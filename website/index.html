@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-black">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Quantum Secure Privacy" />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="English" />
+    <meta name="author" content="Resonance" />
+
+    <title>Quantum Secure Privacy</title>
+
+    <script src="./particles.min.js"></script>
+    <link href="./styles.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+  </head>
+
+  <body class="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
+    <!-- Particle background -->
+    <div id="particles-js" class="absolute inset-0"></div>
+
+    <!-- Main content -->
+    <div class="relative min-h-screen flex flex-col items-center justify-center px-4">
+      <!-- Hero section -->
+      <div class="max-w-4xl mx-auto text-center space-y-8 z-10">
+        <!-- Logo element -->
+        <div class="w-48 flex justify-center items-center mx-auto">
+          <img class="h-full" src="./images/logo-full.webp" alt="Resonance Logo" />
+        </div>
+
+        <h1 class="text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-purple-600 mb-4">
+          Quantum Secure Privacy
+        </h1>
+
+        <!-- Email signup form -->
+        <div class="max-w-lg mx-auto">
+          <form id="signup-form" class="flex flex-col md:flex-row gap-4">
+            <input
+              id="email"
+              type="email"
+              placeholder="Enter your email"
+              class="flex-grow px-6 py-3 rounded-lg bg-gray-800 border border-gray-700 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none transition duration-200"
+              required
+            />
+            <button
+              id="submit-btn"
+              class="px-8 py-3 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 bg-gradient-to-r hover:cursor-pointer from-red-600 to-purple-600 rounded-lg font-semibold hover:opacity-90 transition duration-200 transform hover:scale-105"
+              type="submit"
+            >
+              Join Waitlist
+            </button>
+          </form>
+
+          <!-- Success message (hidden by default) -->
+          <div id="success-message" class="hidden mt-4 p-4 rounded-lg bg-green-500 bg-opacity-20 border border-green-500 text-green-300">
+            🎉 Success! Welcome to the quantum secure privacy.
+          </div>
+
+          <!-- Error message (hidden by default) -->
+          <div id="error-message" class="hidden mt-4 p-4 rounded-lg bg-red-500 bg-opacity-20 border border-red-500 text-red-300">
+            ❌ Oops! Something went wrong. Please try again.
+          </div>
+
+          <p class="text-sm text-gray-500 mt-4">Join our waitlist to be among the first to experience quantum secure privacy</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Submit Handling -->
+    <script>
+      const API_URL = "https://www.resonancenetwork.io/api";
+
+      // Elements
+      const form = document.getElementById("signup-form");
+      const email = document.getElementById("email");
+      const btn = document.getElementById("submit-btn");
+      const successMessage = document.getElementById("success-message");
+      const errorMessage = document.getElementById("error-message");
+
+      // Events
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        // Make button disabled
+        btn.setAttribute("disabled", true);
+
+        // Hide messages if currently displayed
+        successMessage.classList.add("hidden");
+        errorMessage.classList.add("hidden");
+
+        // Make sure the input is not empty
+        const emailValue = email.value?.trim();
+        if (!emailValue) throw new Error("Email is required.");
+
+        try {
+          await fetch(API_URL + "/waitlist", {
+            headers: {
+              "Content-Type": "application/json",
+            },
+            method: "POST",
+            body: JSON.stringify({ email: emailValue }),
+          });
+
+          // Make button active after done processing submit
+          btn.removeAttribute("disabled");
+
+          // Show success message
+          successMessage.classList.remove("hidden");
+          setTimeout(() => {
+            successMessage.classList.add("hidden");
+          }, 3000);
+
+          // Reset form
+          form.reset();
+
+          // Add success animation to the form
+          form.classList.add("opacity-50");
+          setTimeout(() => {
+            form.classList.remove("opacity-50");
+          }, 1000);
+        } catch (error) {
+          // Make button active after done processing submit
+          btn.removeAttribute("disabled");
+
+          // Show error message
+          errorMessage.classList.remove("hidden");
+          setTimeout(() => {
+            errorMessage.classList.add("hidden");
+          }, 3000);
+
+          // Add error shake animation to the form
+          form.classList.add("animate-shake");
+          setTimeout(() => {
+            form.classList.remove("animate-shake");
+          }, 500);
+        }
+      });
+    </script>
+
+    <!-- Particles -->
+    <script>
+      particlesJS("particles-js", {
+        particles: {
+          number: { value: 80, density: { enable: true, value_area: 800 } },
+          color: { value: "#4F46E5" },
+          shape: { type: "circle" },
+          opacity: { value: 0.5, random: true },
+          size: { value: 3, random: true },
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: "#4F46E5",
+            opacity: 0.2,
+            width: 1,
+          },
+          move: {
+            enable: true,
+            speed: 2,
+            direction: "none",
+            random: true,
+            out_mode: "out",
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
