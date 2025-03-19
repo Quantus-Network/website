@@ -106,13 +106,15 @@
         if (!emailValue) throw new Error("Email is required.");
 
         try {
-          await fetch(API_URL + "/waitlist", {
+          const resp = await fetch(API_URL + "/waitlist", {
             headers: {
               "Content-Type": "application/json",
             },
             method: "POST",
             body: JSON.stringify({ email: emailValue }),
           });
+
+          if (resp.status !== 201) throw new Error("Failed adding to waitlist.");
 
           // Make button active after done processing submit
           btn.removeAttribute("disabled");
