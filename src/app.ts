@@ -24,9 +24,13 @@ app.post("/api/waitlist", async (req, res) => {
   const { email } = req.body;
   if (!email) res.status(400).json({ error: "Email is required!" });
 
-  await dbClient.insert(waitlist).values({ id: generateUniqueID(), email });
+  try {
+    await dbClient.insert(waitlist).values({ id: generateUniqueID(), email });
 
-  res.status(201).json({ message: "Success adding to waitlist.", email });
+    res.status(201).json({ message: "Success adding to waitlist.", email });
+  } catch (error) {
+    res.status(400).json({ error: "Failed adding to waitlist." });
+  }
 });
 
 // Listener
