@@ -11,8 +11,8 @@
 
     <title>Quantum Secure Privacy</title>
 
-    <script src="./particles.min.js"></script>
-    <link href="./styles.css" rel="stylesheet" />
+    <script src="./js/particles.min.js"></script>
+    <link href="./css/styles.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="./favicon.ico" />
   </head>
 
@@ -24,7 +24,7 @@
     <nav class="relative z-10 bg-gray-900/70 backdrop-blur-lg">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
-          <div class="flex ms-auto space-x-4">
+          <div class="flex mx-auto sm:mx-0 sm:ms-auto space-x-4">
             <a href="index.html" class="text-gray-300 hover:text-white px-6 py-2 rounded-md text-sm font-medium">Home</a>
             <a href="jobs.html" class="bg-gradient-to-r from-red-600 to-purple-600 text-white px-6 py-2 rounded-md text-sm font-medium">Careers</a>
           </div>
@@ -152,30 +152,6 @@
     </script>
 
     <!-- Particles -->
-    <script>
-      particlesJS("particles-js", {
-        particles: {
-          number: { value: 80, density: { enable: true, value_area: 800 } },
-          color: { value: "#4F46E5" },
-          shape: { type: "circle" },
-          opacity: { value: 0.5, random: true },
-          size: { value: 3, random: true },
-          line_linked: {
-            enable: true,
-            distance: 150,
-            color: "#4F46E5",
-            opacity: 0.2,
-            width: 1,
-          },
-          move: {
-            enable: true,
-            speed: 2,
-            direction: "none",
-            random: true,
-            out_mode: "out",
-          },
-        },
-      });
-    </script>
+    <script src="./js/loadParticle.js"></script>
   </body>
 </html>

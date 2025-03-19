@@ -11,8 +11,8 @@
 
     <title>Careers - Quantum Secure Privacy</title>
 
-    <script src="./particles.min.js"></script>
-    <link href="./styles.css" rel="stylesheet" />
+    <script src="./js/particles.min.js"></script>
+    <link href="./css/styles.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="./favicon.ico" />
   </head>
   <body class="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
@@ -23,7 +23,7 @@
     <nav class="relative z-10 bg-gray-900/70 backdrop-blur-lg">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
-          <div class="flex ms-auto space-x-4">
+          <div class="flex mx-auto sm:mx-0 sm:ms-auto space-x-4">
             <a href="index.html" class="text-gray-300 hover:text-white px-6 py-2 rounded-md text-sm font-medium">Home</a>
             <a href="jobs.html" class="bg-gradient-to-r from-red-600 to-purple-600 text-white px-6 py-2 rounded-md text-sm font-medium">Careers</a>
           </div>
@@ -51,10 +51,8 @@
         <!-- Application Instructions -->
         <div class="bg-blue-900/20 border border-blue-800 rounded-lg p-6 mb-8">
           <h2 class="text-xl font-semibold text-blue-400">How to Apply</h2>
-          <p class="mt-2 text-gray-300 flex gap-x-2">
-            To apply for any of our open positions, please send your resume/CV with GitHub to:
-            <img class="w-48 bg-blue-400 rounded-lg p-2" src="./images/jobs-email.png" alt="picture" />
-          </p>
+          <p class="mt-2 text-gray-300 flex gap-x-2">To apply for any of our open positions, please send your resume/CV with GitHub to:</p>
+          <img class="w-48 bg-blue-400 rounded-lg p-2" src="./images/jobs-email.png" alt="picture" />
           <p class="mt-2 text-gray-300">Please include the position title in your email subject line.</p>
         </div>
 
@@ -92,7 +90,7 @@
             >
               <div class="bg-gray-800 px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                 <div class="sm:flex sm:items-start">
-                  <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                  <div class="mt-3 text-left sm:mt-0 sm:ml-4">
                     <h3 id="modalTitle" class="text-lg leading-6 font-medium text-white"></h3>
                     <div class="mt-2">
                       <p id="modalLocation" class="text-sm text-gray-400"></p>
@@ -101,7 +99,7 @@
 
                       <div id="modalDescriptionList" class="mt-4 text-sm text-gray-300"></div>
 
-                      <div id="modalAdditionalInfoList" class="mt-4 text-sm text-gray-300"></div>
+                      <div id="modalAdditionalInfoList"></div>
 
                       <div id="modalRequirements" class="mt-4">
                         <h4 class="text-sm font-medium text-white">Requirements:</h4>
@@ -127,32 +125,8 @@
       </div>
     </main>
 
-    <!-- Particles.js initialization -->
-    <script>
-      particlesJS("particles-js", {
-        particles: {
-          number: { value: 80, density: { enable: true, value_area: 800 } },
-          color: { value: "#4F46E5" },
-          shape: { type: "circle" },
-          opacity: { value: 0.5, random: true },
-          size: { value: 3, random: true },
-          line_linked: {
-            enable: true,
-            distance: 150,
-            color: "#4F46E5",
-            opacity: 0.2,
-            width: 1,
-          },
-          move: {
-            enable: true,
-            speed: 2,
-            direction: "none",
-            random: true,
-            out_mode: "out",
-          },
-        },
-      });
-    </script>
+    <!-- Particles -->
+    <script src="./js/loadParticle.js"></script>
 
     <!-- Job listings -->
     <script>
@@ -176,8 +150,21 @@
           ],
           additionalInfos: [
             {
-              title: "",
-              contents: [],
+              title: "Interview & Feedback Process",
+              contents: [
+                "We start by reviewing the candidate's GitHub and past projects. If their work is promising, we add them to a Wire group with the team to engage in initial discussions",
+                "Recruiters will arrange the initial screening and coordinate with us for follow-ups, the interview platform: Wire or Signal",
+                "First, phone interview, general discussions with core team members on experience and problem-solving approach",
+                "Second, paid trial (1-2 Weeks), candidates work on a specific task to evaluate their technical skills and collaboration style",
+                "Based on trial performance, a hiring decision is made. Candidates will receive feedback post-trial, either directly from us or via the recruitment team within 3-5 business days",
+              ],
+            },
+            {
+              title: "Offer & Hiring Process",
+              contents: [
+                "Candidates who complete the paid trial to satisfaction will receive an offer. Formal offer letters will be shared within 1 week post-trial",
+                "Salary flexibility, open to negotiation for highly exceptional candidates",
+              ],
             },
           ],
         },
@@ -210,19 +197,24 @@
                                   <p class="mt-1 text-gray-400">${job.location} • ${job.type}</p>
                                   <p class="text-blue-400">${job.compensation.join(" • ")}</p>
                               </div>
-                              <button class="viewDetails px-6 py-2 bg-gradient-to-r hover:cursor-pointer from-red-600 to-purple-600 rounded-lg text-sm font-semibold hover:opacity-90 transition duration-200 transform hover:scale-105" data-job-id="${
+                              <button class="viewDetails hidden sm:inline-block px-6 py-2 bg-gradient-to-r hover:cursor-pointer from-red-600 to-purple-600 rounded-lg text-sm font-semibold hover:opacity-90 transition duration-200 transform hover:scale-105" data-job-id="${
                                 job.id
                               }">
                                   View Details
                               </button>
                           </div>
                           <p class="mt-4 text-gray-300">${job.descriptions[0]}</p>
+                           <button class="viewDetails w-full inline-block mt-4 sm:hidden px-6 py-2 bg-gradient-to-r hover:cursor-pointer from-red-600 to-purple-600 rounded-lg text-sm font-semibold hover:opacity-90 transition duration-200 transform hover:scale-105" data-job-id="${
+                             job.id
+                           }">
+                                  View Details
+                              </button>
                       `;
           jobListingsContainer.appendChild(jobElement);
 
           // Add event listener to the button
-          const viewDetailsButton = jobElement.querySelector(".viewDetails");
-          viewDetailsButton.addEventListener("click", () => openJobModal(job.id));
+          const viewDetailsButton = jobElement.querySelectorAll(".viewDetails");
+          viewDetailsButton.forEach((node) => node.addEventListener("click", () => openJobModal(job.id)));
         });
       }
 
@@ -246,16 +238,6 @@
           descriptionList.appendChild(p);
         });
 
-        // Set description list
-        const additionalInfoList = document.getElementById("modalAdditionalInfoList");
-        additionalInfoList.innerHTML = "";
-        job.additionalInfos.forEach((req) => {
-          const p = document.createElement("p");
-          p.className = "mt-2";
-          p.textContent = req;
-          descriptionList.appendChild(p);
-        });
-
         // Set requirements list
         const requirementsList = document.getElementById("modalRequirementsList");
         requirementsList.innerHTML = "";
@@ -263,6 +245,31 @@
           const li = document.createElement("li");
           li.textContent = req;
           requirementsList.appendChild(li);
+        });
+
+        // Set additional infos
+        const additionalInfoList = document.getElementById("modalAdditionalInfoList");
+        additionalInfoList.innerHTML = "";
+        job.additionalInfos.forEach((req) => {
+          const div = document.createElement("div");
+          div.className = "mt-4 text-sm text-gray-300";
+
+          const h4 = document.createElement("h4");
+          h4.className = "text-sm font-medium text-white";
+          h4.textContent = req.title;
+          div.appendChild(h4);
+
+          const ul = document.createElement("ul");
+          ul.className = "mt-2 list-disc pl-5 text-sm text-gray-300 space-y-1";
+          div.appendChild(ul);
+
+          req.contents.forEach((content) => {
+            const li = document.createElement("li");
+            li.textContent = content;
+            ul.appendChild(li);
+          });
+
+          additionalInfoList.appendChild(div);
         });
 
         // Show the modal

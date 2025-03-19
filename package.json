@@ -16,7 +16,7 @@
     "db:recreate": "node dist/src/models/scripts/recreate.js -start",
     "db:update": "npm run build && npm run db:generate && npm run db:migrate",
     "db:startover": "rimraf src/models/migration && npm run build && npm run db:generate && node dist/src/models/scripts/startover.js",
-    "compile:css": "npx @tailwindcss/cli -i ./website/tailwind.css -o ./website/styles.css --watch",
+    "compile:css": "npx @tailwindcss/cli -i ./website/css/tailwind.css -o ./website/css/styles.css --watch",
     "postinstall": "node ./drizzle-pg-timestamp-patch.js"
   },
   "devDependencies": {
