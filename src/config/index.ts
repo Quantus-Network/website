@@ -11,7 +11,9 @@ export default {
     "https://resonancenetwork.io",
     "http://www.resonancenetwork.io",
     "http://resonancenetwork.io",
+    "http://quantus.com",
     "https://quantus.com",
+    "http://www.quantus.com",
     "https://www.quantus.com",
   ],
   apiBaseUrl: process.env.API_BASE_URL,
@@ -20,7 +22,7 @@ export default {
   databaseURL: process.env.DATABASE_BASE_URL,
   appName: "Resonance_Network",
   nodeEnv: process.env.NODE_ENV,
-   email: {
+  email: {
     host: process.env.EMAIL_HOST,
     port: Number(process.env.EMAIL_PORT),
     auth: {

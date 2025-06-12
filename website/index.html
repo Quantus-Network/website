@@ -1,237 +1,326 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="bg-black">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Quantum secure blockchain" />
-    <meta name="robots" content="index, follow" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="language" content="English" />
-    <meta name="author" content="Resonance" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Quantum secure blockchain" />
+        <meta name="robots" content="index, follow" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="language" content="English" />
+        <meta name="author" content="Resonance" />
 
-    <title>Quantum Security | Quantus</title>
+        <title>Quantum Security | Quantus</title>
 
-    <script src="./js/particles.min.js"></script>
-    <link href="./css/styles.css" rel="stylesheet" />
-    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
-  </head>
+        <script src="./js/particles.min.js"></script>
+        <link href="./css/styles.css" rel="stylesheet" />
+        <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    </head>
 
-  <body class="min-h-screen bg-gradient-to-b flex flex-col gap-10 from-gray-900 to-black text-white">
-    <!-- Particle background -->
-    <div id="particles-js" class="absolute inset-0"></div>
+    <body
+        class="min-h-screen bg-gradient-to-b flex flex-col gap-10 from-gray-900 to-black text-white"
+    >
+        <!-- Particle background -->
+        <div id="particles-js" class="absolute inset-0"></div>
 
-    <!-- Navigation -->
-    <nav class="relative z-10 bg-gray-900/70 backdrop-blur-lg">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-16">
-          <!-- Logo or brand (optional) -->
-          <div class="flex-shrink-0"></div>
-          <!-- Hamburger button (mobile) -->
-          <div class="sm:hidden">
-            <button
-              id="mobile-menu-button"
-              type="button"
-              class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-              aria-controls="mobile-menu"
-              aria-expanded="false"
-            >
-              <span class="sr-only">Open main menu</span>
-              <!-- Hamburger icon -->
-              <svg class="block h-6 w-6" id="menu-open-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-              <!-- Close icon -->
-              <svg
-                class="hidden h-6 w-6"
-                id="menu-close-icon"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
-          <!-- Desktop menu -->
-          <div class="hidden sm:flex mx-auto sm:mx-0 sm:ms-auto space-x-4">
-            <a href="index.html" class="text-gray-300 hover:text-white px-6 py-2 rounded-md text-sm font-medium">Home</a>
-            <a href="about-us.html" class="text-gray-300 hover:text-white px-6 py-2 rounded-md text-sm font-medium">About Us</a>
-            <a href="contact-us.html" class="text-gray-300 hover:text-white px-6 py-2 rounded-md text-sm font-medium">Contact Us</a>
-            <a href="terms-and-privacy.html" class="text-gray-300 hover:text-white px-6 py-2 rounded-md text-sm font-medium">Terms and Privacy</a>
-            <a href="jobs.html" class="bg-gradient-to-r from-red-600 to-purple-600 text-white px-6 py-2 rounded-md text-sm font-medium">Careers</a>
-          </div>
+        <!-- Navigation -->
+        <nav class="relative z-10 bg-gray-900/70 backdrop-blur-lg">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16">
+                    <!-- Logo or brand (optional) -->
+                    <div class="flex-shrink-0"></div>
+                    <!-- Hamburger button (mobile) -->
+                    <div class="sm:hidden">
+                        <button
+                            id="mobile-menu-button"
+                            type="button"
+                            class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                            aria-controls="mobile-menu"
+                            aria-expanded="false"
+                        >
+                            <span class="sr-only">Open main menu</span>
+                            <!-- Hamburger icon -->
+                            <svg
+                                class="block h-6 w-6"
+                                id="menu-open-icon"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16"
+                                />
+                            </svg>
+                            <!-- Close icon -->
+                            <svg
+                                class="hidden h-6 w-6"
+                                id="menu-close-icon"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12"
+                                />
+                            </svg>
+                        </button>
+                    </div>
+                    <!-- Desktop menu -->
+                    <div
+                        class="hidden sm:flex mx-auto sm:mx-0 sm:ms-auto space-x-4"
+                    >
+                        <a
+                            href="index.html"
+                            class="text-gray-300 hover:text-white px-6 py-2 rounded-md text-sm font-medium"
+                            >Home</a
+                        >
+                        <a
+                            href="about-us.html"
+                            class="text-gray-300 hover:text-white px-6 py-2 rounded-md text-sm font-medium"
+                            >About Us</a
+                        >
+                        <a
+                            href="contact-us.html"
+                            class="text-gray-300 hover:text-white px-6 py-2 rounded-md text-sm font-medium"
+                            >Contact Us</a
+                        >
+                        <a
+                            href="terms-and-privacy.html"
+                            class="text-gray-300 hover:text-white px-6 py-2 rounded-md text-sm font-medium"
+                            >Terms and Privacy</a
+                        >
+                        <a
+                            href="jobs.html"
+                            class="bg-gradient-to-r from-red-600 to-purple-600 text-white px-6 py-2 rounded-md text-sm font-medium"
+                            >Careers</a
+                        >
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile menu, show/hide based on menu state. -->
+            <div class="sm:hidden" id="mobile-menu" style="display: none">
+                <div class="px-2 pt-2 pb-3 space-y-1 flex flex-col">
+                    <a
+                        href="index.html"
+                        class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                        >Home</a
+                    >
+                    <a
+                        href="about-us.html"
+                        class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                        >About Us</a
+                    >
+                    <a
+                        href="contact-us.html"
+                        class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                        >Contact Us</a
+                    >
+                    <a
+                        href="terms-and-privacy.html"
+                        class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                        >Terms and Privacy</a
+                    >
+                    <a
+                        href="jobs.html"
+                        class="bg-gradient-to-r from-red-600 to-purple-600 text-white block px-3 py-2 rounded-md text-base font-medium"
+                        >Careers</a
+                    >
+                </div>
+            </div>
+            <script>
+                // Mobile menu toggle
+                const menuButton =
+                    document.getElementById("mobile-menu-button");
+                const mobileMenu = document.getElementById("mobile-menu");
+                const openIcon = document.getElementById("menu-open-icon");
+                const closeIcon = document.getElementById("menu-close-icon");
+                menuButton.addEventListener("click", () => {
+                    const isOpen = mobileMenu.style.display === "block";
+                    mobileMenu.style.display = isOpen ? "none" : "block";
+                    openIcon.classList.toggle("hidden", !isOpen);
+                    closeIcon.classList.toggle("hidden", isOpen);
+                });
+                // Optional: Close menu when clicking a link (for better UX)
+                mobileMenu.querySelectorAll("a").forEach((link) => {
+                    link.addEventListener("click", () => {
+                        mobileMenu.style.display = "none";
+                        openIcon.classList.remove("hidden");
+                        closeIcon.classList.add("hidden");
+                    });
+                });
+            </script>
+        </nav>
+
+        <!-- Main content -->
+        <div
+            class="relative grow flex flex-col items-center justify-center px-4"
+        >
+            <!-- Hero section -->
+            <div class="max-w-4xl mx-auto text-center space-y-8 z-10">
+                <!-- Logo element -->
+                <div class="w-28 flex justify-center items-center mx-auto">
+                    <img
+                        class="h-full"
+                        src="./images/logo-full.webp"
+                        alt="Resonance Logo"
+                    />
+                </div>
+
+                <h1
+                    class="text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-purple-600 mb-4"
+                >
+                    Quantum Security
+                </h1>
+
+                <!-- Email signup form -->
+                <div class="max-w-lg mx-auto">
+                    <form
+                        id="signup-form"
+                        class="flex flex-col md:flex-row gap-4"
+                    >
+                        <input
+                            id="email"
+                            type="email"
+                            placeholder="Enter your email"
+                            class="flex-grow px-6 py-3 rounded-lg bg-gray-800 border border-gray-700 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none transition duration-200"
+                            required
+                        />
+                        <button
+                            id="submit-btn"
+                            class="px-8 py-3 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 bg-gradient-to-r hover:cursor-pointer from-red-600 to-purple-600 rounded-lg font-semibold hover:opacity-90 transition duration-200 transform hover:scale-105"
+                            type="submit"
+                        >
+                            Join Waitlist
+                        </button>
+                    </form>
+
+                    <!-- Success message (hidden by default) -->
+                    <div
+                        id="success-message"
+                        class="hidden mt-4 p-4 rounded-lg bg-green-500 bg-opacity-20 border border-green-500 text-green-300"
+                    >
+                        🎉 Success! Welcome to the quantum security.
+                    </div>
+
+                    <!-- Error message (hidden by default) -->
+                    <div
+                        id="error-message"
+                        class="hidden mt-4 p-4 rounded-lg bg-red-500 bg-opacity-20 border border-red-500 text-red-300"
+                    >
+                        ❌ Oops! Something went wrong. Please try again.
+                    </div>
+
+                    <p class="text-sm text-gray-500 mt-4">
+                        Join our waitlist to be among the first to experience
+                        quantum security
+                    </p>
+                </div>
+            </div>
         </div>
-      </div>
-      <!-- Mobile menu, show/hide based on menu state. -->
-      <div class="sm:hidden" id="mobile-menu" style="display: none">
-        <div class="px-2 pt-2 pb-3 space-y-1 flex flex-col">
-          <a href="index.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
-          <a href="about-us.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About Us</a>
-          <a href="contact-us.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact Us</a>
-          <a href="terms-and-privacy.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-            >Terms and Privacy</a
-          >
-          <a href="jobs.html" class="bg-gradient-to-r from-red-600 to-purple-600 text-white block px-3 py-2 rounded-md text-base font-medium"
-            >Careers</a
-          >
-        </div>
-      </div>
-      <script>
-        // Mobile menu toggle
-        const menuButton = document.getElementById("mobile-menu-button");
-        const mobileMenu = document.getElementById("mobile-menu");
-        const openIcon = document.getElementById("menu-open-icon");
-        const closeIcon = document.getElementById("menu-close-icon");
-        menuButton.addEventListener("click", () => {
-          const isOpen = mobileMenu.style.display === "block";
-          mobileMenu.style.display = isOpen ? "none" : "block";
-          openIcon.classList.toggle("hidden", !isOpen);
-          closeIcon.classList.toggle("hidden", isOpen);
-        });
-        // Optional: Close menu when clicking a link (for better UX)
-        mobileMenu.querySelectorAll("a").forEach((link) => {
-          link.addEventListener("click", () => {
-            mobileMenu.style.display = "none";
-            openIcon.classList.remove("hidden");
-            closeIcon.classList.add("hidden");
-          });
-        });
-      </script>
-    </nav>
 
-    <!-- Main content -->
-    <div class="relative grow flex flex-col items-center justify-center px-4">
-      <!-- Hero section -->
-      <div class="max-w-4xl mx-auto text-center space-y-8 z-10">
-        <!-- Logo element -->
-        <div class="w-28 flex justify-center items-center mx-auto">
-          <img class="h-full" src="./images/logo-full.webp" alt="Resonance Logo" />
+        <!-- Footer -->
+        <div
+            class="relative flex flex-col gap-3 items-center mt-auto py-8 z-10"
+        >
+            <p class="text-sm">Follow Us</p>
+
+            <div class="size-6">
+                <a
+                    href="https://x.com/QuantusNetwork"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <img
+                        class="w-full object-contain"
+                        src="./images/x-white-logo.webp"
+                        alt="x logo"
+                    />
+                </a>
+            </div>
         </div>
 
-        <h1 class="text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-purple-600 mb-4">
-          Quantum Security
-        </h1>
+        <!-- Submit Handling -->
+        <script>
+            const API_URL = "https://quantus.com/api";
 
-        <!-- Email signup form -->
-        <div class="max-w-lg mx-auto">
-          <form id="signup-form" class="flex flex-col md:flex-row gap-4">
-            <input
-              id="email"
-              type="email"
-              placeholder="Enter your email"
-              class="flex-grow px-6 py-3 rounded-lg bg-gray-800 border border-gray-700 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none transition duration-200"
-              required
-            />
-            <button
-              id="submit-btn"
-              class="px-8 py-3 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 bg-gradient-to-r hover:cursor-pointer from-red-600 to-purple-600 rounded-lg font-semibold hover:opacity-90 transition duration-200 transform hover:scale-105"
-              type="submit"
-            >
-              Join Waitlist
-            </button>
-          </form>
+            // Elements
+            const form = document.getElementById("signup-form");
+            const email = document.getElementById("email");
+            const btn = document.getElementById("submit-btn");
+            const successMessage = document.getElementById("success-message");
+            const errorMessage = document.getElementById("error-message");
 
-          <!-- Success message (hidden by default) -->
-          <div id="success-message" class="hidden mt-4 p-4 rounded-lg bg-green-500 bg-opacity-20 border border-green-500 text-green-300">
-            🎉 Success! Welcome to the quantum security.
-          </div>
+            // Events
+            form.addEventListener("submit", async (e) => {
+                e.preventDefault();
 
-          <!-- Error message (hidden by default) -->
-          <div id="error-message" class="hidden mt-4 p-4 rounded-lg bg-red-500 bg-opacity-20 border border-red-500 text-red-300">
-            ❌ Oops! Something went wrong. Please try again.
-          </div>
+                // Make button disabled
+                btn.setAttribute("disabled", true);
 
-          <p class="text-sm text-gray-500 mt-4">Join our waitlist to be among the first to experience quantum security</p>
-        </div>
-      </div>
-    </div>
+                // Hide messages if currently displayed
+                successMessage.classList.add("hidden");
+                errorMessage.classList.add("hidden");
 
-    <!-- Footer -->
-    <div class="relative flex flex-col gap-3 items-center mt-auto py-8 z-10">
-      <p class="text-sm">Follow Us</p>
+                // Make sure the input is not empty
+                const emailValue = email.value?.trim();
+                if (!emailValue) throw new Error("Email is required.");
 
-      <div class="size-6">
-        <a href="https://x.com/QuantusNetwork" target="_blank" rel="noopener noreferrer">
-          <img class="w-full object-contain" src="./images/x-white-logo.webp" alt="x logo" />
-        </a>
-      </div>
-    </div>
+                try {
+                    const resp = await fetch(API_URL + "/waitlist", {
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        method: "POST",
+                        body: JSON.stringify({ email: emailValue }),
+                    });
 
-    <!-- Submit Handling -->
-    <script>
-      const API_URL = "https://www.resonancenetwork.io/api";
+                    if (resp.status !== 201)
+                        throw new Error("Failed adding to waitlist.");
 
-      // Elements
-      const form = document.getElementById("signup-form");
-      const email = document.getElementById("email");
-      const btn = document.getElementById("submit-btn");
-      const successMessage = document.getElementById("success-message");
-      const errorMessage = document.getElementById("error-message");
+                    // Make button active after done processing submit
+                    btn.removeAttribute("disabled");
 
-      // Events
-      form.addEventListener("submit", async (e) => {
-        e.preventDefault();
+                    // Show success message
+                    successMessage.classList.remove("hidden");
+                    setTimeout(() => {
+                        successMessage.classList.add("hidden");
+                    }, 3000);
 
-        // Make button disabled
-        btn.setAttribute("disabled", true);
+                    // Reset form
+                    form.reset();
 
-        // Hide messages if currently displayed
-        successMessage.classList.add("hidden");
-        errorMessage.classList.add("hidden");
+                    // Add success animation to the form
+                    form.classList.add("opacity-50");
+                    setTimeout(() => {
+                        form.classList.remove("opacity-50");
+                    }, 1000);
+                } catch (error) {
+                    // Make button active after done processing submit
+                    btn.removeAttribute("disabled");
 
-        // Make sure the input is not empty
-        const emailValue = email.value?.trim();
-        if (!emailValue) throw new Error("Email is required.");
+                    // Show error message
+                    errorMessage.classList.remove("hidden");
+                    setTimeout(() => {
+                        errorMessage.classList.add("hidden");
+                    }, 3000);
 
-        try {
-          const resp = await fetch(API_URL + "/waitlist", {
-            headers: {
-              "Content-Type": "application/json",
-            },
-            method: "POST",
-            body: JSON.stringify({ email: emailValue }),
-          });
+                    // Add error shake animation to the form
+                    form.classList.add("animate-shake");
+                    setTimeout(() => {
+                        form.classList.remove("animate-shake");
+                    }, 500);
+                }
+            });
+        </script>
 
-          if (resp.status !== 201) throw new Error("Failed adding to waitlist.");
-
-          // Make button active after done processing submit
-          btn.removeAttribute("disabled");
-
-          // Show success message
-          successMessage.classList.remove("hidden");
-          setTimeout(() => {
-            successMessage.classList.add("hidden");
-          }, 3000);
-
-          // Reset form
-          form.reset();
-
-          // Add success animation to the form
-          form.classList.add("opacity-50");
-          setTimeout(() => {
-            form.classList.remove("opacity-50");
-          }, 1000);
-        } catch (error) {
-          // Make button active after done processing submit
-          btn.removeAttribute("disabled");
-
-          // Show error message
-          errorMessage.classList.remove("hidden");
-          setTimeout(() => {
-            errorMessage.classList.add("hidden");
-          }, 3000);
-
-          // Add error shake animation to the form
-          form.classList.add("animate-shake");
-          setTimeout(() => {
-            form.classList.remove("animate-shake");
-          }, 500);
-        }
-      });
-    </script>
-
-    <!-- Particles -->
-    <script src="./js/loadParticle.js"></script>
-  </body>
+        <!-- Particles -->
+        <script src="./js/loadParticle.js"></script>
+    </body>
 </html>

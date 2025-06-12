@@ -1,276 +1,421 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="bg-black">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Quantus Job Vacancy" />
-    <meta name="robots" content="index, follow" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="language" content="English" />
-    <meta name="author" content="Resonance" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Quantus Job Vacancy" />
+        <meta name="robots" content="index, follow" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="language" content="English" />
+        <meta name="author" content="Resonance" />
 
-    <title>Careers - Quantus</title>
+        <title>Careers - Quantus</title>
 
-    <script src="./js/particles.min.js"></script>
-    <link href="./css/styles.css" rel="stylesheet" />
-    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
-  </head>
-  <body class="min-h-screen bg-gradient-to-b from-gray-900 to-black flex flex-col text-white">
-    <!-- Particle background -->
-    <div id="particles-js" class="fixed inset-0"></div>
+        <script src="./js/particles.min.js"></script>
+        <link href="./css/styles.css" rel="stylesheet" />
+        <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    </head>
+    <body
+        class="min-h-screen bg-gradient-to-b from-gray-900 to-black flex flex-col text-white"
+    >
+        <!-- Particle background -->
+        <div id="particles-js" class="fixed inset-0"></div>
 
-    <!-- Navigation -->
-    <nav class="relative z-10 bg-gray-900/70 backdrop-blur-lg">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-16">
-          <!-- Logo or brand (optional) -->
-          <div class="flex-shrink-0"></div>
-          <!-- Hamburger button (mobile) -->
-          <div class="sm:hidden">
-            <button
-              id="mobile-menu-button"
-              type="button"
-              class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-              aria-controls="mobile-menu"
-              aria-expanded="false"
-            >
-              <span class="sr-only">Open main menu</span>
-              <!-- Hamburger icon -->
-              <svg class="block h-6 w-6" id="menu-open-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-              <!-- Close icon -->
-              <svg
-                class="hidden h-6 w-6"
-                id="menu-close-icon"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
-          <!-- Desktop menu -->
-          <div class="hidden sm:flex mx-auto sm:mx-0 sm:ms-auto space-x-4">
-            <a href="index.html" class="text-gray-300 hover:text-white px-6 py-2 rounded-md text-sm font-medium">Home</a>
-            <a href="about-us.html" class="text-gray-300 hover:text-white px-6 py-2 rounded-md text-sm font-medium">About Us</a>
-            <a href="contact-us.html" class="text-gray-300 hover:text-white px-6 py-2 rounded-md text-sm font-medium">Contact Us</a>
-            <a href="terms-and-privacy.html" class="text-gray-300 hover:text-white px-6 py-2 rounded-md text-sm font-medium">Terms and Privacy</a>
-            <a href="jobs.html" class="bg-gradient-to-r from-red-600 to-purple-600 text-white px-6 py-2 rounded-md text-sm font-medium">Careers</a>
-          </div>
-        </div>
-      </div>
-      <!-- Mobile menu, show/hide based on menu state. -->
-      <div class="sm:hidden" id="mobile-menu" style="display: none">
-        <div class="px-2 pt-2 pb-3 space-y-1 flex flex-col">
-          <a href="index.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
-          <a href="about-us.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About Us</a>
-          <a href="contact-us.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact Us</a>
-          <a href="terms-and-privacy.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-            >Terms and Privacy</a
-          >
-          <a href="jobs.html" class="bg-gradient-to-r from-red-600 to-purple-600 text-white block px-3 py-2 rounded-md text-base font-medium"
-            >Careers</a
-          >
-        </div>
-      </div>
-      <script>
-        // Mobile menu toggle
-        const menuButton = document.getElementById("mobile-menu-button");
-        const mobileMenu = document.getElementById("mobile-menu");
-        const openIcon = document.getElementById("menu-open-icon");
-        const closeIcon = document.getElementById("menu-close-icon");
-        menuButton.addEventListener("click", () => {
-          const isOpen = mobileMenu.style.display === "block";
-          mobileMenu.style.display = isOpen ? "none" : "block";
-          openIcon.classList.toggle("hidden", !isOpen);
-          closeIcon.classList.toggle("hidden", isOpen);
-        });
-        // Optional: Close menu when clicking a link (for better UX)
-        mobileMenu.querySelectorAll("a").forEach((link) => {
-          link.addEventListener("click", () => {
-            mobileMenu.style.display = "none";
-            openIcon.classList.remove("hidden");
-            closeIcon.classList.add("hidden");
-          });
-        });
-      </script>
-    </nav>
-
-    <!-- Header -->
-    <header class="relative pt-8 pb-8 z-10">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex">
-          <h1 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-purple-600">Careers</h1>
-        </div>
-
-        <p class="mt-4 text-xl text-gray-300 max-w-3xl">
-          We are building a
-          <strong>Quantum Secure Chain</strong>, a next-generation <strong>Layer 1 blockchain</strong> that prioritizes
-          <strong>privacy, security, and quantum resistance</strong>.
-        </p>
-      </div>
-    </header>
-
-    <!-- Main content -->
-    <main class="relative z-20 pb-8">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Application Instructions -->
-        <div class="bg-blue-900/20 border border-blue-800 rounded-lg p-6 mb-8">
-          <h2 class="text-xl font-semibold text-blue-400">How to Apply</h2>
-          <p class="mt-2 text-gray-300 flex gap-x-2">To apply for any of our open positions, please send your resume/CV with GitHub to:</p>
-          <img class="w-48 bg-blue-400 rounded-lg p-2" src="./images/jobs-email.png" alt="picture" />
-          <p class="mt-2 text-gray-300">Please include the position title in your email subject line.</p>
-        </div>
-
-        <!-- No jobs message (hidden by default) -->
-        <div id="noJobsMessage" class="hidden bg-gray-800 bg-opacity-50 rounded-lg p-10 text-center">
-          <svg class="w-12 h-12 mx-auto text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-            ></path>
-          </svg>
-          <h3 class="mt-4 text-xl font-medium text-gray-100">No Open Positions</h3>
-          <p class="mt-2 max-w-96 mx-auto text-gray-400">
-            We don't have any open positions at the moment. Please check back later or join our talent pool by sending your resume with GitHub to:
-          </p>
-          <img class="w-48 mx-auto mt-2 bg-blue-400 rounded-lg p-2" src="./images/jobs-email.png" alt="picture" />
-        </div>
-
-        <!-- Job listings container -->
-        <div id="jobListings" class="space-y-6">
-          <!-- Job listings will be inserted here dynamically -->
-        </div>
-
-        <!-- Job details modal (hidden by default) -->
-        <div id="jobModal" class="fixed inset-0 z-50 hidden overflow-y-auto">
-          <div class="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
-            <div class="fixed inset-0 transition-opacity" aria-hidden="true">
-              <div class="absolute inset-0 bg-gray-900 opacity-75"></div>
-            </div>
-            <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
-            <div
-              class="inline-block align-bottom bg-gray-800 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
-            >
-              <div class="bg-gray-800 px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-                <div class="sm:flex sm:items-start">
-                  <div class="mt-3 text-left sm:mt-0 sm:ml-4">
-                    <h3 id="modalTitle" class="text-lg leading-6 font-medium text-white"></h3>
-                    <div class="mt-2">
-                      <p id="modalLocation" class="text-sm text-gray-400"></p>
-
-                      <p id="modalCompensation" class="text-sm text-blue-400 mt-1"></p>
-
-                      <div id="modalDescriptionList" class="mt-4 text-sm text-gray-300"></div>
-
-                      <div id="modalAdditionalInfoList"></div>
-
-                      <div id="modalRequirements" class="mt-4">
-                        <h4 class="text-sm font-medium text-white">Requirements:</h4>
-                        <ul id="modalRequirementsList" class="mt-2 list-disc pl-5 text-sm text-gray-300 space-y-1"></ul>
-                      </div>
+        <!-- Navigation -->
+        <nav class="relative z-10 bg-gray-900/70 backdrop-blur-lg">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16">
+                    <!-- Logo or brand (optional) -->
+                    <div class="flex-shrink-0"></div>
+                    <!-- Hamburger button (mobile) -->
+                    <div class="sm:hidden">
+                        <button
+                            id="mobile-menu-button"
+                            type="button"
+                            class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                            aria-controls="mobile-menu"
+                            aria-expanded="false"
+                        >
+                            <span class="sr-only">Open main menu</span>
+                            <!-- Hamburger icon -->
+                            <svg
+                                class="block h-6 w-6"
+                                id="menu-open-icon"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16"
+                                />
+                            </svg>
+                            <!-- Close icon -->
+                            <svg
+                                class="hidden h-6 w-6"
+                                id="menu-close-icon"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12"
+                                />
+                            </svg>
+                        </button>
                     </div>
-                  </div>
+                    <!-- Desktop menu -->
+                    <div
+                        class="hidden sm:flex mx-auto sm:mx-0 sm:ms-auto space-x-4"
+                    >
+                        <a
+                            href="index.html"
+                            class="text-gray-300 hover:text-white px-6 py-2 rounded-md text-sm font-medium"
+                            >Home</a
+                        >
+                        <a
+                            href="about-us.html"
+                            class="text-gray-300 hover:text-white px-6 py-2 rounded-md text-sm font-medium"
+                            >About Us</a
+                        >
+                        <a
+                            href="contact-us.html"
+                            class="text-gray-300 hover:text-white px-6 py-2 rounded-md text-sm font-medium"
+                            >Contact Us</a
+                        >
+                        <a
+                            href="terms-and-privacy.html"
+                            class="text-gray-300 hover:text-white px-6 py-2 rounded-md text-sm font-medium"
+                            >Terms and Privacy</a
+                        >
+                        <a
+                            href="jobs.html"
+                            class="bg-gradient-to-r from-red-600 to-purple-600 text-white px-6 py-2 rounded-md text-sm font-medium"
+                            >Careers</a
+                        >
+                    </div>
                 </div>
-              </div>
-
-              <div class="bg-gray-900 px-4 py-3 sm:px-6">
-                <button
-                  id="closeModal"
-                  type="button"
-                  class="w-full inline-flex justify-center hover:cursor-pointer rounded-md border border-gray-700 shadow-sm px-6 py-2 bg-gray-800 text-base font-medium text-gray-400 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 sm:w-auto sm:text-sm"
-                >
-                  Close
-                </button>
-              </div>
             </div>
-          </div>
+            <!-- Mobile menu, show/hide based on menu state. -->
+            <div class="sm:hidden" id="mobile-menu" style="display: none">
+                <div class="px-2 pt-2 pb-3 space-y-1 flex flex-col">
+                    <a
+                        href="index.html"
+                        class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                        >Home</a
+                    >
+                    <a
+                        href="about-us.html"
+                        class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                        >About Us</a
+                    >
+                    <a
+                        href="contact-us.html"
+                        class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                        >Contact Us</a
+                    >
+                    <a
+                        href="terms-and-privacy.html"
+                        class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                        >Terms and Privacy</a
+                    >
+                    <a
+                        href="jobs.html"
+                        class="bg-gradient-to-r from-red-600 to-purple-600 text-white block px-3 py-2 rounded-md text-base font-medium"
+                        >Careers</a
+                    >
+                </div>
+            </div>
+            <script>
+                // Mobile menu toggle
+                const menuButton =
+                    document.getElementById("mobile-menu-button");
+                const mobileMenu = document.getElementById("mobile-menu");
+                const openIcon = document.getElementById("menu-open-icon");
+                const closeIcon = document.getElementById("menu-close-icon");
+                menuButton.addEventListener("click", () => {
+                    const isOpen = mobileMenu.style.display === "block";
+                    mobileMenu.style.display = isOpen ? "none" : "block";
+                    openIcon.classList.toggle("hidden", !isOpen);
+                    closeIcon.classList.toggle("hidden", isOpen);
+                });
+                // Optional: Close menu when clicking a link (for better UX)
+                mobileMenu.querySelectorAll("a").forEach((link) => {
+                    link.addEventListener("click", () => {
+                        mobileMenu.style.display = "none";
+                        openIcon.classList.remove("hidden");
+                        closeIcon.classList.add("hidden");
+                    });
+                });
+            </script>
+        </nav>
+
+        <!-- Header -->
+        <header class="relative pt-8 pb-8 z-10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex">
+                    <h1
+                        class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-purple-600"
+                    >
+                        Careers
+                    </h1>
+                </div>
+
+                <p class="mt-4 text-xl text-gray-300 max-w-3xl">
+                    We are building a
+                    <strong>Quantum Secure Chain</strong>, a next-generation
+                    <strong>Layer 1 blockchain</strong> that prioritizes
+                    <strong>privacy, security, and quantum resistance</strong>.
+                </p>
+            </div>
+        </header>
+
+        <!-- Main content -->
+        <main class="relative z-20 pb-8">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Application Instructions -->
+                <div
+                    class="bg-blue-900/20 border border-blue-800 rounded-lg p-6 mb-8"
+                >
+                    <h2 class="text-xl font-semibold text-blue-400">
+                        How to Apply
+                    </h2>
+                    <p class="mt-2 text-gray-300 flex gap-x-2">
+                        To apply for any of our open positions, please send your
+                        resume/CV with GitHub to:
+                    </p>
+                    <img
+                        class="w-48 bg-blue-400 rounded-lg p-2"
+                        src="./images/jobs-email.png"
+                        alt="picture"
+                    />
+                    <p class="mt-2 text-gray-300">
+                        Please include the position title in your email subject
+                        line.
+                    </p>
+                </div>
+
+                <!-- No jobs message (hidden by default) -->
+                <div
+                    id="noJobsMessage"
+                    class="hidden bg-gray-800 bg-opacity-50 rounded-lg p-10 text-center"
+                >
+                    <svg
+                        class="w-12 h-12 mx-auto text-gray-400"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                        ></path>
+                    </svg>
+                    <h3 class="mt-4 text-xl font-medium text-gray-100">
+                        No Open Positions
+                    </h3>
+                    <p class="mt-2 max-w-96 mx-auto text-gray-400">
+                        We don't have any open positions at the moment. Please
+                        check back later or join our talent pool by sending your
+                        resume with GitHub to:
+                    </p>
+                    <img
+                        class="w-48 mx-auto mt-2 bg-blue-400 rounded-lg p-2"
+                        src="./images/jobs-email.png"
+                        alt="picture"
+                    />
+                </div>
+
+                <!-- Job listings container -->
+                <div id="jobListings" class="space-y-6">
+                    <!-- Job listings will be inserted here dynamically -->
+                </div>
+
+                <!-- Job details modal (hidden by default) -->
+                <div
+                    id="jobModal"
+                    class="fixed inset-0 z-50 hidden overflow-y-auto"
+                >
+                    <div
+                        class="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0"
+                    >
+                        <div
+                            class="fixed inset-0 transition-opacity"
+                            aria-hidden="true"
+                        >
+                            <div
+                                class="absolute inset-0 bg-gray-900 opacity-75"
+                            ></div>
+                        </div>
+                        <span
+                            class="hidden sm:inline-block sm:align-middle sm:h-screen"
+                            aria-hidden="true"
+                            >&#8203;</span
+                        >
+                        <div
+                            class="inline-block align-bottom bg-gray-800 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
+                        >
+                            <div
+                                class="bg-gray-800 px-4 pt-5 pb-4 sm:p-6 sm:pb-4"
+                            >
+                                <div class="sm:flex sm:items-start">
+                                    <div class="mt-3 text-left sm:mt-0 sm:ml-4">
+                                        <h3
+                                            id="modalTitle"
+                                            class="text-lg leading-6 font-medium text-white"
+                                        ></h3>
+                                        <div class="mt-2">
+                                            <p
+                                                id="modalLocation"
+                                                class="text-sm text-gray-400"
+                                            ></p>
+
+                                            <p
+                                                id="modalCompensation"
+                                                class="text-sm text-blue-400 mt-1"
+                                            ></p>
+
+                                            <div
+                                                id="modalDescriptionList"
+                                                class="mt-4 text-sm text-gray-300"
+                                            ></div>
+
+                                            <div
+                                                id="modalAdditionalInfoList"
+                                            ></div>
+
+                                            <div
+                                                id="modalRequirements"
+                                                class="mt-4"
+                                            >
+                                                <h4
+                                                    class="text-sm font-medium text-white"
+                                                >
+                                                    Requirements:
+                                                </h4>
+                                                <ul
+                                                    id="modalRequirementsList"
+                                                    class="mt-2 list-disc pl-5 text-sm text-gray-300 space-y-1"
+                                                ></ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bg-gray-900 px-4 py-3 sm:px-6">
+                                <button
+                                    id="closeModal"
+                                    type="button"
+                                    class="w-full inline-flex justify-center hover:cursor-pointer rounded-md border border-gray-700 shadow-sm px-6 py-2 bg-gray-800 text-base font-medium text-gray-400 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 sm:w-auto sm:text-sm"
+                                >
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <div
+            class="relative flex flex-col gap-3 items-center mt-auto py-8 z-10"
+        >
+            <p class="text-sm">Follow Us</p>
+
+            <div class="size-6">
+                <a
+                    href="https://x.com/QuantusNetwork"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <img
+                        class="w-full object-contain"
+                        src="./images/x-white-logo.webp"
+                        alt="x logo"
+                    />
+                </a>
+            </div>
         </div>
-      </div>
-    </main>
 
-    <!-- Footer -->
-    <div class="relative flex flex-col gap-3 items-center mt-auto py-8 z-10">
-      <p class="text-sm">Follow Us</p>
+        <!-- Particles -->
+        <script src="./js/loadParticle.js"></script>
 
-      <div class="size-6">
-        <a href="https://x.com/QuantusNetwork" target="_blank" rel="noopener noreferrer">
-          <img class="w-full object-contain" src="./images/x-white-logo.webp" alt="x logo" />
-        </a>
-      </div>
-    </div>
+        <!-- Job listings -->
+        <script>
+            const jobListings = [
+                {
+                    id: 0,
+                    title: "Rust Engineer",
+                    location: "Remote (No location requirement)",
+                    type: "Full-time",
+                    compensation: ["$100K - $150K USD/year", "Equity 0.5-2%"],
+                    descriptions: [
+                        "We're looking for highly skilled Rust engineers who thrive on solving complex problems and pushing the boundaries of blockchain technology.",
+                        "Currently, three team members are in Malaysia, at the Network School (a techstartup society) for the month of March & April (see NS.com). The core team (four members) is based in Bali otherwise",
+                        "Not required, but it's a plus if the candidate is open to Relocating to Bali or Network School or Spending 2-4 weeks with the team in person at some point ",
+                        "You will be reporting to: CEO / Lead Engineers",
+                    ],
+                    requirements: [
+                        "Minimum Experience: 1+ years in Rust development",
+                        "Primary (Must-Have) Skills: Rust, Blockchain development, Building own projects, Applied cryptography",
+                        "Nice to Have (Bonus Skills): Polkadot & Substrate experience, Post-Quantum Cryptography (Lattice Cryptography in particular), Zero-knowledge proof (ZK) design & implementation",
+                    ],
+                    additionalInfos: [
+                        {
+                            title: "Interview & Feedback Process",
+                            contents: [
+                                "We start by reviewing the candidate's GitHub and past projects. If their work is promising, we add them to a Wire group with the team to engage in initial discussions",
+                                "Recruiters will arrange the initial screening and coordinate with us for follow-ups, the interview platform: Wire or Signal",
+                                "First, phone interview, general discussions with core team members on experience and problem-solving approach",
+                                "Second, paid trial (1-2 Weeks), candidates work on a specific task to evaluate their technical skills and collaboration style",
+                                "Based on trial performance, a hiring decision is made. Candidates will receive feedback post-trial, either directly from us or via the recruitment team within 3-5 business days",
+                            ],
+                        },
+                        {
+                            title: "Offer & Hiring Process",
+                            contents: [
+                                "Candidates who complete the paid trial to satisfaction will receive an offer. Formal offer letters will be shared within 1 week post-trial",
+                                "Salary flexibility, open to negotiation for highly exceptional candidates",
+                            ],
+                        },
+                    ],
+                },
+            ];
 
-    <!-- Particles -->
-    <script src="./js/loadParticle.js"></script>
+            // Function to render job listings
+            function renderJobListings() {
+                const jobListingsContainer =
+                    document.getElementById("jobListings");
+                const noJobsMessage = document.getElementById("noJobsMessage");
 
-    <!-- Job listings -->
-    <script>
-      const jobListings = [
-        {
-          id: 0,
-          title: "Rust Engineer",
-          location: "Remote (No location requirement)",
-          type: "Full-time",
-          compensation: ["$100K - $150K USD/year", "Equity 0.5-2%"],
-          descriptions: [
-            "We're looking for highly skilled Rust engineers who thrive on solving complex problems and pushing the boundaries of blockchain technology.",
-            "Currently, three team members are in Malaysia, at the Network School (a techstartup society) for the month of March & April (see NS.com). The core team (four members) is based in Bali otherwise",
-            "Not required, but it's a plus if the candidate is open to Relocating to Bali or Network School or Spending 2-4 weeks with the team in person at some point ",
-            "You will be reporting to: CEO / Lead Engineers",
-          ],
-          requirements: [
-            "Minimum Experience: 1+ years in Rust development",
-            "Primary (Must-Have) Skills: Rust, Blockchain development, Building own projects, Applied cryptography",
-            "Nice to Have (Bonus Skills): Polkadot & Substrate experience, Post-Quantum Cryptography (Lattice Cryptography in particular), Zero-knowledge proof (ZK) design & implementation",
-          ],
-          additionalInfos: [
-            {
-              title: "Interview & Feedback Process",
-              contents: [
-                "We start by reviewing the candidate's GitHub and past projects. If their work is promising, we add them to a Wire group with the team to engage in initial discussions",
-                "Recruiters will arrange the initial screening and coordinate with us for follow-ups, the interview platform: Wire or Signal",
-                "First, phone interview, general discussions with core team members on experience and problem-solving approach",
-                "Second, paid trial (1-2 Weeks), candidates work on a specific task to evaluate their technical skills and collaboration style",
-                "Based on trial performance, a hiring decision is made. Candidates will receive feedback post-trial, either directly from us or via the recruitment team within 3-5 business days",
-              ],
-            },
-            {
-              title: "Offer & Hiring Process",
-              contents: [
-                "Candidates who complete the paid trial to satisfaction will receive an offer. Formal offer letters will be shared within 1 week post-trial",
-                "Salary flexibility, open to negotiation for highly exceptional candidates",
-              ],
-            },
-          ],
-        },
-      ];
+                // Clear existing listings
+                jobListingsContainer.innerHTML = "";
 
-      // Function to render job listings
-      function renderJobListings() {
-        const jobListingsContainer = document.getElementById("jobListings");
-        const noJobsMessage = document.getElementById("noJobsMessage");
+                // Check if there are any jobs
+                if (jobListings.length === 0) {
+                    noJobsMessage.classList.remove("hidden");
+                    return;
+                } else {
+                    noJobsMessage.classList.add("hidden");
+                }
 
-        // Clear existing listings
-        jobListingsContainer.innerHTML = "";
-
-        // Check if there are any jobs
-        if (jobListings.length === 0) {
-          noJobsMessage.classList.remove("hidden");
-          return;
-        } else {
-          noJobsMessage.classList.add("hidden");
-        }
-
-        // Render each job listing
-        jobListings.forEach((job) => {
-          const jobElement = document.createElement("div");
-          jobElement.className = "bg-gray-800 bg-opacity-50 rounded-lg p-6 backdrop-blur-sm hover:bg-opacity-70 transition";
-          jobElement.innerHTML = `
+                // Render each job listing
+                jobListings.forEach((job) => {
+                    const jobElement = document.createElement("div");
+                    jobElement.className =
+                        "bg-gray-800 bg-opacity-50 rounded-lg p-6 backdrop-blur-sm hover:bg-opacity-70 transition";
+                    jobElement.innerHTML = `
                           <div class="flex justify-between items-start">
                               <div>
                                   <h2 class="text-xl font-semibold text-white">${job.title}</h2>
@@ -278,97 +423,113 @@
                                   <p class="text-blue-400">${job.compensation.join(" • ")}</p>
                               </div>
                               <button class="viewDetails hidden sm:inline-block px-6 py-2 bg-gradient-to-r hover:cursor-pointer from-red-600 to-purple-600 rounded-lg text-sm font-semibold hover:opacity-90 transition duration-200 transform hover:scale-105" data-job-id="${
-                                job.id
+                                  job.id
                               }">
                                   View Details
                               </button>
                           </div>
                           <p class="mt-4 text-gray-300">${job.descriptions[0]}</p>
                            <button class="viewDetails w-full inline-block mt-4 sm:hidden px-6 py-2 bg-gradient-to-r hover:cursor-pointer from-red-600 to-purple-600 rounded-lg text-sm font-semibold hover:opacity-90 transition duration-200 transform hover:scale-105" data-job-id="${
-                             job.id
+                               job.id
                            }">
                                   View Details
                               </button>
                       `;
-          jobListingsContainer.appendChild(jobElement);
+                    jobListingsContainer.appendChild(jobElement);
 
-          // Add event listener to the button
-          const viewDetailsButton = jobElement.querySelectorAll(".viewDetails");
-          viewDetailsButton.forEach((node) => node.addEventListener("click", () => openJobModal(job.id)));
-        });
-      }
+                    // Add event listener to the button
+                    const viewDetailsButton =
+                        jobElement.querySelectorAll(".viewDetails");
+                    viewDetailsButton.forEach((node) =>
+                        node.addEventListener("click", () =>
+                            openJobModal(job.id),
+                        ),
+                    );
+                });
+            }
 
-      // Function to open job modal
-      function openJobModal(jobId) {
-        const job = jobListings.find((j) => j.id === jobId);
-        if (!job) return;
+            // Function to open job modal
+            function openJobModal(jobId) {
+                const job = jobListings.find((j) => j.id === jobId);
+                if (!job) return;
 
-        // Set modal content
-        document.getElementById("modalTitle").textContent = job.title;
-        document.getElementById("modalLocation").textContent = `${job.location} • ${job.type}`;
-        document.getElementById("modalCompensation").textContent = job.compensation.join(" • ");
+                // Set modal content
+                document.getElementById("modalTitle").textContent = job.title;
+                document.getElementById("modalLocation").textContent =
+                    `${job.location} • ${job.type}`;
+                document.getElementById("modalCompensation").textContent =
+                    job.compensation.join(" • ");
 
-        // Set description list
-        const descriptionList = document.getElementById("modalDescriptionList");
-        descriptionList.innerHTML = "";
-        job.descriptions.forEach((req) => {
-          const p = document.createElement("p");
-          p.className = "mt-2";
-          p.textContent = req;
-          descriptionList.appendChild(p);
-        });
+                // Set description list
+                const descriptionList = document.getElementById(
+                    "modalDescriptionList",
+                );
+                descriptionList.innerHTML = "";
+                job.descriptions.forEach((req) => {
+                    const p = document.createElement("p");
+                    p.className = "mt-2";
+                    p.textContent = req;
+                    descriptionList.appendChild(p);
+                });
 
-        // Set requirements list
-        const requirementsList = document.getElementById("modalRequirementsList");
-        requirementsList.innerHTML = "";
-        job.requirements.forEach((req) => {
-          const li = document.createElement("li");
-          li.textContent = req;
-          requirementsList.appendChild(li);
-        });
+                // Set requirements list
+                const requirementsList = document.getElementById(
+                    "modalRequirementsList",
+                );
+                requirementsList.innerHTML = "";
+                job.requirements.forEach((req) => {
+                    const li = document.createElement("li");
+                    li.textContent = req;
+                    requirementsList.appendChild(li);
+                });
 
-        // Set additional infos
-        const additionalInfoList = document.getElementById("modalAdditionalInfoList");
-        additionalInfoList.innerHTML = "";
-        job.additionalInfos.forEach((req) => {
-          const div = document.createElement("div");
-          div.className = "mt-4 text-sm text-gray-300";
+                // Set additional infos
+                const additionalInfoList = document.getElementById(
+                    "modalAdditionalInfoList",
+                );
+                additionalInfoList.innerHTML = "";
+                job.additionalInfos.forEach((req) => {
+                    const div = document.createElement("div");
+                    div.className = "mt-4 text-sm text-gray-300";
 
-          const h4 = document.createElement("h4");
-          h4.className = "text-sm font-medium text-white";
-          h4.textContent = req.title;
-          div.appendChild(h4);
+                    const h4 = document.createElement("h4");
+                    h4.className = "text-sm font-medium text-white";
+                    h4.textContent = req.title;
+                    div.appendChild(h4);
 
-          const ul = document.createElement("ul");
-          ul.className = "mt-2 list-disc pl-5 text-sm text-gray-300 space-y-1";
-          div.appendChild(ul);
+                    const ul = document.createElement("ul");
+                    ul.className =
+                        "mt-2 list-disc pl-5 text-sm text-gray-300 space-y-1";
+                    div.appendChild(ul);
 
-          req.contents.forEach((content) => {
-            const li = document.createElement("li");
-            li.textContent = content;
-            ul.appendChild(li);
-          });
+                    req.contents.forEach((content) => {
+                        const li = document.createElement("li");
+                        li.textContent = content;
+                        ul.appendChild(li);
+                    });
 
-          additionalInfoList.appendChild(div);
-        });
+                    additionalInfoList.appendChild(div);
+                });
 
-        // Show the modal
-        document.getElementById("jobModal").classList.remove("hidden");
-      }
+                // Show the modal
+                document.getElementById("jobModal").classList.remove("hidden");
+            }
 
-      // Function to close job modal
-      function closeJobModal() {
-        document.getElementById("jobModal").classList.add("hidden");
-      }
+            // Function to close job modal
+            function closeJobModal() {
+                document.getElementById("jobModal").classList.add("hidden");
+            }
 
-      // Event listeners
-      document.addEventListener("DOMContentLoaded", () => {
-        // Render job listings
-        renderJobListings();
+            // Event listeners
+            document.addEventListener("DOMContentLoaded", () => {
+                // Render job listings
+                renderJobListings();
 
-        // Close job modal
-        document.getElementById("closeModal").addEventListener("click", closeJobModal);
-      });
-    </script>
-  </body>
+                // Close job modal
+                document
+                    .getElementById("closeModal")
+                    .addEventListener("click", closeJobModal);
+            });
+        </script>
+    </body>
 </html>
