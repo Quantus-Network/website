@@ -186,7 +186,9 @@
 
     <!-- Submit Handling -->
     <script>
-      const API_URL = "https://www.resonancenetwork.io/api";
+      // const API_URL = "https://www.resonancenetwork.io/api";
+      const API_URL = "http://localhost:5080/api";
+
 
       // Elements
       const form = document.getElementById("contact-form");
@@ -224,7 +226,7 @@
             body: JSON.stringify({ name: nameValue, email: emailValue, message: messageValue }),
           });
 
-          if (resp.status !== 201) throw new Error("Failed submitting message.");
+          if (resp.status !== 200) throw new Error("Failed submitting message.");
 
           // Make button active after done processing submit
           btn.removeAttribute("disabled");
