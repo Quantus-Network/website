@@ -1,7 +1,7 @@
 {
-  "name": "resonance-landing-page",
+  "name": "quantus-website",
   "version": "0.1.0",
-  "description": "Resonance network landing page",
+  "description": "Quantus website",
   "license": "MIT",
   "type": "module",
   "scripts": {
