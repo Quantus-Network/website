@@ -1,0 +1,70 @@
+---
+import type { Props as CardData } from "./Card.astro";
+import Card from "./Card.astro";
+
+const cardData: CardData[] = [
+  {
+    title: "Quantum Secure at Every Layer",
+    body: "Secured with NIST-backed post-quantum cryptography, every layer of Quantus from transaction signatures to P2P communication is engineered to resist attacks that would break today's blockchains. Built to endure, and ready to evolve with the quantum era.",
+    variant: "benefit-1",
+    qips: [
+      {
+        href: "https://github.com/Quantus-Network/improvement-proposals/blob/main/qip-0002.md",
+        label: "QIP-002",
+      },
+      {
+        href: "https://github.com/Quantus-Network/improvement-proposals/blob/main/qip-0006.md",
+        label: "QIP-006",
+      },
+    ],
+  },
+  {
+    title: "Zero-Knowledge by Design",
+    body: "Recursive zero-knowledge proofs keep the network fast. Instead of reprocessing everything, nodes verify compact proofs - reducing overhead and ensuring the system grows smoothly under real demand.",
+    variant: "benefit-2",
+    qips: [
+      {
+        href: "https://github.com/Quantus-Network/improvement-proposals/blob/main/qip-0005.md",
+        label: "QIP-005",
+      },
+    ],
+  },
+  {
+    title: "Security You Control",
+    body: "Quantus puts you in charge. You decide how assets move, how they're protected, and who to trust. Complexity is handled in the background, so your experience feels clear, secure, and built to last into the quantum future.",
+    variant: "benefit-3",
+    qips: [
+      {
+        href: "https://github.com/Quantus-Network/improvement-proposals/blob/main/qip-0011.md",
+        label: "QIP-011",
+      },
+    ],
+  },
+];
+---
+
+<section
+  class="relative flex flex-col items-center overflow-hidden px-[30px] pt-[105px] pb-[60px]"
+>
+  <span
+    class="font-giant-mobile text-gradient-giant absolute top-16 -z-10 text-[44px] min-[393px]:text-[54px]"
+    >FOUNDATIONS</span
+  >
+  <div class="mb-[63px]">
+    <h2 class="font-large-title-mobile mb-[18px] text-center">
+      The Future is Quantum
+    </h2>
+
+    <p class="font-body-mobile text-center">
+      Quantus Network is a Layer 1 blockchain designed to thrive in the quantum
+      era. Secured with post-quantum cryptography and scaled with zero-knowledge
+      proofs, it delivers a level of security, scalability and usability that
+      today's chains can't match. A clean-slate design that anticipates the
+      coming wave of quantum technology.
+    </p>
+  </div>
+
+  <div class="flex flex-col items-center gap-[63px]">
+    {cardData.map((data) => <Card {...data} />)}
+  </div>
+</section>

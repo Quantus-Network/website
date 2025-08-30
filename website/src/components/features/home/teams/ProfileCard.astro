@@ -1,0 +1,28 @@
+---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+import Separator from "@/components/ui/Separator.astro";
+
+export interface Props {
+  name: string;
+  title: string;
+  avatar: {
+    alt: string;
+    src: ImageMetadata;
+  };
+}
+
+const { name, title, avatar } = Astro.props;
+---
+
+<figure class="flex flex-col gap-6">
+  <Image class="w-full" src={avatar.src} alt={avatar.alt} layout="full-width" />
+
+  <figcaption class="flex w-[280px] flex-col gap-2">
+    <strong class="font-tag">{name}</strong>
+
+    <Separator class="h-[0.5px]" />
+
+    <p class="font-body text-text-content-secondary">{title}</p>
+  </figcaption>
+</figure>

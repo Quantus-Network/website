@@ -1,0 +1,20 @@
+---
+import { applyStyles } from "@/utils/apply-styles";
+
+const { class: className } = Astro.props;
+---
+
+<div class={applyStyles("timeline w-[7px] absolute -z-10", className)}></div>
+
+<style>
+  .timeline {
+    border-radius: 7.5px;
+    background: linear-gradient(
+      0deg,
+      #ffe91f -0.24%,
+      #ed4cce 48.86%,
+      #00f 85.69%,
+      #1f1fa3 97.97%
+    );
+  }
+</style>

@@ -1,0 +1,60 @@
+---
+import Button from "@/components/ui/Button.astro";
+import SiteSocials from "@/components/ui/SiteSocials.astro";
+import SphereDecoration from "@/components/ui/SphereDecoration.astro";
+import { SITE_NAVIGATIONS } from "@/constants/site-navigations";
+import { applyStyles } from "@/utils/apply-styles";
+
+const currentPath = Astro.url.pathname;
+const isCurrentPage = (href: string) => currentPath === href;
+---
+
+<div
+  class="mobile-menu bg-navbar-mobile-menu navbar-desktop:hidden absolute left-0 z-10 hidden w-full flex-col items-center overflow-hidden px-9 py-[62px]"
+  id="mobile-menu"
+>
+  <SphereDecoration
+    class="absolute -top-[0.8rem] -right-[5rem] -z-10"
+    variant="1"
+    size={202}
+  />
+  <SphereDecoration
+    class="absolute top-[5.5rem] -z-10"
+    variant="2"
+    size={320}
+  />
+  <SphereDecoration
+    class="absolute -bottom-[3rem] -left-[6rem] -z-10"
+    variant="3"
+    size={283}
+  />
+  <div class="flex w-full flex-col gap-8">
+    {
+      SITE_NAVIGATIONS.map((item) => (
+        <a
+          href={item.href}
+          class={applyStyles(
+            "text-navbar-link font-larger-body block transition-colors duration-200 hover:font-bold",
+            isCurrentPage(item.href) && "font-bold",
+          )}
+          aria-current={isCurrentPage(item.href) ? "page" : undefined}
+        >
+          {item.label}
+        </a>
+      ))
+    }
+  </div>
+
+  <SiteSocials class="mt-18 justify-center" />
+
+  <Button class="mt-9">Join the Public BETA</Button>
+</div>
+
+<style>
+  /* Ensure smooth transitions */
+  .mobile-menu {
+    transition:
+      opacity 0.2s ease-in-out,
+      transform 0.2s ease-in-out;
+  }
+</style>

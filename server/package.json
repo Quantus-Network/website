@@ -1,0 +1,48 @@
+{
+  "name": "quantus-website",
+  "version": "0.1.0",
+  "description": "Quantus website",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "node dist/src/app.js",
+    "dev": "concurrently \"npm run build:watch\" \"nodemon --exec npm start\"",
+    "clean": "rimraf coverage build tmp",
+    "build": "tsc -p tsconfig.json && tsc-alias -p tsconfig.json",
+    "build:watch": "concurrently \"tsc -w -p tsconfig.json\" \"tsc-alias -w -p tsconfig.json\"",
+    "build:release": "npm run clean && tsc -p tsconfig.release.json",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "node dist/src/models/scripts/migration.js -start",
+    "db:recreate": "node dist/src/models/scripts/recreate.js -start",
+    "db:update": "npm run build && npm run db:generate && npm run db:migrate",
+    "db:startover": "rimraf src/models/migration && npm run build && npm run db:generate && node dist/src/models/scripts/startover.js",
+    "postinstall": "node ./drizzle-pg-timestamp-patch.js"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.0.6",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/json-bigint": "^1.0.4",
+    "@types/node": "^22.13.4",
+    "@types/nodemailer": "^6.4.17",
+    "@types/pg": "^8.11.11",
+    "drizzle-kit": "^0.30.4",
+    "rimraf": "^6.0.1",
+    "tailwindcss": "^4.0.6",
+    "tsc-alias": "^1.8.10",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "drizzle-orm": "^0.39.3",
+    "express": "^4.21.2",
+    "helmet": "^8.0.0",
+    "json-bigint": "^1.0.0",
+    "nodemailer": "^7.0.3",
+    "pg": "^8.13.3",
+    "winston": "^3.17.0",
+    "winston-daily-rotate-file": "^5.0.0"
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+}

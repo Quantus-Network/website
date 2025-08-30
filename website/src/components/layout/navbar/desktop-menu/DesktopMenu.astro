@@ -1,0 +1,26 @@
+---
+import { SITE_NAVIGATIONS } from "@/constants/site-navigations";
+import { applyStyles } from "@/utils/apply-styles";
+
+const currentPath = Astro.url.pathname;
+const isCurrentPage = (href: string) => currentPath === href;
+---
+
+<div class="navbar-desktop:block hidden">
+  <div class="flex items-center gap-x-4">
+    {
+      SITE_NAVIGATIONS.map((item) => (
+        <a
+          href={item.href}
+          class={applyStyles(
+            "text-navbar-link block transition-colors duration-200 hover:font-bold",
+            isCurrentPage(item.href) && "font-bold",
+          )}
+          aria-current={isCurrentPage(item.href) ? "page" : undefined}
+        >
+          {item.label}
+        </a>
+      ))
+    }
+  </div>
+</div>

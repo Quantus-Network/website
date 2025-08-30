@@ -1,0 +1,25 @@
+---
+import Button from "@/components/ui/Button.astro";
+import SphereDecoration from "@/components/ui/SphereDecoration.astro";
+---
+
+<div class="relative flex flex-col overflow-hidden px-[30px] pt-20 pb-[84px]">
+  <SphereDecoration
+    class="absolute top-[1rem] left-[4.7rem] -z-10"
+    variant="8"
+    size={190}
+  />
+  <SphereDecoration
+    class="absolute -right-[14rem] bottom-[5rem] -z-10"
+    variant="9"
+    size={346}
+  />
+
+  <p class="font-tag-caps text-text-title-secondary mb-5">
+    Public beta now live
+  </p>
+  <h2 class="font-medium-title-mobile mb-12">
+    They say quantum is years away. They said the same about AI.
+  </h2>
+  <Button>Join the Quantum Wave</Button>
+</div>

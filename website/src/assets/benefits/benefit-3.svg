@@ -1,0 +1,27 @@
+<svg width="343" height="326" viewBox="0 0 343 326" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_28_390)">
+<path d="M304.975 53.2319C317.944 66.3231 271.801 132.908 201.911 201.929C132.021 270.951 64.8594 316.309 51.9041 303.218" stroke="#F4F6F9" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M182.381 324.623C261.064 324.623 324.849 260.915 324.849 182.327C324.849 103.739 261.064 40.0308 182.381 40.0308C103.698 40.0308 39.9136 103.739 39.9136 182.327C39.9136 260.915 103.698 324.623 182.381 324.623Z" fill="url(#paint0_linear_28_390)"/>
+<path d="M51.9042 303.218C38.935 290.126 85.0781 223.542 154.968 154.52C224.858 85.4851 292.019 40.1408 304.975 53.232" stroke="#F4F6F9" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M52.8137 304.126C-16.3045 234.32 -15.6843 121.785 54.2057 52.7502C124.096 -16.285 236.766 -15.6655 305.884 54.1405" stroke="#F4F6F9" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M341.608 275.493C341.608 248.36 319.585 226.364 292.419 226.364C265.253 226.364 243.23 248.36 243.23 275.493C243.23 302.627 265.253 324.623 292.419 324.623C319.585 324.623 341.608 302.627 341.608 275.493Z" stroke="#F4F6F9" stroke-width="2" stroke-miterlimit="10"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_28_390" x1="283.13" y1="282.955" x2="81.8887" y2="81.4576" gradientUnits="userSpaceOnUse">
+<stop offset="0.07" stop-color="#0000FF"/>
+<stop offset="0.11" stop-color="#0A03FC"/>
+<stop offset="0.18" stop-color="#250BF7"/>
+<stop offset="0.26" stop-color="#5119EE"/>
+<stop offset="0.36" stop-color="#8D2DE1"/>
+<stop offset="0.48" stop-color="#DA46D1"/>
+<stop offset="0.5" stop-color="#ED4CCE"/>
+<stop offset="0.63" stop-color="#F2799B"/>
+<stop offset="0.8" stop-color="#F9B558"/>
+<stop offset="0.93" stop-color="#FDDA2E"/>
+<stop offset="1" stop-color="#FFE91F"/>
+</linearGradient>
+<clipPath id="clip0_28_390">
+<rect width="343" height="326" fill="white"/>
+</clipPath>
+</defs>
+</svg>

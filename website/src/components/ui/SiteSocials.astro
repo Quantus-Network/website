@@ -1,0 +1,37 @@
+---
+import { SITE_SOCIALS, type SiteSocial } from "@/constants/site-socials";
+import { applyStyles } from "@/utils/apply-styles";
+
+import SocialX from "@/assets/socials/social-x.svg";
+import SocialIG from "@/assets/socials/social-ig.svg";
+import SocialYT from "@/assets/socials/social-yt.svg";
+import SocialTelegram from "@/assets/socials/social-telegram.svg";
+import SocialGithub from "@/assets/socials/social-github.svg";
+
+export interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+
+const socials = Object.entries(SITE_SOCIALS) as [SiteSocial, string][];
+---
+
+<div class={applyStyles("flex gap-4 flex-wrap", className)}>
+  {
+    socials.map((social) => (
+      <a
+        href={social[1]}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-button-icon bg-button-icon-body flex size-12 cursor-pointer items-center justify-center rounded-full hover:brightness-125"
+      >
+        {social[0] === "x" && <SocialX />}
+        {social[0] === "instagram" && <SocialIG />}
+        {social[0] === "youtube" && <SocialYT />}
+        {social[0] === "telegram" && <SocialTelegram />}
+        {social[0] === "github" && <SocialGithub />}
+      </a>
+    ))
+  }
+</div>

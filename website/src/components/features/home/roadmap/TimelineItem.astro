@@ -1,0 +1,24 @@
+---
+export interface Props {
+  date: string;
+  title: string;
+  content: string;
+}
+
+const { date, title, content } = Astro.props;
+---
+
+<div class="flex gap-[30px]">
+  <div class="relative flex items-center">
+    <div class="bg-roadmap-marker size-[25px] p-[6px]"></div>
+    <div class="bg-marker-line absolute left-[1.2rem] h-px w-[30px]"></div>
+  </div>
+
+  <div>
+    <span class="font-roadmap-date text-gradient-roadmap relative top-[1.8rem]"
+      >{date}</span
+    >
+    <h3 class="font-small-title mb-3">{title}</h3>
+    <p class="font-body-mobile">{content}</p>
+  </div>
+</div>

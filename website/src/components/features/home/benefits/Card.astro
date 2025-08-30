@@ -1,0 +1,48 @@
+---
+import Tag from "@/components/ui/Tag.astro";
+import BenefitOne from "@/assets/benefits/benefit-1.svg";
+import BenefitTwo from "@/assets/benefits/benefit-2.svg";
+import BenefitThree from "@/assets/benefits/benefit-3.svg";
+
+type Qip = { label: string; href: string };
+type Variant = "benefit-1" | "benefit-2" | "benefit-3";
+
+export interface Props {
+  variant: Variant;
+  title: string;
+  body: string;
+  qips: Qip[];
+}
+
+const { body, qips, title, variant } = Astro.props;
+---
+
+<div class="flex flex-col items-center gap-[50px]">
+  <div>
+    {variant === "benefit-1" && <BenefitOne width={271} height={262} />}
+    {variant === "benefit-2" && <BenefitTwo width={251} height={265} />}
+    {variant === "benefit-3" && <BenefitThree width={259} height={246} />}
+  </div>
+
+  <div class="flex flex-col gap-[15px]">
+    <h3 class="text-text-title-secondary font-small-title">
+      {title}
+    </h3>
+
+    <p class="font-body-mobile">
+      {body}
+    </p>
+
+    <div class="flex gap-[25px] underline">
+      {
+        qips.map((qip) => (
+          <Tag>
+            <a href={qip.href} target="_blank" rel="noopener noreferrer">
+              {qip.label}
+            </a>
+          </Tag>
+        ))
+      }
+    </div>
+  </div>
+</div>
