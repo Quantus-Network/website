@@ -4,6 +4,7 @@ import BrandName from "@/assets/brand/brand-name.svg";
 
 import Button from "@/components/ui/Button.astro";
 import Input from "@/components/ui/Input.astro";
+import MessageAlert from "@/components/ui/MessageAlert.astro";
 import Separator from "@/components/ui/Separator.astro";
 import SphereDecoration from "@/components/ui/SphereDecoration.astro";
 
@@ -47,19 +48,33 @@ const isCurrentPage = (href: string) => currentPath === href;
     </div>
 
     <form
+      id="footer-subscribe-form"
       method="post"
       class="flex w-full max-w-[calc(377px+150px)] flex-col items-end gap-5 md:flex-row md:items-center md:gap-3"
     >
       <Input
         class="md:max-w-[377px]"
-        id="footer-subscribe-form"
+        id="footer-subscribe-input"
         type="email"
         name="email"
         placeholder="Enter your email"
         required
       />
-      <Button type="submit" class="w-[150px]">Subscribe</Button>
+      <Button id="footer-subscribe-button" type="submit" class="w-[150px]"
+        >Subscribe</Button
+      >
     </form>
+
+    <MessageAlert
+      id="error"
+      type="error"
+      message="Error: something is going wrong."
+    />
+    <MessageAlert
+      id="success"
+      type="success"
+      message="Welcome to quantum security 🎉"
+    />
   </div>
 
   <div class="max-w-content mx-auto w-full">
@@ -127,6 +142,71 @@ const isCurrentPage = (href: string) => currentPath === href;
     Copyright &copy; <span id="copy-year">{year}</span> Quantus Network
   </p>
 </footer>
+
+<script>
+  import apiClient from "@/api/client";
+
+  const form = document.getElementById(
+    "footer-subscribe-form",
+  ) as HTMLFormElement;
+  const email = document.getElementById(
+    "footer-subscribe-input",
+  ) as HTMLInputElement;
+  const btn = document.getElementById("footer-subscribe-button");
+
+  const successAlert = document.getElementById("alert-success");
+  const errorAlert = document.getElementById("alert-error");
+  const errorMessage = document.getElementById("alert-message-error");
+
+  if (!form || !email || !btn)
+    throw new Error("Form not detected, can't do submission!");
+
+  // Events
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    // Make button disabled
+    btn.setAttribute("disabled", "true");
+
+    // Hide messages if currently displayed
+    successAlert?.classList.add("hidden");
+    errorAlert?.classList.add("hidden");
+
+    // Make sure the input is not empty
+    const emailValue = email?.value?.trim();
+    if (!emailValue) throw new Error("Email is required.");
+
+    try {
+      const resp = await apiClient.subscribe(emailValue);
+
+      if (resp.status !== 201) throw new Error("Failed adding to waitlist.");
+
+      // Make button active after done processing submit
+      btn.removeAttribute("disabled");
+
+      // Show success message
+      successAlert?.classList.remove("hidden");
+      setTimeout(() => {
+        successAlert?.classList.add("hidden");
+      }, 3000);
+
+      // Reset form
+      form.reset();
+    } catch (error: any) {
+      // Make button active after done processing submit
+      btn.removeAttribute("disabled");
+
+      const errMsg = error.message;
+      if (errMsg && errorMessage) errorMessage.textContent = errMsg;
+
+      // Show error message
+      errorAlert?.classList.remove("hidden");
+      setTimeout(() => {
+        errorAlert?.classList.add("hidden");
+      }, 3000);
+    }
+  });
+</script>
 
 <script>
   const copyYear = document.getElementById("copy-year");
