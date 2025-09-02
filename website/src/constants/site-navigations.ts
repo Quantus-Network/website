@@ -5,5 +5,5 @@ export const SITE_NAVIGATIONS = [
   { href: "#teams", label: "Team" },
   { href: "#roadmap", label: "Roadmap" },
   { href: "#events", label: "Events" },
-  { href: "/contact", label: "Contact" },
+  { href: "/contact-us", label: "Contact" },
 ] as const;

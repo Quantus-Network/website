@@ -119,6 +119,8 @@ const isCurrentPage = (href: string) => currentPath === href;
                 <li>
                   <a
                     href={navItem.href}
+                    target={navItem?.target}
+                    rel={navItem?.rel}
                     class={applyStyles(
                       "font-small text-text-content-secondary transition-colors duration-200 hover:text-white",
                       isCurrentPage(navItem.href) && "text-white",

@@ -1,18 +1,43 @@
-export const FOOTER_NAVIGATIONS = [
+interface Navigation {
+  label: string;
+  children: {
+    href: string;
+    label: string;
+    target?: string;
+    rel?: string;
+  }[];
+}
+
+export const FOOTER_NAVIGATIONS: Navigation[] = [
   {
     label: "Resources",
     children: [
-      { href: "/community", label: "Community" },
-      { href: "/tutorials", label: "Tutorials" },
-      { href: "/documentation", label: "Documentation" },
-      { href: "/supports", label: "Tech Support" },
+      {
+        href: "https://t.me/quantusnetwork",
+        label: "Community",
+        target: "_blank",
+        rel: "noopener noreferrer",
+      },
+      // { href: "/tutorials", label: "Tutorials" },
+      {
+        href: "https://github.com/Quantus-Network/chain",
+        label: "Documentation",
+        target: "_blank",
+        rel: "noopener noreferrer",
+      },
+      {
+        href: "https://t.me/quantustechsupport",
+        label: "Tech Support",
+        target: "_blank",
+        rel: "noopener noreferrer",
+      },
     ],
   },
   {
     label: "Info",
     children: [
       { href: "/about", label: "Company" },
-      { href: "/audits", label: "Audits" },
+      // { href: "/audits", label: "Audits" },
       { href: "/terms", label: "Terms & Conditions" },
       { href: "/privacy-policy", label: "Privacy Policy" },
     ],
