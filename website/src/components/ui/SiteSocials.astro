@@ -7,6 +7,7 @@ import SocialIG from "@/assets/socials/social-ig.svg";
 import SocialYT from "@/assets/socials/social-yt.svg";
 import SocialTelegram from "@/assets/socials/social-telegram.svg";
 import SocialGithub from "@/assets/socials/social-github.svg";
+import SocialLinktree from "@/assets/socials/social-linktree.svg";
 
 export interface Props {
   class?: string;
@@ -31,6 +32,7 @@ const socials = Object.entries(SITE_SOCIALS) as [SiteSocial, string][];
         {social[0] === "youtube" && <SocialYT />}
         {social[0] === "telegram" && <SocialTelegram />}
         {social[0] === "github" && <SocialGithub />}
+        {social[0] === "linktree" && <SocialLinktree />}
       </a>
     ))
   }
