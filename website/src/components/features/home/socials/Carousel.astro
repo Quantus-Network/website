@@ -1,0 +1,270 @@
+---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+// Carousel.astro
+export interface CarouselItem {
+  id: string;
+  alt: string;
+  href: string;
+  src: ImageMetadata;
+}
+
+export interface Props {
+  items: CarouselItem[];
+  autoplay?: boolean;
+  autoplayInterval?: number;
+  showDots?: boolean;
+  className?: string;
+  slideClassName?: string;
+  renderCustomContent?: boolean;
+}
+
+const {
+  items = [],
+  autoplay = false,
+  autoplayInterval = 3000,
+  showDots = true,
+  className = "",
+  slideClassName = "",
+  renderCustomContent = false,
+} = Astro.props;
+
+const carouselId = `carousel-${Math.random().toString(36).substring(2, 9)}`;
+---
+
+<div class={`relative w-full ${className}`} data-carousel-id={carouselId}>
+  <div class="relative flex w-full items-center">
+    <div class="w-full overflow-hidden rounded-lg">
+      <div class="carousel-track ms-[calc(-132px+50vw)] flex gap-5" data-track>
+        {
+          items.map((item, index) => (
+            <div
+              class={`min-h-[200px] w-fit flex-none ${slideClassName}`}
+              data-slide-index={index}
+              data-item-id={item.id}
+            >
+              <div class="flex h-full w-full items-center justify-center">
+                <slot name="slide">
+                  <div class="flex h-full w-full items-center justify-center rounded-[10px] text-center">
+                    <a
+                      class="inline-block h-[394px] w-[264px]"
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Image
+                        class="w-full"
+                        src={item.src}
+                        alt={item.alt}
+                        widths={[264, 281]}
+                        sizes={"(min-width: 281px) 100vw, 264px"}
+                        layout="full-width"
+                      />
+                    </a>
+                  </div>
+                </slot>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+
+  {
+    showDots && items.length > 1 && (
+      <div class="mt-8 flex justify-center gap-2">
+        {items.map((_, index) => (
+          <button
+            class="border-carousel-dot-border hover:bg-quantus-dark-blue [&.active]:bg-carousel-dot size-4 cursor-pointer rounded-full border transition-colors duration-200 [&.active]:w-10 [&.active]:rounded-[23px] [&.active]:border-none"
+            data-slide={index}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
+      </div>
+    )
+  }
+</div>
+
+<style>
+  .carousel-track {
+    transition: transform 0.3s ease-in-out;
+    will-change: transform;
+  }
+</style>
+
+<script
+  define:vars={{
+    carouselId,
+    autoplay,
+    autoplayInterval,
+    renderCustomContent,
+  }}
+>
+  class Carousel {
+    constructor(container, options = {}) {
+      this.container = container;
+      this.track = container.querySelector("[data-track]");
+      this.slides = Array.from(
+        container.querySelectorAll("[data-slide-index]"),
+      );
+      this.dots = Array.from(container.querySelectorAll("[data-slide]"));
+
+      this.currentIndex = 0;
+      this.autoplay = options.autoplay || false;
+      this.autoplayInterval = options.autoplayInterval || 3000;
+      this.autoplayTimer = null;
+      this.renderCustomContent = options.renderCustomContent || false;
+
+      this.init();
+    }
+
+    init() {
+      if (this.slides.length === 0) return;
+
+      // Render custom content if enabled
+      if (this.renderCustomContent) {
+        this.renderSlideContent();
+      }
+
+      this.updateSlidePosition();
+      this.updateDots();
+      this.updateArrows();
+      this.bindEvents();
+
+      if (this.autoplay) {
+        this.startAutoplay();
+      }
+    }
+
+    bindEvents() {
+      // Dot navigation
+      this.dots.forEach((dot, index) => {
+        dot.addEventListener("click", () => this.goToSlide(index));
+      });
+
+      // Keyboard navigation
+      this.container.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowLeft") this.goToPrevious();
+        if (e.key === "ArrowRight") this.goToNext();
+      });
+
+      // Pause autoplay on hover
+      if (this.autoplay) {
+        this.container.addEventListener("mouseenter", () =>
+          this.stopAutoplay(),
+        );
+        this.container.addEventListener("mouseleave", () =>
+          this.startAutoplay(),
+        );
+      }
+
+      // Touch/swipe support
+      let startX = 0;
+      let isDragging = false;
+
+      this.track.addEventListener("touchstart", (e) => {
+        startX = e.touches[0].clientX;
+        isDragging = true;
+      });
+
+      this.track.addEventListener("touchmove", (e) => {
+        if (!isDragging) return;
+        e.preventDefault();
+      });
+
+      this.track.addEventListener("touchend", (e) => {
+        if (!isDragging) return;
+        isDragging = false;
+
+        const endX = e.changedTouches[0].clientX;
+        const diff = startX - endX;
+        const threshold = 50;
+
+        if (Math.abs(diff) > threshold) {
+          if (diff > 0) {
+            this.goToNext();
+          } else {
+            this.goToPrevious();
+          }
+        }
+      });
+    }
+
+    goToSlide(index) {
+      if (index < 0 || index >= this.slides.length) return;
+
+      this.currentIndex = index;
+      this.updateSlidePosition();
+      this.updateDots();
+      this.updateArrows();
+    }
+
+    goToNext() {
+      if (this.currentIndex < this.slides.length - 1) {
+        this.goToSlide(this.currentIndex + 1);
+      }
+    }
+
+    goToPrevious() {
+      if (this.currentIndex > 0) {
+        this.goToSlide(this.currentIndex - 1);
+      }
+    }
+
+    updateSlidePosition() {
+      const translateX = -this.currentIndex * (264 + 20); // 264 = slide width + slide gap
+      this.track.style.transform = `translateX(${translateX}px)`;
+    }
+
+    updateDots() {
+      this.dots.forEach((dot, index) => {
+        dot.classList.toggle("active", index === this.currentIndex);
+      });
+    }
+
+    updateArrows() {
+      if (this.prevButton) {
+        this.prevButton.disabled = this.currentIndex === 0;
+      }
+      if (this.nextButton) {
+        this.nextButton.disabled = this.currentIndex === this.slides.length - 1;
+      }
+    }
+
+    startAutoplay() {
+      if (!this.autoplay || this.slides.length <= 1) return;
+
+      this.stopAutoplay();
+      this.autoplayTimer = setInterval(() => {
+        this.goToNext();
+      }, this.autoplayInterval);
+    }
+
+    stopAutoplay() {
+      if (this.autoplayTimer) {
+        clearInterval(this.autoplayTimer);
+        this.autoplayTimer = null;
+      }
+    }
+
+    destroy() {
+      this.stopAutoplay();
+    }
+  }
+
+  // Initialize carousel when DOM is ready
+  document.addEventListener("DOMContentLoaded", () => {
+    const container = document.querySelector(
+      `[data-carousel-id="${carouselId}"]`,
+    );
+    if (container) {
+      new Carousel(container, {
+        autoplay,
+        autoplayInterval,
+        renderCustomContent,
+      });
+    }
+  });
+</script>

@@ -1,7 +1,7 @@
 ---
 import { applyStyles } from "@/utils/apply-styles";
 
-type Variant = "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9";
+type Variant = "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "10";
 
 interface Props {
   variant: Variant;
@@ -108,5 +108,10 @@ const { variant, size, class: className } = Astro.props;
       #1f1fa3 106.16%
     );
     filter: blur(15px);
+  }
+
+  .sphere-10 {
+    background: linear-gradient(315deg, #ed4cce 35.78%, #ffe91f 86.41%);
+    filter: blur(16.5px);
   }
 </style>

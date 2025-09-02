@@ -13,6 +13,9 @@
   --color-video-player-icon: #f4f6f9;
   --color-video-player-icon-body: #3d3c444d;
 
+  /* Carousel Colors */
+  --color-carousel-dot-border: #ffffff99;
+
   /* Navbar Colors */
   --color-navbar-body: #0c1014;
   --color-navbar-mobile-menu: #0c1014;
@@ -125,5 +128,8 @@
   );
 }
 @utility bg-app-download {
-  background: linear-gradient(1deg, #0C1014 8.13%, #00F 54.27%, #ED4CCE 97.13%);
+  background: linear-gradient(1deg, #0c1014 8.13%, #00f 54.27%, #ed4cce 97.13%);
+}
+@utility bg-carousel-dot {
+  background: linear-gradient(180deg, #ed4cce 28.03%, #ffe91f 100%);
 }
