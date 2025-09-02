@@ -24,4 +24,9 @@
   h6 {
     color: var(--color-text-title-primary);
   }
+
+  b,
+  strong {
+    font-weight: 600;
+  }
 }

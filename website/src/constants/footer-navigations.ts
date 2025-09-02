@@ -38,8 +38,11 @@ export const FOOTER_NAVIGATIONS: Navigation[] = [
     children: [
       { href: "/about", label: "Company" },
       // { href: "/audits", label: "Audits" },
-      { href: "/terms", label: "Terms & Conditions" },
-      { href: "/privacy-policy", label: "Privacy Policy" },
+      {
+        href: "/terms-and-privacy#terms",
+        label: "Terms & Conditions",
+      },
+      { href: "/terms-and-privacy#privacy", label: "Privacy Policy" },
     ],
   },
 ] as const;

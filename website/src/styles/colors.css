@@ -133,3 +133,15 @@
 @utility bg-carousel-dot {
   background: linear-gradient(180deg, #ed4cce 28.03%, #ffe91f 100%);
 }
+@utility text-terms-title {
+  background: linear-gradient(180deg, #ed4cce 28.03%, #ffe91f 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@utility text-privacy-title {
+  background: linear-gradient(46deg, #ed4cce 48.91%, #00f 85.85%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
