@@ -11,6 +11,9 @@ export interface Props {
   ariaDescribedBy?: string;
   class?: string;
   onclick?: string;
+  href?: string;
+  target?: string;
+  rel?: string;
 }
 
 const {
@@ -22,6 +25,9 @@ const {
   ariaDescribedBy,
   class: className = "",
   onclick,
+  href,
+  target,
+  rel,
   ...rest
 } = Astro.props;
 
@@ -31,23 +37,46 @@ const sizeClasses = `btn--${size}`;
 const disabledClasses = disabled ? "btn--disabled" : "";
 ---
 
-<button
-  type={type}
-  class={applyStyles(
-    baseClasses,
-    variantClasses,
-    sizeClasses,
-    disabledClasses,
-    className,
-  )}
-  disabled={disabled}
-  aria-label={ariaLabel}
-  aria-describedby={ariaDescribedBy}
-  onclick={onclick}
-  {...rest}
->
-  <slot />
-</button>
+{
+  !href && (
+    <button
+      type={type}
+      class={applyStyles(
+        baseClasses,
+        variantClasses,
+        sizeClasses,
+        disabledClasses,
+        className,
+      )}
+      disabled={disabled}
+      aria-label={ariaLabel}
+      aria-describedby={ariaDescribedBy}
+      onclick={onclick}
+      {...rest}
+    >
+      <slot />
+    </button>
+  )
+}
+
+{
+  href && (
+    <a
+      class={applyStyles(
+        baseClasses,
+        variantClasses,
+        sizeClasses,
+        disabledClasses,
+        className,
+      )}
+      href={href}
+      target={target ?? "_blank"}
+      rel={rel ?? "noopener noreferrer"}
+    >
+      <slot />
+    </a>
+  )
+}
 
 <style>
   .btn {

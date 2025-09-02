@@ -5,7 +5,10 @@ import Button from "@/components/ui/Button.astro";
 import Token2049 from "@/assets/events/token-2049-singapore.png";
 ---
 
-<section class="flex flex-col items-center overflow-hidden pt-[45px] pb-[72px]">
+<section
+  id="events"
+  class="flex flex-col items-center overflow-hidden pt-[45px] pb-[72px]"
+>
   <div class="mb-[37px] flex flex-col items-center">
     <span
       class="font-event-section text-gradient-giant relative top-[3.7rem] text-center"
@@ -47,5 +50,9 @@ import Token2049 from "@/assets/events/token-2049-singapore.png";
     />
   </div>
 
-  <Button class="mt-[119px] w-[295px]" variant="outline">Event Details</Button>
+  <Button
+    href="https://www.asia.token2049.com/"
+    class="mt-[119px] w-[295px]"
+    variant="outline">Event Details</Button
+  >
 </section>

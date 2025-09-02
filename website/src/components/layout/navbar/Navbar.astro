@@ -11,7 +11,7 @@ import Button from "@/components/ui/Button.astro";
 ---
 
 <nav
-  class="bg-navbar-body navbar-desktop:pt-[50px] relative h-[139px] pt-[70px]"
+  class="bg-navbar-body navbar-desktop:pt-[50px] fixed top-0 z-10 h-[139px] w-full pt-[70px]"
   role="navigation"
   aria-label="Main navigation"
 >
@@ -31,7 +31,7 @@ import Button from "@/components/ui/Button.astro";
 
       <!-- CTA Button (Desktop) -->
       <div class="navbar-desktop:block hidden">
-        <Button>Join the Public BETA</Button>
+        <Button target="_self" href="/app">Join the Public BETA</Button>
       </div>
 
       <!-- Mobile menu button -->
@@ -55,7 +55,7 @@ import Button from "@/components/ui/Button.astro";
     </div>
   </div>
 
-  <Separator />
+  <Separator class="absolute bottom-0" />
   <MobileMenu />
 </nav>
 
