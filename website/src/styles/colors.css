@@ -124,3 +124,6 @@
     rgba(255, 255, 255, 0) 115.65%
   );
 }
+@utility bg-app-download {
+  background: linear-gradient(1deg, #0C1014 8.13%, #00F 54.27%, #ED4CCE 97.13%);
+}

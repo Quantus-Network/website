@@ -1,7 +1,7 @@
 ---
 import Separator from "@/components/ui/Separator.astro";
 
-interface Props {
+export interface Props {
   title: string;
   content: string;
 }
@@ -10,10 +10,10 @@ const { title, content } = Astro.props;
 ---
 
 <div
-  class="bg-app-benefit-card relative rounded-[10px] px-10 py-[35px] backdrop-blur-[20px]"
+  class="bg-app-benefit-card relative rounded-[10px] flex flex-col gap-[10px] px-[35px] py-10 backdrop-blur-[20px]"
 >
   <Separator class="absolute top-0 left-0" variant="2" />
 
-  <p>{title}</p>
-  <p>{content}</p>
+  <p class="font-tag">{title}</p>
+  <p class="font-small">{content}</p>
 </div>
