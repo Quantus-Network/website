@@ -8,17 +8,25 @@ export interface Props {
 const { date, title, content } = Astro.props;
 ---
 
-<div class="flex gap-[30px]">
-  <div class="relative flex items-center">
+<div
+  class="group flex gap-[30px] lg:relative lg:odd:right-[47%] lg:odd:justify-end lg:odd:text-end lg:even:left-[47%]"
+>
+  <div class="relative flex items-center lg:group-odd:hidden">
     <div class="bg-roadmap-marker size-[25px] p-[6px]"></div>
     <div class="bg-marker-line absolute left-[1.2rem] h-px w-[30px]"></div>
   </div>
 
-  <div>
+  <div class="lg:max-w-[380px]">
     <span class="font-roadmap-date text-gradient-roadmap relative top-[1.8rem]"
       >{date}</span
     >
     <h3 class="font-small-title mb-3">{title}</h3>
-    <p class="font-body-mobile">{content}</p>
+    <p class="font-body-mobile lg:font-large-body">{content}</p>
+  </div>
+
+  <div class="relative hidden items-center lg:group-odd:flex">
+    <div class="bg-marker-line absolute right-[1.2rem] z-[1] h-px w-[30px]">
+    </div>
+    <div class="bg-roadmap-marker size-[25px] p-[6px]"></div>
   </div>
 </div>

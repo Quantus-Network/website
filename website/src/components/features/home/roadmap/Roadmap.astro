@@ -39,15 +39,22 @@ const timelineData: TimelineData[] = [
 ];
 ---
 
-<section id="roadmap" class="relative overflow-hidden pt-[105px] pb-[125px]">
+<section
+  id="roadmap"
+  class="relative flex flex-col overflow-hidden pt-[105px] pb-[125px] lg:items-center lg:pt-[60px]"
+>
   <SphereDecoration
-    class="absolute -top-[3rem] -left-[4rem] -z-10"
+    class="absolute -top-[3rem] -left-[4rem] -z-10 lg:left-auto"
     variant="7"
     size={190}
   />
-  <Timeline class="left-2 h-[calc(100%-125px)]" />
+  <Timeline class="left-2 h-[calc(100%-125px)] lg:top-[8rem] lg:left-auto" />
 
-  <h2 class="font-medium-title-mobile ms-[3.5rem] mb-[43px]">Roadmap</h2>
+  <h2
+    class="font-medium-title-mobile lg:font-medium-title ms-[3.5rem] mb-[43px] lg:ms-0 lg:mb-[120px] lg:text-center"
+  >
+    Roadmap
+  </h2>
 
   <div class="flex flex-col gap-[45px]">
     {timelineData.map((data) => <TimelineItem {...data} />)}
