@@ -1,0 +1,32 @@
+---
+import Layout from "@/components/layout/Layout.astro";
+import AppHomeView from "@/assets/download/app-home-view.png";
+import { Image } from "astro:assets";
+
+import AppBenefitCard from "@/components/ui/AppBenefitCard.astro";
+import AppInformation from "@/components/ui/AppInformation.astro";
+
+import { BENEFIT_DATA } from "@/constants/app-benefits";
+import Socials from "@/components/ui/Socials.astro";
+import SphereDecoration from "@/components/ui/SphereDecoration.astro";
+---
+
+<Layout>
+  <section class="flex relative flex-col gap-10 pt-[74px] pb-16 overflow-hidden">
+    <SphereDecoration class="-z-10 absolute top-[23rem] -right-[4rem]" variant="4" size={273} />
+    <SphereDecoration class="-z-10 absolute top-[42%] -left-[10rem]" variant="5" size={422} />
+    <SphereDecoration class="-z-10 absolute bottom-[14rem] -right-[11rem]" variant="11" size={422} />
+
+    <AppInformation />
+
+    <div class="px-[30px]">
+      <Image src={AppHomeView} alt="App's home view" />
+    </div>
+
+    <div class="flex flex-col gap-8 px-5">
+      {BENEFIT_DATA.map((data) => <AppBenefitCard {...data} />)}
+    </div>
+  </section>
+
+  <Socials />
+</Layout>

@@ -1,0 +1,38 @@
+---
+import { Image } from "astro:assets";
+import AppleStore from "@/assets/download/apple-store-download.png";
+import GooglePlay from "@/assets/download/google-play-download.png";
+
+const { asMain } = Astro.props;
+---
+
+<div class="flex flex-col gap-6 px-[30px]">
+  <div class="flex flex-col gap-[10px]">
+    <p class="font-tag-caps-mobile">Your quantum-secure gateway is ready</p>
+    {asMain && <h1 class="font-medium-title-mobile">Quantus App</h1>}
+    {!asMain && <h2 class="font-medium-title-mobile">Quantus App</h2>}
+    <p class="font-body-mobile">
+      The Quantus App puts quantum security and zero-knowledge privacy directly
+      in your hands. Every safeguard runs silently in the background, so you can
+      focus on what matters: moving value with clarity, confidence, and control.
+    </p>
+  </div>
+
+  <div class="flex gap-5">
+    <a
+      href="https://testflight.apple.com/join/xX2usXzz"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Image src={AppleStore} alt="Apple store app link" />
+    </a>
+
+    <a
+      href="https://play.google.com/store/apps/details?id=com.quantus.wallet"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Image src={GooglePlay} alt="Goole play app link" />
+    </a>
+  </div>
+</div>

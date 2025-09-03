@@ -1,77 +1,25 @@
 ---
 import CallToAction from "./CallToAction.astro";
 
-import AppleStore from "@/assets/download/apple-store-download.png";
-import GooglePlay from "@/assets/download/google-play-download.png";
 import AppHomeView from "@/assets/download/app-home-view.png";
 import { Image } from "astro:assets";
 
-import type { Props as BenefitData } from "./AppBenefitCard.astro";
-import AppBenefitCard from "./AppBenefitCard.astro";
+import AppBenefitCard from "@/components/ui/AppBenefitCard.astro";
+import AppInformation from "@/components/ui/AppInformation.astro";
 
-const benefitData: BenefitData[] = [
-  {
-    title: "Reversible Transactions",
-    content:
-      "Set a reversible window for every send. Made a mistake? Didn't receive the goods you were promised? Fat fingers struck again? Simply reverse the transaction before the timer's up.",
-  },
-  {
-    title: "Readable Checkphrases",
-    content:
-      "No more copy-paste paranoia. Send with confidence using unique, human-friendly checkphrases you'll actually recognize. No typos, no lookalike scams, just clear, unmistakable destinations.",
-  },
-  {
-    title: "Security Guardians",
-    content:
-      "You choose your trusted allies and give them the power to step in and intercept a transfer before it goes through. A safety net of your own design, protecting your assets when you can't.",
-  },
-  {
-    title: "Beneficiary & Recovery",
-    content:
-      "Plan for the long term. Assign a recovery account or beneficiary to inherit your funds if you’re gone. Your assets stay protected, even during unexpected events. Think of it as your will, enforced by code.",
-  },
-];
+import { BENEFIT_DATA } from "@/constants/app-benefits";
 ---
 
 <section id="app-info">
   <div class="bg-app-download flex flex-col gap-10 pt-[74px] pb-16">
-    <div class="flex flex-col gap-6 px-[30px]">
-      <div class="flex flex-col gap-[10px]">
-        <p class="font-tag-caps-mobile">Your quantum-secure gateway is ready</p>
-        <h2 class="font-medium-title-mobile">Quantus App</h2>
-        <p class="font-body-mobile">
-          The Quantus App puts quantum security and zero-knowledge privacy
-          directly in your hands. Every safeguard runs silently in the
-          background, so you can focus on what matters: moving value with
-          clarity, confidence, and control.
-        </p>
-      </div>
-
-      <div class="flex gap-5">
-        <a
-          href="https://testflight.apple.com/join/xX2usXzz"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image src={AppleStore} alt="Apple store app link" />
-        </a>
-
-        <a
-          href="https://play.google.com/store/apps/details?id=com.quantus.wallet"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image src={GooglePlay} alt="Goole play app link" />
-        </a>
-      </div>
-    </div>
+    <AppInformation />
 
     <div class="px-[30px]">
       <Image src={AppHomeView} alt="App's home view" />
     </div>
 
     <div class="flex flex-col gap-8 px-5">
-      {benefitData.map((data) => <AppBenefitCard {...data} />)}
+      {BENEFIT_DATA.map((data) => <AppBenefitCard {...data} />)}
     </div>
   </div>
 
