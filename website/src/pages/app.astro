@@ -12,19 +12,54 @@ import SphereDecoration from "@/components/ui/SphereDecoration.astro";
 ---
 
 <Layout>
-  <section class="flex relative flex-col gap-10 pt-[74px] pb-16 overflow-hidden">
-    <SphereDecoration class="-z-10 absolute top-[23rem] -right-[4rem]" variant="4" size={273} />
-    <SphereDecoration class="-z-10 absolute top-[42%] -left-[10rem]" variant="5" size={422} />
-    <SphereDecoration class="-z-10 absolute bottom-[14rem] -right-[11rem]" variant="11" size={422} />
+  <section
+    class="relative overflow-hidden pt-[74px] pb-16 lg:pt-[104px] lg:pb-[169px] xl:pb-[253px]"
+  >
+    <SphereDecoration
+      class="absolute top-[23rem] -right-[4rem] -z-10"
+      variant="4"
+      size={273}
+    />
+    <SphereDecoration
+      class="absolute top-[42%] -left-[10rem] -z-10"
+      variant="5"
+      size={422}
+    />
+    <SphereDecoration
+      class="absolute -right-[11rem] bottom-[14rem] -z-10"
+      variant="11"
+      size={422}
+    />
 
-    <AppInformation />
+    <div class="lg:max-w-content lg:mx-auto xl:flex xl:gap-14">
+      <div class="flex flex-col gap-10">
+        <AppInformation />
 
-    <div class="px-[30px]">
-      <Image src={AppHomeView} alt="App's home view" />
-    </div>
+        <div class="flex flex-col gap-10 lg:flex-row lg:gap-8">
+          <div
+            class="mx-auto max-w-[400px] px-[30px] lg:order-2 lg:max-w-[500px] lg:px-0 xl:hidden"
+          >
+            <Image src={AppHomeView} alt="App's home view" />
+          </div>
 
-    <div class="flex flex-col gap-8 px-5">
-      {BENEFIT_DATA.map((data) => <AppBenefitCard {...data} />)}
+          <div
+            class="flex flex-col gap-8 px-5 lg:order-1 lg:grid lg:grid-cols-1 xl:grid-cols-2 xl:px-0"
+          >
+            {
+              BENEFIT_DATA.map((data) => (
+                <AppBenefitCard
+                  class="lg:w-[352px] xl:even:translate-y-24"
+                  {...data}
+                />
+              ))
+            }
+          </div>
+        </div>
+      </div>
+
+      <div class="hidden lg:w-[348px] xl:block">
+        <Image src={AppHomeView} alt="App's home view" />
+      </div>
     </div>
   </section>
 
