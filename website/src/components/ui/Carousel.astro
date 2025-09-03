@@ -33,6 +33,11 @@ const {
 } = Astro.props;
 
 const carouselId = `carousel-${Math.random().toString(36).substring(2, 9)}`;
+
+// Create duplicated items for infinite loop
+const duplicatedItems =
+  loop && items.length > 1 ? [...items, ...items, ...items] : items;
+const startIndex = loop && items.length > 1 ? items.length : 0;
 ---
 
 <div class={`relative w-full ${className}`} data-carousel-id={carouselId}>
@@ -40,11 +45,14 @@ const carouselId = `carousel-${Math.random().toString(36).substring(2, 9)}`;
     <div class="w-full overflow-hidden rounded-lg">
       <div class="carousel-track ms-[calc(-132px+50vw)] flex gap-5" data-track>
         {
-          items.map((item, index) => (
+          duplicatedItems.map((item, index) => (
             <div
               class={`min-h-[200px] w-fit flex-none ${slideClassName}`}
               data-slide-index={index}
               data-item-id={item.id}
+              data-original-index={
+                loop && items.length > 1 ? index % items.length : index
+              }
             >
               <div class="flex h-full w-full items-center justify-center">
                 <slot name="slide">
@@ -94,6 +102,10 @@ const carouselId = `carousel-${Math.random().toString(36).substring(2, 9)}`;
     transition: transform 0.3s ease-in-out;
     will-change: transform;
   }
+
+  .carousel-track.no-transition {
+    transition: none;
+  }
 </style>
 
 <script
@@ -103,6 +115,7 @@ const carouselId = `carousel-${Math.random().toString(36).substring(2, 9)}`;
     autoplayInterval,
     loop,
     renderCustomContent,
+    itemsLength: items.length,
   }}
 >
   class Carousel {
@@ -114,12 +127,18 @@ const carouselId = `carousel-${Math.random().toString(36).substring(2, 9)}`;
       );
       this.dots = Array.from(container.querySelectorAll("[data-slide]"));
 
-      this.currentIndex = 0;
+      this.itemsLength = options.itemsLength || this.slides.length;
+      this.currentIndex =
+        options.loop && this.itemsLength > 1 ? this.itemsLength : 0;
+      this.visualIndex = 0; // This tracks the visual position for dots
       this.autoplay = options.autoplay || false;
       this.autoplayInterval = options.autoplayInterval || 3000;
       this.loop = options.loop !== undefined ? options.loop : true;
       this.autoplayTimer = null;
       this.renderCustomContent = options.renderCustomContent || false;
+      this.slideWidth = 264; // Width of each slide
+      this.slideGap = 20; // Gap between slides
+      this.isTransitioning = false;
 
       this.init();
     }
@@ -132,9 +151,8 @@ const carouselId = `carousel-${Math.random().toString(36).substring(2, 9)}`;
         this.renderSlideContent();
       }
 
-      this.updateSlidePosition();
+      this.updateSlidePosition(false); // Initialize position without transition
       this.updateDots();
-      this.updateArrows();
       this.bindEvents();
 
       if (this.autoplay) {
@@ -164,6 +182,11 @@ const carouselId = `carousel-${Math.random().toString(36).substring(2, 9)}`;
         );
       }
 
+      // Listen for transition end to handle infinite loop repositioning
+      this.track.addEventListener("transitionend", () => {
+        this.handleTransitionEnd();
+      });
+
       // Touch/swipe support
       let startX = 0;
       let isDragging = false;
@@ -171,6 +194,7 @@ const carouselId = `carousel-${Math.random().toString(36).substring(2, 9)}`;
       this.track.addEventListener("touchstart", (e) => {
         startX = e.touches[0].clientX;
         isDragging = true;
+        this.stopAutoplay(); // Pause autoplay during touch
       });
 
       this.track.addEventListener("touchmove", (e) => {
@@ -193,61 +217,110 @@ const carouselId = `carousel-${Math.random().toString(36).substring(2, 9)}`;
             this.goToPrevious();
           }
         }
+
+        // Resume autoplay after touch interaction
+        if (this.autoplay) {
+          this.startAutoplay();
+        }
       });
     }
 
-    goToSlide(index) {
-      if (index < 0 || index >= this.slides.length) return;
+    goToSlide(visualIndex) {
+      if (visualIndex < 0 || visualIndex >= this.itemsLength) return;
+      if (this.isTransitioning) return;
 
-      this.currentIndex = index;
-      this.updateSlidePosition();
+      this.visualIndex = visualIndex;
+
+      if (this.loop && this.itemsLength > 1) {
+        // In infinite loop mode, find the closest slide with the target visual index
+        this.currentIndex = this.itemsLength + visualIndex;
+      } else {
+        this.currentIndex = visualIndex;
+      }
+
+      this.updateSlidePosition(true);
       this.updateDots();
-      this.updateArrows();
     }
 
     goToNext() {
-      if (this.currentIndex < this.slides.length - 1) {
-        this.goToSlide(this.currentIndex + 1);
-      } else if (this.loop) {
-        // Loop back to the first slide
-        this.goToSlide(0);
+      if (this.isTransitioning) return;
+
+      if (this.loop && this.itemsLength > 1) {
+        this.currentIndex++;
+        this.visualIndex = (this.visualIndex + 1) % this.itemsLength;
+      } else if (this.currentIndex < this.slides.length - 1) {
+        this.currentIndex++;
+        this.visualIndex++;
+      } else {
+        return; // No looping, at the end
       }
+
+      this.updateSlidePosition(true);
+      this.updateDots();
     }
 
     goToPrevious() {
-      if (this.currentIndex > 0) {
-        this.goToSlide(this.currentIndex - 1);
-      } else if (this.loop) {
-        // Loop to the last slide
-        this.goToSlide(this.slides.length - 1);
+      if (this.isTransitioning) return;
+
+      if (this.loop && this.itemsLength > 1) {
+        this.currentIndex--;
+        this.visualIndex =
+          this.visualIndex === 0 ? this.itemsLength - 1 : this.visualIndex - 1;
+      } else if (this.currentIndex > 0) {
+        this.currentIndex--;
+        this.visualIndex--;
+      } else {
+        return; // No looping, at the beginning
+      }
+
+      this.updateSlidePosition(true);
+      this.updateDots();
+    }
+
+    updateSlidePosition(withTransition = true) {
+      const translateX = -this.currentIndex * (this.slideWidth + this.slideGap);
+
+      if (withTransition) {
+        this.track.classList.remove("no-transition");
+        this.isTransitioning = true;
+      } else {
+        this.track.classList.add("no-transition");
+        this.isTransitioning = false;
+      }
+
+      this.track.style.transform = `translateX(${translateX}px)`;
+
+      // If no transition, immediately call handleTransitionEnd
+      if (!withTransition) {
+        setTimeout(() => this.handleTransitionEnd(), 0);
       }
     }
 
-    updateSlidePosition() {
-      const translateX = -this.currentIndex * (264 + 20); // 264 = slide width + slide gap
-      this.track.style.transform = `translateX(${translateX}px)`;
+    handleTransitionEnd() {
+      this.isTransitioning = false;
+
+      if (!this.loop || this.itemsLength <= 1) return;
+
+      // Check if we need to reposition for infinite loop
+      if (this.currentIndex >= this.itemsLength * 2) {
+        // We're at the end of the duplicated slides, jump back to the middle set
+        this.currentIndex = this.itemsLength + this.visualIndex;
+        this.updateSlidePosition(false);
+      } else if (this.currentIndex < this.itemsLength) {
+        // We're at the beginning of the duplicated slides, jump to the middle set
+        this.currentIndex = this.itemsLength + this.visualIndex;
+        this.updateSlidePosition(false);
+      }
     }
 
     updateDots() {
       this.dots.forEach((dot, index) => {
-        dot.classList.toggle("active", index === this.currentIndex);
+        dot.classList.toggle("active", index === this.visualIndex);
       });
     }
 
-    updateArrows() {
-      if (this.prevButton) {
-        // If looping is enabled, arrows are always enabled
-        this.prevButton.disabled = !this.loop && this.currentIndex === 0;
-      }
-      if (this.nextButton) {
-        // If looping is enabled, arrows are always enabled
-        this.nextButton.disabled =
-          !this.loop && this.currentIndex === this.slides.length - 1;
-      }
-    }
-
     startAutoplay() {
-      if (!this.autoplay || this.slides.length <= 1) return;
+      if (!this.autoplay || this.itemsLength <= 1) return;
 
       this.stopAutoplay();
       this.autoplayTimer = setInterval(() => {
@@ -278,6 +351,7 @@ const carouselId = `carousel-${Math.random().toString(36).substring(2, 9)}`;
         autoplayInterval,
         loop,
         renderCustomContent,
+        itemsLength,
       });
     }
   });

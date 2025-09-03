@@ -65,10 +65,12 @@ const carouselItems: CarouselItem[] = [
   />
 
   <div class="flex flex-col gap-11 px-[30px]">
-    <h2 class="font-small-title">
+    <h2
+      class="font-small-title lg:font-medium-title max-w-content lg:text-center"
+    >
       Follow us for fun content, podcasts, interviews, wizardry and more!
     </h2>
-    <SiteSocials />
+    <SiteSocials class="lg:justify-center" />
   </div>
 
   <Carousel items={carouselItems} autoplay loop />
