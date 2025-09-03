@@ -8,7 +8,7 @@ import ContactForm from "@/components/features/contact/ContactForm.astro";
 
 <Layout>
   <section
-    class="relative flex flex-col overflow-hidden px-[30px] pt-[67px] pb-[75px]"
+    class="relative overflow-hidden px-[30px] pt-[67px] pb-[75px] lg:pb-[145px]"
   >
     <SphereDecoration
       class="absolute top-[5rem] -left-[3rem] -z-10"
@@ -26,14 +26,18 @@ import ContactForm from "@/components/features/contact/ContactForm.astro";
       size={185}
     />
 
-    <h1 class="text-contact-title font-large-title-mobile mb-[7px]">
-      Get in touch
-    </h1>
-    <p class="font-tag-mobile mb-[22px] opacity-70">
-      Reach out, and let's create a universe of possibilities together!
-    </p>
+    <div class="max-w-content mx-auto flex flex-col">
+      <h1
+        class="text-contact-title lg:font-large-title font-large-title-mobile mb-[7px] w-fit"
+      >
+        Get in touch
+      </h1>
+      <p class="font-tag-mobile lg:font-tag mb-[22px] opacity-70 lg:mb-[46px]">
+        Reach out, and let's create a universe of possibilities together!
+      </p>
 
-    <ContactForm />
+      <ContactForm />
+    </div>
   </section>
 
   <Socials />

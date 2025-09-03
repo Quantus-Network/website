@@ -24,9 +24,9 @@ import MessageAlert from "@/components/ui/MessageAlert.astro";
 
 <form
   id="contact-form"
-  class="bg-form-body border-form-body-border flex flex-col gap-[30px] rounded-[20px] border-2 px-[15px] pt-10 pb-[15px] backdrop-blur-[190px]"
+  class="bg-form-body border-form-body-border flex flex-col gap-[30px] rounded-[20px] border-2 px-[15px] pt-10 pb-[15px] backdrop-blur-[190px] md:flex-row md:p-5"
 >
-  <div class="flex flex-col gap-[14px]">
+  <div class="flex flex-col gap-[14px] md:w-1/2 lg:p-10">
     <Input id="name" name="name" placeholder="Name" required asContact />
     <Input
       id="email"
@@ -47,11 +47,13 @@ import MessageAlert from "@/components/ui/MessageAlert.astro";
     <Button id="contact-form-submit-btn" type="submit">Send</Button>
   </div>
 
-  <div class="rounded-quantus relative overflow-hidden">
+  <div
+    class="rounded-quantus relative overflow-hidden md:max-h-[412px] md:w-1/2"
+  >
     <div class="bg-dim absolute inset-0 size-full"></div>
 
     <div
-      class="absolute bottom-0 left-0 flex flex-col gap-[6px] ps-[19px] pe-[13px] pb-[16px]"
+      class="absolute bottom-0 left-0 flex flex-col gap-[6px] ps-[19px] pe-[13px] pb-[16px] lg:ps-[39px] lg:pb-[23px]"
     >
       <blockquote class="font-small">
         “The atoms or elementary particles themselves are not real; they form a
@@ -64,7 +66,11 @@ import MessageAlert from "@/components/ui/MessageAlert.astro";
       </address>
     </div>
 
-    <Image class="" src={ContactImage} alt="Planet like object with ring" />
+    <Image
+      class="size-full"
+      src={ContactImage}
+      alt="Planet like object with ring"
+    />
   </div>
 </form>
 
