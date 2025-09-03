@@ -1,16 +1,21 @@
 ---
 import Separator from "@/components/ui/Separator.astro";
+import { applyStyles } from "@/utils/apply-styles";
 
 export interface Props {
   title: string;
   content: string;
+  class?: string;
 }
 
-const { title, content } = Astro.props;
+const { title, content, class: className } = Astro.props;
 ---
 
 <div
-  class="bg-app-benefit-card rounded-quantus relative flex flex-col gap-[10px] px-[35px] py-10 backdrop-blur-[20px]"
+  class={applyStyles(
+    "bg-app-benefit-card rounded-quantus relative flex flex-col gap-[10px] px-[35px] py-10 backdrop-blur-[20px]",
+    className,
+  )}
 >
   <Separator class="absolute top-0 left-0" variant="2" />
 

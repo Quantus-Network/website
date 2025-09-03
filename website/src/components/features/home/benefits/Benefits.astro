@@ -67,7 +67,9 @@ const cardData: CardData[] = [
     </p>
   </div>
 
-  <div class="flex w-full flex-col items-center gap-[63px] lg:max-w-[1050px]">
+  <div
+    class="flex w-full flex-col items-center gap-[63px] lg:max-w-[1050px] lg:gap-[128px]"
+  >
     {cardData.map((data) => <Card {...data} />)}
   </div>
 </section>

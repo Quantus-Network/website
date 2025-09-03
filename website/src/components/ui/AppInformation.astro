@@ -6,12 +6,26 @@ import GooglePlay from "@/assets/download/google-play-download.png";
 const { asMain } = Astro.props;
 ---
 
-<div class="flex flex-col gap-6 px-[30px]">
+<div class="flex flex-col gap-6 px-[30px] xl:px-0">
   <div class="flex flex-col gap-[10px]">
-    <p class="font-tag-caps-mobile">Your quantum-secure gateway is ready</p>
-    {asMain && <h1 class="font-medium-title-mobile">Quantus App</h1>}
-    {!asMain && <h2 class="font-medium-title-mobile">Quantus App</h2>}
-    <p class="font-body-mobile">
+    <p class="font-tag-caps-mobile lg:font-tag-caps">
+      Your quantum-secure gateway is ready
+    </p>
+    {
+      asMain && (
+        <h1 class="font-medium-title-mobile lg:font-medium-title">
+          Quantus App
+        </h1>
+      )
+    }
+    {
+      !asMain && (
+        <h2 class="font-medium-title-mobile lg:font-medium-title">
+          Quantus App
+        </h2>
+      )
+    }
+    <p class="font-body-mobile lg:font-body lg:max-w-[523px]">
       The Quantus App puts quantum security and zero-knowledge privacy directly
       in your hands. Every safeguard runs silently in the background, so you can
       focus on what matters: moving value with clarity, confidence, and control.

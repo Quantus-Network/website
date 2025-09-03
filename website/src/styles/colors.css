@@ -137,6 +137,14 @@
 @utility bg-app-download {
   background: linear-gradient(1deg, #0c1014 8.13%, #00f 54.27%, #ed4cce 97.13%);
 }
+@utility bg-app-download-desktop {
+  background: linear-gradient(
+    45deg,
+    #0c1014 13.24%,
+    #00f 51.06%,
+    #ed4cce 86.2%
+  );
+}
 @utility bg-carousel-dot {
   background: linear-gradient(180deg, #ed4cce 28.03%, #ffe91f 100%);
 }
