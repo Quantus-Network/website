@@ -15,6 +15,7 @@ export interface Props {
   autoplay?: boolean;
   autoplayInterval?: number;
   showDots?: boolean;
+  loop?: boolean;
   className?: string;
   slideClassName?: string;
   renderCustomContent?: boolean;
@@ -25,6 +26,7 @@ const {
   autoplay = false,
   autoplayInterval = 3000,
   showDots = true,
+  loop = true,
   className = "",
   slideClassName = "",
   renderCustomContent = false,
@@ -46,7 +48,7 @@ const carouselId = `carousel-${Math.random().toString(36).substring(2, 9)}`;
             >
               <div class="flex h-full w-full items-center justify-center">
                 <slot name="slide">
-                  <div class="flex h-full w-full items-center justify-center rounded-[10px] text-center">
+                  <div class="rounded-quantus flex h-full w-full items-center justify-center overflow-hidden text-center">
                     <a
                       class="inline-block h-[394px] w-[264px]"
                       href={item.href}
@@ -99,6 +101,7 @@ const carouselId = `carousel-${Math.random().toString(36).substring(2, 9)}`;
     carouselId,
     autoplay,
     autoplayInterval,
+    loop,
     renderCustomContent,
   }}
 >
@@ -114,6 +117,7 @@ const carouselId = `carousel-${Math.random().toString(36).substring(2, 9)}`;
       this.currentIndex = 0;
       this.autoplay = options.autoplay || false;
       this.autoplayInterval = options.autoplayInterval || 3000;
+      this.loop = options.loop !== undefined ? options.loop : true;
       this.autoplayTimer = null;
       this.renderCustomContent = options.renderCustomContent || false;
 
@@ -204,12 +208,18 @@ const carouselId = `carousel-${Math.random().toString(36).substring(2, 9)}`;
     goToNext() {
       if (this.currentIndex < this.slides.length - 1) {
         this.goToSlide(this.currentIndex + 1);
+      } else if (this.loop) {
+        // Loop back to the first slide
+        this.goToSlide(0);
       }
     }
 
     goToPrevious() {
       if (this.currentIndex > 0) {
         this.goToSlide(this.currentIndex - 1);
+      } else if (this.loop) {
+        // Loop to the last slide
+        this.goToSlide(this.slides.length - 1);
       }
     }
 
@@ -226,10 +236,13 @@ const carouselId = `carousel-${Math.random().toString(36).substring(2, 9)}`;
 
     updateArrows() {
       if (this.prevButton) {
-        this.prevButton.disabled = this.currentIndex === 0;
+        // If looping is enabled, arrows are always enabled
+        this.prevButton.disabled = !this.loop && this.currentIndex === 0;
       }
       if (this.nextButton) {
-        this.nextButton.disabled = this.currentIndex === this.slides.length - 1;
+        // If looping is enabled, arrows are always enabled
+        this.nextButton.disabled =
+          !this.loop && this.currentIndex === this.slides.length - 1;
       }
     }
 
@@ -263,6 +276,7 @@ const carouselId = `carousel-${Math.random().toString(36).substring(2, 9)}`;
       new Carousel(container, {
         autoplay,
         autoplayInterval,
+        loop,
         renderCustomContent,
       });
     }

@@ -1,0 +1,134 @@
+---
+import Button from "@/components/ui/Button.astro";
+import Input from "@/components/ui/Input.astro";
+
+import { Image } from "astro:assets";
+import ContactImage from "@/assets/planet-like-object-with-ring.png";
+import TextArea from "@/components/ui/TextArea.astro";
+import MessageAlert from "@/components/ui/MessageAlert.astro";
+---
+
+<MessageAlert
+  id="error"
+  class="mb-4"
+  type="error"
+  message="Error: something is going wrong."
+/>
+
+<MessageAlert
+  id="success"
+  class="mb-4"
+  type="success"
+  message="We will process your message as soon as possible."
+/>
+
+<form
+  id="contact-form"
+  class="bg-form-body border-form-body-border flex flex-col gap-[30px] rounded-[20px] border-2 px-[15px] pt-10 pb-[15px] backdrop-blur-[190px]"
+>
+  <div class="flex flex-col gap-[14px]">
+    <Input id="name" name="name" placeholder="Name" required asContact />
+    <Input
+      id="email"
+      name="email"
+      type="email"
+      placeholder="Email"
+      required
+      asContact
+    />
+    <TextArea
+      id="message"
+      name="message"
+      placeholder="Message"
+      rows={6}
+      required
+      asContact
+    />
+    <Button id="contact-form-submit-btn" type="submit">Send</Button>
+  </div>
+
+  <div class="rounded-quantus relative overflow-hidden">
+    <div class="bg-dim absolute inset-0 size-full"></div>
+
+    <div
+      class="absolute bottom-0 left-0 flex flex-col gap-[6px] ps-[19px] pe-[13px] pb-[16px]"
+    >
+      <blockquote class="font-small">
+        “The atoms or elementary particles themselves are not real; they form a
+        world of potentialities or possibilities rather than one of things or
+        facts.”
+      </blockquote>
+
+      <address class="font-small text-text-content-secondary font-medium">
+        Werner Heisenberg
+      </address>
+    </div>
+
+    <Image class="" src={ContactImage} alt="Planet like object with ring" />
+  </div>
+</form>
+
+<script>
+  import apiClient from "@/api/client";
+
+  const form = document.getElementById("contact-form") as HTMLFormElement;
+  const btn = document.getElementById("footer-subscribe-button");
+
+  const successAlert = document.getElementById("alert-success");
+  const errorAlert = document.getElementById("alert-error");
+  const errorMessage = document.getElementById("alert-message-error");
+
+  if (!form || !btn) throw new Error("Form not detected, can't do submission!");
+
+  // Events
+  form.addEventListener("submit", async (e: any) => {
+    e.preventDefault();
+
+    // Make button disabled
+    btn.setAttribute("disabled", "true");
+
+    // Hide messages if currently displayed
+    successAlert?.classList.add("hidden");
+    errorAlert?.classList.add("hidden");
+
+    // Make sure the input is not empty
+    const nameValue = e.target.name.value.trim();
+    if (!nameValue) throw new Error("Name is required.");
+
+    const emailValue = e.target.email.value.trim();
+    if (!emailValue) throw new Error("Email is required.");
+
+    const messageValue = e.target.message.value.trim();
+    if (!messageValue) throw new Error("Message is required.");
+
+    try {
+      const resp = await apiClient.contact(nameValue, emailValue, messageValue);
+
+      if (resp.status !== 200) throw new Error("Failed submitting message.");
+
+      // Make button active after done processing submit
+      btn.removeAttribute("disabled");
+
+      // Show success message
+      successAlert?.classList.remove("hidden");
+      setTimeout(() => {
+        successAlert?.classList.add("hidden");
+      }, 3000);
+
+      // Reset form
+      form.reset();
+    } catch (error: any) {
+      // Make button active after done processing submit
+      btn.removeAttribute("disabled");
+
+      const errMsg = error.message;
+      if (errMsg && errorMessage) errorMessage.textContent = errMsg;
+
+      // Show error message
+      errorAlert?.classList.remove("hidden");
+      setTimeout(() => {
+        errorAlert?.classList.add("hidden");
+      }, 3000);
+    }
+  });
+</script>

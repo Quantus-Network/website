@@ -61,6 +61,13 @@
     rgba(12, 16, 20, 0.1) 108.37%
   );
 
+  /* Form Colors */
+  --color-form-body: #ffffff0a;
+  --color-form-body-border: #0a0d170d;
+  --color-form-input-body: #ffffff0d;
+  --color-form-input-body-border: #ffffff33;
+  --color-form-input-text: #ffffff99;
+
   /* Input Colors */
   --color-input-body: #f4f6f9;
   --color-input-error: #dc3545;
@@ -144,4 +151,18 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+@utility text-contact-title {
+  opacity: 0.9;
+  background: linear-gradient(268deg, #ed4cce 20.3%, #f4f6f9 90.25%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@utility bg-dim {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 19.83%,
+    rgba(0, 0, 0, 0.8) 88.09%
+  );
 }

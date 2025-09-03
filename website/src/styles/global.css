@@ -7,6 +7,8 @@
   --spacing-content: 1140px;
   --spacing-navbar: 1440px;
   --spacing-video-introduction: 1440px;
+
+  --radius-quantus: 0.625rem;
 }
 
 @layer base {

@@ -6,6 +6,7 @@ export interface Props {
   id: string;
   label?: string;
   type?: astroHTML.JSX.HTMLInputTypeAttribute;
+  asContact?: boolean;
   class?: string;
   placeholder?: string;
   required?: boolean;
@@ -30,6 +31,7 @@ const {
   autocomplete,
   "aria-describedby": ariaDescribedBy,
   class: className,
+  asContact,
   ...rest
 } = Astro.props;
 
@@ -64,7 +66,11 @@ const describedBy =
     autocomplete={autocomplete}
     aria-invalid={error ? "true" : "false"}
     aria-describedby={describedBy}
-    class={applyStyles("input-field font-button", error && "error")}
+    class={applyStyles(
+      "input-field font-button",
+      error && "error",
+      asContact && "font-small contact",
+    )}
     {...rest}
   />
 
@@ -129,17 +135,24 @@ const describedBy =
     box-sizing: border-box;
   }
 
+  .input-field.contact {
+    border-radius: var(--radius-quantus);
+    background: var(--color-form-input-body);
+    border: 1px solid var(--color-form-input-body-border);
+    color: var(--color-form-input-text);
+  }
+
   .input-field::placeholder {
     color: var(--color-input-text);
+  }
+
+  .input-field.contact::placeholder {
+    color: var(--color-form-input-text);
   }
 
   .input-field:focus {
     border-color: var(--color-input-focus);
     box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
-  }
-
-  .input-field:hover:not(:disabled) {
-    background: #e9ecef;
   }
 
   .input-field:disabled {
@@ -150,7 +163,6 @@ const describedBy =
 
   .input-field.error {
     border-color: var(--color-input-error);
-    background: #fef2f2;
   }
 
   .input-field.error:focus {
