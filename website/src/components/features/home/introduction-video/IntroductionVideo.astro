@@ -7,10 +7,10 @@ import { PlayIcon } from "@lucide/astro";
   class="max-w-video-introduction mx-auto flex flex-col lg:flex-row lg:gap-7 lg:px-[114px] lg:pt-[120px] lg:pb-[80px]"
 >
   <div
-    class="lg:rounded-quantus flex aspect-video size-full flex-1 flex-col items-center justify-center bg-(image:--color-video-player) lg:order-2"
+    class="lg:rounded-quantus relative flex aspect-video size-full flex-1 flex-col items-center justify-center overflow-hidden bg-(image:--color-video-player) lg:order-2"
   >
     <button
-      class="bg-video-player-icon-body flex size-[95px] cursor-pointer items-center justify-center rounded-full hover:brightness-125"
+      class="bg-video-player-icon-body absolute -z-0 flex size-[95px] cursor-pointer items-center justify-center rounded-full hover:brightness-125"
     >
       <PlayIcon
         width={33.25}
@@ -18,6 +18,19 @@ import { PlayIcon } from "@lucide/astro";
         class="text-video-player-icon fill-video-player-icon"
       />
     </button>
+
+    <iframe
+      class="relative z-10"
+      width="100%"
+      height="100%"
+      src="https://www.youtube.com/embed/ZoT5cdMoMPA?si=2j3M397Em6445nch&autoplay=1&mute=1&loop=1&playlist=ZoT5cdMoMPA"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    >
+    </iframe>
   </div>
 
   <div
