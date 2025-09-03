@@ -50,70 +50,87 @@ const profileData: ProfileData[] = [
 
 <section
   id="teams"
-  class="bg-team relative flex flex-col gap-[50px] px-4 py-[100px] min-[366px]:px-[30px]"
+  class="bg-team relative px-4 py-[100px] min-[366px]:px-[30px] lg:px-[124px]"
 >
   <Separator class="absolute top-0 left-0" variant="2" />
 
-  <div class="flex flex-col">
-    <h2 class="font-medium-title-mobile mb-5">The Core Team</h2>
+  <div class="max-w-content mx-auto flex flex-col gap-[50px]">
+    <div class="flex flex-col xl:flex-row xl:items-end xl:justify-between">
+      <div class="mb-[30px] lg:max-w-[682px] xl:mb-0">
+        <h2 class="font-medium-title-mobile mb-5">The Core Team</h2>
 
-    <p class="font-body mb-[30px]">
-      Founded by veteran engineers from early-stage crypto startups and former
-      CTO roles. The team combines deep expertise in applied cryptography and
-      zero-knowledge systems with a proven ability to ship secure, scalable
-      infrastructure.
-    </p>
+        <p class="font-body">
+          Founded by veteran engineers from early-stage crypto startups and
+          former CTO roles. The team combines deep expertise in applied
+          cryptography and zero-knowledge systems with a proven ability to ship
+          secure, scalable infrastructure.
+        </p>
+      </div>
 
-    <Button href="/contact" variant="outline">Get in Touch</Button>
-  </div>
-
-  <figure class="flex flex-col gap-5">
-    <figcaption class="flex w-[280px] flex-col gap-2">
-      <h3 class="font-small-title">Christopher Smith</h3>
-      <Separator class="h-[0.5px]" />
-      <p class="font-large-body text-text-content-secondary">
-        Chief Executive Officer
-      </p>
-    </figcaption>
-
-    <Image
-      class={"w-full"}
-      src={Chris}
-      alt="Christopher Smith's avatar"
-      layout="full-width"
-    />
-
-    <div>
-      <p class="font-body text-white">
-        A technology pioneer and entrepreneur at the forefront of AI,
-        blockchain, and quantum computing, Chris brings a rare mix of deep
-        technical expertise and philosophical thinking. He's spent the last
-        decade building tools that empower individuals and redefine digital
-        trust.
-      </p>
-
-      <br />
-
-      <ul class="font-body list-disc ps-4 text-white">
-        <li>Founder of BitMesh, Lunyr (LUN), and FactoryDAO (FVT)</li>
-        <li>Early contributor to foundational Bitcoin libraries</li>
-        <li>
-          Former AI team lead at Tensor Spark, specializing in applied machine
-          learning
-        </li>
-        <li>
-          Private cybersecurity advisor for HNW individuals and digital asset
-          recovery
-        </li>
-        <li>
-          Focus: Cryptography, Complexity Theory, Algebraic Topology, Quantum
-          Computing
-        </li>
-      </ul>
+      <Button class="lg:w-[295px]" href="/contact" variant="outline"
+        >Get in Touch</Button
+      >
     </div>
-  </figure>
 
-  <div class="flex flex-col gap-[42px]">
-    {profileData.map((data) => <ProfileCard {...data} />)}
+    <figure class="lg:flex lg:justify-between lg:gap-5">
+      <div class="flex flex-col gap-5 lg:justify-between">
+        <figcaption class="flex w-[280px] flex-col gap-2">
+          <h3 class="font-small-title">Christopher Smith</h3>
+          <Separator class="h-[0.5px]" />
+          <p class="font-large-body text-text-content-secondary">
+            Chief Executive Officer
+          </p>
+        </figcaption>
+
+        <Image
+          class={"size-full max-w-[600px] mx-auto lg:hidden"}
+          src={Chris}
+          alt="Christopher Smith's avatar"
+          layout="full-width"
+        />
+
+        <div class="lg:max-w-[756px]">
+          <p class="font-body text-white">
+            A technology pioneer and entrepreneur at the forefront of AI,
+            blockchain, and quantum computing, Chris brings a rare mix of deep
+            technical expertise and philosophical thinking. He's spent the last
+            decade building tools that empower individuals and redefine digital
+            trust.
+          </p>
+
+          <br />
+
+          <ul class="font-body list-disc ps-4 text-white">
+            <li>Founder of BitMesh, Lunyr (LUN), and FactoryDAO (FVT)</li>
+            <li>Early contributor to foundational Bitcoin libraries</li>
+            <li>
+              Former AI team lead at Tensor Spark, specializing in applied
+              machine learning
+            </li>
+            <li>
+              Private cybersecurity advisor for HNW individuals and digital
+              asset recovery
+            </li>
+            <li>
+              Focus: Cryptography, Complexity Theory, Algebraic Topology,
+              Quantum Computing
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <Image
+        class={"size-full max-w-[305px] hidden lg:block"}
+        src={Chris}
+        alt="Christopher Smith's avatar"
+        layout="full-width"
+      />
+    </figure>
+
+    <div
+      class="flex flex-col gap-[42px] md:grid md:grid-cols-2 md:gap-x-[22px] md:gap-y-10 lg:grid-cols-4"
+    >
+      {profileData.map((data) => <ProfileCard {...data} />)}
+    </div>
   </div>
 </section>
