@@ -45,18 +45,20 @@ const cardData: CardData[] = [
 
 <section
   id="benefits"
-  class="relative flex flex-col items-center overflow-hidden px-[30px] pt-[105px] pb-[60px]"
+  class="relative flex flex-col items-center overflow-hidden px-[30px] pt-[105px] pb-[238px] lg:pt-[153px]"
 >
   <span
-    class="font-giant-mobile text-gradient-giant absolute top-16 -z-10 text-[44px] min-[393px]:text-[54px]"
+    class="font-giant-mobile lg:font-giant text-gradient-giant min-large-mobile:text-[54px] absolute top-16 -z-10 text-[44px] min-[642px]:top-8 min-[642px]:text-[92px] lg:top-2"
     >FOUNDATIONS</span
   >
   <div class="mb-[63px]">
-    <h2 class="font-large-title-mobile mb-[18px] text-center">
+    <h2
+      class="font-large-title-mobile lg:font-large-title min-large-mobile:text-[50px] mb-[18px] text-center text-[38px]"
+    >
       The Future is Quantum
     </h2>
 
-    <p class="font-body-mobile text-center">
+    <p class="font-body-mobile lg:font-body mx-auto max-w-[790px] text-center">
       Quantus Network is a Layer 1 blockchain designed to thrive in the quantum
       era. Secured with post-quantum cryptography and scaled with zero-knowledge
       proofs, it delivers a level of security, scalability and usability that
@@ -65,7 +67,7 @@ const cardData: CardData[] = [
     </p>
   </div>
 
-  <div class="flex flex-col items-center gap-[63px]">
+  <div class="flex w-full flex-col items-center gap-[63px] lg:max-w-[1050px]">
     {cardData.map((data) => <Card {...data} />)}
   </div>
 </section>

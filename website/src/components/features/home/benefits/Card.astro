@@ -17,19 +17,33 @@ export interface Props {
 const { body, qips, title, variant } = Astro.props;
 ---
 
-<div class="flex flex-col items-center gap-[50px]">
-  <div>
-    {variant === "benefit-1" && <BenefitOne width={271} height={262} />}
-    {variant === "benefit-2" && <BenefitTwo width={251} height={265} />}
-    {variant === "benefit-3" && <BenefitThree width={259} height={246} />}
+<div
+  class="group flex w-full flex-col items-center gap-[50px] lg:flex-row lg:justify-between"
+>
+  <div class="lg:group-even:order-2">
+    {
+      variant === "benefit-1" && (
+        <BenefitOne class="h-[262px] w-[271px] lg:h-[348px] lg:w-[360px]" />
+      )
+    }
+    {
+      variant === "benefit-2" && (
+        <BenefitTwo class="h-[265px] w-[251px] lg:h-[379px] lg:w-[360px]" />
+      )
+    }
+    {
+      variant === "benefit-3" && (
+        <BenefitThree class="h-[246px] w-[259px] lg:h-[326px] lg:w-[343px]" />
+      )
+    }
   </div>
 
-  <div class="flex flex-col gap-[15px]">
+  <div class="flex flex-col gap-[15px] lg:max-w-[500px] lg:group-even:order-1">
     <h3 class="text-text-title-secondary font-small-title">
       {title}
     </h3>
 
-    <p class="font-body-mobile">
+    <p class="font-body-mobile lg:font-large-body">
       {body}
     </p>
 

@@ -1,5 +1,6 @@
 @theme {
   --breakpoint-navbar-desktop: 1111px;
+  --breakpoint-large-mobile: 393px;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
