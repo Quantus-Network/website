@@ -3,10 +3,14 @@ import Layout from "@/components/layout/Layout.astro";
 ---
 
 <Layout>
-  <div class="flex flex-col gap-16 px-[30px] py-10">
+  <div
+    class="max-w-content mx-auto flex flex-col gap-16 px-[30px] py-10 lg:gap-[120px] lg:p-[114px] xl:px-0"
+  >
     <section class="flex flex-col gap-5">
-      <h1 class="font-small-title">Quantus Network Policies</h1>
-      <p class="font-body-mobile">
+      <h1 class="font-small-title lg:font-medium-title">
+        Quantus Network Policies
+      </h1>
+      <p class="font-body-mobile lg:font-body">
         Last updated: June 12, 2025
         <br />
         <br />
@@ -20,15 +24,17 @@ import Layout from "@/components/layout/Layout.astro";
     </section>
 
     <section id="terms" class="flex flex-col gap-5">
-      <h2 class="font-small-title">Terms of Service</h2>
+      <h2 class="font-small-title lg:font-medium-title">Terms of Service</h2>
 
-      <div class="flex flex-col gap-10">
+      <div class="flex flex-col gap-10 lg:grid lg:grid-cols-2 lg:gap-16">
         <div class="flex flex-col gap-[14px]">
-          <h3 class="text-terms-title font-tag">What We Provide</h3>
+          <h3 class="text-terms-title font-tag lg:font-small-title w-fit">
+            What We Provide
+          </h3>
 
           <div>
-            <p class="font-body-mobile">Quantus Network offers:</p>
-            <ul class="font-body-mobile list-disc ps-4">
+            <p class="font-body-mobile lg:font-body">Quantus Network offers:</p>
+            <ul class="font-body-mobile lg:font-body list-disc ps-4">
               <li>Mobile apps (available on App Store and Google Play)</li>
               <li>Desktop applications with integrated mining functionality</li>
               <li>Access to our open-source code</li>
@@ -39,11 +45,15 @@ import Layout from "@/components/layout/Layout.astro";
         </div>
 
         <div class="flex flex-col gap-[14px]">
-          <h3 class="text-terms-title font-tag">What You Cannot Do</h3>
+          <h3 class="text-terms-title font-tag lg:font-small-title w-fit">
+            What You Cannot Do
+          </h3>
 
           <div>
-            <p class="font-body-mobile">You may not use our services to:</p>
-            <ul class="font-body-mobile list-disc ps-4">
+            <p class="font-body-mobile lg:font-body">
+              You may not use our services to:
+            </p>
+            <ul class="font-body-mobile lg:font-body list-disc ps-4">
               <li>Engage in illegal activities</li>
               <li>Distribute malware or hack systems</li>
               <li>Violate export controls or sanctions</li>
@@ -54,12 +64,12 @@ import Layout from "@/components/layout/Layout.astro";
         </div>
 
         <div class="flex flex-col gap-[14px]">
-          <h3 class="text-terms-title font-tag">
+          <h3 class="text-terms-title font-tag lg:font-small-title w-fit">
             Mining and Network Participation
           </h3>
 
           <div>
-            <ul class="font-body-mobile list-disc ps-4">
+            <ul class="font-body-mobile lg:font-body list-disc ps-4">
               <li>
                 Mining functionality is for educational and network
                 participation
@@ -74,10 +84,12 @@ import Layout from "@/components/layout/Layout.astro";
         </div>
 
         <div class="flex flex-col gap-[14px]">
-          <h3 class="text-terms-title font-tag">Dispute Resolution</h3>
+          <h3 class="text-terms-title font-tag lg:font-small-title w-fit">
+            Dispute Resolution
+          </h3>
 
           <div>
-            <p class="font-body-mobile">
+            <p class="font-body-mobile lg:font-body">
               Any disputes will be resolved through binding arbitration in
               Wyoming under American Arbitration Association rules. These terms
               are governed by Wyoming law. We may terminate access if you
@@ -87,11 +99,15 @@ import Layout from "@/components/layout/Layout.astro";
         </div>
 
         <div class="flex flex-col gap-[14px]">
-          <h3 class="text-terms-title font-tag">Your Responsibilities</h3>
+          <h3 class="text-terms-title font-tag lg:font-small-title w-fit">
+            Your Responsibilities
+          </h3>
 
           <div>
-            <p class="font-body-mobile">You are solely responsible for:</p>
-            <ul class="font-body-mobile list-disc ps-4">
+            <p class="font-body-mobile lg:font-body">
+              You are solely responsible for:
+            </p>
+            <ul class="font-body-mobile lg:font-body list-disc ps-4">
               <li>Safeguarding your wallet credentials and seed phrase</li>
               <li>
                 Complying with local laws regarding cryptocurrency and mining
@@ -103,15 +119,17 @@ import Layout from "@/components/layout/Layout.astro";
         </div>
 
         <div class="flex flex-col gap-[14px]">
-          <h3 class="text-terms-title font-tag">Non-Custodial Design</h3>
+          <h3 class="text-terms-title font-tag lg:font-small-title w-fit">
+            Non-Custodial Design
+          </h3>
 
           <div>
-            <p class="font-body-mobile">
+            <p class="font-body-mobile lg:font-body">
               Important: We do not store or access your private keys, seed
               phrases, or digital assets. You have full control and
               responsibility for your wallet and assets.
             </p>
-            <ul class="font-body-mobile list-disc ps-4">
+            <ul class="font-body-mobile lg:font-body list-disc ps-4">
               <li>Engage in illegal activities</li>
               <li>Distribute malware or hack systems</li>
               <li>Violate export controls or sanctions</li>
@@ -122,15 +140,17 @@ import Layout from "@/components/layout/Layout.astro";
         </div>
 
         <div class="flex flex-col gap-[14px]">
-          <h3 class="text-terms-title font-tag">Disclaimers and Limitations</h3>
+          <h3 class="text-terms-title font-tag lg:font-small-title w-fit">
+            Disclaimers and Limitations
+          </h3>
 
           <div>
-            <p class="font-body-mobile">
+            <p class="font-body-mobile lg:font-body">
               Our services are provided "as-is" without warranties.
               Cryptocurrency involves substantial risk of loss. To the maximum
               extent permitted by law:
             </p>
-            <ul class="font-body-mobile list-disc ps-4">
+            <ul class="font-body-mobile lg:font-body list-disc ps-4">
               <li>
                 We are not liable for any indirect or consequential damages
               </li>
@@ -146,42 +166,44 @@ import Layout from "@/components/layout/Layout.astro";
     </section>
 
     <section id="privacy" class="flex flex-col gap-5">
-      <h2 class="font-small-title">Privacy Policy</h2>
+      <h2 class="font-small-title lg:font-medium-title">Privacy Policy</h2>
 
-      <div class="flex flex-col gap-10">
+      <div class="flex flex-col gap-10 lg:grid lg:grid-cols-2 lg:gap-16">
         <div class="flex flex-col gap-[14px]">
-          <h3 class="text-privacy-title font-tag">Information We Collect</h3>
+          <h3 class="text-privacy-title font-tag lg:font-small-title w-fit">
+            Information We Collect
+          </h3>
 
           <div>
-            <p class="font-body-mobile">
+            <p class="font-body-mobile lg:font-body">
               <strong>From Our Apps:</strong>
               <br />
               We do not collect personal information through the Quantus Network
               applications.
             </p>
 
-            <p class="font-body-mobile mt-4">
+            <p class="font-body-mobile lg:font-body mt-4">
               <strong>From Our Website we automatically collect:</strong>
             </p>
-            <ul class="font-body-mobile list-disc ps-4">
+            <ul class="font-body-mobile lg:font-body list-disc ps-4">
               <li>IP address (anonymized through Google Analytics)</li>
               <li>Browser and device information</li>
               <li>Pages visited and usage patterns</li>
               <li>Geographic location (country/region only)</li>
             </ul>
 
-            <p class="font-body-mobile mt-4">
+            <p class="font-body-mobile lg:font-body mt-4">
               <strong>From You Directly:</strong>
             </p>
-            <ul class="font-body-mobile list-disc ps-4">
+            <ul class="font-body-mobile lg:font-body list-disc ps-4">
               <li>Email address (if you subscribe to our newsletter)</li>
               <li>Information you provide when contacting us</li>
             </ul>
 
-            <p class="font-body-mobile mt-4">
+            <p class="font-body-mobile lg:font-body mt-4">
               <strong>Technical Data:</strong>
             </p>
-            <ul class="font-body-mobile list-disc ps-4">
+            <ul class="font-body-mobile lg:font-body list-disc ps-4">
               <li>Application crash reports and error logs</li>
               <li>Network connectivity information (to improve performance)</li>
             </ul>
@@ -189,11 +211,15 @@ import Layout from "@/components/layout/Layout.astro";
         </div>
 
         <div class="flex flex-col gap-[14px]">
-          <h3 class="text-privacy-title font-tag">How We Use Information</h3>
+          <h3 class="text-privacy-title font-tag lg:font-small-title w-fit">
+            How We Use Information
+          </h3>
 
           <div>
-            <p class="font-body-mobile">We use collected information to:</p>
-            <ul class="font-body-mobile list-disc ps-4">
+            <p class="font-body-mobile lg:font-body">
+              We use collected information to:
+            </p>
+            <ul class="font-body-mobile lg:font-body list-disc ps-4">
               <li>Improve our website and applications</li>
               <li>Send newsletter updates (with your consent)</li>
               <li>Analyze usage to enhance user experience</li>
@@ -201,10 +227,10 @@ import Layout from "@/components/layout/Layout.astro";
               <li>Comply with legal obligations</li>
             </ul>
 
-            <p class="font-body-mobile mt-4">
+            <p class="font-body-mobile lg:font-body mt-4">
               <strong>We do not:</strong>
             </p>
-            <ul class="font-body-mobile list-disc ps-4">
+            <ul class="font-body-mobile lg:font-body list-disc ps-4">
               <li>Sell or rent your data to third parties</li>
               <li>Store your private keys or transaction data</li>
               <li>Use your data for targeted advertising</li>
@@ -213,16 +239,20 @@ import Layout from "@/components/layout/Layout.astro";
         </div>
 
         <div class="flex flex-col gap-[14px]">
-          <h3 class="text-privacy-title font-tag">Information Sharing</h3>
+          <h3 class="text-privacy-title font-tag lg:font-small-title w-fit">
+            Information Sharing
+          </h3>
 
           <div>
-            <p class="font-body-mobile">We may share information with:</p>
-            <ul class="font-body-mobile list-disc ps-4">
+            <p class="font-body-mobile lg:font-body">
+              We may share information with:
+            </p>
+            <ul class="font-body-mobile lg:font-body list-disc ps-4">
               <li>Analytics providers (Google Analytics for website data)</li>
               <li>Service providers who help operate our website</li>
               <li>Legal authorities when required by law</li>
             </ul>
-            <p class="font-body-mobile">
+            <p class="font-body-mobile lg:font-body">
               We only share aggregated, anonymized data that cannot identify
               you.
             </p>
@@ -230,16 +260,20 @@ import Layout from "@/components/layout/Layout.astro";
         </div>
 
         <div class="flex flex-col gap-[14px]">
-          <h3 class="text-privacy-title font-tag">Cookies and Tracking</h3>
+          <h3 class="text-privacy-title font-tag lg:font-small-title w-fit">
+            Cookies and Tracking
+          </h3>
 
           <div>
-            <p class="font-body-mobile">Our website uses cookies for:</p>
-            <ul class="font-body-mobile list-disc ps-4">
+            <p class="font-body-mobile lg:font-body">
+              Our website uses cookies for:
+            </p>
+            <ul class="font-body-mobile lg:font-body list-disc ps-4">
               <li>Essential website functionality</li>
               <li>Analytics to understand site usage</li>
               <li>Performance improvements</li>
             </ul>
-            <p class="font-body-mobile">
+            <p class="font-body-mobile lg:font-body">
               You can control cookies through your browser settings, though this
               may affect website functionality.
             </p>
@@ -247,21 +281,21 @@ import Layout from "@/components/layout/Layout.astro";
         </div>
 
         <div class="flex flex-col gap-[14px]">
-          <h3 class="text-privacy-title font-tag">
+          <h3 class="text-privacy-title font-tag lg:font-small-title w-fit">
             Data Security and Retention
           </h3>
 
           <div>
-            <p class="font-body-mobile">
+            <p class="font-body-mobile lg:font-body">
               We implement standard security measures to protect your data,
               including encryption and secure storage. However, no online
               service is completely secure.
             </p>
 
-            <p class="font-body-mobile mt-4">
+            <p class="font-body-mobile lg:font-body mt-4">
               <strong>Technical Data:</strong>
             </p>
-            <ul class="font-body-mobile list-disc ps-4">
+            <ul class="font-body-mobile lg:font-body list-disc ps-4">
               <li>Website analytics: 26 months</li>
               <li>Newsletter subscriptions: Until you unsubscribe</li>
             </ul>
@@ -269,20 +303,22 @@ import Layout from "@/components/layout/Layout.astro";
         </div>
 
         <div class="flex flex-col gap-[14px]">
-          <h3 class="text-privacy-title font-tag">Your Rights</h3>
+          <h3 class="text-privacy-title font-tag lg:font-small-title w-fit">
+            Your Rights
+          </h3>
 
           <div>
-            <p class="font-body-mobile">
+            <p class="font-body-mobile lg:font-body">
               <strong>You can: </strong>Unsubscribe from communications anytime
             </p>
 
-            <p class="font-body-mobile mt-4">
+            <p class="font-body-mobile lg:font-body mt-4">
               <strong>For California residents: </strong>You have additional
               rights under CCPA, including the right to know what personal
               information we collect and the right to deletion.
             </p>
 
-            <p class="font-body-mobile mt-4">
+            <p class="font-body-mobile lg:font-body mt-4">
               <strong>For EU/UK residents: </strong>You have rights under GDPR,
               including data portability and the right to object to processing.
             </p>
@@ -290,10 +326,12 @@ import Layout from "@/components/layout/Layout.astro";
         </div>
 
         <div class="flex flex-col gap-[14px]">
-          <h3 class="text-privacy-title font-tag">International Transfers</h3>
+          <h3 class="text-privacy-title font-tag lg:font-small-title w-fit">
+            International Transfers
+          </h3>
 
           <div>
-            <p class="font-body-mobile">
+            <p class="font-body-mobile lg:font-body">
               Your information may be processed in the United States. We ensure
               appropriate protections for international data transfers.
             </p>
@@ -301,10 +339,12 @@ import Layout from "@/components/layout/Layout.astro";
         </div>
 
         <div class="flex flex-col gap-[14px]">
-          <h3 class="text-privacy-title font-tag">Children's Privacy</h3>
+          <h3 class="text-privacy-title font-tag lg:font-small-title w-fit">
+            Children's Privacy
+          </h3>
 
           <div>
-            <p class="font-body-mobile">
+            <p class="font-body-mobile lg:font-body">
               Our services are not intended for anyone under 18. We do not
               knowingly collect information from minors.
             </p>
@@ -312,13 +352,15 @@ import Layout from "@/components/layout/Layout.astro";
         </div>
 
         <div class="flex flex-col gap-[14px]">
-          <h3 class="text-privacy-title font-tag">Additional Information</h3>
+          <h3 class="text-privacy-title font-tag lg:font-small-title w-fit">
+            Additional Information
+          </h3>
 
           <div>
-            <p class="font-body-mobile">
+            <p class="font-body-mobile lg:font-body">
               <strong>Regulatory Compliance</strong>
             </p>
-            <ul class="font-body-mobile list-disc ps-4">
+            <ul class="font-body-mobile lg:font-body list-disc ps-4">
               <li>Users must comply with local cryptocurrency regulations</li>
               <li>Some features may be restricted in certain jurisdictions</li>
               <li>
@@ -329,10 +371,12 @@ import Layout from "@/components/layout/Layout.astro";
         </div>
 
         <div class="flex flex-col gap-[14px]">
-          <h3 class="text-privacy-title font-tag">Contact Us</h3>
+          <h3 class="text-privacy-title font-tag lg:font-small-title w-fit">
+            Contact Us
+          </h3>
 
           <div>
-            <p class="font-body-mobile">
+            <p class="font-body-mobile lg:font-body">
               Quantus Labs LLC
               <br />
               30 N Gould St #52155
@@ -340,7 +384,7 @@ import Layout from "@/components/layout/Layout.astro";
               Sheridan, WY 82801
             </p>
 
-            <p class="font-body-mobile mt-4">
+            <p class="font-body-mobile lg:font-body mt-4">
               For questions about this policy or to exercise your privacy
               rights, please use our <a
                 class="text-blue-400 underline"
