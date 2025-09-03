@@ -39,7 +39,7 @@ export const FOOTER_NAVIGATIONS: Navigation[] = [
       { href: "/about", label: "Company" },
       // { href: "/audits", label: "Audits" },
       {
-        href: "/terms-and-privacy#terms",
+        href: "/terms-and-privacy",
         label: "Terms & Conditions",
       },
       { href: "/terms-and-privacy#privacy", label: "Privacy Policy" },
