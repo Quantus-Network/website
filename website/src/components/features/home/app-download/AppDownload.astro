@@ -1,0 +1,50 @@
+---
+import CallToAction from "./CallToAction.astro";
+
+import AppHomeView from "@/assets/download/app-home-view.png";
+import { Image } from "astro:assets";
+
+import AppBenefitCard from "@/components/ui/AppBenefitCard.astro";
+import AppInformation from "@/components/ui/AppInformation.astro";
+
+import { BENEFIT_DATA } from "@/constants/app-benefits";
+---
+
+<section id="app-info">
+  <div
+    class="bg-app-download lg:bg-app-download-desktop pt-[74px] pb-16 lg:pt-[104px] lg:pb-[169px] xl:pb-[253px]"
+  >
+    <div class="lg:max-w-content lg:mx-auto xl:flex xl:gap-14">
+      <div class="flex flex-col gap-10">
+        <AppInformation />
+
+        <div class="flex flex-col gap-10 lg:flex-row lg:gap-8">
+          <div
+            class="mx-auto max-w-[400px] px-[30px] lg:order-2 lg:max-w-[500px] lg:px-0 xl:hidden"
+          >
+            <Image src={AppHomeView} alt="App's home view" />
+          </div>
+
+          <div
+            class="flex flex-col gap-8 px-5 lg:order-1 lg:grid lg:grid-cols-1 xl:grid-cols-2 xl:px-0"
+          >
+            {
+              BENEFIT_DATA.map((data) => (
+                <AppBenefitCard
+                  class="lg:w-[352px] xl:even:translate-y-24"
+                  {...data}
+                />
+              ))
+            }
+          </div>
+        </div>
+      </div>
+
+      <div class="hidden lg:w-[348px] xl:block">
+        <Image src={AppHomeView} alt="App's home view" />
+      </div>
+    </div>
+  </div>
+
+  <CallToAction />
+</section>

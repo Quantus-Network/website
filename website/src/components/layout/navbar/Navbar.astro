@@ -1,0 +1,141 @@
+---
+import { MenuIcon, XIcon } from "@lucide/astro";
+import DesktopMenu from "./desktop-menu/DesktopMenu.astro";
+import MobileMenu from "./mobile-menu/MobileMenu.astro";
+
+import BrandLogo from "@/assets/brand/brand-logo.svg";
+import BrandName from "@/assets/brand/brand-name.svg";
+
+import Separator from "@/components/ui/Separator.astro";
+import Button from "@/components/ui/Button.astro";
+---
+
+<nav
+  class="bg-navbar-body navbar-desktop:pt-[50px] fixed top-0 z-10 h-[139px] w-full pt-[70px]"
+  role="navigation"
+  aria-label="Main navigation"
+>
+  <div
+    class="navbar-desktop:px-20 navbar-desktop:pb-[50px] navbar-desktop:max-w-navbar mx-auto px-[30px] pb-[30px]"
+  >
+    <div class="flex items-center justify-between">
+      <!-- Logo/Brand -->
+      <div class="flex-shrink-0">
+        <a href="/" class="flex items-center gap-3 hover:brightness-125">
+          <BrandLogo />
+          <BrandName />
+        </a>
+      </div>
+
+      <DesktopMenu />
+
+      <!-- CTA Button (Desktop) -->
+      <div class="navbar-desktop:block hidden">
+        <Button target="_self" href="/app">Join the Public BETA</Button>
+      </div>
+
+      <!-- Mobile menu button -->
+      <div class="navbar-desktop:hidden">
+        <button
+          id="mobile-menu-button"
+          type="button"
+          class="inline-flex cursor-pointer items-center justify-center rounded-md p-2 text-white"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+          aria-label="Toggle main menu"
+        >
+          <span class="sr-only">Open main menu</span>
+          <!-- Menu icon (hamburger) -->
+          <MenuIcon class="menu-icon block size-5" aria-hidden="true" />
+
+          <!-- Close icon (X) -->
+          <XIcon class="close-icon hidden size-5" aria-hidden="true" />
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <Separator class="absolute bottom-0" />
+  <MobileMenu />
+</nav>
+
+<script>
+  const mobileMenuButton = document.querySelector<HTMLDivElement>(
+    "#mobile-menu-button",
+  );
+  const mobileMenu = document.querySelector(".mobile-menu");
+  const menuIcon = document.querySelector(".menu-icon");
+  const closeIcon = document.querySelector(".close-icon");
+
+  if (!mobileMenuButton || !mobileMenu || !menuIcon || !closeIcon)
+    throw Error(
+      "Mobile navbar elements can't be selected, failed attaching event listener",
+    );
+
+  mobileMenuButton.addEventListener("click", function () {
+    const isExpanded =
+      mobileMenuButton.getAttribute("aria-expanded") === "true";
+
+    // Toggle menu visibility
+    mobileMenu.classList.toggle("hidden");
+    mobileMenu.classList.toggle("flex");
+
+    // Toggle icons
+    menuIcon.classList.toggle("hidden");
+    closeIcon.classList.toggle("hidden");
+
+    // Update aria-expanded attribute
+    mobileMenuButton.setAttribute("aria-expanded", (!isExpanded).toString());
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener("click", function (event) {
+    if (
+      !mobileMenuButton.contains(event.target as Node) &&
+      !mobileMenu.contains(event.target as Node)
+    ) {
+      if (!mobileMenu.classList.contains("hidden")) {
+        mobileMenu.classList.add("hidden");
+        mobileMenu.classList.remove("flex");
+
+        menuIcon.classList.remove("hidden");
+        closeIcon.classList.add("hidden");
+        mobileMenuButton.setAttribute("aria-expanded", "false");
+      }
+    }
+  });
+
+  // Handle escape key
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && !mobileMenu.classList.contains("hidden")) {
+      mobileMenu.classList.add("hidden");
+      mobileMenu.classList.remove("flex");
+
+      menuIcon.classList.remove("hidden");
+      closeIcon.classList.add("hidden");
+      mobileMenuButton.setAttribute("aria-expanded", "false");
+      mobileMenuButton.focus();
+    }
+  });
+</script>
+
+<style>
+  /* High contrast mode support */
+  @media (prefers-contrast: high) {
+    nav {
+      border-width: 2px;
+    }
+
+    a:focus {
+      outline: 2px solid;
+      outline-offset: 2px;
+    }
+  }
+
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      transition-duration: 0.01ms !important;
+    }
+  }
+</style>

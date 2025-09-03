@@ -1,0 +1,31 @@
+---
+import "../../styles/global.css";
+import "@fontsource/prompt/200.css";
+import "@fontsource/prompt/300.css";
+import "@fontsource/prompt/400.css";
+import "@fontsource/prompt/600.css";
+import "@fontsource/prompt/700.css";
+import "@fontsource/prompt/900.css";
+import "@fontsource/inter/900.css";
+
+import Navbar from "./navbar/Navbar.astro";
+import Footer from "./footer/Footer.astro";
+---
+
+<!doctype html>
+<html lang="en" class="flex min-h-full flex-col">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon"  href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Quantus</title>
+  </head>
+  <body class="flex grow flex-col pt-[139px]">
+    <Navbar />
+    <main class="grow">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

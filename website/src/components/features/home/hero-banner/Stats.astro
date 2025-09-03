@@ -1,0 +1,147 @@
+<div
+  class="max-w-content mx-auto grid grid-cols-3 gap-[30px] px-14 pt-[34px] pb-10 md:grid-cols-7"
+>
+  <div class="flex flex-col items-center gap-[6px]">
+    <p class="font-medium-title-mobile md:font-medium-title">
+      2.5<span class="font-small">sec</span>
+    </p>
+    <p class="font-body-mobile md:font-body">Blocktime</p>
+  </div>
+
+  <div class="flex flex-col items-center">
+    <div class="bg-stats-separator h-full w-px"></div>
+  </div>
+
+  <div class="flex flex-col items-center gap-[6px]">
+    <p
+      class="font-medium-title-mobile md:font-medium-title transition-opacity duration-200"
+      id="transactions-count"
+    >
+      -
+    </p>
+    <p class="font-body-mobile md:font-body">Transactions</p>
+  </div>
+
+  <div class="hidden flex-col items-center md:flex">
+    <div class="bg-stats-separator h-full w-px"></div>
+  </div>
+
+  <div class="flex flex-col items-center gap-[6px]">
+    <p
+      class="font-medium-title-mobile md:font-medium-title transition-opacity duration-200"
+      id="addresses-count"
+    >
+      -
+    </p>
+    <p class="font-body-mobile md:font-body">Addresses</p>
+  </div>
+
+  <div class="flex flex-col items-center">
+    <div class="bg-stats-separator h-full w-px"></div>
+  </div>
+
+  <div class="flex flex-col items-center gap-[6px]">
+    <p class="font-medium-title-mobile md:font-medium-title">98</p>
+    <p class="font-body-mobile md:font-body">Nodes</p>
+  </div>
+</div>
+
+<!-- Error display -->
+<div id="stats-error" class="mt-2 hidden text-center text-sm text-red-500">
+</div>
+
+<script>
+  // Import the client for client-side usage
+  import apiClient from "@/api/client";
+
+  // DOM elements
+  const transactionsElement = document.getElementById(
+    "transactions-count",
+  ) as HTMLParagraphElement;
+  const addressesElement = document.getElementById(
+    "addresses-count",
+  ) as HTMLParagraphElement;
+  const errorElement = document.getElementById("stats-error") as HTMLDivElement;
+
+  // State management
+  let isLoading = false;
+
+  // Function to format numbers for display
+  const formatNumber = (num: number): string => {
+    if (num >= 1000000) {
+      return (num / 1000000).toFixed(1) + "M";
+    } else if (num >= 1000) {
+      return (num / 1000).toFixed(1) + "k";
+    }
+    return num.toString();
+  };
+
+  // Function to show/hide error
+  const showError = (message: string) => {
+    errorElement.textContent = `Error loading stats: ${message}`;
+    errorElement.classList.remove("hidden");
+  };
+
+  const hideError = () => {
+    errorElement.classList.add("hidden");
+  };
+
+  // Function to set loading state
+  const setLoadingState = (loading: boolean) => {
+    isLoading = loading;
+
+    // Add loading opacity effect
+    transactionsElement.style = loading ? "0.5" : "1";
+    addressesElement.style.opacity = loading ? "0.5" : "1";
+  };
+
+  // Function to fetch chain stats
+  const fetchChainStats = async (): Promise<void> => {
+    hideError();
+
+    try {
+      const data = await apiClient.getChainStats();
+
+      // Update the stats with formatted numbers
+      transactionsElement.textContent = formatNumber(
+        data.allTransactions.totalCount,
+      );
+      addressesElement.textContent = formatNumber(data.allAccounts.totalCount);
+    } catch (err) {
+      console.error("Error fetching chain stats:", err);
+      const errorMessage = err instanceof Error ? err.message : "Unknown error";
+      showError(errorMessage);
+    }
+  };
+
+  // Set up periodic refresh (every 30 seconds)
+  let refreshInterval: number;
+
+  const startAutoRefresh = () => {
+    refreshInterval = window.setInterval(fetchChainStats, 10 * 1000);
+  };
+
+  const stopAutoRefresh = () => {
+    if (refreshInterval) {
+      clearInterval(refreshInterval);
+    }
+  };
+
+  // Start auto-refresh when page loads
+  startAutoRefresh();
+  fetchChainStats();
+
+  // Optional: Stop auto-refresh when page becomes hidden (performance optimization)
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      stopAutoRefresh();
+    } else {
+      startAutoRefresh();
+      // Refresh immediately when page becomes visible again
+      fetchChainStats();
+    }
+  });
+
+  // Cleanup on page unload
+  window.addEventListener("beforeunload", stopAutoRefresh);
+</script>

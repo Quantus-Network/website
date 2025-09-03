@@ -1,0 +1,35 @@
+---
+import Separator from "@/components/ui/Separator.astro";
+import Banner from "./Banner.astro";
+import Stats from "./Stats.astro";
+import SphereDecoration from "@/components/ui/SphereDecoration.astro";
+---
+
+<section id="about" class="relative overflow-hidden px-4">
+  <div class="absolute -z-10 flex size-full flex-col items-center">
+    <SphereDecoration
+      class="absolute -top-[0.8rem] -right-[5rem] md:top-[1rem] md:right-[4rem]"
+      variant="1"
+      size={202}
+    />
+    <SphereDecoration
+      class="absolute top-[6.5rem] md:top-[3rem] md:left-[4rem]"
+      variant="2"
+      size={320}
+    />
+    <SphereDecoration
+      class="absolute bottom-[4.5rem] -left-[6rem] md:hidden"
+      variant="3"
+      size={283}
+    />
+    <SphereDecoration
+      class="absolute right-[8rem] bottom-0 hidden md:block"
+      variant="3"
+      size={413}
+    />
+  </div>
+
+  <Banner />
+  <Separator />
+  <Stats />
+</section>

@@ -1,0 +1,358 @@
+---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+// Carousel.astro
+export interface CarouselItem {
+  id: string;
+  alt: string;
+  href: string;
+  src: ImageMetadata;
+}
+
+export interface Props {
+  items: CarouselItem[];
+  autoplay?: boolean;
+  autoplayInterval?: number;
+  showDots?: boolean;
+  loop?: boolean;
+  className?: string;
+  slideClassName?: string;
+  renderCustomContent?: boolean;
+}
+
+const {
+  items = [],
+  autoplay = false,
+  autoplayInterval = 3000,
+  showDots = true,
+  loop = true,
+  className = "",
+  slideClassName = "",
+  renderCustomContent = false,
+} = Astro.props;
+
+const carouselId = `carousel-${Math.random().toString(36).substring(2, 9)}`;
+
+// Create duplicated items for infinite loop
+const duplicatedItems =
+  loop && items.length > 1 ? [...items, ...items, ...items] : items;
+const startIndex = loop && items.length > 1 ? items.length : 0;
+---
+
+<div class={`relative w-full ${className}`} data-carousel-id={carouselId}>
+  <div class="relative flex w-full items-center">
+    <div class="w-full overflow-hidden rounded-lg">
+      <div class="carousel-track ms-[calc(-132px+50vw)] flex gap-5" data-track>
+        {
+          duplicatedItems.map((item, index) => (
+            <div
+              class={`min-h-[200px] w-fit flex-none ${slideClassName}`}
+              data-slide-index={index}
+              data-item-id={item.id}
+              data-original-index={
+                loop && items.length > 1 ? index % items.length : index
+              }
+            >
+              <div class="flex h-full w-full items-center justify-center">
+                <slot name="slide">
+                  <div class="rounded-quantus flex h-full w-full items-center justify-center overflow-hidden text-center">
+                    <a
+                      class="inline-block h-[394px] w-[264px]"
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Image
+                        class="w-full"
+                        src={item.src}
+                        alt={item.alt}
+                        widths={[264, 281]}
+                        sizes={"(min-width: 281px) 100vw, 264px"}
+                        layout="full-width"
+                      />
+                    </a>
+                  </div>
+                </slot>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+
+  {
+    showDots && items.length > 1 && (
+      <div class="mt-8 flex justify-center gap-2">
+        {items.map((_, index) => (
+          <button
+            class="border-carousel-dot-border hover:bg-quantus-dark-blue [&.active]:bg-carousel-dot size-4 cursor-pointer rounded-full border transition-colors duration-200 [&.active]:w-10 [&.active]:rounded-[23px] [&.active]:border-none"
+            data-slide={index}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
+      </div>
+    )
+  }
+</div>
+
+<style>
+  .carousel-track {
+    transition: transform 0.3s ease-in-out;
+    will-change: transform;
+  }
+
+  .carousel-track.no-transition {
+    transition: none;
+  }
+</style>
+
+<script
+  define:vars={{
+    carouselId,
+    autoplay,
+    autoplayInterval,
+    loop,
+    renderCustomContent,
+    itemsLength: items.length,
+  }}
+>
+  class Carousel {
+    constructor(container, options = {}) {
+      this.container = container;
+      this.track = container.querySelector("[data-track]");
+      this.slides = Array.from(
+        container.querySelectorAll("[data-slide-index]"),
+      );
+      this.dots = Array.from(container.querySelectorAll("[data-slide]"));
+
+      this.itemsLength = options.itemsLength || this.slides.length;
+      this.currentIndex =
+        options.loop && this.itemsLength > 1 ? this.itemsLength : 0;
+      this.visualIndex = 0; // This tracks the visual position for dots
+      this.autoplay = options.autoplay || false;
+      this.autoplayInterval = options.autoplayInterval || 3000;
+      this.loop = options.loop !== undefined ? options.loop : true;
+      this.autoplayTimer = null;
+      this.renderCustomContent = options.renderCustomContent || false;
+      this.slideWidth = 264; // Width of each slide
+      this.slideGap = 20; // Gap between slides
+      this.isTransitioning = false;
+
+      this.init();
+    }
+
+    init() {
+      if (this.slides.length === 0) return;
+
+      // Render custom content if enabled
+      if (this.renderCustomContent) {
+        this.renderSlideContent();
+      }
+
+      this.updateSlidePosition(false); // Initialize position without transition
+      this.updateDots();
+      this.bindEvents();
+
+      if (this.autoplay) {
+        this.startAutoplay();
+      }
+    }
+
+    bindEvents() {
+      // Dot navigation
+      this.dots.forEach((dot, index) => {
+        dot.addEventListener("click", () => this.goToSlide(index));
+      });
+
+      // Keyboard navigation
+      this.container.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowLeft") this.goToPrevious();
+        if (e.key === "ArrowRight") this.goToNext();
+      });
+
+      // Pause autoplay on hover
+      if (this.autoplay) {
+        this.container.addEventListener("mouseenter", () =>
+          this.stopAutoplay(),
+        );
+        this.container.addEventListener("mouseleave", () =>
+          this.startAutoplay(),
+        );
+      }
+
+      // Listen for transition end to handle infinite loop repositioning
+      this.track.addEventListener("transitionend", () => {
+        this.handleTransitionEnd();
+      });
+
+      // Touch/swipe support
+      let startX = 0;
+      let isDragging = false;
+
+      this.track.addEventListener("touchstart", (e) => {
+        startX = e.touches[0].clientX;
+        isDragging = true;
+        this.stopAutoplay(); // Pause autoplay during touch
+      });
+
+      this.track.addEventListener("touchmove", (e) => {
+        if (!isDragging) return;
+        e.preventDefault();
+      });
+
+      this.track.addEventListener("touchend", (e) => {
+        if (!isDragging) return;
+        isDragging = false;
+
+        const endX = e.changedTouches[0].clientX;
+        const diff = startX - endX;
+        const threshold = 50;
+
+        if (Math.abs(diff) > threshold) {
+          if (diff > 0) {
+            this.goToNext();
+          } else {
+            this.goToPrevious();
+          }
+        }
+
+        // Resume autoplay after touch interaction
+        if (this.autoplay) {
+          this.startAutoplay();
+        }
+      });
+    }
+
+    goToSlide(visualIndex) {
+      if (visualIndex < 0 || visualIndex >= this.itemsLength) return;
+      if (this.isTransitioning) return;
+
+      this.visualIndex = visualIndex;
+
+      if (this.loop && this.itemsLength > 1) {
+        // In infinite loop mode, find the closest slide with the target visual index
+        this.currentIndex = this.itemsLength + visualIndex;
+      } else {
+        this.currentIndex = visualIndex;
+      }
+
+      this.updateSlidePosition(true);
+      this.updateDots();
+    }
+
+    goToNext() {
+      if (this.isTransitioning) return;
+
+      if (this.loop && this.itemsLength > 1) {
+        this.currentIndex++;
+        this.visualIndex = (this.visualIndex + 1) % this.itemsLength;
+      } else if (this.currentIndex < this.slides.length - 1) {
+        this.currentIndex++;
+        this.visualIndex++;
+      } else {
+        return; // No looping, at the end
+      }
+
+      this.updateSlidePosition(true);
+      this.updateDots();
+    }
+
+    goToPrevious() {
+      if (this.isTransitioning) return;
+
+      if (this.loop && this.itemsLength > 1) {
+        this.currentIndex--;
+        this.visualIndex =
+          this.visualIndex === 0 ? this.itemsLength - 1 : this.visualIndex - 1;
+      } else if (this.currentIndex > 0) {
+        this.currentIndex--;
+        this.visualIndex--;
+      } else {
+        return; // No looping, at the beginning
+      }
+
+      this.updateSlidePosition(true);
+      this.updateDots();
+    }
+
+    updateSlidePosition(withTransition = true) {
+      const translateX = -this.currentIndex * (this.slideWidth + this.slideGap);
+
+      if (withTransition) {
+        this.track.classList.remove("no-transition");
+        this.isTransitioning = true;
+      } else {
+        this.track.classList.add("no-transition");
+        this.isTransitioning = false;
+      }
+
+      this.track.style.transform = `translateX(${translateX}px)`;
+
+      // If no transition, immediately call handleTransitionEnd
+      if (!withTransition) {
+        setTimeout(() => this.handleTransitionEnd(), 0);
+      }
+    }
+
+    handleTransitionEnd() {
+      this.isTransitioning = false;
+
+      if (!this.loop || this.itemsLength <= 1) return;
+
+      // Check if we need to reposition for infinite loop
+      if (this.currentIndex >= this.itemsLength * 2) {
+        // We're at the end of the duplicated slides, jump back to the middle set
+        this.currentIndex = this.itemsLength + this.visualIndex;
+        this.updateSlidePosition(false);
+      } else if (this.currentIndex < this.itemsLength) {
+        // We're at the beginning of the duplicated slides, jump to the middle set
+        this.currentIndex = this.itemsLength + this.visualIndex;
+        this.updateSlidePosition(false);
+      }
+    }
+
+    updateDots() {
+      this.dots.forEach((dot, index) => {
+        dot.classList.toggle("active", index === this.visualIndex);
+      });
+    }
+
+    startAutoplay() {
+      if (!this.autoplay || this.itemsLength <= 1) return;
+
+      this.stopAutoplay();
+      this.autoplayTimer = setInterval(() => {
+        this.goToNext();
+      }, this.autoplayInterval);
+    }
+
+    stopAutoplay() {
+      if (this.autoplayTimer) {
+        clearInterval(this.autoplayTimer);
+        this.autoplayTimer = null;
+      }
+    }
+
+    destroy() {
+      this.stopAutoplay();
+    }
+  }
+
+  // Initialize carousel when DOM is ready
+  document.addEventListener("DOMContentLoaded", () => {
+    const container = document.querySelector(
+      `[data-carousel-id="${carouselId}"]`,
+    );
+    if (container) {
+      new Carousel(container, {
+        autoplay,
+        autoplayInterval,
+        loop,
+        renderCustomContent,
+        itemsLength,
+      });
+    }
+  });
+</script>

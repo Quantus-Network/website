@@ -1,0 +1,63 @@
+---
+import { Image } from "astro:assets";
+import Button from "@/components/ui/Button.astro";
+
+import Token2049 from "@/assets/events/token-2049-singapore.png";
+---
+
+<section
+  id="events"
+  class="flex flex-col items-center overflow-hidden pt-[45px] pb-[72px]"
+>
+  <div class="mb-[37px] flex flex-col items-center">
+    <span
+      class="font-event-section text-gradient-giant lg:font-giant relative top-[3.7rem] text-center lg:top-[8rem]"
+      >EVENTS</span
+    >
+    <h2 class="font-large-title-mobile lg:font-large-title text-center">
+      Come Meet Us
+    </h2>
+  </div>
+
+  <div
+    class="relative mx-4 flex h-[496px] flex-col items-center gap-3 ps-[28px] pe-2 pt-[42px] min-[366px]:mx-[30px] md:mx-0 md:h-[566px] md:w-full md:max-w-[700px] md:items-start md:ps-[68px] md:pt-[70px] lg:max-w-[880px] xl:max-w-[1043px]"
+  >
+    <div
+      class="bg-event-card absolute top-0 left-0 -z-10 size-full rounded-[30px] blur-[10px]"
+    >
+    </div>
+
+    <div class="flex flex-col gap-[6px] lg:max-w-[359px]">
+      <p class="font-body-mobile lg:font-large-body">UPCOMING EVENT:</p>
+      <h3 class="font-medium-title-mobile lg:font-medium-title">Token 2049</h3>
+      <p class="font-tag-mobile lg:font-large-body lg:font-semibold">
+        1-2 OCTOBER 2025 MARINA BAY SANDS - Singapore
+      </p>
+    </div>
+
+    <div
+      class="font-body-mobile lg:font-body me-auto w-[275px] font-semibold md:me-0 lg:w-[335px]"
+    >
+      <p>
+        Come meet us and have a chat about quantum, blockchain, art, music or
+        anything!
+      </p>
+      <br />
+      <p>We'll be there all weekend!</p>
+    </div>
+
+    <Image
+      class="rounded-quantus absolute right-0 -bottom-[5rem] w-[250px] min-[366px]:-right-[1.5rem] min-[366px]:w-[292px] lg:top-[4.3rem] lg:-right-[12rem] lg:w-[585px] xl:-right-[4rem]"
+      src={Token2049}
+      alt="Token 2049 Singapore's venue"
+      widths={[292, 585]}
+      sizes={"(min-width:768px) 585px, 292px"}
+    />
+  </div>
+
+  <Button
+    href="https://www.asia.token2049.com/"
+    class="mt-[119px] w-[295px] md:!hidden"
+    variant="outline">Event Details</Button
+  >
+</section>

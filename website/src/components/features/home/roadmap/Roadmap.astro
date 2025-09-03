@@ -1,0 +1,62 @@
+---
+import SphereDecoration from "@/components/ui/SphereDecoration.astro";
+import Timeline from "./Timeline.astro";
+import type { Props as TimelineData } from "./TimelineItem.astro";
+import TimelineItem from "./TimelineItem.astro";
+
+const timelineData: TimelineData[] = [
+  {
+    date: "DEC 2024",
+    title: "Heisenberg Inception",
+    content: "Funding secured, Substrate chosen",
+  },
+  {
+    date: "JULY 2025",
+    title: "Resonance Alpha",
+    content: "Public testnet, dilithium signatures, reversible transactions",
+  },
+  {
+    date: "OCT 2025",
+    title: "Schrödinger Beta",
+    content: "Public Beta Launch, features complete, ready for audit",
+  },
+  {
+    date: "Q1 2026",
+    title: "Bell Mainnet",
+    content: "Mainnet launch, QUAN token launch",
+  },
+  {
+    date: "Q2 2026",
+    title: "Planck Upgrades",
+    content:
+      "High Security Accounts, Multisignature Accounts, Hardware Wallet Integration",
+  },
+  {
+    date: "Q3 2026",
+    title: "Dirac Expansion",
+    content: "Entangled Addresses, Bridge to Solana",
+  },
+];
+---
+
+<section
+  id="roadmap"
+  class="relative flex flex-col overflow-hidden pt-[105px] pb-[125px] lg:items-center lg:pt-[60px]"
+>
+  <SphereDecoration
+    class="absolute -top-[3rem] -left-[4rem] -z-10 lg:left-auto"
+    variant="7"
+    size={190}
+  />
+  <Timeline class="left-2 h-[calc(100%-125px)] lg:top-[8rem] lg:left-auto" />
+
+  <h2
+    class="font-medium-title-mobile lg:font-medium-title ms-[3.5rem] mb-[43px] lg:ms-0 lg:mb-[120px] lg:text-center"
+  >
+    Roadmap
+  </h2>
+
+  <div class="flex flex-col gap-[45px]">
+    {timelineData.map((data) => <TimelineItem {...data} />)}
+  </div>
+</section>

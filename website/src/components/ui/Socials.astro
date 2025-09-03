@@ -1,0 +1,77 @@
+---
+import SiteSocials from "@/components/ui/SiteSocials.astro";
+import Carousel, { type CarouselItem } from "./Carousel.astro";
+import SphereDecoration from "@/components/ui/SphereDecoration.astro";
+
+import GalleryOne from "@/assets/carousels/gallery-1.png";
+import GalleryTwo from "@/assets/carousels/gallery-2.png";
+import GalleryThree from "@/assets/carousels/gallery-3.png";
+import GalleryFour from "@/assets/carousels/gallery-4.png";
+import GalleryFive from "@/assets/carousels/gallery-5.png";
+import GallerySix from "@/assets/carousels/gallery-6.png";
+
+const carouselItems: CarouselItem[] = [
+  {
+    id: "gallery-1",
+    href: "https://www.youtube.com/watch?v=GmOP1buTNd0&t=3s&ab_channel=DeepSteep",
+    src: GalleryOne,
+    alt: "a snapshot of a DeepSteep podcast episode showing Chris",
+  },
+  {
+    id: "gallery-2",
+    href: "https://www.youtube.com/watch?v=u9ZsCo6JWbw&t=11s&ab_channel=DeepSteep",
+    src: GalleryTwo,
+    alt: "DeepSteep's Q-day series opening snapshot",
+  },
+  {
+    id: "gallery-3",
+    href: "https://www.youtube.com/watch?v=GmOP1buTNd0&t=3s&ab_channel=DeepSteep",
+    src: GalleryThree,
+    alt: "a snapshot of a DeepSteep podcast episode showing Joe",
+  },
+  {
+    id: "gallery-4",
+    href: "https://www.youtube.com/watch?v=u9ZsCo6JWbw&t=11s&ab_channel=DeepSteep",
+    src: GalleryFour,
+    alt: "a snapshot of a DeepSteep Q-day episode showing the main characters",
+  },
+  {
+    id: "gallery-5",
+    href: "https://www.youtube.com/watch?v=GmOP1buTNd0&t=3s&ab_channel=DeepSteep",
+    src: GalleryFive,
+    alt: "a snapshot of a DeepSteep podcast episode showing Chris, Joe, and a guest",
+  },
+  {
+    id: "gallery-6",
+    href: "https://www.youtube.com/watch?v=u9ZsCo6JWbw&t=11s&ab_channel=DeepSteep",
+    src: GallerySix,
+    alt: "a snapshot of a DeepSteep Q-day podcast episode showing one of the main villain",
+  },
+];
+---
+
+<section
+  class="relative flex flex-col items-center gap-16 overflow-hidden pt-12 pb-[100px]"
+>
+  <SphereDecoration
+    class="absolute top-[16rem] -right-[8rem] -z-10"
+    variant="10"
+    size={240}
+  />
+  <SphereDecoration
+    class="absolute -bottom-[11rem] -z-10"
+    variant="6"
+    size={240}
+  />
+
+  <div class="flex flex-col gap-11 px-[30px]">
+    <h2
+      class="font-small-title lg:font-medium-title max-w-content lg:text-center"
+    >
+      Follow us for fun content, podcasts, interviews, wizardry and more!
+    </h2>
+    <SiteSocials class="lg:justify-center" />
+  </div>
+
+  <Carousel items={carouselItems} autoplay loop />
+</section>
