@@ -76,6 +76,7 @@ import MessageAlert from "@/components/ui/MessageAlert.astro";
 
 <script>
   import apiClient from "@/api/client";
+  import { ALERT_TIMEOUT } from "@/constants/alert-timeout";
 
   const form = document.getElementById("contact-form") as HTMLFormElement;
   const btn = document.getElementById("footer-subscribe-button");
@@ -119,7 +120,7 @@ import MessageAlert from "@/components/ui/MessageAlert.astro";
       successAlert?.classList.remove("hidden");
       setTimeout(() => {
         successAlert?.classList.add("hidden");
-      }, 3000);
+      }, ALERT_TIMEOUT);
 
       // Reset form
       form.reset();
@@ -134,7 +135,7 @@ import MessageAlert from "@/components/ui/MessageAlert.astro";
       errorAlert?.classList.remove("hidden");
       setTimeout(() => {
         errorAlert?.classList.add("hidden");
-      }, 3000);
+      }, ALERT_TIMEOUT);
     }
   });
 </script>

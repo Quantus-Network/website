@@ -74,6 +74,13 @@ const profileData: ProfileData[] = [
 
     <figure class="lg:flex lg:justify-between lg:gap-5">
       <div class="flex flex-col gap-5 lg:justify-between">
+        <Image
+          class={"size-full max-w-[600px] mx-auto lg:hidden"}
+          src={Chris}
+          alt="Christopher Smith's avatar"
+          layout="full-width"
+        />
+
         <figcaption class="flex w-[280px] flex-col gap-2">
           <h3 class="font-small-title">Christopher Smith</h3>
           <Separator class="h-[0.5px]" />
@@ -81,13 +88,6 @@ const profileData: ProfileData[] = [
             Chief Executive Officer
           </p>
         </figcaption>
-
-        <Image
-          class={"size-full max-w-[600px] mx-auto lg:hidden"}
-          src={Chris}
-          alt="Christopher Smith's avatar"
-          layout="full-width"
-        />
 
         <div class="lg:max-w-[756px]">
           <p class="font-body text-white">
@@ -108,8 +108,8 @@ const profileData: ProfileData[] = [
               machine learning
             </li>
             <li>
-              Private cybersecurity advisor for HNW individuals and digital
-              asset recovery
+              Private cybersecurity and digital asset recovery advisor for HNW
+              individuals
             </li>
             <li>
               Focus: Cryptography, Complexity Theory, Algebraic Topology,

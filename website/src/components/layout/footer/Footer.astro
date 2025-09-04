@@ -147,6 +147,7 @@ const isCurrentPage = (href: string) => currentPath === href;
 
 <script>
   import apiClient from "@/api/client";
+  import { ALERT_TIMEOUT } from "@/constants/alert-timeout";
 
   const form = document.getElementById(
     "footer-subscribe-form",
@@ -190,7 +191,7 @@ const isCurrentPage = (href: string) => currentPath === href;
       successAlert?.classList.remove("hidden");
       setTimeout(() => {
         successAlert?.classList.add("hidden");
-      }, 3000);
+      }, ALERT_TIMEOUT);
 
       // Reset form
       form.reset();
@@ -205,7 +206,7 @@ const isCurrentPage = (href: string) => currentPath === href;
       errorAlert?.classList.remove("hidden");
       setTimeout(() => {
         errorAlert?.classList.add("hidden");
-      }, 3000);
+      }, ALERT_TIMEOUT);
     }
   });
 </script>

@@ -1,5 +1,3 @@
-// client.ts - Updated with better TypeScript support
-
 // Types for API responses
 interface ChainStatsData {
   allTransactions: {

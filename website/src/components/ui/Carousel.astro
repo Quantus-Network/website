@@ -101,9 +101,14 @@ const startIndex = loop && items.length > 1 ? items.length : 0;
   .carousel-track {
     transition: transform 0.3s ease-in-out;
     will-change: transform;
+    touch-action: pan-y pinch-zoom;
   }
 
   .carousel-track.no-transition {
+    transition: none;
+  }
+
+  .carousel-track.swiping {
     transition: none;
   }
 </style>
@@ -139,6 +144,19 @@ const startIndex = loop && items.length > 1 ? items.length : 0;
       this.slideWidth = 264; // Width of each slide
       this.slideGap = 20; // Gap between slides
       this.isTransitioning = false;
+
+      // Touch/swipe properties
+      this.isDragging = false;
+      this.startX = 0;
+      this.startY = 0;
+      this.currentX = 0;
+      this.currentY = 0;
+      this.dragOffset = 0;
+      this.initialTransform = 0;
+      this.velocityTracker = [];
+      this.lastTime = 0;
+      this.isVerticalScroll = false;
+      this.hasMoved = false;
 
       this.init();
     }
@@ -187,47 +205,217 @@ const startIndex = loop && items.length > 1 ? items.length : 0;
         this.handleTransitionEnd();
       });
 
-      // Touch/swipe support
-      let startX = 0;
-      let isDragging = false;
+      // Enhanced touch/swipe support
+      this.bindTouchEvents();
 
-      this.track.addEventListener("touchstart", (e) => {
-        startX = e.touches[0].clientX;
-        isDragging = true;
-        this.stopAutoplay(); // Pause autoplay during touch
-      });
+      // Mouse drag support for desktop
+      this.bindMouseEvents();
+    }
 
-      this.track.addEventListener("touchmove", (e) => {
-        if (!isDragging) return;
-        e.preventDefault();
-      });
+    bindTouchEvents() {
+      this.track.addEventListener(
+        "touchstart",
+        (e) => {
+          this.handleStart(e.touches[0].clientX, e.touches[0].clientY);
+        },
+        { passive: false },
+      );
+
+      this.track.addEventListener(
+        "touchmove",
+        (e) => {
+          this.handleMove(e.touches[0].clientX, e.touches[0].clientY, e);
+        },
+        { passive: false },
+      );
 
       this.track.addEventListener("touchend", (e) => {
-        if (!isDragging) return;
-        isDragging = false;
+        this.handleEnd(
+          e.changedTouches[0].clientX,
+          e.changedTouches[0].clientY,
+        );
+      });
 
-        const endX = e.changedTouches[0].clientX;
-        const diff = startX - endX;
-        const threshold = 50;
+      this.track.addEventListener("touchcancel", () => {
+        this.handleCancel();
+      });
+    }
 
-        if (Math.abs(diff) > threshold) {
-          if (diff > 0) {
-            this.goToNext();
-          } else {
-            this.goToPrevious();
-          }
-        }
+    bindMouseEvents() {
+      this.track.addEventListener("mousedown", (e) => {
+        this.handleStart(e.clientX, e.clientY);
+        e.preventDefault(); // Prevent text selection
+      });
 
-        // Resume autoplay after touch interaction
-        if (this.autoplay) {
-          this.startAutoplay();
+      document.addEventListener("mousemove", (e) => {
+        this.handleMove(e.clientX, e.clientY, e);
+      });
+
+      document.addEventListener("mouseup", (e) => {
+        this.handleEnd(e.clientX, e.clientY);
+      });
+
+      // Prevent context menu on long press
+      this.track.addEventListener("contextmenu", (e) => {
+        if (this.hasMoved) {
+          e.preventDefault();
         }
       });
     }
 
+    handleStart(x, y) {
+      if (this.isTransitioning) return;
+
+      this.isDragging = true;
+      this.startX = x;
+      this.startY = y;
+      this.currentX = x;
+      this.currentY = y;
+      this.dragOffset = 0;
+      this.hasMoved = false;
+      this.isVerticalScroll = false;
+      this.velocityTracker = [];
+      this.lastTime = Date.now();
+
+      // Store the current transform value
+      this.initialTransform =
+        -this.currentIndex * (this.slideWidth + this.slideGap);
+
+      // Stop autoplay during interaction
+      this.stopAutoplay();
+
+      // Remove transition for smooth dragging
+      this.track.classList.add("swiping");
+    }
+
+    handleMove(x, y, event) {
+      if (!this.isDragging) return;
+
+      this.currentX = x;
+      this.currentY = y;
+
+      const deltaX = x - this.startX;
+      const deltaY = y - this.startY;
+
+      // Detect if this is a vertical scroll on first significant movement
+      if (!this.hasMoved && (Math.abs(deltaX) > 5 || Math.abs(deltaY) > 5)) {
+        this.isVerticalScroll = Math.abs(deltaY) > Math.abs(deltaX);
+        this.hasMoved = true;
+      }
+
+      // If it's vertical scroll, let the browser handle it
+      if (this.isVerticalScroll) {
+        this.handleCancel();
+        return;
+      }
+
+      // Prevent default behavior for horizontal swipes
+      if (event && Math.abs(deltaX) > 10) {
+        event.preventDefault();
+      }
+
+      this.dragOffset = deltaX;
+
+      // Track velocity for momentum
+      const now = Date.now();
+      this.velocityTracker.push({
+        time: now,
+        x: deltaX,
+      });
+
+      // Keep only recent velocity data (last 100ms)
+      this.velocityTracker = this.velocityTracker.filter(
+        (point) => now - point.time <= 100,
+      );
+
+      // Apply drag with resistance at boundaries
+      let resistance = 1;
+
+      if (!this.loop) {
+        const atStart = this.currentIndex === 0 && deltaX > 0;
+        const atEnd =
+          this.currentIndex === this.slides.length - 1 && deltaX < 0;
+
+        if (atStart || atEnd) {
+          resistance = 0.3; // Add resistance at boundaries
+        }
+      }
+
+      const finalOffset = this.dragOffset * resistance;
+      const translateX = this.initialTransform + finalOffset;
+
+      this.track.style.transform = `translateX(${translateX}px)`;
+    }
+
+    handleEnd(x, y) {
+      if (!this.isDragging) return;
+
+      this.isDragging = false;
+      this.track.classList.remove("swiping");
+
+      const deltaX = x - this.startX;
+      const deltaY = y - this.startY;
+
+      // If it was vertical scroll, don't process as swipe
+      if (this.isVerticalScroll) {
+        this.updateSlidePosition(false);
+        this.resumeAutoplayIfNeeded();
+        return;
+      }
+
+      // Calculate velocity
+      let velocity = 0;
+      if (this.velocityTracker.length >= 2) {
+        const recent = this.velocityTracker[this.velocityTracker.length - 1];
+        const older = this.velocityTracker[0];
+        const timeDiff = recent.time - older.time;
+        if (timeDiff > 0) {
+          velocity = (recent.x - older.x) / timeDiff;
+        }
+      }
+
+      // Determine if we should change slides
+      const threshold = 50;
+      const velocityThreshold = 0.5;
+      const shouldChange =
+        Math.abs(deltaX) > threshold || Math.abs(velocity) > velocityThreshold;
+
+      if (shouldChange) {
+        if (deltaX > 0 || velocity > velocityThreshold) {
+          this.goToPrevious();
+        } else if (deltaX < 0 || velocity < -velocityThreshold) {
+          this.goToNext();
+        } else {
+          this.updateSlidePosition(true);
+        }
+      } else {
+        this.updateSlidePosition(true);
+      }
+
+      this.resumeAutoplayIfNeeded();
+    }
+
+    handleCancel() {
+      if (!this.isDragging) return;
+
+      this.isDragging = false;
+      this.track.classList.remove("swiping");
+      this.updateSlidePosition(true);
+      this.resumeAutoplayIfNeeded();
+    }
+
+    resumeAutoplayIfNeeded() {
+      if (this.autoplay) {
+        // Resume autoplay after a brief delay
+        setTimeout(() => {
+          this.startAutoplay();
+        }, 500);
+      }
+    }
+
     goToSlide(visualIndex) {
       if (visualIndex < 0 || visualIndex >= this.itemsLength) return;
-      if (this.isTransitioning) return;
+      if (this.isTransitioning || this.isDragging) return;
 
       this.visualIndex = visualIndex;
 
@@ -243,7 +431,7 @@ const startIndex = loop && items.length > 1 ? items.length : 0;
     }
 
     goToNext() {
-      if (this.isTransitioning) return;
+      if (this.isTransitioning || this.isDragging) return;
 
       if (this.loop && this.itemsLength > 1) {
         this.currentIndex++;
@@ -260,7 +448,7 @@ const startIndex = loop && items.length > 1 ? items.length : 0;
     }
 
     goToPrevious() {
-      if (this.isTransitioning) return;
+      if (this.isTransitioning || this.isDragging) return;
 
       if (this.loop && this.itemsLength > 1) {
         this.currentIndex--;
@@ -281,10 +469,11 @@ const startIndex = loop && items.length > 1 ? items.length : 0;
       const translateX = -this.currentIndex * (this.slideWidth + this.slideGap);
 
       if (withTransition) {
-        this.track.classList.remove("no-transition");
+        this.track.classList.remove("no-transition", "swiping");
         this.isTransitioning = true;
       } else {
         this.track.classList.add("no-transition");
+        this.track.classList.remove("swiping");
         this.isTransitioning = false;
       }
 
@@ -320,11 +509,13 @@ const startIndex = loop && items.length > 1 ? items.length : 0;
     }
 
     startAutoplay() {
-      if (!this.autoplay || this.itemsLength <= 1) return;
+      if (!this.autoplay || this.itemsLength <= 1 || this.isDragging) return;
 
       this.stopAutoplay();
       this.autoplayTimer = setInterval(() => {
-        this.goToNext();
+        if (!this.isDragging && !this.isTransitioning) {
+          this.goToNext();
+        }
       }, this.autoplayInterval);
     }
 
