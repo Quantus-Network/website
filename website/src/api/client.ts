@@ -32,8 +32,7 @@ interface SubscribeData {
 type ApiResponse<T = any> = Promise<Response>;
 
 const createApiClient = () => {
-  // const API_URL = "https://api.quantus.com/api";
-  const API_URL = "http://localhost:5080/api";
+  const API_URL = "https://api.quantus.com/api";
   const GRAPHQL_URL = "https://gql.res.fm/graphql";
 
   const methods = {
