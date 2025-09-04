@@ -25,24 +25,27 @@ import { applyStyles } from "@/utils/apply-styles";
     variant="3"
     size={283}
   />
-  <div id="mobile-nav-links" class="flex w-full flex-col gap-8">
-    {
-      SITE_NAVIGATIONS.map((item) => (
-        <a
-          href={item.href}
-          class={applyStyles(
-            "text-navbar-link font-large-body block transition-colors duration-200 hover:font-bold",
-          )}
-        >
-          {item.label}
-        </a>
-      ))
-    }
+  <div class="h-[calc(100vh-139px-62px-52px)] overflow-y-auto">
+    <div id="mobile-nav-links" class="flex w-full flex-col gap-8">
+      {
+        SITE_NAVIGATIONS.map((item) => (
+          <a
+            href={item.href}
+            class={applyStyles(
+              "text-navbar-link font-large-body block transition-colors duration-200 hover:font-bold",
+            )}
+          >
+            {item.label}
+          </a>
+        ))
+      }
+    </div>
+
+    <SiteSocials class="mt-18 justify-center" />
+
+    <Button href="/app" target="_self" class="mt-9">Join the Public BETA</Button
+    >
   </div>
-
-  <SiteSocials class="mt-18 justify-center" />
-
-  <Button href="/app" target="_self" class="mt-9">Join the Public BETA</Button>
 </div>
 
 <style>
