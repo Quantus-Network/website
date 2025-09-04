@@ -18,14 +18,14 @@ const { class: className } = Astro.props;
 const socials = Object.entries(SITE_SOCIALS) as [SiteSocial, string][];
 ---
 
-<div class={applyStyles("flex gap-4 flex-wrap", className)}>
+<div class={applyStyles("flex gap-2 min-[360px]:gap-3 flex-wrap", className)}>
   {
     socials.map((social) => (
       <a
         href={social[1]}
         target="_blank"
         rel="noopener noreferrer"
-        class="text-button-icon bg-button-icon-body flex size-12 cursor-pointer items-center justify-center rounded-full hover:brightness-125"
+        class="text-button-icon bg-button-icon-body flex size-9 cursor-pointer items-center justify-center rounded-full hover:brightness-125 min-[360px]:size-10"
       >
         {social[0] === "x" && <SocialX />}
         {social[0] === "instagram" && <SocialIG />}
