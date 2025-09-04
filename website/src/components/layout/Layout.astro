@@ -10,6 +10,13 @@ import "@fontsource/inter/900.css";
 
 import Navbar from "./navbar/Navbar.astro";
 import Footer from "./footer/Footer.astro";
+
+import { SEO, type SEOProps } from "astro-seo";
+import defaultMetadata from "@/constants/default-metadata";
+
+interface Props extends SEOProps {}
+
+const props = Astro.props;
 ---
 
 <!doctype html>
@@ -17,9 +24,9 @@ import Footer from "./footer/Footer.astro";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon"  href="/favicon.ico" />
+    <link rel="icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
-    <title>Quantus</title>
+    <SEO {...defaultMetadata} {...props} titleTemplate={undefined} />
   </head>
   <body class="flex grow flex-col pt-[139px]">
     <Navbar />
