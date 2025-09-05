@@ -8,13 +8,22 @@ import AppBenefitCard from "@/components/ui/AppBenefitCard.astro";
 import AppInformation from "@/components/ui/AppInformation.astro";
 
 import { BENEFIT_DATA } from "@/constants/app-benefits";
+import SphereDecoration from "@/components/ui/SphereDecoration.astro";
 ---
 
-<section id="app-info">
+<section id="app-info" class="relative overflow-hidden">
+  <div class="flex justify-center">
+    <SphereDecoration
+      class="absolute -top-[9rem] z-0 hidden opacity-25 !blur-none lg:block"
+      variant="14"
+      size={551}
+    />
+  </div>
+
   <div
     class="bg-app-download lg:bg-app-download-desktop pt-[74px] pb-16 lg:pt-[104px] lg:pb-[169px] xl:pb-[253px]"
   >
-    <div class="lg:max-w-content lg:mx-auto xl:flex xl:gap-14">
+    <div class="lg:max-w-content relative z-[1] lg:mx-auto xl:flex xl:gap-14">
       <div class="flex flex-col gap-10">
         <AppInformation />
 
@@ -22,7 +31,11 @@ import { BENEFIT_DATA } from "@/constants/app-benefits";
           <div
             class="mx-auto max-w-[400px] px-[30px] lg:order-2 lg:max-w-[500px] lg:px-0 xl:hidden"
           >
-            <Image src={AppHomeView} alt="App's home view" />
+            <Image
+              class="drop-shadow-app"
+              src={AppHomeView}
+              alt="App's home view"
+            />
           </div>
 
           <div
@@ -41,7 +54,11 @@ import { BENEFIT_DATA } from "@/constants/app-benefits";
       </div>
 
       <div class="hidden lg:w-[348px] xl:block">
-        <Image src={AppHomeView} alt="App's home view" />
+        <Image
+          class="drop-shadow-app"
+          src={AppHomeView}
+          alt="App's home view"
+        />
       </div>
     </div>
   </div>

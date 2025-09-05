@@ -1,4 +1,5 @@
 ---
+import SphereDecoration from "@/components/ui/SphereDecoration.astro";
 import type { Props as CardData } from "./Card.astro";
 import Card from "./Card.astro";
 
@@ -47,6 +48,12 @@ const cardData: CardData[] = [
   id="benefits"
   class="relative flex flex-col items-center overflow-hidden px-[30px] pt-[105px] pb-[238px] lg:pt-[153px]"
 >
+  <SphereDecoration
+    class="absolute -bottom-[25rem] -z-10 hidden lg:block"
+    variant="14"
+    size={551}
+  />
+
   <span
     class="font-giant-mobile lg:font-giant text-gradient-giant min-large-mobile:text-[54px] absolute top-16 -z-10 text-[44px] min-[642px]:top-8 min-[642px]:text-[92px] lg:top-2"
     >FOUNDATIONS</span

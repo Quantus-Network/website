@@ -11,6 +11,12 @@
   --radius-quantus: 0.625rem;
 }
 
+@utility drop-shadow-app {
+  filter: drop-shadow(-67px 34px 6px rgba(0, 0, 0, 0.1));
+  -webkit-filter: drop-shadow(-67px 34px 6px rgba(0, 0, 0, 0.1));
+  -moz-filter: drop-shadow(-67px 34px 6px rgba(0, 0, 0, 0.1));
+}
+
 @layer base {
   html {
     background-color: var(--color-bg-primary);
