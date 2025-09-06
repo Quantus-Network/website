@@ -11,6 +11,7 @@
     "format:write": "prettier --write ."
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.5.1",
     "@fontsource/inter": "^5.2.6",
     "@fontsource/prompt": "^5.2.6",
     "@lucide/astro": "^0.541.0",

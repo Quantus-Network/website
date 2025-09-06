@@ -615,18 +615,16 @@ const duplicatedItems =
     }
   }
 
-  document.addEventListener("DOMContentLoaded", () => {
-    const container = document.querySelector(
-      `[data-carousel-id="${carouselId}"]`,
-    );
-    if (container) {
-      new Carousel(container, {
-        autoplay,
-        autoplayInterval,
-        loop,
-        renderCustomContent,
-        itemsLength,
-      });
-    }
-  });
+  const container = document.querySelector(
+    `[data-carousel-id="${carouselId}"]`,
+  );
+  if (container) {
+    new Carousel(container, {
+      autoplay,
+      autoplayInterval,
+      loop,
+      renderCustomContent,
+      itemsLength,
+    });
+  }
 </script>

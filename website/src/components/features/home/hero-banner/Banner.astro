@@ -18,10 +18,13 @@ const t = await createTranslator(locale);
   </div>
 
   <div
-    class="mx-auto mt-[29px] flex w-[237px] flex-col gap-[30px] md:w-[552px] md:flex-row"
+    class="mx-auto mt-[29px] flex w-[237px] flex-col gap-[30px] md:w-[552px] md:flex-row md:justify-center"
   >
-    <Button target="_self" href="/app">{t("hero.cta_primary")}</Button>
+    <Button class="md:min-w-[200px]" target="_self" href="/app"
+      >{t("hero.cta_primary")}</Button
+    >
     <Button
+      class="md:min-w-[200px]"
       href="https://drive.google.com/file/d/1o07IlIJbog7puRtXAuIn8YThlY_fk50G/view"
       variant="outline">{t("hero.cta_secondary")}</Button
     >
