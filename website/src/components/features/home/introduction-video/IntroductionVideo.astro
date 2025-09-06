@@ -1,6 +1,10 @@
 ---
 import SiteSocials from "@/components/ui/SiteSocials.astro";
 import { PlayIcon } from "@lucide/astro";
+import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
 ---
 
 <section
@@ -39,13 +43,11 @@ import { PlayIcon } from "@lucide/astro";
     <h2
       class="font-medium-title-mobile md:font-medium-title xl:font-medium-title-mobile mb-[13px] text-3xl min-[373px]:text-[45px] lg:text-3xl"
     >
-      Build value on cryptography that lasts.
+      {t("video.title")}
     </h2>
 
     <p class="font-body-mobile md:font-body mb-[38px]">
-      Quantus is here for people who see what's coming; the next wave of
-      innovation. A future-proof, quantum-secure blockchain that can secure
-      today's value against tomorrow's threats.
+      {t("video.description")}
     </p>
 
     <SiteSocials />

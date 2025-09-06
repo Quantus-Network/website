@@ -8,13 +8,29 @@ import Roadmap from "@/components/features/home/roadmap/Roadmap.astro";
 import Events from "@/components/features/home/events/Events.astro";
 import AppDownload from "@/components/features/home/app-download/AppDownload.astro";
 import Socials from "@/components/ui/Socials.astro";
-import { getLocaleFromUrl, getLocalizedMetadata } from "@/utils/i18n";
+import env from "@/config";
+
+import {
+  getLocaleFromUrl,
+  getLocalizedMetadata,
+  SUPPORTED_LOCALES,
+} from "@/utils/i18n";
+import type { SEOProps } from "astro-seo";
+
+export async function getStaticPaths() {
+  return SUPPORTED_LOCALES.map((lang) => ({ params: { lang } }));
+}
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const localizedMetadata = await getLocalizedMetadata(locale);
+
+const metadata: SEOProps = {
+  ...localizedMetadata,
+  canonical: `${env.SITE_BASE_URL}/${locale}`,
+};
 ---
 
-<Layout {...localizedMetadata}>
+<Layout {...metadata}>
   <HeroBanner />
   <IntroductionVideo />
   <Benefits />

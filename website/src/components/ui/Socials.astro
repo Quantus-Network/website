@@ -2,6 +2,7 @@
 import SiteSocials from "@/components/ui/SiteSocials.astro";
 import Carousel, { type CarouselItem } from "./Carousel.astro";
 import SphereDecoration from "@/components/ui/SphereDecoration.astro";
+import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
 
 import GalleryOne from "@/assets/carousels/gallery-1.jpeg";
 import GalleryTwo from "@/assets/carousels/gallery-2.jpeg";
@@ -10,6 +11,9 @@ import GalleryFour from "@/assets/carousels/gallery-4.png";
 import GalleryFive from "@/assets/carousels/gallery-5.jpeg";
 import GallerySix from "@/assets/carousels/gallery-6.png";
 import GallerySeven from "@/assets/carousels/gallery-7.jpeg";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
 
 const carouselItems: CarouselItem[] = [
   {
@@ -75,7 +79,7 @@ const carouselItems: CarouselItem[] = [
     <h2
       class="font-small-title lg:font-medium-title max-w-content lg:text-center"
     >
-      Follow us for fun content, podcasts, interviews, wizardry and more!
+      {t("socials.title")}
     </h2>
     <SiteSocials class="lg:justify-center" />
   </div>

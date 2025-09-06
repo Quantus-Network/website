@@ -1,25 +1,29 @@
 ---
 import Button from "@/components/ui/Button.astro";
+import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
 ---
 
 <div class="mx-auto pt-[115px] pb-[67px] lg:pt-[185px] lg:pb-[159px]">
   <div class="flex flex-col items-center text-center">
-    <p class="font-tag-caps-mobile md:font-caps mb-5">welcome to the future</p>
+    <p class="font-tag-caps-mobile md:font-caps mb-5">{t("hero.tagline")}</p>
     <h1 class="font-large-title-mobile md:font-large-title mb-[29px] md:mb-1">
-      Quantum Secure Your Crypto
+      {t("hero.title")}
     </h1>
     <p class="font-sub-title-mobile md:font-sub-title">
-      Quantus Network, the L1 Blockchain for the Quantum Era
+      {t("hero.subtitle")}
     </p>
   </div>
 
   <div
     class="mx-auto mt-[29px] flex w-[237px] flex-col gap-[30px] md:w-[552px] md:flex-row"
   >
-    <Button target="_self" href="/app">Join the Public BETA</Button>
+    <Button target="_self" href="/app">{t("hero.cta_primary")}</Button>
     <Button
       href="https://drive.google.com/file/d/1o07IlIJbog7puRtXAuIn8YThlY_fk50G/view"
-      variant="outline">Read the Whitepaper</Button
+      variant="outline">{t("hero.cta_secondary")}</Button
     >
   </div>
 </div>

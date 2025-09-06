@@ -13,26 +13,75 @@ import Footer from "./footer/Footer.astro";
 
 import { SEO, type SEOProps } from "astro-seo";
 import defaultMetadata from "@/constants/default-metadata";
+import { getLocaleFromUrl, getTextDirection } from "@/utils/i18n";
 
 interface Props extends SEOProps {}
 
-const props = Astro.props;
+const { ...seoProps } = Astro.props;
+
+// Get current locale from URL or props
+const currentLocale = getLocaleFromUrl(Astro.url.pathname);
+
+// Merge with default metadata and props
+const metadata = {
+  ...defaultMetadata,
+  ...seoProps,
+};
+
+// Get text direction for locale
+const textDirection = getTextDirection(currentLocale);
 ---
 
 <!doctype html>
-<html lang="en" class="flex min-h-full flex-col">
+<html lang={currentLocale} dir={textDirection} class="flex min-h-full flex-col">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
-    <SEO {...defaultMetadata} {...props} titleTemplate={undefined} />
+    <SEO {...metadata} titleTemplate={undefined} />
   </head>
-  <body class="flex grow flex-col pt-[139px]">
-    <Navbar />
+  <body class="flex grow flex-col pt-[139px]" data-locale={currentLocale}>
+    <Navbar locale={currentLocale} />
     <main class="grow">
       <slot />
     </main>
     <Footer />
   </body>
 </html>
+
+<script>
+  import {
+    DEFAULT_LOCALE,
+    getLocaleFromUrl,
+    SUPPORTED_LOCALES,
+  } from "@/utils/i18n";
+
+  const localeStorageKey = "astro-i18n-redirect";
+  const hasRedirected = localStorage.getItem(localeStorageKey);
+
+  if (hasRedirected) throw new Error("Already redirected");
+
+  const currentLocale = getLocaleFromUrl(window.location.pathname);
+  const hasHyphen = navigator.language.includes("-");
+  const userLang: any = hasHyphen
+    ? navigator.language.split("-")[1].toLowerCase()
+    : navigator.language.toLowerCase();
+
+  if (currentLocale === userLang)
+    throw new Error("Already on the correct locale");
+
+  const cleanPathname = window.location.pathname
+    .split("/")
+    .filter((path: any) => !SUPPORTED_LOCALES.includes(path) && path !== "")
+    .join("/");
+
+  let newPath = `/${cleanPathname}`;
+
+  if (SUPPORTED_LOCALES.includes(userLang) && userLang !== DEFAULT_LOCALE) {
+    newPath = `/${userLang}${cleanPathname}`;
+  }
+
+  localStorage.setItem(localeStorageKey, "true");
+  window.location.replace(newPath);
+</script>

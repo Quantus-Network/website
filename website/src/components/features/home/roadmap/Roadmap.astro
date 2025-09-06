@@ -3,38 +3,41 @@ import SphereDecoration from "@/components/ui/SphereDecoration.astro";
 import Timeline from "./Timeline.astro";
 import type { Props as TimelineData } from "./TimelineItem.astro";
 import TimelineItem from "./TimelineItem.astro";
+import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
 
 const timelineData: TimelineData[] = [
   {
-    date: "DEC 2024",
-    title: "Heisenberg Inception",
-    content: "Funding secured, Substrate chosen",
+    date: t("roadmap.timeline.heisenberg.date"),
+    title: t("roadmap.timeline.heisenberg.title"),
+    content: t("roadmap.timeline.heisenberg.content"),
   },
   {
-    date: "JULY 2025",
-    title: "Resonance Alpha",
-    content: "Public testnet, dilithium signatures, reversible transactions",
+    date: t("roadmap.timeline.resonance.date"),
+    title: t("roadmap.timeline.resonance.title"),
+    content: t("roadmap.timeline.resonance.content"),
   },
   {
-    date: "OCT 2025",
-    title: "Schrödinger Beta",
-    content: "Public Beta Launch, features complete, ready for audit",
+    date: t("roadmap.timeline.schrodinger.date"),
+    title: t("roadmap.timeline.schrodinger.title"),
+    content: t("roadmap.timeline.schrodinger.content"),
   },
   {
-    date: "Q1 2026",
-    title: "Bell Mainnet",
-    content: "Mainnet launch, QUAN token launch",
+    date: t("roadmap.timeline.bell.date"),
+    title: t("roadmap.timeline.bell.title"),
+    content: t("roadmap.timeline.bell.content"),
   },
   {
-    date: "Q2 2026",
-    title: "Planck Upgrades",
-    content:
-      "High Security Accounts, Multisignature Accounts, Hardware Wallet Integration",
+    date: t("roadmap.timeline.planck.date"),
+    title: t("roadmap.timeline.planck.title"),
+    content: t("roadmap.timeline.planck.content"),
   },
   {
-    date: "Q3 2026",
-    title: "Dirac Expansion",
-    content: "Entangled Addresses, Bridge to Solana",
+    date: t("roadmap.timeline.dirac.date"),
+    title: t("roadmap.timeline.dirac.title"),
+    content: t("roadmap.timeline.dirac.content"),
   },
 ];
 ---
@@ -58,7 +61,7 @@ const timelineData: TimelineData[] = [
   <h2
     class="font-medium-title-mobile lg:font-medium-title ms-[3.5rem] mb-[43px] lg:ms-0 lg:mb-[120px] lg:text-center"
   >
-    Roadmap
+    {t("roadmap.title")}
   </h2>
 
   <div class="flex flex-col gap-[45px]">

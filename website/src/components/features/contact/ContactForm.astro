@@ -6,20 +6,24 @@ import { Image } from "astro:assets";
 import ContactImage from "@/assets/planet-like-object-with-ring.png";
 import TextArea from "@/components/ui/TextArea.astro";
 import MessageAlert from "@/components/ui/MessageAlert.astro";
+import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
 ---
 
 <MessageAlert
-  id="error"
+  id="contact-error"
   class="mb-4"
   type="error"
-  message="Error: something is going wrong."
+  message={t("contact.form.error")}
 />
 
 <MessageAlert
-  id="success"
+  id="contact-success"
   class="mb-4"
   type="success"
-  message="We will process your message as soon as possible."
+  message={t("contact.form.success")}
 />
 
 <form
@@ -27,24 +31,32 @@ import MessageAlert from "@/components/ui/MessageAlert.astro";
   class="bg-form-body border-form-body-border flex flex-col gap-[30px] rounded-[20px] border-2 px-[15px] pt-10 pb-[15px] backdrop-blur-[190px] md:flex-row md:p-5"
 >
   <div class="flex flex-col gap-[14px] md:w-1/2 lg:p-10">
-    <Input id="name" name="name" placeholder="Name" required asContact />
+    <Input
+      id="name"
+      name="name"
+      placeholder={t("contact.form.name")}
+      required
+      asContact
+    />
     <Input
       id="email"
       name="email"
       type="email"
-      placeholder="Email"
+      placeholder={t("contact.form.email")}
       required
       asContact
     />
     <TextArea
       id="message"
       name="message"
-      placeholder="Message"
+      placeholder={t("contact.form.message")}
       rows={6}
       required
       asContact
     />
-    <Button id="contact-form-submit-btn" type="submit">Send</Button>
+    <Button id="contact-form-submit-btn" type="submit"
+      >{t("contact.form.submit")}</Button
+    >
   </div>
 
   <div
@@ -56,13 +68,11 @@ import MessageAlert from "@/components/ui/MessageAlert.astro";
       class="absolute bottom-0 left-0 flex flex-col gap-[6px] ps-[19px] pe-[13px] pb-[16px] lg:ps-[39px] lg:pb-[23px]"
     >
       <blockquote class="font-small">
-        “The atoms or elementary particles themselves are not real; they form a
-        world of potentialities or possibilities rather than one of things or
-        facts.”
+        {t("contact.quote.text")}
       </blockquote>
 
       <address class="font-small text-text-content-secondary font-medium">
-        Werner Heisenberg
+        {t("contact.quote.author")}
       </address>
     </div>
 
@@ -77,13 +87,17 @@ import MessageAlert from "@/components/ui/MessageAlert.astro";
 <script>
   import apiClient from "@/api/client";
   import { ALERT_TIMEOUT } from "@/constants/alert-timeout";
+  import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+
+  const locale = getLocaleFromUrl(location.pathname);
+  const t = await createTranslator(locale);
 
   const form = document.getElementById("contact-form") as HTMLFormElement;
   const btn = document.getElementById("footer-subscribe-button");
 
-  const successAlert = document.getElementById("alert-success");
-  const errorAlert = document.getElementById("alert-error");
-  const errorMessage = document.getElementById("alert-message-error");
+  const successAlert = document.getElementById("alert-contact-success");
+  const errorAlert = document.getElementById("alert-contact-error");
+  const errorMessage = document.getElementById("alert-message-contact-error");
 
   if (!form || !btn) throw new Error("Form not detected, can't do submission!");
 
@@ -98,17 +112,17 @@ import MessageAlert from "@/components/ui/MessageAlert.astro";
     successAlert?.classList.add("hidden");
     errorAlert?.classList.add("hidden");
 
-    // Make sure the input is not empty
-    const nameValue = e.target.name.value.trim();
-    if (!nameValue) throw new Error("Name is required.");
-
-    const emailValue = e.target.email.value.trim();
-    if (!emailValue) throw new Error("Email is required.");
-
-    const messageValue = e.target.message.value.trim();
-    if (!messageValue) throw new Error("Message is required.");
-
     try {
+      // Make sure the input is not empty
+      const nameValue = e.target.name.value.trim();
+      if (!nameValue) throw new Error(t("common.name_required"));
+
+      const emailValue = e.target.email.value.trim();
+      if (!emailValue) throw new Error(t("common.email_required"));
+
+      const messageValue = e.target.message.value.trim();
+      if (!messageValue) throw new Error(t("common.message_required"));
+
       const resp = await apiClient.contact(nameValue, emailValue, messageValue);
 
       if (resp.status !== 200) throw new Error("Failed submitting message.");

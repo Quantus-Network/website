@@ -2,11 +2,15 @@
 import SphereDecoration from "@/components/ui/SphereDecoration.astro";
 import type { Props as CardData } from "./Card.astro";
 import Card from "./Card.astro";
+import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
 
 const cardData: CardData[] = [
   {
-    title: "Quantum Secure at Every Layer",
-    body: "Secured with NIST-backed post-quantum cryptography, every layer of Quantus from transaction signatures to P2P communication is engineered to resist attacks that would break today's blockchains. Built to endure, and ready to evolve with the quantum era.",
+    title: "benefits.cards.quantum_secure.title",
+    body: "benefits.cards.quantum_secure.description",
     variant: "benefit-1",
     qips: [
       {
@@ -20,8 +24,8 @@ const cardData: CardData[] = [
     ],
   },
   {
-    title: "Zero-Knowledge by Design",
-    body: "Recursive zero-knowledge proofs keep the network fast. Instead of reprocessing everything, nodes verify compact proofs - reducing overhead and ensuring the system grows smoothly under real demand.",
+    title: "benefits.cards.zero_knowledge.title",
+    body: "benefits.cards.zero_knowledge.description",
     variant: "benefit-2",
     qips: [
       {
@@ -31,8 +35,8 @@ const cardData: CardData[] = [
     ],
   },
   {
-    title: "Security You Control",
-    body: "Quantus puts you in charge. You decide how assets move, how they're protected, and who to trust. Complexity is handled in the background, so your experience feels clear, secure, and built to last into the quantum future.",
+    title: "benefits.cards.security_control.title",
+    body: "benefits.cards.security_control.description",
     variant: "benefit-3",
     qips: [
       {
@@ -62,21 +66,21 @@ const cardData: CardData[] = [
     <h2
       class="font-large-title-mobile lg:font-large-title min-large-mobile:text-[50px] mb-[18px] text-center text-[38px]"
     >
-      The Future is Quantum
+      {t("benefits.title")}
     </h2>
 
     <p class="font-body-mobile lg:font-body mx-auto max-w-[790px] text-center">
-      Quantus Network is a Layer 1 blockchain designed to thrive in the quantum
-      era. Secured with post-quantum cryptography and scaled with zero-knowledge
-      proofs, it delivers a level of security, scalability and usability that
-      today's chains can't match. A clean-slate design that anticipates the
-      coming wave of quantum technology.
+      {t("benefits.description")}
     </p>
   </div>
 
   <div
     class="flex w-full flex-col items-center gap-[63px] lg:max-w-[1050px] lg:gap-[128px]"
   >
-    {cardData.map((data) => <Card {...data} />)}
+    {
+      cardData.map(({ title, body, ...rest }) => (
+        <Card {...rest} title={t(title)} body={t(body)} />
+      ))
+    }
   </div>
 </section>

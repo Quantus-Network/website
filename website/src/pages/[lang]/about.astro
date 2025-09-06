@@ -1,17 +1,29 @@
 ---
 import BrandLogo from "@/assets/brand/brand-logo.svg";
 import BrandName from "@/assets/brand/brand-name.svg";
-import Layout from "@/components/layout/Layout.astro";
 
+import Layout from "@/components/layout/Layout.astro";
 import env from "@/config";
-import { getLocaleFromUrl, createTranslator } from "@/utils/i18n";
+
+import {
+  createTranslator,
+  getLocaleFromUrl,
+  getLocalizedMetadata,
+  SUPPORTED_LOCALES,
+} from "@/utils/i18n";
 import type { SEOProps } from "astro-seo";
 
+export async function getStaticPaths() {
+  return SUPPORTED_LOCALES.map((lang) => ({ params: { lang } }));
+}
+
 const locale = getLocaleFromUrl(Astro.url.pathname);
+const localizedMetadata = await getLocalizedMetadata(locale);
 const t = await createTranslator(locale);
 
 const metadata: SEOProps = {
-  canonical: `${env.SITE_BASE_URL}/about`,
+  ...localizedMetadata,
+  canonical: `${env.SITE_BASE_URL}/${locale}/about`,
 };
 ---
 

@@ -11,6 +11,10 @@ import Nik from "@/assets/teams/nik-avatar.png";
 import Cezary from "@/assets/teams/cezary-avatar.png";
 import Rob from "@/assets/teams/rob-avatar.png";
 import ProfileCard from "./ProfileCard.astro";
+import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
 
 const profileData: ProfileData[] = [
   {
@@ -57,18 +61,13 @@ const profileData: ProfileData[] = [
   <div class="max-w-content mx-auto flex flex-col gap-[50px]">
     <div class="flex flex-col xl:flex-row xl:items-end xl:justify-between">
       <div class="mb-[30px] lg:max-w-[682px] xl:mb-0">
-        <h2 class="font-medium-title-mobile mb-5">The Core Team</h2>
+        <h2 class="font-medium-title-mobile mb-5">{t("team.title")}</h2>
 
-        <p class="font-body">
-          Founded by veteran engineers from early-stage crypto startups and
-          former CTO roles. The team combines deep expertise in applied
-          cryptography and zero-knowledge systems with a proven ability to ship
-          secure, scalable infrastructure.
-        </p>
+        <p class="font-body">{t("team.description")}</p>
       </div>
 
       <Button class="lg:w-[295px]" href="/contact" variant="outline"
-        >Get in Touch</Button
+        >{t("team.cta")}</Button
       >
     </div>
 
@@ -91,30 +90,17 @@ const profileData: ProfileData[] = [
 
         <div class="lg:max-w-[756px]">
           <p class="font-body text-white">
-            A technology pioneer and entrepreneur at the forefront of AI,
-            blockchain, and quantum computing, Chris brings a rare mix of deep
-            technical expertise and philosophical thinking. He's spent the last
-            decade building tools that empower individuals and redefine digital
-            trust.
+            {t("team.members.chris.bio")}
           </p>
 
           <br />
 
           <ul class="font-body list-disc ps-4 text-white">
-            <li>Founder of BitMesh, Lunyr (LUN), and FactoryDAO (FVT)</li>
-            <li>Early contributor to foundational Bitcoin libraries</li>
-            <li>
-              Former AI team lead at Tensor Spark, specializing in applied
-              machine learning
-            </li>
-            <li>
-              Private cybersecurity and digital asset recovery advisor for HNW
-              individuals
-            </li>
-            <li>
-              Focus: Cryptography, Complexity Theory, Algebraic Topology,
-              Quantum Computing
-            </li>
+            <li>{t("team.members.chris.achievements.0")}</li>
+            <li>{t("team.members.chris.achievements.1")}</li>
+            <li>{t("team.members.chris.achievements.2")}</li>
+            <li>{t("team.members.chris.achievements.3")}</li>
+            <li>{t("team.members.chris.achievements.4")}</li>
           </ul>
         </div>
       </div>

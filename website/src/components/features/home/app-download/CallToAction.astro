@@ -1,6 +1,10 @@
 ---
 import Button from "@/components/ui/Button.astro";
 import SphereDecoration from "@/components/ui/SphereDecoration.astro";
+import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
 ---
 
 <div
@@ -19,18 +23,18 @@ import SphereDecoration from "@/components/ui/SphereDecoration.astro";
 
   <div class="max-w-content mx-auto flex flex-col">
     <p class="font-tag-caps text-text-title-secondary mb-5">
-      Public beta now live
+      {t("app.cta.tagline")}
     </p>
 
     <div
       class="flex flex-col lg:flex-row lg:items-end lg:justify-between lg:gap-6"
     >
       <h2 class="font-medium-title-mobile mb-12">
-        They say quantum is years away. They said the same about AI.
+        {t("app.cta.title")}
       </h2>
 
       <Button class="lg:w-[295px] lg:shrink-0" href="/app" target="_self"
-        >Join the Quantum Wave</Button
+        >{t("app.cta.button")}</Button
       >
     </div>
   </div>

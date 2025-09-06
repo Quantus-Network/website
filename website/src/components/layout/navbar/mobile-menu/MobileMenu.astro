@@ -2,8 +2,17 @@
 import Button from "@/components/ui/Button.astro";
 import SiteSocials from "@/components/ui/SiteSocials.astro";
 import SphereDecoration from "@/components/ui/SphereDecoration.astro";
-import { SITE_NAVIGATIONS } from "@/constants/site-navigations";
+import LanguageSwitcher from "@/components/i18n/LanguageSwitcher.astro";
 import { applyStyles } from "@/utils/apply-styles";
+import {
+  createTranslator,
+  getLocaleFromUrl,
+  getLocalizedPath,
+} from "@/utils/i18n";
+import { SITE_NAVIGATIONS } from "@/constants/site-navigations";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
 ---
 
 <div
@@ -29,12 +38,12 @@ import { applyStyles } from "@/utils/apply-styles";
     {
       SITE_NAVIGATIONS.map((item) => (
         <a
-          href={item.href}
+          href={getLocalizedPath(locale, item.href)}
           class={applyStyles(
             "text-navbar-link font-large-body block transition-colors duration-200 hover:font-bold",
           )}
         >
-          {item.label}
+          {t(item.label)}
         </a>
       ))
     }
@@ -42,7 +51,7 @@ import { applyStyles } from "@/utils/apply-styles";
 
   <SiteSocials class="mt-8 justify-center" />
 
-  <Button href="/app" target="_self" class="mt-8">Join the Public BETA</Button>
+  <Button href="/app" target="_self" class="mt-8">{t("navbar.cta")}</Button>
 </div>
 
 <style>
@@ -55,6 +64,9 @@ import { applyStyles } from "@/utils/apply-styles";
 </style>
 
 <script>
+  import { getLocaleFromUrl, getLocalizedPath } from "@/utils/i18n";
+  const locale = getLocaleFromUrl(location.pathname);
+
   const mobileMenuButton = document.querySelector<HTMLDivElement>(
     "#mobile-menu-button",
   );
@@ -76,7 +88,8 @@ import { applyStyles } from "@/utils/apply-styles";
 
   links?.forEach((link) => {
     const isActive =
-      location.href === link.href || location.pathname === link.href;
+      location.href === getLocalizedPath(locale, link.href) ||
+      location.pathname === getLocalizedPath(locale, link.href);
     updateLinkStatus(link, isActive);
 
     link.addEventListener("click", () => {
@@ -88,7 +101,7 @@ import { applyStyles } from "@/utils/apply-styles";
       mobileMenuButton?.setAttribute("aria-expanded", "false");
 
       links.forEach((val) => {
-        const isActive = val.href === link.href;
+        const isActive = val.href === getLocalizedPath(locale, link.href);
         updateLinkStatus(val, isActive);
       });
     });

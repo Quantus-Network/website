@@ -10,39 +10,42 @@ interface Navigation {
 
 export const FOOTER_NAVIGATIONS: Navigation[] = [
   {
-    label: "Resources",
+    label: "footer.navigation.resources.title",
     children: [
       {
         href: "https://t.me/quantusnetwork",
-        label: "Community",
+        label: "footer.navigation.resources.community",
         target: "_blank",
         rel: "noopener noreferrer",
       },
-      // { href: "/tutorials", label: "Tutorials" },
+      // { href: "/tutorials", label: "footer.navigation.resources.tutorials" },
       {
         href: "https://github.com/Quantus-Network/chain",
-        label: "Documentation",
+        label: "footer.navigation.resources.documentation",
         target: "_blank",
         rel: "noopener noreferrer",
       },
       {
         href: "https://t.me/quantustechsupport",
-        label: "Tech Support",
+        label: "footer.navigation.resources.tech_support",
         target: "_blank",
         rel: "noopener noreferrer",
       },
     ],
   },
   {
-    label: "Info",
+    label: "footer.navigation.info.title",
     children: [
-      { href: "/about", label: "Company" },
-      // { href: "/audits", label: "Audits" },
+      { href: "/about", label: "footer.navigation.info.company" },
+      // { href: "/audits", label: "footer.navigation.info.audits" },
       {
         href: "/terms-and-privacy",
-        label: "Terms & Conditions",
+        label: "footer.navigation.info.terms",
       },
-      { href: "/terms-and-privacy#privacy", label: "Privacy Policy" },
+      {
+        href: "/terms-and-privacy#privacy",
+        label: "footer.navigation.info.privacy",
+      },
     ],
   },
 ] as const;

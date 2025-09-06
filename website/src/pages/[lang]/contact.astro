@@ -4,15 +4,26 @@ import Layout from "@/components/layout/Layout.astro";
 import Socials from "@/components/ui/Socials.astro";
 import SphereDecoration from "@/components/ui/SphereDecoration.astro";
 import ContactForm from "@/components/features/contact/ContactForm.astro";
-import { getLocaleFromUrl, createTranslator } from "@/utils/i18n";
+import {
+  getLocaleFromUrl,
+  createTranslator,
+  getLocalizedMetadata,
+  SUPPORTED_LOCALES,
+} from "@/utils/i18n";
 import type { SEOProps } from "astro-seo";
 import env from "@/config";
 
+export async function getStaticPaths() {
+  return SUPPORTED_LOCALES.map((lang) => ({ params: { lang } }));
+}
+
 const locale = getLocaleFromUrl(Astro.url.pathname);
+const localizedMetadata = await getLocalizedMetadata(locale);
 const t = await createTranslator(locale);
 
 const metadata: SEOProps = {
-  canonical: `${env.SITE_BASE_URL}/contact`,
+  ...localizedMetadata,
+  canonical: `${env.SITE_BASE_URL}/${locale}/contact`,
 };
 ---
 

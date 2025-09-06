@@ -2,12 +2,21 @@
 import { MenuIcon, XIcon } from "@lucide/astro";
 import DesktopMenu from "./desktop-menu/DesktopMenu.astro";
 import MobileMenu from "./mobile-menu/MobileMenu.astro";
+import LanguageSwitcher from "@/components/i18n/LanguageSwitcher.astro";
 
 import BrandLogo from "@/assets/brand/brand-logo.svg";
 import BrandName from "@/assets/brand/brand-name.svg";
 
 import Separator from "@/components/ui/Separator.astro";
 import Button from "@/components/ui/Button.astro";
+import {
+  createTranslator,
+  getLocaleFromUrl,
+  getLocalizedPath,
+} from "@/utils/i18n";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
 ---
 
 <nav
@@ -22,7 +31,10 @@ import Button from "@/components/ui/Button.astro";
     <div class="flex items-center justify-between">
       <!-- Logo/Brand -->
       <div class="flex-shrink-0">
-        <a href="/" class="flex items-center gap-3 hover:brightness-125">
+        <a
+          href={getLocalizedPath(locale, "/")}
+          class="flex items-center gap-3 hover:brightness-125"
+        >
           <BrandLogo />
           <BrandName />
         </a>
@@ -32,7 +44,9 @@ import Button from "@/components/ui/Button.astro";
 
       <!-- CTA Button (Desktop) -->
       <div class="navbar-desktop:block hidden">
-        <Button target="_self" href="/app">Join the Public BETA</Button>
+        <Button target="_self" href={getLocalizedPath(locale, "/app")}
+          >{t("navbar.cta")}</Button
+        >
       </div>
 
       <!-- Mobile menu button -->
@@ -57,7 +71,7 @@ import Button from "@/components/ui/Button.astro";
   </div>
 
   <Separator class="absolute bottom-0" />
-  <MobileMenu />
+  <MobileMenu locale={locale} />
 </nav>
 
 <!-- Script for mobile menu toggling -->

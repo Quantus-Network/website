@@ -1,14 +1,26 @@
 ---
 import Layout from "@/components/layout/Layout.astro";
 import env from "@/config";
-import { getLocaleFromUrl, createTranslator } from "@/utils/i18n";
+import {
+  getLocaleFromUrl,
+  createTranslator,
+  SUPPORTED_LOCALES,
+  getLocalizedMetadata,
+  getLocalizedPath,
+} from "@/utils/i18n";
 import type { SEOProps } from "astro-seo";
 
+export async function getStaticPaths() {
+  return SUPPORTED_LOCALES.map((lang) => ({ params: { lang } }));
+}
+
 const locale = getLocaleFromUrl(Astro.url.pathname);
+const localizedMetadata = await getLocalizedMetadata(locale);
 const t = await createTranslator(locale);
 
 const metadata: SEOProps = {
-  canonical: `${env.SITE_BASE_URL}/terms-and-privacy`,
+  ...localizedMetadata,
+  canonical: `${env.SITE_BASE_URL}/${locale}/terms-and-privacy`,
 };
 ---
 
@@ -395,7 +407,9 @@ const metadata: SEOProps = {
 
             <p class="font-body-mobile lg:font-body mt-4">
               {t("tos.privacy.contact_info.note")}{" "}
-              <a class="text-blue-400 underline" href="/contact"
+              <a
+                class="text-blue-400 underline"
+                href={getLocalizedPath(locale, "/contact")}
                 >{t("tos.privacy.contact_info.link")}</a
               >.
             </p>

@@ -10,14 +10,25 @@ import { BENEFIT_DATA } from "@/constants/app-benefits";
 import Socials from "@/components/ui/Socials.astro";
 import SphereDecoration from "@/components/ui/SphereDecoration.astro";
 import env from "@/config";
-import { getLocaleFromUrl, createTranslator } from "@/utils/i18n";
+import {
+  getLocaleFromUrl,
+  createTranslator,
+  SUPPORTED_LOCALES,
+  getLocalizedMetadata,
+} from "@/utils/i18n";
 import type { SEOProps } from "astro-seo";
 
+export async function getStaticPaths() {
+  return SUPPORTED_LOCALES.map((lang) => ({ params: { lang } }));
+}
+
 const locale = getLocaleFromUrl(Astro.url.pathname);
+const localizedMetadata = await getLocalizedMetadata(locale);
 const t = await createTranslator(locale);
 
 const metadata: SEOProps = {
-  canonical: `${env.SITE_BASE_URL}/app`,
+  ...localizedMetadata,
+  canonical: `${env.SITE_BASE_URL}/${locale}/app`,
 };
 ---
 

@@ -1,11 +1,18 @@
+---
+import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
+---
+
 <div
   class="max-w-content mx-auto grid grid-cols-3 gap-[30px] px-14 pt-[34px] pb-10 md:grid-cols-7"
 >
   <div class="flex flex-col items-center gap-[6px]">
     <p class="font-medium-title-mobile md:font-medium-title">
-      20<span class="font-small">sec</span>
+      20<span class="font-small">{t("hero.stats.seconds")}</span>
     </p>
-    <p class="font-body-mobile md:font-body">Blocktime</p>
+    <p class="font-body-mobile md:font-body">{t("hero.stats.blocktime")}</p>
   </div>
 
   <div class="flex flex-col items-center">
@@ -19,7 +26,7 @@
     >
       -
     </p>
-    <p class="font-body-mobile md:font-body">Transactions</p>
+    <p class="font-body-mobile md:font-body">{t("hero.stats.transactions")}</p>
   </div>
 
   <div class="hidden flex-col items-center md:flex">
@@ -33,7 +40,7 @@
     >
       -
     </p>
-    <p class="font-body-mobile md:font-body">Addresses</p>
+    <p class="font-body-mobile md:font-body">{t("hero.stats.addresses")}</p>
   </div>
 
   <div class="flex flex-col items-center">
@@ -42,7 +49,7 @@
 
   <div class="flex flex-col items-center gap-[6px]">
     <p class="font-medium-title-mobile md:font-medium-title">98</p>
-    <p class="font-body-mobile md:font-body">Nodes</p>
+    <p class="font-body-mobile md:font-body">{t("hero.stats.nodes")}</p>
   </div>
 </div>
 

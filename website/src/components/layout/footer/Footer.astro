@@ -4,17 +4,27 @@ import BrandName from "@/assets/brand/brand-name.svg";
 
 import Button from "@/components/ui/Button.astro";
 import Input from "@/components/ui/Input.astro";
+import LanguageSwitcher from "@/components/ui/LanguageSwitcher.astro";
 import MessageAlert from "@/components/ui/MessageAlert.astro";
 import Separator from "@/components/ui/Separator.astro";
 import SphereDecoration from "@/components/ui/SphereDecoration.astro";
-
 import { FOOTER_NAVIGATIONS } from "@/constants/footer-navigations";
+
 import { applyStyles } from "@/utils/apply-styles";
+import {
+  createTranslator,
+  getLocaleFromUrl,
+  getLocalizedPath,
+} from "@/utils/i18n";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
 
 const year = new Date().getFullYear();
 
 const currentPath = Astro.url.pathname;
-const isCurrentPage = (href: string) => currentPath === href;
+const isCurrentPage = (href: string) =>
+  currentPath === getLocalizedPath(locale, href);
 ---
 
 <footer
@@ -40,16 +50,25 @@ const isCurrentPage = (href: string) => currentPath === href;
     class="max-w-content flex w-full flex-col items-center gap-9 pt-[76px] pb-9 md:mx-auto md:flex-row md:justify-between md:pt-[57px] md:pb-[67px]"
   >
     <div>
-      <h3 class="font-small-title">Subscribe to our Newsletter</h3>
+      <h3 class="font-small-title">{t("footer.newsletter.title")}</h3>
       <p class="font-body-mobile text-text-content-secondary md:font-body">
-        Alpha Alert! Get your weekly news-blast with sneak previews, updates,
-        news roundup, educational content and more
+        {t("footer.newsletter.description")}
       </p>
     </div>
 
+    <MessageAlert
+      id="subscribe-error"
+      type="error"
+      message={t("footer.newsletter.error")}
+    />
+    <MessageAlert
+      id="subscribe-success"
+      type="success"
+      message={t("footer.newsletter.success")}
+    />
+
     <form
       id="footer-subscribe-form"
-      method="post"
       class="flex w-full max-w-[calc(377px+150px)] flex-col items-end gap-5 md:flex-row md:items-center md:gap-3"
     >
       <Input
@@ -57,24 +76,13 @@ const isCurrentPage = (href: string) => currentPath === href;
         id="footer-subscribe-input"
         type="email"
         name="email"
-        placeholder="Enter your email"
+        placeholder={t("footer.newsletter.placeholder")}
         required
       />
       <Button id="footer-subscribe-button" type="submit" class="w-[150px]"
-        >Subscribe</Button
+        >{t("footer.newsletter.button")}</Button
       >
     </form>
-
-    <MessageAlert
-      id="error"
-      type="error"
-      message="Error: something is going wrong."
-    />
-    <MessageAlert
-      id="success"
-      type="success"
-      message="Welcome to quantum security 🎉"
-    />
   </div>
 
   <div class="max-w-content mx-auto w-full">
@@ -88,7 +96,10 @@ const isCurrentPage = (href: string) => currentPath === href;
       class="flex flex-col items-center gap-4 pt-[116px] md:items-end md:pt-0"
     >
       <div class="flex-shrink-0">
-        <a href="/" class="flex items-center gap-3 hover:brightness-125">
+        <a
+          href={getLocalizedPath(locale, "/")}
+          class="flex items-center gap-3 hover:brightness-125"
+        >
           <BrandLogo
             class="min-[360px]:h-[61px] min-[360px]:w-[65px] md:h-[75px] md:w-[80px]"
           />
@@ -101,8 +112,7 @@ const isCurrentPage = (href: string) => currentPath === href;
       <p
         class="font-body-mobile text-text-content-secondary md:font-body text-center md:max-w-[316px] md:text-left"
       >
-        A quantum-secure, Layer 1 blockchain for people who want to protect what
-        matters; their assets, their future, and their freedom.
+        {t("footer.description")}
       </p>
     </div>
 
@@ -112,13 +122,13 @@ const isCurrentPage = (href: string) => currentPath === href;
       {
         FOOTER_NAVIGATIONS.map((navigation) => (
           <div class="flex flex-col gap-y-5">
-            <h4 class="font-tag">{navigation.label}</h4>
+            <h4 class="font-tag">{t(navigation.label)}</h4>
 
             <ul class="flex flex-col gap-y-4">
               {navigation.children.map((navItem) => (
                 <li>
                   <a
-                    href={navItem.href}
+                    href={getLocalizedPath(locale, navItem.href)}
                     target={navItem?.target}
                     rel={navItem?.rel}
                     class={applyStyles(
@@ -126,7 +136,7 @@ const isCurrentPage = (href: string) => currentPath === href;
                       isCurrentPage(navItem.href) && "text-white",
                     )}
                   >
-                    {navItem.label}
+                    {t(navItem.label)}
                   </a>
                 </li>
               ))}
@@ -137,17 +147,30 @@ const isCurrentPage = (href: string) => currentPath === href;
     </div>
   </div>
 
-  <p
-    id="footer-copyright"
-    class="font-small text-text-content-secondary pt-[98px] text-center md:pt-[83px]"
+  <div
+    class="max-w-content mx-auto flex w-full flex-col items-center gap-10 pt-[98px] text-center md:pt-[83px] lg:flex-row"
   >
-    Copyright &copy; <span id="copy-year">{year}</span> Quantus Network
-  </p>
+    <div class="max-w-[200px] grow">
+      <LanguageSwitcher />
+    </div>
+
+    <div class="grow">
+      <p id="footer-copyright" class="font-small text-text-content-secondary">
+        {t("footer.copyright", { year })}
+      </p>
+    </div>
+
+    <div class="max-w-[200px] grow"></div>
+  </div>
 </footer>
 
 <script>
   import apiClient from "@/api/client";
   import { ALERT_TIMEOUT } from "@/constants/alert-timeout";
+  import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+
+  const locale = getLocaleFromUrl(location.pathname);
+  const t = await createTranslator(locale);
 
   const form = document.getElementById(
     "footer-subscribe-form",
@@ -157,9 +180,9 @@ const isCurrentPage = (href: string) => currentPath === href;
   ) as HTMLInputElement;
   const btn = document.getElementById("footer-subscribe-button");
 
-  const successAlert = document.getElementById("alert-success");
-  const errorAlert = document.getElementById("alert-error");
-  const errorMessage = document.getElementById("alert-message-error");
+  const successAlert = document.getElementById("alert-subscribe-success");
+  const errorAlert = document.getElementById("alert-subscribe-error");
+  const errorMessage = document.getElementById("alert-message-subscribe-error");
 
   if (!form || !email || !btn)
     throw new Error("Form not detected, can't do submission!");
@@ -175,14 +198,14 @@ const isCurrentPage = (href: string) => currentPath === href;
     successAlert?.classList.add("hidden");
     errorAlert?.classList.add("hidden");
 
-    // Make sure the input is not empty
-    const emailValue = email?.value?.trim();
-    if (!emailValue) throw new Error("Email is required.");
-
     try {
+      // Make sure the input is not empty
+      const emailValue = email?.value?.trim();
+      if (!emailValue) throw new Error(t("common.email_required"));
+
       const resp = await apiClient.subscribe(emailValue);
 
-      if (resp.status !== 201) throw new Error("Failed adding to waitlist.");
+      if (resp.status !== 201) throw new Error(t("common.subscribe_failed"));
 
       // Make button active after done processing submit
       btn.removeAttribute("disabled");
@@ -202,6 +225,7 @@ const isCurrentPage = (href: string) => currentPath === href;
       const errMsg = error.message;
       if (errMsg && errorMessage) errorMessage.textContent = errMsg;
 
+      console.log(errorAlert);
       // Show error message
       errorAlert?.classList.remove("hidden");
       setTimeout(() => {
@@ -209,11 +233,4 @@ const isCurrentPage = (href: string) => currentPath === href;
       }, ALERT_TIMEOUT);
     }
   });
-</script>
-
-<script>
-  const copyYear = document.getElementById("copy-year");
-  if (!copyYear) throw new Error("Failed updating copy year");
-
-  copyYear.innerText = new Date().getFullYear().toString();
 </script>

@@ -9,6 +9,10 @@ import AppInformation from "@/components/ui/AppInformation.astro";
 
 import { BENEFIT_DATA } from "@/constants/app-benefits";
 import SphereDecoration from "@/components/ui/SphereDecoration.astro";
+import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
 ---
 
 <section id="app-info" class="relative overflow-hidden">
@@ -45,7 +49,8 @@ import SphereDecoration from "@/components/ui/SphereDecoration.astro";
               BENEFIT_DATA.map((data) => (
                 <AppBenefitCard
                   class="lg:w-[352px] xl:even:translate-y-24"
-                  {...data}
+                  title={t(data.title)}
+                  content={t(data.content)}
                 />
               ))
             }

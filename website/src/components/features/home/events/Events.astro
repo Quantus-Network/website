@@ -3,6 +3,10 @@ import { Image } from "astro:assets";
 import Button from "@/components/ui/Button.astro";
 
 import Token2049 from "@/assets/events/token-2049-singapore.png";
+import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
 ---
 
 <section
@@ -15,7 +19,7 @@ import Token2049 from "@/assets/events/token-2049-singapore.png";
       >EVENTS</span
     >
     <h2 class="font-large-title-mobile lg:font-large-title text-center">
-      Come Meet Us
+      {t("events.title")}
     </h2>
   </div>
 
@@ -28,10 +32,12 @@ import Token2049 from "@/assets/events/token-2049-singapore.png";
     </div>
 
     <div class="flex flex-col gap-[6px] lg:max-w-[359px]">
-      <p class="font-body-mobile lg:font-large-body">UPCOMING EVENT:</p>
-      <h3 class="font-medium-title-mobile lg:font-medium-title">Token 2049</h3>
+      <p class="font-body-mobile lg:font-large-body">{t("events.upcoming")}</p>
+      <h3 class="font-medium-title-mobile lg:font-medium-title">
+        {t("events.token2049.title")}
+      </h3>
       <p class="font-tag-mobile lg:font-large-body lg:font-semibold">
-        1-2 OCTOBER 2025 MARINA BAY SANDS - Singapore
+        {t("events.token2049.date")}
       </p>
     </div>
 
@@ -39,11 +45,10 @@ import Token2049 from "@/assets/events/token-2049-singapore.png";
       class="font-body-mobile lg:font-body me-auto w-[275px] font-semibold md:me-0 lg:w-[335px]"
     >
       <p>
-        Come meet us and have a chat about quantum, blockchain, art, music or
-        anything!
+        {t("events.token2049.description")}
       </p>
       <br />
-      <p>We'll be there all weekend!</p>
+      <p>{t("events.token2049.additional")}</p>
     </div>
 
     <Image
@@ -58,6 +63,6 @@ import Token2049 from "@/assets/events/token-2049-singapore.png";
   <Button
     href="https://www.asia.token2049.com/"
     class="mt-[119px] w-[295px] md:!hidden"
-    variant="outline">Event Details</Button
+    variant="outline">{t("events.token2049.cta")}</Button
   >
 </section>
