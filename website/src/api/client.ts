@@ -1,3 +1,11 @@
+import NodeCounterService from "./node-counter-service";
+import type {
+  NodeCounterListener,
+  NodeData,
+  NodeCounterOptions,
+  NodeCounterState,
+} from "./node-counter-service";
+
 // Types for API responses
 interface ChainStatsData {
   allTransactions: {
@@ -32,6 +40,8 @@ type ApiResponse<T = any> = Promise<Response>;
 const createApiClient = () => {
   const API_URL = "https://api.quantus.com/api";
   const GRAPHQL_URL = "https://gql.res.fm/graphql";
+
+  const nodeCounter = new NodeCounterService();
 
   const methods = {
     /**
@@ -129,6 +139,52 @@ const createApiClient = () => {
       const response = await methods.chainStats();
       return methods.handleGraphQLResponse<ChainStatsData>(response);
     },
+
+    /**
+     * Node Counter Methods
+     */
+    nodeCounter: {
+      /**
+       * Subscribe to node count updates
+       * @param listener Callback function that receives state updates
+       * @returns Unsubscribe function
+       */
+      subscribe: (listener: NodeCounterListener) =>
+        nodeCounter.subscribe(listener),
+
+      /**
+       * Get current node counter state
+       */
+      getState: () => nodeCounter.getState(),
+
+      /**
+       * Start the WebSocket connection to track nodes
+       */
+      connect: () => nodeCounter.connect(),
+
+      /**
+       * Disconnect from the node tracking WebSocket
+       */
+      disconnect: () => nodeCounter.disconnect(),
+
+      /**
+       * Check if currently connected
+       */
+      isConnected: () => nodeCounter.isConnected(),
+
+      /**
+       * Get just the current node count (convenience method)
+       */
+      getCount: () => nodeCounter.getState().count,
+
+      /**
+       * Get current connection status
+       */
+      getStatus: () => ({
+        status: nodeCounter.getState().status,
+        message: nodeCounter.getState().statusMessage,
+      }),
+    },
   };
 
   return methods;
@@ -138,4 +194,13 @@ const apiClient = createApiClient();
 export default apiClient;
 
 // Export types for use in other files
-export type { ChainStatsData, GraphQLResponse, ContactData, SubscribeData };
+export type {
+  ChainStatsData,
+  GraphQLResponse,
+  ContactData,
+  SubscribeData,
+  NodeData,
+  NodeCounterState,
+  NodeCounterOptions,
+  NodeCounterListener,
+};
