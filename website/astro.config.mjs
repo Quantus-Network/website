@@ -2,7 +2,7 @@
 import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 import sitemap from "@astrojs/sitemap";
-import { DEFAULT_LOCALE, HOMEPAGE_LINK, LOCALES_MAP } from "@/utils/i18n";
+import { DEFAULT_LOCALE, HOMEPAGE_LINK, LOCALES_MAP } from "./src/utils/i18n";
 
 // https://astro.build/config
 export default defineConfig({
