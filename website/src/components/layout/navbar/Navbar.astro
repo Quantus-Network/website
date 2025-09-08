@@ -2,7 +2,6 @@
 import { MenuIcon, XIcon } from "@lucide/astro";
 import DesktopMenu from "./desktop-menu/DesktopMenu.astro";
 import MobileMenu from "./mobile-menu/MobileMenu.astro";
-import LanguageSwitcher from "@/components/i18n/LanguageSwitcher.astro";
 
 import BrandLogo from "@/assets/brand/brand-logo.svg";
 import BrandName from "@/assets/brand/brand-name.svg";
@@ -35,8 +34,8 @@ const t = await createTranslator(locale);
           href={getLocalizedPath(locale, "/")}
           class="flex items-center gap-3 hover:brightness-125"
         >
-          <BrandLogo />
-          <BrandName />
+          <BrandLogo title="Quantus's brand logo" />
+          <BrandName title="Quantus's brand name" />
         </a>
       </div>
 

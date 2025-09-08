@@ -27,12 +27,22 @@ const socials = Object.entries(SITE_SOCIALS) as [SiteSocial, string][];
         rel="noopener noreferrer"
         class="text-button-icon bg-button-icon-body flex size-9 cursor-pointer items-center justify-center rounded-full hover:brightness-125 min-[360px]:size-10"
       >
-        {social[0] === "x" && <SocialX />}
-        {social[0] === "instagram" && <SocialIG />}
-        {social[0] === "youtube" && <SocialYT />}
-        {social[0] === "telegram" && <SocialTelegram />}
-        {social[0] === "github" && <SocialGithub />}
-        {social[0] === "linktree" && <SocialLinktree />}
+        {social[0] === "x" && <SocialX title="Quantus's X account" />}
+        {social[0] === "instagram" && (
+          <SocialIG title="Quantus's Instagram account" />
+        )}
+        {social[0] === "youtube" && (
+          <SocialYT title="Quantus's Youtube account" />
+        )}
+        {social[0] === "telegram" && (
+          <SocialTelegram title="Quantus's Telegram account" />
+        )}
+        {social[0] === "github" && (
+          <SocialGithub title="Quantus's Github account" />
+        )}
+        {social[0] === "linktree" && (
+          <SocialLinktree title="Quantus's Linktree account" />
+        )}
       </a>
     ))
   }
