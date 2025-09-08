@@ -64,12 +64,9 @@ const textDirection = getTextDirection(currentLocale);
   if (hasRedirected) throw new Error("Already redirected");
 
   const currentLocale = getLocaleFromUrl(window.location.pathname);
-  const hasHyphen = navigator.language.includes("-");
-  const userLang: any = hasHyphen
-    ? navigator.language.split("-")[1].toLowerCase()
-    : navigator.language.toLowerCase();
+  const userLang = navigator.language as any;
 
-  if (currentLocale === userLang) {
+  if (currentLocale === userLang || userLang.includes("en-")) {
     localStorage.setItem(localeStorageKey, "true");
     throw new Error("Already on the correct locale");
   }

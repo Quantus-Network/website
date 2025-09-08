@@ -1,8 +1,9 @@
 {
   "extends": "astro/tsconfigs/strict",
     "include": [
-    "src", // ✅ This is the key change
-    ".astro/types.d.ts"
+    "src", 
+    "astro.config.mjs",
+    ".astro/types.d.ts",
   ],
   "exclude": ["dist"],
   "compilerOptions": {

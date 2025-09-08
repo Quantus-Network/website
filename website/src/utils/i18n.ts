@@ -1,13 +1,52 @@
+import env from "@/config";
+
 // Types for our translation structure
 export type TranslationKey = string;
 export type TranslationParams = Record<string, string | number>;
 
 // Supported locales
-export type Locale = "en" | "cn" | "kr" | "id" | "jp" | "ru" | "es" | "de" | "in";
-export const SUPPORTED_LOCALES: Locale[] = ["en", "cn", "kr","id" , "jp" , "ru" , "es" , "de" , "in"];
+export type Locale =
+  | "en-US" // English (United States)
+  | "zh-CN" // Chinese (Simplified, China)
+  | "ko-KR" // Korean (South Korea)
+  | "id-ID" // Indonesian (Indonesia)
+  | "ja-JP" // Japanese (Japan)
+  | "ru-RU" // Russian (Russia)
+  | "es-ES" // Spanish (Spain)
+  | "de-DE" // German (Germany)
+  | "hi-IN"; // Hindi (India)
 
-// Default locale
-export const DEFAULT_LOCALE: Locale = "en";
+export const SUPPORTED_LOCALES: Locale[] = [
+  "en-US",
+  "zh-CN",
+  "ko-KR",
+  "id-ID",
+  "ja-JP",
+  "ru-RU",
+  "es-ES",
+  "de-DE",
+  "hi-IN",
+];
+export const HOMEPAGE_LINK = SUPPORTED_LOCALES.map((locale) => {
+  if (locale === "en-US") return `${env.SITE_BASE_URL}/`;
+  return `${env.SITE_BASE_URL}/${locale}`;
+});
+
+export const DEFAULT_LOCALE: Locale = "en-US";
+
+// 3. The locale map for the sitemap configuration
+export const LOCALES_MAP: Record<string, string> = {
+  // URL-path: hreflang-value
+  "en-US": "en-US",
+  "zh-CN": "zh-CN",
+  "ko-KR": "ko-KR",
+  "id-ID": "id-ID",
+  "ja-JP": "ja-JP",
+  "ru-RU": "ru-RU",
+  "es-ES": "es-ES",
+  "de-DE": "de-DE",
+  "hi-IN": "hi-IN",
+};
 
 // Translation cache
 const translationCache = new Map<Locale, Record<string, any>>();
@@ -140,7 +179,7 @@ export async function createTranslator(locale: Locale) {
 }
 
 export function getLocalizedPath(locale: Locale, pathname: string): string {
-  if (pathname.includes("http") ) return pathname
+  if (pathname.includes("http")) return pathname;
 
   // If it's the default language, don't add a prefix.
   if (locale === DEFAULT_LOCALE) {
@@ -246,21 +285,12 @@ export function formatNumber(
   locale: Locale,
   options?: Intl.NumberFormatOptions,
 ): string {
-  const localeMap: Record<Locale, string> = {
-    en: "en-US",
-    cn: "zh-CN",
-    kr: "ko-KR",
-    id: "id-ID",
-    jp: "ja-JP",
-    ru: "ru-RU",
-    es: "es-ES",
-    de: "de-DE",
-    in: "hi-IN",
-  };
-
+  // The localeMap is no longer needed.
+  // The 'locale' variable is already in the correct "en-US" format.
   try {
-    return new Intl.NumberFormat(localeMap[locale], options).format(number);
+    return new Intl.NumberFormat(locale, options).format(number);
   } catch (error) {
+    // Fallback in case of an invalid locale string
     console.warn(`Failed to format number for locale ${locale}:`, error);
     return number.toString();
   }
@@ -274,21 +304,11 @@ export function formatDate(
   locale: Locale,
   options?: Intl.DateTimeFormatOptions,
 ): string {
-  const localeMap: Record<Locale, string> = {
-    en: "en-US",
-    cn: "zh-CN",
-    kr: "ko-KR",
-    id: "id-ID",
-    jp: "ja-JP",
-    ru: "ru-RU",
-    es: "es-ES",
-    de: "de-DE",
-    in: "hi-IN",
-  };
-
+  // The localeMap is also removed from here.
   try {
-    return new Intl.DateTimeFormat(localeMap[locale], options).format(date);
+    return new Intl.DateTimeFormat(locale, options).format(date);
   } catch (error) {
+    // Fallback in case of an invalid locale string
     console.warn(`Failed to format date for locale ${locale}:`, error);
     return date.toISOString();
   }
