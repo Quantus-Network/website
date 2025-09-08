@@ -4,6 +4,7 @@ import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 
 import sitemap from "@astrojs/sitemap";
+import { DEFAULT_LOCALE, SUPPORTED_LOCALES } from "@/utils/i18n";
 
 // https://astro.build/config
 export default defineConfig({
@@ -12,12 +13,8 @@ export default defineConfig({
   },
 
   i18n: {
-    defaultLocale: "en",
-    locales: [
-      "en", // English (default)
-      "cn", // Chinese (Simplified)
-      "kr", // Korean
-    ],
+    defaultLocale: DEFAULT_LOCALE,
+    locales: SUPPORTED_LOCALES,
     routing: {
       prefixDefaultLocale: false,
     },

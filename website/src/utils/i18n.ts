@@ -3,8 +3,8 @@ export type TranslationKey = string;
 export type TranslationParams = Record<string, string | number>;
 
 // Supported locales
-export const SUPPORTED_LOCALES = ["en", "cn", "kr"] as const;
-export type Locale = (typeof SUPPORTED_LOCALES)[number];
+export type Locale = "en" | "cn" | "kr" | "id" | "jp" | "ru" | "es" | "de" | "in";
+export const SUPPORTED_LOCALES: Locale[] = ["en", "cn", "kr","id" , "jp" , "ru" , "es" , "de" , "in"];
 
 // Default locale
 export const DEFAULT_LOCALE: Locale = "en";
@@ -140,6 +140,8 @@ export async function createTranslator(locale: Locale) {
 }
 
 export function getLocalizedPath(locale: Locale, pathname: string): string {
+  if (pathname.includes("http") ) return pathname
+
   // If it's the default language, don't add a prefix.
   if (locale === DEFAULT_LOCALE) {
     return pathname;
@@ -248,6 +250,12 @@ export function formatNumber(
     en: "en-US",
     cn: "zh-CN",
     kr: "ko-KR",
+    id: "id-ID",
+    jp: "ja-JP",
+    ru: "ru-RU",
+    es: "es-ES",
+    de: "de-DE",
+    in: "hi-IN",
   };
 
   try {
@@ -270,6 +278,12 @@ export function formatDate(
     en: "en-US",
     cn: "zh-CN",
     kr: "ko-KR",
+    id: "id-ID",
+    jp: "ja-JP",
+    ru: "ru-RU",
+    es: "es-ES",
+    de: "de-DE",
+    in: "hi-IN",
   };
 
   try {

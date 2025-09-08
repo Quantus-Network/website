@@ -1,6 +1,10 @@
 ---
 import Button from "@/components/ui/Button.astro";
-import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+import {
+  createTranslator,
+  getLocaleFromUrl,
+  getLocalizedPath,
+} from "@/utils/i18n";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
@@ -20,8 +24,10 @@ const t = await createTranslator(locale);
   <div
     class="mx-auto mt-[29px] flex w-[237px] flex-col gap-[30px] md:w-[552px] md:flex-row md:justify-center"
   >
-    <Button class="md:min-w-[200px]" target="_self" href="/app"
-      >{t("hero.cta_primary")}</Button
+    <Button
+      class="md:min-w-[200px]"
+      target="_self"
+      href={getLocalizedPath(locale, "/app")}>{t("hero.cta_primary")}</Button
     >
     <Button
       class="md:min-w-[200px]"

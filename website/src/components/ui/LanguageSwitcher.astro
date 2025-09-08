@@ -18,6 +18,17 @@ const localeInfo: Record<string, LocaleInfo> = {
   en: { code: "en", name: "English", nativeName: "English", flag: "🇺🇸" },
   cn: { code: "cn", name: "Chinese", nativeName: "中文", flag: "🇨🇳" },
   kr: { code: "kr", name: "Korean", nativeName: "한국어", flag: "🇰🇷" },
+  id: {
+    code: "id",
+    name: "Indonesian",
+    nativeName: "Bahasa Indonesia",
+    flag: "🇮🇩",
+  },
+  jp: { code: "jp", name: "Japanese", nativeName: "日本語", flag: "🇯🇵" },
+  ru: { code: "ru", name: "Russian", nativeName: "Русский", flag: "🇷🇺" },
+  es: { code: "es", name: "Spanish", nativeName: "Español", flag: "🇪🇸" },
+  de: { code: "de", name: "German", nativeName: "Deutsch", flag: "🇩🇪" },
+  in: { code: "in", name: "Hindi", nativeName: "हिन्दी", flag: "🇮🇳" },
 };
 
 const currentLocale = getLocaleFromUrl(Astro.url.pathname);

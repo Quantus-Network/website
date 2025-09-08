@@ -1,7 +1,11 @@
 ---
 import Button from "@/components/ui/Button.astro";
 import SphereDecoration from "@/components/ui/SphereDecoration.astro";
-import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+import {
+  createTranslator,
+  getLocaleFromUrl,
+  getLocalizedPath,
+} from "@/utils/i18n";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
@@ -33,8 +37,10 @@ const t = await createTranslator(locale);
         {t("app.cta.title")}
       </h2>
 
-      <Button class="lg:w-[295px] lg:shrink-0" href="/app" target="_self"
-        >{t("app.cta.button")}</Button
+      <Button
+        class="lg:w-[295px] lg:shrink-0"
+        href={getLocalizedPath(locale, "/app")}
+        target="_self">{t("app.cta.button")}</Button
       >
     </div>
   </div>

@@ -11,7 +11,11 @@ import Nik from "@/assets/teams/nik-avatar.png";
 import Cezary from "@/assets/teams/cezary-avatar.png";
 import Rob from "@/assets/teams/rob-avatar.png";
 import ProfileCard from "./ProfileCard.astro";
-import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+import {
+  createTranslator,
+  getLocaleFromUrl,
+  getLocalizedPath,
+} from "@/utils/i18n";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
@@ -66,8 +70,12 @@ const profileData: ProfileData[] = [
         <p class="font-body">{t("team.description")}</p>
       </div>
 
-      <Button class="lg:w-[295px]" href="/contact" variant="outline"
-        >{t("team.cta")}</Button
+      <Button
+        class="lg:w-[295px]"
+        href={getLocalizedPath(locale, "/contact")}
+        target="_self"
+        rel=""
+        variant="outline">{t("team.cta")}</Button
       >
     </div>
 
