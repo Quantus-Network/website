@@ -365,12 +365,12 @@ const duplicatedItems =
       }
 
       if (this.isVerticalScroll) {
-        // If it's a vertical scroll, let the browser handle it and stop our logic.
-        this.handleCancel();
+        // It's a vertical scroll. Let the browser handle it by doing nothing.
+        // The state will be cleaned up properly in handleEnd.
         return;
       }
 
-      // If we've determined it's a horizontal drag, prevent default browser actions like text selection or page scrolling.
+      // If we've determined it's a horizontal drag, prevent default browser actions.
       if (this.hasMoved) {
         event.preventDefault();
       }
