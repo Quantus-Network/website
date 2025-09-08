@@ -34,7 +34,6 @@ export const HOMEPAGE_LINK = SUPPORTED_LOCALES.map((locale) => {
 
 export const DEFAULT_LOCALE: Locale = "en-US";
 
-// 3. The locale map for the sitemap configuration
 export const LOCALES_MAP: Record<string, string> = {
   // URL-path: hreflang-value
   "en-US": "en-US",
