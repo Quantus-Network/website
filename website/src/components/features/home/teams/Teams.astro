@@ -4,6 +4,9 @@ import { Image } from "astro:assets";
 import type { Props as ProfileData } from "./ProfileCard.astro";
 import Button from "@/components/ui/Button.astro";
 import Separator from "@/components/ui/Separator.astro";
+import SocialX from "@/assets/socials/social-x.svg";
+import SocialGithub from "@/assets/socials/social-github.svg";
+import { Globe } from "@lucide/astro";
 
 import Chris from "@/assets/teams/chris-avatar.png";
 import Joe from "@/assets/teams/joe-avatar.png";
@@ -20,7 +23,9 @@ import {
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
 
-const profileData: ProfileData[] = [
+const profileData: (ProfileData & {
+  social: { href: string; type: string };
+})[] = [
   {
     name: "Joe Mattia",
     title: "Chief Operating Officer",
@@ -28,6 +33,7 @@ const profileData: ProfileData[] = [
       alt: "Joe Mattia's avatar",
       src: Joe,
     },
+    social: { href: "https://x.com/joemattia", type: "x" },
   },
   {
     name: "Nik Heger",
@@ -35,6 +41,10 @@ const profileData: ProfileData[] = [
     avatar: {
       alt: "Nik Heger's avatar",
       src: Nik,
+    },
+    social: {
+      href: "https://github.com/n13",
+      type: "github",
     },
   },
   {
@@ -44,6 +54,10 @@ const profileData: ProfileData[] = [
       alt: "Cezary Olborski's avatar",
       src: Cezary,
     },
+    social: {
+      href: "https://github.com/czareko",
+      type: "github",
+    },
   },
   {
     name: "Rob Thijssen",
@@ -51,6 +65,10 @@ const profileData: ProfileData[] = [
     avatar: {
       alt: "Rob Thijssen's avatar",
       src: Rob,
+    },
+    social: {
+      href: "https://rob.tn/",
+      type: "website",
     },
   },
 ];
@@ -89,6 +107,14 @@ const profileData: ProfileData[] = [
         />
 
         <figcaption class="flex w-[280px] flex-col gap-2">
+          <a
+            href="https://x.com/yuvilightman"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-button-icon bg-button-icon-body flex size-7 cursor-pointer items-center justify-center rounded-full hover:brightness-125 min-[360px]:size-8"
+          >
+            <SocialX />
+          </a>
           <h3 class="font-small-title">Christopher Smith</h3>
           <Separator class="h-[0.5px]" />
           <p class="font-large-body text-text-content-secondary">
@@ -124,7 +150,23 @@ const profileData: ProfileData[] = [
     <div
       class="flex flex-col gap-[42px] md:grid md:grid-cols-2 md:gap-x-[22px] md:gap-y-10 lg:grid-cols-4"
     >
-      {profileData.map((data) => <ProfileCard {...data} />)}
+      {
+        profileData.map((data) => (
+          <ProfileCard {...data}>
+            <a
+              slot="social"
+              href={data.social.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-button-icon bg-button-icon-body flex size-7 cursor-pointer items-center justify-center rounded-full hover:brightness-125 min-[360px]:size-8"
+            >
+              {data.social.type === "x" && <SocialX />}
+              {data.social.type === "github" && <SocialGithub />}
+              {data.social.type === "website" && <Globe />}
+            </a>
+          </ProfileCard>
+        ))
+      }
     </div>
   </div>
 </section>

@@ -19,6 +19,8 @@ const { name, title, avatar } = Astro.props;
   <Image class="w-full" src={avatar.src} alt={avatar.alt} layout="full-width" />
 
   <figcaption class="flex w-[280px] flex-col gap-2 lg:w-full">
+    <slot name="social" />
+
     <strong class="font-tag">{name}</strong>
 
     <Separator class="h-[0.5px]" />

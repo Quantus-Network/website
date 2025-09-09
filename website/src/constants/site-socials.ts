@@ -11,6 +11,6 @@ export const SITE_SOCIALS = {
   youtube: "https://www.youtube.com/@quantus.network",
   telegram: "https://t.me/quantusnetwork",
   github: "https://github.com/Quantus-Network",
-  instagram: "https://instagram.com/deepsteep01",
-  linktree: "https://linktr.ee/quantusnetwork",
+  instagram: "https://www.instagram.com/quantusnetwork/",
+  linktree: "https://tr.ee/wFDhS5",
 } as const;
