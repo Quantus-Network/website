@@ -7,10 +7,9 @@ export interface NodeData {
 }
 
 export interface NodeCounterState {
-  count: number;
-  status: 'disconnected' | 'connecting' | 'connected' | 'error';
+  count: number | null;
+  status: "disconnected" | "connecting" | "connected" | "error";
   statusMessage: string;
-  nodes: Map<string, NodeData>;
 }
 
 export interface NodeCounterOptions {
@@ -29,14 +28,13 @@ export type NodeCounterListener = (state: NodeCounterState) => void;
  */
 class NodeCounterService {
   private ws: WebSocket | null = null;
-  private connectedNodes: Map<string, NodeData> = new Map();
   private listeners: Set<NodeCounterListener> = new Set();
   private reconnectAttempts = 0;
   private heartbeatIntervalId: number | null = null;
   private isConnecting = false;
 
   private options: Required<NodeCounterOptions> = {
-    wsUrl: 'wss://tc0.res.fm/feed',
+    wsUrl: "wss://tc0.res.fm/feed",
     maxReconnectAttempts: 5,
     reconnectDelay: 1000,
     heartbeatInterval: 30000,
@@ -44,10 +42,9 @@ class NodeCounterService {
   };
 
   private state: NodeCounterState = {
-    count: 0,
-    status: 'disconnected',
-    statusMessage: 'Not connected',
-    nodes: this.connectedNodes,
+    count: null,
+    status: "disconnected",
+    statusMessage: "Not connected",
   };
 
   constructor(options: NodeCounterOptions = {}) {
@@ -59,10 +56,10 @@ class NodeCounterService {
    */
   subscribe(listener: NodeCounterListener): () => void {
     this.listeners.add(listener);
-    
+
     // Immediately call with current state
     listener(this.getState());
-    
+
     // Return unsubscribe function
     return () => {
       this.listeners.delete(listener);
@@ -75,8 +72,6 @@ class NodeCounterService {
   getState(): NodeCounterState {
     return {
       ...this.state,
-      count: this.connectedNodes.size,
-      nodes: new Map(this.connectedNodes),
     };
   }
 
@@ -84,18 +79,21 @@ class NodeCounterService {
    * Start the WebSocket connection
    */
   connect(): void {
-    if (this.isConnecting || (this.ws && this.ws.readyState === WebSocket.CONNECTING)) {
+    if (
+      this.isConnecting ||
+      (this.ws && this.ws.readyState === WebSocket.CONNECTING)
+    ) {
       return;
     }
 
     this.isConnecting = true;
-    this.updateState('connecting', 'Connecting to network...');
+    this.updateState("connecting", "Connecting to network...");
 
     try {
       this.ws = new WebSocket(this.options.wsUrl);
       this.setupEventListeners();
     } catch (error) {
-      console.error('Failed to create WebSocket connection:', error);
+      console.error("Failed to create WebSocket connection:", error);
       this.handleConnectionError();
     }
   }
@@ -109,7 +107,7 @@ class NodeCounterService {
       this.ws.close();
       this.ws = null;
     }
-    this.updateState('disconnected', 'Disconnected');
+    this.updateState("disconnected", "Disconnected");
     this.isConnecting = false;
   }
 
@@ -124,112 +122,75 @@ class NodeCounterService {
     if (!this.ws) return;
 
     this.ws.onopen = () => {
-      console.log('Connected to substrate feed');
+      console.log("Connected to substrate feed");
       this.isConnecting = false;
       this.reconnectAttempts = 0;
-      this.updateState('connected', 'Connected to network');
-      this.startHeartbeat();
+      this.updateState("connected", "Connected to network");
     };
 
     this.ws.onmessage = (event) => {
       try {
         this.handleMessage(event.data);
       } catch (error) {
-        console.error('Error processing message:', error);
+        console.error("Error processing message:", error);
       }
     };
 
     this.ws.onclose = (event) => {
-      console.log('WebSocket connection closed:', event.code, event.reason);
+      console.log("WebSocket connection closed:", event.code, event.reason);
       this.isConnecting = false;
       this.cleanup();
-      
+
       if (this.reconnectAttempts < this.options.maxReconnectAttempts) {
         this.scheduleReconnect();
       } else {
-        this.updateState('error', 'Connection failed - max retries exceeded');
+        this.updateState("error", "Connection failed - max retries exceeded");
       }
     };
 
     this.ws.onerror = (error) => {
-      console.error('WebSocket error:', error);
+      console.error("WebSocket error:", error);
       this.isConnecting = false;
       this.handleConnectionError();
     };
   }
 
-  private handleMessage(data: string): void {
+  private async handleMessage(data: any): Promise<void> {
     try {
-      const message = JSON.parse(data);
-      
-      // Handle different message types based on the substrate feed format
-      if (message.type === 'node_connected' || message.event === 'connected') {
-        this.addNode(message);
-      } else if (message.type === 'node_disconnected' || message.event === 'disconnected') {
-        this.removeNode(message.id || message.nodeId);
-      } else if (message.type === 'node_list' || Array.isArray(message.nodes)) {
-        this.handleNodeList(message.nodes || message);
-      } else if (message.type === 'heartbeat' || message.ping) {
-        this.handleHeartbeat();
+      let textData = "";
+
+      // Check if the data is a Blob
+      if (data instanceof Blob) {
+        textData = await data.text();
       } else {
-        this.tryExtractNodeInfo(message);
+        textData = data;
       }
 
-      this.notifyListeners();
+      const message = await JSON.parse(textData);
+
+      if (
+        message.length >= 4 &&
+        message[0] === 0 &&
+        typeof message[1] === "number"
+      ) {
+        const chainData = message[3];
+        const nodeCount = chainData[2]
+        this.state.count = nodeCount;
+
+        this.notifyListeners();
+      }
+
+      
     } catch (error) {
       // Non-JSON messages are logged but not processed
-      console.debug('Received non-JSON message:', data);
+      console.debug("Received non-JSON message:", data);
     }
   }
 
-  private addNode(nodeInfo: any): void {
-    const nodeData: NodeData = {
-      id: nodeInfo.id || nodeInfo.nodeId || this.generateNodeId(),
-      name: nodeInfo.name || nodeInfo.nodeName,
-      version: nodeInfo.version,
-      timestamp: Date.now()
-    };
-
-    this.connectedNodes.set(nodeData.id, nodeData);
-  }
-
-  private removeNode(nodeId: string): void {
-    if (nodeId) {
-      this.connectedNodes.delete(nodeId);
-    }
-  }
-
-  private handleNodeList(nodes: any[]): void {
-    this.connectedNodes.clear();
-    if (Array.isArray(nodes)) {
-      nodes.forEach(node => this.addNode(node));
-    }
-  }
-
-  private tryExtractNodeInfo(message: any): void {
-    if (message.peer || message.peerId) {
-      this.addNode({
-        id: message.peer || message.peerId,
-        name: message.peerName,
-        version: message.version
-      });
-    }
-  }
-
-  private generateNodeId(): string {
-    return `node_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-  }
-
-  private handleHeartbeat(): void {
-    const cutoffTime = Date.now() - this.options.nodeTimeout;
-    for (const [nodeId, node] of this.connectedNodes.entries()) {
-      if (node.timestamp < cutoffTime) {
-        this.connectedNodes.delete(nodeId);
-      }
-    }
-  }
-
-  private updateState(status: NodeCounterState['status'], statusMessage: string): void {
+  private updateState(
+    status: NodeCounterState["status"],
+    statusMessage: string,
+  ): void {
     this.state.status = status;
     this.state.statusMessage = statusMessage;
     this.notifyListeners();
@@ -237,29 +198,13 @@ class NodeCounterService {
 
   private notifyListeners(): void {
     const currentState = this.getState();
-    this.listeners.forEach(listener => {
+    this.listeners.forEach((listener) => {
       try {
         listener(currentState);
       } catch (error) {
-        console.error('Error in node counter listener:', error);
+        console.error("Error in node counter listener:", error);
       }
     });
-  }
-
-  private startHeartbeat(): void {
-    this.heartbeatIntervalId = window.setInterval(() => {
-      if (this.ws && this.ws.readyState === WebSocket.OPEN) {
-        try {
-          this.ws.send(JSON.stringify({ type: 'ping' }));
-        } catch (error) {
-          console.debug('Heartbeat ping failed:', error);
-        }
-      }
-      
-      // Clean up old nodes
-      this.handleHeartbeat();
-      this.notifyListeners();
-    }, this.options.heartbeatInterval);
   }
 
   private cleanup(): void {
@@ -271,15 +216,19 @@ class NodeCounterService {
 
   private handleConnectionError(): void {
     this.cleanup();
-    this.updateState('error', 'Connection error');
+    this.updateState("error", "Connection error");
     this.scheduleReconnect();
   }
 
   private scheduleReconnect(): void {
     this.reconnectAttempts++;
-    const delay = this.options.reconnectDelay * Math.pow(2, this.reconnectAttempts - 1);
-    
-    this.updateState('connecting', `Reconnecting... (${this.reconnectAttempts}/${this.options.maxReconnectAttempts})`);
+    const delay =
+      this.options.reconnectDelay * Math.pow(2, this.reconnectAttempts - 1);
+
+    this.updateState(
+      "connecting",
+      `Reconnecting... (${this.reconnectAttempts}/${this.options.maxReconnectAttempts})`,
+    );
 
     setTimeout(() => {
       if (this.reconnectAttempts <= this.options.maxReconnectAttempts) {

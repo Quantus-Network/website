@@ -48,7 +48,9 @@ const t = await createTranslator(locale);
   </div>
 
   <div class="flex flex-col items-center gap-[6px]">
-    <p class="font-medium-title-mobile md:font-medium-title">98</p>
+    <p id="nodes-count" class="font-medium-title-mobile md:font-medium-title">
+      -
+    </p>
     <p class="font-body-mobile md:font-body">{t("hero.stats.nodes")}</p>
   </div>
 </div>
@@ -57,6 +59,7 @@ const t = await createTranslator(locale);
 <div id="stats-error" class="mt-2 hidden text-center text-sm text-red-500">
 </div>
 
+<!--  -->
 <script>
   // Import the client for client-side usage
   import apiClient from "@/api/client";
@@ -68,10 +71,10 @@ const t = await createTranslator(locale);
   const addressesElement = document.getElementById(
     "addresses-count",
   ) as HTMLParagraphElement;
+  const nodesCountElement = document.getElementById(
+    "nodes-count",
+  ) as HTMLParagraphElement;
   const errorElement = document.getElementById("stats-error") as HTMLDivElement;
-
-  // State management
-  let isLoading = false;
 
   // Function to format numbers for display
   const formatNumber = (num: number): string => {
@@ -93,14 +96,10 @@ const t = await createTranslator(locale);
     errorElement.classList.add("hidden");
   };
 
-  // Function to set loading state
-  const setLoadingState = (loading: boolean) => {
-    isLoading = loading;
-
-    // Add loading opacity effect
-    transactionsElement.style = loading ? "0.5" : "1";
-    addressesElement.style.opacity = loading ? "0.5" : "1";
-  };
+  // Handle subscribe to telemetry feed
+  apiClient.nodeCounter.subscribe((event) => {
+    if (event.count) nodesCountElement.textContent = formatNumber(event.count);
+  });
 
   // Function to fetch chain stats
   const fetchChainStats = async (): Promise<void> => {
@@ -137,15 +136,18 @@ const t = await createTranslator(locale);
   // Start auto-refresh when page loads
   startAutoRefresh();
   fetchChainStats();
+  apiClient.nodeCounter.connect();
 
   // Optional: Stop auto-refresh when page becomes hidden (performance optimization)
   document.addEventListener("visibilitychange", () => {
     if (document.hidden) {
       stopAutoRefresh();
+      apiClient.nodeCounter.disconnect();
     } else {
       startAutoRefresh();
       // Refresh immediately when page becomes visible again
       fetchChainStats();
+      apiClient.nodeCounter.connect();
     }
   });
 
