@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.quantus.wallet",
+    "sha256_cert_fingerprints": 
+    ["F3:2C:E1:00:5F:1F:D7:0D:B3:8B:29:93:43:18:58:B0:82:B3:4C:43:52:11:8D:56:3A:59:C4:F1:13:E9:CC:7F"]
+  }
+}]
