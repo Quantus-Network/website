@@ -1,49 +1,30 @@
 ---
-// CookieConsent.astro
-export interface Props {
-  gtmId?: string;
-  gaId?: string;
-  privacyPolicyUrl?: string;
-}
+import Button from "./Button.astro";
 
-const {
-  gtmId = "GTM-XXXXXXX",
-  gaId = "GA-XXXXXXX",
-  privacyPolicyUrl = "/privacy-policy",
-} = Astro.props;
+const privacyPolicyUrl = "/terms-and-privacy";
 ---
 
 <!-- Cookie Consent Banner -->
 <div
   id="cookie-consent-banner"
-  class="fixed inset-x-4 bottom-4 z-50 hidden rounded-lg border border-white/10 bg-gray-900 p-6 shadow-lg md:right-4 md:left-auto md:max-w-[450px]"
+  class="border-footer-separator bg-bg-primary fixed inset-x-4 bottom-4 z-50 hidden rounded-lg border p-6 shadow-lg md:right-4 md:left-auto md:max-w-[450px]"
 >
   <div class="flex flex-col gap-4">
     <div class="space-y-2">
-      <h3 class="m-0 text-lg font-semibold text-amber-400">Cookie Consent</h3>
-      <p class="m-0 text-sm leading-relaxed text-gray-300">
+      <h3 class="font-small-title">Cookie Consent</h3>
+      <p class="font-body-mobile">
         This website uses cookies to understand the interests of its readers
         better and cater to them. Find out more in the
-        <a
-          href={privacyPolicyUrl}
-          class="text-amber-400 underline transition-colors hover:text-amber-300"
+        <a href={privacyPolicyUrl} class="underline"
           >privacy policy and terms of service</a
         >.
       </p>
     </div>
     <div class="flex gap-2">
-      <button
-        id="accept-cookies"
-        class="flex-1 cursor-pointer rounded-md border-none bg-amber-400 px-4 py-3 font-medium text-gray-900 transition-colors hover:bg-amber-300"
+      <Button id="accept-cookies" class="w-full">Accept</Button>
+      <Button id="decline-cookies" class="w-full" variant="outline"
+        >Decline</Button
       >
-        Accept
-      </button>
-      <button
-        id="decline-cookies"
-        class="flex-1 cursor-pointer rounded-md border border-gray-600 bg-transparent px-4 py-3 font-medium text-gray-300 transition-colors hover:border-gray-500 hover:bg-gray-800"
-      >
-        Decline
-      </button>
     </div>
   </div>
 </div>
@@ -52,19 +33,26 @@ const {
 <div id="analytics-container"></div>
 
 <style>
-  .cookie-consent-banner.show {
+  #cookie-consent-banner.show {
     display: block;
   }
 </style>
 
-<script define:vars={{ gtmId, gaId }}>
+<script>
+  import env from "@/config";
+
   class CookieConsentManager {
-    constructor(gtmId, gaId) {
-      this.gtmId = gtmId;
+    private gaId: string;
+    private consentKey: string;
+    private banner: HTMLElement | null;
+    private analyticsContainer: HTMLElement | null;
+
+    constructor(gaId: string) {
       this.gaId = gaId;
       this.consentKey = "cookie-consent";
       this.banner = null;
       this.analyticsContainer = null;
+
       this.init();
     }
 
@@ -106,12 +94,12 @@ const {
     checkExistingConsent() {
       const consent = this.getConsent();
 
+      console.log("Called: ", consent);
       if (consent === null) {
         this.showBanner();
       } else if (consent === true) {
         this.loadAnalytics();
       }
-      // If consent is false, do nothing (no banner, no analytics)
     }
 
     showBanner() {
@@ -146,7 +134,7 @@ const {
       }
     }
 
-    setConsent(value) {
+    setConsent(value: boolean) {
       try {
         localStorage.setItem(this.consentKey, JSON.stringify(value));
       } catch (error) {
@@ -157,42 +145,10 @@ const {
     loadAnalytics() {
       if (!this.analyticsContainer) return;
 
-      // Load Google Tag Manager
-      if (this.gtmId && this.gtmId !== "GTM-XXXXXXX") {
-        this.loadGTM();
-      }
-
       // Load Google Analytics
       if (this.gaId && this.gaId !== "GA-XXXXXXX") {
         this.loadGA();
       }
-
-      // Load Taboola
-      this.loadTaboola();
-    }
-
-    loadGTM() {
-      // GTM Script
-      const gtmScript = document.createElement("script");
-      gtmScript.async = true;
-      gtmScript.src = `https://www.googletagmanager.com/gtm.js?id=${this.gtmId}`;
-
-      // GTM Data Layer
-      const dataLayerScript = document.createElement("script");
-      dataLayerScript.innerHTML = `
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '${this.gtmId}');
-      `;
-
-      this.analyticsContainer.appendChild(dataLayerScript);
-      this.analyticsContainer.appendChild(gtmScript);
-
-      // GTM NoScript fallback
-      const noscript = document.createElement("noscript");
-      noscript.innerHTML = `<iframe src="https://www.googletagmanager.com/ns.html?id=${this.gtmId}" height="0" width="0" style="display:none;visibility:hidden"></iframe>`;
-      document.body.appendChild(noscript);
     }
 
     loadGA() {
@@ -209,35 +165,11 @@ const {
         gtag('config', '${this.gaId}');
       `;
 
-      this.analyticsContainer.appendChild(gaScript);
-      this.analyticsContainer.appendChild(gaConfigScript);
-    }
-
-    loadTaboola() {
-      const taboolaScript = document.createElement("script");
-      taboolaScript.id = "taboola-script";
-      taboolaScript.innerHTML = `
-        (function() {
-          window._tfa = window._tfa || [];
-          window._tfa.push({notify: 'event', name: 'page_view', id: 1897248});
-          !function (t, f, a, x) {
-            if (!document.getElementById(x)) {
-              t.async = 1;
-              t.src = a;
-              t.id = x;
-              f.parentNode.insertBefore(t, f);
-            }
-          }(document.createElement('script'),
-            document.getElementsByTagName('script')[0],
-            '//cdn.taboola.com/libtrc/unip/1897248/tfa.js',
-            'tb_tfa_script');
-        })();
-      `;
-
-      this.analyticsContainer.appendChild(taboolaScript);
+      this.analyticsContainer?.appendChild(gaScript);
+      this.analyticsContainer?.appendChild(gaConfigScript);
     }
   }
 
   // Initialize the cookie consent manager
-  new CookieConsentManager(gtmId, gaId);
+  new CookieConsentManager(env.GA_ID);
 </script>
