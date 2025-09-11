@@ -386,6 +386,13 @@
       }
     }
   },
+  "cookie": {
+    "title":"Persetujuan Cookie",
+    "notice":"Situs web ini menggunakan cookie untuk lebih memahami minat para pembacanya dan melayani mereka. Cari tahu lebih lanjut di",
+    "link": "kebijakan privasi dan persyaratan layanan",
+    "accept":"Terima",
+    "decline":"Tolak"
+  },
   "common": {
     "loading": "Memuat...",
     "error": "Error",

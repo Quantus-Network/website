@@ -386,6 +386,13 @@
       }
     }
   },
+  "cookie": {
+    "title":"Cookie Consent",
+    "notice":"This website uses cookies to understand the interests of its readers better and cater to them. Find out more in the",
+    "link": "privacy policy and terms of service",
+    "accept":"Accept",
+    "decline":"Decline"
+  },
   "common": {
     "loading": "Loading...",
     "error": "Error",

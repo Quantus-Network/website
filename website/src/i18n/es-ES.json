@@ -386,6 +386,13 @@
       }
     }
   },
+  "cookie": {
+    "title":"Consentimiento de cookies",
+    "notice":"Este sitio web utiliza cookies para comprender mejor los intereses de sus lectores y atenderlos. Obtenga más información en la",
+    "link": "política de privacidad y los términos de servicio",
+    "accept":"Aceptar",
+    "decline":"Rechazar"
+  },
   "common": {
     "loading": "Cargando...",
     "error": "Error",

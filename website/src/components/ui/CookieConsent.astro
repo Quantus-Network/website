@@ -1,7 +1,11 @@
 ---
+import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
 import Button from "./Button.astro";
 
 const privacyPolicyUrl = "/terms-and-privacy";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
 ---
 
 <!-- Cookie Consent Banner -->
@@ -11,19 +15,16 @@ const privacyPolicyUrl = "/terms-and-privacy";
 >
   <div class="flex flex-col gap-4">
     <div class="space-y-2">
-      <h3 class="font-small-title">Cookie Consent</h3>
+      <h3 class="font-small-title">{t("cookie.title")}</h3>
       <p class="font-body-mobile">
-        This website uses cookies to understand the interests of its readers
-        better and cater to them. Find out more in the
-        <a href={privacyPolicyUrl} class="underline"
-          >privacy policy and terms of service</a
-        >.
+        {t("cookie.notice")}
+        <a href={privacyPolicyUrl} class="underline">{t("cookie.link")}</a>.
       </p>
     </div>
     <div class="flex gap-2">
-      <Button id="accept-cookies" class="w-full">Accept</Button>
+      <Button id="accept-cookies" class="w-full">{t("cookie.accept")}</Button>
       <Button id="decline-cookies" class="w-full" variant="outline"
-        >Decline</Button
+        >{t("cookie.decline")}</Button
       >
     </div>
   </div>

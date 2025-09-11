@@ -382,6 +382,13 @@
       }
     }
   },
+  "cookie": {
+    "title":"Cookie 同意",
+    "notice":"本网站使用 Cookie 以更好地了解访客兴趣并提供相应内容。更多信息请参阅",
+    "link": "隐私政策与服务条款",
+    "accept":"接受",
+    "decline":"拒绝"
+  },
   "common": {
     "loading": "加载中...",
     "error": "错误",
