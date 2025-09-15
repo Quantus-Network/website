@@ -42,13 +42,19 @@ const t = await createTranslator(locale);
     </div>
 
     <div
-      class="font-body-mobile lg:font-body me-auto w-[275px] font-semibold md:me-0 lg:w-[335px]"
+      class="font-body-mobile lg:font-body me-auto w-[275px] font-semibold md:me-0 lg:w-[335px] lg:font-light"
     >
       <p>
         {t("events.token2049.description")}
       </p>
       <br />
       <p>{t("events.token2049.additional")}</p>
+
+      <Button
+        href="https://www.asia.token2049.com/"
+        class="mt-[14px] !hidden text-center md:!block"
+        variant="outline">{t("events.token2049.cta")}</Button
+      >
     </div>
 
     <Image
