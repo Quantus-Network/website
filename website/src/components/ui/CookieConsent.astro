@@ -95,7 +95,6 @@ const t = await createTranslator(locale);
     checkExistingConsent() {
       const consent = this.getConsent();
 
-      console.log("Called: ", consent);
       if (consent === null) {
         this.showBanner();
       } else if (consent === true) {

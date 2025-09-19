@@ -156,6 +156,15 @@
   "socials": {
     "title": "关注我们，获取有趣内容、播客、访谈、技术魔法等更多资讯！"
   },
+  "checker": {
+    "title": "在 q.day 您安全吗？",
+    "description": "分析您的以太坊地址是否存在量子计算漏洞。我们的工具会检查您的交易历史和余额，以提供全面的量子安全风险评估。",
+    "form": {
+      "label": "以太坊地址",
+      "placeholder": "请输入您的钱包地址",
+      "btn": "分析"
+    }
+  },
   "footer": {
     "newsletter": {
       "title": "订阅我们的新闻通讯",
@@ -170,6 +179,7 @@
     "navigation": {
       "resources": {
         "title": "资源",
+        "checker": "安全检查器",
         "community": "社区",
         "documentation": "文档",
         "tech_support": "技术支持"
@@ -383,11 +393,11 @@
     }
   },
   "cookie": {
-    "title":"Cookie 同意",
-    "notice":"本网站使用 Cookie 以更好地了解访客兴趣并提供相应内容。更多信息请参阅",
+    "title": "Cookie 同意",
+    "notice": "本网站使用 Cookie 以更好地了解访客兴趣并提供相应内容。更多信息请参阅",
     "link": "隐私政策与服务条款",
-    "accept":"接受",
-    "decline":"拒绝"
+    "accept": "接受",
+    "decline": "拒绝"
   },
   "common": {
     "loading": "加载中...",

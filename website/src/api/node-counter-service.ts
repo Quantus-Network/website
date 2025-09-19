@@ -122,7 +122,6 @@ class NodeCounterService {
     if (!this.ws) return;
 
     this.ws.onopen = () => {
-      console.log("Connected to substrate feed");
       this.isConnecting = false;
       this.reconnectAttempts = 0;
       this.updateState("connected", "Connected to network");
@@ -137,7 +136,6 @@ class NodeCounterService {
     };
 
     this.ws.onclose = (event) => {
-      console.log("WebSocket connection closed:", event.code, event.reason);
       this.isConnecting = false;
       this.cleanup();
 
@@ -174,13 +172,11 @@ class NodeCounterService {
         typeof message[1] === "number"
       ) {
         const chainData = message[3];
-        const nodeCount = chainData[2]
+        const nodeCount = chainData[2];
         this.state.count = nodeCount;
 
         this.notifyListeners();
       }
-
-      
     } catch (error) {
       // Non-JSON messages are logged but not processed
       console.debug("Received non-JSON message:", data);

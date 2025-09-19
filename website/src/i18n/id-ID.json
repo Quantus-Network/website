@@ -156,6 +156,15 @@
   "socials": {
     "title": "Ikuti kami untuk konten seru, podcast, wawancara, keajaiban, dan banyak lagi!"
   },
+  "checker": {
+    "title": "Apakah Anda aman di q.day?",
+    "description": "Analisis alamat Ethereum Anda untuk kerentanan komputasi kuantum. Alat kami memeriksa riwayat transaksi dan saldo untuk memberikan penilaian risiko keamanan kuantum yang komprehensif.",
+    "form": {
+      "label": "Alamat Ethereum",
+      "placeholder": "Masukkan alamat dompet Anda",
+      "btn": "Analisis"
+    }
+  },
   "footer": {
     "newsletter": {
       "title": "Berlangganan Newsletter Kami",
@@ -171,6 +180,7 @@
       "resources": {
         "title": "Sumber Daya",
         "community": "Komunitas",
+        "checker": "Pemeriksa Keamanan",
         "documentation": "Dokumentasi",
         "tech_support": "Dukungan Teknis"
       },
@@ -387,11 +397,11 @@
     }
   },
   "cookie": {
-    "title":"Persetujuan Cookie",
-    "notice":"Situs web ini menggunakan cookie untuk lebih memahami minat para pembacanya dan melayani mereka. Cari tahu lebih lanjut di",
+    "title": "Persetujuan Cookie",
+    "notice": "Situs web ini menggunakan cookie untuk lebih memahami minat para pembacanya dan melayani mereka. Cari tahu lebih lanjut di",
     "link": "kebijakan privasi dan persyaratan layanan",
-    "accept":"Terima",
-    "decline":"Tolak"
+    "accept": "Terima",
+    "decline": "Tolak"
   },
   "common": {
     "loading": "Memuat...",

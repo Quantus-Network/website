@@ -156,6 +156,15 @@
   "socials": {
     "title": "Folgen Sie uns für unterhaltsame Inhalte, Podcasts, Interviews, Zauberei und mehr!"
   },
+  "checker": {
+    "title": "Sind Sie am q.day sicher?",
+    "description": "Analysieren Sie Ihre Ethereum-Adresse auf Schwachstellen durch Quantencomputing. Unser Tool prüft den Transaktionsverlauf und den Kontostand, um eine umfassende Risikobewertung der Quantensicherheit zu erstellen.",
+    "form": {
+      "label": "Ethereum-Adresse",
+      "placeholder": "Geben Sie Ihre Wallet-Adresse ein",
+      "btn": "Analysieren"
+    }
+  },
   "footer": {
     "newsletter": {
       "title": "Abonnieren Sie unseren Newsletter",
@@ -171,6 +180,7 @@
       "resources": {
         "title": "Ressourcen",
         "community": "Community",
+        "checker": "Sicherheitsprüfung",
         "documentation": "Dokumentation",
         "tech_support": "Technischer Support"
       },
@@ -387,11 +397,11 @@
     }
   },
   "cookie": {
-    "title":"Cookie-Zustimmung",
-    "notice":"Diese Website verwendet Cookies, um die Interessen ihrer Leser besser zu verstehen und auf sie einzugehen. Mehr erfahren Sie in der",
+    "title": "Cookie-Zustimmung",
+    "notice": "Diese Website verwendet Cookies, um die Interessen ihrer Leser besser zu verstehen und auf sie einzugehen. Mehr erfahren Sie in der",
     "link": "Datenschutzerklärung und den Nutzungsbedingungen",
-    "accept":"Akzeptieren",
-    "decline":"Ablehnen"
+    "accept": "Akzeptieren",
+    "decline": "Ablehnen"
   },
   "common": {
     "loading": "Lädt...",

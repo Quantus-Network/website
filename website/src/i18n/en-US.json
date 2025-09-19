@@ -156,6 +156,15 @@
   "socials": {
     "title": "Follow us for fun content, podcasts, interviews, wizardry and more!"
   },
+  "checker": {
+    "title": "Are you safe on q.day?",
+    "description": "Analyze your Ethereum address for quantum computing vulnerabilities. Our tool checks transaction history and balance to provide a comprehensive quantum security risk assessment.",
+    "form": {
+      "label": "Ethereum Address",
+      "placeholder": "Enter your wallet address",
+      "btn": "Analyze"
+    }
+  },
   "footer": {
     "newsletter": {
       "title": "Subscribe to our Newsletter",
@@ -171,6 +180,7 @@
       "resources": {
         "title": "Resources",
         "community": "Community",
+        "checker": "Security Checker",
         "documentation": "Documentation",
         "tech_support": "Tech Support"
       },
@@ -387,11 +397,11 @@
     }
   },
   "cookie": {
-    "title":"Cookie Consent",
-    "notice":"This website uses cookies to understand the interests of its readers better and cater to them. Find out more in the",
+    "title": "Cookie Consent",
+    "notice": "This website uses cookies to understand the interests of its readers better and cater to them. Find out more in the",
     "link": "privacy policy and terms of service",
-    "accept":"Accept",
-    "decline":"Decline"
+    "accept": "Accept",
+    "decline": "Decline"
   },
   "common": {
     "loading": "Loading...",

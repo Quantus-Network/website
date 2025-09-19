@@ -156,6 +156,15 @@
   "socials": {
     "title": "¡Síguenos para contenido divertido, podcasts, entrevistas, magia y más!"
   },
+  "checker": {
+    "title": "¿Estás a salvo en el q.day?",
+    "description": "Analiza tu dirección de Ethereum en busca de vulnerabilidades a la computación cuántica. Nuestra herramienta comprueba el historial de transacciones y el saldo para ofrecer una evaluación completa del riesgo de seguridad cuántica.",
+    "form": {
+      "label": "Dirección de Ethereum",
+      "placeholder": "Introduce la dirección de tu monedero",
+      "btn": "Analizar"
+    }
+  },
   "footer": {
     "newsletter": {
       "title": "Suscríbete a nuestro Boletín",
@@ -171,6 +180,7 @@
       "resources": {
         "title": "Recursos",
         "community": "Comunidad",
+        "checker": "Verificador de seguridad",
         "documentation": "Documentación",
         "tech_support": "Soporte Técnico"
       },
@@ -387,11 +397,11 @@
     }
   },
   "cookie": {
-    "title":"Consentimiento de cookies",
-    "notice":"Este sitio web utiliza cookies para comprender mejor los intereses de sus lectores y atenderlos. Obtenga más información en la",
+    "title": "Consentimiento de cookies",
+    "notice": "Este sitio web utiliza cookies para comprender mejor los intereses de sus lectores y atenderlos. Obtenga más información en la",
     "link": "política de privacidad y los términos de servicio",
-    "accept":"Aceptar",
-    "decline":"Rechazar"
+    "accept": "Aceptar",
+    "decline": "Rechazar"
   },
   "common": {
     "loading": "Cargando...",

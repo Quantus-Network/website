@@ -1,0 +1,115 @@
+---
+// Loading.astro
+export interface Props {
+  size?: "sm" | "md" | "lg" | "xl";
+  variant?: "spinner" | "dots" | "pulse";
+  text?: string;
+  fullscreen?: boolean;
+  color?: "primary" | "secondary" | "accent" | "neutral";
+}
+
+const {
+  size = "md",
+  variant = "spinner",
+  text = "Loading...",
+  fullscreen = false,
+  color = "primary",
+} = Astro.props;
+
+// Size mappings
+const sizeClasses = {
+  sm: "w-4 h-4",
+  md: "w-8 h-8",
+  lg: "w-12 h-12",
+  xl: "w-16 h-16",
+};
+
+// Color mappings for Tailwind v4
+const colorClasses = {
+  primary: "text-quantus-blue border-quantus-blue",
+  secondary: "text-purple-600 border-purple-600",
+  accent: "text-emerald-600 border-emerald-600",
+  neutral: "text-gray-600 border-gray-600",
+};
+
+const textSizeClasses = {
+  sm: "text-sm",
+  md: "text-base",
+  lg: "text-lg",
+  xl: "text-xl",
+};
+
+const containerClass = fullscreen
+  ? "fixed inset-0 bg-white/80 backdrop-blur-sm z-50 flex items-center justify-center"
+  : "flex items-center justify-center p-4";
+---
+
+<div class={containerClass}>
+  <div class="flex flex-col items-center gap-3">
+    {
+      variant === "spinner" && (
+        <div
+          class={`${sizeClasses[size]} ${colorClasses[color]} animate-spin rounded-full border-2 border-t-transparent`}
+          role="status"
+          aria-label={text}
+        />
+      )
+    }
+
+    {
+      variant === "dots" && (
+        <div class="flex gap-1" role="status" aria-label={text}>
+          <div
+            class={`${sizeClasses[size]} ${colorClasses[color].split(" ")[0]} animate-bounce rounded-full`}
+            style="animation-delay: 0ms;"
+          />
+          <div
+            class={`${sizeClasses[size]} ${colorClasses[color].split(" ")[0]} animate-bounce rounded-full`}
+            style="animation-delay: 150ms;"
+          />
+          <div
+            class={`${sizeClasses[size]} ${colorClasses[color].split(" ")[0]} animate-bounce rounded-full`}
+            style="animation-delay: 300ms;"
+          />
+        </div>
+      )
+    }
+
+    {
+      variant === "pulse" && (
+        <div
+          class={`${sizeClasses[size]} ${colorClasses[color].split(" ")[0]} animate-pulse rounded-full`}
+          role="status"
+          aria-label={text}
+        />
+      )
+    }
+
+    {
+      text && (
+        <p
+          class={`${textSizeClasses[size]} ${colorClasses[color].split(" ")[0]} animate-pulse font-medium`}
+        >
+          {text}
+        </p>
+      )
+    }
+  </div>
+</div>
+
+<style>
+  @keyframes bounce {
+    0%,
+    80%,
+    100% {
+      transform: scale(0);
+    }
+    40% {
+      transform: scale(1);
+    }
+  }
+
+  .animate-bounce {
+    animation: bounce 1.4s infinite ease-in-out both;
+  }
+</style>
