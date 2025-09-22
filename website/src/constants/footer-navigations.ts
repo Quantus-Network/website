@@ -36,14 +36,14 @@ export const FOOTER_NAVIGATIONS: Navigation[] = [
   {
     label: "footer.navigation.info.title",
     children: [
-      { href: "/about", label: "footer.navigation.info.company" },
+      { href: "/about/", label: "footer.navigation.info.company" },
       // { href: "/audits", label: "footer.navigation.info.audits" },
       {
-        href: "/terms-and-privacy",
+        href: "/terms-and-privacy/",
         label: "footer.navigation.info.terms",
       },
       {
-        href: "/terms-and-privacy#privacy",
+        href: "/terms-and-privacy/#privacy",
         label: "footer.navigation.info.privacy",
       },
     ],

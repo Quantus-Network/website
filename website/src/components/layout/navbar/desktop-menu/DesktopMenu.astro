@@ -55,7 +55,7 @@ const t = await createTranslator(locale);
 
     link.addEventListener("click", () => {
       links.forEach((val) => {
-        const isActive = val.href === getLocalizedPath(locale, link.href);
+        const isActive = getLocalizedPath(locale, link.href).includes(val.href);
         updateLinkStatus(val, isActive);
       });
     });

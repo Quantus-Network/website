@@ -5,6 +5,6 @@ export const SITE_NAVIGATIONS = [
   { href: "/#teams", label: "navbar.team", isSpecial: false },
   { href: "/#roadmap", label: "navbar.roadmap", isSpecial: false },
   { href: "/#events", label: "navbar.events", isSpecial: false },
-  { href: "/contact", label: "navbar.contact", isSpecial: false },
-  { href: "/quantum-risk-checker", label: "navbar.checker", isSpecial: true },
+  { href: "/contact/", label: "navbar.contact", isSpecial: false },
+  { href: "/quantum-risk-checker/", label: "navbar.checker", isSpecial: true },
 ] as const;
