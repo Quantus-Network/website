@@ -19,6 +19,8 @@ const t = await createTranslator(locale);
           href={getLocalizedPath(locale, item.href)}
           class={applyStyles(
             "text-navbar-link block transition-colors duration-200 hover:font-bold",
+            item.isSpecial &&
+              "aria-[current='page']:text-quantus-yellow hover:text-quantus-yellow",
           )}
         >
           {t(item.label)}

@@ -2,7 +2,6 @@
 import Button from "@/components/ui/Button.astro";
 import SiteSocials from "@/components/ui/SiteSocials.astro";
 import SphereDecoration from "@/components/ui/SphereDecoration.astro";
-import LanguageSwitcher from "@/components/i18n/LanguageSwitcher.astro";
 import { applyStyles } from "@/utils/apply-styles";
 import {
   createTranslator,
@@ -41,6 +40,7 @@ const t = await createTranslator(locale);
           href={getLocalizedPath(locale, item.href)}
           class={applyStyles(
             "text-navbar-link font-large-body block transition-colors duration-200 hover:font-bold",
+            item.isSpecial && "aria-[current='page']:text-quantus-yellow",
           )}
         >
           {t(item.label)}

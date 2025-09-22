@@ -18,10 +18,6 @@ export const FOOTER_NAVIGATIONS: Navigation[] = [
         target: "_blank",
         rel: "noopener noreferrer",
       },
-      {
-        href: "/quantum-security-checker",
-        label: "footer.navigation.resources.checker",
-      },
       // { href: "/tutorials", label: "footer.navigation.resources.tutorials" },
       {
         href: "https://github.com/Quantus-Network/chain",

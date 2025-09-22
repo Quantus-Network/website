@@ -11,6 +11,7 @@
     "roadmap": "Peta Jalan",
     "events": "Acara",
     "contact": "Kontak",
+    "checker": "Pemeriksa Risiko Qday",
     "cta": "Ikuti BETA Publik"
   },
   "hero": {
@@ -157,12 +158,51 @@
     "title": "Ikuti kami untuk konten seru, podcast, wawancara, keajaiban, dan banyak lagi!"
   },
   "checker": {
-    "title": "Apakah Anda aman di q.day?",
+    "subtitle": "PENGUKUR RISIKO KUANTUM",
+    "title": "Apakah Anda aman di Hari-Q?",
     "description": "Analisis alamat Ethereum Anda untuk kerentanan komputasi kuantum. Alat kami memeriksa riwayat transaksi dan saldo untuk memberikan penilaian risiko keamanan kuantum yang komprehensif.",
     "form": {
       "label": "Alamat Ethereum",
       "placeholder": "Masukkan alamat dompet Anda",
       "btn": "Analisis"
+    },
+    "definition": {
+      "title": "Batas Waktu Kuantum",
+      "paragraph_one": "Hari-Q adalah saat ketika komputer kuantum dapat memecahkan kriptografi yang mengamankan sebagian besar dunia digital saat ini. Algoritma di balik koneksi web yang aman, pembaruan perangkat lunak, sistem perbankan, dan email, seperti kriptografi RSA dan kurva elips, tidak lagi aman.",
+      "paragraph_two": "Bahkan data yang dienkripsi bertahun-tahun sebelumnya bisa dipanen sekarang dan didekripsi nanti, mengekspos informasi rahasia di seluruh pemerintah, bisnis, dan individu."
+    },
+    "consequence": {
+      "title": "Apa arti Hari-Q untuk Blockchain dan Aset Digital",
+      "paragraph_one": "Blockchain bergantung pada tanda tangan digital kurva elips untuk membuktikan kepemilikan dana. Di Ethereum misalnya, setiap transaksi keluar secara permanen mengekspos kunci publik dompet.",
+      "paragraph_two": "Komputer kuantum dapat menggunakan kunci publik untuk secara matematis menurunkan kunci pribadi, memungkinkan penyerang untuk memalsukan tanda tangan yang valid dan mentransfer aset tanpa sepengetahuan pemilik.",
+      "paragraph_three": "Perlombaan di seluruh jaringan untuk mengadopsi protokol aman-kuantum akan menyusul, tetapi pada saat itu rantai yang tidak siap bisa saja sudah disusupi.",
+      "invitation_one": "Gunakan",
+      "product": "Pemindai Risiko Kuantum",
+      "invitation_two": "kami untuk melihat seberapa rentan alamat Anda dan mengambil tindakan sebelum Hari-Q."
+    },
+    "method": {
+      "title": "Cara Kerjanya",
+      "subtitle": "Pemindai Risiko Kuantum memindai alamat Ethereum apa pun dan memberinya Skor Kesiapan Kuantum, Tingkat Risiko, dan Nilai.",
+      "factor_title": "Dua faktor risiko utama mendorong skor:",
+      "factors": [
+        {
+          "title": "Paparan Kunci Publik",
+          "content": "Apakah alamat tersebut pernah mengirim transaksi dan mengungkapkan kuncinya."
+        },
+        {
+          "title": "Sensitivitas Saldo",
+          "content": "Semakin tinggi saldo ETH, semakin menarik targetnya."
+        }
+      ],
+      "factor_usage": "Dari sinyal-sinyal ini kami menghitung skor numerik dan memetakannya ke Nilai A-F sederhana dan Tingkat Risiko yang cukup jelas untuk Anda tindak lanjuti.",
+      "analysis_title": "Apa yang akan diberikan analisis Anda:",
+      "analysis_items": [
+        "Skor Keamanan: 35 - 100",
+        "Tingkat Risiko: Sangat Tinggi / Tinggi / Sedang / Rendah / Sangat Rendah",
+        "Nilai: F / D / C / B / A / A+",
+        "Status Paparan Kunci: Terpapar atau Belum terpapar",
+        "Saran: langkah-langkah praktis berikutnya"
+      ]
     }
   },
   "footer": {
@@ -180,7 +220,6 @@
       "resources": {
         "title": "Sumber Daya",
         "community": "Komunitas",
-        "checker": "Pemeriksa Keamanan",
         "documentation": "Dokumentasi",
         "tech_support": "Dukungan Teknis"
       },

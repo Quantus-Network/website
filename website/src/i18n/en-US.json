@@ -11,6 +11,7 @@
     "roadmap": "Roadmap",
     "events": "Events",
     "contact": "Contact",
+    "checker": "Qday Risk Checker",
     "cta": "Join the Public BETA"
   },
   "hero": {
@@ -157,12 +158,51 @@
     "title": "Follow us for fun content, podcasts, interviews, wizardry and more!"
   },
   "checker": {
-    "title": "Are you safe on q.day?",
+    "subtitle": "QUANTUM RISK CHECKER",
+    "title": "Are you safe on Qday?",
     "description": "Analyze your Ethereum address for quantum computing vulnerabilities. Our tool checks transaction history and balance to provide a comprehensive quantum security risk assessment.",
     "form": {
       "label": "Ethereum Address",
       "placeholder": "Enter your wallet address",
       "btn": "Analyze"
+    },
+    "definition": {
+      "title": "The Quantum Deadline",
+      "paragraph_one": "Q-Day is the moment when quantum computers can break the cryptography that secures most of today's digital world. The algorithms behind secure web connections, software updates, banking systems, and email, such as RSA and elliptic-curve cryptography, would no longer be safe.",
+      "paragraph_two": "Even data encrypted years earlier could be harvested now and decrypted later, exposing confidential information across governments, businesses, and individuals."
+    },
+    "consequence": {
+      "title": "What does Q-day mean for Blockchains and Digital Assets",
+      "paragraph_one": "Blockchains depend on elliptic-curve digital signatures to prove ownership of funds. On Ethereum for example, every outgoing transaction permanently exposes a wallet's public key.",
+      "paragraph_two": "A quantum computer could use a public key to mathematically derive the private key, allowing attackers to forge valid signatures and transfer assets without the owners knowledge.",
+      "paragraph_three": "A network-wide scramble to adopt quantum-safe protocols would follow, but by then unprepared chains could already be compromised.",
+      "invitation_one": "Use our",
+      "product": "Quantum Risk Scanner",
+      "invitation_two": "to see how vulnerable your address is and take action before Qday."
+    },
+    "method": {
+      "title": "How it Works",
+      "subtitle": "The Quantum Risk Scanner scans any Ethereum address and gives it a Quantum Readiness Score, a Risk Level, and a Grade.",
+      "factor_title": "Two primary risk factors drive the score:",
+      "factors": [
+        {
+          "title": "Public-key Exposure",
+          "content": "Whether the address has ever sent a transaction and revealed its key."
+        },
+        {
+          "title": "Balance Sensitivity",
+          "content": "The higher the ETH balance, the more attractive the target."
+        }
+      ],
+      "factor_usage": "From these signals we calculate a numerical score and map it to simple, A-F Grades and Risk levels clear enough for you to act on.",
+      "analysis_title": "What your analysis will provide:",
+      "analysis_items": [
+        "Safety Score: 35 - 100",
+        "Risk Level: Very High / High / Medium / Low / Very Low",
+        "Grade: F / D / C / B / A / A+",
+        "Key Exposure status: Exposed or Not yet exposed",
+        "Advice: practical next steps"
+      ]
     }
   },
   "footer": {
@@ -180,7 +220,6 @@
       "resources": {
         "title": "Resources",
         "community": "Community",
-        "checker": "Security Checker",
         "documentation": "Documentation",
         "tech_support": "Tech Support"
       },

@@ -11,6 +11,7 @@
     "roadmap": "Roadmap",
     "events": "Events",
     "contact": "Kontakt",
+    "checker": "Qday-Risikoprüfer",
     "cta": "An der Public BETA teilnehmen"
   },
   "hero": {
@@ -157,12 +158,51 @@
     "title": "Folgen Sie uns für unterhaltsame Inhalte, Podcasts, Interviews, Zauberei und mehr!"
   },
   "checker": {
-    "title": "Sind Sie am q.day sicher?",
-    "description": "Analysieren Sie Ihre Ethereum-Adresse auf Schwachstellen durch Quantencomputing. Unser Tool prüft den Transaktionsverlauf und den Kontostand, um eine umfassende Risikobewertung der Quantensicherheit zu erstellen.",
+    "subtitle": "QUANTENRISIKO-PRÜFER",
+    "title": "Sind Sie am Q-Day sicher?",
+    "description": "Analysieren Sie Ihre Ethereum-Adresse auf Schwachstellen durch Quantencomputer. Unser Tool überprüft die Transaktionshistorie und den Saldo, um eine umfassende Risikobewertung der Quantensicherheit zu erstellen.",
     "form": {
       "label": "Ethereum-Adresse",
       "placeholder": "Geben Sie Ihre Wallet-Adresse ein",
       "btn": "Analysieren"
+    },
+    "definition": {
+      "title": "Die Quanten-Frist",
+      "paragraph_one": "Der Q-Day ist der Moment, in dem Quantencomputer die Kryptographie, die den größten Teil der heutigen digitalen Welt sichert, knacken können. Die Algorithmen hinter sicheren Webverbindungen, Software-Updates, Banksystemen und E-Mails, wie RSA und die elliptische Kurvenkryptographie, wären nicht mehr sicher.",
+      "paragraph_two": "Selbst Daten, die Jahre zuvor verschlüsselt wurden, könnten jetzt gesammelt und später entschlüsselt werden, wodurch vertrauliche Informationen von Regierungen, Unternehmen und Einzelpersonen offengelegt werden."
+    },
+    "consequence": {
+      "title": "Was bedeutet der Q-Day für Blockchains und digitale Vermögenswerte",
+      "paragraph_one": "Blockchains hängen von digitalen Signaturen mit elliptischen Kurven ab, um den Besitz von Geldern nachzuweisen. Bei Ethereum zum Beispiel legt jede ausgehende Transaktion den öffentlichen Schlüssel einer Wallet dauerhaft offen.",
+      "paragraph_two": "Ein Quantencomputer könnte einen öffentlichen Schlüssel verwenden, um den privaten Schlüssel mathematisch abzuleiten, sodass Angreifer gültige Signaturen fälschen und Vermögenswerte ohne das Wissen der Eigentümer übertragen können.",
+      "paragraph_three": "Es würde ein netzwerkweiter Wettlauf um die Einführung von quantensicheren Protokollen folgen, aber bis dahin könnten unvorbereitete Ketten bereits kompromittiert sein.",
+      "invitation_one": "Nutzen Sie unseren",
+      "product": "Quantenrisiko-Scanner",
+      "invitation_two": "um zu sehen, wie anfällig Ihre Adresse ist, und handeln Sie vor dem Q-Day."
+    },
+    "method": {
+      "title": "Wie es funktioniert",
+      "subtitle": "Der Quantenrisiko-Scanner scannt jede Ethereum-Adresse und gibt ihr einen Quanten-Bereitschafts-Score, ein Risikoniveau und eine Note.",
+      "factor_title": "Zwei Hauptrisikofaktoren bestimmen den Score:",
+      "factors": [
+        {
+          "title": "Offenlegung des öffentlichen Schlüssels",
+          "content": "Ob die Adresse jemals eine Transaktion gesendet und ihren Schlüssel offengelegt hat."
+        },
+        {
+          "title": "Saldo-Empfindlichkeit",
+          "content": "Je höher der ETH-Saldo, desto attraktiver ist das Ziel."
+        }
+      ],
+      "factor_usage": "Aus diesen Signalen berechnen wir einen numerischen Score und ordnen ihn einfachen A-F-Noten und Risikostufen zu, die klar genug sind, damit Sie handeln können.",
+      "analysis_title": "Was Ihre Analyse liefern wird:",
+      "analysis_items": [
+        "Sicherheits-Score: 35 - 100",
+        "Risikostufe: Sehr hoch / Hoch / Mittel / Niedrig / Sehr niedrig",
+        "Note: F / D / C / B / A / A+",
+        "Schlüssel-Offenlegungsstatus: Offengelegt oder Noch nicht offengelegt",
+        "Ratschläge: praktische nächste Schritte"
+      ]
     }
   },
   "footer": {
@@ -180,7 +220,6 @@
       "resources": {
         "title": "Ressourcen",
         "community": "Community",
-        "checker": "Sicherheitsprüfung",
         "documentation": "Dokumentation",
         "tech_support": "Technischer Support"
       },

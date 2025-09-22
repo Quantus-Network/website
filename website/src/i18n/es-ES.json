@@ -11,6 +11,7 @@
     "roadmap": "Roadmap",
     "events": "Eventos",
     "contact": "Contacto",
+    "checker": "Verificador de Riesgo Qday",
     "cta": "Únete a la BETA Pública"
   },
   "hero": {
@@ -157,12 +158,51 @@
     "title": "¡Síguenos para contenido divertido, podcasts, entrevistas, magia y más!"
   },
   "checker": {
-    "title": "¿Estás a salvo en el q.day?",
-    "description": "Analiza tu dirección de Ethereum en busca de vulnerabilidades a la computación cuántica. Nuestra herramienta comprueba el historial de transacciones y el saldo para ofrecer una evaluación completa del riesgo de seguridad cuántica.",
+    "subtitle": "VERIFICADOR DE RIESGO CUÁNTICO",
+    "title": "¿Estás a salvo en el Día-Q?",
+    "description": "Analiza tu dirección de Ethereum en busca de vulnerabilidades de la computación cuántica. Nuestra herramienta verifica el historial de transacciones y el saldo para proporcionar una evaluación integral del riesgo de seguridad cuántica.",
     "form": {
       "label": "Dirección de Ethereum",
       "placeholder": "Introduce la dirección de tu monedero",
       "btn": "Analizar"
+    },
+    "definition": {
+      "title": "El Plazo Cuántico",
+      "paragraph_one": "El Día-Q es el momento en que las computadoras cuánticas pueden romper la criptografía que protege la mayor parte del mundo digital actual. Los algoritmos detrás de las conexiones web seguras, las actualizaciones de software, los sistemas bancarios y el correo electrónico, como RSA y la criptografía de curva elíptica, ya no serían seguros.",
+      "paragraph_two": "Incluso los datos cifrados años antes podrían ser recopilados ahora y descifrados más tarde, exponiendo información confidencial de gobiernos, empresas e individuos."
+    },
+    "consequence": {
+      "title": "Qué significa el Día-Q para las Cadenas de Bloques y los Activos Digitales",
+      "paragraph_one": "Las cadenas de bloques dependen de las firmas digitales de curva elíptica para probar la propiedad de los fondos. En Ethereum, por ejemplo, cada transacción saliente expone permanentemente la clave pública de un monedero.",
+      "paragraph_two": "Una computadora cuántica podría usar una clave pública para derivar matemáticamente la clave privada, lo que permitiría a los atacantes falsificar firmas válidas y transferir activos sin el conocimiento de los propietarios.",
+      "paragraph_three": "A continuación, se produciría una carrera a nivel de red para adoptar protocolos cuánticos seguros, pero para entonces las cadenas no preparadas ya podrían estar comprometidas.",
+      "invitation_one": "Usa nuestro",
+      "product": "Escáner de Riesgo Cuántico",
+      "invitation_two": "para ver cuán vulnerable es tu dirección y tomar medidas antes del Día-Q."
+    },
+    "method": {
+      "title": "Cómo funciona",
+      "subtitle": "El Escáner de Riesgo Cuántico escanea cualquier dirección de Ethereum y le da un Puntuación de Preparación Cuántica, un Nivel de Riesgo y una Calificación.",
+      "factor_title": "Dos factores de riesgo principales impulsan la puntuación:",
+      "factors": [
+        {
+          "title": "Exposición de la clave pública",
+          "content": "Si la dirección ha enviado alguna vez una transacción y ha revelado su clave."
+        },
+        {
+          "title": "Sensibilidad del saldo",
+          "content": "Cuanto mayor sea el saldo de ETH, más atractivo será el objetivo."
+        }
+      ],
+      "factor_usage": "A partir de estas señales, calculamos una puntuación numérica y la mapeamos a calificaciones A-F simples y niveles de riesgo lo suficientemente claros para que actúes.",
+      "analysis_title": "Lo que proporcionará tu análisis:",
+      "analysis_items": [
+        "Puntuación de seguridad: 35 - 100",
+        "Nivel de riesgo: Muy alto / Alto / Medio / Bajo / Muy bajo",
+        "Calificación: F / D / C / B / A / A+",
+        "Estado de exposición de la clave: Expuesta o Aún no expuesta",
+        "Consejo: próximos pasos prácticos"
+      ]
     }
   },
   "footer": {
@@ -180,7 +220,6 @@
       "resources": {
         "title": "Recursos",
         "community": "Comunidad",
-        "checker": "Verificador de seguridad",
         "documentation": "Documentación",
         "tech_support": "Soporte Técnico"
       },

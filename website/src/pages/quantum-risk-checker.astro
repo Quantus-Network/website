@@ -1,0 +1,253 @@
+---
+import Layout from "@/components/layout/Layout.astro";
+import Button from "@/components/ui/Button.astro";
+import Input from "@/components/ui/Input.astro";
+import QDayLogo from "@/assets/qday/q-day-logo.svg";
+import QDayMockup from "@/assets/qday/q-day-mockup.png";
+
+import env from "@/config";
+import { getLocaleFromUrl, createTranslator } from "@/utils/i18n";
+import type { SEOProps } from "astro-seo";
+import { Image } from "astro:assets";
+import SphereDecoration from "@/components/ui/SphereDecoration.astro";
+import AppBenefitCard from "@/components/ui/AppBenefitCard.astro";
+import { ArrowRight } from "@lucide/astro";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
+
+const metadata: SEOProps = {
+  canonical: `${env.SITE_BASE_URL}/quantum-risk-checker`,
+};
+---
+
+<Layout {...metadata}>
+  <section class="overflow-hidden px-[30px] py-10 sm:py-[137px] 2xl:px-0">
+    <div class="max-w-content relative z-[1] mx-auto">
+      <SphereDecoration
+        class="absolute -top-[6rem] -right-[4rem] z-0"
+        variant="17"
+        size={248}
+      />
+      <SphereDecoration
+        class="absolute -bottom-[12rem] -left-[7rem] z-0"
+        variant="18"
+        size={362}
+      />
+      <p class="font-tag-caps-mobile sm:font-tag-caps mb-5 text-center">
+        {t("checker.subtitle")}
+      </p>
+
+      <h1
+        class="font-large-title-mobile text-quantus-yellow lg:font-large-title min-large-mobile:text-[50px] mb-[18px] text-center text-[38px]"
+      >
+        {t("checker.title")}
+      </h1>
+
+      <p
+        class="font-body-mobile lg:font-body mx-auto max-w-[790px] text-center"
+      >
+        {t("checker.description")}
+      </p>
+
+      <form
+        id="security-checker-form"
+        method="post"
+        class="mt-10 flex flex-col items-center justify-center gap-5 sm:flex-row sm:items-stretch"
+      >
+        <Input
+          variant="outline"
+          aria-label={t("checker.form.label")}
+          class="md:!w-[567px]"
+          id="security-checker-input"
+          type="text"
+          name="address"
+          placeholder={t("checker.form.placeholder")}
+          required
+        />
+
+        <Button
+          id="security-checker-button"
+          variant="secondary"
+          type="submit"
+          class="w-[168px]"
+        >
+          <span class="flex items-center gap-4">
+            {t("checker.form.btn")}
+            <ArrowRight />
+          </span>
+        </Button>
+      </form>
+    </div>
+  </section>
+
+  <div id="report-card-container" class="flex flex-col"></div>
+
+  <section class="bg-quantus-yellow px-6 py-[100px] md:px-[114px]">
+    <div
+      class="max-w-content mx-auto flex flex-col gap-8 lg:flex-row lg:gap-15"
+    >
+      <div class="flex flex-col gap-5 lg:w-1/2">
+        <h2
+          class="font-deadline-mobile sm:font-deadline text-text-content-black"
+        >
+          {t("checker.definition.title")}
+        </h2>
+
+        <QDayLogo class="w-full max-w-[395px]" />
+      </div>
+
+      <div class="lg:w-1/2">
+        <p class="font-body text-text-content-black">
+          {t("checker.definition.paragraph_one")}
+          <strong class="font-semibold"
+            >{t("checker.definition.paragraph_two")}</strong
+          >
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="px-6 py-[100px] md:px-[114px]">
+    <div
+      class="max-w-content mx-auto flex flex-col gap-8 lg:flex-row lg:gap-15"
+    >
+      <div class="flex flex-col gap-5 lg:w-1/2">
+        <h2 class="font-small-title sm:font-medium-title-mobile max-w-[500px]">
+          {t("checker.consequence.title")}
+        </h2>
+      </div>
+
+      <div class="lg:w-1/2">
+        <p class="font-body">
+          {t("checker.consequence.paragraph_one")}
+          <strong class="font-semibold"
+            >{t("checker.consequence.paragraph_two")}</strong
+          >
+          {t("checker.consequence.paragraph_three")}
+
+          <br />
+          <br />
+
+          <strong class="font-semibold"
+            >{t("checker.consequence.invitation_one")}
+            <span class="text-quantus-yellow underline"
+              >{t("checker.consequence.product")}</span
+            >
+            {t("checker.consequence.invitation_two")}</strong
+          >
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section
+    class="bg-qday-tool relative z-[1] overflow-hidden px-6 py-[100px] md:px-[114px]"
+  >
+    <div class="flex justify-center">
+      <SphereDecoration
+        class="absolute -top-[9rem] z-0 hidden opacity-25 !blur-none lg:block"
+        variant="14"
+        size={551}
+      />
+    </div>
+
+    <div class="lg:max-w-content lg:mx-auto xl:flex xl:gap-14">
+      <div class="flex flex-col">
+        <h2 class="font-medium-title">{t("checker.method.title")}</h2>
+        <p class="font-large-body mt-[10px] max-w-[637px]">
+          {t("checker.method.subtitle")}
+        </p>
+
+        <div class="mx-auto mt-10 max-w-[500px] xl:hidden">
+          <Image
+            class="drop-shadow-app"
+            src={QDayMockup}
+            alt="QDay's phone view"
+          />
+        </div>
+
+        <p class="font-large-body mt-10 font-semibold">
+          {t("checker.method.factor_title")}
+        </p>
+        <div class="mt-[18px] flex flex-col gap-[35px] sm:flex-row">
+          {
+            t("checker.method.factors").map((factor: any) => (
+              <AppBenefitCard
+                class="lg:w-[352px]"
+                title={factor.title}
+                content={factor.content}
+              />
+            ))
+          }
+        </div>
+
+        <div class="mt-[35px] max-w-[591px]">
+          <p class="font-large-body">
+            {t("checker.method.factor_usage")}
+          </p>
+
+          <br />
+
+          <p class="font-large-body font-semibold">
+            {t("checker.method.analysis_title")}
+          </p>
+          <ul class="font-large-body list-disc ps-4">
+            {
+              t("checker.method.analysis_items").map((item: any) => (
+                <li>{item}</li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+
+      <div class="hidden lg:w-[348px] xl:block">
+        <Image
+          class="drop-shadow-app"
+          src={QDayMockup}
+          alt="QDay's phone view"
+        />
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  const baseCheckerUrl = "https://q.day/security-report";
+
+  const form = document.getElementById(
+    "security-checker-form",
+  ) as HTMLFormElement;
+  const address = document.getElementById(
+    "security-checker-input",
+  ) as HTMLInputElement;
+  const btn = document.getElementById("security-checker-button");
+
+  if (!form || !address || !btn)
+    throw new Error("Form not detected, can't analyze!");
+
+  // Events
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    // Make button disabled
+    btn.setAttribute("disabled", "true");
+
+    try {
+      // Make sure the input is not empty
+      const addressValue = address?.value?.trim();
+      if (!addressValue) throw new Error("Missing wallet address.");
+
+      window.open(`${baseCheckerUrl}/${addressValue}`, "_blank");
+
+      // Make button active after done processing submit
+      btn.removeAttribute("disabled");
+      // Reset form
+      form.reset();
+    } catch (error: any) {
+      // Make button active after done processing submit
+      btn.removeAttribute("disabled");
+    }
+  });
+</script>

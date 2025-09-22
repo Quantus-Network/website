@@ -151,10 +151,7 @@ export async function getTranslation(
 export async function createTranslator(locale: Locale) {
   const translations = await loadTranslations(locale);
 
-  return function t(
-    key: TranslationKey,
-    params: TranslationParams = {},
-  ): string {
+  return function t(key: TranslationKey, params: TranslationParams = {}): any {
     try {
       const value = getNestedValue(translations, key);
 
