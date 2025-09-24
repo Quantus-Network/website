@@ -53,7 +53,7 @@
   "app": {
     "tagline": "Tu puerta de enlace cuántico-segura está lista",
     "title": "App Quantus",
-    "description": "La App Quantus pone la seguridad cuántica y la privacidad de conocimiento cero directamente en tus manos. Cada salvaguarda se ejecuta silenciosamente en segundo plano, para que puedas concentrarte en lo que importa: mover valor con claridad, confianza y control.",
+    "description": "La aplicación Quantus pone la seguridad cuántica y la escalabilidad de conocimiento cero directamente en tus manos. Cada salvaguarda se ejecuta silenciosamente en segundo plano, para que puedas centrarte en lo que importa: mover valor con claridad, confianza y control.",
     "benefits": {
       "reversible_transactions": {
         "title": "Transacciones Reversibles",

@@ -53,7 +53,7 @@
   "app": {
     "tagline": "Your quantum-secure gateway is ready",
     "title": "Quantus App",
-    "description": "The Quantus App puts quantum security and zero-knowledge privacy directly in your hands. Every safeguard runs silently in the background, so you can focus on what matters: moving value with clarity, confidence, and control.",
+    "description": "The Quantus App puts quantum security and zero-knowledge scalability directly in your hands. Every safeguard runs silently in the background, so you can focus on what matters: moving value with clarity, confidence, and control.",
     "benefits": {
       "reversible_transactions": {
         "title": "Reversible Transactions",

@@ -53,7 +53,7 @@
   "app": {
     "tagline": "Gerbang aman-kuantum Anda telah siap",
     "title": "Aplikasi Quantus",
-    "description": "Aplikasi Quantus menempatkan keamanan kuantum dan privasi zero-knowledge langsung di tangan Anda. Setiap perlindungan berjalan secara senyap di latar belakang, sehingga Anda dapat fokus pada hal yang penting: memindahkan nilai dengan kejelasan, keyakinan, dan kontrol.",
+    "description": "Aplikasi Quantus menempatkan keamanan kuantum dan skalabilitas zero-knowledge langsung di tangan Anda. Setiap perlindungan berjalan secara diam-diam di latar belakang, sehingga Anda dapat fokus pada hal yang penting: memindahkan nilai dengan kejelasan, kepercayaan diri, dan kendali.",
     "benefits": {
       "reversible_transactions": {
         "title": "Transaksi yang Dapat Dibalikkan",

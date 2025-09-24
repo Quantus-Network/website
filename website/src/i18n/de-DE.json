@@ -53,7 +53,7 @@
   "app": {
     "tagline": "Ihr quantensicheres Gateway ist bereit",
     "title": "Quantus App",
-    "description": "Die Quantus App legt Quantensicherheit und Zero-Knowledge-Datenschutz direkt in Ihre Hände. Jeder Schutzmechanismus läuft unbemerkt im Hintergrund, damit Sie sich auf das Wesentliche konzentrieren können: Werte mit Klarheit, Vertrauen und Kontrolle zu bewegen.",
+    "description": "Die Quantus App legt Quantensicherheit und Zero-Knowledge-Skalierbarkeit direkt in Ihre Hände. Jede Schutzmaßnahme läuft leise im Hintergrund, sodass Sie sich auf das Wesentliche konzentrieren können: Werte mit Klarheit, Vertrauen und Kontrolle zu bewegen.",
     "benefits": {
       "reversible_transactions": {
         "title": "Umkehrbare Transaktionen",

@@ -53,7 +53,7 @@
   "app": {
     "tagline": "您的量子安全网关已准备就绪",
     "title": "Quantus 应用",
-    "description": "Quantus 应用将量子安全和零知识隐私直接交到您手中。所有安全措施都在后台静默运行，让您可以专注于最重要的事情：清晰、自信、可控地转移价值。",
+    "description": "Quantus App 将量子安全和零知识可扩展性直接交到您手中。每项安全措施都在后台静默运行，因此您可以专注于重要的事情：清晰、自信和可控地转移价值。",
     "benefits": {
       "reversible_transactions": {
         "title": "可撤销交易",
