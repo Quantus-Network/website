@@ -1,9 +1,13 @@
-[{
-  "relation": ["delegate_permission/common.handle_all_urls"],
-  "target": {
-    "namespace": "android_app",
-    "package_name": "com.quantus.wallet",
-    "sha256_cert_fingerprints": 
-    ["D2:58:F2:7F:AD:54:66:CF:55:42:01:01:34:C1:BA:F7:CB:CF:4D:26:7C:61:A1:99:A4:D8:91:24:7A:95:25:9A"]
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.quantus.wallet",
+      "sha256_cert_fingerprints": [
+        "D2:58:F2:7F:AD:54:66:CF:55:42:01:01:34:C1:BA:F7:CB:CF:4D:26:7C:61:A1:99:A4:D8:91:24:7A:95:25:9A",
+        "92:70:90:AB:63:EC:16:5C:0B:7F:38:FB:E3:7A:26:96:B9:B9:CB:1C:DB:76:AF:FD:65:2B:ED:2D:7C:E4:02:D3"
+      ]
+    }
   }
-}]
+]
