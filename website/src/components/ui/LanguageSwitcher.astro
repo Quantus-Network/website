@@ -295,7 +295,9 @@ const {
     // Handle language change
     select.addEventListener("change", function (this: any) {
       const selectedOption = this.options[this.selectedIndex];
-      const url = selectedOption.dataset.url;
+      const url = location.search
+        ? selectedOption.dataset.url + location.search
+        : selectedOption.dataset.url;
 
       if (url) window.location.href = url;
     });

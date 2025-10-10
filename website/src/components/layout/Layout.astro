@@ -87,6 +87,10 @@ const textDirection = getTextDirection(currentLocale);
     newPath = `/${userLang}${cleanPathname}`;
   }
 
+  if (window.location.search) {
+    newPath += window.location.search;
+  }
+
   localStorage.setItem(localeStorageKey, "true");
   window.location.replace(newPath);
 </script>
