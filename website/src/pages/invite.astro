@@ -1,0 +1,114 @@
+---
+import Layout from "@/components/layout/Layout.astro";
+import AppHomeView from "@/assets/download/app-home-view.png";
+import { Image } from "astro:assets";
+import AppleStore from "@/assets/download/apple-store-download.png";
+import GooglePlay from "@/assets/download/google-play-download.png";
+
+import { APP_LINKS } from "@/constants/app-links";
+import Socials from "@/components/ui/Socials.astro";
+import SphereDecoration from "@/components/ui/SphereDecoration.astro";
+import env from "@/config";
+import { getLocaleFromUrl, createTranslator } from "@/utils/i18n";
+import type { SEOProps } from "astro-seo";
+import ReferralCode from "@/components/ui/ReferralCode.astro";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
+
+const metadata: SEOProps = {
+  canonical: `${env.SITE_BASE_URL}/invite`,
+};
+---
+
+<Layout {...metadata}>
+  <section class="relative overflow-hidden pt-[74px] pb-16 lg:pt-[104px]">
+    <SphereDecoration
+      class="absolute top-[23rem] -right-[4rem] -z-10 lg:top-[14rem] lg:left-[33%]"
+      variant="16"
+      size={273}
+    />
+    <SphereDecoration
+      class="absolute top-[42%] -left-[10rem] -z-10 lg:hidden"
+      variant="5"
+      size={422}
+    />
+    <SphereDecoration
+      class="absolute -right-[11rem] bottom-[14rem] -z-10 lg:left-[30%]"
+      variant="11"
+      size={422}
+    />
+
+    <div class="lg:max-w-content flex lg:mx-auto xl:gap-14">
+      <div class="flex flex-col gap-10">
+        <div class="flex flex-col gap-6 px-[30px] xl:px-0">
+          <div class="flex flex-col gap-[10px]">
+            <p class="font-tag-caps-mobile lg:font-tag-caps">
+              {t("app.tagline")}
+            </p>
+
+            <h1
+              class="font-medium-title-mobile lg:font-medium-title lg:max-w-[600px]"
+            >
+              {t("invite.title")}
+            </h1>
+
+            <p class="font-body-mobile lg:font-body lg:max-w-[523px]">
+              {t("app.description")}
+            </p>
+          </div>
+
+          <div class="flex gap-5">
+            <a href={APP_LINKS.ios} target="_blank" rel="noopener noreferrer">
+              <Image src={AppleStore} alt="Apple store app link" />
+            </a>
+
+            <a
+              id="android-download"
+              href={APP_LINKS.android}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image src={GooglePlay} alt="Goole play app link" />
+            </a>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-2 px-[30px] xl:px-0">
+          <strong class="font-tag">Referral Code</strong>
+          <ReferralCode />
+        </div>
+
+        <div class="flex flex-row gap-8">
+          <div class="mx-auto max-w-[400px] px-[30px] md:hidden">
+            <Image src={AppHomeView} alt="App's home view" />
+          </div>
+        </div>
+      </div>
+
+      <div class="me-[30px] hidden md:block lg:w-[348px]">
+        <Image src={AppHomeView} alt="App's home view" />
+      </div>
+    </div>
+  </section>
+
+  <Socials />
+</Layout>
+
+<script>
+  const androidDownloadEl = document.getElementById(
+    "android-download",
+  ) as HTMLAnchorElement | null;
+  const referralContentEl = document.getElementById(
+    "referral-content",
+  ) as HTMLAnchorElement | null;
+
+  const params = new URLSearchParams(location.search);
+  const referralCode = params.get("referralCode");
+
+  if (androidDownloadEl && referralContentEl && referralCode) {
+    referralContentEl.innerText = referralCode;
+    androidDownloadEl.href =
+      androidDownloadEl.href + `&referrer=referral_code%3D${referralCode}`;
+  }
+</script>

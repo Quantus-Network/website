@@ -78,6 +78,13 @@
       "button": "Ikuti Gelombang Kuantum"
     }
   },
+  "invite": {
+    "title": "Anda Diundang untuk Mengamankan Kripto Anda",
+    "code": {
+      "label": "Kode Referal",
+      "copy": "Kode referal disalin!"
+    }
+  },
   "team": {
     "title": "Tim Inti",
     "description": "Didirikan oleh para insinyur veteran dari startup kripto tahap awal dan mantan pemegang peran CTO. Tim ini menggabungkan keahlian mendalam dalam kriptografi terapan dan sistem zero-knowledge dengan kemampuan yang terbukti untuk mengirimkan infrastruktur yang aman dan terukur.",

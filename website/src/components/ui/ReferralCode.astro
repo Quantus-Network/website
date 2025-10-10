@@ -1,0 +1,57 @@
+---
+import Separator from "@/components/ui/Separator.astro";
+import { applyStyles } from "@/utils/apply-styles";
+import { Copy } from "@lucide/astro";
+
+export interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<div
+  class={applyStyles(
+    "bg-app-benefit-card rounded-quantus w-fit relative flex flex-col gap-[10px] px-[35px] py-10 backdrop-blur-[20px]",
+    className,
+  )}
+>
+  <Separator class="absolute top-0 left-0" variant="2" />
+
+  <div class="flex gap-4">
+    <p id="referral-content" class="font-tag text-quantus-pink">-</p>
+
+    <button
+      id="referral-copy-btn"
+      class="hover:cursor-pointer active:scale-90"
+      aria-label="Copy referral code button"
+    >
+      <Copy />
+    </button>
+  </div>
+</div>
+
+<script>
+  import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+
+  const locale = getLocaleFromUrl(location.pathname);
+  const t = await createTranslator(locale);
+
+  const handleCopy = () => {
+    const referralContentEl = document.getElementById(
+      "referral-content",
+    ) as HTMLParagraphElement | null;
+
+    if (!referralContentEl) return;
+
+    const content = referralContentEl.innerText;
+    navigator.clipboard.writeText(content);
+    window.toast.success(t("invite.code.copy"));
+  };
+
+  const copyBtnEl = document.getElementById(
+    "referral-copy-btn",
+  ) as HTMLButtonElement | null;
+
+  copyBtnEl?.addEventListener("click", handleCopy);
+</script>

@@ -78,6 +78,13 @@
       "button": "Únete a la Ola Cuántica"
     }
   },
+  "invite": {
+    "title": "Estás invitado a proteger tus criptomonedas",
+    "code": {
+      "label": "Código de referido",
+      "copy": "¡Código de referido copiado!"
+    }
+  },
   "team": {
     "title": "El Equipo Principal",
     "description": "Fundado por ingenieros veteranos de startups de criptomonedas en etapas tempranas y antiguos directores de tecnología (CTO). El equipo combina una profunda experiencia en criptografía aplicada y sistemas de conocimiento cero con una capacidad probada para entregar infraestructura segura y escalable.",

@@ -1,0 +1,175 @@
+---
+export interface Props {
+  id?: string;
+}
+
+const { id = "toast-container" } = Astro.props;
+---
+
+<div
+  id={id}
+  class="pointer-events-none fixed top-6 right-6 z-50 flex flex-col gap-3"
+>
+</div>
+
+<script>
+  type ToastType = "success" | "error" | "info";
+
+  interface ToastOptions {
+    type?: ToastType;
+    duration?: number;
+  }
+
+  class ToastManager {
+    private container: HTMLElement;
+    private toasts: Map<string, HTMLElement> = new Map();
+
+    constructor(containerId: string = "toast-container") {
+      const container = document.getElementById(containerId);
+      if (!container) {
+        throw new Error(`Toast container with id "${containerId}" not found`);
+      }
+      this.container = container;
+    }
+
+    show(message: string, options: ToastOptions = {}) {
+      const { type = "info", duration = 3000 } = options;
+      const id = `toast-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+
+      const toast = this.createToast(id, message, type);
+      this.container.appendChild(toast);
+      this.toasts.set(id, toast);
+
+      // Trigger animation
+      requestAnimationFrame(() => {
+        toast.classList.remove("opacity-0", "translate-x-8");
+      });
+
+      // Auto-dismiss
+      setTimeout(() => {
+        this.dismiss(id);
+      }, duration);
+
+      return id;
+    }
+
+    success(message: string, duration?: number) {
+      return this.show(message, { type: "success", duration });
+    }
+
+    error(message: string, duration?: number) {
+      return this.show(message, { type: "error", duration });
+    }
+
+    info(message: string, duration?: number) {
+      return this.show(message, { type: "info", duration });
+    }
+
+    dismiss(id: string) {
+      const toast = this.toasts.get(id);
+      if (!toast) return;
+
+      toast.classList.add("opacity-0", "translate-x-8");
+
+      setTimeout(() => {
+        toast.remove();
+        this.toasts.delete(id);
+      }, 300);
+    }
+
+    private createToast(
+      id: string,
+      message: string,
+      type: ToastType,
+    ): HTMLElement {
+      const toast = document.createElement("div");
+      toast.id = id;
+      toast.setAttribute("role", "alert");
+
+      const baseClasses =
+        "font-body flex items-center gap-3 px-6 py-4 rounded-[var(--radius-quantus)] border backdrop-blur-md shadow-lg transition-all duration-300 ease-out pointer-events-auto max-w-md opacity-0 translate-x-8";
+      const typeClasses = this.getTypeClasses(type);
+
+      toast.className = `${baseClasses} ${typeClasses}`;
+
+      const icon = this.getIcon(type);
+      const closeBtn = this.createCloseButton(id);
+
+      toast.innerHTML = `
+        <div class="flex-shrink-0">${icon}</div>
+        <p class="flex-1 text-[var(--color-text-content-primary)]">${this.escapeHtml(message)}</p>
+      `;
+      toast.appendChild(closeBtn);
+
+      return toast;
+    }
+
+    private getTypeClasses(type: ToastType): string {
+      const classes = {
+        success:
+          "bg-[var(--color-input-success)] border-[var(--color-input-success)]",
+        error:
+          "bg-[var(--color-input-error)] border-[var(--color-input-error)]",
+        info: "bg-[var(--color-app-benefit-card)] border-[var(--color-form-input-body-border)]",
+      };
+      return classes[type];
+    }
+
+    private createCloseButton(id: string): HTMLButtonElement {
+      const btn = document.createElement("button");
+      btn.className =
+        "flex-shrink-0 text-[var(--color-text-content-secondary)] hover:text-[var(--color-text-content-primary)] transition-colors p-0 bg-transparent border-0 cursor-pointer";
+      btn.setAttribute("aria-label", "Close notification");
+      btn.innerHTML = `
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M12.8 4.27333L11.7267 3.2L8 6.92667L4.27333 3.2L3.2 4.27333L6.92667 8L3.2 11.7267L4.27333 12.8L8 9.07333L11.7267 12.8L12.8 11.7267L9.07333 8L12.8 4.27333Z" fill="currentColor"/>
+        </svg>
+      `;
+      btn.addEventListener("click", () => this.dismiss(id));
+      return btn;
+    }
+
+    private getIcon(type: ToastType): string {
+      const icons = {
+        success: `
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM8 15L3 10L4.41 8.59L8 12.17L15.59 4.58L17 6L8 15Z" fill="currentColor"/>
+          </svg>
+        `,
+        error: `
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM11 15H9V13H11V15ZM11 11H9V5H11V11Z" fill="currentColor"/>
+          </svg>
+        `,
+        info: `
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM11 15H9V9H11V15ZM11 7H9V5H11V7Z" fill="currentColor"/>
+          </svg>
+        `,
+      };
+      return icons[type];
+    }
+
+    private escapeHtml(text: string): string {
+      const div = document.createElement("div");
+      div.textContent = text;
+      return div.innerHTML;
+    }
+  }
+
+  // Make ToastManager globally available
+  declare global {
+    interface Window {
+      toast: ToastManager;
+    }
+  }
+
+  // Initialize toast manager when DOM is ready
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", () => {
+      window.toast = new ToastManager();
+    });
+  } else {
+    window.toast = new ToastManager();
+  }
+</script>

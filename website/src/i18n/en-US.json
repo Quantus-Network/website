@@ -78,6 +78,13 @@
       "button": "Join the Quantum Wave"
     }
   },
+  "invite": {
+    "title": "You're Invited to Secure Your Crypto",
+    "code": {
+      "label": "Referral Code",
+      "copy": "Referral code copied!"
+    }
+  },
   "team": {
     "title": "The Core Team",
     "description": "Founded by veteran engineers from early-stage crypto startups and former CTO roles. The team combines deep expertise in applied cryptography and zero-knowledge systems with a proven ability to ship secure, scalable infrastructure.",

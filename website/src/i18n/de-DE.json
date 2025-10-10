@@ -78,6 +78,13 @@
       "button": "Schließen Sie sich der Quantenwelle an"
     }
   },
+  "invite": {
+    "title": "Sie sind eingeladen, Ihre Kryptowährung zu sichern",
+    "code": {
+      "label": "Empfehlungscode",
+      "copy": "Empfehlungscode kopiert!"
+    }
+  },
   "team": {
     "title": "Das Kernteam",
     "description": "Gegründet von erfahrenen Ingenieuren aus frühen Krypto-Startups und ehemaligen CTOs. Das Team kombiniert tiefgreifendes Fachwissen in angewandter Kryptografie und Zero-Knowledge-Systemen mit der nachgewiesenen Fähigkeit, sichere und skalierbare Infrastrukturen zu liefern.",

@@ -15,6 +15,7 @@ import { SEO, type SEOProps } from "astro-seo";
 import defaultMetadata from "@/constants/default-metadata";
 import { getLocaleFromUrl, getTextDirection } from "@/utils/i18n";
 import CookieConsent from "@/components/ui/CookieConsent.astro";
+import Toast from "../ui/Toast.astro";
 
 interface Props extends SEOProps {}
 
@@ -51,6 +52,7 @@ const textDirection = getTextDirection(currentLocale);
     <Footer />
 
     <CookieConsent />
+    <Toast />
   </body>
 </html>
 
