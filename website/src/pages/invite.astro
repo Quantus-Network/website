@@ -95,20 +95,35 @@ const metadata: SEOProps = {
   <Socials />
 </Layout>
 
-<script>
-  const androidDownloadEl = document.getElementById(
-    "android-download",
-  ) as HTMLAnchorElement | null;
-  const referralContentEl = document.getElementById(
-    "referral-content",
-  ) as HTMLAnchorElement | null;
+<script is:inline>
+  const APP_LINKS = {
+    android:
+      "https://play.google.com/store/apps/details?id=com.quantus.wallet&pcampaignid=web_share",
+    ios: "https://apps.apple.com/id/app/quantus/id6747967405",
+  };
+
+  function isAndroid() {
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+    return /android/i.test(userAgent);
+  }
+
+  const androidDownloadEl = document.getElementById("android-download");
+  const referralContentEl = document.getElementById("referral-content");
 
   const params = new URLSearchParams(location.search);
   const referralCode = params.get("referralCode");
 
+  const androidDownloadLink =
+    APP_LINKS.android + `&referrer=referral_code%3D${referralCode}`;
+
+  // Redirect Android users to Google Play Store
+  if (isAndroid()) {
+    window.location.href = androidDownloadLink;
+  }
+
   if (androidDownloadEl && referralContentEl && referralCode) {
     referralContentEl.innerText = referralCode;
-    androidDownloadEl.href =
-      androidDownloadEl.href + `&referrer=referral_code%3D${referralCode}`;
+    androidDownloadEl.href = androidDownloadLink;
   }
 </script>
