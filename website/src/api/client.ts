@@ -5,6 +5,7 @@ import type {
   NodeCounterOptions,
   NodeCounterState,
 } from "./node-counter-service";
+import env from "@/config";
 
 // Types for API responses
 interface ChainStatsData {
@@ -38,9 +39,6 @@ interface SubscribeData {
 type ApiResponse<T = any> = Promise<Response>;
 
 const createApiClient = () => {
-  const API_URL = "https://api.quantus.com/api";
-  const GRAPHQL_URL = "https://gql.res.fm/graphql";
-
   const nodeCounter = new NodeCounterService();
 
   const methods = {
@@ -68,7 +66,7 @@ const createApiClient = () => {
         }
       `;
 
-      return fetch(GRAPHQL_URL, {
+      return fetch(env.GRAPHQL_URL, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -83,7 +81,7 @@ const createApiClient = () => {
      * Submit a contact form inquiry
      */
     contact: (name: string, email: string, message: string): ApiResponse => {
-      return fetch(`${API_URL}/inquiries`, {
+      return fetch(`${env.API_URL}/inquiries`, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -100,7 +98,7 @@ const createApiClient = () => {
      * Subscribe to waitlist
      */
     subscribe: (email: string): ApiResponse => {
-      return fetch(`${API_URL}/waitlist`, {
+      return fetch(`${env.API_URL}/waitlist`, {
         headers: {
           "Content-Type": "application/json",
         },
