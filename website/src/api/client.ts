@@ -36,7 +36,7 @@ interface SubscribeData {
   email: string;
 }
 
-interface LeaderboardEntrant {
+export interface LeaderboardEntrant {
   quan_address: string;
   eth_address: string;
   referral_code: String;
@@ -51,7 +51,7 @@ interface LeaderboardOptions {
   pageSize?: number;
 }
 
-interface LeaderboardResponse {
+export interface LeaderboardResponse {
   data: LeaderboardEntrant[];
   meta: {
     page: number;

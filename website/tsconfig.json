@@ -3,10 +3,11 @@
   "include": ["src", ".astro/types.d.ts"],
   "exclude": ["dist"],
   "compilerOptions": {
-    // Path aliases
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
   }
 }

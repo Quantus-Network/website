@@ -3,6 +3,12 @@
   --color-bg-primary: #0c1014;
   --color-app-benefit-card: #3d3c444d;
 
+  --color-popover: hsl(0 0% 7.5%);
+  --color-popover-foreground: hsl(0 0% 88%);
+
+  --color-muted: hsl(0 0% 14.9%);
+  --color-muted-foreground: hsl(0 0% 63.9%);
+
   /* Video Player Colors */
   --color-video-player: linear-gradient(
     47deg,
