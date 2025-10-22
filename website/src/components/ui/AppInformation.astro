@@ -6,10 +6,12 @@ import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
 import { APP_LINKS } from "@/constants/app-links";
 
 export interface Props {
+  customTitle?: string;
+  customTagline?: string;
   asMain?: boolean;
 }
 
-const { asMain } = Astro.props;
+const { asMain, customTitle, customTagline } = Astro.props;
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
@@ -18,12 +20,12 @@ const t = await createTranslator(locale);
 <div class="flex flex-col gap-6 px-[30px] xl:px-0">
   <div class="flex flex-col gap-[10px]">
     <p class="font-tag-caps-mobile lg:font-tag-caps">
-      {t("app.tagline")}
+      {customTagline ?? t("app.tagline")}
     </p>
     {
       asMain && (
         <h1 class="font-medium-title-mobile lg:font-medium-title">
-          {t("app.title")}
+          {customTitle ?? t("app.title")}
         </h1>
       )
     }
