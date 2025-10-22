@@ -42,11 +42,16 @@ const t = await createTranslator(locale);
   </div>
 
   <div class="flex gap-5">
-    <a href={APP_LINKS.ios} target="_blank" rel="noopener noreferrer">
+    <a id="ios" href={APP_LINKS.ios} target="_blank" rel="noopener noreferrer">
       <Image src={AppleStore} alt="Apple store app link" />
     </a>
 
-    <a href={APP_LINKS.android} target="_blank" rel="noopener noreferrer">
+    <a
+      id="android"
+      href={APP_LINKS.android}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <Image src={GooglePlay} alt="Goole play app link" />
     </a>
   </div>
