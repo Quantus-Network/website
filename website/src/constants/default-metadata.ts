@@ -10,7 +10,7 @@ const description =
 const image = {
   url: `${env.SITE_BASE_URL}/banner-small.jpeg`,
   secureUrl: `${env.SITE_BASE_URL}/banner-small.jpeg`,
-  alt: title.default,
+  alt: "Banner with gradient text reading 'Quantum Secure Your Crypto' in pink, purple, and yellow tones on a dark background with abstract circular shapes.",
   width: 600,
   height: 200,
   type: "image/jpeg",

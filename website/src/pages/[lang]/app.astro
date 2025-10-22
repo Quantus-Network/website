@@ -17,6 +17,8 @@ import {
   getLocalizedMetadata,
 } from "@/utils/i18n";
 import type { SEOProps } from "astro-seo";
+import { APP_LINKS } from "@/constants/app-links";
+import { JsonLdGraph } from "@/utils/build-json-ld";
 
 export async function getStaticPaths() {
   return SUPPORTED_LOCALES.map((lang) => ({ params: { lang } }));
@@ -28,11 +30,61 @@ const t = await createTranslator(locale);
 
 const metadata: SEOProps = {
   ...localizedMetadata,
+  title: "App Download",
   canonical: `${env.SITE_BASE_URL}/${locale}/app`,
 };
+
+const jsonLd = JsonLdGraph({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: `${env.SITE_BASE_URL}`,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: metadata.title,
+          item: metadata.canonical as string,
+        },
+      ],
+    },
+    {
+      "@type": "MobileApplication",
+      name: "Quantus",
+      description:
+        "The post-quantum secure crypto wallet for the Quantus Network. Enjoy instant, reversible transactions and HD multi-account management.",
+      operatingSystem: "iOS",
+      applicationCategory: "FinanceApplication",
+      installUrl: APP_LINKS.ios,
+      publisher: {
+        "@type": "Organization",
+        "@id": env.SITE_BASE_URL,
+      },
+    },
+    {
+      "@type": "MobileApplication",
+      name: "Quantus",
+      description:
+        "The post-quantum secure crypto wallet for the Quantus Network. Enjoy instant, reversible transactions and HD multi-account management.",
+      operatingSystem: "Android",
+      applicationCategory: "FinanceApplication",
+      installUrl: APP_LINKS.android,
+      publisher: {
+        "@type": "Organization",
+        "@id": env.SITE_BASE_URL,
+      },
+    },
+  ],
+});
 ---
 
-<Layout {...metadata}>
+<Layout {...metadata} jsonLd={jsonLd}>
   <section
     class="relative overflow-hidden pt-[74px] pb-16 lg:pt-[104px] lg:pb-[169px] xl:pb-[253px]"
   >

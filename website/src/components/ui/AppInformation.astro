@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import AppleStore from "@/assets/download/apple-store-download.png";
 import GooglePlay from "@/assets/download/google-play-download.png";
 import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+import { APP_LINKS } from "@/constants/app-links";
 
 export interface Props {
   asMain?: boolean;
@@ -39,19 +40,11 @@ const t = await createTranslator(locale);
   </div>
 
   <div class="flex gap-5">
-    <a
-      href="https://apps.apple.com/id/app/quantus/id6747967405"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+    <a href={APP_LINKS.ios} target="_blank" rel="noopener noreferrer">
       <Image src={AppleStore} alt="Apple store app link" />
     </a>
 
-    <a
-      href="https://play.google.com/store/apps/details?id=com.quantus.wallet&pcampaignid=web_share"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+    <a href={APP_LINKS.android} target="_blank" rel="noopener noreferrer">
       <Image src={GooglePlay} alt="Goole play app link" />
     </a>
   </div>
