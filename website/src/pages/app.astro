@@ -13,7 +13,7 @@ import env from "@/config";
 import { getLocaleFromUrl, createTranslator } from "@/utils/i18n";
 import type { SEOProps } from "astro-seo";
 import { JsonLdGraph } from "@/utils/build-json-ld";
-import { APP_LINKS } from "@/constants/app-links";
+import { androidAppJsonLd, iosAppJsonLd } from "@/constants/default-jsonld";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
@@ -43,34 +43,8 @@ const jsonLd = JsonLdGraph({
         },
       ],
     },
-    {
-      "@id": `${env.SITE_BASE_URL}/app#ios`,
-      "@type": "MobileApplication",
-      name: "Quantus",
-      description:
-        "The post-quantum secure crypto wallet for the Quantus Network. Enjoy instant, reversible transactions and HD multi-account management.",
-      operatingSystem: "iOS",
-      applicationCategory: "FinanceApplication",
-      installUrl: APP_LINKS.ios,
-      publisher: {
-        "@type": "Organization",
-        "@id": env.SITE_BASE_URL,
-      },
-    },
-    {
-      "@id": `${env.SITE_BASE_URL}/app#android`,
-      "@type": "MobileApplication",
-      name: "Quantus",
-      description:
-        "The post-quantum secure crypto wallet for the Quantus Network. Enjoy instant, reversible transactions and HD multi-account management.",
-      operatingSystem: "Android",
-      applicationCategory: "FinanceApplication",
-      installUrl: APP_LINKS.android,
-      publisher: {
-        "@type": "Organization",
-        "@id": env.SITE_BASE_URL,
-      },
-    },
+    iosAppJsonLd,
+    androidAppJsonLd,
   ],
 });
 ---

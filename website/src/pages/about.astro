@@ -4,6 +4,7 @@ import BrandName from "@/assets/brand/brand-name.svg";
 import Layout from "@/components/layout/Layout.astro";
 
 import env from "@/config";
+import { organizationJsonLd } from "@/constants/default-jsonld";
 import { JsonLdGraph } from "@/utils/build-json-ld";
 import { getLocaleFromUrl, createTranslator } from "@/utils/i18n";
 import type { SEOProps } from "astro-seo";
@@ -36,10 +37,7 @@ const jsonLd = JsonLdGraph({
         },
       ],
     },
-    {
-      "@type": "Organization",
-      "@id": env.SITE_BASE_URL,
-    },
+    organizationJsonLd,
   ],
 });
 ---

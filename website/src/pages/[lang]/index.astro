@@ -18,6 +18,11 @@ import {
 import type { SEOProps } from "astro-seo";
 import defaultMetadata from "@/constants/default-metadata";
 import { JsonLdGraph } from "@/utils/build-json-ld";
+import {
+  androidAppJsonLd,
+  iosAppJsonLd,
+  organizationJsonLd,
+} from "@/constants/default-jsonld";
 
 export async function getStaticPaths() {
   return SUPPORTED_LOCALES.map((lang) => ({ params: { lang } }));
@@ -40,7 +45,7 @@ const jsonLd = JsonLdGraph({
       url: env.SITE_BASE_URL,
       image: {
         "@type": "ImageObject",
-        name: defaultMetadata.openGraph?.image?.alt ?? "",
+        caption: defaultMetadata.openGraph?.image?.alt ?? "",
         contentUrl: defaultMetadata.openGraph?.image?.url as string,
       },
       description: localizedMetadata.description,
@@ -66,10 +71,9 @@ const jsonLd = JsonLdGraph({
         },
       },
     },
-    {
-      "@id": env.SITE_BASE_URL,
-      "@type": "Organization",
-    },
+    organizationJsonLd,
+    iosAppJsonLd,
+    androidAppJsonLd,
   ],
 });
 ---

@@ -12,6 +12,11 @@ import { getLocaleFromUrl, getLocalizedMetadata } from "@/utils/i18n";
 import { JsonLdGraph } from "@/utils/build-json-ld";
 import env from "@/config";
 import defaultMetadata from "@/constants/default-metadata";
+import {
+  androidAppJsonLd,
+  iosAppJsonLd,
+  organizationJsonLd,
+} from "@/constants/default-jsonld";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const localizedMetadata = await getLocalizedMetadata(locale);
@@ -25,7 +30,7 @@ const jsonLd = JsonLdGraph({
       url: env.SITE_BASE_URL,
       image: {
         "@type": "ImageObject",
-        name: defaultMetadata.openGraph?.image?.alt ?? "",
+        caption: defaultMetadata.openGraph?.image?.alt ?? "",
         contentUrl: defaultMetadata.openGraph?.image?.url as string,
       },
       description: localizedMetadata.description,
@@ -51,48 +56,9 @@ const jsonLd = JsonLdGraph({
         },
       },
     },
-    {
-      "@id": env.SITE_BASE_URL,
-      "@type": "Organization",
-      name: "Quantus Labs LLC",
-      description:
-        "Quantus Labs LLC is a technology company based in Wyoming, USA, focused on building infrastructure for decentralized, censorship-resistant technologies. Our flagship project, Quantus Network is a Layer 1 blockchain designed to be simple, open-source, and community-owned from day one.",
-      url: env.SITE_BASE_URL,
-      logo: {
-        "@type": "ImageObject",
-        name: defaultMetadata.openGraph?.image?.alt ?? "",
-        contentUrl: defaultMetadata.openGraph?.image?.url as string,
-      },
-      email: "hello@quantus.com",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "30 N Gould St #52155",
-        addressLocality: "Sheridan",
-        addressRegion: "WY",
-        postalCode: "82801",
-        addressCountry: "US",
-      },
-      contactPoint: {
-        "@type": "ContactPoint",
-        contactType: "Customer Service",
-        email: "hello@quantus.com",
-      },
-      sameAs: [
-        "https://www.linkedin.com/company/quantus-network",
-        "https://x.com/QuantusNetwork",
-        "https://www.instagram.com/quantusnetwork",
-        "https://www.youtube.com/@Quantus.Network",
-        "https://github.com/Quantus-Network",
-      ],
-    },
-    {
-      "@id": `${env.SITE_BASE_URL}/app#android`,
-      "@type": "MobileApplication",
-    },
-    {
-      "@id": `${env.SITE_BASE_URL}/app#ios`,
-      "@type": "MobileApplication",
-    },
+    organizationJsonLd,
+    iosAppJsonLd,
+    androidAppJsonLd,
   ],
 });
 ---
