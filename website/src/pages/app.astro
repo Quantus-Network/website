@@ -12,16 +12,44 @@ import SphereDecoration from "@/components/ui/SphereDecoration.astro";
 import env from "@/config";
 import { getLocaleFromUrl, createTranslator } from "@/utils/i18n";
 import type { SEOProps } from "astro-seo";
+import { JsonLdGraph } from "@/utils/build-json-ld";
+import { androidAppJsonLd, iosAppJsonLd } from "@/constants/default-jsonld";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
 
 const metadata: SEOProps = {
+  title: "App Download",
   canonical: `${env.SITE_BASE_URL}/app`,
 };
+
+const jsonLd = JsonLdGraph({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: `${env.SITE_BASE_URL}`,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: metadata.title,
+          item: metadata.canonical as string,
+        },
+      ],
+    },
+    iosAppJsonLd,
+    androidAppJsonLd,
+  ],
+});
 ---
 
-<Layout {...metadata}>
+<Layout {...metadata} jsonLd={jsonLd}>
   <section
     class="relative overflow-hidden pt-[74px] pb-16 lg:pt-[104px] lg:pb-[169px] xl:pb-[253px]"
   >

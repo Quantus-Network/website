@@ -12,16 +12,38 @@ import { Image } from "astro:assets";
 import SphereDecoration from "@/components/ui/SphereDecoration.astro";
 import AppBenefitCard from "@/components/ui/AppBenefitCard.astro";
 import { ArrowRight } from "@lucide/astro";
+import { JsonLd } from "@/utils/build-json-ld";
+import type { BreadcrumbList } from "schema-dts";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
 
 const metadata: SEOProps = {
+  title: "Quantum Risk Checker",
   canonical: `${env.SITE_BASE_URL}/quantum-risk-checker`,
 };
+
+const jsonLd = JsonLd<BreadcrumbList>({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: `${env.SITE_BASE_URL}`,
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: metadata.title,
+      item: metadata.canonical as string,
+    },
+  ],
+});
 ---
 
-<Layout {...metadata}>
+<Layout {...metadata} jsonLd={jsonLd}>
   <section class="overflow-hidden px-[30px] py-10 sm:py-[137px] 2xl:px-0">
     <div class="max-w-content relative z-[1] mx-auto">
       <SphereDecoration

@@ -12,6 +12,8 @@ import {
 } from "@/utils/i18n";
 import type { SEOProps } from "astro-seo";
 import env from "@/config";
+import { JsonLd } from "@/utils/build-json-ld";
+import type { BreadcrumbList } from "schema-dts";
 
 export async function getStaticPaths() {
   return SUPPORTED_LOCALES.map((lang) => ({ params: { lang } }));
@@ -23,11 +25,31 @@ const t = await createTranslator(locale);
 
 const metadata: SEOProps = {
   ...localizedMetadata,
+  title: "About Us",
   canonical: `${env.SITE_BASE_URL}/${locale}/contact`,
 };
+
+const jsonLd = JsonLd<BreadcrumbList>({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: `${env.SITE_BASE_URL}/${locale}`,
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: metadata.title,
+      item: metadata.canonical as string,
+    },
+  ],
+});
 ---
 
-<Layout {...metadata}>
+<Layout {...metadata} jsonLd={jsonLd}>
   <section
     class="relative overflow-hidden px-[30px] pt-[67px] pb-[75px] lg:pb-[145px]"
   >

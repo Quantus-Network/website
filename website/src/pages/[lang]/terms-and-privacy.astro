@@ -1,6 +1,7 @@
 ---
 import Layout from "@/components/layout/Layout.astro";
 import env from "@/config";
+import { JsonLd } from "@/utils/build-json-ld";
 import {
   getLocaleFromUrl,
   createTranslator,
@@ -9,6 +10,7 @@ import {
   getLocalizedPath,
 } from "@/utils/i18n";
 import type { SEOProps } from "astro-seo";
+import type { BreadcrumbList } from "schema-dts";
 
 export async function getStaticPaths() {
   return SUPPORTED_LOCALES.map((lang) => ({ params: { lang } }));
@@ -20,11 +22,31 @@ const t = await createTranslator(locale);
 
 const metadata: SEOProps = {
   ...localizedMetadata,
+  title: "Terms and Privacy",
   canonical: `${env.SITE_BASE_URL}/${locale}/terms-and-privacy`,
 };
+
+const jsonLd = JsonLd<BreadcrumbList>({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: `${env.SITE_BASE_URL}/${locale}`,
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: metadata.title,
+      item: metadata.canonical as string,
+    },
+  ],
+});
 ---
 
-<Layout {...metadata}>
+<Layout {...metadata} jsonLd={jsonLd}>
   <div
     class="max-w-content mx-auto flex flex-col gap-16 px-[30px] py-10 lg:gap-[120px] lg:p-[114px] xl:px-0"
   >

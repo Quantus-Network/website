@@ -12,14 +12,17 @@ import Navbar from "./navbar/Navbar.astro";
 import Footer from "./footer/Footer.astro";
 
 import { SEO, type SEOProps } from "astro-seo";
+import type { WithContext, Graph, Thing } from "schema-dts";
 import defaultMetadata from "@/constants/default-metadata";
 import { getLocaleFromUrl, getTextDirection } from "@/utils/i18n";
 import CookieConsent from "@/components/ui/CookieConsent.astro";
 import Toast from "../ui/Toast.astro";
 
-interface Props extends SEOProps {}
+interface Props extends SEOProps {
+  jsonLd?: WithContext<Thing> | Graph;
+}
 
-const { ...seoProps } = Astro.props;
+const { jsonLd, ...seoProps } = Astro.props;
 
 // Get current locale from URL or props
 const currentLocale = getLocaleFromUrl(Astro.url.pathname);
@@ -45,6 +48,16 @@ const textDirection = getTextDirection(currentLocale);
     <SEO {...metadata} titleTemplate={undefined} />
   </head>
   <body class="flex grow flex-col pt-[139px]" data-locale={currentLocale}>
+    {
+      jsonLd && (
+        <script
+          type="application/ld+json"
+          set:html={JSON.stringify(jsonLd).replace(/</g, "\\u003c")}
+          is:inline
+        />
+      )
+    }
+
     <Navbar locale={currentLocale} />
     <main class="grow">
       <slot />
