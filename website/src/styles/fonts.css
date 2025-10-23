@@ -44,6 +44,16 @@
     "liga" off,
     "clig" off;
 }
+@utility font-body-bold {
+  font-family: Prompt;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 25.5px */
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+}
 @utility font-body-mobile {
   font-family: var(--font-primary);
   font-size: 15px;

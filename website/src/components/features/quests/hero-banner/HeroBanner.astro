@@ -1,0 +1,28 @@
+---
+import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+import { Image } from "astro:assets";
+import QQLogo from "@/assets/quests/qq-logo.png";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
+---
+
+<section id="heading" class="bg-quests-hero py-[74px]">
+  <div class="max-w-content mx-auto flex flex-col items-center text-center">
+    <p class="font-tag-caps mb-2">Welcome To</p>
+
+    <h1 class="hidden">Quantus Quests</h1>
+    <Image
+      width={689}
+      src={QQLogo}
+      alt="Headshot of quantus mascot of q-cat with text quantus quests beside it"
+    />
+
+    <p class="font-body-bold mt-5 max-w-[810px]">
+      Quantus Quests are a series of challenges designed to reward our earliest
+      and most active community members. By completing Quests, you will earn
+      points, secure your status as an early adopter, and determine your share
+      of our future airdrop.
+    </p>
+  </div>
+</section>

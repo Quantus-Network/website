@@ -18,10 +18,12 @@ const Component = () => {
   );
 };
 
-export const LeaderboardTable = () => {
+const LeaderboardTable = () => {
   return (
     <NuqsAdapter>
       <Component />
     </NuqsAdapter>
   );
 };
+
+export default LeaderboardTable;
