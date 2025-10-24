@@ -5,8 +5,11 @@ function Skeleton({
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) {
   return (
-    <div
-      className={applyStyles("animate-pulse rounded-md bg-white/50", className)}
+    <span
+      className={applyStyles(
+        "inline-block animate-pulse rounded-md bg-white/50",
+        className,
+      )}
       {...props}
     />
   );

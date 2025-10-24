@@ -37,6 +37,7 @@
   --color-quantus-blue: #0000ff;
   --color-quantus-dark-blue: #1f1fa3;
   --color-quantus-yellow: #ffe91f;
+  --color-quantus-purple: #cd8bff;
 
   /* Button Colors */
   --color-button-primary: linear-gradient(
@@ -159,7 +160,7 @@
 }
 @utility bg-quests-decoration {
   background: linear-gradient(
-    2deg,
+    178deg,
     #ffe91f 2.78%,
     #ed4cce 29.41%,
     #00f 69.08%,
@@ -176,7 +177,7 @@
   background: linear-gradient(180deg, #991fff 54.23%, #1f1fa3 110.79%);
 }
 @utility bg-quests-podium-side {
-  background: linear-gradient(352deg, #3d3c44 -9.88%, #0c1014 94.34%);
+  background: linear-gradient(0deg, #3d3c44 -9.88%, #0c1014 94.34%);
 }
 @utility bg-quests-podium-front {
   background: linear-gradient(180deg, #3d3c44 0%, #0c1014 67.21%);

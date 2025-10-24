@@ -54,7 +54,7 @@ export const DataTable = ({
     );
 
   return (
-    <div className="bg-app-benefit-card">
+    <div className="">
       <div
         className={applyStyles(withControls ? "rounded-t-md" : "rounded-md")}
       >

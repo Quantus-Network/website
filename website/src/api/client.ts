@@ -39,7 +39,7 @@ interface SubscribeData {
 export interface LeaderboardEntrant {
   quan_address: string;
   eth_address: string;
-  referral_code: String;
+  referral_code: string;
   referrals_count: number;
   is_reward_program_participant: boolean;
   last_selected_at: string;

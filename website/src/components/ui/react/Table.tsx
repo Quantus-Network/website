@@ -22,7 +22,10 @@ const TableHeader = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <thead
     ref={ref}
-    className={applyStyles("[&_tr]:border-b", className)}
+    className={applyStyles(
+      "[&_tr_th:first-child]:rounded-s-quantus [&_tr_th:last-child]:rounded-e-quantus",
+      className,
+    )}
     {...props}
   />
 ));
@@ -35,7 +38,7 @@ const TableBody = React.forwardRef<
   <tbody
     ref={ref}
     className={applyStyles(
-      "[&_tr]:odd:bg-bg-primary [&_tr:last-child]:border-0",
+      "[&_tr]:bg-table-body [&_tr_td:first-child]:rounded-s-quantus [&_tr_td:last-child]:rounded-e-quantus [&_tr]:border-t-bg-primary [&_tr]:border-t-[10px]",
       className,
     )}
     {...props}
@@ -80,7 +83,7 @@ const TableHead = React.forwardRef<
   <th
     ref={ref}
     className={applyStyles(
-      "text-text-content-primary h-14 px-4 text-left align-middle font-semibold [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]",
+      "text-table-header-text font-small h-14 px-4 text-left align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]",
       className,
     )}
     {...props}
@@ -95,7 +98,7 @@ const TableCell = React.forwardRef<
   <td
     ref={ref}
     className={applyStyles(
-      "px-4 py-4 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]",
+      "font-body px-4 py-4 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]",
       className,
     )}
     {...props}

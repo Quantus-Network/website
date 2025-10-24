@@ -18,6 +18,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/react/Select";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export interface TableControlsProps {
   table: Table<any>;
@@ -38,7 +39,6 @@ export const TableControls: React.FC<TableControlsProps> = ({
     (newPage: number | undefined) => {
       if (newPage && newPage > 0 && newPage <= pageCount) {
         table.setPageIndex(newPage - 1);
-        tableRef.current?.scrollIntoView();
       }
     },
     [table, pageCount],
@@ -51,8 +51,8 @@ export const TableControls: React.FC<TableControlsProps> = ({
   }, [currentPage]);
 
   return (
-    <div className="flex flex-col gap-6 rounded-b-md border-t px-2 py-4 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
-      <div className="flex items-center gap-2">
+    <div className="flex flex-col gap-6 rounded-b-md px-2 py-4 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
+      {/* <div className="flex items-center gap-2">
         <span>Show:</span>
 
         <Select
@@ -74,32 +74,25 @@ export const TableControls: React.FC<TableControlsProps> = ({
         </Select>
 
         <span>Records</span>
-      </div>
+      </div> */}
 
       <Pagination className="justify-stretch sm:justify-end">
         <PaginationContent className="flex w-full items-center justify-between gap-2 sm:w-fit sm:justify-stretch">
           <PaginationItem>
             <Button
-              variant="outline"
+              variant="ghost"
               onClick={() => {
                 table.previousPage();
-
-                // We put timeout because we don't want to race with the rerender
-                setTimeout(() => {
-                  tableRef.current?.scrollIntoView();
-                }, 0);
               }}
               disabled={!table.getCanPreviousPage()}
             >
-              Previous
+              <ChevronLeft />
             </Button>
           </PaginationItem>
 
-          <div className="flex items-center gap-1">
-            <span className="hidden sm:inline">Page</span>
-
+          <div className="flex items-center gap-2">
             <Input
-              className="h-9 w-14"
+              className="h-6 w-9 rounded-none border-0 border-b px-1 text-center"
               value={page}
               onChange={(e) => {
                 const newPage = Number(e.target.value) || undefined;
@@ -116,18 +109,13 @@ export const TableControls: React.FC<TableControlsProps> = ({
 
           <PaginationItem>
             <Button
-              variant="outline"
+              variant="ghost"
               onClick={() => {
                 table.nextPage();
-
-                // We put timeout because we don't want to race with the rerender
-                setTimeout(() => {
-                  tableRef.current?.scrollIntoView();
-                }, 0);
               }}
               disabled={!table.getCanNextPage()}
             >
-              Next
+              <ChevronRight />
             </Button>
           </PaginationItem>
         </PaginationContent>

@@ -57,8 +57,10 @@ export const useLeaderboardTable = () => {
   const columns = useMemo(() => LEADERBOARD_COLUMNS, []);
   const [rowCount, setRowCount] = useState<number>(data?.meta.total_items ?? 0);
 
+  const effectiveData = page === 1 ? data?.data.slice(3) : data?.data;
+
   const table = useReactTable<LeaderboardEntrant>({
-    data: data?.data ?? [],
+    data: effectiveData ?? [],
     columns,
     getCoreRowModel: getCoreRowModel(),
     state: {
@@ -68,8 +70,6 @@ export const useLeaderboardTable = () => {
     onPaginationChange: handleChangePagination,
     manualPagination: true,
   });
-
-  console.log(loading, fetchError);
 
   const success = !loading && !fetchError;
   const error = !loading && fetchError;

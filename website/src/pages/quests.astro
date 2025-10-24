@@ -1,13 +1,15 @@
 ---
 import Layout from "@/components/layout/Layout.astro";
 
-import LeaderboardTable from "@/components/features/quests/leaderboard/leaderboard-table/LeaderboardTable";
+import Leaderboard from "@/components/features/quests/leaderboard/Leaderboard.astro";
 import HeroBanner from "@/components/features/quests/hero-banner/HeroBanner.astro";
 
 import env from "@/config";
 import { getLocaleFromUrl, createTranslator } from "@/utils/i18n";
 import type { SEOProps } from "astro-seo";
 import BodyLayout from "@/components/features/quests/body-layout/BodyLayout.astro";
+import Rules from "@/components/features/quests/rules/Rules.astro";
+import Information from "@/components/features/quests/information/Information.astro";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
@@ -21,6 +23,8 @@ const metadata: SEOProps = {
   <HeroBanner />
 
   <BodyLayout>
-    <LeaderboardTable client:load />
+    <Information />
+    <Leaderboard />
+    <Rules />
   </BodyLayout>
 </Layout>

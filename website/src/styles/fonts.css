@@ -14,6 +14,34 @@
     "liga" off,
     "clig" off;
 }
+@utility font-quest-title {
+  font-family: Prompt;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 80px */
+  letter-spacing: 1.6px;
+}
+@utility font-quest-title-conjuction {
+  font-family: Prompt;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 40px */
+  letter-spacing: 0.8px;
+}
+@utility font-large-body-bold {
+  /* Large Body Bold */
+  font-family: Prompt;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 28px */
+  letter-spacing: 0.4px;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+}
 @utility font-button {
   font-family: var(--font-primary);
   font-size: 17px;

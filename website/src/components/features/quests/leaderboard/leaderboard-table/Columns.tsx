@@ -7,7 +7,18 @@ export const LEADERBOARD_COLUMNS = [
   columnHelper.display({
     id: "rank",
     header: "Rank",
-    cell: ({ row: { index } }) => index + 1,
+    cell: ({ table: { getState }, row: { index } }) => {
+      const {
+        pagination: { pageIndex, pageSize },
+      } = getState();
+
+      // We use 4 becasue the top 3 are displayed in on podiums
+      const indexOffset = pageIndex === 0 ? 4 : 1;
+
+      const effectiveIndex = pageIndex * pageSize + (index + indexOffset);
+
+      return effectiveIndex;
+    },
     enableSorting: false,
   }),
   columnHelper.accessor("quan_address", {
