@@ -1,6 +1,7 @@
 ---
 import Layout from "@/components/layout/Layout.astro";
 import env from "@/config";
+import defaultMetadata from "@/constants/default-metadata";
 import { JsonLd } from "@/utils/build-json-ld";
 import { getLocaleFromUrl, createTranslator } from "@/utils/i18n";
 import type { SEOProps } from "astro-seo";
@@ -10,7 +11,9 @@ const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
 
 const metadata: SEOProps = {
-  title: "Terms and Privacy",
+  ...defaultMetadata,
+  title: t("tos.meta.title"),
+  description: t("tos.meta.description"),
   canonical: `${env.SITE_BASE_URL}/terms-and-privacy`,
 };
 

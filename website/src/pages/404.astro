@@ -1,20 +1,9 @@
 ---
 import Layout from "@/components/layout/Layout.astro";
 import Button from "@/components/ui/Button.astro";
-
-import env from "@/config";
-import { getLocaleFromUrl, createTranslator } from "@/utils/i18n";
-import type { SEOProps } from "astro-seo";
-
-const locale = getLocaleFromUrl(Astro.url.pathname);
-const t = await createTranslator(locale);
-
-const metadata: SEOProps = {
-  canonical: `${env.SITE_BASE_URL}/about`,
-};
 ---
 
-<Layout {...metadata}>
+<Layout>
   <section
     class="max-w-content mx-auto px-[30px] py-10 lg:flex lg:gap-20 lg:pt-[120px] lg:pb-20 2xl:px-0"
   >

@@ -12,12 +12,15 @@ import SphereDecoration from "@/components/ui/SphereDecoration.astro";
 import env from "@/config";
 import { getLocaleFromUrl, createTranslator } from "@/utils/i18n";
 import type { SEOProps } from "astro-seo";
+import defaultMetadata from "@/constants/default-metadata";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
 
 const metadata: SEOProps = {
-  title: "Shared Account",
+  ...defaultMetadata,
+  title: t("account.meta.title"),
+  description: t("account.meta.description"),
   canonical: `${env.SITE_BASE_URL}/account`,
 };
 ---
@@ -45,8 +48,8 @@ const metadata: SEOProps = {
     <div class="lg:max-w-content lg:mx-auto xl:flex xl:gap-14">
       <div class="flex flex-col gap-10">
         <AppInformation
-          customTitle="Secure Your Crypto Now"
-          customTagline="Be invulnerable to quantum threats"
+          customTitle={t("account.title")}
+          customTagline={t("account.tag")}
           asMain
         />
 

@@ -1,7 +1,40 @@
 import env from "@/config";
-import type { MobileApplication, Organization } from "schema-dts";
+import type { MobileApplication, Organization, WebSite } from "schema-dts";
 import defaultMetadata from "./default-metadata";
 import { APP_LINKS } from "./app-links";
+
+export const websiteJsonLd: WebSite = {
+  "@type": "WebSite",
+  name: "Quantus",
+  url: env.SITE_BASE_URL,
+  image: {
+    "@type": "ImageObject",
+    caption: defaultMetadata.openGraph?.image?.alt ?? "",
+    contentUrl: defaultMetadata.openGraph?.image?.url as string,
+  },
+  description: defaultMetadata.description,
+  sameAs: [
+    "https://www.linkedin.com/company/quantus-network",
+    "https://x.com/QuantusNetwork",
+    "https://www.instagram.com/quantusnetwork",
+    "https://www.youtube.com/@Quantus.Network",
+    "https://github.com/Quantus-Network",
+  ],
+  potentialAction: {
+    "@type": "SubscribeAction",
+    description:
+      "Subscribe to our Newsletter. Alpha Alert! Get your weekly news-blast with sneak previews, updates, news roundup, educational content and more",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: `${env.SITE_BASE_URL}/#footer`,
+      actionPlatform: [
+        "http://schema.org/DesktopWebPlatform",
+        "http://schema.org/IOSPlatform",
+        "http://schema.org/AndroidPlatform",
+      ],
+    },
+  },
+};
 
 export const organizationJsonLd: Organization = {
   "@id": env.SITE_BASE_URL,

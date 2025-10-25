@@ -13,7 +13,6 @@ import Footer from "./footer/Footer.astro";
 
 import { SEO, type SEOProps } from "astro-seo";
 import type { WithContext, Graph, Thing } from "schema-dts";
-import defaultMetadata from "@/constants/default-metadata";
 import { getLocaleFromUrl, getTextDirection } from "@/utils/i18n";
 import CookieConsent from "@/components/ui/CookieConsent.astro";
 import Toast from "../ui/Toast.astro";
@@ -22,18 +21,9 @@ interface Props extends SEOProps {
   jsonLd?: WithContext<Thing> | Graph;
 }
 
-const { jsonLd, ...seoProps } = Astro.props;
+const { jsonLd, ...metadata } = Astro.props;
 
-// Get current locale from URL or props
 const currentLocale = getLocaleFromUrl(Astro.url.pathname);
-
-// Merge with default metadata and props
-const metadata = {
-  ...defaultMetadata,
-  ...seoProps,
-};
-
-// Get text direction for locale
 const textDirection = getTextDirection(currentLocale);
 ---
 

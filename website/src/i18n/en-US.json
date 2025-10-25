@@ -1,7 +1,9 @@
 {
-  "site": {
-    "title": "Quantus Network - Quantum-Secure Layer 1 Blockchain",
-    "description": "A quantum-secure, open-source Layer 1 blockchain built with post-quantum cryptography and zk-proof scalability to future-proof your digital assets."
+  "home": {
+    "meta": {
+      "title": "Quantus Network - Quantum-Secure Layer 1 Blockchain",
+      "description": "A quantum-secure, open-source Layer 1 blockchain built with post-quantum cryptography and zk-proof scalability to future-proof your digital assets."
+    }
   },
   "navbar": {
     "about": "About",
@@ -52,6 +54,10 @@
     }
   },
   "app": {
+    "meta": {
+      "title": "Quantus Network - Quantum-Secure Layer 1 Blockchain",
+      "description": "A quantum-secure, open-source Layer 1 blockchain built with post-quantum cryptography and zk-proof scalability to future-proof your digital assets."
+    },
     "tagline": "Your quantum-secure gateway is ready",
     "title": "Quantus App",
     "description": "The Quantus App puts quantum security and zero-knowledge scalability directly in your hands. Every safeguard runs silently in the background, so you can focus on what matters: moving value with clarity, confidence, and control.",
@@ -79,7 +85,19 @@
       "button": "Join the Quantum Wave"
     }
   },
+  "account": {
+    "meta": {
+      "title": "Quantus Network - Quantum-Secure Layer 1 Blockchain",
+      "description": "A quantum-secure, open-source Layer 1 blockchain built with post-quantum cryptography and zk-proof scalability to future-proof your digital assets."
+    },
+    "title": "Secure Your Crypto Now",
+    "tag": "Be invulnerable to quantum threats"
+  },
   "invite": {
+    "meta": {
+      "title": "Quantus Network - Quantum-Secure Layer 1 Blockchain",
+      "description": "A quantum-secure, open-source Layer 1 blockchain built with post-quantum cryptography and zk-proof scalability to future-proof your digital assets."
+    },
     "title": "You're Invited to Secure Your Crypto",
     "code": {
       "label": "Referral Code",
@@ -166,6 +184,10 @@
     "title": "Follow us for fun content, podcasts, interviews, wizardry and more!"
   },
   "checker": {
+    "meta": {
+      "title": "Quantus Network - Quantum-Secure Layer 1 Blockchain",
+      "description": "A quantum-secure, open-source Layer 1 blockchain built with post-quantum cryptography and zk-proof scalability to future-proof your digital assets."
+    },
     "subtitle": "QUANTUM RISK CHECKER",
     "title": "Are you safe on Qday?",
     "description": "Analyze your Ethereum address for quantum computing vulnerabilities. Our tool checks transaction history and balance to provide a comprehensive quantum security risk assessment.",
@@ -214,6 +236,10 @@
     }
   },
   "quests": {
+    "meta": {
+      "title": "Quantus Network - Quantum-Secure Layer 1 Blockchain",
+      "description": "A quantum-secure, open-source Layer 1 blockchain built with post-quantum cryptography and zk-proof scalability to future-proof your digital assets."
+    },
     "hero": {
       "welcome": "Welcome To",
       "title": "Quantus Quests",
@@ -296,6 +322,10 @@
     }
   },
   "contact": {
+    "meta": {
+      "title": "Quantus Network - Quantum-Secure Layer 1 Blockchain",
+      "description": "A quantum-secure, open-source Layer 1 blockchain built with post-quantum cryptography and zk-proof scalability to future-proof your digital assets."
+    },
     "title": "Get in touch",
     "subtitle": "Reach out, and let's create a universe of possibilities together!",
     "form": {
@@ -312,6 +342,10 @@
     }
   },
   "about": {
+    "meta": {
+      "title": "Quantus Network - Quantum-Secure Layer 1 Blockchain",
+      "description": "A quantum-secure, open-source Layer 1 blockchain built with post-quantum cryptography and zk-proof scalability to future-proof your digital assets."
+    },
     "title": "Company Details",
     "content": {
       "p1": "Quantus Labs LLC is a technology company based in Wyoming, USA, focused on building infrastructure for decentralized, censorship-resistant technologies. Our flagship project, Quantus Network is a Layer 1 blockchain designed to be simple, open-source, and community-owned from day one.",
@@ -327,6 +361,10 @@
     }
   },
   "tos": {
+    "meta": {
+      "title": "Quantus Network - Quantum-Secure Layer 1 Blockchain",
+      "description": "A quantum-secure, open-source Layer 1 blockchain built with post-quantum cryptography and zk-proof scalability to future-proof your digital assets."
+    },
     "title": "Quantus Network Policies",
     "last_updated": "Last updated: June 12, 2025",
     "intro": "This policy explains how Quantus Labs LLC (\"Quantus,\" \"we,\" or \"us\") collects, uses, and protects your information when you use quantus.com, our mobile apps, desktop applications, or otherwise interact with us. We may update this policy from time to time. If we make changes, we will notify you by revising the date at the top of this policy and, when appropriate, provide additional notice on our website.",

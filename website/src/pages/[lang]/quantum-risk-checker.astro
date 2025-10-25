@@ -10,7 +10,6 @@ import {
   getLocaleFromUrl,
   createTranslator,
   SUPPORTED_LOCALES,
-  getLocalizedMetadata,
 } from "@/utils/i18n";
 import type { SEOProps } from "astro-seo";
 import { Image } from "astro:assets";
@@ -19,20 +18,21 @@ import AppBenefitCard from "@/components/ui/AppBenefitCard.astro";
 import { ArrowRight } from "@lucide/astro";
 import type { BreadcrumbList } from "schema-dts";
 import { JsonLd } from "@/utils/build-json-ld";
+import defaultMetadata from "@/constants/default-metadata";
 
 export async function getStaticPaths() {
   return SUPPORTED_LOCALES.map((lang) => ({ params: { lang } }));
 }
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
-const localizedMetadata = await getLocalizedMetadata(locale);
 const t = await createTranslator(locale);
 
 const metadata: SEOProps = {
-  ...localizedMetadata,
+  ...defaultMetadata,
+  title: t("checker.meta.title"),
+  description: t("checker.meta.description"),
   canonical: `${env.SITE_BASE_URL}/${locale}/quantum-risk-checker`,
 };
-
 const jsonLd = JsonLd<BreadcrumbList>({
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",

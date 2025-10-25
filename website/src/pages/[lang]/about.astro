@@ -5,12 +5,12 @@ import BrandName from "@/assets/brand/brand-name.svg";
 import Layout from "@/components/layout/Layout.astro";
 import env from "@/config";
 import { organizationJsonLd } from "@/constants/default-jsonld";
+import defaultMetadata from "@/constants/default-metadata";
 import { JsonLdGraph } from "@/utils/build-json-ld";
 
 import {
   createTranslator,
   getLocaleFromUrl,
-  getLocalizedMetadata,
   SUPPORTED_LOCALES,
 } from "@/utils/i18n";
 import type { SEOProps } from "astro-seo";
@@ -20,15 +20,14 @@ export async function getStaticPaths() {
 }
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
-const localizedMetadata = await getLocalizedMetadata(locale);
 const t = await createTranslator(locale);
 
 const metadata: SEOProps = {
-  ...localizedMetadata,
-  title: "About Us",
+  ...defaultMetadata,
+  title: t("about.meta.title"),
+  description: t("about.meta.description"),
   canonical: `${env.SITE_BASE_URL}/${locale}/about`,
 };
-
 const jsonLd = JsonLdGraph({
   "@context": "https://schema.org",
   "@graph": [

@@ -22,15 +22,17 @@ const t = await createTranslator(locale);
         <div class="flex flex-col gap-5 md:gap-0">
           <div class="flex items-end">
             <div>
-              <p class="font-tag-caps">{t("quets.info.code")}</p>
+              <p class="font-tag-caps">{t("quests.info.code")}</p>
 
               <h2
                 class="font-quest-title flex flex-col text-[58px] md:flex-row md:items-center md:gap-4 xl:text-[80px]"
               >
-                KING <span
+                {t("quests.info.name_one")}
+                <span
                   class="font-quest-title-conjuction text-text-title-secondary text-[28px] xl:text-[40px]"
-                  >OF THE</span
-                > SHILL
+                  >{t("quests.info.name_two")}</span
+                >
+                {t("quests.info.name_three")}
               </h2>
             </div>
 
@@ -43,24 +45,20 @@ const t = await createTranslator(locale);
           </div>
 
           <p class="font-tag-mobile md:font-tag">
-            A battle for a $500 USDC prize pool, boosted airdrop points, and the
-            ultimate title: The King of the Shill.
+            {t("quests.info.description")}
           </p>
         </div>
       </div>
 
       <div class="flex flex-col gap-5">
-        <h3 class="font-small-title">How to Play</h3>
+        <h3 class="font-small-title">{t("quests.info.play_guide.title")}</h3>
 
         <ol class="font-body-bold list-decimal ps-4">
-          <li>Download the Quantus App.</li>
-          <li>
-            Go to the Quantus Quests tab to find your referral link (The Qcat).
-          </li>
-          <li>Share your code with your friends & foes.</li>
-          <li>
-            Watch the live leaderboard to track your position in real-time.
-          </li>
+          {
+            t("quests.info.play_guide.guides").map((val: string) => (
+              <li>{val}</li>
+            ))
+          }
         </ol>
 
         <div class="flex gap-5">
