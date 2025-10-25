@@ -9,7 +9,7 @@ const LeaderboardPodium = () => {
   const thirdRank = data?.data[2];
 
   return (
-    <div className="grid grid-cols-3 gap-12 py-10">
+    <div className="flex flex-wrap justify-center gap-12 py-10 xl:grid xl:grid-cols-3">
       {error && <p className="text-red-500">{error.message}</p>}
 
       <WinnerPodium

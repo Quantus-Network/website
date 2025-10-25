@@ -24,21 +24,33 @@ const WinnerPodium = ({
     <div
       className={applyStyles(
         "flex w-[271px] flex-col items-center",
-        rank === 1 && "-translate-y-10",
-        rank === 2 && "-translate-y-5",
+        rank === 1 && "order-1 xl:order-2 xl:-translate-y-10",
+        rank === 2 && "order-2 xl:order-1 xl:-translate-y-5",
+        rank === 3 && "order-3",
       )}
     >
-      <div className="size-[110px] overflow-hidden rounded-full">
-        <div
-          className={applyStyles(
-            "font-medium-title-mobile flex size-full items-center justify-center",
-            rank === 1 && "bg-quests-first-rank",
-            rank === 2 && "bg-quests-second-rank",
-            rank === 3 && "bg-quests-third-rank",
-          )}
-        >
-          <p>{rank}</p>
-        </div>
+      <div className="max-h-[128px]">
+        {rank == 1 && (
+          <img
+            className="size-full translate-x-[calc(21px/2)]"
+            src="/quests/cat-first-rank.webp"
+            alt="Gold cat icon with a half-skull face showing 1st place"
+          />
+        )}
+        {rank == 2 && (
+          <img
+            className="size-full translate-x-[calc(35.5px/2)]"
+            src="/quests/cat-second-rank.webp"
+            alt="Silver cat icon with a half-skull face showing 2nd place"
+          />
+        )}
+        {rank == 3 && (
+          <img
+            className="size-full translate-x-[calc(21.5px/2)]"
+            src="/quests/cat-third-rank.webp"
+            alt="Bronze cat icon with a half-skull face showing 3rd place"
+          />
+        )}
       </div>
 
       {isLoading ? (
@@ -74,7 +86,7 @@ const WinnerPodium = ({
               "mt-4 flex items-center justify-center",
               rank === 1 && "text-quantus-yellow",
               rank === 2 && "text-quantus-pink",
-              rank === 3 && "text-quantus-purple",
+              rank === 3 && "text-quantus-aqua",
             )}
           >
             <p className="font-small-title">

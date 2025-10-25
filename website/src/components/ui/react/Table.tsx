@@ -83,7 +83,7 @@ const TableHead = React.forwardRef<
   <th
     ref={ref}
     className={applyStyles(
-      "text-table-header-text font-small h-14 px-4 text-left align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]",
+      "text-table-header-text font-small h-14 px-3 text-left align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]",
       className,
     )}
     {...props}
@@ -98,7 +98,7 @@ const TableCell = React.forwardRef<
   <td
     ref={ref}
     className={applyStyles(
-      "font-body px-4 py-4 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]",
+      "font-body px-3 py-4 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]",
       className,
     )}
     {...props}

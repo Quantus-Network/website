@@ -14,15 +14,14 @@ export const LEADERBOARD_COLUMNS = [
 
       // We use 4 becasue the top 3 are displayed in on podiums
       const indexOffset = pageIndex === 0 ? 4 : 1;
-
       const effectiveIndex = pageIndex * pageSize + (index + indexOffset);
 
       return effectiveIndex;
     },
     enableSorting: false,
   }),
-  columnHelper.accessor("quan_address", {
-    id: "quan_address",
+  columnHelper.accessor("referral_code", {
+    id: "address",
     header: "Address",
     cell: (props) => props.getValue(),
     enableSorting: false,

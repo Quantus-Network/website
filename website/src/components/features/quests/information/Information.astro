@@ -4,25 +4,45 @@ import AppleStore from "@/assets/download/apple-store-download.png";
 import GooglePlay from "@/assets/download/google-play-download.png";
 import KingOfTheShill from "@/assets/quests/king-of-the-shill.png";
 import { Image } from "astro:assets";
+import Decoration from "../body-layout/Decoration.astro";
 ---
 
 <section id="information" class="mb-[90px]">
   <div class="flex gap-6">
     <div class="flex flex-col gap-14">
-      <div>
-        <p class="font-tag-caps">QUEST #001</p>
+      <div class="flex gap-5 min-[360px]:-translate-x-[22px] md:translate-0">
+        <div class="hidden min-w-[37px] min-[360px]:block md:hidden">
+          <Decoration />
+        </div>
 
-        <h2 class="font-quest-title">
-          KING <span
-            class="font-quest-title-conjuction text-text-title-secondary my-auto"
-            >OF THE</span
-          > SHILL
-        </h2>
+        <div class="flex flex-col gap-5 md:gap-0">
+          <div class="flex items-end">
+            <div>
+              <p class="font-tag-caps">QUEST #001</p>
 
-        <p class="font-tag">
-          A battle for a $500 USDC prize pool, boosted airdrop points, and the
-          ultimate title: The King of the Shill.
-        </p>
+              <h2
+                class="font-quest-title flex flex-col text-[58px] md:flex-row md:items-center md:gap-4 xl:text-[80px]"
+              >
+                KING <span
+                  class="font-quest-title-conjuction text-text-title-secondary text-[28px] xl:text-[40px]"
+                  >OF THE</span
+                > SHILL
+              </h2>
+            </div>
+
+            <div class="max-w-[149px] md:hidden">
+              <Image
+                src={KingOfTheShill}
+                alt="Cartoon cat mascot with half-skeleton design wearing a cap and shirt, holding up a foam finger with the Quantum Canary logo."
+              />
+            </div>
+          </div>
+
+          <p class="font-tag-mobile md:font-tag">
+            A battle for a $500 USDC prize pool, boosted airdrop points, and the
+            ultimate title: The King of the Shill.
+          </p>
+        </div>
       </div>
 
       <div class="flex flex-col gap-5">
@@ -61,7 +81,7 @@ import { Image } from "astro:assets";
       </div>
     </div>
 
-    <div class="max-w-[346px]">
+    <div class="hidden max-w-[346px] md:block">
       <Image
         src={KingOfTheShill}
         alt="Cartoon cat mascot with half-skeleton design wearing a cap and shirt, holding up a foam finger with the Quantum Canary logo."

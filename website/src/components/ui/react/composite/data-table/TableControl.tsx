@@ -11,13 +11,6 @@ import {
   PaginationContent,
   PaginationItem,
 } from "@/components/ui/react/Pagination";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/react/Select";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export interface TableControlsProps {
@@ -52,30 +45,6 @@ export const TableControls: React.FC<TableControlsProps> = ({
 
   return (
     <div className="flex flex-col gap-6 rounded-b-md px-2 py-4 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
-      {/* <div className="flex items-center gap-2">
-        <span>Show:</span>
-
-        <Select
-          value={pageSize.toString()}
-          onValueChange={(val) => {
-            table.setPageSize(Number(val));
-          }}
-        >
-          <SelectTrigger className="max-w-16">
-            <SelectValue placeholder="25" />
-          </SelectTrigger>
-
-          <SelectContent>
-            <SelectItem value="25">25</SelectItem>
-            <SelectItem value="50">50</SelectItem>
-            <SelectItem value="75">75</SelectItem>
-            <SelectItem value="100">100</SelectItem>
-          </SelectContent>
-        </Select>
-
-        <span>Records</span>
-      </div> */}
-
       <Pagination className="justify-stretch sm:justify-end">
         <PaginationContent className="flex w-full items-center justify-between gap-2 sm:w-fit sm:justify-stretch">
           <PaginationItem>
@@ -92,7 +61,7 @@ export const TableControls: React.FC<TableControlsProps> = ({
 
           <div className="flex items-center gap-2">
             <Input
-              className="h-6 w-9 rounded-none border-0 border-b px-1 text-center"
+              className="rounded-quantus h-6 w-9 border px-1 text-center"
               value={page}
               onChange={(e) => {
                 const newPage = Number(e.target.value) || undefined;
