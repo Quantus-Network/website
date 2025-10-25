@@ -16,6 +16,7 @@ import {
 } from "../../Table";
 import { RowSkeleton } from "./RowSkeleton";
 import { TableControls } from "./TableControl";
+import type { TranslationKey, TranslationParams } from "@/utils/i18n";
 
 interface DataTableProps {
   table: ReactTable<any>;
@@ -25,6 +26,7 @@ interface DataTableProps {
   };
   withControls?: boolean;
   customCellProps?: Record<string, any>;
+  t: (key: TranslationKey, params?: TranslationParams) => any;
 }
 
 export const DataTable = ({
@@ -32,6 +34,7 @@ export const DataTable = ({
   fetch,
   withControls = false,
   customCellProps = {},
+  t,
 }: DataTableProps) => {
   const { pageSize } = table.getState().pagination;
 
@@ -62,34 +65,42 @@ export const DataTable = ({
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (
               <TableRow key={headerGroup.id}>
-                {headerGroup.headers.map((header) => (
-                  <TableHead
-                    key={header.id}
-                    colSpan={header.colSpan}
-                    onClick={header.column.getToggleSortingHandler()}
-                    data-sortable={header.column.getCanSort()}
-                    className="data-[sortable=true]:hover:text-text-content-black/70 data-[sortable=true]:cursor-pointer"
-                  >
-                    <div className="flex items-center gap-1">
-                      {header.isPlaceholder
-                        ? null
-                        : flexRender(
-                            header.column.columnDef.header,
-                            header.getContext(),
-                          )}
+                {headerGroup.headers.map((header) => {
+                  const renderValue = flexRender(
+                    header.column.columnDef.header,
+                    header.getContext(),
+                  );
 
-                      {header.column.getCanSort() && (
-                        <>
-                          {header.column.getIsSorted() === "asc" && <ArrowUp />}
+                  return (
+                    <TableHead
+                      key={header.id}
+                      colSpan={header.colSpan}
+                      onClick={header.column.getToggleSortingHandler()}
+                      data-sortable={header.column.getCanSort()}
+                      className="data-[sortable=true]:hover:text-text-content-black/70 data-[sortable=true]:cursor-pointer"
+                    >
+                      <div className="flex items-center gap-1">
+                        {header.isPlaceholder || status === "loading"
+                          ? null
+                          : typeof renderValue === "string"
+                            ? t(renderValue)
+                            : renderValue}
 
-                          {header.column.getIsSorted() === "desc" && (
-                            <ArrowDown />
-                          )}
-                        </>
-                      )}
-                    </div>
-                  </TableHead>
-                ))}
+                        {header.column.getCanSort() && (
+                          <>
+                            {header.column.getIsSorted() === "asc" && (
+                              <ArrowUp />
+                            )}
+
+                            {header.column.getIsSorted() === "desc" && (
+                              <ArrowDown />
+                            )}
+                          </>
+                        )}
+                      </div>
+                    </TableHead>
+                  );
+                })}
               </TableRow>
             ))}
           </TableHeader>

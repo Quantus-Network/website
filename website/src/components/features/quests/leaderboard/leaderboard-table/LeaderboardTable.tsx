@@ -1,10 +1,14 @@
-import { NuqsAdapter } from "nuqs/adapters/react";
 import { DataTable } from "@/components/ui/react/composite/data-table/DataTable";
 
 import { useLeaderboardTable } from "./Hook";
+import type { Locale } from "@/utils/i18n";
 
-const Component = () => {
-  const { getStatus, table, error } = useLeaderboardTable();
+interface LeaderboardTableProps {
+  locale: Locale;
+}
+
+const LeaderboardTable = ({ locale }: LeaderboardTableProps) => {
+  const { getStatus, table, error, t } = useLeaderboardTable(locale);
 
   return (
     <DataTable
@@ -14,15 +18,8 @@ const Component = () => {
         errorFallback: <p>Error: {error && error.message}</p>,
       }}
       withControls
+      t={t}
     />
-  );
-};
-
-const LeaderboardTable = () => {
-  return (
-    <NuqsAdapter>
-      <Component />
-    </NuqsAdapter>
   );
 };
 

@@ -1,11 +1,13 @@
 import { Skeleton } from "@/components/ui/react/Skeleton";
 import { applyStyles } from "@/utils/apply-styles";
+import type { TranslationKey, TranslationParams } from "@/utils/i18n";
 
 interface WinnerPodiumProps {
   rank: 1 | 2 | 3;
   identity: string;
   referralCount: number;
   isLoading: boolean;
+  t: (key: TranslationKey, params?: TranslationParams) => any;
 }
 
 const prizeMap = {
@@ -19,6 +21,7 @@ const WinnerPodium = ({
   rank,
   referralCount,
   isLoading,
+  t,
 }: WinnerPodiumProps) => {
   return (
     <div
@@ -66,11 +69,10 @@ const WinnerPodium = ({
           <div className="my-3 flex items-center justify-center">
             <p className="font-large-body-bold">
               {isLoading ? (
-                <Skeleton className="me-2 h-4 w-20" />
+                <Skeleton className="me-2 h-4 w-52" />
               ) : (
-                referralCount
-              )}{" "}
-              Referrals
+                `${referralCount} ${t("quests.leaderboard.referrals")}`
+              )}
             </p>
           </div>
 

@@ -1,55 +1,52 @@
 ---
+import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
 import Card from "./Card.astro";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
 ---
 
 <section id="rules" class="mt-[84px] flex flex-col gap-8">
   <h3 class="font-medium-title-mobile lg:font-medium-title">
-    The Rules of the Game
+    {t("quests.rules.title")}
   </h3>
 
   <div class="grid gap-8 lg:grid-cols-2">
     <div class="flex flex-col gap-4">
       <div>
-        <h4 class="font-large-body-bold">The Goal:</h4>
+        <h4 class="font-large-body-bold">{t("quests.rules.goal.title")}</h4>
         <p class="font-body">
-          Refer the most users to the Quantus Wallet using your unique invite
-          code. Only referrals that create a wallet will be counted.
+          {t("quests.rules.goal.content")}
         </p>
       </div>
 
       <div>
-        <h4 class="font-large-body-bold">The Prizes:</h4>
+        <h4 class="font-large-body-bold">{t("quests.rules.prize.title")}</h4>
         <ul class="font-body">
-          <li>1st Place: $300 USDC</li>
-          <li>2nd Place: $150 USDC</li>
-          <li>3rd Place: $50 USDC</li>
+          {t("quests.rules.prize.content").map((val: string) => <li>{val}</li>)}
         </ul>
       </div>
 
       <div>
-        <h4 class="font-large-body-bold">The Goal:</h4>
+        <h4 class="font-large-body-bold">{t("quests.rules.win.title")}</h4>
         <p class="font-body">
-          Refer the most users to the Quantus Wallet using your unique invite
-          code. Only referrals that create a wallet will be counted.
+          {t("quests.rules.win.content")}
         </p>
       </div>
     </div>
 
     <Card>
-      <h4 class="font-tag text-text-title-secondary">The Quantum Twist</h4>
+      <h4 class="font-tag text-text-title-secondary">
+        {t("quests.rules.win.card.title")}
+      </h4>
 
       <div class="font-small">
         <p>
-          The #1 spot on the leaderboard is represented by a live, reversible
-          10,000 QUAN transaction. If another user overtakes you, the
-          transaction automatically reverses and is sent to the new leader. The
-          claim to the $300 USDC prize moves with it.
+          {t("quests.rules.win.card.content_one")}
         </p>
         <br />
         <p>
-          To win the grand prize, you must claim the #1 spot and hold it for 72
-          consecutive hours. Once you do, the 10,000 QUAN transaction finalizes,
-          the prize is secured, and the challenge concludes.
+          {t("quests.rules.win.card.content_one")}
         </p>
       </div>
     </Card>

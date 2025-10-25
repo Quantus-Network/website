@@ -1,11 +1,15 @@
 ---
+import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
 import LeaderboardPodium from "./leaderboard-podium/LeaderboardPodium";
 import LeaderboardTable from "./leaderboard-table/LeaderboardTable";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
 ---
 
 <section id="leaderboard">
-  <h3 class="font-small-title mb-9">Leaderboard</h3>
+  <h3 class="font-small-title mb-9">{t("quests.leaderboard.title")}</h3>
 
-  <LeaderboardPodium client:load />
-  <LeaderboardTable client:load />
+  <LeaderboardPodium client:load locale={locale} />
+  <LeaderboardTable client:load locale={locale} />
 </section>

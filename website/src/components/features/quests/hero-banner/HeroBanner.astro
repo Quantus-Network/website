@@ -11,9 +11,9 @@ const t = await createTranslator(locale);
   <div
     class="max-w-content mx-auto flex flex-col items-center px-8 text-center lg:px-0"
   >
-    <p class="font-tag-caps mb-2">Welcome To</p>
+    <p class="font-tag-caps mb-2">{t("quests.hero.welcome")}</p>
 
-    <h1 class="hidden">Quantus Quests</h1>
+    <h1 class="hidden">{t("quests.hero.title")}</h1>
     <Image
       width={689}
       src={QQLogo}
@@ -21,10 +21,7 @@ const t = await createTranslator(locale);
     />
 
     <p class="font-body-bold mt-5 max-w-[810px]">
-      Quantus Quests are a series of challenges designed to reward our earliest
-      and most active community members. By completing Quests, you will earn
-      points, secure your status as an early adopter, and determine your share
-      of our future airdrop.
+      {t("quests.hero.description")}
     </p>
   </div>
 </section>

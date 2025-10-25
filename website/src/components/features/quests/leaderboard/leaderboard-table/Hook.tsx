@@ -1,6 +1,5 @@
 import type { OnChangeFn, PaginationState } from "@tanstack/react-table";
 import { getCoreRowModel, useReactTable } from "@tanstack/react-table";
-import { parseAsInteger, useQueryState } from "nuqs";
 import { useCallback, useEffect, useMemo, useState } from "react";
 
 import api, {
@@ -11,14 +10,13 @@ import { LEADERBOARD_COLUMNS } from "./Columns";
 import { QUERY_DEFAULT_LIMIT } from "@/constants/query-default-limit";
 import useFetch from "@/hooks/useFetch";
 import { DATA_POOL_INTERVAL } from "@/constants/data-pool-interval";
+import { createTranslator, type Locale } from "@/utils/i18n";
 
-export const useLeaderboardTable = () => {
-  const [page, setPage] = useQueryState("page", parseAsInteger.withDefault(1));
-  const [pageSize, setPageSize] = useQueryState(
-    "pageSize",
-    parseAsInteger.withDefault(QUERY_DEFAULT_LIMIT),
-  );
+export const useLeaderboardTable = (locale: Locale) => {
+  const [t, setT] = useState<any>(null);
+  const [page, setPage] = useState(1);
 
+  const pageSize = QUERY_DEFAULT_LIMIT;
   const currentPageIndex = page - 1;
   const paginationValue: PaginationState = {
     pageSize,
@@ -30,10 +28,8 @@ export const useLeaderboardTable = () => {
       const newPagination = pagination(paginationValue);
 
       setPage(newPagination.pageIndex + 1);
-      setPageSize(newPagination.pageSize);
     } else {
       setPage(pagination.pageIndex + 1);
-      setPageSize(pagination.pageSize);
     }
   };
 
@@ -43,8 +39,8 @@ export const useLeaderboardTable = () => {
   }, [page, pageSize]);
 
   const {
-    data,
-    loading,
+    data: fetchData,
+    loading: fetchLoading,
     error: fetchError,
   } = useFetch<LeaderboardResponse>({
     fetchFn,
@@ -55,12 +51,14 @@ export const useLeaderboardTable = () => {
   });
 
   const columns = useMemo(() => LEADERBOARD_COLUMNS, []);
-  const [rowCount, setRowCount] = useState<number>(data?.meta.total_items ?? 0);
+  const [rowCount, setRowCount] = useState<number>(
+    fetchData?.meta.total_items ?? 0,
+  );
 
-  const effectiveData = page === 1 ? data?.data.slice(3) : data?.data;
+  const data = (page === 1 ? fetchData?.data.slice(3) : fetchData?.data) ?? [];
 
   const table = useReactTable<LeaderboardEntrant>({
-    data: effectiveData ?? [],
+    data,
     columns,
     getCoreRowModel: getCoreRowModel(),
     state: {
@@ -71,7 +69,8 @@ export const useLeaderboardTable = () => {
     manualPagination: true,
   });
 
-  const success = !loading && !fetchError;
+  const loading = fetchLoading || t === null;
+  const success = t !== null && !loading && !fetchError;
   const error = !loading && fetchError;
 
   const getStatus = () => {
@@ -88,12 +87,23 @@ export const useLeaderboardTable = () => {
   };
 
   useEffect(() => {
-    if (!loading && data?.meta.total_items) setRowCount(data.meta.total_items);
-  }, [loading, data?.meta.total_items]);
+    if (!loading && fetchData?.meta.total_items)
+      setRowCount(fetchData.meta.total_items);
+  }, [loading, fetchData?.meta.total_items]);
+
+  useEffect(() => {
+    const loadTranslation = async () => {
+      const tFn = await createTranslator(locale);
+      setT(() => tFn); // ← Use function updater to set a function
+    };
+
+    loadTranslation();
+  }, [locale]);
 
   return {
     table,
     getStatus,
     error,
+    t,
   };
 };

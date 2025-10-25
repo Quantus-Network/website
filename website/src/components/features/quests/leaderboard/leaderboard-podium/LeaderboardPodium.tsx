@@ -1,8 +1,13 @@
+import type { Locale } from "@/utils/i18n";
 import { useWinnerPodium } from "./Hook";
 import WinnerPodium from "./WinnerPodium";
 
-const LeaderboardPodium = () => {
-  const { data, error, status } = useWinnerPodium();
+interface LeaderboardPodiumProps {
+  locale: Locale;
+}
+
+const LeaderboardPodium = ({ locale }: LeaderboardPodiumProps) => {
+  const { data, error, status, t } = useWinnerPodium(locale);
 
   const firstRank = data?.data[0];
   const secondRank = data?.data[1];
@@ -17,6 +22,7 @@ const LeaderboardPodium = () => {
         identity={secondRank?.referral_code ?? "loading..."}
         referralCount={secondRank?.referrals_count ?? 0}
         isLoading={status === "loading"}
+        t={t}
       />
 
       <WinnerPodium
@@ -24,6 +30,7 @@ const LeaderboardPodium = () => {
         identity={firstRank?.referral_code ?? "loading..."}
         referralCount={firstRank?.referrals_count ?? 0}
         isLoading={status === "loading"}
+        t={t}
       />
 
       <WinnerPodium
@@ -31,6 +38,7 @@ const LeaderboardPodium = () => {
         identity={thirdRank?.referral_code ?? "loading..."}
         referralCount={thirdRank?.referrals_count ?? 0}
         isLoading={status === "loading"}
+        t={t}
       />
     </div>
   );

@@ -5,6 +5,10 @@ import GooglePlay from "@/assets/download/google-play-download.png";
 import KingOfTheShill from "@/assets/quests/king-of-the-shill.png";
 import { Image } from "astro:assets";
 import Decoration from "../body-layout/Decoration.astro";
+import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
 ---
 
 <section id="information" class="mb-[90px]">
@@ -18,7 +22,7 @@ import Decoration from "../body-layout/Decoration.astro";
         <div class="flex flex-col gap-5 md:gap-0">
           <div class="flex items-end">
             <div>
-              <p class="font-tag-caps">QUEST #001</p>
+              <p class="font-tag-caps">{t("quets.info.code")}</p>
 
               <h2
                 class="font-quest-title flex flex-col text-[58px] md:flex-row md:items-center md:gap-4 xl:text-[80px]"
