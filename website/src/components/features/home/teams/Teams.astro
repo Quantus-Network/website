@@ -12,7 +12,6 @@ import Chris from "@/assets/teams/chris-avatar.png";
 import Joe from "@/assets/teams/joe-avatar.png";
 import Nik from "@/assets/teams/nik-avatar.png";
 import Cezary from "@/assets/teams/cezary-avatar.png";
-import Rob from "@/assets/teams/rob-avatar.png";
 import ProfileCard from "./ProfileCard.astro";
 import {
   createTranslator,
@@ -57,18 +56,6 @@ const profileData: (ProfileData & {
     social: {
       href: "https://github.com/czareko",
       type: "github",
-    },
-  },
-  {
-    name: "Rob Thijssen",
-    title: "Dev Ops",
-    avatar: {
-      alt: "Rob Thijssen's avatar",
-      src: Rob,
-    },
-    social: {
-      href: "https://rob.tn/",
-      type: "website",
     },
   },
 ];
@@ -148,7 +135,7 @@ const profileData: (ProfileData & {
     </figure>
 
     <div
-      class="flex flex-col gap-[42px] md:grid md:grid-cols-2 md:gap-x-[22px] md:gap-y-10 lg:grid-cols-4"
+      class="flex flex-col gap-[42px] md:flex-row md:flex-wrap md:gap-x-[22px] md:gap-y-10 md:justify-center"
     >
       {
         profileData.map((data) => (
