@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 
 import type { Props as ProfileData } from "./ProfileCard.astro";
+import type { Props as ExtraData } from "./ExtraCard.astro";
 import Button from "@/components/ui/Button.astro";
 import Separator from "@/components/ui/Separator.astro";
 import SocialX from "@/assets/socials/social-x.svg";
@@ -18,6 +19,7 @@ import {
   getLocaleFromUrl,
   getLocalizedPath,
 } from "@/utils/i18n";
+import ExtraCard from "./ExtraCard.astro";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
@@ -59,6 +61,30 @@ const profileData: (ProfileData & {
     },
   },
 ];
+
+const extraProfiles: ExtraData[] = [
+  {
+    name: "Balaji Srinivasan",
+    title: "Key Investor",
+    subTitles: [
+      "Author of The Network State.",
+      "Founder of The Network School.",
+    ],
+    social: {
+      href: "https://x.com/balajis",
+      type: "x",
+    },
+  },
+  {
+    name: "Raghav Gulati",
+    title: "Strategic Advisor",
+    subTitles: ["CEO Coinlist"],
+    social: {
+      href: "https://x.com/rargulati",
+      type: "x",
+    },
+  },
+];
 ---
 
 <section
@@ -87,7 +113,7 @@ const profileData: (ProfileData & {
     <figure class="lg:flex lg:justify-between lg:gap-5">
       <div class="flex flex-col gap-5 lg:justify-between">
         <Image
-          class={"size-full max-w-[600px] mx-auto lg:hidden"}
+          class={"size-full max-w-[390px] mx-auto lg:hidden"}
           src={Chris}
           alt="Christopher Smith's avatar"
           layout="full-width"
@@ -135,7 +161,7 @@ const profileData: (ProfileData & {
     </figure>
 
     <div
-      class="flex flex-col gap-[42px] md:flex-row md:flex-wrap md:gap-x-[22px] md:gap-y-10 md:justify-center"
+      class="flex flex-col gap-[42px] md:flex-row md:flex-wrap md:justify-center md:gap-y-10"
     >
       {
         profileData.map((data) => (
@@ -154,6 +180,12 @@ const profileData: (ProfileData & {
           </ProfileCard>
         ))
       }
+    </div>
+
+    <div
+      class="mt-16 flex flex-col gap-[50px] md:flex-row md:flex-wrap md:justify-center md:gap-x-[76px] md:gap-y-10"
+    >
+      {extraProfiles.map((data) => <ExtraCard {...data} />)}
     </div>
   </div>
 </section>

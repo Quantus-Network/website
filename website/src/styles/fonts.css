@@ -5,11 +5,39 @@
 
 /* https://tailwindcss.com/docs/adding-custom-styles#adding-custom-utilities */
 @utility font-large-body {
-  font-family: Prompt;
+  font-family: var(--font-primary);
   font-size: 20px;
   font-style: normal;
   font-weight: 300;
   line-height: 150%;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+}
+@utility font-quest-title {
+  font-family: var(--font-primary);
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 80px */
+  letter-spacing: 1.6px;
+}
+@utility font-quest-title-conjuction {
+  font-family: var(--font-primary);
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 40px */
+  letter-spacing: 0.8px;
+}
+@utility font-large-body-bold {
+  /* Large Body Bold */
+  font-family: var(--font-primary);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 28px */
+  letter-spacing: 0.4px;
   font-feature-settings:
     "liga" off,
     "clig" off;
@@ -44,6 +72,16 @@
     "liga" off,
     "clig" off;
 }
+@utility font-body-bold {
+  font-family: var(--font-primary);
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 25.5px */
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+}
 @utility font-body-mobile {
   font-family: var(--font-primary);
   font-size: 15px;
@@ -54,7 +92,15 @@
     "liga" off,
     "clig" off;
 }
-
+@utility font-extra-card-title {
+  font-family: var(--font-primary);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 120%; /* 19.2px */
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+}
 @utility font-tag {
   font-family: var(--font-primary);
   font-size: 23px;
@@ -67,7 +113,7 @@
     "clig" off;
 }
 @utility font-tag-mobile {
-  font-family: Prompt;
+  font-family: var(--font-primary);
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
@@ -88,7 +134,7 @@
     "clig" off;
 }
 @utility font-tag-caps {
-  font-family: Prompt;
+  font-family: var(--font-primary);
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
@@ -195,7 +241,7 @@
     "clig" off;
 }
 @utility font-giant {
-  font-family: Prompt;
+  font-family: var(--font-primary);
   font-size: 194px;
   font-style: normal;
   font-weight: 900;
@@ -207,7 +253,7 @@
     "clig" off;
 }
 @utility font-qday-title {
-  font-family: Prompt;
+  font-family: var(--font-primary);
   font-size: 33px;
   font-style: normal;
   font-weight: 100;
@@ -215,7 +261,7 @@
   letter-spacing: 0.99px;
 }
 @utility font-deadline {
-  font-family: Prompt;
+  font-family: var(--font-primary);
   font-size: 28px;
   font-style: normal;
   font-weight: 600;
@@ -227,7 +273,7 @@
     "clig" off;
 }
 @utility font-deadline-mobile {
-  font-family: Prompt;
+  font-family: var(--font-primary);
   font-size: 18px;
   font-style: normal;
   font-weight: 600;

@@ -15,8 +15,13 @@ export interface Props {
 const { name, title, avatar } = Astro.props;
 ---
 
-<figure class="flex flex-col gap-6">
-  <Image class="w-full" src={avatar.src} alt={avatar.alt} layout="full-width" />
+<figure class="mx-auto flex flex-col gap-6">
+  <Image
+    class="max-w-[390px]"
+    src={avatar.src}
+    alt={avatar.alt}
+    layout="full-width"
+  />
 
   <figcaption class="flex w-[280px] flex-col gap-2 lg:w-full">
     <slot name="social" />

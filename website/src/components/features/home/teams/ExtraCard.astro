@@ -1,0 +1,43 @@
+---
+import SocialX from "@/assets/socials/social-x.svg";
+import SocialGithub from "@/assets/socials/social-github.svg";
+import { Globe } from "@lucide/astro";
+import Separator from "@/components/ui/Separator.astro";
+
+export interface Props {
+  name: string;
+  title: string;
+  subTitles: string[];
+  social: {
+    href: string;
+    type: "x" | "website" | "github";
+  };
+}
+
+const { name, title, subTitles, social } = Astro.props;
+---
+
+<div class="mx-auto flex gap-4 md:mx-0">
+  <a
+    slot="social"
+    href={social.href}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="text-button-icon bg-button-icon-body flex size-7 cursor-pointer items-center justify-center rounded-full hover:brightness-125 min-[360px]:size-8"
+  >
+    {social.type === "x" && <SocialX />}
+    {social.type === "github" && <SocialGithub />}
+    {social.type === "website" && <Globe />}
+  </a>
+
+  <div class="min-w-[268px]">
+    <p class="font-extra-card-title mb-1">{title}</p>
+    <strong class="font-tag">{name}</strong>
+
+    <Separator class="my-2 h-[0.5px]" />
+
+    <div>
+      {subTitles.map((subTitle) => <p class="font-body">{subTitle}</p>)}
+    </div>
+  </div>
+</div>
