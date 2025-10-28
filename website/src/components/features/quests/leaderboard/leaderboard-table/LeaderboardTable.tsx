@@ -15,7 +15,9 @@ const LeaderboardTable = ({ locale }: LeaderboardTableProps) => {
       table={table}
       fetch={{
         status: getStatus(),
-        errorFallback: <p>Error: {error && error.message}</p>,
+        errorFallback: (
+          <p className="text-red-500">Error: {error && error.message}</p>
+        ),
       }}
       withControls
       t={t}

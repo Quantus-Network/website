@@ -110,22 +110,23 @@ export const DataTable = ({
               <RowSkeleton rowCount={pageSize} columnsLength={columnsLength} />
             )}
 
-            {table.getRowModel().rows.map((row) => {
-              return (
-                <TableRow key={row.id}>
-                  {row.getVisibleCells().map((cell) => {
-                    return (
-                      <TableCell key={cell.id}>
-                        {flexRender(cell.column.columnDef.cell, {
-                          ...cell.getContext(),
-                          ...customCellProps,
-                        })}
-                      </TableCell>
-                    );
-                  })}
-                </TableRow>
-              );
-            })}
+            {status === "success" &&
+              table.getRowModel().rows.map((row) => {
+                return (
+                  <TableRow key={row.id}>
+                    {row.getVisibleCells().map((cell) => {
+                      return (
+                        <TableCell key={cell.id}>
+                          {flexRender(cell.column.columnDef.cell, {
+                            ...cell.getContext(),
+                            ...customCellProps,
+                          })}
+                        </TableCell>
+                      );
+                    })}
+                  </TableRow>
+                );
+              })}
           </TableBody>
         </Table>
       </div>
