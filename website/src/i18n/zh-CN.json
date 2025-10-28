@@ -55,8 +55,8 @@
   },
   "app": {
     "meta": {
-      "title": "Quantus Network - 量子安全的第一层区块链",
-      "description": "一个量子安全的开源第一层区块链，采用后量子密码学和 zk-proof 可扩展性构建，为您的数字资产提供未来保障。"
+      "title": "下载 Quantus 钱包 | 量子安全加密应用",
+      "description": "下载 Quantus 应用 — 一款具有可逆交易、恢复选项和 zk-proof 保护的量子安全加密钱包。支持 iOS 和 Android。"
     },
     "tagline": "您的量子安全网关已准备就绪",
     "title": "Quantus 应用",
@@ -185,8 +185,8 @@
   },
   "checker": {
     "meta": {
-      "title": "Quantus Network - 量子安全的第一层区块链",
-      "description": "一个量子安全的开源第一层区块链，采用后量子密码学和 zk-proof 可扩展性构建，为您的数字资产提供未来保障。"
+      "title": "量子风险检查器 | 扫描您的钱包或 ENS 的 Q-Day 风险",
+      "description": "检查任何以太坊钱包或 ENS 名称是否存在量子威胁。立即获取您的 Q-Day 风险评分，看看您的加密资产到底有多安全。"
     },
     "subtitle": "量子风险检查器",
     "title": "您在 Qday（量子日）安全吗？",
@@ -237,8 +237,8 @@
   },
   "quests": {
     "meta": {
-      "title": "Quantus Network - 量子安全的第一层区块链",
-      "description": "一个量子安全的开源第一层区块链，采用后量子密码学和 zk-proof 可扩展性构建，为您的数字资产提供未来保障。"
+      "title": "Quantus 任务 | 加入游戏并在 Quantus 网络上赚取奖励",
+      "description": "参与 Quantus 任务 — 赢取真实奖励的有趣区块链挑战。在 Quantus 网络上赚取积分、攀登排行榜并确保您的空投份额。"
     },
     "hero": {
       "welcome": "欢迎来到",
@@ -319,8 +319,8 @@
   },
   "contact": {
     "meta": {
-      "title": "Quantus Network - 量子安全的第一层区块链",
-      "description": "一个量子安全的开源第一层区块链，采用后量子密码学和 zk-proof 可扩展性构建，为您的数字资产提供未来保障。"
+      "title": "联系 Quantus Network | 获取支持或合作信息",
+      "description": "如需支持、合作或媒体咨询，请联系 Quantus Network 团队。我们将帮您快速联系到合适的专家。"
     },
     "title": "取得联系",
     "subtitle": "联系我们，让我们一起创造一个充满可能性的宇宙！",
@@ -339,8 +339,8 @@
   },
   "about": {
     "meta": {
-      "title": "Quantus Network - 量子安全的第一层区块链",
-      "description": "一个量子安全的开源第一层区块链，采用后量子密码学和 zk-proof 可扩展性构建，为您的数字资产提供未来保障。"
+      "title": "关于 Quantus Network | 我们对量子安全未来的愿景",
+      "description": "了解 Quantus Network 构建量子安全区块链生态系统的使命。了解我们是谁、我们的目标，以及我们如何保护下一个加密时代。"
     },
     "title": "公司详情",
     "content": {
@@ -358,8 +358,8 @@
   },
   "tos": {
     "meta": {
-      "title": "Quantus Network - 量子安全的第一层区块链",
-      "description": "一个量子安全的开源第一层区块链，采用后量子密码学和 zk-proof 可扩展性构建，为您的数字资产提供未来保障。"
+      "title": "Quantus Network - 服务条款和隐私政策",
+      "description": "阅读 Quantus Network 的服务条款和隐私政策。了解我们如何保护您的数据、确保透明度，并保护您的加密体验安全。"
     },
     "title": "Quantus Network 政策",
     "last_updated": "最后更新：2025 年 6 月 12 日",

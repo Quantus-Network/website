@@ -55,8 +55,8 @@
   },
   "app": {
     "meta": {
-      "title": "Quantus Network - Quantum-Secure Layer 1 Blockchain",
-      "description": "A quantum-secure, open-source Layer 1 blockchain built with post-quantum cryptography and zk-proof scalability to future-proof your digital assets."
+      "title": "Download Quantus Wallet | Quantum-Secure Crypto App",
+      "description": "Download the Quantus App — a quantum-secure crypto wallet with reversible transactions, recovery options, and zk-proof protection. iOS & Android ready."
     },
     "tagline": "Your quantum-secure gateway is ready",
     "title": "Quantus App",
@@ -185,8 +185,8 @@
   },
   "checker": {
     "meta": {
-      "title": "Quantus Network - Quantum-Secure Layer 1 Blockchain",
-      "description": "A quantum-secure, open-source Layer 1 blockchain built with post-quantum cryptography and zk-proof scalability to future-proof your digital assets."
+      "title": "Quantum Risk Checker | Scan Your Wallet or ENS for Q-Day Risk",
+      "description": "Check any Ethereum wallet or ENS name for quantum threats. Get your Q-Day risk score instantly and see how secure your crypto really is."
     },
     "subtitle": "QUANTUM RISK CHECKER",
     "title": "Are you safe on Qday?",
@@ -237,8 +237,8 @@
   },
   "quests": {
     "meta": {
-      "title": "Quantus Network - Quantum-Secure Layer 1 Blockchain",
-      "description": "A quantum-secure, open-source Layer 1 blockchain built with post-quantum cryptography and zk-proof scalability to future-proof your digital assets."
+      "title": "Quantus Quests | Join the Game & Earn Rewards on Quantus Network",
+      "description": "Compete in Quantus Quests — fun blockchain challenges with real rewards. Earn points, climb the leaderboard, and secure your airdrop share on Quantus Network."
     },
     "hero": {
       "welcome": "Welcome To",
@@ -323,8 +323,8 @@
   },
   "contact": {
     "meta": {
-      "title": "Quantus Network - Quantum-Secure Layer 1 Blockchain",
-      "description": "A quantum-secure, open-source Layer 1 blockchain built with post-quantum cryptography and zk-proof scalability to future-proof your digital assets."
+      "title": "Contact Quantus Network | Get Support or Partnership Info",
+      "description": "Reach out to the Quantus Network team for support, partnership, or media inquiries. We'll help you connect with the right expert fast."
     },
     "title": "Get in touch",
     "subtitle": "Reach out, and let's create a universe of possibilities together!",
@@ -343,8 +343,8 @@
   },
   "about": {
     "meta": {
-      "title": "Quantus Network - Quantum-Secure Layer 1 Blockchain",
-      "description": "A quantum-secure, open-source Layer 1 blockchain built with post-quantum cryptography and zk-proof scalability to future-proof your digital assets."
+      "title": "About Quantus Network | Our Vision for a Quantum-Secure Future",
+      "description": "Discover Quantus Network's mission to build a quantum-secure blockchain ecosystem. Learn who we are, our goals, and how we protect the next era of crypto."
     },
     "title": "Company Details",
     "content": {
@@ -362,8 +362,8 @@
   },
   "tos": {
     "meta": {
-      "title": "Quantus Network - Quantum-Secure Layer 1 Blockchain",
-      "description": "A quantum-secure, open-source Layer 1 blockchain built with post-quantum cryptography and zk-proof scalability to future-proof your digital assets."
+      "title": "Quantus Network - Terms of Service & Privacy Policy",
+      "description": "Read Quantus Network's Terms of Service and Privacy Policy. Learn how we protect your data, ensure transparency, and keep your crypto experience secure."
     },
     "title": "Quantus Network Policies",
     "last_updated": "Last updated: June 12, 2025",
