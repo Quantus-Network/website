@@ -3,7 +3,7 @@ const env = {
   SITE_BASE_URL: "https://www.quantus.com",
   GA_ID: "G-JBZETNF6F1",
   API_URL: "https://api.quantus.com/api",
-  GRAPHQL_URL: "https://quantu.se/graphql",
+  GRAPHQL_URL: "https://subsquid.quantus.com/graphql",
 };
 
 export default env;
