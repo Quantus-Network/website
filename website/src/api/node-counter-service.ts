@@ -171,7 +171,7 @@ class NodeCounterService {
         message[0] === 0 &&
         typeof message[1] === "number"
       ) {
-        const chainData = message[3];
+        const chainData = message[5];
         const nodeCount = chainData[2];
         this.state.count = nodeCount;
 
