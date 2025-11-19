@@ -34,7 +34,7 @@ class NodeCounterService {
   private isConnecting = false;
 
   private options: Required<NodeCounterOptions> = {
-    wsUrl: "wss://tc0.res.fm/feed",
+    wsUrl: "wss://a1-dirac.quantus.cat",
     maxReconnectAttempts: 5,
     reconnectDelay: 1000,
     heartbeatInterval: 30000,
@@ -125,6 +125,16 @@ class NodeCounterService {
       this.isConnecting = false;
       this.reconnectAttempts = 0;
       this.updateState("connected", "Connected to network");
+
+      // Subscribe to system health (includes peer count)
+      const healthRequest = {
+        id: 1,
+        jsonrpc: "2.0",
+        method: "system_health",
+        params: [],
+      };
+
+      this.ws?.send(JSON.stringify(healthRequest));
     };
 
     this.ws.onmessage = (event) => {
@@ -166,13 +176,8 @@ class NodeCounterService {
 
       const message = await JSON.parse(textData);
 
-      if (
-        message.length >= 4 &&
-        message[0] === 0 &&
-        typeof message[1] === "number"
-      ) {
-        const chainData = message[3];
-        const nodeCount = chainData[2];
+      if (message.id == 1 && message.result?.peers > 0) {
+        const nodeCount = message.result.peers;
         this.state.count = nodeCount;
 
         this.notifyListeners();
