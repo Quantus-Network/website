@@ -32,7 +32,7 @@ const WinnerPodium = ({
         rank === 3 && "order-3",
       )}
     >
-      <div className="max-h-[128px]">
+      <div className="max-h-[128px] max-w-[160px]">
         {rank == 1 && (
           <img
             className="size-full translate-x-[calc(21px/2)]"
