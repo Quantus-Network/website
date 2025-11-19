@@ -1,0 +1,61 @@
+---
+import Layout from "@/components/layout/Layout.astro";
+
+import Leaderboard from "@/components/features/quests/leaderboard/Leaderboard.astro";
+import HeroBanner from "@/components/features/quests/hero-banner/HeroBanner.astro";
+
+import env from "@/config";
+import { getLocaleFromUrl, createTranslator } from "@/utils/i18n";
+import type { SEOProps } from "astro-seo";
+import BodyLayout from "@/components/features/quests/body-layout/BodyLayout.astro";
+import Rules from "@/components/features/quests/rules/Rules.astro";
+import Information from "@/components/features/quests/information/Information.astro";
+import defaultMetadata from "@/constants/default-metadata";
+import { JsonLdGraph } from "@/utils/build-json-ld";
+import { androidAppJsonLd, iosAppJsonLd } from "@/constants/default-jsonld";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
+
+const metadata: SEOProps = {
+  ...defaultMetadata,
+  title: t("quests.meta.title"),
+  description: t("quests.meta.description"),
+  canonical: `${env.SITE_BASE_URL}/quests`,
+};
+
+const jsonLd = JsonLdGraph({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: `${env.SITE_BASE_URL}`,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: metadata.title,
+          item: metadata.canonical as string,
+        },
+      ],
+    },
+    androidAppJsonLd,
+    iosAppJsonLd,
+  ],
+});
+---
+
+<Layout {...metadata} jsonLd={jsonLd}>
+  <HeroBanner />
+
+  <BodyLayout>
+    <Information />
+    <Leaderboard />
+    <Rules />
+  </BodyLayout>
+</Layout>

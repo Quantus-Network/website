@@ -9,12 +9,15 @@ import type { SEOProps } from "astro-seo";
 import env from "@/config";
 import { JsonLd } from "@/utils/build-json-ld";
 import type { BreadcrumbList } from "schema-dts";
+import defaultMetadata from "@/constants/default-metadata";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
 
 const metadata: SEOProps = {
-  title: "Contact Us",
+  ...defaultMetadata,
+  title: t("contact.meta.title"),
+  description: t("contact.meta.description"),
   canonical: `${env.SITE_BASE_URL}/contact`,
 };
 

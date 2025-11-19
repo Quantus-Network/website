@@ -2,6 +2,7 @@
 import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 import sitemap from "@astrojs/sitemap";
+import react from "@astrojs/react";
 
 const SITE_BASE_URL = "https://www.quantus.com";
 const DEFAULT_LOCALE = "en-US";
@@ -36,6 +37,7 @@ const HOMEPAGE_LINK = SUPPORTED_LOCALES.map((locale) => {
 // https://astro.build/config
 export default defineConfig({
   vite: {
+    // @ts-ignore
     plugins: [tailwindcss()],
   },
   site: "https://www.quantus.com",
@@ -52,5 +54,6 @@ export default defineConfig({
         return item;
       },
     }),
+    react()
   ],
 });

@@ -8,62 +8,35 @@ import Roadmap from "@/components/features/home/roadmap/Roadmap.astro";
 import Events from "@/components/features/home/events/Events.astro";
 import AppDownload from "@/components/features/home/app-download/AppDownload.astro";
 import Socials from "@/components/ui/Socials.astro";
-import { getLocaleFromUrl, getLocalizedMetadata } from "@/utils/i18n";
+import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
 import { JsonLdGraph } from "@/utils/build-json-ld";
 import env from "@/config";
 import defaultMetadata from "@/constants/default-metadata";
 import {
+  websiteJsonLd,
   androidAppJsonLd,
   iosAppJsonLd,
   organizationJsonLd,
 } from "@/constants/default-jsonld";
+import type { SEOProps } from "astro-seo";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
-const localizedMetadata = await getLocalizedMetadata(locale);
+const t = await createTranslator(locale);
+
+const metadata: SEOProps = {
+  ...defaultMetadata,
+  title: t("home.meta.title"),
+  description: t("home.meta.description"),
+  canonical: `${env.SITE_BASE_URL}`,
+};
 
 const jsonLd = JsonLdGraph({
   "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebSite",
-      name: localizedMetadata.title,
-      url: env.SITE_BASE_URL,
-      image: {
-        "@type": "ImageObject",
-        caption: defaultMetadata.openGraph?.image?.alt ?? "",
-        contentUrl: defaultMetadata.openGraph?.image?.url as string,
-      },
-      description: localizedMetadata.description,
-      sameAs: [
-        "https://www.linkedin.com/company/quantus-network",
-        "https://x.com/QuantusNetwork",
-        "https://www.instagram.com/quantusnetwork",
-        "https://www.youtube.com/@Quantus.Network",
-        "https://github.com/Quantus-Network",
-      ],
-      potentialAction: {
-        "@type": "SubscribeAction",
-        description:
-          "Subscribe to our Newsletter. Alpha Alert! Get your weekly news-blast with sneak previews, updates, news roundup, educational content and more",
-        target: {
-          "@type": "EntryPoint",
-          urlTemplate: `${env.SITE_BASE_URL}/#footer`,
-          actionPlatform: [
-            "http://schema.org/DesktopWebPlatform",
-            "http://schema.org/IOSPlatform",
-            "http://schema.org/AndroidPlatform",
-          ],
-        },
-      },
-    },
-    organizationJsonLd,
-    iosAppJsonLd,
-    androidAppJsonLd,
-  ],
+  "@graph": [websiteJsonLd, organizationJsonLd, iosAppJsonLd, androidAppJsonLd],
 });
 ---
 
-<Layout {...localizedMetadata} jsonLd={jsonLd}>
+<Layout {...metadata} jsonLd={jsonLd}>
   <HeroBanner />
   <IntroductionVideo />
   <Benefits />

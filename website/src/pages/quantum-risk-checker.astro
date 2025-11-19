@@ -14,12 +14,15 @@ import AppBenefitCard from "@/components/ui/AppBenefitCard.astro";
 import { ArrowRight } from "@lucide/astro";
 import { JsonLd } from "@/utils/build-json-ld";
 import type { BreadcrumbList } from "schema-dts";
+import defaultMetadata from "@/constants/default-metadata";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
 
 const metadata: SEOProps = {
-  title: "Quantum Risk Checker",
+  ...defaultMetadata,
+  title: t("checker.meta.title"),
+  description: t("checker.meta.description"),
   canonical: `${env.SITE_BASE_URL}/quantum-risk-checker`,
 };
 

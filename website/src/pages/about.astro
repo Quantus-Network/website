@@ -5,6 +5,7 @@ import Layout from "@/components/layout/Layout.astro";
 
 import env from "@/config";
 import { organizationJsonLd } from "@/constants/default-jsonld";
+import defaultMetadata from "@/constants/default-metadata";
 import { JsonLdGraph } from "@/utils/build-json-ld";
 import { getLocaleFromUrl, createTranslator } from "@/utils/i18n";
 import type { SEOProps } from "astro-seo";
@@ -13,7 +14,9 @@ const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
 
 const metadata: SEOProps = {
-  title: "About Us",
+  ...defaultMetadata,
+  title: t("about.meta.title"),
+  description: t("about.meta.description"),
   canonical: `${env.SITE_BASE_URL}/about`,
 };
 
@@ -46,7 +49,7 @@ const jsonLd = JsonLdGraph({
   <section
     class="max-w-content mx-auto px-[30px] py-10 lg:flex lg:gap-20 lg:pt-[120px] lg:pb-20 2xl:px-0"
   >
-    <div class="justify-betwee hidden flex-col gap-10 lg:flex">
+    <div class="hidden flex-col justify-between gap-10 lg:flex">
       <div class="flex flex-col items-center gap-[51px]">
         <BrandLogo class="h-[139px] w-[154px]" />
         <BrandName class="h-[49px] w-[366px]" />

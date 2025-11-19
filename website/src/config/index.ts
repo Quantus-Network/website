@@ -3,6 +3,7 @@ const env = {
   SITE_BASE_URL: "https://www.quantus.com",
   GA_ID: "G-JBZETNF6F1",
   API_URL: "https://api.quantus.com/api",
+  TASK_MASTER_URL: "https://quests.quantus.com/api",
   GRAPHQL_URL: "https://subsquid.quantus.com/graphql",
 };
 

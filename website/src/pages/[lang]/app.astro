@@ -14,24 +14,23 @@ import {
   getLocaleFromUrl,
   createTranslator,
   SUPPORTED_LOCALES,
-  getLocalizedMetadata,
 } from "@/utils/i18n";
 import type { SEOProps } from "astro-seo";
-import { APP_LINKS } from "@/constants/app-links";
 import { JsonLdGraph } from "@/utils/build-json-ld";
 import { androidAppJsonLd, iosAppJsonLd } from "@/constants/default-jsonld";
+import defaultMetadata from "@/constants/default-metadata";
 
 export async function getStaticPaths() {
   return SUPPORTED_LOCALES.map((lang) => ({ params: { lang } }));
 }
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
-const localizedMetadata = await getLocalizedMetadata(locale);
 const t = await createTranslator(locale);
 
 const metadata: SEOProps = {
-  ...localizedMetadata,
-  title: "App Download",
+  ...defaultMetadata,
+  title: t("app.meta.title"),
+  description: t("app.meta.description"),
   canonical: `${env.SITE_BASE_URL}/${locale}/app`,
 };
 

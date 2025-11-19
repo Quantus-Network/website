@@ -243,20 +243,6 @@ export function getAlternateUrls(pathname: string): Record<Locale, string> {
 }
 
 /**
- * Get locale-specific metadata
- */
-export async function getLocalizedMetadata(locale: Locale) {
-  const translations = await loadTranslations(locale);
-
-  return {
-    title: getNestedValue(translations, "site.title") || "Quantus Network",
-    description:
-      getNestedValue(translations, "site.description") ||
-      "Quantum-secure Layer 1 blockchain",
-  };
-}
-
-/**
  * Validate if a string is a supported locale
  */
 export function isValidLocale(locale: string): locale is Locale {

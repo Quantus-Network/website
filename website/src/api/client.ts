@@ -36,12 +36,55 @@ interface SubscribeData {
   email: string;
 }
 
+export interface LeaderboardEntrant {
+  quan_address: string;
+  eth_address: string;
+  referral_code: string;
+  referrals_count: number;
+  is_reward_program_participant: boolean;
+  last_selected_at: string;
+  created_at: string;
+}
+
+interface LeaderboardOptions {
+  page?: number;
+  pageSize?: number;
+}
+
+export interface LeaderboardResponse {
+  data: LeaderboardEntrant[];
+  meta: {
+    page: number;
+    page_size: number;
+    total_items: number;
+    total_pages: number;
+  };
+}
+
 type ApiResponse<T = any> = Promise<Response>;
 
 const createApiClient = () => {
   const nodeCounter = new NodeCounterService();
 
   const methods = {
+    fetchLeaderboard: (
+      options: LeaderboardOptions,
+    ): ApiResponse<LeaderboardResponse> => {
+      let url = `${env.TASK_MASTER_URL}/addresses/leaderboard`;
+
+      let queryParams = [];
+      if (options.page) queryParams.push(`page=${options.page}`);
+      if (options.pageSize) queryParams.push(`page_size=${options.pageSize}`);
+
+      if (queryParams.length != 0) url = url + "?" + queryParams.join("&");
+
+      return fetch(url, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+    },
+
     /**
      * Fetch blockchain statistics including transaction and account counts
      */

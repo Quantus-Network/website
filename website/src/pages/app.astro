@@ -14,12 +14,15 @@ import { getLocaleFromUrl, createTranslator } from "@/utils/i18n";
 import type { SEOProps } from "astro-seo";
 import { JsonLdGraph } from "@/utils/build-json-ld";
 import { androidAppJsonLd, iosAppJsonLd } from "@/constants/default-jsonld";
+import defaultMetadata from "@/constants/default-metadata";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
 
 const metadata: SEOProps = {
-  title: "App Download",
+  ...defaultMetadata,
+  title: t("app.meta.title"),
+  description: t("app.meta.description"),
   canonical: `${env.SITE_BASE_URL}/app`,
 };
 

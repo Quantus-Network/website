@@ -1,24 +1,27 @@
 {
-  "site": {
-    "title": "Quantus Network - Blockchain Layer 1 Aman-Kuantum",
-    "description": "Blockchain Layer 1 sumber terbuka yang aman-kuantum, dibangun dengan kriptografi pasca-kuantum dan skalabilitas zk-proof untuk melindungi aset digital Anda di masa depan."
+  "home": {
+    "meta": {
+      "title": "Quantus Network - Blockchain Layer 1 Aman Kuantum",
+      "description": "Blockchain Layer 1 sumber terbuka yang aman kuantum, dibangun dengan kriptografi pasca-kuantum dan skalabilitas zk-proof untuk melindungi aset digital Anda di masa depan."
+    }
   },
   "navbar": {
     "about": "Tentang",
-    "foundations": "Dasar-dasar",
+    "foundations": "Fondasi",
     "app": "Aplikasi",
     "team": "Tim",
     "roadmap": "Peta Jalan",
     "events": "Acara",
     "contact": "Kontak",
     "checker": "Pemeriksa Risiko Qday",
-    "cta": "Ikuti BETA Publik"
+    "quests": "Misi",
+    "cta": "Gabung BETA Publik"
   },
   "hero": {
     "tagline": "selamat datang di masa depan",
-    "title": "Amankan Kripto Anda dengan Kuantum",
+    "title": "Amankan Kripto Anda Secara Kuantum",
     "subtitle": "Quantus Network, Blockchain L1 untuk Era Kuantum",
-    "cta_primary": "Ikuti BETA Publik",
+    "cta_primary": "Gabung BETA Publik",
     "cta_secondary": "Baca Whitepaper",
     "stats": {
       "blocktime": "Waktu Blok",
@@ -30,55 +33,71 @@
   },
   "video": {
     "title": "Bangun nilai di atas kriptografi yang bertahan lama.",
-    "description": "Quantus hadir untuk mereka yang melihat apa yang akan datang; gelombang inovasi berikutnya. Blockchain yang siap untuk masa depan dan aman-kuantum yang dapat mengamankan nilai hari ini dari ancaman di masa depan."
+    "description": "Quantus hadir untuk orang-orang yang melihat apa yang akan datang; gelombang inovasi berikutnya. Blockchain yang siap menghadapi masa depan dan aman kuantum yang dapat mengamankan nilai hari ini terhadap ancaman hari esok."
   },
   "benefits": {
     "title": "Masa Depan adalah Kuantum",
     "description": "Quantus Network adalah blockchain Layer 1 yang dirancang untuk berkembang di era kuantum. Diamankan dengan kriptografi pasca-kuantum dan diskalakan dengan zero-knowledge proof, ia memberikan tingkat keamanan, skalabilitas, dan kegunaan yang tidak dapat ditandingi oleh chain saat ini. Desain baru yang mengantisipasi gelombang teknologi kuantum yang akan datang.",
     "cards": {
       "quantum_secure": {
-        "title": "Aman-Kuantum di Setiap Lapisan",
-        "description": "Diamankan dengan kriptografi pasca-kuantum yang didukung NIST, setiap lapisan Quantus mulai dari tanda tangan transaksi hingga komunikasi P2P dirancang untuk menahan serangan yang akan merusak blockchain saat ini. Dibangun untuk bertahan lama, dan siap berevolusi dengan era kuantum."
+        "title": "Aman Kuantum di Setiap Lapisan",
+        "description": "Diamankan dengan kriptografi pasca-kuantum yang didukung NIST, setiap lapisan Quantus mulai dari tanda tangan transaksi hingga komunikasi P2P direkayasa untuk menahan serangan yang akan merusak blockchain saat ini. Dibangun untuk bertahan lama, dan siap berevolusi bersama era kuantum."
       },
       "zero_knowledge": {
-        "title": "Zero-Knowledge Sejak Awal",
+        "title": "Zero-Knowledge Berdasarkan Desain",
         "description": "Zero-knowledge proof rekursif menjaga jaringan tetap cepat. Alih-alih memproses ulang semuanya, node memverifikasi bukti ringkas - mengurangi overhead dan memastikan sistem tumbuh dengan lancar di bawah permintaan nyata."
       },
       "security_control": {
-        "title": "Keamanan yang Anda Kendalikan",
-        "description": "Quantus memberikan Anda kendali. Anda memutuskan bagaimana aset bergerak, bagaimana aset dilindungi, dan siapa yang harus dipercaya. Kompleksitas ditangani di latar belakang, sehingga pengalaman Anda terasa jelas, aman, dan dibangun untuk bertahan hingga masa depan kuantum."
+        "title": "Keamanan yang Anda Kontrol",
+        "description": "Quantus memberi Anda kendali. Anda memutuskan bagaimana aset bergerak, bagaimana aset dilindungi, dan siapa yang harus dipercaya. Kompleksitas ditangani di latar belakang, sehingga pengalaman Anda terasa jelas, aman, dan dibangun untuk bertahan hingga masa depan kuantum."
       }
     }
   },
   "app": {
-    "tagline": "Gerbang aman-kuantum Anda telah siap",
+    "meta": {
+      "title": "Unduh Dompet Quantus | Aplikasi Kripto Aman Kuantum",
+      "description": "Unduh Aplikasi Quantus — dompet kripto aman kuantum dengan transaksi yang dapat dibalikkan, opsi pemulihan, dan perlindungan zk-proof. Siap untuk iOS & Android."
+    },
+    "tagline": "Gerbang aman kuantum Anda siap",
     "title": "Aplikasi Quantus",
-    "description": "Aplikasi Quantus menempatkan keamanan kuantum dan skalabilitas zero-knowledge langsung di tangan Anda. Setiap perlindungan berjalan secara diam-diam di latar belakang, sehingga Anda dapat fokus pada hal yang penting: memindahkan nilai dengan kejelasan, kepercayaan diri, dan kendali.",
+    "description": "Aplikasi Quantus menempatkan keamanan kuantum dan skalabilitas zero-knowledge langsung di tangan Anda. Setiap pengamanan berjalan tanpa suara di latar belakang, sehingga Anda dapat fokus pada hal yang penting: memindahkan nilai dengan kejelasan, keyakinan, dan kontrol.",
     "benefits": {
       "reversible_transactions": {
         "title": "Transaksi yang Dapat Dibalikkan",
-        "description": "Atur jendela waktu pembalikan untuk setiap pengiriman. Membuat kesalahan? Tidak menerima barang yang dijanjikan? Salah ketik lagi? Cukup balikkan transaksi sebelum waktunya habis."
+        "description": "Tetapkan jendela waktu pembalikan untuk setiap pengiriman. Membuat kesalahan? Tidak menerima barang yang dijanjikan? Salah ketik? Cukup balikkan transaksi sebelum waktunya habis."
       },
       "readable_checkphrases": {
-        "title": "Frasa Pengecekan yang Dapat Dibaca",
-        "description": "Tidak ada lagi paranoia salin-tempel. Kirim dengan percaya diri menggunakan frasa pengecekan unik yang ramah manusia yang akan benar-benar Anda kenali. Tidak ada salah ketik, tidak ada penipuan yang mirip, hanya tujuan yang jelas dan tidak salah lagi."
+        "title": "Frasa Cek yang Dapat Dibaca",
+        "description": "Tidak ada lagi paranoia salin-tempel. Kirim dengan percaya diri menggunakan frasa cek unik yang ramah manusia yang benar-benar akan Anda kenali. Tidak ada salah ketik, tidak ada penipuan serupa, hanya tujuan yang jelas dan tidak salah lagi."
       },
       "security_guardians": {
-        "title": "Wali Keamanan",
+        "title": "Penjaga Keamanan",
         "description": "Anda memilih sekutu tepercaya Anda dan memberi mereka kekuatan untuk turun tangan dan mencegat transfer sebelum berhasil. Jaring pengaman rancangan Anda sendiri, melindungi aset Anda saat Anda tidak bisa."
       },
       "beneficiary_recovery": {
         "title": "Penerima Manfaat & Pemulihan",
-        "description": "Rencanakan untuk jangka panjang. Tetapkan akun pemulihan atau penerima manfaat untuk mewarisi dana Anda jika Anda tiada. Aset Anda tetap terlindungi, bahkan selama peristiwa tak terduga. Anggap saja ini sebagai wasiat Anda, yang ditegakkan oleh kode."
+        "description": "Rencanakan untuk jangka panjang. Tentukan akun pemulihan atau penerima manfaat untuk mewarisi dana Anda jika Anda tiada. Aset Anda tetap terlindungi, bahkan selama kejadian tak terduga. Anggap saja sebagai surat wasiat Anda, yang ditegakkan oleh kode."
       }
     },
     "cta": {
-      "tagline": "Beta publik sekarang aktif",
+      "tagline": "Beta publik sekarang tayang",
       "title": "Mereka bilang kuantum masih bertahun-tahun lagi. Mereka mengatakan hal yang sama tentang AI.",
-      "button": "Ikuti Gelombang Kuantum"
+      "button": "Bergabung dengan Gelombang Kuantum"
     }
   },
+  "account": {
+    "meta": {
+      "title": "Quantus Network - Blockchain Layer 1 Aman Kuantum",
+      "description": "Blockchain Layer 1 sumber terbuka yang aman kuantum, dibangun dengan kriptografi pasca-kuantum dan skalabilitas zk-proof untuk melindungi aset digital Anda di masa depan."
+    },
+    "title": "Amankan Kripto Anda Sekarang",
+    "tag": "Jadilah kebal terhadap ancaman kuantum"
+  },
   "invite": {
+    "meta": {
+      "title": "Quantus Network - Blockchain Layer 1 Aman Kuantum",
+      "description": "Blockchain Layer 1 sumber terbuka yang aman kuantum, dibangun dengan kriptografi pasca-kuantum dan skalabilitas zk-proof untuk melindungi aset digital Anda di masa depan."
+    },
     "title": "Anda Diundang untuk Mengamankan Kripto Anda",
     "code": {
       "label": "Kode Referal",
@@ -87,17 +106,17 @@
   },
   "team": {
     "title": "Tim Inti",
-    "description": "Didirikan oleh para insinyur veteran dari startup kripto tahap awal dan mantan pemegang peran CTO. Tim ini menggabungkan keahlian mendalam dalam kriptografi terapan dan sistem zero-knowledge dengan kemampuan yang terbukti untuk mengirimkan infrastruktur yang aman dan terukur.",
+    "description": "Didirikan oleh insinyur veteran dari startup kripto tahap awal dan mantan peran CTO. Tim ini menggabungkan keahlian mendalam dalam kriptografi terapan dan sistem zero-knowledge dengan kemampuan yang terbukti untuk mengirimkan infrastruktur yang aman dan dapat diskalakan.",
     "cta": "Hubungi Kami",
     "members": {
       "chris": {
         "title": "Chief Executive Officer",
-        "bio": "Seorang pelopor teknologi dan pengusaha di garis depan AI, blockchain, dan komputasi kuantum, Chris membawa perpaduan langka antara keahlian teknis yang mendalam dan pemikiran filosofis. Dia telah menghabiskan dekade terakhir membangun alat yang memberdayakan individu dan mendefinisikan kembali kepercayaan digital.",
+        "bio": "Seorang pelopor teknologi dan pengusaha di garis depan AI, blockchain, dan komputasi kuantum, Chris membawa campuran langka keahlian teknis yang mendalam dan pemikiran filosofis. Dia menghabiskan dekade terakhir membangun alat yang memberdayakan individu dan mendefinisikan kembali kepercayaan digital.",
         "achievements": [
           "Pendiri BitMesh, Lunyr (LUN), dan FactoryDAO (FVT)",
           "Kontributor awal untuk pustaka dasar Bitcoin",
-          "Mantan pemimpin tim AI di Tensor Spark, dengan spesialisasi dalam pembelajaran mesin terapan",
-          "Penasihat keamanan siber pribadi dan pemulihan aset digital untuk individu HNW",
+          "Mantan pemimpin tim AI di Tensor Spark, yang berspesialisasi dalam pembelajaran mesin terapan",
+          "Penasihat pemulihan aset digital dan keamanan siber pribadi untuk individu HNW",
           "Fokus: Kriptografi, Teori Kompleksitas, Topologi Aljabar, Komputasi Kuantum"
         ]
       },
@@ -105,10 +124,10 @@
         "title": "Chief Operating Officer"
       },
       "nik": {
-        "title": "Senior Software Engineer"
+        "title": "Insinyur Perangkat Lunak Senior"
       },
       "cezary": {
-        "title": "Senior Software Engineer"
+        "title": "Insinyur Perangkat Lunak Senior"
       },
       "rob": {
         "title": "Dev Ops"
@@ -126,7 +145,7 @@
       "resonance": {
         "date": "JULI 2025",
         "title": "Resonance Alpha",
-        "content": "Testnet publik, tanda tangan dilithium, transaksi yang dapat dibalikkan"
+        "content": "Testnet publik, tanda tangan Dilithium, transaksi yang dapat dibalikkan"
       },
       "schrodinger": {
         "date": "OKT 2025",
@@ -151,22 +170,26 @@
     }
   },
   "events": {
-    "title": "Ayo Temui Kami",
+    "title": "Datang dan Temui Kami",
     "upcoming": "ACARA MENDATANG:",
     "token2049": {
       "title": "Token 2049",
       "date": "1-2 OKTOBER 2025 MARINA BAY SANDS - Singapura",
-      "description": "Ayo temui kami dan mengobrol tentang kuantum, blockchain, seni, musik, atau apa pun!",
-      "additional": "Kami akan ada di sana sepanjang akhir pekan!",
+      "description": "Datang dan temui kami dan mengobrol tentang kuantum, blockchain, seni, musik, atau apa saja!",
+      "additional": "Kami akan berada di sana sepanjang akhir pekan!",
       "cta": "Detail Acara"
     }
   },
   "socials": {
-    "title": "Ikuti kami untuk konten seru, podcast, wawancara, keajaiban, dan banyak lagi!"
+    "title": "Ikuti kami untuk konten menyenangkan, podcast, wawancara, keajaiban, dan banyak lagi!"
   },
   "checker": {
-    "subtitle": "PENGUKUR RISIKO KUANTUM",
-    "title": "Apakah Anda aman di Hari-Q?",
+    "meta": {
+      "title": "Pemeriksa Risiko Kuantum | Pindai Dompet atau ENS Anda untuk Risiko Q-Day",
+      "description": "Periksa dompet Ethereum atau nama ENS apa pun untuk ancaman kuantum. Dapatkan skor risiko Q-Day Anda secara instan dan lihat seberapa aman kripto Anda sebenarnya."
+    },
+    "subtitle": "PEMERIKSA RISIKO KUANTUM",
+    "title": "Apakah Anda aman pada Qday?",
     "description": "Analisis alamat Ethereum Anda untuk kerentanan komputasi kuantum. Alat kami memeriksa riwayat transaksi dan saldo untuk memberikan penilaian risiko keamanan kuantum yang komprehensif.",
     "form": {
       "label": "Alamat Ethereum",
@@ -174,22 +197,22 @@
       "btn": "Analisis"
     },
     "definition": {
-      "title": "Batas Waktu Kuantum",
-      "paragraph_one": "Hari-Q adalah saat ketika komputer kuantum dapat memecahkan kriptografi yang mengamankan sebagian besar dunia digital saat ini. Algoritma di balik koneksi web yang aman, pembaruan perangkat lunak, sistem perbankan, dan email, seperti kriptografi RSA dan kurva elips, tidak lagi aman.",
-      "paragraph_two": "Bahkan data yang dienkripsi bertahun-tahun sebelumnya bisa dipanen sekarang dan didekripsi nanti, mengekspos informasi rahasia di seluruh pemerintah, bisnis, dan individu."
+      "title": "Tenggat Waktu Kuantum",
+      "paragraph_one": "Q-Day adalah saat ketika komputer kuantum dapat memecahkan kriptografi yang mengamankan sebagian besar dunia digital saat ini. Algoritma di balik koneksi web yang aman, pembaruan perangkat lunak, sistem perbankan, dan email, seperti RSA dan kriptografi kurva eliptik, tidak akan aman lagi.",
+      "paragraph_two": "Bahkan data yang dienkripsi bertahun-tahun sebelumnya dapat dipanen sekarang dan didekripsi nanti, mengekspos informasi rahasia di seluruh pemerintahan, bisnis, dan individu."
     },
     "consequence": {
-      "title": "Apa arti Hari-Q untuk Blockchain dan Aset Digital",
-      "paragraph_one": "Blockchain bergantung pada tanda tangan digital kurva elips untuk membuktikan kepemilikan dana. Di Ethereum misalnya, setiap transaksi keluar secara permanen mengekspos kunci publik dompet.",
-      "paragraph_two": "Komputer kuantum dapat menggunakan kunci publik untuk secara matematis menurunkan kunci pribadi, memungkinkan penyerang untuk memalsukan tanda tangan yang valid dan mentransfer aset tanpa sepengetahuan pemilik.",
-      "paragraph_three": "Perlombaan di seluruh jaringan untuk mengadopsi protokol aman-kuantum akan menyusul, tetapi pada saat itu rantai yang tidak siap bisa saja sudah disusupi.",
+      "title": "Apa arti Q-day bagi Blockchain dan Aset Digital",
+      "paragraph_one": "Blockchain bergantung pada tanda tangan digital kurva eliptik untuk membuktikan kepemilikan dana. Di Ethereum misalnya, setiap transaksi keluar secara permanen mengekspos kunci publik dompet.",
+      "paragraph_two": "Komputer kuantum dapat menggunakan kunci publik untuk mendapatkan kunci pribadi secara matematis, memungkinkan penyerang memalsukan tanda tangan yang valid dan mentransfer aset tanpa sepengetahuan pemilik.",
+      "paragraph_three": "Perebutan di seluruh jaringan untuk mengadopsi protokol aman kuantum akan menyusul, tetapi pada saat itu chain yang tidak siap mungkin sudah disusupi.",
       "invitation_one": "Gunakan",
       "product": "Pemindai Risiko Kuantum",
-      "invitation_two": "kami untuk melihat seberapa rentan alamat Anda dan mengambil tindakan sebelum Hari-Q."
+      "invitation_two": "kami untuk melihat seberapa rentan alamat Anda dan mengambil tindakan sebelum Qday."
     },
     "method": {
       "title": "Cara Kerjanya",
-      "subtitle": "Pemindai Risiko Kuantum memindai alamat Ethereum apa pun dan memberinya Skor Kesiapan Kuantum, Tingkat Risiko, dan Nilai.",
+      "subtitle": "Pemindai Risiko Kuantum memindai alamat Ethereum apa pun dan memberinya Skor Kesiapan Kuantum, Tingkat Risiko, dan Peringkat.",
       "factor_title": "Dua faktor risiko utama mendorong skor:",
       "factors": [
         {
@@ -201,27 +224,87 @@
           "content": "Semakin tinggi saldo ETH, semakin menarik targetnya."
         }
       ],
-      "factor_usage": "Dari sinyal-sinyal ini kami menghitung skor numerik dan memetakannya ke Nilai A-F sederhana dan Tingkat Risiko yang cukup jelas untuk Anda tindak lanjuti.",
-      "analysis_title": "Apa yang akan diberikan analisis Anda:",
+      "factor_usage": "Dari sinyal-sinyal ini kami menghitung skor numerik dan memetakannya ke Peringkat A-F sederhana dan tingkat Risiko yang cukup jelas untuk Anda tindak lanjuti.",
+      "analysis_title": "Apa yang akan diberikan oleh analisis Anda:",
       "analysis_items": [
         "Skor Keamanan: 35 - 100",
         "Tingkat Risiko: Sangat Tinggi / Tinggi / Sedang / Rendah / Sangat Rendah",
-        "Nilai: F / D / C / B / A / A+",
+        "Peringkat: F / D / C / B / A / A+",
         "Status Paparan Kunci: Terpapar atau Belum terpapar",
-        "Saran: langkah-langkah praktis berikutnya"
+        "Saran: langkah selanjutnya yang praktis"
       ]
+    }
+  },
+  "quests": {
+    "meta": {
+      "title": "Quantus Quests | Gabung Game & Dapatkan Hadiah di Jaringan Quantus",
+      "description": "Bersainglah di Quantus Quests — tantangan blockchain seru dengan hadiah nyata. Dapatkan poin, naiki papan peringkat, dan amankan bagian airdrop Anda di Jaringan Quantus."
+    },
+    "hero": {
+      "welcome": "Selamat Datang di",
+      "title": "Misi Quantus",
+      "description": "Misi Quantus adalah serangkaian tantangan yang dirancang untuk memberi penghargaan kepada anggota komunitas kami yang paling awal dan paling aktif. Dengan menyelesaikan Misi, Anda akan mendapatkan poin, mengamankan status Anda sebagai pengadopsi awal, dan menentukan bagian Anda dari airdrop kami di masa depan."
+    },
+    "info": {
+      "code": "MISI #001",
+      "name_one": "RAJA",
+      "name_two": "DARI",
+      "name_three": "SHILL",
+      "description": "Pertarungan untuk memperebutkan total hadiah $500 USDC, poin airdrop yang ditingkatkan, dan gelar utama: Raja Shill.",
+      "play_guide": {
+        "title": "Cara Bermain",
+        "guides": [
+          "Unduh Aplikasi Quantus.",
+          "Buka tab Misi Quantus untuk menemukan tautan referal Anda (Qcat).",
+          "Bagikan kode Anda dengan teman & musuh Anda.",
+          "Tonton papan peringkat langsung untuk melacak posisi Anda secara real-time."
+        ]
+      }
+    },
+    "leaderboard": {
+      "title": "Papan Peringkat",
+      "referrals": "Referal",
+      "table": {
+        "rank": "Peringkat",
+        "address": "Alamat",
+        "referrals": "Referal"
+      }
+    },
+    "rules": {
+      "title": "Aturan Main",
+      "goal": {
+        "title": "Tujuan:",
+        "content": "Referensikan pengguna terbanyak ke Dompet Quantus menggunakan kode undangan unik Anda. Hanya referal yang membuat dompet yang akan dihitung."
+      },
+      "prize": {
+        "title": "Hadiah:",
+        "content": [
+          "Juara 1: $300 USDC",
+          "Juara 2: $150 USDC",
+          "Juara 3: $50 USDC"
+        ]
+      },
+      "win": {
+        "title": "Cara Menang:",
+        "content": "Pegang posisi #1 selama 72 jam berturut-turut.",
+        "card": {
+          "title": "Putaran Kuantum",
+          "content_one": "Posisi #1 di papan peringkat diwakili oleh transaksi 10.000 QUAN langsung yang dapat dibalikkan. Jika pengguna lain menyalip Anda, transaksi tersebut secara otomatis berbalik dan dikirim ke pemimpin baru. Klaim atas hadiah $300 USDC bergerak bersamanya.",
+          "content_two": "Untuk memenangkan hadiah utama, Anda harus mengklaim posisi #1 dan menahannya selama 72 jam berturut-turut. Setelah Anda melakukannya, transaksi 10.000 QUAN akan final, hadiah diamankan, dan tantangan berakhir."
+        }
+      }
     }
   },
   "footer": {
     "newsletter": {
       "title": "Berlangganan Newsletter Kami",
-      "description": "Peringatan Alpha! Dapatkan ledakan berita mingguan Anda dengan pratinjau, pembaruan, rangkuman berita, konten edukatif, dan lainnya",
+      "description": "Peringatan Alfa! Dapatkan ledakan berita mingguan Anda dengan pratinjau, pembaruan, rangkuman berita, konten pendidikan, dan lainnya",
       "placeholder": "Masukkan email Anda",
       "button": "Berlangganan",
       "success": "Selamat datang di keamanan kuantum 🎉",
-      "error": "Error: terjadi kesalahan."
+      "error": "Error: terjadi sesuatu yang salah."
     },
-    "description": "Blockchain Layer 1 yang aman-kuantum untuk orang-orang yang ingin melindungi apa yang penting; aset mereka, masa depan mereka, dan kebebasan mereka.",
+    "description": "Blockchain Layer 1 yang aman kuantum untuk orang-orang yang ingin melindungi apa yang penting; aset mereka, masa depan mereka, dan kebebasan mereka.",
     "copyright": "Hak Cipta © {year} Quantus Network",
     "navigation": {
       "resources": {
@@ -239,15 +322,19 @@
     }
   },
   "contact": {
+    "meta": {
+      "title": "Hubungi Quantus Network | Dapatkan Dukungan atau Info Kemitraan",
+      "description": "Hubungi tim Quantus Network untuk dukungan, kemitraan, atau pertanyaan media. Kami akan membantu Anda terhubung dengan ahli yang tepat dengan cepat."
+    },
     "title": "Hubungi kami",
-    "subtitle": "Hubungi kami, dan mari kita ciptakan alam semesta penuh kemungkinan bersama!",
+    "subtitle": "Jangkau kami, dan mari ciptakan alam semesta penuh kemungkinan bersama!",
     "form": {
       "name": "Nama",
       "email": "Email",
       "message": "Pesan",
       "submit": "Kirim",
       "success": "Kami akan memproses pesan Anda sesegera mungkin.",
-      "error": "Error: terjadi kesalahan."
+      "error": "Error: terjadi sesuatu yang salah."
     },
     "quote": {
       "text": "Atom atau partikel elementer itu sendiri tidak nyata; mereka membentuk dunia potensialitas atau kemungkinan daripada dunia benda atau fakta.",
@@ -255,11 +342,15 @@
     }
   },
   "about": {
+    "meta": {
+      "title": "Tentang Quantus Network | Visi Kami untuk Masa Depan Aman Kuantum",
+      "description": "Temukan misi Quantus Network untuk membangun ekosistem blockchain yang aman kuantum. Pelajari siapa kami, tujuan kami, dan bagaimana kami melindungi era kripto berikutnya."
+    },
     "title": "Detail Perusahaan",
     "content": {
-      "p1": "Quantus Labs LLC adalah perusahaan teknologi yang berbasis di Wyoming, AS, yang berfokus pada pembangunan infrastruktur untuk teknologi yang terdesentralisasi dan tahan sensor. Proyek andalan kami, Quantus Network, adalah blockchain Layer 1 yang dirancang agar sederhana, sumber terbuka, dan dimiliki oleh komunitas sejak hari pertama.",
+      "p1": "Quantus Labs LLC adalah perusahaan teknologi yang berbasis di Wyoming, AS, yang berfokus pada pembangunan infrastruktur untuk teknologi terdesentralisasi yang tahan sensor. Proyek andalan kami, Quantus Network adalah blockchain Layer 1 yang dirancang agar sederhana, sumber terbuka, dan dimiliki komunitas sejak hari pertama.",
       "p2": "Kami percaya pada kekuatan protokol terbuka, proof-of-work, dan kepemilikan berdaulat. Aplikasi Quantus Network—tersedia di desktop dan seluler—memungkinkan pengguna menyimpan aset digital, menambang blok baru, dan berpartisipasi dalam masa depan keuangan yang lebih adil tanpa perantara.",
-      "p3": "Kami berkomitmen pada transparansi, privasi, dan memberdayakan individu melalui alat yang aman dan bersifat kustodi mandiri.",
+      "p3": "Kami berkomitmen pada transparansi, privasi, dan memberdayakan individu melalui alat yang aman dan kustodi mandiri.",
       "address_label": "Alamat Perusahaan:"
     },
     "address": {
@@ -270,25 +361,29 @@
     }
   },
   "tos": {
-    "title": "Kebijakan Jaringan Quantus",
+    "meta": {
+      "title": "Quantus Network - Ketentuan Layanan & Kebijakan Privasi",
+      "description": "Baca Ketentuan Layanan dan Kebijakan Privasi Quantus Network. Pelajari cara kami melindungi data Anda, memastikan transparansi, dan menjaga keamanan pengalaman kripto Anda."
+    },
+    "title": "Kebijakan Quantus Network",
     "last_updated": "Terakhir diperbarui: 12 Juni 2025",
-    "intro": "Kebijakan ini menjelaskan bagaimana Quantus Labs LLC (\"Quantus,\" \"kami,\" atau \"kita\") mengumpulkan, menggunakan, dan melindungi informasi Anda saat Anda menggunakan quantus.com, aplikasi seluler kami, aplikasi desktop, atau berinteraksi dengan kami. Kami dapat memperbarui kebijakan ini dari waktu ke waktu. Jika kami membuat perubahan, kami akan memberitahu Anda dengan merevisi tanggal di bagian atas kebijakan ini dan, jika perlu, memberikan pemberitahuan tambahan di situs web kami.",
+    "intro": "Kebijakan ini menjelaskan bagaimana Quantus Labs LLC (\"Quantus,\" \"kami\") mengumpulkan, menggunakan, dan melindungi informasi Anda saat Anda menggunakan quantus.com, aplikasi seluler kami, aplikasi desktop, atau berinteraksi dengan kami. Kami dapat memperbarui kebijakan ini dari waktu ke waktu. Jika kami membuat perubahan, kami akan memberi tahu Anda dengan merevisi tanggal di bagian atas kebijakan ini dan, bila perlu, memberikan pemberitahuan tambahan di situs web kami.",
     "service_title": "Ketentuan Layanan",
     "privacy_title": "Kebijakan Privasi",
     "terms": {
       "what_we_provide": {
         "title": "Apa yang Kami Sediakan",
-        "intro": "Jaringan Quantus menawarkan:",
+        "intro": "Quantus Network menawarkan:",
         "items": [
           "Aplikasi seluler (tersedia di App Store dan Google Play)",
           "Aplikasi desktop dengan fungsionalitas penambangan terintegrasi",
           "Akses ke kode sumber terbuka kami",
           "Newsletter komunitas dan pembaruan",
-          "Akses ke blockchain Jaringan Quantus"
+          "Akses ke blockchain Quantus Network"
         ]
       },
       "what_you_cannot_do": {
-        "title": "Apa yang Tidak Boleh Anda Lakukan",
+        "title": "Apa yang Tidak Dapat Anda Lakukan",
         "intro": "Anda tidak boleh menggunakan layanan kami untuk:",
         "items": [
           "Terlibat dalam aktivitas ilegal",
@@ -301,44 +396,44 @@
       "mining_participation": {
         "title": "Penambangan dan Partisipasi Jaringan",
         "items": [
-          "Fungsionalitas penambangan adalah untuk tujuan pendidikan dan partisipasi jaringan",
+          "Fungsionalitas penambangan adalah untuk partisipasi pendidikan dan jaringan",
           "Anda harus mematuhi peraturan energi dan penambangan setempat",
-          "Kami tidak memberikan jaminan tentang profitabilitas atau imbalan penambangan",
+          "Kami tidak memberikan jaminan tentang profitabilitas atau hadiah penambangan",
           "Fitur jaringan dapat berubah seiring berkembangnya protokol"
         ]
       },
       "dispute_resolution": {
-        "title": "Penyelesaian Sengketa",
-        "content": "Setiap sengketa akan diselesaikan melalui arbitrase yang mengikat di Wyoming di bawah aturan American Arbitration Association. Ketentuan ini diatur oleh hukum Wyoming. Kami dapat menghentikan akses jika Anda melanggar ketentuan ini"
+        "title": "Resolusi Sengketa",
+        "content": "Setiap sengketa akan diselesaikan melalui arbitrase yang mengikat di Wyoming di bawah aturan Asosiasi Arbitrase Amerika. Ketentuan ini diatur oleh hukum Wyoming. Kami dapat menghentikan akses jika Anda melanggar ketentuan ini"
       },
       "your_responsibilities": {
         "title": "Tanggung Jawab Anda",
-        "intro": "Anda bertanggung jawab penuh untuk:",
+        "intro": "Anda sepenuhnya bertanggung jawab untuk:",
         "items": [
-          "Menjaga kredensial dompet dan seed phrase Anda",
+          "Menjaga kredensial dompet dan frasa benih Anda",
           "Mematuhi hukum setempat mengenai mata uang kripto dan penambangan",
           "Memahami risiko teknologi blockchain",
-          "Kunci privat yang hilang tidak dapat kami pulihkan"
+          "Kunci pribadi yang hilang tidak dapat dipulihkan oleh kami"
         ]
       },
       "non_custodial": {
         "title": "Desain Non-Kustodial",
-        "intro": "Penting: Kami tidak menyimpan atau mengakses kunci privat, seed phrase, atau aset digital Anda. Anda memiliki kendali dan tanggung jawab penuh atas dompet dan aset Anda.",
+        "intro": "Penting: Kami tidak menyimpan atau mengakses kunci pribadi, frasa benih, atau aset digital Anda. Anda memiliki kendali dan tanggung jawab penuh atas dompet dan aset Anda.",
         "items": [
-          "Kami tidak dapat memulihkan kunci privat atau seed phrase yang hilang",
-          "Kami tidak dapat membatalkan transaksi di blockchain",
+          "Kami tidak dapat memulihkan kunci pribadi atau frasa benih yang hilang",
+          "Kami tidak dapat membalikkan transaksi di blockchain",
           "Kami tidak dapat membekukan atau mengontrol aset Anda",
           "Anda bertanggung jawab untuk mengamankan kredensial dompet Anda",
-          "Selalu cadangkan seed phrase Anda di lokasi yang aman"
+          "Selalu cadangkan frasa benih Anda di lokasi yang aman"
         ]
       },
       "disclaimers": {
-        "title": "Sanggahan dan Batasan",
-        "intro": "Layanan kami disediakan \"sebagaimana adanya\" tanpa jaminan. Mata uang kripto melibatkan risiko kerugian yang besar. Sejauh diizinkan oleh hukum:",
+        "title": "Sangkalan dan Batasan",
+        "intro": "Layanan kami disediakan \"sebagaimana adanya\" tanpa jaminan. Mata uang kripto melibatkan risiko kerugian yang substansial. Sejauh diizinkan oleh hukum:",
         "items": [
           "Kami tidak bertanggung jawab atas kerugian tidak langsung atau konsekuensial",
-          "Total tanggung jawab kami tidak akan melebihi $1",
-          "Anda setuju untuk mengganti rugi kami dari klaim yang timbul dari penggunaan layanan kami oleh Anda"
+          "Total kewajiban kami tidak akan melebihi $1",
+          "Anda setuju untuk mengganti rugi kami dari klaim yang timbul dari penggunaan Anda atas layanan kami"
         ]
       }
     },
@@ -346,15 +441,15 @@
       "information_collect": {
         "title": "Informasi yang Kami Kumpulkan",
         "from_apps": "Dari Aplikasi Kami:",
-        "from_apps_content": "Kami tidak mengumpulkan informasi pribadi melalui aplikasi Jaringan Quantus.",
+        "from_apps_content": "Kami tidak mengumpulkan informasi pribadi melalui aplikasi Quantus Network.",
         "from_website": "Dari Situs Web Kami, kami secara otomatis mengumpulkan:",
         "from_website_items": [
           "Alamat IP (dianonimkan melalui Google Analytics)",
-          "Informasi peramban dan perangkat",
+          "Informasi browser dan perangkat",
           "Halaman yang dikunjungi dan pola penggunaan",
           "Lokasi geografis (hanya negara/wilayah)"
         ],
-        "from_you": "Dari Anda Secara Langsung:",
+        "from_you": "Langsung dari Anda:",
         "from_you_items": [
           "Alamat email (jika Anda berlangganan newsletter kami)",
           "Informasi yang Anda berikan saat menghubungi kami"
@@ -366,7 +461,7 @@
         ]
       },
       "how_we_use": {
-        "title": "Bagaimana Kami Menggunakan Informasi",
+        "title": "Cara Kami Menggunakan Informasi",
         "intro": "Kami menggunakan informasi yang dikumpulkan untuk:",
         "items": [
           "Meningkatkan situs web dan aplikasi kami",
@@ -378,29 +473,29 @@
         "we_do_not": "Kami tidak:",
         "we_do_not_items": [
           "Menjual atau menyewakan data Anda kepada pihak ketiga",
-          "Menyimpan kunci privat atau data transaksi Anda",
+          "Menyimpan kunci pribadi atau data transaksi Anda",
           "Menggunakan data Anda untuk iklan bertarget"
         ]
       },
       "information_sharing": {
         "title": "Berbagi Informasi",
-        "intro": "Kami dapat membagikan informasi dengan:",
+        "intro": "Kami dapat berbagi informasi dengan:",
         "items": [
           "Penyedia analitik (Google Analytics untuk data situs web)",
           "Penyedia layanan yang membantu mengoperasikan situs web kami",
-          "Otoritas hukum jika diwajibkan oleh hukum"
+          "Otoritas hukum bila diwajibkan oleh hukum"
         ],
-        "note": "Kami hanya membagikan data agregat dan anonim yang tidak dapat mengidentifikasi Anda."
+        "note": "Kami hanya berbagi data gabungan dan anonim yang tidak dapat mengidentifikasi Anda."
       },
       "cookies_tracking": {
         "title": "Cookie dan Pelacakan",
         "intro": "Situs web kami menggunakan cookie untuk:",
         "items": [
-          "Fungsionalitas situs web yang esensial",
+          "Fungsionalitas penting situs web",
           "Analitik untuk memahami penggunaan situs",
           "Peningkatan kinerja"
         ],
-        "note": "Anda dapat mengontrol cookie melalui pengaturan peramban Anda, meskipun ini dapat memengaruhi fungsionalitas situs web."
+        "note": "Anda dapat mengontrol cookie melalui pengaturan browser Anda, meskipun ini dapat memengaruhi fungsionalitas situs web."
       },
       "data_security": {
         "title": "Keamanan dan Penyimpanan Data",
@@ -414,7 +509,7 @@
       "your_rights": {
         "title": "Hak Anda",
         "general": "Anda dapat: Berhenti berlangganan dari komunikasi kapan saja",
-        "california": "Untuk penduduk California: Anda memiliki hak tambahan di bawah CCPA, termasuk hak untuk mengetahui informasi pribadi apa yang kami kumpulkan dan hak untuk menghapusnya.",
+        "california": "Untuk penduduk California: Anda memiliki hak tambahan di bawah CCPA, termasuk hak untuk mengetahui informasi pribadi apa yang kami kumpulkan dan hak untuk penghapusan.",
         "eu_uk": "Untuk penduduk UE/Inggris: Anda memiliki hak di bawah GDPR, termasuk portabilitas data dan hak untuk menolak pemrosesan."
       },
       "international_transfers": {
@@ -423,7 +518,7 @@
       },
       "childrens_privacy": {
         "title": "Privasi Anak-Anak",
-        "content": "Layanan kami tidak ditujukan untuk siapa pun di bawah 18 tahun. Kami tidak secara sengaja mengumpulkan informasi dari anak di bawah umur."
+        "content": "Layanan kami tidak ditujukan untuk siapa pun di bawah usia 18 tahun. Kami tidak secara sadar mengumpulkan informasi dari anak di bawah umur."
       },
       "additional_info": {
         "title": "Informasi Tambahan",
@@ -444,8 +539,8 @@
   },
   "cookie": {
     "title": "Persetujuan Cookie",
-    "notice": "Situs web ini menggunakan cookie untuk lebih memahami minat para pembacanya dan melayani mereka. Cari tahu lebih lanjut di",
-    "link": "kebijakan privasi dan persyaratan layanan",
+    "notice": "Situs web ini menggunakan cookie untuk lebih memahami minat pembacanya dan melayani mereka. Cari tahu lebih lanjut di",
+    "link": "kebijakan privasi dan ketentuan layanan",
     "accept": "Terima",
     "decline": "Tolak"
   },

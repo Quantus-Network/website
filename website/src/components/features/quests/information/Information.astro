@@ -1,0 +1,93 @@
+---
+import { APP_LINKS } from "@/constants/app-links";
+import AppleStore from "@/assets/download/apple-store-download.png";
+import GooglePlay from "@/assets/download/google-play-download.png";
+import KingOfTheShill from "@/assets/quests/king-of-the-shill.png";
+import { Image } from "astro:assets";
+import Decoration from "../body-layout/Decoration.astro";
+import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
+---
+
+<section id="information" class="mb-[90px]">
+  <div class="flex gap-6">
+    <div class="flex flex-col gap-14">
+      <div class="flex gap-5 min-[360px]:-translate-x-[22px] md:translate-0">
+        <div class="hidden min-w-[37px] min-[360px]:block md:hidden">
+          <Decoration />
+        </div>
+
+        <div class="flex flex-col gap-5 md:gap-0">
+          <div class="flex items-end">
+            <div>
+              <p class="font-tag-caps">{t("quests.info.code")}</p>
+
+              <h2
+                class="font-quest-title flex flex-col text-[58px] md:flex-row md:items-center md:gap-4 xl:text-[80px]"
+              >
+                {t("quests.info.name_one")}
+                <span
+                  class="font-quest-title-conjuction text-text-title-secondary text-[28px] xl:text-[40px]"
+                  >{t("quests.info.name_two")}</span
+                >
+                {t("quests.info.name_three")}
+              </h2>
+            </div>
+
+            <div class="max-w-[149px] md:hidden">
+              <Image
+                src={KingOfTheShill}
+                alt="Cartoon cat mascot with half-skeleton design wearing a cap and shirt, holding up a foam finger with the Quantum Canary logo."
+              />
+            </div>
+          </div>
+
+          <p class="font-tag-mobile md:font-tag">
+            {t("quests.info.description")}
+          </p>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-5">
+        <h3 class="font-small-title">{t("quests.info.play_guide.title")}</h3>
+
+        <ol class="font-body-bold list-decimal ps-4">
+          {
+            t("quests.info.play_guide.guides").map((val: string) => (
+              <li>{val}</li>
+            ))
+          }
+        </ol>
+
+        <div class="flex gap-5">
+          <a
+            id="ios"
+            href={APP_LINKS.ios}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image src={AppleStore} alt="Apple store app link" />
+          </a>
+
+          <a
+            id="android"
+            href={APP_LINKS.android}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image src={GooglePlay} alt="Goole play app link" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hidden max-w-[346px] md:block">
+      <Image
+        src={KingOfTheShill}
+        alt="Cartoon cat mascot with half-skeleton design wearing a cap and shirt, holding up a foam finger with the Quantum Canary logo."
+      />
+    </div>
+  </div>
+</section>

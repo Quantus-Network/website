@@ -11,18 +11,29 @@
     "format:write": "prettier --write ."
   },
   "dependencies": {
+    "@astrojs/react": "^4.4.0",
     "@astrojs/sitemap": "^3.5.1",
     "@fontsource/inter": "^5.2.6",
     "@fontsource/prompt": "^5.2.6",
     "@lucide/astro": "^0.541.0",
+    "@radix-ui/react-select": "^2.2.6",
+    "@radix-ui/react-slot": "^1.2.3",
     "@tailwindcss/vite": "^4.1.12",
+    "@tanstack/react-table": "^8.21.3",
     "astro": "^5.13.2",
     "astro-seo": "^0.8.4",
+    "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "lucide-react": "^0.546.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
     "tailwind-merge": "^3.3.1",
-    "tailwindcss": "^4.1.12"
+    "tailwindcss": "^4.1.12",
+    "usehooks-ts": "^3.1.1"
   },
   "devDependencies": {
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
     "prettier": "^3.6.2",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.6.14",
