@@ -16,7 +16,11 @@ export const LEADERBOARD_COLUMNS = [
       const indexOffset = pageIndex === 0 ? 4 : 1;
       const effectiveIndex = pageIndex * pageSize + (index + indexOffset);
 
-      return effectiveIndex;
+      return (
+        <div className="flex justify-center font-bold sm:block">
+          {effectiveIndex}
+        </div>
+      );
     },
     enableSorting: false,
   }),
@@ -29,7 +33,11 @@ export const LEADERBOARD_COLUMNS = [
   columnHelper.accessor("referrals_count", {
     id: "referrals_count",
     header: "quests.leaderboard.table.referrals",
-    cell: (props) => props.getValue(),
+    cell: (props) => (
+      <div className="flex justify-center font-bold sm:block">
+        {props.getValue()}
+      </div>
+    ),
     enableSorting: false,
   }),
 ];
