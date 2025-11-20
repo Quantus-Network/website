@@ -19,24 +19,24 @@ const LeaderboardPodium = ({ locale }: LeaderboardPodiumProps) => {
 
       <WinnerPodium
         rank={2}
-        identity={secondRank?.referral_code ?? "loading..."}
-        referralCount={secondRank?.referrals_count ?? 0}
+        identity={secondRank?.address.referral_code ?? "loading..."}
+        referralCount={secondRank?.address.referrals_count ?? 0}
         isLoading={status === "loading"}
         t={t}
       />
 
       <WinnerPodium
         rank={1}
-        identity={firstRank?.referral_code ?? "loading..."}
-        referralCount={firstRank?.referrals_count ?? 0}
+        identity={firstRank?.address.referral_code ?? "loading..."}
+        referralCount={firstRank?.address.referrals_count ?? 0}
         isLoading={status === "loading"}
         t={t}
       />
 
       <WinnerPodium
         rank={3}
-        identity={thirdRank?.referral_code ?? "loading..."}
-        referralCount={thirdRank?.referrals_count ?? 0}
+        identity={thirdRank?.address.referral_code ?? "loading..."}
+        referralCount={thirdRank?.address.referrals_count ?? 0}
         isLoading={status === "loading"}
         t={t}
       />

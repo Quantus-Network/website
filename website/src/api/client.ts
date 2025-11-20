@@ -36,7 +36,7 @@ interface SubscribeData {
   email: string;
 }
 
-export interface LeaderboardEntrant {
+export interface Entrant {
   quan_address: string;
   eth_address: string;
   referral_code: string;
@@ -46,9 +46,15 @@ export interface LeaderboardEntrant {
   created_at: string;
 }
 
+export interface LeaderboardEntrant {
+  address: Entrant;
+  rank: number;
+}
+
 interface LeaderboardOptions {
   page?: number;
   pageSize?: number;
+  filterByReferralCode?: string;
 }
 
 export interface LeaderboardResponse {
@@ -75,6 +81,8 @@ const createApiClient = () => {
       let queryParams = [];
       if (options.page) queryParams.push(`page=${options.page}`);
       if (options.pageSize) queryParams.push(`page_size=${options.pageSize}`);
+      if (options.filterByReferralCode)
+        queryParams.push(`referral_code=${options.filterByReferralCode}`);
 
       if (queryParams.length != 0) url = url + "?" + queryParams.join("&");
 
