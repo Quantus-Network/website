@@ -18,7 +18,7 @@ const LeaderboardTable = ({ locale }: LeaderboardTableProps) => {
         <label>Search your entry</label>
 
         <Input
-          placeholder="your-referra-code-here"
+          placeholder="your-referral-code-here"
           className="rounded-quantus h-9 max-w-72 border px-3"
           onChange={(e) => {
             const newKeyword = e.target.value;
