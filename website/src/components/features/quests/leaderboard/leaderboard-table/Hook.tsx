@@ -11,10 +11,13 @@ import { QUERY_DEFAULT_LIMIT } from "@/constants/query-default-limit";
 import useFetch from "@/hooks/useFetch";
 import { DATA_POOL_INTERVAL } from "@/constants/data-pool-interval";
 import { createTranslator, type Locale } from "@/utils/i18n";
+import { useDebounceCallback } from "usehooks-ts";
+import { INPUT_DEBOUNCE_INTERVAL } from "@/constants/debounce-interval";
 
 export const useLeaderboardTable = (locale: Locale) => {
   const [t, setT] = useState<any>(null);
   const [page, setPage] = useState(1);
+  const [keyword, setKeyword] = useState("");
 
   const pageSize = QUERY_DEFAULT_LIMIT;
   const currentPageIndex = page - 1;
@@ -22,6 +25,19 @@ export const useLeaderboardTable = (locale: Locale) => {
     pageSize,
     pageIndex: currentPageIndex,
   };
+
+  const updateKeywordFn = useCallback(
+    (newKeyword: string) => {
+      setKeyword(newKeyword.trim());
+      setPage(1);
+    },
+    [setKeyword],
+  );
+
+  const handleChangeKeyword = useDebounceCallback(
+    updateKeywordFn,
+    INPUT_DEBOUNCE_INTERVAL,
+  );
 
   const handleChangePagination: OnChangeFn<PaginationState> = (pagination) => {
     if (typeof pagination === "function") {
@@ -33,10 +49,17 @@ export const useLeaderboardTable = (locale: Locale) => {
     }
   };
 
+  const normalizeData = (fetchData: LeaderboardResponse | null) =>
+    (fetchData?.data ?? []).filter((data) => ![1, 2, 3].includes(data.rank));
+
   const fetchFn = useCallback(async () => {
-    const res = await api.fetchLeaderboard({ page, pageSize });
+    const res = await api.fetchLeaderboard({
+      page,
+      pageSize,
+      filterByReferralCode: keyword,
+    });
     return res.json();
-  }, [page, pageSize]);
+  }, [page, pageSize, keyword]);
 
   const {
     data: fetchData,
@@ -55,7 +78,7 @@ export const useLeaderboardTable = (locale: Locale) => {
     fetchData?.meta.total_items ?? 0,
   );
 
-  const data = (page === 1 ? fetchData?.data.slice(3) : fetchData?.data) ?? [];
+  const data = normalizeData(fetchData);
 
   const table = useReactTable<LeaderboardEntrant>({
     data,
@@ -101,6 +124,7 @@ export const useLeaderboardTable = (locale: Locale) => {
   }, [locale]);
 
   return {
+    handleChangeKeyword,
     table,
     getStatus,
     error,
