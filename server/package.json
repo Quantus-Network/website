@@ -17,6 +17,7 @@
     "db:update": "npm run build && npm run db:generate && npm run db:migrate",
     "db:startover": "rimraf src/models/migration && npm run build && npm run db:generate && node dist/src/models/scripts/startover.js",
     "db:import": "node dist/src/models/scripts/import-data.js src/models/contacts.csv",
+    "db:export": "node dist/src/models/scripts/export-data.js",
     "postinstall": "node ./drizzle-pg-timestamp-patch.js"
   },
   "devDependencies": {
@@ -39,6 +40,7 @@
     "dotenv": "^16.4.7",
     "drizzle-orm": "^0.39.3",
     "express": "^4.21.2",
+    "fast-csv": "^5.0.5",
     "helmet": "^8.0.0",
     "json-bigint": "^1.0.0",
     "nodemailer": "^7.0.3",
