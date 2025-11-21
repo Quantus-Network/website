@@ -5,12 +5,16 @@ import api, { type LeaderboardResponse } from "@/api/client";
 import useFetch from "@/hooks/useFetch";
 import { DATA_POOL_INTERVAL } from "@/constants/data-pool-interval";
 import { createTranslator, type Locale } from "@/utils/i18n";
+import { QUERY_DEFAULT_LIMIT } from "@/constants/query-default-limit";
 
 export const useWinnerPodium = (locale: Locale) => {
   const [t, setT] = useState<any>(null);
 
   const fetchFn = useCallback(async () => {
-    const res = await api.fetchLeaderboard({ page: 1, pageSize: 3 });
+    const res = await api.fetchLeaderboard({
+      page: 1,
+      pageSize: QUERY_DEFAULT_LIMIT,
+    });
     return res.json();
   }, []);
 
