@@ -15,6 +15,13 @@
       "when": 1749436029665,
       "tag": "0001_panoramic_sandman",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1763700099140,
+      "tag": "0002_purple_lady_deathstrike",
+      "breakpoints": true
     }
   ]
 }
