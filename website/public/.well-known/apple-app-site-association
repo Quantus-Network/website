@@ -6,7 +6,9 @@
         "appID": "8BRRAHLVW5.com.quantus.mobile-wallet",
         "paths": [
           "/account/*",
-          "/account"
+          "/account",
+          "/oauth/*",
+          "/oauth"
         ]
       }
     ]
