@@ -295,7 +295,11 @@
     "newsletter": {
       "title": "ニュースレターを購読する",
       "description": "アルファアラート！ プレビュー、アップデート、ニュースまとめ、教育コンテンツなどを含む週刊ニュースブラストを受け取りましょう",
-      "placeholder": "メールアドレスを入力してください",
+      "placeholder": {
+        "email": "メールアドレス",
+        "firstname": "名",
+        "lastname": "姓"
+      },
       "button": "購読する",
       "success": "量子セキュリティへようこそ 🎉",
       "error": "エラー：問題が発生しました。"
@@ -545,6 +549,7 @@
     "error": "エラー",
     "success": "成功",
     "email_required": "Eメールは必須です。",
+    "first_name_required": "名は必須です。",
     "name_required": "お名前は必須です。",
     "message_required": "メッセージは必須です。",
     "subscribe_failed": "ウェイティングリストへの追加に失敗しました。"

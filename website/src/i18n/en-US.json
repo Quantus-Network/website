@@ -299,7 +299,11 @@
     "newsletter": {
       "title": "Subscribe to our Newsletter",
       "description": "Alpha Alert! Get your weekly news-blast with sneak previews, updates, news roundup, educational content and more",
-      "placeholder": "Enter your email",
+      "placeholder": {
+        "email": "Email",
+        "firstname": "First name",
+        "lastname": "Last name"
+      },
       "button": "Subscribe",
       "success": "Welcome to quantum security 🎉",
       "error": "Error: something is going wrong."
@@ -549,6 +553,7 @@
     "error": "Error",
     "success": "Success",
     "email_required": "Email is required.",
+    "first_name_required": "First name is required.",
     "name_required": "Name is required.",
     "message_required": "Message is required.",
     "subscribe_failed": "Failed adding to waitlist."

@@ -35,7 +35,7 @@ const isCurrentPage = (href: string) =>
   <SphereDecoration
     variant="4"
     size={124}
-    class="absolute top-[12rem] right-[3rem] -z-10 min-[453px]:top-[11rem] min-[482px]:top-[9rem] md:top-[15rem] md:left-[40%]"
+    class="absolute top-[12rem] right-[3rem] -z-10 min-[453px]:top-[11rem] min-[482px]:top-[9rem] md:top-[20rem] md:left-[40%]"
   />
   <SphereDecoration
     variant="5"
@@ -58,31 +58,54 @@ const isCurrentPage = (href: string) =>
       </p>
     </div>
 
-    <MessageAlert
-      id="subscribe-error"
-      type="error"
-      message={t("footer.newsletter.error")}
-    />
-    <MessageAlert
-      id="subscribe-success"
-      type="success"
-      message={t("footer.newsletter.success")}
-    />
-
     <form
       id="footer-subscribe-form"
-      class="flex w-full max-w-[calc(377px+150px)] flex-col items-end gap-5 md:flex-row md:items-center md:gap-3"
+      class="flex w-full max-w-[calc(377px+150px)] flex-col items-end gap-5 md:items-center md:gap-3"
     >
+      <MessageAlert
+        id="subscribe-error"
+        type="error"
+        message={t("footer.newsletter.error")}
+      />
+
+      <MessageAlert
+        id="subscribe-success"
+        type="success"
+        message={t("footer.newsletter.success")}
+      />
+
+      <div class="grid grid-cols-2 justify-between gap-3">
+        <Input
+          aria-label="Subscribe first name input"
+          class="md:max-w-[182.5px]"
+          id="footer-subscribe-firstname-input"
+          type="text"
+          name="firstName"
+          placeholder={t("footer.newsletter.placeholder.firstname")}
+          required
+        />
+
+        <Input
+          aria-label="Subscribe last name input"
+          class="md:max-w-[182.5px]"
+          id="footer-subscribe-lastname-input"
+          type="text"
+          name="lastName"
+          placeholder={t("footer.newsletter.placeholder.lastname")}
+        />
+      </div>
+
       <Input
         aria-label="Subscribe email input"
         class="md:max-w-[377px]"
-        id="footer-subscribe-input"
+        id="footer-subscribe-email-input"
         type="email"
         name="email"
-        placeholder={t("footer.newsletter.placeholder")}
+        placeholder={t("footer.newsletter.placeholder.email")}
         required
       />
-      <Button id="footer-subscribe-button" type="submit" class="w-[150px]"
+
+      <Button id="footer-subscribe-button" type="submit" class="mt-2 w-[150px]"
         >{t("footer.newsletter.button")}</Button
       >
     </form>
@@ -183,7 +206,13 @@ const isCurrentPage = (href: string) =>
     "footer-subscribe-form",
   ) as HTMLFormElement;
   const email = document.getElementById(
-    "footer-subscribe-input",
+    "footer-subscribe-email-input",
+  ) as HTMLInputElement;
+  const firstName = document.getElementById(
+    "footer-subscribe-firstname-input",
+  ) as HTMLInputElement;
+  const lastName = document.getElementById(
+    "footer-subscribe-lastname-input",
   ) as HTMLInputElement;
   const btn = document.getElementById("footer-subscribe-button");
 
@@ -191,7 +220,7 @@ const isCurrentPage = (href: string) =>
   const errorAlert = document.getElementById("alert-subscribe-error");
   const errorMessage = document.getElementById("alert-message-subscribe-error");
 
-  if (!form || !email || !btn)
+  if (!form || !email || !firstName || !lastName || !btn)
     throw new Error("Form not detected, can't do submission!");
 
   // Events
@@ -206,13 +235,22 @@ const isCurrentPage = (href: string) =>
     errorAlert?.classList.add("hidden");
 
     try {
-      // Make sure the input is not empty
       const emailValue = email?.value?.trim();
       if (!emailValue) throw new Error(t("common.email_required"));
 
-      const resp = await apiClient.subscribe(emailValue);
+      const firstNameValue = firstName?.value?.trim();
+      if (!firstNameValue) throw new Error(t("common.first_name_required"));
 
-      if (resp.status !== 201) throw new Error(t("common.subscribe_failed"));
+      const lastNameValue = lastName?.value?.trim();
+
+      const resp = await apiClient.subscribe(
+        emailValue,
+        firstNameValue,
+        lastNameValue,
+      );
+      const data = await resp.json();
+
+      if (resp.status !== 201 && data.error) throw new Error(data.error);
 
       // Make button active after done processing submit
       btn.removeAttribute("disabled");

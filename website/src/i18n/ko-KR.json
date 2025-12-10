@@ -295,7 +295,11 @@
     "newsletter": {
       "title": "뉴스레터 구독하기",
       "description": "알파 알림! 미리 보기, 업데이트, 뉴스 요약, 교육 콘텐츠 등이 포함된 주간 뉴스레터를 받아보세요",
-      "placeholder": "이메일을 입력하세요",
+      "placeholder": {
+        "email": "이메일",
+        "firstname": "이름",
+        "lastname": "성"
+      },
       "button": "구독하기",
       "success": "퀀텀 보안에 오신 것을 환영합니다 🎉",
       "error": "오류: 문제가 발생했습니다."
@@ -545,6 +549,7 @@
     "error": "오류",
     "success": "성공",
     "email_required": "이메일은 필수입니다.",
+    "first_name_required": "이름은 필수입니다.",
     "name_required": "이름은 필수입니다.",
     "message_required": "메시지는 필수입니다.",
     "subscribe_failed": "대기자 명단 추가에 실패했습니다."

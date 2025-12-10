@@ -299,7 +299,11 @@
     "newsletter": {
       "title": "Berlangganan Newsletter Kami",
       "description": "Peringatan Alfa! Dapatkan ledakan berita mingguan Anda dengan pratinjau, pembaruan, rangkuman berita, konten pendidikan, dan lainnya",
-      "placeholder": "Masukkan email Anda",
+      "placeholder": {
+        "email": "Email",
+        "firstname": "Nama depan",
+        "lastname": "Nama belakang"
+      },
       "button": "Berlangganan",
       "success": "Selamat datang di keamanan kuantum 🎉",
       "error": "Error: terjadi sesuatu yang salah."
@@ -549,6 +553,7 @@
     "error": "Error",
     "success": "Sukses",
     "email_required": "Email wajib diisi.",
+    "first_name_required": "Nama depan wajib diisi.",
     "name_required": "Nama wajib diisi.",
     "message_required": "Pesan wajib diisi.",
     "subscribe_failed": "Gagal menambahkan ke daftar tunggu."

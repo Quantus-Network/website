@@ -299,7 +299,11 @@
     "newsletter": {
       "title": "Abonnieren Sie unseren Newsletter",
       "description": "Alpha-Alarm! Erhalten Sie Ihre wöchentliche Nachrichten-Blast mit Vorschauen, Updates, Nachrichtenübersicht, Bildungsinhalten und mehr",
-      "placeholder": "Geben Sie Ihre E-Mail-Adresse ein",
+      "placeholder": {
+        "email": "E-Mail",
+        "firstname": "Vorname",
+        "lastname": "Nachname"
+      },
       "button": "Abonnieren",
       "success": "Willkommen bei der Quantensicherheit 🎉",
       "error": "Fehler: Etwas läuft schief."
@@ -549,6 +553,7 @@
     "error": "Fehler",
     "success": "Erfolg",
     "email_required": "E-Mail ist erforderlich.",
+    "first_name_required": "Vorname ist erforderlich.",
     "name_required": "Name ist erforderlich.",
     "message_required": "Nachricht ist erforderlich.",
     "subscribe_failed": "Hinzufügen zur Warteliste fehlgeschlagen."

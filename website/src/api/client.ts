@@ -148,7 +148,11 @@ const createApiClient = () => {
     /**
      * Subscribe to waitlist
      */
-    subscribe: (email: string): ApiResponse => {
+    subscribe: (
+      email: string,
+      firstName: string,
+      lastName: string,
+    ): ApiResponse => {
       return fetch(`${env.API_URL}/waitlist`, {
         headers: {
           "Content-Type": "application/json",
@@ -156,6 +160,8 @@ const createApiClient = () => {
         method: "POST",
         body: JSON.stringify({
           email,
+          firstName,
+          lastName,
         } as SubscribeData),
       });
     },

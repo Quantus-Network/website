@@ -299,7 +299,11 @@
     "newsletter": {
       "title": "Suscríbase a nuestro Boletín",
       "description": "¡Alerta Alfa! Reciba su explosión de noticias semanal con avances, actualizaciones, resumen de noticias, contenido educativo y más",
-      "placeholder": "Ingrese su correo electrónico",
+      "placeholder": {
+        "email": "Correo electrónico",
+        "firstname": "Nombre",
+        "lastname": "Apellido"
+      },
       "button": "Suscribirse",
       "success": "Bienvenido a la seguridad cuántica 🎉",
       "error": "Error: algo salió mal."
@@ -549,6 +553,7 @@
     "error": "Error",
     "success": "Éxito",
     "email_required": "Se requiere correo electrónico.",
+    "first_name_required": "El nombre es obligatorio.",
     "name_required": "Se requiere nombre.",
     "message_required": "Se requiere mensaje.",
     "subscribe_failed": "Error al agregar a la lista de espera."
