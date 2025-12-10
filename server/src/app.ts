@@ -12,6 +12,7 @@ import { generateUniqueID } from "./utils/generateId.js";
 import { Inquiry } from "./interfaces/Inquiry.js";
 import Mail from "nodemailer/lib/mailer/index.js";
 import axios from "axios";
+import { DatabaseError } from "pg";
 
 const dbClient = await db();
 const emailClient = emailTransporter();
@@ -48,8 +49,16 @@ app.post("/api/waitlist", async (req, res) => {
     );
 
     res.status(201).json({ message: "Success adding to newsletter.", email });
-  } catch (error) {
-    res.status(400).json({ error: "Failed adding to newsletter." });
+  } catch (err) {
+    if (err instanceof DatabaseError && err.code === "23505") {
+      const column = err.detail?.split(")=")[0]?.slice(5);
+
+      res.status(409).json({ error: `${column} is already used.` });
+
+      return;
+    }
+
+    res.status(500).json({ error: "Unknown internal server error" });
   }
 });
 app.post("/api/inquiries", async (req, res) => {

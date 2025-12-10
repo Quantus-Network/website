@@ -5,26 +5,11 @@ import Input from "@/components/ui/Input.astro";
 import { Image } from "astro:assets";
 import ContactImage from "@/assets/planet-like-object-with-ring.png";
 import TextArea from "@/components/ui/TextArea.astro";
-import MessageAlert from "@/components/ui/MessageAlert.astro";
 import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
 ---
-
-<MessageAlert
-  id="contact-error"
-  class="mb-4"
-  type="error"
-  message={t("contact.form.error")}
-/>
-
-<MessageAlert
-  id="contact-success"
-  class="mb-4"
-  type="success"
-  message={t("contact.form.success")}
-/>
 
 <form
   id="contact-form"
@@ -89,7 +74,6 @@ const t = await createTranslator(locale);
 
 <script>
   import apiClient from "@/api/client";
-  import { ALERT_TIMEOUT } from "@/constants/alert-timeout";
   import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
 
   const locale = getLocaleFromUrl(location.pathname);
@@ -97,10 +81,6 @@ const t = await createTranslator(locale);
 
   const form = document.getElementById("contact-form") as HTMLFormElement;
   const btn = document.getElementById("footer-subscribe-button");
-
-  const successAlert = document.getElementById("alert-contact-success");
-  const errorAlert = document.getElementById("alert-contact-error");
-  const errorMessage = document.getElementById("alert-message-contact-error");
 
   if (!form || !btn) throw new Error("Form not detected, can't do submission!");
 
@@ -110,10 +90,6 @@ const t = await createTranslator(locale);
 
     // Make button disabled
     btn.setAttribute("disabled", "true");
-
-    // Hide messages if currently displayed
-    successAlert?.classList.add("hidden");
-    errorAlert?.classList.add("hidden");
 
     try {
       // Make sure the input is not empty
@@ -134,10 +110,7 @@ const t = await createTranslator(locale);
       btn.removeAttribute("disabled");
 
       // Show success message
-      successAlert?.classList.remove("hidden");
-      setTimeout(() => {
-        successAlert?.classList.add("hidden");
-      }, ALERT_TIMEOUT);
+      window.toast.success(t("contact.form.success"));
 
       // Reset form
       form.reset();
@@ -146,13 +119,9 @@ const t = await createTranslator(locale);
       btn.removeAttribute("disabled");
 
       const errMsg = error.message;
-      if (errMsg && errorMessage) errorMessage.textContent = errMsg;
 
       // Show error message
-      errorAlert?.classList.remove("hidden");
-      setTimeout(() => {
-        errorAlert?.classList.add("hidden");
-      }, ALERT_TIMEOUT);
+      window.toast.error(errMsg);
     }
   });
 </script>

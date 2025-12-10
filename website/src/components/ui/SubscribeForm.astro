@@ -1,6 +1,5 @@
 ---
 import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
-import MessageAlert from "./MessageAlert.astro";
 import Input from "./Input.astro";
 import Button from "./Button.astro";
 
@@ -12,18 +11,6 @@ const t = await createTranslator(locale);
   id="footer-subscribe-form"
   class="flex w-full max-w-[calc(377px+150px)] flex-col items-end gap-5 md:items-center md:gap-3"
 >
-  <MessageAlert
-    id="subscribe-error"
-    type="error"
-    message={t("footer.newsletter.error")}
-  />
-
-  <MessageAlert
-    id="subscribe-success"
-    type="success"
-    message={t("footer.newsletter.success")}
-  />
-
   <div class="grid grid-cols-2 justify-between gap-3">
     <Input
       aria-label="Subscribe first name input"
@@ -62,7 +49,6 @@ const t = await createTranslator(locale);
 
 <script>
   import apiClient from "@/api/client";
-  import { ALERT_TIMEOUT } from "@/constants/alert-timeout";
   import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
 
   const locale = getLocaleFromUrl(location.pathname);
@@ -82,10 +68,6 @@ const t = await createTranslator(locale);
   ) as HTMLInputElement;
   const btn = document.getElementById("footer-subscribe-button");
 
-  const successAlert = document.getElementById("alert-subscribe-success");
-  const errorAlert = document.getElementById("alert-subscribe-error");
-  const errorMessage = document.getElementById("alert-message-subscribe-error");
-
   if (!form || !email || !firstName || !lastName || !btn)
     throw new Error("Form not detected, can't do submission!");
 
@@ -95,10 +77,6 @@ const t = await createTranslator(locale);
 
     // Make button disabled
     btn.setAttribute("disabled", "true");
-
-    // Hide messages if currently displayed
-    successAlert?.classList.add("hidden");
-    errorAlert?.classList.add("hidden");
 
     try {
       const emailValue = email?.value?.trim();
@@ -122,10 +100,7 @@ const t = await createTranslator(locale);
       btn.removeAttribute("disabled");
 
       // Show success message
-      successAlert?.classList.remove("hidden");
-      setTimeout(() => {
-        successAlert?.classList.add("hidden");
-      }, ALERT_TIMEOUT);
+      window.toast.success(t("footer.newsletter.success"));
 
       // Reset form
       form.reset();
@@ -134,13 +109,9 @@ const t = await createTranslator(locale);
       btn.removeAttribute("disabled");
 
       const errMsg = error.message;
-      if (errMsg && errorMessage) errorMessage.textContent = errMsg;
 
       // Show error message
-      errorAlert?.classList.remove("hidden");
-      setTimeout(() => {
-        errorAlert?.classList.add("hidden");
-      }, ALERT_TIMEOUT);
+      window.toast.error(errMsg);
     }
   });
 </script>
