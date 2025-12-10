@@ -33,4 +33,8 @@ export default {
     sender: process.env.EMAIL_SENDER,
     receiver: process.env.EMAIL_RECEIVER,
   },
+  newsletter: {
+    baseUrl: process.env.NEWSLETTER_BASE_URL,
+    apiToken: process.env.NEWSLETTER_API_TOKEN,
+  },
 };

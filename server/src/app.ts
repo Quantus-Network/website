@@ -11,6 +11,7 @@ import { waitlist } from "./models/waitlist.js";
 import { generateUniqueID } from "./utils/generateId.js";
 import { Inquiry } from "./interfaces/Inquiry.js";
 import Mail from "nodemailer/lib/mailer/index.js";
+import axios from "axios";
 
 const dbClient = await db();
 const emailClient = emailTransporter();
@@ -27,15 +28,28 @@ app.get("/", async (_, res) => {
   res.send("API is running...");
 });
 app.post("/api/waitlist", async (req, res) => {
-  const { email } = req.body;
+  const { email, firstName, lastName } = req.body;
   if (!email) res.status(400).json({ error: "Email is required!" });
+  if (!firstName) res.status(400).json({ error: "First name is required!" });
 
   try {
-    await dbClient.insert(waitlist).values({ id: generateUniqueID(), email });
+    await dbClient
+      .insert(waitlist)
+      .values({ id: generateUniqueID(), email, lastName, firstName });
 
-    res.status(201).json({ message: "Success adding to waitlist.", email });
+    await axios.post(
+      `${env.newsletter.baseUrl}/subscribers`,
+      { email, lastname: lastName, firstname: firstName },
+      {
+        headers: {
+          Authorization: `Bearer ${env.newsletter.apiToken}`,
+        },
+      }
+    );
+
+    res.status(201).json({ message: "Success adding to newsletter.", email });
   } catch (error) {
-    res.status(400).json({ error: "Failed adding to waitlist." });
+    res.status(400).json({ error: "Failed adding to newsletter." });
   }
 });
 app.post("/api/inquiries", async (req, res) => {
