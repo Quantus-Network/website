@@ -71,7 +71,7 @@ const WinnerPodium = ({
               {isLoading ? (
                 <Skeleton className="me-2 h-4 w-52" />
               ) : (
-                `${referralCount} ${t("quests.leaderboard.referrals")}`
+                `${referralCount} ${t("quests.shill.leaderboard.referrals")}`
               )}
             </p>
           </div>
