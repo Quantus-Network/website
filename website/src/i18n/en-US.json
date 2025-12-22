@@ -238,12 +238,12 @@
   "quests": {
     "meta": {
       "title": "Quantus Quests | Join the Game & Earn Rewards on Quantus Network",
-      "description": "Compete in Quantus Quests — fun blockchain challenges with real rewards. Earn points, climb the leaderboard, and secure your airdrop share on Quantus Network."
+      "description": "Compete in Quantus Quests — fun blockchain challenges with real rewards. Climb the leaderboard and Earn USDC."
     },
     "hero": {
       "welcome": "Welcome To",
       "title": "Quantus Quests",
-      "description": "Quantus Quests are a series of challenges designed to reward our earliest and most active community members. By completing Quests, you will earn points, secure your status as an early adopter, and determine your share of our future airdrop."
+      "description": "Quantus Quests are a series of challenges designed to reward our earliest and most active community members. By completing Quests, secure your status as an early adopter and you will earn USDC."
     },
     "shill": {
       "info": {
@@ -301,8 +301,8 @@
         "code": "QUEST #002",
         "name_one": "KING",
         "name_two": "OF THE",
-        "name_three": "RAIDER",
-        "description": "A battle for a $500 USDC prize pool, boosted airdrop points, and the ultimate title: The King of the Raider.",
+        "name_three": "SHILL",
+        "description": "A battle for a $500 USDC prize pool and the ultimate title: The King of the Shill.",
         "play_guide": {
           "title": "How to Play",
           "guides": [
@@ -311,7 +311,6 @@
             "Associate your ETH and X account to be eligible.",
             "Check the raid target from telegram group",
             "Conduct a raid on the target by replying to it",
-            "Go to the Raid Quest",
             "Add it to your raid submission",
             "Watch the leaderboard to track your position.",
             "The leaderboard is updated every 24 hours."

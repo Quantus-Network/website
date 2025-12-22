@@ -243,7 +243,7 @@
     "hero": {
       "welcome": "Bienvenido a",
       "title": "Quantus Quests",
-      "description": "Las Quantus Quests (Misiones Quantus) son una serie de desafíos diseñados para recompensar a nuestros miembros más tempranos y activos de la comunidad. Al completar Misiones, ganará puntos, asegurará su estatus como uno de los primeros en adoptar y determinará su parte de nuestro futuro airdrop."
+      "description": "Los Quantus Quests son una serie de desafíos diseñados para recompensar a los miembros más antiguos y activos de nuestra comunidad. Al completar Quests, asegura tu estatus de adoptante temprano y ganarás USDC."
     },
     "shill": {
       "info": {
@@ -302,7 +302,7 @@
         "name_one": "REY",
         "name_two": "DE LOS",
         "name_three": "RAIDERS",
-        "description": "Una batalla por un premio total de $500 USDC, puntos de airdrop mejorados y el título definitivo: El Rey de los Raiders.",
+        "description": "Una batalla por un pozo de premios de 500 USDC y el título definitivo: El Rey del Shill.",
         "play_guide": {
           "title": "Cómo jugar",
           "guides": [
@@ -311,7 +311,6 @@
             "Asocia tu cuenta de ETH y X para ser elegible.",
             "Consulta el objetivo del raid en el grupo de Telegram.",
             "Realiza un raid sobre el objetivo respondiendo al mismo.",
-            "Ve a la Raid Quest.",
             "Añádelo a tu envío de raid.",
             "Observa la tabla de clasificación para seguir tu posición.",
             "La tabla de clasificación se actualiza cada 24 horas."

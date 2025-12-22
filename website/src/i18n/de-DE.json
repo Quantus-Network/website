@@ -243,7 +243,7 @@
     "hero": {
       "welcome": "Willkommen zu",
       "title": "Quantus Quests",
-      "description": "Quantus Quests sind eine Reihe von Herausforderungen, die darauf ausgelegt sind, unsere frühesten und aktivsten Community-Mitglieder zu belohnen. Durch das Abschließen von Quests verdienen Sie Punkte, sichern Ihren Status als Early Adopter und bestimmen Ihren Anteil an unserem zukünftigen Airdrop."
+      "description": "Quantus Quests sind eine Reihe von Herausforderungen, die darauf abzielen, unsere frühesten und aktivsten Community-Mitglieder zu belohnen. Durch das Abschließen von Quests sichern Sie sich Ihren Status als Early Adopter und verdienen USDC."
     },
     "shill": {
       "info": {
@@ -302,7 +302,7 @@
         "name_one": "KING",
         "name_two": "OF THE",
         "name_three": "RAIDER",
-        "description": "Ein Kampf um einen Preispool von 500 $ USDC, erhöhte Airdrop-Punkte und den ultimativen Titel: The King of the Raider.",
+        "description": "Ein Kampf um einen Preispool von 500 USDC und den ultimativen Titel: Der King of the Shill.",
         "play_guide": {
           "title": "Spielanleitung",
           "guides": [
@@ -311,7 +311,6 @@
             "Verknüpfe dein ETH- und X-Konto, um teilnahmeberechtigt zu sein.",
             "Prüfe das Raid-Ziel in der Telegram-Gruppe.",
             "Führe einen Raid auf das Ziel durch, indem du darauf antwortest.",
-            "Gehe zur Raid Quest.",
             "Füge es deiner Raid-Einreichung hinzu.",
             "Beobachte die Bestenliste, um deine Position zu verfolgen.",
             "Die Bestenliste wird alle 24 Stunden aktualisiert."

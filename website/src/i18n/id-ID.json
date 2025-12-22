@@ -243,7 +243,7 @@
     "hero": {
       "welcome": "Selamat Datang di",
       "title": "Misi Quantus",
-      "description": "Misi Quantus adalah serangkaian tantangan yang dirancang untuk memberi penghargaan kepada anggota komunitas kami yang paling awal dan paling aktif. Dengan menyelesaikan Misi, Anda akan mendapatkan poin, mengamankan status Anda sebagai pengadopsi awal, dan menentukan bagian Anda dari airdrop kami di masa depan."
+      "description": "Quantus Quests adalah serangkaian tantangan yang dirancang untuk memberi imbalan kepada anggota komunitas kami yang paling awal dan paling aktif. Dengan menyelesaikan Quest, amankan status Anda sebagai pengadopsi awal dan Anda akan mendapatkan USDC."
     },
     "shill": {
       "info": {
@@ -302,7 +302,7 @@
         "name_one": "RAJA",
         "name_two": "DARI",
         "name_three": "RAIDER",
-        "description": "Pertarungan memperebutkan total hadiah $500 USDC, boost poin airdrop, dan gelar tertinggi: The King of the Raider.",
+        "description": "Pertempuran memperebutkan total hadiah 500 USDC dan gelar pamungkas: The King of the Shill.",
         "play_guide": {
           "title": "Cara Bermain",
           "guides": [
@@ -311,7 +311,6 @@
             "Hubungkan akun ETH dan X Anda untuk memenuhi syarat.",
             "Cek target raid dari grup Telegram.",
             "Lakukan raid pada target dengan membalas (reply) postingan tersebut.",
-            "Masuk ke menu Raid Quest.",
             "Tambahkan ke submisi raid Anda.",
             "Pantau leaderboard untuk melihat posisi Anda.",
             "Leaderboard diperbarui setiap 24 jam."
