@@ -13,13 +13,13 @@ interface Props {
 
 const { title, description, pubDate, href, tags = [], heroImage } = Astro.props;
 
-const formattedDate = pubDate.toLocaleDateString("en-US", {
+const currentLocale = getLocaleFromUrl(Astro.url.pathname);
+
+const formattedDate = pubDate.toLocaleDateString(currentLocale, {
   year: "numeric",
   month: "short",
   day: "numeric",
 });
-
-const currentLocale = getLocaleFromUrl(Astro.url.pathname);
 ---
 
 <div
