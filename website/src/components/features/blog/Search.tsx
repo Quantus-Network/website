@@ -1,10 +1,13 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect, useRef } from "react";
 import Fuse from "fuse.js";
 import { Search as SearchIcon } from "lucide-react";
 import { useDebounceValue } from "usehooks-ts";
 import { Input } from "@/components/ui/react/Input";
 import { Tag } from "@/components/ui/react/Tag";
 import { INPUT_DEBOUNCE_INTERVAL } from "@/constants/debounce-interval";
+
+const INITIAL_VISIBLE_COUNT = 6;
+const LOAD_MORE_COUNT = 6;
 
 interface Post {
   id: string;
@@ -37,6 +40,8 @@ export const BlogSearch: React.FC<Props> = ({
 }) => {
   const [query, setQuery] = useState("");
   const [debouncedQuery] = useDebounceValue(query, INPUT_DEBOUNCE_INTERVAL);
+  const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE_COUNT);
+  const observerTarget = useRef<HTMLDivElement>(null);
 
   const fuse = useMemo(() => {
     return new Fuse(posts, {
@@ -49,6 +54,31 @@ export const BlogSearch: React.FC<Props> = ({
     if (!debouncedQuery) return posts;
     return fuse.search(debouncedQuery).map((result) => result.item);
   }, [fuse, debouncedQuery, posts]);
+
+  const displayedPosts = useMemo(() => {
+    return results.slice(0, visibleCount);
+  }, [results, visibleCount]);
+
+  useEffect(() => {
+    setVisibleCount(INITIAL_VISIBLE_COUNT);
+  }, [debouncedQuery]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && visibleCount < results.length) {
+          setVisibleCount((prev) => prev + LOAD_MORE_COUNT);
+        }
+      },
+      { threshold: 1.0, rootMargin: "100px" },
+    );
+
+    if (observerTarget.current) {
+      observer.observe(observerTarget.current);
+    }
+
+    return () => observer.disconnect();
+  }, [visibleCount, results.length]);
 
   const formatDate = (dateStr: string) => {
     return new Date(dateStr).toLocaleDateString(locale, {
@@ -72,7 +102,7 @@ export const BlogSearch: React.FC<Props> = ({
       </div>
 
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {results.map((post) => {
+        {displayedPosts.map((post) => {
           const postSlug = post.id.split("/").slice(1).join("/");
           const postHref = `${localizedBlogPath}/${postSlug}`;
 
@@ -122,6 +152,12 @@ export const BlogSearch: React.FC<Props> = ({
           );
         })}
       </div>
+
+      {visibleCount < results.length && (
+        <div ref={observerTarget} className="flex justify-center py-8">
+          <div className="h-8 w-8 animate-spin rounded-full border-4 border-quantus-blue border-t-transparent"></div>
+        </div>
+      )}
 
       {results.length === 0 && (
         <p className="col-span-full text-center text-gray-400">
