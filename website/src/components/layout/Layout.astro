@@ -13,9 +13,14 @@ import Footer from "./footer/Footer.astro";
 
 import { SEO, type SEOProps } from "astro-seo";
 import type { WithContext, Graph, Thing } from "schema-dts";
-import { getLocaleFromUrl, getTextDirection } from "@/utils/i18n";
+import {
+  DEFAULT_LOCALE,
+  getLocaleFromUrl,
+  getTextDirection,
+} from "@/utils/i18n";
 import CookieConsent from "@/components/ui/CookieConsent.astro";
 import Toast from "../ui/Toast.astro";
+import env from "@/config";
 
 interface Props extends SEOProps {
   jsonLd?: WithContext<Thing> | Graph;
@@ -25,6 +30,18 @@ const { jsonLd, ...metadata } = Astro.props;
 
 const currentLocale = getLocaleFromUrl(Astro.url.pathname);
 const textDirection = getTextDirection(currentLocale);
+
+// Fix canonical for default locale duplicate content
+let canonical = metadata.canonical;
+const currentPath = Astro.url.pathname;
+
+if (
+  currentLocale === DEFAULT_LOCALE &&
+  currentPath.startsWith(`/${DEFAULT_LOCALE}`)
+) {
+  const rootPath = currentPath.replace(`/${DEFAULT_LOCALE}`, "") || "/";
+  canonical = `${env.SITE_BASE_URL}${rootPath}`;
+}
 ---
 
 <!doctype html>
@@ -35,7 +52,7 @@ const textDirection = getTextDirection(currentLocale);
     <link rel="icon" href="/favicon.ico" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <meta name="generator" content={Astro.generator} />
-    <SEO {...metadata} titleTemplate={undefined} />
+    <SEO {...metadata} canonical={canonical} titleTemplate={undefined} />
   </head>
   <body class="flex grow flex-col pt-[139px]" data-locale={currentLocale}>
     {
