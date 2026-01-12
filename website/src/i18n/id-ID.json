@@ -542,6 +542,21 @@
       }
     }
   },
+  "blog": {
+    "title": "Blog",
+    "meta": {
+      "title": "Blog Quantus | Berita Terbaru & Wawasan Kuantum",
+      "description": "Tetap terinformasi dengan berita terbaru, konten edukasi, dan wawasan dari Jaringan Quantus."
+    },
+    "tag": {
+      "meta": {
+        "title": "Blog - #{tag} | Jaringan Quantus",
+        "description": "Telusuri semua postingan blog dengan tag #{tag} di Jaringan Quantus."
+      },
+      "heading": "Postingan dengan tag {tag}",
+      "back_link": "← Kembali ke semua postingan"
+    }
+  },
   "cookie": {
     "title": "Persetujuan Cookie",
     "notice": "Situs web ini menggunakan cookie untuk lebih memahami minat pembacanya dan melayani mereka. Cari tahu lebih lanjut di",

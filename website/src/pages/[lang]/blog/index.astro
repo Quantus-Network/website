@@ -39,15 +39,20 @@ const serializablePosts = sortedPosts.map((post) => ({
     heroImage: post.data.heroImage,
   },
 }));
+
+const metadata = {
+  title: t("blog.meta.title"),
+  description: t("blog.meta.description"),
+};
 ---
 
-<Layout title="Blog" description="Latest news and updates from Quantus">
+<Layout {...metadata}>
   <div class="container mx-auto px-4 py-12">
-    <h1 class="mb-8 text-4xl font-bold text-white">Blog</h1>
-    
-    <BlogSearch 
-      client:load 
-      posts={serializablePosts} 
+    <h1 class="mb-8 text-4xl font-bold text-white">{t("blog.title")}</h1>
+
+    <BlogSearch
+      client:load
+      posts={serializablePosts}
       locale={currentLocale}
       localizedBlogPath={getLocalizedPath(currentLocale, "/blog")}
       localizedTagPath={getLocalizedPath(currentLocale, "/blog/tags")}
