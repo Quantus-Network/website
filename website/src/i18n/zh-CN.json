@@ -12,6 +12,7 @@
     "team": "团队",
     "roadmap": "路线图",
     "events": "活动",
+    "blog": "博客",
     "contact": "联系",
     "checker": "Qday 风险检查器",
     "quests": "任务",
@@ -278,7 +279,11 @@
       },
       "prize": {
         "title": "奖品：",
-        "content": ["第一名：300 USDC", "第二名：150 USDC", "第三名：50 USDC"]
+        "content": [
+          "第一名：300 USDC",
+          "第二名：150 USDC",
+          "第三名：50 USDC"
+        ]
       },
       "win": {
         "title": "如何获胜：",
@@ -316,6 +321,7 @@
       "info": {
         "title": "信息",
         "company": "公司",
+        "blog": "博客",
         "terms": "条款与条件",
         "privacy": "隐私政策"
       }
@@ -490,14 +496,21 @@
       "cookies_tracking": {
         "title": "Cookie 和跟踪",
         "intro": "我们的网站使用 Cookie 来：",
-        "items": ["实现网站基本功能", "进行分析以了解网站使用情况", "提升性能"],
+        "items": [
+          "实现网站基本功能",
+          "进行分析以了解网站使用情况",
+          "提升性能"
+        ],
         "note": "您可以通过浏览器设置控制 Cookie，但这可能会影响网站功能。"
       },
       "data_security": {
         "title": "数据安全和保留",
         "intro": "我们实施标准安全措施来保护您的数据，包括加密和安全存储。但是，没有哪个在线服务是完全安全的。",
         "technical_data": "技术数据：",
-        "retention_items": ["网站分析：26 个月", "新闻通讯订阅：直到您取消订阅"]
+        "retention_items": [
+          "网站分析：26 个月",
+          "新闻通讯订阅：直到您取消订阅"
+        ]
       },
       "your_rights": {
         "title": "您的权利",
@@ -534,6 +547,8 @@
     "title": "来自 Quantus Network 的最新动态。",
     "search_placeholder": "搜索文章...",
     "no_posts_found": "未找到文章。",
+    "featured_label": "精选",
+    "related_posts": "相关文章",
     "meta": {
       "title": "Quantus 博客 | 最新消息与量子见解",
       "description": "获取 Quantus Network 的最新消息、教育内容和见解。"

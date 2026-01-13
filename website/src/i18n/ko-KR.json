@@ -12,6 +12,7 @@
     "team": "팀",
     "roadmap": "로드맵",
     "events": "이벤트",
+    "blog": "블로그",
     "contact": "문의",
     "checker": "Qday 위험 검사기",
     "quests": "퀘스트",
@@ -278,7 +279,11 @@
       },
       "prize": {
         "title": "상금:",
-        "content": ["1위: $300 USDC", "2위: $150 USDC", "3위: $50 USDC"]
+        "content": [
+          "1위: $300 USDC",
+          "2위: $150 USDC",
+          "3위: $50 USDC"
+        ]
       },
       "win": {
         "title": "승리 방법:",
@@ -316,6 +321,7 @@
       "info": {
         "title": "정보",
         "company": "회사",
+        "blog": "블로그",
         "terms": "이용약관",
         "privacy": "개인정보 처리방침"
       }
@@ -541,6 +547,8 @@
     "title": "Quantus Network의 최신 뉴스.",
     "search_placeholder": "포스트 검색...",
     "no_posts_found": "포스트를 찾을 수 없습니다.",
+    "featured_label": "주요",
+    "related_posts": "관련 게시물",
     "meta": {
       "title": "Quantus 블로그 | 최신 뉴스 및 양자 통찰력",
       "description": "Quantus Network의 최신 뉴스, 교육 콘텐츠 및 통찰력을 받아보세요."

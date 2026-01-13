@@ -12,10 +12,10 @@
     "team": "Tim",
     "roadmap": "Peta Jalan",
     "events": "Acara",
+    "blog": "Blog",
     "contact": "Kontak",
     "checker": "Pemeriksa Risiko Qday",
     "quests": "Misi",
-    "blog": "Blog",
     "cta": "Gabung BETA Publik"
   },
   "hero": {
@@ -321,6 +321,7 @@
       "info": {
         "title": "Info",
         "company": "Perusahaan",
+        "blog": "Blog",
         "terms": "Syarat & Ketentuan",
         "privacy": "Kebijakan Privasi"
       }

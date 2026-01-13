@@ -12,6 +12,7 @@
     "team": "Equipo",
     "roadmap": "Hoja de Ruta",
     "events": "Eventos",
+    "blog": "Blog",
     "contact": "Contacto",
     "checker": "Verificador de Riesgo Qday",
     "quests": "Misiones",
@@ -320,6 +321,7 @@
       "info": {
         "title": "Información",
         "company": "Compañía",
+        "blog": "Blog",
         "terms": "Términos y Condiciones",
         "privacy": "Política de Privacidad"
       }
@@ -545,6 +547,8 @@
     "title": "Las últimas noticias de Quantus Network.",
     "search_placeholder": "Buscar publicaciones...",
     "no_posts_found": "No se encontraron publicaciones.",
+    "featured_label": "Destacado",
+    "related_posts": "Entradas relacionadas",
     "meta": {
       "title": "Quantus Blog | Últimas Noticias y Perspectivas Cuánticas",
       "description": "Manténgase al día con las últimas noticias, contenido educativo y perspectivas de Quantus Network."

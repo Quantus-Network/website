@@ -12,6 +12,7 @@
     "team": "チーム",
     "roadmap": "ロードマップ",
     "events": "イベント",
+    "blog": "ブログ",
     "contact": "お問い合わせ",
     "checker": "Qdayリスクチェッカー",
     "quests": "クエスト",
@@ -278,7 +279,11 @@
       },
       "prize": {
         "title": "賞品：",
-        "content": ["1位：$300 USDC", "2位：$150 USDC", "3位：$50 USDC"]
+        "content": [
+          "1位：$300 USDC",
+          "2位：$150 USDC",
+          "3位：$50 USDC"
+        ]
       },
       "win": {
         "title": "勝利条件：",
@@ -316,6 +321,7 @@
       "info": {
         "title": "情報",
         "company": "会社概要",
+        "blog": "ブログ",
         "terms": "利用規約",
         "privacy": "プライバシーポリシー"
       }
@@ -541,6 +547,8 @@
     "title": "Quantus Networkからの最新ニュース。",
     "search_placeholder": "記事を検索...",
     "no_posts_found": "記事が見つかりませんでした。",
+    "featured_label": "注目",
+    "related_posts": "関連記事",
     "meta": {
       "title": "Quantusブログ | 最新ニュースと量子インサイト",
       "description": "Quantus Networkの最新ニュース、教育コンテンツ、インサイトを常に入手してください。"
