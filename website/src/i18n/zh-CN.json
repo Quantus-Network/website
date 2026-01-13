@@ -531,7 +531,7 @@
     }
   },
   "blog": {
-    "title": "博客",
+    "title": "来自 Quantus Network 的最新动态。",
     "search_placeholder": "搜索文章...",
     "no_posts_found": "未找到文章。",
     "meta": {

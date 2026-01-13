@@ -538,7 +538,7 @@
     }
   },
   "blog": {
-    "title": "블로그",
+    "title": "Quantus Network의 최신 뉴스.",
     "search_placeholder": "포스트 검색...",
     "no_posts_found": "포스트를 찾을 수 없습니다.",
     "meta": {

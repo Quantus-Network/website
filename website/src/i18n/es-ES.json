@@ -542,7 +542,7 @@
     }
   },
   "blog": {
-    "title": "Blog",
+    "title": "Las últimas noticias de Quantus Network.",
     "search_placeholder": "Buscar publicaciones...",
     "no_posts_found": "No se encontraron publicaciones.",
     "meta": {

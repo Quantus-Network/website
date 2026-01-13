@@ -543,7 +543,7 @@
     }
   },
   "blog": {
-    "title": "Blog",
+    "title": "The latest news from the Quantus Network.",
     "search_placeholder": "Search posts...",
     "no_posts_found": "No posts found.",
     "meta": {

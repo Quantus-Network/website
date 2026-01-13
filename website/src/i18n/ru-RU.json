@@ -542,7 +542,7 @@
     }
   },
   "blog": {
-    "title": "Блог",
+    "title": "Последние новости от Quantus Network.",
     "search_placeholder": "Поиск постов...",
     "no_posts_found": "Посты не найдены.",
     "meta": {
