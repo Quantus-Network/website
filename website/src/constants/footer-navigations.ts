@@ -37,6 +37,7 @@ export const FOOTER_NAVIGATIONS: Navigation[] = [
     label: "footer.navigation.info.title",
     children: [
       { href: "/about/", label: "footer.navigation.info.company" },
+      { href: "/blog/", label: "footer.navigation.info.blog" },
       // { href: "/audits", label: "footer.navigation.info.audits" },
       {
         href: "/terms-and-privacy/",

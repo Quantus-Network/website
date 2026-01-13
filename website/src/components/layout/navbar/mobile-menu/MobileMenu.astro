@@ -9,6 +9,7 @@ import {
   getLocalizedPath,
 } from "@/utils/i18n";
 import { SITE_NAVIGATIONS } from "@/constants/site-navigations";
+import { ChevronDownIcon } from "@lucide/astro";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
@@ -35,17 +36,44 @@ const t = await createTranslator(locale);
   />
   <div id="mobile-nav-links" class="flex w-full flex-col gap-4">
     {
-      SITE_NAVIGATIONS.map((item) => (
-        <a
-          href={getLocalizedPath(locale, item.href)}
-          class={applyStyles(
-            "text-navbar-link font-large-body block transition-colors duration-200 hover:font-bold",
-            item.isSpecial && "aria-[current='page']:text-quantus-yellow",
-          )}
-        >
-          {t(item.label)}
-        </a>
-      ))
+      SITE_NAVIGATIONS.map((item) => {
+        if ("children" in item) {
+          return (
+            <div class="flex flex-col gap-4">
+              <button class="mobile-group-toggle text-navbar-link font-large-body flex w-full items-center justify-between transition-colors duration-200 hover:font-bold">
+                {t(item.label)}
+                <ChevronDownIcon class="size-5 transition-transform" />
+              </button>
+              <div class="mobile-group-children hidden flex-col gap-4 pl-4">
+                {item.children.map((child) => (
+                  <a
+                    href={getLocalizedPath(locale, child.href)}
+                    class={applyStyles(
+                      "text-navbar-link font-large-body block transition-colors duration-200 hover:font-bold",
+                      child.isSpecial &&
+                        "aria-[current='page']:text-quantus-yellow",
+                    )}
+                  >
+                    {t(child.label)}
+                  </a>
+                ))}
+              </div>
+            </div>
+          );
+        }
+
+        return (
+          <a
+            href={getLocalizedPath(locale, item.href)}
+            class={applyStyles(
+              "text-navbar-link font-large-body block transition-colors duration-200 hover:font-bold",
+              item.isSpecial && "aria-[current='page']:text-quantus-yellow",
+            )}
+          >
+            {t(item.label)}
+          </a>
+        );
+      })
     }
   </div>
 
@@ -75,22 +103,56 @@ const t = await createTranslator(locale);
   const closeIcon = document.querySelector(".close-icon");
   const mobileNavLinks = document.getElementById("mobile-nav-links");
   const links = mobileNavLinks?.querySelectorAll("a");
+  const groupToggles = mobileNavLinks?.querySelectorAll(".mobile-group-toggle");
 
   const updateLinkStatus = (link: HTMLAnchorElement, isActive: boolean) => {
     if (isActive) {
       link.classList.add("font-bold");
       link.setAttribute("aria-current", "page");
+
+      // If it's a child link, expand the parent group and highlight it
+      const groupContainer = link.closest(".flex.flex-col.gap-4");
+      if (groupContainer) {
+        const children = groupContainer.querySelector(".mobile-group-children");
+        const toggle = groupContainer.querySelector(".mobile-group-toggle");
+        const icon = toggle?.querySelector("svg");
+
+        if (children && children.classList.contains("hidden")) {
+          children.classList.remove("hidden");
+          children.classList.add("flex");
+          icon?.classList.add("rotate-180");
+        }
+        toggle?.classList.add("font-bold");
+      }
     } else {
       link.classList.remove("font-bold");
       link.removeAttribute("aria-current");
     }
   };
 
+  const checkIsActive = (link: HTMLAnchorElement) => {
+    const linkPath = new URL(link.href).pathname + new URL(link.href).hash;
+    const currentPath = location.pathname + location.hash;
+    return currentPath === getLocalizedPath(locale, linkPath);
+  };
+
+  // Handle group toggles
+  groupToggles?.forEach((toggle) => {
+    toggle.addEventListener("click", () => {
+      const children = toggle.nextElementSibling;
+      const icon = toggle.querySelector("svg");
+
+      if (children) {
+        const isHidden = children.classList.contains("hidden");
+        children.classList.toggle("hidden", !isHidden);
+        children.classList.toggle("flex", isHidden);
+        icon?.classList.toggle("rotate-180", isHidden);
+      }
+    });
+  });
+
   links?.forEach((link) => {
-    const isActive =
-      location.href === getLocalizedPath(locale, link.href) ||
-      location.pathname === getLocalizedPath(locale, link.href);
-    updateLinkStatus(link, isActive);
+    updateLinkStatus(link, checkIsActive(link));
 
     link.addEventListener("click", () => {
       mobileMenu?.classList.add("hidden");
@@ -100,10 +162,17 @@ const t = await createTranslator(locale);
       closeIcon?.classList.add("hidden");
       mobileMenuButton?.setAttribute("aria-expanded", "false");
 
-      links.forEach((val) => {
-        const isActive = getLocalizedPath(locale, link.href).includes(val.href);
-        updateLinkStatus(val, isActive);
-      });
+      setTimeout(() => {
+        links.forEach((val) => {
+          updateLinkStatus(val, checkIsActive(val));
+        });
+      }, 0);
+    });
+  });
+
+  window.addEventListener("hashchange", () => {
+    links?.forEach((link) => {
+      updateLinkStatus(link, checkIsActive(link));
     });
   });
 </script>
