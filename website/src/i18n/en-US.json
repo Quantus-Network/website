@@ -547,6 +547,7 @@
     "title": "The latest news from the Quantus Network.",
     "search_placeholder": "Search posts...",
     "no_posts_found": "No posts found.",
+    "featured_label": "Featured",
     "meta": {
       "title": "Quantus Blog | Latest News & Quantum Insights",
       "description": "Stay updated with the latest news, educational content, and insights from the Quantus Network."

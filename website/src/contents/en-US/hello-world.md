@@ -4,6 +4,7 @@ description: "This is the first post of my new Astro blog."
 pubDate: "2026-01-12"
 heroImage: "https://placehold.co/600x400/EEE/31343C?text=Hello+World"
 heroAlt: "Hello World Welcome Image"
+featured: true
 tags: ["general", "update"]
 ---
 

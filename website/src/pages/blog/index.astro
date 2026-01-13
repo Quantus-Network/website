@@ -30,6 +30,7 @@ const serializablePosts = sortedPosts.map((post) => ({
     tags: post.data.tags,
     heroImage: post.data.heroImage,
     heroAlt: post.data.heroAlt,
+    featured: post.data.featured,
   },
 }));
 
@@ -64,6 +65,7 @@ const metadata = {
       localizedTagPath={getLocalizedPath(DEFAULT_LOCALE, "/blog/tags")}
       searchPlaceholder={t("blog.search_placeholder")}
       noPostsFoundText={t("blog.no_posts_found")}
+      featuredLabel={t("blog.featured_label")}
       tagsMap={tagsMap}
     />
 

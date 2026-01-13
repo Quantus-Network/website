@@ -19,6 +19,7 @@ interface Post {
     tags: string[];
     heroImage?: string;
     heroAlt?: string;
+    featured?: boolean;
   };
 }
 
@@ -29,6 +30,7 @@ interface Props {
   localizedTagPath: string;
   noPostsFoundText: string;
   searchPlaceholder: string;
+  featuredLabel: string;
   tagsMap: Record<string, string>;
 }
 
@@ -39,6 +41,7 @@ export const BlogList: React.FC<Props> = ({
   localizedTagPath,
   noPostsFoundText,
   searchPlaceholder,
+  featuredLabel,
   tagsMap,
 }) => {
   const [query, setQuery] = useState("");
@@ -58,9 +61,18 @@ export const BlogList: React.FC<Props> = ({
     return fuse.search(debouncedQuery).map((result) => result.item);
   }, [fuse, debouncedQuery, posts]);
 
+  const featuredPost = useMemo(() => {
+    if (debouncedQuery) return null;
+    return posts.find((post) => post.data.featured);
+  }, [posts, debouncedQuery]);
+
   const displayedPosts = useMemo(() => {
-    return results.slice(0, visibleCount);
-  }, [results, visibleCount]);
+    let filteredResults = results;
+    if (featuredPost) {
+      filteredResults = results.filter((post) => post.id !== featuredPost.id);
+    }
+    return filteredResults.slice(0, visibleCount);
+  }, [results, visibleCount, featuredPost]);
 
   useEffect(() => {
     setVisibleCount(INITIAL_VISIBLE_COUNT);
@@ -104,6 +116,55 @@ export const BlogList: React.FC<Props> = ({
         />
       </div>
 
+      {featuredPost && (
+        <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 transition-colors hover:bg-white/10">
+          <a
+            href={`${localizedBlogPath}/${featuredPost.id.split("/").slice(1).join("/")}`}
+            className="flex flex-col md:flex-row"
+          >
+            {featuredPost.data.heroImage && (
+              <div className="aspect-video w-full overflow-hidden md:aspect-auto md:w-1/2">
+                <img
+                  src={featuredPost.data.heroImage}
+                  alt={featuredPost.data.heroAlt || featuredPost.data.title}
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+            )}
+            <div className="flex flex-col justify-center p-6 md:w-1/2 md:p-10">
+              <div className="mb-4 flex items-center justify-between gap-4">
+                <time
+                  dateTime={featuredPost.data.pubDate}
+                  className="text-sm text-gray-400"
+                >
+                  {formatDate(featuredPost.data.pubDate)}
+                </time>
+                <span className="bg-primary/20 text-primary rounded-full px-3 py-1 text-xs font-bold uppercase tracking-wider">
+                  {featuredLabel}
+                </span>
+              </div>
+              <h2 className="mb-4 text-2xl font-bold text-white md:text-4xl">
+                {featuredPost.data.title}
+              </h2>
+              <p className="mb-6 line-clamp-3 text-lg text-gray-300">
+                {featuredPost.data.description}
+              </p>
+              {featuredPost.data.tags.length > 0 && (
+                <div className="flex flex-wrap gap-2">
+                  {featuredPost.data.tags.map((tag) => (
+                    <Tag key={tag}>
+                      <span className="text-gray-400">
+                        {tagsMap[tag] || tag}
+                      </span>
+                    </Tag>
+                  ))}
+                </div>
+              )}
+            </div>
+          </a>
+        </div>
+      )}
+
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {displayedPosts.map((post) => {
           const postSlug = post.id.split("/").slice(1).join("/");
@@ -131,6 +192,11 @@ export const BlogList: React.FC<Props> = ({
                   >
                     {formatDate(post.data.pubDate)}
                   </time>
+                  {post.data.featured && (
+                    <span className="bg-primary/20 text-primary rounded-full px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider">
+                      {featuredLabel}
+                    </span>
+                  )}
                 </div>
                 <h3 className="group-hover:text-primary mb-2 text-xl font-bold text-white">
                   {post.data.title}
