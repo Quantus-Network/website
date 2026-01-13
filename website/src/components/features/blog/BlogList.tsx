@@ -28,15 +28,17 @@ interface Props {
   localizedTagPath: string;
   noPostsFoundText: string;
   searchPlaceholder: string;
+  tagsMap: Record<string, string>;
 }
 
-export const BlogSearch: React.FC<Props> = ({
+export const BlogList: React.FC<Props> = ({
   posts,
   locale,
   localizedBlogPath,
   localizedTagPath,
   noPostsFoundText,
   searchPlaceholder,
+  tagsMap,
 }) => {
   const [query, setQuery] = useState("");
   const [debouncedQuery] = useDebounceValue(query, INPUT_DEBOUNCE_INTERVAL);
@@ -142,7 +144,7 @@ export const BlogSearch: React.FC<Props> = ({
                         href={`${localizedTagPath}/${tag}`}
                         className="hover:text-primary transition-colors"
                       >
-                        {tag}
+                        {tagsMap[tag] || tag}
                       </a>
                     </Tag>
                   ))}
@@ -155,7 +157,7 @@ export const BlogSearch: React.FC<Props> = ({
 
       {visibleCount < results.length && (
         <div ref={observerTarget} className="flex justify-center py-8">
-          <div className="h-8 w-8 animate-spin rounded-full border-4 border-quantus-blue border-t-transparent"></div>
+          <div className="border-quantus-blue h-8 w-8 animate-spin rounded-full border-4 border-t-transparent"></div>
         </div>
       )}
 

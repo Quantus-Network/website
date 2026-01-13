@@ -3,7 +3,7 @@ title: "Penjelasan ZK-Proofs: Mesin Skalabilitas"
 description: "Pelajari bagaimana Zero-Knowledge Proof memungkinkan Quantus untuk berskala tanpa mengorbankan keamanan atau privasi."
 pubDate: "2026-01-08"
 heroImage: "https://placehold.co/600x400/000/FFF?text=Penjelasan+ZK-Proofs"
-tags: ["teknologi", "skalabilitas", "zk-proofs"]
+tags: ["technology", "scaling", "zk-proofs"]
 ---
 
 # Penjelasan ZK-Proofs

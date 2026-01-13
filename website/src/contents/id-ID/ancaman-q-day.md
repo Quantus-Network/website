@@ -3,7 +3,7 @@ title: "Ancaman Q-Day: Apakah Kripto Anda Siap?"
 description: "Q-Day akan datang. Pelajari mengapa sebagian besar blockchain rentan dan bagaimana Quantus memberikan perlindungan."
 pubDate: "2025-12-28"
 heroImage: "https://placehold.co/600x400/300/AAA?text=Ancaman+Q-Day"
-tags: ["keamanan", "kuantum", "kesadaran"]
+tags: ["security", "quantum", "awareness"]
 ---
 
 # Ancaman Q-Day

@@ -3,7 +3,7 @@ title: "Cara Mengamankan Frasa Benih Anda"
 description: "Praktik terbaik untuk menjaga dompet Quantus Anda tetap aman dari ancaman fisik dan digital."
 pubDate: "2025-12-15"
 heroImage: "https://placehold.co/600x400/555/888?text=Amankan+Frasa+Benih"
-tags: ["edukasi", "keamanan", "dasar"]
+tags: ["education", "security", "basics"]
 ---
 
 # Cara Mengamankan Frasa Benih Anda

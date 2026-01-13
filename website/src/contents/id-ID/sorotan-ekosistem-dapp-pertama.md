@@ -3,7 +3,7 @@ title: "Sorotan Ekosistem: dApp Pertama di Quantus"
 description: "Kenalan dengan 'QuantumSwap', bursa terdesentralisasi pertama yang dibangun khusus untuk era kuantum."
 pubDate: "2025-12-10"
 heroImage: "https://placehold.co/600x400/666/777?text=Sorotan+Ekosistem"
-tags: ["ekosistem", "dapps", "defi"]
+tags: ["ecosystem", "dapps", "defi"]
 ---
 
 # Sorotan Ekosistem: QuantumSwap

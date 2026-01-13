@@ -1,6 +1,10 @@
 ---
 import Tag from "@/components/ui/Tag.astro";
-import { getLocaleFromUrl, getLocalizedPath } from "@/utils/i18n";
+import {
+  getLocaleFromUrl,
+  getLocalizedPath,
+  createTranslator,
+} from "@/utils/i18n";
 
 interface Props {
   title: string;
@@ -11,9 +15,17 @@ interface Props {
   heroImage?: string;
 }
 
-const { title, description, pubDate, href, tags = [], heroImage } = Astro.props;
+const {
+  title,
+  description,
+  pubDate,
+  href,
+  tags = [],
+  heroImage,
+} = Astro.props;
 
 const currentLocale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(currentLocale);
 
 const formattedDate = pubDate.toLocaleDateString(currentLocale, {
   year: "numeric",
@@ -58,7 +70,7 @@ const formattedDate = pubDate.toLocaleDateString(currentLocale, {
               href={getLocalizedPath(currentLocale, `/blog/tags/${tag}`)}
               class="hover:text-primary transition-colors"
             >
-              {tag}
+              {t(`blog.tags.${tag}`) || tag}
             </a>
           </Tag>
         ))}

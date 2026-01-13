@@ -3,7 +3,7 @@ title: "Pembaruan Peta Jalan Quantus: Q1 2026"
 description: "Melihat apa yang akan datang selanjutnya untuk Quantus Network saat kami menuju peluncuran Mainnet kami."
 pubDate: "2026-01-05"
 heroImage: "https://placehold.co/600x400/111/EEE?text=Pembaruan+Peta+Jalan"
-tags: ["pembaruan", "peta-jalan"]
+tags: ["update", "roadmap"]
 ---
 
 # Pembaruan Peta Jalan Quantus: Q1 2026

@@ -1,6 +1,6 @@
 ---
 import Layout from "@/components/layout/Layout.astro";
-import { BlogSearch } from "@/components/features/blog/Search";
+import { BlogList } from "@/components/features/blog/BlogList";
 import { getCollection } from "astro:content";
 import {
   getLocaleFromUrl,
@@ -40,6 +40,9 @@ const serializablePosts = sortedPosts.map((post) => ({
   },
 }));
 
+const translations = await import(`../../../i18n/${currentLocale}.json`);
+const tagsMap = translations.default.blog?.tags || {};
+
 const metadata = {
   title: t("blog.meta.title"),
   description: t("blog.meta.description"),
@@ -50,7 +53,7 @@ const metadata = {
   <div class="container mx-auto px-4 py-12">
     <h1 class="mb-8 text-4xl font-bold text-white">{t("blog.title")}</h1>
 
-    <BlogSearch
+    <BlogList
       client:load
       posts={serializablePosts}
       locale={currentLocale}
@@ -58,6 +61,7 @@ const metadata = {
       localizedTagPath={getLocalizedPath(currentLocale, "/blog/tags")}
       searchPlaceholder={t("blog.search_placeholder")}
       noPostsFoundText={t("blog.no_posts_found")}
+      tagsMap={tagsMap}
     />
   </div>
 </Layout>

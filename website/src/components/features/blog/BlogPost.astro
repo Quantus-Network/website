@@ -2,7 +2,11 @@
 import Layout from "@/components/layout/Layout.astro";
 import Tag from "@/components/ui/Tag.astro";
 import type { CollectionEntry } from "astro:content";
-import { getLocaleFromUrl, getLocalizedPath } from "@/utils/i18n";
+import {
+  getLocaleFromUrl,
+  getLocalizedPath,
+  createTranslator,
+} from "@/utils/i18n";
 
 type Props = CollectionEntry<"blog">["data"];
 
@@ -16,6 +20,7 @@ const {
 } = Astro.props;
 
 const currentLocale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(currentLocale);
 ---
 
 <Layout title={title} description={description}>
@@ -66,7 +71,7 @@ const currentLocale = getLocaleFromUrl(Astro.url.pathname);
                   href={getLocalizedPath(currentLocale, `/blog/tags/${tag}`)}
                   class="hover:text-primary transition-colors"
                 >
-                  {tag}
+                  {t(`blog.tags.${tag}`) || tag}
                 </a>
               </Tag>
             ))}

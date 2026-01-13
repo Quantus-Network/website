@@ -557,6 +557,32 @@
       },
       "heading": "Postingan dengan tag {tag}",
       "back_link": "← Kembali ke semua postingan"
+    },
+    "tags": {
+      "general": "Umum",
+      "update": "Pembaruan",
+      "education": "Edukasi",
+      "security": "Keamanan",
+      "quantum": "Kuantum",
+      "technology": "Teknologi",
+      "scaling": "Skalabilitas",
+      "zk-proofs": "ZK-Proofs",
+      "innovation": "Inovasi",
+      "usability": "Kegunaan",
+      "awareness": "Kesadaran",
+      "cryptography": "Kriptografi",
+      "basics": "Dasar",
+      "ecosystem": "Ekosistem",
+      "dapps": "dApps",
+      "defi": "DeFi",
+      "governance": "Tata Kelola",
+      "dao": "DAO",
+      "mining": "Penambangan",
+      "rewards": "Hadiah",
+      "tokenomics": "Tokenomik",
+      "finance": "Keuangan",
+      "quan": "QUAN",
+      "roadmap": "Peta Jalan"
     }
   },
   "cookie": {
