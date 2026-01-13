@@ -15,19 +15,27 @@ const t = await createTranslator(locale);
 <div class="navbar-desktop:block hidden">
   <div id="desktop-nav-links" class="flex items-center gap-x-8">
     {
-      SITE_NAVIGATIONS.map((item) => {
+      SITE_NAVIGATIONS.map((item, index) => {
         if ("children" in item) {
+          const dropdownId = `dropdown-${index}`;
           return (
             <div class="group relative">
               <button
+                type="button"
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-controls={dropdownId}
                 class={applyStyles(
-                  "text-navbar-link flex items-center gap-1 transition-colors duration-200 hover:font-bold",
+                  "text-navbar-link dropdown-toggle flex items-center gap-1 transition-colors duration-200 hover:font-bold",
                 )}
               >
                 {t(item.label)}
-                <ChevronDownIcon class="size-4 transition-transform group-hover:rotate-180" />
+                <ChevronDownIcon class="size-4 transition-transform group-hover:rotate-180 group-[.is-open]:rotate-180" />
               </button>
-              <div class="invisible absolute top-full left-0 z-20 min-w-[200px] pt-4 opacity-0 transition-all group-hover:visible group-hover:opacity-100">
+              <div
+                id={dropdownId}
+                class="invisible absolute top-full left-0 z-20 min-w-[200px] pt-4 opacity-0 transition-all group-hover:visible group-hover:opacity-100 group-[.is-open]:visible group-[.is-open]:opacity-100"
+              >
                 <div class="bg-navbar-body border-quantus-white/10 flex flex-col rounded-lg border p-2 shadow-xl backdrop-blur-md">
                   {item.children.map((child) => (
                     <a
@@ -66,6 +74,8 @@ const t = await createTranslator(locale);
 
   const desktopNavLinks = document.getElementById("desktop-nav-links");
   const links = desktopNavLinks?.querySelectorAll("a");
+  const dropdownToggles =
+    desktopNavLinks?.querySelectorAll<HTMLButtonElement>(".dropdown-toggle");
 
   const updateLinkStatus = (link: HTMLAnchorElement, isActive: boolean) => {
     if (isActive) {
@@ -103,6 +113,54 @@ const t = await createTranslator(locale);
     const currentPath = location.pathname + location.hash;
     return currentPath === getLocalizedPath(locale, linkPath);
   };
+
+  // Dropdown accessibility logic
+  dropdownToggles?.forEach((toggle) => {
+    const group = toggle.closest(".group");
+
+    const toggleDropdown = (show: boolean) => {
+      group?.classList.toggle("is-open", show);
+      toggle.setAttribute("aria-expanded", show.toString());
+    };
+
+    toggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isOpen = group?.classList.contains("is-open");
+      // Close other dropdowns first
+      dropdownToggles.forEach((other) => {
+        if (other !== toggle) {
+          other.closest(".group")?.classList.remove("is-open");
+          other.setAttribute("aria-expanded", "false");
+        }
+      });
+      toggleDropdown(!isOpen);
+    });
+
+    // Handle mouse enter/leave to sync aria-expanded if using hover
+    group?.addEventListener("mouseenter", () => toggleDropdown(true));
+    group?.addEventListener("mouseleave", () => toggleDropdown(false));
+  });
+
+  // Close dropdowns on click outside
+  document.addEventListener("click", () => {
+    dropdownToggles?.forEach((toggle) => {
+      toggle.closest(".group")?.classList.remove("is-open");
+      toggle.setAttribute("aria-expanded", "false");
+    });
+  });
+
+  // Handle Escape key
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      dropdownToggles?.forEach((toggle) => {
+        if (toggle.closest(".group")?.classList.contains("is-open")) {
+          toggle.closest(".group")?.classList.remove("is-open");
+          toggle.setAttribute("aria-expanded", "false");
+          toggle.focus();
+        }
+      });
+    }
+  });
 
   links?.forEach((link) => {
     updateLinkStatus(link, checkIsActive(link));

@@ -36,15 +36,24 @@ const t = await createTranslator(locale);
   />
   <div id="mobile-nav-links" class="flex w-full flex-col gap-4">
     {
-      SITE_NAVIGATIONS.map((item) => {
+      SITE_NAVIGATIONS.map((item, index) => {
         if ("children" in item) {
+          const mobileGroupId = `mobile-group-${index}`;
           return (
             <div class="flex flex-col gap-4">
-              <button class="mobile-group-toggle text-navbar-link font-large-body flex w-full items-center justify-between transition-colors duration-200 hover:font-bold">
+              <button
+                type="button"
+                aria-expanded="false"
+                aria-controls={mobileGroupId}
+                class="mobile-group-toggle text-navbar-link font-large-body flex w-full items-center justify-between transition-colors duration-200 hover:font-bold"
+              >
                 {t(item.label)}
                 <ChevronDownIcon class="size-5 transition-transform" />
               </button>
-              <div class="mobile-group-children hidden flex-col gap-4 pl-4">
+              <div
+                id={mobileGroupId}
+                class="mobile-group-children hidden flex-col gap-4 pl-4"
+              >
                 {item.children.map((child) => (
                   <a
                     href={getLocalizedPath(locale, child.href)}
@@ -103,7 +112,8 @@ const t = await createTranslator(locale);
   const closeIcon = document.querySelector(".close-icon");
   const mobileNavLinks = document.getElementById("mobile-nav-links");
   const links = mobileNavLinks?.querySelectorAll("a");
-  const groupToggles = mobileNavLinks?.querySelectorAll(".mobile-group-toggle");
+  const groupToggles =
+    mobileNavLinks?.querySelectorAll<HTMLButtonElement>(".mobile-group-toggle");
 
   const updateLinkStatus = (link: HTMLAnchorElement, isActive: boolean) => {
     if (isActive) {
@@ -113,14 +123,19 @@ const t = await createTranslator(locale);
       // If it's a child link, expand the parent group and highlight it
       const groupContainer = link.closest(".flex.flex-col.gap-4");
       if (groupContainer) {
-        const children = groupContainer.querySelector(".mobile-group-children");
-        const toggle = groupContainer.querySelector(".mobile-group-toggle");
+        const children = groupContainer.querySelector<HTMLElement>(
+          ".mobile-group-children",
+        );
+        const toggle = groupContainer.querySelector<HTMLButtonElement>(
+          ".mobile-group-toggle",
+        );
         const icon = toggle?.querySelector("svg");
 
         if (children && children.classList.contains("hidden")) {
           children.classList.remove("hidden");
           children.classList.add("flex");
           icon?.classList.add("rotate-180");
+          toggle?.setAttribute("aria-expanded", "true");
         }
         toggle?.classList.add("font-bold");
       }
@@ -139,7 +154,7 @@ const t = await createTranslator(locale);
   // Handle group toggles
   groupToggles?.forEach((toggle) => {
     toggle.addEventListener("click", () => {
-      const children = toggle.nextElementSibling;
+      const children = toggle.nextElementSibling as HTMLElement;
       const icon = toggle.querySelector("svg");
 
       if (children) {
@@ -147,6 +162,7 @@ const t = await createTranslator(locale);
         children.classList.toggle("hidden", !isHidden);
         children.classList.toggle("flex", isHidden);
         icon?.classList.toggle("rotate-180", isHidden);
+        toggle.setAttribute("aria-expanded", isHidden.toString());
       }
     });
   });
