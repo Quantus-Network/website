@@ -1,6 +1,7 @@
 ---
 import Layout from "@/components/layout/Layout.astro";
 import Tag from "@/components/ui/Tag.astro";
+import Card from "@/components/features/blog/Card.astro";
 import type { CollectionEntry } from "astro:content";
 import {
   getLocaleFromUrl,
@@ -8,7 +9,9 @@ import {
   createTranslator,
 } from "@/utils/i18n";
 
-type Props = CollectionEntry<"blog">["data"];
+type Props = CollectionEntry<"blog">["data"] & {
+  relatedPosts?: CollectionEntry<"blog">[];
+};
 
 const {
   title,
@@ -18,6 +21,7 @@ const {
   heroImage,
   heroAlt,
   tags = [],
+  relatedPosts = [],
 } = Astro.props;
 
 const currentLocale = getLocaleFromUrl(Astro.url.pathname);
@@ -25,65 +29,94 @@ const t = await createTranslator(currentLocale);
 ---
 
 <Layout title={title} description={description}>
-  <article class="container mx-auto max-w-3xl px-4 py-12">
-    <div class="mb-8 text-center">
-      {
-        heroImage && (
-          <img
-            width={1020}
-            height={510}
-            src={heroImage}
-            alt={heroAlt || title}
-            class="mb-8 w-full rounded-xl object-cover"
-          />
-        )
-      }
-      <div class="mb-4 text-gray-400">
-        <time datetime={pubDate.toISOString()}>
-          {
-            pubDate.toLocaleDateString(currentLocale, {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-            })
-          }
-        </time>
+  <div class="container mx-auto px-4 py-12">
+    <article class="mx-auto max-w-3xl">
+      <div class="mb-8 text-center">
         {
-          updatedDate && (
-            <div class="italic">
-              Last updated on{" "}
-              {updatedDate.toLocaleDateString(currentLocale, {
+          heroImage && (
+            <img
+              width={1020}
+              height={510}
+              src={heroImage}
+              alt={heroAlt || title}
+              class="mb-8 w-full rounded-xl object-cover"
+            />
+          )
+        }
+        <div class="mb-4 text-gray-400">
+          <time datetime={pubDate.toISOString()}>
+            {
+              pubDate.toLocaleDateString(currentLocale, {
                 year: "numeric",
                 month: "long",
                 day: "numeric",
-              })}
+              })
+            }
+          </time>
+          {
+            updatedDate && (
+              <div class="italic">
+                Last updated on{" "}
+                {updatedDate.toLocaleDateString(currentLocale, {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })}
+              </div>
+            )
+          }
+        </div>
+        <h1 class="mb-4 text-4xl font-bold text-white md:text-5xl">{title}</h1>
+        <hr class="my-4 border-white/10" />
+        {
+          tags.length > 0 && (
+            <div class="mb-8 flex flex-wrap justify-center gap-2">
+              {tags.map((tag: string) => (
+                <Tag>
+                  <a
+                    href={getLocalizedPath(currentLocale, `/blog/tags/${tag}`)}
+                    class="hover:text-primary transition-colors"
+                  >
+                    {t(`blog.tags.${tag}`) || tag}
+                  </a>
+                </Tag>
+              ))}
             </div>
           )
         }
       </div>
-      <h1 class="mb-4 text-4xl font-bold text-white md:text-5xl">{title}</h1>
-      <hr class="my-4 border-white/10" />
-      {
-        tags.length > 0 && (
-          <div class="mb-8 flex flex-wrap justify-center gap-2">
-            {tags.map((tag) => (
-              <Tag>
-                <a
-                  href={getLocalizedPath(currentLocale, `/blog/tags/${tag}`)}
-                  class="hover:text-primary transition-colors"
-                >
-                  {t(`blog.tags.${tag}`) || tag}
-                </a>
-              </Tag>
+      <div class="prose prose-invert mx-auto max-w-none">
+        <slot />
+      </div>
+    </article>
+
+    {
+      relatedPosts.length > 0 && (
+        <div class="mt-16 border-t border-white/10 pt-16">
+          <h2 class="mb-8 text-2xl font-bold text-white">
+            {t("blog.related_posts")}
+          </h2>
+          <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {relatedPosts.map((relatedPost) => (
+              <Card
+                title={relatedPost.data.title}
+                description={relatedPost.data.description}
+                pubDate={relatedPost.data.pubDate}
+                href={getLocalizedPath(
+                  currentLocale,
+                  `/blog/${relatedPost.id.split("/").slice(1).join("/")}`,
+                )}
+                tags={relatedPost.data.tags}
+                heroImage={relatedPost.data.heroImage}
+                heroAlt={relatedPost.data.heroAlt}
+                featured={relatedPost.data.featured}
+              />
             ))}
           </div>
-        )
-      }
-    </div>
-    <div class="prose prose-invert mx-auto max-w-none">
-      <slot />
-    </div>
-  </article>
+        </div>
+      )
+    }
+  </div>
 </Layout>
 
 <style is:global>
