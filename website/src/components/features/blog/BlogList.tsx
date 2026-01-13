@@ -118,50 +118,58 @@ export const BlogList: React.FC<Props> = ({
 
       {featuredPost && (
         <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 transition-colors hover:bg-white/10">
-          <a
-            href={`${localizedBlogPath}/${featuredPost.id.split("/").slice(1).join("/")}`}
-            className="flex flex-col md:flex-row"
-          >
+          <div className="flex flex-col md:flex-row">
             {featuredPost.data.heroImage && (
-              <div className="aspect-video w-full overflow-hidden md:aspect-auto md:w-1/2">
+              <a
+                href={`${localizedBlogPath}/${featuredPost.id.split("/").slice(1).join("/")}`}
+                className="aspect-video w-full overflow-hidden md:aspect-auto md:w-1/2"
+              >
                 <img
                   src={featuredPost.data.heroImage}
                   alt={featuredPost.data.heroAlt || featuredPost.data.title}
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-              </div>
+              </a>
             )}
             <div className="flex flex-col justify-center p-6 md:w-1/2 md:p-10">
-              <div className="mb-4 flex items-center justify-between gap-4">
-                <time
-                  dateTime={featuredPost.data.pubDate}
-                  className="text-sm text-gray-400"
-                >
-                  {formatDate(featuredPost.data.pubDate)}
-                </time>
-                <span className="text-primary rounded-full bg-(image:--color-button-primary) px-3 py-1 text-xs font-bold tracking-wider uppercase">
-                  {featuredLabel}
-                </span>
-              </div>
-              <h2 className="mb-4 text-2xl font-bold text-white md:text-4xl">
-                {featuredPost.data.title}
-              </h2>
-              <p className="mb-6 line-clamp-3 text-lg text-gray-300">
-                {featuredPost.data.description}
-              </p>
+              <a
+                href={`${localizedBlogPath}/${featuredPost.id.split("/").slice(1).join("/")}`}
+                className="block"
+              >
+                <div className="mb-4 flex items-center justify-between gap-4">
+                  <time
+                    dateTime={featuredPost.data.pubDate}
+                    className="text-sm text-gray-400"
+                  >
+                    {formatDate(featuredPost.data.pubDate)}
+                  </time>
+                  <span className="text-primary rounded-full bg-(image:--color-button-primary) px-3 py-1 text-xs font-bold tracking-wider uppercase">
+                    {featuredLabel}
+                  </span>
+                </div>
+                <h2 className="group-hover:text-primary mb-4 text-2xl font-bold text-white transition-colors md:text-4xl">
+                  {featuredPost.data.title}
+                </h2>
+                <p className="mb-6 line-clamp-3 text-lg text-gray-300">
+                  {featuredPost.data.description}
+                </p>
+              </a>
               {featuredPost.data.tags.length > 0 && (
                 <div className="flex flex-wrap gap-2">
                   {featuredPost.data.tags.map((tag) => (
                     <Tag key={tag}>
-                      <span className="text-gray-400">
+                      <a
+                        href={`${localizedTagPath}/${tag}`}
+                        className="hover:text-primary transition-colors"
+                      >
                         {tagsMap[tag] || tag}
-                      </span>
+                      </a>
                     </Tag>
                   ))}
                 </div>
               )}
             </div>
-          </a>
+          </div>
         </div>
       )}
 
