@@ -3,6 +3,7 @@ title: "Tokenomics of QUAN: Built for Longevity"
 description: "Understanding the supply, distribution, and utility of the Quantus native token."
 pubDate: "2025-11-25"
 heroImage: "https://placehold.co/600x400/999/444?text=Tokenomics+of+QUAN"
+heroAlt: "Tokenomics of QUAN Supply and Distribution Chart"
 tags: ["tokenomics", "finance", "quan"]
 ---
 

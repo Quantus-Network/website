@@ -3,6 +3,7 @@ title: "Mulai Menambang di Quantus"
 description: "Panduan pemula untuk berkontribusi pada keamanan jaringan dan mendapatkan hadiah."
 pubDate: "2025-12-01"
 heroImage: "https://placehold.co/600x400/888/555?text=Mulai+Menambang"
+heroAlt: "Ilustrasi Panduan Memulai Menambang di Quantus"
 tags: ["mining", "education", "rewards"]
 ---
 

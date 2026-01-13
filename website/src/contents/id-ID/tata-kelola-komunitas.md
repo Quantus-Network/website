@@ -3,6 +3,7 @@ title: "Tata Kelola Komunitas: Suara Anda Berarti"
 description: "Bagaimana Quantus memberdayakan pemegang token untuk membentuk masa depan jaringan."
 pubDate: "2025-12-05"
 heroImage: "https://placehold.co/600x400/777/666?text=Tata+Kelola+Komunitas"
+heroAlt: "Ilustrasi Tata Kelola Komunitas"
 tags: ["community", "governance", "dao"]
 ---
 

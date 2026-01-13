@@ -3,6 +3,7 @@ title: "Reversible Transactions: A Safety Net for Web3"
 description: "Discover how Quantus protects users from fat-finger errors and scams with reversible transactions."
 pubDate: "2026-01-03"
 heroImage: "https://placehold.co/600x400/222/DDD?text=Reversible+Transactions"
+heroAlt: "Reversible Transactions Safety Net Concept"
 tags: ["security", "usability", "innovation"]
 ---
 

@@ -16,6 +16,7 @@ const {
   pubDate,
   updatedDate,
   heroImage,
+  heroAlt,
   tags = [],
 } = Astro.props;
 
@@ -32,7 +33,7 @@ const t = await createTranslator(currentLocale);
             width={1020}
             height={510}
             src={heroImage}
-            alt=""
+            alt={heroAlt || title}
             class="mb-8 w-full rounded-xl object-cover"
           />
         )

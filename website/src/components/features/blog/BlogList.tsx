@@ -18,6 +18,7 @@ interface Post {
     pubDate: string;
     tags: string[];
     heroImage?: string;
+    heroAlt?: string;
   };
 }
 
@@ -118,7 +119,7 @@ export const BlogList: React.FC<Props> = ({
                   <div className="mb-4 aspect-video w-full overflow-hidden rounded-md">
                     <img
                       src={post.data.heroImage}
-                      alt={post.data.title}
+                      alt={post.data.heroAlt || post.data.title}
                       className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                   </div>

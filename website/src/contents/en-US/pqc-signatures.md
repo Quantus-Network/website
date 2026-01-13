@@ -3,6 +3,7 @@ title: "Post-Quantum Signatures: Why Dilithium?"
 description: "A deep dive into why we chose NIST-standard Dilithium for our digital signatures."
 pubDate: "2025-12-20"
 heroImage: "https://placehold.co/600x400/444/999?text=PQC+Signatures"
+heroAlt: "Post-Quantum Signatures and Dilithium Illustration"
 tags: ["technology", "cryptography", "quantum"]
 ---
 

@@ -3,6 +3,7 @@ title: "Tanda Tangan Pasca-Kuantum: Mengapa Dilithium?"
 description: "Pendalaman tentang mengapa kami memilih standar NIST Dilithium untuk tanda tangan digital kami."
 pubDate: "2025-12-20"
 heroImage: "https://placehold.co/600x400/444/999?text=Tanda+Tangan+PQC"
+heroAlt: "Ilustrasi Tanda Tangan Post-Quantum dan Dilithium"
 tags: ["technology", "cryptography", "quantum"]
 ---
 

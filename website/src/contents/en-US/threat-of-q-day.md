@@ -3,6 +3,7 @@ title: "The Threat of Q-Day: Is Your Crypto Ready?"
 description: "Q-Day is coming. Learn why most blockchains are vulnerable and how Quantus provides a shield."
 pubDate: "2025-12-28"
 heroImage: "https://placehold.co/600x400/300/AAA?text=Threat+of+Q-Day"
+heroAlt: "The Threat of Q-Day Quantum Threat Concept"
 tags: ["security", "quantum", "awareness"]
 ---
 

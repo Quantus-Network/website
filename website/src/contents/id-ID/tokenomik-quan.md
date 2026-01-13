@@ -3,6 +3,7 @@ title: "Tokenomik QUAN: Dibangun untuk Jangka Panjang"
 description: "Memahami pasokan, distribusi, dan kegunaan token asli Quantus."
 pubDate: "2025-11-25"
 heroImage: "https://placehold.co/600x400/999/444?text=Tokenomik+QUAN"
+heroAlt: "Bagan Pasokan dan Distribusi Tokenomik QUAN"
 tags: ["tokenomics", "finance", "quan"]
 ---
 

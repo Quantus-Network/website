@@ -3,6 +3,7 @@ title: "How to Secure Your Seed Phrase"
 description: "Best practices for keeping your Quantus wallet safe from physical and digital threats."
 pubDate: "2025-12-15"
 heroImage: "https://placehold.co/600x400/555/888?text=Secure+Seed+Phrase"
+heroAlt: "Secure Your Seed Phrase Security Illustration"
 tags: ["education", "security", "basics"]
 ---
 

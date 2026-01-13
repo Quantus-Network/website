@@ -3,6 +3,7 @@ title: "Quantus Roadmap Update: Q1 2026"
 description: "A look at what's coming next for the Quantus Network as we move towards our Mainnet launch."
 pubDate: "2026-01-05"
 heroImage: "https://placehold.co/600x400/111/EEE?text=Roadmap+Update"
+heroAlt: "Quantus Roadmap Update Q1 2026 Milestone Chart"
 tags: ["update", "roadmap"]
 ---
 

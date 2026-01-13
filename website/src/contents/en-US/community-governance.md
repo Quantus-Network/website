@@ -3,6 +3,7 @@ title: "Community Governance: Your Voice Matters"
 description: "How Quantus empowers token holders to shape the future of the network."
 pubDate: "2025-12-05"
 heroImage: "https://placehold.co/600x400/777/666?text=Community+Governance"
+heroAlt: "Community Governance Illustration"
 tags: ["community", "governance", "dao"]
 ---
 

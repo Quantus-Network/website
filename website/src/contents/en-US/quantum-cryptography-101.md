@@ -3,6 +3,7 @@ title: "Quantum Cryptography 101"
 description: "An introduction to how quantum computers affect modern cryptography and what we're doing about it."
 pubDate: "2026-01-10"
 heroImage: "https://placehold.co/600x400/000/FFF?text=Quantum+Cryptography"
+heroAlt: "Quantum Cryptography 101 Educational Image"
 tags: ["education", "security", "quantum"]
 ---
 

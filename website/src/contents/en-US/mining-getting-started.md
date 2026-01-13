@@ -3,6 +3,7 @@ title: "Mining on Quantus: Getting Started"
 description: "A beginner's guide to contributing to network security and earning rewards."
 pubDate: "2025-12-01"
 heroImage: "https://placehold.co/600x400/888/555?text=Mining+Getting+Started"
+heroAlt: "Mining on Quantus Getting Started Guide Illustration"
 tags: ["mining", "education", "rewards"]
 ---
 

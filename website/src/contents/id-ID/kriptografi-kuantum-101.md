@@ -3,6 +3,7 @@ title: "Kriptografi Kuantum 101"
 description: "Pengantar tentang bagaimana komputer kuantum memengaruhi kriptografi modern dan apa yang kami lakukan untuk mengatasinya."
 pubDate: "2026-01-10"
 heroImage: "https://placehold.co/600x400/000/FFF?text=Kriptografi+Kuantum"
+heroAlt: "Gambar Edukasi Kriptografi Kuantum 101"
 tags: ["education", "security", "quantum"]
 ---
 

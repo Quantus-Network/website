@@ -13,6 +13,7 @@ interface Props {
   href: string;
   tags?: string[];
   heroImage?: string;
+  heroAlt?: string;
 }
 
 const {
@@ -22,6 +23,7 @@ const {
   href,
   tags = [],
   heroImage,
+  heroAlt,
 } = Astro.props;
 
 const currentLocale = getLocaleFromUrl(Astro.url.pathname);
@@ -43,7 +45,7 @@ const formattedDate = pubDate.toLocaleDateString(currentLocale, {
         <div class="mb-4 aspect-video w-full overflow-hidden rounded-md">
           <img
             src={heroImage}
-            alt={title}
+            alt={heroAlt || title}
             class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
           />
         </div>

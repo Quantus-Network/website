@@ -3,6 +3,7 @@ title: "ZK-Proofs Explained: The Engine of Scalability"
 description: "Learn how Zero-Knowledge Proofs allow Quantus to scale without compromising security or privacy."
 pubDate: "2026-01-08"
 heroImage: "https://placehold.co/600x400/000/FFF?text=ZK-Proofs+Explained"
+heroAlt: "ZK-Proofs Explained Technology Concept"
 tags: ["technology", "scaling", "zk-proofs"]
 ---
 

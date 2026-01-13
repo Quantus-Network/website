@@ -3,6 +3,7 @@ title: "Ecosystem Spotlight: The First dApp on Quantus"
 description: "Meet 'QuantumSwap', the first decentralized exchange built specifically for the quantum era."
 pubDate: "2025-12-10"
 heroImage: "https://placehold.co/600x400/666/777?text=Ecosystem+Spotlight"
+heroAlt: "Ecosystem Spotlight: QuantumSwap dApp"
 tags: ["ecosystem", "dapps", "defi"]
 ---
 
