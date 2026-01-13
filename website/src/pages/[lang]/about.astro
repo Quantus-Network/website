@@ -6,7 +6,6 @@ import Layout from "@/components/layout/Layout.astro";
 import env from "@/config";
 import { organizationJsonLd } from "@/constants/default-jsonld";
 import defaultMetadata from "@/constants/default-metadata";
-import { JsonLdGraph } from "@/utils/build-json-ld";
 
 import {
   createTranslator,
@@ -28,29 +27,10 @@ const metadata: SEOProps = {
   description: t("about.meta.description"),
   canonical: `${env.SITE_BASE_URL}/${locale}/about`,
 };
-const jsonLd = JsonLdGraph({
+const jsonLd = {
   "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: `${env.SITE_BASE_URL}/${locale}`,
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: metadata.title,
-          item: metadata.canonical as string,
-        },
-      ],
-    },
-    organizationJsonLd,
-  ],
-});
+  ...organizationJsonLd,
+};
 ---
 
 <Layout {...metadata} jsonLd={jsonLd}>

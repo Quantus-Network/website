@@ -2,10 +2,8 @@
 import Layout from "@/components/layout/Layout.astro";
 import env from "@/config";
 import defaultMetadata from "@/constants/default-metadata";
-import { JsonLd } from "@/utils/build-json-ld";
 import { getLocaleFromUrl, createTranslator } from "@/utils/i18n";
 import type { SEOProps } from "astro-seo";
-import type { BreadcrumbList } from "schema-dts";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
@@ -16,28 +14,9 @@ const metadata: SEOProps = {
   description: t("tos.meta.description"),
   canonical: `${env.SITE_BASE_URL}/terms-and-privacy`,
 };
-
-const jsonLd = JsonLd<BreadcrumbList>({
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    {
-      "@type": "ListItem",
-      position: 1,
-      name: "Home",
-      item: `${env.SITE_BASE_URL}`,
-    },
-    {
-      "@type": "ListItem",
-      position: 2,
-      name: metadata.title,
-      item: metadata.canonical as string,
-    },
-  ],
-});
 ---
 
-<Layout {...metadata} jsonLd={jsonLd}>
+<Layout {...metadata}>
   <div
     class="max-w-content mx-auto flex flex-col gap-16 px-[30px] py-10 lg:gap-[120px] lg:p-[114px] xl:px-0"
   >

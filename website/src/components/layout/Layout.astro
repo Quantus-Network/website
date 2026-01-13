@@ -17,7 +17,11 @@ import {
   DEFAULT_LOCALE,
   getLocaleFromUrl,
   getTextDirection,
+  getAlternateUrls,
+  createTranslator,
 } from "@/utils/i18n";
+import { generateBreadcrumbs } from "@/utils/build-json-ld";
+import { SITE_NAVIGATIONS } from "@/constants/site-navigations";
 import CookieConsent from "@/components/ui/CookieConsent.astro";
 import Toast from "../ui/Toast.astro";
 import env from "@/config";
@@ -29,6 +33,7 @@ interface Props extends SEOProps {
 const { jsonLd, ...metadata } = Astro.props;
 
 const currentLocale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(currentLocale);
 const textDirection = getTextDirection(currentLocale);
 
 // Fix canonical for default locale duplicate content
@@ -42,6 +47,21 @@ if (
   const rootPath = currentPath.replace(`/${DEFAULT_LOCALE}`, "") || "/";
   canonical = `${env.SITE_BASE_URL}${rootPath}`;
 }
+
+const alternates = getAlternateUrls(currentPath);
+const languageAlternates = Object.entries(alternates).map(([lang, path]) => ({
+  href: `${env.SITE_BASE_URL}${path}`,
+  hrefLang: lang,
+}));
+
+const breadcrumbs = generateBreadcrumbs({
+  pathname: currentPath,
+  locale: currentLocale,
+  siteBaseUrl: env.SITE_BASE_URL,
+  t,
+  navigations: SITE_NAVIGATIONS as any,
+  title: metadata.title,
+});
 ---
 
 <!doctype html>
@@ -52,9 +72,19 @@ if (
     <link rel="icon" href="/favicon.ico" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <meta name="generator" content={Astro.generator} />
-    <SEO {...metadata} canonical={canonical} titleTemplate={undefined} />
+    <SEO
+      {...metadata}
+      canonical={canonical}
+      languageAlternates={languageAlternates}
+      titleTemplate={undefined}
+    />
   </head>
   <body class="flex grow flex-col pt-[139px]" data-locale={currentLocale}>
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(breadcrumbs).replace(/</g, "\\u003c")}
+      is:inline
+    />
     {
       jsonLd && (
         <script

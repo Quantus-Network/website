@@ -35,23 +35,6 @@ const metadata: SEOProps = {
 const jsonLd = JsonLdGraph({
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: `${env.SITE_BASE_URL}/${locale}`,
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: metadata.title,
-          item: metadata.canonical as string,
-        },
-      ],
-    },
     androidAppJsonLd,
     iosAppJsonLd,
   ],

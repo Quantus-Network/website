@@ -3,11 +3,13 @@ import Layout from "@/components/layout/Layout.astro";
 import Tag from "@/components/ui/Tag.astro";
 import Card from "@/components/features/blog/Card.astro";
 import type { CollectionEntry } from "astro:content";
+import type { Article, WithContext } from "schema-dts";
 import {
   getLocaleFromUrl,
   getLocalizedPath,
   createTranslator,
 } from "@/utils/i18n";
+import env from "@/config";
 
 type Props = CollectionEntry<"blog">["data"] & {
   relatedPosts?: CollectionEntry<"blog">[];
@@ -26,9 +28,24 @@ const {
 
 const currentLocale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(currentLocale);
+
+const articleSchema: WithContext<Article> = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: title,
+  description: description,
+  image: heroImage ? new URL(heroImage, env.SITE_BASE_URL).toString() : undefined,
+  datePublished: pubDate.toISOString(),
+  dateModified: updatedDate?.toISOString() || pubDate.toISOString(),
+  author: {
+    "@type": "Organization",
+    name: env.SITE_NAME,
+    url: env.SITE_BASE_URL,
+  },
+};
 ---
 
-<Layout title={title} description={description}>
+<Layout title={title} description={description} jsonLd={articleSchema}>
   <div class="container mx-auto px-4 py-12">
     <article class="mx-auto max-w-3xl">
       <div class="mb-8 text-center">
