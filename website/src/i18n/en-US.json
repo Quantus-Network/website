@@ -13,8 +13,6 @@
     "roadmap": "Roadmap",
     "events": "Events",
     "blog": "Blog",
-    "search_placeholder": "Search posts...",
-    "no_posts_found": "No posts found.",
     "contact": "Contact",
     "checker": "Qday Risk Checker",
     "quests": "Quests",
@@ -546,6 +544,8 @@
   },
   "blog": {
     "title": "Blog",
+    "search_placeholder": "Search posts...",
+    "no_posts_found": "No posts found.",
     "meta": {
       "title": "Quantus Blog | Latest News & Quantum Insights",
       "description": "Stay updated with the latest news, educational content, and insights from the Quantus Network."
