@@ -139,7 +139,7 @@ export const BlogList: React.FC<Props> = ({
                 >
                   {formatDate(featuredPost.data.pubDate)}
                 </time>
-                <span className="bg-primary/20 text-primary rounded-full px-3 py-1 text-xs font-bold uppercase tracking-wider">
+                <span className="text-primary rounded-full bg-(image:--color-button-primary) px-3 py-1 text-xs font-bold tracking-wider uppercase">
                   {featuredLabel}
                 </span>
               </div>
@@ -193,7 +193,7 @@ export const BlogList: React.FC<Props> = ({
                     {formatDate(post.data.pubDate)}
                   </time>
                   {post.data.featured && (
-                    <span className="bg-primary/20 text-primary rounded-full px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider">
+                    <span className="text-primary rounded-full bg-(image:--color-button-primary) px-2 py-0.5 text-[10px] font-bold tracking-wider uppercase">
                       {featuredLabel}
                     </span>
                   )}
