@@ -537,6 +537,49 @@
       }
     }
   },
+  "blog": {
+    "title": "ブログ",
+    "search_placeholder": "記事を検索...",
+    "no_posts_found": "記事が見つかりませんでした。",
+    "meta": {
+      "title": "Quantusブログ | 最新ニュースと量子インサイト",
+      "description": "Quantus Networkの最新ニュース、教育コンテンツ、インサイトを常に入手してください。"
+    },
+    "tag": {
+      "meta": {
+        "title": "ブログ - #{tag} | Quantus Network",
+        "description": "Quantus Networkで#{tag}のタグが付いたすべてのブログ記事を閲覧する。"
+      },
+      "heading": "{tag}のタグが付いた記事",
+      "back_link": "← すべての記事に戻る"
+    },
+    "tags": {
+      "general": "一般",
+      "update": "アップデート",
+      "education": "教育",
+      "security": "セキュリティ",
+      "quantum": "量子",
+      "technology": "テクノロジー",
+      "scaling": "スケーリング",
+      "zk-proofs": "ZK-Proofs",
+      "innovation": "イノベーション",
+      "usability": "ユーザビリティ",
+      "awareness": "意識向上",
+      "cryptography": "暗号学",
+      "basics": "基本",
+      "ecosystem": "エコシステム",
+      "dapps": "dApps",
+      "defi": "DeFi",
+      "governance": "ガバナンス",
+      "dao": "DAO",
+      "mining": "マイニング",
+      "rewards": "報酬",
+      "tokenomics": "トークノミクス",
+      "finance": "金融",
+      "quan": "QUAN",
+      "roadmap": "ロードマップ"
+    }
+  },
   "cookie": {
     "title": "Cookieへの同意",
     "notice": "このウェブサイトは、読者の関心をよりよく理解し、それに応えるためにCookieを使用しています。詳細は",

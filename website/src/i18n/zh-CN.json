@@ -530,6 +530,49 @@
       }
     }
   },
+  "blog": {
+    "title": "博客",
+    "search_placeholder": "搜索文章...",
+    "no_posts_found": "未找到文章。",
+    "meta": {
+      "title": "Quantus 博客 | 最新消息与量子见解",
+      "description": "获取 Quantus Network 的最新消息、教育内容和见解。"
+    },
+    "tag": {
+      "meta": {
+        "title": "博客 - #{tag} | Quantus Network",
+        "description": "浏览 Quantus Network 上带有 #{tag} 标签的所有博客文章。"
+      },
+      "heading": "带有 {tag} 标签的文章",
+      "back_link": "← 返回所有文章"
+    },
+    "tags": {
+      "general": "通用",
+      "update": "更新",
+      "education": "教育",
+      "security": "安全",
+      "quantum": "量子",
+      "technology": "技术",
+      "scaling": "扩展",
+      "zk-proofs": "ZK-Proofs",
+      "innovation": "创新",
+      "usability": "可用性",
+      "awareness": "意识",
+      "cryptography": "密码学",
+      "basics": "基础",
+      "ecosystem": "生态系统",
+      "dapps": "dApps",
+      "defi": "DeFi",
+      "governance": "治理",
+      "dao": "DAO",
+      "mining": "挖矿",
+      "rewards": "奖励",
+      "tokenomics": "代币经济学",
+      "finance": "金融",
+      "quan": "QUAN",
+      "roadmap": "路线图"
+    }
+  },
   "cookie": {
     "title": "Cookie 同意",
     "notice": "本网站使用 Cookie 以更好地了解读者的兴趣并满足他们的需求。在",

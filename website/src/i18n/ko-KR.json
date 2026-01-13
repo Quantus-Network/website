@@ -537,6 +537,49 @@
       }
     }
   },
+  "blog": {
+    "title": "블로그",
+    "search_placeholder": "포스트 검색...",
+    "no_posts_found": "포스트를 찾을 수 없습니다.",
+    "meta": {
+      "title": "Quantus 블로그 | 최신 뉴스 및 양자 통찰력",
+      "description": "Quantus Network의 최신 뉴스, 교육 콘텐츠 및 통찰력을 받아보세요."
+    },
+    "tag": {
+      "meta": {
+        "title": "블로그 - #{tag} | Quantus Network",
+        "description": "Quantus Network에서 #{tag} 태그가 지정된 모든 블로그 포스트 보기."
+      },
+      "heading": "{tag} 태그가 지정된 포스트",
+      "back_link": "← 모든 포스트로 돌아가기"
+    },
+    "tags": {
+      "general": "일반",
+      "update": "업데이트",
+      "education": "교육",
+      "security": "보안",
+      "quantum": "양자",
+      "technology": "기술",
+      "scaling": "스케일링",
+      "zk-proofs": "ZK-Proofs",
+      "innovation": "혁신",
+      "usability": "유용성",
+      "awareness": "인식",
+      "cryptography": "암호학",
+      "basics": "기초",
+      "ecosystem": "생태계",
+      "dapps": "dApps",
+      "defi": "DeFi",
+      "governance": "거버넌스",
+      "dao": "DAO",
+      "mining": "마이닝",
+      "rewards": "보상",
+      "tokenomics": "토크노믹스",
+      "finance": "금융",
+      "quan": "QUAN",
+      "roadmap": "로드맵"
+    }
+  },
   "cookie": {
     "title": "쿠키 동의",
     "notice": "이 웹사이트는 방문자의 관심사를 더 잘 이해하고 이에 부응하기 위해 쿠키를 사용합니다. 자세한 내용은",

@@ -541,6 +541,49 @@
       }
     }
   },
+  "blog": {
+    "title": "Blog",
+    "search_placeholder": "Beiträge suchen...",
+    "no_posts_found": "Keine Beiträge gefunden.",
+    "meta": {
+      "title": "Quantus Blog | Aktuelle Nachrichten & Quantum Insights",
+      "description": "Bleiben Sie auf dem Laufenden mit den neuesten Nachrichten, Bildungsinhalten und Einblicken aus dem Quantus Network."
+    },
+    "tag": {
+      "meta": {
+        "title": "Blog - #{tag} | Quantus Network",
+        "description": "Durchsuchen Sie alle Blog-Beiträge mit dem Tag #{tag} im Quantus Network."
+      },
+      "heading": "Beiträge mit dem Tag {tag}",
+      "back_link": "← Zurück zu allen Beiträgen"
+    },
+    "tags": {
+      "general": "Allgemein",
+      "update": "Update",
+      "education": "Bildung",
+      "security": "Sicherheit",
+      "quantum": "Quantum",
+      "technology": "Technologie",
+      "scaling": "Skalierung",
+      "zk-proofs": "ZK-Proofs",
+      "innovation": "Innovation",
+      "usability": "Benutzerfreundlichkeit",
+      "awareness": "Bewusstsein",
+      "cryptography": "Kryptographie",
+      "basics": "Grundlagen",
+      "ecosystem": "Ökosystem",
+      "dapps": "dApps",
+      "defi": "DeFi",
+      "governance": "Governance",
+      "dao": "DAO",
+      "mining": "Mining",
+      "rewards": "Belohnungen",
+      "tokenomics": "Tokenomics",
+      "finance": "Finanzen",
+      "quan": "QUAN",
+      "roadmap": "Roadmap"
+    }
+  },
   "cookie": {
     "title": "Cookie-Zustimmung",
     "notice": "Diese Website verwendet Cookies, um die Interessen ihrer Leser besser zu verstehen und auf sie einzugehen. Erfahren Sie mehr in der",
