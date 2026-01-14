@@ -2,3 +2,5 @@
 /quantum-security-checker/ /quantum-risk-checker 301
 /quests /quests/shill 301
 /quests/ /quests/shill 301
+/whitepaper https://mozilla.github.io/pdf.js/web/viewer.html?file=https://raw.githubusercontent.com/Quantus-Network/whitepaper/main/whitepaper.pdf 301
+/whitepaper/ https://mozilla.github.io/pdf.js/web/viewer.html?file=https://raw.githubusercontent.com/Quantus-Network/whitepaper/main/whitepaper.pdf 301
