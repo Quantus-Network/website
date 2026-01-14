@@ -239,59 +239,116 @@
   "quests": {
     "meta": {
       "title": "Quantus Quests | Join the Game & Earn Rewards on Quantus Network",
-      "description": "Compete in Quantus Quests — fun blockchain challenges with real rewards. Earn points, climb the leaderboard, and secure your airdrop share on Quantus Network."
+      "description": "Compete in Quantus Quests — fun blockchain challenges with real rewards. Climb the leaderboard and Earn USDC."
     },
     "hero": {
       "welcome": "Welcome To",
       "title": "Quantus Quests",
-      "description": "Quantus Quests are a series of challenges designed to reward our earliest and most active community members. By completing Quests, you will earn points, secure your status as an early adopter, and determine your share of our future airdrop."
+      "description": "Quantus Quests are a series of challenges designed to reward our earliest and most active community members. By completing Quests, secure your status as an early adopter and you will earn USDC."
     },
-    "info": {
-      "code": "QUEST #001",
-      "name_one": "KING",
-      "name_two": "OF THE",
-      "name_three": "SHILL",
-      "description": "A battle for a $500 USDC prize pool, boosted airdrop points, and the ultimate title: The King of the Shill.",
-      "play_guide": {
-        "title": "How to Play",
-        "guides": [
-          "Download the Quantus App.",
-          "Go to the Quantus Quests tab to find your referral link (The Qcat).",
-          "Share your code with your friends & foes.",
-          "Watch the live leaderboard to track your position in real-time."
-        ]
+    "shill": {
+      "info": {
+        "code": "QUEST #001",
+        "name_one": "KING",
+        "name_two": "OF THE",
+        "name_three": "SHILL",
+        "description": "A battle for a $500 USDC prize pool, boosted airdrop points, and the ultimate title: The King of the Shill.",
+        "play_guide": {
+          "title": "How to Play",
+          "guides": [
+            "Download the Quantus App.",
+            "Go to the Quantus Quests tab to find your referral link (The Qcat).",
+            "Share your code with your friends & foes.",
+            "Watch the live leaderboard to track your position in real-time."
+          ]
+        }
+      },
+      "leaderboard": {
+        "title": "Leaderboard",
+        "referrals": "Referrals",
+        "table": {
+          "rank": "Rank",
+          "address": "Address",
+          "referrals": "Referrals"
+        }
+      },
+      "rules": {
+        "title": "The Rules of the Game",
+        "goal": {
+          "title": "The Goal:",
+          "content": "Refer the most users to the Quantus Wallet using your unique invite code. Only referrals that create a wallet will be counted."
+        },
+        "prize": {
+          "title": "The Prizes:",
+          "content": [
+            "1st Place: $300 USDC",
+            "2nd Place: $150 USDC",
+            "3rd Place: $50 USDC"
+          ]
+        },
+        "win": {
+          "title": "How to Win:",
+          "content": "Hold the #1 spot for 72 consecutive hours.",
+          "card": {
+            "title": "The Quantum Twist",
+            "content_one": "The #1 spot on the leaderboard is represented by a live, reversible 10,000 QUAN transaction. If another user overtakes you, the transaction automatically reverses and is sent to the new leader. The claim to the $300 USDC prize moves with it.",
+            "content_two": "To win the grand prize, you must claim the #1 spot and hold it for 72 consecutive hours. Once you do, the 10,000 QUAN transaction finalizes, the prize is secured, and the challenge concludes."
+          }
+        }
       }
     },
-    "leaderboard": {
-      "title": "Leaderboard",
-      "referrals": "Referrals",
-      "table": {
-        "rank": "Rank",
-        "address": "Address",
-        "referrals": "Referrals"
-      }
-    },
-    "rules": {
-      "title": "The Rules of the Game",
-      "goal": {
-        "title": "The Goal:",
-        "content": "Refer the most users to the Quantus Wallet using your unique invite code. Only referrals that create a wallet will be counted."
+    "raid": {
+      "info": {
+        "code": "QUEST #002",
+        "name_one": "KING",
+        "name_two": "OF THE",
+        "name_three": "SHILL",
+        "description": "A battle for a $500 USDC prize pool and the ultimate title: The King of the Shill.",
+        "play_guide": {
+          "title": "How to Play",
+          "guides": [
+            "Download the Quantus App.",
+            "Go to the Quantus Quests tab (The Qcat).",
+            "Associate your ETH and X account to be eligible.",
+            "Check the raid target from telegram group",
+            "Conduct a raid on the target by replying to it",
+            "Add it to your raid submission",
+            "Watch the leaderboard to track your position.",
+            "The leaderboard is updated every 24 hours."
+          ]
+        }
       },
-      "prize": {
-        "title": "The Prizes:",
-        "content": [
-          "1st Place: $300 USDC",
-          "2nd Place: $150 USDC",
-          "3rd Place: $50 USDC"
-        ]
+      "leaderboard": {
+        "title": "Leaderboard",
+        "impressions": "Impressions",
+        "table": {
+          "rank": "Rank",
+          "address": "Address",
+          "impressions": "Impressions"
+        }
       },
-      "win": {
-        "title": "How to Win:",
-        "content": "Hold the #1 spot for 72 consecutive hours.",
-        "card": {
-          "title": "The Quantum Twist",
-          "content_one": "The #1 spot on the leaderboard is represented by a live, reversible 10,000 QUAN transaction. If another user overtakes you, the transaction automatically reverses and is sent to the new leader. The claim to the $300 USDC prize moves with it.",
-          "content_two": "To win the grand prize, you must claim the #1 spot and hold it for 72 consecutive hours. Once you do, the 10,000 QUAN transaction finalizes, the prize is secured, and the challenge concludes."
+      "rules": {
+        "title": "The Rules of the Game",
+        "goal": {
+          "title": "The Goal:",
+          "content": "Accumulate the most impressions from one or more raid attempts. Only valid owned reply to raid target will be counted."
+        },
+        "prize": {
+          "title": "The Prizes:",
+          "content": [
+            "1st Place: $300 USDC",
+            "2nd Place: $150 USDC",
+            "3rd Place: $50 USDC"
+          ]
+        },
+        "win": {
+          "title": "How to Win:",
+          "content": "Hold the #1 spot for 72 consecutive hours.",
+          "card": {
+            "title": "The Quantum Twist",
+            "content_one": "The #1 spot on the leaderboard is represented by a live, reversible 10,000 QUAN transaction. If another user overtakes you, the transaction automatically reverses and is sent to the new leader. The claim to the $300 USDC prize moves with it.",
+            "content_two": "To win the grand prize, you must claim the #1 spot and hold it for 72 consecutive hours. Once you do, the 10,000 QUAN transaction finalizes, the prize is secured, and the challenge concludes."
+          }
         }
       }
     }

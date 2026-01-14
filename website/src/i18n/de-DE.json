@@ -244,54 +244,111 @@
     "hero": {
       "welcome": "Willkommen zu",
       "title": "Quantus Quests",
-      "description": "Quantus Quests sind eine Reihe von Herausforderungen, die darauf ausgelegt sind, unsere frühesten und aktivsten Community-Mitglieder zu belohnen. Durch das Abschließen von Quests verdienen Sie Punkte, sichern Ihren Status als Early Adopter und bestimmen Ihren Anteil an unserem zukünftigen Airdrop."
+      "description": "Quantus Quests sind eine Reihe von Herausforderungen, die darauf abzielen, unsere frühesten und aktivsten Community-Mitglieder zu belohnen. Durch das Abschließen von Quests sichern Sie sich Ihren Status als Early Adopter und verdienen USDC."
     },
-    "info": {
-      "code": "QUEST #001",
-      "name_one": "KÖNIG",
-      "name_two": "DES",
-      "name_three": "SHILL",
-      "description": "Ein Kampf um einen Preispool von 500 $ USDC, erhöhte Airdrop-Punkte und den ultimativen Titel: Der König des Shill.",
-      "play_guide": {
-        "title": "Spielanleitung",
-        "guides": [
-          "Lade die Quantus App herunter.",
-          "Gehe zum Tab „Quantus Quests“, um deinen Empfehlungslink (den Qcat) zu finden.",
-          "Teile deinen Code mit deinen Freunden & Feinden.",
-          "Beobachte das Live-Leaderboard, um deine Position in Echtzeit zu verfolgen."
-        ]
+    "shill": {
+      "info": {
+        "code": "QUEST #001",
+        "name_one": "KÖNIG",
+        "name_two": "DES",
+        "name_three": "SHILL",
+        "description": "Ein Kampf um einen Preispool von 500 $ USDC, erhöhte Airdrop-Punkte und den ultimativen Titel: Der König des Shill.",
+        "play_guide": {
+          "title": "Spielanleitung",
+          "guides": [
+            "Lade die Quantus App herunter.",
+            "Gehe zum Tab „Quantus Quests“, um deinen Empfehlungslink (den Qcat) zu finden.",
+            "Teile deinen Code mit deinen Freunden & Feinden.",
+            "Beobachte das Live-Leaderboard, um deine Position in Echtzeit zu verfolgen."
+          ]
+        }
+      },
+      "leaderboard": {
+        "title": "Bestenliste",
+        "referrals": "Empfehlungen",
+        "table": {
+          "rank": "Rang",
+          "address": "Adresse",
+          "referrals": "Empfehlungen"
+        }
+      },
+      "rules": {
+        "title": "Die Spielregeln",
+        "goal": {
+          "title": "Das Ziel:",
+          "content": "Werbe die meisten Benutzer für das Quantus Wallet mit deinem einzigartigen Einladungscode. Nur Empfehlungen, die eine Wallet erstellen, werden gezählt."
+        },
+        "prize": {
+          "title": "Die Preise:",
+          "content": [
+            "1. Platz: 300 $ USDC",
+            "2. Platz: 150 $ USDC",
+            "3. Platz: 50 $ USDC"
+          ]
+        },
+        "win": {
+          "title": "So gewinnst du:",
+          "content": "Halte den 1. Platz für 72 aufeinanderfolgende Stunden.",
+          "card": {
+            "title": "Der Quanten-Twist",
+            "content_one": "Der 1. Platz auf der Bestenliste wird durch eine live, umkehrbare 10.000 QUAN-Transaktion repräsentiert. Wenn ein anderer Benutzer dich überholt, wird die Transaktion automatisch umgekehrt und an den neuen Führenden gesendet. Der Anspruch auf den 300 $ USDC-Preis bewegt sich mit.",
+            "content_two": "Um den Hauptpreis zu gewinnen, musst du den 1. Platz beanspruchen und ihn 72 aufeinanderfolgende Stunden halten. Sobald du das schaffst, wird die 10.000 QUAN-Transaktion finalisiert, der Preis ist gesichert und die Herausforderung endet."
+          }
+        }
       }
     },
-    "leaderboard": {
-      "title": "Bestenliste",
-      "referrals": "Empfehlungen",
-      "table": {
-        "rank": "Rang",
-        "address": "Adresse",
-        "referrals": "Empfehlungen"
-      }
-    },
-    "rules": {
-      "title": "Die Spielregeln",
-      "goal": {
-        "title": "Das Ziel:",
-        "content": "Werbe die meisten Benutzer für das Quantus Wallet mit deinem einzigartigen Einladungscode. Nur Empfehlungen, die eine Wallet erstellen, werden gezählt."
+    "raid": {
+      "info": {
+        "code": "QUEST #002",
+        "name_one": "KING",
+        "name_two": "OF THE",
+        "name_three": "RAIDER",
+        "description": "Ein Kampf um einen Preispool von 500 USDC und den ultimativen Titel: Der King of the Shill.",
+        "play_guide": {
+          "title": "Spielanleitung",
+          "guides": [
+            "Lade die Quantus-App herunter.",
+            "Gehe zum Reiter Quantus Quests (The Qcat).",
+            "Verknüpfe dein ETH- und X-Konto, um teilnahmeberechtigt zu sein.",
+            "Prüfe das Raid-Ziel in der Telegram-Gruppe.",
+            "Führe einen Raid auf das Ziel durch, indem du darauf antwortest.",
+            "Füge es deiner Raid-Einreichung hinzu.",
+            "Beobachte die Bestenliste, um deine Position zu verfolgen.",
+            "Die Bestenliste wird alle 24 Stunden aktualisiert."
+          ]
+        }
       },
-      "prize": {
-        "title": "Die Preise:",
-        "content": [
-          "1. Platz: 300 $ USDC",
-          "2. Platz: 150 $ USDC",
-          "3. Platz: 50 $ USDC"
-        ]
+      "leaderboard": {
+        "title": "Bestenliste",
+        "impressions": "Impressionen",
+        "table": {
+          "rank": "Rang",
+          "address": "Adresse",
+          "impressions": "Impressionen"
+        }
       },
-      "win": {
-        "title": "So gewinnst du:",
-        "content": "Halte den 1. Platz für 72 aufeinanderfolgende Stunden.",
-        "card": {
-          "title": "Der Quanten-Twist",
-          "content_one": "Der 1. Platz auf der Bestenliste wird durch eine live, umkehrbare 10.000 QUAN-Transaktion repräsentiert. Wenn ein anderer Benutzer dich überholt, wird die Transaktion automatisch umgekehrt und an den neuen Führenden gesendet. Der Anspruch auf den 300 $ USDC-Preis bewegt sich mit.",
-          "content_two": "Um den Hauptpreis zu gewinnen, musst du den 1. Platz beanspruchen und ihn 72 aufeinanderfolgende Stunden halten. Sobald du das schaffst, wird die 10.000 QUAN-Transaktion finalisiert, der Preis ist gesichert und die Herausforderung endet."
+      "rules": {
+        "title": "Die Spielregeln",
+        "goal": {
+          "title": "Das Ziel:",
+          "content": "Sammle die meisten Impressionen durch einen oder mehrere Raid-Versuche. Es werden nur gültige eigene Antworten auf das Raid-Ziel gezählt."
+        },
+        "prize": {
+          "title": "Die Preise:",
+          "content": [
+            "1. Platz: 300 $ USDC",
+            "2. Platz: 150 $ USDC",
+            "3. Platz: 50 $ USDC"
+          ]
+        },
+        "win": {
+          "title": "Wie man gewinnt:",
+          "content": "Halte den 1. Platz für 72 aufeinanderfolgende Stunden.",
+          "card": {
+            "title": "Der Quantus-Twist",
+            "content_one": "Der 1. Platz auf der Bestenliste wird durch eine aktive, rückgängig machbare Transaktion von 10.000 QUAN repräsentiert. Wenn ein anderer Benutzer dich überholt, wird die Transaktion automatisch rückgängig gemacht und an den neuen Anführer gesendet. Der Anspruch auf den Preis von 300 $ USDC wandert mit.",
+            "content_two": "Um den Hauptpreis zu gewinnen, musst du den 1. Platz beanspruchen und ihn für 72 aufeinanderfolgende Stunden halten. Sobald du das schaffst, wird die 10.000 QUAN-Transaktion finalisiert, der Preis gesichert und die Herausforderung endet."
+          }
         }
       }
     }
