@@ -243,54 +243,111 @@
     "hero": {
       "welcome": "Selamat Datang di",
       "title": "Misi Quantus",
-      "description": "Misi Quantus adalah serangkaian tantangan yang dirancang untuk memberi penghargaan kepada anggota komunitas kami yang paling awal dan paling aktif. Dengan menyelesaikan Misi, Anda akan mendapatkan poin, mengamankan status Anda sebagai pengadopsi awal, dan menentukan bagian Anda dari airdrop kami di masa depan."
+      "description": "Quantus Quests adalah serangkaian tantangan yang dirancang untuk memberi imbalan kepada anggota komunitas kami yang paling awal dan paling aktif. Dengan menyelesaikan Quest, amankan status Anda sebagai pengadopsi awal dan Anda akan mendapatkan USDC."
     },
-    "info": {
-      "code": "MISI #001",
-      "name_one": "RAJA",
-      "name_two": "DARI",
-      "name_three": "SHILL",
-      "description": "Pertarungan untuk memperebutkan total hadiah $500 USDC, poin airdrop yang ditingkatkan, dan gelar utama: Raja Shill.",
-      "play_guide": {
-        "title": "Cara Bermain",
-        "guides": [
-          "Unduh Aplikasi Quantus.",
-          "Buka tab Misi Quantus untuk menemukan tautan referal Anda (Qcat).",
-          "Bagikan kode Anda dengan teman & musuh Anda.",
-          "Tonton papan peringkat langsung untuk melacak posisi Anda secara real-time."
-        ]
+    "shill": {
+      "info": {
+        "code": "MISI #001",
+        "name_one": "RAJA",
+        "name_two": "DARI",
+        "name_three": "SHILL",
+        "description": "Pertarungan untuk memperebutkan total hadiah $500 USDC, poin airdrop yang ditingkatkan, dan gelar utama: Raja Shill.",
+        "play_guide": {
+          "title": "Cara Bermain",
+          "guides": [
+            "Unduh Aplikasi Quantus.",
+            "Buka tab Misi Quantus untuk menemukan tautan referal Anda (Qcat).",
+            "Bagikan kode Anda dengan teman & musuh Anda.",
+            "Tonton papan peringkat langsung untuk melacak posisi Anda secara real-time."
+          ]
+        }
+      },
+      "leaderboard": {
+        "title": "Papan Peringkat",
+        "referrals": "Referal",
+        "table": {
+          "rank": "Peringkat",
+          "address": "Alamat",
+          "referrals": "Referal"
+        }
+      },
+      "rules": {
+        "title": "Aturan Main",
+        "goal": {
+          "title": "Tujuan:",
+          "content": "Referensikan pengguna terbanyak ke Dompet Quantus menggunakan kode undangan unik Anda. Hanya referal yang membuat dompet yang akan dihitung."
+        },
+        "prize": {
+          "title": "Hadiah:",
+          "content": [
+            "Juara 1: $300 USDC",
+            "Juara 2: $150 USDC",
+            "Juara 3: $50 USDC"
+          ]
+        },
+        "win": {
+          "title": "Cara Menang:",
+          "content": "Pegang posisi #1 selama 72 jam berturut-turut.",
+          "card": {
+            "title": "Putaran Kuantum",
+            "content_one": "Posisi #1 di papan peringkat diwakili oleh transaksi 10.000 QUAN langsung yang dapat dibalikkan. Jika pengguna lain menyalip Anda, transaksi tersebut secara otomatis berbalik dan dikirim ke pemimpin baru. Klaim atas hadiah $300 USDC bergerak bersamanya.",
+            "content_two": "Untuk memenangkan hadiah utama, Anda harus mengklaim posisi #1 dan menahannya selama 72 jam berturut-turut. Setelah Anda melakukannya, transaksi 10.000 QUAN akan final, hadiah diamankan, dan tantangan berakhir."
+          }
+        }
       }
     },
-    "leaderboard": {
-      "title": "Papan Peringkat",
-      "referrals": "Referal",
-      "table": {
-        "rank": "Peringkat",
-        "address": "Alamat",
-        "referrals": "Referal"
-      }
-    },
-    "rules": {
-      "title": "Aturan Main",
-      "goal": {
-        "title": "Tujuan:",
-        "content": "Referensikan pengguna terbanyak ke Dompet Quantus menggunakan kode undangan unik Anda. Hanya referal yang membuat dompet yang akan dihitung."
+    "raid": {
+      "info": {
+        "code": "QUEST #002",
+        "name_one": "RAJA",
+        "name_two": "DARI",
+        "name_three": "RAIDER",
+        "description": "Pertempuran memperebutkan total hadiah 500 USDC dan gelar pamungkas: The King of the Shill.",
+        "play_guide": {
+          "title": "Cara Bermain",
+          "guides": [
+            "Unduh Aplikasi Quantus.",
+            "Buka tab Quantus Quests (The Qcat).",
+            "Hubungkan akun ETH dan X Anda untuk memenuhi syarat.",
+            "Cek target raid dari grup Telegram.",
+            "Lakukan raid pada target dengan membalas (reply) postingan tersebut.",
+            "Tambahkan ke submisi raid Anda.",
+            "Pantau leaderboard untuk melihat posisi Anda.",
+            "Leaderboard diperbarui setiap 24 jam."
+          ]
+        }
       },
-      "prize": {
-        "title": "Hadiah:",
-        "content": [
-          "Juara 1: $300 USDC",
-          "Juara 2: $150 USDC",
-          "Juara 3: $50 USDC"
-        ]
+      "leaderboard": {
+        "title": "Papan Peringkat",
+        "impressions": "Impresi",
+        "table": {
+          "rank": "Peringkat",
+          "address": "Alamat",
+          "impressions": "Impresi"
+        }
       },
-      "win": {
-        "title": "Cara Menang:",
-        "content": "Pegang posisi #1 selama 72 jam berturut-turut.",
-        "card": {
-          "title": "Putaran Kuantum",
-          "content_one": "Posisi #1 di papan peringkat diwakili oleh transaksi 10.000 QUAN langsung yang dapat dibalikkan. Jika pengguna lain menyalip Anda, transaksi tersebut secara otomatis berbalik dan dikirim ke pemimpin baru. Klaim atas hadiah $300 USDC bergerak bersamanya.",
-          "content_two": "Untuk memenangkan hadiah utama, Anda harus mengklaim posisi #1 dan menahannya selama 72 jam berturut-turut. Setelah Anda melakukannya, transaksi 10.000 QUAN akan final, hadiah diamankan, dan tantangan berakhir."
+      "rules": {
+        "title": "Aturan Permainan",
+        "goal": {
+          "title": "Tujuan:",
+          "content": "Kumpulkan impresi terbanyak dari satu atau lebih percobaan raid. Hanya balasan (reply) valid milik sendiri ke target raid yang akan dihitung."
+        },
+        "prize": {
+          "title": "Hadiah:",
+          "content": [
+            "Juara 1: $300 USDC",
+            "Juara 2: $150 USDC",
+            "Juara 3: $50 USDC"
+          ]
+        },
+        "win": {
+          "title": "Cara Menang:",
+          "content": "Pertahankan posisi #1 selama 72 jam berturut-turut.",
+          "card": {
+            "title": "The Quantum Twist",
+            "content_one": "Posisi #1 di leaderboard diwakili oleh transaksi 10.000 QUAN yang aktif dan dapat dibalik (reversible). Jika pengguna lain menyalip Anda, transaksi otomatis dibatalkan dan dikirim ke pemimpin baru. Hak klaim atas hadiah $300 USDC juga ikut berpindah.",
+            "content_two": "Untuk memenangkan hadiah utama, Anda harus merebut posisi #1 dan mempertahankannya selama 72 jam berturut-turut. Setelah berhasil, transaksi 10.000 QUAN akan difinalisasi, hadiah diamankan, dan tantangan berakhir."
+          }
         }
       }
     }

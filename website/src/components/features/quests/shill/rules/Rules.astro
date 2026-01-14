@@ -1,0 +1,64 @@
+---
+import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+import Card from "./Card.astro";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
+---
+
+<section id="rules" class="mt-[84px] flex flex-col gap-8">
+  <h3 class="font-medium-title-mobile lg:font-medium-title">
+    {t("quests.shill.rules.title")}
+  </h3>
+
+  <div class="grid gap-8 lg:grid-cols-2">
+    <div class="flex flex-col gap-4">
+      <div>
+        <h4 class="font-large-body-bold">
+          {t("quests.shill.rules.goal.title")}
+        </h4>
+        <p class="font-body">
+          {t("quests.shill.rules.goal.content")}
+        </p>
+      </div>
+
+      <div>
+        <h4 class="font-large-body-bold">
+          {t("quests.shill.rules.prize.title")}
+        </h4>
+        <ul class="font-body">
+          {
+            t("quests.shill.rules.prize.content").map((val: string) => (
+              <li>{val}</li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-large-body-bold">
+          {t("quests.shill.rules.win.title")}
+        </h4>
+        <p class="font-body">
+          {t("quests.shill.rules.win.content")}
+        </p>
+      </div>
+    </div>
+
+    <Card>
+      <h4 class="font-tag text-text-title-secondary">
+        {t("quests.shill.rules.win.card.title")}
+      </h4>
+
+      <div class="font-small">
+        <p>
+          {t("quests.shill.rules.win.card.content_one")}
+        </p>
+        <br />
+        <p>
+          {t("quests.shill.rules.win.card.content_two")}
+        </p>
+      </div>
+    </Card>
+  </div>
+</section>

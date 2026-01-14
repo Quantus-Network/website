@@ -51,6 +51,23 @@ export interface LeaderboardEntrant {
   rank: number;
 }
 
+export interface RaidLeaderboardEntrant {
+  raid_id: number;
+  rank: number;
+  raider: {
+    address: string;
+    referral_code: string;
+    referrals_count: number;
+  };
+  total_submissions: number;
+  total_impressions: number;
+  total_replies: number;
+  total_retweets: number;
+  total_likes: number;
+  /** This is a date string ISO-8601 */
+  last_activity: string;
+}
+
 interface LeaderboardOptions {
   page?: number;
   pageSize?: number;
@@ -67,12 +84,42 @@ export interface LeaderboardResponse {
   };
 }
 
+export interface RaidLeaderboardResponse {
+  data: RaidLeaderboardEntrant[];
+  meta: {
+    page: number;
+    page_size: number;
+    total_items: number;
+    total_pages: number;
+  };
+}
+
 type ApiResponse<T = any> = Promise<Response>;
 
 const createApiClient = () => {
   const nodeCounter = new NodeCounterService();
 
   const methods = {
+    fetchRaidLeaderboard: (
+      options: LeaderboardOptions,
+    ): ApiResponse<RaidLeaderboardResponse> => {
+      const firstRaid = 1;
+      let url = `${env.TASK_MASTER_URL}/raid-quests/leaderboards/${firstRaid}`;
+
+      let queryParams = [];
+      if (options.page) queryParams.push(`page=${options.page}`);
+      if (options.pageSize) queryParams.push(`page_size=${options.pageSize}`);
+      if (options.filterByReferralCode)
+        queryParams.push(`referral_code=${options.filterByReferralCode}`);
+
+      if (queryParams.length != 0) url = url + "?" + queryParams.join("&");
+
+      return fetch(url, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+    },
     fetchLeaderboard: (
       options: LeaderboardOptions,
     ): ApiResponse<LeaderboardResponse> => {

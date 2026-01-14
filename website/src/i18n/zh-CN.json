@@ -243,50 +243,107 @@
     "hero": {
       "welcome": "欢迎来到",
       "title": "Quantus 任务",
-      "description": "Quantus 任务是一系列旨在奖励我们最早和最活跃社区成员的挑战。通过完成任务，您将获得积分，确保您作为早期采用者的地位，并决定您在未来空投中的份额。"
+      "description": "Quantus 任务是为奖励我们最早且最活跃的社区成员而设计的一系列挑战。通过完成任务，确保您早期采用者的身份，并赚取 USDC。"
     },
-    "info": {
-      "code": "任务 #001",
-      "name_one": "宣传",
-      "name_two": "之",
-      "name_three": "王",
-      "description": "一场争夺 500 美元 USDC 奖金池、额外空投积分以及最终头衔“宣传之王”的战斗。",
-      "play_guide": {
-        "title": "如何参与",
-        "guides": [
-          "下载 Quantus 应用。",
-          "转到 Quantus 任务标签页，找到您的推荐链接 (Qcat)。",
-          "将您的代码分享给您的朋友和“敌人”。",
-          "观看实时排行榜，跟踪您的实时排名。"
-        ]
+    "shill": {
+      "info": {
+        "code": "任务 #001",
+        "name_one": "宣传",
+        "name_two": "之",
+        "name_three": "王",
+        "description": "一场争夺 500 美元 USDC 奖金池、额外空投积分以及最终头衔“宣传之王”的战斗。",
+        "play_guide": {
+          "title": "如何参与",
+          "guides": [
+            "下载 Quantus 应用。",
+            "转到 Quantus 任务标签页，找到您的推荐链接 (Qcat)。",
+            "将您的代码分享给您的朋友和“敌人”。",
+            "观看实时排行榜，跟踪您的实时排名。"
+          ]
+        }
+      },
+      "leaderboard": {
+        "title": "排行榜",
+        "referrals": "推荐数",
+        "table": {
+          "rank": "排名",
+          "address": "地址",
+          "referrals": "推荐数"
+        }
+      },
+      "rules": {
+        "title": "游戏规则",
+        "goal": {
+          "title": "目标：",
+          "content": "使用您独特的邀请码推荐最多的用户使用 Quantus 钱包。只有创建了钱包的推荐才会被计算在内。"
+        },
+        "prize": {
+          "title": "奖品：",
+          "content": ["第一名：300 USDC", "第二名：150 USDC", "第三名：50 USDC"]
+        },
+        "win": {
+          "title": "如何获胜：",
+          "content": "连续 72 小时保持第一名的位置。",
+          "card": {
+            "title": "量子扭转",
+            "content_one": "排行榜上的第一名由一笔实时的、可逆转的 10,000 QUAN 交易代表。如果另一位用户超越了您，该交易将自动逆转并发送给新的领先者。300 USDC 奖金的申领权也随之转移。",
+            "content_two": "要赢得大奖，您必须夺得第一名并连续保持 72 小时。一旦您做到了，这笔 10,000 QUAN 的交易将最终确定，奖金被锁定，挑战结束。"
+          }
+        }
       }
     },
-    "leaderboard": {
-      "title": "排行榜",
-      "referrals": "推荐数",
-      "table": {
-        "rank": "排名",
-        "address": "地址",
-        "referrals": "推荐数"
-      }
-    },
-    "rules": {
-      "title": "游戏规则",
-      "goal": {
-        "title": "目标：",
-        "content": "使用您独特的邀请码推荐最多的用户使用 Quantus 钱包。只有创建了钱包的推荐才会被计算在内。"
+    "raid": {
+      "info": {
+        "code": "QUEST #002",
+        "name_one": "突袭",
+        "name_two": "之",
+        "name_three": "王",
+        "description": "一场为了 500 USDC 奖池及终极头衔“Shill 之王”而展开的对决。",
+        "play_guide": {
+          "title": "玩法说明",
+          "guides": [
+            "下载 Quantus 应用程序。",
+            "进入 Quantus Quests 标签页 (The Qcat)。",
+            "关联您的 ETH 和 X 账号以获取资格。",
+            "在 Telegram 群组中查看突袭目标。",
+            "通过回复目标推文来进行突袭。",
+            "将其添加到您的突袭提交中。",
+            "关注排行榜以追踪您的排名。",
+            "排行榜每 24 小时更新一次。"
+          ]
+        }
       },
-      "prize": {
-        "title": "奖品：",
-        "content": ["第一名：300 USDC", "第二名：150 USDC", "第三名：50 USDC"]
+      "leaderboard": {
+        "title": "排行榜",
+        "impressions": "曝光量",
+        "table": {
+          "rank": "排名",
+          "address": "地址",
+          "impressions": "曝光量"
+        }
       },
-      "win": {
-        "title": "如何获胜：",
-        "content": "连续 72 小时保持第一名的位置。",
-        "card": {
-          "title": "量子扭转",
-          "content_one": "排行榜上的第一名由一笔实时的、可逆转的 10,000 QUAN 交易代表。如果另一位用户超越了您，该交易将自动逆转并发送给新的领先者。300 USDC 奖金的申领权也随之转移。",
-          "content_two": "要赢得大奖，您必须夺得第一名并连续保持 72 小时。一旦您做到了，这笔 10,000 QUAN 的交易将最终确定，奖金被锁定，挑战结束。"
+      "rules": {
+        "title": "游戏规则",
+        "goal": {
+          "title": "目标：",
+          "content": "通过一次或多次突袭尝试积累最多的曝光量。仅计算对自己有效的突袭目标回复。"
+        },
+        "prize": {
+          "title": "奖品：",
+          "content": [
+            "第一名：$300 USDC",
+            "第二名：$150 USDC",
+            "第三名：$50 USDC"
+          ]
+        },
+        "win": {
+          "title": "如何获胜：",
+          "content": "连续 72 小时保持第一名的位置。",
+          "card": {
+            "title": "量子反转 (Quantum Twist)",
+            "content_one": "排行榜第一名的位置由一笔实时的、可撤销的 10,000 QUAN 交易代表。如果其他用户超过您，该交易将自动撤销并发送给新的领先者。$300 USDC 奖金的索取权也随之转移。",
+            "content_two": "要赢得大奖，您必须占据第一名并保持 72 小时。一旦达成，10,000 QUAN 交易将最终确认，奖金锁定，挑战结束。"
+          }
         }
       }
     }

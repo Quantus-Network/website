@@ -1,12 +1,12 @@
-import type { LeaderboardEntrant } from "@/api/client";
+import type { RaidLeaderboardEntrant } from "@/api/client";
 import { createColumnHelper } from "@tanstack/react-table";
 
-const columnHelper = createColumnHelper<LeaderboardEntrant>();
+const columnHelper = createColumnHelper<RaidLeaderboardEntrant>();
 
 export const LEADERBOARD_COLUMNS = [
   columnHelper.accessor("rank", {
     id: "rank",
-    header: "quests.leaderboard.table.rank",
+    header: "quests.raid.leaderboard.table.rank",
     cell: (props) => (
       <div className="flex justify-center font-bold sm:block">
         {props.getValue()}
@@ -14,15 +14,15 @@ export const LEADERBOARD_COLUMNS = [
     ),
     enableSorting: false,
   }),
-  columnHelper.accessor("address.referral_code", {
+  columnHelper.accessor("raider.referral_code", {
     id: "address",
-    header: "quests.leaderboard.table.address",
+    header: "quests.raid.leaderboard.table.address",
     cell: (props) => props.getValue(),
     enableSorting: false,
   }),
-  columnHelper.accessor("address.referrals_count", {
-    id: "referrals_count",
-    header: "quests.leaderboard.table.referrals",
+  columnHelper.accessor("total_impressions", {
+    id: "impressions",
+    header: "quests.raid.leaderboard.table.impressions",
     cell: (props) => (
       <div className="flex justify-center font-bold sm:block">
         {props.getValue()}

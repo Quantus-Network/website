@@ -243,54 +243,111 @@
     "hero": {
       "welcome": "Bienvenido a",
       "title": "Quantus Quests",
-      "description": "Las Quantus Quests (Misiones Quantus) son una serie de desafíos diseñados para recompensar a nuestros miembros más tempranos y activos de la comunidad. Al completar Misiones, ganará puntos, asegurará su estatus como uno de los primeros en adoptar y determinará su parte de nuestro futuro airdrop."
+      "description": "Los Quantus Quests son una serie de desafíos diseñados para recompensar a los miembros más antiguos y activos de nuestra comunidad. Al completar Quests, asegura tu estatus de adoptante temprano y ganarás USDC."
     },
-    "info": {
-      "code": "MISIÓN #001",
-      "name_one": "REY",
-      "name_two": "DEL",
-      "name_three": "SHILL",
-      "description": "Una batalla por un pozo de premios de $500 USDC, puntos de airdrop aumentados y el título definitivo: El Rey del Shill (Promoción).",
-      "play_guide": {
-        "title": "Cómo Jugar",
-        "guides": [
-          "Descargue la Quantus App.",
-          "Vaya a la pestaña Quantus Quests para encontrar su enlace de referido (El Qcat).",
-          "Comparta su código con sus amigos y enemigos.",
-          "Mire la tabla de clasificación en vivo para seguir su posición en tiempo real."
-        ]
+    "shill": {
+      "info": {
+        "code": "MISIÓN #001",
+        "name_one": "REY",
+        "name_two": "DEL",
+        "name_three": "SHILL",
+        "description": "Una batalla por un pozo de premios de $500 USDC, puntos de airdrop aumentados y el título definitivo: El Rey del Shill (Promoción).",
+        "play_guide": {
+          "title": "Cómo Jugar",
+          "guides": [
+            "Descargue la Quantus App.",
+            "Vaya a la pestaña Quantus Quests para encontrar su enlace de referido (El Qcat).",
+            "Comparta su código con sus amigos y enemigos.",
+            "Mire la tabla de clasificación en vivo para seguir su posición en tiempo real."
+          ]
+        }
+      },
+      "leaderboard": {
+        "title": "Tabla de Clasificación",
+        "referrals": "Referidos",
+        "table": {
+          "rank": "Rango",
+          "address": "Dirección",
+          "referrals": "Referidos"
+        }
+      },
+      "rules": {
+        "title": "Las Reglas del Juego",
+        "goal": {
+          "title": "El Objetivo:",
+          "content": "Referir a la mayor cantidad de usuarios a la Billetera Quantus usando su código de invitación único. Solo se contarán los referidos que creen una billetera."
+        },
+        "prize": {
+          "title": "Los Premios:",
+          "content": [
+            "1er Lugar: $300 USDC",
+            "2do Lugar: $150 USDC",
+            "3er Lugar: $50 USDC"
+          ]
+        },
+        "win": {
+          "title": "Cómo Ganar:",
+          "content": "Mantener el puesto #1 durante 72 horas consecutivas.",
+          "card": {
+            "title": "El Giro Cuántico",
+            "content_one": "El puesto #1 en la tabla de clasificación está representado por una transacción en vivo y reversible de 10,000 QUAN. Si otro usuario lo supera, la transacción se revierte automáticamente y se envía al nuevo líder. El derecho a reclamar el premio de $300 USDC se mueve con ella.",
+            "content_two": "Para ganar el gran premio, debe reclamar el puesto #1 y mantenerlo durante 72 horas consecutivas. Una vez que lo haga, la transacción de 10,000 QUAN se finaliza, el premio está asegurado y el desafío concluye."
+          }
+        }
       }
     },
-    "leaderboard": {
-      "title": "Tabla de Clasificación",
-      "referrals": "Referidos",
-      "table": {
-        "rank": "Rango",
-        "address": "Dirección",
-        "referrals": "Referidos"
-      }
-    },
-    "rules": {
-      "title": "Las Reglas del Juego",
-      "goal": {
-        "title": "El Objetivo:",
-        "content": "Referir a la mayor cantidad de usuarios a la Billetera Quantus usando su código de invitación único. Solo se contarán los referidos que creen una billetera."
+    "raid": {
+      "info": {
+        "code": "QUEST #002",
+        "name_one": "REY",
+        "name_two": "DE LOS",
+        "name_three": "RAIDERS",
+        "description": "Una batalla por un pozo de premios de 500 USDC y el título definitivo: El Rey del Shill.",
+        "play_guide": {
+          "title": "Cómo jugar",
+          "guides": [
+            "Descarga la aplicación Quantus.",
+            "Ve a la pestaña Quantus Quests (The Qcat).",
+            "Asocia tu cuenta de ETH y X para ser elegible.",
+            "Consulta el objetivo del raid en el grupo de Telegram.",
+            "Realiza un raid sobre el objetivo respondiendo al mismo.",
+            "Añádelo a tu envío de raid.",
+            "Observa la tabla de clasificación para seguir tu posición.",
+            "La tabla de clasificación se actualiza cada 24 horas."
+          ]
+        }
       },
-      "prize": {
-        "title": "Los Premios:",
-        "content": [
-          "1er Lugar: $300 USDC",
-          "2do Lugar: $150 USDC",
-          "3er Lugar: $50 USDC"
-        ]
+      "leaderboard": {
+        "title": "Tabla de clasificación",
+        "impressions": "Impresiones",
+        "table": {
+          "rank": "Rango",
+          "address": "Dirección",
+          "impressions": "Impresiones"
+        }
       },
-      "win": {
-        "title": "Cómo Ganar:",
-        "content": "Mantener el puesto #1 durante 72 horas consecutivas.",
-        "card": {
-          "title": "El Giro Cuántico",
-          "content_one": "El puesto #1 en la tabla de clasificación está representado por una transacción en vivo y reversible de 10,000 QUAN. Si otro usuario lo supera, la transacción se revierte automáticamente y se envía al nuevo líder. El derecho a reclamar el premio de $300 USDC se mueve con ella.",
-          "content_two": "Para ganar el gran premio, debe reclamar el puesto #1 y mantenerlo durante 72 horas consecutivas. Una vez que lo haga, la transacción de 10,000 QUAN se finaliza, el premio está asegurado y el desafío concluye."
+      "rules": {
+        "title": "Las reglas del juego",
+        "goal": {
+          "title": "El objetivo:",
+          "content": "Acumular la mayor cantidad de impresiones en uno o más intentos de raid. Solo se contarán las respuestas válidas propias al objetivo del raid."
+        },
+        "prize": {
+          "title": "Los premios:",
+          "content": [
+            "1er Lugar: $300 USDC",
+            "2do Lugar: $150 USDC",
+            "3er Lugar: $50 USDC"
+          ]
+        },
+        "win": {
+          "title": "Cómo ganar:",
+          "content": "Mantén el puesto n.º 1 durante 72 horas consecutivas.",
+          "card": {
+            "title": "El Giro Cuántico",
+            "content_one": "El puesto n.º 1 en la tabla de clasificación está representado por una transacción de 10,000 QUAN activa y reversible. Si otro usuario te supera, la transacción se revierte automáticamente y se envía al nuevo líder. El derecho al premio de $300 USDC se mueve con ella.",
+            "content_two": "Para ganar el gran premio, debes reclamar el puesto n.º 1 y mantenerlo durante 72 horas consecutivas. Una vez lo hagas, la transacción de 10,000 QUAN finaliza, el premio se asegura y el desafío concluye."
+          }
         }
       }
     }
