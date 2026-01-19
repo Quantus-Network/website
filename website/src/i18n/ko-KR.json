@@ -611,30 +611,13 @@
       "back_link": "← 모든 포스트로 돌아가기"
     },
     "tags": {
-      "general": "일반",
-      "update": "업데이트",
-      "education": "교육",
-      "security": "보안",
-      "quantum": "양자",
-      "technology": "기술",
-      "scaling": "스케일링",
-      "zk-proofs": "ZK-Proofs",
-      "innovation": "혁신",
-      "usability": "유용성",
-      "awareness": "인식",
-      "cryptography": "암호학",
-      "basics": "기초",
-      "ecosystem": "생태계",
-      "dapps": "dApps",
-      "defi": "DeFi",
-      "governance": "거버넌스",
-      "dao": "DAO",
-      "mining": "마이닝",
-      "rewards": "보상",
-      "tokenomics": "토크노믹스",
-      "finance": "금융",
-      "quan": "QUAN",
-      "roadmap": "로드맵"
+      "weekly-update": "주간 업데이트",
+      "threshold-signatures": "임계값 서명",
+      "post-quantum-cryptography": "포스트 양자 암호화",
+      "dilithium": "딜리슘(Dilithium)",
+      "zero-knowledge-proofs": "영지식 증명",
+      "quantum-safe": "양자 내성",
+      "blockchain": "블록체인"
     }
   },
   "cookie": {

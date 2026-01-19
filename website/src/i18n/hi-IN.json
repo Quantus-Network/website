@@ -619,30 +619,13 @@
       "back_link": "← सभी पोस्ट पर वापस जाएं"
     },
     "tags": {
-      "general": "सामान्य",
-      "update": "अपडेट",
-      "education": "शिक्षा",
-      "security": "सुरक्षा",
-      "quantum": "क्वांटम",
-      "technology": "तकनीक",
-      "scaling": "स्केलिंग",
-      "zk-proofs": "ZK-Proofs",
-      "innovation": "नवाचार",
-      "usability": "उपयोगिता",
-      "awareness": "जागरूकता",
-      "cryptography": "क्रिप्टोग्राफी",
-      "basics": "बुनियादी बातें",
-      "ecosystem": "पारिस्थितिकी तंत्र",
-      "dapps": "dApps",
-      "defi": "DeFi",
-      "governance": "शासन",
-      "dao": "DAO",
-      "mining": "माइनिंग",
-      "rewards": "पुरस्कार",
-      "tokenomics": "टोकनोमिक्स",
-      "finance": "वित्त",
-      "quan": "QUAN",
-      "roadmap": "रोडमैप"
+      "weekly-update": "साप्ताहिक अपडेट",
+      "threshold-signatures": "थ्रेशोल्ड हस्ताक्षर",
+      "post-quantum-cryptography": "पोस्ट-क्वांटम क्रिप्टोग्राफी",
+      "dilithium": "डिलिथियम (Dilithium)",
+      "zero-knowledge-proofs": "जीरो-नॉलेज प्रूफ",
+      "quantum-safe": "क्वांटम-सुरक्षित",
+      "blockchain": "ब्लॉकचेन"
     }
   },
   "cookie": {

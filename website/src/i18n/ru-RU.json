@@ -619,31 +619,14 @@
       "back_link": "← Назад ко всем постам"
     },
     "tags": {
-      "general": "Общее",
-      "update": "Обновление",
-      "education": "Образование",
-      "security": "Безопасность",
-      "quantum": "Кванты",
-      "technology": "Технологии",
-      "scaling": "Масштабирование",
-      "zk-proofs": "ZK-Proofs",
-      "innovation": "Инновации",
-      "usability": "Удобство",
-      "awareness": "Осведомленность",
-      "cryptography": "Криптография",
-      "basics": "Основы",
-      "ecosystem": "Экосистема",
-      "dapps": "dApps",
-      "defi": "DeFi",
-      "governance": "Управление",
-      "dao": "DAO",
-      "mining": "Майнинг",
-      "rewards": "Награды",
-      "tokenomics": "Токеномика",
-      "finance": "Финансы",
-      "quan": "QUAN",
-      "roadmap": "Дорожная карта"
-    }
+      "weekly-update": "Еженедельное обновление",
+      "threshold-signatures": "Пороговые подписи",
+      "post-quantum-cryptography": "Постквантовая криптография",
+      "dilithium": "Dilithium",
+      "zero-knowledge-proofs": "Доказательства с нулевым разглашением",
+      "quantum-safe": "Квантово-безопасный",
+      "blockchain": "Блокчейн"
+    }    }
   },
   "cookie": {
     "title": "Согласие на использование cookie",

@@ -608,30 +608,13 @@
       "back_link": "← 返回所有文章"
     },
     "tags": {
-      "general": "通用",
-      "update": "更新",
-      "education": "教育",
-      "security": "安全",
-      "quantum": "量子",
-      "technology": "技术",
-      "scaling": "扩展",
-      "zk-proofs": "ZK-Proofs",
-      "innovation": "创新",
-      "usability": "可用性",
-      "awareness": "意识",
-      "cryptography": "密码学",
-      "basics": "基础",
-      "ecosystem": "生态系统",
-      "dapps": "dApps",
-      "defi": "DeFi",
-      "governance": "治理",
-      "dao": "DAO",
-      "mining": "挖矿",
-      "rewards": "奖励",
-      "tokenomics": "代币经济学",
-      "finance": "金融",
-      "quan": "QUAN",
-      "roadmap": "路线图"
+      "weekly-update": "每周更新",
+      "threshold-signatures": "阈值签名",
+      "post-quantum-cryptography": "后量子密码学",
+      "dilithium": "Dilithium",
+      "zero-knowledge-proofs": "零知识证明",
+      "quantum-safe": "量子安全",
+      "blockchain": "区块链"
     }
   },
   "cookie": {

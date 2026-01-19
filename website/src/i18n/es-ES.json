@@ -619,30 +619,13 @@
       "back_link": "← Volver a todas las publicaciones"
     },
     "tags": {
-      "general": "General",
-      "update": "Actualización",
-      "education": "Educación",
-      "security": "Seguridad",
-      "quantum": "Cuántico",
-      "technology": "Tecnología",
-      "scaling": "Escalabilidad",
-      "zk-proofs": "ZK-Proofs",
-      "innovation": "Innovación",
-      "usability": "Usabilidad",
-      "awareness": "Conciencia",
-      "cryptography": "Criptografía",
-      "basics": "Conceptos básicos",
-      "ecosystem": "Ecosistema",
-      "dapps": "dApps",
-      "defi": "DeFi",
-      "governance": "Gobernanza",
-      "dao": "DAO",
-      "mining": "Minería",
-      "rewards": "Recompensas",
-      "tokenomics": "Tokenomics",
-      "finance": "Finanzas",
-      "quan": "QUAN",
-      "roadmap": "Hoja de ruta"
+      "weekly-update": "Actualización semanal",
+      "threshold-signatures": "Firmas de umbral",
+      "post-quantum-cryptography": "Criptografía post-cuántica",
+      "dilithium": "Dilithium",
+      "zero-knowledge-proofs": "Pruebas de conocimiento cero",
+      "quantum-safe": "Seguro ante la computación cuántica",
+      "blockchain": "Blockchain"
     }
   },
   "cookie": {

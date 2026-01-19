@@ -63,7 +63,11 @@ export const BlogList: React.FC<Props> = ({
 
   const featuredPost = useMemo(() => {
     if (debouncedQuery) return null;
-    return posts.find((post) => post.data.featured);
+    let featuredPost = posts.find((post) => post.data.featured);
+    if (!featuredPost) {
+      featuredPost = posts[0];
+    }
+    return featuredPost;
   }, [posts, debouncedQuery]);
 
   const displayedPosts = useMemo(() => {

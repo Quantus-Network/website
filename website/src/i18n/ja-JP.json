@@ -611,30 +611,13 @@
       "back_link": "← すべての記事に戻る"
     },
     "tags": {
-      "general": "一般",
-      "update": "アップデート",
-      "education": "教育",
-      "security": "セキュリティ",
-      "quantum": "量子",
-      "technology": "テクノロジー",
-      "scaling": "スケーリング",
-      "zk-proofs": "ZK-Proofs",
-      "innovation": "イノベーション",
-      "usability": "ユーザビリティ",
-      "awareness": "意識向上",
-      "cryptography": "暗号学",
-      "basics": "基本",
-      "ecosystem": "エコシステム",
-      "dapps": "dApps",
-      "defi": "DeFi",
-      "governance": "ガバナンス",
-      "dao": "DAO",
-      "mining": "マイニング",
-      "rewards": "報酬",
-      "tokenomics": "トークノミクス",
-      "finance": "金融",
-      "quan": "QUAN",
-      "roadmap": "ロードマップ"
+      "weekly-update": "週刊アップデート",
+      "threshold-signatures": "しきい値署名",
+      "post-quantum-cryptography": "ポスト量子暗号",
+      "dilithium": "Dilithium",
+      "zero-knowledge-proofs": "ゼロ知識証明",
+      "quantum-safe": "量子耐性",
+      "blockchain": "ブロックチェーン"
     }
   },
   "cookie": {

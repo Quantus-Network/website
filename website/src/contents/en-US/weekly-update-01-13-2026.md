@@ -4,7 +4,7 @@ description: "Weekly update covering threshold signatures, ZK circuit improvemen
 pubDate: "2026-01-13"
 heroImage: "/blog/covers/weekly-update-01-13-2026.webp"
 heroAlt: "Quantus Weekly: Threshold Dilithium Signatures and Distributed Coordination"
-featured: true
+featured: false
 tags:
   [
     "weekly-update",
