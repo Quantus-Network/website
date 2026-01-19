@@ -619,30 +619,13 @@
       "back_link": "← Back to all posts"
     },
     "tags": {
-      "general": "General",
-      "update": "Update",
-      "education": "Education",
-      "security": "Security",
-      "quantum": "Quantum",
-      "technology": "Technology",
-      "scaling": "Scaling",
-      "zk-proofs": "ZK-Proofs",
-      "innovation": "Innovation",
-      "usability": "Usability",
-      "awareness": "Awareness",
-      "cryptography": "Cryptography",
-      "basics": "Basics",
-      "ecosystem": "Ecosystem",
-      "dapps": "dApps",
-      "defi": "DeFi",
-      "governance": "Governance",
-      "dao": "DAO",
-      "mining": "Mining",
-      "rewards": "Rewards",
-      "tokenomics": "Tokenomics",
-      "finance": "Finance",
-      "quan": "QUAN",
-      "roadmap": "Roadmap"
+      "weekly-update": "Weekly Update",
+      "threshold-signatures": "Threshold Signatures",
+      "post-quantum-cryptography": "Post-Quantum Cryptography",
+      "dilithium": "Dilithium",
+      "zero-knowledge-proofs": "Zero-Knowledge Proofs",
+      "quantum-safe": "Quantum-Safe",
+      "blockchain": "Blockchain"
     }
   },
   "cookie": {
