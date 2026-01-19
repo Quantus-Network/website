@@ -1,0 +1,120 @@
+---
+import Layout from "@/components/layout/Layout.astro";
+import Card from "@/components/features/blog/Card.astro";
+import { getCollection } from "astro:content";
+import {
+  getLocaleFromUrl,
+  getLocalizedPath,
+  SUPPORTED_LOCALES,
+  createTranslator,
+} from "@/utils/i18n";
+import SphereDecoration from "@/components/ui/SphereDecoration.astro";
+
+export async function getStaticPaths() {
+  const allPosts = await getCollection("blog");
+  const paths = [];
+
+  for (const lang of SUPPORTED_LOCALES) {
+    const langPosts = allPosts.filter((post) =>
+      post.id.toLowerCase().startsWith(`${lang.toLowerCase()}/`),
+    );
+    const uniqueTags = [
+      ...new Set(langPosts.flatMap((post) => post.data.tags)),
+    ];
+
+    for (const tag of uniqueTags) {
+      paths.push({
+        params: { lang, tag },
+      });
+    }
+  }
+
+  return paths;
+}
+
+const { lang, tag } = Astro.params;
+const currentLocale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(currentLocale);
+
+const posts = await getCollection("blog", ({ id, data }) => {
+  return (
+    id.toLowerCase().startsWith(`${lang.toLowerCase()}/`) &&
+    data.tags.includes(tag)
+  );
+});
+
+const sortedPosts = posts.sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+
+const metadata = {
+  title: t("blog.tag.meta.title", { tag }),
+  description: t("blog.tag.meta.description", { tag }),
+};
+---
+
+<Layout {...metadata}>
+  <div class="container mx-auto overflow-hidden px-4 py-12">
+    <div class="relative flex items-center justify-center">
+      <SphereDecoration
+        class="absolute -top-[11rem] -z-10"
+        variant="3"
+        size={300}
+      />
+    </div>
+
+    <div class="mb-8">
+      <h1 class="mb-2 max-w-[27rem] text-3xl font-bold text-white md:text-4xl">
+        {t("blog.title")}
+      </h1>
+      <p class="text-xl text-gray-300">
+        {
+          t("blog.tag.heading", {
+            tag: `#${tag}`,
+          })
+        }
+      </p>
+      <a
+        href={getLocalizedPath(currentLocale, "/blog")}
+        class="mt-4 inline-block text-sm text-gray-400 hover:text-white"
+      >
+        {t("blog.tag.back_link")}
+      </a>
+    </div>
+
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {
+        sortedPosts.map((post) => (
+          <Card
+            title={post.data.title}
+            description={post.data.description}
+            pubDate={post.data.pubDate}
+            href={getLocalizedPath(
+              currentLocale,
+              `/blog/${post.id.split("/").slice(1).join("/")}`,
+            )}
+            tags={post.data.tags}
+            heroImage={post.data.heroImage}
+            heroAlt={post.data.heroAlt}
+            featured={post.data.featured}
+          />
+        ))
+      }
+      {
+        sortedPosts.length === 0 && (
+          <p class="col-span-full text-center text-gray-400">
+            {t("navbar.no_posts_found")}
+          </p>
+        )
+      }
+    </div>
+
+    <div class="relative flex items-center justify-center">
+      <SphereDecoration
+        class="absolute -bottom-[11rem] -z-10"
+        variant="9"
+        size={300}
+      />
+    </div>
+  </div>
+</Layout>

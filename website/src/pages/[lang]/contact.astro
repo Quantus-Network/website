@@ -11,8 +11,6 @@ import {
 } from "@/utils/i18n";
 import type { SEOProps } from "astro-seo";
 import env from "@/config";
-import { JsonLd } from "@/utils/build-json-ld";
-import type { BreadcrumbList } from "schema-dts";
 import defaultMetadata from "@/constants/default-metadata";
 
 export async function getStaticPaths() {
@@ -28,28 +26,9 @@ const metadata: SEOProps = {
   description: t("contact.meta.description"),
   canonical: `${env.SITE_BASE_URL}/${locale}/contact`,
 };
-
-const jsonLd = JsonLd<BreadcrumbList>({
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    {
-      "@type": "ListItem",
-      position: 1,
-      name: "Home",
-      item: `${env.SITE_BASE_URL}/${locale}`,
-    },
-    {
-      "@type": "ListItem",
-      position: 2,
-      name: metadata.title,
-      item: metadata.canonical as string,
-    },
-  ],
-});
 ---
 
-<Layout {...metadata} jsonLd={jsonLd}>
+<Layout {...metadata}>
   <section
     class="relative overflow-hidden px-[30px] pt-[67px] pb-[75px] lg:pb-[145px]"
   >

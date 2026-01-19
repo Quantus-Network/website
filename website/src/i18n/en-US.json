@@ -12,6 +12,7 @@
     "team": "Team",
     "roadmap": "Roadmap",
     "events": "Events",
+    "blog": "Blog",
     "contact": "Contact",
     "checker": "Qday Risk Checker",
     "quests": "Quests",
@@ -377,6 +378,7 @@
       "info": {
         "title": "Info",
         "company": "Company",
+        "blog": "Blog",
         "terms": "Terms & Conditions",
         "privacy": "Privacy Policy"
       }
@@ -596,6 +598,47 @@
         "note": "For questions about this policy or to exercise your privacy rights, please use our",
         "link": "contact form"
       }
+    }
+  },
+  "blog": {
+    "title": "The latest news from the Quantus Network.",
+    "search_placeholder": "Search posts...",
+    "no_posts_found": "No posts found.",
+    "featured_label": "Featured",
+    "related_posts": "Related Posts",
+    "meta": {
+      "title": "Quantus Blog | Latest News & Quantum Insights",
+      "description": "Stay updated with the latest news, educational content, and insights from the Quantus Network."
+    },
+    "tag": {
+      "meta": {
+        "title": "Blog - #{tag} | Quantus Network",
+        "description": "Browse all blog posts tagged with #{tag} on the Quantus Network."
+      },
+      "heading": "Posts tagged with {tag}",
+      "back_link": "← Back to all posts"
+    },
+    "tags": {
+      "weekly-update": "Weekly Update",
+      "threshold-signatures": "Threshold Signatures",
+      "post-quantum-cryptography": "Post-Quantum Cryptography",
+      "dilithium": "Dilithium",
+      "zero-knowledge-proofs": "Zero-Knowledge Proofs",
+      "quantum-safe": "Quantum-Safe",
+      "blockchain": "Blockchain",
+      "podcast": "Podcast",
+      "crypto": "Crypto",
+      "defi": "DeFi",
+      "bitcoin": "Bitcoin",
+      "quantus-network": "Quantus Network",
+      "business": "Business",
+      "network-state": "Network State",
+      "innovation": "Innovation",
+      "quantum-computing": "Quantum Computing",
+      "culture": "Culture",
+      "ai": "AI",
+      "justice": "Justice",
+      "freedom": "Freedom"
     }
   },
   "cookie": {

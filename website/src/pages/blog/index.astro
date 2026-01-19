@@ -1,0 +1,80 @@
+---
+import Layout from "@/components/layout/Layout.astro";
+import { BlogList } from "@/components/features/blog/BlogList";
+import { getCollection } from "astro:content";
+import {
+  DEFAULT_LOCALE,
+  getLocalizedPath,
+  createTranslator,
+} from "@/utils/i18n";
+import SphereDecoration from "@/components/ui/SphereDecoration.astro";
+
+const t = await createTranslator(DEFAULT_LOCALE);
+
+const posts = await getCollection("blog", ({ id }) => {
+  return id.toLowerCase().startsWith(`${DEFAULT_LOCALE.toLowerCase()}/`);
+});
+
+const sortedPosts = posts.sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+
+// Map posts to a simple serializable format for the React component
+const serializablePosts = sortedPosts.map((post) => ({
+  id: post.id,
+  slug: post.id.split("/").slice(1).join("/"),
+  data: {
+    title: post.data.title,
+    description: post.data.description,
+    pubDate: post.data.pubDate.toISOString(),
+    tags: post.data.tags,
+    heroImage: post.data.heroImage,
+    heroAlt: post.data.heroAlt,
+    featured: post.data.featured,
+  },
+}));
+
+const translations = await import(`../../i18n/${DEFAULT_LOCALE}.json`);
+const tagsMap = translations.default.blog?.tags || {};
+
+const metadata = {
+  title: t("blog.meta.title"),
+  description: t("blog.meta.description"),
+};
+---
+
+<Layout {...metadata}>
+  <div class="container mx-auto overflow-hidden px-4 py-12">
+    <div class="relative flex items-center justify-center">
+      <SphereDecoration
+        class="absolute -top-[11rem] -z-10"
+        variant="3"
+        size={300}
+      />
+    </div>
+
+    <h1 class="mb-8 max-w-[27rem] text-3xl font-bold text-white md:text-4xl">
+      {t("blog.title")}
+    </h1>
+
+    <BlogList
+      client:load
+      posts={serializablePosts}
+      locale={DEFAULT_LOCALE}
+      localizedBlogPath={getLocalizedPath(DEFAULT_LOCALE, "/blog")}
+      localizedTagPath={getLocalizedPath(DEFAULT_LOCALE, "/blog/tags")}
+      searchPlaceholder={t("blog.search_placeholder")}
+      noPostsFoundText={t("blog.no_posts_found")}
+      featuredLabel={t("blog.featured_label")}
+      tagsMap={tagsMap}
+    />
+
+    <div class="relative flex items-center justify-center">
+      <SphereDecoration
+        class="absolute -bottom-[11rem] -z-10"
+        variant="9"
+        size={300}
+      />
+    </div>
+  </div>
+</Layout>

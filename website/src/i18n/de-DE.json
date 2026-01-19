@@ -12,6 +12,7 @@
     "team": "Team",
     "roadmap": "Roadmap",
     "events": "Events",
+    "blog": "Blog",
     "contact": "Kontakt",
     "checker": "Qday Risiko-Checker",
     "quests": "Quests",
@@ -377,6 +378,7 @@
       "info": {
         "title": "Info",
         "company": "Unternehmen",
+        "blog": "Blog",
         "terms": "Allgemeine Geschäftsbedingungen",
         "privacy": "Datenschutzrichtlinie"
       }
@@ -596,6 +598,47 @@
         "note": "Bei Fragen zu dieser Richtlinie oder zur Ausübung Ihrer Datenschutzrechte nutzen Sie bitte unser",
         "link": "Kontaktformular"
       }
+    }
+  },
+  "blog": {
+    "title": "Die neuesten Nachrichten aus dem Quantus Network.",
+    "search_placeholder": "Beiträge suchen...",
+    "no_posts_found": "Keine Beiträge gefunden.",
+    "featured_label": "Hervorgehoben",
+    "related_posts": "Ähnliche Beiträge",
+    "meta": {
+      "title": "Quantus Blog | Aktuelle Nachrichten & Quantum Insights",
+      "description": "Bleiben Sie auf dem Laufenden mit den neuesten Nachrichten, Bildungsinhalten und Einblicken aus dem Quantus Network."
+    },
+    "tag": {
+      "meta": {
+        "title": "Blog - #{tag} | Quantus Network",
+        "description": "Durchsuchen Sie alle Blog-Beiträge mit dem Tag #{tag} im Quantus Network."
+      },
+      "heading": "Beiträge mit dem Tag {tag}",
+      "back_link": "← Zurück zu allen Beiträgen"
+    },
+    "tags": {
+      "weekly-update": "Wöchentliches Update",
+      "threshold-signatures": "Threshold-Signaturen",
+      "post-quantum-cryptography": "Post-Quanten-Kryptographie",
+      "dilithium": "Dilithium",
+      "zero-knowledge-proofs": "Zero-Knowledge-Proofs",
+      "quantum-safe": "Quantensicher",
+      "blockchain": "Blockchain",
+      "podcast": "Podcast",
+      "crypto": "Krypto",
+      "defi": "DeFi",
+      "bitcoin": "Bitcoin",
+      "quantus-network": "Quantus Network",
+      "business": "Business",
+      "network-state": "Netzwerkstaat",
+      "innovation": "Innovation",
+      "quantum-computing": "Quantencomputer",
+      "culture": "Kultur",
+      "ai": "KI",
+      "justice": "Gerechtigkeit",
+      "freedom": "Freiheit"
     }
   },
   "cookie": {

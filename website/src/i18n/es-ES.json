@@ -12,6 +12,7 @@
     "team": "Equipo",
     "roadmap": "Hoja de Ruta",
     "events": "Eventos",
+    "blog": "Blog",
     "contact": "Contacto",
     "checker": "Verificador de Riesgo Qday",
     "quests": "Misiones",
@@ -377,6 +378,7 @@
       "info": {
         "title": "Información",
         "company": "Compañía",
+        "blog": "Blog",
         "terms": "Términos y Condiciones",
         "privacy": "Política de Privacidad"
       }
@@ -596,6 +598,47 @@
         "note": "Para preguntas sobre esta política o para ejercer sus derechos de privacidad, por favor use nuestro",
         "link": "formulario de contacto"
       }
+    }
+  },
+  "blog": {
+    "title": "Las últimas noticias de Quantus Network.",
+    "search_placeholder": "Buscar publicaciones...",
+    "no_posts_found": "No se encontraron publicaciones.",
+    "featured_label": "Destacado",
+    "related_posts": "Entradas relacionadas",
+    "meta": {
+      "title": "Quantus Blog | Últimas Noticias y Perspectivas Cuánticas",
+      "description": "Manténgase al día con las últimas noticias, contenido educativo y perspectivas de Quantus Network."
+    },
+    "tag": {
+      "meta": {
+        "title": "Blog - #{tag} | Quantus Network",
+        "description": "Explorar todas las publicaciones del blog etiquetadas con #{tag} en Quantus Network."
+      },
+      "heading": "Publicaciones etiquetadas con {tag}",
+      "back_link": "← Volver a todas las publicaciones"
+    },
+    "tags": {
+      "weekly-update": "Actualización semanal",
+      "threshold-signatures": "Firmas de umbral",
+      "post-quantum-cryptography": "Criptografía post-cuántica",
+      "dilithium": "Dilithium",
+      "zero-knowledge-proofs": "Pruebas de conocimiento cero",
+      "quantum-safe": "Seguro ante la computación cuántica",
+      "blockchain": "Blockchain",
+      "podcast": "Podcast",
+      "crypto": "Cripto",
+      "defi": "DeFi",
+      "bitcoin": "Bitcoin",
+      "quantus-network": "Red Quantus",
+      "business": "Negocios",
+      "network-state": "Estado de Red",
+      "innovation": "Innovación",
+      "quantum-computing": "Computación Cuántica",
+      "culture": "Cultura",
+      "ai": "IA",
+      "justice": "Justicia",
+      "freedom": "Libertad"
     }
   },
   "cookie": {

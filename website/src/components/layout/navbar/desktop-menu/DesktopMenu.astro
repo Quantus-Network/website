@@ -6,26 +6,64 @@ import {
   getLocaleFromUrl,
   getLocalizedPath,
 } from "@/utils/i18n";
+import { ChevronDownIcon } from "@lucide/astro";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
 ---
 
 <div class="navbar-desktop:block hidden">
-  <div id="desktop-nav-links" class="flex items-center gap-x-4">
+  <div id="desktop-nav-links" class="flex items-center gap-x-8">
     {
-      SITE_NAVIGATIONS.map((item) => (
-        <a
-          href={getLocalizedPath(locale, item.href)}
-          class={applyStyles(
-            "text-navbar-link block transition-colors duration-200 hover:font-bold",
-            item.isSpecial &&
-              "aria-[current='page']:text-quantus-yellow hover:text-quantus-yellow",
-          )}
-        >
-          {t(item.label)}
-        </a>
-      ))
+      SITE_NAVIGATIONS.map((item, index) => {
+        if ("children" in item) {
+          const dropdownId = `dropdown-${index}`;
+          return (
+            <div class="group relative">
+              <button
+                type="button"
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-controls={dropdownId}
+                class={applyStyles(
+                  "text-navbar-link dropdown-toggle flex items-center gap-1 transition-colors duration-200 hover:font-bold",
+                )}
+              >
+                {t(item.label)}
+                <ChevronDownIcon class="size-4 transition-transform group-hover:rotate-180 group-[.is-open]:rotate-180" />
+              </button>
+              <div
+                id={dropdownId}
+                class="invisible absolute top-full left-0 z-20 min-w-[200px] pt-4 opacity-0 transition-all group-hover:visible group-hover:opacity-100 group-[.is-open]:visible group-[.is-open]:opacity-100"
+              >
+                <div class="bg-navbar-body border-quantus-white/10 flex flex-col rounded-lg border p-2 shadow-xl backdrop-blur-md">
+                  {item.children.map((child) => (
+                    <a
+                      href={getLocalizedPath(locale, child.href)}
+                      class="text-navbar-link hover:bg-quantus-white/5 block rounded-md px-4 py-2 transition-colors hover:font-bold"
+                    >
+                      {t(child.label)}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+          );
+        }
+
+        return (
+          <a
+            href={getLocalizedPath(locale, item.href)}
+            class={applyStyles(
+              "text-navbar-link block transition-colors duration-200 hover:font-bold",
+              item.isSpecial &&
+                "aria-[current='page']:text-quantus-yellow hover:text-quantus-yellow",
+            )}
+          >
+            {t(item.label)}
+          </a>
+        );
+      })
     }
   </div>
 </div>
@@ -36,28 +74,111 @@ const t = await createTranslator(locale);
 
   const desktopNavLinks = document.getElementById("desktop-nav-links");
   const links = desktopNavLinks?.querySelectorAll("a");
+  const dropdownToggles =
+    desktopNavLinks?.querySelectorAll<HTMLButtonElement>(".dropdown-toggle");
 
   const updateLinkStatus = (link: HTMLAnchorElement, isActive: boolean) => {
     if (isActive) {
       link.classList.add("font-bold");
       link.setAttribute("aria-current", "page");
+
+      // If it's a child link, also highlight the parent button
+      const parentGroup = link.closest(".group");
+      if (parentGroup) {
+        const parentBtn = parentGroup.querySelector("button");
+        if (parentBtn) {
+          parentBtn.classList.add("font-bold");
+        }
+      }
     } else {
       link.classList.remove("font-bold");
       link.removeAttribute("aria-current");
+
+      const parentGroup = link.closest(".group");
+      if (parentGroup) {
+        const parentBtn = parentGroup.querySelector("button");
+        // Only remove if no other child is active
+        const hasActiveChild = parentGroup.querySelector(
+          'a[aria-current="page"]',
+        );
+        if (parentBtn && !hasActiveChild) {
+          parentBtn.classList.remove("font-bold");
+        }
+      }
     }
   };
 
+  const checkIsActive = (link: HTMLAnchorElement) => {
+    const linkPath = new URL(link.href).pathname + new URL(link.href).hash;
+    const currentPath = location.pathname + location.hash;
+    return currentPath === getLocalizedPath(locale, linkPath);
+  };
+
+  // Dropdown accessibility logic
+  dropdownToggles?.forEach((toggle) => {
+    const group = toggle.closest(".group");
+
+    const toggleDropdown = (show: boolean) => {
+      group?.classList.toggle("is-open", show);
+      toggle.setAttribute("aria-expanded", show.toString());
+    };
+
+    toggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isOpen = group?.classList.contains("is-open");
+      // Close other dropdowns first
+      dropdownToggles.forEach((other) => {
+        if (other !== toggle) {
+          other.closest(".group")?.classList.remove("is-open");
+          other.setAttribute("aria-expanded", "false");
+        }
+      });
+      toggleDropdown(!isOpen);
+    });
+
+    // Handle mouse enter/leave to sync aria-expanded if using hover
+    group?.addEventListener("mouseenter", () => toggleDropdown(true));
+    group?.addEventListener("mouseleave", () => toggleDropdown(false));
+  });
+
+  // Close dropdowns on click outside
+  document.addEventListener("click", () => {
+    dropdownToggles?.forEach((toggle) => {
+      toggle.closest(".group")?.classList.remove("is-open");
+      toggle.setAttribute("aria-expanded", "false");
+    });
+  });
+
+  // Handle Escape key
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      dropdownToggles?.forEach((toggle) => {
+        if (toggle.closest(".group")?.classList.contains("is-open")) {
+          toggle.closest(".group")?.classList.remove("is-open");
+          toggle.setAttribute("aria-expanded", "false");
+          toggle.focus();
+        }
+      });
+    }
+  });
+
   links?.forEach((link) => {
-    const isActive =
-      location.href === getLocalizedPath(locale, link.href) ||
-      location.pathname === getLocalizedPath(locale, link.href);
-    updateLinkStatus(link, isActive);
+    updateLinkStatus(link, checkIsActive(link));
 
     link.addEventListener("click", () => {
-      links.forEach((val) => {
-        const isActive = getLocalizedPath(locale, link.href).includes(val.href);
-        updateLinkStatus(val, isActive);
-      });
+      // Small timeout to allow hash change if it's an anchor
+      setTimeout(() => {
+        links.forEach((val) => {
+          updateLinkStatus(val, checkIsActive(val));
+        });
+      }, 0);
+    });
+  });
+
+  // Also handle hashchange for anchor links
+  window.addEventListener("hashchange", () => {
+    links?.forEach((link) => {
+      updateLinkStatus(link, checkIsActive(link));
     });
   });
 </script>

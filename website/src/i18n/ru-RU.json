@@ -12,6 +12,7 @@
     "team": "Команда",
     "roadmap": "Дорожная карта",
     "events": "События",
+    "blog": "Блог",
     "contact": "Контакты",
     "checker": "Проверка риска Qday",
     "quests": "Квесты",
@@ -377,6 +378,7 @@
       "info": {
         "title": "Информация",
         "company": "Компания",
+        "blog": "Блог",
         "terms": "Условия и Положения",
         "privacy": "Политика конфиденциальности"
       }
@@ -596,6 +598,47 @@
         "note": "По вопросам об этой политике или для реализации ваших прав на конфиденциальность, пожалуйста, используйте нашу",
         "link": "контактную форму"
       }
+    }
+  },
+  "blog": {
+    "title": "Последние новости от Quantus Network.",
+    "search_placeholder": "Поиск постов...",
+    "no_posts_found": "Посты не найдены.",
+    "featured_label": "Избранное",
+    "related_posts": "Похожие сообщения",
+    "meta": {
+      "title": "Блог Quantus | Последние новости и квантовые инсайты",
+      "description": "Будьте в курсе последних новостей, образовательного контента и инсайтов от Quantus Network."
+    },
+    "tag": {
+      "meta": {
+        "title": "Блог - #{tag} | Quantus Network",
+        "description": "Просмотреть все посты в блоге с тегом #{tag} в Quantus Network."
+      },
+      "heading": "Посты с тегом {tag}",
+      "back_link": "← Назад ко всем постам"
+    },
+    "tags": {
+      "weekly-update": "Еженедельное обновление",
+      "threshold-signatures": "Пороговые подписи",
+      "post-quantum-cryptography": "Постквантовая криптография",
+      "dilithium": "Dilithium",
+      "zero-knowledge-proofs": "Доказательства с нулевым разглашением",
+      "quantum-safe": "Квантово-безопасный",
+      "blockchain": "Блокчейн",
+      "podcast": "Подкаст",
+      "crypto": "Крипто",
+      "defi": "DeFi",
+      "bitcoin": "Биткоин",
+      "quantus-network": "Сеть Quantus",
+      "business": "Бизнес",
+      "network-state": "Сетевое государство",
+      "innovation": "Инновация",
+      "quantum-computing": "Квантовые вычисления",
+      "culture": "Культура",
+      "ai": "ИИ",
+      "justice": "Справедливость",
+      "freedom": "Свобода"
     }
   },
   "cookie": {

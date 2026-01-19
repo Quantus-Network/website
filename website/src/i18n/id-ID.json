@@ -12,6 +12,7 @@
     "team": "Tim",
     "roadmap": "Peta Jalan",
     "events": "Acara",
+    "blog": "Blog",
     "contact": "Kontak",
     "checker": "Pemeriksa Risiko Qday",
     "quests": "Misi",
@@ -377,6 +378,7 @@
       "info": {
         "title": "Info",
         "company": "Perusahaan",
+        "blog": "Blog",
         "terms": "Syarat & Ketentuan",
         "privacy": "Kebijakan Privasi"
       }
@@ -596,6 +598,47 @@
         "note": "Untuk pertanyaan tentang kebijakan ini atau untuk menggunakan hak privasi Anda, silakan gunakan",
         "link": "formulir kontak"
       }
+    }
+  },
+  "blog": {
+    "title": "Berita terbaru dari Jaringan Quantus.",
+    "search_placeholder": "Cari postingan...",
+    "no_posts_found": "Tidak ada postingan yang ditemukan.",
+    "featured_label": "Unggulan",
+    "related_posts": "Postingan Terkait",
+    "meta": {
+      "title": "Blog Quantus | Berita Terbaru & Wawasan Kuantum",
+      "description": "Tetap terinformasi dengan berita terbaru, konten edukasi, dan wawasan dari Jaringan Quantus."
+    },
+    "tag": {
+      "meta": {
+        "title": "Blog - #{tag} | Jaringan Quantus",
+        "description": "Telusuri semua postingan blog dengan tag #{tag} di Jaringan Quantus."
+      },
+      "heading": "Postingan dengan tag {tag}",
+      "back_link": "← Kembali ke semua postingan"
+    },
+    "tags": {
+      "weekly-update": "Pembaruan Mingguan",
+      "threshold-signatures": "Tanda Tangan Threshold",
+      "post-quantum-cryptography": "Kriptografi Pasca-Kuantum",
+      "dilithium": "Dilithium",
+      "zero-knowledge-proofs": "Zero-Knowledge Proof",
+      "quantum-safe": "Aman Kuantum",
+      "blockchain": "Blockchain",
+      "podcast": "Podcast",
+      "crypto": "Kripto",
+      "defi": "DeFi",
+      "bitcoin": "Bitcoin",
+      "quantus-network": "Jaringan Quantus",
+      "business": "Bisnis",
+      "network-state": "Negara Jaringan",
+      "innovation": "Inovasi",
+      "quantum-computing": "Komputasi Kuantum",
+      "culture": "Budaya",
+      "ai": "AI",
+      "justice": "Keadilan",
+      "freedom": "Kebebasan"
     }
   },
   "cookie": {

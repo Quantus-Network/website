@@ -12,6 +12,7 @@
     "team": "团队",
     "roadmap": "路线图",
     "events": "活动",
+    "blog": "博客",
     "contact": "联系",
     "checker": "Qday 风险检查器",
     "quests": "任务",
@@ -373,6 +374,7 @@
       "info": {
         "title": "信息",
         "company": "公司",
+        "blog": "博客",
         "terms": "条款与条件",
         "privacy": "隐私政策"
       }
@@ -585,6 +587,47 @@
         "note": "有关本政策的问题或行使您的隐私权，请使用我们的",
         "link": "联系表格"
       }
+    }
+  },
+  "blog": {
+    "title": "来自 Quantus Network 的最新动态。",
+    "search_placeholder": "搜索文章...",
+    "no_posts_found": "未找到文章。",
+    "featured_label": "精选",
+    "related_posts": "相关文章",
+    "meta": {
+      "title": "Quantus 博客 | 最新消息与量子见解",
+      "description": "获取 Quantus Network 的最新消息、教育内容和见解。"
+    },
+    "tag": {
+      "meta": {
+        "title": "博客 - #{tag} | Quantus Network",
+        "description": "浏览 Quantus Network 上带有 #{tag} 标签的所有博客文章。"
+      },
+      "heading": "带有 {tag} 标签的文章",
+      "back_link": "← 返回所有文章"
+    },
+    "tags": {
+      "weekly-update": "每周更新",
+      "threshold-signatures": "阈值签名",
+      "post-quantum-cryptography": "后量子密码学",
+      "dilithium": "Dilithium",
+      "zero-knowledge-proofs": "零知识证明",
+      "quantum-safe": "量子安全",
+      "blockchain": "区块链",
+      "podcast": "播客",
+      "crypto": "加密货币",
+      "defi": "DeFi",
+      "bitcoin": "比特币",
+      "quantus-network": "Quantus 网络",
+      "business": "商业",
+      "network-state": "网络国家",
+      "innovation": "创新",
+      "quantum-computing": "量子计算",
+      "culture": "文化",
+      "ai": "人工智能",
+      "justice": "正义",
+      "freedom": "自由"
     }
   },
   "cookie": {
