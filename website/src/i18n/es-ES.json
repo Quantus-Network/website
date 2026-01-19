@@ -625,7 +625,20 @@
       "dilithium": "Dilithium",
       "zero-knowledge-proofs": "Pruebas de conocimiento cero",
       "quantum-safe": "Seguro ante la computación cuántica",
-      "blockchain": "Blockchain"
+      "blockchain": "Blockchain",
+      "podcast": "Podcast",
+      "crypto": "Cripto",
+      "defi": "DeFi",
+      "bitcoin": "Bitcoin",
+      "quantus-network": "Red Quantus",
+      "business": "Negocios",
+      "network-state": "Estado de Red",
+      "innovation": "Innovación",
+      "quantum-computing": "Computación Cuántica",
+      "culture": "Cultura",
+      "ai": "IA",
+      "justice": "Justicia",
+      "freedom": "Libertad"
     }
   },
   "cookie": {
