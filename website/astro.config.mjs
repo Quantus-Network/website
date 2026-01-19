@@ -3,6 +3,7 @@ import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 import sitemap from "@astrojs/sitemap";
 import react from "@astrojs/react";
+import rehypeExternalLinks from "./src/utils/rehype-external-links.ts";
 
 const SITE_BASE_URL = "https://www.quantus.com";
 const DEFAULT_LOCALE = "en-US";
@@ -41,6 +42,9 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   site: "https://www.quantus.com",
+  markdown: {
+    rehypePlugins: [rehypeExternalLinks],
+  },
   integrations: [
     sitemap({
       changefreq: "monthly",
