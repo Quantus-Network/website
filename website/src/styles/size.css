@@ -1,0 +1,7 @@
+@utility max-h-tags {
+  max-height: 35px;
+}
+
+@utility max-h-tags-featured {
+  max-height: 121px;
+}

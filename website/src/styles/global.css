@@ -2,6 +2,7 @@
 @import "./colors.css";
 @import "./fonts.css";
 @import "./breakpoints.css";
+@import "./size.css";
 
 @theme {
   --spacing-content: 1140px;

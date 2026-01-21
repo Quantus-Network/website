@@ -85,27 +85,30 @@ const articleSchema: WithContext<Article> = {
         </div>
         <h1 class="mb-4 text-4xl font-bold text-white md:text-5xl">{title}</h1>
         <hr class="my-4 border-white/10" />
-        {
-          tags.length > 0 && (
-            <div class="mb-8 flex flex-wrap justify-center gap-2">
-              {tags.map((tag: string) => (
-                <Tag>
-                  <a
-                    href={getLocalizedPath(currentLocale, `/blog/tags/${tag}`)}
-                    class="hover:text-primary transition-colors"
-                  >
-                    {t(`blog.tags.${tag}`) || tag}
-                  </a>
-                </Tag>
-              ))}
-            </div>
-          )
-        }
       </div>
       <div class="prose prose-invert mx-auto max-w-none">
         <slot />
       </div>
     </article>
+
+    <div class="mx-auto mt-16 max-w-3xl">
+      {
+        tags.length > 0 && (
+          <div class="flex flex-wrap gap-2">
+            {tags.map((tag: string) => (
+              <Tag>
+                <a
+                  href={getLocalizedPath(currentLocale, `/blog/tags/${tag}`)}
+                  class="hover:text-primary transition-colors"
+                >
+                  {t(`blog.tags.${tag}`) || tag}
+                </a>
+              </Tag>
+            ))}
+          </div>
+        )
+      }
+    </div>
 
     {
       relatedPosts.length > 0 && (
