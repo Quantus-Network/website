@@ -2,7 +2,7 @@
   "home": {
     "meta": {
       "title": "Quantus Network - 量子安全的第一层区块链",
-      "description": "一个量子安全的开源第一层区块链，采用后量子密码学和 zk-proof 可扩展性构建，为您的数字资产提供未来保障。"
+      "description": "Quantus：量子安全的第一层区块链。下载我们的钱包，保护您的资产免受后量子威胁。"
     }
   },
   "navbar": {
@@ -57,10 +57,10 @@
   "app": {
     "meta": {
       "title": "下载 Quantus 钱包 | 量子安全加密应用",
-      "description": "下载 Quantus 应用 — 一款具有可逆交易、恢复选项和 zk-proof 保护的量子安全加密钱包。支持 iOS 和 Android。"
+      "description": "Quantus：量子安全的第一层区块链。下载我们的钱包，保护您的资产免受后量子威胁。"
     },
     "tagline": "您的量子安全网关已准备就绪",
-    "title": "Quantus 应用",
+    "title": "下载 Quantus 钱包",
     "description": "Quantus 应用将量子安全和零知识可扩展性直接交到您的手中。每一项安全措施都在后台静默运行，因此您可以专注于重要的事情：清晰、自信、可控地转移价值。",
     "benefits": {
       "reversible_transactions": {

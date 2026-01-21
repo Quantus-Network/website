@@ -2,7 +2,7 @@
   "home": {
     "meta": {
       "title": "Quantus Network - Blockchain Layer 1 Aman Kuantum",
-      "description": "Blockchain Layer 1 sumber terbuka yang aman kuantum, dibangun dengan kriptografi pasca-kuantum dan skalabilitas zk-proof untuk melindungi aset digital Anda di masa depan."
+      "description": "Quantus: blockchain Layer 1 yang aman kuantum. Unduh dompet kami untuk aset terlindungi pasca-kuantum."
     }
   },
   "navbar": {
@@ -57,10 +57,10 @@
   "app": {
     "meta": {
       "title": "Unduh Dompet Quantus | Aplikasi Kripto Aman Kuantum",
-      "description": "Unduh Aplikasi Quantus — dompet kripto aman kuantum dengan transaksi yang dapat dibalikkan, opsi pemulihan, dan perlindungan zk-proof. Siap untuk iOS & Android."
+      "description": "Quantus: blockchain Layer 1 yang aman kuantum. Unduh dompet kami untuk aset terlindungi pasca-kuantum."
     },
     "tagline": "Gerbang aman kuantum Anda siap",
-    "title": "Aplikasi Quantus",
+    "title": "Unduh Dompet Quantus",
     "description": "Aplikasi Quantus menempatkan keamanan kuantum dan skalabilitas zero-knowledge langsung di tangan Anda. Setiap pengamanan berjalan tanpa suara di latar belakang, sehingga Anda dapat fokus pada hal yang penting: memindahkan nilai dengan kejelasan, keyakinan, dan kontrol.",
     "benefits": {
       "reversible_transactions": {
