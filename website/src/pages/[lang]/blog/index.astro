@@ -9,6 +9,7 @@ import {
   createTranslator,
 } from "@/utils/i18n";
 import SphereDecoration from "@/components/ui/SphereDecoration.astro";
+import { createMetadata } from "@/utils/create-metadata";
 
 export async function getStaticPaths() {
   return SUPPORTED_LOCALES.map((lang) => ({
@@ -46,10 +47,11 @@ const serializablePosts = sortedPosts.map((post) => ({
 const translations = await import(`../../../i18n/${currentLocale}.json`);
 const tagsMap = translations.default.blog?.tags || {};
 
-const metadata = {
+const metadata = createMetadata({
   title: t("blog.meta.title"),
   description: t("blog.meta.description"),
-};
+  pathname: Astro.url.pathname,
+});
 ---
 
 <Layout {...metadata}>

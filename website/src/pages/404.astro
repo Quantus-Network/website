@@ -1,9 +1,16 @@
 ---
 import Layout from "@/components/layout/Layout.astro";
 import Button from "@/components/ui/Button.astro";
+import { createMetadata } from "@/utils/create-metadata";
+
+const metadata = createMetadata({
+  title: "404 Not Found",
+  description: "The page you are looking for could not be found.",
+  pathname: Astro.url.pathname,
+});
 ---
 
-<Layout>
+<Layout {...metadata}>
   <section
     class="max-w-content mx-auto px-[30px] py-10 lg:flex lg:gap-20 lg:pt-[120px] lg:pb-20 2xl:px-0"
   >

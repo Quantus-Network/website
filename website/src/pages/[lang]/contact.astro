@@ -9,9 +9,7 @@ import {
   createTranslator,
   SUPPORTED_LOCALES,
 } from "@/utils/i18n";
-import type { SEOProps } from "astro-seo";
-import env from "@/config";
-import defaultMetadata from "@/constants/default-metadata";
+import { createMetadata } from "@/utils/create-metadata";
 
 export async function getStaticPaths() {
   return SUPPORTED_LOCALES.map((lang) => ({ params: { lang } }));
@@ -20,12 +18,11 @@ export async function getStaticPaths() {
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
 
-const metadata: SEOProps = {
-  ...defaultMetadata,
+const metadata = createMetadata({
   title: t("contact.meta.title"),
   description: t("contact.meta.description"),
-  canonical: `${env.SITE_BASE_URL}/${locale}/contact`,
-};
+  pathname: Astro.url.pathname,
+});
 ---
 
 <Layout {...metadata}>

@@ -1,19 +1,16 @@
 ---
 import Layout from "@/components/layout/Layout.astro";
-import env from "@/config";
-import defaultMetadata from "@/constants/default-metadata";
 import { getLocaleFromUrl, createTranslator } from "@/utils/i18n";
-import type { SEOProps } from "astro-seo";
+import { createMetadata } from "@/utils/create-metadata";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
 
-const metadata: SEOProps = {
-  ...defaultMetadata,
+const metadata = createMetadata({
   title: t("tos.meta.title"),
   description: t("tos.meta.description"),
-  canonical: `${env.SITE_BASE_URL}/terms-and-privacy`,
-};
+  pathname: Astro.url.pathname,
+});
 ---
 
 <Layout {...metadata}>
