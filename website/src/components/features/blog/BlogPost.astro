@@ -34,6 +34,8 @@ const metadata = createMetadata({
   title,
   description,
   pathname: Astro.url.pathname,
+  imageUrl: heroImage,
+  imageAlt: heroAlt,
 });
 
 const articleSchema: WithContext<Article> = {
@@ -42,7 +44,7 @@ const articleSchema: WithContext<Article> = {
   headline: title,
   description: description,
   url: metadata.canonical as string,
-  image: heroImage ? new URL(heroImage, env.SITE_BASE_URL).toString() : undefined,
+  image: metadata.openGraph?.basic?.image,
   datePublished: pubDate.toISOString(),
   dateModified: updatedDate?.toISOString() || pubDate.toISOString(),
   author: {
