@@ -159,8 +159,8 @@ export const BlogList: React.FC<Props> = ({
                 </p>
               </a>
               {featuredPost.data.tags.length > 0 && (
-                <div className="flex flex-wrap gap-2">
-                  {featuredPost.data.tags.map((tag) => (
+                <div className="flex flex-wrap gap-2 max-h-tags-featured overflow-hidden">
+                  {featuredPost.data.tags.slice(0, 8).map((tag) => (
                     <Tag key={tag}>
                       <a
                         href={`${localizedTagPath}/${tag}`}
@@ -216,8 +216,8 @@ export const BlogList: React.FC<Props> = ({
                 <p className="text-gray-300">{post.data.description}</p>
               </a>
               {post.data.tags.length > 0 && (
-                <div className="mt-auto flex flex-wrap gap-2">
-                  {post.data.tags.map((tag) => (
+                <div className="mt-auto flex flex-wrap gap-2 overflow-hidden max-h-tags">
+                  {post.data.tags.slice(0, 4).map((tag) => (
                     <Tag key={tag}>
                       <a
                         href={`${localizedTagPath}/${tag}`}

@@ -9,22 +9,19 @@ import AppInformation from "@/components/ui/AppInformation.astro";
 import { BENEFIT_DATA } from "@/constants/app-benefits";
 import Socials from "@/components/ui/Socials.astro";
 import SphereDecoration from "@/components/ui/SphereDecoration.astro";
-import env from "@/config";
 import { getLocaleFromUrl, createTranslator } from "@/utils/i18n";
-import type { SEOProps } from "astro-seo";
 import { JsonLdGraph } from "@/utils/build-json-ld";
 import { androidAppJsonLd, iosAppJsonLd } from "@/constants/default-jsonld";
-import defaultMetadata from "@/constants/default-metadata";
+import { createMetadata } from "@/utils/create-metadata";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
 
-const metadata: SEOProps = {
-  ...defaultMetadata,
+const metadata = createMetadata({
   title: t("app.meta.title"),
   description: t("app.meta.description"),
-  canonical: `${env.SITE_BASE_URL}/app`,
-};
+  pathname: Astro.url.pathname,
+});
 
 const jsonLd = JsonLdGraph({
   "@context": "https://schema.org",

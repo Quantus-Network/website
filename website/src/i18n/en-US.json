@@ -2,7 +2,7 @@
   "home": {
     "meta": {
       "title": "Quantus Network - Quantum-Secure Layer 1 Blockchain",
-      "description": "A quantum-secure, open-source Layer 1 blockchain built with post-quantum cryptography and zk-proof scalability to future-proof your digital assets."
+      "description": "Quantus: Quantum-secure Layer 1 blockchain. Download our wallet for post-quantum protected assets."
     }
   },
   "navbar": {
@@ -57,10 +57,10 @@
   "app": {
     "meta": {
       "title": "Download Quantus Wallet | Quantum-Secure Crypto App",
-      "description": "Download the Quantus App — a quantum-secure crypto wallet with reversible transactions, recovery options, and zk-proof protection. iOS & Android ready."
+      "description": "Quantus: Quantum-secure Layer 1 blockchain. Download our wallet for post-quantum protected assets."
     },
     "tagline": "Your quantum-secure gateway is ready",
-    "title": "Quantus App",
+    "title": "Download Quantus Wallet",
     "description": "The Quantus App puts quantum security and zero-knowledge scalability directly in your hands. Every safeguard runs silently in the background, so you can focus on what matters: moving value with clarity, confidence, and control.",
     "benefits": {
       "reversible_transactions": {

@@ -9,20 +9,17 @@ import AppInformation from "@/components/ui/AppInformation.astro";
 import { BENEFIT_DATA } from "@/constants/app-benefits";
 import Socials from "@/components/ui/Socials.astro";
 import SphereDecoration from "@/components/ui/SphereDecoration.astro";
-import env from "@/config";
 import { getLocaleFromUrl, createTranslator } from "@/utils/i18n";
-import type { SEOProps } from "astro-seo";
-import defaultMetadata from "@/constants/default-metadata";
+import { createMetadata } from "@/utils/create-metadata";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
 
-const metadata: SEOProps = {
-  ...defaultMetadata,
+const metadata = createMetadata({
   title: t("account.meta.title"),
   description: t("account.meta.description"),
-  canonical: `${env.SITE_BASE_URL}/account`,
-};
+  pathname: Astro.url.pathname,
+});
 ---
 
 <Layout {...metadata}>

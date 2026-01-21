@@ -8,15 +8,13 @@ import Roadmap from "@/components/features/home/roadmap/Roadmap.astro";
 import Events from "@/components/features/home/events/Events.astro";
 import AppDownload from "@/components/features/home/app-download/AppDownload.astro";
 import Socials from "@/components/ui/Socials.astro";
-import env from "@/config";
 
 import {
   createTranslator,
   getLocaleFromUrl,
   SUPPORTED_LOCALES,
 } from "@/utils/i18n";
-import type { SEOProps } from "astro-seo";
-import defaultMetadata from "@/constants/default-metadata";
+import { createMetadata } from "@/utils/create-metadata";
 import { JsonLdGraph } from "@/utils/build-json-ld";
 import {
   websiteJsonLd,
@@ -32,12 +30,11 @@ export async function getStaticPaths() {
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
 
-const metadata: SEOProps = {
-  ...defaultMetadata,
+const metadata = createMetadata({
   title: t("home.meta.title"),
   description: t("home.meta.description"),
-  canonical: `${env.SITE_BASE_URL}`,
-};
+  pathname: Astro.url.pathname,
+});
 
 const jsonLd = JsonLdGraph({
   "@context": "https://schema.org",

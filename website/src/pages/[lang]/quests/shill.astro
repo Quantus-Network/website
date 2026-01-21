@@ -10,13 +10,12 @@ import {
   createTranslator,
   SUPPORTED_LOCALES,
 } from "@/utils/i18n";
-import type { SEOProps } from "astro-seo";
 import BodyLayout from "@/components/features/quests/body-layout/BodyLayout.astro";
 import Rules from "@/components/features/quests/shill/rules/Rules.astro";
 import Information from "@/components/features/quests/shill/information/Information.astro";
-import defaultMetadata from "@/constants/default-metadata";
 import { JsonLdGraph } from "@/utils/build-json-ld";
 import { androidAppJsonLd, iosAppJsonLd } from "@/constants/default-jsonld";
+import { createMetadata } from "@/utils/create-metadata";
 
 export async function getStaticPaths() {
   return SUPPORTED_LOCALES.map((lang) => ({ params: { lang } }));
@@ -25,12 +24,11 @@ export async function getStaticPaths() {
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
 
-const metadata: SEOProps = {
-  ...defaultMetadata,
+const metadata = createMetadata({
   title: t("quests.meta.title"),
   description: t("quests.meta.description"),
-  canonical: `${env.SITE_BASE_URL}/${locale}/quests/shill`,
-};
+  pathname: Astro.url.pathname,
+});
 
 const jsonLd = JsonLdGraph({
   "@context": "https://schema.org",

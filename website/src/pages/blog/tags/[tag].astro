@@ -8,6 +8,7 @@ import {
   createTranslator,
 } from "@/utils/i18n";
 import SphereDecoration from "@/components/ui/SphereDecoration.astro";
+import { createMetadata } from "@/utils/create-metadata";
 
 export async function getStaticPaths() {
   const allPosts = await getCollection("blog", ({ id }) => {
@@ -35,10 +36,11 @@ const sortedPosts = posts.sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 
-const metadata = {
+const metadata = createMetadata({
   title: t("blog.tag.meta.title", { tag }),
   description: t("blog.tag.meta.description", { tag }),
-};
+  pathname: Astro.url.pathname,
+});
 ---
 
 <Layout {...metadata}>

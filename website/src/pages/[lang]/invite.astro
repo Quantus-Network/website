@@ -8,15 +8,13 @@ import GooglePlay from "@/assets/download/google-play-download.png";
 import { APP_LINKS } from "@/constants/app-links";
 import Socials from "@/components/ui/Socials.astro";
 import SphereDecoration from "@/components/ui/SphereDecoration.astro";
-import env from "@/config";
 import {
   getLocaleFromUrl,
   createTranslator,
   SUPPORTED_LOCALES,
 } from "@/utils/i18n";
-import type { SEOProps } from "astro-seo";
 import ReferralCode from "@/components/ui/ReferralCode.astro";
-import defaultMetadata from "@/constants/default-metadata";
+import { createMetadata } from "@/utils/create-metadata";
 
 export async function getStaticPaths() {
   return SUPPORTED_LOCALES.map((lang) => ({ params: { lang } }));
@@ -25,12 +23,11 @@ export async function getStaticPaths() {
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
 
-const metadata: SEOProps = {
-  ...defaultMetadata,
+const metadata = createMetadata({
   title: t("invite.meta.title"),
   description: t("invite.meta.description"),
-  canonical: `${env.SITE_BASE_URL}/${locale}/invite`,
-};
+  pathname: Astro.url.pathname,
+});
 ---
 
 <Layout {...metadata}>

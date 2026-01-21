@@ -2,7 +2,7 @@
   "home": {
     "meta": {
       "title": "Quantus Network - 양자 보안 레이어 1 블록체인",
-      "description": "포스트 퀀텀 암호화와 zk-proof 확장성으로 구축되어 디지털 자산을 미래에도 안전하게 보호하는 양자 보안 오픈소스 레이어 1 블록체인입니다."
+      "description": "Quantus: 양자 보안 레이어 1 블록체인. 포스트 퀀텀으로 보호된 자산을 위해 지갑을 다운로드하세요."
     }
   },
   "navbar": {
@@ -57,10 +57,10 @@
   "app": {
     "meta": {
       "title": "Quantus 지갑 다운로드 | 양자 보안 암호화폐 앱",
-      "description": "Quantus 앱을 다운로드하세요 — 되돌릴 수 있는 트랜잭션, 복구 옵션, zk-proof 보호 기능을 갖춘 양자 보안 암호화폐 지갑입니다. iOS 및 Android 지원."
+      "description": "Quantus: 양자 보안 레이어 1 블록체인. 포스트 퀀텀으로 보호된 자산을 위해 지갑을 다운로드하세요."
     },
     "tagline": "당신의 양자 보안 게이트웨이가 준비되었습니다",
-    "title": "Quantus 앱",
+    "title": "Quantus 지갑 다운로드",
     "description": "Quantus 앱은 양자 보안과 영지식 확장성을 당신의 손안에 직접 제공합니다. 모든 안전장치는 백그라운드에서 조용히 실행되므로, 당신은 중요한 것, 즉 명확성, 자신감, 통제력을 가지고 가치를 이동하는 데 집중할 수 있습니다.",
     "benefits": {
       "reversible_transactions": {

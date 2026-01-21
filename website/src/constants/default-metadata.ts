@@ -6,7 +6,7 @@ const title = {
   default: "Quantus Network - Quantum-Secure Layer 1 Blockchain",
 };
 const description =
-  "A quantum-secure, open-source Layer 1 blockchain built with post-quantum cryptography and zk-proof scalability to future-proof your digital assets.";
+  "Quantus: Quantum-secure Layer 1 blockchain. Download our wallet for post-quantum protected assets.";
 const image = {
   url: `${env.SITE_BASE_URL}/banner-small.jpeg`,
   secureUrl: `${env.SITE_BASE_URL}/banner-small.jpeg`,

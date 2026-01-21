@@ -8,6 +8,7 @@ import {
   createTranslator,
 } from "@/utils/i18n";
 import SphereDecoration from "@/components/ui/SphereDecoration.astro";
+import { createMetadata } from "@/utils/create-metadata";
 
 const t = await createTranslator(DEFAULT_LOCALE);
 
@@ -37,10 +38,11 @@ const serializablePosts = sortedPosts.map((post) => ({
 const translations = await import(`../../i18n/${DEFAULT_LOCALE}.json`);
 const tagsMap = translations.default.blog?.tags || {};
 
-const metadata = {
+const metadata = createMetadata({
   title: t("blog.meta.title"),
   description: t("blog.meta.description"),
-};
+  pathname: Astro.url.pathname,
+});
 ---
 
 <Layout {...metadata}>

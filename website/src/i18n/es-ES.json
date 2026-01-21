@@ -2,7 +2,7 @@
   "home": {
     "meta": {
       "title": "Quantus Network - Blockchain de Capa 1 Cuánticamente Segura",
-      "description": "Una blockchain de Capa 1 de código abierto y cuánticamente segura, construida con criptografía post-cuántica y escalabilidad zk-proof para asegurar sus activos digitales a prueba de futuro."
+      "description": "Quantus: blockchain de Capa 1 segura ante la computación cuántica. Descarga nuestra wallet para activos protegidos con criptografía post-cuántica."
     }
   },
   "navbar": {
@@ -57,10 +57,10 @@
   "app": {
     "meta": {
       "title": "Descargar Quantus Wallet | App Cripto Cuánticamente Segura",
-      "description": "Descargue la Quantus App — una billetera cripto cuánticamente segura con transacciones reversibles, opciones de recuperación y protección zk-proof. Lista para iOS y Android."
+      "description": "Quantus: blockchain de Capa 1 segura ante la computación cuántica. Descarga nuestra wallet para activos protegidos con criptografía post-cuántica."
     },
     "tagline": "Su puerta de enlace cuánticamente segura está lista",
-    "title": "Quantus App",
+    "title": "Descargar Quantus Wallet",
     "description": "La Quantus App pone la seguridad cuántica y la escalabilidad de conocimiento cero directamente en sus manos. Cada medida de seguridad se ejecuta silenciosamente en segundo plano, para que pueda concentrarse en lo que importa: mover valor con claridad, confianza y control.",
     "benefits": {
       "reversible_transactions": {
