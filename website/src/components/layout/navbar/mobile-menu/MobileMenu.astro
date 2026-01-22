@@ -112,8 +112,9 @@ const t = await createTranslator(locale);
   const closeIcon = document.querySelector(".close-icon");
   const mobileNavLinks = document.getElementById("mobile-nav-links");
   const links = mobileNavLinks?.querySelectorAll("a");
-  const groupToggles =
-    mobileNavLinks?.querySelectorAll<HTMLButtonElement>(".mobile-group-toggle");
+  const groupToggles = mobileNavLinks?.querySelectorAll<HTMLButtonElement>(
+    ".mobile-group-toggle",
+  );
 
   const updateLinkStatus = (link: HTMLAnchorElement, isActive: boolean) => {
     if (isActive) {

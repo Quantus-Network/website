@@ -49,7 +49,8 @@ export default defineConfig({
       serialize: (item) => {
         // Read environment variable at runtime (during build)
         // The serialize function runs during sitemap generation, so process.env should be available
-        const envBaseUrl = typeof process !== 'undefined' && process.env?.SITE_BASE_URL;
+        const envBaseUrl =
+          typeof process !== "undefined" && process.env?.SITE_BASE_URL;
         const baseUrl = envBaseUrl || SITE_BASE_URL;
 
         // Replace production URLs with the correct base URL if env var is set
@@ -69,6 +70,6 @@ export default defineConfig({
         return item;
       },
     }),
-    react()
+    react(),
   ],
 });
