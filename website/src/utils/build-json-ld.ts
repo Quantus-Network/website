@@ -46,7 +46,7 @@ export function generateBreadcrumbs({
     // Find name from navigations
     // Check both exact match and match with trailing slash
     const navItem = navigations.find(
-      (n) => n.href === currentPath || n.href === `${currentPath}/`
+      (n) => n.href === currentPath || n.href === `${currentPath}/`,
     );
 
     let name = navItem ? t(navItem.label) : segment;
