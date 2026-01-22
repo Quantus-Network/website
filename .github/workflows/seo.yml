@@ -83,10 +83,18 @@ jobs:
           ls -la website/.unlighthouse/client 2>/dev/null || echo "website/.unlighthouse/client not found"
           find website -name ".unlighthouse" -type d 2>/dev/null || echo "No .unlighthouse directories found"
 
+      - name: Create SEO Report Zip
+        if: always()
+        run: |
+          cd website
+          zip -r seo-report.zip .unlighthouse/ || echo "Failed to create zip, but continuing..."
+          ls -lh seo-report.zip || echo "Zip file not created"
+
       - name: Upload SEO Report
         uses: actions/upload-artifact@v4
         if: always() # Upload even if previous step failed
         with:
           name: seo-report
-          path: website/.unlighthouse
+          path: website/seo-report.zip
+          if-no-files-found: warn # Warn instead of error if no files found
           retention-days: 7 # Auto-delete after 7 days to save space
