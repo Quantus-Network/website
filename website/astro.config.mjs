@@ -30,11 +30,6 @@ const LOCALES_MAP = {
   "hi-IN": "hi-IN",
 };
 
-const HOMEPAGE_LINK = SUPPORTED_LOCALES.map((locale) => {
-  if (locale === "en-US") return `${SITE_BASE_URL}/`;
-  return `${SITE_BASE_URL}/${locale}`;
-});
-
 // https://astro.build/config
 export default defineConfig({
   vite: {
@@ -52,7 +47,23 @@ export default defineConfig({
       lastmod: new Date(),
       i18n: { defaultLocale: DEFAULT_LOCALE, locales: LOCALES_MAP },
       serialize: (item) => {
-        if (HOMEPAGE_LINK.includes(item.url)) {
+        // Read environment variable at runtime (during build)
+        // The serialize function runs during sitemap generation, so process.env should be available
+        const envBaseUrl = typeof process !== 'undefined' && process.env?.SITE_BASE_URL;
+        const baseUrl = envBaseUrl || SITE_BASE_URL;
+
+        // Replace production URLs with the correct base URL if env var is set
+        if (envBaseUrl && item.url) {
+          item.url = item.url.replace(/^https?:\/\/[^/]+/, baseUrl);
+        }
+
+        // Check if this is a homepage link using the current base URL
+        const homepageLinks = SUPPORTED_LOCALES.map((locale) => {
+          if (locale === DEFAULT_LOCALE) return `${baseUrl}/`;
+          return `${baseUrl}/${locale}`;
+        });
+
+        if (homepageLinks.includes(item.url)) {
           item.priority = 1;
         }
         return item;

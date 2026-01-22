@@ -11,4 +11,19 @@ export default defineUnlighthouseConfig({
   },
   // Output path for reports
   outputPath: './.unlighthouse',
+  puppeteerClusterOptions: {
+    maxConcurrency: 2,
+  },
+  scanner: {
+    exclude: [
+      '/zh-CN/.*',
+      '/ko-KR/.*',
+      '/id-ID/.*',
+      '/ja-JP/.*',
+      '/ru-RU/.*',
+      '/es-ES/.*',
+      '/de-DE/.*',
+      '/hi-IN/.*',
+    ],
+  },
 })
