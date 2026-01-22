@@ -30,8 +30,11 @@ jobs:
 
       # 1. Build and Start Server
       # NOTE: Astro outputs to 'dist' directory by default
+      # Set SITE_BASE_URL to localhost for CI so all links point to localhost instead of production
       - name: Install Dependencies & Build
         working-directory: website
+        env:
+          SITE_BASE_URL: "http://localhost:3000"
         run: |
           bun install --frozen-lockfile
           bun run build
@@ -44,9 +47,10 @@ jobs:
           npx wait-on http://localhost:3000 --timeout 60000 || (echo "Server failed to start" && exit 1)
 
       # 3. FAIL FAST: Broken Link Checker
+      # Only check links on localhost:3000, skip external links (e.g., https://www.quantus.com)
       - name: Check for Broken Links
         run: |
-          npx --yes linkinator http://localhost:3000 --recurse
+          npx --yes linkinator http://localhost:3000 --recurse --skip "^(?!http://localhost:3000)"
 
       # 4. DEEP AUDIT: Unlighthouse
       # Scans all pages and fails if SEO score is below 100 (configured in unlighthouse.config.ts)

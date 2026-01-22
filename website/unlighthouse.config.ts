@@ -1,4 +1,4 @@
-import { defineUnlighthouseConfig } from '@unlighthouse/cli'
+import { defineUnlighthouseConfig } from 'unlighthouse/config'
 
 export default defineUnlighthouseConfig({
   site: 'http://localhost:3000',

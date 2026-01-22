@@ -32,7 +32,7 @@ export function generateBreadcrumbs({
     {
       "@type": "ListItem",
       position: 1,
-      name: t("navbar.home") || "Home",
+      name: "Home",
       item: siteBaseUrl + (locale === "en-US" ? "/" : `/${locale}/`),
     },
   ];

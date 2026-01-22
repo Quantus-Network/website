@@ -5,7 +5,7 @@ import sitemap from "@astrojs/sitemap";
 import react from "@astrojs/react";
 import rehypeExternalLinks from "./src/utils/rehype-external-links.ts";
 
-const SITE_BASE_URL = "https://www.quantus.com";
+const SITE_BASE_URL = process.env.SITE_BASE_URL || "https://www.quantus.com";
 const DEFAULT_LOCALE = "en-US";
 const SUPPORTED_LOCALES = [
   "en-US",
@@ -41,7 +41,7 @@ export default defineConfig({
     // @ts-ignore
     plugins: [tailwindcss()],
   },
-  site: "https://www.quantus.com",
+  site: SITE_BASE_URL,
   markdown: {
     rehypePlugins: [rehypeExternalLinks],
   },
