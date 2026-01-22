@@ -60,35 +60,39 @@ jobs:
           npx --yes linkinator http://localhost:3000 --recurse --skip "^(?!http://localhost:3000)"
 
       # 4. DEEP AUDIT: Unlighthouse
-      # Scans all pages and fails if SEO score is below 100 (configured in unlighthouse.config.ts)
+      # Scans all pages for both desktop and mobile devices
+      # Fails if SEO score is below 100 (configured in unlighthouse.config.ts)
       # The '--build-static' flag generates the HTML report files.
       # PUPPETEER_SKIP_CHROMIUM_DOWNLOAD tells Puppeteer to use the system Chromium from setup-chromium
       # CHROMIUM_PATH is automatically set by the setup-chromium action
-      - name: Run Unlighthouse Site-Wide Audit
+      - name: Run Unlighthouse Mobile Audit
         working-directory: website
         env:
           PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: "true"
           PUPPETEER_EXECUTABLE_PATH: ${{ env.CHROMIUM_PATH }}
         run: |
-          npx --yes @unlighthouse/cli@latest --build-static
+          npx --yes @unlighthouse/cli@latest --build-static --output-path ./.unlighthouse/mobile
+
+      - name: Run Unlighthouse Desktop Audit
+        working-directory: website
+        env:
+          PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: "true"
+          PUPPETEER_EXECUTABLE_PATH: ${{ env.CHROMIUM_PATH }}
+        run: |
+          npx --yes @unlighthouse/cli@latest --build-static --desktop --output-path ./.unlighthouse/desktop
 
       # 5. UPLOAD ARTIFACT
       # This takes the generated report and saves it as a zip file.
       # Note: Unlighthouse runs in website/ directory, so output is at website/.unlighthouse
-      - name: Debug - List Unlighthouse output
-        if: always()
-        run: |
-          echo "Checking for Unlighthouse output..."
-          ls -la website/.unlighthouse 2>/dev/null || echo "website/.unlighthouse not found"
-          ls -la website/.unlighthouse/client 2>/dev/null || echo "website/.unlighthouse/client not found"
-          find website -name ".unlighthouse" -type d 2>/dev/null || echo "No .unlighthouse directories found"
-
+      # Includes both mobile and desktop reports
       - name: Create SEO Report Zip
         if: always()
         run: |
           cd website
           zip -r seo-report.zip .unlighthouse/ || echo "Failed to create zip, but continuing..."
           ls -lh seo-report.zip || echo "Zip file not created"
+          echo "Report includes:"
+          ls -la .unlighthouse/ 2>/dev/null || echo "No .unlighthouse directory"
 
       - name: Upload SEO Report
         uses: actions/upload-artifact@v4

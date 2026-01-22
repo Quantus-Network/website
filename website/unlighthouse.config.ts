@@ -1,6 +1,7 @@
 import { defineUnlighthouseConfig } from 'unlighthouse/config'
 
-export default defineUnlighthouseConfig({
+// Base configuration shared by both desktop and mobile scans
+const baseConfig = {
   site: 'http://localhost:3000',
   // Fail the build if SEO score is below 100
   // Other categories (performance, accessibility, best-practices) will be audited but won't fail the build
@@ -9,12 +10,11 @@ export default defineUnlighthouseConfig({
       seo: 100,
     },
   },
-  // Output path for reports
-  outputPath: './.unlighthouse',
   puppeteerClusterOptions: {
     maxConcurrency: 2,
   },
   scanner: {
+    throttle: true,
     exclude: [
       '/zh-CN/.*',
       '/ko-KR/.*',
@@ -25,5 +25,16 @@ export default defineUnlighthouseConfig({
       '/de-DE/.*',
       '/hi-IN/.*',
     ],
+  },
+}
+
+// Default to mobile (can be overridden via CLI flags)
+export default defineUnlighthouseConfig({
+  ...baseConfig,
+  // Output path for reports (will be device-specific)
+  outputPath: './.unlighthouse',
+  scanner: {
+    ...baseConfig.scanner,
+    device: 'mobile', // Default to mobile
   },
 })
