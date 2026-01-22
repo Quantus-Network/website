@@ -5,6 +5,7 @@ export default defineUnlighthouseConfig({
   // Fail the build if SEO score is below 100
   // Other categories (performance, accessibility, best-practices) will be audited but won't fail the build
   ci: {
+    buildStatic: true,
     budget: {
       seo: 100,
     },

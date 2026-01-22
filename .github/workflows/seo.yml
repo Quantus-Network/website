@@ -71,7 +71,7 @@ jobs:
           PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: "true"
           PUPPETEER_EXECUTABLE_PATH: ${{ env.CHROMIUM_PATH }}
         run: |
-          npx --yes @unlighthouse/cli@latest --build-static --output-path ./.unlighthouse/mobile
+          npx --yes @unlighthouse/cli@latest --build-static --mobile --output-path ./.unlighthouse/mobile
 
       - name: Run Unlighthouse Desktop Audit
         working-directory: website
