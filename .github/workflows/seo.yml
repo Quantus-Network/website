@@ -79,5 +79,5 @@ jobs:
         if: always() # Upload even if previous step failed
         with:
           name: seo-report
-          path: .unlighthouse # The static report lives here
+          path: ./.unlighthouse # The static report lives here
           retention-days: 7 # Auto-delete after 7 days to save space
