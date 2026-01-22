@@ -1,0 +1,67 @@
+name: Quality & SEO Audit
+on: [pull_request]
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      # Cache dependencies for faster builds
+      - uses: actions/cache@v4
+        id: bun-cache
+        with:
+          path: ~/.bun/install/cache
+          key: ${{ runner.os }}-bun-${{ hashFiles('website/bun.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-bun-
+
+      - uses: actions/cache@v4
+        id: node-modules-cache
+        with:
+          path: website/node_modules
+          key: ${{ runner.os }}-node-modules-${{ hashFiles('website/package.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-modules-
+
+      # 1. Build and Start Server
+      # NOTE: Astro outputs to 'dist' directory by default
+      - name: Install Dependencies & Build
+        working-directory: website
+        run: |
+          bun install --frozen-lockfile
+          bun run build
+
+      # 2. Start Static Server (Astro outputs to 'dist' directory)
+      - name: Start Static Server
+        working-directory: website
+        run: |
+          npx --yes serve@latest dist -p 3000 &
+          npx wait-on http://localhost:3000 --timeout 60000 || (echo "Server failed to start" && exit 1)
+
+      # 3. FAIL FAST: Broken Link Checker
+      - name: Check for Broken Links
+        run: |
+          npx --yes linkinator http://localhost:3000 --recurse
+
+      # 4. DEEP AUDIT: Unlighthouse
+      # Scans all pages and fails if SEO score is below 100 (configured in unlighthouse.config.ts)
+      # The '--build-static' flag generates the HTML report files.
+      - name: Run Unlighthouse Site-Wide Audit
+        working-directory: website
+        run: |
+          npx --yes @unlighthouse/cli@latest --build-static
+
+      # 5. UPLOAD ARTIFACT
+      # This takes the generated report and saves it as a zip file.
+      - name: Upload SEO Report
+        uses: actions/upload-artifact@v4
+        if: always() # Upload even if previous step failed
+        with:
+          name: seo-report
+          path: website/.unlighthouse/client # The static report lives here
+          retention-days: 7 # Auto-delete after 7 days to save space
