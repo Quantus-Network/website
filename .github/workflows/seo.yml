@@ -28,6 +28,13 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-modules-
 
+      # Install Chromium for Puppeteer (required by Unlighthouse)
+      # This action sets CHROMIUM_PATH environment variable automatically
+      - name: Setup Chromium
+        uses: browser-actions/setup-chromium@v1
+        with:
+          chromium-version: latest
+
       # 1. Build and Start Server
       # NOTE: Astro outputs to 'dist' directory by default
       # Set SITE_BASE_URL to localhost for CI so all links point to localhost instead of production
@@ -55,8 +62,13 @@ jobs:
       # 4. DEEP AUDIT: Unlighthouse
       # Scans all pages and fails if SEO score is below 100 (configured in unlighthouse.config.ts)
       # The '--build-static' flag generates the HTML report files.
+      # PUPPETEER_SKIP_CHROMIUM_DOWNLOAD tells Puppeteer to use the system Chromium from setup-chromium
+      # CHROMIUM_PATH is automatically set by the setup-chromium action
       - name: Run Unlighthouse Site-Wide Audit
         working-directory: website
+        env:
+          PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: "true"
+          PUPPETEER_EXECUTABLE_PATH: ${{ env.CHROMIUM_PATH }}
         run: |
           npx --yes @unlighthouse/cli@latest --build-static
 
