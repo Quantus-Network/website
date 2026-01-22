@@ -17,7 +17,7 @@ export const websiteJsonLd: WebSite = {
     "https://www.linkedin.com/company/quantus-network",
     "https://x.com/QuantusNetwork",
     "https://www.instagram.com/quantusnetwork",
-    "https://www.youtube.com/@Quantus.Network",
+    "https://www.youtube.com/@QuantusNetwork",
     "https://github.com/Quantus-Network",
   ],
   potentialAction: {
@@ -66,7 +66,7 @@ export const organizationJsonLd: Organization = {
     "https://www.linkedin.com/company/quantus-network",
     "https://x.com/QuantusNetwork",
     "https://www.instagram.com/quantusnetwork",
-    "https://www.youtube.com/@Quantus.Network",
+    "https://www.youtube.com/@QuantusNetwork",
     "https://github.com/Quantus-Network",
   ],
 };
