@@ -13,7 +13,6 @@ const LeaderboardPodium = ({ locale }: LeaderboardPodiumProps) => {
   const secondRank = data?.data[1];
   const thirdRank = data?.data[2];
 
-  const unknownIdentity = "-";
   const isLoading = status === "loading";
 
   return (
@@ -22,24 +21,24 @@ const LeaderboardPodium = ({ locale }: LeaderboardPodiumProps) => {
 
       <WinnerPodium
         rank={2}
-        identity={secondRank?.raider.referral_code ?? unknownIdentity}
-        impressions={secondRank?.total_impressions ?? 0}
+        identity={secondRank?.raider.referral_code}
+        impressions={secondRank?.total_impressions}
         isLoading={isLoading}
         t={t}
       />
 
       <WinnerPodium
         rank={1}
-        identity={firstRank?.raider.referral_code ?? unknownIdentity}
-        impressions={firstRank?.total_impressions ?? 0}
+        identity={firstRank?.raider.referral_code}
+        impressions={firstRank?.total_impressions}
         isLoading={isLoading}
         t={t}
       />
 
       <WinnerPodium
         rank={3}
-        identity={thirdRank?.raider.referral_code ?? unknownIdentity}
-        impressions={thirdRank?.total_impressions ?? 0}
+        identity={thirdRank?.raider.referral_code}
+        impressions={thirdRank?.total_impressions}
         isLoading={isLoading}
         t={t}
       />

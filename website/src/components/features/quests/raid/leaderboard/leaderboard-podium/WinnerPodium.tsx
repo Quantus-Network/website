@@ -4,8 +4,8 @@ import type { TranslationKey, TranslationParams } from "@/utils/i18n";
 
 interface WinnerPodiumProps {
   rank: 1 | 2 | 3;
-  identity: string;
-  impressions: number;
+  identity?: string;
+  impressions?: number;
   isLoading: boolean;
   t: (key: TranslationKey, params?: TranslationParams) => any;
 }
@@ -59,7 +59,9 @@ const WinnerPodium = ({
       {isLoading ? (
         <Skeleton className="mt-3 h-6 w-full" />
       ) : (
-        <p className="font-large-body-bold mt-3 text-center">{identity}</p>
+        <p className="font-large-body-bold mt-3 text-center">
+          {identity ?? "-"}
+        </p>
       )}
 
       <div className="relative -z-[1] mt-4 w-full perspective-[100px]">
@@ -71,7 +73,7 @@ const WinnerPodium = ({
               {isLoading ? (
                 <Skeleton className="me-2 h-4 w-52" />
               ) : (
-                `${impressions} ${t("quests.raid.leaderboard.impressions")}`
+                `${impressions ?? "-"} ${t("quests.raid.leaderboard.impressions")}`
               )}
             </p>
           </div>
