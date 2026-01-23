@@ -300,9 +300,9 @@
     "raid": {
       "info": {
         "code": "QUEST #002",
-        "name_one": "KING",
-        "name_two": "OF THE",
-        "name_three": "RAIDER",
+        "name_one": "शिल",
+        "name_two": "का",
+        "name_three": "राजा",
         "description": "500 USDC के प्राइज़ पूल और सर्वश्रेष्ठ खिताब `द किंग ऑफ द शिल` के लिए एक महायुद्ध।",
         "play_guide": {
           "title": "कैसे खेलें",

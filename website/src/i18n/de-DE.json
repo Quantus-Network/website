@@ -300,9 +300,9 @@
     "raid": {
       "info": {
         "code": "QUEST #002",
-        "name_one": "KING",
-        "name_two": "OF THE",
-        "name_three": "RAIDER",
+        "name_one": "KÖNIG",
+        "name_two": "DES",
+        "name_three": "SHILL",
         "description": "Ein Kampf um einen Preispool von 500 USDC und den ultimativen Titel: Der King of the Shill.",
         "play_guide": {
           "title": "Spielanleitung",

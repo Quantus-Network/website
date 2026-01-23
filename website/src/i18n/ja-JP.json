@@ -296,9 +296,9 @@
     "raid": {
       "info": {
         "code": "QUEST #002",
-        "name_one": "KING",
-        "name_two": "OF THE",
-        "name_three": "RAIDER",
+        "name_one": "キング",
+        "name_two": "オブ",
+        "name_three": "ザ・シル",
         "description": "賞金総額 500 USDC と究極の称号「キング・オブ・シル」をかけた戦い。",
         "play_guide": {
           "title": "遊び方",
