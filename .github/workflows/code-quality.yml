@@ -1,9 +1,50 @@
-name: Quality & SEO Audit
-on: [pull_request]
+name: Code Quality & SEO Audit
+
+on: 
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
 
 jobs:
-  audit:
+  code-quality:
+    name: Code Quality
     runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      # Cache dependencies for faster builds
+      - uses: actions/cache@v4
+        id: bun-cache
+        with:
+          path: ~/.bun/install/cache
+          key: ${{ runner.os }}-bun-${{ hashFiles('website/bun.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-bun-
+
+      - uses: actions/cache@v4
+        id: node-modules-cache
+        with:
+          path: website/node_modules
+          key: ${{ runner.os }}-node-modules-${{ hashFiles('website/package.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-modules-
+
+      - name: Install Dependencies & Run Code Quality
+        working-directory: website
+        run: |
+          bun install --frozen-lockfile
+          bun run format:check
+
+  seo-audit:
+    name: SEO Audit
+    runs-on: ubuntu-latest
+    # Only run if code-quality job succeeds
+    needs: code-quality
     steps:
       - uses: actions/checkout@v4
 
