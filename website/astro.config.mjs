@@ -32,6 +32,9 @@ const LOCALES_MAP = {
 
 // https://astro.build/config
 export default defineConfig({
+  build: {
+    inlineStylesheets: 'always',
+  },
   vite: {
     // @ts-ignore
     plugins: [tailwindcss()],
