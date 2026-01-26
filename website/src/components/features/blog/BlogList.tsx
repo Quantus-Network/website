@@ -203,7 +203,7 @@ export const BlogList: React.FC<Props> = ({
                       decoding="async"
                       width="800"
                       height="450"
-                      fetchpriority="low"
+                      fetchPriority="low"
                     />
                   </div>
                 )}
