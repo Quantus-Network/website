@@ -35,6 +35,16 @@ export default defineConfig({
   vite: {
     // @ts-ignore
     plugins: [tailwindcss()],
+    build: {
+      cssMinify: true,
+    },
+  },
+  image: {
+    domains: [],
+    remotePatterns: [],
+    service: {
+      entrypoint: "astro/assets/services/sharp",
+    },
   },
   site: SITE_BASE_URL,
   markdown: {

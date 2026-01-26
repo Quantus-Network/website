@@ -1,2 +1,71 @@
 /.well-known/*
   Content-Type: application/json
+
+# Cache static assets with long cache lifetimes
+# Font files - cache for 1 year (immutable)
+/_astro/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+/_astro/*.woff
+  Cache-Control: public, max-age=31536000, immutable
+/_astro/*.ttf
+  Cache-Control: public, max-age=31536000, immutable
+/_astro/*.otf
+  Cache-Control: public, max-age=31536000, immutable
+*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+*.woff
+  Cache-Control: public, max-age=31536000, immutable
+*.ttf
+  Cache-Control: public, max-age=31536000, immutable
+*.otf
+  Cache-Control: public, max-age=31536000, immutable
+
+# CSS and JS files with hashes - cache for 1 year (immutable)
+/_astro/*.css
+  Cache-Control: public, max-age=31536000, immutable
+/_astro/*.js
+  Cache-Control: public, max-age=31536000, immutable
+
+# Images - cache for 1 year (immutable)
+/_astro/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+/_astro/*.jpeg
+  Cache-Control: public, max-age=31536000, immutable
+/_astro/*.png
+  Cache-Control: public, max-age=31536000, immutable
+/_astro/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+/_astro/*.avif
+  Cache-Control: public, max-age=31536000, immutable
+/_astro/*.svg
+  Cache-Control: public, max-age=31536000, immutable
+/_astro/*.gif
+  Cache-Control: public, max-age=31536000, immutable
+
+# Public folder images and assets - cache for 1 year
+/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+/*.jpeg
+  Cache-Control: public, max-age=31536000, immutable
+/*.png
+  Cache-Control: public, max-age=31536000, immutable
+/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+/*.avif
+  Cache-Control: public, max-age=31536000, immutable
+/*.svg
+  Cache-Control: public, max-age=31536000, immutable
+/*.gif
+  Cache-Control: public, max-age=31536000, immutable
+/*.ico
+  Cache-Control: public, max-age=31536000, immutable
+
+# Other static assets in _astro (catch-all for any other file types)
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# HTML files - short cache with revalidation
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate

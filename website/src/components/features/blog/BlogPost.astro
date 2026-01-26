@@ -67,6 +67,9 @@ const articleSchema: WithContext<Article> = {
               src={heroImage}
               alt={heroAlt || title}
               class="mb-8 w-full rounded-xl object-cover"
+              loading="eager"
+              decoding="async"
+              fetchpriority="high"
             />
           )
         }
