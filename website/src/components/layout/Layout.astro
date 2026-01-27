@@ -72,10 +72,11 @@ const breadcrumbs = generateBreadcrumbs({
     <link rel="icon" href="/favicon.ico" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <meta name="generator" content={Astro.generator} />
-    
+
     {/* Resource hints for performance */}
+    <link rel="preconnect" href={new URL(env.GRAPHQL_URL).origin} />
     <link rel="preconnect" href={new URL(env.SITE_BASE_URL).origin} />
-    
+
     <SEO
       {...metadata}
       canonical={canonical}
@@ -120,31 +121,30 @@ const breadcrumbs = generateBreadcrumbs({
   const localeStorageKey = "astro-i18n-redirect";
   const hasRedirected = localStorage.getItem(localeStorageKey);
 
-  if (hasRedirected) throw new Error("Already redirected");
+  if (!hasRedirected) {
+    const currentLocale = getLocaleFromUrl(window.location.pathname);
+    const userLang = navigator.language as any;
 
-  const currentLocale = getLocaleFromUrl(window.location.pathname);
-  const userLang = navigator.language as any;
+    if (currentLocale === userLang || userLang.includes("en-")) {
+      localStorage.setItem(localeStorageKey, "true");
+    } else {
+      const cleanPathname = window.location.pathname
+        .split("/")
+        .filter((path: any) => !SUPPORTED_LOCALES.includes(path) && path !== "")
+        .join("/");
 
-  if (currentLocale === userLang || userLang.includes("en-")) {
-    localStorage.setItem(localeStorageKey, "true");
-    throw new Error("Already on the correct locale");
+      let newPath = `/${cleanPathname}`;
+
+      if (SUPPORTED_LOCALES.includes(userLang) && userLang !== DEFAULT_LOCALE) {
+        newPath = `/${userLang}${cleanPathname}`;
+      }
+
+      if (window.location.search) {
+        newPath += window.location.search;
+      }
+
+      localStorage.setItem(localeStorageKey, "true");
+      window.location.replace(newPath);
+    }
   }
-
-  const cleanPathname = window.location.pathname
-    .split("/")
-    .filter((path: any) => !SUPPORTED_LOCALES.includes(path) && path !== "")
-    .join("/");
-
-  let newPath = `/${cleanPathname}`;
-
-  if (SUPPORTED_LOCALES.includes(userLang) && userLang !== DEFAULT_LOCALE) {
-    newPath = `/${userLang}${cleanPathname}`;
-  }
-
-  if (window.location.search) {
-    newPath += window.location.search;
-  }
-
-  localStorage.setItem(localeStorageKey, "true");
-  window.location.replace(newPath);
 </script>

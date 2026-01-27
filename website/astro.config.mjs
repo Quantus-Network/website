@@ -42,16 +42,12 @@ export default defineConfig({
       cssMinify: true,
     },
   },
-  image: {
-    domains: [],
-    remotePatterns: [],
-    service: {
-      entrypoint: "astro/assets/services/sharp",
-    },
-  },
   site: SITE_BASE_URL,
   markdown: {
     rehypePlugins: [rehypeExternalLinks],
+  },
+  image: {
+    domains: ['i.ytimg.com'],
   },
   integrations: [
     sitemap({
