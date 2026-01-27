@@ -16,6 +16,7 @@
     "@fontsource/inter": "^5.2.6",
     "@fontsource/prompt": "^5.2.6",
     "@lucide/astro": "^0.541.0",
+    "@playform/compress": "^0.2.1",
     "@radix-ui/react-select": "^2.2.6",
     "@radix-ui/react-slot": "^1.2.3",
     "@tailwindcss/vite": "^4.1.12",

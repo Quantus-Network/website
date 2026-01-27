@@ -4,6 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 import sitemap from "@astrojs/sitemap";
 import react from "@astrojs/react";
 import rehypeExternalLinks from "./src/utils/rehype-external-links.ts";
+import playformCompress from "@playform/compress";
 
 const SITE_BASE_URL = process.env.SITE_BASE_URL || "https://www.quantus.com";
 const DEFAULT_LOCALE = "en-US";
@@ -80,5 +81,6 @@ export default defineConfig({
       },
     }),
     react(),
+    playformCompress(),
   ],
 });
