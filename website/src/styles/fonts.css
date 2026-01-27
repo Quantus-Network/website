@@ -3,6 +3,11 @@
   --font-secondary: "Inter", "sans-serif";
 }
 
+/* Note: font-display: swap is handled by @fontsource packages.
+ * To ensure optimal font loading, consider using a Vite plugin
+ * to modify @font-face rules in @fontsource CSS files if needed.
+ */
+
 /* https://tailwindcss.com/docs/adding-custom-styles#adding-custom-utilities */
 @utility font-large-body {
   font-family: var(--font-primary);

@@ -23,6 +23,7 @@ const { name, title, subTitles, social } = Astro.props;
     href={social.href}
     target="_blank"
     rel="noopener noreferrer"
+    aria-label={`${name}'s ${social.type} profile`}
     class="text-button-icon bg-button-icon-body flex size-7 cursor-pointer items-center justify-center rounded-full hover:brightness-125 min-[360px]:size-8"
   >
     {social.type === "x" && <SocialX />}

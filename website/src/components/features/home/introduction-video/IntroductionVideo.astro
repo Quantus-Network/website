@@ -2,40 +2,46 @@
 import SiteSocials from "@/components/ui/SiteSocials.astro";
 import { PlayIcon } from "@lucide/astro";
 import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+import { Image } from "astro:assets";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
+
+const VIDEO_ID = "ZoT5cdMoMPA";
+const THUMBNAIL_URL = `https://i.ytimg.com/vi/${VIDEO_ID}/sddefault.jpg`;
 ---
 
 <section
   class="max-w-video-introduction mx-auto flex flex-col lg:flex-row lg:gap-7 lg:px-[114px] lg:pt-[120px] lg:pb-[80px]"
 >
   <div
-    class="lg:rounded-quantus relative flex aspect-video size-full flex-1 flex-col items-center justify-center overflow-hidden bg-(image:--color-video-player) lg:order-2"
+    id="lazy-video-container"
+    class="lg:rounded-quantus relative flex aspect-video size-full flex-1 flex-col items-center justify-center overflow-hidden bg-(image:--color-video-player) transition-opacity duration-1000 lg:order-2"
   >
-    <button
-      aria-label="Play youtube video button"
-      class="bg-video-player-icon-body absolute -z-0 flex size-[95px] cursor-pointer items-center justify-center rounded-full hover:brightness-125"
-    >
-      <PlayIcon
-        width={33.25}
-        height={38}
-        class="text-video-player-icon fill-video-player-icon"
-      />
-    </button>
+    <Image
+      src={THUMBNAIL_URL}
+      width={640}
+      height={480}
+      alt="Video Loading..."
+      class="absolute inset-0 z-10 size-full object-cover transition-opacity duration-500"
+      id="video-placeholder"
+      loading="lazy"
+      decoding="async"
+      fetchpriority="low"
+    />
 
-    <iframe
-      class="pointer-events-none relative z-[1]"
-      width="100%"
-      height="100%"
-      src="https://www.youtube.com/embed/ZoT5cdMoMPA?si=2j3M397Em6445nch&autoplay=1&mute=1&loop=1&playlist=ZoT5cdMoMPA&controls=0"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; modestbranding; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen
-    >
-    </iframe>
+    <div id="video-loader" class="absolute z-20 flex flex-col items-center">
+      <button
+        aria-label="Loading video"
+        class="bg-video-player-icon-body pointer-events-none flex size-[95px] items-center justify-center rounded-full opacity-50"
+      >
+        <PlayIcon
+          width={33.25}
+          height={38}
+          class="text-video-player-icon fill-video-player-icon"
+        />
+      </button>
+    </div>
   </div>
 
   <div
@@ -46,11 +52,84 @@ const t = await createTranslator(locale);
     >
       {t("video.title")}
     </h2>
-
     <p class="font-body-mobile md:font-body mb-[38px]">
       {t("video.description")}
     </p>
-
     <SiteSocials />
   </div>
 </section>
+
+<script define:vars={{ VIDEO_ID }}>
+  // Configuration
+  const DELAY_MS = 1000;
+
+  const container = document.getElementById("lazy-video-container");
+  const placeholder = document.getElementById("video-placeholder");
+  const loader = document.getElementById("video-loader");
+
+  const loadVideo = () => {
+    // Check if already loaded to prevent duplicates
+    if (container.querySelector("iframe")) return;
+
+    const iframe = document.createElement("iframe");
+    iframe.setAttribute("width", "100%");
+    iframe.setAttribute("height", "100%");
+    // CRITICAL: autoplay=1 AND mute=1 are required for auto-play
+    iframe.setAttribute(
+      "src",
+      `https://www.youtube-nocookie.com/embed/${VIDEO_ID}?si=2j3M397Em6445nch&autoplay=1&mute=1&loop=1&playlist=${VIDEO_ID}&controls=0`,
+    );
+    iframe.setAttribute("title", "YouTube video player");
+    iframe.setAttribute("frameborder", "0");
+    iframe.setAttribute(
+      "allow",
+      "accelerometer; autoplay; clipboard-write; modestbranding; encrypted-media; gyroscope; picture-in-picture; web-share",
+    );
+    iframe.setAttribute("allowfullscreen", "");
+    iframe.classList.add(
+      "absolute",
+      "inset-0",
+      "z-30",
+      "size-full",
+      "opacity-0",
+      "transition-opacity",
+      "duration-1000",
+      "pointer-events-none",
+    );
+
+    // Smooth fade-in effect
+    iframe.onload = () => {
+      iframe.classList.remove("opacity-0");
+      if (placeholder) placeholder.style.opacity = "0";
+      if (loader) loader.style.opacity = "0";
+      // Cleanup DOM after transition
+      setTimeout(() => {
+        if (placeholder) placeholder.remove();
+        if (loader) loader.remove();
+      }, 1000);
+    };
+
+    container.appendChild(iframe);
+  };
+
+  // The Observer: Only load when the user actually sees the video container
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Wait a moment to ensure it's not just a quick scroll-past
+          // AND to let the main thread clear up
+          setTimeout(() => {
+            loadVideo();
+          }, DELAY_MS);
+
+          // Stop observing once we've triggered the load
+          observer.disconnect();
+        }
+      });
+    },
+    { threshold: 0.25 },
+  ); // Trigger when 25% of the video is visible
+
+  if (container) observer.observe(container);
+</script>

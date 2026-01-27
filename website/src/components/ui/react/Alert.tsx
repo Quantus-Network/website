@@ -36,7 +36,7 @@ const AlertTitle = React.forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLHeadingElement>
 >(({ className, children, ...props }, ref) => (
-  <h5
+  <p
     ref={ref}
     className={applyStyles(
       "mb-1 leading-none font-medium tracking-tight",
@@ -45,7 +45,7 @@ const AlertTitle = React.forwardRef<
     {...props}
   >
     {children}
-  </h5>
+  </p>
 ));
 AlertTitle.displayName = "AlertTitle";
 

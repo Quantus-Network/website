@@ -57,7 +57,12 @@ const jsonLd = JsonLdGraph({
           <div
             class="mx-auto max-w-[400px] px-[30px] lg:order-2 lg:max-w-[500px] lg:px-0 xl:hidden"
           >
-            <Image src={AppHomeView} alt="App's home view" />
+            <Image
+              src={AppHomeView}
+              alt="App's home view"
+              loading="eager"
+              fetchpriority="high"
+            />
           </div>
 
           <div

@@ -132,6 +132,11 @@ export const BlogList: React.FC<Props> = ({
                   src={featuredPost.data.heroImage}
                   alt={featuredPost.data.heroAlt || featuredPost.data.title}
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="eager"
+                  decoding="async"
+                  width="800"
+                  height="450"
+                  fetchPriority="high"
                 />
               </a>
             )}
@@ -194,6 +199,11 @@ export const BlogList: React.FC<Props> = ({
                       src={post.data.heroImage}
                       alt={post.data.heroAlt || post.data.title}
                       className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      loading="lazy"
+                      decoding="async"
+                      width="800"
+                      height="450"
+                      fetchPriority="low"
                     />
                   </div>
                 )}

@@ -1,6 +1,9 @@
 const env = {
   SITE_NAME: "Quantus Network",
-  SITE_BASE_URL: process.env.SITE_BASE_URL || "https://www.quantus.com",
+  SITE_BASE_URL:
+    typeof process !== "undefined" && process.env?.SITE_BASE_URL
+      ? process.env.SITE_BASE_URL
+      : "https://www.quantus.com",
   GA_ID: "G-JBZETNF6F1",
   API_URL: "https://api.quantus.com/api",
   TASK_MASTER_URL: "https://quests.quantus.com/api",

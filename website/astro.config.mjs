@@ -4,6 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 import sitemap from "@astrojs/sitemap";
 import react from "@astrojs/react";
 import rehypeExternalLinks from "./src/utils/rehype-external-links.ts";
+import playformCompress from "@playform/compress";
 
 const SITE_BASE_URL = process.env.SITE_BASE_URL || "https://www.quantus.com";
 const DEFAULT_LOCALE = "en-US";
@@ -32,13 +33,22 @@ const LOCALES_MAP = {
 
 // https://astro.build/config
 export default defineConfig({
+  build: {
+    inlineStylesheets: "always",
+  },
   vite: {
     // @ts-ignore
     plugins: [tailwindcss()],
+    build: {
+      cssMinify: true,
+    },
   },
   site: SITE_BASE_URL,
   markdown: {
     rehypePlugins: [rehypeExternalLinks],
+  },
+  image: {
+    domains: ["i.ytimg.com"],
   },
   integrations: [
     sitemap({
@@ -71,5 +81,6 @@ export default defineConfig({
       },
     }),
     react(),
+    playformCompress(),
   ],
 });

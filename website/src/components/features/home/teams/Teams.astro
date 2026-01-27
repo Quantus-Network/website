@@ -124,6 +124,7 @@ const extraProfiles: ExtraData[] = [
             href="https://x.com/yuvilightman"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Christopher Smith's X profile"
             class="text-button-icon bg-button-icon-body flex size-7 cursor-pointer items-center justify-center rounded-full hover:brightness-125 min-[360px]:size-8"
           >
             <SocialX />
@@ -171,6 +172,7 @@ const extraProfiles: ExtraData[] = [
               href={data.social.href}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label={`${data.name}'s ${data.social.type} profile`}
               class="text-button-icon bg-button-icon-body flex size-7 cursor-pointer items-center justify-center rounded-full hover:brightness-125 min-[360px]:size-8"
             >
               {data.social.type === "x" && <SocialX />}
