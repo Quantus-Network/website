@@ -33,7 +33,7 @@ const LOCALES_MAP = {
 // https://astro.build/config
 export default defineConfig({
   build: {
-    inlineStylesheets: 'always',
+    inlineStylesheets: "always",
   },
   vite: {
     // @ts-ignore
@@ -47,7 +47,7 @@ export default defineConfig({
     rehypePlugins: [rehypeExternalLinks],
   },
   image: {
-    domains: ['i.ytimg.com'],
+    domains: ["i.ytimg.com"],
   },
   integrations: [
     sitemap({
