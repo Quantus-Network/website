@@ -16,6 +16,7 @@
     "contact": "Contact",
     "checker": "Qday Risk Checker",
     "quests": "Quests",
+    "launch": "Launch",
     "cta": "Join the Public BETA"
   },
   "hero": {
@@ -402,6 +403,18 @@
     "quote": {
       "text": "The atoms or elementary particles themselves are not real; they form a world of potentialities or possibilities rather than one of things or facts.",
       "author": "Werner Heisenberg"
+    }
+  },
+  "launch": {
+    "meta": {
+      "title": "Quantus Token & Mainnet Launch Announcement",
+      "description": "Official QUAN token and Quantus mainnet launch information for Q2 2026. Reference page for CoinGecko, exchanges, and ecosystem partners."
+    },
+    "title": "Quantus Token & Mainnet Launch Announcement",
+    "content": {
+      "p1": "Quantus plans to launch the QUAN token and Quantus mainnet in Q2 2026, following the completion of testnet operations, external security reviews, and launchpad coordination.",
+      "p2": "The Quantus network is currently operating its public Dirac testnet, allowing users to mine, test wallet features, and interact with post-quantum security primitives such as reversible transactions and High-Security Accounts.",
+      "p3": "This page serves as the official launch reference for CoinGecko, exchanges, and ecosystem partners. Specific public sale and TGE dates will be announced once launchpad partners and mainnet readiness are finalized."
     }
   },
   "about": {

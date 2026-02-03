@@ -16,6 +16,7 @@
     "contact": "Contacto",
     "checker": "Verificador de Riesgo Qday",
     "quests": "Misiones",
+    "launch": "Lanzamiento",
     "cta": "Unirse a la BETA Pública"
   },
   "hero": {
@@ -402,6 +403,18 @@
     "quote": {
       "text": "Los átomos o partículas elementales en sí mismos no son reales; forman un mundo de potencialidades o posibilidades en lugar de uno de cosas o hechos.",
       "author": "Werner Heisenberg"
+    }
+  },
+  "launch": {
+    "meta": {
+      "title": "Anuncio de Lanzamiento del Token y Mainnet de Quantus",
+      "description": "Información oficial del lanzamiento del token QUAN y la mainnet de Quantus para el Q2 2026. Página de referencia para CoinGecko, exchanges y socios del ecosistema."
+    },
+    "title": "Anuncio de Lanzamiento del Token y Mainnet de Quantus",
+    "content": {
+      "p1": "Quantus planea lanzar el token QUAN y la mainnet de Quantus en el Q2 2026, tras la finalización de las operaciones de testnet, revisiones de seguridad externas y coordinación con launchpads.",
+      "p2": "La red Quantus actualmente opera su testnet pública Dirac, permitiendo a los usuarios minar, probar funciones de wallet e interactuar con primitivas de seguridad post-cuántica como transacciones reversibles y Cuentas de Alta Seguridad.",
+      "p3": "Esta página sirve como referencia oficial de lanzamiento para CoinGecko, exchanges y socios del ecosistema. Las fechas específicas de venta pública y TGE se anunciarán una vez que se finalicen los socios del launchpad y la preparación de la mainnet."
     }
   },
   "about": {

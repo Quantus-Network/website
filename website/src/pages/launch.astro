@@ -1,0 +1,48 @@
+---
+import Layout from "@/components/layout/Layout.astro";
+import { organizationJsonLd } from "@/constants/default-jsonld";
+import { getLocaleFromUrl, createTranslator } from "@/utils/i18n";
+import { createMetadata } from "@/utils/create-metadata";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
+
+const metadata = createMetadata({
+  title: t("launch.meta.title"),
+  description: t("launch.meta.description"),
+  pathname: Astro.url.pathname,
+});
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  ...organizationJsonLd,
+};
+---
+
+<Layout {...metadata} jsonLd={jsonLd}>
+  <section
+    class="max-w-content mx-auto px-[30px] py-10 lg:pt-[120px] lg:pb-20 2xl:px-0"
+  >
+    <div class="flex flex-col items-center text-center">
+      <h1 class="font-small-title lg:font-medium-title mb-8 max-w-4xl">
+        {t("launch.title")}
+      </h1>
+
+      <div
+        class="font-body-mobile lg:font-body flex max-w-3xl flex-col gap-6 text-left"
+      >
+        <p>
+          {t("launch.content.p1")}
+        </p>
+
+        <p>
+          {t("launch.content.p2")}
+        </p>
+
+        <p>
+          {t("launch.content.p3")}
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>
