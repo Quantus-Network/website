@@ -16,6 +16,7 @@
     "contact": "Kontak",
     "checker": "Pemeriksa Risiko Qday",
     "quests": "Misi",
+    "launch": "Peluncuran",
     "cta": "Gabung BETA Publik"
   },
   "hero": {
@@ -402,6 +403,18 @@
     "quote": {
       "text": "Atom atau partikel elementer itu sendiri tidak nyata; mereka membentuk dunia potensialitas atau kemungkinan daripada dunia benda atau fakta.",
       "author": "Werner Heisenberg"
+    }
+  },
+  "launch": {
+    "meta": {
+      "title": "Pengumuman Peluncuran Token & Mainnet Quantus",
+      "description": "Informasi resmi peluncuran token QUAN dan mainnet Quantus untuk Q2 2026. Halaman referensi untuk CoinGecko, bursa, dan mitra ekosistem."
+    },
+    "title": "Pengumuman Peluncuran Token & Mainnet Quantus",
+    "content": {
+      "p1": "Quantus berencana meluncurkan token QUAN dan mainnet Quantus pada Q2 2026, setelah selesainya operasi testnet, tinjauan keamanan eksternal, dan koordinasi launchpad.",
+      "p2": "Jaringan Quantus saat ini mengoperasikan testnet publik Dirac, memungkinkan pengguna untuk menambang, menguji fitur dompet, dan berinteraksi dengan primitif keamanan pasca-kuantum seperti transaksi reversibel dan Akun Keamanan Tinggi.",
+      "p3": "Halaman ini berfungsi sebagai referensi peluncuran resmi untuk CoinGecko, bursa, dan mitra ekosistem. Tanggal penjualan publik dan TGE yang spesifik akan diumumkan setelah mitra launchpad dan kesiapan mainnet diselesaikan."
     }
   },
   "about": {
