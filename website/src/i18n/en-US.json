@@ -407,14 +407,65 @@
   },
   "launch": {
     "meta": {
-      "title": "Quantus Token & Mainnet Launch Announcement",
-      "description": "Official QUAN token and Quantus mainnet launch information for Q2 2026. Reference page for CoinGecko, exchanges, and ecosystem partners."
+      "title": "Quantus Tokenomics & Launch Allocation",
+      "description": "QUAN token supply, distribution, and launch allocation details. Fixed supply of 21M QUAN with fair launch mechanics."
     },
-    "title": "Quantus Token & Mainnet Launch Announcement",
-    "content": {
-      "p1": "Quantus plans to launch the QUAN token and Quantus mainnet in Q2 2026, following the completion of testnet operations, external security reviews, and launchpad coordination.",
-      "p2": "The Quantus network is currently operating its public Dirac testnet, allowing users to mine, test wallet features, and interact with post-quantum security primitives such as reversible transactions and High-Security Accounts.",
-      "p3": "This page serves as the official launch reference for CoinGecko, exchanges, and ecosystem partners. Specific public sale and TGE dates will be announced once launchpad partners and mainnet readiness are finalized."
+    "title": "Quantus Tokenomics & Launch Allocation",
+    "overview": {
+      "title": "Overview",
+      "content": "Quantus has a fixed maximum supply of **21,000,000 QUAN**. The token is issued through a combination of an initial Token Generation Event (TGE) and long-term Proof-of-Work mining. This structure is designed to avoid pre-mining, minimize insider advantages, and align long-term network security with user participation."
+    },
+    "supply": {
+      "title": "Token Supply",
+      "max_supply": "Maximum Supply:",
+      "max_supply_value": "21,000,000 QUAN",
+      "tge_supply": "TGE Minted Supply:",
+      "tge_supply_value": "6,300,000 QUAN (30%)",
+      "mining_supply": "Mining Emissions:",
+      "mining_supply_value": "14,700,000 QUAN (70%) over ~40 years",
+      "note": "The mining emission follows an exponentially decaying block reward curve, meaning issuance is higher in the early years and gradually slows over time as supply approaches the maximum."
+    },
+    "tge": {
+      "title": "Launch Allocation (TGE)",
+      "intro": "The following tokens are minted and distributed at the Token Generation Event:",
+      "table": {
+        "category": "Category",
+        "percent": "% of Supply",
+        "quan": "QUAN",
+        "private_sale": "Private Sale",
+        "public_sale": "Public Sale",
+        "dex_liquidity": "DEX Liquidity",
+        "total": "Total at TGE"
+      },
+      "note": "All private and public sale tokens are **fully liquid at launch**. There are no investor lockups or vesting schedules."
+    },
+    "mining": {
+      "title": "Mining-Based Distribution (70%)",
+      "intro": "The remaining 70% of supply — **14,700,000 QUAN** — is distributed through Proof-of-Work mining over approximately 40 years.",
+      "ownership_title": "Final ownership of mining emissions:",
+      "table": {
+        "recipient": "Recipient",
+        "percent": "% of Total Supply",
+        "miners": "Miners",
+        "community": "Community",
+        "team": "Team & Advisors"
+      }
+    },
+    "team": {
+      "title": "Team & Community Alignment",
+      "intro": "Quantus does not pre-mine or reserve tokens for the team.",
+      "content": "Instead, the team is compensated through mining rewards:",
+      "points": [
+        "For the first 4 years, **50%** of block rewards are allocated to the team and advisors (this acts as protocol-level vesting).",
+        "The remaining **50%** goes to miners.",
+        "After year 4, the team's share is redirected to a **community fund**, which gradually accumulates 25% of the total supply over the remaining emission period."
+      ]
+    },
+    "fees": {
+      "title": "Fees & Burning",
+      "intro": "To support long-term network security, wormhole transactions incur a **0.1% volume fee**:",
+      "points": ["**50%** is paid to miners", "**50%** is burned"],
+      "note": "This introduces deflationary pressure as network usage grows."
     }
   },
   "about": {
