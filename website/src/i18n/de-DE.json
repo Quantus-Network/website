@@ -407,14 +407,68 @@
   },
   "launch": {
     "meta": {
-      "title": "Quantus Token & Mainnet Launch Ankündigung",
-      "description": "Offizielle Informationen zum QUAN Token und Quantus Mainnet Launch für Q2 2026. Referenzseite für CoinGecko, Börsen und Ökosystem-Partner."
+      "title": "Quantus Tokenomics & Launch-Zuteilung",
+      "description": "Details zur QUAN-Token-Versorgung, -Verteilung und Launch-Zuteilung. Feste Versorgung von 21 Mio. QUAN mit fairen Launch-Mechanismen."
     },
-    "title": "Quantus Token & Mainnet Launch Ankündigung",
-    "content": {
-      "p1": "Quantus plant den Launch des QUAN Tokens und des Quantus Mainnets im Q2 2026, nach Abschluss des Testnet-Betriebs, externer Sicherheitsüberprüfungen und Launchpad-Koordination.",
-      "p2": "Das Quantus-Netzwerk betreibt derzeit sein öffentliches Dirac-Testnet, das es Benutzern ermöglicht zu minen, Wallet-Funktionen zu testen und mit post-quantensicheren Primitiven wie reversiblen Transaktionen und Hochsicherheitskonten zu interagieren.",
-      "p3": "Diese Seite dient als offizielle Launch-Referenz für CoinGecko, Börsen und Ökosystem-Partner. Spezifische Daten für den öffentlichen Verkauf und TGE werden bekannt gegeben, sobald die Launchpad-Partner und die Mainnet-Bereitschaft finalisiert sind."
+    "title": "Quantus Tokenomics & Launch-Zuteilung",
+    "overview": {
+      "title": "Übersicht",
+      "content": "Quantus hat eine feste maximale Versorgung von **21.000.000 QUAN**. Der Token wird durch eine Kombination aus einem initialen Token Generation Event (TGE) und langfristigem Proof-of-Work-Mining ausgegeben. Diese Struktur ist darauf ausgelegt, Pre-Mining zu vermeiden, Insider-Vorteile zu minimieren und die langfristige Netzwerksicherheit mit der Benutzerbeteiligung in Einklang zu bringen."
+    },
+    "supply": {
+      "title": "Token-Versorgung",
+      "max_supply": "Maximale Versorgung:",
+      "max_supply_value": "21.000.000 QUAN",
+      "tge_supply": "TGE-Prägungsversorgung:",
+      "tge_supply_value": "6.300.000 QUAN (30%)",
+      "mining_supply": "Mining-Emissionen:",
+      "mining_supply_value": "14.700.000 QUAN (70%) über ~40 Jahre",
+      "note": "Die Mining-Emission folgt einer exponentiell abnehmenden Block-Belohnungskurve, was bedeutet, dass die Ausgabe in den frühen Jahren höher ist und sich im Laufe der Zeit allmählich verlangsamt, wenn sich die Versorgung dem Maximum nähert."
+    },
+    "tge": {
+      "title": "Launch-Zuteilung (TGE)",
+      "intro": "Die folgenden Token werden beim Token Generation Event geprägt und verteilt:",
+      "table": {
+        "category": "Kategorie",
+        "percent": "% der Versorgung",
+        "quan": "QUAN",
+        "private_sale": "Privatverkauf",
+        "public_sale": "Öffentlicher Verkauf",
+        "dex_liquidity": "DEX-Liquidität",
+        "total": "Gesamt bei TGE"
+      },
+      "note": "Alle Privat- und öffentlichen Verkaufstoken sind **beim Launch vollständig liquide**. Es gibt keine Investoren-Lockups oder Vesting-Zeitpläne."
+    },
+    "mining": {
+      "title": "Mining-basierte Verteilung (70%)",
+      "intro": "Die verbleibenden 70% der Versorgung — **14.700.000 QUAN** — werden über etwa 40 Jahre durch Proof-of-Work-Mining verteilt.",
+      "ownership_title": "Endgültiges Eigentum an Mining-Emissionen:",
+      "table": {
+        "recipient": "Empfänger",
+        "percent": "% der Gesamtversorgung",
+        "miners": "Miner",
+        "community": "Community",
+        "team": "Team & Berater"
+      }
+    },
+    "team": {
+      "title": "Team- & Community-Ausrichtung",
+      "intro": "Quantus betreibt kein Pre-Mining und reserviert keine Token für das Team.",
+      "content": "Stattdessen wird das Team durch Mining-Belohnungen entschädigt:",
+      "points": [
+        "In den ersten 4 Jahren werden **50%** der Block-Belohnungen dem Team und den Beratern zugewiesen (dies fungiert als Vesting auf Protokollebene).",
+        "Die verbleibenden **50%** gehen an die Miner.",
+        "Nach Jahr 4 wird der Anteil des Teams in einen **Community-Fonds** umgeleitet, der über den verbleibenden Emissionszeitraum allmählich 25% der Gesamtversorgung ansammelt."
+      ]
+    },
+    "fees": {
+      "title": "Gebühren & Burning",
+      "intro": "Um die langfristige Netzwerksicherheit zu unterstützen, fallen bei Wormhole-Transaktionen **0,1% Volumengebühren** an:",
+      "points": [
+        "**50%** werden an Miner gezahlt",
+        "**50%** werden verbrannt"
+      ],
+      "note": "Dies führt zu deflationärem Druck, wenn die Netzwerknutzung wächst."
     }
   },
   "about": {

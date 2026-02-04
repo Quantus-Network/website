@@ -407,14 +407,68 @@
   },
   "launch": {
     "meta": {
-      "title": "Anuncio de Lanzamiento del Token y Mainnet de Quantus",
-      "description": "Información oficial del lanzamiento del token QUAN y la mainnet de Quantus para el Q2 2026. Página de referencia para CoinGecko, exchanges y socios del ecosistema."
+      "title": "Tokenomics y Asignación de Lanzamiento de Quantus",
+      "description": "Detalles del suministro, distribución y asignación de lanzamiento del token QUAN. Suministro fijo de 21M QUAN con mecánicas de lanzamiento justas."
     },
-    "title": "Anuncio de Lanzamiento del Token y Mainnet de Quantus",
-    "content": {
-      "p1": "Quantus planea lanzar el token QUAN y la mainnet de Quantus en el Q2 2026, tras la finalización de las operaciones de testnet, revisiones de seguridad externas y coordinación con launchpads.",
-      "p2": "La red Quantus actualmente opera su testnet pública Dirac, permitiendo a los usuarios minar, probar funciones de wallet e interactuar con primitivas de seguridad post-cuántica como transacciones reversibles y Cuentas de Alta Seguridad.",
-      "p3": "Esta página sirve como referencia oficial de lanzamiento para CoinGecko, exchanges y socios del ecosistema. Las fechas específicas de venta pública y TGE se anunciarán una vez que se finalicen los socios del launchpad y la preparación de la mainnet."
+    "title": "Tokenomics y Asignación de Lanzamiento de Quantus",
+    "overview": {
+      "title": "Resumen",
+      "content": "Quantus tiene un suministro máximo fijo de **21,000,000 QUAN**. El token se emite a través de una combinación de un Evento de Generación de Tokens (TGE) inicial y minería de Prueba de Trabajo a largo plazo. Esta estructura está diseñada para evitar la preminería, minimizar las ventajas de los insiders y alinear la seguridad de la red a largo plazo con la participación de los usuarios."
+    },
+    "supply": {
+      "title": "Suministro de Tokens",
+      "max_supply": "Suministro Máximo:",
+      "max_supply_value": "21,000,000 QUAN",
+      "tge_supply": "Suministro Acuñado en TGE:",
+      "tge_supply_value": "6,300,000 QUAN (30%)",
+      "mining_supply": "Emisiones de Minería:",
+      "mining_supply_value": "14,700,000 QUAN (70%) durante ~40 años",
+      "note": "La emisión de minería sigue una curva de recompensa por bloque que decae exponencialmente, lo que significa que la emisión es mayor en los primeros años y se ralentiza gradualmente con el tiempo a medida que el suministro se acerca al máximo."
+    },
+    "tge": {
+      "title": "Asignación de Lanzamiento (TGE)",
+      "intro": "Los siguientes tokens se acuñan y distribuyen en el Evento de Generación de Tokens:",
+      "table": {
+        "category": "Categoría",
+        "percent": "% del Suministro",
+        "quan": "QUAN",
+        "private_sale": "Venta Privada",
+        "public_sale": "Venta Pública",
+        "dex_liquidity": "Liquidez DEX",
+        "total": "Total en TGE"
+      },
+      "note": "Todos los tokens de venta privada y pública son **totalmente líquidos en el lanzamiento**. No hay bloqueos para inversores ni calendarios de vesting."
+    },
+    "mining": {
+      "title": "Distribución Basada en Minería (70%)",
+      "intro": "El 70% restante del suministro — **14,700,000 QUAN** — se distribuye a través de minería de Prueba de Trabajo durante aproximadamente 40 años.",
+      "ownership_title": "Propiedad final de las emisiones de minería:",
+      "table": {
+        "recipient": "Destinatario",
+        "percent": "% del Suministro Total",
+        "miners": "Mineros",
+        "community": "Comunidad",
+        "team": "Equipo y Asesores"
+      }
+    },
+    "team": {
+      "title": "Alineación del Equipo y la Comunidad",
+      "intro": "Quantus no hace preminería ni reserva tokens para el equipo.",
+      "content": "En cambio, el equipo es compensado a través de recompensas de minería:",
+      "points": [
+        "Durante los primeros 4 años, el **50%** de las recompensas por bloque se asignan al equipo y asesores (esto actúa como vesting a nivel de protocolo).",
+        "El **50%** restante va a los mineros.",
+        "Después del año 4, la parte del equipo se redirige a un **fondo comunitario**, que acumula gradualmente el 25% del suministro total durante el período de emisión restante."
+      ]
+    },
+    "fees": {
+      "title": "Comisiones y Quema",
+      "intro": "Para apoyar la seguridad de la red a largo plazo, las transacciones wormhole incurren en una **comisión de volumen del 0.1%**:",
+      "points": [
+        "**50%** se paga a los mineros",
+        "**50%** se quema"
+      ],
+      "note": "Esto introduce presión deflacionaria a medida que crece el uso de la red."
     }
   },
   "about": {

@@ -407,14 +407,68 @@
   },
   "launch": {
     "meta": {
-      "title": "Pengumuman Peluncuran Token & Mainnet Quantus",
-      "description": "Informasi resmi peluncuran token QUAN dan mainnet Quantus untuk Q2 2026. Halaman referensi untuk CoinGecko, bursa, dan mitra ekosistem."
+      "title": "Tokenomics & Alokasi Peluncuran Quantus",
+      "description": "Detail pasokan, distribusi, dan alokasi peluncuran token QUAN. Pasokan tetap 21 juta QUAN dengan mekanisme peluncuran yang adil."
     },
-    "title": "Pengumuman Peluncuran Token & Mainnet Quantus",
-    "content": {
-      "p1": "Quantus berencana meluncurkan token QUAN dan mainnet Quantus pada Q2 2026, setelah selesainya operasi testnet, tinjauan keamanan eksternal, dan koordinasi launchpad.",
-      "p2": "Jaringan Quantus saat ini mengoperasikan testnet publik Dirac, memungkinkan pengguna untuk menambang, menguji fitur dompet, dan berinteraksi dengan primitif keamanan pasca-kuantum seperti transaksi reversibel dan Akun Keamanan Tinggi.",
-      "p3": "Halaman ini berfungsi sebagai referensi peluncuran resmi untuk CoinGecko, bursa, dan mitra ekosistem. Tanggal penjualan publik dan TGE yang spesifik akan diumumkan setelah mitra launchpad dan kesiapan mainnet diselesaikan."
+    "title": "Tokenomics & Alokasi Peluncuran Quantus",
+    "overview": {
+      "title": "Ikhtisar",
+      "content": "Quantus memiliki pasokan maksimum tetap sebesar **21.000.000 QUAN**. Token diterbitkan melalui kombinasi Token Generation Event (TGE) awal dan penambangan Proof-of-Work jangka panjang. Struktur ini dirancang untuk menghindari pra-penambangan, meminimalkan keuntungan orang dalam, dan menyelaraskan keamanan jaringan jangka panjang dengan partisipasi pengguna."
+    },
+    "supply": {
+      "title": "Pasokan Token",
+      "max_supply": "Pasokan Maksimum:",
+      "max_supply_value": "21.000.000 QUAN",
+      "tge_supply": "Pasokan Cetak TGE:",
+      "tge_supply_value": "6.300.000 QUAN (30%)",
+      "mining_supply": "Emisi Penambangan:",
+      "mining_supply_value": "14.700.000 QUAN (70%) selama ~40 tahun",
+      "note": "Emisi penambangan mengikuti kurva hadiah blok yang meluruh secara eksponensial, artinya penerbitan lebih tinggi di tahun-tahun awal dan secara bertahap melambat seiring waktu saat pasokan mendekati maksimum."
+    },
+    "tge": {
+      "title": "Alokasi Peluncuran (TGE)",
+      "intro": "Token berikut dicetak dan didistribusikan pada Token Generation Event:",
+      "table": {
+        "category": "Kategori",
+        "percent": "% dari Pasokan",
+        "quan": "QUAN",
+        "private_sale": "Penjualan Privat",
+        "public_sale": "Penjualan Publik",
+        "dex_liquidity": "Likuiditas DEX",
+        "total": "Total di TGE"
+      },
+      "note": "Semua token penjualan privat dan publik **sepenuhnya likuid saat peluncuran**. Tidak ada penguncian investor atau jadwal vesting."
+    },
+    "mining": {
+      "title": "Distribusi Berbasis Penambangan (70%)",
+      "intro": "Sisa 70% pasokan — **14.700.000 QUAN** — didistribusikan melalui penambangan Proof-of-Work selama kurang lebih 40 tahun.",
+      "ownership_title": "Kepemilikan akhir dari emisi penambangan:",
+      "table": {
+        "recipient": "Penerima",
+        "percent": "% dari Total Pasokan",
+        "miners": "Penambang",
+        "community": "Komunitas",
+        "team": "Tim & Penasihat"
+      }
+    },
+    "team": {
+      "title": "Keselarasan Tim & Komunitas",
+      "intro": "Quantus tidak melakukan pra-penambangan atau mereservasi token untuk tim.",
+      "content": "Sebaliknya, tim dikompensasi melalui hadiah penambangan:",
+      "points": [
+        "Untuk 4 tahun pertama, **50%** dari hadiah blok dialokasikan untuk tim dan penasihat (ini bertindak sebagai vesting tingkat protokol).",
+        "Sisa **50%** diberikan kepada penambang.",
+        "Setelah tahun ke-4, bagian tim dialihkan ke **dana komunitas**, yang secara bertahap mengakumulasi 25% dari total pasokan selama periode emisi yang tersisa."
+      ]
+    },
+    "fees": {
+      "title": "Biaya & Pembakaran",
+      "intro": "Untuk mendukung keamanan jaringan jangka panjang, transaksi wormhole dikenakan **biaya volume 0,1%**:",
+      "points": [
+        "**50%** dibayarkan kepada penambang",
+        "**50%** dibakar"
+      ],
+      "note": "Ini memperkenalkan tekanan deflasi seiring pertumbuhan penggunaan jaringan."
     }
   },
   "about": {
