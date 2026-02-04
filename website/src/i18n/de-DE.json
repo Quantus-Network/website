@@ -464,10 +464,7 @@
     "fees": {
       "title": "Gebühren & Burning",
       "intro": "Um die langfristige Netzwerksicherheit zu unterstützen, fallen bei Wormhole-Transaktionen **0,1% Volumengebühren** an:",
-      "points": [
-        "**50%** werden an Miner gezahlt",
-        "**50%** werden verbrannt"
-      ],
+      "points": ["**50%** werden an Miner gezahlt", "**50%** werden verbrannt"],
       "note": "Dies führt zu deflationärem Druck, wenn die Netzwerknutzung wächst."
     }
   },

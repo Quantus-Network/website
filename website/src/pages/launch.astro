@@ -20,14 +20,26 @@ const jsonLd = {
 
 // Helper to render text with **bold** markdown
 function renderMarkdown(text: string) {
-  return text.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+  return text.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
 }
 
 // TGE allocation data
 const tgeData = [
-  { category: t("launch.tge.table.private_sale"), percent: "15%", quan: "3,150,000" },
-  { category: t("launch.tge.table.public_sale"), percent: "10%", quan: "2,100,000" },
-  { category: t("launch.tge.table.dex_liquidity"), percent: "5%", quan: "1,050,000" },
+  {
+    category: t("launch.tge.table.private_sale"),
+    percent: "15%",
+    quan: "3,150,000",
+  },
+  {
+    category: t("launch.tge.table.public_sale"),
+    percent: "10%",
+    quan: "2,100,000",
+  },
+  {
+    category: t("launch.tge.table.dex_liquidity"),
+    percent: "5%",
+    quan: "1,050,000",
+  },
   { category: t("launch.tge.table.total"), percent: "30%", quan: "6,300,000" },
 ];
 
@@ -58,73 +70,113 @@ const feesPoints = t("launch.fees.points") as unknown as string[];
       <!-- Overview -->
       <div class="mb-10">
         <h2 class="font-small-title mb-4">{t("launch.overview.title")}</h2>
-        <p class="font-body-mobile lg:font-body" set:html={renderMarkdown(t("launch.overview.content"))} />
+        <p
+          class="font-body-mobile lg:font-body"
+          set:html={renderMarkdown(t("launch.overview.content"))}
+        />
       </div>
 
       <!-- Token Supply -->
       <div class="mb-10">
         <h2 class="font-small-title mb-4">{t("launch.supply.title")}</h2>
         <ul class="font-body-mobile lg:font-body mb-4 list-none space-y-2">
-          <li><strong>{t("launch.supply.max_supply")}</strong> {t("launch.supply.max_supply_value")}</li>
-          <li><strong>{t("launch.supply.tge_supply")}</strong> {t("launch.supply.tge_supply_value")}</li>
-          <li><strong>{t("launch.supply.mining_supply")}</strong> {t("launch.supply.mining_supply_value")}</li>
+          <li>
+            <strong>{t("launch.supply.max_supply")}</strong>
+            {t("launch.supply.max_supply_value")}
+          </li>
+          <li>
+            <strong>{t("launch.supply.tge_supply")}</strong>
+            {t("launch.supply.tge_supply_value")}
+          </li>
+          <li>
+            <strong>{t("launch.supply.mining_supply")}</strong>
+            {t("launch.supply.mining_supply_value")}
+          </li>
         </ul>
-        <p class="font-body-mobile lg:font-body text-quantus-white/70">{t("launch.supply.note")}</p>
+        <p class="font-body-mobile lg:font-body text-quantus-white/70">
+          {t("launch.supply.note")}
+        </p>
       </div>
 
       <!-- Launch Allocation (TGE) -->
       <div class="mb-10">
         <h2 class="font-small-title mb-4">{t("launch.tge.title")}</h2>
-        <p class="font-body-mobile lg:font-body mb-4">{t("launch.tge.intro")}</p>
-        
+        <p class="font-body-mobile lg:font-body mb-4">
+          {t("launch.tge.intro")}
+        </p>
+
         <div class="mb-4 overflow-x-auto">
           <table class="font-body-mobile lg:font-body w-full border-collapse">
             <thead>
               <tr class="border-quantus-white/20 border-b">
-                <th class="px-4 py-3 text-left font-bold">{t("launch.tge.table.category")}</th>
-                <th class="px-4 py-3 text-left font-bold">{t("launch.tge.table.percent")}</th>
-                <th class="px-4 py-3 text-left font-bold">{t("launch.tge.table.quan")}</th>
+                <th class="px-4 py-3 text-left font-bold"
+                  >{t("launch.tge.table.category")}</th
+                >
+                <th class="px-4 py-3 text-left font-bold"
+                  >{t("launch.tge.table.percent")}</th
+                >
+                <th class="px-4 py-3 text-left font-bold"
+                  >{t("launch.tge.table.quan")}</th
+                >
               </tr>
             </thead>
             <tbody>
-              {tgeData.map((row, i) => (
-                <tr class:list={[
-                  "border-quantus-white/10 border-b",
-                  i === tgeData.length - 1 && "font-bold"
-                ]}>
-                  <td class="px-4 py-3">{row.category}</td>
-                  <td class="px-4 py-3">{row.percent}</td>
-                  <td class="px-4 py-3">{row.quan}</td>
-                </tr>
-              ))}
+              {
+                tgeData.map((row, i) => (
+                  <tr
+                    class:list={[
+                      "border-quantus-white/10 border-b",
+                      i === tgeData.length - 1 && "font-bold",
+                    ]}
+                  >
+                    <td class="px-4 py-3">{row.category}</td>
+                    <td class="px-4 py-3">{row.percent}</td>
+                    <td class="px-4 py-3">{row.quan}</td>
+                  </tr>
+                ))
+              }
             </tbody>
           </table>
         </div>
-        
-        <p class="font-body-mobile lg:font-body" set:html={renderMarkdown(t("launch.tge.note"))} />
+
+        <p
+          class="font-body-mobile lg:font-body"
+          set:html={renderMarkdown(t("launch.tge.note"))}
+        />
       </div>
 
       <!-- Mining-Based Distribution -->
       <div class="mb-10">
         <h2 class="font-small-title mb-4">{t("launch.mining.title")}</h2>
-        <p class="font-body-mobile lg:font-body mb-4" set:html={renderMarkdown(t("launch.mining.intro"))} />
-        <p class="font-body-mobile lg:font-body mb-4 font-bold">{t("launch.mining.ownership_title")}</p>
-        
+        <p
+          class="font-body-mobile lg:font-body mb-4"
+          set:html={renderMarkdown(t("launch.mining.intro"))}
+        />
+        <p class="font-body-mobile lg:font-body mb-4 font-bold">
+          {t("launch.mining.ownership_title")}
+        </p>
+
         <div class="mb-4 overflow-x-auto">
           <table class="font-body-mobile lg:font-body w-full border-collapse">
             <thead>
               <tr class="border-quantus-white/20 border-b">
-                <th class="px-4 py-3 text-left font-bold">{t("launch.mining.table.recipient")}</th>
-                <th class="px-4 py-3 text-left font-bold">{t("launch.mining.table.percent")}</th>
+                <th class="px-4 py-3 text-left font-bold"
+                  >{t("launch.mining.table.recipient")}</th
+                >
+                <th class="px-4 py-3 text-left font-bold"
+                  >{t("launch.mining.table.percent")}</th
+                >
               </tr>
             </thead>
             <tbody>
-              {miningData.map((row) => (
-                <tr class="border-quantus-white/10 border-b">
-                  <td class="px-4 py-3">{row.recipient}</td>
-                  <td class="px-4 py-3">{row.percent}</td>
-                </tr>
-              ))}
+              {
+                miningData.map((row) => (
+                  <tr class="border-quantus-white/10 border-b">
+                    <td class="px-4 py-3">{row.recipient}</td>
+                    <td class="px-4 py-3">{row.percent}</td>
+                  </tr>
+                ))
+              }
             </tbody>
           </table>
         </div>
@@ -133,25 +185,30 @@ const feesPoints = t("launch.fees.points") as unknown as string[];
       <!-- Team & Community Alignment -->
       <div class="mb-10">
         <h2 class="font-small-title mb-4">{t("launch.team.title")}</h2>
-        <p class="font-body-mobile lg:font-body mb-2">{t("launch.team.intro")}</p>
-        <p class="font-body-mobile lg:font-body mb-4">{t("launch.team.content")}</p>
+        <p class="font-body-mobile lg:font-body mb-2">
+          {t("launch.team.intro")}
+        </p>
+        <p class="font-body-mobile lg:font-body mb-4">
+          {t("launch.team.content")}
+        </p>
         <ul class="font-body-mobile lg:font-body list-disc space-y-2 pl-6">
-          {teamPoints.map((point) => (
-            <li set:html={renderMarkdown(point)} />
-          ))}
+          {teamPoints.map((point) => <li set:html={renderMarkdown(point)} />)}
         </ul>
       </div>
 
       <!-- Fees & Burning -->
       <div class="mb-10">
         <h2 class="font-small-title mb-4">{t("launch.fees.title")}</h2>
-        <p class="font-body-mobile lg:font-body mb-4" set:html={renderMarkdown(t("launch.fees.intro"))} />
+        <p
+          class="font-body-mobile lg:font-body mb-4"
+          set:html={renderMarkdown(t("launch.fees.intro"))}
+        />
         <ul class="font-body-mobile lg:font-body mb-4 list-disc space-y-2 pl-6">
-          {feesPoints.map((point) => (
-            <li set:html={renderMarkdown(point)} />
-          ))}
+          {feesPoints.map((point) => <li set:html={renderMarkdown(point)} />)}
         </ul>
-        <p class="font-body-mobile lg:font-body text-quantus-white/70">{t("launch.fees.note")}</p>
+        <p class="font-body-mobile lg:font-body text-quantus-white/70">
+          {t("launch.fees.note")}
+        </p>
       </div>
     </div>
   </section>

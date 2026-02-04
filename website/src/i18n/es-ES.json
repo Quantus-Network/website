@@ -464,10 +464,7 @@
     "fees": {
       "title": "Comisiones y Quema",
       "intro": "Para apoyar la seguridad de la red a largo plazo, las transacciones wormhole incurren en una **comisión de volumen del 0.1%**:",
-      "points": [
-        "**50%** se paga a los mineros",
-        "**50%** se quema"
-      ],
+      "points": ["**50%** se paga a los mineros", "**50%** se quema"],
       "note": "Esto introduce presión deflacionaria a medida que crece el uso de la red."
     }
   },

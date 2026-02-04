@@ -464,10 +464,7 @@
     "fees": {
       "title": "Fees & Burning",
       "intro": "To support long-term network security, wormhole transactions incur a **0.1% volume fee**:",
-      "points": [
-        "**50%** is paid to miners",
-        "**50%** is burned"
-      ],
+      "points": ["**50%** is paid to miners", "**50%** is burned"],
       "note": "This introduces deflationary pressure as network usage grows."
     }
   },

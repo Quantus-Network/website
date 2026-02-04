@@ -464,10 +464,7 @@
     "fees": {
       "title": "Biaya & Pembakaran",
       "intro": "Untuk mendukung keamanan jaringan jangka panjang, transaksi wormhole dikenakan **biaya volume 0,1%**:",
-      "points": [
-        "**50%** dibayarkan kepada penambang",
-        "**50%** dibakar"
-      ],
+      "points": ["**50%** dibayarkan kepada penambang", "**50%** dibakar"],
       "note": "Ini memperkenalkan tekanan deflasi seiring pertumbuhan penggunaan jaringan."
     }
   },
