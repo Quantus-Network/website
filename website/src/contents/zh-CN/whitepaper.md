@@ -17,6 +17,7 @@ tags:
 ---
 
 # **Quantus Network 白皮书 v0.3.2**
+
 ## **法律免责声明**
 
 本白皮书仅供信息参考之用，不构成出售要约、购买要约的招揽，亦不构成对任何证券、投资或金融产品的推荐。读者在做出任何投资决策前，应自行进行尽职调查，并咨询合格专业人士。Quantus Network 不对本文信息的准确性或完整性做出任何陈述或保证。
@@ -171,13 +172,13 @@ P2P 层在量子安全分析中常被忽视。节点认证很重要，但攻击�
 
 用户通过对盐（salt）和秘密（secret）的双重哈希生成一个可证明不可花费的地址：
 
-*H(H(salt | secret))*
+_H(H(salt | secret))_
 
 这一构造防止假阳性（例如将单哈希公钥误认为是不可花费地址），在 Substrate（以及大多数区块链）中，地址通常是公钥的单哈希，而公钥通过代数运算从私钥派生，而非安全哈希。因此，该构造的安全性最终归结为寻找哈希原像的原像。发送到该地址的代币实际上已被“销毁”（因无对应私钥，无法花费），这些币可在不增加总供应的情况下被重新铸造。
 
 对于每笔转账，会创建一个 TransferProof 存储对象，包含唯一全局转账计数等细节。用户钱包从最近区块头存储根生成 Merkle-Patricia-Trie（MPT）存储证明，到该 TransferProof 的叶子节点。nullifier 计算为：
 
-*H(H(salt | secret | global\_transfer\_count))*
+_H(H(salt | secret | global_transfer_count))_
 
 以防止双花，其中相关密钥从钱包种子确定性派生，确保用户可保留控制。
 
@@ -301,9 +302,9 @@ Quantus Network 处于不断变化的环境中，我们不能假设第一次就�
 
 Quantus Network 采用一种模仿比特币的简单代币经济学模型。最大供应量为 21,000,000 枚代币，每区块奖励由一个简单启发式公式决定：
 
-*block\_reward = (max\_supply - current\_supply) / constant*
+_block_reward = (max_supply - current_supply) / constant_
 
-这一启发式公式形成一条平滑的指数衰减曲线，因为区块奖励会增加 current\_supply，从而降低下一区块计算出的区块奖励。任何来自费用或其他方式的销毁都会减少 current\_supply，并实质上成为区块奖励预算的一部分。常数的选择确保在没有销毁的情况下，99% 的代币将在约 40 年内发行完毕。
+这一启发式公式形成一条平滑的指数衰减曲线，因为区块奖励会增加 current_supply，从而降低下一区块计算出的区块奖励。任何来自费用或其他方式的销毁都会减少 current_supply，并实质上成为区块奖励预算的一部分。常数的选择确保在没有销毁的情况下，99% 的代币将在约 40 年内发行完毕。
 
 ## **投资者分配**
 
@@ -390,4 +391,3 @@ Quantus 未做任何修改地直接采用这一系统，但初期采用极简配
 9. Roetteler, M., Naehrig, M., Svore, K. M., & Lauter, K. (2017). Quantum resource estimates for computing elliptic curve discrete logarithms. arXiv preprint arXiv:1706.06752. https://arxiv.org/abs/1706.06752
 
 10. Open Quantum Safe Project. (n.d.). ML-DSA | Open Quantum Safe. Retrieved January 29, 2026, from https://openquantumsafe.org/liboqs/algorithms/sig/ml-dsa.html
-

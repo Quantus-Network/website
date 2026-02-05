@@ -60,10 +60,10 @@ Scaling Challenges in Post-Quantum Cryptography
 
 While post-quantum cryptography (PQC) offers essential protections against quantum threats, it introduces significant scaling hurdles due to the inherent design of these algorithms. Unlike elliptic curve schemes, which rely on compact mathematical structures, PQC primitives require larger parameters to maintain security against both classical and quantum adversaries. This results in substantially bigger public keys, private keys, and signatures, often by orders of magnitude. The following table illustrates typical sizes for ML-DSA at a 128-bit post-quantum security level compared to classical counterparts like 256-bit ECDSA [10]:
 
-| Algorithm | Public Key Size (Bytes) | Private Key Size (Bytes) | Signature Size (Bytes) |
-| --- | --- | --- | --- |
-| ML-DSA-87 (Dilithium) | 2,592 | 4,896 | 4,627 |
-| ECDSA (256-bit) | 32 | 32 | 65 |
+| Algorithm             | Public Key Size (Bytes) | Private Key Size (Bytes) | Signature Size (Bytes) |
+| --------------------- | ----------------------- | ------------------------ | ---------------------- |
+| ML-DSA-87 (Dilithium) | 2,592                   | 4,896                    | 4,627                  |
+| ECDSA (256-bit)       | 32                      | 32                       | 65                     |
 
 As shown, ML-DSA signatures can be over 70 times larger than ECDSA equivalents, and public keys more than 80 times larger. Other PQC families exacerbate this: hash-based schemes like SPHINCS+ may produce signatures up to 41 KB, while even size-optimized lattice variants like FALCON still exceed classical sizes by a significant multiple.
 
@@ -154,7 +154,7 @@ This construction prevents false positives (e.g., mistaking a single-hash public
 
 For each transfer, a TransferProof storage object is created, containing details like a unique global transfer count. The user's wallet generates a Merkle-Patricia-Trie (MPT) storage proof from a recent block header's storage root to the leaf for this TransferProof. A nullifier is computed
 
-H(H(salt | secret | global\_transfer\_count))
+H(H(salt | secret | global_transfer_count))
 
 to prevent double-spends, with the secret derived deterministically from the wallet seed for retention.
 
@@ -263,12 +263,10 @@ Block Rewards
 Quantus Network employs a straightforward tokenomics model imitating that of Bitcoin. There is a maximum supply of 21,000,000 coins and a simple heuristic determines the reward each block.
 
 ```javascript
-block_reward = (max_supply - current_supply) / constant
+block_reward = (max_supply - current_supply) / constant;
 ```
 
-This heuristic forms a smooth exponentially decaying curve as the block\_reward contributes to the current\_supply which reduces the block\_reward computed at the next block. Any burns from fees or otherwise reduce current\_supply and essentially become part of the budget for block rewards. The constant is chosen so that, in the absence of any burns, 99% of the coins will be emitted in about 40 years.
-
-
+This heuristic forms a smooth exponentially decaying curve as the block_reward contributes to the current_supply which reduces the block_reward computed at the next block. Any burns from fees or otherwise reduce current_supply and essentially become part of the budget for block rewards. The constant is chosen so that, in the absence of any burns, 99% of the coins will be emitted in about 40 years.
 
 Investor Allocations
 
@@ -279,8 +277,6 @@ Company Allocations
 To compensate the team for taking the risk to build new technology with no promise of success, a portion of the block reward is sent to the company for approximately four years. This gives a de facto vesting schedule of about 10% of the total supply to the company.
 
 After that point, the company's portion of block rewards will be redirected to a treasury governed by token holders, essentially forming a DAO.
-
-
 
 Transaction Fees
 
@@ -329,13 +325,13 @@ Building Quantus Network comes with inherent risks.
 
 **9. References & Further Reading**
 
-1. Shor, P. W. (1997). Polynomial-time algorithms for prime factorization and discrete logarithms on a quantum computer. *SIAM Journal on Computing*, 26(5), 1484–1509. [https://doi.org/10.1137/S0097539795293172](https://doi.org/10.1137/S0097539795293172)
-2. Grover, L. K. (1996). A fast quantum mechanical algorithm for database search. *Proceedings of the Twenty-Eighth Annual ACM Symposium on Theory of Computing*, 212–219. [https://doi.org/10.1145/237814.237866](https://doi.org/10.1145/237814.237866)
+1. Shor, P. W. (1997). Polynomial-time algorithms for prime factorization and discrete logarithms on a quantum computer. _SIAM Journal on Computing_, 26(5), 1484–1509. [https://doi.org/10.1137/S0097539795293172](https://doi.org/10.1137/S0097539795293172)
+2. Grover, L. K. (1996). A fast quantum mechanical algorithm for database search. _Proceedings of the Twenty-Eighth Annual ACM Symposium on Theory of Computing_, 212–219. [https://doi.org/10.1145/237814.237866](https://doi.org/10.1145/237814.237866)
 3. Chainalysis. (2024). The Chainalysis 2024 Crypto Crime Report. [https://www.chainalysis.com/blog/2024-crypto-crime-report-introduction/](https://www.chainalysis.com/blog/2024-crypto-crime-report-introduction/)
 4. National Institute of Standards and Technology. (2024). FIPS 204: Module-Lattice-Based Digital Signature Standard (ML-DSA). U.S. Department of Commerce. [https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.204.pdf](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.204.pdf)
 5. National Institute of Standards and Technology. (2024). FIPS 203: Module-Lattice-Based Key-Encapsulation Mechanism Standard (ML-KEM). U.S. Department of Commerce. [https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.203.pdf](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.203.pdf)
-6. Häner, T., Jaques, S., Naehrig, M., Roetteler, M., & Soeken, M. (2020). Improved quantum circuits for elliptic curve discrete logarithms. *arXiv preprint arXiv:2002.12480*. [https://arxiv.org/abs/2002.12480](https://arxiv.org/abs/2002.12480)
-7. Gidney, C., & Ekerå, M. (2021). How to factor 2048 bit RSA integers in 8 hours using 20 million noisy qubits. *arXiv preprint arXiv:1905.09749*. [https://arxiv.org/abs/1905.09749](https://arxiv.org/abs/1905.09749)
-8. Aggarwal, D., et al. (2021). Assessment of Quantum Threat To Bitcoin and Derived Cryptocurrencies. *ePrint IACR*. [https://eprint.iacr.org/2021/967.pdf](https://eprint.iacr.org/2021/967.pdf)
-9. Roetteler, M., Naehrig, M., Svore, K. M., & Lauter, K. (2017). Quantum resource estimates for computing elliptic curve discrete logarithms. *arXiv preprint arXiv:1706.06752*. [https://arxiv.org/abs/1706.06752](https://arxiv.org/abs/1706.06752)
+6. Häner, T., Jaques, S., Naehrig, M., Roetteler, M., & Soeken, M. (2020). Improved quantum circuits for elliptic curve discrete logarithms. _arXiv preprint arXiv:2002.12480_. [https://arxiv.org/abs/2002.12480](https://arxiv.org/abs/2002.12480)
+7. Gidney, C., & Ekerå, M. (2021). How to factor 2048 bit RSA integers in 8 hours using 20 million noisy qubits. _arXiv preprint arXiv:1905.09749_. [https://arxiv.org/abs/1905.09749](https://arxiv.org/abs/1905.09749)
+8. Aggarwal, D., et al. (2021). Assessment of Quantum Threat To Bitcoin and Derived Cryptocurrencies. _ePrint IACR_. [https://eprint.iacr.org/2021/967.pdf](https://eprint.iacr.org/2021/967.pdf)
+9. Roetteler, M., Naehrig, M., Svore, K. M., & Lauter, K. (2017). Quantum resource estimates for computing elliptic curve discrete logarithms. _arXiv preprint arXiv:1706.06752_. [https://arxiv.org/abs/1706.06752](https://arxiv.org/abs/1706.06752)
 10. Open Quantum Safe Project. (n.d.). ML-DSA | Open Quantum Safe. Retrieved January 29, 2026, from https://openquantumsafe.org/liboqs/algorithms/sig/ml-dsa.html
