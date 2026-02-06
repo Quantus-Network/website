@@ -2,7 +2,7 @@
 title: "Quantus 白皮书"
 description: "Quantus Network 官方白皮书，详细介绍我们的量子安全第一层区块链架构、后量子密码学和代币经济学。"
 pubDate: "2026-02-05"
-heroImage: "/blog/covers/whitepaper.jpeg"
+heroImage: "/blog/covers/whitepaper.webp"
 heroAlt: "Quantus Network 白皮书"
 featured: true
 tags:
