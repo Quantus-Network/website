@@ -2,7 +2,7 @@
 title: "Quantus Whitepaper"
 description: "The official Quantus Network whitepaper detailing our quantum-secure Layer 1 blockchain architecture, post-quantum cryptography, and tokenomics."
 pubDate: "2026-02-05"
-heroImage: "/blog/covers/whitepaper.jpeg"
+heroImage: "/blog/covers/whitepaper.webp"
 heroAlt: "Quantus Network Whitepaper"
 featured: true
 tags:
