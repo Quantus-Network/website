@@ -33,6 +33,17 @@ const LOCALES_MAP = {
 
 // https://astro.build/config
 export default defineConfig({
+  redirects: {
+    "/whitepaper": "/blog/whitepaper",
+    "/zh-CN/whitepaper": "/zh-CN/blog/whitepaper",
+    "/ko-KR/whitepaper": "/ko-KR/blog/whitepaper",
+    "/id-ID/whitepaper": "/id-ID/blog/whitepaper",
+    "/ja-JP/whitepaper": "/ja-JP/blog/whitepaper",
+    "/ru-RU/whitepaper": "/ru-RU/blog/whitepaper",
+    "/es-ES/whitepaper": "/es-ES/blog/whitepaper",
+    "/de-DE/whitepaper": "/de-DE/blog/whitepaper",
+    "/hi-IN/whitepaper": "/hi-IN/blog/whitepaper",
+  },
   build: {
     inlineStylesheets: "always",
   },
