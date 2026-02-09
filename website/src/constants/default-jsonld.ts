@@ -1,5 +1,10 @@
 import env from "@/config";
-import type { MobileApplication, Organization, TechArticle, WebSite } from "schema-dts";
+import type {
+  MobileApplication,
+  Organization,
+  TechArticle,
+  WebSite,
+} from "schema-dts";
 import defaultMetadata from "./default-metadata";
 import { APP_LINKS } from "./app-links";
 
@@ -98,32 +103,34 @@ export const androidAppJsonLd: MobileApplication = {
 export const whitepaperJsonLd: TechArticle = {
   "@id": `${env.SITE_BASE_URL}/whitepaper`,
   "@type": "TechArticle",
-  "headline": "Quantus Network Whitepaper",
-  "description": "The official whitepaper for Quantus Network, detailing the versioned history, protocol, and architecture of the network.",
-  "author": {
+  headline: "Quantus Network Whitepaper",
+  description:
+    "The official whitepaper for Quantus Network, detailing the versioned history, protocol, and architecture of the network.",
+  author: {
     "@type": "Organization",
-    "name": "Quantus Network",
-    "url": "https://github.com/Quantus-Network"
+    name: "Quantus Network",
+    url: "https://github.com/Quantus-Network",
   },
-  "publisher": {
+  publisher: {
     "@type": "Organization",
-    "name": "Quantus Network",
-    "logo": {
+    name: "Quantus Network",
+    logo: {
       "@type": "ImageObject",
-      "url": "https://github.com/Quantus-Network.png"
-    }
+      url: "https://github.com/Quantus-Network.png",
+    },
   },
-  "inLanguage": "en-US",
-  "encoding": {
+  inLanguage: "en-US",
+  encoding: {
     "@type": "MediaObject",
-    "contentUrl": "https://raw.githubusercontent.com/Quantus-Network/whitepaper/main/whitepaper.pdf",
-    "encodingFormat": "application/pdf"
+    contentUrl:
+      "https://raw.githubusercontent.com/Quantus-Network/whitepaper/main/whitepaper.pdf",
+    encodingFormat: "application/pdf",
   },
-  "about": {
+  about: {
     "@type": "Thing",
-    "name": "Blockchain Protocol",
-    "description": "Technical specification of the Quantus Network protocol."
-  }
+    name: "Blockchain Protocol",
+    description: "Technical specification of the Quantus Network protocol.",
+  },
 };
 
 export const getWhitepaperJsonLd = (locale: string): TechArticle => {
@@ -139,7 +146,7 @@ export const getWhitepaperJsonLd = (locale: string): TechArticle => {
     encoding: {
       "@type": "MediaObject",
       contentUrl: `https://raw.githubusercontent.com/Quantus-Network/whitepaper/main/${locale}/whitepaper.pdf`,
-      "encodingFormat": "application/pdf"
-    }
+      encodingFormat: "application/pdf",
+    },
   };
 };

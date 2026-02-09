@@ -5,7 +5,7 @@ export type SiteSocial =
   | "github"
   | "instagram"
   | "linktree"
-  | 'coingecko';
+  | "coingecko";
 
 export const SITE_SOCIALS = {
   x: "https://x.com/QuantusNetwork",
