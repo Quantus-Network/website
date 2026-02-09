@@ -712,6 +712,20 @@
     "accept": "Принять",
     "decline": "Отклонить"
   },
+  "whitepaper": {
+    "meta": {
+      "title": "Whitepaper Quantus | Технические основы квантовой безопасности",
+      "description": "Прочтите whitepaper Quantus Network. Изучите наш технический подход к постквантовой криптографии, доказательствам с нулевым разглашением и безопасной архитектуре блокчейна Уровня 1."
+    },
+    "title": "Whitepaper Quantus",
+    "executive_summary": "Краткое описание",
+    "pdf": {
+      "unable": "Невозможно отобразить PDF напрямую.",
+      "download": "Скачать",
+      "read": "Читать",
+      "preview_alt": "Предпросмотр Whitepaper"
+    }
+  },
   "common": {
     "loading": "Загрузка...",
     "error": "Ошибка",

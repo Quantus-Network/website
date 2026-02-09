@@ -4,7 +4,8 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "prebuild": "node scripts/sync-whitepapers.js",
+    "build": "bun prebuild && astro build",
     "preview": "astro preview",
     "astro": "astro",
     "format:check": "prettier --check .",
@@ -38,6 +39,7 @@
   "devDependencies": {
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
+    "pdf-parse": "^2.4.5",
     "prettier": "^3.6.2",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.6.14",

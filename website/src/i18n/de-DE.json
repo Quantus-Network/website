@@ -712,6 +712,20 @@
     "accept": "Akzeptieren",
     "decline": "Ablehnen"
   },
+  "whitepaper": {
+    "meta": {
+      "title": "Quantus Whitepaper | Technische Grundlagen der Quantensicherheit",
+      "description": "Lesen Sie das Quantus Network Whitepaper. Entdecken Sie unseren technischen Ansatz für Post-Quanten-Kryptographie, Zero-Knowledge-Proofs und eine sichere Layer-1-Blockchain-Architektur."
+    },
+    "title": "Quantus Whitepaper",
+    "executive_summary": "Zusammenfassung",
+    "pdf": {
+      "unable": "PDF kann nicht direkt angezeigt werden.",
+      "download": "Herunterladen",
+      "read": "Lesen",
+      "preview_alt": "Whitepaper Vorschau"
+    }
+  },
   "common": {
     "loading": "Wird geladen...",
     "error": "Fehler",

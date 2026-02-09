@@ -712,6 +712,20 @@
     "accept": "Aceptar",
     "decline": "Rechazar"
   },
+  "whitepaper": {
+    "meta": {
+      "title": "Whitepaper de Quantus | Fundamentos Técnicos de la Seguridad Cuántica",
+      "description": "Lea el whitepaper de Quantus Network. Explore nuestro enfoque técnico de la criptografía post-cuántica, las pruebas de conocimiento cero y la arquitectura segura de blockchain de Capa 1."
+    },
+    "title": "Whitepaper de Quantus",
+    "executive_summary": "Resumen Ejecutivo",
+    "pdf": {
+      "unable": "No se puede mostrar el PDF directamente.",
+      "download": "Descargar",
+      "read": "Leer",
+      "preview_alt": "Vista Previa del Whitepaper"
+    }
+  },
   "common": {
     "loading": "Cargando...",
     "error": "Error",
