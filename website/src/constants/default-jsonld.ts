@@ -1,5 +1,10 @@
 import env from "@/config";
-import type { MobileApplication, Organization, WebSite } from "schema-dts";
+import type {
+  MobileApplication,
+  Organization,
+  TechArticle,
+  WebSite,
+} from "schema-dts";
 import defaultMetadata from "./default-metadata";
 import { APP_LINKS } from "./app-links";
 
@@ -93,4 +98,55 @@ export const androidAppJsonLd: MobileApplication = {
   applicationCategory: "FinanceApplication",
   installUrl: APP_LINKS.android,
   publisher: organizationJsonLd,
+};
+
+export const whitepaperJsonLd: TechArticle = {
+  "@id": `${env.SITE_BASE_URL}/whitepaper`,
+  "@type": "TechArticle",
+  headline: "Quantus Network Whitepaper",
+  description:
+    "The official whitepaper for Quantus Network, detailing the versioned history, protocol, and architecture of the network.",
+  author: {
+    "@type": "Organization",
+    name: "Quantus Network",
+    url: "https://github.com/Quantus-Network",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Quantus Network",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://github.com/Quantus-Network.png",
+    },
+  },
+  inLanguage: "en-US",
+  encoding: {
+    "@type": "MediaObject",
+    contentUrl:
+      "https://raw.githubusercontent.com/Quantus-Network/whitepaper/main/whitepaper.pdf",
+    encodingFormat: "application/pdf",
+  },
+  about: {
+    "@type": "Thing",
+    name: "Blockchain Protocol",
+    description: "Technical specification of the Quantus Network protocol.",
+  },
+};
+
+export const getWhitepaperJsonLd = (locale: string): TechArticle => {
+  const url =
+    locale === "en-US"
+      ? `${env.SITE_BASE_URL}/whitepaper`
+      : `${env.SITE_BASE_URL}/${locale}/whitepaper`;
+
+  return {
+    ...whitepaperJsonLd,
+    "@id": url,
+    inLanguage: locale,
+    encoding: {
+      "@type": "MediaObject",
+      contentUrl: `https://raw.githubusercontent.com/Quantus-Network/whitepaper/main/${locale}/whitepaper.pdf`,
+      encodingFormat: "application/pdf",
+    },
+  };
 };

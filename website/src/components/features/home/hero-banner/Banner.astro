@@ -31,7 +31,8 @@ const t = await createTranslator(locale);
     >
     <Button
       class="md:min-w-[200px]"
-      href="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://raw.githubusercontent.com/Quantus-Network/whitepaper/main/whitepaper.pdf"
+      target="_self"
+      href={getLocalizedPath(locale, "/whitepaper")}
       variant="outline">{t("hero.cta_secondary")}</Button
     >
   </div>

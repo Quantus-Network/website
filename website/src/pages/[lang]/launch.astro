@@ -1,4 +1,5 @@
 ---
+import AllocationChart from "@/components/features/launch/AllocationChart.astro";
 import Layout from "@/components/layout/Layout.astro";
 import { organizationJsonLd } from "@/constants/default-jsonld";
 import { createMetadata } from "@/utils/create-metadata";
@@ -23,7 +24,7 @@ const metadata = createMetadata({
 
 const jsonLd = {
   "@context": "https://schema.org",
-  ...organizationJsonLd,
+  ...(organizationJsonLd as any),
 };
 
 // Helper to render text with **bold** markdown
@@ -105,6 +106,9 @@ const feesPoints = t("launch.fees.points") as unknown as string[];
           {t("launch.supply.note")}
         </p>
       </div>
+
+      <!-- Chart -->
+      <AllocationChart />
 
       <!-- Launch Allocation (TGE) -->
       <div class="mb-10">

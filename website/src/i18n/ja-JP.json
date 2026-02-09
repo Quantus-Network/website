@@ -704,6 +704,20 @@
     "accept": "同意する",
     "decline": "拒否する"
   },
+  "whitepaper": {
+    "meta": {
+      "title": "Quantus ホワイトペーパー | 量子セキュリティの技術的基盤",
+      "description": "Quantus Network のホワイトペーパーをご覧ください。ポスト量子暗号、ゼロ知識証明、および安全なレイヤー 1 ブロックチェーン アーキテクチャへの当社の技術的アプローチを解説します。"
+    },
+    "title": "Quantus ホワイトペーパー",
+    "executive_summary": "エグゼクティブサマリー",
+    "pdf": {
+      "unable": "PDF を直接表示できません。",
+      "download": "ダウンロード",
+      "read": "読む",
+      "preview_alt": "ホワイトペーパーのプレビュー"
+    }
+  },
   "common": {
     "loading": "読み込み中...",
     "error": "エラー",

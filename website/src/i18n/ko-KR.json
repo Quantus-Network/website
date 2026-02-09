@@ -704,6 +704,20 @@
     "accept": "수락",
     "decline": "거부"
   },
+  "whitepaper": {
+    "meta": {
+      "title": "Quantus 백서 | 양자 보안의 기술적 토대",
+      "description": "Quantus Network 백서를 읽어보세요. 포스트 퀀텀 암호화, 영지식 증명 및 안전한 레이어 1 블록체인 아키텍처에 대한 당사의 기술적 접근 방식을 탐구합니다."
+    },
+    "title": "Quantus 백서",
+    "executive_summary": "요약",
+    "pdf": {
+      "unable": "PDF를 직접 표시할 수 없습니다.",
+      "download": "다운로드",
+      "read": "읽기",
+      "preview_alt": "백서 미리보기"
+    }
+  },
   "common": {
     "loading": "로딩 중...",
     "error": "오류",

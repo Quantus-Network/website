@@ -712,6 +712,20 @@
     "accept": "Terima",
     "decline": "Tolak"
   },
+  "whitepaper": {
+    "meta": {
+      "title": "Whitepaper Quantus | Fondasi Teknis Keamanan Kuantum",
+      "description": "Baca whitepaper Quantus Network. Jelajahi pendekatan teknis kami terhadap kriptografi pasca-kuantum, zero-knowledge proof, dan arsitektur blockchain Layer 1 yang aman."
+    },
+    "title": "Whitepaper Quantus",
+    "executive_summary": "Ringkasan Eksekutif",
+    "pdf": {
+      "unable": "Tidak dapat menampilkan PDF secara langsung.",
+      "download": "Unduh",
+      "read": "Baca",
+      "preview_alt": "Pratinjau Whitepaper"
+    }
+  },
   "common": {
     "loading": "Memuat...",
     "error": "Error",

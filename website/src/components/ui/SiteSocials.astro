@@ -8,6 +8,7 @@ import SocialYT from "@/assets/socials/social-yt.svg";
 import SocialTelegram from "@/assets/socials/social-telegram.svg";
 import SocialGithub from "@/assets/socials/social-github.svg";
 import SocialLinktree from "@/assets/socials/social-linktree.svg";
+import SocialCoingecko from "@/assets/socials/social-cg.svg";
 
 export interface Props {
   class?: string;
@@ -42,6 +43,13 @@ const socials = Object.entries(SITE_SOCIALS) as [SiteSocial, string][];
         )}
         {social[0] === "linktree" && (
           <SocialLinktree title="Quantus's Linktree account" />
+        )}
+        {social[0] === "coingecko" && (
+          <SocialCoingecko
+            width={28}
+            height={28}
+            title="Quantus's Coingecko Coin Page"
+          />
         )}
       </a>
     ))

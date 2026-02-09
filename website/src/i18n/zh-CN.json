@@ -701,6 +701,20 @@
     "accept": "接受",
     "decline": "拒绝"
   },
+  "whitepaper": {
+    "meta": {
+      "title": "Quantus 白皮书 | 量子安全的技术基础",
+      "description": "阅读 Quantus Network 白皮书。探索我们在后量子密码学、零知识证明和安全的第一层区块链架构方面的技术方案。"
+    },
+    "title": "Quantus 白皮书",
+    "executive_summary": "执行摘要",
+    "pdf": {
+      "unable": "无法直接显示 PDF。",
+      "download": "下载",
+      "read": "阅读",
+      "preview_alt": "白皮书预览"
+    }
+  },
   "common": {
     "loading": "加载中...",
     "error": "错误",

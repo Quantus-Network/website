@@ -1,0 +1,91 @@
+---
+import fs from "fs";
+import path from "path";
+import Layout from "@/components/layout/Layout.astro";
+import {
+  getLocaleFromUrl,
+  createTranslator,
+  SUPPORTED_LOCALES,
+} from "@/utils/i18n";
+import { JsonLdGraph } from "@/utils/build-json-ld";
+import { getWhitepaperJsonLd } from "@/constants/default-jsonld";
+import { createMetadata } from "@/utils/create-metadata";
+import Button from "@/components/ui/Button.astro";
+
+export async function getStaticPaths() {
+  return SUPPORTED_LOCALES.map((lang) => ({ params: { lang } }));
+}
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
+
+const getAssetUrl = (fileName: string) => {
+  const localePath = `./public/whitepapers/${locale}/${fileName}`;
+  if (fs.existsSync(path.resolve(localePath))) {
+    return `/whitepapers/${locale}/${fileName}`;
+  }
+  return `/whitepapers/en-US/${fileName}`;
+};
+
+const seoPath = path.resolve(`./public${getAssetUrl("seo-content.json")}`);
+const seoData = JSON.parse(fs.readFileSync(seoPath, "utf-8"));
+
+const pdfUrl = getAssetUrl("whitepaper.pdf");
+const thumbUrl = getAssetUrl("thumb.png");
+
+const metadata = createMetadata({
+  title: t("whitepaper.meta.title"),
+  description: t("whitepaper.meta.description"),
+  pathname: Astro.url.pathname,
+});
+
+const jsonLd = JsonLdGraph({
+  "@context": "https://schema.org",
+  "@graph": [getWhitepaperJsonLd(locale)],
+});
+---
+
+<Layout {...metadata} jsonLd={jsonLd}>
+  <section
+    class="lg:max-w-content px-[30px] py-10 lg:mx-auto lg:py-20 2xl:px-0"
+  >
+    <h1 class="font-small-title lg:font-medium-title mb-6">
+      {t("whitepaper.title")}
+    </h1>
+
+    <div class="sr-only">
+      <h2>{t("whitepaper.executive_summary")}</h2>
+      <p>{seoData.text}</p>
+    </div>
+
+    <div
+      class="mx-auto hidden h-[800px] w-full overflow-hidden rounded-lg bg-white shadow-2xl md:block"
+    >
+      <object data={pdfUrl} type="application/pdf" class="h-full w-full">
+        <div class="flex h-full flex-col items-center justify-center">
+          <p class="mb-4">{t("whitepaper.pdf.unable")}</p>
+          <a href={pdfUrl} class="btn btn-primary"
+            >{t("whitepaper.pdf.download")}</a
+          >
+        </div>
+      </object>
+    </div>
+
+    <div class="w-full rounded-xl bg-white p-4 shadow-lg md:hidden">
+      <img
+        src={thumbUrl}
+        alt="Whitepaper Preview"
+        class="w-full rounded-lg border"
+      />
+
+      <Button
+        href={pdfUrl}
+        target="_blank"
+        variant="primary"
+        class="mt-4 w-full"
+      >
+        {t("whitepaper.pdf.read")}
+      </Button>
+    </div>
+  </section>
+</Layout>

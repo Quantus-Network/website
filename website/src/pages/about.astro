@@ -18,7 +18,7 @@ const metadata = createMetadata({
 
 const jsonLd = {
   "@context": "https://schema.org",
-  ...organizationJsonLd,
+  ...(organizationJsonLd as any),
 };
 ---
 
