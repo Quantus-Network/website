@@ -110,7 +110,7 @@ jobs:
           PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: "true"
           PUPPETEER_EXECUTABLE_PATH: ${{ env.CHROMIUM_PATH }}
         run: |
-          npx --yes @unlighthouse/cli@latest --build-static --mobile --output-path ./.unlighthouse/mobile
+          npx unlighthouse-ci --build-static --mobile --output-path ./.unlighthouse/mobile
 
       - name: Run Unlighthouse Desktop Audit
         working-directory: website
@@ -118,7 +118,7 @@ jobs:
           PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: "true"
           PUPPETEER_EXECUTABLE_PATH: ${{ env.CHROMIUM_PATH }}
         run: |
-          npx --yes @unlighthouse/cli@latest --build-static --desktop --output-path ./.unlighthouse/desktop
+          npx unlighthouse-ci --build-static --desktop --output-path ./.unlighthouse/desktop
 
       # 5. UPLOAD ARTIFACT
       # This takes the generated report and saves it as a zip file.
