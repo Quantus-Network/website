@@ -15,7 +15,7 @@ const metadata = createMetadata({
 
 const jsonLd = {
   "@context": "https://schema.org",
-  ...organizationJsonLd,
+  ...(organizationJsonLd as any),
 };
 
 // Helper to render text with **bold** markdown
