@@ -1,0 +1,67 @@
+<canvas id="chart" class="mb-10 max-h-[400px]"></canvas>
+
+<script>
+  import { Chart, PieController, ArcElement, Legend, Tooltip } from "chart.js";
+  import ChartDataLabels from "chartjs-plugin-datalabels";
+  import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+  Chart.register(PieController, ArcElement, Legend, Tooltip);
+
+  const chartEl = document.getElementById("chart");
+  if (chartEl) {
+    const locale = getLocaleFromUrl(location.pathname);
+    const t = await createTranslator(locale);
+
+    new Chart(chartEl as HTMLCanvasElement, {
+      type: "pie",
+      plugins: [ChartDataLabels],
+      data: {
+        labels: [
+          t("launch.tge.table.private_sale"),
+          t("launch.tge.table.public_sale"),
+          t("launch.tge.table.dex_liquidity"),
+          t("launch.mining.table.miners"),
+          t("launch.mining.table.community"),
+          t("launch.mining.table.team"),
+        ],
+        datasets: [
+          {
+            label: "Launch Allocation",
+            data: [15, 10, 5, 35, 25, 10],
+            backgroundColor: [
+              "rgb(140, 44, 230)",
+              "rgb(255, 193, 7)",
+              "rgb(61, 90, 254)",
+              "rgb(0, 245, 255)",
+              "rgb(0, 230, 118)",
+              "rgb(120, 144, 156)",
+            ],
+            borderColor: "#000000",
+            borderWidth: 2,
+            hoverOffset: 12,
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          tooltip: {
+            enabled: false,
+          },
+          datalabels: {
+            formatter: (value, context) => {
+              const datapoints = context.chart.data.datasets[0]
+                .data as number[];
+              const total = datapoints.reduce((acc, val) => acc + val, 0);
+              const percentage = ((value / total) * 100).toFixed(1) + "%";
+              return percentage;
+            },
+            color: "#fff",
+          },
+          legend: {
+            display: true,
+          },
+        },
+      },
+    });
+  }
+</script>

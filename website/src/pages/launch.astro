@@ -3,6 +3,7 @@ import Layout from "@/components/layout/Layout.astro";
 import { organizationJsonLd } from "@/constants/default-jsonld";
 import { getLocaleFromUrl, createTranslator } from "@/utils/i18n";
 import { createMetadata } from "@/utils/create-metadata";
+import AllocationChart from "@/components/features/launch/AllocationChart.astro";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
@@ -97,6 +98,9 @@ const feesPoints = t("launch.fees.points") as unknown as string[];
           {t("launch.supply.note")}
         </p>
       </div>
+
+      <!-- Chart -->
+      <AllocationChart />
 
       <!-- Launch Allocation (TGE) -->
       <div class="mb-10">
