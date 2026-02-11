@@ -731,7 +731,11 @@
       "referral": "Referido",
       "governance": "Gobernanza",
       "treasury": "Tesorería",
-      "conviction-voting": "Votación por Convicción"
+      "conviction-voting": "Votación por Convicción",
+      "gamification": "Gamificación",
+      "plonky3": "Plonky3",
+      "liberland": "Liberland",
+      "schrodinger-testnet": "Red de pruebas Schrödinger"
     }
   },
   "cookie": {

@@ -731,7 +731,11 @@
       "referral": "Реферал",
       "governance": "Управление",
       "treasury": "Казначейство",
-      "conviction-voting": "Голосование по убеждению"
+      "conviction-voting": "Голосование по убеждению",
+      "gamification": "Геймификация",
+      "plonky3": "Plonky3",
+      "liberland": "Либерленд",
+      "schrodinger-testnet": "Тестнет Шрёдингера"
     }
   },
   "cookie": {

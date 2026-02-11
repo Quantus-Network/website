@@ -723,7 +723,11 @@
       "referral": "紹介",
       "governance": "ガバナンス",
       "treasury": "トレジャリー",
-      "conviction-voting": "コンビクション・ボーティング"
+      "conviction-voting": "コンビクション・ボーティング",
+      "gamification": "ゲーミフィケーション",
+      "plonky3": "Plonky3",
+      "liberland": "リバーランド",
+      "schrodinger-testnet": "シュレーディンガー・テストネット"
     }
   },
   "cookie": {

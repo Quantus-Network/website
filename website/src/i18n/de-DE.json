@@ -731,7 +731,11 @@
       "referral": "Empfehlung",
       "governance": "Governance",
       "treasury": "Treasury",
-      "conviction-voting": "Conviction Voting"
+      "conviction-voting": "Conviction Voting",
+      "gamification": "Gamifizierung",
+      "plonky3": "Plonky3",
+      "liberland": "Liberland",
+      "schrodinger-testnet": "Schrödinger-Testnetz"
     }
   },
   "cookie": {

@@ -720,7 +720,11 @@
       "referral": "推荐",
       "governance": "治理",
       "treasury": "国库",
-      "conviction-voting": "信念投票"
+      "conviction-voting": "信念投票",
+      "gamification": "游戏化",
+      "plonky3": "Plonky3",
+      "liberland": "自由地",
+      "schrodinger-testnet": "薛定谔测试网"
     }
   },
   "cookie": {

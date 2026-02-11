@@ -723,7 +723,11 @@
       "referral": "추천",
       "governance": "거버넌스",
       "treasury": "트레저리",
-      "conviction-voting": "컨빅션 보팅"
+      "conviction-voting": "컨빅션 보팅",
+      "gamification": "게이미피케이션",
+      "plonky3": "Plonky3",
+      "liberland": "리버랜드",
+      "schrodinger-testnet": "슈뢰딩거 테스트넷"
     }
   },
   "cookie": {
