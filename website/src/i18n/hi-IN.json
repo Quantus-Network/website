@@ -738,7 +738,11 @@
       "gamification": "Gamification",
       "plonky3": "Plonky3",
       "liberland": "Liberland",
-      "schrodinger-testnet": "Schrödinger Testnet"
+      "schrodinger-testnet": "Schrödinger Testnet",
+      "mpc": "MPC",
+      "multisig": "Multisig",
+      "zk-aggregator": "ZK-Aggregator",
+      "indexer": "Indexer"
     }
   },
   "cookie": {

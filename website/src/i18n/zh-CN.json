@@ -724,7 +724,11 @@
       "gamification": "游戏化",
       "plonky3": "Plonky3",
       "liberland": "自由地",
-      "schrodinger-testnet": "薛定谔测试网"
+      "schrodinger-testnet": "薛定谔测试网",
+      "mpc": "MPC",
+      "multisig": "多重签名",
+      "zk-aggregator": "ZK 聚合器",
+      "indexer": "索引器"
     }
   },
   "cookie": {

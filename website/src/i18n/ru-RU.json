@@ -735,7 +735,11 @@
       "gamification": "Геймификация",
       "plonky3": "Plonky3",
       "liberland": "Либерленд",
-      "schrodinger-testnet": "Тестнет Шрёдингера"
+      "schrodinger-testnet": "Тестнет Шрёдингера",
+      "mpc": "MPC",
+      "multisig": "Мультисиг",
+      "zk-aggregator": "ZK-агрегатор",
+      "indexer": "Индексатор"
     }
   },
   "cookie": {

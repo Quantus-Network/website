@@ -727,7 +727,11 @@
       "gamification": "게이미피케이션",
       "plonky3": "Plonky3",
       "liberland": "리버랜드",
-      "schrodinger-testnet": "슈뢰딩거 테스트넷"
+      "schrodinger-testnet": "슈뢰딩거 테스트넷",
+      "mpc": "MPC",
+      "multisig": "멀티시그",
+      "zk-aggregator": "ZK-애그리게이터",
+      "indexer": "인덱서"
     }
   },
   "cookie": {
