@@ -705,7 +705,10 @@
       "poseidon2": "Poseidon2",
       "chain-architecture": "チェーン・アーキテクチャ",
       "wormhole": "Wormhole",
-      "binance-blockchain-week": "Binance Blockchain Week"
+      "binance-blockchain-week": "Binance Blockchain Week",
+      "lattice-cryptography": "格子暗号",
+      "polkadot-sdk": "Polkadot SDK",
+      "audit": "監査"
     }
   },
   "cookie": {
