@@ -769,7 +769,8 @@
       "unable": "PDF kann nicht direkt angezeigt werden.",
       "download": "Herunterladen",
       "read": "Lesen",
-      "preview_alt": "Whitepaper Vorschau"
+      "preview_alt": "Whitepaper Vorschau",
+      "loading": "PDF wird gerendert..."
     }
   },
   "common": {

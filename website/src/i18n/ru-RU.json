@@ -767,7 +767,8 @@
       "unable": "Невозможно отобразить PDF напрямую.",
       "download": "Скачать",
       "read": "Читать",
-      "preview_alt": "Предпросмотр Whitepaper"
+      "preview_alt": "Предпросмотр Whitepaper",
+      "loading": "Рендеринг PDF..."
     }
   },
   "common": {

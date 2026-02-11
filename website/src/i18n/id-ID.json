@@ -767,7 +767,8 @@
       "unable": "Tidak dapat menampilkan PDF secara langsung.",
       "download": "Unduh",
       "read": "Baca",
-      "preview_alt": "Pratinjau Whitepaper"
+      "preview_alt": "Pratinjau Whitepaper",
+      "loading": "Merender PDF..."
     }
   },
   "common": {

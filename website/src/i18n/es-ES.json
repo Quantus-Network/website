@@ -767,7 +767,8 @@
       "unable": "No se puede mostrar el PDF directamente.",
       "download": "Descargar",
       "read": "Leer",
-      "preview_alt": "Vista Previa del Whitepaper"
+      "preview_alt": "Vista Previa del Whitepaper",
+      "loading": "Renderizando PDF..."
     }
   },
   "common": {

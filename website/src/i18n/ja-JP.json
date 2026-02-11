@@ -759,7 +759,8 @@
       "unable": "PDF を直接表示できません。",
       "download": "ダウンロード",
       "read": "読む",
-      "preview_alt": "ホワイトペーパーのプレビュー"
+      "preview_alt": "ホワイトペーパーのプレビュー",
+      "loading": "PDFをレンダリング中..."
     }
   },
   "common": {

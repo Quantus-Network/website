@@ -11,6 +11,7 @@ import { JsonLdGraph } from "@/utils/build-json-ld";
 import { getWhitepaperJsonLd } from "@/constants/default-jsonld";
 import { createMetadata } from "@/utils/create-metadata";
 import Button from "@/components/ui/Button.astro";
+import Loader from "@/components/ui/Loader.astro";
 
 export async function getStaticPaths() {
   return SUPPORTED_LOCALES.map((lang) => ({ params: { lang } }));
@@ -59,9 +60,24 @@ const jsonLd = JsonLdGraph({
     </div>
 
     <div
-      class="mx-auto hidden h-[800px] w-full overflow-hidden rounded-lg bg-white shadow-2xl md:block"
+      class="relative mx-auto hidden h-[800px] w-full overflow-hidden rounded-lg bg-white shadow-2xl md:block"
     >
-      <object data={pdfUrl} type="application/pdf" class="h-full w-full">
+      <div
+        id="pdf-loader"
+        class="absolute inset-0 z-10 flex items-center justify-center bg-white"
+      >
+        <Loader
+          variant="spinner"
+          size="lg"
+          text={t("whitepaper.pdf.loading")}
+        />
+      </div>
+      <object
+        id="pdf-object"
+        data={pdfUrl}
+        type="application/pdf"
+        class="h-full w-full opacity-0 transition-opacity duration-300"
+      >
         <div class="flex h-full flex-col items-center justify-center">
           <p class="mb-4">{t("whitepaper.pdf.unable")}</p>
           <a href={pdfUrl} class="btn btn-primary"
@@ -70,6 +86,29 @@ const jsonLd = JsonLdGraph({
         </div>
       </object>
     </div>
+
+    <script>
+      const pdfObject = document.getElementById(
+        "pdf-object",
+      ) as HTMLObjectElement;
+      const pdfLoader = document.getElementById("pdf-loader");
+
+      if (pdfObject && pdfLoader) {
+        pdfObject.onload = () => {
+          pdfLoader.classList.add("hidden");
+          pdfObject.classList.remove("opacity-0");
+        };
+
+        // Fallback for some browsers where onload might not fire for object tags
+        // or if the PDF is already cached
+        setTimeout(() => {
+          if (!pdfLoader.classList.contains("hidden")) {
+            pdfLoader.classList.add("hidden");
+            pdfObject.classList.remove("opacity-0");
+          }
+        }, 5000);
+      }
+    </script>
 
     <div class="w-full rounded-xl bg-white p-4 shadow-lg md:hidden">
       <img

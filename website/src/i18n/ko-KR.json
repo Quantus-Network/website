@@ -759,7 +759,8 @@
       "unable": "PDF를 직접 표시할 수 없습니다.",
       "download": "다운로드",
       "read": "읽기",
-      "preview_alt": "백서 미리보기"
+      "preview_alt": "백서 미리보기",
+      "loading": "PDF 렌더링 중..."
     }
   },
   "common": {

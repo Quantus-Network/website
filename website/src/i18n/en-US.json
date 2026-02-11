@@ -769,7 +769,8 @@
       "unable": "Unable to display PDF directly.",
       "download": "Download",
       "read": "Read",
-      "preview_alt": "Whitepaper Preview"
+      "preview_alt": "Whitepaper Preview",
+      "loading": "Rendering PDF..."
     }
   },
   "common": {
