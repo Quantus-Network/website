@@ -739,7 +739,11 @@
       "mpc": "MPC",
       "multisig": "Multisig",
       "zk-aggregator": "ZK-Aggregator",
-      "indexer": "Indexador"
+      "indexer": "Indexador",
+      "rpc": "RPC",
+      "privacy": "Privacidad",
+      "audit": "Auditoría",
+      "security": "Seguridad"
     }
   },
   "cookie": {

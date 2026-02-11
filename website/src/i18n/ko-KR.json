@@ -731,7 +731,11 @@
       "mpc": "MPC",
       "multisig": "멀티시그",
       "zk-aggregator": "ZK-애그리게이터",
-      "indexer": "인덱서"
+      "indexer": "인덱서",
+      "rpc": "RPC",
+      "privacy": "프라이버시",
+      "audit": "감사",
+      "security": "보안"
     }
   },
   "cookie": {

@@ -728,7 +728,11 @@
       "mpc": "MPC",
       "multisig": "多重签名",
       "zk-aggregator": "ZK 聚合器",
-      "indexer": "索引器"
+      "indexer": "索引器",
+      "rpc": "RPC",
+      "privacy": "隐私",
+      "audit": "审计",
+      "security": "安全"
     }
   },
   "cookie": {

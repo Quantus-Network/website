@@ -741,7 +741,11 @@
       "multisig": "Multisig",
       "indexer": "Indexer",
       "zk-aggregator": "ZK-Aggregator",
-      "biohacking": "Biohacking"
+      "biohacking": "Biohacking",
+      "rpc": "RPC",
+      "privacy": "Privacy",
+      "audit": "Audit",
+      "security": "Security"
     }
   },
   "cookie": {
