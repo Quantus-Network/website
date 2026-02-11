@@ -708,7 +708,11 @@
       "audit": "审计",
       "miner-app": "矿机应用",
       "ama": "AMA",
-      "substrate": "Substrate"
+      "substrate": "Substrate",
+      "poseidon": "Poseidon",
+      "dirac-testnet": "Dirac 测试网",
+      "mobile-wallet": "移动钱包",
+      "pow": "工作量证明"
     }
   },
   "cookie": {

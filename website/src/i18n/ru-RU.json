@@ -719,7 +719,11 @@
       "audit": "Аудит",
       "miner-app": "Приложение для майнинга",
       "ama": "AMA",
-      "substrate": "Substrate"
+      "substrate": "Substrate",
+      "poseidon": "Poseidon",
+      "dirac-testnet": "Тестовая сеть Dirac",
+      "mobile-wallet": "Мобильный кошелек",
+      "pow": "Доказательство работы"
     }
   },
   "cookie": {

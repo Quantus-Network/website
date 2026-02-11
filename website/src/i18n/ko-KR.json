@@ -711,7 +711,11 @@
       "audit": "감사",
       "miner-app": "마이너 앱",
       "ama": "AMA",
-      "substrate": "Substrate"
+      "substrate": "Substrate",
+      "poseidon": "Poseidon",
+      "dirac-testnet": "Dirac 테스트넷",
+      "mobile-wallet": "모바일 지갑",
+      "pow": "작업 증명"
     }
   },
   "cookie": {

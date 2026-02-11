@@ -719,7 +719,11 @@
       "audit": "Auditoría",
       "miner-app": "App de Minería",
       "ama": "AMA",
-      "substrate": "Substrate"
+      "substrate": "Substrate",
+      "poseidon": "Poseidon",
+      "dirac-testnet": "Dirac Testnet",
+      "mobile-wallet": "Billetera Móvil",
+      "pow": "Prueba de Trabajo"
     }
   },
   "cookie": {

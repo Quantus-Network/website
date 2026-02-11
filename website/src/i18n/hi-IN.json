@@ -722,7 +722,11 @@
       "audit": "Audit",
       "miner-app": "Miner App",
       "ama": "AMA",
-      "substrate": "Substrate"
+      "substrate": "Substrate",
+      "poseidon": "Poseidon",
+      "dirac-testnet": "Dirac Testnet",
+      "mobile-wallet": "Mobile Wallet",
+      "pow": "Proof of Work"
     }
   },
   "cookie": {

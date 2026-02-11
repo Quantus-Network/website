@@ -719,7 +719,11 @@
       "audit": "Audit",
       "miner-app": "Aplikasi Miner",
       "ama": "AMA",
-      "substrate": "Substrate"
+      "substrate": "Substrate",
+      "poseidon": "Poseidon",
+      "dirac-testnet": "Dirac Testnet",
+      "mobile-wallet": "Dompet Seluler",
+      "pow": "Proof of Work"
     }
   },
   "cookie": {
