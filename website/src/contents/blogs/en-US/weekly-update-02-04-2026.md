@@ -34,20 +34,25 @@ This week we started testing multisig integration for guardian accounts. We also
 Here's what else we shipped this week:
 
 ### GitHub Activity (5 merged pull requests):
+
 ![Github Stats](/blog/assets/github-stats-weekly-update-02-04-2026.png)
 
 ### Core Tech & ZK
+
 - Multisig pallet for high-security accounts in testing phase with CLI commands.
 - Added recover funds functionality to chain for high-security accounts.
 - Brought qp-plonky2 up to date with changes made to the original plonky2 repo.
 
 ### Web & Mobile App Updates
+
 - Refactored quests screens UI with gradients and wallet integration.
 - Cleaned up unused assets in the app.
 
 ### Content & Partnerships
+
 - [@QuantusNetwork](https://x.com/@QuantusNetwork) and [@YuviLightman](https://x.com/@YuviLightman) accounts both crossed 1k+ followers.
 - Podcast with Henry Love on AI and productivity (on our Youtube).
 
 ### Industry Updates
+
 - Quantum Canary: ["Will Zcash Replace Bitcoin?"](https://x.com/QuantumCanary_/status/2016327421797294286)

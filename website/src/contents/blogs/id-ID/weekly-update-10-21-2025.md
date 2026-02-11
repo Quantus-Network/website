@@ -20,6 +20,7 @@ tags:
 ---
 
 ## Berita Produk & Pengembangan
+
 - Laporan aktivitas Github mingguan termasuk 105 event dan 17 event pull request: https://github.com/Quantus-Network/n8n-workflows/blob/main/github/weekly-update-2025-10-20-02%3A48%3A36.md
 - Mulai mengintegrasikan binding Ingonyama icicle untuk miner GPU.
 - Mengimplementasikan gate Poseidon2 di Plonky2.
@@ -31,9 +32,11 @@ tags:
 - Menerima audit mekanisme konsensus, memperbarui sebagai tanggapan.
 
 ## Konten & Kemitraan
+
 - Podcast live dengan Khaled Sabbagh, pengusaha dan kreator konten: https://www.youtube.com/watch?v=RZKmiOPzTVw&t
 - Banyak diskusi yang sedang berlangsung dengan investor, calon mitra media sosial, dan penasihat.
 
 ## Berita Industri
+
 - Artikel tentang kemajuan Kuantum, chip Willow, dan risiko kripto: https://www.quantumcanary.org/insights/overlooked-threat-to-crypto-some-industry-leaders-are-dismissing-too-soon
 - Peneliti mencapai rekor 120 qubit yang terjerat secara maksimal melalui \"keadaan kucing Schrodinger\": https://arxiv.org/abs/2510.09520

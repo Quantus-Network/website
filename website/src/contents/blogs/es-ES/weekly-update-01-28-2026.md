@@ -37,9 +37,11 @@ Esta semana también [anunciamos](https://x.com/QuantusNetwork/status/2016390125
 Esos son los aspectos más destacados. Aquí está lo demás que enviamos en la última semana:
 
 ### Actividad en GitHub (19 pull requests fusionados):
+
 ![Estadísticas de Github](/blog/assets/github-stats-weekly-update-01-28-2026.webp)
 
 ### Tecnología Core y ZK
+
 - Auditoría de [@Neodyme](https://x.com/@Neodyme) completada con todos los problemas resueltos. Técnicas de endurecimiento aplicadas, incluyendo la puesta a cero de la memoria después de su uso. [Publicación aquí](https://x.com/QuantusNetwork/status/2016390125626773871).
 - Lanzamiento de RPC denegables mediante hashing de prefijo. Los usuarios ahora tienen denegación plausible al conectarse a nodos RPC (búsqueda inconsciente).
 - Direcciones ZK privadas habilitadas para todos los tokens en el génesis.
@@ -49,6 +51,7 @@ Esos son los aspectos más destacados. Aquí está lo demás que enviamos en la 
 - Fuzzer renovado para circuitos ZK-aggregator y cobertura de prueba ampliada para tarifas de minero y tarifas quemadas.
 
 ### Actualizaciones de la Aplicación Web y Móvil
+
 - Lanzamiento de la aplicación móvil v1.1.5 (build 65) con función de extracción de alta seguridad.
 - Creación de videos de demostración para funciones de alta seguridad.
 - Mejoras en el explorador y el faucet: se agregaron eventos de error y de alta seguridad a los detalles del bloque, búsqueda por tipo de error y filtrado de mensajes de grupo mejorado.
@@ -57,6 +60,7 @@ Esos son los aspectos más destacados. Aquí está lo demás que enviamos en la 
 - Actualización de la UX del blog del sitio web y corrección de problemas de SEO.
 
 ### Contenido y Alianzas
+
 - Superamos los 1.000 miembros en Telegram.
 - Reserva de lugar para evento paralelo en Token2049 Dubai.
 - El equipo ha decidido volver a [@ns](https://x.com/@ns) para nuestro próximo sprint.
@@ -64,5 +68,6 @@ Esos son los aspectos más destacados. Aquí está lo demás que enviamos en la 
 - Contratación de nuestro primer creador de contenido de tamaño mediano para colaboraciones de video. Construyendo nuestra lista de creadores.
 
 ### Actualizaciones de la Industria
-- Artículo de [@QuantumCanary_](https://x.com/@QuantumCanary_) [analizando Zcash](https://x.com/QuantumCanary_/status/2016327421797294286).
-- [@QuantumCanary_](https://x.com/@QuantumCanary_) publicó su "[Tabla de Comparación de Blockchains](https://x.com/QuantumCanary_/status/2015734605450731824)".
+
+- Artículo de [@QuantumCanary\_](https://x.com/@QuantumCanary_) [analizando Zcash](https://x.com/QuantumCanary_/status/2016327421797294286).
+- [@QuantumCanary\_](https://x.com/@QuantumCanary_) publicó su "[Tabla de Comparación de Blockchains](https://x.com/QuantumCanary_/status/2015734605450731824)".

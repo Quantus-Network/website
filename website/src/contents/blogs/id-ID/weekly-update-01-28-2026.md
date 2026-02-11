@@ -37,9 +37,11 @@ Minggu ini kami juga [mengumumkan](https://x.com/QuantusNetwork/status/201639012
 Itu adalah sorotannya. Inilah hal lain yang kami luncurkan dalam seminggu terakhir:
 
 ### Aktivitas GitHub (19 pull request yang digabungkan):
+
 ![Statistik Github](/blog/assets/github-stats-weekly-update-01-28-2026.webp)
 
 ### Core Tech & ZK
+
 - Menyelesaikan audit [@Neodyme](https://x.com/@Neodyme) dengan semua masalah teratasi. Teknik pengerasan diterapkan termasuk pengosongan memori (memory zeroing) setelah digunakan. [Postingan di sini](https://x.com/QuantusNetwork/status/2016390125626773871).
 - Meluncurkan Deniable RPC melalui prefix hashing. Pengguna sekarang memiliki plausible deniability saat terhubung ke node RPC (oblivious lookup).
 - Mengaktifkan alamat ZK privat untuk semua token saat genesis.
@@ -49,6 +51,7 @@ Itu adalah sorotannya. Inilah hal lain yang kami luncurkan dalam seminggu terakh
 - Memperbarui fuzzer untuk sirkuit ZK-aggregator dan memperluas cakupan pengujian untuk biaya miner dan biaya yang dibakar.
 
 ### Pembaruan Aplikasi Web & Seluler
+
 - Meluncurkan Aplikasi Seluler v1.1.5 (build 65) dengan fitur penarikan keamanan tinggi.
 - Membuat video demo untuk fitur keamanan tinggi.
 - Peningkatan explorer dan faucet: menambahkan event kesalahan dan keamanan tinggi ke detail blok, pencarian berdasarkan jenis kesalahan, dan pemfilteran pesan grup yang ditingkatkan.
@@ -57,6 +60,7 @@ Itu adalah sorotannya. Inilah hal lain yang kami luncurkan dalam seminggu terakh
 - Memperbarui UX blog situs web dan memperbaiki masalah SEO.
 
 ### Konten & Kemitraan
+
 - Melampaui 1.000 anggota di Telegram.
 - Memesan tempat untuk side event di Token2049 Dubai.
 - Tim telah memutuskan untuk kembali ke [@ns](https://x.com/@ns) untuk sprint kami berikutnya.
@@ -64,5 +68,6 @@ Itu adalah sorotannya. Inilah hal lain yang kami luncurkan dalam seminggu terakh
 - Mempekerjakan kreator konten berukuran sedang pertama kami untuk kolaborasi video. Membangun daftar kreator kami.
 
 ### Pembaruan Industri
-- Artikel [@QuantumCanary_](https://x.com/@QuantumCanary_) [membahas Zcash](https://x.com/QuantumCanary_/status/2016327421797294286).
-- [@QuantumCanary_](https://x.com/@QuantumCanary_) menerbitkan "[Tabel Perbandingan Blockchain](https://x.com/QuantumCanary_/status/2015734605450731824)" mereka.
+
+- Artikel [@QuantumCanary\_](https://x.com/@QuantumCanary_) [membahas Zcash](https://x.com/QuantumCanary_/status/2016327421797294286).
+- [@QuantumCanary\_](https://x.com/@QuantumCanary_) menerbitkan "[Tabel Perbandingan Blockchain](https://x.com/QuantumCanary_/status/2015734605450731824)" mereka.

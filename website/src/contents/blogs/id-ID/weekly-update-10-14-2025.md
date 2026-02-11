@@ -20,6 +20,7 @@ tags:
 ---
 
 ## Berita Produk & Pengembangan
+
 - Laporan aktivitas Github mingguan termasuk 104 event dan 6 pull request yang digabungkan: https://github.com/Quantus-Network/n8n-workflows/blob/main/github/weekly-update-2025-10-12-23%3A16%3A37.md
 - Merancang gamifikasi transaksi pembalikan (reversal transactions) untuk inisiatif keterlibatan mendatang.
 - Mengoptimalkan alokasi memori di Rusty Crystals sebesar 80%.
@@ -31,10 +32,12 @@ tags:
 - Bootnode baru untuk testnet schrodinger.
 
 ## Konten
+
 - Podcast live dengan Vit Jedlička, Presiden Liberland: https://www.youtube.com/watch?v=_hy-SaPRzpk&t
 - Banyak penjangkauan ke investor dan KOL.
 - Membuat grafis untuk program referensi dan sistem progresi.
 
 ## Berita Industri
+
 - Artikel yang membahas risiko kuantum terhadap privasi. Komputer kuantum masa depan dapat mengekspos transaksi pribadi masa lalu secara retroaktif di jaringan seperti Zcash yang menggunakan kriptografi kurva eliptik: https://www.quantumcanary.org/insights/zcash-quantum-challenges-could-be-looming
 - Ilmuwan membuat komputer kuantum yang tidak perlu dihidupkan ulang setiap beberapa menit: https://www.nature.com/articles/s41586-025-09596-6

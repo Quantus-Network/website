@@ -22,9 +22,11 @@ Esta semana el equipo lanzó la testnet Dirac, finalizando la actualización en 
 **SI ERES UN MINERO DEBES ACTUALIZAR A LA NUEVA TESTNET DIRAC**
 
 ## Noticias de Desarrollo
+
 - Informe semanal de actividad en Github que incluye 12 pull requests y 3 fusionados: https://github.com/Quantus-Network/n8n-workflows/blob/main/github/weekly-update-2025-11-09-23:57:50.md
 
 ## Core Tech
+
 - Implementación de referencia completa para qp-rusty-crystals con generación de claves y firmas de tiempo constante lanzada y fusionada.
 - Se resolvieron todas las pruebas KAT para rusty crystals, se hizo de tiempo constante y se corrigieron los problemas pendientes del script de lanzamiento.
 - Se inició la auditoría de qp-rusty-crystals.
@@ -35,6 +37,7 @@ Esta semana el equipo lanzó la testnet Dirac, finalizando la actualización en 
 - Se comenzó la implementación del paper de consenso GHOSTDAG.
 
 ## Network & Infra
+
 - Lanzamiento de Dirac 0.4.0 en todos los servidores.
 - Lanzamiento de la build del minero externo 1.0.0.
 - Actualización de la cadena para la actualización de rusty crystals.
@@ -48,6 +51,7 @@ Esta semana el equipo lanzó la testnet Dirac, finalizando la actualización en 
 - Se corrigieron problemas de indexación en http://quantu.se/ y se actualizó la metadata para apuntar a la URL del nodo correcta.
 
 ## Web & Mobile App Updates
+
 - Se terminó la función de notificaciones de la aplicación móvil.
 - Se refactorizó el manejo de route intent para mejorar el rendimiento y la fiabilidad de los deep links.
 - El diseño del panel del minero es ahora totalmente responsivo.
@@ -55,10 +59,12 @@ Esta semana el equipo lanzó la testnet Dirac, finalizando la actualización en 
 - Se refactorizó el cliente de Quantus Explorer API para usar hooks modernos para un mejor rendimiento.
 
 ## Content & Partnerships
+
 - Podcast con Remus Boroiu, 9 veces campeón de culturismo, emprendedor y creador: https://www.youtube.com/watch?v=OtBKnaFAe_8
 - Nota de prensa vía Chainwire.
 
 ## Quantum Canary
+
 - Un análisis de las acciones cuánticas: https://www.quantumcanary.org/insights/what-is-the-best-quantum-computing-stock
 - Una inmersión profunda en el papel influyente de la RAND Corporation en la configuración de la política global y la aceleración del cronograma para la migración PQC: https://www.quantumcanary.org/insights/rand-quantum-controversy
 - Princeton investiga el triple de tiempo de coherencia para 45 qubits de tantalio sobre zafiro: https://www.nature.com/articles/s41586-025-09687-4

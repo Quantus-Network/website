@@ -34,20 +34,25 @@ Esta semana comenzamos a probar la integración multisig para cuentas de guardi�
 Aquí está lo demás que enviamos esta semana:
 
 ### Actividad en GitHub (5 pull requests fusionados):
+
 ![Estadísticas de Github](/blog/assets/github-stats-weekly-update-02-04-2026.png)
 
 ### Tecnología Core y ZK
+
 - Pallet multisig para cuentas de alta seguridad en fase de prueba con comandos CLI.
 - Se agregó la funcionalidad de recuperación de fondos a la cadena para cuentas de alta seguridad.
 - Se actualizó qp-plonky2 con los cambios realizados en el repositorio original de plonky2.
 
 ### Actualizaciones de la Aplicación Web y Móvil
+
 - Se rediseñó la interfaz de usuario de las pantallas de misiones con degradados e integración de billetera.
 - Se eliminaron activos no utilizados en la aplicación.
 
 ### Contenido y Alianzas
+
 - Las cuentas de [@QuantusNetwork](https://x.com/@QuantusNetwork) y [@YuviLightman](https://x.com/@YuviLightman) superaron los 1.000 seguidores.
 - Podcast con Henry Love sobre IA y productividad (en nuestro Youtube).
 
 ### Actualizaciones de la Industria
+
 - Quantum Canary: ["¿Reemplazará Zcash a Bitcoin?"](https://x.com/QuantumCanary_/status/2016327421797294286)

@@ -37,9 +37,11 @@ Ich möchte hier nichts ankündigen, aber Sie können jederzeit unser GitHub öf
 Hier ist, was wir diese Woche sonst noch ausgeliefert haben, damit wir bereit sind, wenn der Q-Day kommt:
 
 ### Github-Aktivität (7 gemergte Pull-Requests):
+
 ![Github-Statistiken](/blog/assets/github-stats-weekly-update-01-21-2026.webp)
 
 ### Core Tech & ZK
+
 - Integration von Dilithium-Threshold-Signaturen in das MPC-System eines anderen Protokolls.
 - POC für benutzerdefiniertes Treasury-Management mit dem Parity Multisig Pallet erstellt.
 - Erste Iteration des benutzerdefinierten Multisig Pallets mit Tests und Benchmarks implementiert.
@@ -48,6 +50,7 @@ Hier ist, was wir diese Woche sonst noch ausgeliefert haben, damit wir bereit si
 - End-to-End ZK-Aggregator Beispiel-Skript für neue Field-Element-Serializer korrigiert.
 
 ### Web & Mobile App Updates
+
 - Mobile UX zur Unterstützung von festen Verzögerungs- und Intercept-Funktionen für Hochsicherheitskonten erstellt (wird noch getestet).
 - Block-Scanner und Hochsicherheitsfunktionen zum CLI mit verbesserter Fehlerbehandlung hinzugefügt.
 - Subsquid (Indexer) Updates für Hochsicherheits-Handling und Hasher-Fix für das neueste Poseidon.
@@ -55,10 +58,12 @@ Hier ist, was wir diese Woche sonst noch ausgeliefert haben, damit wir bereit si
 - Whitepaper auf v3.1 aktualisiert, Tokenomics-Chart-Verteilungswerte korrigiert.
 
 ### Content & Partnerschaften
+
 - Podcasts werden jetzt auf Apple Podcasts hochgeladen.
 - Gespräche mit 2 Token-Launchpads begonnen.
 - Verbesserungen an der Blockchain-Vergleichsseite von Quantum Canary.
 - Podcast mit AJ über Biohacking und Selbstoptimierung: https://x.com/QuantusNetwork/status/2012526120869286161
 
 ### Branchen-Updates
+
 - Quantum Canary Artikel darüber, wie CRQCs Satoshis Coins bedrohen: https://x.com/QuantumCanary_/status/2011706634868047982

@@ -20,6 +20,7 @@ tags:
 ---
 
 ## 产品与开发新闻
+
 - 每周 Github 活动报告，包含 105 个事件和 17 个拉取请求事件：https://github.com/Quantus-Network/n8n-workflows/blob/main/github/weekly-update-2025-10-20-02%3A48%3A36.md
 - 开始为 GPU 矿机集成 Ingonyama icicle 绑定。
 - 在 Plonky2 中实现了 Poseidon2 门电路。
@@ -31,9 +32,11 @@ tags:
 - 收到了共识机制的审计报告，并正据此进行更新。
 
 ## 内容与合作伙伴
+
 - 与企业家及内容创作者 Khaled Sabbagh 的播客已上线：https://www.youtube.com/watch?v=RZKmiOPzTVw&t
 - 与投资者、潜在社交媒体合作伙伴及顾问进行了多项深入讨论。
 
 ## 行业动态
+
 - 关于量子进展、Willow 芯片及加密风险的文章：https://www.quantumcanary.org/insights/overlooked-threat-to-crypto-some-industry-leaders-are-dismissing-too-soon
 - 研究人员通过“薛定谔猫态”实现了创纪录的 120 个最大纠缠量子比特：https://arxiv.org/abs/2510.09520

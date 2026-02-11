@@ -34,20 +34,25 @@ tags:
 이번 주에 출시된 다른 소식들은 다음과 같습니다.
 
 ### GitHub 활동 (5개의 병합된 풀 리퀘스트):
+
 ![Github 통계](/blog/assets/github-stats-weekly-update-02-04-2026.png)
 
 ### 코어 기술 및 ZK
+
 - CLI 명령과 함께 테스트 단계에 있는 고보안 계정용 멀티시그 팔렛.
 - 고보안 계정을 위해 체인에 자금 회수 기능 추가.
 - qp-plonky2를 원래 plonky2 레포의 변경 사항에 맞춰 최신 상태로 업데이트.
 
 ### 웹 및 모바일 앱 업데이트
+
 - 그라데이션 및 지갑 통합으로 퀘스트 화면 UI 리팩토링.
 - 앱 내 사용하지 않는 에셋 정리.
 
 ### 콘텐츠 및 파트너십
+
 - [@QuantusNetwork](https://x.com/@QuantusNetwork) 및 [@YuviLightman](https://x.com/@YuviLightman) 계정 모두 팔로워 1,000명을 돌파했습니다.
 - AI와 생산성에 관한 Henry Love와의 팟캐스트(저희 유튜브 채널).
 
 ### 업계 업데이트
+
 - Quantum Canary: ["Zcash가 비트코인을 대체할 것인가?"](https://x.com/QuantumCanary_/status/2016327421797294286)

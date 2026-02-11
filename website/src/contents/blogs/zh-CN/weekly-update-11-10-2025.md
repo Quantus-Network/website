@@ -22,9 +22,11 @@ tags:
 **如果您是矿工，请务必更新至新的 DIRAC 测试网**
 
 ## 开发新闻
+
 - 每周 Github 活动报告，包含 12 个拉取请求，其中 3 个已合并：https://github.com/Quantus-Network/n8n-workflows/blob/main/github/weekly-update-2025-11-09-23:57:50.md
 
 ## 核心技术
+
 - 发布并合并了 qp-rusty-crystals 的完整参考实现，支持恒定时间密钥生成和签名。
 - 解决了 rusty-crystals 的所有 KAT 测试，实现了恒定时间并修复了遗留的发布脚本问题。
 - 启动了对 qp-rusty-crystals 的审计。
@@ -35,6 +37,7 @@ tags:
 - 开始实现 GHOSTDAG 共识论文。
 
 ## 网络与基础设施
+
 - 在所有服务器上发布 Dirac 0.4.0。
 - 发布外部矿机版本 1.0.0。
 - 针对 rusty-crystals 更新同步更新链端。
@@ -48,6 +51,7 @@ tags:
 - 修复了 http://quantu.se/ 的索引问题，并更新了元数据以指向正确的节点 URL。
 
 ## 网页与移动应用更新
+
 - 完成了移动应用通知功能。
 - 重构了路由意图 (route intent) 处理，以提高深度链接 (deep linking) 的性能和可靠性。
 - 矿机仪表板布局现已完全实现响应式。
@@ -55,10 +59,12 @@ tags:
 - 重构了 Quantus Explorer API 客户端，使用现代 Hooks 以获得更好的性能。
 
 ## 内容与合作伙伴
+
 - 与 Remus Boroiu（9 届健美冠军、企业家和创作者）的播客：https://www.youtube.com/watch?v=OtBKnaFAe_8
 - 通过 Chainwire 发布新闻稿。
 
 ## Quantum Canary
+
 - 量子股票分析：https://www.quantumcanary.org/insights/what-is-the-best-quantum-computing-stock
 - 深度探讨兰德公司 (RAND Corporation) 在制定全球政策和加速 PQC 迁移时间表中的影响力：https://www.quantumcanary.org/insights/rand-quantum-controversy
 - 普林斯顿大学研究人员将 45 个蓝宝石基钽 (tantalum-on-sapphire) 量子比特的相干时间提高了三倍：https://www.nature.com/articles/s41586-025-09687-4

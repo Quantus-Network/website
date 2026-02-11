@@ -20,6 +20,7 @@ tags:
 ---
 
 ## 製品 & 開発ニュース
+
 - 104件のイベントと6件のマージされたプルリクエストを含む週刊Github活動レポート：https://github.com/Quantus-Network/n8n-workflows/blob/main/github/weekly-update-2025-10-12-23%3A16%3A37.md
 - 今後のエンゲージメント・イニシアチブに向けた、リバーサル・トランザクションのゲーミフィケーションを設計しました。
 - Rusty Crystalsでのメモリ割り当てを80%最適化しました。
@@ -31,10 +32,12 @@ tags:
 - schrodingerテストネット用の新しいブートノードを追加しました。
 
 ## コンテンツ
+
 - リバーランド大統領Vit Jedlička氏とのポッドキャストを公開：https://www.youtube.com/watch?v=_hy-SaPRzpk&t
 - 投資家やKOLへの積極的なアウトリーチを実施。
 - リファラルプログラムと進行システムのグラフィックを作成しました。
 
 ## 業界ニュース
+
 - プライバシーに対する量子リスクに関する記事。将来の量子コンピュータは、楕円曲線暗号を使用するZcashのようなネットワーク上の過去のプライベートトランザクションを遡及的に公開する可能性があります：https://www.quantumcanary.org/insights/zcash-quantum-challenges-could-be-looming
 - 数分おきに再起動する必要のない量子コンピュータを科学者が開発：https://www.nature.com/articles/s41586-025-09596-6

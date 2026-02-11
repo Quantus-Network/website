@@ -20,6 +20,7 @@ tags:
 ---
 
 ## Produkt- & Entwicklungs-News
+
 - Wöchentlicher Github-Aktivitätsbericht inklusive 104 Events und 6 gemergten Pull-Requests: https://github.com/Quantus-Network/n8n-workflows/blob/main/github/weekly-update-2025-10-12-23%3A16%3A37.md
 - Design der Gamifizierung von Reversal-Transaktionen für kommende Engagement-Initiativen.
 - Speicherallokation in Rusty Crystals um 80 % optimiert.
@@ -31,10 +32,12 @@ tags:
 - Neue Bootnodes für das Schrodinger-Testnet.
 
 ## Content
+
 - Podcast live mit Vit Jedlička, Präsident von Liberland: https://www.youtube.com/watch?v=_hy-SaPRzpk&t
 - Viel Outreach an Investoren und KOLs.
 - Grafiken für das Empfehlungsprogramm und das Progressionssystem erstellt.
 
 ## Branchen-News
+
 - Artikel über Quantenrisiken für die Privatsphäre. Zukünftige Quantencomputer könnten rückwirkend vergangene private Transaktionen in Netzwerken wie Zcash offenlegen, die Elliptische-Kurven-Kryptographie verwenden: https://www.quantumcanary.org/insights/zcash-quantum-challenges-could-be-looming
 - Wissenschaftler entwickeln Quantencomputer, der nicht alle paar Minuten neu gestartet werden muss: https://www.nature.com/articles/s41586-025-09596-6

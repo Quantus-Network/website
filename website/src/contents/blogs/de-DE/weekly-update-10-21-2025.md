@@ -20,6 +20,7 @@ tags:
 ---
 
 ## Produkt- & Entwicklungs-News
+
 - Wöchentlicher Github-Aktivitätsbericht inklusive 105 Events und 17 Pull-Request-Events: https://github.com/Quantus-Network/n8n-workflows/blob/main/github/weekly-update-2025-10-20-02%3A48%3A36.md
 - Beginn der Integration von Ingonyama Icicle-Bindings für GPU-Miner.
 - Poseidon2-Gate in Plonky2 implementiert.
@@ -31,9 +32,11 @@ tags:
 - Audit des Konsensmechanismus erhalten, Aktualisierung als Reaktion darauf.
 
 ## Content & Partnerschaften
+
 - Podcast live mit Khaled Sabbagh, Unternehmer und Content Creator: https://www.youtube.com/watch?v=RZKmiOPzTVw&t
 - Viele laufende Gespräche mit Investoren, potenziellen Social-Media-Partnern und Beratern.
 
 ## Branchen-News
+
 - Artikel über Quantenfortschritte, den Willow-Chip und Krypto-Risiken: https://www.quantumcanary.org/insights/overlooked-threat-to-crypto-some-industry-leaders-are-dismissing-too-soon
 - Forscher erreichen Rekord von 120 maximal verschränkten Qubits über „Schrödingers-Katzen-Zustände“: https://arxiv.org/abs/2510.09520

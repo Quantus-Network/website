@@ -37,9 +37,11 @@ Diese Woche haben wir auch den abgeschlossenen [@Neodyme](https://x.com/@Neodyme
 Das sind die Highlights. Hier ist, was wir in der letzten Woche sonst noch ausgeliefert haben:
 
 ### GitHub-Aktivität (19 gemergte Pull-Requests):
+
 ![Github-Statistiken](/blog/assets/github-stats-weekly-update-01-28-2026.webp)
 
 ### Core Tech & ZK
+
 - [@Neodyme](https://x.com/@Neodyme) Audit abgeschlossen, alle Probleme gelöst. Härtungstechniken angewendet, einschließlich Nullsetzen des Speichers nach Gebrauch. [Post hier](https://x.com/QuantusNetwork/status/2016390125626773871).
 - Deniable RPCs via Präfix-Hashing ausgeliefert. Benutzer haben nun plausible Abstreitbarkeit beim Verbinden mit RPC-Knoten (Oblivious Lookup).
 - Private ZK-Adressen für alle Token bei Genesis aktiviert.
@@ -49,6 +51,7 @@ Das sind die Highlights. Hier ist, was wir in der letzten Woche sonst noch ausge
 - Fuzzer für ZK-Aggregator-Schaltkreise überarbeitet und Testabdeckung für Miner-Gebühren und Burned-Gebühren erweitert.
 
 ### Web & Mobile App Updates
+
 - Mobile App v1.1.5 (Build 65) mit High-Security-Pull-Funktion ausgeliefert.
 - Demo-Videos für High-Security-Funktionen erstellt.
 - Explorer- und Faucet-Verbesserungen: Fehler- und High-Security-Events zu Blockdetails hinzugefügt, Suche nach Fehlertyp und verbessertes Filtern von Gruppennachrichten.
@@ -57,6 +60,7 @@ Das sind die Highlights. Hier ist, was wir in der letzten Woche sonst noch ausge
 - Website-Blog-UX aktualisiert und SEO-Probleme behoben.
 
 ### Content & Partnerschaften
+
 - Über 1.000 Mitglieder auf Telegram erreicht.
 - Veranstaltungsort für Side-Event auf der Token2049 Dubai gebucht.
 - Das Team hat beschlossen, für unseren nächsten Sprint zu [@ns](https://x.com/@ns) zurückzukehren.
@@ -64,5 +68,6 @@ Das sind die Highlights. Hier ist, was wir in der letzten Woche sonst noch ausge
 - Ersten mittelgroßen Content Creator für Video-Kollaborationen eingestellt. Aufbau unseres Creator-Rosters.
 
 ### Branchen-Updates
-- [@QuantumCanary_](https://x.com/@QuantumCanary_) Artikel [über Zcash](https://x.com/QuantumCanary_/status/2016327421797294286).
-- [@QuantumCanary_](https://x.com/@QuantumCanary_) veröffentlichte ihre „[Blockchain Vergleichstabelle](https://x.com/QuantumCanary_/status/2015734605450731824)“.
+
+- [@QuantumCanary\_](https://x.com/@QuantumCanary_) Artikel [über Zcash](https://x.com/QuantumCanary_/status/2016327421797294286).
+- [@QuantumCanary\_](https://x.com/@QuantumCanary_) veröffentlichte ihre „[Blockchain Vergleichstabelle](https://x.com/QuantumCanary_/status/2015734605450731824)“.

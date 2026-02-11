@@ -37,9 +37,11 @@ tags:
 이상 하이라이트였습니다. 지난 한 주 동안 출시된 다른 소식들은 다음과 같습니다.
 
 ### GitHub 활동 (19개의 병합된 풀 리퀘스트):
+
 ![Github 통계](/blog/assets/github-stats-weekly-update-01-28-2026.webp)
 
 ### 코어 기술 및 ZK
+
 - 모든 문제가 해결된 [@Neodyme](https://x.com/@Neodyme) 감사가 완료되었습니다. 사용 후 메모리 제로화(memory zeroing)를 포함한 하드닝 기술이 적용되었습니다. [여기 포스트](https://x.com/QuantusNetwork/status/2016390125626773871).
 - 접두사 해싱을 통한 디나이어블 RPC를 출시했습니다. 이제 사용자는 RPC 노드에 연결할 때 부인 방지(oblivious lookup) 기능을 갖게 되었습니다.
 - 제네시스에서 모든 토큰에 대해 프라이빗 ZK 주소를 활성화했습니다.
@@ -49,6 +51,7 @@ tags:
 - ZK-애그리게이터 회로용 퍼저(fuzzer)를 개편하고 마이너 수수료 및 소각 수수료에 대한 테스트 범위를 확장했습니다.
 
 ### 웹 및 모바일 앱 업데이트
+
 - 고보안 풀(pull) 기능이 포함된 모바일 앱 v1.1.5(빌드 65)를 출시했습니다.
 - 고보안 기능을 위한 데모 비디오를 제작했습니다.
 - 익스플로러 및 수도꼭지(faucet) 개선: 블록 상세 정보에 오류 및 고보안 이벤트 추가, 오류 유형별 검색, 그룹 메시지 필터링 강화.
@@ -57,6 +60,7 @@ tags:
 - 웹사이트 블로그 UX를 업데이트하고 SEO 문제를 수정했습니다.
 
 ### 콘텐츠 및 파트너십
+
 - 텔레그램 회원 1,000명을 돌파했습니다.
 - Token2049 Dubai 사이드 이벤트 장소를 예약했습니다.
 - 팀은 다음 스프린트를 위해 [@ns](https://x.com/@ns)로 돌아가기로 결정했습니다.
@@ -64,5 +68,6 @@ tags:
 - 비디오 협업을 위해 첫 번째 중간 규모 콘텐츠 크리에이터를 고용했습니다. 크리에이터 로스터를 구축 중입니다.
 
 ### 업계 업데이트
-- [@QuantumCanary_](https://x.com/@QuantumCanary_)의 [Zcash 심층 분석](https://x.com/QuantumCanary_/status/2016327421797294286) 기사.
-- [@QuantumCanary_](https://x.com/@QuantumCanary_)에서 "[블록체인 비교표](https://x.com/QuantumCanary_/status/2015734605450731824)"를 발표했습니다.
+
+- [@QuantumCanary\_](https://x.com/@QuantumCanary_)의 [Zcash 심층 분석](https://x.com/QuantumCanary_/status/2016327421797294286) 기사.
+- [@QuantumCanary\_](https://x.com/@QuantumCanary_)에서 "[블록체인 비교표](https://x.com/QuantumCanary_/status/2015734605450731824)"를 발표했습니다.

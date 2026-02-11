@@ -34,20 +34,25 @@ Chainalysis 估计 2025 年有 170 亿美元的加密货币被盗。当时的口
 以下是我们本周发布的其他内容：
 
 ### GitHub 活动（5 个已合并的拉取请求）：
+
 ![Github 统计](/blog/assets/github-stats-weekly-update-02-04-2026.png)
 
 ### 核心技术与 ZK
+
 - 高安全账户的多重签名 (Multisig) pallet 已进入测试阶段，并配备了 CLI 命令。
 - 为高安全账户增加了链上回收资金功能。
 - 使 qp-plonky2 与原始 plonky2 仓库的更改保持同步。
 
 ### 网页与移动应用更新
+
 - 重构了任务页面的 UI，增加了渐变效果和钱包集成。
 - 清理了应用中未使用的资源。
 
 ### 内容与合作伙伴
+
 - [@QuantusNetwork](https://x.com/@QuantusNetwork) 和 [@YuviLightman](https://x.com/@YuviLightman) 账户的粉丝数均突破 1,000。
 - 与 Henry Love 关于 AI 和生产力的播客（已上传至我们的 Youtube）。
 
 ### 行业动态
+
 - Quantum Canary：[“Zcash 会取代比特币吗？”](https://x.com/QuantumCanary_/status/2016327421797294286)

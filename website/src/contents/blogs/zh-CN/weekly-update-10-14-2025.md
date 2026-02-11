@@ -20,6 +20,7 @@ tags:
 ---
 
 ## 产品与开发新闻
+
 - 每周 Github 活动报告，包含 104 个事件和 6 个已合并的拉取请求：https://github.com/Quantus-Network/n8n-workflows/blob/main/github/weekly-update-2025-10-12-23%3A16%3A37.md
 - 为即将推出的参与活动设计了可逆交易的游戏化方案。
 - 将 Rusty Crystals 中的内存分配优化了 80%。
@@ -31,10 +32,12 @@ tags:
 - Schrodinger 测试网的新引导节点 (bootnodes)。
 
 ## 内容
+
 - 与自由地 (Liberland) 总统 Vit Jedlička 的播客已上线：https://www.youtube.com/watch?v=_hy-SaPRzpk&t
 - 与投资者和 KOL 进行了大量接触。
 - 为推荐计划和晋升系统设计了图形。
 
 ## 行业动态
+
 - 涵盖隐私量子风险的文章。未来的量子计算机可能会追溯暴露 Zcash 等使用椭圆曲线密码学的网络上的过去私人交易：https://www.quantumcanary.org/insights/zcash-quantum-challenges-could-be-looming
 - 科学家研制出无需每隔几分钟重启一次的量子计算机：https://www.nature.com/articles/s41586-025-09596-6

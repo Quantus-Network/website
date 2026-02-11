@@ -37,9 +37,11 @@ This week we also [announced](https://x.com/QuantusNetwork/status/20163901256267
 That's the highlights. Here's what else we shipped in the last week:
 
 ### GitHub Activity (19 merged pull requests):
+
 ![Github Stats](/blog/assets/github-stats-weekly-update-01-28-2026.webp)
 
 ### Core Tech & ZK
+
 - Completed [@Neodyme](https://x.com/@Neodyme) audit with all issues resolved. Hardening techniques applied including memory zeroing after use. [Post here](https://x.com/QuantusNetwork/status/2016390125626773871).
 - Shipped Deniable RPCs via prefix hashing. Users now have plausible deniability when connecting to RPC nodes (oblivious lookup).
 - Enabled private ZK addresses for all tokens at genesis.
@@ -49,6 +51,7 @@ That's the highlights. Here's what else we shipped in the last week:
 - Revamped fuzzer for ZK-aggregator circuits and expanded test coverage for miner fees and burned fees.
 
 ### Web & Mobile App Updates
+
 - Shipped Mobile App v1.1.5 (build 65) with high security pull feature.
 - Created demo videos for high security features.
 - Explorer and faucet improvements: added error and high security events to block details, search by error type, and enhanced group message filtering.
@@ -57,6 +60,7 @@ That's the highlights. Here's what else we shipped in the last week:
 - Updated website blog UX and fixed SEO issues.
 
 ### Content & Partnerships
+
 - Crossed 1,000 members on Telegram.
 - Booked venue for side event at Token2049 Dubai.
 - The team has decided to return to [@ns](https://x.com/@ns) for our next sprint.
@@ -64,5 +68,6 @@ That's the highlights. Here's what else we shipped in the last week:
 - Hired our first medium-sized content creator for video collabs. Building our roster of creators.
 
 ### Industry Updates
-- [@QuantumCanary_](https://x.com/@QuantumCanary_) article [diving into Zcash](https://x.com/QuantumCanary_/status/2016327421797294286).
-- [@QuantumCanary_](https://x.com/@QuantumCanary_) published their "[Blockchain Comparison Table](https://x.com/QuantumCanary_/status/2015734605450731824)".
+
+- [@QuantumCanary\_](https://x.com/@QuantumCanary_) article [diving into Zcash](https://x.com/QuantumCanary_/status/2016327421797294286).
+- [@QuantumCanary\_](https://x.com/@QuantumCanary_) published their "[Blockchain Comparison Table](https://x.com/QuantumCanary_/status/2015734605450731824)".

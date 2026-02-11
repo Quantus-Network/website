@@ -22,9 +22,11 @@ This week the team released the Dirac testnet, finalizing the chain-wide update 
 **IF YOU ARE A MINER YOU SHOULD UPDATE TO THE NEW DIRAC TESTNET**
 
 ## Development News
+
 - Weekly Github activity report including 12 pull requests and 3 merged: https://github.com/Quantus-Network/n8n-workflows/blob/main/github/weekly-update-2025-11-09-23:57:50.md
 
 ## Core Tech
+
 - Full reference implementation for qp-rusty-crystals with constant time key generation and signatures released and merged.
 - Resolved all KAT tests for rusty crystals, made it constant time and fixed outstanding release script issues.
 - Initiated audit of qp-rusty-crystals.
@@ -35,6 +37,7 @@ This week the team released the Dirac testnet, finalizing the chain-wide update 
 - Began implementation of GHOSTDAG consensus paper.
 
 ## Network & Infra
+
 - Release Dirac 0.4.0 on all servers.
 - Release external miner build 1.0.0.
 - Update chain for rusty crystals update.
@@ -48,6 +51,7 @@ This week the team released the Dirac testnet, finalizing the chain-wide update 
 - Fixed indexing issues at http://quantu.se/ and updated metadata to point to the correct node URL.
 
 ## Web & Mobile App Updates
+
 - Finished mobile app notification feature.
 - Refactored route intent handling to improve deep linking performance and reliability.
 - The miner dashboard layout is now fully responsive.
@@ -55,10 +59,12 @@ This week the team released the Dirac testnet, finalizing the chain-wide update 
 - Refactored Quantus Explorer API client to use modern hooks for better performance.
 
 ## Content & Partnerships
+
 - Podcast with Remus Boroiu, a 9-time bodybuilding champion, entrepreneur, and creator: https://www.youtube.com/watch?v=OtBKnaFAe_8
 - Press release via Chainwire.
 
 ## Quantum Canary
+
 - An analysis of quantum stocks: https://www.quantumcanary.org/insights/what-is-the-best-quantum-computing-stock
 - A deep dive into the RAND Corporation’s influential role in shaping global policy and accelerating the timeline for PQC migration: https://www.quantumcanary.org/insights/rand-quantum-controversy
 - Princeton researches triple coherence times for 45 tantalum-on-sapphire qubits: https://www.nature.com/articles/s41586-025-09687-4

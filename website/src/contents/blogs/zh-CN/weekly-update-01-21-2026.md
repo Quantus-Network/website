@@ -37,9 +37,11 @@ tags:
 以下是我们本周发布的其他内容，以便当 Q-day 到来时，我们已做好准备：
 
 ### Github 活动（7 个已合并的拉取请求）：
+
 ![Github 统计](/blog/assets/github-stats-weekly-update-01-21-2026.webp)
 
 ### 核心技术与 ZK
+
 - 将 Dilithium 门限签名集成到另一个协议的 MPC 系统中。
 - 使用 Parity 多重签名 pallet 构建了自定义国库管理的 POC。
 - 实现了自定义多重签名 pallet 的第一个迭代，并进行了测试和基准测试。
@@ -48,6 +50,7 @@ tags:
 - 修复了针对新字段元素序列化器的端到端 ZK-aggregator 示例脚本。
 
 ### 网页与移动应用更新
+
 - 构建了移动端 UX，以支持高安全账户的固定延迟和拦截功能（仍在测试中）。
 - CLI 中增加了区块扫描器和高安全功能，并改进了错误处理。
 - Subsquid（索引器）更新，用于高安全处理，并修复了针对最新 Poseidon 的哈希器。
@@ -55,10 +58,12 @@ tags:
 - 白皮书更新至 v3.1，修复了代币经济图表的分配值。
 
 ### 内容与合作伙伴
+
 - 播客现在正上传到 Apple Podcasts。
 - 开始与 2 个代币启动平台 (launchpads) 进行对话。
 - Quantum Canary 区块链对比页面的改进。
 - 与 AJ 关于生物黑客和自我优化的播客：https://x.com/QuantusNetwork/status/2012526120869286161
 
 ### 行业动态
+
 - Quantum Canary 文章讨论 CRQC 如何威胁中本聪的代币：https://x.com/QuantumCanary_/status/2011706634868047982

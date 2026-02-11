@@ -20,6 +20,7 @@ tags:
 ---
 
 ## 製品 & 開発ニュース
+
 - 105件のイベントと17件のプルリクエストイベントを含む週刊Github活動レポート：https://github.com/Quantus-Network/n8n-workflows/blob/main/github/weekly-update-2025-10-20-02%3A48%3A36.md
 - GPUマイナー向けのIngonyama icicleバインディングの統合を開始しました。
 - Plonky2にPoseidon2ゲートを実装しました。
@@ -31,9 +32,11 @@ tags:
 - コンセンサスメカニズムの監査を受け取り、それに対応して更新を行っています。
 
 ## コンテンツ & パートナーシップ
+
 - 起業家でコンテンツクリエイターのKhaled Sabbagh氏とのポッドキャストを公開：https://www.youtube.com/watch?v=RZKmiOPzTVw&t
 - 投資家、潜在的なソーシャルメディアパートナー、およびアドバイザーとの多くの議論が進行中です。
 
 ## 業界ニュース
+
 - 量子の進歩、Willowチップ、および暗号資産のリスクに関する記事：https://www.quantumcanary.org/insights/overlooked-threat-to-crypto-some-industry-leaders-are-dismissing-too-soon
 - 研究者が「シュレーディンガーの猫状態」を介して、記録的な120個の最大量子もつれ状態の量子ビットを達成：https://arxiv.org/abs/2510.09520

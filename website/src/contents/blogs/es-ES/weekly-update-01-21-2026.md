@@ -37,9 +37,11 @@ No quiero anunciar nada aquí, pero siempre puedes abrir nuestro GitHub y echar 
 Esto es lo que más enviamos esta semana, para que cuando llegue el día Q, estemos listos:
 
 ### Actividad en Github (7 pull requests fusionados):
+
 ![Estadísticas de Github](/blog/assets/github-stats-weekly-update-01-21-2026.webp)
 
 ### Tecnología Core y ZK
+
 - Integración de firmas de umbral Dilithium en el sistema MPC de otro protocolo.
 - Construcción de POC para la gestión de tesorería personalizada utilizando el pallet multisig de Parity.
 - Implementación de la primera iteración del pallet multisig personalizado con pruebas y benchmarks.
@@ -48,6 +50,7 @@ Esto es lo que más enviamos esta semana, para que cuando llegue el día Q, este
 - Corrección del script de ejemplo de ZK-aggregator de extremo a extremo para los nuevos serializadores de elementos de campo.
 
 ### Actualizaciones de la Aplicación Web y Móvil
+
 - Construcción de la UX móvil para soportar funciones de retraso fijo e interceptación para cuentas de alta seguridad (aún en pruebas).
 - Escáner de bloques y funciones de alta seguridad añadidas a la CLI con una mejor gestión de errores.
 - Actualizaciones de Subsquid (indexador) para el manejo de alta seguridad y corrección del hasher para el último Poseidon.
@@ -55,10 +58,12 @@ Esto es lo que más enviamos esta semana, para que cuando llegue el día Q, este
 - Whitepaper actualizado a la v3.1, corrección de los valores de distribución del gráfico de tokenomics.
 
 ### Contenido y Alianzas
+
 - Los podcasts ahora se están subiendo a Apple Podcasts.
 - Inicio de conversaciones con 2 plataformas de lanzamiento (launchpads) de tokens.
 - Mejoras en la página de comparación de blockchains de Quantum Canary.
 - Podcast con AJ sobre biohacking y auto-optimización: https://x.com/QuantusNetwork/status/2012526120869286161
 
 ### Actualizaciones de la Industria
+
 - Artículo de Quantum Canary discutiendo cómo los CRQCs amenazan las monedas de Satoshi: https://x.com/QuantumCanary_/status/2011706634868047982

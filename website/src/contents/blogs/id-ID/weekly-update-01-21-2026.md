@@ -37,9 +37,11 @@ Saya tidak ingin mengumumkan apa pun di sini, tetapi Anda selalu dapat membuka G
 Inilah hal lain yang kami luncurkan minggu ini, jadi ketika hari Q tiba, kami siap:
 
 ### Aktivitas Github (7 pull request yang digabungkan):
+
 ![Statistik Github](/blog/assets/github-stats-weekly-update-01-21-2026.webp)
 
 ### Core Tech & ZK
+
 - Mengintegrasikan tanda tangan ambang Dilithium ke dalam sistem MPC protokol lain.
 - Membangun POC untuk manajemen treasury kustom menggunakan pallet multisig Parity.
 - Mengimplementasikan iterasi pertama pallet multisig kustom dengan pengujian dan benchmark.
@@ -48,6 +50,7 @@ Inilah hal lain yang kami luncurkan minggu ini, jadi ketika hari Q tiba, kami si
 - Memperbaiki skrip contoh ZK-aggregator end-to-end untuk serializer elemen field baru.
 
 ### Pembaruan Aplikasi Web & Seluler
+
 - Membangun UX seluler untuk mendukung fitur penundaan tetap dan intersep untuk akun keamanan tinggi (masih dalam pengujian).
 - Pemindai blok dan fitur keamanan tinggi ditambahkan ke CLI dengan penanganan kesalahan yang ditingkatkan.
 - Pembaruan Subsquid (indexer) untuk penanganan keamanan tinggi dan perbaikan hasher untuk Poseidon terbaru.
@@ -55,10 +58,12 @@ Inilah hal lain yang kami luncurkan minggu ini, jadi ketika hari Q tiba, kami si
 - Whitepaper diperbarui ke v3.1, memperbaiki nilai distribusi bagan tokenomik.
 
 ### Konten & Kemitraan
+
 - Podcast sekarang sedang diunggah ke Apple Podcasts.
 - Memulai percakapan dengan 2 launchpad token.
 - Peningkatan halaman perbandingan blockchain Quantum Canary.
 - Podcast dengan AJ tentang biohacking dan optimasi diri: https://x.com/QuantusNetwork/status/2012526120869286161
 
 ### Pembaruan Industri
+
 - Artikel Quantum Canary yang membahas bagaimana CRQC mengancam Koin Satoshi: https://x.com/QuantumCanary_/status/2011706634868047982

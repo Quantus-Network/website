@@ -34,20 +34,25 @@ Minggu ini kami mulai menguji integrasi multisig untuk akun guardian. Kami juga 
 Berikut adalah hal lain yang kami luncurkan minggu ini:
 
 ### Aktivitas GitHub (5 pull request yang digabungkan):
+
 ![Statistik Github](/blog/assets/github-stats-weekly-update-02-04-2026.png)
 
 ### Core Tech & ZK
+
 - Pallet multisig untuk akun keamanan tinggi dalam fase pengujian dengan perintah CLI.
 - Menambahkan fungsionalitas pemulihan dana ke rantai untuk akun keamanan tinggi.
 - Memperbarui qp-plonky2 dengan perubahan yang dibuat pada repo plonky2 asli.
 
 ### Pembaruan Aplikasi Web & Seluler
+
 - Merombak UI layar quest dengan gradien dan integrasi dompet.
 - Membersihkan aset yang tidak digunakan dalam aplikasi.
 
 ### Konten & Kemitraan
+
 - Akun [@QuantusNetwork](https://x.com/@QuantusNetwork) dan [@YuviLightman](https://x.com/@YuviLightman) keduanya melampaui 1k+ pengikut.
 - Podcast dengan Henry Love tentang AI dan produktivitas (di Youtube kami).
 
 ### Pembaruan Industri
+
 - Quantum Canary: ["Akankah Zcash Menggantikan Bitcoin?"](https://x.com/QuantumCanary_/status/2016327421797294286)

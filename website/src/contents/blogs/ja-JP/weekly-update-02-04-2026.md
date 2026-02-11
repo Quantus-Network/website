@@ -34,20 +34,25 @@ Chainalysisの推定によると、2025年には170億ドルの暗号資産が�
 今週出荷されたその他の内容は以下の通りです。
 
 ### GitHub活動（5件のマージされたプルリクエスト）：
+
 ![Github統計](/blog/assets/github-stats-weekly-update-02-04-2026.png)
 
 ### コア技術 & ZK
+
 - 高セキュリティアカウント用のマルチシグパレットがCLIコマンドとともにテスト段階に入りました。
 - 高セキュリティアカウント向けに資金回収機能をチェーンに追加しました。
 - qp-plonky2をオリジナルのplonky2リポジトリの変更に合わせて最新の状態に更新しました。
 
 ### ウェブ & モバイルアプリの更新
+
 - クエスト画面のUIをグラデーションとウォレット統合でリファクタリングしました。
 - アプリ内の未使用のアセットをクリーンアップしました。
 
 ### コンテンツ & パートナーシップ
+
 - [@QuantusNetwork](https://x.com/@QuantusNetwork) と [@YuviLightman](https://x.com/@YuviLightman) のアカウントが共にフォロワー1,000人を突破しました。
 - AIと生産性に関するHenry Love氏とのポッドキャスト（Youtubeにて公開）。
 
 ### 業界の更新
+
 - Quantum Canary: [「Zcashはビットコインに取って代わるか？」](https://x.com/QuantumCanary_/status/2016327421797294286)
