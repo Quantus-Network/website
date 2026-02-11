@@ -726,7 +726,12 @@
       "pow": "Prueba de Trabajo",
       "libp2p": "libp2p",
       "ghostdag": "GHOSTDAG",
-      "blue-green-deployment": "Despliegue Azul-Verde"
+      "blue-green-deployment": "Despliegue Azul-Verde",
+      "plonky2": "Plonky2",
+      "referral": "Referido",
+      "governance": "Gobernanza",
+      "treasury": "Tesorería",
+      "conviction-voting": "Votación por Convicción"
     }
   },
   "cookie": {

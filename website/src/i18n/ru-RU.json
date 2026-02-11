@@ -726,7 +726,12 @@
       "pow": "Доказательство работы",
       "libp2p": "libp2p",
       "ghostdag": "GHOSTDAG",
-      "blue-green-deployment": "Сине-зеленое развертывание"
+      "blue-green-deployment": "Сине-зеленое развертывание",
+      "plonky2": "Plonky2",
+      "referral": "Реферал",
+      "governance": "Управление",
+      "treasury": "Казначейство",
+      "conviction-voting": "Голосование по убеждению"
     }
   },
   "cookie": {

@@ -715,7 +715,12 @@
       "pow": "工作量证明",
       "libp2p": "libp2p",
       "ghostdag": "GHOSTDAG",
-      "blue-green-deployment": "蓝绿部署"
+      "blue-green-deployment": "蓝绿部署",
+      "plonky2": "Plonky2",
+      "referral": "推荐",
+      "governance": "治理",
+      "treasury": "国库",
+      "conviction-voting": "信念投票"
     }
   },
   "cookie": {

@@ -718,7 +718,12 @@
       "pow": "작업 증명",
       "libp2p": "libp2p",
       "ghostdag": "GHOSTDAG",
-      "blue-green-deployment": "블루-그린 배포"
+      "blue-green-deployment": "블루-그린 배포",
+      "plonky2": "Plonky2",
+      "referral": "추천",
+      "governance": "거버넌스",
+      "treasury": "트레저리",
+      "conviction-voting": "컨빅션 보팅"
     }
   },
   "cookie": {

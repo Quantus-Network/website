@@ -726,7 +726,12 @@
       "pow": "Proof of Work",
       "libp2p": "libp2p",
       "ghostdag": "GHOSTDAG",
-      "blue-green-deployment": "Blue-Green-Deployment"
+      "blue-green-deployment": "Blue-Green-Deployment",
+      "plonky2": "Plonky2",
+      "referral": "Empfehlung",
+      "governance": "Governance",
+      "treasury": "Treasury",
+      "conviction-voting": "Conviction Voting"
     }
   },
   "cookie": {
