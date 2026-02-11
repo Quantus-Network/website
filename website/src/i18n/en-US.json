@@ -745,7 +745,10 @@
       "rpc": "RPC",
       "privacy": "Privacy",
       "audit": "Audit",
-      "security": "Security"
+      "security": "Security",
+      "guardian": "Guardian",
+      "time-lock": "Time-Lock",
+      "fraud-prevention": "Fraud Prevention"
     }
   },
   "cookie": {

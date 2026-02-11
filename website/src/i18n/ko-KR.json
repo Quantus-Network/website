@@ -735,7 +735,10 @@
       "rpc": "RPC",
       "privacy": "프라이버시",
       "audit": "감사",
-      "security": "보안"
+      "security": "보안",
+      "guardian": "가디언",
+      "time-lock": "타임락",
+      "fraud-prevention": "사기 방지"
     }
   },
   "cookie": {

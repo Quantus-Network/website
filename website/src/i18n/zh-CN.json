@@ -732,7 +732,10 @@
       "rpc": "RPC",
       "privacy": "隐私",
       "audit": "审计",
-      "security": "安全"
+      "security": "安全",
+      "guardian": "守护者",
+      "time-lock": "时间锁",
+      "fraud-prevention": "反欺诈"
     }
   },
   "cookie": {

@@ -735,7 +735,10 @@
       "rpc": "RPC",
       "privacy": "プライバシー",
       "audit": "監査",
-      "security": "セキュリティ"
+      "security": "セキュリティ",
+      "guardian": "ガーディアン",
+      "time-lock": "タイムロック",
+      "fraud-prevention": "不正防止"
     }
   },
   "cookie": {

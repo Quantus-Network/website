@@ -743,7 +743,10 @@
       "rpc": "RPC",
       "privacy": "Privasi",
       "audit": "Audit",
-      "security": "Keamanan"
+      "security": "Keamanan",
+      "guardian": "Guardian",
+      "time-lock": "Kunci Waktu",
+      "fraud-prevention": "Pencegahan Penipuan"
     }
   },
   "cookie": {
