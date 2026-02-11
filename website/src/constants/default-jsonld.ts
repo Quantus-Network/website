@@ -104,6 +104,8 @@ export const whitepaperJsonLd: TechArticle = {
   "@id": `${env.SITE_BASE_URL}/whitepaper`,
   "@type": "TechArticle",
   headline: "Quantus Network Whitepaper",
+  image:
+    "https://raw.githubusercontent.com/Quantus-Network/whitepaper/main/whitepaper-cover.png",
   description:
     "The official whitepaper for Quantus Network, detailing the versioned history, protocol, and architecture of the network.",
   author: {

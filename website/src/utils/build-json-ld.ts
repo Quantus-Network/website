@@ -79,6 +79,6 @@ export function generateBreadcrumbs({
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement,
+    itemListElement: itemListElement as any,
   };
 }
