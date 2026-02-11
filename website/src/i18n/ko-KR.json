@@ -715,7 +715,10 @@
       "poseidon": "Poseidon",
       "dirac-testnet": "Dirac 테스트넷",
       "mobile-wallet": "모바일 지갑",
-      "pow": "작업 증명"
+      "pow": "작업 증명",
+      "libp2p": "libp2p",
+      "ghostdag": "GHOSTDAG",
+      "blue-green-deployment": "블루-그린 배포"
     }
   },
   "cookie": {

@@ -712,7 +712,10 @@
       "poseidon": "Poseidon",
       "dirac-testnet": "Dirac 测试网",
       "mobile-wallet": "移动钱包",
-      "pow": "工作量证明"
+      "pow": "工作量证明",
+      "libp2p": "libp2p",
+      "ghostdag": "GHOSTDAG",
+      "blue-green-deployment": "蓝绿部署"
     }
   },
   "cookie": {

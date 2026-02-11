@@ -723,7 +723,10 @@
       "poseidon": "Poseidon",
       "dirac-testnet": "Dirac Testnet",
       "mobile-wallet": "Dompet Seluler",
-      "pow": "Proof of Work"
+      "pow": "Proof of Work",
+      "libp2p": "libp2p",
+      "ghostdag": "GHOSTDAG",
+      "blue-green-deployment": "Deployment Blue-Green"
     }
   },
   "cookie": {

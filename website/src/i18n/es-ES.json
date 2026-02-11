@@ -723,7 +723,10 @@
       "poseidon": "Poseidon",
       "dirac-testnet": "Dirac Testnet",
       "mobile-wallet": "Billetera Móvil",
-      "pow": "Prueba de Trabajo"
+      "pow": "Prueba de Trabajo",
+      "libp2p": "libp2p",
+      "ghostdag": "GHOSTDAG",
+      "blue-green-deployment": "Despliegue Azul-Verde"
     }
   },
   "cookie": {

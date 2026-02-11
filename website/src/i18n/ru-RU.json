@@ -723,7 +723,10 @@
       "poseidon": "Poseidon",
       "dirac-testnet": "Тестовая сеть Dirac",
       "mobile-wallet": "Мобильный кошелек",
-      "pow": "Доказательство работы"
+      "pow": "Доказательство работы",
+      "libp2p": "libp2p",
+      "ghostdag": "GHOSTDAG",
+      "blue-green-deployment": "Сине-зеленое развертывание"
     }
   },
   "cookie": {
