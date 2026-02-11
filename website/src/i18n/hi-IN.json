@@ -719,7 +719,10 @@
       "binance-blockchain-week": "Binance Blockchain Week",
       "lattice-cryptography": "Lattice Cryptography",
       "polkadot-sdk": "Polkadot SDK",
-      "audit": "Audit"
+      "audit": "Audit",
+      "miner-app": "Miner App",
+      "ama": "AMA",
+      "substrate": "Substrate"
     }
   },
   "cookie": {

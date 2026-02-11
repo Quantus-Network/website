@@ -708,7 +708,10 @@
       "binance-blockchain-week": "Binance Blockchain Week",
       "lattice-cryptography": "格子暗号",
       "polkadot-sdk": "Polkadot SDK",
-      "audit": "監査"
+      "audit": "監査",
+      "miner-app": "マイナーアプリ",
+      "ama": "AMA",
+      "substrate": "Substrate"
     }
   },
   "cookie": {
