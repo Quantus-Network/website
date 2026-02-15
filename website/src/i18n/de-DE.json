@@ -456,8 +456,8 @@
       "intro": "Quantus betreibt kein Pre-Mining und reserviert keine Token für das Team.",
       "content": "Stattdessen wird das Team durch Mining-Belohnungen entschädigt:",
       "points": [
-        "In den ersten 4 Jahren werden **50%** der Block-Belohnungen dem Team und den Beratern zugewiesen (dies fungiert als Vesting auf Protokollebene).",
-        "Die verbleibenden **50%** gehen an die Miner.",
+        "In den ersten 4 Jahren wird ein Teil der Block-Belohnungen dem Team und den Beratern zugewiesen (dies fungiert als Vesting auf Protokollebene). Der verbleibende Teil geht an die Miner.",
+        "Der Anteil ist so gewählt, dass **10%** des Gesamtangebots über 4 Jahre an das Team ausgegeben werden.",
         "Nach Jahr 4 wird der Anteil des Teams in einen **Community-Fonds** umgeleitet, der über den verbleibenden Emissionszeitraum allmählich 25% der Gesamtversorgung ansammelt."
       ]
     },

@@ -456,8 +456,8 @@
       "intro": "Quantus does not pre-mine or reserve tokens for the team.",
       "content": "Instead, the team is compensated through mining rewards:",
       "points": [
-        "For the first 4 years, **50%** of block rewards are allocated to the team and advisors (this acts as protocol-level vesting).",
-        "The remaining **50%** goes to miners.",
+        "For the first 4 years, a portion of the block rewards are allocated to the team and advisors (this acts as protocol-level vesting). The remaining portion goes to miners.",
+        "The amount is chosen so that **10%** of the total supply is emitted to the team over 4 years.",
         "After year 4, the team's share is redirected to a **community fund**, which gradually accumulates 25% of the total supply over the remaining emission period."
       ]
     },
