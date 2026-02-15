@@ -456,8 +456,8 @@
       "intro": "Quantus no hace preminería ni reserva tokens para el equipo.",
       "content": "En cambio, el equipo es compensado a través de recompensas de minería:",
       "points": [
-        "Durante los primeros 4 años, el **50%** de las recompensas por bloque se asignan al equipo y asesores (esto actúa como vesting a nivel de protocolo).",
-        "El **50%** restante va a los mineros.",
+        "Durante los primeros 4 años, una parte de las recompensas por bloque se asigna al equipo y asesores (esto actúa como vesting a nivel de protocolo). La parte restante va a los mineros.",
+        "La cantidad se elige de manera que el **10%** del suministro total se distribuya al equipo en 4 años.",
         "Después del año 4, la parte del equipo se redirige a un **fondo comunitario**, que acumula gradualmente el 25% del suministro total durante el período de emisión restante."
       ]
     },

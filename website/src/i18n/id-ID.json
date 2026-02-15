@@ -456,8 +456,8 @@
       "intro": "Quantus tidak melakukan pra-penambangan atau mereservasi token untuk tim.",
       "content": "Sebaliknya, tim dikompensasi melalui hadiah penambangan:",
       "points": [
-        "Untuk 4 tahun pertama, **50%** dari hadiah blok dialokasikan untuk tim dan penasihat (ini bertindak sebagai vesting tingkat protokol).",
-        "Sisa **50%** diberikan kepada penambang.",
+        "Untuk 4 tahun pertama, sebagian dari hadiah blok dialokasikan untuk tim dan penasihat (ini bertindak sebagai vesting tingkat protokol). Sisanya diberikan kepada penambang.",
+        "Jumlahnya dipilih sehingga **10%** dari total pasokan didistribusikan kepada tim selama 4 tahun.",
         "Setelah tahun ke-4, bagian tim dialihkan ke **dana komunitas**, yang secara bertahap mengakumulasi 25% dari total pasokan selama periode emisi yang tersisa."
       ]
     },
