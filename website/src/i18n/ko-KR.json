@@ -738,7 +738,12 @@
       "security": "보안",
       "guardian": "가디언",
       "time-lock": "타임락",
-      "fraud-prevention": "사기 방지"
+      "fraud-prevention": "사기 방지",
+      "coingecko": "CoinGecko",
+      "quantum-resistant": "양자 내성",
+      "zk-proofs": "ZK 증명",
+      "research": "연구",
+      "notification-system": "알림 시스템"
     }
   },
   "cookie": {

@@ -735,7 +735,12 @@
       "security": "安全",
       "guardian": "守护者",
       "time-lock": "时间锁",
-      "fraud-prevention": "反欺诈"
+      "fraud-prevention": "反欺诈",
+      "coingecko": "CoinGecko",
+      "quantum-resistant": "抗量子",
+      "zk-proofs": "ZK 证明",
+      "research": "研究",
+      "notification-system": "通知系统"
     }
   },
   "cookie": {

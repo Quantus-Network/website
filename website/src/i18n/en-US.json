@@ -748,7 +748,12 @@
       "security": "Security",
       "guardian": "Guardian",
       "time-lock": "Time-Lock",
-      "fraud-prevention": "Fraud Prevention"
+      "fraud-prevention": "Fraud Prevention",
+      "coingecko": "CoinGecko",
+      "quantum-resistant": "Quantum-Resistant",
+      "zk-proofs": "ZK-Proofs",
+      "research": "Research",
+      "notification-system": "Notification System"
     }
   },
   "cookie": {
