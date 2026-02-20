@@ -35,7 +35,7 @@ Chainalysisの推定によると、2025年には170億ドルの暗号資産が�
 
 ### GitHub活動（5件のマージされたプルリクエスト）：
 
-![Github統計](/blog/assets/github-stats-weekly-update-02-04-2026.png)
+![Github統計](/blog/assets/github-stats-weekly-update-02-04-2026.webp)
 
 ### コア技術 & ZK
 

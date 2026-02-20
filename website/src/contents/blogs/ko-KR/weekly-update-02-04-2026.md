@@ -35,7 +35,7 @@ tags:
 
 ### GitHub 활동 (5개의 병합된 풀 리퀘스트):
 
-![Github 통계](/blog/assets/github-stats-weekly-update-02-04-2026.png)
+![Github 통계](/blog/assets/github-stats-weekly-update-02-04-2026.webp)
 
 ### 코어 기술 및 ZK
 

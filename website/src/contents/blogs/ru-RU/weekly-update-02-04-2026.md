@@ -35,7 +35,7 @@ tags:
 
 ### Активность на GitHub (5 объединенных pull-реквестов):
 
-![Статистика Github](/blog/assets/github-stats-weekly-update-02-04-2026.png)
+![Статистика Github](/blog/assets/github-stats-weekly-update-02-04-2026.webp)
 
 ### Core Tech & ZK
 

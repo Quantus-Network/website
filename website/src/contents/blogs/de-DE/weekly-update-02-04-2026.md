@@ -35,7 +35,7 @@ Hier ist, was wir diese Woche sonst noch ausgeliefert haben:
 
 ### GitHub-Aktivität (5 gemergte Pull-Requests):
 
-![Github-Statistiken](/blog/assets/github-stats-weekly-update-02-04-2026.png)
+![Github-Statistiken](/blog/assets/github-stats-weekly-update-02-04-2026.webp)
 
 ### Core Tech & ZK
 

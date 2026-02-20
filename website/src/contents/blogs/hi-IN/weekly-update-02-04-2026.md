@@ -35,7 +35,7 @@ tags:
 
 ### GitHub गतिविधि (5 मर्ज किए गए पुल रिक्वेस्ट):
 
-![जीथब आँकड़े](/blog/assets/github-stats-weekly-update-02-04-2026.png)
+![जीथब आँकड़े](/blog/assets/github-stats-weekly-update-02-04-2026.webp)
 
 ### कोर टेक और ZK
 

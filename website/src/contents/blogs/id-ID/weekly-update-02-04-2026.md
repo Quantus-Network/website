@@ -35,7 +35,7 @@ Berikut adalah hal lain yang kami luncurkan minggu ini:
 
 ### Aktivitas GitHub (5 pull request yang digabungkan):
 
-![Statistik Github](/blog/assets/github-stats-weekly-update-02-04-2026.png)
+![Statistik Github](/blog/assets/github-stats-weekly-update-02-04-2026.webp)
 
 ### Core Tech & ZK
 

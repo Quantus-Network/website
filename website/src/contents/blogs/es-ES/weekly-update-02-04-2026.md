@@ -35,7 +35,7 @@ Aquí está lo demás que enviamos esta semana:
 
 ### Actividad en GitHub (5 pull requests fusionados):
 
-![Estadísticas de Github](/blog/assets/github-stats-weekly-update-02-04-2026.png)
+![Estadísticas de Github](/blog/assets/github-stats-weekly-update-02-04-2026.webp)
 
 ### Tecnología Core y ZK
 

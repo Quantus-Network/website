@@ -35,7 +35,7 @@ Chainalysis 估计 2025 年有 170 亿美元的加密货币被盗。当时的口
 
 ### GitHub 活动（5 个已合并的拉取请求）：
 
-![Github 统计](/blog/assets/github-stats-weekly-update-02-04-2026.png)
+![Github 统计](/blog/assets/github-stats-weekly-update-02-04-2026.webp)
 
 ### 核心技术与 ZK
 

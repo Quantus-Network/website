@@ -35,7 +35,7 @@ Here's what else we shipped this week:
 
 ### GitHub Activity (5 merged pull requests):
 
-![Github Stats](/blog/assets/github-stats-weekly-update-02-04-2026.png)
+![Github Stats](/blog/assets/github-stats-weekly-update-02-04-2026.webp)
 
 ### Core Tech & ZK
 
