@@ -749,7 +749,9 @@
       "fraud-prevention": "Prevención de fraude",
       "coingecko": "CoinGecko",
       "quantum-resistant": "Resistente a la computación cuántica",
-      "zk-proofs": "Pruebas ZK"
+      "zk-proofs": "Pruebas ZK",
+      "research": "Investigación",
+      "notification-system": "Sistema de notificaciones"
     }
   },
   "cookie": {

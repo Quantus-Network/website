@@ -749,7 +749,9 @@
       "fraud-prevention": "Pencegahan Penipuan",
       "coingecko": "CoinGecko",
       "quantum-resistant": "Tahan Kuantum",
-      "zk-proofs": "Bukti ZK"
+      "zk-proofs": "Bukti ZK",
+      "research": "Riset",
+      "notification-system": "Sistem Notifikasi"
     }
   },
   "cookie": {
