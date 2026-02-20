@@ -746,7 +746,10 @@
       "security": "Keamanan",
       "guardian": "Guardian",
       "time-lock": "Kunci Waktu",
-      "fraud-prevention": "Pencegahan Penipuan"
+      "fraud-prevention": "Pencegahan Penipuan",
+      "coingecko": "CoinGecko",
+      "quantum-resistant": "Tahan Kuantum",
+      "zk-proofs": "Bukti ZK"
     }
   },
   "cookie": {

@@ -749,7 +749,10 @@
       "security": "Security",
       "guardian": "Guardian",
       "time-lock": "Time-Lock",
-      "fraud-prevention": "Fraud Prevention"
+      "fraud-prevention": "Fraud Prevention",
+      "coingecko": "CoinGecko",
+      "quantum-resistant": "क्वांटम-रेसिस्टेंट",
+      "zk-proofs": "ZK-प्रूफ्स"
     }
   },
   "cookie": {

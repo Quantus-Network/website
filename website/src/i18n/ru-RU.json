@@ -746,7 +746,10 @@
       "security": "Безопасность",
       "guardian": "Хранитель",
       "time-lock": "Временная блокировка",
-      "fraud-prevention": "Предотвращение мошенничества"
+      "fraud-prevention": "Предотвращение мошенничества",
+      "coingecko": "CoinGecko",
+      "quantum-resistant": "Квантово-устойчивый",
+      "zk-proofs": "ZK-доказательства"
     }
   },
   "cookie": {
