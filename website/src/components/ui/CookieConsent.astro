@@ -94,8 +94,10 @@ const t = await createTranslator(locale);
 
     checkExistingConsent() {
       const consent = this.getConsent();
+      const isPrint =
+        new URLSearchParams(window.location.search).get("print") === "true";
 
-      if (consent === null) {
+      if (consent === null && !isPrint) {
         this.showBanner();
       } else if (consent === true) {
         this.loadAnalytics();
