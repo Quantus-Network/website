@@ -56,6 +56,9 @@ export default defineConfig({
       priority: 0.8,
       lastmod: new Date(),
       i18n: { defaultLocale: DEFAULT_LOCALE, locales: LOCALES_MAP },
+      filter: (page) => {
+        return !page.includes("/tags/");
+      },
       serialize: (item) => {
         // Read environment variable at runtime (during build)
         // The serialize function runs during sitemap generation, so process.env should be available

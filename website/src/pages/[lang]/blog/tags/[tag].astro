@@ -52,21 +52,19 @@ const metadata = createMetadata({
   title: t("blog.tag.meta.title", { tag }),
   description: t("blog.tag.meta.description", { tag }),
   pathname: Astro.url.pathname,
+  noindex: true,
+  nofollow: true,
 });
 ---
 
 <Layout {...metadata}>
   <div class="container mx-auto overflow-hidden px-4 py-12">
     <div class="relative flex items-center justify-center">
-      <SphereDecoration
-        class="absolute -top-[11rem] -z-10"
-        variant="3"
-        size={300}
-      />
+      <SphereDecoration class="absolute -top-44 -z-10" variant="3" size={300} />
     </div>
 
     <div class="mb-8">
-      <h1 class="mb-2 max-w-[27rem] text-3xl font-bold text-white md:text-4xl">
+      <h1 class="mb-2 max-w-108 text-3xl font-bold text-white md:text-4xl">
         {t("blog.title")}
       </h1>
       <p class="text-xl text-gray-300">
@@ -113,7 +111,7 @@ const metadata = createMetadata({
 
     <div class="relative flex items-center justify-center">
       <SphereDecoration
-        class="absolute -bottom-[11rem] -z-10"
+        class="absolute -bottom-44 -z-10"
         variant="9"
         size={300}
       />
