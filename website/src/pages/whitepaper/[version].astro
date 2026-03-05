@@ -1,7 +1,11 @@
 ---
 import { render } from "astro:content";
 import Layout from "@/components/layout/Layout.astro";
-import { getLocaleFromUrl, createTranslator, getLocalizedPath } from "@/utils/i18n";
+import {
+  getLocaleFromUrl,
+  createTranslator,
+  getLocalizedPath,
+} from "@/utils/i18n";
 import { JsonLdGraph } from "@/utils/build-json-ld";
 import { getWhitepaperJsonLd } from "@/constants/default-jsonld";
 import { createMetadata } from "@/utils/create-metadata";
@@ -18,7 +22,9 @@ import {
 export async function getStaticPaths() {
   const { getCollection } = await import("astro:content");
   const allEntries = await getCollection("whitepaper");
-  const enEntries = allEntries.filter((e) => e.id.toLowerCase().startsWith("en-us/"));
+  const enEntries = allEntries.filter((e) =>
+    e.id.toLowerCase().startsWith("en-us/"),
+  );
 
   return enEntries.map((entry) => ({
     params: { version: `v${entry.data.version}` },
@@ -35,7 +41,8 @@ if (!entry) return Astro.redirect("/404");
 
 const allEntries = await getWhitepapersForLocale(locale);
 const versions = getAllVersions(allEntries);
-const latestVersion = versions[versions.length - 1]?.version ?? entry.data.version;
+const latestVersion =
+  versions[versions.length - 1]?.version ?? entry.data.version;
 const pdfHref = getWhitepaperPdfPath(locale, entry.data.version);
 
 if (entry.data.version === latestVersion) {
@@ -101,27 +108,31 @@ const jsonLd = JsonLdGraph({
       </div>
     </div>
 
-    {entry.data.changelog.length > 0 && (
-      <footer class="mt-16 border-t border-white/10 pt-8 print:border-black/10">
-        <h2 class="mb-4 text-lg font-semibold text-white/80 print:text-black/80">
-          {t("whitepaper.changelog")}
-        </h2>
-        <ul class="space-y-2">
-          {entry.data.changelog.map((item) => (
-            <li class="flex items-start gap-2 text-sm text-white/60 print:text-black/60">
-              <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-white/30" />
-              {item}
-            </li>
-          ))}
-        </ul>
-      </footer>
-    )}
+    {
+      entry.data.changelog.length > 0 && (
+        <footer class="mt-16 border-t border-white/10 pt-8 print:border-black/10">
+          <h2 class="mb-4 text-lg font-semibold text-white/80 print:text-black/80">
+            {t("whitepaper.changelog")}
+          </h2>
+          <ul class="space-y-2">
+            {entry.data.changelog.map((item) => (
+              <li class="flex items-start gap-2 text-sm text-white/60 print:text-black/60">
+                <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-white/30" />
+                {item}
+              </li>
+            ))}
+          </ul>
+        </footer>
+      )
+    }
   </section>
 </Layout>
 
 <script>
   function initTocHighlighting() {
-    const tocLinks = document.querySelectorAll("[data-toc-desktop] [data-toc-link]");
+    const tocLinks = document.querySelectorAll(
+      "[data-toc-desktop] [data-toc-link]",
+    );
     if (tocLinks.length === 0) return;
 
     const headingElements: Element[] = [];
@@ -143,9 +154,9 @@ const jsonLd = JsonLdGraph({
             tocLinks.forEach((link) => {
               const slug = (link as HTMLElement).dataset.headingSlug;
               if (slug === id) {
-                link.classList.add("!border-blue-400", "!text-white");
+                link.classList.add("!border-quantus-blue", "!text-white");
               } else {
-                link.classList.remove("!border-blue-400", "!text-white");
+                link.classList.remove("!border-quantus-blue", "!text-white");
               }
             });
           }
