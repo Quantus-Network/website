@@ -5,7 +5,7 @@ import { spawn } from "node:child_process";
 const DIST_DIR = "./dist";
 const OUTPUT_BASE = path.join(DIST_DIR, "whitepapers");
 const PORT = 4322;
-const BASE_URL = `http://localhost:${PORT}`;
+const BASE_URL = `http://host.docker.internal:${PORT}`;
 
 const SUPPORTED_LOCALES = [
   "en-US",
@@ -46,7 +46,7 @@ function startPreviewServer() {
   return new Promise((resolve, reject) => {
     const server = spawn(
       "npx",
-      ["astro", "preview", "--port", String(PORT)],
+      ["astro", "preview", "--port", String(PORT), "--host", "0.0.0.0"],
       {
         cwd: process.cwd(),
         stdio: ["pipe", "pipe", "pipe"],
@@ -84,6 +84,8 @@ async function generatePdf(browser, locale, version) {
       ? `/whitepaper/v${version}`
       : `/${locale}/whitepaper/v${version}`;
 
+  console.log(`  URL: ${BASE_URL}${urlPath}?print=true`);
+
   const url = `${BASE_URL}${urlPath}?print=true`;
   const outputDir = path.join(OUTPUT_BASE, locale);
   const outputFile = path.join(outputDir, `whitepaper-v${version}.pdf`);
@@ -95,25 +97,12 @@ async function generatePdf(browser, locale, version) {
   const page = await browser.newPage();
 
   try {
-    const response = await page.goto(url, {
+    await page.goto(url, {
       waitUntil: "networkidle0",
       timeout: 30000,
     });
 
-    if (!response || response.status() >= 400) {
-      const latestUrl =
-        locale === DEFAULT_LOCALE
-          ? `${BASE_URL}/whitepaper?print=true`
-          : `${BASE_URL}/${locale}/whitepaper?print=true`;
-
-      console.log(
-        `  Version route returned ${response?.status()}, trying latest: ${latestUrl}`,
-      );
-      await page.goto(latestUrl, {
-        waitUntil: "networkidle0",
-        timeout: 30000,
-      });
-    }
+    await page.waitForSelector("h1", { timeout: 30000 });
 
     await page.pdf({
       path: outputFile,
@@ -170,9 +159,7 @@ async function main() {
   try {
     puppeteer = await import("puppeteer");
   } catch {
-    console.warn(
-      "\nPuppeteer not available. Skipping PDF generation.",
-    );
+    console.warn("\nPuppeteer not available. Skipping PDF generation.");
     console.log(
       "To enable PDF generation, run: npx puppeteer browsers install chrome",
     );
@@ -181,15 +168,11 @@ async function main() {
 
   let browser;
   try {
-    browser = await puppeteer.default.launch({
-      headless: true,
-      args: ["--no-sandbox", "--disable-setuid-sandbox"],
+    browser = await puppeteer.connect({
+      browserWSEndpoint: `ws://127.0.0.1:33000`,
     });
   } catch (err) {
-    console.warn(`\nCould not launch browser: ${err.message}`);
-    console.log(
-      "To install Chrome for Puppeteer, run: npx puppeteer browsers install chrome",
-    );
+    console.warn(`\nCould not connect to browser: ${err.message}`);
     console.log("Skipping PDF generation.");
     return;
   }

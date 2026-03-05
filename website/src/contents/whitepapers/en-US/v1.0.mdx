@@ -9,8 +9,8 @@ changelog:
   - "Initial release of the Quantus Network Whitepaper"
 ---
 
-import Callout from "@/components/whitepaper/mdx/Callout.astro";
-import Figure from "@/components/whitepaper/mdx/Figure.astro";
+import Callout from "@/components/features/whitepaper/mdx/Callout.astro";
+import Figure from "@/components/features/whitepaper/mdx/Figure.astro";
 
 ## Introduction
 
@@ -19,7 +19,8 @@ The advent of scalable quantum computers poses an existential threat to every bl
 Quantus Network was designed from the ground up to be **quantum-resistant from day one**, not as a retrofit. This whitepaper describes the architecture, cryptographic primitives, consensus mechanism, and economic model that together form a secure, performant, and developer-friendly Layer 1 blockchain.
 
 <Callout variant="info">
-Quantus uses CRYSTALS-Dilithium and CRYSTALS-Kyber, both standardized by NIST in 2024 as the primary post-quantum signature and key-encapsulation schemes.
+  Quantus uses CRYSTALS-Dilithium and CRYSTALS-Kyber, both standardized by NIST
+  in 2024 as the primary post-quantum signature and key-encapsulation schemes.
 </Callout>
 
 ## Problem Statement
@@ -34,11 +35,11 @@ Current estimates suggest that a cryptographically relevant quantum computer (CR
 
 ### Limitations of Existing Solutions
 
-| Approach | Limitation |
-|---|---|
-| Post-quantum bolt-on to existing L1 | Requires hard fork; legacy addresses remain vulnerable |
-| Hybrid classical + PQ signatures | Doubles signature size; complex upgrade path |
-| Hash-based signatures (XMSS, LMS) | Stateful key management; limited number of signatures per key |
+| Approach                            | Limitation                                                    |
+| ----------------------------------- | ------------------------------------------------------------- |
+| Post-quantum bolt-on to existing L1 | Requires hard fork; legacy addresses remain vulnerable        |
+| Hybrid classical + PQ signatures    | Doubles signature size; complex upgrade path                  |
+| Hash-based signatures (XMSS, LMS)   | Stateful key management; limited number of signatures per key |
 
 Quantus addresses these limitations by integrating post-quantum cryptography into every layer of the protocol from genesis.
 
@@ -52,7 +53,9 @@ The Quantus Network architecture consists of four primary layers:
 4. **Application Layer** — SDKs, wallet infrastructure, and developer tooling
 
 <Callout variant="tip">
-Each layer is designed to be independently upgradeable, allowing the network to adopt stronger cryptographic primitives as the field evolves without requiring a full protocol overhaul.
+  Each layer is designed to be independently upgradeable, allowing the network
+  to adopt stronger cryptographic primitives as the field evolves without
+  requiring a full protocol overhaul.
 </Callout>
 
 ### Cryptographic Primitives
@@ -110,7 +113,9 @@ One of Quantus's most innovative features is its **reversible transaction model*
 - Smart contract bugs caught immediately after execution
 
 <Callout variant="warning">
-Reversibility is optional and configurable per transaction. Merchants and exchanges can accept irreversible transactions for instant settlement when the use case demands it.
+  Reversibility is optional and configurable per transaction. Merchants and
+  exchanges can accept irreversible transactions for instant settlement when the
+  use case demands it.
 </Callout>
 
 ### How Reversibility Works
@@ -146,14 +151,14 @@ The QNT token serves as the native currency of the Quantus Network with the foll
 
 ### Supply Schedule
 
-| Parameter | Value |
-|---|---|
-| Total supply | 1,000,000,000 QNT |
-| Initial circulating | 150,000,000 QNT |
-| Validator rewards | 40% of total supply (vested over 10 years) |
-| Ecosystem fund | 25% of total supply |
-| Team & advisors | 15% of total supply (4-year vesting, 1-year cliff) |
-| Community sale | 20% of total supply |
+| Parameter           | Value                                              |
+| ------------------- | -------------------------------------------------- |
+| Total supply        | 1,000,000,000 QNT                                  |
+| Initial circulating | 150,000,000 QNT                                    |
+| Validator rewards   | 40% of total supply (vested over 10 years)         |
+| Ecosystem fund      | 25% of total supply                                |
+| Team & advisors     | 15% of total supply (4-year vesting, 1-year cliff) |
+| Community sale      | 20% of total supply                                |
 
 ### Fee Model
 
@@ -214,4 +219,4 @@ The combination of instant finality, reversible transactions, zero-knowledge pro
 
 ---
 
-*For more information, visit [quantus.com](https://www.quantus.com) or join the community on [GitHub](https://github.com/Quantus-Network).*
+_For more information, visit [quantus.com](https://www.quantus.com) or join the community on [GitHub](https://github.com/Quantus-Network)._

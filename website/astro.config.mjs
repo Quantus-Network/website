@@ -37,11 +37,18 @@ export default defineConfig({
   build: {
     inlineStylesheets: "always",
   },
+  server: {
+    host: true,
+    allowedHosts: ["host.docker.internal", "host.containers.internal"],
+  },
   vite: {
     // @ts-ignore
     plugins: [tailwindcss()],
     build: {
       cssMinify: true,
+    },
+    preview: {
+      allowedHosts: ["host.docker.internal", "host.containers.internal"],
     },
   },
   site: SITE_BASE_URL,

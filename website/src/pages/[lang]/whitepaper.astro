@@ -9,9 +9,9 @@ import {
 import { JsonLdGraph } from "@/utils/build-json-ld";
 import { getWhitepaperJsonLd } from "@/constants/default-jsonld";
 import { createMetadata } from "@/utils/create-metadata";
-import WhitepaperHeader from "@/components/whitepaper/WhitepaperHeader.astro";
-import TableOfContents from "@/components/whitepaper/TableOfContents.astro";
-import WhitepaperContent from "@/components/whitepaper/WhitepaperContent.astro";
+import WhitepaperHeader from "@/components/features/whitepaper/WhitepaperHeader.astro";
+import TableOfContents from "@/components/features/whitepaper/TableOfContents.astro";
+import WhitepaperContent from "@/components/features/whitepaper/WhitepaperContent.astro";
 import {
   getLatestWhitepaper,
   getWhitepapersForLocale,
@@ -25,7 +25,6 @@ export async function getStaticPaths() {
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
-const isPrint = Astro.url.searchParams.get("print") === "true";
 
 const entry = await getLatestWhitepaper(locale);
 if (!entry) return Astro.redirect("/404");
@@ -52,10 +51,8 @@ const jsonLd = JsonLdGraph({
 
 <Layout {...metadata} jsonLd={jsonLd}>
   <section
-    class:list={[
-      "lg:max-w-content mx-auto px-[30px] py-10 lg:py-20 2xl:px-0",
-      isPrint && "print-mode",
-    ]}
+    id="whitepaper-section"
+    class:list={["lg:max-w-content mx-auto px-[30px] py-10 lg:py-20 2xl:px-0"]}
   >
     <WhitepaperHeader
       title={entry.data.title}
@@ -156,4 +153,12 @@ const jsonLd = JsonLdGraph({
   }
   initTocHighlighting();
   document.addEventListener("astro:after-swap", initTocHighlighting);
+</script>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const isPrint = params.get("print") === "true";
+
+  if (isPrint)
+    document.getElementById("whitepaper-section")?.classList.add("print-mode");
 </script>
