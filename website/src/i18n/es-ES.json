@@ -767,14 +767,16 @@
       "description": "Lea el whitepaper de Quantus Network. Explore nuestro enfoque técnico de la criptografía post-cuántica, las pruebas de conocimiento cero y la arquitectura segura de blockchain de Capa 1."
     },
     "title": "Whitepaper de Quantus",
-    "executive_summary": "Resumen Ejecutivo",
-    "pdf": {
-      "unable": "No se puede mostrar el PDF directamente.",
-      "download": "Descargar",
-      "read": "Leer",
-      "preview_alt": "Vista Previa del Whitepaper",
-      "loading": "Renderizando PDF..."
-    }
+    "on_this_page": "En esta página",
+    "version": "Versión",
+    "version_selector": "Seleccionar versión",
+    "latest": "Última",
+    "download_pdf": "Descargar PDF",
+    "last_updated": "Última actualización",
+    "changelog": "Registro de cambios",
+    "authors": "Autores",
+    "abstract": "Resumen",
+    "back_to_top": "Volver arriba"
   },
   "common": {
     "loading": "Cargando...",

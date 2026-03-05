@@ -1,0 +1,112 @@
+---
+export interface Props {
+  headings: { depth: number; slug: string; text: string }[];
+  tocLabel: string;
+  backToTopLabel: string;
+}
+
+const { headings, tocLabel, backToTopLabel } = Astro.props;
+
+const filteredHeadings = headings.filter((h) => h.depth >= 2 && h.depth <= 3);
+---
+
+{/* Mobile TOC toggle */}
+<div class="mb-6 lg:hidden print:hidden" data-toc-mobile>
+  <button
+    type="button"
+    class="flex w-full items-center justify-between rounded-lg border border-white/15 bg-white/5 px-4 py-3 text-sm font-medium text-white/80"
+    data-toc-mobile-toggle
+    aria-expanded="false"
+  >
+    <span>{tocLabel}</span>
+    <svg class="h-4 w-4 transition-transform" viewBox="0 0 20 20" fill="currentColor" data-toc-mobile-chevron>
+      <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+    </svg>
+  </button>
+  <nav class="mt-2 hidden rounded-lg border border-white/10 bg-white/5 p-4" data-toc-mobile-list>
+    <ul class="space-y-1">
+      {filteredHeadings.map((heading) => (
+        <li>
+          <a
+            href={`#${heading.slug}`}
+            class:list={[
+              "block rounded-md px-3 py-1.5 text-sm transition-colors hover:bg-white/10 hover:text-white",
+              heading.depth === 2 ? "text-white/70" : "pl-7 text-white/50",
+            ]}
+            data-toc-link
+          >
+            {heading.text}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</div>
+
+{/* Desktop sticky TOC */}
+<aside class="hidden lg:block print:hidden" data-toc-desktop>
+  <div class="sticky top-24">
+    <p class="mb-4 text-xs font-semibold uppercase tracking-widest text-white/40">
+      {tocLabel}
+    </p>
+    <nav class="max-h-[calc(100vh-10rem)] overflow-y-auto">
+      <ul class="space-y-0.5 border-l border-white/10">
+        {filteredHeadings.map((heading) => (
+          <li>
+            <a
+              href={`#${heading.slug}`}
+              class:list={[
+                "toc-link -ml-px block border-l-2 border-transparent py-1.5 text-sm transition-all hover:border-white/40 hover:text-white",
+                heading.depth === 2
+                  ? "pl-4 text-white/60"
+                  : "pl-8 text-xs text-white/40",
+              ]}
+              data-toc-link
+              data-heading-slug={heading.slug}
+            >
+              {heading.text}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+    <a
+      href="#top"
+      class="mt-6 inline-flex items-center gap-1.5 text-xs text-white/30 transition-colors hover:text-white/60"
+    >
+      <svg class="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M14.77 12.79a.75.75 0 01-1.06-.02L10 8.832l-3.71 3.938a.75.75 0 01-1.08-1.04l4.25-4.5a.75.75 0 011.08 0l4.25 4.5a.75.75 0 01-.02 1.06z" clip-rule="evenodd" />
+      </svg>
+      {backToTopLabel}
+    </a>
+  </div>
+</aside>
+
+<script>
+  function initMobileToc() {
+    document.querySelectorAll("[data-toc-mobile]").forEach((container) => {
+      const toggle = container.querySelector("[data-toc-mobile-toggle]") as HTMLButtonElement;
+      const list = container.querySelector("[data-toc-mobile-list]") as HTMLElement;
+      const chevron = container.querySelector("[data-toc-mobile-chevron]") as SVGElement;
+      if (!toggle || !list) return;
+
+      toggle.addEventListener("click", () => {
+        const isOpen = !list.classList.contains("hidden");
+        list.classList.toggle("hidden");
+        toggle.setAttribute("aria-expanded", String(!isOpen));
+        chevron?.classList.toggle("rotate-180");
+      });
+
+      list.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          list.classList.add("hidden");
+          toggle.setAttribute("aria-expanded", "false");
+          chevron?.classList.remove("rotate-180");
+        });
+      });
+    });
+  }
+  initMobileToc();
+  document.addEventListener("astro:after-swap", initMobileToc);
+</script>

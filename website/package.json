@@ -4,14 +4,16 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "prebuild": "node scripts/sync-whitepapers.js",
     "build": "astro build",
+    "build:pdf": "node scripts/generate-whitepaper-pdfs.js",
+    "build:full": "astro build && node scripts/generate-whitepaper-pdfs.js",
     "preview": "astro preview",
     "astro": "astro",
     "format:check": "prettier --check .",
     "format:write": "prettier --write ."
   },
   "dependencies": {
+    "@astrojs/mdx": "^4.3.13",
     "@astrojs/react": "^4.4.0",
     "@astrojs/sitemap": "^3.5.1",
     "@fontsource/inter": "^5.2.6",
@@ -20,6 +22,7 @@
     "@playform/compress": "^0.2.1",
     "@radix-ui/react-select": "^2.2.6",
     "@radix-ui/react-slot": "^1.2.3",
+    "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.1.12",
     "@tanstack/react-table": "^8.21.3",
     "astro": "^5.13.2",
@@ -39,10 +42,10 @@
   "devDependencies": {
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
-    "pdf-parse": "^2.4.5",
     "prettier": "^3.6.2",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.6.14",
+    "puppeteer": "^24.38.0",
     "schema-dts": "^1.1.5",
     "unlighthouse": "^0.17.4"
   }

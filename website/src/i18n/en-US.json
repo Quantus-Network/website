@@ -769,14 +769,16 @@
       "description": "Read the Quantus Network whitepaper. Explore our technical approach to post-quantum cryptography, zero-knowledge proofs, and secure Layer 1 blockchain architecture."
     },
     "title": "Quantus Whitepaper",
-    "executive_summary": "Executive Summary",
-    "pdf": {
-      "unable": "Unable to display PDF directly.",
-      "download": "Download",
-      "read": "Read",
-      "preview_alt": "Whitepaper Preview",
-      "loading": "Rendering PDF..."
-    }
+    "on_this_page": "On this page",
+    "version": "Version",
+    "version_selector": "Select Version",
+    "latest": "Latest",
+    "download_pdf": "Download PDF",
+    "last_updated": "Last updated",
+    "changelog": "Changelog",
+    "authors": "Authors",
+    "abstract": "Abstract",
+    "back_to_top": "Back to top"
   },
   "common": {
     "loading": "Loading...",

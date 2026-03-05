@@ -759,14 +759,16 @@
       "description": "Quantus Network 백서를 읽어보세요. 포스트 퀀텀 암호화, 영지식 증명 및 안전한 레이어 1 블록체인 아키텍처에 대한 당사의 기술적 접근 방식을 탐구합니다."
     },
     "title": "Quantus 백서",
-    "executive_summary": "요약",
-    "pdf": {
-      "unable": "PDF를 직접 표시할 수 없습니다.",
-      "download": "다운로드",
-      "read": "읽기",
-      "preview_alt": "백서 미리보기",
-      "loading": "PDF 렌더링 중..."
-    }
+    "on_this_page": "이 페이지에서",
+    "version": "버전",
+    "version_selector": "버전 선택",
+    "latest": "최신",
+    "download_pdf": "PDF 다운로드",
+    "last_updated": "마지막 업데이트",
+    "changelog": "변경 이력",
+    "authors": "저자",
+    "abstract": "요약",
+    "back_to_top": "맨 위로"
   },
   "common": {
     "loading": "로딩 중...",

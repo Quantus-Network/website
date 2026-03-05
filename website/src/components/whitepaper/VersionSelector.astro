@@ -1,0 +1,100 @@
+---
+import type { Locale } from "@/utils/i18n";
+import { getLocalizedPath } from "@/utils/i18n";
+
+export interface Props {
+  versions: { version: string; date: Date }[];
+  currentVersion: string;
+  locale: Locale;
+  latestVersion: string;
+  t: (key: string) => string;
+}
+
+const { versions, currentVersion, locale, latestVersion, t } = Astro.props;
+---
+
+<div class="relative inline-block" data-version-selector>
+  <button
+    type="button"
+    class="flex items-center gap-2 rounded-lg border border-white/15 bg-white/5 px-3 py-2 text-sm text-white/80 transition-colors hover:border-white/25 hover:bg-white/10"
+    aria-haspopup="listbox"
+    aria-expanded="false"
+    data-version-toggle
+  >
+    <span class="font-medium">v{currentVersion}</span>
+    {currentVersion === latestVersion && (
+      <span class="rounded-full bg-emerald-500/20 px-2 py-0.5 text-xs text-emerald-400">
+        {t("whitepaper.latest")}
+      </span>
+    )}
+    <svg class="h-4 w-4 transition-transform" viewBox="0 0 20 20" fill="currentColor" data-version-chevron>
+      <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+    </svg>
+  </button>
+
+  <ul
+    class="absolute left-0 top-full z-50 mt-1 hidden min-w-[180px] overflow-hidden rounded-lg border border-white/15 bg-[#1a1e24] shadow-xl"
+    role="listbox"
+    data-version-list
+  >
+    {versions.map(({ version, date }) => {
+      const isLatest = version === latestVersion;
+      const isCurrent = version === currentVersion;
+      const href = isLatest
+        ? getLocalizedPath(locale, "/whitepaper")
+        : getLocalizedPath(locale, `/whitepaper/v${version}`);
+      return (
+        <li role="option" aria-selected={isCurrent ? "true" : "false"}>
+          <a
+            href={href}
+            class:list={[
+              "flex items-center justify-between px-4 py-2.5 text-sm transition-colors hover:bg-white/10",
+              isCurrent ? "bg-white/5 text-white" : "text-white/70",
+            ]}
+          >
+            <span class="flex items-center gap-2">
+              <span class="font-medium">v{version}</span>
+              {isLatest && (
+                <span class="rounded-full bg-emerald-500/20 px-1.5 py-0.5 text-[10px] text-emerald-400">
+                  {t("whitepaper.latest")}
+                </span>
+              )}
+            </span>
+            <span class="text-xs text-white/40">
+              {date.toLocaleDateString(locale, { year: "numeric", month: "short" })}
+            </span>
+          </a>
+        </li>
+      );
+    })}
+  </ul>
+</div>
+
+<script>
+  function initVersionSelector() {
+    document.querySelectorAll("[data-version-selector]").forEach((selector) => {
+      const toggle = selector.querySelector("[data-version-toggle]") as HTMLButtonElement;
+      const list = selector.querySelector("[data-version-list]") as HTMLElement;
+      const chevron = selector.querySelector("[data-version-chevron]") as SVGElement;
+
+      if (!toggle || !list) return;
+
+      toggle.addEventListener("click", () => {
+        const isOpen = !list.classList.contains("hidden");
+        list.classList.toggle("hidden");
+        toggle.setAttribute("aria-expanded", String(!isOpen));
+        chevron?.classList.toggle("rotate-180");
+      });
+
+      document.addEventListener("click", (e) => {
+        if (!selector.contains(e.target as Node)) {
+          list.classList.add("hidden");
+          toggle.setAttribute("aria-expanded", "false");
+          chevron?.classList.remove("rotate-180");
+        }
+      });
+    });
+  }
+  initVersionSelector();
+  document.addEventListener("astro:after-swap", initVersionSelector);
+</script>

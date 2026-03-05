@@ -1,6 +1,5 @@
 ---
-import fs from "fs";
-import path from "path";
+import { render } from "astro:content";
 import Layout from "@/components/layout/Layout.astro";
 import {
   getLocaleFromUrl,
@@ -10,8 +9,15 @@ import {
 import { JsonLdGraph } from "@/utils/build-json-ld";
 import { getWhitepaperJsonLd } from "@/constants/default-jsonld";
 import { createMetadata } from "@/utils/create-metadata";
-import Button from "@/components/ui/Button.astro";
-import Loader from "@/components/ui/Loader.astro";
+import WhitepaperHeader from "@/components/whitepaper/WhitepaperHeader.astro";
+import TableOfContents from "@/components/whitepaper/TableOfContents.astro";
+import WhitepaperContent from "@/components/whitepaper/WhitepaperContent.astro";
+import {
+  getLatestWhitepaper,
+  getWhitepapersForLocale,
+  getAllVersions,
+  getWhitepaperPdfPath,
+} from "@/utils/whitepaper";
 
 export async function getStaticPaths() {
   return SUPPORTED_LOCALES.map((lang) => ({ params: { lang } }));
@@ -19,20 +25,17 @@ export async function getStaticPaths() {
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
+const isPrint = Astro.url.searchParams.get("print") === "true";
 
-const getAssetUrl = (fileName: string) => {
-  const localePath = `./public/whitepapers/${locale}/${fileName}`;
-  if (fs.existsSync(path.resolve(localePath))) {
-    return `/whitepapers/${locale}/${fileName}`;
-  }
-  return `/whitepapers/en-US/${fileName}`;
-};
+const entry = await getLatestWhitepaper(locale);
+if (!entry) return Astro.redirect("/404");
 
-const seoPath = path.resolve(`./public${getAssetUrl("seo-content.json")}`);
-const seoData = JSON.parse(fs.readFileSync(seoPath, "utf-8"));
+const allEntries = await getWhitepapersForLocale(locale);
+const versions = getAllVersions(allEntries);
+const latestVersion = versions[versions.length - 1]?.version ?? entry.data.version;
+const pdfHref = getWhitepaperPdfPath(locale, entry.data.version);
 
-const pdfUrl = getAssetUrl("whitepaper.pdf");
-const thumbUrl = getAssetUrl("thumb.png");
+const { Content, headings } = await render(entry);
 
 const metadata = createMetadata({
   title: t("whitepaper.meta.title"),
@@ -42,89 +45,108 @@ const metadata = createMetadata({
 
 const jsonLd = JsonLdGraph({
   "@context": "https://schema.org",
-  "@graph": [getWhitepaperJsonLd(locale)],
+  "@graph": [getWhitepaperJsonLd(locale, entry.data.version)],
 });
 ---
 
 <Layout {...metadata} jsonLd={jsonLd}>
   <section
-    class="lg:max-w-content px-[30px] py-10 lg:mx-auto lg:py-20 2xl:px-0"
+    class:list={[
+      "lg:max-w-content mx-auto px-[30px] py-10 lg:py-20 2xl:px-0",
+      isPrint && "print-mode",
+    ]}
   >
-    <h1 class="font-small-title lg:font-medium-title mb-6">
-      {t("whitepaper.title")}
-    </h1>
+    <WhitepaperHeader
+      title={entry.data.title}
+      version={entry.data.version}
+      latestVersion={latestVersion}
+      versions={versions}
+      updatedDate={entry.data.updatedDate}
+      publishedDate={entry.data.publishedDate}
+      authors={entry.data.authors}
+      abstract={entry.data.abstract}
+      pdfHref={pdfHref}
+      locale={locale}
+      t={t}
+    />
 
-    <div class="sr-only">
-      <h2>{t("whitepaper.executive_summary")}</h2>
-      <p>{seoData.text}</p>
-    </div>
+    <div class="flex gap-10 lg:gap-14">
+      <div class="min-w-0 flex-1">
+        <TableOfContents
+          headings={headings}
+          tocLabel={t("whitepaper.on_this_page")}
+          backToTopLabel={t("whitepaper.back_to_top")}
+        />
 
-    <div
-      class="relative mx-auto hidden h-[800px] w-full overflow-hidden rounded-lg bg-white shadow-2xl md:block"
-    >
-      <div
-        id="pdf-loader"
-        class="absolute inset-0 z-10 flex items-center justify-center bg-white"
-      >
-        <Loader
-          variant="spinner"
-          size="lg"
-          text={t("whitepaper.pdf.loading")}
+        <WhitepaperContent>
+          <Content />
+        </WhitepaperContent>
+      </div>
+
+      <div class="hidden w-[260px] shrink-0 lg:block">
+        <TableOfContents
+          headings={headings}
+          tocLabel={t("whitepaper.on_this_page")}
+          backToTopLabel={t("whitepaper.back_to_top")}
         />
       </div>
-      <object
-        id="pdf-object"
-        data={pdfUrl}
-        type="application/pdf"
-        class="h-full w-full opacity-0 transition-opacity duration-300"
-      >
-        <div class="flex h-full flex-col items-center justify-center">
-          <p class="mb-4">{t("whitepaper.pdf.unable")}</p>
-          <a href={pdfUrl} class="btn btn-primary"
-            >{t("whitepaper.pdf.download")}</a
-          >
-        </div>
-      </object>
     </div>
 
-    <script>
-      const pdfObject = document.getElementById(
-        "pdf-object",
-      ) as HTMLObjectElement;
-      const pdfLoader = document.getElementById("pdf-loader");
-
-      if (pdfObject && pdfLoader) {
-        pdfObject.onload = () => {
-          pdfLoader.classList.add("hidden");
-          pdfObject.classList.remove("opacity-0");
-        };
-
-        // Fallback for some browsers where onload might not fire for object tags
-        // or if the PDF is already cached
-        setTimeout(() => {
-          if (!pdfLoader.classList.contains("hidden")) {
-            pdfLoader.classList.add("hidden");
-            pdfObject.classList.remove("opacity-0");
-          }
-        }, 5000);
-      }
-    </script>
-
-    <div class="w-full rounded-xl bg-white p-4 shadow-lg md:hidden">
-      <img
-        src={thumbUrl}
-        alt="Whitepaper Preview"
-        class="w-full rounded-lg border"
-      />
-
-      <Button
-        href={pdfUrl}
-        target="_blank"
-        variant="primary"
-        class="mt-4 w-full"
-      >
-        {t("whitepaper.pdf.read")}
-      </Button>
-    </div>
+    {entry.data.changelog.length > 0 && (
+      <footer class="mt-16 border-t border-white/10 pt-8 print:border-black/10">
+        <h2 class="mb-4 text-lg font-semibold text-white/80 print:text-black/80">
+          {t("whitepaper.changelog")}
+        </h2>
+        <ul class="space-y-2">
+          {entry.data.changelog.map((item) => (
+            <li class="flex items-start gap-2 text-sm text-white/60 print:text-black/60">
+              <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-white/30" />
+              {item}
+            </li>
+          ))}
+        </ul>
+      </footer>
+    )}
   </section>
 </Layout>
+
+<script>
+  function initTocHighlighting() {
+    const tocLinks = document.querySelectorAll("[data-toc-desktop] [data-toc-link]");
+    if (tocLinks.length === 0) return;
+
+    const headingElements: Element[] = [];
+    tocLinks.forEach((link) => {
+      const slug = (link as HTMLElement).dataset.headingSlug;
+      if (slug) {
+        const el = document.getElementById(slug);
+        if (el) headingElements.push(el);
+      }
+    });
+
+    if (headingElements.length === 0) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            tocLinks.forEach((link) => {
+              const slug = (link as HTMLElement).dataset.headingSlug;
+              if (slug === id) {
+                link.classList.add("!border-blue-400", "!text-white");
+              } else {
+                link.classList.remove("!border-blue-400", "!text-white");
+              }
+            });
+          }
+        }
+      },
+      { rootMargin: "-80px 0px -65% 0px", threshold: 0 },
+    );
+
+    headingElements.forEach((el) => observer.observe(el));
+  }
+  initTocHighlighting();
+  document.addEventListener("astro:after-swap", initTocHighlighting);
+</script>

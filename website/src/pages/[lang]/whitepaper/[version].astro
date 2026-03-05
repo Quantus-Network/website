@@ -1,7 +1,13 @@
 ---
 import { render } from "astro:content";
 import Layout from "@/components/layout/Layout.astro";
-import { getLocaleFromUrl, createTranslator } from "@/utils/i18n";
+import {
+  getLocaleFromUrl,
+  createTranslator,
+  getLocalizedPath,
+  SUPPORTED_LOCALES,
+  type Locale,
+} from "@/utils/i18n";
 import { JsonLdGraph } from "@/utils/build-json-ld";
 import { getWhitepaperJsonLd } from "@/constants/default-jsonld";
 import { createMetadata } from "@/utils/create-metadata";
@@ -9,28 +15,55 @@ import WhitepaperHeader from "@/components/whitepaper/WhitepaperHeader.astro";
 import TableOfContents from "@/components/whitepaper/TableOfContents.astro";
 import WhitepaperContent from "@/components/whitepaper/WhitepaperContent.astro";
 import {
-  getLatestWhitepaper,
+  getWhitepaperByVersion,
   getWhitepapersForLocale,
   getAllVersions,
   getWhitepaperPdfPath,
 } from "@/utils/whitepaper";
 
+export async function getStaticPaths() {
+  const { getCollection } = await import("astro:content");
+  const allEntries = await getCollection("whitepaper");
+  const paths: { params: { lang: string; version: string } }[] = [];
+
+  for (const lang of SUPPORTED_LOCALES) {
+    const langEntries = allEntries.filter((e) => e.id.toLowerCase().startsWith(`${lang.toLowerCase()}/`));
+    const fallbackEntries =
+      langEntries.length > 0
+        ? langEntries
+        : allEntries.filter((e) => e.id.toLowerCase().startsWith("en-us/"));
+
+    for (const entry of fallbackEntries) {
+      paths.push({
+        params: { lang, version: `v${entry.data.version}` },
+      });
+    }
+  }
+
+  return paths;
+}
+
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
 const isPrint = Astro.url.searchParams.get("print") === "true";
 
-const entry = await getLatestWhitepaper(locale);
+const { version: versionParam } = Astro.params;
+const entry = await getWhitepaperByVersion(locale as Locale, versionParam!);
 if (!entry) return Astro.redirect("/404");
 
-const allEntries = await getWhitepapersForLocale(locale);
+const allEntries = await getWhitepapersForLocale(locale as Locale);
 const versions = getAllVersions(allEntries);
 const latestVersion = versions[versions.length - 1]?.version ?? entry.data.version;
-const pdfHref = getWhitepaperPdfPath(locale, entry.data.version);
+const pdfHref = getWhitepaperPdfPath(locale as Locale, entry.data.version);
+
+if (entry.data.version === latestVersion) {
+  return Astro.redirect(getLocalizedPath(locale, "/whitepaper"));
+}
 
 const { Content, headings } = await render(entry);
 
 const metadata = createMetadata({
-  title: t("whitepaper.meta.title"),
+  title: `${t("whitepaper.meta.title")} - v${entry.data.version}`,
   description: t("whitepaper.meta.description"),
   pathname: Astro.url.pathname,
 });

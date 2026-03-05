@@ -2,6 +2,7 @@
 import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 import sitemap from "@astrojs/sitemap";
+import mdx from "@astrojs/mdx";
 import react from "@astrojs/react";
 import rehypeExternalLinks from "./src/utils/rehype-external-links.ts";
 import playformCompress from "@playform/compress";
@@ -83,6 +84,7 @@ export default defineConfig({
         return item;
       },
     }),
+    mdx(),
     react(),
     playformCompress(),
   ],

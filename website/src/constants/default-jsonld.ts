@@ -135,19 +135,28 @@ export const whitepaperJsonLd: TechArticle = {
   },
 };
 
-export const getWhitepaperJsonLd = (locale: string): TechArticle => {
-  const url =
+export const getWhitepaperJsonLd = (
+  locale: string,
+  version?: string,
+): TechArticle => {
+  const basePath =
     locale === "en-US"
       ? `${env.SITE_BASE_URL}/whitepaper`
       : `${env.SITE_BASE_URL}/${locale}/whitepaper`;
+
+  const url = version ? `${basePath}/v${version}` : basePath;
+  const pdfPath = version
+    ? `/whitepapers/${locale}/whitepaper-v${version}.pdf`
+    : `/whitepapers/${locale}/whitepaper-v1.0.pdf`;
 
   return {
     ...whitepaperJsonLd,
     "@id": url,
     inLanguage: locale,
+    ...(version ? { version } : {}),
     encoding: {
       "@type": "MediaObject",
-      contentUrl: `https://raw.githubusercontent.com/Quantus-Network/whitepaper/main/${locale}/whitepaper.pdf`,
+      contentUrl: `${env.SITE_BASE_URL}${pdfPath}`,
       encodingFormat: "application/pdf",
     },
   };
