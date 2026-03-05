@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "prebuild": "node scripts/sync-whitepapers.js",
-    "build": "bun prebuild && astro build",
+    "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
     "format:check": "prettier --check .",
