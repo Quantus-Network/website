@@ -62,14 +62,15 @@ const jsonLd = JsonLdGraph({
       t={t}
     />
 
-    <div class="flex gap-10 lg:gap-14">
-      <div class="min-w-0 flex-1">
-        <TableOfContents
-          headings={headings}
-          tocLabel={t("whitepaper.on_this_page")}
-          backToTopLabel={t("whitepaper.back_to_top")}
-        />
+    <TableOfContents
+      headings={headings}
+      tocLabel={t("whitepaper.on_this_page")}
+      backToTopLabel={t("whitepaper.back_to_top")}
+      variant="mobile"
+    />
 
+    <div class="lg:flex lg:gap-14">
+      <div class="min-w-0 flex-1">
         <WhitepaperContent>
           <Content />
         </WhitepaperContent>
@@ -80,6 +81,7 @@ const jsonLd = JsonLdGraph({
           headings={headings}
           tocLabel={t("whitepaper.on_this_page")}
           backToTopLabel={t("whitepaper.back_to_top")}
+          variant="desktop"
         />
       </div>
     </div>

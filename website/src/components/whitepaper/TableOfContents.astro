@@ -3,49 +3,50 @@ export interface Props {
   headings: { depth: number; slug: string; text: string }[];
   tocLabel: string;
   backToTopLabel: string;
+  variant: "mobile" | "desktop";
 }
 
-const { headings, tocLabel, backToTopLabel } = Astro.props;
+const { headings, tocLabel, backToTopLabel, variant } = Astro.props;
 
 const filteredHeadings = headings.filter((h) => h.depth >= 2 && h.depth <= 3);
 ---
 
-{/* Mobile TOC toggle */}
-<div class="mb-6 lg:hidden print:hidden" data-toc-mobile>
-  <button
-    type="button"
-    class="flex w-full items-center justify-between rounded-lg border border-white/15 bg-white/5 px-4 py-3 text-sm font-medium text-white/80"
-    data-toc-mobile-toggle
-    aria-expanded="false"
-  >
-    <span>{tocLabel}</span>
-    <svg class="h-4 w-4 transition-transform" viewBox="0 0 20 20" fill="currentColor" data-toc-mobile-chevron>
-      <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
-    </svg>
-  </button>
-  <nav class="mt-2 hidden rounded-lg border border-white/10 bg-white/5 p-4" data-toc-mobile-list>
-    <ul class="space-y-1">
-      {filteredHeadings.map((heading) => (
-        <li>
-          <a
-            href={`#${heading.slug}`}
-            class:list={[
-              "block rounded-md px-3 py-1.5 text-sm transition-colors hover:bg-white/10 hover:text-white",
-              heading.depth === 2 ? "text-white/70" : "pl-7 text-white/50",
-            ]}
-            data-toc-link
-          >
-            {heading.text}
-          </a>
-        </li>
-      ))}
-    </ul>
-  </nav>
-</div>
+{variant === "mobile" && (
+  <div class="mb-6 lg:hidden print:hidden" data-toc-mobile>
+    <button
+      type="button"
+      class="flex w-full items-center justify-between rounded-lg border border-white/15 bg-white/5 px-4 py-3 text-sm font-medium text-white/80"
+      data-toc-mobile-toggle
+      aria-expanded="false"
+    >
+      <span>{tocLabel}</span>
+      <svg class="h-4 w-4 transition-transform" viewBox="0 0 20 20" fill="currentColor" data-toc-mobile-chevron>
+        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+      </svg>
+    </button>
+    <nav class="mt-2 hidden rounded-lg border border-white/10 bg-white/5 p-4" data-toc-mobile-list>
+      <ul class="space-y-1">
+        {filteredHeadings.map((heading) => (
+          <li>
+            <a
+              href={`#${heading.slug}`}
+              class:list={[
+                "block rounded-md px-3 py-1.5 text-sm transition-colors hover:bg-white/10 hover:text-white",
+                heading.depth === 2 ? "text-white/70" : "pl-7 text-white/50",
+              ]}
+              data-toc-link
+            >
+              {heading.text}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+)}
 
-{/* Desktop sticky TOC */}
-<aside class="hidden lg:block print:hidden" data-toc-desktop>
-  <div class="sticky top-24">
+{variant === "desktop" && (
+  <div class="sticky top-24 print:hidden" data-toc-desktop>
     <p class="mb-4 text-xs font-semibold uppercase tracking-widest text-white/40">
       {tocLabel}
     </p>
@@ -81,7 +82,7 @@ const filteredHeadings = headings.filter((h) => h.depth >= 2 && h.depth <= 3);
       {backToTopLabel}
     </a>
   </div>
-</aside>
+)}
 
 <script>
   function initMobileToc() {
