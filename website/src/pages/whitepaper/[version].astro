@@ -1,11 +1,7 @@
 ---
 import { render } from "astro:content";
 import Layout from "@/components/layout/Layout.astro";
-import {
-  getLocaleFromUrl,
-  createTranslator,
-  getLocalizedPath,
-} from "@/utils/i18n";
+import { getLocaleFromUrl, createTranslator } from "@/utils/i18n";
 import { JsonLdGraph } from "@/utils/build-json-ld";
 import { getWhitepaperJsonLd } from "@/constants/default-jsonld";
 import { createMetadata } from "@/utils/create-metadata";
