@@ -10,8 +10,8 @@ export interface Props {
 const { src, alt, caption, number, width } = Astro.props;
 ---
 
-<figure class="not-prose my-8">
-  <div class="overflow-hidden rounded-lg border border-white/10">
+<figure class="not-prose my-8 print:break-inside-avoid">
+  <div class="overflow-hidden rounded-lg border border-white/10 print:border-[#d0d7de]">
     <img
       src={src}
       alt={alt}
@@ -22,8 +22,8 @@ const { src, alt, caption, number, width } = Astro.props;
     />
   </div>
   {caption && (
-    <figcaption class="mt-3 text-center text-sm text-white/50">
-      {number != null && <span class="font-semibold text-white/70">Figure {number}. </span>}
+    <figcaption class="mt-3 text-center text-sm text-white/50 print:text-[#555]">
+      {number != null && <span class="font-semibold text-white/70 print:text-[#333]">Figure {number}. </span>}
       {caption}
     </figcaption>
   )}

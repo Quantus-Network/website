@@ -26,7 +26,21 @@ const { class: className = "" } = Astro.props;
     "prose-hr:border-white/10",
     "prose-blockquote:border-l-blue-500/40 prose-blockquote:text-white/60",
     "prose-img:rounded-lg prose-img:border prose-img:border-white/10",
-    "print:prose-p:text-black/80 print:prose-headings:text-black print:prose-strong:text-black print:prose-a:text-blue-700 print:prose-td:text-black/70 print:prose-th:text-black print:prose-li:text-black/80 print:prose-code:text-pink-700 print:prose-code:bg-black/5",
+
+    "print:prose-headings:text-black",
+    "print:prose-p:text-[#333] print:prose-strong:text-black",
+    "print:prose-a:text-blue-700 print:prose-a:underline",
+    "print:prose-li:text-[#333] print:prose-li:marker:text-[#555]",
+    "print:prose-ol:text-[#333] print:prose-ul:text-[#333]",
+    "print:prose-code:text-[#c7254e] print:prose-code:bg-[#f9f2f4]",
+    "print:prose-pre:bg-[#f6f8fa] print:prose-pre:border-[#d0d7de]",
+    "print:prose-table:border-[#d0d7de]",
+    "print:prose-th:text-black print:prose-th:bg-[#f6f8fa] print:prose-th:border-[#d0d7de]",
+    "print:prose-td:text-[#333] print:prose-td:border-[#e1e4e8]",
+    "print:prose-hr:border-[#d0d7de]",
+    "print:prose-blockquote:border-l-blue-600 print:prose-blockquote:text-[#555]",
+    "print:prose-img:border-[#d0d7de]",
+    "print:prose-h2:border-[#d0d7de]",
     className,
   ]}
 >

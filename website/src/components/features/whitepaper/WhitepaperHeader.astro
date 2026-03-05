@@ -47,10 +47,10 @@ const displayDate = updatedDate ?? publishedDate;
         {title}
       </h1>
       <div
-        class="flex flex-wrap items-center gap-3 text-sm text-white/50 print:text-black/50"
+        class="flex flex-wrap items-center gap-3 text-sm text-white/50 print:text-[#666]"
       >
         <span>{t("whitepaper.authors")}: {authors.join(", ")}</span>
-        <span class="text-white/20">|</span>
+        <span class="text-white/20 print:text-[#ccc]">|</span>
         <span>
           {t("whitepaper.last_updated")}: {
             formatDate(displayDate, locale, {
