@@ -37,7 +37,7 @@ const displayDate = updatedDate ?? publishedDate;
   class="mb-10 border-b border-white/10 pb-10 print:border-black/10"
   id="top"
 >
-  <div class="mb-6 flex flex-col gap-4">
+  <div class="flex flex-col gap-4">
     <div>
       <h1
         class="font-small-title lg:font-medium-title mb-3 text-white print:text-black"
@@ -47,17 +47,24 @@ const displayDate = updatedDate ?? publishedDate;
       <div
         class="flex flex-wrap items-center gap-3 text-sm text-white/50 print:text-[#666]"
       >
-        <span>{t("whitepaper.authors")}: {authors.join(", ")}</span>
+        <p>
+          <span class="font-bold">{t("whitepaper.authors")}:</span>
+          {authors.join(", ")}
+        </p>
         <span class="text-white/20 print:text-[#ccc]">|</span>
-        <span>
-          {t("whitepaper.last_updated")}: {
+        <p>
+          <span class="font-bold">
+            {t("whitepaper.last_updated")}:
+          </span>
+
+          {
             formatDate(displayDate, locale, {
               year: "numeric",
               month: "long",
               day: "numeric",
             })
           }
-        </span>
+        </p>
       </div>
     </div>
 

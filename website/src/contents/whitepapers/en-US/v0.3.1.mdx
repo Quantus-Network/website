@@ -13,6 +13,7 @@ import Figure from "@/components/features/whitepaper/mdx/Figure.astro";
 import Grid from "@/components/features/whitepaper/mdx/Grid.astro";
 import Column from "@/components/features/whitepaper/mdx/Column.astro";
 import Timeline from "@/components/features/whitepaper/mdx/Timeline.astro";
+import ResponsiveTable from "@/components/features/whitepaper/mdx/ResponsiveTable.astro";
 import SiteSocials from "@/components/ui/SiteSocials.astro";
 
 ## Introduction
@@ -154,10 +155,13 @@ magnitude.
 The following table illustrates typical sizes for ML-DSA at a 128-bit post-quantum
 security level compared to classical counterparts like 256-bit ECDSA:
 
-| Algorithm             | Public Key Size (Bytes) | Private Key Size (Bytes) | Signature Size (Bytes) |
-| --------------------- | ----------------------- | ------------------------ | ---------------------- |
-| ML-DSA-87 (Dilithium) | 2,592                   | 4,896                    | 4,627                  |
-| ECDSA (256-bit)       | 32                      | 32                       | 65                     |
+<ResponsiveTable
+  headers={["Algorithm", "Public Key Size (Bytes)", "Private Key Size (Bytes)", "Signature Size (Bytes)"]}
+  rows={[
+    ["ML-DSA-87 (Dilithium)", "2,592", "4,896", "4,627"],
+    ["ECDSA (256-bit)", "32", "32", "65"],
+  ]}
+/>
 
 **As shown, ML-DSA signatures can be over 70 times larger than ECDSA
 equivalents, and public keys more than 80 times larger.**
