@@ -23,14 +23,14 @@ const { title, date, subtitle, class: className } = Astro.props;
 
   {/* The dot - using design system bg-roadmap-marker style */}
   <div
-    class="border-bg-primary absolute -top-1 left-0 z-10 h-6 w-6 rounded-full border-4 bg-white shadow-[0_0_20px_rgba(255,255,255,0.1)] print:border-white print:bg-slate-900 print:shadow-none"
+    class="border-bg-primary print:bg-quantus-blue absolute -top-1 left-0 z-10 h-6 w-6 rounded-full border-4 bg-white shadow-[0_0_20px_rgba(255,255,255,0.1)] print:border-white print:shadow-none"
   >
   </div>
 
   <div class="flex flex-col gap-1">
     {/* Title: Highlighted */}
     <h4
-      class="text-quantus-pink mt-0 mb-0 text-lg leading-tight font-bold print:text-blue-700"
+      class="text-quantus-pink print:text-quantus-blue mt-0 mb-0 text-lg leading-tight font-bold"
     >
       {title}
     </h4>
