@@ -52,10 +52,7 @@ export async function getWhitepaperByVersion(
   return entries.find((e) => e.data.version === cleanVersion);
 }
 
-export function getWhitepaperPdfPath(
-  locale: Locale,
-  version: string,
-): string {
+export function getWhitepaperPdfPath(locale: Locale, version: string): string {
   return `/whitepapers/${locale}/whitepaper-v${version}.pdf`;
 }
 

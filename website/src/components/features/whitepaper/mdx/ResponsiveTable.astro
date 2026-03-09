@@ -13,56 +13,64 @@ const valueHeaders = headers.filter((_, i) => i !== labelColumn);
 
 <div class:list={["not-prose my-6", className]}>
   {/* Desktop: standard table */}
-  <div class="hidden sm:block overflow-x-auto rounded-lg border border-white/10 print:block print:border-[#d0d7de]">
+  <div
+    class="hidden overflow-x-auto rounded-lg border border-white/10 sm:block print:block print:border-[#d0d7de]"
+  >
     <table class="w-full border-collapse text-sm">
       <thead>
         <tr>
-          {headers.map((header) => (
-            <th class="border-b border-white/10 bg-white/5 px-4 py-3 text-left text-sm font-semibold text-white/80 print:border-[#d0d7de] print:bg-[#f6f8fa] print:text-black">
-              {header}
-            </th>
-          ))}
+          {
+            headers.map((header) => (
+              <th class="border-b border-white/10 bg-white/5 px-4 py-3 text-left text-sm font-semibold text-white/80 print:border-[#d0d7de] print:bg-[#f6f8fa] print:text-black">
+                {header}
+              </th>
+            ))
+          }
         </tr>
       </thead>
       <tbody>
-        {rows.map((row) => (
-          <tr>
-            {row.map((cell) => (
-              <td class="border-b border-white/5 px-4 py-3 text-sm text-white/60 print:border-[#e1e4e8] print:text-[#333]">
-                {cell}
-              </td>
-            ))}
-          </tr>
-        ))}
+        {
+          rows.map((row) => (
+            <tr>
+              {row.map((cell) => (
+                <td class="border-b border-white/5 px-4 py-3 text-sm text-white/60 print:border-[#e1e4e8] print:text-[#333]">
+                  {cell}
+                </td>
+              ))}
+            </tr>
+          ))
+        }
       </tbody>
     </table>
   </div>
 
   {/* Mobile: card layout */}
   <div class="flex flex-col gap-3 sm:hidden print:hidden">
-    {rows.map((row) => (
-      <div class="rounded-lg border border-white/10 bg-white/5 overflow-hidden">
-        <div class="border-b border-white/10 bg-white/[0.07] px-4 py-2.5">
-          <span class="text-sm font-semibold text-white/90">
-            {row[labelColumn]}
-          </span>
+    {
+      rows.map((row) => (
+        <div class="overflow-hidden rounded-lg border border-white/10 bg-white/5">
+          <div class="border-b border-white/10 bg-white/[0.07] px-4 py-2.5">
+            <span class="text-sm font-semibold text-white/90">
+              {row[labelColumn]}
+            </span>
+          </div>
+          <div class="divide-y divide-white/5">
+            {valueHeaders.map((header, i) => {
+              const cellIndex = i >= labelColumn ? i + 1 : i;
+              return (
+                <div class="flex items-center justify-between px-4 py-2.5">
+                  <span class="text-xs font-medium tracking-wider text-white/50 uppercase">
+                    {header}
+                  </span>
+                  <span class="text-sm font-medium text-white/70 tabular-nums">
+                    {row[cellIndex]}
+                  </span>
+                </div>
+              );
+            })}
+          </div>
         </div>
-        <div class="divide-y divide-white/5">
-          {valueHeaders.map((header, i) => {
-            const cellIndex = i >= labelColumn ? i + 1 : i;
-            return (
-              <div class="flex items-center justify-between px-4 py-2.5">
-                <span class="text-xs font-medium text-white/50 uppercase tracking-wider">
-                  {header}
-                </span>
-                <span class="text-sm font-medium text-white/70 tabular-nums">
-                  {row[cellIndex]}
-                </span>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    ))}
+      ))
+    }
   </div>
 </div>

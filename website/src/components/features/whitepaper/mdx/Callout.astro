@@ -53,11 +53,15 @@ const config = variantConfig[variant];
   ]}
   role="note"
 >
-  <p class="mb-1 flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-white/80 print:text-[#333]">
+  <p
+    class="mb-1 flex items-center gap-2 text-sm font-semibold tracking-wider text-white/80 uppercase print:text-[#333]"
+  >
     <span>{config.icon}</span>
     {config.label}
   </p>
-  <div class="text-[15px] leading-relaxed text-white/70 print:text-[#444] [&>p]:m-0">
+  <div
+    class="text-[15px] leading-relaxed text-white/70 print:text-[#444] [&>p]:m-0"
+  >
     <slot />
   </div>
 </aside>
