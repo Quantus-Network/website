@@ -35,7 +35,7 @@
   },
   "video": {
     "title": "ऐसी क्रिप्टोग्राफी पर मूल्य बनाएँ जो स्थायी हो।",
-    "description": "क्वांटस उन लोगों के लिए है जो आने वाले कल को देख सकते हैं; नवाचार की अगली लहर। एक भविष्य-प्रूफ, क्वांटम-सुरक्षित ब्लॉकचेन जो आज के मूल्य को कल के खतरों से सुरक्षित कर सकता है।"
+    "description": "क्वांटस उन लोगों के लिए है जो आने वाले कल को देख सकते हैं; नवाचार की अगली लहर। एक भविष्य-प्रूफ, क्वांटम-सुरक्षित ब्लॉकचेน जो आज के मूल्य को कल के खतरों से सुरक्षित कर सकता है।"
   },
   "benefits": {
     "title": "भविष्य क्वांटम है",
@@ -739,13 +739,14 @@
       "plonky3": "Plonky3",
       "liberland": "Liberland",
       "schrodinger-testnet": "Schrödinger Testnet",
+      "pqc": "PQC",
       "mpc": "MPC",
       "multisig": "Multisig",
       "zk-aggregator": "ZK-Aggregator",
       "indexer": "Indexer",
+      "biohacking": "Biohacking",
       "rpc": "RPC",
       "privacy": "Privacy",
-      "audit": "Audit",
       "security": "Security",
       "guardian": "Guardian",
       "time-lock": "Time-Lock",
