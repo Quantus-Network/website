@@ -1,0 +1,58 @@
+---
+export interface Props {
+  cols?: number;
+  gap?: string;
+  align?: "start" | "center" | "end" | "stretch";
+  class?: string;
+}
+
+const { cols, gap = "1.5rem", align = "start", class: className } = Astro.props;
+
+// If cols is provided, we use a fixed grid.
+// If not, we use flexbox which allows children to define their own widths/ratios.
+const isFlex = !cols;
+---
+
+<div
+  class:list={[
+    "my-8 w-full print:break-inside-avoid",
+    isFlex
+      ? "flex flex-col flex-wrap md:flex-row"
+      : "grid grid-cols-1 md:grid-cols-(--grid-cols)",
+    className,
+  ]}
+  style={{
+    gap,
+    alignItems: align,
+    "--grid-cols": cols ? `repeat(${cols}, minmax(0, 1fr))` : undefined,
+  }}
+>
+  <slot />
+</div>
+
+<style>
+  /* Only apply default flex to direct children if they are not Column components */
+  /* On mobile, they should take full width (flex-basis: 100%) */
+  /* On desktop, they share space (flex-basis: 0%) */
+  .flex > :global(*) {
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+
+  @media (min-width: 768px) {
+    .flex > :global(*) {
+      flex: 1 1 0%;
+    }
+  }
+
+  @media print {
+    .flex,
+    .grid {
+      gap: 1rem !important;
+      flex-direction: row !important;
+    }
+    .flex > :global(*) {
+      flex: 1 1 0% !important;
+    }
+  }
+</style>

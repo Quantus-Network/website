@@ -25,7 +25,6 @@ const whitepaper = defineCollection({
     version: z.string(),
     publishedDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
-    abstract: z.string(),
     authors: z.array(z.string()).default(["Quantus Labs"]),
     changelog: z.array(z.string()).default([]),
   }),

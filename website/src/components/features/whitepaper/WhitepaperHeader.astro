@@ -12,7 +12,6 @@ export interface Props {
   updatedDate?: Date;
   publishedDate: Date;
   authors: string[];
-  abstract: string;
   pdfHref: string;
   locale: Locale;
   t: (key: string) => string;
@@ -26,7 +25,6 @@ const {
   updatedDate,
   publishedDate,
   authors,
-  abstract,
   pdfHref,
   locale,
   t,
@@ -78,13 +76,4 @@ const displayDate = updatedDate ?? publishedDate;
       <DownloadButton href={pdfHref} label={t("whitepaper.download_pdf")} />
     </div>
   </div>
-
-  <p
-    class="max-w-3xl text-base leading-relaxed text-white/60 print:text-black/60"
-  >
-    <span class="font-semibold text-white/80 print:text-black/80"
-      >{t("whitepaper.abstract")}:</span
-    >{" "}
-    {abstract}
-  </p>
 </header>

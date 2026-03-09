@@ -1,0 +1,78 @@
+---
+export interface Props {
+  title: string;
+  date?: string;
+  subtitle?: string;
+  class?: string;
+}
+
+const { title, date, subtitle, class: className } = Astro.props;
+---
+
+<div
+  class:list={[
+    "timeline-item not-prose relative pb-10 pl-8 last:pb-0 print:pb-8",
+    className,
+  ]}
+>
+  {/* The vertical line */}
+  <div
+    class="timeline-line absolute top-0 bottom-0 left-[11px] w-[2px] bg-white/10 print:bg-slate-200"
+  >
+  </div>
+
+  {/* The dot - using design system bg-roadmap-marker style */}
+  <div
+    class="border-bg-primary absolute -top-1 left-0 z-10 h-6 w-6 rounded-full border-4 bg-white shadow-[0_0_20px_rgba(255,255,255,0.1)] print:border-white print:bg-slate-900 print:shadow-none"
+  >
+  </div>
+
+  <div class="flex flex-col gap-1">
+    {/* Title: Highlighted */}
+    <h4
+      class="text-quantus-pink mt-0 mb-0 text-lg leading-tight font-bold print:text-blue-700"
+    >
+      {title}
+    </h4>
+
+    {/* Date: Plain text */}
+    {
+      date && (
+        <span class="text-text-content-secondary text-xs font-normal tracking-[0.2em] uppercase print:tracking-widest print:text-slate-500">
+          {date}
+        </span>
+      )
+    }
+
+    {/* Subtitle: Bold */}
+    {
+      subtitle && (
+        <p class="text-text-title-primary mt-0 mb-2 text-sm font-bold print:text-slate-900">
+          {subtitle}
+        </p>
+      )
+    }
+
+    <div
+      class="text-text-content-secondary/80 prose prose-invert print:prose-slate max-w-none text-[15px] leading-relaxed print:text-slate-700 [&>p]:mt-2 [&>p]:mb-0"
+    >
+      <slot />
+    </div>
+  </div>
+</div>
+
+<style>
+  .timeline-item:last-child .timeline-line {
+    display: none;
+  }
+
+  @media print {
+    .timeline-line {
+      background-color: #e2e8f0 !important;
+      -webkit-print-color-adjust: exact;
+    }
+    .timeline-item {
+      page-break-inside: avoid;
+    }
+  }
+</style>

@@ -5,26 +5,37 @@ export interface Props {
   caption?: string;
   number?: number;
   width?: string;
+  class?: string;
 }
 
-const { src, alt, caption, number, width } = Astro.props;
+const { src, alt, caption, number, width, class: className } = Astro.props;
 ---
 
-<figure class="not-prose my-8 print:break-inside-avoid">
-  <div class="overflow-hidden rounded-lg border border-white/10 print:border-[#d0d7de]">
+<figure class:list={["not-prose print:break-inside-avoid", className]}>
+  <div
+    class="overflow-hidden rounded-lg border border-white/10 print:border-[#d0d7de]"
+  >
     <img
       src={src}
       alt={alt}
       class="w-full"
-      style={width ? `max-width: ${width}; margin: 0 auto; display: block;` : undefined}
+      style={width
+        ? `max-width: ${width}; margin: 0 auto; display: block;`
+        : undefined}
       loading="lazy"
       decoding="async"
     />
   </div>
-  {caption && (
-    <figcaption class="mt-3 text-center text-sm text-white/50 print:text-[#555]">
-      {number != null && <span class="font-semibold text-white/70 print:text-[#333]">Figure {number}. </span>}
-      {caption}
-    </figcaption>
-  )}
+  {
+    caption && (
+      <figcaption class="mt-3 text-center text-sm text-white/50 print:text-[#555]">
+        {number != null && (
+          <span class="font-semibold text-white/70 print:text-[#333]">
+            Figure {number}.{" "}
+          </span>
+        )}
+        {caption}
+      </figcaption>
+    )
+  }
 </figure>
