@@ -745,7 +745,9 @@
       "zk-proofs": "ZK証明",
       "research": "研究",
       "notification-system": "通知システム",
-      "keystone": "Keystone"
+      "keystone": "Keystone",
+      "heisenberg-testnet": "Heisenbergテストネット",
+      "performance": "パフォーマンス"
     }
   },
   "cookie": {

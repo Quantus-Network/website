@@ -753,7 +753,9 @@
       "zk-proofs": "ZK-доказательства",
       "research": "Исследования",
       "notification-system": "Система уведомлений",
-      "keystone": "Keystone"
+      "keystone": "Keystone",
+      "heisenberg-testnet": "Тестовая сеть Heisenberg",
+      "performance": "Производительность"
     }
   },
   "cookie": {

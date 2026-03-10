@@ -753,7 +753,9 @@
       "zk-proofs": "Pruebas ZK",
       "research": "Investigación",
       "notification-system": "Sistema de notificaciones",
-      "keystone": "Keystone"
+      "keystone": "Keystone",
+      "heisenberg-testnet": "Heisenberg Testnet",
+      "performance": "Rendimiento"
     }
   },
   "cookie": {
