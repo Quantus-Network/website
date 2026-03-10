@@ -723,6 +723,7 @@
       "poseidon": "Poseidon",
       "dirac-testnet": "Dirac-Testnetz",
       "mobile-wallet": "Mobile Wallet",
+      "wallet": "Wallet",
       "pow": "Proof of Work",
       "libp2p": "libp2p",
       "ghostdag": "GHOSTDAG",
