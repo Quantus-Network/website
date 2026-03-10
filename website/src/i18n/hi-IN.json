@@ -758,7 +758,8 @@
       "notification-system": "अधिसूचना प्रणाली",
       "keystone": "Keystone",
       "heisenberg-testnet": "हाइजेनबर्ग टेस्टनेट (Heisenberg Testnet)",
-      "performance": "प्रदर्शन"
+      "performance": "प्रदर्शन",
+      "consensus": "आम सहमति"
     }
   },
   "cookie": {

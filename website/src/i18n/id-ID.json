@@ -755,7 +755,8 @@
       "notification-system": "Sistem Notifikasi",
       "keystone": "Keystone",
       "heisenberg-testnet": "Heisenberg Testnet",
-      "performance": "Performa"
+      "performance": "Performa",
+      "consensus": "Konsensus"
     }
   },
   "cookie": {

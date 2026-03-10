@@ -755,7 +755,8 @@
       "notification-system": "Система уведомлений",
       "keystone": "Keystone",
       "heisenberg-testnet": "Тестовая сеть Heisenberg",
-      "performance": "Производительность"
+      "performance": "Производительность",
+      "consensus": "Консенсус"
     }
   },
   "cookie": {

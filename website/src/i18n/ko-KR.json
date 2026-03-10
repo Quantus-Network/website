@@ -747,7 +747,8 @@
       "notification-system": "알림 시스템",
       "keystone": "Keystone",
       "heisenberg-testnet": "하이젠베르크 테스트넷(Heisenberg Testnet)",
-      "performance": "성능"
+      "performance": "성능",
+      "consensus": "합의"
     }
   },
   "cookie": {

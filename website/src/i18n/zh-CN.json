@@ -744,7 +744,8 @@
       "notification-system": "通知系统",
       "keystone": "Keystone",
       "heisenberg-testnet": "Heisenberg 测试网",
-      "performance": "性能"
+      "performance": "性能",
+      "consensus": "共识"
     }
   },
   "cookie": {
