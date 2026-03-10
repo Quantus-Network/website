@@ -712,6 +712,7 @@
       "poseidon": "Poseidon",
       "dirac-testnet": "Dirac 测试网",
       "mobile-wallet": "移动钱包",
+      "wallet": "钱包",
       "pow": "工作量证明",
       "libp2p": "libp2p",
       "ghostdag": "GHOSTDAG",
@@ -742,7 +743,10 @@
       "zk-proofs": "ZK 证明",
       "research": "研究",
       "notification-system": "通知系统",
-      "keystone": "Keystone"
+      "keystone": "Keystone",
+      "heisenberg-testnet": "Heisenberg 测试网",
+      "performance": "性能",
+      "consensus": "共识"
     }
   },
   "cookie": {

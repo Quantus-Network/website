@@ -726,6 +726,7 @@
       "poseidon": "Poseidon",
       "dirac-testnet": "Dirac Testnet",
       "mobile-wallet": "Mobile Wallet",
+      "wallet": "वॉलेट",
       "pow": "Proof of Work",
       "libp2p": "libp2p",
       "ghostdag": "GHOSTDAG",
@@ -756,7 +757,10 @@
       "zk-proofs": "ZK-प्रूफ्स",
       "research": "अनुसंधान",
       "notification-system": "अधिसूचना प्रणाली",
-      "keystone": "Keystone"
+      "keystone": "Keystone",
+      "heisenberg-testnet": "हाइजेनबर्ग टेस्टनेट (Heisenberg Testnet)",
+      "performance": "प्रदर्शन",
+      "consensus": "आम सहमति"
     }
   },
   "cookie": {

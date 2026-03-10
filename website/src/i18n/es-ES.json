@@ -723,6 +723,7 @@
       "poseidon": "Poseidon",
       "dirac-testnet": "Dirac Testnet",
       "mobile-wallet": "Billetera Móvil",
+      "wallet": "Billetera",
       "pow": "Prueba de Trabajo",
       "libp2p": "libp2p",
       "ghostdag": "GHOSTDAG",
@@ -753,7 +754,10 @@
       "zk-proofs": "Pruebas ZK",
       "research": "Investigación",
       "notification-system": "Sistema de notificaciones",
-      "keystone": "Keystone"
+      "keystone": "Keystone",
+      "heisenberg-testnet": "Heisenberg Testnet",
+      "performance": "Rendimiento",
+      "consensus": "Consenso"
     }
   },
   "cookie": {
