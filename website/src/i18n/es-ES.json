@@ -752,7 +752,8 @@
       "quantum-resistant": "Resistente a la computación cuántica",
       "zk-proofs": "Pruebas ZK",
       "research": "Investigación",
-      "notification-system": "Sistema de notificaciones"
+      "notification-system": "Sistema de notificaciones",
+      "keystone": "Keystone"
     }
   },
   "cookie": {

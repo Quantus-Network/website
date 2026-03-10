@@ -104,8 +104,6 @@ export const whitepaperJsonLd: TechArticle = {
   "@id": `${env.SITE_BASE_URL}/whitepaper`,
   "@type": "TechArticle",
   headline: "Quantus Network Whitepaper",
-  image:
-    "https://raw.githubusercontent.com/Quantus-Network/whitepaper/main/whitepaper-cover.png",
   description:
     "The official whitepaper for Quantus Network, detailing the versioned history, protocol, and architecture of the network.",
   author: {
@@ -122,12 +120,6 @@ export const whitepaperJsonLd: TechArticle = {
     },
   },
   inLanguage: "en-US",
-  encoding: {
-    "@type": "MediaObject",
-    contentUrl:
-      "https://raw.githubusercontent.com/Quantus-Network/whitepaper/main/whitepaper.pdf",
-    encodingFormat: "application/pdf",
-  },
   about: {
     "@type": "Thing",
     name: "Blockchain Protocol",
@@ -146,8 +138,8 @@ export const getWhitepaperJsonLd = (
 
   const url = version ? `${basePath}/v${version}` : basePath;
   const pdfPath = version
-    ? `/whitepapers/${locale}/whitepaper-v${version}.pdf`
-    : `/whitepapers/${locale}/whitepaper-v1.0.pdf`;
+    ? `/whitepaper/pdf/${locale}/whitepaper-v${version}.pdf`
+    : `/whitepaper/pdf/${locale}/whitepaper.pdf`;
 
   return {
     ...whitepaperJsonLd,

@@ -53,7 +53,7 @@ export async function getWhitepaperByVersion(
 }
 
 export function getWhitepaperPdfPath(locale: Locale, version: string): string {
-  return `/whitepapers/${locale}/whitepaper-v${version}.pdf`;
+  return `/whitepaper/pdf/${locale}/whitepaper-v${version}.pdf`;
 }
 
 export function getAllVersions(

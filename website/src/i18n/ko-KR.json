@@ -743,8 +743,9 @@
       "coingecko": "CoinGecko",
       "quantum-resistant": "양자 내성",
       "zk-proofs": "ZK 증명",
-      "research": "연구",
-      "notification-system": "알림 시스템"
+      "research": "研究",
+      "notification-system": "알림 시스템",
+      "keystone": "Keystone"
     }
   },
   "cookie": {

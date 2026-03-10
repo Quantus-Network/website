@@ -752,7 +752,8 @@
       "quantum-resistant": "Tahan Kuantum",
       "zk-proofs": "Bukti ZK",
       "research": "Riset",
-      "notification-system": "Sistem Notifikasi"
+      "notification-system": "Sistem Notifikasi",
+      "keystone": "Keystone"
     }
   },
   "cookie": {
