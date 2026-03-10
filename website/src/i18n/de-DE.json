@@ -744,7 +744,6 @@
       "biohacking": "Biohacking",
       "rpc": "RPC",
       "privacy": "Privatsphäre",
-      "audit": "Audit",
       "security": "Sicherheit",
       "guardian": "Guardian",
       "time-lock": "Zeitsperre",
@@ -753,7 +752,8 @@
       "quantum-resistant": "Quantenresistent",
       "zk-proofs": "ZK-Proofs",
       "research": "Forschung",
-      "notification-system": "Benachrichtigungssystem"
+      "notification-system": "Benachrichtigungssystem",
+      "keystone": "Keystone"
     }
   },
   "cookie": {
@@ -769,14 +769,16 @@
       "description": "Lesen Sie das Quantus Network Whitepaper. Entdecken Sie unseren technischen Ansatz für Post-Quanten-Kryptographie, Zero-Knowledge-Proofs und eine sichere Layer-1-Blockchain-Architektur."
     },
     "title": "Quantus Whitepaper",
-    "executive_summary": "Zusammenfassung",
-    "pdf": {
-      "unable": "PDF kann nicht direkt angezeigt werden.",
-      "download": "Herunterladen",
-      "read": "Lesen",
-      "preview_alt": "Whitepaper Vorschau",
-      "loading": "PDF wird gerendert..."
-    }
+    "on_this_page": "Auf dieser Seite",
+    "version": "Version",
+    "version_selector": "Version auswählen",
+    "latest": "Neueste",
+    "download_pdf": "PDF herunterladen",
+    "last_updated": "Zuletzt aktualisiert",
+    "changelog": "Änderungsprotokoll",
+    "authors": "Autoren",
+    "abstract": "Zusammenfassung",
+    "back_to_top": "Nach oben"
   },
   "common": {
     "loading": "Wird geladen...",

@@ -104,8 +104,6 @@ export const whitepaperJsonLd: TechArticle = {
   "@id": `${env.SITE_BASE_URL}/whitepaper`,
   "@type": "TechArticle",
   headline: "Quantus Network Whitepaper",
-  image:
-    "https://raw.githubusercontent.com/Quantus-Network/whitepaper/main/whitepaper-cover.png",
   description:
     "The official whitepaper for Quantus Network, detailing the versioned history, protocol, and architecture of the network.",
   author: {
@@ -122,12 +120,6 @@ export const whitepaperJsonLd: TechArticle = {
     },
   },
   inLanguage: "en-US",
-  encoding: {
-    "@type": "MediaObject",
-    contentUrl:
-      "https://raw.githubusercontent.com/Quantus-Network/whitepaper/main/whitepaper.pdf",
-    encodingFormat: "application/pdf",
-  },
   about: {
     "@type": "Thing",
     name: "Blockchain Protocol",
@@ -135,19 +127,28 @@ export const whitepaperJsonLd: TechArticle = {
   },
 };
 
-export const getWhitepaperJsonLd = (locale: string): TechArticle => {
-  const url =
+export const getWhitepaperJsonLd = (
+  locale: string,
+  version?: string,
+): TechArticle => {
+  const basePath =
     locale === "en-US"
       ? `${env.SITE_BASE_URL}/whitepaper`
       : `${env.SITE_BASE_URL}/${locale}/whitepaper`;
+
+  const url = version ? `${basePath}/v${version}` : basePath;
+  const pdfPath = version
+    ? `/whitepaper/pdf/${locale}/whitepaper-v${version}.pdf`
+    : `/whitepaper/pdf/${locale}/whitepaper.pdf`;
 
   return {
     ...whitepaperJsonLd,
     "@id": url,
     inLanguage: locale,
+    ...(version ? { version } : {}),
     encoding: {
       "@type": "MediaObject",
-      contentUrl: `https://raw.githubusercontent.com/Quantus-Network/whitepaper/main/${locale}/whitepaper.pdf`,
+      contentUrl: `${env.SITE_BASE_URL}${pdfPath}`,
       encodingFormat: "application/pdf",
     },
   };

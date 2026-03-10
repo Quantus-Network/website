@@ -1,0 +1,67 @@
+---
+export interface Props {
+  variant?: "info" | "tip" | "warning" | "danger";
+}
+
+const { variant = "info" } = Astro.props;
+
+const variantConfig = {
+  info: {
+    border: "border-blue-500/40",
+    bg: "bg-blue-500/10",
+    printBorder: "print:border-blue-600",
+    printBg: "print:bg-blue-50",
+    icon: "ⓘ",
+    label: "Info",
+  },
+  tip: {
+    border: "border-emerald-500/40",
+    bg: "bg-emerald-500/10",
+    printBorder: "print:border-emerald-600",
+    printBg: "print:bg-emerald-50",
+    icon: "💡",
+    label: "Tip",
+  },
+  warning: {
+    border: "border-amber-500/40",
+    bg: "bg-amber-500/10",
+    printBorder: "print:border-amber-600",
+    printBg: "print:bg-amber-50",
+    icon: "⚠",
+    label: "Warning",
+  },
+  danger: {
+    border: "border-red-500/40",
+    bg: "bg-red-500/10",
+    printBorder: "print:border-red-600",
+    printBg: "print:bg-red-50",
+    icon: "🚨",
+    label: "Danger",
+  },
+};
+
+const config = variantConfig[variant];
+---
+
+<aside
+  class:list={[
+    "not-prose my-6 rounded-lg border-l-4 px-5 py-4",
+    config.border,
+    config.bg,
+    config.printBorder,
+    config.printBg,
+  ]}
+  role="note"
+>
+  <p
+    class="mb-1 flex items-center gap-2 text-sm font-semibold tracking-wider text-white/80 uppercase print:text-[#333]"
+  >
+    <span>{config.icon}</span>
+    {config.label}
+  </p>
+  <div
+    class="text-[15px] leading-relaxed text-white/70 print:text-[#444] [&>p]:m-0"
+  >
+    <slot />
+  </div>
+</aside>

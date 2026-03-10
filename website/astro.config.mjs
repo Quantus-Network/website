@@ -2,6 +2,7 @@
 import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 import sitemap from "@astrojs/sitemap";
+import mdx from "@astrojs/mdx";
 import react from "@astrojs/react";
 import rehypeExternalLinks from "./src/utils/rehype-external-links.ts";
 import playformCompress from "@playform/compress";
@@ -36,11 +37,18 @@ export default defineConfig({
   build: {
     inlineStylesheets: "always",
   },
+  server: {
+    host: true,
+    allowedHosts: ["host.docker.internal", "host.containers.internal"],
+  },
   vite: {
     // @ts-ignore
     plugins: [tailwindcss()],
     build: {
       cssMinify: true,
+    },
+    preview: {
+      allowedHosts: ["host.docker.internal", "host.containers.internal"],
     },
   },
   site: SITE_BASE_URL,
@@ -83,6 +91,7 @@ export default defineConfig({
         return item;
       },
     }),
+    mdx(),
     react(),
     playformCompress(),
   ],

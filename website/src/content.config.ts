@@ -15,4 +15,19 @@ const blog = defineCollection({
   }),
 });
 
-export const collections = { blog };
+const whitepaper = defineCollection({
+  loader: glob({
+    pattern: "**/*.{md,mdx}",
+    base: "./src/contents/whitepapers",
+  }),
+  schema: z.object({
+    title: z.string(),
+    version: z.string(),
+    publishedDate: z.coerce.date(),
+    updatedDate: z.coerce.date().optional(),
+    authors: z.array(z.string()).default(["Quantus Labs"]),
+    changelog: z.array(z.string()).default([]),
+  }),
+});
+
+export const collections = { blog, whitepaper };

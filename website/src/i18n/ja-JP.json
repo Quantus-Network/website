@@ -728,13 +728,14 @@
       "plonky3": "Plonky3",
       "liberland": "リバーランド",
       "schrodinger-testnet": "シュレーディンガー・テストネット",
+      "pqc": "PQC",
       "mpc": "MPC",
       "multisig": "マルチシグ",
       "zk-aggregator": "ZKアグリゲーター",
       "indexer": "インデクサー",
+      "biohacking": "バイオハッキング",
       "rpc": "RPC",
       "privacy": "プライバシー",
-      "audit": "監査",
       "security": "セキュリティ",
       "guardian": "ガーディアン",
       "time-lock": "タイムロック",
@@ -743,7 +744,8 @@
       "quantum-resistant": "量子耐性",
       "zk-proofs": "ZK証明",
       "research": "研究",
-      "notification-system": "通知システム"
+      "notification-system": "通知システム",
+      "keystone": "Keystone"
     }
   },
   "cookie": {
@@ -759,14 +761,16 @@
       "description": "Quantus Network のホワイトペーパーをご覧ください。ポスト量子暗号、ゼロ知識証明、および安全なレイヤー 1 ブロックチェーン アーキテクチャへの当社の技術的アプローチを解説します。"
     },
     "title": "Quantus ホワイトペーパー",
-    "executive_summary": "エグゼクティブサマリー",
-    "pdf": {
-      "unable": "PDF を直接表示できません。",
-      "download": "ダウンロード",
-      "read": "読む",
-      "preview_alt": "ホワイトペーパーのプレビュー",
-      "loading": "PDFをレンダリング中..."
-    }
+    "on_this_page": "このページの内容",
+    "version": "バージョン",
+    "version_selector": "バージョンを選択",
+    "latest": "最新",
+    "download_pdf": "PDFをダウンロード",
+    "last_updated": "最終更新",
+    "changelog": "変更履歴",
+    "authors": "著者",
+    "abstract": "概要",
+    "back_to_top": "トップに戻る"
   },
   "common": {
     "loading": "読み込み中...",

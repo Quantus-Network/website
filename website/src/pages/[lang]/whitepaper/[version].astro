@@ -1,0 +1,185 @@
+---
+import { render } from "astro:content";
+import Layout from "@/components/layout/Layout.astro";
+import {
+  getLocaleFromUrl,
+  createTranslator,
+  SUPPORTED_LOCALES,
+  type Locale,
+} from "@/utils/i18n";
+import { JsonLdGraph } from "@/utils/build-json-ld";
+import { getWhitepaperJsonLd } from "@/constants/default-jsonld";
+import { createMetadata } from "@/utils/create-metadata";
+import WhitepaperHeader from "@/components/features/whitepaper/WhitepaperHeader.astro";
+import TableOfContents from "@/components/features/whitepaper/TableOfContents.astro";
+import WhitepaperContent from "@/components/features/whitepaper/WhitepaperContent.astro";
+import {
+  getWhitepaperByVersion,
+  getWhitepapersForLocale,
+  getAllVersions,
+  getWhitepaperPdfPath,
+} from "@/utils/whitepaper";
+
+export async function getStaticPaths() {
+  const { getCollection } = await import("astro:content");
+  const allEntries = await getCollection("whitepaper");
+  const paths: { params: { lang: string; version: string } }[] = [];
+
+  for (const lang of SUPPORTED_LOCALES) {
+    const langEntries = allEntries.filter((e) =>
+      e.id.toLowerCase().startsWith(`${lang.toLowerCase()}/`),
+    );
+    const fallbackEntries =
+      langEntries.length > 0
+        ? langEntries
+        : allEntries.filter((e) => e.id.toLowerCase().startsWith("en-us/"));
+
+    for (const entry of fallbackEntries) {
+      paths.push({
+        params: { lang, version: `v${entry.data.version}` },
+      });
+    }
+  }
+
+  return paths;
+}
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
+
+const { version: versionParam } = Astro.params;
+const entry = await getWhitepaperByVersion(locale as Locale, versionParam!);
+if (!entry) return Astro.redirect("/404");
+
+const allEntries = await getWhitepapersForLocale(locale as Locale);
+const versions = getAllVersions(allEntries);
+const latestVersion =
+  versions[versions.length - 1]?.version ?? entry.data.version;
+const pdfHref = getWhitepaperPdfPath(locale as Locale, entry.data.version);
+
+const { Content, headings } = await render(entry);
+
+const metadata = createMetadata({
+  title: `${t("whitepaper.meta.title")} - v${entry.data.version}`,
+  description: t("whitepaper.meta.description"),
+  pathname: Astro.url.pathname,
+});
+
+const jsonLd = JsonLdGraph({
+  "@context": "https://schema.org",
+  "@graph": [getWhitepaperJsonLd(locale, entry.data.version)],
+});
+---
+
+<Layout {...metadata} jsonLd={jsonLd}>
+  <section
+    id="whitepaper-section"
+    class:list={["lg:max-w-content mx-auto px-[30px] py-10 lg:py-20 2xl:px-0"]}
+  >
+    <WhitepaperHeader
+      title={entry.data.title}
+      version={entry.data.version}
+      latestVersion={latestVersion}
+      versions={versions}
+      updatedDate={entry.data.updatedDate}
+      publishedDate={entry.data.publishedDate}
+      authors={entry.data.authors}
+      pdfHref={pdfHref}
+      locale={locale}
+      t={t}
+    />
+
+    <TableOfContents
+      headings={headings}
+      tocLabel={t("whitepaper.on_this_page")}
+      backToTopLabel={t("whitepaper.back_to_top")}
+      variant="mobile"
+    />
+
+    <div class="lg:flex lg:gap-14">
+      <div class="min-w-0 flex-1">
+        <WhitepaperContent>
+          <Content />
+        </WhitepaperContent>
+      </div>
+
+      <div class="hidden w-[260px] shrink-0 lg:block">
+        <TableOfContents
+          headings={headings}
+          tocLabel={t("whitepaper.on_this_page")}
+          backToTopLabel={t("whitepaper.back_to_top")}
+          variant="desktop"
+        />
+      </div>
+    </div>
+
+    {
+      entry.data.changelog.length > 0 && (
+        <footer class="mt-16 border-t border-white/10 pt-8 print:border-black/10">
+          <h2 class="mb-4 text-lg font-semibold text-white/80 print:text-black/80">
+            {t("whitepaper.changelog")}
+          </h2>
+          <ul class="space-y-2">
+            {entry.data.changelog.map((item) => (
+              <li class="flex items-start gap-2 text-sm text-white/60 print:text-black/60">
+                <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-white/30 print:bg-black/40" />
+                {item}
+              </li>
+            ))}
+          </ul>
+        </footer>
+      )
+    }
+  </section>
+</Layout>
+
+<script>
+  function initTocHighlighting() {
+    const tocLinks = document.querySelectorAll(
+      "[data-toc-desktop] [data-toc-link]",
+    );
+    if (tocLinks.length === 0) return;
+
+    const headingElements: Element[] = [];
+    tocLinks.forEach((link) => {
+      const slug = (link as HTMLElement).dataset.headingSlug;
+      if (slug) {
+        const el = document.getElementById(slug);
+        if (el) headingElements.push(el);
+      }
+    });
+
+    if (headingElements.length === 0) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            tocLinks.forEach((link) => {
+              const slug = (link as HTMLElement).dataset.headingSlug;
+              if (slug === id) {
+                link.classList.add("!border-quantus-blue", "!text-white");
+              } else {
+                link.classList.remove("!border-quantus-blue", "!text-white");
+              }
+            });
+          }
+        }
+      },
+      { rootMargin: "-80px 0px -65% 0px", threshold: 0 },
+    );
+
+    headingElements.forEach((el) => observer.observe(el));
+  }
+  initTocHighlighting();
+  document.addEventListener("astro:after-swap", initTocHighlighting);
+</script>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const isPrint = params.get("print") === "true";
+
+  if (isPrint)
+    document.getElementById("whitepaper-section")?.classList.add("print-mode");
+</script>

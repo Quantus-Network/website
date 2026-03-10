@@ -736,13 +736,14 @@
       "plonky3": "Plonky3",
       "liberland": "Liberland",
       "schrodinger-testnet": "Red de pruebas Schrödinger",
+      "pqc": "PQC",
       "mpc": "MPC",
       "multisig": "Multisig",
       "zk-aggregator": "ZK-Aggregator",
       "indexer": "Indexador",
+      "biohacking": "Biohacking",
       "rpc": "RPC",
       "privacy": "Privacidad",
-      "audit": "Auditoría",
       "security": "Seguridad",
       "guardian": "Guardián",
       "time-lock": "Bloqueo de tiempo",
@@ -751,7 +752,8 @@
       "quantum-resistant": "Resistente a la computación cuántica",
       "zk-proofs": "Pruebas ZK",
       "research": "Investigación",
-      "notification-system": "Sistema de notificaciones"
+      "notification-system": "Sistema de notificaciones",
+      "keystone": "Keystone"
     }
   },
   "cookie": {
@@ -767,14 +769,16 @@
       "description": "Lea el whitepaper de Quantus Network. Explore nuestro enfoque técnico de la criptografía post-cuántica, las pruebas de conocimiento cero y la arquitectura segura de blockchain de Capa 1."
     },
     "title": "Whitepaper de Quantus",
-    "executive_summary": "Resumen Ejecutivo",
-    "pdf": {
-      "unable": "No se puede mostrar el PDF directamente.",
-      "download": "Descargar",
-      "read": "Leer",
-      "preview_alt": "Vista Previa del Whitepaper",
-      "loading": "Renderizando PDF..."
-    }
+    "on_this_page": "En esta página",
+    "version": "Versión",
+    "version_selector": "Seleccionar versión",
+    "latest": "Última",
+    "download_pdf": "Descargar PDF",
+    "last_updated": "Última actualización",
+    "changelog": "Registro de cambios",
+    "authors": "Autores",
+    "abstract": "Resumen",
+    "back_to_top": "Volver arriba"
   },
   "common": {
     "loading": "Cargando...",

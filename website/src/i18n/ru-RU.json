@@ -736,13 +736,14 @@
       "plonky3": "Plonky3",
       "liberland": "Либерленд",
       "schrodinger-testnet": "Тестнет Шрёдингера",
+      "pqc": "PQC",
       "mpc": "MPC",
       "multisig": "Мультисиг",
       "zk-aggregator": "ZK-агрегатор",
       "indexer": "Индексатор",
+      "biohacking": "Биохакинг",
       "rpc": "RPC",
       "privacy": "Конфиденциальность",
-      "audit": "Аудит",
       "security": "Безопасность",
       "guardian": "Хранитель",
       "time-lock": "Временная блокировка",
@@ -751,7 +752,8 @@
       "quantum-resistant": "Квантово-устойчивый",
       "zk-proofs": "ZK-доказательства",
       "research": "Исследования",
-      "notification-system": "Система уведомлений"
+      "notification-system": "Система уведомлений",
+      "keystone": "Keystone"
     }
   },
   "cookie": {
@@ -767,14 +769,16 @@
       "description": "Прочтите whitepaper Quantus Network. Изучите наш технический подход к постквантовой криптографии, доказательствам с нулевым разглашением и безопасной архитектуре блокчейна Уровня 1."
     },
     "title": "Whitepaper Quantus",
-    "executive_summary": "Краткое описание",
-    "pdf": {
-      "unable": "Невозможно отобразить PDF напрямую.",
-      "download": "Скачать",
-      "read": "Читать",
-      "preview_alt": "Предпросмотр Whitepaper",
-      "loading": "Рендеринг PDF..."
-    }
+    "on_this_page": "На этой странице",
+    "version": "Версия",
+    "version_selector": "Выбрать версию",
+    "latest": "Последняя",
+    "download_pdf": "Скачать PDF",
+    "last_updated": "Последнее обновление",
+    "changelog": "История изменений",
+    "authors": "Авторы",
+    "abstract": "Аннотация",
+    "back_to_top": "Наверх"
   },
   "common": {
     "loading": "Загрузка...",

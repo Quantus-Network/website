@@ -736,13 +736,14 @@
       "plonky3": "Plonky3",
       "liberland": "Liberland",
       "schrodinger-testnet": "Schrödinger Testnet",
+      "pqc": "PQC",
       "mpc": "MPC",
       "multisig": "Multisig",
       "zk-aggregator": "ZK-Aggregator",
       "indexer": "Indexer",
+      "biohacking": "Biohacking",
       "rpc": "RPC",
       "privacy": "Privasi",
-      "audit": "Audit",
       "security": "Keamanan",
       "guardian": "Guardian",
       "time-lock": "Kunci Waktu",
@@ -751,7 +752,8 @@
       "quantum-resistant": "Tahan Kuantum",
       "zk-proofs": "Bukti ZK",
       "research": "Riset",
-      "notification-system": "Sistem Notifikasi"
+      "notification-system": "Sistem Notifikasi",
+      "keystone": "Keystone"
     }
   },
   "cookie": {
@@ -767,14 +769,16 @@
       "description": "Baca whitepaper Quantus Network. Jelajahi pendekatan teknis kami terhadap kriptografi pasca-kuantum, zero-knowledge proof, dan arsitektur blockchain Layer 1 yang aman."
     },
     "title": "Whitepaper Quantus",
-    "executive_summary": "Ringkasan Eksekutif",
-    "pdf": {
-      "unable": "Tidak dapat menampilkan PDF secara langsung.",
-      "download": "Unduh",
-      "read": "Baca",
-      "preview_alt": "Pratinjau Whitepaper",
-      "loading": "Merender PDF..."
-    }
+    "on_this_page": "Di halaman ini",
+    "version": "Versi",
+    "version_selector": "Pilih Versi",
+    "latest": "Terbaru",
+    "download_pdf": "Unduh PDF",
+    "last_updated": "Terakhir diperbarui",
+    "changelog": "Catatan Perubahan",
+    "authors": "Penulis",
+    "abstract": "Abstrak",
+    "back_to_top": "Kembali ke atas"
   },
   "common": {
     "loading": "Memuat...",

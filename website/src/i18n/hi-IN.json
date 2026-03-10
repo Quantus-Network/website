@@ -35,7 +35,7 @@
   },
   "video": {
     "title": "ऐसी क्रिप्टोग्राफी पर मूल्य बनाएँ जो स्थायी हो।",
-    "description": "क्वांटस उन लोगों के लिए है जो आने वाले कल को देख सकते हैं; नवाचार की अगली लहर। एक भविष्य-प्रूफ, क्वांटम-सुरक्षित ब्लॉकचेन जो आज के मूल्य को कल के खतरों से सुरक्षित कर सकता है।"
+    "description": "क्वांटस उन लोगों के लिए है जो आने वाले कल को देख सकते हैं; नवाचार की अगली लहर। एक भविष्य-प्रूफ, क्वांटम-सुरक्षित ब्लॉकचेน जो आज के मूल्य को कल के खतरों से सुरक्षित कर सकता है।"
   },
   "benefits": {
     "title": "भविष्य क्वांटम है",
@@ -739,13 +739,14 @@
       "plonky3": "Plonky3",
       "liberland": "Liberland",
       "schrodinger-testnet": "Schrödinger Testnet",
+      "pqc": "PQC",
       "mpc": "MPC",
       "multisig": "Multisig",
       "zk-aggregator": "ZK-Aggregator",
       "indexer": "Indexer",
+      "biohacking": "Biohacking",
       "rpc": "RPC",
       "privacy": "Privacy",
-      "audit": "Audit",
       "security": "Security",
       "guardian": "Guardian",
       "time-lock": "Time-Lock",
@@ -754,7 +755,8 @@
       "quantum-resistant": "क्वांटम-रेसिस्टेंट",
       "zk-proofs": "ZK-प्रूफ्स",
       "research": "अनुसंधान",
-      "notification-system": "अधिसूचना प्रणाली"
+      "notification-system": "अधिसूचना प्रणाली",
+      "keystone": "Keystone"
     }
   },
   "cookie": {
@@ -770,14 +772,16 @@
       "description": "क्वांटस नेटवर्क व्हाइटपेपर पढ़ें। पोस्ट-क्वांटम क्रिप्टोग्राफी, जीरो-नॉलेज प्रूफ और सुरक्षित लेयर 1 ब्लॉकचेन आर्किटेक्चर के लिए हमारे तकनीकी दृष्टिकोण का पता लगाएं।"
     },
     "title": "क्वांटस व्हाइटपेपर",
-    "executive_summary": "कार्यकारी सारांश",
-    "pdf": {
-      "unable": "पीडीएफ को सीधे प्रदर्शित करने में असमर्थ।",
-      "download": "डाउनलोड",
-      "read": "पढ़ें",
-      "preview_alt": "व्हाइटपेपर पूर्वावलोकन",
-      "loading": "PDF रेंडर हो रहा है..."
-    }
+    "on_this_page": "इस पृष्ठ पर",
+    "version": "संस्करण",
+    "version_selector": "संस्करण चुनें",
+    "latest": "नवीनतम",
+    "download_pdf": "PDF डाउनलोड करें",
+    "last_updated": "अंतिम अपडेट",
+    "changelog": "परिवर्तन लॉग",
+    "authors": "लेखक",
+    "abstract": "सारांश",
+    "back_to_top": "शीर्ष पर वापस जाएँ"
   },
   "common": {
     "loading": "लोड हो रहा है...",

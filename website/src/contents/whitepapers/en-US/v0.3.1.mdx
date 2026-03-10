@@ -1,0 +1,720 @@
+---
+title: "Quantus Network Whitepaper"
+version: "0.3.1"
+publishedDate: "2026-01-14"
+updatedDate: "2026-01-14"
+authors: ["Christopher Smith"]
+changelog:
+  - "Fix wrong allocation for investors in the pie chart."
+---
+
+import Callout from "@/components/features/whitepaper/mdx/Callout.astro";
+import Figure from "@/components/features/whitepaper/mdx/Figure.astro";
+import Grid from "@/components/features/whitepaper/mdx/Grid.astro";
+import Column from "@/components/features/whitepaper/mdx/Column.astro";
+import Timeline from "@/components/features/whitepaper/mdx/Timeline.astro";
+import ResponsiveTable from "@/components/features/whitepaper/mdx/ResponsiveTable.astro";
+import SiteSocials from "@/components/ui/SiteSocials.astro";
+
+## Introduction
+
+### The Quantum Threat
+
+Traditional blockchains face an existential threat from the advent of quantum
+computing. The cryptographic foundations of blockchains rely on the hardness
+of the discrete logarithm problem (DLP), and quantum algorithms, notably Shor’s,
+can solve the DLP exponentially faster than classical computers. This vulnerability
+could enable quantum-adversaries to derive private keys from public keys, which
+would allow them to forge transactions and decrypt sensitive financial data.
+
+The outcome is a catastrophic system failure. Without
+proactive quantum-resistant upgrades, the trillion-dollar
+crypto economy risks sudden devaluation from such attacks.
+
+<Callout variant="tip">**Quantus fixes this.**</Callout>
+
+### Unique Value Proposition
+
+Named after the Latin word for "how much", Quantus Network delivers scalable,
+quantum-secure wealth preservation. Quantus is not a smart contract platform.
+Instead, like a high-end restaurant with no menu, Quantus is focused on doing a
+small number of things better than any other chain.
+
+Specifically, Quantus uses:
+
+- Post-quantum signatures for all transactions
+- Post-quantum signatures and encryption (ML-DSA and ML-KEM) to secure peer connections
+- A post-quantum bridge to other blockchains and create quantum-secure wrapped coins
+- Post-quantum zero-knowledge-proofs to scale
+- High Security Accounts to deter theft and enable recovery from mistakes
+- Human-readable check-phrases for easy address verification
+
+This targeted approach empowers users to preserve wealth confidently, turning
+quantum threats into opportunities.
+
+<Callout variant="tip">
+  Quantus is the future-proof fortress for your fortune.
+</Callout>
+
+## The Quantum Threat to Blockchain
+
+### Quantum Computing Basics
+
+<Grid gap="2rem">
+  <Column ratio={2}>
+    Quantum computers leverage principles like superposition
+    and entanglement to perform computations that are intractable
+    for classical machines.
+
+    Unlike classical bits, which are either 0 or 1, quantum bits
+    (qubits) can exist in multiple states simultaneously, enabling
+    exponential parallelism for certain problems. **This capability
+    poses existential risks to the cryptographic systems
+    underpinning blockchain finance, as algorithms developed
+    for quantum hardware undermine the security assumptions
+    of most public-key cryptography.**
+
+  </Column>
+
+  <Column class="order-first sm:order-last" ratio={1}>
+    <Figure src="/whitepaper/v0.3.1/quantum-computing-basics.webp" alt="Quantum Computing Basics" />
+  </Column>
+</Grid>
+
+#### Shor's Algorithm
+
+Introduced in 1994 by Peter Shor, provides a polynomial-time method for
+factoring large integers and solving the discrete logarithm problem on a quantum
+computer. In essence, it exploits Quantum Fourier Transforms (QFT) to find the
+period of a function, allowing efficient reversal of the trapdoor functions that
+underlie schemes like RSA or elliptic curve cryptography (ECC).
+
+**For blockchain finance, this means an attacker with a sufficiently powerful
+quantum computer (estimated at ~2,300 logical qubits) could derive private
+keys from public keys in polynomial time O(n³). This is an extreme speed-up,
+rendering vulnerable systems obsolete overnight.**
+
+#### Grover's Algorithm
+
+Proposed by Lov Grover in 1996, offers a quadratic speedup for unstructured
+search problems, reducing the time to find a specific item in an unsorted database
+from O(n) to O(√n) operations. It works by iteratively amplifying the amplitude of
+the target state through quantum interference. While not as devastating as Shor’s
+for asymmetric cryptography, **Grover’s impacts symmetric primitives like hash
+functions and AES encryption, effectively halving the security level** (e.g., a 256-bit
+key behaves like 128 bits against quantum attacks).
+
+While impactful, this attack is mitigated by simply doubling the security bits,
+rather than changing the cryptographic scheme. Additionally, Grover’s quadratic
+speedup is impractical due to its high qubit and gate requirements, requiring
+billions of operations in sequence, with limited parallelization, making it infeasible
+for real-world reversals even on future hardware.
+
+### The dangers of quantum computing to blockchain finance can be categorized into four areas:
+
+#### Forging Digital Signatures
+
+Shor’s algorithm directly threatens ECC-based signatures used in most
+blockchains (e.g., Bitcoin’s secp256k1 curve), allowing adversaries
+to impersonate users and authorize fraudulent transactions. Such a
+capability would represent a critical failure of the most basic feature of a
+blockchain.
+
+#### Forging False Proofs in Zero-Knowledge Systems
+
+Many zero-knowledge proofs, such as those in zk-SNARKs for privacy-
+focused finance, rely on discrete logarithm hardness via elliptic-curve
+pairings for commitments; Shor’s could enable the creation of invalid
+proofs that appear valid, which could allow an attacker to mint new
+coins or falsify the state of Layer-2s (L2s).
+
+#### Decrypting Secret Information
+
+Quantum attacks could expose encrypted data protected by vulnerable
+public-key schemes in privacy protocols such as Zcash or Monero. It
+could also decrypt p2p communications in financial protocols, revealing
+sensitive wealth details and enabling targeted theft.
+
+#### Reversing Hash Functions
+
+Grover’s algorithm could accelerate preimage attacks on hashes like
+SHA-256, used for proof-of-work and address generation, but this is the
+least concerning threat. Many post-quantum cryptographic schemes
+incorporate hash-based constructions as hashes are considered secure-
+enough with a large enough digest.
+
+### Scaling Challenges in Post-Quantum Cryptography
+
+While post-quantum cryptography (PQC) offers essential protections against
+quantum threats, it introduces significant scaling hurdles due to the inherent
+design of these algorithms. Unlike elliptic curve schemes, which rely on
+compact mathematical structures, PQC primitives require larger parameters to
+maintain security against both classical and quantum adversaries. This results in
+substantially bigger public keys, private keys, and signatures, often by orders of
+magnitude.
+
+The following table illustrates typical sizes for ML-DSA at a 128-bit post-quantum
+security level compared to classical counterparts like 256-bit ECDSA:
+
+<ResponsiveTable
+  headers={[
+    "Algorithm",
+    "Public Key Size (Bytes)",
+    "Private Key Size (Bytes)",
+    "Signature Size (Bytes)",
+  ]}
+  rows={[
+    ["ML-DSA-87 (Dilithium)", "2,592", "4,896", "4,627"],
+    ["ECDSA (256-bit)", "32", "32", "65"],
+  ]}
+/>
+
+**As shown, ML-DSA signatures can be over 70 times larger than ECDSA
+equivalents, and public keys more than 80 times larger.**
+
+Other PQC families exacerbate this: hash-based schemes like SPHINCS+ may
+produce signatures up to 41 KB, while even size-optimized lattice variants like
+FALCON still exceed classical sizes by a significant multiple.
+
+In blockchain contexts, these inflated sizes compound into systemic scaling
+issues. Larger signatures bloat individual transactions, reducing transactions per
+second (TPS) as blocks fill faster and require more time for validation. This also
+strains peer-to-peer (P2P) communication, increasing bandwidth demands and
+propagation delays, which can heighten the risk of network forks or orphaned
+blocks in consensus mechanisms like proof-of-work. Storage requirements are also
+affected, leading to higher node operating costs and barriers for participation,
+especially for resource-constrained users or validators.
+
+**These scaling challenges will have to be addressed by all blockchains in the
+future. Bitcoin, for example, will have much less than 1 TPS if the max block size
+is not increased.**
+
+## Quantus Network Architecture
+
+### Post-Quantum Cryptographic Primitives
+
+Quantus Network employs **NIST-standardized PQC** primitives to ensure the
+security of transactions and network communications against quantum threats.
+At the core of transaction integrity is **ML-DSA (Module-Lattice-based Digital
+Signature Algorithm**, formerly known as CRYSTALS-Dilithium), a lattice-based
+signature scheme selected for its balance of security, efficiency, and ease of
+implementation. **ML-DSA leverages the hardness of problems** like Learning With
+Errors (LWE) and Short Integer Solution (SIS) over module lattices, providing
+robust resistance to both classical and quantum attacks, including those from
+Shor’s algorithm.
+
+For transaction signatures, **Quantus integrates ML-DSA-87**, the parameter set
+offering the highest security level (NIST Security Level 5, equivalent to 256-bit
+classical and 128-bit quantum security) to **protect against potential cryptanalytic
+breakthroughs in lattice problems**. This choice prioritizes caution, as lattice
+cryptography is relatively new and less battle-tested than classical schemes. The
+larger parameters mitigate risks from potential advances in lattice cryptanalysis,
+which would still leave smaller key sizes as softer targets.
+
+#### Alternatives
+
+ML-DSA was selected over alternatives like FN-DSA (Falcon) due to:
+
+- FN-DSA’s greater implementation complexity (e.g., requiring floating-point operations, which are blockchain-unfriendly)
+- Lack of deterministic key generation in its specification
+- Its non-finalized status at the time of development
+
+Hash-based options like SLH-DSA were dismissed for their even larger signature
+sizes (exceeding 17 KB). Crypto-agility (being able to swap in different signature
+schemes) is built into Substrate, so it is relatively easy to add these alternatives at a
+future date, should circumstances demand.
+
+While ML-DSA-87 results in larger keys and signatures, these are manageable in
+Quantus’s early-stage network, where storage is not yet a bottleneck, and future
+optimizations like wormhole addresses via zero-knowledge proofs will address
+scaling.
+
+For technical details about the implementation see [QIP-0006](https://github.com/Quantus-Network/improvement-proposals/blob/main/qip-0006.md).
+
+#### LibP2P
+
+**Quantus Network secures peer-to-peer (P2P) node communications using a
+combination of ML-DSA for authentication and ML-KEM (Module-Lattice-based
+Key Encapsulation Mechanism, formerly CRYSTALS-Kyber) for encryption.**
+
+This integration extends PQC to the libp2p networking stack, modifying core
+components for quantum resistance: using ML-DSA-87 signatures for peer identity
+and ML-KEM-768 for transport security (extending the Noise handshake with an
+additional KEM message for quantum-resistant shared secrets).
+
+The P2P layer is often neglected in quantum-security analysis. Authentication of
+peers is important, but the worst an attacker could do at the peer level is
+impersonate a node and send invalid messages, which could result in denial-of-
+service. This attack is already mitigated by the fact that nodes are generally
+untrusted in the blockchain model and nodes can easily switch their keys if the
+attack is detected. Likewise, decrypting P2P communications yields limited
+attacker benefits (e.g., tracking transaction paths, mitigated by proxies or Tor),
+and most data becomes public on-chain anyway.
+
+**Nevertheless, quantum-securing the P2P layer protects against eavesdropping,
+man-in-the-middle attacks, and quantum decryption, ensuring that node gossip,
+block propagation, and other network interactions remain confidential and
+tamper-proof for the foreseeable future.**
+
+For technical details about the implementation see [QIP-0004](https://github.com/Quantus-Network/improvement-proposals/blob/main/qip-0004.md).
+
+### Scaling PQC
+
+To address the scaling challenges inherent in post-quantum cryptography,
+**Quantus Network introduces an innovative aggregated post-quantum signature
+scheme called “Wormhole Addresses”.** This system leverages zero-knowledge
+proofs (ZKPs) generated via the Plonky2 proving system (basically STARKs) to
+move balance verification off-chain, allowing the chain to verify a single compact
+proof without processing individual signatures.
+
+**Wormhole Addresses enable the verification of a large number of transactions
+with one proof**, with the public inputs (e.g., nullifiers, storage root, exit addresses,
+and amounts) becoming the primary limiting factor. This reduces the amortized
+per-transaction storage demands to **approximately 256 additional bytes per
+transaction, much smaller than any known PQC signature scheme.**
+
+The quantum security of the scheme derives from the use of the secure hash
+function Poseidon2 for commitments via FRI (Fast Reed-Solomon Interactive
+Oracle Proofs), instead of the quantum-vulnerable elliptic-curve pairings
+commonly used in SNARKs.
+
+Additionally the authentication secrets are hidden behind Poseidon2. Since secure
+hash functions are only quadratically weakened by Grover’s algorithm, not broken,
+hash preimage proofs can serve as lightweight post-quantum signatures in ZK
+contexts, similar to hash-based schemes like SPHINCS+.
+
+#### Client / Prover Flow
+
+Users generate a provably unspendable address by double-hashing a salt
+concatenated with a secret:
+
+```
+H(H(salt|secret))
+```
+
+This construction prevents false positives (e.g., mistaking a single-hash public key
+for an unspendable address) because in Substrate (and generally) blockchain
+addresses are the single hash of a public key, which is derived from the private
+key via some algebraic operation, not via a secure hash. The security of the
+construction therefore reduces to finding the preimage-of-a-preimage of a secure
+hash. Tokens sent to this address are effectively burned. They cannot be spent
+because no private key exists for the address that received them. These coins can
+therefore be re-minted without inflating supply.
+
+For each transfer, a TransferProof storage object is created, containing details like a
+unique global transfer count. The user’s wallet generates a Merkle-Patricia-Trie (MPT)
+storage proof from a recent block header’s storage root to the leaf for this TransferProof.
+
+A nullifier is computed:
+
+```
+H(H(salt | secret | global_transfer_count))
+```
+
+To prevent double-spends, with the secret derived deterministically from the wallet seed
+for retention.
+
+#### Aggregator Flow
+
+Any party (client, miner, or third-party) can aggregate multiple proofs using Plonky2’s
+recursion, forming a tree of proofs where each parent proof is a verification of the child
+proofs, with the child proofs’ public inputs aggregated:
+
+- nullifiers pass unchanged
+- exit addresses are deduplicated
+- block hashes are proven to be linked and then all but the most recent is dropped
+- amounts for duplicate exit addresses are summed
+  This recursion supports hierarchical aggregation, drastically reducing on-chain data.
+
+#### Chain / Verifier Flow
+
+**The network verifies the aggregated proof by checking:**
+
+- block hash is on chain and recent
+- nullifier uniqueness (to prevent double-spends)
+- proof validity
+
+**The ZK circuit enforces:**
+
+- storage proof correctness
+- nullifier computation accuracy
+- address unspendability
+- balance match between inputs and outputs
+- block header linkage
+
+**Plonky2 was selected for the following reasons:**
+
+- already audited
+- post-quantum
+- no trusted setup
+- efficient proving/verification
+- seamless proof aggregation
+- Rust-native implementation
+- compatible with Substrate’s no-std environment
+
+#### Performance highlights include:
+
+**Recursive proofs in 170 milliseconds and compact sizes** (100 KB per aggregated
+proof), enabling massive throughput gains.
+
+In an optimal case with 5 MB blocks and all transactions going to the same output,
+**Wormhole Addresses could pack ~153,000 transactions into a single block**
+(4.9 MB / 32 bytes per nullifier), a 223x improvement over ~685 raw ML-DSA
+transactions (5 MB / 7.3 KB each).
+
+#### Security Notes
+
+Potential risks include inflation bugs from faulty circuit/verification implementations,
+although this would be economically detectable if re-minted coins exceed balances
+of zero-send addresses. Users can optionally prove an address is a wormhole by
+publishing the first hash without revealing the secret. Verification transactions are
+unsigned, so denial-of-service via failed transactions needs to be mitigated non-
+financially. Token supply calculations are maintained, as re-mints appear as new
+coins but maintain maximum supply guarantees via burns.
+
+For more technical details about the implementation see [QIP-0005](https://github.com/Quantus-Network/improvement-proposals/blob/main/qip-0005.md).
+
+### Consensus Mechanism
+
+**Quantus Network uses a Proof-of-Work (PoW) consensus
+algorithm that preserves the desirable properties of Bitcoin’s
+consensus algorithm while improving compatibility with
+ZK-proof systems by switching out SHA-256 with Poseidon2.**
+
+Importantly, this change is not being made for quantum security. Cryptographic
+hash functions like SHA-256 are weakened but not destroyed by quantum
+algorithms, notably Grover’s. Some post-quantum signature schemes use secure
+hashes as a building block for this reason.
+
+Poseidon2 is a refinement of the Poseidon hash function. Creating SNARKs
+or STARKs for computations involving traditional hash functions like SHA-256
+often requires nearly 100x the number of gates compared to using Poseidon,
+which relies entirely on algebraic functions over field elements, instead of bit-
+level operations. We use the Goldilocks field for both Poseidon2 and Plonky2 to
+maximize the efficiency.
+
+## Wealth Preservation
+
+**There are many risks in managing cryptocurrency keys. Most of them are avoidable.
+Quantus Network bakes ease-of-use into the chain itself, enabling non-experts to
+transact with peace-of-mind.**
+
+### Reversible Transactions
+
+<Grid gap="2rem">
+  <Column ratio={2}>
+    **Quantus Network offers user-configurable reversible
+    transactions, enabling senders to set a time window
+    during which they can cancel outgoing transfers,
+    enhancing theft deterrence and error correction without
+    sacrificing blockchain’s core irreversibility.** Leveraging a
+    modified Substrate “scheduler pallet” that uses timestamps
+    for intuitive delays, the system allows clients to schedule
+    transfers via a simple interface, displaying countdowns in
+    wallets for both sender (with a cancel button) and recipient
+    (indicating completion if not cancelled). This balances quick
+    finality for commerce with flexibility for users concerned
+    about making mistakes or wanting to make a good faith
+    deposit without an escrow service.
+
+    **Reversible transactions form a powerful building block for
+    novel security protocols while maintaining decentralization
+    through on-chain enforcement.**
+
+    For more technical details see [QIP-0009](https://github.com/Quantus-Network/improvement-proposals/blob/main/qip-0009.md).
+
+  </Column>
+
+  <Column class="order-first sm:order-last" ratio={1}>
+    <Figure src="/whitepaper/v0.3.1/reversible-transactions.webp" alt="Reversible Transactions" />
+  </Column>
+</Grid>
+
+### Check-Phrases
+
+<Grid gap="2rem">
+  <Column ratio={2}>
+    Quantus Network introduces “check-phrases,” a
+    cryptographically-secure human-readable checksum for
+    blockchain addresses and other data requiring human
+    verification. **By hashing the address to generate a short
+    sequence of memorable words from the BIP-39 mnemonic
+    list, check-phrases enable quick, error-proof integrity
+    checks, protecting against typos, tampering, and attacks
+    like address poisoning.** This tool allows users to confidently
+    verify addresses during transfers without relying on
+    truncated displays or weak checksums. A 50,000 iteration
+    key derivation function is used to ensure that creating a
+    rainbow table for given checksums is very expensive. Of
+    course, for large transactions, users should still manually
+    check every letter of the address for correctness.
+
+    For more technical detail please see [QIP-0008](https://github.com/Quantus-Network/improvement-proposals/blob/main/qip-0008.md).
+
+  </Column>
+
+  <Column class="order-first sm:order-last" ratio={1}>
+    <Figure src="/whitepaper/v0.3.1/check-phrases.webp" alt="Checkphrases" />
+  </Column>
+</Grid>
+
+### High-Security Accounts
+
+<Grid gap="2rem">
+  <Column ratio={2}>
+    Quantus Network offers the ability to upgrade any
+    account to a “high-security account” which enforces
+    mandatory reversal periods on all outgoing transfers,
+    allowing a designated “guardian” account such as
+    a hardware wallet, multisig, or even a user-chosen
+    trusted-third-party to exclusively cancel suspicious
+    transactions during the reversal period, sending
+    the funds to the guardian instead of the sender or
+    receiver. This opt-in, permanent feature builds on
+    reversible transfers, where users specify the delay
+    and interceptor upon activation, preventing thieves
+    from disabling it.
+
+    The interceptor can itself be another high-security
+    account with its own guardian, enabling composable
+    hierarchies where each guardian has superior
+    permissions to the account it protects. This design
+    mimics traditional finance’s court-ordered reversals
+    but with user control. It balances security and
+    convenience for high-value accounts, giving time to
+    detect and respond to unauthorized activity without
+    compromising blockchain finality for legitimate flows.
+
+    For more technical details see [QIP-0011](https://github.com/Quantus-Network/improvement-proposals/blob/main/qip-0011.md).
+
+  </Column>
+
+  <Column class="order-first sm:order-last" ratio={1}>
+    <Figure src="/whitepaper/v0.3.1/high-security-account.webp" alt="High Security Account" />
+  </Column>
+</Grid>
+
+### Key Recovery
+
+Many crypto-fortunes have gone to the grave with their owners. Quantus Network
+offers a simple way to specify a recovery address that can pull your funds at any
+time, subject to a fixed delay. During this time, the owner can deny recovery if they
+have access to the key. This feature enables survivorship: users have an on-chain
+will without the need for courts or estates.
+
+### HD-Lattice
+
+Hierarchical Deterministic (HD) wallets are the industry standard for blockchains,
+allowing users to back up one seed phrase for all keys, improving security and
+convenience over manual backups per action.
+
+Adapting this to lattice schemes like Dilithium involves two challenges:
+
+- HMAC-SHA512 outputs can’t directly form lattice private keys, which require “good basis” polynomials via rejection sampling.
+- Non-hardened key derivation relies on elliptic curve addition, absent in lattices (public keys aren’t closed under any algebraic operation).
+
+Quantus Network addresses the first issue by using the output of the HMAC as
+entropy to deterministically construct the private key, not as the private key itself.
+The second issue is less critical and remains an open research question whether
+lattice cryptography can be adapted to address it.
+
+For more technical details see [QIP-0002](https://github.com/Quantus-Network/improvement-proposals/tree/main/qip-0002).
+
+## Tokenomics and Governance
+
+Quantus Network exists in a changing environment, and we cannot assume that we
+will get everything right on the first try. For this reason, we choose a simple starting
+point and allow the governance system to make changes as new information is
+acquired. This design makes the blockchain a living entity that can adapt to its
+environment at will. In particular, the Substrate governance process allows deep
+changes to the chain with minimal coordination among the various node-runners.
+
+### Block Rewards
+
+Quantus Network employs a straightforward tokenomics model imitating that of
+Bitcoin. There is a maximum supply of 21,000,000 coins and a simple heuristic
+determines the reward each block.
+
+```
+block_reward = (max_supply-current_supply) / constant
+```
+
+This heuristic forms a smooth exponentially decaying curve as the block_reward
+contributes to the current_supply which reduces the block_reward computed at the
+next block.
+
+Any burns from fees or otherwise reduce current_supply and essentially become
+part of the budget for block rewards. The constant is chosen so that, in the absence
+of any burns, 99% of the coins will be emitted in about 40 years.
+
+<Grid gap="2rem">
+  <Column>
+    **Block Rewards / Year**
+  
+    <Figure src="/whitepaper/v0.3.1/block-rewards-graph.webp" alt="Block rewards graph" />
+  </Column>
+
+  <Column>
+    **Inflation / Year**
+
+    <Figure src="/whitepaper/v0.3.1/inflation-graph.webp" alt="Inflation graph" />
+
+  </Column>
+</Grid>
+
+### Investor Allocation
+
+Quantus Network was built with the help of angel investors who took great risk
+in funding it. To avoid the supply overhangs that investor-lockups create, we are
+making all investors, public and private, liquid on day one. This allocation will
+be the only “pre-mine”. All other tokens will have to be mined into existence.
+Depending on the success of public sales this portion will represent 20-30% of the
+total supply.
+
+### Company Allocation
+
+To compensate the team for taking the risk to build new technology with no promise
+of success, we will divide the block rewards into two halves. First half will go to the
+miner. For approximately four years the second half will go to the company. This
+gives a de facto vesting schedule of about 10% of the total supply to the company.
+During this time, the miners get the same amount of newly minted coins.
+
+After that point, the company’s portion of block rewards will be redirected to a
+treasury governed by token holders, essentially forming a DAO.
+
+**Approximate Supply Allocation**
+
+<Figure src="/whitepaper/v0.3.1/tokenomics.webp" alt="Tokenomics" />
+
+### Transaction Fees
+
+Standard transactions will have a fee that goes to miners, providing an incentive
+to include transactions. Reversed transactions from high-security accounts will be
+charged a volume-based fee of 1% that is split, with half going to the miner and half
+being burned, going to the future security budget. Transactions that go thru the zk
+aggregation system will also be subject to a volume-based fee of 0.1%, which will
+be split among the miner, the proof aggregator, and a burn.
+
+### Forkless Upgrades
+
+Quantus Network supports “forkless” upgrades through Substrate’s runtime upgrades,
+allowing the blockchain’s core logic (the “runtime”) to evolve without hard forks
+that could disrupt the network or split the community. This is achieved via on-chain
+governance referenda, where approved proposals trigger a runtime swap, essentially
+replacing the existing WASM code blob with a new one in a single block, ensuring
+continuity of state and operations. This upgrade path minimizes downtime and risks,
+empowering the community to iteratively refine the protocol.
+
+### Governance System
+
+Quantus Network inherits its governance framework from Polkadot’s OpenGov system
+via Substrate. Token holders participate via conviction voting, where they agree to lock
+their assets for varying periods to amplify their vote’s weight. This amplification can
+range from 1x (no lock) to 6x (maximum lockup). This design encourages long-term
+alignment by tying influence to commitment.
+
+Proposals are categorized into multiple voting tracks called “origins”. Each origin
+has tailored parameters like approval thresholds (e.g., supermajority for high-
+impact changes), minimum deposits to deter spam, preparation/enactment periods,
+and decision timelines to prevent gridlock. This multi-track design allows parallel
+processing of diverse referenda, from routine treasury spends to critical runtime
+upgrades.
+
+The Technical Collective is a curated group of technical experts serving as a specialized
+body to propose, review, or whitelist urgent technical matters, expediting them
+through a dedicated track while maintaining community oversight.
+
+Quantus adopts this system without modifications but starts with a minimalistic setup
+to avoid complexity in its early stages. Initially, only the Technical Collective track is
+active, which will be used for binding, high-privilege decisions like protocol upgrades
+or parameter tweaks.
+
+Later we will introduce non-binding community vote track is for gauging sentiment on
+non-enforceable topics, such as feature suggestions or ecosystem polls. This system
+will become binding when the company turns the network over to the DAO.
+
+This phased approach allows the network to evolve organically via future governance
+votes without burdening users with unnecessary complexity at the beginning.
+
+## Roadmap
+
+<Timeline
+  title="Heisenberg Inception"
+  date="December 2024"
+  subtitle="Funding Secured, Substrate Chosen"
+/>
+
+<Timeline
+  title="Resonance Alpha"
+  date="July 2025"
+  subtitle="Public Testnet, Dilithium Signatures, Reversible Transactions"
+/>
+
+<Timeline
+  title="Schrödinger Beta"
+  date="October 2025"
+  subtitle="Features Complete, Ready for Audit"
+/>
+
+<Timeline
+  title="Dirac Beta"
+  date="November 2025"
+  subtitle="PoW changed to Poseidon2, Audits Addressed"
+/>
+
+<Timeline
+  title="Planck Beta"
+  date="January 2026"
+  subtitle="High Security Accounts, Multisigs, Hardware Wallet"
+/>
+
+<Timeline title="Bell Mainnet" date="Q1 2026" subtitle="Mainnet Launch" />
+
+<Timeline title="Fermi Upgrade" date="Q2 2026" subtitle="ZK Aggregation" />
+
+## Risks
+
+Building Quantus Network comes with inherent risks.
+
+- **Implementation Issues:** Flaws in software logic can cause serious failures in
+  even the best designed systems.
+- **NIST Algorithm Selection Issues:** Potential flaws or backdoors in selected
+  post-quantum standards (e.g., ML-DSA, ML-KEM) that could emerge post-
+  standardization. In the worst case, such flaws would allow an attacker to
+  forge signatures by deriving a private key from the public, representing
+  a catastrophic failure mode of the chain. If such flaws were made public,
+  Quantus Network could be upgraded to a new algorithm, but if such flaws are
+  exploited sparingly they may never be discovered.
+- **Quantum Computing Timelines:** Quantum breakthroughs might arrive much
+  later than anticipated, delaying the need for PQC; conversely, secretive
+  development (e.g. by governments) could lead to sudden threats if the
+  blockchain community fails to update swiftly.
+- **Other Considerations:** General adoption barriers, regulatory uncertainties in
+  finance/blockchain, and the inherent volatility of crypto ecosystems.
+
+## Closure
+
+<Grid class="gap-8! sm:gap-16!">
+  <Column>
+    <div className="flex flex-col items-center gap-[51px] border-none mb-0 p-0">
+      <svg className="h-[111.2px] w-[123.2px] shrink-0" viewBox="0 0 43 40" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#wp-logo-clip)"><path d="M42.99 39.33L35.52 32.73C42.53 25.1 42.23 13.47 34.62 6.19C26.7-1.4 13.86-1.4 5.94 6.19C-1.98 13.77-1.98 26.06 5.94 33.65C9.9 37.44 15.09 39.33 20.28 39.33H42.99ZM29.4 11.19C34.19 15.78 34.42 23.07 30.09 27.92L11.17 11.19C16.2 6.37 24.36 6.37 29.4 11.19Z" fill="url(#wp-icon-g0)"/><path d="M11.17 11.19C8.83 13.42 7.39 16.51 7.39 19.91C7.39 26.73 13.16 32.26 20.28 32.26C24.21 32.26 27.72 30.57 30.09 27.92L11.17 11.19Z" fill="url(#wp-icon-g1)"/><path opacity="0.8" d="M29.4 11.19C34.19 15.78 34.42 23.07 30.09 27.92L35.52 32.73C42.53 25.1 42.23 13.47 34.62 6.19" fill="url(#wp-icon-g2)"/></g><defs><linearGradient id="wp-icon-g0" x1="7.05" y1="39.43" x2="36.12" y2="9.06" gradientUnits="userSpaceOnUse"><stop offset="0.07" stop-color="#00F"/><stop offset="0.5" stop-color="#ED4CCE"/><stop offset="1" stop-color="#FFE91F"/></linearGradient><linearGradient id="wp-icon-g1" x1="7.01" y1="21.72" x2="29.71" y2="21.72" gradientUnits="userSpaceOnUse"><stop stop-color="#1E1E95"/><stop offset="0.94" stop-color="#ED4CCE" stop-opacity="0.5"/></linearGradient><linearGradient id="wp-icon-g2" x1="35.75" y1="30.92" x2="45.21" y2="19.56" gradientUnits="userSpaceOnUse"><stop stop-color="#00F"/><stop offset="0.41" stop-color="#FC6AD4" stop-opacity="0.2"/><stop offset="0.89" stop-color="#FFDE1D" stop-opacity="0"/></linearGradient><clipPath id="wp-logo-clip"><rect width="43" height="39" fill="white" transform="translate(0 0.5)"/></clipPath></defs></svg>
+      <svg className="h-[39.2px] w-[292.8px] [&_path]:fill-white print:[&_path]:fill-[#333]" viewBox="0 0 172 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#wp-text-clip)"><path d="M24.5449 22.6748L21.0807 19.9424C23.2115 17.8773 24.528 15.07 24.528 11.9783C24.5322 5.64884 19.03 0.5 12.2661 0.5C5.50224 0.5 0 5.64884 0 11.9783C0 18.3077 5.50224 23.4566 12.2661 23.4566C15.3084 23.4566 18.0933 22.4142 20.241 20.6887L23.8023 23.5039L24.5449 22.6787V22.6748ZM12.2661 1.58189C18.3929 1.58189 23.3761 6.24506 23.3761 11.9783C23.3761 14.8054 22.1651 17.368 20.1988 19.2475L3.27434 5.87785C5.29549 3.27579 8.57405 1.58189 12.2661 1.58189ZM19.3465 19.9819C17.4224 21.4744 14.954 22.3747 12.2661 22.3747C6.13939 22.3747 1.15615 17.7115 1.15615 11.9783C1.15615 10.0909 1.70046 8.31803 2.64142 6.79391L19.3465 19.9858V19.9819Z"/><path d="M47.5202 0.768497V14.6593C47.5202 18.9118 43.8324 22.3747 39.2964 22.3747C34.7604 22.3747 31.0726 18.9118 31.0726 14.6593V0.768497H29.9207V14.6593C29.9207 19.5081 34.1275 23.4566 39.3006 23.4566C44.4738 23.4566 48.6806 19.512 48.6806 14.6593V0.768497H47.5287H47.5202Z"/><path d="M147.071 0.768497V14.6593C147.071 18.9118 143.383 22.3747 138.847 22.3747C134.311 22.3747 130.623 18.9118 130.623 14.6593V0.768497H129.471V14.6593C129.471 19.5081 133.678 23.4566 138.851 23.4566C144.025 23.4566 148.231 19.512 148.231 14.6593V0.768497H147.079H147.071Z"/><path d="M99.0699 0.768497V21.1704L82.2087 0.768497H81.4661V23.0459H82.5631V2.8691L99.2344 23.0499H100.167V0.768497H99.0699Z"/><path d="M75.2045 23.0341H76.4956L64.6008 0.768497H63.7274L51.8284 23.0341H53.1195L57.3306 15.1489H70.9892L75.2003 23.0341H75.2045ZM64.1662 2.36764L70.4195 14.067H57.9171L64.1704 2.36764H64.1662Z"/><path d="M123.906 0.768497H105.724V1.75167H114.269V23.0499H115.361V1.75167H123.906V0.768497Z"/><path d="M171.354 15.0068C170.932 14.3355 170.316 13.767 169.531 13.3129C168.768 12.8706 167.823 12.4995 166.734 12.2073C165.658 11.9191 164.447 11.6506 163.13 11.4018C161.822 11.157 160.687 10.9043 159.755 10.6516C158.839 10.4028 158.08 10.1027 157.506 9.75923C156.949 9.42755 156.531 9.01691 156.27 8.53914C156.004 8.05743 155.869 7.44146 155.869 6.71099C155.869 5.98052 156.008 5.26189 156.282 4.66567C156.552 4.07339 156.983 3.55614 157.569 3.12575C158.16 2.68747 158.932 2.3479 159.86 2.11494C160.801 1.87803 161.953 1.75562 163.282 1.75562C164.612 1.75562 165.835 1.92541 166.814 2.26103C167.78 2.5927 168.73 3.22446 169.629 4.12867L169.84 4.33794L170.671 3.5127L170.485 3.32712C169.523 2.35579 168.443 1.65691 167.278 1.24232C166.122 0.831674 164.755 0.626352 163.211 0.626352C161.919 0.626352 160.742 0.760601 159.704 1.0212C158.658 1.28575 157.746 1.68455 156.995 2.2018C156.236 2.72695 155.645 3.3824 155.236 4.14446C154.826 4.90652 154.62 5.79099 154.62 6.77416C154.62 7.75734 154.814 8.52335 155.189 9.16695C155.569 9.81056 156.139 10.3515 156.881 10.774C157.603 11.1846 158.497 11.5282 159.531 11.7888C160.548 12.0454 161.734 12.2902 163.05 12.5153C164.392 12.7561 165.578 13.0246 166.569 13.3089C167.54 13.5853 168.35 13.9288 168.97 14.3197C169.574 14.7027 170.025 15.1608 170.316 15.682C170.607 16.2032 170.751 16.8626 170.751 17.6325C170.751 19.1882 170.122 20.3175 168.827 21.0796C167.51 21.8574 165.675 22.2523 163.375 22.2523C161.611 22.2523 160.021 21.9996 158.645 21.5021C157.274 21.0045 155.983 20.1912 154.814 19.0737L154.624 18.896L153.675 19.6502L153.898 19.8555C155.194 21.044 156.616 21.9285 158.13 22.4813C159.641 23.0341 161.392 23.3144 163.341 23.3144C166 23.3144 168.118 22.8209 169.645 21.8535C171.207 20.8624 171.996 19.4094 171.996 17.5378C171.996 16.5309 171.78 15.678 171.354 15.0028V15.0068Z"/></g><defs><clipPath id="wp-text-clip"><rect width="172" height="23" fill="white" transform="translate(0 0.5)"/></clipPath></defs></svg>
+    </div>
+
+  </Column>
+
+  <Column>
+      We believe in the power of open
+      protocols, proof-of-work, and sovereign
+      ownership. The Quantus Network app,
+      available on desktop and mobile, lets users
+      store digital assets, mine new blocks, and
+      participate in a fairer financial future without
+      intermediaries.
+
+      We’re committed to transparency, privacy, and empowering individuals through secure, self-custodial tools.
+
+    <SiteSocials />
+
+  </Column>
+</Grid>

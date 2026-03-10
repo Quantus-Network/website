@@ -725,13 +725,14 @@
       "plonky3": "Plonky3",
       "liberland": "自由地",
       "schrodinger-testnet": "薛定谔测试网",
+      "pqc": "PQC",
       "mpc": "MPC",
       "multisig": "多重签名",
       "zk-aggregator": "ZK 聚合器",
       "indexer": "索引器",
+      "biohacking": "生物黑客",
       "rpc": "RPC",
       "privacy": "隐私",
-      "audit": "审计",
       "security": "安全",
       "guardian": "守护者",
       "time-lock": "时间锁",
@@ -740,7 +741,8 @@
       "quantum-resistant": "抗量子",
       "zk-proofs": "ZK 证明",
       "research": "研究",
-      "notification-system": "通知系统"
+      "notification-system": "通知系统",
+      "keystone": "Keystone"
     }
   },
   "cookie": {
@@ -756,14 +758,16 @@
       "description": "阅读 Quantus Network 白皮书。探索我们在后量子密码学、零知识证明和安全的第一层区块链架构方面的技术方案。"
     },
     "title": "Quantus 白皮书",
-    "executive_summary": "执行摘要",
-    "pdf": {
-      "unable": "无法直接显示 PDF。",
-      "download": "下载",
-      "read": "阅读",
-      "preview_alt": "白皮书预览",
-      "loading": "正在渲染 PDF..."
-    }
+    "on_this_page": "本页内容",
+    "version": "版本",
+    "version_selector": "选择版本",
+    "latest": "最新",
+    "download_pdf": "下载 PDF",
+    "last_updated": "最后更新",
+    "changelog": "更新日志",
+    "authors": "作者",
+    "abstract": "摘要",
+    "back_to_top": "返回顶部"
   },
   "common": {
     "loading": "加载中...",
