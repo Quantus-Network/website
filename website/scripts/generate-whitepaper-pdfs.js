@@ -77,7 +77,7 @@ function startPreviewServer() {
   });
 }
 
-async function generatePdf(browser, locale, version) {
+async function generatePdf(puppeteer, locale, version) {
   const urlPath =
     locale === DEFAULT_LOCALE
       ? `/whitepaper/v${version}`
@@ -89,9 +89,25 @@ async function generatePdf(browser, locale, version) {
   const outputDir = path.join(OUTPUT_BASE, locale);
   const outputFile = path.join(outputDir, `whitepaper-v${version}.pdf`);
 
+  if (fs.existsSync(outputFile)) {
+    console.log(`  PDF already exists: ${outputFile}`);
+    return;
+  }
+
   fs.mkdirSync(outputDir, { recursive: true });
 
   console.log(`  Generating PDF: ${locale}/v${version} -> ${outputFile}`);
+
+  let browser;
+  try {
+    browser = await puppeteer.connect({
+      browserWSEndpoint: `ws://127.0.0.1:33000`,
+    });
+  } catch (err) {
+    console.warn(`\nCould not connect to browser: ${err.message}`);
+    console.log("Skipping PDF generation.");
+    return;
+  }
 
   const page = await browser.newPage();
 
@@ -161,7 +177,7 @@ async function generatePdf(browser, locale, version) {
       `  Warning: Failed to generate PDF for ${locale}/v${version}: ${err.message}`,
     );
   } finally {
-    await page.close();
+    await browser.close();
   }
 }
 
@@ -191,17 +207,6 @@ async function main() {
     return;
   }
 
-  let browser;
-  try {
-    browser = await puppeteer.connect({
-      browserWSEndpoint: `ws://127.0.0.1:33000`,
-    });
-  } catch (err) {
-    console.warn(`\nCould not connect to browser: ${err.message}`);
-    console.log("Skipping PDF generation.");
-    return;
-  }
-
   console.log("\nStarting preview server...");
   const server = await startPreviewServer();
 
@@ -210,18 +215,17 @@ async function main() {
 
     for (const [locale, versions] of versionMap) {
       for (const version of versions) {
-        await generatePdf(browser, locale, version);
+        await generatePdf(puppeteer, locale, version);
       }
     }
 
     console.log("\nAll PDFs generated successfully.");
-  } finally {
-    await browser.close();
-    server.kill();
+  } catch (err) {
+    console.error("PDF generation failed:", err.message);
+    console.log("Build completed but PDF generation was skipped.");
   }
+
+  server.kill();
 }
 
-main().catch((err) => {
-  console.error("PDF generation failed:", err.message);
-  console.log("Build completed but PDF generation was skipped.");
-});
+main();
