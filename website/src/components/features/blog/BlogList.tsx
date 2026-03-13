@@ -52,7 +52,6 @@ export const BlogList: React.FC<Props> = ({
   const fuse = useMemo(() => {
     return new Fuse(posts, {
       keys: ["data.title", "data.description", "data.tags"],
-      threshold: 0.3,
     });
   }, [posts]);
 
