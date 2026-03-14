@@ -19,6 +19,8 @@ const metadata = createMetadata({
   title: t("account.meta.title"),
   description: t("account.meta.description"),
   pathname: Astro.url.pathname,
+  noindex: true,
+  nofollow: true,
 });
 ---
 

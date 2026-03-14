@@ -65,7 +65,12 @@ export default defineConfig({
       lastmod: new Date(),
       i18n: { defaultLocale: DEFAULT_LOCALE, locales: LOCALES_MAP },
       filter: (page) => {
-        return !page.includes("/tags/");
+        return (
+          !page.includes("/tags/") &&
+          !page.includes("/account/") &&
+          !page.includes("/oauth/") &&
+          !page.includes("/invite/")
+        );
       },
       serialize: (item) => {
         // Read environment variable at runtime (during build)
