@@ -1,0 +1,51 @@
+---
+import type { AstroComponentFactory } from "astro/runtime/server/index.js";
+
+export interface Props {
+  items: string[];
+  class?: string;
+  /**
+   * Optional bullet rendering component.
+   * If provided, it will be used instead of `bulletTemplate`.
+   */
+  Bullet?: AstroComponentFactory;
+  /**
+   * Fallback bullet renderer when `Bullet` is not provided.
+   * Supports placeholders:
+   * - `{n}`  -> 1-based index
+   * - `{index}` -> 0-based index
+   */
+  bulletTemplate?: string;
+}
+
+const {
+  items,
+  class: className,
+  Bullet,
+  bulletTemplate = "{n}. ",
+} = Astro.props;
+
+function formatBullet(template: string, index: number, n: number) {
+  return template
+    .replaceAll("{index}", String(index))
+    .replaceAll("{n}", String(n));
+}
+---
+
+<ol class:list={["list-none p-0", className]}>
+  {
+    items.map((item, index) => (
+      <li class="flex items-start gap-2 p-0">
+        <span class="w-8">
+          {Bullet ? (
+            <Bullet index={index} value={index + 1} item={item} />
+          ) : (
+            formatBullet(bulletTemplate, index, index + 1)
+          )}
+        </span>
+
+        <div>{item}</div>
+      </li>
+    ))
+  }
+</ol>

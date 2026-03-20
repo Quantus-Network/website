@@ -15,6 +15,8 @@ import Column from "@/components/features/whitepaper/mdx/Column.astro";
 import Timeline from "@/components/features/whitepaper/mdx/Timeline.astro";
 import ResponsiveTable from "@/components/features/whitepaper/mdx/ResponsiveTable.astro";
 import SiteSocials from "@/components/ui/SiteSocials.astro";
+import OrderedList from "@/components/features/whitepaper/mdx/OrderedList.astro";
+import Divider from "@/components/features/whitepaper/mdx/Divider.astro";
 
 ## Legal Disclaimer
 
@@ -28,15 +30,22 @@ regarding the accuracy or completeness of the information herein._
 
 ## Contents
 
-01 introduction
-02 the quantum threat to blockchain
-03 the migration crisis
-04 quantus network architecture
-05 wealth preservation
-06 tokenomics and governance
-07 roadmap
-08 risks
-09 references & further reading
+<OrderedList
+  bulletTemplate="0{n}"
+  items={[
+    "Introduction",
+    "The Quantum Threat to Blockchain",
+    "The Migration Crisis",
+    "Quantus Network Architecture",
+    "Wealth Preservation",
+    "Tokenomics and Governance",
+    "Roadmap",
+    "Risks",
+    "References & Further Reading",
+  ]}
+/>
+
+<Divider />
 
 ## 01 - Introduction
 
@@ -72,6 +81,8 @@ few highly perfected menu items, Quantus delivers:
 The decision to focus on scalable, quantum-secure, private money
 stems from the threat CRQCs present to the industry and Bitcoin's
 inability to address these challenges.
+
+<Divider />
 
 ## 02 - The Quantum Threat to Blockchain
 
@@ -196,6 +207,8 @@ resource-constrained users or validators.
 > Bitcoin, for example, will have much less than
 > 1 TPS if the max block size is not increased.
 
+<Divider />
+
 ## 03 - The Migration Crisis
 
 ### The Coordination Problem
@@ -252,6 +265,7 @@ months or years while quantum-vulnerable coins remain exposed.
 > sidesteps this by building quantum security
 > into the chain from day one.
 
+<Divider />
 ## 04 - Quantus Network Architecture
 
 ### Foundation
@@ -482,6 +496,8 @@ We use the **Goldilocks field** for both Poseidon2 and Plonky2. The
 Goldilocks field's order fits in an unsigned 64-bit integer, which
 increases efficiency without compromising soundness.
 
+<Divider />
+
 ## 05 - Wealth Preservation
 
 There are many risks in managing cryptocurrency keys. Most of
@@ -564,6 +580,8 @@ remains an open research question whether lattice cryptography
 can be adapted to address it.
 
 For more technical details see [QIP-0002](https://github.com/Quantus-Network/improvement-proposals/tree/main/qip-0002).
+
+<Divider />
 
 ## 06 - Tokenomics and Governance
 
@@ -686,6 +704,8 @@ approach allows the network to evolve organically via future
 governance votes without burdening users with unnecessary
 complexity at the beginning.
 
+<Divider />
+
 ## 07 - Roadmap
 
 The current roadmap through 2026, subject to change.
@@ -728,6 +748,8 @@ The current roadmap through 2026, subject to change.
   subtitle="ZK proof aggregation infrastructure."
 />
 
+<Divider />
+
 ## 08 - Risks
 
 Building Quantus Network comes with inherent risks.
@@ -761,50 +783,131 @@ General adoption barriers, regulatory uncertainties in
 finance/blockchain, and the inherent volatility of crypto
 ecosystems.
 
+<Divider />
+
 ## 09 - References & Further Reading
 
-[1] Shor, P. W. (1997). Polynomial-time algorithms for prime
+<Grid gap="2rem">
+  <Column ratio={1}>
+    [1]
+  </Column>
+
+  <Column ratio={30}>
+    Shor, P. W. (1997). Polynomial-time algorithms for prime
 factorization and discrete logarithms on a quantum
 computer. _SIAM Journal on Computing_, 26(5), 1484–1509.
 https://doi.org/10.1137/S0097539795293172
+  </Column>
+</Grid>
 
-[2] Grover, L.K. (1996). A fast quantum mechanical algorithm
+<Grid gap="2rem">
+  <Column ratio={1}>
+    [2]
+  </Column>
+
+  <Column ratio={30}>
+    Grover, L.K. (1996). A fast quantum mechanical algorithm
 for database search. _Proceedings of the Twenty-Eight
 Annual ACM Symposium on Theory of Computing_, 212-219.
 https://doi.org/10.1145/237814.237866
+  </Column>
+</Grid>
 
-[3] Chainalysis. (2024). _The Chainalysis 2024 Crypto Crime
+<Grid gap="2rem">
+  <Column ratio={1}>
+    [3]
+  </Column>
+
+  <Column ratio={30}>
+    Chainalysis. (2024). _The Chainalysis 2024 Crypto Crime
 Report_. https://www.chainalysis.com/blog/2024-crypto-crime-report-introduction/
+  </Column>
+</Grid>
 
-[4] National Institute of Standards and Technology. (2024). _FIPS
+<Grid gap="2rem">
+  <Column ratio={1}>
+    [4]
+  </Column>
+
+  <Column ratio={30}>
+    National Institute of Standards and Technology. (2024). _FIPS
 204: Module-Lattice-Based Digital Signature Standard (ML-
 DSA)_. U.S. Department of Commerce.
 https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.204.pdf
+  </Column>
+</Grid>
 
-[5] National Institute of Standards and Technology. (2024). _FIPS
+<Grid gap="2rem">
+  <Column ratio={1}>
+    [5]
+  </Column>
+
+  <Column ratio={30}>
+    National Institute of Standards and Technology. (2024). _FIPS
 203: \_Module-Lattice-Based Key-Encapsulation Mechanism
 Standard (ML-KEM)_. U.S. Department of Commerce.
 https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.203.pdf
+  </Column>
+</Grid>
 
-[6] Häner, T., Jaques, S., Naehrig, M., Roetteler, M., & Soeken, M.
+<Grid gap="2rem">
+  <Column ratio={1}>
+    [6]
+  </Column>
+
+  <Column ratio={30}>
+    Häner, T., Jaques, S., Naehrig, M., Roetteler, M., & Soeken, M.
 (2020). Improved quantum circuits for elliptic curve discrete
 logarithms. _arXiv:2002.12480_.
 https://arxiv.org/abs/2002.12480
+  </Column>
+</Grid>
 
-[7] Gidney, C., & Ekerå, M. (2021). _How to factor 2048 bit RSA
+<Grid gap="2rem">
+  <Column ratio={1}>
+    [7]
+  </Column>
+
+  <Column ratio={30}>
+    Gidney, C., & Ekerå, M. (2021). _How to factor 2048 bit RSA
 integers in 8 hours using 20 million noisy qubits_.
 _arXiv:1905.09749_. https://arxiv.org/abs/1905.09749
+  </Column>
+</Grid>
 
-[8] Aggarwal, D., et al. (2021). Assessment of Quantum Threat
+<Grid gap="2rem">
+  <Column ratio={1}>
+    [8]
+  </Column>
+
+  <Column ratio={30}>
+    Aggarwal, D., et al. (2021). Assessment of Quantum Threat
 To Bitcoin and Derived Cryptocurrencies. _ePrint IACR_.
 https://eprint.iacr.org/2021/967.pdf
+  </Column>
+</Grid>
 
-[9] Roetteler, M., Naehrig, M., Svore, K. M., & Lauter, K. (2017).
+<Grid gap="2rem">
+  <Column ratio={1}>
+    [9]
+  </Column>
+
+  <Column ratio={30}>
+    Roetteler, M., Naehrig, M., Svore, K. M., & Lauter, K. (2017).
 Quantum resource estimates for computing elliptic curve
 discrete logarithms. _arXiv:1706.06752_.
 https://arxiv.org/abs/1706.06752
+  </Column>
+</Grid>
 
-[10] Open Quantum Safe Project. (n.d.). ML-DSA | Open
+<Grid gap="2rem">
+  <Column ratio={1}>
+    [10]
+  </Column>
+
+  <Column ratio={30}>
+    Open Quantum Safe Project. (n.d.). ML-DSA | Open
 Quantum Safe. Retrieved January 29, 2026, from
-https://openquantumsafe.org/liboqs/algorithms/sig/ml-
-dsa.html
+https://openquantumsafe.org/liboqs/algorithms/sig/ml-dsa.html
+  </Column>
+</Grid>

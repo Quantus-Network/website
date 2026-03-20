@@ -100,6 +100,12 @@
 
   /* Roadmap Colors */
   --color-marker-line: #f4f6f9;
+
+  /* Whitepapers Colors */
+  --color-whitepaper-primary: #ff6b35;
+  --color-whitepaper-body: #111111;
+  --color-whitepaper-tagline: #0e0e0e66;
+  --color-whitepaper-divider: #e8e8e8;
 }
 
 @utility text-gradient-giant {
