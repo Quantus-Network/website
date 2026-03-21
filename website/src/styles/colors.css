@@ -109,6 +109,7 @@
   --color-whitepaper-divider: #e8e8e8;
   --color-whitepaper-section-title-alt: #888;
   --color-whitepaper-callout-background: #f6f6f4;
+  --color-whitepaper-pre-background: #f6f6f4;
 }
 
 @utility text-gradient-giant {

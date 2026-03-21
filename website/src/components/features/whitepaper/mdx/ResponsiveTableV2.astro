@@ -23,7 +23,7 @@ const valueHeaders = headers.filter((_, i) => i !== labelColumn);
             headers.map((header, headerIndex) => (
               <th
                 class={applyStyles(
-                  "font-whitepaper-table-header border-b border-white/10 py-3 text-left text-white/80 print:border-[#d0d7de] print:bg-[#f6f8fa] print:text-[#333]",
+                  "font-whitepaper-table-header print:text-whitepaper-section-title-alt border-b border-white/10 py-3 text-left text-white/80 print:border-black print:bg-white",
                   headerIndex > 0 ? "px-4" : "pr-4",
                 )}
               >
@@ -40,8 +40,9 @@ const valueHeaders = headers.filter((_, i) => i !== labelColumn);
               {row.map((cell, cellIndex) => (
                 <td
                   class={applyStyles(
-                    "font-whitepaper-table-cell border-b border-white/5 py-3 text-white/60 print:border-[#e1e4e8] print:text-[#333]",
-                    cellIndex === 0 && "text-whitepaper-primary",
+                    "font-whitepaper-table-cell print:text-whitepaper-body border-b border-white/5 py-3 text-white/60 print:border-[#E8E8E8]",
+                    cellIndex === 0 &&
+                      "text-whitepaper-primary print:text-whitepaper-primary",
                     cellIndex > 0 ? "px-4" : "pr-4",
                   )}
                 >

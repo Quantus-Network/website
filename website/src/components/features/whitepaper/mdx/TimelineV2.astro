@@ -13,7 +13,7 @@ const { title, date, subtitle } = Astro.props;
 <Divider />
 
 <div class="flex">
-  <div class="flex min-w-[213.333px] flex-col gap-1 pt-5 pr-5 pb-5">
+  <div class="flex min-w-[213.333px] flex-col gap-1 py-5 pr-5 print:py-3">
     <span class="font-whitepaper-timeline-title text-whitepaper-primary">
       {title}
     </span>
@@ -25,7 +25,7 @@ const { title, date, subtitle } = Astro.props;
     </span>
   </div>
 
-  <div class="w-full pt-6">
+  <div class="print:text-whitepaper-body w-full pt-6">
     {subtitle}
   </div>
 </div>
