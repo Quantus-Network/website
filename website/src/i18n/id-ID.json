@@ -783,8 +783,12 @@
     "last_updated": "Terakhir diperbarui",
     "changelog": "Catatan Perubahan",
     "authors": "Penulis",
+    "published": "Diterbitkan",
+    "classification": "Klasifikasi",
     "abstract": "Abstrak",
-    "back_to_top": "Kembali ke atas"
+    "back_to_top": "Kembali ke atas",
+    "tag_line": "uang aman kuantum, terenkripsi",
+    "whitepaper": "Whitepaper"
   },
   "common": {
     "loading": "Memuat...",

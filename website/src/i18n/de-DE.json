@@ -783,8 +783,12 @@
     "last_updated": "Zuletzt aktualisiert",
     "changelog": "Änderungsprotokoll",
     "authors": "Autoren",
+    "published": "Veröffentlicht",
+    "classification": "Klassifizierung",
     "abstract": "Zusammenfassung",
-    "back_to_top": "Nach oben"
+    "back_to_top": "Nach oben",
+    "tag_line": "quantensicher, verschlüsseltes Geld",
+    "whitepaper": "Whitepaper"
   },
   "common": {
     "loading": "Wird geladen...",

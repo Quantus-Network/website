@@ -775,8 +775,12 @@
     "last_updated": "最終更新",
     "changelog": "変更履歴",
     "authors": "著者",
+    "published": "公開",
+    "classification": "区分",
     "abstract": "概要",
-    "back_to_top": "トップに戻る"
+    "back_to_top": "トップに戻る",
+    "tag_line": "量子セキュアで暗号化されたマネー",
+    "whitepaper": "ホワイトペーパー"
   },
   "common": {
     "loading": "読み込み中...",

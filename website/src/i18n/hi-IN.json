@@ -786,8 +786,12 @@
     "last_updated": "अंतिम अपडेट",
     "changelog": "परिवर्तन लॉग",
     "authors": "लेखक",
+    "published": "प्रकाशित",
+    "classification": "वर्गीकरण",
     "abstract": "सारांश",
-    "back_to_top": "शीर्ष पर वापस जाएँ"
+    "back_to_top": "शीर्ष पर वापस जाएँ",
+    "tag_line": "क्वांटम-सुरक्षित, एन्क्रिप्टेड धन",
+    "whitepaper": "व्हाइटपेपर"
   },
   "common": {
     "loading": "लोड हो रहा है...",

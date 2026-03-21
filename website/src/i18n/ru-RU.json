@@ -783,8 +783,12 @@
     "last_updated": "Последнее обновление",
     "changelog": "История изменений",
     "authors": "Авторы",
+    "published": "Опубликовано",
+    "classification": "Классификация",
     "abstract": "Аннотация",
-    "back_to_top": "Наверх"
+    "back_to_top": "Наверх",
+    "tag_line": "квантовая безопасность, зашифрованные деньги",
+    "whitepaper": "Whitepaper"
   },
   "common": {
     "loading": "Загрузка...",

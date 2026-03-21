@@ -772,8 +772,12 @@
     "last_updated": "最后更新",
     "changelog": "更新日志",
     "authors": "作者",
+    "published": "发布",
+    "classification": "分类",
     "abstract": "摘要",
-    "back_to_top": "返回顶部"
+    "back_to_top": "返回顶部",
+    "tag_line": "量子安全，加密货币",
+    "whitepaper": "白皮书"
   },
   "common": {
     "loading": "加载中...",
