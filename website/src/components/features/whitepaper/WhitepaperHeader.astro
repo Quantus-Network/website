@@ -15,6 +15,8 @@ export interface Props {
   pdfHref: string;
   locale: Locale;
   t: (key: string) => string;
+  /** When set with pdf cover, hide header in print so the cover replaces it. */
+  class?: string;
 }
 
 const {
@@ -28,13 +30,17 @@ const {
   pdfHref,
   locale,
   t,
+  class: className = "",
 } = Astro.props;
 
 const displayDate = updatedDate ?? publishedDate;
 ---
 
 <header
-  class="mb-10 border-b border-white/10 pb-10 print:border-black/10"
+  class:list={[
+    "mb-10 border-b border-white/10 pb-10 print:border-black/10",
+    className,
+  ]}
   id="top"
 >
   <div class="flex flex-col gap-4">

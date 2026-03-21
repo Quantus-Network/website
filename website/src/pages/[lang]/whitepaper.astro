@@ -18,6 +18,7 @@ import {
   getAllVersions,
   getWhitepaperPdfPath,
 } from "@/utils/whitepaper";
+import WhitepaperPrintCover from "@/components/features/whitepaper/WhitepaperPrintCover.astro";
 
 export async function getStaticPaths() {
   return SUPPORTED_LOCALES.map((lang) => ({ params: { lang } }));
@@ -47,6 +48,8 @@ const jsonLd = JsonLdGraph({
   "@context": "https://schema.org",
   "@graph": [getWhitepaperJsonLd(locale, entry.data.version)],
 });
+
+const styleVersion = entry.data.version === "0.3.1" ? "v1" : "v2";
 ---
 
 <Layout {...metadata} jsonLd={jsonLd}>
@@ -54,6 +57,18 @@ const jsonLd = JsonLdGraph({
     id="whitepaper-section"
     class:list={["lg:max-w-content mx-auto px-[30px] py-10 lg:py-20 2xl:px-0"]}
   >
+    {
+      entry.data.pdfCover && (
+        <WhitepaperPrintCover
+          version={entry.data.version}
+          publishedDate={entry.data.publishedDate}
+          updatedDate={entry.data.updatedDate}
+          locale={locale}
+          t={t}
+        />
+      )
+    }
+
     <WhitepaperHeader
       title={entry.data.title}
       version={entry.data.version}
@@ -65,6 +80,7 @@ const jsonLd = JsonLdGraph({
       pdfHref={pdfHref}
       locale={locale}
       t={t}
+      class={entry.data.pdfCover ? "print:hidden" : undefined}
     />
 
     <TableOfContents
@@ -76,7 +92,7 @@ const jsonLd = JsonLdGraph({
 
     <div class="lg:flex lg:gap-14">
       <div class="min-w-0 flex-1">
-        <WhitepaperContent>
+        <WhitepaperContent styleVersion={styleVersion}>
           <Content />
         </WhitepaperContent>
       </div>

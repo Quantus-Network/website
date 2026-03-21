@@ -783,8 +783,12 @@
     "last_updated": "Last updated",
     "changelog": "Changelog",
     "authors": "Authors",
+    "published": "Published",
+    "classification": "Classification",
     "abstract": "Abstract",
-    "back_to_top": "Back to top"
+    "back_to_top": "Back to top",
+    "tag_line": "quantum secure, encrypted money",
+    "whitepaper": "Whitepaper"
   },
   "common": {
     "loading": "Loading...",

@@ -27,6 +27,8 @@ const whitepaper = defineCollection({
     updatedDate: z.coerce.date().optional(),
     authors: z.array(z.string()).default(["Quantus Labs"]),
     changelog: z.array(z.string()).default([]),
+    /** When true, PDF/print output includes a dedicated cover page and hides the in-page header. */
+    pdfCover: z.boolean().optional(),
   }),
 });
 
