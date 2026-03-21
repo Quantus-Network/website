@@ -39,6 +39,8 @@ const jsonLd = JsonLdGraph({
   "@context": "https://schema.org",
   "@graph": [getWhitepaperJsonLd(locale, entry.data.version)],
 });
+
+const styleVersion = entry.data.version === "0.3.3" ? "v2" : "v1";
 ---
 
 <Layout {...metadata} jsonLd={jsonLd}>
@@ -68,7 +70,7 @@ const jsonLd = JsonLdGraph({
 
     <div class="lg:flex lg:gap-14">
       <div class="min-w-0 flex-1">
-        <WhitepaperContent>
+        <WhitepaperContent styleVersion={styleVersion}>
           <Content />
         </WhitepaperContent>
       </div>

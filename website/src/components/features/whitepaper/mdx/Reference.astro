@@ -1,0 +1,23 @@
+---
+import Column from "./Column.astro";
+import Grid from "./Grid.astro";
+
+export interface Props {
+  id: string;
+  label: string;
+}
+
+const { id, label } = Astro.props;
+---
+
+<Grid id={id} gap="2rem">
+  <Column ratio={1}>
+    <span class="font-whitepaper-reference-label text-whitepaper-primary">
+      {label}
+    </span>
+  </Column>
+
+  <Column ratio={20}>
+    <slot />
+  </Column>
+</Grid>

@@ -103,9 +103,12 @@
 
   /* Whitepapers Colors */
   --color-whitepaper-primary: #ff6b35;
-  --color-whitepaper-body: #111111;
+  --color-whitepaper-body-light: #111111;
+  --color-whitepaper-body: #1a1a1a;
   --color-whitepaper-tagline: #0e0e0e66;
   --color-whitepaper-divider: #e8e8e8;
+  --color-whitepaper-section-title-alt: #888;
+  --color-whitepaper-callout-background: #f6f6f4;
 }
 
 @utility text-gradient-giant {

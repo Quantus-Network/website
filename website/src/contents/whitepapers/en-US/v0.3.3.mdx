@@ -8,17 +8,22 @@ changelog:
   - "Fix wrong allocation for investors in the pie chart."
 ---
 
-import Callout from "@/components/features/whitepaper/mdx/Callout.astro";
+import CalloutV2 from "@/components/features/whitepaper/mdx/CalloutV2.astro";
 import Figure from "@/components/features/whitepaper/mdx/Figure.astro";
 import Grid from "@/components/features/whitepaper/mdx/Grid.astro";
 import Column from "@/components/features/whitepaper/mdx/Column.astro";
-import Timeline from "@/components/features/whitepaper/mdx/Timeline.astro";
-import ResponsiveTable from "@/components/features/whitepaper/mdx/ResponsiveTable.astro";
+import TimelineV2 from "@/components/features/whitepaper/mdx/TimelineV2.astro";
+import ResponsiveTableV2 from "@/components/features/whitepaper/mdx/ResponsiveTableV2.astro";
 import SiteSocials from "@/components/ui/SiteSocials.astro";
 import OrderedList from "@/components/features/whitepaper/mdx/OrderedList.astro";
 import Divider from "@/components/features/whitepaper/mdx/Divider.astro";
+import ChapterHeading from "@/components/features/whitepaper/mdx/ChapterHeading.astro";
+import Reference from "@/components/features/whitepaper/mdx/Reference.astro";
+import ReferenceMarker from "@/components/features/whitepaper/mdx/ReferenceMarker.astro";
 
-## Legal Disclaimer
+<h2 className="font-whitepaper-section-title-alt!">
+  <span>Legal Disclaimer</span>
+</h2>
 
 _This whitepaper is provided for informational purposes only and
 does not constitute an offer to sell, a solicitation of an offer to buy,
@@ -28,26 +33,27 @@ consult with qualified professionals before making any investment
 decisions. Quantus Network makes no representations or warranties
 regarding the accuracy or completeness of the information herein._
 
-## Contents
+<h2 className="font-whitepaper-section-title-alt!">
+  <span>Contents</span>
+</h2>
 
 <OrderedList
-  bulletTemplate="0{n}"
   items={[
-    "Introduction",
-    "The Quantum Threat to Blockchain",
-    "The Migration Crisis",
-    "Quantus Network Architecture",
-    "Wealth Preservation",
-    "Tokenomics and Governance",
-    "Roadmap",
-    "Risks",
-    "References & Further Reading",
+    { title: "Introduction", number: "01" },
+    { title: "The Quantum Threat to Blockchain", number: "02" },
+    { title: "The Migration Crisis", number: "03" },
+    { title: "Quantus Network Architecture", number: "04" },
+    { title: "Wealth Preservation", number: "05" },
+    { title: "Tokenomics and Governance", number: "06" },
+    { title: "Roadmap", number: "07" },
+    { title: "Risks", number: "08" },
+    { title: "References & Further Reading", number: "09" },
   ]}
 />
 
-<Divider />
+<br />
 
-## 01 - Introduction
+<ChapterHeading number="01" title="Introduction" />
 
 ### The Quantum Threat
 
@@ -82,9 +88,7 @@ The decision to focus on scalable, quantum-secure, private money
 stems from the threat CRQCs present to the industry and Bitcoin's
 inability to address these challenges.
 
-<Divider />
-
-## 02 - The Quantum Threat to Blockchain
+<ChapterHeading number="02" title="The Quantum Threat to Blockchain" />
 
 ### Quantum Computing Basics
 
@@ -105,9 +109,9 @@ Quantum Fourier Transforms (QFT) to find the period of a function,
 allowing efficient reversal of the trapdoor functions that underlie
 schemes like RSA or elliptic curve cryptography (ECC). For
 blockchain finance, this means an attacker with a sufficiently
-powerful quantum computer (estimated at ~2,000 logical qubits [6][7][8][9])
+powerful quantum computer (estimated at ~2,000 logical qubits <ReferenceMarker id="6" /><ReferenceMarker id="7" /><ReferenceMarker id="8" /><ReferenceMarker id="9" />)
 could derive private keys from public keys in polynomial time O(n³) — an extreme
-speed-up rendering vulnerable systems obsolete overnight. [1]
+speed-up rendering vulnerable systems obsolete overnight.<ReferenceMarker id="1" />
 
 **Grover's algorithm**, proposed by Lov Grover in 1996, offers a
 quadratic speedup for unstructured search problems, reducing
@@ -121,7 +125,7 @@ the cryptographic scheme. Additionally, Grover's quadratic
 speedup is impractical due to its high qubit and gate requirements,
 requiring billions of sequential operations with limited
 parallelization, making it infeasible for real-world reversals even on
-future hardware. [2]
+future hardware.<ReferenceMarker id="2" />
 
 ### Four Threat Categories
 
@@ -169,9 +173,9 @@ results in substantially bigger public keys, private keys, and
 signatures, often by orders of magnitude. The following table
 illustrates typical sizes for ML-DSA at a 128-bit post-quantum
 security level compared to classical counterparts like 256-bit
-ECDSA: [10]
+ECDSA:<ReferenceMarker id="10" />
 
-<ResponsiveTable
+<ResponsiveTableV2
   headers={["Algorithm", "Public Key", "Private Key", "Signature"]}
   rows={[
     ["ML-DSA-87 (Dilithium)", "2,592 bytes", "4,896 bytes", "4,627 bytes"],
@@ -180,7 +184,7 @@ ECDSA: [10]
 />
 
 Sizes at 128-bit post-quantum security level. Source: Open
-Quantum Safe Project [10]
+Quantum Safe Project<ReferenceMarker id="10" />
 
 As shown, ML-DSA signatures can be over 70 times larger than
 ECDSA equivalents, and public keys more than 80 times larger.
@@ -200,16 +204,13 @@ Storage requirements are also affected, leading to higher node
 operating costs and barriers for participation, especially for
 resource-constrained users or validators.
 
-> **NOTE**
->
-> These scaling challenges will have to be
-> addressed by all blockchains in the future.
-> Bitcoin, for example, will have much less than
-> 1 TPS if the max block size is not increased.
+<CalloutV2 title="NOTE">
+  These scaling challenges will have to be addressed by all blockchains in the
+  future. Bitcoin, for example, will have much less than 1 TPS if the max block
+  size is not increased.
+</CalloutV2>
 
-<Divider />
-
-## 03 - The Migration Crisis
+<ChapterHeading number="03" title="The Migration Crisis" />
 
 ### The Coordination Problem
 
@@ -257,16 +258,13 @@ address. Many will send test transactions first. With bloated PQC
 signatures choking throughput, the network faces a backlog lasting
 months or years while quantum-vulnerable coins remain exposed.
 
-> **QUANTUS'S ANSWER**
->
-> These compounding challenges make retrofitting
-> quantum security onto existing chains
-> extraordinarily difficult. Quantus Network
-> sidesteps this by building quantum security
-> into the chain from day one.
+<CalloutV2 title="QUANTUS'S ANSWER">
+  These compounding challenges make retrofitting quantum security onto existing
+  chains extraordinarily difficult. Quantus Network sidesteps this by building
+  quantum security into the chain from day one.
+</CalloutV2>
 
-<Divider />
-## 04 - Quantus Network Architecture
+<ChapterHeading number="04" title="Quantus Network Architecture" />
 
 ### Foundation
 
@@ -294,7 +292,7 @@ selected for its balance of security, efficiency, and ease of
 implementation. ML-DSA leverages the hardness of problems like
 Learning With Errors (LWE) and Short Integer Solution (SIS) over
 module lattices, providing robust resistance to both classical and
-quantum attacks, including those from Shor's algorithm. [4]
+quantum attacks, including those from Shor's algorithm. <ReferenceMarker id="4" />
 
 For transaction signatures, Quantus integrates **ML-DSA-87**, the
 parameter set offering the highest security level (NIST Security
@@ -306,7 +304,7 @@ schemes. The larger parameters mitigate risks from potential
 advances in lattice cryptanalysis, which would still leave smaller
 key sizes as softer targets.
 
-### Alternatives Considered
+#### Alternatives Considered
 
 ML-DSA was selected over alternatives like FN-DSA (Falcon) due to
 FN-DSA's greater implementation complexity (e.g., requiring
@@ -337,7 +335,7 @@ integration extends PQC to the libp2p networking stack, modifying
 core components for quantum resistance: using ML-DSA-87
 signatures for peer identity and ML-KEM-768 for transport security
 (extending the Noise handshake with an additional KEM message
-for quantum-resistant shared secrets).
+for quantum-resistant shared secrets).<ReferenceMarker id="5" />
 
 The P2P layer is often neglected in quantum-security analysis.
 Authentication of peers is important, but the worst an attacker
@@ -446,17 +444,13 @@ block header linkage.
 - Rust-native implementation
 - Compatible with Substrate’s no-std environment
 
-> **PERFORMANCE**
->
-> Recursive proofs complete in 170 milliseconds
-> with compact sizes (100 KB per aggregated
-> proof). In an optimal case with 5 MB blocks
-> and all transactions going to the same output,
-> Wormhole Addresses could pack ~153,000
-> transactions into a single block (4.9 MB / 32
-> bytes per nullifier) — a 223x improvement over
-> ~685 raw ML-DSA transactions (5 MB / 7.3 KB
-> each).
+<CalloutV2 title="PERFORMANCE">
+  Recursive proofs complete in 170 milliseconds with compact sizes (100 KB per
+  aggregated proof). In an optimal case with 5 MB blocks and all transactions
+  going to the same output, Wormhole Addresses could pack ~153,000 transactions
+  into a single block (4.9 MB / 32 bytes per nullifier) — a 223x improvement
+  over ~685 raw ML-DSA transactions (5 MB / 7.3 KB each).
+</CalloutV2>
 
 #### Security Notes
 
@@ -496,9 +490,7 @@ We use the **Goldilocks field** for both Poseidon2 and Plonky2. The
 Goldilocks field's order fits in an unsigned 64-bit integer, which
 increases efficiency without compromising soundness.
 
-<Divider />
-
-## 05 - Wealth Preservation
+<ChapterHeading number="05" title="Wealth Preservation" />
 
 There are many risks in managing cryptocurrency keys. Most of
 them are avoidable.
@@ -534,7 +526,7 @@ For more technical detail please see [QIP-0008](https://github.com/Quantus-Netwo
 
 Any account can be upgraded to a "high-security account" with
 mandatory reversal periods on all outgoing transfers. A designated
-guardian (hardware wallet, multisig, or trusted third party) can
+**guardian** (hardware wallet, multisig, or trusted third party) can
 cancel suspicious transactions during the reversal period, sending
 funds to the guardian instead of the sender or receiver. This opt-in
 feature is permanent once activated, preventing thieves from
@@ -581,9 +573,7 @@ can be adapted to address it.
 
 For more technical details see [QIP-0002](https://github.com/Quantus-Network/improvement-proposals/tree/main/qip-0002).
 
-<Divider />
-
-## 06 - Tokenomics and Governance
+<ChapterHeading number="06" title="Tokenomics and Governance" />
 
 Quantus Network exists in a changing environment, and we cannot
 assume that we will get everything right on the first try. For this
@@ -640,7 +630,7 @@ turned off, adjusted or redirected according to a token holder vote.
 
 ### Transaction Fees
 
-<ResponsiveTable
+<ResponsiveTableV2
   headers={["TRANSACTION TYPE", "FEE STRUCTURE", "DESTINATION"]}
   rows={[
     ["Standard", "Fixed fee", "Miners"],
@@ -704,53 +694,51 @@ approach allows the network to evolve organically via future
 governance votes without burdening users with unnecessary
 complexity at the beginning.
 
-<Divider />
-
-## 07 - Roadmap
+<ChapterHeading number="07" title="Roadmap" />
 
 The current roadmap through 2026, subject to change.
 
-<Timeline
+<TimelineV2
   title="Heisenberg Inception"
   date="December 2024"
   subtitle="Funding Secured, Substrate Chosen."
 />
 
-<Timeline
+<TimelineV2
   title="Resonance Alpha"
   date="July 2025"
   subtitle="Public Testnet, Dilithium Signatures, Reversible Transactions."
 />
 
-<Timeline
+<TimelineV2
   title="Schrödinger Beta"
   date="October 2025"
   subtitle="Features Complete, Ready for Audit."
 />
 
-<Timeline
+<TimelineV2
   title="Dirac Beta"
   date="November 2025"
   subtitle="PoW changed to Poseidon2, Audits Addressed."
 />
 
-<Timeline
+<TimelineV2
   title="Planck Beta"
   date="January 2026"
   subtitle="High Security Accounts, Multisigs, Hardware Wallet, ZK integration."
 />
 
-<Timeline title="Bell Mainnet" date="Q2 2026" subtitle="Mainnet Launch." />
+<TimelineV2 title="Bell Mainnet" date="Q2 2026" subtitle="Mainnet Launch." />
 
-<Timeline
+<TimelineV2
   title="Fermi Upgrade"
   date="Q4 2026"
   subtitle="ZK proof aggregation infrastructure."
 />
 
-<Divider />
+<br />
 
-## 08 - Risks
+<ChapterHeading number="08" title="Risks" />
 
 Building Quantus Network comes with inherent risks.
 
@@ -783,131 +771,64 @@ General adoption barriers, regulatory uncertainties in
 finance/blockchain, and the inherent volatility of crypto
 ecosystems.
 
-<Divider />
+<ChapterHeading number="09" title="References & Further Reading" />
 
-## 09 - References & Further Reading
+<Reference id="reference-1" label="[1]">
+  Shor, P. W. (1997). Polynomial-time algorithms for prime factorization and
+  discrete logarithms on a quantum computer. _SIAM Journal on Computing_, 26(5),
+  1484–1509. https://doi.org/10.1137/S0097539795293172
+</Reference>
 
-<Grid gap="2rem">
-  <Column ratio={1}>
-    [1]
-  </Column>
+<Reference id="reference-2" label="[2]">
+  Grover, L.K. (1996). A fast quantum mechanical algorithm for database search.
+  _Proceedings of the Twenty-Eight Annual ACM Symposium on Theory of Computing_,
+  212-219. https://doi.org/10.1145/237814.237866
+</Reference>
 
-  <Column ratio={30}>
-    Shor, P. W. (1997). Polynomial-time algorithms for prime
-factorization and discrete logarithms on a quantum
-computer. _SIAM Journal on Computing_, 26(5), 1484–1509.
-https://doi.org/10.1137/S0097539795293172
-  </Column>
-</Grid>
+<Reference id="reference-3" label="[3]">
+  Chainalysis. (2024). _The Chainalysis 2024 Crypto Crime Report_.
+  https://www.chainalysis.com/blog/2024-crypto-crime-report-introduction/
+</Reference>
 
-<Grid gap="2rem">
-  <Column ratio={1}>
-    [2]
-  </Column>
+<Reference id="reference-4" label="[4]">
+  National Institute of Standards and Technology. (2024). _FIPS 204:
+  Module-Lattice-Based Digital Signature Standard (ML- DSA)_. U.S. Department of
+  Commerce. https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.204.pdf
+</Reference>
 
-  <Column ratio={30}>
-    Grover, L.K. (1996). A fast quantum mechanical algorithm
-for database search. _Proceedings of the Twenty-Eight
-Annual ACM Symposium on Theory of Computing_, 212-219.
-https://doi.org/10.1145/237814.237866
-  </Column>
-</Grid>
+<Reference id="reference-5" label="[5]">
+  National Institute of Standards and Technology. (2024). _FIPS 203:
+  Module-Lattice-Based Key-Encapsulation Mechanism Standard (ML-KEM)_. U.S.
+  Department of Commerce.
+  https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.203.pdf
+</Reference>
 
-<Grid gap="2rem">
-  <Column ratio={1}>
-    [3]
-  </Column>
+<Reference id="reference-6" label="[6]">
+  Häner, T., Jaques, S., Naehrig, M., Roetteler, M., & Soeken, M. (2020).
+  Improved quantum circuits for elliptic curve discrete logarithms.
+  _arXiv:2002.12480_. https://arxiv.org/abs/2002.12480
+  https://arxiv.org/abs/2002.12480
+</Reference>
 
-  <Column ratio={30}>
-    Chainalysis. (2024). _The Chainalysis 2024 Crypto Crime
-Report_. https://www.chainalysis.com/blog/2024-crypto-crime-report-introduction/
-  </Column>
-</Grid>
+<Reference id="reference-7" label="[7]">
+  idney, C., & Ekerå, M. (2021). _How to factor 2048 bit RSA integers in 8 hours
+  using 20 million noisy qubits_. _arXiv:1905.09749_.
+  https://arxiv.org/abs/1905.09749
+</Reference>
 
-<Grid gap="2rem">
-  <Column ratio={1}>
-    [4]
-  </Column>
+<Reference id="reference-8" label="[8]">
+  Aggarwal, D., et al. (2021). Assessment of Quantum Threat To Bitcoin and
+  Derived Cryptocurrencies. _ePrint IACR_. https://eprint.iacr.org/2021/967.pdf
+</Reference>
 
-  <Column ratio={30}>
-    National Institute of Standards and Technology. (2024). _FIPS
-204: Module-Lattice-Based Digital Signature Standard (ML-
-DSA)_. U.S. Department of Commerce.
-https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.204.pdf
-  </Column>
-</Grid>
+<Reference id="reference-9" label="[9]">
+  Roetteler, M., Naehrig, M., Svore, K. M., & Lauter, K. (2017). Quantum
+  resource estimates for computing elliptic curve discrete logarithms.
+  _arXiv:1706.06752_. https://arxiv.org/abs/1706.06752
+</Reference>
 
-<Grid gap="2rem">
-  <Column ratio={1}>
-    [5]
-  </Column>
-
-  <Column ratio={30}>
-    National Institute of Standards and Technology. (2024). _FIPS
-203: \_Module-Lattice-Based Key-Encapsulation Mechanism
-Standard (ML-KEM)_. U.S. Department of Commerce.
-https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.203.pdf
-  </Column>
-</Grid>
-
-<Grid gap="2rem">
-  <Column ratio={1}>
-    [6]
-  </Column>
-
-  <Column ratio={30}>
-    Häner, T., Jaques, S., Naehrig, M., Roetteler, M., & Soeken, M.
-(2020). Improved quantum circuits for elliptic curve discrete
-logarithms. _arXiv:2002.12480_.
-https://arxiv.org/abs/2002.12480
-  </Column>
-</Grid>
-
-<Grid gap="2rem">
-  <Column ratio={1}>
-    [7]
-  </Column>
-
-  <Column ratio={30}>
-    Gidney, C., & Ekerå, M. (2021). _How to factor 2048 bit RSA
-integers in 8 hours using 20 million noisy qubits_.
-_arXiv:1905.09749_. https://arxiv.org/abs/1905.09749
-  </Column>
-</Grid>
-
-<Grid gap="2rem">
-  <Column ratio={1}>
-    [8]
-  </Column>
-
-  <Column ratio={30}>
-    Aggarwal, D., et al. (2021). Assessment of Quantum Threat
-To Bitcoin and Derived Cryptocurrencies. _ePrint IACR_.
-https://eprint.iacr.org/2021/967.pdf
-  </Column>
-</Grid>
-
-<Grid gap="2rem">
-  <Column ratio={1}>
-    [9]
-  </Column>
-
-  <Column ratio={30}>
-    Roetteler, M., Naehrig, M., Svore, K. M., & Lauter, K. (2017).
-Quantum resource estimates for computing elliptic curve
-discrete logarithms. _arXiv:1706.06752_.
-https://arxiv.org/abs/1706.06752
-  </Column>
-</Grid>
-
-<Grid gap="2rem">
-  <Column ratio={1}>
-    [10]
-  </Column>
-
-  <Column ratio={30}>
-    Open Quantum Safe Project. (n.d.). ML-DSA | Open
-Quantum Safe. Retrieved January 29, 2026, from
-https://openquantumsafe.org/liboqs/algorithms/sig/ml-dsa.html
-  </Column>
-</Grid>
+<Reference id="reference-10" label="[10]">
+  Open Quantum Safe Project. (n.d.). ML-DSA | Open Quantum Safe. Retrieved
+  January 29, 2026, from
+  https://openquantumsafe.org/liboqs/algorithms/sig/ml-dsa.html
+</Reference>
