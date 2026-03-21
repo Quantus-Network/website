@@ -5,8 +5,46 @@ publishedDate: "2026-03-21"
 updatedDate: "2026-03-21"
 authors: ["Christopher Smith"]
 changelog:
-  - "Korrigiert die falsche Zuordnung für Investoren im Kreisdiagramm."
+  - "Umfassende Überarbeitung: Rechtlicher Hinweis, Inhaltsverzeichnis, nummerierte Kapitel (01–09), PDF-Deckblatt, TOC; „References & Further Reading“ ersetzt den Schlussabschnitt."
+  - "Neues Kapitel: Die Migrationskrise (Koordination, verlorene Coins, PQC-Migrationszeitplan)."
+  - "Einleitung und Kapitel zur Quantenbedrohung neu formuliert: CRQC-Rahmen, vier nummerierte Bedrohungskategorien, Zitate im Fließtext."
+  - "Architektur und technische Abschnitte erweitert oder präzisiert (Foundation/Substrate, LibP2P, Wormhole/Plonky2, Konsens/Goldilocks-Feld)."
+  - "Roadmap: Bell Mainnet Q2 2026; Fermi-Upgrade Q4 2026; Planck Beta um ZK-Integration ergänzt."
 pdfCover: true
+# Astro `render().headings` überspringt JSX-`<h2>` und ChapterHeading; Anker-Slugs entsprechen den Markdown-`###`-IDs.
+toc:
+  insertBefore:
+    die-quantenbedrohung:
+      - slug: legal-disclaimer
+        text: Rechtlicher Hinweis
+      - slug: contents
+        text: Inhalt
+      - slug: chapter-01
+        text: Einführung
+    grundlagen-des-quantencomputings:
+      - slug: chapter-02
+        text: Die Quantenbedrohung für die Blockchain
+    das-koordinationsproblem:
+      - slug: chapter-03
+        text: Die Migrationskrise
+    grundlagen:
+      - slug: chapter-04
+        text: Architektur von Quantus Network
+    umkehrbare-transaktionen:
+      - slug: chapter-05
+        text: Vermögenserhalt
+    blockbelohnungen:
+      - slug: chapter-06
+        text: Tokenomics und Governance
+    implementierungsprobleme:
+      - slug: chapter-07
+        text: Roadmap
+      - slug: chapter-08
+        text: Risiken
+  insertAfter:
+    sonstige-überlegungen:
+      - slug: chapter-09
+        text: Referenzen und weiterführende Literatur
 ---
 
 import CalloutV2 from "@/components/features/whitepaper/mdx/CalloutV2.astro";
@@ -22,7 +60,10 @@ import ChapterHeading from "@/components/features/whitepaper/mdx/ChapterHeading.
 import Reference from "@/components/features/whitepaper/mdx/Reference.astro";
 import ReferenceMarker from "@/components/features/whitepaper/mdx/ReferenceMarker.astro";
 
-<h2 className="font-whitepaper-section-title-alt! print:text-whitepaper-section-title-alt!">
+<h2
+  id="legal-disclaimer"
+  className="font-whitepaper-section-title-alt! print:text-whitepaper-section-title-alt!"
+>
   <span>Rechtlicher Hinweis</span>
 </h2>
 
@@ -33,7 +74,10 @@ eigene Sorgfalt walten lassen und qualifizierte Fachleute konsultieren, bevor si
 Anlageentscheidungen treffen. Quantus Network übernimmt keine Zusicherungen oder Gewährleistungen
 hinsichtlich der Richtigkeit oder Vollständigkeit der hier enthaltenen Informationen._
 
-<h2 className="font-whitepaper-section-title-alt! print:text-whitepaper-section-title-alt!">
+<h2
+  id="contents"
+  className="font-whitepaper-section-title-alt! print:text-whitepaper-section-title-alt!"
+>
   <span>Inhalt</span>
 </h2>
 
@@ -169,7 +213,12 @@ zeigt typische ML-DSA-Größen bei einer Post-Quanten-Sicherheit von 128 Bit
 im Vergleich zu klassischen Äquivalenten wie 256-Bit-ECDSA:<ReferenceMarker id="10" />
 
 <ResponsiveTableV2
-  headers={["Algorithmus", "Öffentlicher Schlüssel", "Privater Schlüssel", "Signatur"]}
+  headers={[
+    "Algorithmus",
+    "Öffentlicher Schlüssel",
+    "Privater Schlüssel",
+    "Signatur",
+  ]}
   rows={[
     ["ML-DSA-87 (Dilithium)", "2,592 bytes", "4,896 bytes", "4,627 bytes"],
     ["ECDSA (256-bit)", "32 bytes", "32 bytes", "65 bytes"],
@@ -196,8 +245,9 @@ Auch die Speicheranforderungen steigen, mit höheren Betriebskosten für Knoten 
 Nutzer oder Validatoren mit begrenzten Ressourcen.
 
 <CalloutV2 title="HINWEIS">
-  Diese Skalierungsherausforderungen müssen künftig alle Blockchains
-  angehen. Bitcoin hätte zum Beispiel deutlich weniger als 1 TPS, wenn die maximale Blockgröße nicht erhöht würde.
+  Diese Skalierungsherausforderungen müssen künftig alle Blockchains angehen.
+  Bitcoin hätte zum Beispiel deutlich weniger als 1 TPS, wenn die maximale
+  Blockgröße nicht erhöht würde.
 </CalloutV2>
 
 <ChapterHeading number="03" title="Die Migrationskrise" />
@@ -247,8 +297,10 @@ Viele werden zuerst Testtransaktionen senden. Während aufgeblähte PQC-Signatur
 Monate oder Jahre, während weiterhin verwundbare Coins exponiert sind.
 
 <CalloutV2 title="DIE ANTWORT VON QUANTUS">
-  Diese sich stapelnden Herausforderungen machen es außerordentlich schwer, Quantensicherheit zu bestehenden Ketten hinzuzufügen.
-  Quantus Network vermeidet das, indem es Quantensicherheit von Tag eins in die Kette integriert.
+  Diese sich stapelnden Herausforderungen machen es außerordentlich schwer,
+  Quantensicherheit zu bestehenden Ketten hinzuzufügen. Quantus Network
+  vermeidet das, indem es Quantensicherheit von Tag eins in die Kette
+  integriert.
 </CalloutV2>
 
 <ChapterHeading number="04" title="Architektur von Quantus Network" />
@@ -421,10 +473,11 @@ Verkettung der Block-Header.
 
 <CalloutV2 title="LEISTUNG">
   Rekursive Beweise enden in 170 Millisekunden mit kompakten Größen (100 KB pro
-  aggregiertem Beweis). Im optimalen Fall mit 5-MB-Blöcken und allen Transaktionen
-  zur gleichen Ausgabe könnten Wormhole Addresses ~153.000 Transaktionen
-  in einem Block bündeln (4,9 MB / 32 Bytes pro Nullifier): eine Verbesserung um den Faktor 223
-  gegenüber ~685 rohen ML-DSA-Transaktionen (5 MB / 7,3 KB je Transaktion).
+  aggregiertem Beweis). Im optimalen Fall mit 5-MB-Blöcken und allen
+  Transaktionen zur gleichen Ausgabe könnten Wormhole Addresses ~153.000
+  Transaktionen in einem Block bündeln (4,9 MB / 32 Bytes pro Nullifier): eine
+  Verbesserung um den Faktor 223 gegenüber ~685 rohen ML-DSA-Transaktionen (5 MB
+  / 7,3 KB je Transaktion).
 </CalloutV2>
 
 #### Sicherheitshinweise
@@ -759,8 +812,8 @@ Finanzen/Blockchain und die inhärente Volatilität von Krypto-Ökosystemen.
 </Reference>
 
 <Reference id="reference-7" label="[7]">
-  Gidney, C., & Ekerå, M. (2021). _How to factor 2048 bit RSA integers in 8 hours
-  using 20 million noisy qubits_. _arXiv:1905.09749_.
+  Gidney, C., & Ekerå, M. (2021). _How to factor 2048 bit RSA integers in 8
+  hours using 20 million noisy qubits_. _arXiv:1905.09749_.
   https://arxiv.org/abs/1905.09749
 </Reference>
 
@@ -780,5 +833,3 @@ Finanzen/Blockchain und die inhärente Volatilität von Krypto-Ökosystemen.
   January 29, 2026, from
   https://openquantumsafe.org/liboqs/algorithms/sig/ml-dsa.html
 </Reference>
-
-

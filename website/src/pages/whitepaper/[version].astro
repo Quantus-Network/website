@@ -14,6 +14,7 @@ import {
   getWhitepapersForLocale,
   getAllVersions,
   getWhitepaperPdfPath,
+  resolveWhitepaperTocHeadings,
 } from "@/utils/whitepaper";
 
 export async function getStaticPaths() {
@@ -41,7 +42,8 @@ const latestVersion =
   versions[versions.length - 1]?.version ?? entry.data.version;
 const pdfHref = getWhitepaperPdfPath(locale, entry.data.version);
 
-const { Content, headings } = await render(entry);
+const { Content, headings: renderHeadings } = await render(entry);
+const headings = resolveWhitepaperTocHeadings(entry, renderHeadings);
 
 const metadata = createMetadata({
   title: `${t("whitepaper.meta.title")} - v${entry.data.version}`,

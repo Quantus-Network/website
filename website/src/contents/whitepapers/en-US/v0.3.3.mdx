@@ -5,8 +5,46 @@ publishedDate: "2026-03-21"
 updatedDate: "2026-03-21"
 authors: ["Christopher Smith"]
 changelog:
-  - "Fix wrong allocation for investors in the pie chart."
+  - "Major revision: Legal Disclaimer, Contents, numbered chapters (01–09), PDF cover, TOC; References & Further Reading replaces Closure."
+  - "New chapter: The Migration Crisis (coordination, lost coins, PQC migration timeline)."
+  - "Introduction and quantum-threat sections rewritten: CRQCs framing, four numbered threat categories, inline citations."
+  - "Architecture and technical sections expanded or clarified (Foundation/Substrate, LibP2P, wormhole/Plonky2, consensus/Goldilocks field)."
+  - "Roadmap: Bell Mainnet Q2 2026; Fermi Upgrade Q4 2026; Planck Beta adds ZK integration."
 pdfCover: true
+# Astro `render().headings` skips JSX `<h2>` and ChapterHeading; anchor slugs match markdown `###` ids.
+toc:
+  insertBefore:
+    the-quantum-threat:
+      - slug: legal-disclaimer
+        text: Legal Disclaimer
+      - slug: contents
+        text: Contents
+      - slug: chapter-01
+        text: Introduction
+    quantum-computing-basics:
+      - slug: chapter-02
+        text: The Quantum Threat to Blockchain
+    the-coordination-problem:
+      - slug: chapter-03
+        text: The Migration Crisis
+    foundation:
+      - slug: chapter-04
+        text: Quantus Network Architecture
+    reversible-transactions:
+      - slug: chapter-05
+        text: Wealth Preservation
+    block-rewards:
+      - slug: chapter-06
+        text: Tokenomics and Governance
+    implementation-issues:
+      - slug: chapter-07
+        text: Roadmap
+      - slug: chapter-08
+        text: Risks
+  insertAfter:
+    other-considerations:
+      - slug: chapter-09
+        text: References & Further Reading
 ---
 
 import CalloutV2 from "@/components/features/whitepaper/mdx/CalloutV2.astro";
@@ -22,7 +60,10 @@ import ChapterHeading from "@/components/features/whitepaper/mdx/ChapterHeading.
 import Reference from "@/components/features/whitepaper/mdx/Reference.astro";
 import ReferenceMarker from "@/components/features/whitepaper/mdx/ReferenceMarker.astro";
 
-<h2 className="font-whitepaper-section-title-alt! print:text-whitepaper-section-title-alt!">
+<h2
+  id="legal-disclaimer"
+  className="font-whitepaper-section-title-alt! print:text-whitepaper-section-title-alt!"
+>
   <span>Legal Disclaimer</span>
 </h2>
 
@@ -34,7 +75,10 @@ consult with qualified professionals before making any investment
 decisions. Quantus Network makes no representations or warranties
 regarding the accuracy or completeness of the information herein._
 
-<h2 className="font-whitepaper-section-title-alt! print:text-whitepaper-section-title-alt!">
+<h2
+  id="contents"
+  className="font-whitepaper-section-title-alt! print:text-whitepaper-section-title-alt!"
+>
   <span>Contents</span>
 </h2>
 
@@ -813,8 +857,8 @@ ecosystems.
 </Reference>
 
 <Reference id="reference-7" label="[7]">
-  Gidney, C., & Ekerå, M. (2021). _How to factor 2048 bit RSA integers in 8 hours
-  using 20 million noisy qubits_. _arXiv:1905.09749_.
+  Gidney, C., & Ekerå, M. (2021). _How to factor 2048 bit RSA integers in 8
+  hours using 20 million noisy qubits_. _arXiv:1905.09749_.
   https://arxiv.org/abs/1905.09749
 </Reference>
 

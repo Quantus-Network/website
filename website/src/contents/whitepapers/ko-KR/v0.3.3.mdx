@@ -5,8 +5,46 @@ publishedDate: "2026-03-21"
 updatedDate: "2026-03-21"
 authors: ["Christopher Smith"]
 changelog:
-  - "원형 차트에서 투자자 배분이 잘못 표시되던 문제를 수정함."
+  - "대폭 개정: 법적 고지, 목차, 번호가 붙은 장(01–09), PDF 표지, TOC; 맺음말 대신 「참고문헌 및 추가 읽을거리」."
+  - "신규 장: 이전 위기(조정 문제, 분실 코인, PQC 이전 일정)."
+  - "서론 및 양자 위협 절 재작성: CRQC 프레이밍, 네 가지 번호 위협 범주, 본문 인용."
+  - "아키텍처 및 기술 절 확장·명확화(Foundation/Substrate, LibP2P, wormhole/Plonky2, 합의/Goldilocks 필드)."
+  - "로드맵: Bell 메인넷 2026년 2분기; Fermi 업그레이드 2026년 4분기; Planck 베타에 ZK 통합 추가."
 pdfCover: true
+# Astro `render().headings`는 JSX `<h2>`와 ChapterHeading을 포함하지 않습니다. 앵커 slug는 Markdown `###` id와 같습니다.
+toc:
+  insertBefore:
+    양자-위협:
+      - slug: legal-disclaimer
+        text: 면책 조항
+      - slug: contents
+        text: 목차
+      - slug: chapter-01
+        text: 서론
+    양자-컴퓨팅-기초:
+      - slug: chapter-02
+        text: 블록체인에 대한 양자 위협
+    조정-문제:
+      - slug: chapter-03
+        text: 마이그레이션 위기
+    기초:
+      - slug: chapter-04
+        text: Quantus Network 아키텍처
+    가역-트랜잭션:
+      - slug: chapter-05
+        text: 자산 보존
+    블록-보상:
+      - slug: chapter-06
+        text: 토크노믹스와 거버넌스
+    구현-문제:
+      - slug: chapter-07
+        text: 로드맵
+      - slug: chapter-08
+        text: 리스크
+  insertAfter:
+    기타-고려:
+      - slug: chapter-09
+        text: 참고문헌 및 추가 읽을거리
 ---
 
 import CalloutV2 from "@/components/features/whitepaper/mdx/CalloutV2.astro";
@@ -22,13 +60,19 @@ import ChapterHeading from "@/components/features/whitepaper/mdx/ChapterHeading.
 import Reference from "@/components/features/whitepaper/mdx/Reference.astro";
 import ReferenceMarker from "@/components/features/whitepaper/mdx/ReferenceMarker.astro";
 
-<h2 className="font-whitepaper-section-title-alt! print:text-whitepaper-section-title-alt!">
+<h2
+  id="legal-disclaimer"
+  className="font-whitepaper-section-title-alt! print:text-whitepaper-section-title-alt!"
+>
   <span>면책 조항</span>
 </h2>
 
 _본 백서는 정보 제공 목적으로만 제공되며, 어떠한 증권·투자 또는 금융 상품에 대한 매도 제안, 매수 제안의 권유 또는 권고를 구성하지 않습니다. 독자는 투자 결정을 내리기 전에 스스로 충분한 실사를 수행하고 자격을 갖춘 전문가와 상담해야 합니다. Quantus Network는 여기에 포함된 정보의 정확성이나 완전성에 대해 어떠한 진술이나 보증도 하지 않습니다._
 
-<h2 className="font-whitepaper-section-title-alt! print:text-whitepaper-section-title-alt!">
+<h2
+  id="contents"
+  className="font-whitepaper-section-title-alt! print:text-whitepaper-section-title-alt!"
+>
   <span>목차</span>
 </h2>
 
@@ -115,7 +159,8 @@ _본 백서는 정보 제공 목적으로만 제공되며, 어떠한 증권·투
 블록체인 맥락에서 이러한 팽창된 크기는 시스템적 확장 문제로 누적됩니다. 더 큰 서명은 개별 트랜잭션을 부풀려 블록이 더 빨리 차고 검증에 더 오래 걸리면서 초당 트랜잭션 수(TPS)를 낮춥니다. P2P 통신에도 부담을 주어 대역폭과 전파 지연이 늘고, 작업 증명 같은 합의에서 포크나 고아 블록 위험을 높일 수 있습니다. 저장 요구도 영향을 받아 노드 운영 비용이 오르고, 자원이 제한된 사용자나 검증자의 참여 장벽이 특히 커집니다.
 
 <CalloutV2 title="참고">
-  이러한 확장 과제는 앞으로 모든 블록체인이 다뤄야 합니다. 예를 들어 비트코인은 최대 블록 크기를 늘리지 않으면 1 TPS도 훨씬 못 미칠 것입니다.
+  이러한 확장 과제는 앞으로 모든 블록체인이 다뤄야 합니다. 예를 들어 비트코인은
+  최대 블록 크기를 늘리지 않으면 1 TPS도 훨씬 못 미칠 것입니다.
 </CalloutV2>
 
 <ChapterHeading number="03" title="마이그레이션 위기" />
@@ -142,7 +187,8 @@ _본 백서는 정보 제공 목적으로만 제공되며, 어떠한 증권·투
 비트코인이 정치·기술적 과제를 해결한다고 가정해도, 마이그레이션 자체는 수개월~수년이 걸립니다. 각 보유자는 자금을 양자 안전 주소로 옮기기 위해 최소 한 번은 트랜잭션을 보내야 합니다. 많은 이가 먼저 시험 트랜잭션을 보낼 것입니다. 부풀려진 PQC 서명이 처리량을 질식시키면서, 네트워크는 취약한 코인이 여전히 노출된 채 수개월~수년간 이어지는 대기열에 직면합니다.
 
 <CalloutV2 title="Quantus의 대응">
-  이러한 누적 과제는 기존 체인에 양자 보안을 추가하는 일을 비현실적으로 어렵게 만듭니다. Quantus Network는 첫날부터 체인에 양자 보안을 통합해 이를 피합니다.
+  이러한 누적 과제는 기존 체인에 양자 보안을 추가하는 일을 비현실적으로 어렵게
+  만듭니다. Quantus Network는 첫날부터 체인에 양자 보안을 통합해 이를 피합니다.
 </CalloutV2>
 
 <ChapterHeading number="04" title="Quantus Network 아키텍처" />
@@ -232,7 +278,10 @@ H(H(salt | secret | global_transfer_count))
 - Substrate의 no-std 환경과 호환
 
 <CalloutV2 title="성능">
-  재귀 증명은 약 170밀리초에 끝나며 크기도 컴팩트합니다(집계 증명당 약 100KB). 5MB 블록에 모든 트랜잭션이 동일 출력으로 가는 최적 경우, 웜홀 주소는 한 블록에 약 153,000건(nullifier당 32바이트로 4.9MB)을 담을 수 있어, 원시 ML-DSA 약 685건(5MB ÷ 7.3KB) 대비 약 223배 개선입니다.
+  재귀 증명은 약 170밀리초에 끝나며 크기도 컴팩트합니다(집계 증명당 약 100KB).
+  5MB 블록에 모든 트랜잭션이 동일 출력으로 가는 최적 경우, 웜홀 주소는 한 블록에
+  약 153,000건(nullifier당 32바이트로 4.9MB)을 담을 수 있어, 원시 ML-DSA 약
+  685건(5MB ÷ 7.3KB) 대비 약 223배 개선입니다.
 </CalloutV2>
 
 #### 보안 참고
@@ -452,8 +501,8 @@ Quantus Network를 구축하는 데는 고유한 위험이 따릅니다.
 </Reference>
 
 <Reference id="reference-7" label="[7]">
-  Gidney, C., & Ekerå, M. (2021). _How to factor 2048 bit RSA integers in 8 hours
-  using 20 million noisy qubits_. _arXiv:1905.09749_.
+  Gidney, C., & Ekerå, M. (2021). _How to factor 2048 bit RSA integers in 8
+  hours using 20 million noisy qubits_. _arXiv:1905.09749_.
   https://arxiv.org/abs/1905.09749
 </Reference>
 
@@ -473,4 +522,3 @@ Quantus Network를 구축하는 데는 고유한 위험이 따릅니다.
   January 29, 2026, from
   https://openquantumsafe.org/liboqs/algorithms/sig/ml-dsa.html
 </Reference>
-

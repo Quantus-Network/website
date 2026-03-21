@@ -3,6 +3,58 @@ import type { Locale } from "./i18n";
 
 export type WhitepaperEntry = CollectionEntry<"whitepaper">;
 
+export type WhitepaperTocHeading = {
+  depth: number;
+  slug: string;
+  text: string;
+};
+
+/**
+ * Astro's `render().headings` only includes markdown headings (`##` / `###`), not JSX `<h2>` or
+ * components that render `<h2>`. Optional `entry.data.toc` inserts those entries next to a nearby
+ * markdown heading slug (`insertBefore` / `insertAfter`) so the table of contents matches the page.
+ */
+export function resolveWhitepaperTocHeadings(
+  entry: WhitepaperEntry,
+  renderHeadings: WhitepaperTocHeading[],
+): WhitepaperTocHeading[] {
+  const toc = entry.data.toc;
+  if (!toc) return renderHeadings;
+
+  const insertBefore = toc.insertBefore ?? {};
+  const insertAfter = toc.insertAfter ?? {};
+  const flat = renderHeadings.filter((h) => h.depth >= 2 && h.depth <= 3);
+  const out: WhitepaperTocHeading[] = [];
+  const beforeDone = new Set<string>();
+
+  for (const h of flat) {
+    const pending = insertBefore[h.slug];
+    if (pending?.length && !beforeDone.has(h.slug)) {
+      beforeDone.add(h.slug);
+      for (const add of pending) {
+        out.push({
+          depth: add.depth ?? 2,
+          slug: add.slug,
+          text: add.text,
+        });
+      }
+    }
+    out.push(h);
+    const afterAdds = insertAfter[h.slug];
+    if (afterAdds?.length) {
+      for (const add of afterAdds) {
+        out.push({
+          depth: add.depth ?? 2,
+          slug: add.slug,
+          text: add.text,
+        });
+      }
+    }
+  }
+
+  return out;
+}
+
 function compareVersions(a: string, b: string): number {
   const pa = a.split(".").map(Number);
   const pb = b.split(".").map(Number);

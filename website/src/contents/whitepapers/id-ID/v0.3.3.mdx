@@ -5,8 +5,46 @@ publishedDate: "2026-03-21"
 updatedDate: "2026-03-21"
 authors: ["Christopher Smith"]
 changelog:
-  - "Memperbaiki alokasi yang salah untuk investor pada diagram lingkaran."
+  - "Revisi besar: Penafian hukum, Daftar isi, bab bernomor (01–09), sampul PDF, TOC; «References & Further Reading» mengganti bagian penutup."
+  - "Bab baru: Krisis migrasi (koordinasi, koin hilang, linimasa migrasi PQC)."
+  - "Pendahuluan dan bagian ancaman kuantum ditulis ulang: kerangka CRQC, empat kategori ancaman bernomor, kutipan dalam teks."
+  - "Arsitektur dan bagian teknis diperluas atau diperjelas (Foundation/Substrate, LibP2P, wormhole/Plonky2, konsensus/medan Goldilocks)."
+  - "Peta jalan: Bell Mainnet Q2 2026; Fermi Upgrade Q4 2026; Planck Beta menambah integrasi ZK."
 pdfCover: true
+# Astro `render().headings` tidak menyertakan `<h2>` JSX dan ChapterHeading; slug jangkar sama dengan id `###` Markdown.
+toc:
+  insertBefore:
+    ancaman-kuantum:
+      - slug: legal-disclaimer
+        text: Penafian hukum
+      - slug: contents
+        text: Daftar isi
+      - slug: chapter-01
+        text: Pendahuluan
+    dasar-dasar-komputasi-kuantum:
+      - slug: chapter-02
+        text: Ancaman Kuantum terhadap Blockchain
+    masalah-koordinasi:
+      - slug: chapter-03
+        text: Krisis Migrasi
+    fondasi:
+      - slug: chapter-04
+        text: Arsitektur Quantus Network
+    transaksi-reversibel:
+      - slug: chapter-05
+        text: Pelestarian Kekayaan
+    hadiah-blok:
+      - slug: chapter-06
+        text: Tokenomik dan Tata Kelola
+    masalah-implementasi:
+      - slug: chapter-07
+        text: Peta jalan
+      - slug: chapter-08
+        text: Risiko
+  insertAfter:
+    pertimbangan-lain:
+      - slug: chapter-09
+        text: Referensi & Bacaan lanjutan
 ---
 
 import CalloutV2 from "@/components/features/whitepaper/mdx/CalloutV2.astro";
@@ -22,7 +60,10 @@ import ChapterHeading from "@/components/features/whitepaper/mdx/ChapterHeading.
 import Reference from "@/components/features/whitepaper/mdx/Reference.astro";
 import ReferenceMarker from "@/components/features/whitepaper/mdx/ReferenceMarker.astro";
 
-<h2 className="font-whitepaper-section-title-alt! print:text-whitepaper-section-title-alt!">
+<h2
+  id="legal-disclaimer"
+  className="font-whitepaper-section-title-alt! print:text-whitepaper-section-title-alt!"
+>
   <span>Penafian hukum</span>
 </h2>
 
@@ -34,7 +75,10 @@ berkonsultasi dengan profesional yang berkualifikasi sebelum membuat keputusan i
 apa pun. Quantus Network tidak memberikan pernyataan atau jaminan
 mengenai keakuratan atau kelengkapan informasi di sini._
 
-<h2 className="font-whitepaper-section-title-alt! print:text-whitepaper-section-title-alt!">
+<h2
+  id="contents"
+  className="font-whitepaper-section-title-alt! print:text-whitepaper-section-title-alt!"
+>
   <span>Daftar isi</span>
 </h2>
 
@@ -117,7 +161,7 @@ yang membuat sistem rentan usang dalam semalam.<ReferenceMarker id="1" />
 percepatan kuadratik untuk masalah pencarian tak terstruktur, mengurangi
 waktu pencarian dari O(n) menjadi O(√n) operasi. Meskipun tidak se
 dahsyat Shor untuk kriptografi asimetris, Grover
- mempengaruhi primitif simetris seperti fungsi hash dan enkripsi AES,
+mempengaruhi primitif simetris seperti fungsi hash dan enkripsi AES,
 secara efektif membagi dua tingkat keamanan (misalnya kunci 256-bit
 berperilaku seperti 128 bit terhadap serangan kuantum). Serangan ini
 dimitigasi dengan menggandakan bit keamanan, bukan mengubah
@@ -143,7 +187,7 @@ Banyak bukti zero-knowledge, seperti dalam zk-SNARKs untuk
 keuangan berfokus privasi, bergantung pada kesulitan logaritma diskrit melalui
 pasangan kurva eliptik untuk komitmen. Shor dapat memungkinkan
 pembuatan bukti tidak valid yang tampak valid, yang dapat memungkinkan penyerang
- mencetak koin baru atau memalsukan keadaan Layer-2 (L2).
+mencetak koin baru atau memalsukan keadaan Layer-2 (L2).
 
 #### 03 - Mendekripsi informasi rahasia
 
@@ -202,9 +246,9 @@ Persyaratan penyimpanan juga terpengaruh, menyebabkan biaya operasi node lebih t
 pengguna atau validator dengan sumber daya terbatas.
 
 <CalloutV2 title="CATATAN">
-  Tantangan penskalaan ini harus diatasi oleh semua blockchain di
-  masa depan. Bitcoin, misalnya, akan memiliki jauh kurang dari 1 TPS jika ukuran blok maksimum
-  tidak ditingkatkan.
+  Tantangan penskalaan ini harus diatasi oleh semua blockchain di masa depan.
+  Bitcoin, misalnya, akan memiliki jauh kurang dari 1 TPS jika ukuran blok
+  maksimum tidak ditingkatkan.
 </CalloutV2>
 
 <ChapterHeading number="03" title="Krisis Migrasi" />
@@ -253,9 +297,9 @@ Banyak yang akan mengirim transaksi uji terlebih dahulu. Dengan tanda tangan PQC
 berbulan-bulan atau bertahun-tahun sementara koin rentan kuantum tetap terpapar.
 
 <CalloutV2 title="JAWABAN QUANTUS">
-  Tantangan yang bertumpuk ini membuat retrofit keamanan kuantum ke chain yang ada
-  sangat sulit. Quantus Network menghindari ini dengan membangun
-  keamanan kuantum ke dalam chain sejak hari pertama.
+  Tantangan yang bertumpuk ini membuat retrofit keamanan kuantum ke chain yang
+  ada sangat sulit. Quantus Network menghindari ini dengan membangun keamanan
+  kuantum ke dalam chain sejak hari pertama.
 </CalloutV2>
 
 <ChapterHeading number="04" title="Arsitektur Quantus Network" />
@@ -339,7 +383,7 @@ dimitigasi oleh proxy atau Tor), dan sebagian besar data menjadi publik di
 chain.
 
 Namun, mengamankan lapisan P2P secara kuantum melindungi dari
- penyadapan, serangan man-in-the-middle, dan dekripsi
+penyadapan, serangan man-in-the-middle, dan dekripsi
 kuantum, memastikan gossip node, propagasi blok, dan
 interaksi jaringan lainnya tetap rahasia dan bebas gangguan
 untuk masa mendatang.
@@ -707,7 +751,11 @@ Peta jalan saat ini hingga 2026, dapat berubah.
   subtitle="Akun keamanan tinggi, multisig, dompet perangkat keras, integrasi ZK."
 />
 
-<TimelineV2 title="Bell Mainnet" date="Kuartal 2 2026" subtitle="Peluncuran mainnet." />
+<TimelineV2
+  title="Bell Mainnet"
+  date="Kuartal 2 2026"
+  subtitle="Peluncuran mainnet."
+/>
 
 <TimelineV2
   title="Fermi Upgrade"
@@ -790,8 +838,8 @@ keuangan/blockchain, dan volatilitas inheren ekosistem kripto.
 </Reference>
 
 <Reference id="reference-7" label="[7]">
-  Gidney, C., & Ekerå, M. (2021). _How to factor 2048 bit RSA integers in 8 hours
-  using 20 million noisy qubits_. _arXiv:1905.09749_.
+  Gidney, C., & Ekerå, M. (2021). _How to factor 2048 bit RSA integers in 8
+  hours using 20 million noisy qubits_. _arXiv:1905.09749_.
   https://arxiv.org/abs/1905.09749
 </Reference>
 

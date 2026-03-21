@@ -5,8 +5,46 @@ publishedDate: "2026-03-21"
 updatedDate: "2026-03-21"
 authors: ["Christopher Smith"]
 changelog:
-  - "Исправлено неверное распределение для инвесторов на круговой диаграмме."
+  - "Крупная переработка: отказ от ответственности, содержание, нумерованные главы (01–09), обложка PDF, TOC; вместо заключения — «References & Further Reading»."
+  - "Новая глава: кризис миграции (координация, потерянные монеты, сроки PQC-миграции)."
+  - "Переписаны введение и раздел об угрозе: рамка CRQC, четыре нумерованные категории угроз, сноски в тексте."
+  - "Расширены или уточнены разделы об архитектуре и технике (Foundation/Substrate, LibP2P, wormhole/Plonky2, консенсус/поле Goldilocks)."
+  - "Дорожная карта: Bell Mainnet Q2 2026; Fermi Upgrade Q4 2026; в Planck Beta добавлена ZK-интеграция."
 pdfCover: true
+# В `render().headings` Astro не попадают JSX-`<h2>` и ChapterHeading; slug якоря совпадает с id заголовков `###` в Markdown.
+toc:
+  insertBefore:
+    квантовая-угроза:
+      - slug: legal-disclaimer
+        text: Юридическая информация
+      - slug: contents
+        text: Содержание
+      - slug: chapter-01
+        text: Введение
+    основы-квантовых-вычислений:
+      - slug: chapter-02
+        text: Квантовая угроза для блокчейна
+    проблема-координации:
+      - slug: chapter-03
+        text: Кризис миграции
+    основы:
+      - slug: chapter-04
+        text: Архитектура Quantus Network
+    обратимые-транзакции:
+      - slug: chapter-05
+        text: Сохранение капитала
+    награды-за-блок:
+      - slug: chapter-06
+        text: Токеномика и управление
+    ошибки-реализации:
+      - slug: chapter-07
+        text: Дорожная карта
+      - slug: chapter-08
+        text: Риски
+  insertAfter:
+    прочие-соображения:
+      - slug: chapter-09
+        text: Ссылки и дополнительные материалы
 ---
 
 import CalloutV2 from "@/components/features/whitepaper/mdx/CalloutV2.astro";
@@ -22,7 +60,10 @@ import ChapterHeading from "@/components/features/whitepaper/mdx/ChapterHeading.
 import Reference from "@/components/features/whitepaper/mdx/Reference.astro";
 import ReferenceMarker from "@/components/features/whitepaper/mdx/ReferenceMarker.astro";
 
-<h2 className="font-whitepaper-section-title-alt! print:text-whitepaper-section-title-alt!">
+<h2
+  id="legal-disclaimer"
+  className="font-whitepaper-section-title-alt! print:text-whitepaper-section-title-alt!"
+>
   <span>Юридическая информация</span>
 </h2>
 
@@ -34,7 +75,10 @@ _Настоящий whitepaper предоставляется исключите
 Quantus Network не даёт заявлений и гарантий
 относительно точности или полноты содержащейся здесь информации._
 
-<h2 className="font-whitepaper-section-title-alt! print:text-whitepaper-section-title-alt!">
+<h2
+  id="contents"
+  className="font-whitepaper-section-title-alt! print:text-whitepaper-section-title-alt!"
+>
   <span>Содержание</span>
 </h2>
 
@@ -199,8 +243,9 @@ SPHINCS+ могут давать подписи до 41 КБ, тогда как 
 пользователей или валидаторов с ограниченными ресурсами.
 
 <CalloutV2 title="ПРИМЕЧАНИЕ">
-  Эти проблемы масштабирования в будущем придётся решать всем блокчейнам.
-  У Bitcoin, например, будет гораздо меньше 1 TPS, если не увеличивать максимальный размер блока.
+  Эти проблемы масштабирования в будущем придётся решать всем блокчейнам. У
+  Bitcoin, например, будет гораздо меньше 1 TPS, если не увеличивать
+  максимальный размер блока.
 </CalloutV2>
 
 <ChapterHeading number="03" title="Кризис миграции" />
@@ -250,8 +295,9 @@ SPHINCS+ могут давать подписи до 41 КБ, тогда как 
 месяцы или годы, пока уязвимые к кванту монеты остаются под угрозой.
 
 <CalloutV2 title="ОТВЕТ QUANTUS">
-  Эти накопленные вызовы делают чрезвычайно трудным добавление квантовой безопасности к существующим цепям.
-  Quantus Network избегает этого, встраивая квантовую безопасность в цепь с первого дня.
+  Эти накопленные вызовы делают чрезвычайно трудным добавление квантовой
+  безопасности к существующим цепям. Quantus Network избегает этого, встраивая
+  квантовую безопасность в цепь с первого дня.
 </CalloutV2>
 
 <ChapterHeading number="04" title="Архитектура Quantus Network" />
@@ -426,11 +472,12 @@ H(H(salt | secret | global_transfer_count))
 - Совместим с no-std окружением Substrate
 
 <CalloutV2 title="ПРОИЗВОДИТЕЛЬНОСТЬ">
-  Рекурсивные доказательства завершаются за 170 миллисекунд при компактных размерах (100 КБ на
-  агрегированное доказательство). В оптимальном случае с блоками 5 МБ и всеми транзакциями
-  на один выход wormhole-адреса могли бы упаковать ~153 000 транзакций
-  в один блок (4,9 МБ / 32 байта на nullifier): улучшение в 223 раза
-  по сравнению с ~685 «сырыми» транзакциями ML-DSA (5 МБ / 7,3 КБ каждая).
+  Рекурсивные доказательства завершаются за 170 миллисекунд при компактных
+  размерах (100 КБ на агрегированное доказательство). В оптимальном случае с
+  блоками 5 МБ и всеми транзакциями на один выход wormhole-адреса могли бы
+  упаковать ~153 000 транзакций в один блок (4,9 МБ / 32 байта на nullifier):
+  улучшение в 223 раза по сравнению с ~685 «сырыми» транзакциями ML-DSA (5 МБ /
+  7,3 КБ каждая).
 </CalloutV2>
 
 #### Замечания по безопасности
@@ -772,8 +819,8 @@ Quantus принимает эту систему без изменений, но
 </Reference>
 
 <Reference id="reference-7" label="[7]">
-  Gidney, C., & Ekerå, M. (2021). _How to factor 2048 bit RSA integers in 8 hours
-  using 20 million noisy qubits_. _arXiv:1905.09749_.
+  Gidney, C., & Ekerå, M. (2021). _How to factor 2048 bit RSA integers in 8
+  hours using 20 million noisy qubits_. _arXiv:1905.09749_.
   https://arxiv.org/abs/1905.09749
 </Reference>
 
@@ -793,5 +840,3 @@ Quantus принимает эту систему без изменений, но
   January 29, 2026, from
   https://openquantumsafe.org/liboqs/algorithms/sig/ml-dsa.html
 </Reference>
-
-

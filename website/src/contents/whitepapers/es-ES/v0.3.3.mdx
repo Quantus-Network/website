@@ -5,8 +5,46 @@ publishedDate: "2026-03-21"
 updatedDate: "2026-03-21"
 authors: ["Christopher Smith"]
 changelog:
-  - "Corrige la asignación incorrecta a inversores en el gráfico circular."
+  - "Revisión amplia: aviso legal, índice, capítulos numerados (01–09), portada PDF, TOC; «References & Further Reading» sustituye el cierre."
+  - "Nuevo capítulo: La crisis de migración (coordinación, monedas perdidas, plazos de migración PQC)."
+  - "Introducción y sección de amenaza cuántica reescritas: marco CRQC, cuatro categorías de amenaza numeradas, citas en línea."
+  - "Arquitectura y secciones técnicas ampliadas o aclaradas (Foundation/Substrate, LibP2P, wormhole/Plonky2, consenso/campo Goldilocks)."
+  - "Hoja de ruta: Bell Mainnet Q2 2026; Fermi Upgrade Q4 2026; Planck Beta añade integración ZK."
 pdfCover: true
+# Astro `render().headings` omite los `<h2>` en JSX y ChapterHeading; los slugs de ancla coinciden con los id de `###` en Markdown.
+toc:
+  insertBefore:
+    la-amenaza-cuántica:
+      - slug: legal-disclaimer
+        text: Aviso legal
+      - slug: contents
+        text: Contenido
+      - slug: chapter-01
+        text: Introducción
+    fundamentos-de-la-computación-cuántica:
+      - slug: chapter-02
+        text: La amenaza cuántica para la blockchain
+    el-problema-de-coordinación:
+      - slug: chapter-03
+        text: La crisis de la migración
+    fundamentos:
+      - slug: chapter-04
+        text: Arquitectura de Quantus Network
+    transacciones-reversibles:
+      - slug: chapter-05
+        text: Preservación del patrimonio
+    recompensas-de-bloque:
+      - slug: chapter-06
+        text: Tokenómica y gobernanza
+    problemas-de-implementación:
+      - slug: chapter-07
+        text: Hoja de ruta
+      - slug: chapter-08
+        text: Riesgos
+  insertAfter:
+    otras-consideraciones:
+      - slug: chapter-09
+        text: Referencias y lecturas adicionales
 ---
 
 import CalloutV2 from "@/components/features/whitepaper/mdx/CalloutV2.astro";
@@ -22,7 +60,10 @@ import ChapterHeading from "@/components/features/whitepaper/mdx/ChapterHeading.
 import Reference from "@/components/features/whitepaper/mdx/Reference.astro";
 import ReferenceMarker from "@/components/features/whitepaper/mdx/ReferenceMarker.astro";
 
-<h2 className="font-whitepaper-section-title-alt! print:text-whitepaper-section-title-alt!">
+<h2
+  id="legal-disclaimer"
+  className="font-whitepaper-section-title-alt! print:text-whitepaper-section-title-alt!"
+>
   <span>Aviso legal</span>
 </h2>
 
@@ -34,7 +75,10 @@ consultar a profesionales cualificados antes de tomar decisiones de inversión.
 Quantus Network no ofrece declaraciones ni garantías
 sobre la exactitud o integridad de la información aquí contenida._
 
-<h2 className="font-whitepaper-section-title-alt! print:text-whitepaper-section-title-alt!">
+<h2
+  id="contents"
+  className="font-whitepaper-section-title-alt! print:text-whitepaper-section-title-alt!"
+>
   <span>Contenido</span>
 </h2>
 
@@ -201,7 +245,8 @@ usuarios o validadores con recursos limitados.
 
 <CalloutV2 title="NOTA">
   Estos retos de escalado tendrán que abordarlos todas las blockchains en el
-  futuro. Bitcoin, por ejemplo, tendrá mucho menos de 1 TPS si no se aumenta el tamaño máximo del bloque.
+  futuro. Bitcoin, por ejemplo, tendrá mucho menos de 1 TPS si no se aumenta el
+  tamaño máximo del bloque.
 </CalloutV2>
 
 <ChapterHeading number="03" title="La crisis de la migración" />
@@ -251,8 +296,9 @@ Muchos enviarán primero transacciones de prueba. Con firmas PQC hinchadas asfix
 meses o años mientras las monedas vulnerables al quantum siguen expuestas.
 
 <CalloutV2 title="LA RESPUESTA DE QUANTUS">
-  Estos retos acumulados hacen extraordinariamente difícil añadir seguridad cuántica a cadenas existentes.
-  Quantus Network lo evita integrando la seguridad cuántica en la cadena desde el primer día.
+  Estos retos acumulados hacen extraordinariamente difícil añadir seguridad
+  cuántica a cadenas existentes. Quantus Network lo evita integrando la
+  seguridad cuántica en la cadena desde el primer día.
 </CalloutV2>
 
 <ChapterHeading number="04" title="Arquitectura de Quantus Network" />
@@ -428,11 +474,12 @@ enlace de cabeceras de bloque.
 - Compatible con el entorno no-std de Substrate
 
 <CalloutV2 title="RENDIMIENTO">
-  Las pruebas recursivas terminan en 170 milisegundos con tamaños compactos (100 KB por
-  prueba agregada). En un caso óptimo con bloques de 5 MB y todas las transacciones
-  hacia la misma salida, las Wormhole Addresses podrían empaquetar ~153.000 transacciones
-  en un solo bloque (4,9 MB / 32 bytes por nullifier): una mejora de 223x
-  frente a ~685 transacciones ML-DSA en bruto (5 MB / 7,3 KB cada una).
+  Las pruebas recursivas terminan en 170 milisegundos con tamaños compactos (100
+  KB por prueba agregada). En un caso óptimo con bloques de 5 MB y todas las
+  transacciones hacia la misma salida, las Wormhole Addresses podrían empaquetar
+  ~153.000 transacciones en un solo bloque (4,9 MB / 32 bytes por nullifier):
+  una mejora de 223x frente a ~685 transacciones ML-DSA en bruto (5 MB / 7,3 KB
+  cada una).
 </CalloutV2>
 
 #### Notas de seguridad
@@ -694,7 +741,11 @@ La hoja de ruta actual hasta 2026, sujeta a cambios.
   subtitle="Cuentas de alta seguridad, multisig, monedero hardware, integración ZK."
 />
 
-<TimelineV2 title="Bell Mainnet" date="Q2 2026" subtitle="Lanzamiento de mainnet." />
+<TimelineV2
+  title="Bell Mainnet"
+  date="Q2 2026"
+  subtitle="Lanzamiento de mainnet."
+/>
 
 <TimelineV2
   title="Fermi Upgrade"
@@ -776,8 +827,8 @@ finanzas/blockchain y la volatilidad inherente de los ecosistemas cripto.
 </Reference>
 
 <Reference id="reference-7" label="[7]">
-  Gidney, C., & Ekerå, M. (2021). _How to factor 2048 bit RSA integers in 8 hours
-  using 20 million noisy qubits_. _arXiv:1905.09749_.
+  Gidney, C., & Ekerå, M. (2021). _How to factor 2048 bit RSA integers in 8
+  hours using 20 million noisy qubits_. _arXiv:1905.09749_.
   https://arxiv.org/abs/1905.09749
 </Reference>
 
@@ -797,5 +848,3 @@ finanzas/blockchain y la volatilidad inherente de los ecosistemas cripto.
   January 29, 2026, from
   https://openquantumsafe.org/liboqs/algorithms/sig/ml-dsa.html
 </Reference>
-
-

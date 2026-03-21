@@ -13,6 +13,7 @@ import {
   getWhitepapersForLocale,
   getAllVersions,
   getWhitepaperPdfPath,
+  resolveWhitepaperTocHeadings,
 } from "@/utils/whitepaper";
 import WhitepaperPrintCover from "@/components/features/whitepaper/WhitepaperPrintCover.astro";
 
@@ -28,7 +29,8 @@ const latestVersion =
   versions[versions.length - 1]?.version ?? entry.data.version;
 const pdfHref = getWhitepaperPdfPath(locale, entry.data.version);
 
-const { Content, headings } = await render(entry);
+const { Content, headings: renderHeadings } = await render(entry);
+const headings = resolveWhitepaperTocHeadings(entry, renderHeadings);
 
 const metadata = createMetadata({
   title: t("whitepaper.meta.title"),

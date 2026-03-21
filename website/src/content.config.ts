@@ -15,6 +15,18 @@ const blog = defineCollection({
   }),
 });
 
+const tocHeadingItem = z.object({
+  slug: z.string(),
+  text: z.string(),
+  depth: z.number().optional(),
+});
+
+/** Merges with Astro `render().headings` so JSX/custom `<h2>` (e.g. ChapterHeading) appear in the TOC. */
+const whitepaperToc = z.object({
+  insertBefore: z.record(z.string(), z.array(tocHeadingItem)).optional(),
+  insertAfter: z.record(z.string(), z.array(tocHeadingItem)).optional(),
+});
+
 const whitepaper = defineCollection({
   loader: glob({
     pattern: "**/*.{md,mdx}",
@@ -29,6 +41,7 @@ const whitepaper = defineCollection({
     changelog: z.array(z.string()).default([]),
     /** When true, PDF/print output includes a dedicated cover page and hides the in-page header. */
     pdfCover: z.boolean().optional(),
+    toc: whitepaperToc.optional(),
   }),
 });
 
