@@ -1,7 +1,4 @@
 ---
-import Column from "./Column.astro";
-import Grid from "./Grid.astro";
-
 export interface Props {
   id: string;
   label: string;
@@ -10,14 +7,17 @@ export interface Props {
 const { id, label } = Astro.props;
 ---
 
-<Grid id={id} gap="2rem">
-  <Column ratio={1}>
+<div
+  id={id}
+  class="my-8 flex flex-col items-start justify-between gap-2 sm:flex-row sm:gap-8"
+>
+  <div class="w-16">
     <span class="font-whitepaper-reference-label text-whitepaper-primary">
       {label}
     </span>
-  </Column>
+  </div>
 
-  <Column ratio={20}>
+  <div class="m-0 w-full [&>p]:m-0 [&>p]:wrap-break-word">
     <slot />
-  </Column>
-</Grid>
+  </div>
+</div>

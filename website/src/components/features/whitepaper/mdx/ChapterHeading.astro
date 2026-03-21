@@ -9,9 +9,9 @@ export interface Props {
 const { number, title } = Astro.props;
 ---
 
-<div id={`chapter-${number}`} class="not-prose flex flex-col">
-  <Divider />
+<Divider />
 
+<h2 id={`chapter-${number}`} class="not-prose flex flex-col">
   <br />
   <br />
 
@@ -20,7 +20,5 @@ const { number, title } = Astro.props;
     >{number}</span
   >
 
-  <h2 class="font-whitepaper-chapter-title">
-    <span>{title}</span>
-  </h2>
-</div>
+  <span class="font-whitepaper-chapter-title">{title}</span>
+</h2>
