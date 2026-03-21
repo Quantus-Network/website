@@ -1,0 +1,16 @@
+---
+export interface Props {
+  id: string;
+}
+
+const { id } = Astro.props;
+---
+
+<sup class="not-prose">
+  <a
+    class="font-whitepaper-reference-marker text-whitepaper-section-title-alt inline-block"
+    href={`#reference-${id}`}
+  >
+    [{id}]
+  </a>
+</sup>

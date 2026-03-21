@@ -1,0 +1,31 @@
+---
+import Divider from "./Divider.astro";
+
+export interface Props {
+  title: string;
+  date?: string;
+  subtitle?: string;
+}
+
+const { title, date, subtitle } = Astro.props;
+---
+
+<Divider />
+
+<div class="flex">
+  <div class="flex min-w-[213.333px] flex-col gap-1 py-5 pr-5 print:py-3">
+    <span class="font-whitepaper-timeline-title text-whitepaper-primary">
+      {title}
+    </span>
+
+    <span
+      class="text-text-content-secondary font-whitepaper-timeline-date print:text-whitepaper-section-title-alt"
+    >
+      {date}
+    </span>
+  </div>
+
+  <div class="print:text-whitepaper-body w-full pt-6 print:pt-4">
+    {subtitle}
+  </div>
+</div>

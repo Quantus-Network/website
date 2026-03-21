@@ -1,0 +1,22 @@
+---
+export interface Props {
+  number: string;
+  title: string;
+}
+
+const { number, title } = Astro.props;
+---
+
+<h2
+  id={`chapter-${number}`}
+  class="not-prose flex flex-col border-t border-white/10 pt-8 print:border-none print:pt-0"
+>
+  <span
+    class="font-whitepaper-chapter-number text-whitepaper-primary print:text-whitepaper-primary translate-y-[14px] opacity-15"
+    >{number}</span
+  >
+
+  <span class="font-whitepaper-chapter-title print:text-whitepaper-body-light"
+    >{title}</span
+  >
+</h2>

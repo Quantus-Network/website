@@ -1,0 +1,40 @@
+---
+import Divider from "./Divider.astro";
+
+export interface Props {
+  items: {
+    title: string;
+    number: string;
+  }[];
+  class?: string;
+}
+
+const { items, class: className } = Astro.props;
+---
+
+<ol class:list={["list-none p-0", className]}>
+  {
+    items.map((item, index) => (
+      <>
+        <Divider />
+
+        <li class="group">
+          <a
+            class="not-prose flex items-start gap-2 p-0"
+            href={`#chapter-${item.number}`}
+          >
+            <span class="text-whitepaper-primary font-whitepaper-ordered-list-bullet w-8">
+              {item.number}
+            </span>
+
+            <div class="font-whitepaper-ordered-list-item print:text-whitepaper-body-light group-hover:underline">
+              {item.title}
+            </div>
+          </a>
+        </li>
+
+        {index === items.length - 1 && <Divider />}
+      </>
+    ))
+  }
+</ol>

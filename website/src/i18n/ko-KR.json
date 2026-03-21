@@ -775,8 +775,12 @@
     "last_updated": "마지막 업데이트",
     "changelog": "변경 이력",
     "authors": "저자",
+    "published": "게시",
+    "classification": "분류",
     "abstract": "요약",
-    "back_to_top": "맨 위로"
+    "back_to_top": "맨 위로",
+    "tag_line": "양자 보안, 암호화된 화폐",
+    "whitepaper": "백서"
   },
   "common": {
     "loading": "로딩 중...",

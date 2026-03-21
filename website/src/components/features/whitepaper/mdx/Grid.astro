@@ -1,12 +1,19 @@
 ---
 export interface Props {
+  id?: string;
   cols?: number;
   gap?: string;
   align?: "start" | "center" | "end" | "stretch";
   class?: string;
 }
 
-const { cols, gap = "1.5rem", align = "start", class: className } = Astro.props;
+const {
+  id,
+  cols,
+  gap = "1.5rem",
+  align = "start",
+  class: className,
+} = Astro.props;
 
 // If cols is provided, we use a fixed grid.
 // If not, we use flexbox which allows children to define their own widths/ratios.
@@ -14,6 +21,7 @@ const isFlex = !cols;
 ---
 
 <div
+  id={id}
   class:list={[
     "my-8 w-full print:break-inside-avoid",
     isFlex

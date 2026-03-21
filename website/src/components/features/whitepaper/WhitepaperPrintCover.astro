@@ -1,0 +1,100 @@
+---
+import type { Locale } from "@/utils/i18n";
+import { formatDate } from "@/utils/i18n";
+
+export interface Props {
+  version: string;
+
+  publishedDate: Date;
+  updatedDate?: Date;
+  locale: Locale;
+  t: (key: string) => string;
+}
+
+const { version, publishedDate, updatedDate, locale, t } = Astro.props;
+
+const displayDate = updatedDate ?? publishedDate;
+const formattedDate = formatDate(displayDate, locale, {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+});
+---
+
+<div
+  class="whitepaper-print-cover not-prose hidden print:flex print:min-h-[calc(100vh-70px)] print:flex-col"
+  aria-hidden="true"
+>
+  <div class="flex flex-1 flex-col">
+    <div class="flex flex-col">
+      <span class="font-whitepaper-cover-version text-whitepaper-cover-label"
+        >{t("whitepaper.whitepaper")} / V{version}</span
+      >
+
+      <h1 class="font-whitepaper-cover-title text-whitepaper-primary">
+        Quantus
+      </h1>
+
+      <p class="font-whitepaper-cover-tagline text-whitepaper-cover-tagline">
+        {t("whitepaper.tag_line")}
+      </p>
+    </div>
+
+    <div class="mt-20 flex gap-20">
+      <div class="flex flex-col gap-1">
+        <p class="font-whitepaper-cover-credit-label text-whitepaper-primary">
+          {t("whitepaper.published")}
+        </p>
+
+        <p
+          class="font-whitepaper-cover-credit-content text-whitepaper-cover-label"
+        >
+          {formattedDate}
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-1">
+        <p class="font-whitepaper-cover-credit-label text-whitepaper-primary">
+          {t("whitepaper.version")}
+        </p>
+
+        <p
+          class="font-whitepaper-cover-credit-content text-whitepaper-cover-label"
+        >
+          {version}
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-1">
+        <p class="font-whitepaper-cover-credit-label text-whitepaper-primary">
+          {t("whitepaper.classification")}
+        </p>
+
+        <p
+          class="font-whitepaper-cover-credit-content text-whitepaper-cover-label"
+        >
+          Public
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex w-full flex-1 items-end">
+    <img
+      src="/whitepaper/v0.3.3/whitepaper-cover-decoration.webp"
+      alt="Decoration"
+      class="h-full w-full object-cover"
+    />
+  </div>
+</div>
+
+<style>
+  @media print {
+    .whitepaper-print-cover {
+      page-break-after: always;
+      break-after: page;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+  }
+</style>

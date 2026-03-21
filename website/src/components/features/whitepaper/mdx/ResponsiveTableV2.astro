@@ -1,0 +1,88 @@
+---
+import { applyStyles } from "@/utils/apply-styles";
+
+export interface Props {
+  headers: string[];
+  rows: string[][];
+  labelColumn?: number;
+  class?: string;
+}
+
+const { headers, rows, labelColumn = 0, class: className } = Astro.props;
+
+const valueHeaders = headers.filter((_, i) => i !== labelColumn);
+---
+
+<div class:list={["not-prose my-6", className]}>
+  {/* Desktop: standard table */}
+  <div class="hidden overflow-x-auto sm:block print:block">
+    <table class="w-full border-collapse text-sm">
+      <thead>
+        <tr>
+          {
+            headers.map((header, headerIndex) => (
+              <th
+                class={applyStyles(
+                  "font-whitepaper-table-header print:text-whitepaper-section-title-alt border-b border-white/10 py-3 text-left text-white/80 print:border-black print:bg-white",
+                  headerIndex > 0 ? "px-4" : "pr-4",
+                )}
+              >
+                {header}
+              </th>
+            ))
+          }
+        </tr>
+      </thead>
+      <tbody>
+        {
+          rows.map((row) => (
+            <tr>
+              {row.map((cell, cellIndex) => (
+                <td
+                  class={applyStyles(
+                    "font-whitepaper-table-cell print:text-whitepaper-body border-b border-white/5 py-3 text-white/60 print:border-[#E8E8E8]",
+                    cellIndex === 0 &&
+                      "text-whitepaper-primary print:text-whitepaper-primary",
+                    cellIndex > 0 ? "px-4" : "pr-4",
+                  )}
+                >
+                  {cell}
+                </td>
+              ))}
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
+
+  {/* Mobile: card layout */}
+  <div class="flex flex-col gap-3 sm:hidden print:hidden">
+    {
+      rows.map((row) => (
+        <div class="overflow-hidden border border-white/10 bg-white/5">
+          <div class="border-b border-white/10 bg-white/[0.07] px-4 py-2.5">
+            <span class="font-whitepaper-table-header text-whitepaper-primary text-sm">
+              {row[labelColumn]}
+            </span>
+          </div>
+          <div class="divide-y divide-white/5">
+            {valueHeaders.map((header, i) => {
+              const cellIndex = i >= labelColumn ? i + 1 : i;
+              return (
+                <div class="flex items-center justify-between px-4 py-2.5">
+                  <span class="font-whitepaper-header-cell text-xs">
+                    {header}
+                  </span>
+                  <span class="font-whitepaper-table-cell text-sm tabular-nums">
+                    {row[cellIndex]}
+                  </span>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</div>

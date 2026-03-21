@@ -1,48 +1,93 @@
 ---
+import { applyStyles } from "@/utils/apply-styles";
+
 export interface Props {
   class?: string;
+  styleVersion?: "v1" | "v2";
 }
 
-const { class: className = "" } = Astro.props;
+const { class: className = "", styleVersion = "v1" } = Astro.props;
+
+const v1 = applyStyles([
+  "prose prose-invert max-w-none [&>*:first-child]:mt-0",
+  "prose-headings:font-semibold prose-headings:tracking-tight",
+  "prose-h2:mt-12 prose-h2:mb-4 prose-h2:scroll-mt-24 prose-h2:border-white/10 prose-h2:pb-3 prose-h2:text-2xl lg:prose-h2:text-3xl",
+  "prose-h3:mt-8 prose-h3:mb-3 prose-h3:scroll-mt-24 prose-h3:text-xl lg:prose-h3:text-2xl",
+  "prose-h4:mt-6 prose-h4:mb-2 prose-h4:scroll-mt-24 prose-h4:text-lg",
+  "prose-p:leading-relaxed prose-p:text-white/70",
+  "prose-a:text-blue-400 prose-a:no-underline hover:prose-a:underline",
+  "prose-strong:text-white/90",
+  "prose-li:text-white/70 prose-li:marker:text-white/30",
+  "prose-ol:text-white/70 prose-ul:text-white/70",
+  "prose-code:rounded prose-code:bg-white/10 prose-code:px-1.5 prose-code:py-0.5 prose-code:text-sm prose-code:text-pink-300 prose-code:before:content-none prose-code:after:content-none",
+  "prose-pre:rounded-lg prose-pre:border prose-pre:border-white/10 prose-pre:bg-white/5",
+  "prose-table:overflow-hidden prose-table:rounded-lg prose-table:border prose-table:border-white/10",
+  "prose-th:border-b prose-th:border-white/10 prose-th:bg-white/5 prose-th:px-4 prose-th:py-3 prose-th:text-left prose-th:text-sm prose-th:font-semibold prose-th:text-white/80",
+  "prose-td:border-b prose-td:border-white/5 prose-td:px-4 prose-td:py-3 prose-td:text-sm prose-td:text-white/60",
+  "prose-hr:border-white/10",
+  "prose-blockquote:border-l-blue-500/40 prose-blockquote:text-white/60",
+  "prose-img:rounded-lg prose-img:border prose-img:border-white/10",
+
+  "print:prose-headings:text-black",
+  "print:prose-p:text-[#333] print:prose-strong:text-black",
+  "print:prose-a:text-blue-700 print:prose-a:underline",
+  "print:prose-li:text-[#333] print:prose-li:marker:text-[#555]",
+  "print:prose-ol:text-[#333] print:prose-ul:text-[#333]",
+  "print:prose-code:text-[#c7254e] print:prose-code:bg-[#f9f2f4]",
+  "print:prose-pre:bg-[#f6f8fa] print:prose-pre:border-[#d0d7de]",
+  "print:prose-table:border-[#d0d7de]",
+  "print:prose-th:text-black print:prose-th:bg-[#f6f8fa] print:prose-th:border-[#d0d7de]",
+  "print:prose-td:text-[#333] print:prose-td:border-[#e1e4e8]",
+  "print:prose-hr:border-[#d0d7de]",
+  "print:prose-blockquote:border-l-blue-600 print:prose-blockquote:text-[#555]",
+  "print:prose-img:border-[#d0d7de]",
+  "print:prose-h2:border-[#d0d7de]",
+  className,
+]);
+
+const v2 = applyStyles([
+  "prose prose-invert max-w-none [&>*:first-child]:mt-0",
+  "prose-headings:font-semibold prose-headings:tracking-tight",
+  "prose-h2:mt-12 prose-h2:mb-4 prose-h2:scroll-mt-24 prose-h2:pb-3",
+  "prose-h3:mt-8 prose-h3:mb-3 prose-h3:scroll-mt-24 prose-h3:font-whitepaper-section-title",
+  "prose-h4:mt-6 prose-h4:mb-2 prose-h4:scroll-mt-24 prose-h4:font-whitepaper-sub-section-title prose-h4:text-whitepaper-primary",
+  "prose-p:font-whitepaper-section-paragraph prose-p:text-white/70",
+  "prose-a:text-blue-400 prose-a:no-underline hover:prose-a:underline",
+  "prose-strong:text-white/90",
+  "prose-ul:[&_li]:list-none prose-ul:p-0 prose-ul:[&_li]:before:content-['—'] prose-ul:[&_li]:before:mr-2 prose-ul:[&_li]:before:text-whitepaper-primary",
+  "prose-li:text-white/70 prose-li:font-whitepaper-section-paragraph prose-li:p-0",
+  "prose-ol:text-white/70 prose-ul:text-white/70",
+  "prose-code:font-whitepaper-code prose-code:py-0.5 prose-code:before:content-none prose-code:after:content-none",
+  "prose-pre:border-l-2 prose-pre:rounded-none prose-pre:border-whitepaper-primary prose-pre:bg-white/10!",
+  "prose-table:overflow-hidden prose-table:rounded-lg prose-table:border prose-table:border-white/10",
+  "prose-th:border-b prose-th:border-white/10 prose-th:bg-white/5 prose-th:px-4 prose-th:py-3 prose-th:text-left prose-th:text-sm prose-th:font-semibold prose-th:text-white/80",
+  "prose-td:border-b prose-td:border-white/5 prose-td:px-4 prose-td:py-3 prose-td:text-sm prose-td:text-white/60",
+  "prose-hr:border-white/10",
+  "prose-blockquote:border-l-whitepaper-primary prose-blockquote:font-whitepaper-blockquote prose-blockquote:border-l-2 prose-blockquote:text-white/60 prose-blockquote:[&>p::before]:content-none  prose-blockquote:[&>p::after]:content-none prose-blockquote:[&>p]:not-italic",
+  "prose-img:rounded-lg prose-img:border prose-img:border-white/10",
+
+  "print:prose-h2:text-whitepaper-body-light",
+  "print:prose-h3:text-whitepaper-body-light",
+  "print:prose-h4:text-whitepaper-primary",
+  "print:prose-p:text-whitepaper-body print:prose-strong:text-black",
+  "print:prose-a:text-blue-700 print:prose-a:underline",
+  "print:prose-li:text-[#333] print:prose-li:marker:text-[#555]",
+  "print:prose-ol:text-[#333] print:prose-ul:text-[#333]",
+  "print:prose-code:text-whitepaper-body-light",
+  "print:prose-pre:bg-whitepaper-pre-background!",
+  "print:prose-table:border-[#d0d7de]",
+  "print:prose-th:text-black print:prose-th:bg-[#f6f8fa] print:prose-th:border-[#d0d7de]",
+  "print:prose-td:text-[#333] print:prose-td:border-[#e1e4e8]",
+  "print:prose-hr:border-[#d0d7de]",
+  "print:prose-blockquote:text-whitepaper-body-light",
+  "print:prose-img:border-[#d0d7de]",
+  "print:prose-h2:border-[#d0d7de]",
+  className,
+]);
+
+const appliedStyles = styleVersion === "v1" ? v1 : v2;
 ---
 
-<article
-  class:list={[
-    "prose prose-invert max-w-none [&>*:first-child]:mt-0",
-    "prose-headings:font-semibold prose-headings:tracking-tight",
-    "prose-h2:mt-12 prose-h2:mb-4 prose-h2:scroll-mt-24 prose-h2:border-white/10 prose-h2:pb-3 prose-h2:text-2xl lg:prose-h2:text-3xl",
-    "prose-h3:mt-8 prose-h3:mb-3 prose-h3:scroll-mt-24 prose-h3:text-xl lg:prose-h3:text-2xl",
-    "prose-h4:mt-6 prose-h4:mb-2 prose-h4:scroll-mt-24 prose-h4:text-lg",
-    "prose-p:leading-relaxed prose-p:text-white/70",
-    "prose-a:text-blue-400 prose-a:no-underline hover:prose-a:underline",
-    "prose-strong:text-white/90",
-    "prose-li:text-white/70 prose-li:marker:text-white/30",
-    "prose-ol:text-white/70 prose-ul:text-white/70",
-    "prose-code:rounded prose-code:bg-white/10 prose-code:px-1.5 prose-code:py-0.5 prose-code:text-sm prose-code:text-pink-300 prose-code:before:content-none prose-code:after:content-none",
-    "prose-pre:rounded-lg prose-pre:border prose-pre:border-white/10 prose-pre:bg-white/5",
-    "prose-table:overflow-hidden prose-table:rounded-lg prose-table:border prose-table:border-white/10",
-    "prose-th:border-b prose-th:border-white/10 prose-th:bg-white/5 prose-th:px-4 prose-th:py-3 prose-th:text-left prose-th:text-sm prose-th:font-semibold prose-th:text-white/80",
-    "prose-td:border-b prose-td:border-white/5 prose-td:px-4 prose-td:py-3 prose-td:text-sm prose-td:text-white/60",
-    "prose-hr:border-white/10",
-    "prose-blockquote:border-l-blue-500/40 prose-blockquote:text-white/60",
-    "prose-img:rounded-lg prose-img:border prose-img:border-white/10",
-
-    "print:prose-headings:text-black",
-    "print:prose-p:text-[#333] print:prose-strong:text-black",
-    "print:prose-a:text-blue-700 print:prose-a:underline",
-    "print:prose-li:text-[#333] print:prose-li:marker:text-[#555]",
-    "print:prose-ol:text-[#333] print:prose-ul:text-[#333]",
-    "print:prose-code:text-[#c7254e] print:prose-code:bg-[#f9f2f4]",
-    "print:prose-pre:bg-[#f6f8fa] print:prose-pre:border-[#d0d7de]",
-    "print:prose-table:border-[#d0d7de]",
-    "print:prose-th:text-black print:prose-th:bg-[#f6f8fa] print:prose-th:border-[#d0d7de]",
-    "print:prose-td:text-[#333] print:prose-td:border-[#e1e4e8]",
-    "print:prose-hr:border-[#d0d7de]",
-    "print:prose-blockquote:border-l-blue-600 print:prose-blockquote:text-[#555]",
-    "print:prose-img:border-[#d0d7de]",
-    "print:prose-h2:border-[#d0d7de]",
-    className,
-  ]}
->
+<article class:list={appliedStyles}>
   <slot />
 </article>

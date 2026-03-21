@@ -1,0 +1,23 @@
+---
+export interface Props {
+  id: string;
+  label: string;
+}
+
+const { id, label } = Astro.props;
+---
+
+<div
+  id={id}
+  class="my-8 flex flex-col items-start justify-between gap-2 sm:flex-row sm:gap-8"
+>
+  <div class="w-16">
+    <span class="font-whitepaper-reference-label text-whitepaper-primary">
+      {label}
+    </span>
+  </div>
+
+  <div class="m-0 w-full [&>p]:m-0 [&>p]:wrap-break-word">
+    <slot />
+  </div>
+</div>

@@ -783,8 +783,12 @@
     "last_updated": "Última actualización",
     "changelog": "Registro de cambios",
     "authors": "Autores",
+    "published": "Publicado",
+    "classification": "Clasificación",
     "abstract": "Resumen",
-    "back_to_top": "Volver arriba"
+    "back_to_top": "Volver arriba",
+    "tag_line": "dinero cifrado y seguro en el sentido cuántico",
+    "whitepaper": "Whitepaper"
   },
   "common": {
     "loading": "Cargando...",
