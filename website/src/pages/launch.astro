@@ -99,7 +99,7 @@ const companyPoints = t("launch.company.points") as unknown as string[];
       <!-- Chart -->
       <AllocationChart />
 
-      <hr class="border-quantus-white/10 mb-10 mt-0" />
+      <hr class="border-quantus-white/10 mt-0 mb-10" />
 
       <!-- Launch Allocation (TGE) -->
       <div class="mb-10">
@@ -150,7 +150,7 @@ const companyPoints = t("launch.company.points") as unknown as string[];
         </p>
       </div>
 
-      <hr class="border-quantus-white/10 mb-10 mt-0" />
+      <hr class="border-quantus-white/10 mt-0 mb-10" />
 
       <!-- Mining-Based Distribution -->
       <div class="mb-10">
@@ -189,7 +189,7 @@ const companyPoints = t("launch.company.points") as unknown as string[];
         </div>
       </div>
 
-      <hr class="border-quantus-white/10 mb-10 mt-0" />
+      <hr class="border-quantus-white/10 mt-0 mb-10" />
 
       <!-- Company Alignment -->
       <div class="mb-10">
@@ -201,11 +201,15 @@ const companyPoints = t("launch.company.points") as unknown as string[];
           {t("launch.company.content")}
         </p>
         <ul class="font-body-mobile lg:font-body list-disc space-y-2 pl-6">
-          {companyPoints.map((point) => <li set:html={renderMarkdown(point)} />)}
+          {
+            companyPoints.map((point) => (
+              <li set:html={renderMarkdown(point)} />
+            ))
+          }
         </ul>
       </div>
 
-      <hr class="border-quantus-white/10 mb-10 mt-0" />
+      <hr class="border-quantus-white/10 mt-0 mb-10" />
 
       <!-- Lockups & Vesting -->
       <div class="mb-10">
@@ -216,7 +220,7 @@ const companyPoints = t("launch.company.points") as unknown as string[];
         </p>
       </div>
 
-      <hr class="border-quantus-white/10 mb-10 mt-0" />
+      <hr class="border-quantus-white/10 mt-0 mb-10" />
 
       <!-- Fees & Burning -->
       <div class="mb-10">
@@ -237,7 +241,7 @@ const companyPoints = t("launch.company.points") as unknown as string[];
         </p>
       </div>
 
-      <hr class="border-quantus-white/10 mb-10 mt-0" />
+      <hr class="border-quantus-white/10 mt-0 mb-10" />
 
       <!-- Funding History -->
       <div class="mb-10">
@@ -266,19 +270,23 @@ const companyPoints = t("launch.company.points") as unknown as string[];
             <tbody>
               <tr class="border-quantus-white/10 border-b">
                 <td class="px-4 py-3">{t("launch.funding.table.pr1")}</td>
-                <td class="px-4 py-3">{t("launch.funding.table.raised_pr1")}</td>
+                <td class="px-4 py-3">{t("launch.funding.table.raised_pr1")}</td
+                >
                 <td class="px-4 py-3">{t("launch.funding.table.val_pr1")}</td>
                 <td class="px-4 py-3">{t("launch.funding.table.dash")}</td>
               </tr>
               <tr class="border-quantus-white/10 border-b">
                 <td class="px-4 py-3">{t("launch.funding.table.pr2")}</td>
-                <td class="px-4 py-3">{t("launch.funding.table.raised_pr2")}</td>
+                <td class="px-4 py-3">{t("launch.funding.table.raised_pr2")}</td
+                >
                 <td class="px-4 py-3">{t("launch.funding.table.val_pr2")}</td>
                 <td class="px-4 py-3">{t("launch.funding.table.lead_pr2")}</td>
               </tr>
               <tr class="border-quantus-white/20 border-t font-bold">
                 <td class="px-4 py-3">{t("launch.funding.table.total")}</td>
-                <td class="px-4 py-3">{t("launch.funding.table.raised_total")}</td>
+                <td class="px-4 py-3"
+                  >{t("launch.funding.table.raised_total")}</td
+                >
                 <td class="px-4 py-3"></td>
                 <td class="px-4 py-3"></td>
               </tr>
