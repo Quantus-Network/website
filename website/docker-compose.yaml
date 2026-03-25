@@ -1,0 +1,12 @@
+services:
+  browserless:
+    image: browserless/chrome:latest
+    ports:
+      - "33000:3000"
+    environment:
+      CONNECTION_TIMEOUT: "600000"
+      MAX_CONCURRENT_SESSIONS: "5"
+    shm_size: "2gb"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: "no"

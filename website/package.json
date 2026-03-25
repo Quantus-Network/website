@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "build:pdf": "node scripts/generate-whitepaper-pdfs.js",
-    "build:full": "astro build && node scripts/generate-whitepaper-pdfs.js",
+    "build:pdf": "node scripts/run-whitepaper-pdf-with-browserless.mjs",
+    "build:full": "astro build && node scripts/run-whitepaper-pdf-with-browserless.mjs",
     "preview": "astro preview",
     "astro": "astro",
     "format:check": "prettier --check .",

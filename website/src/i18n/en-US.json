@@ -420,9 +420,9 @@
       "max_supply": "Maximum Supply:",
       "max_supply_value": "21,000,000 QUAN",
       "tge_supply": "TGE Minted Supply:",
-      "tge_supply_value": "6,300,000 QUAN (30%)",
+      "tge_supply_value": "7,350,000 QUAN (35%)",
       "mining_supply": "Mining Emissions:",
-      "mining_supply_value": "14,700,000 QUAN (70%) over ~40 years",
+      "mining_supply_value": "13,650,000 QUAN (65%) over ~40 years",
       "note": "The mining emission follows an exponentially decaying block reward curve, meaning issuance is higher in the early years and gradually slows over time as supply approaches the maximum."
     },
     "tge": {
@@ -437,35 +437,80 @@
         "dex_liquidity": "DEX Liquidity",
         "total": "Total at TGE"
       },
-      "note": "All private and public sale tokens are **fully liquid at launch**. There are no investor lockups or vesting schedules."
+      "note_1": "All private and public sale tokens are fully liquid at launch. There are no investor lockups or vesting schedules.",
+      "note_2": "Public sale proceeds (USDC) are paired 1:1 with QUAN and deposited directly into a liquidity pool. If the full 10% public sale fills, another 10% is minted to match it — 100% of public sale proceeds go into the LP."
     },
     "mining": {
-      "title": "Mining-Based Distribution (70%)",
-      "intro": "The remaining 70% of supply — **14,700,000 QUAN** — is distributed through Proof-of-Work mining over approximately 40 years.",
+      "title": "Mining-Based Distribution (65%)",
+      "intro": "The remaining 65% of supply — **13,650,000 QUAN** — is distributed through Proof-of-Work mining over approximately 40 years.",
       "ownership_title": "Final ownership of mining emissions:",
       "table": {
         "recipient": "Recipient",
         "percent": "% of Total Supply",
         "miners": "Miners",
-        "community": "Community",
-        "team": "Team & Advisors"
+        "company": "Company (Dev Tax)"
       }
     },
-    "team": {
-      "title": "Team & Community Alignment",
+    "company": {
+      "title": "Company Alignment",
       "intro": "Quantus does not pre-mine or reserve tokens for the team.",
-      "content": "Instead, the team is compensated through mining rewards:",
+      "content": "Instead, the company is compensated through a dev tax on block rewards:",
       "points": [
-        "For the first 4 years, a portion of the block rewards are allocated to the team and advisors (this acts as protocol-level vesting). The remaining portion goes to miners.",
-        "The amount is chosen so that **10%** of the total supply is emitted to the team over 4 years.",
-        "After year 4, the team's share is redirected to a **community fund**, which gradually accumulates 25% of the total supply over the remaining emission period."
+        "A portion of each block reward is allocated to the company. This acts as protocol-level vesting — tokens are earned alongside the network over approximately 5 years.",
+        "This avoids Bitcoin's early supply curve problem, where early miners accumulated massive holdings that create perpetual overhang risk."
       ]
     },
+    "vesting": {
+      "title": "Lockups & Vesting",
+      "mark_tge": "TGE",
+      "mark_y1": "Y1",
+      "mark_y2": "Y2",
+      "mark_y3": "Y3",
+      "mark_y4": "Y4+",
+      "row_investors": "Investors",
+      "investors_bar": "100% Liquid Day 1",
+      "row_dex": "DEX Liquidity",
+      "dex_bar": "Paired into LP at TGE",
+      "row_team": "Team & Founders",
+      "cliff": "Cliff",
+      "linear_monthly": "Linear Monthly",
+      "row_advisors": "Advisors",
+      "row_company": "Company (Dev Tax)",
+      "company_bar": "Earned via Block Rewards ~5yr"
+    },
+    "vesting_summary": "All private and public sale tokens are fully liquid at TGE. The team and advisors vest over four years with a one-year cliff. Company tokens are never pre-mined — they are earned gradually through a dev tax on block rewards.",
     "fees": {
       "title": "Fees & Burning",
       "intro": "To support long-term network security, wormhole transactions incur a **0.1% volume fee**:",
       "points": ["**50%** is paid to miners", "**50%** is burned"],
       "note": "This introduces deflationary pressure as network usage grows."
+    },
+    "funding": {
+      "title": "Funding History",
+      "intro": "Two private rounds are closed, with 7% of total supply sold. Token valuation is 2x equity valuation — industry standard, reflected in all contracts. All fundraising going forward is token sales only.",
+      "table": {
+        "round": "Round",
+        "raised": "Raised",
+        "valuation": "Token Valuation",
+        "lead": "Lead",
+        "total": "Total",
+        "pr1": "Private Round 1",
+        "pr2": "Private Round 2",
+        "raised_pr1": "$1.65M",
+        "raised_pr2": "$770K",
+        "val_pr1": "$40M",
+        "val_pr2": "$100M",
+        "lead_pr2": "Balaji Srinivasan",
+        "dash": "—",
+        "raised_total": "$2.42M"
+      }
+    },
+    "chart": {
+      "miners": "Miners",
+      "private": "Private",
+      "company": "Company",
+      "public": "Public",
+      "liquidity": "Liquidity"
     }
   },
   "about": {
@@ -759,6 +804,8 @@
       "keystone": "Keystone",
       "heisenberg-testnet": "Heisenberg Testnet",
       "performance": "Performance",
+      "prover": "Prover",
+      "infrastructure": "Infrastructure",
       "consensus": "Consensus"
     }
   },

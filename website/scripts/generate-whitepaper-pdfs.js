@@ -1,10 +1,14 @@
 import fs from "node:fs";
 import path from "node:path";
+import process from "node:process";
 import { spawn } from "node:child_process";
+import * as puppeteer from "puppeteer-core";
 
 const OUTPUT_BASE = path.join("./public", "whitepaper", "pdf");
 const PORT = 4322;
 const BASE_URL = `http://host.docker.internal:${PORT}`;
+
+const BROWSERLESS_WS = process.env.BROWSERLESS_WS ?? "ws://127.0.0.1:33000";
 
 const SUPPORTED_LOCALES = [
   "en-US",
@@ -18,6 +22,55 @@ const SUPPORTED_LOCALES = [
   "hi-IN",
 ];
 const DEFAULT_LOCALE = "en-US";
+
+/** Time with no network activity before considering the page idle (ms). */
+const NETWORK_IDLE_MS = 500;
+/** Max time to wait for network idle after scrolling (ms). */
+const NETWORK_IDLE_TIMEOUT_MS = 90_000;
+/** Pause between scroll steps so lazy observers can fire (ms). */
+const SCROLL_STEP_PAUSE_MS = 75;
+
+/**
+ * Scrolls the full document to trigger lazy-loaded images, waits for network
+ * quiet, then resolves when images have loaded (or failed).
+ */
+async function waitForImagesAndNetworkIdle(page) {
+  await page.evaluate(async (stepPause) => {
+    const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+    const step = Math.max(240, Math.floor(window.innerHeight * 0.9));
+    const maxY = document.documentElement.scrollHeight;
+    for (let y = 0; y < maxY; y += step) {
+      window.scrollTo(0, y);
+      await sleep(stepPause);
+    }
+    window.scrollTo(0, maxY);
+    await sleep(stepPause);
+    window.scrollTo(0, 0);
+    await sleep(100);
+  }, SCROLL_STEP_PAUSE_MS);
+
+  await page.waitForNetworkIdle({
+    idleTime: NETWORK_IDLE_MS,
+    timeout: NETWORK_IDLE_TIMEOUT_MS,
+  });
+
+  await page.evaluate(async () => {
+    const imgs = Array.from(document.images);
+    await Promise.all(
+      imgs.map((img) => {
+        if (img.complete && img.naturalWidth > 0) {
+          return img.decode?.().catch(() => {}) ?? Promise.resolve();
+        }
+        return new Promise((resolve) => {
+          const done = () => resolve();
+          img.addEventListener("load", done, { once: true });
+          img.addEventListener("error", done, { once: true });
+          setTimeout(done, 15_000);
+        }).then(() => img.decode?.().catch(() => {}) ?? Promise.resolve());
+      }),
+    );
+  });
+}
 
 function discoverVersions() {
   const contentDir = "./src/contents/whitepapers";
@@ -98,24 +151,19 @@ async function generatePdf(puppeteer, locale, version) {
 
   console.log(`  Generating PDF: ${locale}/v${version} -> ${outputFile}`);
 
-  let browser;
-  try {
-    browser = await puppeteer.connect({
-      browserWSEndpoint: `ws://127.0.0.1:33000`,
-    });
-  } catch (err) {
-    console.warn(`\nCould not connect to browser: ${err.message}`);
-    console.log("Skipping PDF generation.");
-    return;
-  }
+  const browser = await puppeteer.connect({
+    browserWSEndpoint: BROWSERLESS_WS,
+  });
 
   const page = await browser.newPage();
 
   try {
     await page.goto(url, {
       waitUntil: "networkidle0",
-      timeout: 30000,
+      timeout: 60_000,
     });
+
+    await waitForImagesAndNetworkIdle(page);
 
     await page.pdf({
       path: outputFile,
@@ -153,11 +201,11 @@ async function generatePdf(puppeteer, locale, version) {
       `  Warning: Failed to generate PDF for ${locale}/v${version}: ${err.message}`,
     );
   } finally {
-    await browser.close();
+    await browser?.close();
   }
 }
 
-async function main() {
+export async function main() {
   console.log("Whitepaper PDF Generation");
   console.log("=".repeat(50));
 
@@ -170,17 +218,6 @@ async function main() {
   console.log("\nDiscovered content:");
   for (const [locale, versions] of versionMap) {
     console.log(`  ${locale}: ${versions.map((v) => `v${v}`).join(", ")}`);
-  }
-
-  let puppeteer;
-  try {
-    puppeteer = await import("puppeteer");
-  } catch {
-    console.warn("\nPuppeteer not available. Skipping PDF generation.");
-    console.log(
-      "To enable PDF generation, run: npx puppeteer browsers install chrome",
-    );
-    return;
   }
 
   console.log("\nStarting preview server...");
@@ -198,10 +235,7 @@ async function main() {
     console.log("\nAll PDFs generated successfully.");
   } catch (err) {
     console.error("PDF generation failed:", err.message);
-    console.log("Build completed but PDF generation was skipped.");
   }
 
   server.kill();
 }
-
-main();

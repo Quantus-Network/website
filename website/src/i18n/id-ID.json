@@ -407,65 +407,110 @@
   },
   "launch": {
     "meta": {
-      "title": "Tokenomics & Alokasi Peluncuran Quantus",
+      "title": "Tokenomik & Alokasi Peluncuran Quantus",
       "description": "Detail pasokan, distribusi, dan alokasi peluncuran token QUAN. Pasokan tetap 21 juta QUAN dengan mekanisme peluncuran yang adil."
     },
-    "title": "Tokenomics & Alokasi Peluncuran Quantus",
+    "title": "Tokenomik & Alokasi Peluncuran Quantus",
     "overview": {
-      "title": "Ikhtisar",
-      "content": "Quantus memiliki pasokan maksimum tetap sebesar **21.000.000 QUAN**. Token diterbitkan melalui kombinasi Token Generation Event (TGE) awal dan penambangan Proof-of-Work jangka panjang. Struktur ini dirancang untuk menghindari pra-penambangan, meminimalkan keuntungan orang dalam, dan menyelaraskan keamanan jaringan jangka panjang dengan partisipasi pengguna."
+      "title": "Ringkasan",
+      "content": "Quantus memiliki pasokan maksimum tetap sebesar **21.000.000 QUAN**. Token diterbitkan melalui kombinasi Token Generation Event (TGE) awal dan penambangan Proof-of-Work jangka panjang. Struktur ini dirancang untuk menghindari pra-tambang, meminimalkan keuntungan insider, dan menyelaraskan keamanan jaringan jangka panjang dengan partisipasi pengguna."
     },
     "supply": {
       "title": "Pasokan Token",
-      "max_supply": "Pasokan Maksimum:",
+      "max_supply": "Pasokan maksimum:",
       "max_supply_value": "21.000.000 QUAN",
-      "tge_supply": "Pasokan Cetak TGE:",
-      "tge_supply_value": "6.300.000 QUAN (30%)",
-      "mining_supply": "Emisi Penambangan:",
-      "mining_supply_value": "14.700.000 QUAN (70%) selama ~40 tahun",
-      "note": "Emisi penambangan mengikuti kurva hadiah blok yang meluruh secara eksponensial, artinya penerbitan lebih tinggi di tahun-tahun awal dan secara bertahap melambat seiring waktu saat pasokan mendekati maksimum."
+      "tge_supply": "Pasokan dicetak TGE:",
+      "tge_supply_value": "7.350.000 QUAN (35%)",
+      "mining_supply": "Emisi penambangan:",
+      "mining_supply_value": "13.650.000 QUAN (65%) selama ~40 tahun",
+      "note": "Emisi penambangan mengikuti kurva hadiah blok yang menurun secara eksponensial, sehingga penerbitan lebih tinggi di tahun-tahun awal dan berangsur melambat seiring pasokan mendekati maksimum."
     },
     "tge": {
-      "title": "Alokasi Peluncuran (TGE)",
+      "title": "Alokasi peluncuran (TGE)",
       "intro": "Token berikut dicetak dan didistribusikan pada Token Generation Event:",
       "table": {
         "category": "Kategori",
-        "percent": "% dari Pasokan",
+        "percent": "% dari pasokan",
         "quan": "QUAN",
-        "private_sale": "Penjualan Privat",
-        "public_sale": "Penjualan Publik",
+        "private_sale": "Penjualan privat",
+        "public_sale": "Penjualan publik",
         "dex_liquidity": "Likuiditas DEX",
-        "total": "Total di TGE"
+        "total": "Total pada TGE"
       },
-      "note": "Semua token penjualan privat dan publik **sepenuhnya likuid saat peluncuran**. Tidak ada penguncian investor atau jadwal vesting."
+      "note_1": "Semua token penjualan privat dan publik sepenuhnya likuid saat peluncuran. Tidak ada kunci investor atau jadwal vesting.",
+      "note_2": "Hasil penjualan publik (USDC) dipasangkan 1:1 dengan QUAN dan disetor langsung ke pool likuiditas. Jika penjualan publik 10% terjual habis, tambahan 10% dicetak untuk mencocokkannya — 100% hasil penjualan publik masuk ke LP."
     },
     "mining": {
-      "title": "Distribusi Berbasis Penambangan (70%)",
-      "intro": "Sisa 70% pasokan — **14.700.000 QUAN** — didistribusikan melalui penambangan Proof-of-Work selama kurang lebih 40 tahun.",
-      "ownership_title": "Kepemilikan akhir dari emisi penambangan:",
+      "title": "Distribusi berbasis penambangan (65%)",
+      "intro": "Sisa 65% pasokan — **13.650.000 QUAN** — didistribusikan melalui penambangan Proof-of-Work selama sekitar 40 tahun.",
+      "ownership_title": "Kepemilikan akhir emisi penambangan:",
       "table": {
         "recipient": "Penerima",
-        "percent": "% dari Total Pasokan",
+        "percent": "% dari total pasokan",
         "miners": "Penambang",
-        "community": "Komunitas",
-        "team": "Tim & Penasihat"
+        "company": "Perusahaan (pajak dev)"
       }
     },
-    "team": {
-      "title": "Keselarasan Tim & Komunitas",
-      "intro": "Quantus tidak melakukan pra-penambangan atau mereservasi token untuk tim.",
-      "content": "Sebaliknya, tim dikompensasi melalui hadiah penambangan:",
+    "company": {
+      "title": "Kesejajaran perusahaan",
+      "intro": "Quantus tidak melakukan pra-tambang atau menyisihkan token untuk tim.",
+      "content": "Sebagai gantinya, perusahaan mendapat kompensasi melalui pajak pengembang pada hadiah blok:",
       "points": [
-        "Untuk 4 tahun pertama, sebagian dari hadiah blok dialokasikan untuk tim dan penasihat (ini bertindak sebagai vesting tingkat protokol). Sisanya diberikan kepada penambang.",
-        "Jumlahnya dipilih sehingga **10%** dari total pasokan didistribusikan kepada tim selama 4 tahun.",
-        "Setelah tahun ke-4, bagian tim dialihkan ke **dana komunitas**, yang secara bertahap mengakumulasi 25% dari total pasokan selama periode emisi yang tersisa."
+        "Sebagian dari setiap hadiah blok dialokasikan ke perusahaan. Ini berfungsi sebagai vesting tingkat protokol — token diperoleh bersama jaringan selama sekitar 5 tahun.",
+        "Ini menghindari masalah kurva pasokan awal Bitcoin, di mana penambang awal menumpuk kepemilikan besar yang menimbulkan risiko tekanan jual berkelanjutan."
       ]
     },
+    "vesting": {
+      "title": "Kunci & vesting",
+      "mark_tge": "TGE",
+      "mark_y1": "T1",
+      "mark_y2": "T2",
+      "mark_y3": "T3",
+      "mark_y4": "T4+",
+      "row_investors": "Investor",
+      "investors_bar": "100% likuid hari 1",
+      "row_dex": "Likuiditas DEX",
+      "dex_bar": "Dipasangkan ke LP di TGE",
+      "row_team": "Tim & pendiri",
+      "cliff": "Cliff",
+      "linear_monthly": "Linear bulanan",
+      "row_advisors": "Penasihat",
+      "row_company": "Perusahaan (pajak dev)",
+      "company_bar": "Diperoleh via hadiah blok ~5 thn"
+    },
+    "vesting_summary": "Semua token penjualan privat dan publik sepenuhnya likuid pada TGE. Tim dan penasihat vesting selama empat tahun dengan cliff satu tahun. Token perusahaan tidak pernah pra-tambang — diperoleh bertahap melalui pajak dev pada hadiah blok.",
     "fees": {
-      "title": "Biaya & Pembakaran",
+      "title": "Biaya & pembakaran",
       "intro": "Untuk mendukung keamanan jaringan jangka panjang, transaksi wormhole dikenakan **biaya volume 0,1%**:",
-      "points": ["**50%** dibayarkan kepada penambang", "**50%** dibakar"],
-      "note": "Ini memperkenalkan tekanan deflasi seiring pertumbuhan penggunaan jaringan."
+      "points": ["**50%** dibayarkan ke penambang", "**50%** dibakar"],
+      "note": "Ini memberikan tekanan deflasi seiring pertumbuhan penggunaan jaringan."
+    },
+    "funding": {
+      "title": "Riwayat pendanaan",
+      "intro": "Dua putaran privat telah ditutup, dengan 7% dari total pasokan terjual. Valuasi token adalah 2x valuasi ekuitas — standar industri, tercermin dalam semua kontrak. Seluruh penggalangan dana ke depan hanya melalui penjualan token.",
+      "table": {
+        "round": "Putaran",
+        "raised": "Terkumpul",
+        "valuation": "Valuasi token",
+        "lead": "Pimpin",
+        "total": "Total",
+        "pr1": "Putaran privat 1",
+        "pr2": "Putaran privat 2",
+        "raised_pr1": "$1.65M",
+        "raised_pr2": "$770K",
+        "val_pr1": "$40M",
+        "val_pr2": "$100M",
+        "lead_pr2": "Balaji Srinivasan",
+        "dash": "—",
+        "raised_total": "$2.42M"
+      }
+    },
+    "chart": {
+      "miners": "Penambang",
+      "private": "Privat",
+      "company": "Perusahaan",
+      "public": "Publik",
+      "liquidity": "Likuiditas"
     }
   },
   "about": {
@@ -759,6 +804,8 @@
       "keystone": "Keystone",
       "heisenberg-testnet": "Heisenberg Testnet",
       "performance": "Performa",
+      "prover": "Prover",
+      "infrastructure": "Infrastruktur",
       "consensus": "Konsensus"
     }
   },

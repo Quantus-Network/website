@@ -407,65 +407,110 @@
   },
   "launch": {
     "meta": {
-      "title": "Tokenomics y Asignación de Lanzamiento de Quantus",
-      "description": "Detalles del suministro, distribución y asignación de lanzamiento del token QUAN. Suministro fijo de 21M QUAN con mecánicas de lanzamiento justas."
+      "title": "Tokenomics de Quantus y asignación de lanzamiento",
+      "description": "Suministro, distribución y asignación de lanzamiento del token QUAN. Suministro fijo de 21 M QUAN con mecánica de lanzamiento justa."
     },
-    "title": "Tokenomics y Asignación de Lanzamiento de Quantus",
+    "title": "Tokenomics de Quantus y asignación de lanzamiento",
     "overview": {
       "title": "Resumen",
-      "content": "Quantus tiene un suministro máximo fijo de **21,000,000 QUAN**. El token se emite a través de una combinación de un Evento de Generación de Tokens (TGE) inicial y minería de Prueba de Trabajo a largo plazo. Esta estructura está diseñada para evitar la preminería, minimizar las ventajas de los insiders y alinear la seguridad de la red a largo plazo con la participación de los usuarios."
+      "content": "Quantus tiene un suministro máximo fijo de **21.000.000 QUAN**. El token se emite mediante una combinación de un Token Generation Event (TGE) inicial y minería Proof-of-Work a largo plazo. Esta estructura evita la pre-minería, reduce ventajas de insiders y alinea la seguridad de la red a largo plazo con la participación de los usuarios."
     },
     "supply": {
-      "title": "Suministro de Tokens",
-      "max_supply": "Suministro Máximo:",
-      "max_supply_value": "21,000,000 QUAN",
-      "tge_supply": "Suministro Acuñado en TGE:",
-      "tge_supply_value": "6,300,000 QUAN (30%)",
-      "mining_supply": "Emisiones de Minería:",
-      "mining_supply_value": "14,700,000 QUAN (70%) durante ~40 años",
-      "note": "La emisión de minería sigue una curva de recompensa por bloque que decae exponencialmente, lo que significa que la emisión es mayor en los primeros años y se ralentiza gradualmente con el tiempo a medida que el suministro se acerca al máximo."
+      "title": "Suministro del token",
+      "max_supply": "Suministro máximo:",
+      "max_supply_value": "21.000.000 QUAN",
+      "tge_supply": "Suministro acuñado en el TGE:",
+      "tge_supply_value": "7.350.000 QUAN (35%)",
+      "mining_supply": "Emisiones de minería:",
+      "mining_supply_value": "13.650.000 QUAN (65%) en ~40 años",
+      "note": "La emisión de minería sigue una curva de recompensa por bloque en decaimiento exponencial: la emisión es mayor al inicio y se ralentiza con el tiempo a medida que el suministro se acerca al máximo."
     },
     "tge": {
-      "title": "Asignación de Lanzamiento (TGE)",
-      "intro": "Los siguientes tokens se acuñan y distribuyen en el Evento de Generación de Tokens:",
+      "title": "Asignación de lanzamiento (TGE)",
+      "intro": "Los siguientes tokens se acuñan y distribuyen en el Token Generation Event:",
       "table": {
         "category": "Categoría",
-        "percent": "% del Suministro",
+        "percent": "% del suministro",
         "quan": "QUAN",
-        "private_sale": "Venta Privada",
-        "public_sale": "Venta Pública",
+        "private_sale": "Venta privada",
+        "public_sale": "Venta pública",
         "dex_liquidity": "Liquidez DEX",
-        "total": "Total en TGE"
+        "total": "Total en el TGE"
       },
-      "note": "Todos los tokens de venta privada y pública son **totalmente líquidos en el lanzamiento**. No hay bloqueos para inversores ni calendarios de vesting."
+      "note_1": "Todos los tokens de venta privada y pública son totalmente líquidos en el lanzamiento. No hay bloqueos para inversores ni calendarios de vesting.",
+      "note_2": "Los ingresos de la venta pública (USDC) se emparejan 1:1 con QUAN y se depositan directamente en un pool de liquidez. Si se completa el 10% de la venta pública, se acuña otro 10% para igualarlo: el 100% de los ingresos de la venta pública va al LP."
     },
     "mining": {
-      "title": "Distribución Basada en Minería (70%)",
-      "intro": "El 70% restante del suministro — **14,700,000 QUAN** — se distribuye a través de minería de Prueba de Trabajo durante aproximadamente 40 años.",
-      "ownership_title": "Propiedad final de las emisiones de minería:",
+      "title": "Distribución basada en minería (65%)",
+      "intro": "El 65% restante del suministro — **13.650.000 QUAN** — se distribuye mediante minería Proof-of-Work durante unos 40 años.",
+      "ownership_title": "Titularidad final de las emisiones de minería:",
       "table": {
         "recipient": "Destinatario",
-        "percent": "% del Suministro Total",
+        "percent": "% del suministro total",
         "miners": "Mineros",
-        "community": "Comunidad",
-        "team": "Equipo y Asesores"
+        "company": "Empresa (impuesto dev)"
       }
     },
-    "team": {
-      "title": "Alineación del Equipo y la Comunidad",
-      "intro": "Quantus no hace preminería ni reserva tokens para el equipo.",
-      "content": "En cambio, el equipo es compensado a través de recompensas de minería:",
+    "company": {
+      "title": "Alineación con la empresa",
+      "intro": "Quantus no pre-mina ni reserva tokens para el equipo.",
+      "content": "En su lugar, la empresa se compensa mediante un impuesto de desarrollo sobre las recompensas de bloque:",
       "points": [
-        "Durante los primeros 4 años, una parte de las recompensas por bloque se asigna al equipo y asesores (esto actúa como vesting a nivel de protocolo). La parte restante va a los mineros.",
-        "La cantidad se elige de manera que el **10%** del suministro total se distribuya al equipo en 4 años.",
-        "Después del año 4, la parte del equipo se redirige a un **fondo comunitario**, que acumula gradualmente el 25% del suministro total durante el período de emisión restante."
+        "Una parte de cada recompensa de bloque se asigna a la empresa. Actúa como vesting a nivel de protocolo: los tokens se obtienen junto con la red durante unos 5 años.",
+        "Esto evita el problema de la curva de suministro temprana de Bitcoin, donde los mineros iniciales acumularon grandes posiciones que generan riesgo de sobreoferta permanente."
       ]
     },
+    "vesting": {
+      "title": "Bloqueos y vesting",
+      "mark_tge": "TGE",
+      "mark_y1": "A1",
+      "mark_y2": "A2",
+      "mark_y3": "A3",
+      "mark_y4": "A4+",
+      "row_investors": "Inversores",
+      "investors_bar": "100% líquido el día 1",
+      "row_dex": "Liquidez DEX",
+      "dex_bar": "Emparejado al LP en el TGE",
+      "row_team": "Equipo y fundadores",
+      "cliff": "Cliff",
+      "linear_monthly": "Lineal mensual",
+      "row_advisors": "Asesores",
+      "row_company": "Empresa (impuesto dev)",
+      "company_bar": "Vía recompensas de bloque ~5 años"
+    },
+    "vesting_summary": "Todos los tokens de venta privada y pública son totalmente líquidos en el TGE. El equipo y los asesores tienen vesting de cuatro años con cliff de un año. Los tokens de la empresa nunca se pre-minan: se obtienen gradualmente mediante el impuesto dev sobre las recompensas de bloque.",
     "fees": {
-      "title": "Comisiones y Quema",
-      "intro": "Para apoyar la seguridad de la red a largo plazo, las transacciones wormhole incurren en una **comisión de volumen del 0.1%**:",
-      "points": ["**50%** se paga a los mineros", "**50%** se quema"],
+      "title": "Comisiones y quema",
+      "intro": "Para apoyar la seguridad de la red a largo plazo, las transacciones wormhole tienen una **comisión del 0,1% sobre el volumen**:",
+      "points": ["El **50%** se paga a los mineros", "El **50%** se quema"],
       "note": "Esto introduce presión deflacionaria a medida que crece el uso de la red."
+    },
+    "funding": {
+      "title": "Historial de financiación",
+      "intro": "Dos rondas privadas están cerradas; se vendió el 7% del suministro total. La valoración del token es 2x la valoración de equity — estándar del sector, reflejado en todos los contratos. Toda recaudación futura será solo venta de tokens.",
+      "table": {
+        "round": "Ronda",
+        "raised": "Recaudado",
+        "valuation": "Valoración del token",
+        "lead": "Líder",
+        "total": "Total",
+        "pr1": "Ronda privada 1",
+        "pr2": "Ronda privada 2",
+        "raised_pr1": "$1.65M",
+        "raised_pr2": "$770K",
+        "val_pr1": "$40M",
+        "val_pr2": "$100M",
+        "lead_pr2": "Balaji Srinivasan",
+        "dash": "—",
+        "raised_total": "$2.42M"
+      }
+    },
+    "chart": {
+      "miners": "Mineros",
+      "private": "Privada",
+      "company": "Empresa",
+      "public": "Pública",
+      "liquidity": "Liquidez"
     }
   },
   "about": {
@@ -759,6 +804,8 @@
       "keystone": "Keystone",
       "heisenberg-testnet": "Heisenberg Testnet",
       "performance": "Rendimiento",
+      "prover": "Probador",
+      "infrastructure": "Infraestructura",
       "consensus": "Consenso"
     }
   },

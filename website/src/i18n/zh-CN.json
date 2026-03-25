@@ -404,64 +404,109 @@
   "launch": {
     "meta": {
       "title": "Quantus 代币经济学与发行分配",
-      "description": "QUAN 代币供应、分配和发行分配详情。固定供应量 2100 万 QUAN，采用公平发行机制。"
+      "description": "QUAN 代币供应、分配与发行分配详情。固定供应量 2100 万 QUAN，采用公平发行机制。"
     },
     "title": "Quantus 代币经济学与发行分配",
     "overview": {
       "title": "概述",
-      "content": "Quantus 的最大固定供应量为 **21,000,000 QUAN**。代币通过初始代币生成事件 (TGE) 和长期工作量证明挖矿的组合发行。这种结构旨在避免预挖、最大程度减少内部人士优势，并使长期网络安全与用户参与保持一致。"
+      "content": "Quantus 的最大固定供应量为 **21,000,000 QUAN**。代币通过初始代币生成事件 (TGE) 与长期工作量证明挖矿相结合的方式发行。该结构旨在避免预挖、最大程度减少内部人士优势，并使长期网络安全与用户参与保持一致。"
     },
     "supply": {
       "title": "代币供应",
       "max_supply": "最大供应量：",
       "max_supply_value": "21,000,000 QUAN",
       "tge_supply": "TGE 铸造供应量：",
-      "tge_supply_value": "6,300,000 QUAN (30%)",
+      "tge_supply_value": "7,350,000 QUAN (35%)",
       "mining_supply": "挖矿释放量：",
-      "mining_supply_value": "14,700,000 QUAN (70%)，约 40 年释放",
+      "mining_supply_value": "13,650,000 QUAN (65%)，约 40 年释放",
       "note": "挖矿释放遵循指数衰减的区块奖励曲线，这意味着早期发行量较高，随着供应接近最大值而逐渐放缓。"
     },
     "tge": {
       "title": "发行分配 (TGE)",
-      "intro": "以下代币在代币生成事件时铸造和分配：",
+      "intro": "以下代币在代币生成事件 (TGE) 时铸造并分配：",
       "table": {
         "category": "类别",
-        "percent": "供应百分比",
+        "percent": "占供应比例",
         "quan": "QUAN",
         "private_sale": "私募",
         "public_sale": "公募",
         "dex_liquidity": "DEX 流动性",
-        "total": "TGE 总计"
+        "total": "TGE 合计"
       },
-      "note": "所有私募和公募代币在发行时**完全流通**。没有投资者锁仓或归属期安排。"
+      "note_1": "所有私募与公募代币在上线时完全流通。不设投资者锁仓或归属期。",
+      "note_2": "公募所得 (USDC) 与 QUAN 按 1:1 配对并直接存入流动性池。若 10% 公募份额全部售罄，将再铸造 10% 与之匹配——100% 的公募所得进入流动性池 (LP)。"
     },
     "mining": {
-      "title": "基于挖矿的分配 (70%)",
-      "intro": "剩余 70% 的供应量 — **14,700,000 QUAN** — 通过工作量证明挖矿在约 40 年内分配。",
-      "ownership_title": "挖矿释放的最终所有权：",
+      "title": "基于挖矿的分配 (65%)",
+      "intro": "剩余 65% 的供应量 — **13,650,000 QUAN** — 通过工作量证明挖矿在约 40 年内分配。",
+      "ownership_title": "挖矿释放的最终归属：",
       "table": {
         "recipient": "接收方",
-        "percent": "总供应百分比",
+        "percent": "占总供应比例",
         "miners": "矿工",
-        "community": "社区",
-        "team": "团队与顾问"
+        "company": "公司（开发者税）"
       }
     },
-    "team": {
-      "title": "团队与社区协调",
-      "intro": "Quantus 不进行预挖或为团队保留代币。",
-      "content": "相反，团队通过挖矿奖励获得补偿：",
+    "company": {
+      "title": "公司与网络对齐",
+      "intro": "Quantus 不进行预挖，也不为团队预留代币。",
+      "content": "相反，公司通过区块奖励上的开发者税获得补偿：",
       "points": [
-        "在前 4 年，一部分区块奖励分配给团队和顾问（这相当于协议级别的归属）。剩余部分归矿工所有。",
-        "该比例经过设定，使得总供应量的 **10%** 在 4 年内分配给团队。",
-        "4 年后，团队的份额将转向**社区基金**，在剩余释放期内逐步积累总供应量的 25%。"
+        "每块奖励的一部分分配给公司。这相当于协议层面的归属安排——代币随网络发展在约 5 年内逐步获得。",
+        "这避免了比特币早期供应曲线问题：早期矿工囤积大量持仓，导致持续的抛压风险。"
       ]
     },
+    "vesting": {
+      "title": "锁仓与归属",
+      "mark_tge": "TGE",
+      "mark_y1": "第1年",
+      "mark_y2": "第2年",
+      "mark_y3": "第3年",
+      "mark_y4": "第4年+",
+      "row_investors": "投资者",
+      "investors_bar": "100% 首日即流通",
+      "row_dex": "DEX 流动性",
+      "dex_bar": "TGE 时配对入 LP",
+      "row_team": "团队与创始人",
+      "cliff": "锁定期",
+      "linear_monthly": "按月线性释放",
+      "row_advisors": "顾问",
+      "row_company": "公司（开发者税）",
+      "company_bar": "通过区块奖励获得 ~5年"
+    },
+    "vesting_summary": "所有私募与公募代币在 TGE 时完全流通。团队与顾问分四年归属，含一年锁定期。公司代币从不预挖——通过区块奖励上的开发者税逐步获得。",
     "fees": {
-      "title": "费用与销毁",
-      "intro": "为支持长期网络安全，虫洞交易收取 **0.1% 的交易量费用**：",
+      "title": "手续费与销毁",
+      "intro": "为支持长期网络安全，虫洞 (wormhole) 交易收取 **0.1% 的交易量费用**：",
       "points": ["**50%** 支付给矿工", "**50%** 被销毁"],
-      "note": "随着网络使用量的增长，这将引入通缩压力。"
+      "note": "随着网络使用增长，这将带来通缩压力。"
+    },
+    "funding": {
+      "title": "融资历史",
+      "intro": "两轮融资已结束，共出售总供应量的 7%。代币估值为股权估值的 2 倍——行业标准，已体现在所有合同之中。未来融资仅通过代币销售进行。",
+      "table": {
+        "round": "轮次",
+        "raised": "募集金额",
+        "valuation": "代币估值",
+        "lead": "领投",
+        "total": "合计",
+        "pr1": "私募第一轮",
+        "pr2": "私募第二轮",
+        "raised_pr1": "$1.65M",
+        "raised_pr2": "$770K",
+        "val_pr1": "$40M",
+        "val_pr2": "$100M",
+        "lead_pr2": "Balaji Srinivasan",
+        "dash": "—",
+        "raised_total": "$2.42M"
+      }
+    },
+    "chart": {
+      "miners": "矿工",
+      "private": "私募",
+      "company": "公司",
+      "public": "公募",
+      "liquidity": "流动性"
     }
   },
   "about": {
@@ -748,6 +793,8 @@
       "keystone": "Keystone",
       "heisenberg-testnet": "Heisenberg 测试网",
       "performance": "性能",
+      "prover": "证明器",
+      "infrastructure": "基础设施",
       "consensus": "共识"
     }
   },
