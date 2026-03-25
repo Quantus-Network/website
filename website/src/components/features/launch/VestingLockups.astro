@@ -7,9 +7,18 @@ const { t } = Astro.props;
 ---
 
 <div class="vest-wrap my-8">
-  <div
-    class="mb-2 hidden min-[500px]:flex min-[500px]:items-center min-[500px]:gap-3"
-  >
+  <!-- Mobile: milestone legend -->
+  <div class="mb-2 flex items-center md:hidden">
+    <div class="text-quantus-white/30 flex w-full justify-between text-[9px]">
+      <span class="w-[20%] text-center">{t("launch.vesting.mark_tge")}</span>
+      <span class="w-[20%] text-center">{t("launch.vesting.mark_y1")}</span>
+      <span class="w-[20%] text-center">{t("launch.vesting.mark_y2")}</span>
+      <span class="w-[20%] text-center">{t("launch.vesting.mark_y3")}</span>
+      <span class="w-[20%] text-center">{t("launch.vesting.mark_y4")}</span>
+    </div>
+  </div>
+
+  <div class="mb-2 hidden md:flex md:items-center md:gap-3">
     <div class="w-[150px] shrink-0" aria-hidden="true"></div>
     <div class="text-quantus-white/30 flex flex-1 justify-between text-[10px]">
       <span class="w-[20%] text-center">{t("launch.vesting.mark_tge")}</span>
@@ -21,16 +30,14 @@ const { t } = Astro.props;
   </div>
 
   <!-- Investors -->
-  <div
-    class="mb-2 flex flex-col gap-2 min-[500px]:flex-row min-[500px]:items-center min-[500px]:gap-3"
-  >
+  <div class="mb-2 flex flex-col gap-2 md:flex-row md:items-center md:gap-3">
     <div
-      class="text-quantus-white/70 w-full shrink-0 text-left text-sm min-[500px]:w-[150px] min-[500px]:text-right"
+      class="text-quantus-white/70 w-full shrink-0 text-left text-sm md:w-[150px] md:text-right"
     >
       {t("launch.vesting.row_investors")}
     </div>
     <div
-      class="bg-quantus-white/5 relative h-[30px] flex-1 overflow-hidden rounded"
+      class="bg-quantus-white/5 relative h-[30px] w-full overflow-hidden rounded md:flex-1"
     >
       <div
         class="absolute top-0 left-0 flex h-full w-full items-center justify-center bg-linear-to-r from-[rgba(34,197,94,0.35)] to-[rgba(34,197,94,0.08)]"
@@ -44,16 +51,14 @@ const { t } = Astro.props;
   </div>
 
   <!-- DEX Liquidity -->
-  <div
-    class="mb-2 flex flex-col gap-2 min-[500px]:flex-row min-[500px]:items-center min-[500px]:gap-3"
-  >
+  <div class="mb-2 flex flex-col gap-2 md:flex-row md:items-center md:gap-3">
     <div
-      class="text-quantus-white/70 w-full shrink-0 text-left text-sm min-[500px]:w-[150px] min-[500px]:text-right"
+      class="text-quantus-white/70 w-full shrink-0 text-left text-sm md:w-[150px] md:text-right"
     >
       {t("launch.vesting.row_dex")}
     </div>
     <div
-      class="bg-quantus-white/5 relative h-[30px] flex-1 overflow-hidden rounded"
+      class="bg-quantus-white/5 relative h-[30px] w-full overflow-hidden rounded md:flex-1"
     >
       <div
         class="absolute top-0 left-0 flex h-full w-full items-center justify-center bg-linear-to-r from-[rgba(34,197,94,0.35)] to-[rgba(34,197,94,0.08)]"
@@ -67,16 +72,14 @@ const { t } = Astro.props;
   </div>
 
   <!-- Team & Founders -->
-  <div
-    class="mb-2 flex flex-col gap-2 min-[500px]:flex-row min-[500px]:items-center min-[500px]:gap-3"
-  >
+  <div class="mb-2 flex flex-col gap-2 md:flex-row md:items-center md:gap-3">
     <div
-      class="text-quantus-white/70 w-full shrink-0 text-left text-sm min-[500px]:w-[150px] min-[500px]:text-right"
+      class="text-quantus-white/70 w-full shrink-0 text-left text-sm md:w-[150px] md:text-right"
     >
       {t("launch.vesting.row_team")}
     </div>
     <div
-      class="bg-quantus-white/5 relative h-[30px] flex-1 overflow-hidden rounded"
+      class="bg-quantus-white/5 relative h-[30px] w-full overflow-hidden rounded md:flex-1"
     >
       <div
         class="absolute top-0 left-0 flex h-[30px] w-[20%] items-center justify-center border-r-2 border-[#8b5cf6]"
@@ -99,16 +102,14 @@ const { t } = Astro.props;
   </div>
 
   <!-- Advisors -->
-  <div
-    class="mb-2 flex flex-col gap-2 min-[500px]:flex-row min-[500px]:items-center min-[500px]:gap-3"
-  >
+  <div class="mb-2 flex flex-col gap-2 md:flex-row md:items-center md:gap-3">
     <div
-      class="text-quantus-white/70 w-full shrink-0 text-left text-sm min-[500px]:w-[150px] min-[500px]:text-right"
+      class="text-quantus-white/70 w-full shrink-0 text-left text-sm md:w-[150px] md:text-right"
     >
       {t("launch.vesting.row_advisors")}
     </div>
     <div
-      class="bg-quantus-white/5 relative h-[30px] flex-1 overflow-hidden rounded"
+      class="bg-quantus-white/5 relative h-[30px] w-full overflow-hidden rounded md:flex-1"
     >
       <div
         class="absolute top-0 left-0 flex h-[30px] w-[20%] items-center justify-center border-r-2 border-[#8b5cf6]"
@@ -131,16 +132,14 @@ const { t } = Astro.props;
   </div>
 
   <!-- Company (Dev Tax) -->
-  <div
-    class="mb-2 flex flex-col gap-2 min-[500px]:flex-row min-[500px]:items-center min-[500px]:gap-3"
-  >
+  <div class="mb-2 flex flex-col gap-2 md:flex-row md:items-center md:gap-3">
     <div
-      class="text-quantus-white/70 w-full shrink-0 text-left text-sm min-[500px]:w-[150px] min-[500px]:text-right"
+      class="text-quantus-white/70 w-full shrink-0 text-left text-sm md:w-[150px] md:text-right"
     >
       {t("launch.vesting.row_company")}
     </div>
     <div
-      class="bg-quantus-white/5 relative h-[30px] flex-1 overflow-hidden rounded"
+      class="bg-quantus-white/5 relative h-[30px] w-full overflow-hidden rounded md:flex-1"
     >
       <div
         class="absolute top-0 left-0 flex h-full w-full items-center justify-center bg-linear-to-r from-[rgba(43,188,179,0.35)] to-[rgba(43,188,179,0.05)]"
