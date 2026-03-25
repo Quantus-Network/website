@@ -482,15 +482,12 @@
     "fees": {
       "title": "Comisiones y quema",
       "intro": "Para apoyar la seguridad de la red a largo plazo, las transacciones wormhole tienen una **comisión del 0,1% sobre el volumen**:",
-      "points": [
-        "El **50%** se paga a los mineros",
-        "El **50%** se quema"
-      ],
+      "points": ["El **50%** se paga a los mineros", "El **50%** se quema"],
       "note": "Esto introduce presión deflacionaria a medida que crece el uso de la red."
     },
     "funding": {
       "title": "Historial de financiación",
-      "intro": "Dos rondas privadas están cerradas; se vendió el 7% del suministro total. La valoración del token es 2× la valoración de equity — estándar del sector, reflejado en todos los contratos. Toda recaudación futura será solo venta de tokens.",
+      "intro": "Dos rondas privadas están cerradas; se vendió el 7% del suministro total. La valoración del token es 2x la valoración de equity — estándar del sector, reflejado en todos los contratos. Toda recaudación futura será solo venta de tokens.",
       "table": {
         "round": "Ronda",
         "raised": "Recaudado",
@@ -807,6 +804,8 @@
       "keystone": "Keystone",
       "heisenberg-testnet": "Heisenberg Testnet",
       "performance": "Rendimiento",
+      "prover": "Probador",
+      "infrastructure": "Infraestructura",
       "consensus": "Consenso"
     }
   },

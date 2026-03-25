@@ -482,15 +482,12 @@
     "fees": {
       "title": "Biaya & pembakaran",
       "intro": "Untuk mendukung keamanan jaringan jangka panjang, transaksi wormhole dikenakan **biaya volume 0,1%**:",
-      "points": [
-        "**50%** dibayarkan ke penambang",
-        "**50%** dibakar"
-      ],
+      "points": ["**50%** dibayarkan ke penambang", "**50%** dibakar"],
       "note": "Ini memberikan tekanan deflasi seiring pertumbuhan penggunaan jaringan."
     },
     "funding": {
       "title": "Riwayat pendanaan",
-      "intro": "Dua putaran privat telah ditutup, dengan 7% dari total pasokan terjual. Valuasi token adalah 2× valuasi ekuitas — standar industri, tercermin dalam semua kontrak. Seluruh penggalangan dana ke depan hanya melalui penjualan token.",
+      "intro": "Dua putaran privat telah ditutup, dengan 7% dari total pasokan terjual. Valuasi token adalah 2x valuasi ekuitas — standar industri, tercermin dalam semua kontrak. Seluruh penggalangan dana ke depan hanya melalui penjualan token.",
       "table": {
         "round": "Putaran",
         "raised": "Terkumpul",
@@ -807,6 +804,8 @@
       "keystone": "Keystone",
       "heisenberg-testnet": "Heisenberg Testnet",
       "performance": "Performa",
+      "prover": "Prover",
+      "infrastructure": "Infrastruktur",
       "consensus": "Konsensus"
     }
   },

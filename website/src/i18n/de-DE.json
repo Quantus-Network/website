@@ -482,15 +482,12 @@
     "fees": {
       "title": "Gebühren & Burning",
       "intro": "Zur langfristigen Netzwerksicherheit fallen auf Wormhole-Transaktionen **0,1% Volumengebühr** an:",
-      "points": [
-        "**50%** gehen an Miner",
-        "**50%** werden verbrannt"
-      ],
+      "points": ["**50%** gehen an Miner", "**50%** werden verbrannt"],
       "note": "Mit wachsender Nutzung entsteht deflationärer Druck."
     },
     "funding": {
       "title": "Finanzierungshistorie",
-      "intro": "Zwei Privatrunden sind abgeschlossen; 7% der Gesamtversorgung wurden verkauft. Tokenbewertung ist 2× Eigenkapitalbewertung — Branchenstandard, in allen Verträgen verankert. Künftige Finanzierung nur über Tokenverkäufe.",
+      "intro": "Zwei Privatrunden sind abgeschlossen; 7% der Gesamtversorgung wurden verkauft. Tokenbewertung ist 2x Eigenkapitalbewertung — Branchenstandard, in allen Verträgen verankert. Künftige Finanzierung nur über Tokenverkäufe.",
       "table": {
         "round": "Runde",
         "raised": "Eingesammelt",
@@ -807,6 +804,8 @@
       "keystone": "Keystone",
       "heisenberg-testnet": "Heisenberg-Testnetz",
       "performance": "Performance",
+      "prover": "Prover",
+      "infrastructure": "Infrastruktur",
       "consensus": "Konsens"
     }
   },

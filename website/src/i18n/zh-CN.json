@@ -807,6 +807,8 @@
       "keystone": "Keystone",
       "heisenberg-testnet": "Heisenberg 测试网",
       "performance": "性能",
+      "prover": "证明器",
+      "infrastructure": "基础设施",
       "consensus": "共识"
     }
   },

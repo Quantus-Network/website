@@ -807,6 +807,8 @@
       "keystone": "Keystone",
       "heisenberg-testnet": "하이젠베르크 테스트넷(Heisenberg Testnet)",
       "performance": "성능",
+      "prover": "프로버",
+      "infrastructure": "인프라",
       "consensus": "합의"
     }
   },

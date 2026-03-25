@@ -804,6 +804,8 @@
       "keystone": "Keystone",
       "heisenberg-testnet": "Heisenberg Testnet",
       "performance": "Performance",
+      "prover": "Prover",
+      "infrastructure": "Infrastructure",
       "consensus": "Consensus"
     }
   },
