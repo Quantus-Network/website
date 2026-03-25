@@ -1,5 +1,6 @@
 ---
 import AllocationChart from "@/components/features/launch/AllocationChart.astro";
+import VestingLockups from "@/components/features/launch/VestingLockups.astro";
 import Layout from "@/components/layout/Layout.astro";
 import { organizationJsonLd } from "@/constants/default-jsonld";
 import { createMetadata } from "@/utils/create-metadata";
@@ -46,24 +47,20 @@ const tgeData = [
   },
   {
     category: t("launch.tge.table.dex_liquidity"),
-    percent: "5%",
-    quan: "1,050,000",
+    percent: "10%",
+    quan: "2,100,000",
   },
-  { category: t("launch.tge.table.total"), percent: "30%", quan: "6,300,000" },
+  { category: t("launch.tge.table.total"), percent: "35%", quan: "7,350,000" },
 ];
 
 // Mining distribution data
 const miningData = [
-  { recipient: t("launch.mining.table.miners"), percent: "35%" },
-  { recipient: t("launch.mining.table.community"), percent: "25%" },
-  { recipient: t("launch.mining.table.team"), percent: "10%" },
+  { recipient: t("launch.mining.table.miners"), percent: "50%" },
+  { recipient: t("launch.mining.table.company"), percent: "15%" },
 ];
 
-// Team points
-const teamPoints = t("launch.team.points") as unknown as string[];
-
-// Fees points
-const feesPoints = t("launch.fees.points") as unknown as string[];
+// Company alignment points
+const companyPoints = t("launch.company.points") as unknown as string[];
 ---
 
 <Layout {...metadata} jsonLd={jsonLd}>
@@ -110,6 +107,8 @@ const feesPoints = t("launch.fees.points") as unknown as string[];
       <!-- Chart -->
       <AllocationChart />
 
+      <hr class="border-quantus-white/10 mb-10 mt-0" />
+
       <!-- Launch Allocation (TGE) -->
       <div class="mb-10">
         <h2 class="font-small-title mb-4">{t("launch.tge.title")}</h2>
@@ -151,11 +150,15 @@ const feesPoints = t("launch.fees.points") as unknown as string[];
           </table>
         </div>
 
-        <p
-          class="font-body-mobile lg:font-body"
-          set:html={renderMarkdown(t("launch.tge.note"))}
-        />
+        <p class="font-body-mobile lg:font-body mb-4">
+          {t("launch.tge.note_1")}
+        </p>
+        <p class="font-body-mobile lg:font-body">
+          {t("launch.tge.note_2")}
+        </p>
       </div>
+
+      <hr class="border-quantus-white/10 mb-10 mt-0" />
 
       <!-- Mining-Based Distribution -->
       <div class="mb-10">
@@ -194,19 +197,34 @@ const feesPoints = t("launch.fees.points") as unknown as string[];
         </div>
       </div>
 
-      <!-- Team & Community Alignment -->
+      <hr class="border-quantus-white/10 mb-10 mt-0" />
+
+      <!-- Company Alignment -->
       <div class="mb-10">
-        <h2 class="font-small-title mb-4">{t("launch.team.title")}</h2>
+        <h2 class="font-small-title mb-4">{t("launch.company.title")}</h2>
         <p class="font-body-mobile lg:font-body mb-2">
-          {t("launch.team.intro")}
+          {t("launch.company.intro")}
         </p>
         <p class="font-body-mobile lg:font-body mb-4">
-          {t("launch.team.content")}
+          {t("launch.company.content")}
         </p>
         <ul class="font-body-mobile lg:font-body list-disc space-y-2 pl-6">
-          {teamPoints.map((point) => <li set:html={renderMarkdown(point)} />)}
+          {companyPoints.map((point) => <li set:html={renderMarkdown(point)} />)}
         </ul>
       </div>
+
+      <hr class="border-quantus-white/10 mb-10 mt-0" />
+
+      <!-- Lockups & Vesting -->
+      <div class="mb-10">
+        <h2 class="font-small-title mb-4">{t("launch.vesting.title")}</h2>
+        <VestingLockups t={t} />
+        <p class="font-body-mobile lg:font-body text-quantus-white/70">
+          {t("launch.vesting_summary")}
+        </p>
+      </div>
+
+      <hr class="border-quantus-white/10 mb-10 mt-0" />
 
       <!-- Fees & Burning -->
       <div class="mb-10">
@@ -216,11 +234,65 @@ const feesPoints = t("launch.fees.points") as unknown as string[];
           set:html={renderMarkdown(t("launch.fees.intro"))}
         />
         <ul class="font-body-mobile lg:font-body mb-4 list-disc space-y-2 pl-6">
-          {feesPoints.map((point) => <li set:html={renderMarkdown(point)} />)}
+          {
+            (t("launch.fees.points") as unknown as string[]).map((point) => (
+              <li set:html={renderMarkdown(point)} />
+            ))
+          }
         </ul>
         <p class="font-body-mobile lg:font-body text-quantus-white/70">
           {t("launch.fees.note")}
         </p>
+      </div>
+
+      <hr class="border-quantus-white/10 mb-10 mt-0" />
+
+      <!-- Funding History -->
+      <div class="mb-10">
+        <h2 class="font-small-title mb-4">{t("launch.funding.title")}</h2>
+        <p class="font-body-mobile lg:font-body mb-4">
+          {t("launch.funding.intro")}
+        </p>
+        <div class="overflow-x-auto">
+          <table class="font-body-mobile lg:font-body w-full border-collapse">
+            <thead>
+              <tr class="border-quantus-white/20 border-b">
+                <th class="px-4 py-3 text-left font-bold"
+                  >{t("launch.funding.table.round")}</th
+                >
+                <th class="px-4 py-3 text-left font-bold"
+                  >{t("launch.funding.table.raised")}</th
+                >
+                <th class="px-4 py-3 text-left font-bold"
+                  >{t("launch.funding.table.valuation")}</th
+                >
+                <th class="px-4 py-3 text-left font-bold"
+                  >{t("launch.funding.table.lead")}</th
+                >
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-quantus-white/10 border-b">
+                <td class="px-4 py-3">{t("launch.funding.table.pr1")}</td>
+                <td class="px-4 py-3">{t("launch.funding.table.raised_pr1")}</td>
+                <td class="px-4 py-3">{t("launch.funding.table.val_pr1")}</td>
+                <td class="px-4 py-3">{t("launch.funding.table.dash")}</td>
+              </tr>
+              <tr class="border-quantus-white/10 border-b">
+                <td class="px-4 py-3">{t("launch.funding.table.pr2")}</td>
+                <td class="px-4 py-3">{t("launch.funding.table.raised_pr2")}</td>
+                <td class="px-4 py-3">{t("launch.funding.table.val_pr2")}</td>
+                <td class="px-4 py-3">{t("launch.funding.table.lead_pr2")}</td>
+              </tr>
+              <tr class="border-quantus-white/20 border-t font-bold">
+                <td class="px-4 py-3">{t("launch.funding.table.total")}</td>
+                <td class="px-4 py-3">{t("launch.funding.table.raised_total")}</td>
+                <td class="px-4 py-3"></td>
+                <td class="px-4 py-3"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </section>

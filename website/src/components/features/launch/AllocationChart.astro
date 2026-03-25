@@ -16,24 +16,22 @@
       plugins: [ChartDataLabels],
       data: {
         labels: [
-          t("launch.tge.table.private_sale"),
-          t("launch.tge.table.public_sale"),
-          t("launch.tge.table.dex_liquidity"),
-          t("launch.mining.table.miners"),
-          t("launch.mining.table.community"),
-          t("launch.mining.table.team"),
+          t("launch.chart.miners"),
+          t("launch.chart.private"),
+          t("launch.chart.company"),
+          t("launch.chart.public"),
+          t("launch.chart.liquidity"),
         ],
         datasets: [
           {
             label: "Launch Allocation",
-            data: [15, 10, 5, 35, 25, 10],
+            data: [50, 15, 15, 10, 10],
             backgroundColor: [
+              "#00C2A8",
               "#0000FF",
+              "#7C3AED",
               "#ED4CCE",
               "#FFE91F",
-              "#00C2A8",
-              "#FF6B35",
-              "#7C3AED",
             ],
             borderColor: "#000000",
             borderWidth: 2,
@@ -48,17 +46,21 @@
             enabled: false,
           },
           datalabels: {
+            textShadowBlur: 10,
+            textShadowColor: "#000000",
             formatter: (value, context) => {
               const datapoints = context.chart.data.datasets[0]
                 .data as number[];
+              const label = context.chart?.data.labels?.[context.dataIndex];
+
               const total = datapoints.reduce((acc, val) => acc + val, 0);
               const percentage = ((value / total) * 100).toFixed(1) + "%";
-              return percentage;
+              return `${label}\n ${percentage}`;
             },
             color: "#fff",
           },
           legend: {
-            display: true,
+            display: false,
           },
         },
       },

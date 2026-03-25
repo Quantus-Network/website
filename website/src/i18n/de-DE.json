@@ -408,22 +408,22 @@
   "launch": {
     "meta": {
       "title": "Quantus Tokenomics & Launch-Zuteilung",
-      "description": "Details zur QUAN-Token-Versorgung, -Verteilung und Launch-Zuteilung. Feste Versorgung von 21 Mio. QUAN mit fairen Launch-Mechanismen."
+      "description": "QUAN-Tokenversorgung, Verteilung und Launch-Zuteilung. Feste Versorgung von 21 Mio. QUAN mit fairer Launch-Mechanik."
     },
     "title": "Quantus Tokenomics & Launch-Zuteilung",
     "overview": {
-      "title": "Übersicht",
-      "content": "Quantus hat eine feste maximale Versorgung von **21.000.000 QUAN**. Der Token wird durch eine Kombination aus einem initialen Token Generation Event (TGE) und langfristigem Proof-of-Work-Mining ausgegeben. Diese Struktur ist darauf ausgelegt, Pre-Mining zu vermeiden, Insider-Vorteile zu minimieren und die langfristige Netzwerksicherheit mit der Benutzerbeteiligung in Einklang zu bringen."
+      "title": "Überblick",
+      "content": "Quantus hat eine feste maximale Versorgung von **21.000.000 QUAN**. Der Token wird über ein initiales Token Generation Event (TGE) und langfristiges Proof-of-Work-Mining ausgegeben. Diese Struktur soll Pre-Mining vermeiden, Insider-Vorteile minimieren und langfristige Netzwerksicherheit mit Nutzerbeteiligung in Einklang bringen."
     },
     "supply": {
-      "title": "Token-Versorgung",
-      "max_supply": "Maximale Versorgung:",
+      "title": "Tokenversorgung",
+      "max_supply": "Maximalversorgung:",
       "max_supply_value": "21.000.000 QUAN",
-      "tge_supply": "TGE-Prägungsversorgung:",
-      "tge_supply_value": "6.300.000 QUAN (30%)",
+      "tge_supply": "TGE-geprägte Versorgung:",
+      "tge_supply_value": "7.350.000 QUAN (35%)",
       "mining_supply": "Mining-Emissionen:",
-      "mining_supply_value": "14.700.000 QUAN (70%) über ~40 Jahre",
-      "note": "Die Mining-Emission folgt einer exponentiell abnehmenden Block-Belohnungskurve, was bedeutet, dass die Ausgabe in den frühen Jahren höher ist und sich im Laufe der Zeit allmählich verlangsamt, wenn sich die Versorgung dem Maximum nähert."
+      "mining_supply_value": "13.650.000 QUAN (65%) über ~40 Jahre",
+      "note": "Die Mining-Emission folgt einer exponentiell abfallenden Blockbelohnungskurve: Die Ausgabe ist in den frühen Jahren höher und verlangsamt sich mit der Zeit, wenn sich die Versorgung dem Maximum nähert."
     },
     "tge": {
       "title": "Launch-Zuteilung (TGE)",
@@ -435,37 +435,85 @@
         "private_sale": "Privatverkauf",
         "public_sale": "Öffentlicher Verkauf",
         "dex_liquidity": "DEX-Liquidität",
-        "total": "Gesamt bei TGE"
+        "total": "Gesamt beim TGE"
       },
-      "note": "Alle Privat- und öffentlichen Verkaufstoken sind **beim Launch vollständig liquide**. Es gibt keine Investoren-Lockups oder Vesting-Zeitpläne."
+      "note_1": "Alle Privat- und öffentlichen Verkaufstoken sind beim Launch vollständig liquid. Es gibt keine Investor-Sperren oder Vesting-Pläne.",
+      "note_2": "Öffentliche Verkaufserlöse (USDC) werden 1:1 mit QUAN gepaart und direkt in einen Liquiditätspool eingezahlt. Wenn der volle 10%-Öffentliche Verkauf ausgeschöpft wird, werden weitere 10% geprägt — 100% der öffentlichen Verkaufserlöse fließen in den LP."
     },
     "mining": {
-      "title": "Mining-basierte Verteilung (70%)",
-      "intro": "Die verbleibenden 70% der Versorgung — **14.700.000 QUAN** — werden über etwa 40 Jahre durch Proof-of-Work-Mining verteilt.",
-      "ownership_title": "Endgültiges Eigentum an Mining-Emissionen:",
+      "title": "Mining-basierte Verteilung (65%)",
+      "intro": "Die verbleibenden 65% der Versorgung — **13.650.000 QUAN** — werden über etwa 40 Jahre per Proof-of-Work-Mining verteilt.",
+      "ownership_title": "Endgültige Eigentümerschaft der Mining-Emissionen:",
       "table": {
         "recipient": "Empfänger",
         "percent": "% der Gesamtversorgung",
         "miners": "Miner",
-        "community": "Community",
-        "team": "Team & Berater"
+        "company": "Unternehmen (Dev-Steuer)"
       }
     },
-    "team": {
-      "title": "Team- & Community-Ausrichtung",
+    "company": {
+      "title": "Ausrichtung des Unternehmens",
       "intro": "Quantus betreibt kein Pre-Mining und reserviert keine Token für das Team.",
-      "content": "Stattdessen wird das Team durch Mining-Belohnungen entschädigt:",
+      "content": "Stattdessen wird das Unternehmen über eine Dev-Steuer auf Blockbelohnungen vergütet:",
       "points": [
-        "In den ersten 4 Jahren wird ein Teil der Block-Belohnungen dem Team und den Beratern zugewiesen (dies fungiert als Vesting auf Protokollebene). Der verbleibende Teil geht an die Miner.",
-        "Der Anteil ist so gewählt, dass **10%** des Gesamtangebots über 4 Jahre an das Team ausgegeben werden.",
-        "Nach Jahr 4 wird der Anteil des Teams in einen **Community-Fonds** umgeleitet, der über den verbleibenden Emissionszeitraum allmählich 25% der Gesamtversorgung ansammelt."
+        "Ein Teil jeder Blockbelohnung fließt an das Unternehmen. Das wirkt wie Vesting auf Protokollebene — Token werden über etwa 5 Jahre gemeinsam mit dem Netzwerk verdient.",
+        "So wird das frühe Versorgungskurvenproblem von Bitcoin vermieden, bei dem frühe Miner massive Bestände anhäufen und dauerhaftes Überhang-Risiko entsteht."
       ]
     },
+    "vesting": {
+      "title": "Sperren & Vesting",
+      "mark_tge": "TGE",
+      "mark_y1": "J1",
+      "mark_y2": "J2",
+      "mark_y3": "J3",
+      "mark_y4": "J4+",
+      "row_investors": "Investoren",
+      "investors_bar": "100% liquid Tag 1",
+      "row_dex": "DEX-Liquidität",
+      "dex_bar": "Beim TGE ins LP gepaart",
+      "row_team": "Team & Gründer",
+      "cliff": "Cliff",
+      "linear_monthly": "Linear monatlich",
+      "row_advisors": "Berater",
+      "row_company": "Unternehmen (Dev-Steuer)",
+      "company_bar": "Über Blockbelohnungen ~5 J."
+    },
+    "vesting_summary": "Alle Privat- und öffentlichen Verkaufstoken sind beim TGE vollständig liquid. Team und Berater vesting über vier Jahre mit einjährigem Cliff. Unternehmenstoken werden nie pre-mined — sie werden schrittweise über die Dev-Steuer auf Blockbelohnungen verdient.",
     "fees": {
       "title": "Gebühren & Burning",
-      "intro": "Um die langfristige Netzwerksicherheit zu unterstützen, fallen bei Wormhole-Transaktionen **0,1% Volumengebühren** an:",
-      "points": ["**50%** werden an Miner gezahlt", "**50%** werden verbrannt"],
-      "note": "Dies führt zu deflationärem Druck, wenn die Netzwerknutzung wächst."
+      "intro": "Zur langfristigen Netzwerksicherheit fallen auf Wormhole-Transaktionen **0,1% Volumengebühr** an:",
+      "points": [
+        "**50%** gehen an Miner",
+        "**50%** werden verbrannt"
+      ],
+      "note": "Mit wachsender Nutzung entsteht deflationärer Druck."
+    },
+    "funding": {
+      "title": "Finanzierungshistorie",
+      "intro": "Zwei Privatrunden sind abgeschlossen; 7% der Gesamtversorgung wurden verkauft. Tokenbewertung ist 2× Eigenkapitalbewertung — Branchenstandard, in allen Verträgen verankert. Künftige Finanzierung nur über Tokenverkäufe.",
+      "table": {
+        "round": "Runde",
+        "raised": "Eingesammelt",
+        "valuation": "Tokenbewertung",
+        "lead": "Lead",
+        "total": "Gesamt",
+        "pr1": "Privatrunde 1",
+        "pr2": "Privatrunde 2",
+        "raised_pr1": "$1.65M",
+        "raised_pr2": "$770K",
+        "val_pr1": "$40M",
+        "val_pr2": "$100M",
+        "lead_pr2": "Balaji Srinivasan",
+        "dash": "—",
+        "raised_total": "$2.42M"
+      }
+    },
+    "chart": {
+      "miners": "Miner",
+      "private": "Privat",
+      "company": "Unternehmen",
+      "public": "Öffentlich",
+      "liquidity": "Liquidität"
     }
   },
   "about": {
