@@ -42,9 +42,3 @@ const heroLoop = () => {
 export const updateHeroActive = (active: boolean) => {
     heroActive = active;
 };
-
-window.addEventListener("resize", calcHeroDims);
-
-calcHeroDims();
-heroLoop();
-buildTicker();

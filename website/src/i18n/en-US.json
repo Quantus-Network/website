@@ -10,6 +10,22 @@
       "download_wallet": "Download Wallet",
       "open_menu": "Open menu"
     },
+    "home": {
+      "loader": {
+        "lines": {
+          "protocol": "> QUANTUS PROTOCOL v0.9.1-bell",
+          "integrity": "> SYSTEM INTEGRITY <span class=\"ok\">[PASS]</span>",
+          "nist_module": "> NIST FIPS 204 MODULE LOADED <span class=\"ok\">[OK]</span>",
+          "initializing": "> INITIALIZING <span class=\"ac\">ML-DSA / DILITHIUM-5</span>...",
+          "signature_scheme": "> POST-QUANTUM SIGNATURE SCHEME <span class=\"ok\">ACTIVE</span>",
+          "p2p_layer": "> P2P COMM LAYER → <span class=\"ac\">PQ-ENCRYPTED TUNNEL</span>",
+          "zk_engine": "> RECURSIVE ZK PROOF ENGINE <span class=\"ok\">READY</span>",
+          "syncing": "> SYNCING BELL TESTNET... PEERS: <span class=\"ac\">247</span>",
+          "chladni": "> CHLADNI FIELD VISUALIZER <span class=\"ac\">LOADING</span>",
+          "prompt": "> <span class=\"blink\"></span>"
+        }
+      }
+    },
     "footer": {
       "brand": "QUANTUS",
       "copyright": "© {year} Quantus Network.",
