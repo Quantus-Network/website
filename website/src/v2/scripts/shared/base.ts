@@ -1,29 +1,3 @@
-window.addEventListener("scroll", () => {
-    const nav = document.querySelector("nav")!;
-    if (window.scrollY > window.innerHeight * 0.5) {
-        nav.classList.add("scrolled");
-    } else {
-        nav.classList.remove("scrolled");
-    }
-});
-
-(function () {
-    const hamburger = document.getElementById("nav-hamburger");
-    const menu = document.getElementById("mobile-menu");
-    if (!hamburger || !menu) return;
-
-    hamburger.addEventListener("click", () => {
-        menu.classList.toggle("open");
-        hamburger.classList.toggle("open");
-    });
-    menu.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("click", () => {
-            menu.classList.remove("open");
-            hamburger.classList.remove("open");
-        });
-    });
-})();
-
 (function () {
     const targets = [
         document.querySelector(".newsletter-headline"),
@@ -97,10 +71,3 @@ window.addEventListener("scroll", () => {
         }, 400);
     });
 })();
-
-window.addEventListener("load", () => {
-    const walletLink = getWalletLink();
-    document.querySelectorAll(".wallet-cta-link").forEach((el) => {
-        (el as HTMLAnchorElement).href = walletLink;
-    });
-});

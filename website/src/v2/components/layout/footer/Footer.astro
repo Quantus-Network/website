@@ -33,7 +33,7 @@ const isCurrentPage = (href: string) =>
 
   <!-- Left Column -->
   <div
-    class="border-content-8 relative z-10 flex flex-col justify-between border-b p-6 md:border-r md:border-b-0 md:p-[52px]"
+    class="border-content-8 p-content-edges-mobile md:p-content-edges relative z-10 flex flex-col justify-between border-b md:border-r md:border-b-0"
   >
     <a
       href={getLocalizedPath(locale, "/")}
@@ -52,7 +52,9 @@ const isCurrentPage = (href: string) =>
   </div>
 
   <!-- Right Column -->
-  <div class="relative z-10 flex flex-col justify-between p-6 md:p-[52px]">
+  <div
+    class="p-content-edges-mobile md:p-content-edges relative z-10 flex flex-col justify-between"
+  >
     <div class="grid grid-cols-2 gap-8 md:grid-cols-3 md:gap-10">
       {
         FOOTER_NAVIGATIONS.map((section) => (

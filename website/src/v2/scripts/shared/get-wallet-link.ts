@@ -1,4 +1,4 @@
-function getWalletLink() {
+export const getWalletLink = () => {
     const ua = navigator.userAgent || navigator.vendor || (window as any).opera;
     if (/android/i.test(ua)) {
         return "https://play.google.com/store/apps/details?id=com.quantus.wallet";

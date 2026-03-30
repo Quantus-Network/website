@@ -35,16 +35,16 @@ const baseClasses =
   "font-cta-mono inline-flex items-center justify-center no-underline transition-[opacity,border-color,background-color,color] duration-200";
 
 const variantClasses = {
-  primary: "border border-(--flare) bg-(--flare) text-(--void) hover:opacity-85",
+  primary: "border border-flare bg-flare text-void hover:opacity-85",
   secondary:
-    "border border-(--border-med) bg-(--void) text-(--content) hover:border-(--content-60)",
+    "border border-border-med bg-void text-content hover:border-content-60",
   outline:
-    "border border-(--flare) bg-transparent text-(--flare) hover:bg-(--flare) hover:text-(--void)",
+    "border border-flare bg-transparent text-flare hover:bg-flare hover:text-void",
 }[variant];
 
 const sizeClasses = {
-  small: "px-3 py-2 text-[10px] tracking-[0.08em]",
-  medium: "px-6 py-3 text-[12px] tracking-[0.11em]",
+  small: "px-[18px] py-[8px] text-[10.5px] font-mono tracking-[0.12em]",
+  medium: "px-6 py-3 font-cta-mono",
   large: "px-7 py-3.5 text-[13px] tracking-[0.12em]",
 }[size];
 

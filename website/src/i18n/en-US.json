@@ -5,8 +5,10 @@
       "technology": "Technology",
       "wallet": "Wallet",
       "community": "Community",
-      "quantum-risk-checker": "Q-Day Checker",
-      "quan": "Quan"
+      "quantum_risk_checker": "Q-Day Checker",
+      "quan": "Quan",
+      "download_wallet": "Download Wallet",
+      "open_menu": "Open menu"
     },
     "footer": {
       "brand": "QUANTUS",

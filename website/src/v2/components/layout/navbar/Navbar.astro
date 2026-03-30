@@ -6,6 +6,7 @@ import {
   getLocalizedPath,
 } from "@/utils/i18n";
 import { SITE_NAVIGATIONS } from "@/v2/constants/site-navigations";
+import Button from "../../ui/Button.astro";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
@@ -13,21 +14,21 @@ const t = await createTranslator(locale);
 
 <nav
   id="navbar"
-  class="bg-navbar border-border px-content-edges [&.scrolled]:bg-navbar-scrolled] fixed top-0 right-0 left-0 z-1000 flex items-center justify-between border-b py-5 backdrop-blur-xs transition-all duration-500 ease-in-out [&.scrolled]:backdrop-blur-md [&.visible]:opacity-100"
+  class="bg-navbar border-border px-content-edges-mobile lg:px-content-edges [&.scrolled]:bg-navbar-scrolled] fixed top-0 right-0 left-0 z-1000 flex items-center justify-between border-b py-4 backdrop-blur-xs transition-all duration-500 ease-in-out lg:py-5 [&.scrolled]:backdrop-blur-md [&.visible]:opacity-100"
 >
   <a href={getLocalizedPath(locale, "/")} class="block leading-none">
     <LogoLong class="block h-[26px] w-auto" />
   </a>
 
   <ul
-    class="nav-links absolute left-1/2 hidden -translate-x-1/2 list-none gap-8 md:flex"
+    class="nav-links absolute left-1/2 hidden -translate-x-1/2 list-none gap-4 lg:flex xl:gap-8"
   >
     {
       SITE_NAVIGATIONS.map((item) => (
         <li>
           <a
-            href={item.href}
-            class="after:bg-whitepaper-primary relative text-[12px] font-normal tracking-[0.09em] text-(--muted) uppercase no-underline transition-all duration-200 ease-in-out after:absolute after:bottom-[-2px] after:left-0 after:h-px after:w-0 after:transition-all after:duration-250 after:content-[''] hover:text-white hover:opacity-100 hover:after:w-full [&.nav-active]:text-white [&.nav-active]:after:bottom-[-4px] [&.nav-active]:after:h-[2px] [&.nav-active]:after:w-full"
+            href={getLocalizedPath(locale, item.href)}
+            class="after:bg-flare font-navbar-link text-muted relative no-underline transition-all duration-200 ease-in-out after:absolute after:bottom-[-2px] after:left-0 after:h-px after:w-0 after:transition-all after:duration-250 after:content-[''] hover:text-white hover:opacity-100 hover:after:w-full [&.nav-active]:text-white [&.nav-active]:after:bottom-[-4px] [&.nav-active]:after:h-[2px] [&.nav-active]:after:w-full"
           >
             {t(item.label)}
           </a>
@@ -37,16 +38,18 @@ const t = await createTranslator(locale);
   </ul>
 
   <div class="flex items-center gap-4">
-    <a
-      href="#"
-      class="nav-dl wallet-cta-link hidden border border-(--flare) px-[18px] py-2 font-mono text-[10.5px] font-medium tracking-[0.12em] text-(--flare) uppercase no-underline transition-all duration-180 hover:bg-(--flare) hover:text-(--void) md:block"
+    <Button
+      class="wallet-cta-link hidden lg:block"
       target="_blank"
-      rel="noopener">Download Wallet</a
+      rel="noopener"
+      variant="outline"
+      size="small">{t("v2.navbar.download_wallet")}</Button
     >
+
     <button
-      class="nav-hamburger group flex h-9 w-9 cursor-pointer items-center justify-center border-none bg-none p-1 md:hidden"
+      class="nav-hamburger group flex h-9 w-9 cursor-pointer items-center justify-center border-none bg-none p-1 lg:hidden"
       id="nav-hamburger"
-      aria-label="Open menu"
+      aria-label={t("v2.navbar.open_menu")}
       aria-expanded="false"
     >
       <svg
@@ -82,6 +85,7 @@ const t = await createTranslator(locale);
           stroke-width="1.5"
           stroke-linecap="square"></line>
       </svg>
+
       <svg
         class="close-icon hidden group-[.open]:block"
         width="24"
@@ -109,31 +113,32 @@ const t = await createTranslator(locale);
       </svg>
     </button>
   </div>
-
-  <div
-    class="mobile-menu fixed inset-0 z-999 hidden flex-col items-center justify-center gap-8 bg-(--void) p-8"
-    id="mobile-nav-menu"
-  >
-    <div class="mobile-menu-links flex flex-col items-center gap-6">
-      {
-        SITE_NAVIGATIONS.map((item) => (
-          <a
-            href={item.href}
-            class="text-lg font-medium tracking-widest text-(--content) uppercase"
-          >
-            {t(item.label)}
-          </a>
-        ))
-      }
-    </div>
-    <a
-      href="#"
-      class="mobile-menu-cta wallet-cta-link border border-(--flare) px-8 py-4 font-mono text-sm font-medium tracking-widest text-(--flare) uppercase no-underline transition-all hover:bg-(--flare) hover:text-(--void)"
-      target="_blank"
-      rel="noopener">Download Wallet</a
-    >
-  </div>
 </nav>
+
+<div
+  class="mobile-menu bg-void fixed inset-0 z-999 hidden flex-col gap-8 px-8 pt-20 pb-10"
+  id="mobile-nav-menu"
+>
+  <div class="mobile-menu-links flex flex-1 flex-col">
+    {
+      SITE_NAVIGATIONS.map((item) => (
+        <a
+          href={getLocalizedPath(locale, item.href)}
+          class="font-navbar-link-mobile text-content border-content-10 flex items-center justify-between border-b py-[18px]"
+        >
+          {t(item.label)}
+        </a>
+      ))
+    }
+  </div>
+
+  <Button
+    class="wallet-cta-link py-[14px]"
+    target="_blank"
+    rel="noopener"
+    variant="primary">{t("v2.navbar.download_wallet")}</Button
+  >
+</div>
 
 <script>
   const hamburger = document.getElementById("nav-hamburger");
@@ -144,6 +149,8 @@ const t = await createTranslator(locale);
     mobileMenu?.classList.add("flex");
     hamburger?.classList.add("open");
     hamburger?.setAttribute("aria-expanded", "true");
+    const closeLabel = hamburger?.getAttribute("data-aria-close");
+    if (closeLabel) hamburger?.setAttribute("aria-label", closeLabel);
     document.body.style.overflow = "hidden";
   }
 
@@ -175,13 +182,24 @@ const t = await createTranslator(locale);
     if (e.key === "Escape") closeMenu();
   });
 
-  // Scroll: darken background on scroll
-  const navbar = document.getElementById("navbar");
+  const nav = document.getElementById("navbar") as HTMLElement;
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 20) {
-      navbar?.classList.add("scrolled");
+    if (window.scrollY > window.innerHeight * 0.5) {
+      nav.classList.add("scrolled");
     } else {
-      navbar?.classList.remove("scrolled");
+      nav.classList.remove("scrolled");
     }
+  });
+</script>
+
+<script>
+  import { getWalletLink } from "@/v2/scripts/shared/get-wallet-link";
+
+  window.addEventListener("load", () => {
+    const walletLink = getWalletLink();
+
+    document.querySelectorAll(".wallet-cta-link").forEach((el) => {
+      (el as HTMLAnchorElement).href = walletLink;
+    });
   });
 </script>
