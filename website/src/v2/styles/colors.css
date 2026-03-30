@@ -1,0 +1,49 @@
+@theme {
+  /* Mirror redesign naming first */
+  --color-void: #0e0e0e;
+  --color-flare: #ff6b35;
+  --color-content: #e8e6e0;
+  --color-white: #ffffff;
+  --color-surface: #181818;
+
+  --color-muted: rgba(232, 230, 224, 0.42);
+  --color-border: rgba(232, 230, 224, 0.08);
+  --color-border-med: rgba(232, 230, 224, 0.16);
+  --color-navbar: rgba(14, 14, 14, 0.3);
+  --color-navbar-scrolled: rgba(14, 14, 14, 0.95);
+
+  /* Common content alpha variants from redesign pages */
+  --color-content-90: rgba(232, 230, 224, 0.9);
+  --color-content-85: rgba(232, 230, 224, 0.85);
+  --color-content-70: rgba(232, 230, 224, 0.7);
+  --color-content-65: rgba(232, 230, 224, 0.65);
+  --color-content-60: rgba(232, 230, 224, 0.6);
+  --color-content-55: rgba(232, 230, 224, 0.55);
+  --color-content-45: rgba(232, 230, 224, 0.45);
+  --color-content-40: rgba(232, 230, 224, 0.4);
+  --color-content-35: rgba(232, 230, 224, 0.35);
+  --color-content-30: rgba(232, 230, 224, 0.3);
+  --color-content-25: rgba(232, 230, 224, 0.25);
+  --color-content-20: rgba(232, 230, 224, 0.2);
+  --color-content-15: rgba(232, 230, 224, 0.15);
+  --color-content-8: rgba(232, 230, 224, 0.08);
+  --color-content-4: rgba(232, 230, 224, 0.04);
+
+  --color-flare-70: rgba(255, 107, 53, 0.7);
+  --color-flare-50: rgba(255, 107, 53, 0.5);
+  --color-flare-40: rgba(255, 107, 53, 0.4);
+  --color-flare-38: rgba(255, 107, 53, 0.38);
+  --color-flare-30: rgba(255, 107, 53, 0.3);
+  --color-flare-22: rgba(255, 107, 53, 0.22);
+  --color-flare-15: rgba(255, 107, 53, 0.15);
+  --color-flare-12: rgba(255, 107, 53, 0.12);
+  --color-flare-10: rgba(255, 107, 53, 0.1);
+  --color-flare-8: rgba(255, 107, 53, 0.08);
+
+  --color-green: #4ade80;
+  --color-green-10: rgba(74, 222, 128, 0.1);
+
+  /* Functional colors from redesign */
+  --color-vuln: rgba(255, 107, 53, 0.1);
+  --color-secure: rgba(74, 222, 128, 0.1);
+}

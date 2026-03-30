@@ -1,4 +1,43 @@
 {
+  "v2": {
+    "navbar": {
+      "about": "About",
+      "technology": "Technology",
+      "wallet": "Wallet",
+      "community": "Community",
+      "quantum-risk-checker": "Q-Day Checker",
+      "quan": "Quan"
+    },
+    "footer": {
+      "brand": "QUANTUS",
+      "copyright": "© {year} Quantus Network.",
+      "rights": "All rights reserved.",
+      "built_on": "BUILT ON BELL TESTNET",
+      "sections": {
+        "protocol": "Protocol",
+        "community": "Community",
+        "company": "Company"
+      },
+      "links": {
+        "whitepaper": "Whitepaper",
+        "technology": "Technology",
+        "network": "Network",
+        "wallet": "Wallet",
+        "research": "Research",
+        "documentation": "Documentation",
+        "telegram": "Telegram",
+        "x": "X (Twitter)",
+        "instagram": "Instagram",
+        "youtube": "YouTube",
+        "about": "About",
+        "blog": "Blog",
+        "podcast": "QDay Podcast",
+        "contact": "Contact",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service"
+      }
+    }
+  },
   "home": {
     "meta": {
       "title": "Quantus Network - Quantum-Secure Layer 1 Blockchain",

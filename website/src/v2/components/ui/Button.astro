@@ -1,0 +1,98 @@
+---
+import { applyStyles } from "@/utils/apply-styles";
+
+export interface Props {
+  id?: string;
+  variant?: "primary" | "secondary" | "outline";
+  size?: "small" | "medium" | "large";
+  disabled?: boolean;
+  type?: "button" | "submit" | "reset";
+  ariaLabel?: string;
+  ariaDescribedBy?: string;
+  class?: string;
+  onclick?: string;
+  href?: string;
+  target?: string;
+  rel?: string;
+}
+
+const {
+  variant = "primary",
+  size = "medium",
+  disabled = false,
+  type = "button",
+  ariaLabel,
+  ariaDescribedBy,
+  class: className = "",
+  onclick,
+  href,
+  target,
+  rel,
+  ...rest
+} = Astro.props;
+
+const baseClasses =
+  "font-cta-mono inline-flex items-center justify-center no-underline transition-[opacity,border-color,background-color,color] duration-200";
+
+const variantClasses = {
+  primary: "border border-(--flare) bg-(--flare) text-(--void) hover:opacity-85",
+  secondary:
+    "border border-(--border-med) bg-(--void) text-(--content) hover:border-(--content-60)",
+  outline:
+    "border border-(--flare) bg-transparent text-(--flare) hover:bg-(--flare) hover:text-(--void)",
+}[variant];
+
+const sizeClasses = {
+  small: "px-3 py-2 text-[10px] tracking-[0.08em]",
+  medium: "px-6 py-3 text-[12px] tracking-[0.11em]",
+  large: "px-7 py-3.5 text-[13px] tracking-[0.12em]",
+}[size];
+
+const disabledClasses = disabled
+  ? "pointer-events-none cursor-not-allowed opacity-60"
+  : "cursor-pointer";
+---
+
+{
+  !href && (
+    <button
+      type={type}
+      class={applyStyles(
+        baseClasses,
+        variantClasses,
+        sizeClasses,
+        disabledClasses,
+        className,
+      )}
+      disabled={disabled}
+      aria-label={ariaLabel}
+      aria-describedby={ariaDescribedBy}
+      onclick={onclick}
+      {...rest}
+    >
+      <slot />
+    </button>
+  )
+}
+
+{
+  href && (
+    <a
+      class={applyStyles(
+        baseClasses,
+        variantClasses,
+        sizeClasses,
+        disabledClasses,
+        className,
+      )}
+      href={href}
+      target={target}
+      rel={rel}
+      aria-label={ariaLabel}
+      aria-describedby={ariaDescribedBy}
+      {...rest}
+    >
+      <slot />
+    </a>
+  )
+}

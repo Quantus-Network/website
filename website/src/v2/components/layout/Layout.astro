@@ -1,0 +1,160 @@
+---
+import "../../styles/global.css";
+
+// Main fonts
+import "@fontsource/geist/300.css";
+import "@fontsource/geist/400.css";
+import "@fontsource/geist/500.css";
+import "@fontsource/geist-mono/300.css";
+import "@fontsource/geist-mono/400.css";
+import "@fontsource/geist-mono/500.css";
+
+// Whitepapers Fonts
+import "@fontsource/ibm-plex-sans/400.css";
+import "@fontsource/ibm-plex-sans/400-italic.css";
+import "@fontsource/ibm-plex-sans/700.css";
+import "@fontsource/ibm-plex-mono/300.css";
+import "@fontsource/ibm-plex-mono/400.css";
+import "@fontsource/ibm-plex-mono/500.css";
+import "@fontsource/ibm-plex-mono/700.css";
+
+import Navbar from "./navbar/Navbar.astro";
+import Footer from "./footer/Footer.astro";
+
+import { SEO, type SEOProps } from "astro-seo";
+import type { WithContext, Graph, Thing } from "schema-dts";
+import {
+  DEFAULT_LOCALE,
+  getLocaleFromUrl,
+  getTextDirection,
+  getAlternateUrls,
+  createTranslator,
+} from "@/utils/i18n";
+import { generateBreadcrumbs } from "@/utils/build-json-ld";
+import { SITE_NAVIGATIONS } from "@/v2/constants/site-navigations";
+import CookieConsent from "@/components/ui/CookieConsent.astro";
+import Toast from "@/components/ui/Toast.astro";
+import env from "@/config";
+
+interface Props extends SEOProps {
+  jsonLd?: WithContext<Thing> | Graph;
+}
+
+const { jsonLd, ...metadata } = Astro.props;
+
+const currentLocale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(currentLocale);
+const textDirection = getTextDirection(currentLocale);
+
+// Fix canonical for default locale duplicate content
+let canonical = metadata.canonical;
+const currentPath = Astro.url.pathname;
+
+if (
+  currentLocale === DEFAULT_LOCALE &&
+  currentPath.startsWith(`/${DEFAULT_LOCALE}`)
+) {
+  const rootPath = currentPath.replace(`/${DEFAULT_LOCALE}`, "") || "/";
+  canonical = `${env.SITE_BASE_URL}${rootPath}`;
+}
+
+const alternates = getAlternateUrls(currentPath);
+const languageAlternates = Object.entries(alternates).map(([lang, path]) => ({
+  href: `${env.SITE_BASE_URL}${path}`,
+  hrefLang: lang,
+}));
+
+const breadcrumbs = generateBreadcrumbs({
+  pathname: currentPath,
+  locale: currentLocale,
+  siteBaseUrl: env.SITE_BASE_URL,
+  t,
+  navigations: SITE_NAVIGATIONS as any,
+  title: metadata.title,
+});
+---
+
+<!doctype html>
+<html lang={currentLocale} dir={textDirection} class="flex min-h-full flex-col">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta name="generator" content={Astro.generator} />
+
+    {/* Resource hints for performance */}
+    <link rel="preconnect" href={new URL(env.GRAPHQL_URL).origin} />
+    <link rel="preconnect" href={new URL(env.SITE_BASE_URL).origin} />
+
+    <SEO
+      {...metadata}
+      canonical={canonical}
+      languageAlternates={languageAlternates}
+      titleTemplate={undefined}
+    />
+  </head>
+  <body class="flex grow flex-col" data-locale={currentLocale}>
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(breadcrumbs).replace(/</g, "\\u003c")}
+      is:inline
+    />
+    {
+      jsonLd && (
+        <script
+          type="application/ld+json"
+          set:html={JSON.stringify(jsonLd).replace(/</g, "\\u003c")}
+          is:inline
+        />
+      )
+    }
+
+    <Navbar locale={currentLocale} />
+    <main class="grow">
+      <slot />
+    </main>
+    <Footer />
+
+    <CookieConsent />
+    <Toast />
+  </body>
+</html>
+
+<script>
+  import {
+    DEFAULT_LOCALE,
+    getLocaleFromUrl,
+    SUPPORTED_LOCALES,
+  } from "@/utils/i18n";
+
+  const localeStorageKey = "astro-i18n-redirect";
+  const hasRedirected = localStorage.getItem(localeStorageKey);
+
+  if (!hasRedirected) {
+    const currentLocale = getLocaleFromUrl(window.location.pathname);
+    const userLang = navigator.language as any;
+
+    if (currentLocale === userLang || userLang.includes("en-")) {
+      localStorage.setItem(localeStorageKey, "true");
+    } else {
+      const cleanPathname = window.location.pathname
+        .split("/")
+        .filter((path: any) => !SUPPORTED_LOCALES.includes(path) && path !== "")
+        .join("/");
+
+      let newPath = `/${cleanPathname}`;
+
+      if (SUPPORTED_LOCALES.includes(userLang) && userLang !== DEFAULT_LOCALE) {
+        newPath = `/${userLang}${cleanPathname}`;
+      }
+
+      if (window.location.search) {
+        newPath += window.location.search;
+      }
+
+      localStorage.setItem(localeStorageKey, "true");
+      window.location.replace(newPath);
+    }
+  }
+</script>

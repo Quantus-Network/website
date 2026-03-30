@@ -1,0 +1,41 @@
+---
+import { applyStyles } from "@/utils/apply-styles";
+
+interface Props {
+  variant?: Variant;
+  class?: string;
+  isSpan?: boolean;
+}
+
+type Variant = "default" | "flare" | "muted";
+
+const {
+  isSpan = true,
+  variant = "default",
+  class: className = "",
+} = Astro.props;
+
+const variantClass = {
+  default: "text-(--content-35)",
+  flare: "text-(--flare)",
+  muted: "text-(--muted)",
+}[variant];
+
+const classes = applyStyles(
+  "font-mono-label block tracking-[0.2em]",
+  variantClass,
+  className,
+);
+---
+
+{
+  isSpan ? (
+    <span class={classes}>
+      <slot />
+    </span>
+  ) : (
+    <p class={classes}>
+      <slot />
+    </p>
+  )
+}
