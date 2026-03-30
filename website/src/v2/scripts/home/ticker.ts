@@ -1,12 +1,24 @@
-const buildTicker = () => {
+export const buildTicker = () => {
+    const track = document.getElementById("ttrack");
+    if (!track) return;
+
+    // Get localized labels from data attributes
+    const labels = {
+        blockHeight: track.dataset.i18nBlockHeight || "BLOCK HEIGHT",
+        tps: track.dataset.i18nTps || "TPS",
+        uptime: track.dataset.i18nUptime || "UPTIME",
+        validators: track.dataset.i18nValidators || "VALIDATORS",
+        mainnet: track.dataset.i18nMainnet || "MAINNET: ??",
+    };
+
     const items = [
-        { lbl: "BLOCK HEIGHT", val: "1,284,771", live: true },
-        { lbl: "TPS", val: "3,800", live: false },
-        { lbl: "UPTIME", val: "99.97%", live: false },
-        { lbl: "VALIDATORS", val: "247", live: false },
-        { lbl: "", val: "MAINNET: ??", live: false, mainnet: true },
+        { lbl: labels.blockHeight, val: "1,284,771", live: true },
+        { lbl: labels.tps, val: "3,800", live: false },
+        { lbl: labels.uptime, val: "99.97%", live: false },
+        { lbl: labels.validators, val: "247", live: false },
+        { lbl: "", val: labels.mainnet, live: false, mainnet: true },
     ];
-    const track = document.getElementById("ttrack")!;
+
     [0, 1].forEach((copyIdx) => {
         items.forEach(({ lbl, val, live, mainnet }) => {
             const el = document.createElement("div");
@@ -18,6 +30,8 @@ const buildTicker = () => {
             track.appendChild(el);
         });
     });
+
+    // Mock dynamic updates for now (replace with real API polling later)
     let bh = 1284771;
     setInterval(() => {
         bh += Math.floor(Math.random() * 3) + 1;

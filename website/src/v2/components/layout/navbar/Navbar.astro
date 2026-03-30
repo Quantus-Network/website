@@ -14,7 +14,7 @@ const t = await createTranslator(locale);
 
 <nav
   id="navbar"
-  class="bg-navbar border-border px-content-edges-mobile lg:px-content-edges [&.scrolled]:bg-navbar-scrolled] fixed top-0 right-0 left-0 z-1000 flex items-center justify-between border-b py-4 backdrop-blur-xs transition-all duration-500 ease-in-out lg:py-5 [&.scrolled]:backdrop-blur-md [&.visible]:opacity-100"
+  class="bg-navbar border-border px-content-edges-mobile lg:px-content-edges [&.scrolled]:bg-navbar-scrolled] fixed top-0 right-0 left-0 z-1000 flex items-center justify-between border-b py-4 opacity-0 backdrop-blur-xs transition-all duration-500 ease-in-out lg:py-5 [&.scrolled]:backdrop-blur-md [&.visible]:opacity-100"
 >
   <a href={getLocalizedPath(locale, "/")} class="block leading-none">
     <LogoLong class="block h-[26px] w-auto" />

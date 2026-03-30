@@ -24,6 +24,28 @@
           "chladni": "> CHLADNI FIELD VISUALIZER <span class=\"ac\">LOADING</span>",
           "prompt": "> <span class=\"blink\"></span>"
         }
+      },
+      "hero_banner": {
+        "eyebrow": "Quantum-Secure L1 Blockchain",
+        "title_line1": "The blockchain quantum",
+        "title_line2": "computers can't break.",
+        "sub": {
+          "line1": "Post-quantum cryptography at every layer.",
+          "line2": "Clean-slate architecture.",
+          "line3": "Mainnet Q2 2026."
+        },
+        "cta_whitepaper": "Read Whitepaper",
+        "freq": {
+          "wave_mode": "WAVE MODE (m,n)",
+          "move_cursor": "MOVE CURSOR TO SHIFT FREQUENCY"
+        },
+        "ticker": {
+          "block_height": "BLOCK HEIGHT",
+          "tps": "TPS",
+          "uptime": "UPTIME",
+          "validators": "VALIDATORS",
+          "mainnet": "MAINNET: ??"
+        }
       }
     },
     "footer": {

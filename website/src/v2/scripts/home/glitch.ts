@@ -31,4 +31,6 @@ const glitchLoop = (el: HTMLElement, real: string) => {
     nextCycle();
 }
 
-glitchLoop(mainnetEl, mainnetReal);
+export const startGlitchLoop = () => {
+    glitchLoop(mainnetEl, mainnetReal);
+}
