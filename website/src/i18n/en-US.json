@@ -291,6 +291,15 @@
         "secondary_cta": "Explore Network"
       }
     },
+    "wallet": {
+      "hero_banner": {
+        "eyebrow": "THE QUANTUS WALLET",
+        "title": "Quantum-secure from the ground up. In your pocket.",
+        "sub": "Send, receive, and secure your assets with post-quantum cryptography built into every transaction. Available on iOS and Android.",
+        "cta_app_store": "Download on App Store",
+        "cta_google_play": "Download on Google Play"
+      }
+    },
     "footer": {
       "brand": "QUANTUS",
       "copyright": "© {year} Quantus Network.",
