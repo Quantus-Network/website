@@ -344,6 +344,13 @@
             "label": "MIGRATION REQUIRED"
           }
         }
+      },
+      "cta": {
+        "title": "Own quantum-secure assets.",
+        "sub": "Free to download. Available worldwide.",
+        "primary_cta": "Download on App Store",
+        "secondary_cta": "Download on Google Play",
+        "note": "Public beta available now on iOS and Android"
       }
     },
     "footer": {

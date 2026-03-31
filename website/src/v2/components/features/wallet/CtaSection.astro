@@ -1,0 +1,144 @@
+---
+import { APP_LINKS } from "@/constants/app-links";
+import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
+---
+
+<section id="wallet-cta">
+  <h2 class="wallet-cta-h2 wallet-animate" data-delay="0">
+    {t("v2.wallet.cta.title")}
+  </h2>
+  <p class="wallet-cta-sub wallet-animate" data-delay="0.15">
+    {t("v2.wallet.cta.sub")}
+  </p>
+  <div class="wallet-cta-btn-row wallet-animate" data-delay="0.3">
+    <a
+      href={APP_LINKS.ios}
+      class="wallet-btn-primary"
+      target="_blank"
+      rel="noopener"
+    >
+      {t("v2.wallet.cta.primary_cta")}
+    </a>
+    <a
+      href={APP_LINKS.android}
+      class="wallet-btn-secondary"
+      target="_blank"
+      rel="noopener"
+    >
+      {t("v2.wallet.cta.secondary_cta")}
+    </a>
+  </div>
+  <span class="wallet-cta-note wallet-animate" data-delay="0.45">
+    {t("v2.wallet.cta.note")}
+  </span>
+</section>
+
+<style>
+  .wallet-btn-primary {
+    font-family: "Geist Mono", monospace;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    background: #ff6b35;
+    color: #0e0e0e;
+    border: 1px solid #ff6b35;
+    padding: 14px 32px;
+    text-decoration: none;
+    display: inline-block;
+    transition: opacity 0.18s;
+    white-space: nowrap;
+  }
+  .wallet-btn-primary:hover {
+    opacity: 0.88;
+  }
+
+  .wallet-btn-secondary {
+    font-family: "Geist Mono", monospace;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    background: transparent;
+    color: rgba(232, 230, 224, 0.7);
+    border: 1px solid rgba(232, 230, 224, 0.2);
+    padding: 14px 32px;
+    text-decoration: none;
+    display: inline-block;
+    transition: border-color 0.18s;
+    white-space: nowrap;
+  }
+  .wallet-btn-secondary:hover {
+    border-color: rgba(232, 230, 224, 0.5);
+  }
+
+  #wallet-cta {
+    background: #0e0e0e;
+    position: relative;
+    z-index: 50;
+    padding: 120px 52px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-top: 1px solid rgba(232, 230, 224, 0.08);
+  }
+
+  .wallet-cta-h2 {
+    font-family: "Geist", sans-serif;
+    font-size: 52px;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+  }
+
+  .wallet-cta-sub {
+    font-family: "Geist", sans-serif;
+    font-size: 18px;
+    color: rgba(232, 230, 224, 0.55);
+    margin-top: 16px;
+  }
+
+  .wallet-cta-btn-row {
+    display: flex;
+    gap: 16px;
+    margin-top: 40px;
+  }
+
+  .wallet-cta-note {
+    font-family: "Geist Mono", monospace;
+    font-size: 11px;
+    color: rgba(232, 230, 224, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    margin-top: 28px;
+  }
+
+  @media (max-width: 768px) {
+    .wallet-btn-primary,
+    .wallet-btn-secondary {
+      width: 100%;
+      text-align: center;
+    }
+
+    #wallet-cta {
+      padding: 80px 24px;
+    }
+    .wallet-cta-h2 {
+      font-size: 32px;
+    }
+    .wallet-cta-btn-row {
+      flex-direction: column;
+      width: 100%;
+    }
+    .wallet-cta-btn-row .wallet-btn-primary,
+    .wallet-cta-btn-row .wallet-btn-secondary {
+      width: 100%;
+      text-align: center;
+      box-sizing: border-box;
+    }
+  }
+</style>
