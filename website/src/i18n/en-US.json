@@ -208,6 +208,33 @@
         }
       }
     },
+    "technology": {
+      "hero_banner": {
+        "eyebrow": "The Protocol",
+        "title_line1": "Post-quantum security.",
+        "title_line2": "At every layer.",
+        "sub": "Quantus isn't a general purpose blockchain. It does one thing better than any chain in existence - quantum-secure, private, scalable money."
+      },
+      "architecture": {
+        "title": "Architecture",
+        "subtitle": "Built clean. No legacy. No compromises.",
+        "content": "Every existing blockchain was built before quantum computers were a real threat. That means their security is borrowed time. Quantus was built after - with post-quantum cryptography as the foundation, not a feature.",
+        "cards": {
+          "signatures": {
+            "title": "Quantum-Secure Signatures",
+            "body": "Every transaction on Quantus is signed with ML-DSA - a NIST-approved post-quantum algorithm. The same standard governments and institutions are adopting now."
+          },
+          "network_layer": {
+            "title": "Secured Network Layer",
+            "body": "Most chains only secure transactions. Quantus secures everything - including the communications between nodes. There's no weak point in the stack."
+          },
+          "scale": {
+            "title": "Built to Scale",
+            "body": "Post-quantum signatures are larger than classical ones. We solved that with a zero-knowledge proof system that compresses thousands of transactions into a single verifiable proof - without sacrificing security."
+          }
+        }
+      }
+    },
     "footer": {
       "brand": "QUANTUS",
       "copyright": "© {year} Quantus Network.",

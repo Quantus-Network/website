@@ -94,7 +94,6 @@ const doTransition = () => {
   updateHeroActive(true);
   loader.classList.add("out");
   hero.classList.add("on");
-  document.querySelector("nav")!.classList.add("visible");
 
   setTimeout(() => {
     loader.style.display = "none";
