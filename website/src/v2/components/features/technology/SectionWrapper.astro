@@ -3,7 +3,7 @@ interface Props {
   id: string;
   title: string;
   subtitle: string;
-  content: string;
+  content?: string;
 }
 
 const { id, title, subtitle, content } = Astro.props;
@@ -13,7 +13,7 @@ const { id, title, subtitle, content } = Astro.props;
   <div class="tech-section-divider"></div>
   <span class="tech-section-eyebrow">{title}</span>
   <h2 class="tech-section-h2">{subtitle}</h2>
-  <p class="tech-section-intro">{content}</p>
+  {content && <p class="tech-section-intro">{content}</p>}
 
   <slot />
 </section>

@@ -13,6 +13,7 @@ import HeroBanner from "@/v2/components/features/technology/HeroBanner.astro";
 import ArchitectureSection from "@/v2/components/features/technology/ArchitectureSection.astro";
 import CryptographySection from "@/v2/components/features/technology/CryptographySection.astro";
 import ScalabilitySection from "@/v2/components/features/technology/ScalabilitySection.astro";
+import ConsensusSection from "@/v2/components/features/technology/ConsensusSection.astro";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
@@ -34,4 +35,5 @@ const jsonLd = JsonLdGraph({
   <ArchitectureSection />
   <CryptographySection />
   <ScalabilitySection />
+  <ConsensusSection />
 </Layout>

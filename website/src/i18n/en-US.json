@@ -278,7 +278,11 @@
           "sub": "vs raw post-quantum transactions with ZK proof aggregation"
         },
         "description": "Thousands of transactions. One compact proof. Verified on-chain."
-        }
+      },
+      "consensus": {
+        "title": "Consensus",
+        "subtitle": "Proof-of-Work. Built for ZK.",
+        "body": "Quantus uses Proof-of-Work consensus - the same battle-tested model as Bitcoin. One change: the hash function is optimized for zero-knowledge proof systems, making Quantus's ZK infrastructure natively efficient rather than bolted on."
       }
     },
     "footer": {
