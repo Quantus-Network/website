@@ -138,6 +138,31 @@
             }
           }
         }
+      },
+      "ecosystem": {
+        "eyebrow": "The Ecosystem",
+        "headline": "One chain. Three entry points.",
+        "cards": {
+          "wallet": {
+            "label": "Wallet",
+            "description": "Your quantum-secure key to the Quantus network. Available on iOS and Android.",
+            "beta": "Public Beta Live",
+            "app_store": "App Store",
+            "google_play": "Google Play"
+          },
+          "technology": {
+            "label": "Technology",
+            "description": "Post-quantum cryptography, engineered from first principles.",
+            "nist_badge": "NIST FIPS 204",
+            "whitepaper_cta": "Read Whitepaper"
+          },
+          "network": {
+            "label": "Network",
+            "description": "A live peer-to-peer quantum-secure network.",
+            "validators": "247 Active Validators",
+            "explorer_cta": "View Explorer"
+          }
+        }
       }
     },
     "footer": {

@@ -13,6 +13,7 @@ import TerminalLoader from "@/v2/components/features/home/TerminalLoader.astro";
 import HeroBanner from "@/v2/components/features/home/HeroBanner.astro";
 import ProblemSection from "@/v2/components/features/home/ProblemSection.astro";
 import SolutionSection from "@/v2/components/features/home/SolutionSection.astro";
+import EcosystemSection from "@/v2/components/features/home/EcosystemSection.astro";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
@@ -34,4 +35,5 @@ const jsonLd = JsonLdGraph({
   <HeroBanner />
   <ProblemSection />
   <SolutionSection />
+  <EcosystemSection />
 </Layout>
