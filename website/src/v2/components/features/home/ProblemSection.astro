@@ -1,3 +1,10 @@
+---
+import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
+---
+
 <section id="problem">
   <div class="prob-frame">
     <div class="corner tl"></div>
@@ -7,59 +14,96 @@
 
     <!-- TOP ROW -->
     <div class="prob-top-row">
-      <div class="prob-eyebrow">The Threat Is Real</div>
+      <div class="prob-eyebrow">
+        {t("v2.home.problem.eyebrow")}
+      </div>
       <div class="prob-status">
         <div class="prob-status-dot"></div>
-        <span class="prob-status-label">Threat Level: Critical</span>
+        <span class="prob-status-label">
+          {t("v2.home.problem.status_label")}
+        </span>
       </div>
     </div>
 
     <!-- HEADLINE ROW -->
     <div class="prob-headline-row">
-      <h2 class="prob-h2">$3 trillion in crypto. Zero quantum defense.</h2>
+      <h2 class="prob-h2">
+        {t("v2.home.problem.headline")}
+      </h2>
     </div>
 
     <!-- DATA ROW 1: qubits stat -->
     <div class="prob-data-row1">
-      <span class="cell-label">Qubits to Break Bitcoin</span>
-      <span class="cell-num">2,400</span>
-      <span class="cell-sub"
-        >logical qubits required for a cryptographically relevant quantum
-        computer</span
-      >
+      <span class="cell-label">
+        {t("v2.home.problem.qubits.label")}
+      </span>
+      <span class="cell-num">
+        {t("v2.home.problem.qubits.value")}
+      </span>
+      <span class="cell-sub">
+        {t("v2.home.problem.qubits.sub")}
+      </span>
     </div>
 
     <!-- DATA ROW 2: chain grid -->
     <div class="prob-data-row2">
       <div class="prob-chain-cell">
-        <span class="cell-chain">Bitcoin</span>
-        <span class="cell-enc">ECDSA-256</span>
-        <span class="cell-tag vuln">Vulnerable</span>
+        <span class="cell-chain">
+          {t("v2.home.problem.chains.bitcoin.name")}
+        </span>
+        <span class="cell-enc">
+          {t("v2.home.problem.chains.bitcoin.enc")}
+        </span>
+        <span class="cell-tag vuln">
+          {t("v2.home.problem.tags.vulnerable")}
+        </span>
       </div>
       <div class="prob-chain-cell">
-        <span class="cell-chain">Ethereum</span>
-        <span class="cell-enc">ECDSA-256</span>
-        <span class="cell-tag vuln">Vulnerable</span>
+        <span class="cell-chain">
+          {t("v2.home.problem.chains.ethereum.name")}
+        </span>
+        <span class="cell-enc">
+          {t("v2.home.problem.chains.ethereum.enc")}
+        </span>
+        <span class="cell-tag vuln">
+          {t("v2.home.problem.tags.vulnerable")}
+        </span>
       </div>
       <div class="prob-chain-cell">
-        <span class="cell-chain">Solana</span>
-        <span class="cell-enc">ED25519</span>
-        <span class="cell-tag vuln">Vulnerable</span>
+        <span class="cell-chain">
+          {t("v2.home.problem.chains.solana.name")}
+        </span>
+        <span class="cell-enc">
+          {t("v2.home.problem.chains.solana.enc")}
+        </span>
+        <span class="cell-tag vuln">
+          {t("v2.home.problem.tags.vulnerable")}
+        </span>
       </div>
       <div class="prob-chain-cell">
-        <span class="cell-chain">Quantus</span>
-        <span class="cell-enc">ML-DSA</span>
-        <span class="cell-enc">DILITHIUM-5</span>
-        <span class="cell-tag secure">Secure</span>
-        <span class="cell-note">NIST FIPS 204</span>
+        <span class="cell-chain">
+          {t("v2.home.problem.chains.quantus.name")}
+        </span>
+        <span class="cell-enc">
+          {t("v2.home.problem.chains.quantus.enc_primary")}
+        </span>
+        <span class="cell-enc">
+          {t("v2.home.problem.chains.quantus.enc_secondary")}
+        </span>
+        <span class="cell-tag secure">
+          {t("v2.home.problem.tags.secure")}
+        </span>
+        <span class="cell-note">
+          {t("v2.home.problem.chains.quantus.note")}
+        </span>
       </div>
     </div>
 
     <!-- BOTTOM ROW -->
     <div class="prob-bottom-row">
-      <span class="prob-source"
-        >Source: NIST Post-Quantum Cryptography Standardization · 2024</span
-      >
+      <span class="prob-source">
+        {t("v2.home.problem.source")}
+      </span>
     </div>
   </div>
 </section>

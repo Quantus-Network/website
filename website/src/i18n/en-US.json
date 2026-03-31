@@ -46,6 +46,41 @@
           "validators": "VALIDATORS",
           "mainnet": "MAINNET: ??"
         }
+      },
+      "problem": {
+        "eyebrow": "The Threat Is Real",
+        "status_label": "Threat Level: Critical",
+        "headline": "$3 trillion in crypto. Zero quantum defense.",
+        "qubits": {
+          "label": "Qubits to Break Bitcoin",
+          "value": "2,400",
+          "sub": "logical qubits required for a cryptographically relevant quantum computer"
+        },
+        "chains": {
+          "bitcoin": {
+            "name": "Bitcoin",
+            "enc": "ECDSA-256"
+          },
+          "ethereum": {
+            "name": "Ethereum",
+            "enc": "ECDSA-256"
+          },
+          "solana": {
+            "name": "Solana",
+            "enc": "ED25519"
+          },
+          "quantus": {
+            "name": "Quantus",
+            "enc_primary": "ML-DSA",
+            "enc_secondary": "DILITHIUM-5",
+            "note": "NIST FIPS 204"
+          }
+        },
+        "tags": {
+          "vulnerable": "Vulnerable",
+          "secure": "Secure"
+        },
+        "source": "Source: NIST Post-Quantum Cryptography Standardization · 2024"
       }
     },
     "footer": {
