@@ -233,6 +233,40 @@
             "body": "Post-quantum signatures are larger than classical ones. We solved that with a zero-knowledge proof system that compresses thousands of transactions into a single verifiable proof - without sacrificing security."
           }
         }
+      },
+      "cryptography": {
+        "title": "Cryptography",
+        "subtitle": "The standard quantum can't break.",
+        "content": "In 2024, NIST finalized its post-quantum cryptography standards. Quantus was already building with them.",
+        "columns": {
+          "meaning": {
+            "title": "What This Means",
+            "body": "Classical blockchains use elliptic curve cryptography. A sufficiently powerful quantum computer can break it - deriving private keys from public ones, forging transactions, stealing funds. ML-DSA, the algorithm Quantus uses, has no known quantum vulnerability. Its security is based on a class of mathematical problems that quantum computers cannot solve efficiently."
+          },
+          "urgency": {
+            "title": "Why It Matters Now",
+            "body": "Quantum computers capable of breaking today's blockchains don't exist yet. But harvesting attacks do - adversaries collecting encrypted data today to decrypt later. The window to migrate is closing. Quantus doesn't need to migrate. It was already there."
+          }
+        },
+        "table": {
+          "headers": {
+            "ecdsa": "ECDSA",
+            "mldsa": "ML-DSA"
+          },
+          "rows": {
+            "quantum_resistant": "Quantum Resistant",
+            "nist_approved": "NIST Approved",
+            "security_level": "Security Level",
+            "signature_scheme": "Signature Scheme",
+            "shor_vulnerable": "Vulnerable to Shor's Algorithm"
+          },
+          "values": {
+            "ecdsa_security": "NIST Level 1",
+            "mldsa_security": "NIST Level 5",
+            "ecdsa_scheme": "Elliptic Curve",
+            "mldsa_scheme": "Module Lattice"
+          }
+        }
       }
     },
     "footer": {

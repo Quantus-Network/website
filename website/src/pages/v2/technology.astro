@@ -11,6 +11,7 @@ import {
 } from "@/constants/default-jsonld";
 import HeroBanner from "@/v2/components/features/technology/HeroBanner.astro";
 import ArchitectureSection from "@/v2/components/features/technology/ArchitectureSection.astro";
+import CryptographySection from "@/v2/components/features/technology/CryptographySection.astro";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
@@ -30,4 +31,5 @@ const jsonLd = JsonLdGraph({
 <Layout {...metadata} jsonLd={jsonLd}>
   <HeroBanner />
   <ArchitectureSection />
+  <CryptographySection />
 </Layout>
