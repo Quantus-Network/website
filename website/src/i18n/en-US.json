@@ -283,6 +283,12 @@
         "title": "Consensus",
         "subtitle": "Proof-of-Work. Built for ZK.",
         "body": "Quantus uses Proof-of-Work consensus - the same battle-tested model as Bitcoin. One change: the hash function is optimized for zero-knowledge proof systems, making Quantus's ZK infrastructure natively efficient rather than bolted on."
+      },
+      "cta": {
+        "title": "The full technical picture.",
+        "sub": "Protocol architecture, cryptographic assumptions, and the complete security model - in the Quantus whitepaper.",
+        "primary_cta": "Read Whitepaper",
+        "secondary_cta": "Explore Network"
       }
     },
     "footer": {

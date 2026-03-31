@@ -14,6 +14,7 @@ import ArchitectureSection from "@/v2/components/features/technology/Architectur
 import CryptographySection from "@/v2/components/features/technology/CryptographySection.astro";
 import ScalabilitySection from "@/v2/components/features/technology/ScalabilitySection.astro";
 import ConsensusSection from "@/v2/components/features/technology/ConsensusSection.astro";
+import CtaSection from "@/v2/components/features/technology/CtaSection.astro";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
@@ -36,4 +37,5 @@ const jsonLd = JsonLdGraph({
   <CryptographySection />
   <ScalabilitySection />
   <ConsensusSection />
+  <CtaSection />
 </Layout>
