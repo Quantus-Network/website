@@ -81,6 +81,63 @@
           "secure": "Secure"
         },
         "source": "Source: NIST Post-Quantum Cryptography Standardization · 2024"
+      },
+      "solution": {
+        "eyebrow": "Why Quantus",
+        "typewriter_text": "Quantus is a Layer 1 blockchain built from the ground up with post-quantum cryptography at every layer. Signatures, P2P communications, SSH keys. Not a patch on existing infrastructure. A clean-slate protocol designed for the world that's coming.",
+        "pillars": {
+          "pqc": {
+            "title": "Post-Quantum Cryptography",
+            "specs": {
+              "algorithm": {
+                "label": "Algorithm",
+                "value": "ML-DSA / Dilithium-5"
+              },
+              "standard": {
+                "label": "Standard",
+                "value": "NIST FIPS 204"
+              },
+              "layer": {
+                "label": "Layer",
+                "value": "Signatures · P2P · SSH"
+              }
+            }
+          },
+          "zk": {
+            "title": "Recursive ZK Proofs",
+            "specs": {
+              "type": {
+                "label": "Type",
+                "value": "Recursive STARKs"
+              },
+              "purpose": {
+                "label": "Purpose",
+                "value": "Scalability"
+              },
+              "throughput": {
+                "label": "Throughput",
+                "value": "4,200 TPS"
+              }
+            }
+          },
+          "arch": {
+            "title": "Clean-Slate Architecture",
+            "specs": {
+              "type": {
+                "label": "Type",
+                "value": "Layer 1"
+              },
+              "approach": {
+                "label": "Approach",
+                "value": "Ground-up build"
+              },
+              "migration": {
+                "label": "Migration",
+                "value": "Not required"
+              }
+            }
+          }
+        }
       }
     },
     "footer": {
