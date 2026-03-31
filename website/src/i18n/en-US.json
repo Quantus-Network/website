@@ -189,6 +189,23 @@
             "cta": "Watch on YouTube"
           }
         }
+      },
+      "newsletter": {
+        "headline": "The window is open.",
+        "sub": "Get quantum security updates, protocol news, and early access straight to your inbox.",
+        "first_name_placeholder": "First name",
+        "first_name_aria": "First name",
+        "last_name_placeholder": "Last name",
+        "last_name_aria": "Last name",
+        "email_placeholder": "Enter your email",
+        "email_aria": "Email address",
+        "submit_label": "SUBSCRIBE",
+        "error_message": "Please fill in all fields with a valid email address.",
+        "fine_print": "No spam. Unsubscribe anytime.",
+        "success": {
+          "headline": "You're in.",
+          "sub": "We'll keep you ahead of the curve."
+        }
       }
     },
     "footer": {
