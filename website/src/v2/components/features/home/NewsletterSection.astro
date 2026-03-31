@@ -330,7 +330,8 @@ const t = await createTranslator(locale);
   const errorMsg = document.getElementById("nl-error")!;
   const formWrap = document.getElementById("newsletter-form-wrap")!;
   const successWrap = document.getElementById("newsletter-success")!;
-  if (!submitBtn) return;
+
+  if (!submitBtn) throw new Error("Submit button not found");
 
   function isValidEmail(val: string) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);

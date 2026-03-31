@@ -7,6 +7,7 @@ import {
 } from "@/utils/i18n";
 import { SITE_NAVIGATIONS } from "@/v2/constants/site-navigations";
 import Button from "../../ui/Button.astro";
+import { applyStyles } from "@/utils/apply-styles";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
@@ -14,7 +15,7 @@ const t = await createTranslator(locale);
 
 <nav
   id="navbar"
-  class="bg-navbar border-border px-content-edges-mobile lg:px-content-edges [&.scrolled]:bg-navbar-scrolled] fixed top-0 right-0 left-0 z-1000 flex items-center justify-between border-b py-4 opacity-0 backdrop-blur-xs transition-all duration-500 ease-in-out lg:py-5 [&.scrolled]:backdrop-blur-md [&.visible]:opacity-100"
+  class="bg-navbar border-border px-content-edges-mobile lg:px-content-edges [&.scrolled]:bg-navbar-scrolled fixed top-0 right-0 left-0 z-1000 flex items-center justify-between border-b py-4 opacity-0 backdrop-blur-xs transition-all duration-500 ease-in-out lg:py-5 [&.scrolled]:backdrop-blur-md [&.visible]:opacity-100"
 >
   <a href={getLocalizedPath(locale, "/")} class="block leading-none">
     <LogoLong class="block h-[26px] w-auto" />
@@ -28,7 +29,9 @@ const t = await createTranslator(locale);
         <li>
           <a
             href={getLocalizedPath(locale, item.href)}
-            class="after:bg-flare font-navbar-link text-muted relative no-underline transition-all duration-200 ease-in-out after:absolute after:bottom-[-2px] after:left-0 after:h-px after:w-0 after:transition-all after:duration-250 after:content-[''] hover:text-white hover:opacity-100 hover:after:w-full [&.nav-active]:text-white [&.nav-active]:after:bottom-[-4px] [&.nav-active]:after:h-[2px] [&.nav-active]:after:w-full"
+            class={applyStyles(
+              "after:bg-flare font-navbar-link text-muted relative no-underline transition-all duration-200 ease-in-out after:absolute after:bottom-[-2px] after:left-0 after:h-px after:w-0 after:transition-all after:duration-250 after:content-[''] hover:text-white hover:opacity-100 hover:after:w-full [&.nav-active]:text-white [&.nav-active]:after:bottom-[-4px] [&.nav-active]:after:h-[2px] [&.nav-active]:after:w-full",
+            )}
           >
             {t(item.label)}
           </a>
@@ -181,17 +184,6 @@ const t = await createTranslator(locale);
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closeMenu();
   });
-
-  const nav = document.getElementById("navbar") as HTMLElement;
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > window.innerHeight * 0.5) {
-      nav.classList.add("scrolled");
-    } else {
-      nav.classList.remove("scrolled");
-    }
-  });
-
-  setTimeout(() => nav.classList.add("visible"), 100);
 </script>
 
 <script>
@@ -204,4 +196,59 @@ const t = await createTranslator(locale);
       (el as HTMLAnchorElement).href = walletLink;
     });
   });
+</script>
+
+<script>
+  import { getLocaleFromUrl, getLocalizedPath } from "@/utils/i18n";
+
+  const locale = getLocaleFromUrl(location.pathname);
+
+  const updateLinkStatus = (link: HTMLAnchorElement, isActive: boolean) => {
+    if (isActive) {
+      link.classList.add("nav-active");
+      link.setAttribute("aria-current", "page");
+    } else {
+      link.classList.remove("nav-active");
+      link.removeAttribute("aria-current");
+    }
+  };
+
+  const checkIsActive = (link: HTMLAnchorElement) => {
+    const linkPath = new URL(link.href).pathname + new URL(link.href).hash;
+    const currentPath = location.pathname + location.hash;
+    return currentPath === getLocalizedPath(locale, linkPath);
+  };
+
+  const nav = document.getElementById("navbar") as HTMLElement;
+  const links = nav?.querySelectorAll("a");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > window.innerHeight * 0.5) {
+      nav.classList.add("scrolled");
+    } else {
+      nav.classList.remove("scrolled");
+    }
+  });
+
+  links?.forEach((link) => {
+    updateLinkStatus(link, checkIsActive(link));
+
+    link.addEventListener("click", () => {
+      // Small timeout to allow hash change if it's an anchor
+      setTimeout(() => {
+        links.forEach((val) => {
+          updateLinkStatus(val, checkIsActive(val));
+        });
+      }, 0);
+    });
+  });
+
+  // Also handle hashchange for anchor links
+  window.addEventListener("hashchange", () => {
+    links?.forEach((link) => {
+      updateLinkStatus(link, checkIsActive(link));
+    });
+  });
+
+  setTimeout(() => nav.classList.add("visible"), 100);
 </script>

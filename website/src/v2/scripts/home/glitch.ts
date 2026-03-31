@@ -1,8 +1,7 @@
-const GLITCH_CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%&?";
-const mainnetEl = document.getElementById("ticker-mainnet")!;
-const mainnetReal = "MAINNET: Q2 2026";
-
-const glitchLoop = (el: HTMLElement, real: string) => {
+export const startGlitchLoop = () => {
+  const GLITCH_CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%&?";
+  const el = document.getElementById("ticker-mainnet")!;
+  const real = "MAINNET: Q2 2026";
   const staticPart = "MAINNET: ";
   const glitchPart = "Q2 2026";
   let frame = 0;
@@ -33,8 +32,4 @@ const glitchLoop = (el: HTMLElement, real: string) => {
     }, 30);
   };
   nextCycle();
-};
-
-export const startGlitchLoop = () => {
-  glitchLoop(mainnetEl, mainnetReal);
 };

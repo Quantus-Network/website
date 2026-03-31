@@ -352,6 +352,7 @@ const t = await createTranslator(locale);
 </style>
 
 <script>
+  import { startGlitchLoop } from "@/v2/scripts/home/glitch";
   import {
     calcHeroDims,
     heroLoop,
@@ -362,6 +363,7 @@ const t = await createTranslator(locale);
   calcHeroDims();
   heroLoop();
   buildTicker();
+  startGlitchLoop();
 
   window.addEventListener("resize", calcHeroDims);
   window.addEventListener("mousemove", updateMousePosition);
