@@ -14,6 +14,7 @@ import HeroBanner from "@/v2/components/features/home/HeroBanner.astro";
 import ProblemSection from "@/v2/components/features/home/ProblemSection.astro";
 import SolutionSection from "@/v2/components/features/home/SolutionSection.astro";
 import EcosystemSection from "@/v2/components/features/home/EcosystemSection.astro";
+import CommunitySection from "@/v2/components/features/home/CommunitySection.astro";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
@@ -36,4 +37,5 @@ const jsonLd = JsonLdGraph({
   <ProblemSection />
   <SolutionSection />
   <EcosystemSection />
+  <CommunitySection />
 </Layout>

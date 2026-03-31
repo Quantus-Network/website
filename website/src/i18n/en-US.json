@@ -163,6 +163,32 @@
             "explorer_cta": "View Explorer"
           }
         }
+      },
+      "community": {
+        "eyebrow": "Community",
+        "headline": "The people building the quantum-secure future.",
+        "cards": {
+          "telegram": {
+            "label": "Telegram",
+            "description": "Join the conversation",
+            "cta": "Join Telegram"
+          },
+          "x": {
+            "label": "X",
+            "description": "Follow for updates",
+            "cta": "Follow on X"
+          },
+          "instagram": {
+            "label": "Instagram",
+            "description": "Behind the scenes",
+            "cta": "Follow on IG"
+          },
+          "youtube": {
+            "label": "YouTube",
+            "description": "Watch and learn",
+            "cta": "Watch on YouTube"
+          }
+        }
       }
     },
     "footer": {
