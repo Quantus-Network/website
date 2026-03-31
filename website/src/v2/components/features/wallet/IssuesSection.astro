@@ -1,0 +1,134 @@
+---
+import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
+---
+
+<section id="wallet-why">
+  <div class="wallet-divider"></div>
+  <div class="wallet-why-inner">
+    <span class="wallet-section-eyebrow wallet-animate" data-delay="0">
+      {t("v2.wallet.issues.eyebrow")}
+    </span>
+    <h2
+      class="wallet-section-h2 wallet-why-h2 wallet-animate"
+      data-delay="0.15"
+    >
+      {t("v2.wallet.issues.heading")}
+    </h2>
+    <p class="wallet-why-body wallet-animate" data-delay="0.3">
+      {t("v2.wallet.issues.body")}
+    </p>
+    <div class="wallet-stat-bar">
+      <div class="wallet-stat-col wallet-animate" data-delay="0">
+        <span class="wallet-stat-num">
+          {t("v2.wallet.issues.stats.tps.value")}
+        </span>
+        <span class="wallet-stat-label">
+          {t("v2.wallet.issues.stats.tps.label")}
+        </span>
+      </div>
+      <div class="wallet-stat-col wallet-animate" data-delay="0.15">
+        <span class="wallet-stat-num">
+          {t("v2.wallet.issues.stats.security.value")}
+        </span>
+        <span class="wallet-stat-label">
+          {t("v2.wallet.issues.stats.security.label")}
+        </span>
+      </div>
+      <div class="wallet-stat-col wallet-animate" data-delay="0.3">
+        <span class="wallet-stat-num">
+          {t("v2.wallet.issues.stats.migration.value")}
+        </span>
+        <span class="wallet-stat-label">
+          {t("v2.wallet.issues.stats.migration.label")}
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  #wallet-why {
+    background: #0e0e0e;
+    position: relative;
+    z-index: 50;
+    padding: 0 52px 48px;
+  }
+
+  .wallet-why-inner {
+    padding-top: 80px;
+  }
+
+  .wallet-why-h2 {
+    font-size: 48px;
+    max-width: 680px;
+    margin-top: 16px;
+  }
+
+  .wallet-why-body {
+    font-family: "Geist", sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    color: rgba(232, 230, 224, 0.65);
+    max-width: 640px;
+    margin-top: 28px;
+  }
+
+  .wallet-stat-bar {
+    margin-top: 64px;
+    border: 1px solid rgba(232, 230, 224, 0.08);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .wallet-stat-col {
+    padding: 40px 36px;
+    border-right: 1px solid rgba(232, 230, 224, 0.08);
+  }
+  .wallet-stat-col:last-child {
+    border-right: none;
+  }
+
+  .wallet-stat-num {
+    font-family: "Geist Mono", monospace;
+    font-size: 48px;
+    font-weight: 500;
+    color: #ff6b35;
+    display: block;
+    line-height: 1;
+  }
+
+  .wallet-stat-label {
+    font-family: "Geist Mono", monospace;
+    font-size: 11px;
+    color: rgba(232, 230, 224, 0.35);
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    display: block;
+    margin-top: 12px;
+  }
+
+  @media (max-width: 768px) {
+    #wallet-why {
+      padding: 80px 24px 48px;
+    }
+    .wallet-why-h2 {
+      font-size: clamp(26px, 7vw, 38px);
+    }
+    .wallet-stat-bar {
+      grid-template-columns: 1fr;
+    }
+    .wallet-stat-col {
+      border-right: none;
+      border-bottom: 1px solid rgba(232, 230, 224, 0.08);
+    }
+    .wallet-stat-col:last-child {
+      border-bottom: none;
+    }
+    .wallet-stat-num {
+      font-size: 36px;
+    }
+  }
+</style>

@@ -325,6 +325,25 @@
             "body": "Every transaction on Quantus is signed with ML-DSA, a NIST-approved post-quantum algorithm. Your funds are encrypted at the protocol level, not the app level. No patch. No migration. Already there."
           }
         }
+      },
+      "issues": {
+        "eyebrow": "WHY IT MATTERS",
+        "heading": "Your wallet today. Still safe when quantum arrives.",
+        "body": "Most crypto users will not know when quantum computers become a real threat. By then, migrating to a secure wallet will be chaotic, slow, and expensive. The Quantus wallet means you do not have to think about it. You are already on the right side of the shift.",
+        "stats": {
+          "tps": {
+            "value": "4,200",
+            "label": "TPS ON QUANTUS"
+          },
+          "security": {
+            "value": "NIST 5",
+            "label": "SECURITY LEVEL"
+          },
+          "migration": {
+            "value": "0",
+            "label": "MIGRATION REQUIRED"
+          }
+        }
       }
     },
     "footer": {
