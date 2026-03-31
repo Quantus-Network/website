@@ -11,6 +11,7 @@ import {
 } from "@/constants/default-jsonld";
 import TerminalLoader from "@/v2/components/features/home/TerminalLoader.astro";
 import HeroBanner from "@/v2/components/features/home/HeroBanner.astro";
+import ProblemSection from "@/v2/components/features/home/ProblemSection.astro";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
@@ -30,4 +31,5 @@ const jsonLd = JsonLdGraph({
 <Layout {...metadata} jsonLd={jsonLd}>
   <TerminalLoader />
   <HeroBanner />
+  <ProblemSection />
 </Layout>

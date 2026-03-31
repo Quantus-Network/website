@@ -1,0 +1,423 @@
+<section id="problem">
+  <div class="prob-frame">
+    <div class="corner tl"></div>
+    <div class="corner tr"></div>
+    <div class="corner bl"></div>
+    <div class="corner br"></div>
+
+    <!-- TOP ROW -->
+    <div class="prob-top-row">
+      <div class="prob-eyebrow">The Threat Is Real</div>
+      <div class="prob-status">
+        <div class="prob-status-dot"></div>
+        <span class="prob-status-label">Threat Level: Critical</span>
+      </div>
+    </div>
+
+    <!-- HEADLINE ROW -->
+    <div class="prob-headline-row">
+      <h2 class="prob-h2">$3 trillion in crypto. Zero quantum defense.</h2>
+    </div>
+
+    <!-- DATA ROW 1: qubits stat -->
+    <div class="prob-data-row1">
+      <span class="cell-label">Qubits to Break Bitcoin</span>
+      <span class="cell-num">2,400</span>
+      <span class="cell-sub"
+        >logical qubits required for a cryptographically relevant quantum
+        computer</span
+      >
+    </div>
+
+    <!-- DATA ROW 2: chain grid -->
+    <div class="prob-data-row2">
+      <div class="prob-chain-cell">
+        <span class="cell-chain">Bitcoin</span>
+        <span class="cell-enc">ECDSA-256</span>
+        <span class="cell-tag vuln">Vulnerable</span>
+      </div>
+      <div class="prob-chain-cell">
+        <span class="cell-chain">Ethereum</span>
+        <span class="cell-enc">ECDSA-256</span>
+        <span class="cell-tag vuln">Vulnerable</span>
+      </div>
+      <div class="prob-chain-cell">
+        <span class="cell-chain">Solana</span>
+        <span class="cell-enc">ED25519</span>
+        <span class="cell-tag vuln">Vulnerable</span>
+      </div>
+      <div class="prob-chain-cell">
+        <span class="cell-chain">Quantus</span>
+        <span class="cell-enc">ML-DSA</span>
+        <span class="cell-enc">DILITHIUM-5</span>
+        <span class="cell-tag secure">Secure</span>
+        <span class="cell-note">NIST FIPS 204</span>
+      </div>
+    </div>
+
+    <!-- BOTTOM ROW -->
+    <div class="prob-bottom-row">
+      <span class="prob-source"
+        >Source: NIST Post-Quantum Cryptography Standardization · 2024</span
+      >
+    </div>
+  </div>
+</section>
+
+<style>
+  #problem {
+    position: relative;
+    z-index: 50;
+    background: #0e0e0e;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 0;
+    opacity: 0;
+    transform: translateY(50px);
+    transition:
+      opacity 0.9s ease,
+      transform 0.9s ease;
+  }
+  #problem.vis {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Frame container */
+  .prob-frame {
+    position: relative;
+    margin: 0 52px;
+    border: 1px solid rgba(232, 230, 224, 0.08);
+  }
+
+  /* Corner bracket markers */
+  .corner {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    z-index: 10;
+  }
+  .corner.tl {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 20px;
+    height: 20px;
+    border-top: 1px solid rgba(232, 230, 224, 0.35);
+    border-left: 1px solid rgba(232, 230, 224, 0.35);
+    z-index: 10;
+  }
+  .corner.tr {
+    top: -1px;
+    right: -1px;
+    border-top: 1px solid rgba(232, 230, 224, 0.35);
+    border-right: 1px solid rgba(232, 230, 224, 0.35);
+  }
+  .corner.bl {
+    bottom: -1px;
+    left: -1px;
+    border-bottom: 1px solid rgba(232, 230, 224, 0.35);
+    border-left: 1px solid rgba(232, 230, 224, 0.35);
+  }
+  .corner.br {
+    bottom: -1px;
+    right: -1px;
+    border-bottom: 1px solid rgba(232, 230, 224, 0.35);
+    border-right: 1px solid rgba(232, 230, 224, 0.35);
+  }
+
+  /* Row animation base */
+  .prob-top-row,
+  .prob-headline-row,
+  .prob-data-row1,
+  .prob-data-row2,
+  .prob-bottom-row {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  #problem.vis .prob-top-row {
+    opacity: 1;
+    transform: none;
+    transition:
+      opacity 0.6s ease 0s,
+      transform 0.6s ease 0s;
+  }
+  #problem.vis .prob-headline-row {
+    opacity: 1;
+    transform: none;
+    transition:
+      opacity 0.6s ease 0.2s,
+      transform 0.6s ease 0.2s;
+  }
+  #problem.vis .prob-data-row1 {
+    opacity: 1;
+    transform: none;
+    transition:
+      opacity 0.6s ease 0.35s,
+      transform 0.6s ease 0.35s;
+  }
+  #problem.vis .prob-data-row2 {
+    opacity: 1;
+    transform: none;
+    transition:
+      opacity 0.6s ease 0.5s,
+      transform 0.6s ease 0.5s;
+  }
+  #problem.vis .prob-bottom-row {
+    opacity: 1;
+    transform: none;
+    transition:
+      opacity 0.6s ease 0.65s,
+      transform 0.6s ease 0.65s;
+  }
+
+  /* TOP ROW */
+  .prob-top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 28px;
+    border-bottom: 1px solid rgba(232, 230, 224, 0.08);
+    background: none;
+  }
+  .prob-eyebrow {
+    font-family: "Geist Mono", monospace;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(232, 230, 224, 0.35);
+  }
+  .prob-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .prob-status-dot {
+    width: 4px;
+    height: 4px;
+    background: #4ade80;
+    border-radius: 50%;
+    flex-shrink: 0;
+    animation: pd 2s ease infinite;
+  }
+  .prob-status-label {
+    font-family: "Geist Mono", monospace;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(232, 230, 224, 0.35);
+  }
+
+  /* HEADLINE ROW */
+  .prob-headline-row {
+    padding: 52px 28px 48px;
+  }
+  .prob-h2 {
+    font-family: "Geist", sans-serif;
+    font-size: 52px;
+    font-weight: 500;
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+  }
+
+  /* DATA ROW 1 — qubits stat */
+  .prob-data-row1 {
+    padding: 28px;
+    border-top: 1px solid rgba(232, 230, 224, 0.08);
+    border-bottom: 1px solid rgba(232, 230, 224, 0.08);
+  }
+  .prob-data-row1 .cell-label {
+    font-family: "Geist Mono", monospace;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(232, 230, 224, 0.3);
+    display: block;
+    margin-bottom: 10px;
+  }
+  .prob-data-row1 .cell-num {
+    font-family: "Geist Mono", monospace;
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 1;
+    color: #ff6b35;
+    display: block;
+  }
+  .prob-data-row1 .cell-sub {
+    font-family: "Geist Mono", monospace;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(232, 230, 224, 0.25);
+    margin-top: 8px;
+    display: block;
+  }
+
+  /* DATA ROW 2 — chain grid */
+  .prob-data-row2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .prob-chain-cell {
+    padding: 28px;
+    border-right: 1px solid rgba(232, 230, 224, 0.08);
+  }
+  .prob-chain-cell:last-child {
+    border-right: none;
+  }
+
+  .cell-chain {
+    font-family: "Geist Mono", monospace;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(232, 230, 224, 0.35);
+    display: block;
+    margin-bottom: 14px;
+  }
+  .cell-enc {
+    font-family: "Geist Mono", monospace;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1;
+    color: rgba(232, 230, 224, 0.8);
+    display: block;
+  }
+  .cell-tag {
+    font-family: "Geist Mono", monospace;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    display: inline-block;
+    margin-top: 14px;
+  }
+  .cell-tag.vuln {
+    background: rgba(255, 107, 53, 0.1);
+    color: #ff6b35;
+  }
+  .cell-tag.secure {
+    background: rgba(74, 222, 128, 0.1);
+    color: #4ade80;
+  }
+  .cell-note {
+    font-family: "Geist Mono", monospace;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(232, 230, 224, 0.2);
+    margin-top: 8px;
+    display: block;
+  }
+
+  /* BOTTOM ROW */
+  .prob-bottom-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(232, 230, 224, 0.08);
+    padding: 16px 28px;
+  }
+  .prob-source {
+    font-family: "Geist Mono", monospace;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(232, 230, 224, 0.2);
+  }
+
+  @media (max-width: 768px) {
+    .prob-frame {
+      margin: 0 16px;
+    }
+
+    .prob-h2 {
+      font-size: 28px;
+    }
+
+    .prob-headline-row {
+      padding: 32px 20px;
+    }
+
+    .prob-data-row1 {
+      padding: 20px;
+    }
+
+    .prob-data-row1 .cell-num {
+      font-size: 40px;
+    }
+
+    .prob-data-row2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .prob-chain-cell:nth-child(2) {
+      border-right: none;
+    }
+
+    .prob-chain-cell:nth-child(3) {
+      border-top: 1px solid rgba(232, 230, 224, 0.08);
+      border-right: 1px solid rgba(232, 230, 224, 0.08);
+    }
+
+    .prob-chain-cell:nth-child(4) {
+      border-top: 1px solid rgba(232, 230, 224, 0.08);
+      border-right: none;
+    }
+
+    .prob-chain-cell {
+      padding: 16px;
+    }
+
+    .cell-enc {
+      font-size: 16px;
+    }
+
+    .cell-tag {
+      font-size: 10px;
+      padding: 3px 7px;
+    }
+
+    .prob-eyebrow,
+    .prob-status-label {
+      font-size: 10px;
+    }
+    .prob-status {
+      display: none;
+    }
+    .prob-source {
+      font-size: 10px;
+      letter-spacing: 0.08em;
+    }
+
+    .prob-bottom-row {
+      flex-direction: column;
+      gap: 6px;
+      align-items: flex-start;
+      padding: 12px 20px;
+    }
+  }
+</style>
+
+<script>
+  const probSection = document.getElementById("problem")!;
+  const probObs = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.intersectionRatio >= 0.15) {
+          probSection.classList.add("vis");
+          probObs.unobserve(probSection);
+        }
+      });
+    },
+    { threshold: 0.15 },
+  );
+  probObs.observe(probSection);
+</script>

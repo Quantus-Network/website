@@ -153,7 +153,10 @@ const companyPoints = t("launch.company.points") as unknown as string[];
 
         <ResponsiveLaunchCardsTable
           class="mb-4"
-          headers={[t("launch.mining.table.recipient"), t("launch.mining.table.percent")]}
+          headers={[
+            t("launch.mining.table.recipient"),
+            t("launch.mining.table.percent"),
+          ]}
           rows={miningData.map((row) => [row.recipient, row.percent])}
           labelColumn={0}
         />
