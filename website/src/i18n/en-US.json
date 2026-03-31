@@ -298,6 +298,11 @@
         "sub": "Send, receive, and secure your assets with post-quantum cryptography built into every transaction. Available on iOS and Android.",
         "cta_app_store": "Download on App Store",
         "cta_google_play": "Download on Google Play"
+      },
+      "advantage": {
+        "eyebrow": "BUILT DIFFERENTLY",
+        "heading": "Security that starts at the chain.",
+        "body": "Most wallets are only as secure as the blockchain underneath them. Every existing chain uses elliptic curve cryptography, the kind a sufficiently powerful quantum computer can break. Quantus is built differently. Post-quantum cryptography is the foundation of the chain, not a feature added on top. Your wallet inherits that security by default."
       }
     },
     "footer": {

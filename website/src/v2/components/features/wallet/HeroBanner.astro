@@ -116,6 +116,21 @@ const t = await createTranslator(locale);
   </div>
 </section>
 
+<style is:global>
+  .wallet-divider {
+    width: 0;
+    height: 1px;
+    background: #ff6b35;
+    margin-bottom: 0;
+    margin-left: -52px;
+    margin-right: -52px;
+    transition: width 0.8s ease-out;
+  }
+  .wallet-divider.expanded {
+    width: calc(100% + 104px);
+  }
+</style>
+
 <style>
   #wallet-hero {
     position: relative;

@@ -10,6 +10,7 @@ import {
   websiteJsonLd,
 } from "@/constants/default-jsonld";
 import HeroBanner from "@/v2/components/features/wallet/HeroBanner.astro";
+import AdvantageSection from "@/v2/components/features/wallet/AdvantageSection.astro";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
@@ -28,4 +29,5 @@ const jsonLd = JsonLdGraph({
 
 <Layout {...metadata} jsonLd={jsonLd}>
   <HeroBanner />
+  <AdvantageSection />
 </Layout>
