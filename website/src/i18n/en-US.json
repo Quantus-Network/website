@@ -267,6 +267,18 @@
             "mldsa_scheme": "Module Lattice"
           }
         }
+      },
+      "scalability": {
+        "title": "Scalability",
+        "subtitle": "More secure. Not slower.",
+        "content": "Post-quantum cryptography comes with a tradeoff - larger signatures mean fewer transactions per block. Every chain working on quantum security will hit this wall. Quantus already solved it.",
+        "stat": {
+          "label": "Throughput Improvement",
+          "value": "223×",
+          "sub": "vs raw post-quantum transactions with ZK proof aggregation"
+        },
+        "description": "Thousands of transactions. One compact proof. Verified on-chain."
+        }
       }
     },
     "footer": {
