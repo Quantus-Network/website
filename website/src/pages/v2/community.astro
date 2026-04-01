@@ -1,0 +1,41 @@
+---
+import Layout from "@/v2/components/layout/Layout.astro";
+import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+import { createMetadata } from "@/utils/create-metadata";
+import { JsonLdGraph } from "@/utils/build-json-ld";
+import {
+  androidAppJsonLd,
+  iosAppJsonLd,
+  organizationJsonLd,
+  websiteJsonLd,
+} from "@/constants/default-jsonld";
+import HeroBanner from "@/v2/components/features/community/HeroBanner.astro";
+import EventSection from "@/v2/components/features/community/EventSection.astro";
+import PodcastSection from "@/v2/components/features/community/PodcastSection.astro";
+import BlogSection from "@/v2/components/features/community/BlogSection.astro";
+import TelegramSection from "@/v2/components/features/community/TelegramSection.astro";
+import SocialsSection from "@/v2/components/features/community/SocialsSection.astro";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
+
+const metadata = createMetadata({
+  title: t("home.meta.title"),
+  description: t("home.meta.description"),
+  pathname: Astro.url.pathname,
+});
+
+const jsonLd = JsonLdGraph({
+  "@context": "https://schema.org",
+  "@graph": [websiteJsonLd, organizationJsonLd, iosAppJsonLd, androidAppJsonLd],
+});
+---
+
+<Layout {...metadata} jsonLd={jsonLd}>
+  <HeroBanner />
+  <EventSection />
+  <PodcastSection />
+  <BlogSection />
+  <TelegramSection />
+  <SocialsSection />
+</Layout>

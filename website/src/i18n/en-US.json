@@ -384,6 +384,72 @@
         "cta": "SEND US A MESSAGE →"
       }
     },
+    "community": {
+      "hero": {
+        "eyebrow": "COMMUNITY",
+        "heading": "The people building the quantum-secure future.",
+        "sub": "Join the Quantus community. Researchers and early adopters who understood the quantum threat before the mainstream caught up."
+      },
+      "events": {
+        "eyebrow": "EVENTS",
+        "heading": "Meet us in person.",
+        "card": {
+          "date_label": "QDAY — APRIL 2026",
+          "title": "A community event bringing together the Quantus network and quantum computing researchers.",
+          "cta": "GET NOTIFIED →",
+          "status": "DETAILS COMING SOON"
+        }
+      },
+      "podcast": {
+        "eyebrow": "PODCAST",
+        "heading": "QDay — The quantum security podcast.",
+        "body": "Hosted by Christopher Smith. Conversations at the intersection of quantum computing, blockchain security, and the future of digital finance.",
+        "cta_spotify": "LISTEN ON SPOTIFY →",
+        "cta_apple": "LISTEN ON APPLE PODCASTS →",
+        "episode": {
+          "title": "EP. 18: Is the Quantum threat really that close?",
+          "meta": "1:27:02 · 9 DAYS AGO"
+        }
+      },
+      "telegram": {
+        "eyebrow": "JOIN THE CONVERSATION",
+        "heading": "Find your corner of the community.",
+        "body": "Connect with researchers and early adopters in the Quantus Telegram community.",
+        "cta": "JOIN TELEGRAM →"
+      },
+      "socials": {
+        "eyebrow": "FOLLOW ALONG",
+        "platforms": {
+          "x": "X (TWITTER)",
+          "instagram": "INSTAGRAM",
+          "github": "GITHUB",
+          "youtube": "YOUTUBE"
+        }
+      },
+      "blog": {
+        "eyebrow": "BLOG",
+        "heading": "From the Quantus team.",
+        "sub": "Technical deep-dives, protocol updates, and perspectives on the quantum threat landscape.",
+        "posts": {
+          "post1": {
+            "date": "MAR 24",
+            "tag": "UPDATE",
+            "title": "Second Halving: 4x Faster ZK Proofs in Two Weeks"
+          },
+          "post2": {
+            "date": "MAR 16",
+            "tag": "UPDATE",
+            "title": "Quantum-Safe Signatures, ZK Scaling, and 2x Faster Wormhole Proofs"
+          },
+          "post3": {
+            "date": "MAR 07",
+            "tag": "PROTOCOL",
+            "title": "Wormhole Transactions"
+          }
+        },
+        "view_all": "READ ALL POSTS →"
+      }
+    },
     "privacy": {
       "meta": {
         "title": "Quantus Network - Privacy Policy",

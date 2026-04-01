@@ -1,0 +1,248 @@
+---
+import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
+---
+
+<section id="community-hero">
+  <div class="comm-hero-content">
+    <span class="comm-hero-eyebrow" id="comm-eyebrow">
+      {t("v2.community.hero.eyebrow")}
+    </span>
+    <h1 class="comm-hero-h1" id="comm-h1">
+      {t("v2.community.hero.heading")}
+    </h1>
+    <p class="comm-hero-sub" id="comm-sub">
+      {t("v2.community.hero.sub")}
+    </p>
+  </div>
+</section>
+
+<style>
+  #community-hero {
+    position: relative;
+    height: 100vh;
+    background: #0e0e0e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 52px;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  #community-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(
+      circle,
+      rgba(232, 230, 224, 0.12) 1px,
+      transparent 1px
+    );
+    background-size: 28px 28px;
+    -webkit-mask-image: radial-gradient(
+      ellipse 80% 80% at 50% 50%,
+      transparent 30%,
+      rgba(0, 0, 0, 0.6) 60%,
+      black 100%
+    );
+    mask-image: radial-gradient(
+      ellipse 80% 80% at 50% 50%,
+      transparent 30%,
+      rgba(0, 0, 0, 0.6) 60%,
+      black 100%
+    );
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  #community-hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 320px;
+    height: 320px;
+    background:
+      linear-gradient(to bottom, #ff6b35 1px, transparent 1px),
+      linear-gradient(to right, #ff6b35 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.06;
+    pointer-events: none;
+    z-index: 0;
+    -webkit-mask-image: radial-gradient(
+      circle at top right,
+      black 0%,
+      transparent 70%
+    );
+    mask-image: radial-gradient(circle at top right, black 0%, transparent 70%);
+  }
+
+  .comm-hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .comm-hero-eyebrow {
+    font-family: "Geist Mono", monospace;
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #ff6b35;
+    display: block;
+    opacity: 0;
+    transform: translateY(8px);
+    transition:
+      opacity 0.6s ease,
+      transform 0.6s ease;
+  }
+  .comm-hero-eyebrow.in {
+    opacity: 1;
+    transform: none;
+  }
+
+  .comm-hero-h1 {
+    font-family: "Geist", sans-serif;
+    font-size: clamp(36px, 4.2vw, 64px);
+    font-weight: 500;
+    letter-spacing: -0.025em;
+    color: #ffffff;
+    max-width: 760px;
+    margin: 20px auto 0;
+    text-align: center;
+    line-height: 1.08;
+    opacity: 0;
+    transform: translateY(8px);
+    transition:
+      opacity 0.6s ease,
+      transform 0.6s ease;
+  }
+  .comm-hero-h1.in {
+    opacity: 1;
+    transform: none;
+  }
+
+  .comm-hero-sub {
+    font-family: "Geist", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(232, 230, 224, 0.6);
+    max-width: 520px;
+    margin: 24px auto 0;
+    line-height: 1.6;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(8px);
+    transition:
+      opacity 0.6s ease,
+      transform 0.6s ease;
+  }
+  .comm-hero-sub.in {
+    opacity: 1;
+    transform: none;
+  }
+
+  @media (max-width: 768px) {
+    #community-hero {
+      padding: 100px 24px 60px;
+    }
+  }
+</style>
+
+<style is:global>
+  .comm-divider {
+    display: block;
+    height: 1px;
+    background: #ff6b35;
+    width: 0;
+    transition: width 0.8s ease-out;
+  }
+  .comm-divider.expanded {
+    width: 100%;
+  }
+
+  /* ── SECTION STRUCTURE ── */
+  .comm-section-inner {
+    padding: 80px 52px 80px;
+  }
+
+  /* ── ANIMATE ── */
+  .comm-animate {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity 0.7s ease,
+      transform 0.7s ease;
+  }
+  .comm-animate.in {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* ── SHARED EYEBROW ── */
+  .comm-eyebrow {
+    font-family: "Geist Mono", monospace;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(232, 230, 224, 0.35);
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .comm-section-inner {
+      padding: 80px 24px 80px;
+    }
+  }
+</style>
+
+<script>
+  // Hero animate
+  window.addEventListener("load", () => {
+    setTimeout(
+      () => document.getElementById("comm-eyebrow")?.classList.add("in"),
+      100,
+    );
+    setTimeout(
+      () => document.getElementById("comm-h1")?.classList.add("in"),
+      250,
+    );
+    setTimeout(
+      () => document.getElementById("comm-sub")?.classList.add("in"),
+      400,
+    );
+  });
+
+  // Dividers
+  document.querySelectorAll(".comm-divider").forEach((el) => {
+    new IntersectionObserver(
+      ([e]) => {
+        if (e.isIntersecting) {
+          el.classList.add("expanded");
+        }
+      },
+      { threshold: 0.1 },
+    ).observe(el);
+  });
+
+  // Scroll animations
+  document.querySelectorAll<HTMLElement>(".comm-animate").forEach((el) => {
+    new IntersectionObserver(
+      ([e]) => {
+        if (e.isIntersecting) {
+          el.style.transitionDelay = (el.dataset.delay || "0") + "s";
+          el.classList.add("in");
+        }
+      },
+      { threshold: 0.12 },
+    ).observe(el);
+  });
+</script>

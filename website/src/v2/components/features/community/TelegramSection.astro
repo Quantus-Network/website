@@ -1,0 +1,87 @@
+---
+import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
+---
+
+<section id="telegram">
+  <div class="comm-divider"></div>
+  <div class="comm-section-inner">
+    <span class="comm-eyebrow comm-animate" data-delay="0">
+      {t("v2.community.telegram.eyebrow")}
+    </span>
+    <h2 class="telegram-h2 comm-animate" data-delay="0.15">
+      {t("v2.community.telegram.heading")}
+    </h2>
+    <p class="telegram-body comm-animate" data-delay="0.3">
+      {t("v2.community.telegram.body")}
+    </p>
+    <a
+      href="https://t.me/quantusnetwork"
+      target="_blank"
+      rel="noopener"
+      class="telegram-btn comm-animate"
+      data-delay="0.45"
+      >{t("v2.community.telegram.cta")}</a
+    >
+  </div>
+</section>
+
+<style>
+  #telegram {
+    background: #0e0e0e;
+  }
+
+  .telegram-h2 {
+    font-family: "Geist", sans-serif;
+    font-size: 48px;
+    font-weight: 500;
+    color: #ffffff;
+    margin-top: 16px;
+    max-width: 560px;
+    line-height: 1.1;
+    margin-bottom: 0;
+  }
+
+  .telegram-body {
+    font-family: "Geist", sans-serif;
+    font-size: 16px;
+    color: rgba(232, 230, 224, 0.65);
+    margin-top: 20px;
+    max-width: 480px;
+    line-height: 1.65;
+  }
+
+  .telegram-btn {
+    display: inline-block;
+    margin-top: 36px;
+    background: #ff6b35;
+    color: #0e0e0e;
+    font-family: "Geist Mono", monospace;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    padding: 14px 36px;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+  }
+  .telegram-btn:hover {
+    opacity: 0.88;
+  }
+
+  #telegram .comm-section-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    @media (max-width: 768px) {
+      .telegram-h2 {
+        font-size: 32px;
+      }
+    }
+  }
+</style>

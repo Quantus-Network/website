@@ -1,0 +1,129 @@
+---
+import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
+---
+
+<section id="socials">
+  <div class="comm-divider"></div>
+  <div class="comm-section-inner">
+    <span
+      class="comm-eyebrow comm-animate"
+      data-delay="0"
+      style="margin-bottom:32px;"
+      >{t("v2.community.socials.eyebrow")}</span
+    >
+    <div class="social-boxes">
+      <a
+        href="https://x.com/QuantusNetwork"
+        target="_blank"
+        rel="noopener"
+        class="social-box comm-animate"
+        data-delay="0"
+      >
+        <span class="social-platform">
+          {t("v2.community.socials.platforms.x")}
+        </span>
+        <span class="social-arrow">→</span>
+      </a>
+      <a
+        href="https://www.instagram.com/quantusnetwork/"
+        target="_blank"
+        rel="noopener"
+        class="social-box comm-animate"
+        data-delay="0.08"
+      >
+        <span class="social-platform">
+          {t("v2.community.socials.platforms.instagram")}
+        </span>
+        <span class="social-arrow">→</span>
+      </a>
+      <a
+        href="https://github.com/Quantus-Network/chain"
+        target="_blank"
+        rel="noopener"
+        class="social-box comm-animate"
+        data-delay="0.16"
+      >
+        <span class="social-platform">
+          {t("v2.community.socials.platforms.github")}
+        </span>
+        <span class="social-arrow">→</span>
+      </a>
+      <a
+        href="https://www.youtube.com/@QuantusNetwork"
+        target="_blank"
+        rel="noopener"
+        class="social-box comm-animate"
+        data-delay="0.24"
+      >
+        <span class="social-platform">
+          {t("v2.community.socials.platforms.youtube")}
+        </span>
+        <span class="social-arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  #socials {
+    background: #0e0e0e;
+  }
+
+  .social-boxes {
+    display: flex;
+    gap: 0;
+  }
+
+  .social-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    padding: 24px 28px;
+    border: 1px solid rgba(232, 230, 224, 0.08);
+    margin-left: -1px;
+    text-decoration: none;
+    transition:
+      border-color 0.2s ease,
+      background 0.2s ease;
+    position: relative;
+  }
+  .social-box:first-child {
+    margin-left: 0;
+  }
+  .social-box:hover {
+    border-color: #ff6b35;
+    background: rgba(255, 107, 53, 0.03);
+    z-index: 1;
+  }
+
+  .social-platform {
+    font-family: "Geist Mono", monospace;
+    font-size: 13px;
+    color: rgba(232, 230, 224, 0.7);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+  }
+
+  .social-arrow {
+    font-size: 16px;
+    color: rgba(232, 230, 224, 0.25);
+    transition: color 0.2s ease;
+  }
+  .social-box:hover .social-arrow {
+    color: #ff6b35;
+  }
+
+  @media (max-width: 768px) {
+    .social-boxes {
+      flex-wrap: wrap;
+    }
+    .social-box {
+      flex: 1 1 calc(50% - 1px);
+      margin-left: 0;
+    }
+  }
+</style>

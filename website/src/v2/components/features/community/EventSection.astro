@@ -1,0 +1,126 @@
+---
+import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
+---
+
+<section id="events">
+  <div class="comm-divider"></div>
+  <div class="comm-section-inner">
+    <span class="comm-eyebrow comm-animate" data-delay="0">
+      {t("v2.community.events.eyebrow")}
+    </span>
+    <h2 class="comm-section-inner-h2 comm-animate" data-delay="0.1">
+      {t("v2.community.events.heading")}
+    </h2>
+    <div class="event-card comm-animate" data-delay="0.2">
+      <div class="event-card-left">
+        <span class="event-date-label">
+          {t("v2.community.events.card.date_label")}
+        </span>
+        <p class="event-title">
+          {t("v2.community.events.card.title")}
+        </p>
+        <a
+          href="https://tally.so/r/D4502E"
+          target="_blank"
+          rel="noopener"
+          class="event-cta"
+          >{t("v2.community.events.card.cta")}</a
+        >
+      </div>
+      <div class="event-card-right">
+        <span class="event-status-pill">
+          {t("v2.community.events.card.status")}
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  #events {
+    background: #0e0e0e;
+  }
+
+  #events .comm-section-inner-h2 {
+    font-family: "Geist", sans-serif;
+    font-size: 48px;
+    font-weight: 500;
+    color: #ffffff;
+    margin: 0 0 48px;
+  }
+
+  .event-card {
+    border: 1px solid rgba(232, 230, 224, 0.08);
+    padding: 48px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 40px;
+    background: #181818;
+    transition: border-color 0.2s ease;
+  }
+  .event-card:hover {
+    border-color: rgba(232, 230, 224, 0.2);
+  }
+
+  .event-date-label {
+    font-family: "Geist Mono", monospace;
+    font-size: 11px;
+    color: rgba(232, 230, 224, 0.35);
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .event-title {
+    font-family: "Geist", sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: #ffffff;
+    line-height: 1.3;
+    max-width: 560px;
+    margin: 0;
+  }
+
+  .event-cta {
+    font-family: "Geist Mono", monospace;
+    font-size: 12px;
+    color: #ff6b35;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 24px;
+    transition: opacity 0.2s ease;
+  }
+  .event-cta:hover {
+    opacity: 0.75;
+  }
+
+  .event-status-pill {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid rgba(232, 230, 224, 0.15);
+    padding: 8px 20px;
+    font-family: "Geist Mono", monospace;
+    font-size: 11px;
+    color: rgba(232, 230, 224, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 768px) {
+    .event-card {
+      grid-template-columns: 1fr;
+    }
+
+    #events .comm-section-inner-h2 {
+      font-size: 32px;
+    }
+  }
+</style>
