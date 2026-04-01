@@ -353,6 +353,196 @@
         "note": "Public beta available now on iOS and Android"
       }
     },
+    "privacy": {
+      "meta": {
+        "title": "Quantus Network - Privacy Policy",
+        "description": "Read Quantus Network's Privacy Policy to understand how we collect, use, and protect your information across our apps and website."
+      },
+      "hero": {
+        "eyebrow": "LEGAL",
+        "title": "Privacy Policy",
+        "last_updated": "Last updated: June 12, 2025"
+      },
+      "information_collect": {
+        "title": "Information We Collect",
+        "from_apps": "From Our Apps:",
+        "from_apps_content": "We do not collect personal information through the Quantus Network applications.",
+        "from_website": "From Our Website we automatically collect:",
+        "from_website_items": [
+          "IP address (anonymized through Google Analytics)",
+          "Browser and device information",
+          "Pages visited and usage patterns",
+          "Geographic location (country and region only)"
+        ],
+        "from_you": "From You Directly:",
+        "from_you_items": [
+          "Email address (if you subscribe to our newsletter)",
+          "Information you provide when contacting us"
+        ],
+        "technical": "Technical Data:",
+        "technical_items": [
+          "Application crash reports and error logs",
+          "Network connectivity information (to improve performance)"
+        ]
+      },
+      "how_we_use": {
+        "title": "How We Use Information",
+        "intro": "We use collected information to:",
+        "items": [
+          "Improve our website and applications",
+          "Send newsletter updates (with your consent)",
+          "Analyze usage to enhance user experience",
+          "Monitor for abuse and protect our services",
+          "Comply with legal obligations"
+        ],
+        "we_do_not": "We do not:",
+        "we_do_not_items": [
+          "Sell or rent your data to third parties",
+          "Store your private keys or transaction data",
+          "Use your data for targeted advertising"
+        ]
+      },
+      "information_sharing": {
+        "title": "Information Sharing",
+        "intro": "We may share information with:",
+        "items": [
+          "Analytics providers (Google Analytics for website data)",
+          "Service providers who help operate our website",
+          "Legal authorities when required by law"
+        ],
+        "note": "We only share aggregated, anonymized data that cannot identify you."
+      },
+      "cookies_tracking": {
+        "title": "Cookies and Tracking",
+        "intro": "Our website uses cookies for:",
+        "items": [
+          "Essential website functionality",
+          "Analytics to understand site usage",
+          "Performance improvements"
+        ],
+        "note": "You can control cookies through your browser settings, though this may affect website functionality."
+      },
+      "data_security": {
+        "title": "Data Security and Retention",
+        "intro": "We implement standard security measures to protect your data, including encryption and secure storage. However, no online service is completely secure.",
+        "technical": "Retention periods:",
+        "retention_items": [
+          "Website analytics: 26 months",
+          "Newsletter subscriptions: Until you unsubscribe"
+        ]
+      },
+      "your_rights": {
+        "title": "Your Rights",
+        "general": "You can: Unsubscribe from communications anytime.",
+        "california": "For California residents: You have additional rights under CCPA, including the right to know what personal information we collect and the right to deletion.",
+        "eu_uk": "For EU and UK residents: You have rights under GDPR, including data portability and the right to object to processing."
+      },
+      "international_transfers": {
+        "title": "International Transfers",
+        "content": "Your information may be processed in the United States. We ensure appropriate protections for international data transfers."
+      },
+      "childrens_privacy": {
+        "title": "Children's Privacy",
+        "content": "Our services are not intended for anyone under 18. We do not knowingly collect information from minors."
+      },
+      "additional_info": {
+        "title": "Additional Information",
+        "regulatory": "Regulatory Compliance:",
+        "regulatory_items": [
+          "Users must comply with local cryptocurrency regulations",
+          "Some features may be restricted in certain jurisdictions",
+          "We reserve the right to limit access based on legal requirements"
+        ]
+      },
+      "contact_info": {
+        "title": "Contact Us",
+        "address": "Quantus Labs LLC\n20 N Gould St 52783\nSheridan, WY 82801",
+        "note": "For questions about this policy or to exercise your privacy rights, please use our",
+        "link": "contact form"
+      }
+    },
+    "terms": {
+      "meta": {
+        "title": "Quantus Network - Terms of Service",
+        "description": "Read Quantus Network's Terms of Service for usage rules, responsibilities, and legal disclaimers for our apps and blockchain services."
+      },
+      "hero": {
+        "eyebrow": "LEGAL",
+        "title": "Terms of Service",
+        "last_updated": "Last updated: June 12, 2025"
+      },
+      "what_we_provide": {
+        "title": "What We Provide",
+        "intro": "Quantus Network offers:",
+        "items": [
+          "Mobile apps (available on App Store and Google Play)",
+          "Desktop applications with integrated mining functionality",
+          "Access to our open-source code",
+          "Community newsletter and updates",
+          "Access to the Quantus Network blockchain"
+        ]
+      },
+      "what_you_cannot_do": {
+        "title": "What You Cannot Do",
+        "intro": "You may not use our services to:",
+        "items": [
+          "Engage in illegal activities",
+          "Distribute malware or hack systems",
+          "Violate export controls or sanctions",
+          "Interfere with network operations",
+          "Provide false information"
+        ]
+      },
+      "mining_participation": {
+        "title": "Mining and Network Participation",
+        "items": [
+          "Mining functionality is for educational and network participation",
+          "You must comply with local energy and mining regulations",
+          "We make no guarantees about mining profitability or rewards",
+          "Network features may change as the protocol evolves"
+        ]
+      },
+      "dispute_resolution": {
+        "title": "Dispute Resolution",
+        "content": "Any disputes will be resolved through binding arbitration in Wyoming under American Arbitration Association rules. These terms are governed by Wyoming law. We may terminate access if you violate these terms."
+      },
+      "your_responsibilities": {
+        "title": "Your Responsibilities",
+        "intro": "You are solely responsible for:",
+        "items": [
+          "Safeguarding your wallet credentials and seed phrase",
+          "Complying with local laws regarding cryptocurrency and mining",
+          "Understanding the risks of blockchain technology",
+          "Lost private keys cannot be recovered by us"
+        ]
+      },
+      "non_custodial": {
+        "title": "Non-Custodial Design",
+        "intro": "Important: We do not store or access your private keys, seed phrases, or digital assets. You have full control and responsibility for your wallet and assets.",
+        "items": [
+          "We cannot recover lost private keys or seed phrases",
+          "We cannot reverse transactions on the blockchain",
+          "We cannot freeze or control your assets",
+          "You are responsible for securing your wallet credentials",
+          "Always back up your seed phrase in a secure location"
+        ]
+      },
+      "disclaimers": {
+        "title": "Disclaimers and Limitations",
+        "intro": "Our services are provided \"as-is\" without warranties. Cryptocurrency involves substantial risk of loss. To the maximum extent permitted by law:",
+        "items": [
+          "We are not liable for any indirect or consequential damages",
+          "Our total liability shall not exceed $1",
+          "You agree to indemnify us from claims arising from your use of our services"
+        ]
+      },
+      "contact": {
+        "title": "Contact Us",
+        "address": "Quantus Labs LLC\n20 N Gould St 52783\nSheridan, WY 82801",
+        "note": "For questions about these terms, please email:",
+        "email": "hello@quantus.com"
+      }
+    },
     "footer": {
       "brand": "QUANTUS",
       "copyright": "© {year} Quantus Network.",
