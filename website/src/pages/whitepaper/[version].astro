@@ -1,6 +1,6 @@
 ---
 import { render } from "astro:content";
-import Layout from "@/components/layout/Layout.astro";
+import Layout from "@/v2/components/layout/Layout.astro";
 import { getLocaleFromUrl, createTranslator } from "@/utils/i18n";
 import { JsonLdGraph } from "@/utils/build-json-ld";
 import { getWhitepaperJsonLd } from "@/constants/default-jsonld";
@@ -160,9 +160,12 @@ const styleVersion = entry.data.version === "0.3.1" ? "v1" : "v2";
             tocLinks.forEach((link) => {
               const slug = (link as HTMLElement).dataset.headingSlug;
               if (slug === id) {
-                link.classList.add("!border-quantus-blue", "!text-white");
+                link.classList.add("!border-whitepaper-primary", "!text-white");
               } else {
-                link.classList.remove("!border-quantus-blue", "!text-white");
+                link.classList.remove(
+                  "!border-whitepaper-primary",
+                  "!text-white",
+                );
               }
             });
           }

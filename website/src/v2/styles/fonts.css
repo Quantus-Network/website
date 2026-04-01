@@ -25,3 +25,196 @@
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
+
+/* Whitepapers Fonts */
+@utility font-whitepaper-cover-version {
+  font-family: var(--font-whitepaper-secondary);
+  font-size: 8px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.08px;
+  text-transform: uppercase;
+}
+@utility font-whitepaper-cover-title {
+  font-family: var(--font-primary);
+  font-size: 80px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.8px;
+  text-transform: lowercase;
+}
+@utility font-whitepaper-cover-tagline {
+  font-family: var(--font-whitepaper-secondary);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 135%; /* 16.2px */
+  letter-spacing: 0.12px;
+  text-transform: lowercase;
+}
+@utility font-whitepaper-cover-credit-label {
+  font-family: var(--font-whitepaper-secondary);
+  font-size: 8px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.08px;
+  text-transform: uppercase;
+}
+@utility font-whitepaper-cover-credit-content {
+  font-family: var(--font-whitepaper-secondary);
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 135%; /* 13.5px */
+  letter-spacing: 0.1px;
+  text-transform: lowercase;
+}
+@utility font-whitepaper-chapter-number {
+  font-family: var(--font-primary);
+  font-size: 85.3px;
+  font-weight: 700;
+  line-height: 85.33px;
+  letter-spacing: -4px;
+}
+@utility font-whitepaper-chapter-title {
+  font-family: var(--font-primary);
+  font-size: 37.3px;
+  font-weight: 700;
+  line-height: 41px; /* 109.92% */
+  letter-spacing: -0.667px;
+  text-transform: lowercase;
+}
+@utility font-whitepaper-section-paragraph {
+  font-family: var(--font-whitepaper-primary);
+  font-size: 21.3px;
+  font-weight: 400;
+  line-height: 37.97px;
+  letter-spacing: 0%;
+}
+@utility font-whitepaper-blockquote {
+  font-family: var(--font-whitepaper-secondary);
+  font-size: 21.3px;
+  font-weight: 300;
+  line-height: 32px;
+  letter-spacing: -0.427px;
+}
+@utility font-whitepaper-section-title {
+  font-family: var(--font-primary);
+  font-size: 21.3px;
+  font-weight: 700;
+  line-height: 35.2px;
+  letter-spacing: 0.427px;
+  text-transform: lowercase;
+}
+@utility font-whitepaper-sub-section-title {
+  font-family: var(--font-whitepaper-secondary);
+  font-size: 21.3px;
+  font-weight: 500;
+  line-height: 35.2px; /* 165.258% */
+  letter-spacing: 1.28px;
+  text-transform: lowercase;
+}
+@utility font-whitepaper-section-title-alt {
+  font-family: var(--font-whitepaper-secondary);
+  font-size: 21.3px;
+  font-weight: 400;
+  line-height: 35.2px; /* 165.258% */
+  letter-spacing: 4.267px;
+  text-transform: uppercase;
+}
+@utility font-whitepaper-ordered-list-bullet {
+  font-family: var(--font-whitepaper-secondary);
+  font-size: 21.3px;
+  font-weight: 700;
+  line-height: 35.2px; /* 165.258% */
+}
+@utility font-whitepaper-ordered-list-item {
+  font-family: var(--font-whitepaper-secondary);
+  font-size: 21.3px;
+  font-weight: 400;
+  line-height: 35.2px; /* 165.258% */
+  letter-spacing: -0.213px;
+  text-transform: lowercase;
+}
+@utility font-whitepaper-timeline-title {
+  font-family: var(--font-whitepaper-secondary);
+  font-size: 21.3px;
+  font-weight: 700;
+  line-height: 35.2px; /* 165.258% */
+  text-transform: lowercase;
+}
+@utility font-whitepaper-timeline-date {
+  font-family: var(--font-whitepaper-secondary);
+  font-size: 21.3px;
+  font-weight: 400;
+  line-height: 35.2px;
+  letter-spacing: 0.853px;
+}
+@utility font-whitepaper-reference-label {
+  font-family: var(--font-whitepaper-secondary);
+  font-size: 21.3px;
+  font-weight: 700;
+  line-height: 35.2px; /* 165.258% */
+}
+@utility font-whitepaper-reference-marker {
+  font-family: var(--font-whitepaper-secondary);
+  font-size: 21.3px;
+  font-weight: 400;
+  line-height: 37.97px;
+  letter-spacing: 0.853px;
+}
+@utility font-whitepaper-table-header {
+  font-family: var(--font-whitepaper-secondary);
+  font-size: 21.3px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2.56px;
+  text-transform: uppercase;
+}
+@utility font-whitepaper-table-cell {
+  font-family: var(--font-whitepaper-secondary);
+  font-size: 21.3px;
+  font-weight: 700;
+  line-height: 30.93px; /* 145.211% */
+}
+@utility font-whitepaper-callout-title {
+  font-family: var(--font-whitepaper-secondary);
+  font-size: 21.3px;
+  font-weight: 700;
+  line-height: 35.2px; /* 165.258% */
+  letter-spacing: 3.84px;
+  text-transform: uppercase;
+}
+@utility font-whitepaper-callout-body {
+  font-family: var(--font-whitepaper-secondary);
+  font-size: 21.3px;
+  font-weight: 400;
+  line-height: 35.2px; /* 165.258% */
+}
+@utility font-whitepaper-code {
+  font-family: var(--font-whitepaper-secondary);
+  font-size: 21.3px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 34.13px; /* 160.235% */
+}
+
+/* Old Fonts */
+@utility font-medium-title {
+  font-family: var(--font-primary);
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 72px */
+  letter-spacing: 1.2px;
+}
+
+@utility font-small-title {
+  font-family: var(--font-primary);
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: 0.3px;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+}
