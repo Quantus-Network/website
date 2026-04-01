@@ -1,0 +1,241 @@
+---
+import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
+---
+
+<section id="about-hero">
+  <div class="about-hero-content">
+    <span class="about-hero-eyebrow" id="about-eyebrow">
+      {t("v2.about.hero.eyebrow")}
+    </span>
+    <h1 class="about-hero-h1" id="about-h1">
+      {t("v2.about.hero.title")}
+    </h1>
+    <p class="about-hero-sub" id="about-sub">
+      {t("v2.about.hero.sub")}
+    </p>
+  </div>
+</section>
+
+<style>
+  #about-hero {
+    position: relative;
+    height: 100vh;
+    background: #0e0e0e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 52px;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  #about-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(
+      circle,
+      rgba(232, 230, 224, 0.12) 1px,
+      transparent 1px
+    );
+    background-size: 28px 28px;
+    -webkit-mask-image: radial-gradient(
+      ellipse 80% 80% at 50% 50%,
+      transparent 30%,
+      rgba(0, 0, 0, 0.6) 60%,
+      black 100%
+    );
+    mask-image: radial-gradient(
+      ellipse 80% 80% at 50% 50%,
+      transparent 30%,
+      rgba(0, 0, 0, 0.6) 60%,
+      black 100%
+    );
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  #about-hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 320px;
+    height: 320px;
+    background:
+      linear-gradient(to bottom, #ff6b35 1px, transparent 1px),
+      linear-gradient(to right, #ff6b35 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.06;
+    pointer-events: none;
+    z-index: 0;
+    -webkit-mask-image: radial-gradient(
+      circle at top right,
+      black 0%,
+      transparent 70%
+    );
+    mask-image: radial-gradient(circle at top right, black 0%, transparent 70%);
+  }
+
+  .about-hero-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .about-hero-eyebrow {
+    font-family: "Geist Mono", monospace;
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #ff6b35;
+    display: block;
+    opacity: 0;
+    transform: translateY(8px);
+    transition:
+      opacity 0.6s ease,
+      transform 0.6s ease;
+  }
+  .about-hero-eyebrow.in {
+    opacity: 1;
+    transform: none;
+  }
+
+  .about-hero-h1 {
+    font-family: "Geist", sans-serif;
+    font-size: clamp(36px, 4.2vw, 64px);
+    font-weight: 500;
+    letter-spacing: -0.025em;
+    color: #ffffff;
+    max-width: 800px;
+    margin: 20px auto 0;
+    line-height: 1.08;
+    opacity: 0;
+    transform: translateY(8px);
+    transition:
+      opacity 0.6s ease,
+      transform 0.6s ease;
+  }
+  .about-hero-h1.in {
+    opacity: 1;
+    transform: none;
+  }
+
+  .about-hero-sub {
+    font-family: "Geist", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(232, 230, 224, 0.6);
+    max-width: 520px;
+    margin: 24px auto 0;
+    line-height: 1.6;
+    opacity: 0;
+    transform: translateY(8px);
+    transition:
+      opacity 0.6s ease,
+      transform 0.6s ease;
+  }
+  .about-hero-sub.in {
+    opacity: 1;
+    transform: none;
+  }
+
+  @media (max-width: 768px) {
+    #about-hero {
+      padding: 100px 24px 60px;
+    }
+  }
+</style>
+
+<style is:global>
+  .about-section-inner {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  /* ── ANIMATE ── */
+  .about-animate {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity 0.7s ease,
+      transform 0.7s ease;
+  }
+  .about-animate.in {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* ── SHARED EYEBROW ── */
+  .about-eyebrow {
+    font-family: "Geist Mono", monospace;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(232, 230, 224, 0.35);
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  /* ── DIVIDER ── */
+  .about-divider {
+    display: block;
+    height: 1px;
+    background: #ff6b35;
+    width: 0;
+    margin-left: -52px;
+    transition: width 0.8s ease-out;
+  }
+  .about-divider.expanded {
+    width: calc(100% + 104px);
+  }
+
+  @media (max-width: 768px) {
+    .about-divider {
+      margin-left: -24px;
+    }
+    .about-divider.expanded {
+      width: calc(100% + 48px);
+    }
+  }
+</style>
+
+<script>
+  const eyebrow = document.getElementById("about-eyebrow")!;
+  const h1 = document.getElementById("about-h1")!;
+  const sub = document.getElementById("about-sub")!;
+  window.addEventListener("load", () => {
+    setTimeout(() => eyebrow.classList.add("in"), 100);
+    setTimeout(() => h1.classList.add("in"), 250);
+    setTimeout(() => sub.classList.add("in"), 400);
+  });
+
+  // Dividers
+  document.querySelectorAll(".about-divider").forEach((el) => {
+    new IntersectionObserver(
+      ([e]) => {
+        if (e.isIntersecting) {
+          el.classList.add("expanded");
+        }
+      },
+      { threshold: 0.1 },
+    ).observe(el);
+  });
+
+  // Scroll animations
+  document.querySelectorAll<HTMLElement>(".about-animate").forEach((el) => {
+    new IntersectionObserver(
+      ([e]) => {
+        if (e.isIntersecting) {
+          el.style.transitionDelay = (el.dataset.delay || "0") + "s";
+          el.classList.add("in");
+        }
+      },
+      { threshold: 0.12 },
+    ).observe(el);
+  });
+</script>

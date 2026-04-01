@@ -1,0 +1,333 @@
+---
+import { Image } from "astro:assets";
+
+import ChristopherSmith from "@/v2/assets/team/christopher-smith.png";
+import JosephMattia from "@/v2/assets/team/joe-mattia.png";
+import CezaryOlborski from "@/v2/assets/team/cezary-olborski.png";
+import EthanCemer from "@/v2/assets/team/ethan-cemer.png";
+import NikolausHager from "@/v2/assets/team/nikolaus-hager.png";
+import JonathanAngle from "@/v2/assets/team/jonathan-angle.png";
+import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
+---
+
+<section id="team">
+  <div class="about-divider"></div>
+  <div class="about-section-inner">
+    <span class="about-eyebrow about-animate" data-delay="0">
+      {t("v2.about.team.eyebrow")}
+    </span>
+    <h2 class="team-h2 about-animate" data-delay="0.1">
+      {t("v2.about.team.heading")}
+    </h2>
+    <div class="team-grid">
+      <!-- Christopher Smith -->
+      <div class="team-card about-animate" data-delay="0">
+        <div class="team-img-wrap">
+          <a
+            href="https://x.com/YuviLightman"
+            target="_blank"
+            rel="noopener"
+            style="display:block;line-height:0;"
+            ><Image src={ChristopherSmith} alt="Christopher Smith" /></a
+          >
+        </div>
+        <div class="team-card-body">
+          <span class="team-name">Christopher Smith</span>
+          <span class="team-role">CEO and CTO</span>
+          <a
+            href="https://x.com/YuviLightman"
+            target="_blank"
+            rel="noopener"
+            class="team-x-link"
+          >
+            <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor"
+              ><path
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+              ></path></svg
+            >
+            @YuviLightman
+          </a>
+        </div>
+      </div>
+
+      <!-- Joseph Mattia -->
+      <div class="team-card about-animate" data-delay="0.08">
+        <div class="team-img-wrap">
+          <a
+            href="https://x.com/JoeMattia"
+            target="_blank"
+            rel="noopener"
+            style="display:block;line-height:0;"
+            ><Image src={JosephMattia} alt="Joseph Mattia" /></a
+          >
+        </div>
+        <div class="team-card-body">
+          <span class="team-name">Joseph Mattia</span>
+          <span class="team-role">COO · Sales and Operations</span>
+          <a
+            href="https://x.com/JoeMattia"
+            target="_blank"
+            rel="noopener"
+            class="team-x-link"
+          >
+            <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor"
+              ><path
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+              ></path></svg
+            >
+            @JoeMattia
+          </a>
+        </div>
+      </div>
+
+      <!-- Cezary Olborski -->
+      <div class="team-card about-animate" data-delay="0.16">
+        <div class="team-img-wrap">
+          <a
+            href="https://x.com/czareko"
+            target="_blank"
+            rel="noopener"
+            style="display:block;line-height:0;"
+            ><Image src={CezaryOlborski} alt="Cezary Olborski" /></a
+          >
+        </div>
+        <div class="team-card-body">
+          <span class="team-name">Cezary Olborski</span>
+          <span class="team-role">Senior Engineer · DeFi HFT</span>
+          <a
+            href="https://x.com/czareko"
+            target="_blank"
+            rel="noopener"
+            class="team-x-link"
+          >
+            <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor"
+              ><path
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+              ></path></svg
+            >
+            @czareko
+          </a>
+        </div>
+      </div>
+
+      <!-- Ethan Cemer -->
+      <div class="team-card about-animate" data-delay="0.24">
+        <div class="team-img-wrap">
+          <a
+            href="https://x.com/ethan_t_c_"
+            target="_blank"
+            rel="noopener"
+            style="display:block;line-height:0;"
+            ><Image src={EthanCemer} alt="Ethan Cemer" /></a
+          >
+        </div>
+        <div class="team-card-body">
+          <span class="team-name">Ethan Cemer</span>
+          <span class="team-role">Zero-Knowledge Engineer</span>
+          <a
+            href="https://x.com/ethan_t_c_"
+            target="_blank"
+            rel="noopener"
+            class="team-x-link"
+          >
+            <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor"
+              ><path
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+              ></path></svg
+            >
+            @ethan_t_c_
+          </a>
+        </div>
+      </div>
+
+      <!-- Nikolaus Hager -->
+      <div class="team-card about-animate" data-delay="0.32">
+        <div class="team-img-wrap">
+          <a
+            href="https://x.com/n13"
+            target="_blank"
+            rel="noopener"
+            style="display:block;line-height:0;"
+            ><Image src={NikolausHager} alt="Nikolaus Hager" /></a
+          >
+        </div>
+        <div class="team-card-body">
+          <span class="team-name">Nikolaus Hager</span>
+          <span class="team-role">Senior Engineer · Blockchain</span>
+          <a
+            href="https://x.com/n13"
+            target="_blank"
+            rel="noopener"
+            class="team-x-link"
+          >
+            <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor"
+              ><path
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+              ></path></svg
+            >
+            @n13
+          </a>
+        </div>
+      </div>
+
+      <!-- Jonathan Angle -->
+      <div class="team-card about-animate" data-delay="0.4">
+        <div class="team-img-wrap">
+          <a
+            href="https://x.com/defijangle"
+            target="_blank"
+            rel="noopener"
+            style="display:block;line-height:0;"
+            ><Image src={JonathanAngle} alt="Jonathan Angle" /></a
+          >
+        </div>
+        <div class="team-card-body">
+          <span class="team-name">Jonathan Angle</span>
+          <span class="team-role">Communications Director</span>
+          <a
+            href="https://x.com/defijangle"
+            target="_blank"
+            rel="noopener"
+            class="team-x-link"
+          >
+            <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor"
+              ><path
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+              ></path></svg
+            >
+            @defijangle
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  #team {
+    background: #0e0e0e;
+    padding: 0 52px;
+  }
+
+  .team-h2 {
+    font-family: "Geist", sans-serif;
+    font-size: 48px;
+    font-weight: 500;
+    color: #ffffff;
+    margin-top: 16px;
+    margin-bottom: 56px;
+  }
+
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 320px));
+    justify-content: center;
+    gap: 24px;
+    max-width: 1040px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  .team-card {
+    background: #0e0e0e;
+    border: 1px solid rgba(232, 230, 224, 0.08);
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    cursor: default;
+    transition: background 0.2s ease;
+  }
+  .team-card:hover {
+    background: #181818;
+  }
+
+  .team-img-wrap {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    position: relative;
+    overflow: hidden;
+    background: #111;
+  }
+  .team-img-wrap img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    filter: grayscale(100%);
+  }
+
+  .team-img-wrap a img {
+    transition: opacity 0.2s ease;
+  }
+  .team-img-wrap a:hover img {
+    opacity: 0.8;
+  }
+
+  .team-card-body {
+    padding: 24px 20px 28px;
+  }
+
+  .team-name {
+    font-family: "Geist", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
+    display: block;
+  }
+
+  .team-role {
+    font-family: "Geist Mono", monospace;
+    font-size: 11px;
+    color: #ff6b35;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    display: block;
+    margin-top: 6px;
+  }
+
+  .team-bg {
+    font-family: "Geist", sans-serif;
+    font-size: 12px;
+    color: rgba(232, 230, 224, 0.35);
+    display: block;
+    margin-top: 4px;
+  }
+
+  .team-x-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 12px;
+    text-decoration: none;
+    font-family: "Geist Mono", monospace;
+    font-size: 11px;
+    color: rgba(232, 230, 224, 0.35);
+    letter-spacing: 0.1em;
+    transition: color 0.2s ease;
+  }
+  .team-x-link:hover {
+    color: rgba(232, 230, 224, 0.7);
+  }
+
+  @media (max-width: 768px) {
+    #team {
+      padding: 0 24px;
+    }
+    .team-grid {
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 100%;
+    }
+    .team-h2 {
+      font-size: 32px;
+    }
+  }
+</style>
