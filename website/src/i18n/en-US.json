@@ -209,20 +209,24 @@
       }
     },
     "technology": {
+      "meta": {
+        "title": "Technology - Quantum-Secure Encrypted Money",
+        "description": "Quantus: Quantum-secure encrypted money. Download our wallet for post-quantum protected assets."
+      },
       "hero_banner": {
         "eyebrow": "The Protocol",
-        "title_line1": "Post-quantum security.",
-        "title_line2": "At every layer.",
-        "sub": "Quantus isn't a general purpose blockchain. It does one thing better than any chain in existence - quantum-secure, private, scalable money."
+        "title_line1": "Quantum secure",
+        "title_line2": "encrypted money.",
+        "sub": "Scaled with zero-knowledge proofs. Secured by Proof of Work."
       },
       "architecture": {
         "title": "Architecture",
-        "subtitle": "Built clean. No legacy. No compromises.",
-        "content": "Every existing blockchain was built before quantum computers were a real threat. That means their security is borrowed time. Quantus was built after - with post-quantum cryptography as the foundation, not a feature.",
+        "subtitle": "No migration. No compromises.",
+        "content": "Every existing blockchain was built before quantum computers were a real threat. That means their security is on borrowed time. Quantus is the next generation, with post-quantum cryptography as the foundation. No messy migration required.",
         "cards": {
           "signatures": {
             "title": "Quantum-Secure Signatures",
-            "body": "Every transaction on Quantus is signed with ML-DSA - a NIST-approved post-quantum algorithm. The same standard governments and institutions are adopting now."
+            "body": "Every transaction on Quantus is signed with ML-DSA-87. The highest security standard being adopted by organizations like Cloudflare and Signal."
           },
           "network_layer": {
             "title": "Secured Network Layer",
@@ -237,7 +241,7 @@
       "cryptography": {
         "title": "Cryptography",
         "subtitle": "The standard quantum can't break.",
-        "content": "In 2024, NIST finalized its post-quantum cryptography standards. Quantus was already building with them.",
+        "content": "Post-quantum cryptography is here.",
         "columns": {
           "meaning": {
             "title": "What This Means",
@@ -245,11 +249,12 @@
           },
           "urgency": {
             "title": "Why It Matters Now",
-            "body": "Quantum computers capable of breaking today's blockchains don't exist yet. But harvesting attacks do - adversaries collecting encrypted data today to decrypt later. The window to migrate is closing. Quantus doesn't need to migrate. It was already there."
+            "body": "Pre-quantum chains face a hard migration. They need to implement new cryptographic standards, get every user to migrate, and decide what to do with unmigrated coins, all while figuring out how to scale PQC. The window to migrate is closing. Quantus doesn't need to migrate. It started there."
           }
         },
         "table": {
           "headers": {
+            "property": "Property",
             "ecdsa": "ECDSA",
             "mldsa": "ML-DSA"
           },
@@ -270,7 +275,7 @@
       },
       "scalability": {
         "title": "Scalability",
-        "subtitle": "More secure. Not slower.",
+        "subtitle": "Scaling superior money.",
         "content": "Post-quantum cryptography comes with a tradeoff - larger signatures mean fewer transactions per block. Every chain working on quantum security will hit this wall. Quantus already solved it.",
         "stat": {
           "label": "Throughput Improvement",
@@ -282,7 +287,7 @@
       "consensus": {
         "title": "Consensus",
         "subtitle": "Proof-of-Work. Built for ZK.",
-        "body": "Quantus uses Proof-of-Work consensus - the same battle-tested model as Bitcoin. One change: the hash function is optimized for zero-knowledge proof systems, making Quantus's ZK infrastructure natively efficient rather than bolted on."
+        "body": "Quantus uses Proof-of-Work consensus. The same battle-tested model as Bitcoin. One change: the hash function is optimized for zero-knowledge proof systems. That means Quantus's ZK infrastructure is native and efficient rather than bolted on."
       },
       "cta": {
         "title": "The full technical picture.",
