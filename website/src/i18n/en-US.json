@@ -362,7 +362,7 @@
       "hero": {
         "eyebrow": "ABOUT QUANTUS",
         "title": "Built by people who saw the threat before it was obvious.",
-        "sub": "Quantus Network is a team of engineers, researchers, and operators building the infrastructure for a post-quantum financial system."
+        "sub": "Quantus is a team of engineers, researchers, and operators building the infrastructure for a post-quantum financial system."
       },
       "team": {
         "eyebrow": "THE TEAM",
@@ -370,9 +370,10 @@
       },
       "mission": {
         "eyebrow": "MISSION",
-        "heading": "Build the most secure blockchain of the quantum era. Without compromising usability or performance.",
-        "body1": "Every decision we make, from protocol design to user interface, is built on deep technical knowledge and a respect for simplicity. We focus on the fundamentals: mathematically proven security, high performance, and a product experience that feels effortless.",
-        "body2": "We build with precision. We move fast without cutting corners. And we build for the world that is coming, not the one that has already passed."
+        "heading": "Permanent Economic Freedom",
+        "body1": "Every decision we make, from protocol design to user interface, is grounded in deep technical knowledge and a respect for simplicity.",
+        "body2": "We focus on the fundamentals: mathematically proven security, high performance, and a product experience that feels effortless.",
+        "body3": "We build with precision. We move fast without cutting corners. And we design for the world that is coming, not the one that has already passed."
       },
       "advisors": {
         "eyebrow": "ADVISORS"
