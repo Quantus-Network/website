@@ -7,5 +7,5 @@ export const SITE_NAVIGATIONS = [
     href: "/v2/quantum-risk-checker/",
     label: "v2.navbar.quantum_risk_checker",
   },
-  { href: "/v2/quan/", label: "v2.navbar.quan" },
+  // { href: "/v2/quan/", label: "v2.navbar.quan" },
 ] as const;

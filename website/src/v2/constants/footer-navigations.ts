@@ -14,9 +14,7 @@ export const FOOTER_NAVIGATIONS: Navigation[] = [
     children: [
       {
         label: "v2.footer.links.whitepaper",
-        href: "https://www.quantus.com/whitepaper/",
-        target: "_blank",
-        rel: "noopener",
+        href: "/v2/whitepaper",
       },
       { label: "v2.footer.links.technology", href: "/technology" },
       {
