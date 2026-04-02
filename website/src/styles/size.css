@@ -1,7 +1,13 @@
-@utility max-h-tags {
-  max-height: 35px;
-}
+@theme {
+  --spacing-content: 1140px;
+  --spacing-navbar: 1440px;
 
-@utility max-h-tags-featured {
-  max-height: 121px;
+  --spacing-content-edges: 52px;
+  --spacing-content-edges-mobile: 24px;
+
+  --border-width-none: 0px;
+  --border-width-default: 1px;
+
+  --radius-none: 0px;
+  --radius-circle: 50%;
 }

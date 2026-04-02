@@ -1,0 +1,110 @@
+---
+import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
+---
+
+<section id="tech-cta">
+  <h2 class="tech-cta-h2">
+    {t("v2.technology.cta.title")}
+  </h2>
+  <p class="tech-cta-sub">
+    {t("v2.technology.cta.sub")}
+  </p>
+  <div class="tech-cta-btns">
+    <a href="/whitepaper" class="tech-cta-primary">
+      {t("v2.technology.cta.primary_cta")}
+    </a>
+    <a
+      href="https://explorer.quantus.com/"
+      class="tech-cta-secondary"
+      target="_blank"
+      rel="noopener"
+    >
+      {t("v2.technology.cta.secondary_cta")}
+    </a>
+  </div>
+</section>
+
+<style>
+  #tech-cta {
+    background: #0e0e0e;
+    position: relative;
+    z-index: 50;
+    padding: 120px 52px;
+    text-align: center;
+    border-top: 1px solid rgba(232, 230, 224, 0.08);
+  }
+
+  .tech-cta-h2 {
+    font-family: "Geist", sans-serif;
+    font-size: 52px;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    margin-bottom: 16px;
+  }
+
+  .tech-cta-sub {
+    font-family: "Geist", sans-serif;
+    font-size: 17px;
+    color: rgba(232, 230, 224, 0.45);
+    line-height: 1.7;
+    max-width: 520px;
+    margin: 0 auto 48px auto;
+  }
+
+  .tech-cta-btns {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+  }
+
+  .tech-cta-primary {
+    font-family: "Geist Mono", monospace;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    background: #ff6b35;
+    color: #0e0e0e;
+    border: 1px solid #ff6b35;
+    padding: 14px 28px;
+    text-decoration: none;
+    transition: opacity 0.18s;
+  }
+  .tech-cta-primary:hover {
+    opacity: 0.82;
+  }
+
+  .tech-cta-secondary {
+    font-family: "Geist Mono", monospace;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    background: #0e0e0e;
+    color: rgba(232, 230, 224, 0.8);
+    border: 1px solid rgba(232, 230, 224, 0.16);
+    padding: 14px 28px;
+    text-decoration: none;
+    transition: border-color 0.18s;
+  }
+  .tech-cta-secondary:hover {
+    border-color: rgba(232, 230, 224, 0.5);
+  }
+
+  @media (max-width: 768px) {
+    #tech-cta {
+      padding: 80px 24px;
+    }
+    .tech-cta-h2 {
+      font-size: 32px;
+    }
+    .tech-cta-btns {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>

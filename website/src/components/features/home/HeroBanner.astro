@@ -1,0 +1,360 @@
+---
+import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+import Button from "@/components/ui/Button.astro";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
+---
+
+<div id="hero">
+  <div id="ascii-hero"></div>
+
+  <div class="hc" id="hc">
+    <div class="eyebrow">{t("v2.home.hero_banner.eyebrow")}</div>
+    <h1>
+      {t("v2.home.hero_banner.title_line1")}<br />{
+        t("v2.home.hero_banner.title_line2")
+      }
+    </h1>
+    <div class="sub"></div>
+    <div class="ctas">
+      <Button
+        href="#"
+        variant="primary"
+        size="medium"
+        class="wallet-cta-link"
+        target="_blank"
+        rel="noopener"
+      >
+        {t("v2.home.hero_banner.cta_download_wallet")}
+      </Button>
+      <Button href="/whitepaper" variant="secondary" size="medium">
+        {t("v2.home.hero_banner.cta_whitepaper")}
+      </Button>
+    </div>
+  </div>
+
+  <div id="freq">
+    <span>{t("v2.home.hero_banner.freq.wave_mode")}</span>
+    <span id="fval">1,1</span>
+    <span id="fhz">{t("v2.home.hero_banner.freq.move_cursor")}</span>
+  </div>
+
+  <div class="ticker">
+    <div
+      class="t-track"
+      id="ttrack"
+      data-i18n-block-height={t("v2.home.hero_banner.ticker.block_height")}
+      data-i18n-tps={t("v2.home.hero_banner.ticker.tps")}
+      data-i18n-uptime={t("v2.home.hero_banner.ticker.uptime")}
+      data-i18n-validators={t("v2.home.hero_banner.ticker.validators")}
+      data-i18n-mainnet={t("v2.home.hero_banner.ticker.mainnet")}
+    >
+    </div>
+  </div>
+</div>
+
+<!-- SPACER -->
+<div class="h-screen"></div>
+
+<style>
+  #hero {
+    position: fixed;
+    inset: 0;
+    height: 100vh;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    z-index: 10;
+  }
+  #hero.on {
+    opacity: 1;
+  }
+
+  /* Full-bleed ASCII canvas */
+  #ascii-hero {
+    position: absolute;
+    inset: 0;
+    font-family: "Geist Mono", monospace;
+    font-size: 12px;
+    line-height: 1.22;
+    letter-spacing: 0.05em;
+    white-space: pre;
+    color: rgba(255, 107, 53, 0.38);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  /* HERO CONTENT */
+  .hc {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 80px;
+    padding-top: 66px;
+    padding-bottom: 60px;
+    z-index: 10;
+    pointer-events: none;
+  }
+
+  .eyebrow {
+    font-family: "Geist Mono", monospace;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-flare);
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(6px);
+    transition:
+      opacity 0.55s ease 0.1s,
+      transform 0.55s ease 0.1s;
+  }
+  .hc.in .eyebrow {
+    opacity: 1;
+    transform: none;
+  }
+
+  h1 {
+    font-family: "Geist", sans-serif;
+    font-size: clamp(36px, 4.2vw, 64px);
+    font-weight: 500;
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+    color: var(--color-white); /* ALL WHITE */
+    margin-bottom: 28px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition:
+      opacity 0.65s ease 0.25s,
+      transform 0.65s ease 0.25s;
+  }
+  .hc.in h1 {
+    opacity: 1;
+    transform: none;
+  }
+
+  .sub {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-bottom: 40px;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(6px);
+    transition:
+      opacity 0.55s ease 0.42s,
+      transform 0.55s ease 0.42s;
+  }
+  .hc.in .sub {
+    opacity: 1;
+    transform: none;
+  }
+
+  .sub-l {
+    font-family: "Geist Mono", monospace;
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--color-muted);
+    letter-spacing: 0.03em;
+  }
+  .sub-l::before {
+    content: "—";
+    margin-right: 9px;
+    color: var(--color-flare);
+    opacity: 0.45;
+  }
+
+  .ctas {
+    display: flex;
+    gap: 14px;
+    pointer-events: all;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(6px);
+    transition:
+      opacity 0.55s ease 0.58s,
+      transform 0.55s ease 0.58s;
+  }
+  .hc.in .ctas {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* FREQ DISPLAY */
+  #freq {
+    position: absolute;
+    bottom: 52px;
+    right: 52px;
+    font-family: "Geist Mono", monospace;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    color: rgba(255, 107, 53, 0.4);
+    z-index: 10;
+    text-align: right;
+    opacity: 0;
+    transition: opacity 0.6s ease 1s;
+  }
+  #hero.on #freq {
+    opacity: 1;
+  }
+  #fval {
+    font-size: 18px;
+    font-weight: 500;
+    color: rgba(255, 107, 53, 0.5);
+    display: block;
+    line-height: 1;
+    margin-top: 3px;
+  }
+  #fhz {
+    font-size: 12px;
+    color: rgba(255, 107, 53, 0.22);
+    display: block;
+    margin-top: 4px;
+    letter-spacing: 0.1em;
+  }
+
+  /* TICKER */
+  .ticker {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    border-top: 1px solid var(--color-border);
+    background: rgba(14, 14, 14, 0.8);
+    backdrop-filter: blur(6px);
+    overflow: hidden;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease 1.1s;
+  }
+  #hero.on .ticker {
+    opacity: 1;
+  }
+
+  .t-track {
+    display: flex;
+    animation: tscroll 28s linear infinite;
+    white-space: nowrap;
+  }
+  @keyframes tscroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @media (max-width: 768px) {
+    #ascii-hero {
+      font-size: 6px;
+      line-height: 1.15;
+      letter-spacing: 0.02em;
+      padding: 0;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    #freq {
+      display: none;
+    }
+
+    h1 {
+      font-size: clamp(28px, 8vw, 40px);
+    }
+
+    .hc {
+      padding: 0 24px;
+      padding-top: 80px;
+      padding-bottom: 60px;
+    }
+
+    .ctas {
+      flex-direction: row;
+      gap: 8px;
+    }
+
+    .ctas :global(a),
+    .ctas :global(button) {
+      font-size: 10px;
+      padding: 10px 14px;
+      letter-spacing: 0.08em;
+    }
+  }
+</style>
+
+<style is:global>
+  .t-item {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 0 80px;
+    border-right: 1px solid var(--color-border);
+    height: 40px;
+  }
+  .t-lbl {
+    font-family: "Geist Mono", monospace;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+  }
+  .t-val {
+    font-family: "Geist Mono", monospace;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--color-content);
+  }
+  .t-val.live {
+    color: var(--color-flare);
+  }
+  .tdot {
+    width: 4px;
+    height: 4px;
+    background: #4ade80;
+    border-radius: 50%;
+    animation: pd 2s ease infinite;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 768px) {
+    .t-item {
+      padding: 0 32px;
+    }
+    .t-lbl {
+      font-size: 10px;
+    }
+    .t-val {
+      font-size: 10px;
+    }
+  }
+</style>
+
+<script>
+  import { startGlitchLoop } from "@/scripts/home/glitch";
+  import {
+    calcHeroDims,
+    heroLoop,
+    updateMousePosition,
+  } from "@/scripts/home/hero";
+  import { buildTicker } from "@/scripts/home/ticker";
+
+  calcHeroDims();
+  heroLoop();
+  buildTicker();
+  startGlitchLoop();
+
+  window.addEventListener("resize", calcHeroDims);
+  window.addEventListener("mousemove", updateMousePosition);
+</script>

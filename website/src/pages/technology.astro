@@ -9,17 +9,19 @@ import {
   organizationJsonLd,
   websiteJsonLd,
 } from "@/constants/default-jsonld";
-import HeroBanner from "@/components/features/qday-checker/HeroBanner.astro";
-import DefinitionSection from "@/components/features/qday-checker/DefinitionSection.astro";
-import MethodSection from "@/components/features/qday-checker/MethodSection.astro";
-import AdviceSection from "@/components/features/qday-checker/AdviceSection.astro";
+import HeroBanner from "@/components/features/technology/HeroBanner.astro";
+import ArchitectureSection from "@/components/features/technology/ArchitectureSection.astro";
+import CryptographySection from "@/components/features/technology/CryptographySection.astro";
+import ScalabilitySection from "@/components/features/technology/ScalabilitySection.astro";
+import ConsensusSection from "@/components/features/technology/ConsensusSection.astro";
+import CtaSection from "@/components/features/technology/CtaSection.astro";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
 
 const metadata = createMetadata({
-  title: t("home.meta.title"),
-  description: t("home.meta.description"),
+  title: t("v2.technology.meta.title"),
+  description: t("v2.technology.meta.description"),
   pathname: Astro.url.pathname,
 });
 
@@ -31,7 +33,9 @@ const jsonLd = JsonLdGraph({
 
 <Layout {...metadata} jsonLd={jsonLd}>
   <HeroBanner />
-  <DefinitionSection />
-  <MethodSection />
-  <AdviceSection />
+  <ArchitectureSection />
+  <CryptographySection />
+  <ScalabilitySection />
+  <ConsensusSection />
+  <CtaSection />
 </Layout>

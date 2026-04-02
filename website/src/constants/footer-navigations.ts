@@ -14,7 +14,7 @@ export const FOOTER_NAVIGATIONS: Navigation[] = [
     children: [
       {
         label: "v2.footer.links.whitepaper",
-        href: "/v2/whitepaper",
+        href: "/whitepaper",
       },
       { label: "v2.footer.links.technology", href: "/technology" },
       {
@@ -76,6 +76,7 @@ export const FOOTER_NAVIGATIONS: Navigation[] = [
       { label: "v2.footer.links.contact", href: "/about#contact" },
       { label: "v2.footer.links.privacy", href: "/privacy-policy" },
       { label: "v2.footer.links.terms", href: "/terms" },
+      { label: "v2.footer.links.coingecko", href: "https://www.coingecko.com/en/coins/quantus", target: "_blank", rel: "noopener" },
     ],
   },
 ] as const;

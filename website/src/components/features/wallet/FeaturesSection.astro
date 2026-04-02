@@ -1,0 +1,202 @@
+---
+import { Image } from "astro:assets";
+
+import checkphrases from "@/assets/wallet/checkphrases.png";
+import encryptYourFunds from "@/assets/wallet/encrypt-your-funds.png";
+import reversibleTransactions from "@/assets/wallet/reversible-transactions.png";
+import highSecurityAccounts from "@/assets/wallet/high-security-accounts.png";
+import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
+---
+
+<section id="wallet-features">
+  <div class="wallet-divider"></div>
+  <div class="features-header">
+    <span class="wallet-section-eyebrow wallet-animate" data-delay="0">
+      {t("v2.wallet.features.eyebrow")}
+    </span>
+    <h2
+      class="wallet-section-h2 features-header-h2 wallet-animate"
+      data-delay="0.15"
+    >
+      {t("v2.wallet.features.heading")}
+    </h2>
+  </div>
+  <div class="features-stack">
+    <!-- Card 1 -->
+    <div class="feature-card">
+      <div class="feature-card-left">
+        <span class="feature-num">01</span>
+        <h3 class="feature-title">
+          {t("v2.wallet.features.cards.reversible.title")}
+        </h3>
+        <p class="feature-body">
+          {t("v2.wallet.features.cards.reversible.body")}
+        </p>
+      </div>
+      <div class="feature-card-right">
+        <Image src={reversibleTransactions} alt="Reversible Transactions" />
+      </div>
+    </div>
+    <!-- Card 2 -->
+    <div class="feature-card">
+      <div class="feature-card-left">
+        <span class="feature-num">02</span>
+        <h3 class="feature-title">
+          {t("v2.wallet.features.cards.checkphrases.title")}
+        </h3>
+        <p class="feature-body">
+          {t("v2.wallet.features.cards.checkphrases.body")}
+        </p>
+      </div>
+      <div class="feature-card-right">
+        <Image src={checkphrases} alt="Check-Phrases" />
+      </div>
+    </div>
+    <!-- Card 3 -->
+    <div class="feature-card">
+      <div class="feature-card-left">
+        <span class="feature-num">03</span>
+        <h3 class="feature-title">
+          {t("v2.wallet.features.cards.high_security.title")}
+        </h3>
+        <p class="feature-body">
+          {t("v2.wallet.features.cards.high_security.body")}
+        </p>
+      </div>
+      <div class="feature-card-right">
+        <Image src={highSecurityAccounts} alt="High Security Accounts" />
+      </div>
+    </div>
+    <!-- Card 4 -->
+    <div class="feature-card">
+      <div class="feature-card-left">
+        <span class="feature-num">04</span>
+        <h3 class="feature-title">
+          {t("v2.wallet.features.cards.encrypt.title")}
+        </h3>
+        <p class="feature-body">
+          {t("v2.wallet.features.cards.encrypt.body")}
+        </p>
+      </div>
+      <div class="feature-card-right">
+        <Image src={encryptYourFunds} alt="Encrypt Your Funds" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  #wallet-features {
+    background: #0e0e0e;
+    position: relative;
+    z-index: 1;
+    padding: 80px 52px 48px;
+  }
+
+  .features-header {
+    margin-top: 64px;
+    margin-bottom: 64px;
+  }
+
+  .features-header-h2 {
+    font-size: 48px;
+    margin-top: 16px;
+    margin-bottom: 0;
+  }
+
+  .features-stack {
+    display: block;
+    position: relative;
+    overflow: visible;
+  }
+
+  .feature-card {
+    position: sticky;
+    background: #181818;
+    border: 1px solid rgba(232, 230, 224, 0.08);
+    height: 560px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    margin-bottom: 24px;
+    width: 100%;
+  }
+
+  .feature-card-left {
+    padding: 64px 52px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .feature-num {
+    font-family: "Geist Mono", monospace;
+    font-size: 11px;
+    color: rgba(232, 230, 224, 0.25);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 28px;
+    display: block;
+  }
+
+  .feature-title {
+    font-family: "Geist", sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    color: #ffffff;
+    line-height: 1.1;
+    margin-bottom: 18px;
+  }
+
+  .feature-body {
+    font-family: "Geist", sans-serif;
+    font-size: 15px;
+    color: rgba(232, 230, 224, 0.6);
+    line-height: 1.7;
+    max-width: 380px;
+  }
+
+  .feature-card-right {
+    background: #0e0e0e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 40px;
+  }
+
+  .feature-card-right img {
+    max-height: 460px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    #wallet-features {
+      padding: 80px 24px 48px;
+    }
+    .features-stack {
+      height: auto;
+    }
+    .features-header-h2 {
+      font-size: 32px;
+    }
+    .feature-card {
+      height: auto;
+      grid-template-columns: 1fr;
+    }
+
+    .feature-card-left {
+      padding: 32px 24px;
+    }
+    .feature-card-right {
+      padding: 32px 24px;
+    }
+    .feature-card-right img {
+      max-height: 300px;
+    }
+  }
+</style>

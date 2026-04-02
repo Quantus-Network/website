@@ -1,9 +1,7 @@
 ---
-import { Image } from "astro:assets";
-import AppleStore from "@/assets/download/apple-store-download.png";
-import GooglePlay from "@/assets/download/google-play-download.png";
 import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
 import { APP_LINKS } from "@/constants/app-links";
+import Button from "./Button.astro";
 
 export interface Props {
   customTitle?: string;
@@ -42,17 +40,22 @@ const t = await createTranslator(locale);
   </div>
 
   <div class="flex gap-5">
-    <a id="ios" href={APP_LINKS.ios} target="_blank" rel="noopener noreferrer">
-      <Image src={AppleStore} alt="Download on App Store" />
-    </a>
+    <Button
+      id="ios"
+      href={APP_LINKS.ios}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      {t("app.download.ios")}
+    </Button>
 
-    <a
+    <Button
       id="android"
       href={APP_LINKS.android}
       target="_blank"
       rel="noopener noreferrer"
     >
-      <Image src={GooglePlay} alt="Download on Google Play" />
-    </a>
+      {t("app.download.android")}
+    </Button>
   </div>
 </div>

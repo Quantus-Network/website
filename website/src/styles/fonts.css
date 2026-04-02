@@ -1,291 +1,46 @@
 @theme {
-  --font-primary: "Prompt", "sans-serif";
-  --font-secondary: "Inter", "sans-serif";
-  --font-whitepaper-primary: "IBM Plex Sans", "sans-serif";
-  --font-whitepaper-secondary: "IBM Plex Mono", "monospace";
+  --font-primary: "Geist", sans-serif;
+  --font-mono: "Geist Mono", monospace;
+  --font-whitepaper-primary: "IBM Plex Sans", sans-serif;
+  --font-whitepaper-secondary: "IBM Plex Mono", monospace;
 }
 
-/* Note: font-display: swap is handled by @fontsource packages.
- * To ensure optimal font loading, consider using a Vite plugin
- * to modify @font-face rules in @fontsource CSS files if needed.
- */
-
-/* https://tailwindcss.com/docs/adding-custom-styles#adding-custom-utilities */
-@utility font-large-body {
+@utility font-page-title-desktop {
   font-family: var(--font-primary);
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 150%;
-  font-feature-settings:
-    "liga" off,
-    "clig" off;
-}
-@utility font-quest-title {
-  font-family: var(--font-primary);
-  font-size: 80px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 100%; /* 80px */
-  letter-spacing: 1.6px;
-}
-@utility font-quest-title-conjuction {
-  font-family: var(--font-primary);
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 100%; /* 40px */
-  letter-spacing: 0.8px;
-}
-@utility font-large-body-bold {
-  /* Large Body Bold */
-  font-family: var(--font-primary);
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 140%; /* 28px */
-  letter-spacing: 0.4px;
-  font-feature-settings:
-    "liga" off,
-    "clig" off;
-}
-@utility font-button {
-  font-family: var(--font-primary);
-  font-size: 17px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 120%;
-  letter-spacing: 0.17px;
-}
-@utility font-small-title {
-  font-family: var(--font-primary);
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 120%;
-  letter-spacing: 0.3px;
-  font-feature-settings:
-    "liga" off,
-    "clig" off;
-}
-@utility font-body {
-  font-family: var(--font-primary);
-  font-size: 17px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: normal;
-  letter-spacing: 0.17px;
-  font-feature-settings:
-    "liga" off,
-    "clig" off;
-}
-@utility font-body-bold {
-  font-family: var(--font-primary);
-  font-size: 17px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 150%; /* 25.5px */
-  font-feature-settings:
-    "liga" off,
-    "clig" off;
-}
-@utility font-body-mobile {
-  font-family: var(--font-primary);
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: normal;
-  font-feature-settings:
-    "liga" off,
-    "clig" off;
-}
-@utility font-extra-card-title {
-  font-family: var(--font-primary);
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 120%; /* 19.2px */
-  letter-spacing: 1.6px;
-  text-transform: uppercase;
-}
-@utility font-tag {
-  font-family: var(--font-primary);
-  font-size: 23px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  letter-spacing: 0.46px;
-  font-feature-settings:
-    "liga" off,
-    "clig" off;
-}
-@utility font-tag-mobile {
-  font-family: var(--font-primary);
-  font-size: 18px;
-  font-style: normal;
+  font-size: clamp(36px, 4.5vw, 68px);
   font-weight: 500;
-  line-height: normal;
-  font-feature-settings:
-    "liga" off,
-    "clig" off;
+  line-height: 1.02;
+  letter-spacing: -0.025em;
 }
-@utility font-small {
+
+@utility font-page-title-mobile {
   font-family: var(--font-primary);
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 140%;
-  letter-spacing: 0.15px;
-  font-feature-settings:
-    "liga" off,
-    "clig" off;
+  font-size: clamp(28px, 8vw, 40px);
+  font-weight: 500;
+  line-height: 1.02;
+  letter-spacing: -0.025em;
 }
-@utility font-tag-caps {
-  font-family: var(--font-primary);
-  font-size: 24px;
-  font-style: normal;
+
+@utility font-navbar-link {
+  font-size: 12px;
   font-weight: 400;
-  line-height: 120%; /* 28.8px */
-  letter-spacing: 2.4px;
+  letter-spacing: 0.09em;
   text-transform: uppercase;
 }
-@utility font-tag-caps-mobile {
+
+@utility font-navbar-link-mobile {
   font-family: var(--font-primary);
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 120%;
-  letter-spacing: 1.8px;
-  text-transform: uppercase;
-}
-@utility font-large-title-mobile {
-  font-family: var(--font-primary);
-  font-size: 50px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 120%;
-  letter-spacing: 1px;
-}
-@utility font-sub-title-mobile {
-  font-family: var(--font-primary);
-  font-size: 19px;
-  font-style: normal;
-  font-weight: 275;
-  line-height: 140%;
-}
-@utility font-sub-title {
-  font-family: var(--font-primary);
-  font-size: 36px;
-  font-style: normal;
-  font-weight: 250;
-  line-height: 160%; /* 57.6px */
-}
-@utility font-medium-title-mobile {
-  font-family: var(--font-primary);
-  font-size: 45px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 120%;
-}
-@utility font-caps {
-  font-family: var(--font-primary);
-  font-size: 24px;
-  font-style: normal;
+  font-size: 22px;
   font-weight: 400;
-  line-height: 120%; /* 28.8px */
-  letter-spacing: 2.4px;
-  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: -0.01em;
 }
-@utility font-large-title {
-  font-family: var(--font-primary);
-  font-size: 80px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 140%; /* 112px */
-  letter-spacing: 1.6px;
-}
-@utility font-medium-title {
-  font-family: var(--font-primary);
-  font-size: 60px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 120%; /* 72px */
-  letter-spacing: 1.2px;
-}
-@utility font-giant-mobile {
-  font-family: var(--font-primary);
-  font-size: 54px;
-  font-style: normal;
-  font-weight: 900;
-  line-height: normal;
-  letter-spacing: 2.16px;
-  text-transform: uppercase;
-  font-feature-settings:
-    "liga" off,
-    "clig" off;
-}
-@utility font-roadmap-date {
-  font-family: var(--font-secondary);
-  font-size: 60px;
-  font-style: normal;
-  font-weight: 900;
-  line-height: normal;
-  text-transform: uppercase;
-  font-feature-settings:
-    "liga" off,
-    "clig" off;
-}
-@utility font-event-section {
-  font-family: var(--font-primary);
-  font-size: 80px;
-  font-style: normal;
-  font-weight: 900;
-  line-height: normal;
-  letter-spacing: 3.2px;
-  text-transform: uppercase;
-  font-feature-settings:
-    "liga" off,
-    "clig" off;
-}
-@utility font-giant {
-  font-family: var(--font-primary);
-  font-size: 194px;
-  font-style: normal;
-  font-weight: 900;
-  line-height: normal;
-  letter-spacing: 9.7px;
-  text-transform: uppercase;
-  font-feature-settings:
-    "liga" off,
-    "clig" off;
-}
-@utility font-qday-title {
-  font-family: var(--font-primary);
-  font-size: 33px;
-  font-style: normal;
-  font-weight: 100;
-  line-height: 120%; /* 39.6px */
-  letter-spacing: 0.99px;
-}
-@utility font-deadline {
-  font-family: var(--font-primary);
-  font-size: 28px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 120%; /* 33.6px */
-  letter-spacing: 0.56px;
-  text-transform: uppercase;
-  font-feature-settings:
-    "liga" off,
-    "clig" off;
-}
-@utility font-deadline-mobile {
-  font-family: var(--font-primary);
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 120%; /* 21.6px */
-  letter-spacing: 1.8px;
+
+@utility font-cta-mono {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: medium;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 

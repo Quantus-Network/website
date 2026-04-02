@@ -9,17 +9,19 @@ import {
   organizationJsonLd,
   websiteJsonLd,
 } from "@/constants/default-jsonld";
-import HeroBanner from "@/components/features/qday-checker/HeroBanner.astro";
-import DefinitionSection from "@/components/features/qday-checker/DefinitionSection.astro";
-import MethodSection from "@/components/features/qday-checker/MethodSection.astro";
-import AdviceSection from "@/components/features/qday-checker/AdviceSection.astro";
+import HeroBanner from "@/components/features/community/HeroBanner.astro";
+import EventSection from "@/components/features/community/EventSection.astro";
+import PodcastSection from "@/components/features/community/PodcastSection.astro";
+import BlogSection from "@/components/features/community/BlogSection.astro";
+import TelegramSection from "@/components/features/community/TelegramSection.astro";
+import SocialsSection from "@/components/features/community/SocialsSection.astro";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
 
 const metadata = createMetadata({
-  title: t("home.meta.title"),
-  description: t("home.meta.description"),
+  title: t("v2.community.meta.title"),
+  description: t("v2.community.meta.description"),
   pathname: Astro.url.pathname,
 });
 
@@ -31,7 +33,9 @@ const jsonLd = JsonLdGraph({
 
 <Layout {...metadata} jsonLd={jsonLd}>
   <HeroBanner />
-  <DefinitionSection />
-  <MethodSection />
-  <AdviceSection />
+  <EventSection />
+  <PodcastSection />
+  <BlogSection />
+  <TelegramSection />
+  <SocialsSection />
 </Layout>

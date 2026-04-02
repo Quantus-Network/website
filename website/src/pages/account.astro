@@ -1,7 +1,5 @@
 ---
 import Layout from "@/components/layout/Layout.astro";
-import AppHomeView from "@/assets/download/app-home-view.png";
-import { Image } from "astro:assets";
 
 import AppBenefitCard from "@/components/ui/AppBenefitCard.astro";
 import AppInformation from "@/components/ui/AppInformation.astro";
@@ -54,12 +52,6 @@ const metadata = createMetadata({
 
         <div class="flex flex-col gap-10 lg:flex-row lg:gap-8">
           <div
-            class="mx-auto max-w-[400px] px-[30px] lg:order-2 lg:max-w-[500px] lg:px-0 xl:hidden"
-          >
-            <Image src={AppHomeView} alt="App's home view" />
-          </div>
-
-          <div
             class="flex flex-col gap-8 px-5 lg:order-1 lg:grid lg:grid-cols-1 xl:grid-cols-2 xl:px-0"
           >
             {
@@ -73,10 +65,6 @@ const metadata = createMetadata({
             }
           </div>
         </div>
-      </div>
-
-      <div class="hidden lg:w-[348px] xl:block">
-        <Image src={AppHomeView} alt="App's home view" />
       </div>
     </div>
   </section>
