@@ -297,6 +297,10 @@
       }
     },
     "wallet": {
+      "meta": {
+        "title": "Wallet - Quantum-Secure Encrypted Money",
+        "description": "Quantus: Quantum-secure encrypted money. Download our wallet for post-quantum protected assets."
+      },
       "hero_banner": {
         "eyebrow": "THE QUANTUS WALLET",
         "title": "Superior money. In your pocket.",
@@ -359,6 +363,10 @@
       }
     },
     "about": {
+      "meta": {
+        "title": "About - Quantum-Secure Encrypted Money",
+        "description": "Quantus: Quantum-secure encrypted money. Download our wallet for post-quantum protected assets."
+      },
       "hero": {
         "eyebrow": "ABOUT QUANTUS",
         "title": "Built by people who saw the threat before it was obvious.",
@@ -391,6 +399,10 @@
       }
     },
     "community": {
+      "meta": {
+        "title": "Community - Quantum-Secure Encrypted Money",
+        "description": "Quantus: Quantum-secure encrypted money. Download our wallet for post-quantum protected assets."
+      },
       "hero": {
         "eyebrow": "COMMUNITY",
         "heading": "The people building the quantum-secure future.",
