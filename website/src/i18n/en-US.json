@@ -11,6 +11,10 @@
       "open_menu": "Open menu"
     },
     "home": {
+      "meta": {
+        "title": "Quantus - Quantum-Secure Encrypted Money",
+        "description": "Quantus: Quantum-secure encrypted money. Download our wallet for post-quantum protected assets."
+      },
       "loader": {
         "lines": {
           "protocol": "> QUANTUS PROTOCOL v0.9.1-bell",
@@ -26,15 +30,11 @@
         }
       },
       "hero_banner": {
-        "eyebrow": "Quantum-Secure L1 Blockchain",
+        "eyebrow": "Quantum-Secure Encrypted Money",
         "title_line1": "The blockchain quantum",
         "title_line2": "computers can't break.",
-        "sub": {
-          "line1": "Post-quantum cryptography at every layer.",
-          "line2": "Clean-slate architecture.",
-          "line3": "Mainnet Q2 2026."
-        },
         "cta_whitepaper": "Read Whitepaper",
+        "cta_download_wallet": "Download Wallet",
         "freq": {
           "wave_mode": "WAVE MODE (m,n)",
           "move_cursor": "MOVE CURSOR TO SHIFT FREQUENCY"
@@ -48,7 +48,7 @@
         }
       },
       "problem": {
-        "eyebrow": "The Threat Is Real",
+        "eyebrow": "The Threat",
         "status_label": "Threat Level: Critical",
         "headline": "$3 trillion in crypto. Zero quantum defense.",
         "qubits": {
@@ -84,7 +84,7 @@
       },
       "solution": {
         "eyebrow": "Why Quantus",
-        "typewriter_text": "Quantus is a Layer 1 blockchain built from the ground up with post-quantum cryptography at every layer. Signatures, P2P communications, SSH keys. Not a patch on existing infrastructure. A clean-slate protocol designed for the world that's coming.",
+        "typewriter_text": "Quantus is quantum secure, private, scalable money. It uses NIST-approved post-quantum cryptography, ZK for scaling, and PoW mining. Maximally fair tokenomics modeled after Bitcoin.",
         "pillars": {
           "pqc": {
             "title": "Post-Quantum Cryptography",
@@ -141,24 +141,24 @@
       },
       "ecosystem": {
         "eyebrow": "The Ecosystem",
-        "headline": "One chain. Three entry points.",
+        "headline": "Tools. Entry Points to Quantus.",
         "cards": {
           "wallet": {
             "label": "Wallet",
-            "description": "Your quantum-secure key to the Quantus network. Available on iOS and Android.",
+            "description": "Download on iOS and Android.",
             "beta": "Public Beta Live",
             "app_store": "App Store",
             "google_play": "Google Play"
           },
           "technology": {
-            "label": "Technology",
-            "description": "Post-quantum cryptography, engineered from first principles.",
+            "label": "Whitepaper",
+            "description": "Learn about Quantus.",
             "nist_badge": "NIST FIPS 204",
             "whitepaper_cta": "Read Whitepaper"
           },
           "network": {
             "label": "Network",
-            "description": "A live peer-to-peer quantum-secure network.",
+            "description": "View network activity.",
             "validators": "247 Active Validators",
             "explorer_cta": "View Explorer"
           }
@@ -166,7 +166,7 @@
       },
       "community": {
         "eyebrow": "Community",
-        "headline": "The people building the quantum-secure future.",
+        "headline": "Get involved. Stay connected.",
         "cards": {
           "telegram": {
             "label": "Telegram",
@@ -200,7 +200,7 @@
         "email_placeholder": "Enter your email",
         "email_aria": "Email address",
         "submit_label": "SUBSCRIBE",
-        "error_message": "Please fill in all fields with a valid email address.",
+        "error_message": "Please fill in each field with a valid value.",
         "fine_print": "No spam. Unsubscribe anytime.",
         "success": {
           "headline": "You're in.",
@@ -642,7 +642,7 @@
     },
     "footer": {
       "brand": "QUANTUS",
-      "copyright": "© {year} Quantus Network.",
+      "copyright": "© {year} Quantus.",
       "rights": "All rights reserved.",
       "built_on": "BUILT ON BELL TESTNET",
       "sections": {

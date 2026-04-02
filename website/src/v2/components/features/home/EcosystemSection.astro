@@ -1,4 +1,5 @@
 ---
+import { APP_LINKS } from "@/constants/app-links";
 import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
@@ -122,12 +123,22 @@ const t = await createTranslator(locale);
             {t("v2.home.ecosystem.cards.wallet.beta")}
           </div>
           <div class="eco-dl-tags">
-            <span class="eco-dl-tag">
+            <a
+              href={APP_LINKS.ios}
+              target="_blank"
+              rel="noopener"
+              class="eco-dl-tag"
+            >
               {t("v2.home.ecosystem.cards.wallet.app_store")}
-            </span>
-            <span class="eco-dl-tag">
+            </a>
+            <a
+              href={APP_LINKS.android}
+              target="_blank"
+              rel="noopener"
+              class="eco-dl-tag"
+            >
               {t("v2.home.ecosystem.cards.wallet.google_play")}
-            </span>
+            </a>
           </div>
         </div>
       </div>

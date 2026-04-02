@@ -16,11 +16,7 @@ const t = await createTranslator(locale);
         t("v2.home.hero_banner.title_line2")
       }
     </h1>
-    <div class="sub">
-      <span class="sub-l">{t("v2.home.hero_banner.sub.line1")}</span>
-      <span class="sub-l">{t("v2.home.hero_banner.sub.line2")}</span>
-      <span class="sub-l">{t("v2.home.hero_banner.sub.line3")}</span>
-    </div>
+    <div class="sub"></div>
     <div class="ctas">
       <Button
         href="#"
@@ -30,7 +26,7 @@ const t = await createTranslator(locale);
         target="_blank"
         rel="noopener"
       >
-        {t("v2.navbar.download_wallet")}
+        {t("v2.home.hero_banner.cta_download_wallet")}
       </Button>
       <Button href="/v2/whitepaper" variant="secondary" size="medium">
         {t("v2.home.hero_banner.cta_whitepaper")}
