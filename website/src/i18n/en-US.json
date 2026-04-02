@@ -299,45 +299,45 @@
     "wallet": {
       "hero_banner": {
         "eyebrow": "THE QUANTUS WALLET",
-        "title": "Quantum-secure from the ground up. In your pocket.",
-        "sub": "Send, receive, and secure your assets with post-quantum cryptography built into every transaction. Available on iOS and Android.",
+        "title": "Superior money. In your pocket.",
+        "sub": "Send, receive, and store quantum-secure sound money. Available on iOS and Android.",
         "cta_app_store": "Download on App Store",
         "cta_google_play": "Download on Google Play"
       },
       "advantage": {
         "eyebrow": "BUILT DIFFERENTLY",
-        "heading": "Security that starts at the chain.",
-        "body": "Most wallets are only as secure as the blockchain underneath them. Every existing chain uses elliptic curve cryptography, the kind a sufficiently powerful quantum computer can break. Quantus is built differently. Post-quantum cryptography is the foundation of the chain, not a feature added on top. Your wallet inherits that security by default."
+        "heading": "Safe haven security.",
+        "body": "Your wallet is only as secure as the blockchain underneath it. Other chains use elliptic curve cryptography, the kind a sufficiently powerful quantum computer can break. Quantus is built differently. Post-quantum cryptography is the foundation of the chain, not a feature added on top. Your wallet inherits that security."
       },
       "features": {
         "eyebrow": "FEATURES",
-        "heading": "Designed for security. Built for humans.",
+        "heading": "Built for humans.",
         "cards": {
           "reversible": {
             "title": "Reversible Transactions",
-            "body": "Set a time window on outgoing transfers. Changed your mind? Cancel before the window closes. A safety net that does not compromise finality."
+            "body": "Say goodbye to test transactions. Set a time window on outgoing transfers. Changed your mind? Cancel before the window closes. A safety net that does not compromise finality."
           },
           "checkphrases": {
             "title": "Check-Phrases",
-            "body": "Every Quantus address has a human-readable checksum. A short sequence of memorable words generated from your address. Verify the phrase before you send. Protection against typos, copy-paste tampering, and address poisoning attacks."
+            "body": "Never fat finger again. Every Quantus address has a human-readable checkphrase. A short sequence of memorable words generated from your address. Verify the phrase before you send. Protect against typos, copy-paste tampering, and address poisoning attacks."
           },
           "high_security": {
             "title": "High-Security Accounts",
-            "body": "Assign a guardian to your account. A hardware wallet, multisig, or trusted party. Any suspicious transaction can be cancelled during a reversal period. Opt-in, permanent, and composable."
+            "body": "For institutions and advanced users. Create a dead-man switch or assign a guardian to your account who can revert malicious transactions. Guardians can cancel transactions during the reversal period, but not spend on your behalf. Opt-in and composable."
           },
           "encrypt": {
-            "title": "Encrypt Your Funds",
-            "body": "Every transaction on Quantus is signed with ML-DSA, a NIST-approved post-quantum algorithm. Your funds are encrypted at the protocol level, not the app level. No patch. No migration. Already there."
+            "title": "Private By Default",
+            "body": "Privacy is a right. The same zero-knowledge proof design that scales Quantus to 3,800 TPS also protects your privacy. Your transactions, balance, and history are yours."
           }
         }
       },
       "issues": {
         "eyebrow": "WHY IT MATTERS",
         "heading": "Your wallet today. Still safe when quantum arrives.",
-        "body": "Most crypto users will not know when quantum computers become a real threat. By then, migrating to a secure wallet will be chaotic, slow, and expensive. The Quantus wallet means you do not have to think about it. You are already on the right side of the shift.",
+        "body": "Q-day will not be televised. The Quantus wallet means you do not have to think about it. You are already on the right side of the shift.",
         "stats": {
           "tps": {
-            "value": "4,200",
+            "value": "3,800",
             "label": "TPS ON QUANTUS"
           },
           "security": {
@@ -351,7 +351,7 @@
         }
       },
       "cta": {
-        "title": "Own quantum-secure assets.",
+        "title": "Own quantum-secure money.",
         "sub": "Free to download. Available worldwide.",
         "primary_cta": "Download on App Store",
         "secondary_cta": "Download on Google Play",
