@@ -1,780 +1,690 @@
 {
-  "v2": {
-    "navbar": {
-      "about": "About",
-      "technology": "Technology",
-      "wallet": "Wallet",
-      "community": "Community",
-      "quantum_risk_checker": "Q-Day Checker",
-      "quan": "Quan",
-      "download_wallet": "Download Wallet",
-      "open_menu": "Open menu"
-    },
-    "home": {
-      "meta": {
-        "title": "Quantus - Quantum-Secure Encrypted Money",
-        "description": "Quantus: Quantum-secure encrypted money. Download our wallet for post-quantum protected assets."
-      },
-      "loader": {
-        "lines": {
-          "protocol": "> QUANTUS PROTOCOL v0.9.1-bell",
-          "integrity": "> SYSTEM INTEGRITY <span class=\"ok\">[PASS]</span>",
-          "nist_module": "> NIST FIPS 204 MODULE LOADED <span class=\"ok\">[OK]</span>",
-          "initializing": "> INITIALIZING <span class=\"ac\">ML-DSA / DILITHIUM-5</span>...",
-          "signature_scheme": "> POST-QUANTUM SIGNATURE SCHEME <span class=\"ok\">ACTIVE</span>",
-          "p2p_layer": "> P2P COMM LAYER → <span class=\"ac\">PQ-ENCRYPTED TUNNEL</span>",
-          "zk_engine": "> RECURSIVE ZK PROOF ENGINE <span class=\"ok\">READY</span>",
-          "syncing": "> SYNCING BELL TESTNET... PEERS: <span class=\"ac\">247</span>",
-          "chladni": "> CHLADNI FIELD VISUALIZER <span class=\"ac\">LOADING</span>",
-          "prompt": "> <span class=\"blink\"></span>"
-        }
-      },
-      "hero_banner": {
-        "eyebrow": "Quantum-Secure Encrypted Money",
-        "title_line1": "The blockchain quantum",
-        "title_line2": "computers can't break.",
-        "cta_whitepaper": "Read Whitepaper",
-        "cta_download_wallet": "Download Wallet",
-        "freq": {
-          "wave_mode": "WAVE MODE (m,n)",
-          "move_cursor": "MOVE CURSOR TO SHIFT FREQUENCY"
-        },
-        "ticker": {
-          "block_height": "BLOCK HEIGHT",
-          "tps": "TPS",
-          "uptime": "UPTIME",
-          "validators": "VALIDATORS",
-          "mainnet": "MAINNET: ??"
-        }
-      },
-      "problem": {
-        "eyebrow": "The Threat",
-        "status_label": "Threat Level: Critical",
-        "headline": "$3 trillion in crypto. Zero quantum defense.",
-        "qubits": {
-          "label": "Qubits to Break Bitcoin",
-          "value": "2,400",
-          "sub": "logical qubits required for a cryptographically relevant quantum computer"
-        },
-        "chains": {
-          "bitcoin": {
-            "name": "Bitcoin",
-            "enc": "ECDSA-256"
-          },
-          "ethereum": {
-            "name": "Ethereum",
-            "enc": "ECDSA-256"
-          },
-          "solana": {
-            "name": "Solana",
-            "enc": "ED25519"
-          },
-          "quantus": {
-            "name": "Quantus",
-            "enc_primary": "ML-DSA",
-            "enc_secondary": "DILITHIUM-5",
-            "note": "NIST FIPS 204"
-          }
-        },
-        "tags": {
-          "vulnerable": "Vulnerable",
-          "secure": "Secure"
-        },
-        "source": "Source: NIST Post-Quantum Cryptography Standardization · 2024"
-      },
-      "solution": {
-        "eyebrow": "Why Quantus",
-        "typewriter_text": "Quantus is quantum secure, private, scalable money. It uses NIST-approved post-quantum cryptography, ZK for scaling, and PoW mining. Maximally fair tokenomics modeled after Bitcoin.",
-        "pillars": {
-          "pqc": {
-            "title": "Post-Quantum Cryptography",
-            "specs": {
-              "algorithm": {
-                "label": "Algorithm",
-                "value": "ML-DSA / Dilithium-5"
-              },
-              "standard": {
-                "label": "Standard",
-                "value": "NIST FIPS 204"
-              },
-              "layer": {
-                "label": "Layer",
-                "value": "Signatures · P2P · SSH"
-              }
-            }
-          },
-          "zk": {
-            "title": "Recursive ZK Proofs",
-            "specs": {
-              "type": {
-                "label": "Type",
-                "value": "Recursive STARKs"
-              },
-              "purpose": {
-                "label": "Purpose",
-                "value": "Scalability"
-              },
-              "throughput": {
-                "label": "Throughput",
-                "value": "4,200 TPS"
-              }
-            }
-          },
-          "arch": {
-            "title": "Clean-Slate Architecture",
-            "specs": {
-              "type": {
-                "label": "Type",
-                "value": "Layer 1"
-              },
-              "approach": {
-                "label": "Approach",
-                "value": "Ground-up build"
-              },
-              "migration": {
-                "label": "Migration",
-                "value": "Not required"
-              }
-            }
-          }
-        }
-      },
-      "ecosystem": {
-        "eyebrow": "The Ecosystem",
-        "headline": "Tools. Entry Points to Quantus.",
-        "cards": {
-          "wallet": {
-            "label": "Wallet",
-            "description": "Download on iOS and Android.",
-            "beta": "Public Beta Live",
-            "app_store": "App Store",
-            "google_play": "Google Play"
-          },
-          "technology": {
-            "label": "Whitepaper",
-            "description": "Learn about Quantus.",
-            "nist_badge": "NIST FIPS 204",
-            "whitepaper_cta": "Read Whitepaper"
-          },
-          "network": {
-            "label": "Network",
-            "description": "View network activity.",
-            "validators": "247 Active Validators",
-            "explorer_cta": "View Explorer"
-          }
-        }
-      },
-      "community": {
-        "eyebrow": "Community",
-        "headline": "Get involved. Stay connected.",
-        "cards": {
-          "telegram": {
-            "label": "Telegram",
-            "description": "Join the conversation",
-            "cta": "Join Telegram"
-          },
-          "x": {
-            "label": "X",
-            "description": "Follow for updates",
-            "cta": "Follow on X"
-          },
-          "instagram": {
-            "label": "Instagram",
-            "description": "Behind the scenes",
-            "cta": "Follow on IG"
-          },
-          "youtube": {
-            "label": "YouTube",
-            "description": "Watch and learn",
-            "cta": "Watch on YouTube"
-          }
-        }
-      },
-      "newsletter": {
-        "headline": "The window is open.",
-        "sub": "Get quantum security updates, protocol news, and early access straight to your inbox.",
-        "first_name_placeholder": "First name",
-        "first_name_aria": "First name",
-        "last_name_placeholder": "Last name",
-        "last_name_aria": "Last name",
-        "email_placeholder": "Enter your email",
-        "email_aria": "Email address",
-        "submit_label": "SUBSCRIBE",
-        "error_message": "Please fill in each field with a valid value.",
-        "fine_print": "No spam. Unsubscribe anytime.",
-        "success": {
-          "headline": "You're in.",
-          "sub": "We'll keep you ahead of the curve."
-        }
-      }
-    },
-    "technology": {
-      "meta": {
-        "title": "Technology - Quantum-Secure Encrypted Money",
-        "description": "Quantus: Quantum-secure encrypted money. Download our wallet for post-quantum protected assets."
-      },
-      "hero_banner": {
-        "eyebrow": "The Protocol",
-        "title_line1": "Quantum secure",
-        "title_line2": "encrypted money.",
-        "sub": "Scaled with zero-knowledge proofs. Secured by Proof of Work."
-      },
-      "architecture": {
-        "title": "Architecture",
-        "subtitle": "No migration. No compromises.",
-        "content": "Every existing blockchain was built before quantum computers were a real threat. That means their security is on borrowed time. Quantus is the next generation, with post-quantum cryptography as the foundation. No messy migration required.",
-        "cards": {
-          "signatures": {
-            "title": "Quantum-Secure Signatures",
-            "body": "Every transaction on Quantus is signed with ML-DSA-87. The highest security standard being adopted by organizations like Cloudflare and Signal."
-          },
-          "network_layer": {
-            "title": "Secured Network Layer",
-            "body": "Most chains only secure transactions. Quantus secures everything - including the communications between nodes. There's no weak point in the stack."
-          },
-          "scale": {
-            "title": "Built to Scale",
-            "body": "Post-quantum signatures are larger than classical ones. We solved that with a zero-knowledge proof system that compresses thousands of transactions into a single verifiable proof - without sacrificing security."
-          }
-        }
-      },
-      "cryptography": {
-        "title": "Cryptography",
-        "subtitle": "The standard quantum can't break.",
-        "content": "Post-quantum cryptography is here.",
-        "columns": {
-          "meaning": {
-            "title": "What This Means",
-            "body": "Classical blockchains use elliptic curve cryptography. A sufficiently powerful quantum computer can break it - deriving private keys from public ones, forging transactions, stealing funds. ML-DSA, the algorithm Quantus uses, has no known quantum vulnerability. Its security is based on a class of mathematical problems that quantum computers cannot solve efficiently."
-          },
-          "urgency": {
-            "title": "Why It Matters Now",
-            "body": "Pre-quantum chains face a hard migration. They need to implement new cryptographic standards, get every user to migrate, and decide what to do with unmigrated coins, all while figuring out how to scale PQC. The window to migrate is closing. Quantus doesn't need to migrate. It started there."
-          }
-        },
-        "table": {
-          "headers": {
-            "property": "Property",
-            "ecdsa": "ECDSA",
-            "mldsa": "ML-DSA"
-          },
-          "rows": {
-            "quantum_resistant": "Quantum Resistant",
-            "nist_approved": "NIST Approved",
-            "security_level": "Security Level",
-            "signature_scheme": "Signature Scheme",
-            "shor_vulnerable": "Vulnerable to Shor's Algorithm"
-          },
-          "values": {
-            "ecdsa_security": "NIST Level 1",
-            "mldsa_security": "NIST Level 5",
-            "ecdsa_scheme": "Elliptic Curve",
-            "mldsa_scheme": "Module Lattice"
-          }
-        }
-      },
-      "scalability": {
-        "title": "Scalability",
-        "subtitle": "Scaling superior money.",
-        "content": "Post-quantum cryptography comes with a tradeoff - larger signatures mean fewer transactions per block. Every chain working on quantum security will hit this wall. Quantus already solved it.",
-        "stat": {
-          "label": "Throughput Improvement",
-          "value": "223×",
-          "sub": "vs raw post-quantum transactions with ZK proof aggregation"
-        },
-        "description": "Thousands of transactions. One compact proof. Verified on-chain."
-      },
-      "consensus": {
-        "title": "Consensus",
-        "subtitle": "Proof-of-Work. Built for ZK.",
-        "body": "Quantus uses Proof-of-Work consensus. The same battle-tested model as Bitcoin. One change: the hash function is optimized for zero-knowledge proof systems. That means Quantus's ZK infrastructure is native and efficient rather than bolted on."
-      },
-      "cta": {
-        "title": "The full technical picture.",
-        "sub": "Protocol architecture, cryptographic assumptions, and the complete security model - in the Quantus whitepaper.",
-        "primary_cta": "Read Whitepaper",
-        "secondary_cta": "Explore Network"
-      }
-    },
-    "wallet": {
-      "meta": {
-        "title": "Wallet - Quantum-Secure Encrypted Money",
-        "description": "Quantus: Quantum-secure encrypted money. Download our wallet for post-quantum protected assets."
-      },
-      "hero_banner": {
-        "eyebrow": "THE QUANTUS WALLET",
-        "title": "Superior money. In your pocket.",
-        "sub": "Send, receive, and store quantum-secure sound money. Available on iOS and Android.",
-        "cta_app_store": "Download on App Store",
-        "cta_google_play": "Download on Google Play"
-      },
-      "advantage": {
-        "eyebrow": "BUILT DIFFERENTLY",
-        "heading": "Safe haven security.",
-        "body": "Your wallet is only as secure as the blockchain underneath it. Other chains use elliptic curve cryptography, the kind a sufficiently powerful quantum computer can break. Quantus is built differently. Post-quantum cryptography is the foundation of the chain, not a feature added on top. Your wallet inherits that security."
-      },
-      "features": {
-        "eyebrow": "FEATURES",
-        "heading": "Built for humans.",
-        "cards": {
-          "reversible": {
-            "title": "Reversible Transactions",
-            "body": "Say goodbye to test transactions. Set a time window on outgoing transfers. Changed your mind? Cancel before the window closes. A safety net that does not compromise finality."
-          },
-          "checkphrases": {
-            "title": "Check-Phrases",
-            "body": "Never fat finger again. Every Quantus address has a human-readable checkphrase. A short sequence of memorable words generated from your address. Verify the phrase before you send. Protect against typos, copy-paste tampering, and address poisoning attacks."
-          },
-          "high_security": {
-            "title": "High-Security Accounts",
-            "body": "For institutions and advanced users. Create a dead-man switch or assign a guardian to your account who can revert malicious transactions. Guardians can cancel transactions during the reversal period, but not spend on your behalf. Opt-in and composable."
-          },
-          "encrypt": {
-            "title": "Private By Default",
-            "body": "Privacy is a right. The same zero-knowledge proof design that scales Quantus to 3,800 TPS also protects your privacy. Your transactions, balance, and history are yours."
-          }
-        }
-      },
-      "issues": {
-        "eyebrow": "WHY IT MATTERS",
-        "heading": "Your wallet today. Still safe when quantum arrives.",
-        "body": "Q-day will not be televised. The Quantus wallet means you do not have to think about it. You are already on the right side of the shift.",
-        "stats": {
-          "tps": {
-            "value": "3,800",
-            "label": "TPS ON QUANTUS"
-          },
-          "security": {
-            "value": "NIST 5",
-            "label": "SECURITY LEVEL"
-          },
-          "migration": {
-            "value": "0",
-            "label": "MIGRATION REQUIRED"
-          }
-        }
-      },
-      "cta": {
-        "title": "Own quantum-secure money.",
-        "sub": "Free to download. Available worldwide.",
-        "primary_cta": "Download on App Store",
-        "secondary_cta": "Download on Google Play",
-        "note": "Public beta available now on iOS and Android"
-      }
-    },
-    "about": {
-      "meta": {
-        "title": "About - Quantum-Secure Encrypted Money",
-        "description": "Quantus: Quantum-secure encrypted money. Download our wallet for post-quantum protected assets."
-      },
-      "hero": {
-        "eyebrow": "ABOUT QUANTUS",
-        "title": "Built by people who saw the threat before it was obvious.",
-        "sub": "Quantus is a team of engineers, researchers, and operators building the infrastructure for a post-quantum financial system."
-      },
-      "team": {
-        "eyebrow": "THE TEAM",
-        "heading": "The people building it."
-      },
-      "mission": {
-        "eyebrow": "MISSION",
-        "heading": "Permanent Economic Freedom",
-        "body1": "Every decision we make, from protocol design to user interface, is grounded in deep technical knowledge and a respect for simplicity.",
-        "body2": "We focus on the fundamentals: mathematically proven security, high performance, and a product experience that feels effortless.",
-        "body3": "We build with precision. We move fast without cutting corners. And we design for the world that is coming, not the one that has already passed."
-      },
-      "advisors": {
-        "eyebrow": "ADVISORS"
-      },
-      "investors": {
-        "eyebrow": "BACKED BY"
-      },
-      "contact": {
-        "eyebrow": "GET IN TOUCH",
-        "heading": "Want to work with us or learn more?",
-        "body": "For partnerships, press, and investment enquiries:",
-        "email": "hello@quantus.com",
-        "subject": "Enquiry from Quantus Website",
-        "cta": "SEND US A MESSAGE →"
-      }
-    },
-    "community": {
-      "meta": {
-        "title": "Community - Quantum-Secure Encrypted Money",
-        "description": "Quantus: Quantum-secure encrypted money. Download our wallet for post-quantum protected assets."
-      },
-      "hero": {
-        "eyebrow": "COMMUNITY",
-        "heading": "The people building the quantum-secure future.",
-        "sub": "Join the Quantus community. Researchers and early adopters who understood the quantum threat before the mainstream caught up."
-      },
-      "events": {
-        "eyebrow": "EVENTS",
-        "heading": "Meet us in person.",
-        "card": {
-          "date_label": "QDAY — APRIL 2026",
-          "title": "A community event bringing together the Quantus network and quantum computing researchers.",
-          "cta": "GET NOTIFIED →",
-          "status": "DETAILS COMING SOON"
-        }
-      },
-      "podcast": {
-        "eyebrow": "PODCAST",
-        "heading": "QDay — The quantum security podcast.",
-        "body": "Hosted by Christopher Smith. Conversations at the intersection of quantum computing, blockchain security, and the future of digital finance.",
-        "cta_spotify": "LISTEN ON SPOTIFY →",
-        "cta_apple": "LISTEN ON APPLE PODCASTS →",
-        "episode": {
-          "title": "EP. 18: Is the Quantum threat really that close?",
-          "meta": "1:27:02 · 9 DAYS AGO"
-        }
-      },
-      "telegram": {
-        "eyebrow": "JOIN THE CONVERSATION",
-        "heading": "Find your corner of the community.",
-        "body": "Connect with researchers and early adopters in the Quantus Telegram community.",
-        "cta": "JOIN TELEGRAM →"
-      },
-      "socials": {
-        "eyebrow": "FOLLOW ALONG",
-        "platforms": {
-          "x": "X (TWITTER)",
-          "instagram": "INSTAGRAM",
-          "github": "GITHUB",
-          "youtube": "YOUTUBE"
-        }
-      },
-      "blog": {
-        "eyebrow": "BLOG",
-        "heading": "From the Quantus team.",
-        "sub": "Technical deep-dives, protocol updates, and perspectives on the quantum threat landscape.",
-        "posts": {
-          "post1": {
-            "date": "MAR 24",
-            "tag": "UPDATE",
-            "title": "Second Halving: 4x Faster ZK Proofs in Two Weeks"
-          },
-          "post2": {
-            "date": "MAR 16",
-            "tag": "UPDATE",
-            "title": "Quantum-Safe Signatures, ZK Scaling, and 2x Faster Wormhole Proofs"
-          },
-          "post3": {
-            "date": "MAR 07",
-            "tag": "PROTOCOL",
-            "title": "Wormhole Transactions"
-          }
-        },
-        "view_all": "READ ALL POSTS →"
-      }
-    },
-    "privacy": {
-      "meta": {
-        "title": "Quantus Network - Privacy Policy",
-        "description": "Read Quantus Network's Privacy Policy to understand how we collect, use, and protect your information across our apps and website."
-      },
-      "hero": {
-        "eyebrow": "LEGAL",
-        "title": "Privacy Policy",
-        "last_updated": "Last updated: June 12, 2025"
-      },
-      "information_collect": {
-        "title": "Information We Collect",
-        "from_apps": "From Our Apps:",
-        "from_apps_content": "We do not collect personal information through the Quantus Network applications.",
-        "from_website": "From Our Website we automatically collect:",
-        "from_website_items": [
-          "IP address (anonymized through Google Analytics)",
-          "Browser and device information",
-          "Pages visited and usage patterns",
-          "Geographic location (country and region only)"
-        ],
-        "from_you": "From You Directly:",
-        "from_you_items": [
-          "Email address (if you subscribe to our newsletter)",
-          "Information you provide when contacting us"
-        ],
-        "technical": "Technical Data:",
-        "technical_items": [
-          "Application crash reports and error logs",
-          "Network connectivity information (to improve performance)"
-        ]
-      },
-      "how_we_use": {
-        "title": "How We Use Information",
-        "intro": "We use collected information to:",
-        "items": [
-          "Improve our website and applications",
-          "Send newsletter updates (with your consent)",
-          "Analyze usage to enhance user experience",
-          "Monitor for abuse and protect our services",
-          "Comply with legal obligations"
-        ],
-        "we_do_not": "We do not:",
-        "we_do_not_items": [
-          "Sell or rent your data to third parties",
-          "Store your private keys or transaction data",
-          "Use your data for targeted advertising"
-        ]
-      },
-      "information_sharing": {
-        "title": "Information Sharing",
-        "intro": "We may share information with:",
-        "items": [
-          "Analytics providers (Google Analytics for website data)",
-          "Service providers who help operate our website",
-          "Legal authorities when required by law"
-        ],
-        "note": "We only share aggregated, anonymized data that cannot identify you."
-      },
-      "cookies_tracking": {
-        "title": "Cookies and Tracking",
-        "intro": "Our website uses cookies for:",
-        "items": [
-          "Essential website functionality",
-          "Analytics to understand site usage",
-          "Performance improvements"
-        ],
-        "note": "You can control cookies through your browser settings, though this may affect website functionality."
-      },
-      "data_security": {
-        "title": "Data Security and Retention",
-        "intro": "We implement standard security measures to protect your data, including encryption and secure storage. However, no online service is completely secure.",
-        "technical": "Retention periods:",
-        "retention_items": [
-          "Website analytics: 26 months",
-          "Newsletter subscriptions: Until you unsubscribe"
-        ]
-      },
-      "your_rights": {
-        "title": "Your Rights",
-        "general": "You can: Unsubscribe from communications anytime.",
-        "california": "For California residents: You have additional rights under CCPA, including the right to know what personal information we collect and the right to deletion.",
-        "eu_uk": "For EU and UK residents: You have rights under GDPR, including data portability and the right to object to processing."
-      },
-      "international_transfers": {
-        "title": "International Transfers",
-        "content": "Your information may be processed in the United States. We ensure appropriate protections for international data transfers."
-      },
-      "childrens_privacy": {
-        "title": "Children's Privacy",
-        "content": "Our services are not intended for anyone under 18. We do not knowingly collect information from minors."
-      },
-      "additional_info": {
-        "title": "Additional Information",
-        "regulatory": "Regulatory Compliance:",
-        "regulatory_items": [
-          "Users must comply with local cryptocurrency regulations",
-          "Some features may be restricted in certain jurisdictions",
-          "We reserve the right to limit access based on legal requirements"
-        ]
-      },
-      "contact_info": {
-        "title": "Contact Us",
-        "address": "Quantus Labs LLC\n20 N Gould St 52783\nSheridan, WY 82801",
-        "note": "For questions about this policy or to exercise your privacy rights, please use our",
-        "link": "contact form"
-      }
-    },
-    "terms": {
-      "meta": {
-        "title": "Quantus Network - Terms of Service",
-        "description": "Read Quantus Network's Terms of Service for usage rules, responsibilities, and legal disclaimers for our apps and blockchain services."
-      },
-      "hero": {
-        "eyebrow": "LEGAL",
-        "title": "Terms of Service",
-        "last_updated": "Last updated: June 12, 2025"
-      },
-      "what_we_provide": {
-        "title": "What We Provide",
-        "intro": "Quantus Network offers:",
-        "items": [
-          "Mobile apps (available on App Store and Google Play)",
-          "Desktop applications with integrated mining functionality",
-          "Access to our open-source code",
-          "Community newsletter and updates",
-          "Access to the Quantus Network blockchain"
-        ]
-      },
-      "what_you_cannot_do": {
-        "title": "What You Cannot Do",
-        "intro": "You may not use our services to:",
-        "items": [
-          "Engage in illegal activities",
-          "Distribute malware or hack systems",
-          "Violate export controls or sanctions",
-          "Interfere with network operations",
-          "Provide false information"
-        ]
-      },
-      "mining_participation": {
-        "title": "Mining and Network Participation",
-        "items": [
-          "Mining functionality is for educational and network participation",
-          "You must comply with local energy and mining regulations",
-          "We make no guarantees about mining profitability or rewards",
-          "Network features may change as the protocol evolves"
-        ]
-      },
-      "dispute_resolution": {
-        "title": "Dispute Resolution",
-        "content": "Any disputes will be resolved through binding arbitration in Wyoming under American Arbitration Association rules. These terms are governed by Wyoming law. We may terminate access if you violate these terms."
-      },
-      "your_responsibilities": {
-        "title": "Your Responsibilities",
-        "intro": "You are solely responsible for:",
-        "items": [
-          "Safeguarding your wallet credentials and seed phrase",
-          "Complying with local laws regarding cryptocurrency and mining",
-          "Understanding the risks of blockchain technology",
-          "Lost private keys cannot be recovered by us"
-        ]
-      },
-      "non_custodial": {
-        "title": "Non-Custodial Design",
-        "intro": "Important: We do not store or access your private keys, seed phrases, or digital assets. You have full control and responsibility for your wallet and assets.",
-        "items": [
-          "We cannot recover lost private keys or seed phrases",
-          "We cannot reverse transactions on the blockchain",
-          "We cannot freeze or control your assets",
-          "You are responsible for securing your wallet credentials",
-          "Always back up your seed phrase in a secure location"
-        ]
-      },
-      "disclaimers": {
-        "title": "Disclaimers and Limitations",
-        "intro": "Our services are provided \"as-is\" without warranties. Cryptocurrency involves substantial risk of loss. To the maximum extent permitted by law:",
-        "items": [
-          "We are not liable for any indirect or consequential damages",
-          "Our total liability shall not exceed $1",
-          "You agree to indemnify us from claims arising from your use of our services"
-        ]
-      },
-      "contact": {
-        "title": "Contact Us",
-        "address": "Quantus Labs LLC\n20 N Gould St 52783\nSheridan, WY 82801",
-        "note": "For questions about these terms, please email:",
-        "email": "hello@quantus.com"
-      }
-    },
-    "footer": {
-      "brand": "QUANTUS",
-      "copyright": "© {year} Quantus.",
-      "rights": "All rights reserved.",
-      "built_on": "BUILT ON BELL TESTNET",
-      "sections": {
-        "protocol": "Protocol",
-        "community": "Community",
-        "company": "Company"
-      },
-      "links": {
-        "whitepaper": "Whitepaper",
-        "technology": "Technology",
-        "network": "Network",
-        "wallet": "Wallet",
-        "research": "Research",
-        "documentation": "Documentation",
-        "telegram": "Telegram",
-        "x": "X (Twitter)",
-        "instagram": "Instagram",
-        "youtube": "YouTube",
-        "about": "About",
-        "blog": "Blog",
-        "podcast": "QDay Podcast",
-        "contact": "Contact",
-        "privacy": "Privacy Policy",
-        "terms": "Terms of Service",
-        "coingecko": "CoinGecko"
-      }
-    }
+  "navbar": {
+    "about": "About",
+    "technology": "Technology",
+    "wallet": "Wallet",
+    "community": "Community",
+    "quantum_risk_checker": "Q-Day Checker",
+    "quan": "Quan",
+    "download_wallet": "Download Wallet",
+    "open_menu": "Open menu"
   },
   "home": {
     "meta": {
-      "title": "Quantus Network - Quantum-Secure Layer 1 Blockchain",
-      "description": "Quantus: Quantum-secure Layer 1 blockchain. Download our wallet for post-quantum protected assets."
-    }
-  },
-  "navbar": {
-    "about": "About",
-    "foundations": "Foundations",
-    "app": "App",
-    "team": "Team",
-    "roadmap": "Roadmap",
-    "events": "Events",
-    "blog": "Blog",
-    "contact": "Contact",
-    "checker": "Qday Risk Checker",
-    "quests": "Quests",
-    "launch": "Launch",
-    "cta": "Join the Public BETA"
-  },
-  "hero": {
-    "tagline": "welcome to the future",
-    "title": "Quantum Secure Your Crypto",
-    "subtitle": "Quantus Network, the L1 Blockchain for the Quantum Era",
-    "cta_primary": "Join the Public BETA",
-    "cta_secondary": "Read the Whitepaper",
-    "stats": {
-      "blocktime": "Blocktime",
-      "seconds": "sec",
-      "transactions": "Transactions",
-      "addresses": "Addresses",
-      "nodes": "Nodes"
-    }
-  },
-  "video": {
-    "title": "Build value on cryptography that lasts.",
-    "description": "Quantus is here for people who see what's coming; the next wave of innovation. A future-proof, quantum-secure blockchain that can secure today's value against tomorrow's threats."
-  },
-  "benefits": {
-    "title": "The Future is Quantum",
-    "description": "Quantus Network is a Layer 1 blockchain designed to thrive in the quantum era. Secured with post-quantum cryptography and scaled with zero-knowledge proofs, it delivers a level of security, scalability and usability that today's chains can't match. A clean-slate design that anticipates the coming wave of quantum technology.",
-    "cards": {
-      "quantum_secure": {
-        "title": "Quantum Secure at Every Layer",
-        "description": "Secured with NIST-backed post-quantum cryptography, every layer of Quantus from transaction signatures to P2P communication is engineered to resist attacks that would break today's blockchains. Built to endure, and ready to evolve with the quantum era."
+      "title": "Quantus - Quantum-Secure Encrypted Money",
+      "description": "Quantus: Quantum-secure encrypted money. Download our wallet for post-quantum protected assets."
+    },
+    "loader": {
+      "lines": {
+        "protocol": "> QUANTUS PROTOCOL v0.9.1-bell",
+        "integrity": "> SYSTEM INTEGRITY <span class=\"ok\">[PASS]</span>",
+        "nist_module": "> NIST FIPS 204 MODULE LOADED <span class=\"ok\">[OK]</span>",
+        "initializing": "> INITIALIZING <span class=\"ac\">ML-DSA / DILITHIUM-5</span>...",
+        "signature_scheme": "> POST-QUANTUM SIGNATURE SCHEME <span class=\"ok\">ACTIVE</span>",
+        "p2p_layer": "> P2P COMM LAYER → <span class=\"ac\">PQ-ENCRYPTED TUNNEL</span>",
+        "zk_engine": "> RECURSIVE ZK PROOF ENGINE <span class=\"ok\">READY</span>",
+        "syncing": "> SYNCING BELL TESTNET... PEERS: <span class=\"ac\">247</span>",
+        "chladni": "> CHLADNI FIELD VISUALIZER <span class=\"ac\">LOADING</span>",
+        "prompt": "> <span class=\"blink\"></span>"
+      }
+    },
+    "hero_banner": {
+      "eyebrow": "Quantum-Secure Encrypted Money",
+      "title_line1": "The blockchain quantum",
+      "title_line2": "computers can't break.",
+      "cta_whitepaper": "Read Whitepaper",
+      "cta_download_wallet": "Download Wallet",
+      "freq": {
+        "wave_mode": "WAVE MODE (m,n)",
+        "move_cursor": "MOVE CURSOR TO SHIFT FREQUENCY"
       },
-      "zero_knowledge": {
-        "title": "Zero-Knowledge by Design",
-        "description": "Recursive zero-knowledge proofs keep the network fast. Instead of reprocessing everything, nodes verify compact proofs - reducing overhead and ensuring the system grows smoothly under real demand."
+      "ticker": {
+        "block_height": "BLOCK HEIGHT",
+        "tps": "TPS",
+        "uptime": "UPTIME",
+        "validators": "VALIDATORS",
+        "mainnet": "MAINNET: ??"
+      }
+    },
+    "problem": {
+      "eyebrow": "The Threat",
+      "status_label": "Threat Level: Critical",
+      "headline": "$3 trillion in crypto. Zero quantum defense.",
+      "qubits": {
+        "label": "Qubits to Break Bitcoin",
+        "value": "2,400",
+        "sub": "logical qubits required for a cryptographically relevant quantum computer"
       },
-      "security_control": {
-        "title": "Security You Control",
-        "description": "Quantus puts you in charge. You decide how assets move, how they're protected, and who to trust. Complexity is handled in the background, so your experience feels clear, secure, and built to last into the quantum future."
+      "chains": {
+        "bitcoin": {
+          "name": "Bitcoin",
+          "enc": "ECDSA-256"
+        },
+        "ethereum": {
+          "name": "Ethereum",
+          "enc": "ECDSA-256"
+        },
+        "solana": {
+          "name": "Solana",
+          "enc": "ED25519"
+        },
+        "quantus": {
+          "name": "Quantus",
+          "enc_primary": "ML-DSA",
+          "enc_secondary": "DILITHIUM-5",
+          "note": "NIST FIPS 204"
+        }
+      },
+      "tags": {
+        "vulnerable": "Vulnerable",
+        "secure": "Secure"
+      },
+      "source": "Source: NIST Post-Quantum Cryptography Standardization · 2024"
+    },
+    "solution": {
+      "eyebrow": "Why Quantus",
+      "typewriter_text": "Quantus is quantum secure, private, scalable money. It uses NIST-approved post-quantum cryptography, ZK for scaling, and PoW mining. Maximally fair tokenomics modeled after Bitcoin.",
+      "pillars": {
+        "pqc": {
+          "title": "Post-Quantum Cryptography",
+          "specs": {
+            "algorithm": {
+              "label": "Algorithm",
+              "value": "ML-DSA / Dilithium-5"
+            },
+            "standard": {
+              "label": "Standard",
+              "value": "NIST FIPS 204"
+            },
+            "layer": {
+              "label": "Layer",
+              "value": "Signatures · P2P · SSH"
+            }
+          }
+        },
+        "zk": {
+          "title": "Recursive ZK Proofs",
+          "specs": {
+            "type": {
+              "label": "Type",
+              "value": "Recursive STARKs"
+            },
+            "purpose": {
+              "label": "Purpose",
+              "value": "Scalability"
+            },
+            "throughput": {
+              "label": "Throughput",
+              "value": "4,200 TPS"
+            }
+          }
+        },
+        "arch": {
+          "title": "Clean-Slate Architecture",
+          "specs": {
+            "type": {
+              "label": "Type",
+              "value": "Layer 1"
+            },
+            "approach": {
+              "label": "Approach",
+              "value": "Ground-up build"
+            },
+            "migration": {
+              "label": "Migration",
+              "value": "Not required"
+            }
+          }
+        }
+      }
+    },
+    "ecosystem": {
+      "eyebrow": "The Ecosystem",
+      "headline": "Tools. Entry Points to Quantus.",
+      "cards": {
+        "wallet": {
+          "label": "Wallet",
+          "description": "Download on iOS and Android.",
+          "beta": "Public Beta Live",
+          "app_store": "App Store",
+          "google_play": "Google Play"
+        },
+        "technology": {
+          "label": "Whitepaper",
+          "description": "Learn about Quantus.",
+          "nist_badge": "NIST FIPS 204",
+          "whitepaper_cta": "Read Whitepaper"
+        },
+        "network": {
+          "label": "Network",
+          "description": "View network activity.",
+          "validators": "247 Active Validators",
+          "explorer_cta": "View Explorer"
+        }
+      }
+    },
+    "community": {
+      "eyebrow": "Community",
+      "headline": "Get involved. Stay connected.",
+      "cards": {
+        "telegram": {
+          "label": "Telegram",
+          "description": "Join the conversation",
+          "cta": "Join Telegram"
+        },
+        "x": {
+          "label": "X",
+          "description": "Follow for updates",
+          "cta": "Follow on X"
+        },
+        "instagram": {
+          "label": "Instagram",
+          "description": "Behind the scenes",
+          "cta": "Follow on IG"
+        },
+        "youtube": {
+          "label": "YouTube",
+          "description": "Watch and learn",
+          "cta": "Watch on YouTube"
+        }
+      }
+    },
+    "newsletter": {
+      "headline": "The window is open.",
+      "sub": "Get quantum security updates, protocol news, and early access straight to your inbox.",
+      "first_name_placeholder": "First name",
+      "first_name_aria": "First name",
+      "last_name_placeholder": "Last name",
+      "last_name_aria": "Last name",
+      "email_placeholder": "Enter your email",
+      "email_aria": "Email address",
+      "submit_label": "SUBSCRIBE",
+      "error_message": "Please fill in each field with a valid value.",
+      "fine_print": "No spam. Unsubscribe anytime.",
+      "success": {
+        "headline": "You're in.",
+        "sub": "We'll keep you ahead of the curve."
       }
     }
   },
-  "app": {
+  "technology": {
     "meta": {
-      "title": "Download Quantus Wallet | Quantum-Secure Crypto App",
-      "description": "Quantus: Quantum-secure Layer 1 blockchain. Download our wallet for post-quantum protected assets."
+      "title": "Technology - Quantum-Secure Encrypted Money",
+      "description": "Quantus: Quantum-secure encrypted money. Download our wallet for post-quantum protected assets."
     },
-    "tagline": "Your quantum-secure gateway is ready",
-    "title": "Download Quantus Wallet",
-    "description": "The Quantus App puts quantum security and zero-knowledge scalability directly in your hands. Every safeguard runs silently in the background, so you can focus on what matters: moving value with clarity, confidence, and control.",
-    "benefits": {
-      "reversible_transactions": {
-        "title": "Reversible Transactions",
-        "description": "Set a reversible window for every send. Made a mistake? Didn't receive the goods you were promised? Fat fingers struck again? Simply reverse the transaction before the timer's up."
+    "hero_banner": {
+      "eyebrow": "The Protocol",
+      "title_line1": "Quantum secure",
+      "title_line2": "encrypted money.",
+      "sub": "Scaled with zero-knowledge proofs. Secured by Proof of Work."
+    },
+    "architecture": {
+      "title": "Architecture",
+      "subtitle": "No migration. No compromises.",
+      "content": "Every existing blockchain was built before quantum computers were a real threat. That means their security is on borrowed time. Quantus is the next generation, with post-quantum cryptography as the foundation. No messy migration required.",
+      "cards": {
+        "signatures": {
+          "title": "Quantum-Secure Signatures",
+          "body": "Every transaction on Quantus is signed with ML-DSA-87. The highest security standard being adopted by organizations like Cloudflare and Signal."
+        },
+        "network_layer": {
+          "title": "Secured Network Layer",
+          "body": "Most chains only secure transactions. Quantus secures everything - including the communications between nodes. There's no weak point in the stack."
+        },
+        "scale": {
+          "title": "Built to Scale",
+          "body": "Post-quantum signatures are larger than classical ones. We solved that with a zero-knowledge proof system that compresses thousands of transactions into a single verifiable proof - without sacrificing security."
+        }
+      }
+    },
+    "cryptography": {
+      "title": "Cryptography",
+      "subtitle": "The standard quantum can't break.",
+      "content": "Post-quantum cryptography is here.",
+      "columns": {
+        "meaning": {
+          "title": "What This Means",
+          "body": "Classical blockchains use elliptic curve cryptography. A sufficiently powerful quantum computer can break it - deriving private keys from public ones, forging transactions, stealing funds. ML-DSA, the algorithm Quantus uses, has no known quantum vulnerability. Its security is based on a class of mathematical problems that quantum computers cannot solve efficiently."
+        },
+        "urgency": {
+          "title": "Why It Matters Now",
+          "body": "Pre-quantum chains face a hard migration. They need to implement new cryptographic standards, get every user to migrate, and decide what to do with unmigrated coins, all while figuring out how to scale PQC. The window to migrate is closing. Quantus doesn't need to migrate. It started there."
+        }
       },
-      "readable_checkphrases": {
-        "title": "Readable Checkphrases",
-        "description": "No more copy-paste paranoia. Send with confidence using unique, human-friendly checkphrases you'll actually recognize. No typos, no lookalike scams, just clear, unmistakable destinations."
+      "table": {
+        "headers": {
+          "property": "Property",
+          "ecdsa": "ECDSA",
+          "mldsa": "ML-DSA"
+        },
+        "rows": {
+          "quantum_resistant": "Quantum Resistant",
+          "nist_approved": "NIST Approved",
+          "security_level": "Security Level",
+          "signature_scheme": "Signature Scheme",
+          "shor_vulnerable": "Vulnerable to Shor's Algorithm"
+        },
+        "values": {
+          "ecdsa_security": "NIST Level 1",
+          "mldsa_security": "NIST Level 5",
+          "ecdsa_scheme": "Elliptic Curve",
+          "mldsa_scheme": "Module Lattice"
+        }
+      }
+    },
+    "scalability": {
+      "title": "Scalability",
+      "subtitle": "Scaling superior money.",
+      "content": "Post-quantum cryptography comes with a tradeoff - larger signatures mean fewer transactions per block. Every chain working on quantum security will hit this wall. Quantus already solved it.",
+      "stat": {
+        "label": "Throughput Improvement",
+        "value": "223×",
+        "sub": "vs raw post-quantum transactions with ZK proof aggregation"
       },
-      "security_guardians": {
-        "title": "Security Guardians",
-        "description": "You choose your trusted allies and give them the power to step in and intercept a transfer before it goes through. A safety net of your own design, protecting your assets when you can't."
-      },
-      "beneficiary_recovery": {
-        "title": "Beneficiary & Recovery",
-        "description": "Plan for the long term. Assign a recovery account or beneficiary to inherit your funds if you're gone. Your assets stay protected, even during unexpected events. Think of it as your will, enforced by code."
+      "description": "Thousands of transactions. One compact proof. Verified on-chain."
+    },
+    "consensus": {
+      "title": "Consensus",
+      "subtitle": "Proof-of-Work. Built for ZK.",
+      "body": "Quantus uses Proof-of-Work consensus. The same battle-tested model as Bitcoin. One change: the hash function is optimized for zero-knowledge proof systems. That means Quantus's ZK infrastructure is native and efficient rather than bolted on."
+    },
+    "cta": {
+      "title": "The full technical picture.",
+      "sub": "Protocol architecture, cryptographic assumptions, and the complete security model - in the Quantus whitepaper.",
+      "primary_cta": "Read Whitepaper",
+      "secondary_cta": "Explore Network"
+    }
+  },
+  "wallet": {
+    "meta": {
+      "title": "Wallet - Quantum-Secure Encrypted Money",
+      "description": "Quantus: Quantum-secure encrypted money. Download our wallet for post-quantum protected assets."
+    },
+    "hero_banner": {
+      "eyebrow": "THE QUANTUS WALLET",
+      "title": "Superior money. In your pocket.",
+      "sub": "Send, receive, and store quantum-secure sound money. Available on iOS and Android.",
+      "cta_app_store": "Download on App Store",
+      "cta_google_play": "Download on Google Play"
+    },
+    "advantage": {
+      "eyebrow": "BUILT DIFFERENTLY",
+      "heading": "Safe haven security.",
+      "body": "Your wallet is only as secure as the blockchain underneath it. Other chains use elliptic curve cryptography, the kind a sufficiently powerful quantum computer can break. Quantus is built differently. Post-quantum cryptography is the foundation of the chain, not a feature added on top. Your wallet inherits that security."
+    },
+    "features": {
+      "eyebrow": "FEATURES",
+      "heading": "Built for humans.",
+      "cards": {
+        "reversible": {
+          "title": "Reversible Transactions",
+          "body": "Say goodbye to test transactions. Set a time window on outgoing transfers. Changed your mind? Cancel before the window closes. A safety net that does not compromise finality."
+        },
+        "checkphrases": {
+          "title": "Check-Phrases",
+          "body": "Never fat finger again. Every Quantus address has a human-readable checkphrase. A short sequence of memorable words generated from your address. Verify the phrase before you send. Protect against typos, copy-paste tampering, and address poisoning attacks."
+        },
+        "high_security": {
+          "title": "High-Security Accounts",
+          "body": "For institutions and advanced users. Create a dead-man switch or assign a guardian to your account who can revert malicious transactions. Guardians can cancel transactions during the reversal period, but not spend on your behalf. Opt-in and composable."
+        },
+        "encrypt": {
+          "title": "Private By Default",
+          "body": "Privacy is a right. The same zero-knowledge proof design that scales Quantus to 3,800 TPS also protects your privacy. Your transactions, balance, and history are yours."
+        }
+      }
+    },
+    "issues": {
+      "eyebrow": "WHY IT MATTERS",
+      "heading": "Your wallet today. Still safe when quantum arrives.",
+      "body": "Q-day will not be televised. The Quantus wallet means you do not have to think about it. You are already on the right side of the shift.",
+      "stats": {
+        "tps": {
+          "value": "3,800",
+          "label": "TPS ON QUANTUS"
+        },
+        "security": {
+          "value": "NIST 5",
+          "label": "SECURITY LEVEL"
+        },
+        "migration": {
+          "value": "0",
+          "label": "MIGRATION REQUIRED"
+        }
       }
     },
     "cta": {
-      "tagline": "Public beta now live",
-      "title": "They say quantum is years away. They said the same about AI.",
-      "button": "Join the Quantum Wave"
+      "title": "Own quantum-secure money.",
+      "sub": "Free to download. Available worldwide.",
+      "primary_cta": "Download on App Store",
+      "secondary_cta": "Download on Google Play",
+      "note": "Public beta available now on iOS and Android"
+    }
+  },
+  "about": {
+    "meta": {
+      "title": "About - Quantum-Secure Encrypted Money",
+      "description": "Quantus: Quantum-secure encrypted money. Download our wallet for post-quantum protected assets."
+    },
+    "hero": {
+      "eyebrow": "ABOUT QUANTUS",
+      "title": "Built by people who saw the threat before it was obvious.",
+      "sub": "Quantus is a team of engineers, researchers, and operators building the infrastructure for a post-quantum financial system."
+    },
+    "team": {
+      "eyebrow": "THE TEAM",
+      "heading": "The people building it."
+    },
+    "mission": {
+      "eyebrow": "MISSION",
+      "heading": "Permanent Economic Freedom",
+      "body1": "Every decision we make, from protocol design to user interface, is grounded in deep technical knowledge and a respect for simplicity.",
+      "body2": "We focus on the fundamentals: mathematically proven security, high performance, and a product experience that feels effortless.",
+      "body3": "We build with precision. We move fast without cutting corners. And we design for the world that is coming, not the one that has already passed."
+    },
+    "advisors": {
+      "eyebrow": "ADVISORS"
+    },
+    "investors": {
+      "eyebrow": "BACKED BY"
+    },
+    "contact": {
+      "eyebrow": "GET IN TOUCH",
+      "heading": "Want to work with us or learn more?",
+      "body": "For partnerships, press, and investment enquiries:",
+      "email": "hello@quantus.com",
+      "subject": "Enquiry from Quantus Website",
+      "cta": "SEND US A MESSAGE →"
+    }
+  },
+  "community": {
+    "meta": {
+      "title": "Community - Quantum-Secure Encrypted Money",
+      "description": "Quantus: Quantum-secure encrypted money. Download our wallet for post-quantum protected assets."
+    },
+    "hero": {
+      "eyebrow": "COMMUNITY",
+      "heading": "The people building the quantum-secure future.",
+      "sub": "Join the Quantus community. Researchers and early adopters who understood the quantum threat before the mainstream caught up."
+    },
+    "events": {
+      "eyebrow": "EVENTS",
+      "heading": "Meet us in person.",
+      "card": {
+        "date_label": "QDAY — APRIL 2026",
+        "title": "A community event bringing together the Quantus network and quantum computing researchers.",
+        "cta": "GET NOTIFIED →",
+        "status": "DETAILS COMING SOON"
+      }
+    },
+    "podcast": {
+      "eyebrow": "PODCAST",
+      "heading": "QDay — The quantum security podcast.",
+      "body": "Hosted by Christopher Smith. Conversations at the intersection of quantum computing, blockchain security, and the future of digital finance.",
+      "cta_spotify": "LISTEN ON SPOTIFY →",
+      "cta_apple": "LISTEN ON APPLE PODCASTS →",
+      "episode": {
+        "title": "EP. 18: Is the Quantum threat really that close?",
+        "meta": "1:27:02 · 9 DAYS AGO"
+      }
+    },
+    "telegram": {
+      "eyebrow": "JOIN THE CONVERSATION",
+      "heading": "Find your corner of the community.",
+      "body": "Connect with researchers and early adopters in the Quantus Telegram community.",
+      "cta": "JOIN TELEGRAM →"
+    },
+    "socials": {
+      "eyebrow": "FOLLOW ALONG",
+      "platforms": {
+        "x": "X (TWITTER)",
+        "instagram": "INSTAGRAM",
+        "github": "GITHUB",
+        "youtube": "YOUTUBE"
+      }
+    },
+    "blog": {
+      "eyebrow": "BLOG",
+      "heading": "From the Quantus team.",
+      "sub": "Technical deep-dives, protocol updates, and perspectives on the quantum threat landscape.",
+      "posts": {
+        "post1": {
+          "date": "MAR 24",
+          "tag": "UPDATE",
+          "title": "Second Halving: 4x Faster ZK Proofs in Two Weeks"
+        },
+        "post2": {
+          "date": "MAR 16",
+          "tag": "UPDATE",
+          "title": "Quantum-Safe Signatures, ZK Scaling, and 2x Faster Wormhole Proofs"
+        },
+        "post3": {
+          "date": "MAR 07",
+          "tag": "PROTOCOL",
+          "title": "Wormhole Transactions"
+        }
+      },
+      "view_all": "READ ALL POSTS →"
+    }
+  },
+  "privacy": {
+    "meta": {
+      "title": "Quantus Network - Privacy Policy",
+      "description": "Read Quantus Network's Privacy Policy to understand how we collect, use, and protect your information across our apps and website."
+    },
+    "hero": {
+      "eyebrow": "LEGAL",
+      "title": "Privacy Policy",
+      "last_updated": "Last updated: June 12, 2025"
+    },
+    "information_collect": {
+      "title": "Information We Collect",
+      "from_apps": "From Our Apps:",
+      "from_apps_content": "We do not collect personal information through the Quantus Network applications.",
+      "from_website": "From Our Website we automatically collect:",
+      "from_website_items": [
+        "IP address (anonymized through Google Analytics)",
+        "Browser and device information",
+        "Pages visited and usage patterns",
+        "Geographic location (country and region only)"
+      ],
+      "from_you": "From You Directly:",
+      "from_you_items": [
+        "Email address (if you subscribe to our newsletter)",
+        "Information you provide when contacting us"
+      ],
+      "technical": "Technical Data:",
+      "technical_items": [
+        "Application crash reports and error logs",
+        "Network connectivity information (to improve performance)"
+      ]
+    },
+    "how_we_use": {
+      "title": "How We Use Information",
+      "intro": "We use collected information to:",
+      "items": [
+        "Improve our website and applications",
+        "Send newsletter updates (with your consent)",
+        "Analyze usage to enhance user experience",
+        "Monitor for abuse and protect our services",
+        "Comply with legal obligations"
+      ],
+      "we_do_not": "We do not:",
+      "we_do_not_items": [
+        "Sell or rent your data to third parties",
+        "Store your private keys or transaction data",
+        "Use your data for targeted advertising"
+      ]
+    },
+    "information_sharing": {
+      "title": "Information Sharing",
+      "intro": "We may share information with:",
+      "items": [
+        "Analytics providers (Google Analytics for website data)",
+        "Service providers who help operate our website",
+        "Legal authorities when required by law"
+      ],
+      "note": "We only share aggregated, anonymized data that cannot identify you."
+    },
+    "cookies_tracking": {
+      "title": "Cookies and Tracking",
+      "intro": "Our website uses cookies for:",
+      "items": [
+        "Essential website functionality",
+        "Analytics to understand site usage",
+        "Performance improvements"
+      ],
+      "note": "You can control cookies through your browser settings, though this may affect website functionality."
+    },
+    "data_security": {
+      "title": "Data Security and Retention",
+      "intro": "We implement standard security measures to protect your data, including encryption and secure storage. However, no online service is completely secure.",
+      "technical": "Retention periods:",
+      "retention_items": [
+        "Website analytics: 26 months",
+        "Newsletter subscriptions: Until you unsubscribe"
+      ]
+    },
+    "your_rights": {
+      "title": "Your Rights",
+      "general": "You can: Unsubscribe from communications anytime.",
+      "california": "For California residents: You have additional rights under CCPA, including the right to know what personal information we collect and the right to deletion.",
+      "eu_uk": "For EU and UK residents: You have rights under GDPR, including data portability and the right to object to processing."
+    },
+    "international_transfers": {
+      "title": "International Transfers",
+      "content": "Your information may be processed in the United States. We ensure appropriate protections for international data transfers."
+    },
+    "childrens_privacy": {
+      "title": "Children's Privacy",
+      "content": "Our services are not intended for anyone under 18. We do not knowingly collect information from minors."
+    },
+    "additional_info": {
+      "title": "Additional Information",
+      "regulatory": "Regulatory Compliance:",
+      "regulatory_items": [
+        "Users must comply with local cryptocurrency regulations",
+        "Some features may be restricted in certain jurisdictions",
+        "We reserve the right to limit access based on legal requirements"
+      ]
+    },
+    "contact_info": {
+      "title": "Contact Us",
+      "address": "Quantus Labs LLC\n20 N Gould St 52783\nSheridan, WY 82801",
+      "note": "For questions about this policy or to exercise your privacy rights, please use our",
+      "link": "contact form"
+    }
+  },
+  "terms": {
+    "meta": {
+      "title": "Quantus Network - Terms of Service",
+      "description": "Read Quantus Network's Terms of Service for usage rules, responsibilities, and legal disclaimers for our apps and blockchain services."
+    },
+    "hero": {
+      "eyebrow": "LEGAL",
+      "title": "Terms of Service",
+      "last_updated": "Last updated: June 12, 2025"
+    },
+    "what_we_provide": {
+      "title": "What We Provide",
+      "intro": "Quantus Network offers:",
+      "items": [
+        "Mobile apps (available on App Store and Google Play)",
+        "Desktop applications with integrated mining functionality",
+        "Access to our open-source code",
+        "Community newsletter and updates",
+        "Access to the Quantus Network blockchain"
+      ]
+    },
+    "what_you_cannot_do": {
+      "title": "What You Cannot Do",
+      "intro": "You may not use our services to:",
+      "items": [
+        "Engage in illegal activities",
+        "Distribute malware or hack systems",
+        "Violate export controls or sanctions",
+        "Interfere with network operations",
+        "Provide false information"
+      ]
+    },
+    "mining_participation": {
+      "title": "Mining and Network Participation",
+      "items": [
+        "Mining functionality is for educational and network participation",
+        "You must comply with local energy and mining regulations",
+        "We make no guarantees about mining profitability or rewards",
+        "Network features may change as the protocol evolves"
+      ]
+    },
+    "dispute_resolution": {
+      "title": "Dispute Resolution",
+      "content": "Any disputes will be resolved through binding arbitration in Wyoming under American Arbitration Association rules. These terms are governed by Wyoming law. We may terminate access if you violate these terms."
+    },
+    "your_responsibilities": {
+      "title": "Your Responsibilities",
+      "intro": "You are solely responsible for:",
+      "items": [
+        "Safeguarding your wallet credentials and seed phrase",
+        "Complying with local laws regarding cryptocurrency and mining",
+        "Understanding the risks of blockchain technology",
+        "Lost private keys cannot be recovered by us"
+      ]
+    },
+    "non_custodial": {
+      "title": "Non-Custodial Design",
+      "intro": "Important: We do not store or access your private keys, seed phrases, or digital assets. You have full control and responsibility for your wallet and assets.",
+      "items": [
+        "We cannot recover lost private keys or seed phrases",
+        "We cannot reverse transactions on the blockchain",
+        "We cannot freeze or control your assets",
+        "You are responsible for securing your wallet credentials",
+        "Always back up your seed phrase in a secure location"
+      ]
+    },
+    "disclaimers": {
+      "title": "Disclaimers and Limitations",
+      "intro": "Our services are provided \"as-is\" without warranties. Cryptocurrency involves substantial risk of loss. To the maximum extent permitted by law:",
+      "items": [
+        "We are not liable for any indirect or consequential damages",
+        "Our total liability shall not exceed $1",
+        "You agree to indemnify us from claims arising from your use of our services"
+      ]
+    },
+    "contact": {
+      "title": "Contact Us",
+      "address": "Quantus Labs LLC\n20 N Gould St 52783\nSheridan, WY 82801",
+      "note": "For questions about these terms, please email:",
+      "email": "hello@quantus.com"
+    }
+  },
+  "footer": {
+    "brand": "QUANTUS",
+    "copyright": "© {year} Quantus.",
+    "rights": "All rights reserved.",
+    "built_on": "BUILT ON BELL TESTNET",
+    "sections": {
+      "protocol": "Protocol",
+      "community": "Community",
+      "company": "Company"
+    },
+    "links": {
+      "whitepaper": "Whitepaper",
+      "technology": "Technology",
+      "network": "Network",
+      "wallet": "Wallet",
+      "research": "Research",
+      "documentation": "Documentation",
+      "telegram": "Telegram",
+      "x": "X (Twitter)",
+      "instagram": "Instagram",
+      "youtube": "YouTube",
+      "about": "About",
+      "blog": "Blog",
+      "podcast": "QDay Podcast",
+      "contact": "Contact",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "coingecko": "CoinGecko"
     }
   },
   "account": {
@@ -794,609 +704,6 @@
     "code": {
       "label": "Referral Code",
       "copy": "Referral code copied!"
-    }
-  },
-  "team": {
-    "title": "The Core Team",
-    "description": "Founded by veteran engineers from early-stage crypto startups and former CTO roles. The team combines deep expertise in applied cryptography and zero-knowledge systems with a proven ability to ship secure, scalable infrastructure.",
-    "cta": "Get in Touch",
-    "members": {
-      "chris": {
-        "title": "Chief Executive Officer",
-        "bio": "A technology pioneer and entrepreneur at the forefront of AI, blockchain, and quantum computing, Chris brings a rare mix of deep technical expertise and philosophical thinking. He's spent the last decade building tools that empower individuals and redefine digital trust.",
-        "achievements": [
-          "Founder of BitMesh, Lunyr (LUN), and FactoryDAO (FVT)",
-          "Early contributor to foundational Bitcoin libraries",
-          "Former AI team lead at Tensor Spark, specializing in applied machine learning",
-          "Private cybersecurity and digital asset recovery advisor for HNW individuals",
-          "Focus: Cryptography, Complexity Theory, Algebraic Topology, Quantum Computing"
-        ]
-      },
-      "joe": {
-        "title": "Chief Operating Officer"
-      },
-      "nik": {
-        "title": "Senior Software Engineer"
-      },
-      "cezary": {
-        "title": "Senior Software Engineer"
-      },
-      "rob": {
-        "title": "Dev Ops"
-      }
-    }
-  },
-  "roadmap": {
-    "title": "Roadmap",
-    "timeline": {
-      "heisenberg": {
-        "date": "DEC 2024",
-        "title": "Heisenberg Inception",
-        "content": "Funding secured, Substrate chosen"
-      },
-      "resonance": {
-        "date": "JULY 2025",
-        "title": "Resonance Alpha",
-        "content": "Public testnet, dilithium signatures, reversible transactions"
-      },
-      "schrodinger": {
-        "date": "OCT 2025",
-        "title": "Schrödinger Beta",
-        "content": "Public Beta Launch, features complete, ready for audit"
-      },
-      "bell": {
-        "date": "Q1 2026",
-        "title": "Bell Mainnet",
-        "content": "Mainnet launch, QUAN token launch"
-      },
-      "planck": {
-        "date": "Q2 2026",
-        "title": "Planck Upgrades",
-        "content": "High Security Accounts, Multisignature Accounts, Hardware Wallet Integration"
-      },
-      "dirac": {
-        "date": "Q3 2026",
-        "title": "Dirac Expansion",
-        "content": "Entangled Addresses, Bridge to Solana"
-      }
-    }
-  },
-  "events": {
-    "title": "Come Meet Us",
-    "upcoming": "UPCOMING EVENT:",
-    "token2049": {
-      "title": "Token 2049",
-      "date": "1-2 OCTOBER 2025 MARINA BAY SANDS - Singapore",
-      "description": "Come meet us and have a chat about quantum, blockchain, art, music or anything!",
-      "additional": "We'll be there all weekend!",
-      "cta": "Event Details"
-    }
-  },
-  "socials": {
-    "title": "Follow us for educational content, podcasts, interviews and more!"
-  },
-  "checker": {
-    "meta": {
-      "title": "Quantum Risk Checker | Scan Your Wallet or ENS for Q-Day Risk",
-      "description": "Check any Ethereum wallet or ENS name for quantum threats. Get your Q-Day risk score instantly and see how secure your crypto really is."
-    },
-    "subtitle": "QUANTUM RISK CHECKER",
-    "title": "Are you safe on Qday?",
-    "description": "Analyze your Ethereum address for quantum computing vulnerabilities. Our tool checks transaction history and balance to provide a comprehensive quantum security risk assessment.",
-    "form": {
-      "label": "Ethereum Address",
-      "placeholder": "Enter your wallet address",
-      "btn": "Analyze"
-    },
-    "definition": {
-      "title": "The Quantum Deadline",
-      "paragraph_one": "Q-Day is the moment when quantum computers can break the cryptography that secures most of today's digital world. The algorithms behind secure web connections, software updates, banking systems, and email, such as RSA and elliptic-curve cryptography, would no longer be safe.",
-      "paragraph_two": "Even data encrypted years earlier could be harvested now and decrypted later, exposing confidential information across governments, businesses, and individuals."
-    },
-    "consequence": {
-      "title": "What does Q-day mean for Blockchains and Digital Assets",
-      "paragraph_one": "Blockchains depend on elliptic-curve digital signatures to prove ownership of funds. On Ethereum for example, every outgoing transaction permanently exposes a wallet's public key.",
-      "paragraph_two": "A quantum computer could use a public key to mathematically derive the private key, allowing attackers to forge valid signatures and transfer assets without the owners knowledge.",
-      "paragraph_three": "A network-wide scramble to adopt quantum-safe protocols would follow, but by then unprepared chains could already be compromised.",
-      "invitation_one": "Use our",
-      "product": "Quantum Risk Scanner",
-      "invitation_two": "to see how vulnerable your address is and take action before Qday."
-    },
-    "method": {
-      "title": "How it Works",
-      "subtitle": "The Quantum Risk Scanner scans any Ethereum address and gives it a Quantum Readiness Score, a Risk Level, and a Grade.",
-      "factor_title": "Two primary risk factors drive the score:",
-      "factors": [
-        {
-          "title": "Public-key Exposure",
-          "content": "Whether the address has ever sent a transaction and revealed its key."
-        },
-        {
-          "title": "Balance Sensitivity",
-          "content": "The higher the ETH balance, the more attractive the target."
-        }
-      ],
-      "factor_usage": "From these signals we calculate a numerical score and map it to simple, A-F Grades and Risk levels clear enough for you to act on.",
-      "analysis_title": "What your analysis will provide:",
-      "analysis_items": [
-        "Safety Score: 35 - 100",
-        "Risk Level: Very High / High / Medium / Low / Very Low",
-        "Grade: F / D / C / B / A / A+",
-        "Key Exposure status: Exposed or Not yet exposed",
-        "Advice: practical next steps"
-      ]
-    }
-  },
-  "quests": {
-    "meta": {
-      "title": "Quantus Quests | Join the Game & Earn Rewards on Quantus Network",
-      "description": "Compete in Quantus Quests — fun blockchain challenges with real rewards. Climb the leaderboard and Earn USDC."
-    },
-    "hero": {
-      "welcome": "Welcome To",
-      "title": "Quantus Quests",
-      "description": "Quantus Quests are a series of challenges designed to reward our earliest and most active community members. By completing Quests, secure your status as an early adopter and you will earn USDC."
-    },
-    "shill": {
-      "info": {
-        "code": "QUEST #001",
-        "name_one": "KING",
-        "name_two": "OF THE",
-        "name_three": "SHILL",
-        "description": "A battle for a $500 USDC prize pool, boosted airdrop points, and the ultimate title: The King of the Shill.",
-        "play_guide": {
-          "title": "How to Play",
-          "guides": [
-            "Download the Quantus App.",
-            "Go to the Quantus Quests tab to find your referral link (The Qcat).",
-            "Share your code with your friends & foes.",
-            "Watch the live leaderboard to track your position in real-time."
-          ]
-        }
-      },
-      "leaderboard": {
-        "title": "Leaderboard",
-        "referrals": "Referrals",
-        "table": {
-          "rank": "Rank",
-          "address": "Address",
-          "referrals": "Referrals"
-        }
-      },
-      "rules": {
-        "title": "The Rules of the Game",
-        "goal": {
-          "title": "The Goal:",
-          "content": "Refer the most users to the Quantus Wallet using your unique invite code. Only referrals that create a wallet will be counted."
-        },
-        "prize": {
-          "title": "The Prizes:",
-          "content": [
-            "1st Place: $300 USDC",
-            "2nd Place: $150 USDC",
-            "3rd Place: $50 USDC"
-          ]
-        },
-        "win": {
-          "title": "How to Win:",
-          "content": "Hold the #1 spot for 72 consecutive hours.",
-          "card": {
-            "title": "The Quantum Twist",
-            "content_one": "The #1 spot on the leaderboard is represented by a live, reversible 10,000 QUAN transaction. If another user overtakes you, the transaction automatically reverses and is sent to the new leader. The claim to the $300 USDC prize moves with it.",
-            "content_two": "To win the grand prize, you must claim the #1 spot and hold it for 72 consecutive hours. Once you do, the 10,000 QUAN transaction finalizes, the prize is secured, and the challenge concludes."
-          }
-        }
-      }
-    },
-    "raid": {
-      "info": {
-        "code": "QUEST #002",
-        "name_one": "KING",
-        "name_two": "OF THE",
-        "name_three": "SHILL",
-        "description": "A battle for a $500 USDC prize pool and the ultimate title: The King of the Shill.",
-        "play_guide": {
-          "title": "How to Play",
-          "guides": [
-            "Download the Quantus App.",
-            "Go to the Quantus Quests tab (The Qcat).",
-            "Associate your ETH and X account to be eligible.",
-            "Check the raid target from telegram group",
-            "Conduct a raid on the target by replying to it",
-            "Add it to your raid submission",
-            "Watch the leaderboard to track your position.",
-            "The leaderboard is updated every 24 hours."
-          ]
-        }
-      },
-      "leaderboard": {
-        "title": "Leaderboard",
-        "impressions": "Impressions",
-        "table": {
-          "rank": "Rank",
-          "address": "Address",
-          "impressions": "Impressions"
-        }
-      },
-      "rules": {
-        "title": "The Rules of the Game",
-        "goal": {
-          "title": "The Goal:",
-          "content": "Accumulate the most impressions from one or more raid attempts. Only valid owned reply to raid target will be counted."
-        },
-        "prize": {
-          "title": "The Prizes:",
-          "content": [
-            "1st Place: $300 USDC",
-            "2nd Place: $150 USDC",
-            "3rd Place: $50 USDC"
-          ]
-        },
-        "win": {
-          "title": "How to Win:",
-          "content": "Hold the #1 spot for 72 consecutive hours.",
-          "card": {
-            "title": "The Quantum Twist",
-            "content_one": "The #1 spot on the leaderboard is represented by a live, reversible 10,000 QUAN transaction. If another user overtakes you, the transaction automatically reverses and is sent to the new leader. The claim to the $300 USDC prize moves with it.",
-            "content_two": "To win the grand prize, you must claim the #1 spot and hold it for 72 consecutive hours. Once you do, the 10,000 QUAN transaction finalizes, the prize is secured, and the challenge concludes."
-          }
-        }
-      }
-    }
-  },
-  "footer": {
-    "newsletter": {
-      "title": "Subscribe to our Newsletter",
-      "description": "Alpha Alert! Get your weekly news-blast with sneak previews, updates, news roundup, educational content and more",
-      "placeholder": {
-        "email": "Email",
-        "firstname": "First name",
-        "lastname": "Last name"
-      },
-      "button": "Subscribe",
-      "success": "Welcome to quantum security 🎉",
-      "error": "Error: something is going wrong."
-    },
-    "description": "A quantum-secure, Layer 1 blockchain for people who want to protect what matters; their assets, their future, and their freedom.",
-    "copyright": "Copyright © {year} Quantus Network",
-    "navigation": {
-      "resources": {
-        "title": "Resources",
-        "community": "Community",
-        "documentation": "Documentation",
-        "tech_support": "Tech Support"
-      },
-      "info": {
-        "title": "Info",
-        "company": "Company",
-        "blog": "Blog",
-        "terms": "Terms & Conditions",
-        "privacy": "Privacy Policy"
-      }
-    }
-  },
-  "contact": {
-    "meta": {
-      "title": "Contact Quantus Network | Get Support or Partnership Info",
-      "description": "Reach out to the Quantus Network team for support, partnership, or media inquiries. We'll help you connect with the right expert fast."
-    },
-    "title": "Get in touch",
-    "subtitle": "Reach out, and let's create a universe of possibilities together!",
-    "form": {
-      "name": "Name",
-      "email": "Email",
-      "message": "Message",
-      "submit": "Send",
-      "success": "We will process your message as soon as possible.",
-      "error": "Error: something is going wrong."
-    },
-    "quote": {
-      "text": "The atoms or elementary particles themselves are not real; they form a world of potentialities or possibilities rather than one of things or facts.",
-      "author": "Werner Heisenberg"
-    }
-  },
-  "launch": {
-    "meta": {
-      "title": "Quantus Tokenomics & Launch Allocation",
-      "description": "QUAN token supply, distribution, and launch allocation details. Fixed supply of 21M QUAN with fair launch mechanics."
-    },
-    "title": "Quantus Tokenomics & Launch Allocation",
-    "overview": {
-      "title": "Overview",
-      "content": "Quantus has a fixed maximum supply of **21,000,000 QUAN**. The token is issued through a combination of an initial Token Generation Event (TGE) and long-term Proof-of-Work mining. This structure is designed to avoid pre-mining, minimize insider advantages, and align long-term network security with user participation."
-    },
-    "supply": {
-      "title": "Token Supply",
-      "max_supply": "Maximum Supply:",
-      "max_supply_value": "21,000,000 QUAN",
-      "tge_supply": "TGE Minted Supply:",
-      "tge_supply_value": "7,350,000 QUAN (35%)",
-      "mining_supply": "Mining Emissions:",
-      "mining_supply_value": "13,650,000 QUAN (65%) over ~40 years",
-      "note": "The mining emission follows an exponentially decaying block reward curve, meaning issuance is higher in the early years and gradually slows over time as supply approaches the maximum."
-    },
-    "tge": {
-      "title": "Launch Allocation (TGE)",
-      "intro": "The following tokens are minted and distributed at the Token Generation Event:",
-      "table": {
-        "category": "Category",
-        "percent": "% of Supply",
-        "quan": "QUAN",
-        "private_sale": "Private Sale",
-        "public_sale": "Public Sale",
-        "dex_liquidity": "DEX Liquidity",
-        "total": "Total at TGE"
-      },
-      "note_1": "All private and public sale tokens are fully liquid at launch. There are no investor lockups or vesting schedules.",
-      "note_2": "Public sale proceeds (USDC) are paired 1:1 with QUAN and deposited directly into a liquidity pool. If the full 10% public sale fills, another 10% is minted to match it — 100% of public sale proceeds go into the LP."
-    },
-    "mining": {
-      "title": "Mining-Based Distribution (65%)",
-      "intro": "The remaining 65% of supply — **13,650,000 QUAN** — is distributed through Proof-of-Work mining over approximately 40 years.",
-      "ownership_title": "Final ownership of mining emissions:",
-      "table": {
-        "recipient": "Recipient",
-        "percent": "% of Total Supply",
-        "miners": "Miners",
-        "company": "Company (Dev Tax)"
-      }
-    },
-    "company": {
-      "title": "Company Alignment",
-      "intro": "Quantus does not pre-mine or reserve tokens for the team.",
-      "content": "Instead, the company is compensated through a dev tax on block rewards:",
-      "points": [
-        "A portion of each block reward is allocated to the company. This acts as protocol-level vesting — tokens are earned alongside the network over approximately 5 years.",
-        "This avoids Bitcoin's early supply curve problem, where early miners accumulated massive holdings that create perpetual overhang risk."
-      ]
-    },
-    "vesting": {
-      "title": "Lockups & Vesting",
-      "mark_tge": "TGE",
-      "mark_y1": "Y1",
-      "mark_y2": "Y2",
-      "mark_y3": "Y3",
-      "mark_y4": "Y4+",
-      "row_investors": "Investors",
-      "investors_bar": "100% Liquid Day 1",
-      "row_dex": "DEX Liquidity",
-      "dex_bar": "Paired into LP at TGE",
-      "row_team": "Team & Founders",
-      "cliff": "Cliff",
-      "linear_monthly": "Linear Monthly",
-      "row_advisors": "Advisors",
-      "row_company": "Company (Dev Tax)",
-      "company_bar": "Earned via Block Rewards ~5yr"
-    },
-    "vesting_summary": "All private and public sale tokens are fully liquid at TGE. The team and advisors vest over four years with a one-year cliff. Company tokens are never pre-mined — they are earned gradually through a dev tax on block rewards.",
-    "fees": {
-      "title": "Fees & Burning",
-      "intro": "To support long-term network security, wormhole transactions incur a **0.1% volume fee**:",
-      "points": ["**50%** is paid to miners", "**50%** is burned"],
-      "note": "This introduces deflationary pressure as network usage grows."
-    },
-    "funding": {
-      "title": "Funding History",
-      "intro": "Two private rounds are closed, with 7% of total supply sold. Token valuation is 2x equity valuation — industry standard, reflected in all contracts. All fundraising going forward is token sales only.",
-      "table": {
-        "round": "Round",
-        "raised": "Raised",
-        "valuation": "Token Valuation",
-        "lead": "Lead",
-        "total": "Total",
-        "pr1": "Private Round 1",
-        "pr2": "Private Round 2",
-        "raised_pr1": "$1.65M",
-        "raised_pr2": "$770K",
-        "val_pr1": "$40M",
-        "val_pr2": "$100M",
-        "lead_pr2": "Balaji Srinivasan",
-        "dash": "—",
-        "raised_total": "$2.42M"
-      }
-    },
-    "chart": {
-      "miners": "Miners",
-      "private": "Private",
-      "company": "Company",
-      "public": "Public",
-      "liquidity": "Liquidity"
-    }
-  },
-  "about": {
-    "meta": {
-      "title": "About Quantus Network | Our Vision for a Quantum-Secure Future",
-      "description": "Discover Quantus Network's mission to build a quantum-secure blockchain ecosystem. Learn who we are, our goals, and how we protect the next era of crypto."
-    },
-    "title": "Company Details",
-    "content": {
-      "p1": "Quantus Labs LLC is a technology company focused on building infrastructure for decentralized, censorship-resistant technologies. Our flagship project, Quantus Network is a Layer 1 blockchain designed to be simple, open-source, and community-owned from day one.",
-      "p2": "We believe in the power of open protocols, proof-of-work, and sovereign ownership. The Quantus Network app—available on desktop and mobile—lets users store digital assets, mine new blocks, and participate in a fairer financial future without intermediaries.",
-      "p3": "We're committed to transparency, privacy, and empowering individuals through secure, self-custodial tools.",
-      "address_label": "Company Address:"
-    },
-    "address": {
-      "company": "Quantus Labs LLC",
-      "street": "30 N Gould St #52155",
-      "city": "Sheridan, WY 82801",
-      "country": "USA"
-    }
-  },
-  "tos": {
-    "meta": {
-      "title": "Quantus Network - Terms of Service & Privacy Policy",
-      "description": "Read Quantus Network's Terms of Service and Privacy Policy. Learn how we protect your data, ensure transparency, and keep your crypto experience secure."
-    },
-    "title": "Quantus Network Policies",
-    "last_updated": "Last updated: June 12, 2025",
-    "intro": "This policy explains how Quantus Labs LLC (\"Quantus,\" \"we,\" or \"us\") collects, uses, and protects your information when you use quantus.com, our mobile apps, desktop applications, or otherwise interact with us. We may update this policy from time to time. If we make changes, we will notify you by revising the date at the top of this policy and, when appropriate, provide additional notice on our website.",
-    "service_title": "Terms of Service",
-    "privacy_title": "Privacy Policy",
-    "terms": {
-      "what_we_provide": {
-        "title": "What We Provide",
-        "intro": "Quantus Network offers:",
-        "items": [
-          "Mobile apps (available on App Store and Google Play)",
-          "Desktop applications with integrated mining functionality",
-          "Access to our open-source code",
-          "Community newsletter and updates",
-          "Access to the Quantus Network blockchain"
-        ]
-      },
-      "what_you_cannot_do": {
-        "title": "What You Cannot Do",
-        "intro": "You may not use our services to:",
-        "items": [
-          "Engage in illegal activities",
-          "Distribute malware or hack systems",
-          "Violate export controls or sanctions",
-          "Interfere with network operations",
-          "Provide false information"
-        ]
-      },
-      "mining_participation": {
-        "title": "Mining and Network Participation",
-        "items": [
-          "Mining functionality is for educational and network participation",
-          "You must comply with local energy and mining regulations",
-          "We make no guarantees about mining profitability or rewards",
-          "Network features may change as the protocol evolves"
-        ]
-      },
-      "dispute_resolution": {
-        "title": "Dispute Resolution",
-        "content": "Any disputes will be resolved through binding arbitration in Wyoming under American Arbitration Association rules. These terms are governed by Wyoming law. We may terminate access if you violate these terms"
-      },
-      "your_responsibilities": {
-        "title": "Your Responsibilities",
-        "intro": "You are solely responsible for:",
-        "items": [
-          "Safeguarding your wallet credentials and seed phrase",
-          "Complying with local laws regarding cryptocurrency and mining",
-          "Understanding the risks of blockchain technology",
-          "Lost private keys cannot be recovered by us"
-        ]
-      },
-      "non_custodial": {
-        "title": "Non-Custodial Design",
-        "intro": "Important: We do not store or access your private keys, seed phrases, or digital assets. You have full control and responsibility for your wallet and assets.",
-        "items": [
-          "We cannot recover lost private keys or seed phrases",
-          "We cannot reverse transactions on the blockchain",
-          "We cannot freeze or control your assets",
-          "You are responsible for securing your wallet credentials",
-          "Always back up your seed phrase in a secure location"
-        ]
-      },
-      "disclaimers": {
-        "title": "Disclaimers and Limitations",
-        "intro": "Our services are provided \"as-is\" without warranties. Cryptocurrency involves substantial risk of loss. To the maximum extent permitted by law:",
-        "items": [
-          "We are not liable for any indirect or consequential damages",
-          "Our total liability shall not exceed $1",
-          "You agree to indemnify us from claims arising from your use of our services"
-        ]
-      }
-    },
-    "privacy": {
-      "information_collect": {
-        "title": "Information We Collect",
-        "from_apps": "From Our Apps:",
-        "from_apps_content": "We do not collect personal information through the Quantus Network applications.",
-        "from_website": "From Our Website we automatically collect:",
-        "from_website_items": [
-          "IP address (anonymized through Google Analytics)",
-          "Browser and device information",
-          "Pages visited and usage patterns",
-          "Geographic location (country/region only)"
-        ],
-        "from_you": "From You Directly:",
-        "from_you_items": [
-          "Email address (if you subscribe to our newsletter)",
-          "Information you provide when contacting us"
-        ],
-        "technical": "Technical Data:",
-        "technical_items": [
-          "Application crash reports and error logs",
-          "Network connectivity information (to improve performance)"
-        ]
-      },
-      "how_we_use": {
-        "title": "How We Use Information",
-        "intro": "We use collected information to:",
-        "items": [
-          "Improve our website and applications",
-          "Send newsletter updates (with your consent)",
-          "Analyze usage to enhance user experience",
-          "Monitor for abuse and protect our services",
-          "Comply with legal obligations"
-        ],
-        "we_do_not": "We do not:",
-        "we_do_not_items": [
-          "Sell or rent your data to third parties",
-          "Store your private keys or transaction data",
-          "Use your data for targeted advertising"
-        ]
-      },
-      "information_sharing": {
-        "title": "Information Sharing",
-        "intro": "We may share information with:",
-        "items": [
-          "Analytics providers (Google Analytics for website data)",
-          "Service providers who help operate our website",
-          "Legal authorities when required by law"
-        ],
-        "note": "We only share aggregated, anonymized data that cannot identify you."
-      },
-      "cookies_tracking": {
-        "title": "Cookies and Tracking",
-        "intro": "Our website uses cookies for:",
-        "items": [
-          "Essential website functionality",
-          "Analytics to understand site usage",
-          "Performance improvements"
-        ],
-        "note": "You can control cookies through your browser settings, though this may affect website functionality."
-      },
-      "data_security": {
-        "title": "Data Security and Retention",
-        "intro": "We implement standard security measures to protect your data, including encryption and secure storage. However, no online service is completely secure.",
-        "technical_data": "Technical Data:",
-        "retention_items": [
-          "Website analytics: 26 months",
-          "Newsletter subscriptions: Until you unsubscribe"
-        ]
-      },
-      "your_rights": {
-        "title": "Your Rights",
-        "general": "You can: Unsubscribe from communications anytime",
-        "california": "For California residents: You have additional rights under CCPA, including the right to know what personal information we collect and the right to deletion.",
-        "eu_uk": "For EU/UK residents: You have rights under GDPR, including data portability and the right to object to processing."
-      },
-      "international_transfers": {
-        "title": "International Transfers",
-        "content": "Your information may be processed in the United States. We ensure appropriate protections for international data transfers."
-      },
-      "childrens_privacy": {
-        "title": "Children's Privacy",
-        "content": "Our services are not intended for anyone under 18. We do not knowingly collect information from minors."
-      },
-      "additional_info": {
-        "title": "Additional Information",
-        "regulatory": "Regulatory Compliance",
-        "regulatory_items": [
-          "Users must comply with local cryptocurrency regulations",
-          "Some features may be restricted in certain jurisdictions",
-          "We reserve the right to limit access based on legal requirements"
-        ]
-      },
-      "contact_info": {
-        "title": "Contact Us",
-        "address": "Quantus Labs LLC\n30 N Gould St #52155\nSheridan, WY 82801",
-        "note": "For questions about this policy or to exercise your privacy rights, please use our",
-        "link": "contact form"
-      }
     }
   },
   "blog": {

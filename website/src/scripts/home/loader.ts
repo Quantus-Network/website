@@ -3,15 +3,15 @@ import { renderASCIIRect } from "./ascii";
 import { updateHeroActive } from "./hero";
 
 const LINES = [
-  { k: "v2.home.loader.lines.protocol", d: 0 },
-  { k: "v2.home.loader.lines.integrity", d: 120 },
-  { k: "v2.home.loader.lines.nist_module", d: 240 },
-  { k: "v2.home.loader.lines.initializing", d: 360 },
-  { k: "v2.home.loader.lines.signature_scheme", d: 480 },
-  { k: "v2.home.loader.lines.p2p_layer", d: 600 },
-  { k: "v2.home.loader.lines.zk_engine", d: 720 },
-  { k: "v2.home.loader.lines.syncing", d: 840 },
-  { k: "v2.home.loader.lines.chladni", d: 960 },
+  { k: "home.loader.lines.protocol", d: 0 },
+  { k: "home.loader.lines.integrity", d: 120 },
+  { k: "home.loader.lines.nist_module", d: 240 },
+  { k: "home.loader.lines.initializing", d: 360 },
+  { k: "home.loader.lines.signature_scheme", d: 480 },
+  { k: "home.loader.lines.p2p_layer", d: 600 },
+  { k: "home.loader.lines.zk_engine", d: 720 },
+  { k: "home.loader.lines.syncing", d: 840 },
+  { k: "home.loader.lines.chladni", d: 960 },
 ];
 
 export const initLoader = async () => {

@@ -10,10 +10,10 @@ const t = await createTranslator(locale);
   <div id="ascii-hero"></div>
 
   <div class="hc" id="hc">
-    <div class="eyebrow">{t("v2.home.hero_banner.eyebrow")}</div>
+    <div class="eyebrow">{t("home.hero_banner.eyebrow")}</div>
     <h1>
-      {t("v2.home.hero_banner.title_line1")}<br />{
-        t("v2.home.hero_banner.title_line2")
+      {t("home.hero_banner.title_line1")}<br />{
+        t("home.hero_banner.title_line2")
       }
     </h1>
     <div class="sub"></div>
@@ -26,29 +26,29 @@ const t = await createTranslator(locale);
         target="_blank"
         rel="noopener"
       >
-        {t("v2.home.hero_banner.cta_download_wallet")}
+        {t("home.hero_banner.cta_download_wallet")}
       </Button>
       <Button href="/whitepaper" variant="secondary" size="medium">
-        {t("v2.home.hero_banner.cta_whitepaper")}
+        {t("home.hero_banner.cta_whitepaper")}
       </Button>
     </div>
   </div>
 
   <div id="freq">
-    <span>{t("v2.home.hero_banner.freq.wave_mode")}</span>
+    <span>{t("home.hero_banner.freq.wave_mode")}</span>
     <span id="fval">1,1</span>
-    <span id="fhz">{t("v2.home.hero_banner.freq.move_cursor")}</span>
+    <span id="fhz">{t("home.hero_banner.freq.move_cursor")}</span>
   </div>
 
   <div class="ticker">
     <div
       class="t-track"
       id="ttrack"
-      data-i18n-block-height={t("v2.home.hero_banner.ticker.block_height")}
-      data-i18n-tps={t("v2.home.hero_banner.ticker.tps")}
-      data-i18n-uptime={t("v2.home.hero_banner.ticker.uptime")}
-      data-i18n-validators={t("v2.home.hero_banner.ticker.validators")}
-      data-i18n-mainnet={t("v2.home.hero_banner.ticker.mainnet")}
+      data-i18n-block-height={t("home.hero_banner.ticker.block_height")}
+      data-i18n-tps={t("home.hero_banner.ticker.tps")}
+      data-i18n-uptime={t("home.hero_banner.ticker.uptime")}
+      data-i18n-validators={t("home.hero_banner.ticker.validators")}
+      data-i18n-mainnet={t("home.hero_banner.ticker.mainnet")}
     >
     </div>
   </div>

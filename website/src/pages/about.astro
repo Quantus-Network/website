@@ -19,8 +19,8 @@ const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
 
 const metadata = createMetadata({
-  title: t("v2.about.meta.title"),
-  description: t("v2.about.meta.description"),
+  title: t("about.meta.title"),
+  description: t("about.meta.description"),
   pathname: Astro.url.pathname,
 });
 
