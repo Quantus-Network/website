@@ -1,0 +1,107 @@
+<section id="how-it-works">
+  <div class="qrc-divider"></div>
+  <div class="qrc-section-inner">
+    <span class="qrc-eyebrow qrc-animate" data-delay="0">HOW IT WORKS</span>
+    <h2 class="qrc-h2 qrc-animate" data-delay="0.1" style="margin-top:16px;">
+      Two risk factors. One score.
+    </h2>
+    <p class="qrc-intro qrc-animate" data-delay="0.2">
+      The Quantum Risk Checker scans any Ethereum address and calculates a
+      Quantum Readiness Score based on two signals:
+    </p>
+
+    <div class="qrc-signal-grid">
+      <div class="qrc-signal-card qrc-animate" data-delay="0.1">
+        <span class="qrc-signal-title">PUBLIC KEY EXPOSURE</span>
+        <p class="qrc-signal-body">
+          Every outgoing transaction permanently exposes your public key
+          on-chain. The longer it has been exposed, the higher the risk.
+        </p>
+      </div>
+      <div class="qrc-signal-card qrc-animate" data-delay="0.2">
+        <span class="qrc-signal-title">BALANCE SENSITIVITY</span>
+        <p class="qrc-signal-body">
+          The higher the balance in an exposed wallet, the more attractive the
+          target. High balance combined with an exposed key means maximum risk.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  #how-it-works {
+    background: #0e0e0e;
+  }
+
+  .qrc-intro {
+    font-family: "Geist", sans-serif;
+    font-size: 16px;
+    color: rgba(232, 230, 224, 0.65);
+    max-width: 600px;
+    margin-top: 16px;
+    margin-bottom: 48px;
+    line-height: 1.7;
+  }
+
+  .qrc-signal-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: rgba(232, 230, 224, 0.08);
+    margin-bottom: 48px;
+  }
+
+  .qrc-signal-card {
+    background: #0e0e0e;
+    padding: 40px 36px;
+  }
+
+  .qrc-signal-title {
+    font-family: "Geist Mono", monospace;
+    font-size: 12px;
+    color: #ff6b35;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .qrc-signal-body {
+    font-family: "Geist", sans-serif;
+    font-size: 15px;
+    color: rgba(232, 230, 224, 0.65);
+    line-height: 1.7;
+  }
+
+  .qrc-report-label {
+    font-family: "Geist Mono", monospace;
+    font-size: 11px;
+    color: rgba(232, 230, 224, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .qrc-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .qrc-pill {
+    font-family: "Geist Mono", monospace;
+    font-size: 11px;
+    color: rgba(232, 230, 224, 0.55);
+    border: 1px solid rgba(232, 230, 224, 0.12);
+    padding: 7px 18px;
+    display: inline-block;
+  }
+
+  @media (max-width: 768px) {
+    .qrc-signal-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

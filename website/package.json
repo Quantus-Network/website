@@ -13,10 +13,10 @@
     "format:write": "prettier --write ."
   },
   "dependencies": {
-    "@fontsource/ibm-plex-mono": "^5.2.7",
-    "@fontsource/ibm-plex-sans": "^5.2.8",
     "@fontsource/geist": "^5.2.8",
     "@fontsource/geist-mono": "^5.2.7",
+    "@fontsource/ibm-plex-mono": "^5.2.7",
+    "@fontsource/ibm-plex-sans": "^5.2.8",
     "@fontsource/inter": "^5.2.6",
     "@fontsource/prompt": "^5.2.6",
     "@lucide/astro": "^0.541.0",

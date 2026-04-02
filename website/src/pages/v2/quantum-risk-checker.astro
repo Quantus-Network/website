@@ -1,0 +1,37 @@
+---
+import Layout from "@/v2/components/layout/Layout.astro";
+import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+import { createMetadata } from "@/utils/create-metadata";
+import { JsonLdGraph } from "@/utils/build-json-ld";
+import {
+  androidAppJsonLd,
+  iosAppJsonLd,
+  organizationJsonLd,
+  websiteJsonLd,
+} from "@/constants/default-jsonld";
+import HeroBanner from "@/v2/components/features/qday-checker/HeroBanner.astro";
+import DefinitionSection from "@/v2/components/features/qday-checker/DefinitionSection.astro";
+import MethodSection from "@/v2/components/features/qday-checker/MethodSection.astro";
+import AdviceSection from "@/v2/components/features/qday-checker/AdviceSection.astro";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
+
+const metadata = createMetadata({
+  title: t("home.meta.title"),
+  description: t("home.meta.description"),
+  pathname: Astro.url.pathname,
+});
+
+const jsonLd = JsonLdGraph({
+  "@context": "https://schema.org",
+  "@graph": [websiteJsonLd, organizationJsonLd, iosAppJsonLd, androidAppJsonLd],
+});
+---
+
+<Layout {...metadata} jsonLd={jsonLd}>
+  <HeroBanner />
+  <DefinitionSection />
+  <MethodSection />
+  <AdviceSection />
+</Layout>
