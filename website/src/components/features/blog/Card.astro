@@ -56,7 +56,7 @@ const formattedDate = pubDate
           height="450"
           fetchpriority="low"
         />
-        <div class="absolute inset-0 flex items-center justify-center bg-void/55 opacity-0 backdrop-blur-xs transition-opacity duration-200 group-hover:opacity-100">
+        <div class="absolute inset-0 flex items-center justify-center bg-void/55 opacity-0 backdrop-blur-xs transition-opacity duration-250 group-hover:opacity-100">
           <span class="font-mono text-[13px] font-medium tracking-[0.2em] text-flare">
             READ
           </span>
@@ -65,21 +65,12 @@ const formattedDate = pubDate
     )
   }
   <div class="flex flex-1 flex-col px-5 pb-7 pt-6">
-    <div class="mb-2.5 flex items-center gap-3">
-      <time
-        datetime={pubDate.toISOString()}
-        class="font-mono block text-[11px] tracking-[0.14em] text-content-35 uppercase"
-      >
-        {formattedDate}
-      </time>
-      {
-        featured && (
-          <span class="font-mono text-[10px] tracking-[0.14em] text-flare uppercase">
-            {t("blog.featured_label")}
-          </span>
-        )
-      }
-    </div>
+    <time
+      datetime={pubDate.toISOString()}
+      class="font-mono mb-2.5 block text-[11px] tracking-[0.14em] text-content-35 uppercase"
+    >
+      {formattedDate}
+    </time>
     <span class="block text-[17px] font-medium leading-[1.35] text-content-90">
       {title}
     </span>
@@ -87,12 +78,9 @@ const formattedDate = pubDate
       tags.length > 0 && (
         <div class="mt-auto flex flex-wrap gap-1.5 pt-4">
           {tags.slice(0, 4).map((tag) => (
-            <a
-              href={getLocalizedPath(currentLocale, `/blog/tags/${tag}`)}
-              class="font-mono text-[10px] tracking-widest text-content-40 border border-content-10 px-2.5 py-0.5 uppercase transition-colors hover:text-content-70 hover:border-content-25"
-            >
+            <span class="font-mono text-[10px] tracking-widest text-content-40 border border-content-10 px-2.5 py-0.5 uppercase">
               {t(`blog.tags.${tag}`) || tag}
-            </a>
+            </span>
           ))}
         </div>
       )
