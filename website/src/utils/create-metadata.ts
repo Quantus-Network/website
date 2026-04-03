@@ -12,8 +12,7 @@ export const createMetadata = (
     url: seo.imageUrl || `${env.SITE_BASE_URL}/quantus-banner.png`,
     secureUrl: seo.imageUrl || `${env.SITE_BASE_URL}/quantus-banner.png`,
     alt:
-      seo.imageAlt ||
-      "Banner with abstract circular shapes of quantus logo.",
+      seo.imageAlt || "Banner with abstract circular shapes of quantus logo.",
     width: 6000,
     height: 3140,
     type: "image/png",

@@ -155,13 +155,13 @@ export const BlogList: React.FC<Props> = ({
     <div className="flex flex-col gap-10">
       {/* Search */}
       <div className="relative max-w-md">
-        <SearchIcon className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-content-35" />
+        <SearchIcon className="text-content-35 absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2" />
         <input
           type="text"
           placeholder={searchPlaceholder}
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          className="h-11 w-full border border-border bg-transparent pl-10 pr-4 font-mono text-sm text-content placeholder:text-content-35 focus:border-content-25 focus:outline-none"
+          className="border-border text-content placeholder:text-content-35 focus:border-content-25 h-11 w-full border bg-transparent pr-4 pl-10 font-mono text-sm focus:outline-none"
         />
       </div>
 
@@ -169,7 +169,7 @@ export const BlogList: React.FC<Props> = ({
       {featuredPost && (
         <a
           href={`${localizedBlogPath}/${featuredPost.id.split("/").slice(1).join("/")}`}
-          className="group block border border-border transition-colors duration-200 hover:border-content-15 hover:bg-surface"
+          className="group border-border hover:border-content-15 hover:bg-surface block border transition-colors duration-200"
         >
           <div className="flex flex-col md:flex-row">
             {featuredPost.data.heroImage && (
@@ -183,8 +183,8 @@ export const BlogList: React.FC<Props> = ({
                   width="800"
                   height="450"
                 />
-                  <div className="absolute inset-0 flex items-center justify-center bg-void/55 opacity-0 backdrop-blur-xs transition-opacity duration-250 group-hover:opacity-100">
-                  <span className="font-mono text-[13px] font-medium tracking-[0.2em] text-flare">
+                <div className="bg-void/55 absolute inset-0 flex items-center justify-center opacity-0 backdrop-blur-xs transition-opacity duration-250 group-hover:opacity-100">
+                  <span className="text-flare font-mono text-[13px] font-medium tracking-[0.2em]">
                     READ
                   </span>
                 </div>
@@ -194,18 +194,18 @@ export const BlogList: React.FC<Props> = ({
               <div className="mb-3 flex items-center gap-3">
                 <time
                   dateTime={featuredPost.data.pubDate}
-                  className="font-mono text-[11px] tracking-[0.14em] text-content-35"
+                  className="text-content-35 font-mono text-[11px] tracking-[0.14em]"
                 >
                   {formatDate(featuredPost.data.pubDate)}
                 </time>
-                <span className="font-mono text-[10px] tracking-[0.14em] text-flare uppercase">
+                <span className="text-flare font-mono text-[10px] tracking-[0.14em] uppercase">
                   {featuredLabel}
                 </span>
               </div>
-              <h2 className="mb-4 text-2xl font-medium leading-snug text-content-90 md:text-3xl">
+              <h2 className="text-content-90 mb-4 text-2xl leading-snug font-medium md:text-3xl">
                 {featuredPost.data.title}
               </h2>
-              <p className="mb-6 line-clamp-3 text-base text-content-60">
+              <p className="text-content-60 mb-6 line-clamp-3 text-base">
                 {featuredPost.data.description}
               </p>
               {featuredPost.data.tags.length > 0 && (
@@ -213,7 +213,7 @@ export const BlogList: React.FC<Props> = ({
                   {featuredPost.data.tags.slice(0, 6).map((tag) => (
                     <span
                       key={tag}
-                      className="font-mono text-[10px] tracking-widest text-content-40 border border-content-10 px-2.5 py-0.5 uppercase"
+                      className="text-content-40 border-content-10 border px-2.5 py-0.5 font-mono text-[10px] tracking-widest uppercase"
                     >
                       {tagsMap[tag] || tag}
                     </span>
@@ -226,10 +226,7 @@ export const BlogList: React.FC<Props> = ({
       )}
 
       {/* Grid */}
-      <div
-        ref={gridRef}
-        className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
-      >
+      <div ref={gridRef} className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {displayedPosts.map((post) => {
           const postSlug = post.id.split("/").slice(1).join("/");
           const postHref = `${localizedBlogPath}/${postSlug}`;
@@ -239,7 +236,7 @@ export const BlogList: React.FC<Props> = ({
               key={post.id}
               href={postHref}
               data-blog-card
-              className="group flex flex-col border border-border text-inherit no-underline transition-colors duration-200 hover:border-content-15 hover:bg-surface"
+              className="group border-border hover:border-content-15 hover:bg-surface flex flex-col border text-inherit no-underline transition-colors duration-200"
             >
               {post.data.heroImage && (
                 <div className="relative aspect-video w-full overflow-hidden">
@@ -252,21 +249,21 @@ export const BlogList: React.FC<Props> = ({
                     width="800"
                     height="450"
                   />
-                  <div className="absolute inset-0 flex items-center justify-center bg-void/55 opacity-0 backdrop-blur-xs transition-opacity duration-250 group-hover:opacity-100">
-                    <span className="font-mono text-[13px] font-medium tracking-[0.2em] text-flare">
+                  <div className="bg-void/55 absolute inset-0 flex items-center justify-center opacity-0 backdrop-blur-xs transition-opacity duration-250 group-hover:opacity-100">
+                    <span className="text-flare font-mono text-[13px] font-medium tracking-[0.2em]">
                       READ
                     </span>
                   </div>
                 </div>
               )}
-              <div className="flex flex-1 flex-col px-5 pb-7 pt-6">
+              <div className="flex flex-1 flex-col px-5 pt-6 pb-7">
                 <time
                   dateTime={post.data.pubDate}
-                  className="font-mono mb-2.5 block text-[11px] tracking-[0.14em] text-content-35 uppercase"
+                  className="text-content-35 mb-2.5 block font-mono text-[11px] tracking-[0.14em] uppercase"
                 >
                   {formatDate(post.data.pubDate)}
                 </time>
-                <span className="block text-[17px] font-medium leading-[1.35] text-content-90">
+                <span className="text-content-90 block text-[17px] leading-[1.35] font-medium">
                   {post.data.title}
                 </span>
                 {post.data.tags.length > 0 && (
@@ -274,7 +271,7 @@ export const BlogList: React.FC<Props> = ({
                     {post.data.tags.slice(0, 4).map((tag) => (
                       <span
                         key={tag}
-                        className="font-mono text-[10px] tracking-widest text-content-40 border border-content-10 px-2.5 py-0.5 uppercase"
+                        className="text-content-40 border-content-10 border px-2.5 py-0.5 font-mono text-[10px] tracking-widest uppercase"
                       >
                         {tagsMap[tag] || tag}
                       </span>
@@ -290,12 +287,12 @@ export const BlogList: React.FC<Props> = ({
       {/* Infinite scroll sentinel */}
       {visibleCount < results.length && (
         <div ref={observerTarget} className="flex justify-center py-8">
-          <div className="h-8 w-8 animate-spin rounded-full border-2 border-border border-t-flare"></div>
+          <div className="border-border border-t-flare h-8 w-8 animate-spin rounded-full border-2"></div>
         </div>
       )}
 
       {results.length === 0 && (
-        <p className="font-mono text-center text-sm tracking-wider text-content-35 uppercase">
+        <p className="text-content-35 text-center font-mono text-sm tracking-wider uppercase">
           {noPostsFoundText}
         </p>
       )}

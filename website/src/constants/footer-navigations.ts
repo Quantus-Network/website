@@ -76,7 +76,12 @@ export const FOOTER_NAVIGATIONS: Navigation[] = [
       { label: "footer.links.contact", href: "/about#contact" },
       { label: "footer.links.privacy", href: "/privacy-policy" },
       { label: "footer.links.terms", href: "/terms" },
-      { label: "footer.links.coingecko", href: "https://www.coingecko.com/en/coins/quantus", target: "_blank", rel: "noopener" },
+      {
+        label: "footer.links.coingecko",
+        href: "https://www.coingecko.com/en/coins/quantus",
+        target: "_blank",
+        rel: "noopener",
+      },
     ],
   },
 ] as const;

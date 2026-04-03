@@ -42,7 +42,9 @@ export const calculateQuantumSecurityScore = (
     );
   } else {
     // Factor 1: Public Key Exposure (most critical)
-    const publicKeyExposedPenalty = addressData.hasOutgoingTransactions ? 40 : 0;
+    const publicKeyExposedPenalty = addressData.hasOutgoingTransactions
+      ? 40
+      : 0;
     score -= publicKeyExposedPenalty;
 
     if (addressData.hasOutgoingTransactions) {
@@ -117,7 +119,8 @@ export const generateSecurityAnalysis = (
 ): EthereumSecurityAnalysis => {
   const securityScore = calculateQuantumSecurityScore(addressData);
 
-  const publicKeyExposed = addressData.hasOutgoingTransactions && !addressData.isSmartContract;
+  const publicKeyExposed =
+    addressData.hasOutgoingTransactions && !addressData.isSmartContract;
 
   // Calculate exposure duration risk (0-1 scale)
   let exposureDurationRisk = 0;
