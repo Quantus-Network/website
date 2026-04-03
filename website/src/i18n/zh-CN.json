@@ -704,6 +704,10 @@
     "no_posts_found": "未找到文章。",
     "featured_label": "精选",
     "related_posts": "相关文章",
+    "post": {
+      "back_to_blog": "返回博客",
+      "author": "Quantus 团队"
+    },
     "meta": {
       "title": "Quantus 博客 | 最新消息与量子见解",
       "description": "获取 Quantus Network 的最新消息、教育内容和见解。"

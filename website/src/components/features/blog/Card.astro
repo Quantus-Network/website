@@ -14,6 +14,7 @@ interface Props {
   heroImage?: string;
   heroAlt?: string;
   featured?: boolean;
+  horizontal?: boolean;
 }
 
 const {
@@ -25,6 +26,7 @@ const {
   heroImage,
   heroAlt,
   featured,
+  horizontal = false,
 } = Astro.props;
 
 const currentLocale = getLocaleFromUrl(Astro.url.pathname);
@@ -41,11 +43,21 @@ const formattedDate = pubDate
 
 <a
   href={href}
-  class="group flex flex-col border border-border text-inherit no-underline transition-colors duration-200 hover:border-content-15 hover:bg-surface"
+  class:list={[
+    "group border border-border text-inherit no-underline transition-colors duration-200 hover:border-content-15 hover:bg-surface",
+    horizontal ? "flex flex-row items-stretch" : "flex flex-col",
+  ]}
 >
   {
     heroImage && (
-      <div class="relative aspect-video w-full overflow-hidden">
+      <div
+        class:list={[
+          "relative shrink-0 overflow-hidden",
+          horizontal
+            ? "w-[200px] max-sm:hidden"
+            : "aspect-video w-full",
+        ]}
+      >
         <img
           src={heroImage}
           alt={heroAlt || title}
@@ -64,20 +76,43 @@ const formattedDate = pubDate
       </div>
     )
   }
-  <div class="flex flex-1 flex-col px-5 pb-7 pt-6">
+  <div
+    class:list={[
+      "flex flex-1 flex-col",
+      horizontal ? "px-5 py-5" : "px-5 pb-7 pt-6",
+    ]}
+  >
     <time
       datetime={pubDate.toISOString()}
       class="font-mono mb-2.5 block text-[11px] tracking-[0.14em] text-content-35 uppercase"
     >
       {formattedDate}
     </time>
-    <span class="block text-[17px] font-medium leading-[1.35] text-content-90">
+    <span
+      class:list={[
+        "block font-medium leading-[1.35] text-content-90",
+        horizontal ? "text-[15px]" : "text-[17px]",
+      ]}
+    >
       {title}
     </span>
     {
-      tags.length > 0 && (
-        <div class="mt-auto flex flex-wrap gap-1.5 pt-4">
-          {tags.slice(0, 4).map((tag) => (
+      !horizontal && (
+        tags.length > 0 && (
+          <div class="mt-auto flex flex-wrap gap-1.5 pt-4">
+            {tags.slice(0, 4).map((tag) => (
+              <span class="font-mono text-[10px] tracking-widest text-content-40 border border-content-10 px-2.5 py-0.5 uppercase">
+                {t(`blog.tags.${tag}`) || tag}
+              </span>
+            ))}
+          </div>
+        )
+      )
+    }
+    {
+      horizontal && tags.length > 0 && (
+        <div class="mt-auto flex flex-wrap gap-1.5 pt-3">
+          {tags.slice(0, 3).map((tag) => (
             <span class="font-mono text-[10px] tracking-widest text-content-40 border border-content-10 px-2.5 py-0.5 uppercase">
               {t(`blog.tags.${tag}`) || tag}
             </span>

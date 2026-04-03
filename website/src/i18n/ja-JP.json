@@ -707,6 +707,10 @@
     "no_posts_found": "記事が見つかりませんでした。",
     "featured_label": "注目",
     "related_posts": "関連記事",
+    "post": {
+      "back_to_blog": "ブログに戻る",
+      "author": "Quantusチーム"
+    },
     "meta": {
       "title": "Quantusブログ | 最新ニュースと量子インサイト",
       "description": "Quantus Networkの最新ニュース、教育コンテンツ、インサイトを常に入手してください。"
