@@ -2,7 +2,7 @@
 import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
 import Button from "./Button.astro";
 
-const privacyPolicyUrl = "/terms-and-privacy";
+const privacyPolicyUrl = "/privacy-policy";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
