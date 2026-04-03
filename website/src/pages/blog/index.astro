@@ -7,7 +7,6 @@ import {
   getLocalizedPath,
   createTranslator,
 } from "@/utils/i18n";
-import SphereDecoration from "@/components/ui/SphereDecoration.astro";
 import { createMetadata } from "@/utils/create-metadata";
 
 const t = await createTranslator(DEFAULT_LOCALE);
@@ -46,15 +45,33 @@ const metadata = createMetadata({
 ---
 
 <Layout {...metadata}>
-  <div class="container mx-auto overflow-hidden px-4 py-12">
-    <div class="relative flex items-center justify-center">
-      <SphereDecoration class="absolute -top-44 -z-10" variant="3" size={300} />
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-void px-6 pb-20 pt-40 md:px-13">
+    <!-- Dot grid background -->
+    <div
+      class="pointer-events-none absolute inset-0 z-0"
+      style="background-image: radial-gradient(circle, rgba(232,230,224,0.12) 1px, transparent 1px); background-size: 28px 28px; -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, transparent 30%, rgba(0,0,0,0.6) 60%, black 100%); mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, transparent 30%, rgba(0,0,0,0.6) 60%, black 100%);"
+    ></div>
+    <div class="relative z-1">
+      <span
+        class="font-mono block text-xs tracking-[0.22em] uppercase text-flare"
+      >
+        FROM THE QUANTUS TEAM
+      </span>
+      <h1
+        class="mt-4 text-[clamp(36px,4vw,64px)] font-medium leading-tight text-white"
+      >
+        {t("blog.hero.heading")}
+      </h1>
+      <p class="mt-4 max-w-[480px] text-lg text-content-60">
+        {t("blog.hero.sub")}
+      </p>
+      <span class="mt-12 block h-px w-full bg-flare"></span>
     </div>
+  </section>
 
-    <h1 class="mb-8 max-w-108 text-3xl font-bold text-white md:text-4xl">
-      {t("blog.title")}
-    </h1>
-
+  <!-- Posts -->
+  <section class="px-6 pb-30 pt-20 md:px-13">
     <BlogList
       client:load
       posts={serializablePosts}
@@ -66,13 +83,5 @@ const metadata = createMetadata({
       featuredLabel={t("blog.featured_label")}
       tagsMap={tagsMap}
     />
-
-    <div class="relative flex items-center justify-center">
-      <SphereDecoration
-        class="absolute -bottom-44 -z-10"
-        variant="9"
-        size={300}
-      />
-    </div>
-  </div>
+  </section>
 </Layout>

@@ -708,6 +708,10 @@
   },
   "blog": {
     "title": "The latest news from the Quantus Network.",
+    "hero": {
+      "heading": "The Quantus Blog.",
+      "sub": "Protocol updates, technical deep-dives, and perspectives on the quantum threat landscape."
+    },
     "search_placeholder": "Search posts...",
     "no_posts_found": "No posts found.",
     "featured_label": "Featured",

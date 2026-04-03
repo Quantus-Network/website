@@ -2,8 +2,6 @@ import React, { useState, useMemo, useEffect, useRef } from "react";
 import Fuse from "fuse.js";
 import { Search as SearchIcon } from "lucide-react";
 import { useDebounceValue } from "usehooks-ts";
-import { Input } from "@/components/ui/react/Input";
-import { Tag } from "@/components/ui/react/Tag";
 import { INPUT_DEBOUNCE_INTERVAL } from "@/constants/debounce-interval";
 
 const INITIAL_VISIBLE_COUNT = 6;
@@ -34,6 +32,53 @@ interface Props {
   tagsMap: Record<string, string>;
 }
 
+function useCardEntrance(deps: unknown[]) {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const cards = Array.from(
+      container.querySelectorAll<HTMLElement>("[data-blog-card]"),
+    );
+
+    cards.forEach((card) => {
+      card.style.opacity = "0";
+      card.style.transform = "translateY(20px)";
+    });
+
+    const observers: IntersectionObserver[] = [];
+
+    for (let i = 0; i < cards.length; i += 3) {
+      const group = cards.slice(i, i + 3);
+      const obs = new IntersectionObserver(
+        (entries) => {
+          if (entries[0].isIntersecting) {
+            group.forEach((card, idx) => {
+              setTimeout(() => {
+                card.style.transition =
+                  "opacity 0.5s ease, transform 0.5s ease";
+                card.style.opacity = "1";
+                card.style.transform = "translateY(0)";
+              }, idx * 80);
+            });
+            obs.disconnect();
+          }
+        },
+        { threshold: 0.1 },
+      );
+      if (group[0]) obs.observe(group[0]);
+      observers.push(obs);
+    }
+
+    return () => observers.forEach((o) => o.disconnect());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, deps);
+
+  return containerRef;
+}
+
 export const BlogList: React.FC<Props> = ({
   posts,
   locale,
@@ -62,11 +107,7 @@ export const BlogList: React.FC<Props> = ({
 
   const featuredPost = useMemo(() => {
     if (debouncedQuery) return null;
-    let featuredPost = posts.find((post) => post.data.featured);
-    if (!featuredPost) {
-      featuredPost = posts[0];
-    }
-    return featuredPost;
+    return posts.find((post) => post.data.featured) ?? posts[0] ?? null;
   }, [posts, debouncedQuery]);
 
   const displayedPosts = useMemo(() => {
@@ -98,159 +139,163 @@ export const BlogList: React.FC<Props> = ({
     return () => observer.disconnect();
   }, [visibleCount, results.length]);
 
+  const gridRef = useCardEntrance([displayedPosts]);
+
   const formatDate = (dateStr: string) => {
-    return new Date(dateStr).toLocaleDateString(locale, {
-      year: "numeric",
-      month: "short",
-      day: "numeric",
-    });
+    return new Date(dateStr)
+      .toLocaleDateString(locale, {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+      })
+      .toUpperCase();
   };
 
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-10">
+      {/* Search */}
       <div className="relative max-w-md">
-        <SearchIcon className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-gray-400" />
-        <Input
+        <SearchIcon className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-content-35" />
+        <input
           type="text"
           placeholder={searchPlaceholder}
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          className="pl-10"
+          className="h-11 w-full border border-border bg-transparent pl-10 pr-4 font-mono text-sm text-content placeholder:text-content-35 focus:border-content-25 focus:outline-none"
         />
       </div>
 
+      {/* Featured post */}
       {featuredPost && (
-        <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 transition-colors hover:bg-white/10">
+        <a
+          href={`${localizedBlogPath}/${featuredPost.id.split("/").slice(1).join("/")}`}
+          className="group block border border-border transition-colors duration-200 hover:border-content-15 hover:bg-surface"
+        >
           <div className="flex flex-col md:flex-row">
             {featuredPost.data.heroImage && (
-              <a
-                href={`${localizedBlogPath}/${featuredPost.id.split("/").slice(1).join("/")}`}
-                className="aspect-video w-full overflow-hidden md:aspect-auto md:w-1/2"
-              >
+              <div className="relative aspect-video w-full overflow-hidden md:aspect-auto md:w-1/2">
                 <img
                   src={featuredPost.data.heroImage}
                   alt={featuredPost.data.heroAlt || featuredPost.data.title}
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="h-full w-full object-cover"
                   loading="eager"
                   decoding="async"
                   width="800"
                   height="450"
-                  fetchPriority="high"
                 />
-              </a>
-            )}
-            <div className="flex flex-col justify-center p-6 md:w-1/2 md:p-10">
-              <a
-                href={`${localizedBlogPath}/${featuredPost.id.split("/").slice(1).join("/")}`}
-                className="block"
-              >
-                <div className="mb-4 flex items-center justify-between gap-4">
-                  <time
-                    dateTime={featuredPost.data.pubDate}
-                    className="text-sm text-gray-400"
-                  >
-                    {formatDate(featuredPost.data.pubDate)}
-                  </time>
-                  <span className="text-primary rounded-full bg-(image:--color-button-primary) px-3 py-1 text-xs font-bold tracking-wider uppercase">
-                    {featuredLabel}
+                  <div className="absolute inset-0 flex items-center justify-center bg-void/55 opacity-0 backdrop-blur-xs transition-opacity duration-250 group-hover:opacity-100">
+                  <span className="font-mono text-[13px] font-medium tracking-[0.2em] text-flare">
+                    READ
                   </span>
                 </div>
-                <h2 className="group-hover:text-primary mb-4 text-2xl font-bold text-white transition-colors md:text-4xl">
-                  {featuredPost.data.title}
-                </h2>
-                <p className="mb-6 line-clamp-3 text-lg text-gray-300">
-                  {featuredPost.data.description}
-                </p>
-              </a>
+              </div>
+            )}
+            <div className="flex flex-col justify-center p-6 md:w-1/2 md:p-10">
+              <div className="mb-3 flex items-center gap-3">
+                <time
+                  dateTime={featuredPost.data.pubDate}
+                  className="font-mono text-[11px] tracking-[0.14em] text-content-35"
+                >
+                  {formatDate(featuredPost.data.pubDate)}
+                </time>
+                <span className="font-mono text-[10px] tracking-[0.14em] text-flare uppercase">
+                  {featuredLabel}
+                </span>
+              </div>
+              <h2 className="mb-4 text-2xl font-medium leading-snug text-content-90 md:text-3xl">
+                {featuredPost.data.title}
+              </h2>
+              <p className="mb-6 line-clamp-3 text-base text-content-60">
+                {featuredPost.data.description}
+              </p>
               {featuredPost.data.tags.length > 0 && (
-                <div className="max-h-tags-featured flex flex-wrap gap-2 overflow-hidden">
-                  {featuredPost.data.tags.slice(0, 8).map((tag) => (
-                    <Tag key={tag}>
-                      <a
-                        href={`${localizedTagPath}/${tag}`}
-                        className="hover:text-primary transition-colors"
-                      >
-                        {tagsMap[tag] || tag}
-                      </a>
-                    </Tag>
+                <div className="flex flex-wrap gap-1.5">
+                  {featuredPost.data.tags.slice(0, 6).map((tag) => (
+                    <span
+                      key={tag}
+                      className="font-mono text-[10px] tracking-widest text-content-40 border border-content-10 px-2.5 py-0.5 uppercase"
+                    >
+                      {tagsMap[tag] || tag}
+                    </span>
                   ))}
                 </div>
               )}
             </div>
           </div>
-        </div>
+        </a>
       )}
 
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {/* Grid */}
+      <div
+        ref={gridRef}
+        className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+      >
         {displayedPosts.map((post) => {
           const postSlug = post.id.split("/").slice(1).join("/");
           const postHref = `${localizedBlogPath}/${postSlug}`;
 
           return (
-            <div
+            <a
               key={post.id}
-              className="group flex flex-col gap-4 rounded-lg border border-white/10 p-4 transition-colors hover:bg-white/5"
+              href={postHref}
+              data-blog-card
+              className="group flex flex-col border border-border text-inherit no-underline transition-colors duration-200 hover:border-content-15 hover:bg-surface"
             >
-              <a href={postHref} className="block">
-                {post.data.heroImage && (
-                  <div className="mb-4 aspect-video w-full overflow-hidden rounded-md">
-                    <img
-                      src={post.data.heroImage}
-                      alt={post.data.heroAlt || post.data.title}
-                      className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                      loading="lazy"
-                      decoding="async"
-                      width="800"
-                      height="450"
-                      fetchPriority="low"
-                    />
-                  </div>
-                )}
-                <div className="mb-2 flex items-center justify-between">
-                  <time
-                    dateTime={post.data.pubDate}
-                    className="text-sm text-gray-400"
-                  >
-                    {formatDate(post.data.pubDate)}
-                  </time>
-                  {post.data.featured && (
-                    <span className="text-primary rounded-full bg-(image:--color-button-primary) px-2 py-0.5 text-[10px] font-bold tracking-wider uppercase">
-                      {featuredLabel}
+              {post.data.heroImage && (
+                <div className="relative aspect-video w-full overflow-hidden">
+                  <img
+                    src={post.data.heroImage}
+                    alt={post.data.heroAlt || post.data.title}
+                    className="h-full w-full object-cover"
+                    loading="lazy"
+                    decoding="async"
+                    width="800"
+                    height="450"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center bg-void/55 opacity-0 backdrop-blur-xs transition-opacity duration-250 group-hover:opacity-100">
+                    <span className="font-mono text-[13px] font-medium tracking-[0.2em] text-flare">
+                      READ
                     </span>
-                  )}
-                </div>
-                <h3 className="group-hover:text-primary mb-2 text-xl font-bold text-white">
-                  {post.data.title}
-                </h3>
-                <p className="text-gray-300">{post.data.description}</p>
-              </a>
-              {post.data.tags.length > 0 && (
-                <div className="max-h-tags mt-auto flex flex-wrap gap-2 overflow-hidden">
-                  {post.data.tags.slice(0, 4).map((tag) => (
-                    <Tag key={tag}>
-                      <a
-                        href={`${localizedTagPath}/${tag}`}
-                        className="hover:text-primary transition-colors"
-                      >
-                        {tagsMap[tag] || tag}
-                      </a>
-                    </Tag>
-                  ))}
+                  </div>
                 </div>
               )}
-            </div>
+              <div className="flex flex-1 flex-col px-5 pb-7 pt-6">
+                <time
+                  dateTime={post.data.pubDate}
+                  className="font-mono mb-2.5 block text-[11px] tracking-[0.14em] text-content-35 uppercase"
+                >
+                  {formatDate(post.data.pubDate)}
+                </time>
+                <span className="block text-[17px] font-medium leading-[1.35] text-content-90">
+                  {post.data.title}
+                </span>
+                {post.data.tags.length > 0 && (
+                  <div className="mt-auto flex flex-wrap gap-1.5 pt-4">
+                    {post.data.tags.slice(0, 4).map((tag) => (
+                      <span
+                        key={tag}
+                        className="font-mono text-[10px] tracking-widest text-content-40 border border-content-10 px-2.5 py-0.5 uppercase"
+                      >
+                        {tagsMap[tag] || tag}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </a>
           );
         })}
       </div>
 
+      {/* Infinite scroll sentinel */}
       {visibleCount < results.length && (
         <div ref={observerTarget} className="flex justify-center py-8">
-          <div className="border-quantus-blue h-8 w-8 animate-spin rounded-full border-4 border-t-transparent"></div>
+          <div className="h-8 w-8 animate-spin rounded-full border-2 border-border border-t-flare"></div>
         </div>
       )}
 
       {results.length === 0 && (
-        <p className="col-span-full text-center text-gray-400">
+        <p className="font-mono text-center text-sm tracking-wider text-content-35 uppercase">
           {noPostsFoundText}
         </p>
       )}
