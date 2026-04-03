@@ -1,0 +1,85 @@
+---
+import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
+---
+
+<section id="mission">
+  <div class="about-divider"></div>
+  <div class="about-section-inner">
+    <div class="mission-grid">
+      <div class="mission-left about-animate" data-delay="0">
+        <span class="about-eyebrow">
+          {t("about.mission.eyebrow")}
+        </span>
+        <h2 class="mission-h2">
+          {t("about.mission.heading")}
+        </h2>
+      </div>
+      <div class="mission-right about-animate" data-delay="0.15">
+        <p class="mission-body">
+          {t("about.mission.body1")}
+        </p>
+        <p class="mission-body">
+          {t("about.mission.body2")}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  #mission {
+    background: #0e0e0e;
+    padding: 0 52px;
+  }
+
+  .mission-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .mission-left {
+    max-width: 420px;
+  }
+  .mission-right {
+    max-width: 420px;
+  }
+
+  .mission-h2 {
+    font-family: "Geist", sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    line-height: 1.1;
+    margin: 0;
+  }
+
+  .mission-body {
+    font-family: "Geist", sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    color: rgba(232, 230, 224, 0.65);
+    margin: 0 0 24px;
+  }
+  .mission-body:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 768px) {
+    #mission {
+      padding: 0 24px;
+    }
+    .mission-grid {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+    .mission-h2 {
+      font-size: 28px;
+    }
+  }
+</style>

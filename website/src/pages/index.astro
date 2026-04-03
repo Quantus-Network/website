@@ -1,22 +1,22 @@
 ---
 import Layout from "@/components/layout/Layout.astro";
-import HeroBanner from "@/components/features/home/hero-banner/HeroBanner.astro";
-import IntroductionVideo from "@/components/features/home/introduction-video/IntroductionVideo.astro";
-import Benefits from "@/components/features/home/benefits/Benefits.astro";
-import Teams from "@/components/features/home/teams/Teams.astro";
-import Roadmap from "@/components/features/home/roadmap/Roadmap.astro";
-import Events from "@/components/features/home/events/Events.astro";
-import AppDownload from "@/components/features/home/app-download/AppDownload.astro";
-import Socials from "@/components/ui/Socials.astro";
 import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
-import { JsonLdGraph } from "@/utils/build-json-ld";
 import { createMetadata } from "@/utils/create-metadata";
+import { JsonLdGraph } from "@/utils/build-json-ld";
 import {
-  websiteJsonLd,
   androidAppJsonLd,
   iosAppJsonLd,
   organizationJsonLd,
+  websiteJsonLd,
 } from "@/constants/default-jsonld";
+import TerminalLoader from "@/components/features/home/TerminalLoader.astro";
+import HeroBanner from "@/components/features/home/HeroBanner.astro";
+import ProblemSection from "@/components/features/home/ProblemSection.astro";
+import SolutionSection from "@/components/features/home/SolutionSection.astro";
+import EcosystemSection from "@/components/features/home/EcosystemSection.astro";
+import CommunitySection from "@/components/features/home/CommunitySection.astro";
+import BlogSection from "@/components/features/home/BlogSection.astro";
+import NewsletterSection from "@/components/features/home/NewsletterSection.astro";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
@@ -34,12 +34,12 @@ const jsonLd = JsonLdGraph({
 ---
 
 <Layout {...metadata} jsonLd={jsonLd}>
+  <TerminalLoader />
   <HeroBanner />
-  <IntroductionVideo />
-  <Benefits />
-  <AppDownload />
-  <Teams />
-  <Roadmap />
-  <Events />
-  <Socials />
+  <ProblemSection />
+  <SolutionSection />
+  <EcosystemSection />
+  <CommunitySection />
+  <BlogSection />
+  <NewsletterSection />
 </Layout>

@@ -1,0 +1,376 @@
+---
+import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
+---
+
+<section id="newsletter">
+  <div class="newsletter-divider"></div>
+  <div
+    class="newsletter-content"
+    style="position:relative;z-index:2;width:100%;"
+  >
+    <div id="newsletter-form-wrap">
+      <h2 class="newsletter-headline">
+        {t("home.newsletter.headline")}
+      </h2>
+      <p class="newsletter-sub">
+        {t("home.newsletter.sub")}
+      </p>
+      <div class="newsletter-name-row">
+        <input
+          type="text"
+          id="nl-firstname"
+          class="newsletter-name-input"
+          placeholder={t("home.newsletter.first_name_placeholder")}
+          aria-label={t("home.newsletter.first_name_aria")}
+        />
+        <input
+          type="text"
+          id="nl-lastname"
+          class="newsletter-name-input"
+          placeholder={t("home.newsletter.last_name_placeholder")}
+          aria-label={t("home.newsletter.last_name_aria")}
+        />
+      </div>
+      <div class="newsletter-form-row">
+        <input
+          type="email"
+          id="nl-email"
+          class="newsletter-input"
+          placeholder={t("home.newsletter.email_placeholder")}
+          aria-label={t("home.newsletter.email_aria")}
+        />
+        <button class="newsletter-btn" type="button" id="nl-submit">
+          {t("home.newsletter.submit_label")}
+        </button>
+      </div>
+      <span class="newsletter-error-msg" id="nl-error">
+        {t("home.newsletter.error_message")}
+      </span>
+      <span class="newsletter-fine">
+        {t("home.newsletter.fine_print")}
+      </span>
+    </div>
+    <div class="newsletter-success" id="newsletter-success">
+      <span class="newsletter-success-headline">
+        {t("home.newsletter.success.headline")}
+      </span>
+      <span class="newsletter-success-sub">
+        {t("home.newsletter.success.sub")}
+      </span>
+    </div>
+  </div>
+</section>
+
+<style>
+  #newsletter {
+    background: #0e0e0e;
+    position: relative;
+    z-index: 50;
+    padding: 120px 52px;
+    text-align: center;
+  }
+  .newsletter-divider {
+    width: 100%;
+    height: 1px;
+    background: #ff6b35;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .newsletter-headline {
+    font-family: "Geist", sans-serif;
+    font-size: 52px;
+    font-weight: 500;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+    margin: 0 0 16px 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity 0.7s ease 0s,
+      transform 0.7s ease 0s;
+  }
+  .newsletter-sub {
+    font-family: "Geist", sans-serif;
+    font-size: 16px;
+    color: rgba(232, 230, 224, 0.45);
+    line-height: 1.7;
+    max-width: 560px;
+    margin: 0 auto 48px auto;
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity 0.7s ease 0.15s,
+      transform 0.7s ease 0.15s;
+  }
+  .newsletter-name-row {
+    display: flex;
+    gap: 0;
+    max-width: 480px;
+    margin: 0 auto 8px auto;
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity 0.7s ease 0.3s,
+      transform 0.7s ease 0.3s;
+  }
+  .newsletter-name-row.nl-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .newsletter-name-input {
+    flex: 1;
+    background: transparent;
+    border: 1px solid rgba(232, 230, 224, 0.2);
+    border-right: none;
+    padding: 14px 20px;
+    font-family: "Geist", sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+    outline: none;
+    border-radius: 0;
+    transition: border-color 0.2s;
+  }
+  .newsletter-name-input:last-child {
+    border-right: 1px solid rgba(232, 230, 224, 0.2);
+  }
+  .newsletter-name-input::placeholder {
+    color: rgba(232, 230, 224, 0.3);
+  }
+  .newsletter-name-input:focus {
+    border-color: rgba(232, 230, 224, 0.5);
+  }
+  .newsletter-form-row {
+    display: flex;
+    max-width: 480px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity 0.7s ease 0.45s,
+      transform 0.7s ease 0.45s;
+  }
+  .newsletter-input {
+    flex: 1;
+    background: transparent;
+    border: 1px solid rgba(232, 230, 224, 0.2);
+    border-right: none;
+    padding: 14px 20px;
+    font-family: "Geist", sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+    outline: none;
+    border-radius: 0;
+    transition: border-color 0.2s;
+  }
+  .newsletter-input::placeholder {
+    color: rgba(232, 230, 224, 0.3);
+  }
+  .newsletter-input:focus {
+    border-color: rgba(232, 230, 224, 0.5);
+  }
+  .newsletter-btn {
+    background: #ff6b35;
+    color: #0e0e0e;
+    border: 1px solid #ff6b35;
+    padding: 14px 28px;
+    font-family: "Geist Mono", monospace;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    cursor: pointer;
+    border-radius: 0;
+    transition: opacity 0.2s;
+    white-space: nowrap;
+  }
+  .newsletter-btn:hover {
+    opacity: 0.85;
+  }
+  .newsletter-fine {
+    font-family: "Geist Mono", monospace;
+    font-size: 12px;
+    color: rgba(232, 230, 224, 0.25);
+    letter-spacing: 0.08em;
+    margin-top: 16px;
+    display: block;
+  }
+  .newsletter-headline.nl-in,
+  .newsletter-sub.nl-in,
+  .newsletter-name-row.nl-in,
+  .newsletter-form-row.nl-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .newsletter-name-input.error,
+  .newsletter-input.error {
+    border-color: rgba(255, 59, 59, 0.6);
+  }
+  .newsletter-error-msg {
+    font-family: "Geist Mono", monospace;
+    font-size: 12px;
+    color: rgba(255, 59, 59, 0.8);
+    letter-spacing: 0.08em;
+    margin-top: 8px;
+    display: none;
+    text-align: center;
+  }
+  .newsletter-error-msg.visible {
+    display: block;
+  }
+  .newsletter-success {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity 0.7s ease,
+      transform 0.7s ease;
+  }
+  .newsletter-success.visible {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .newsletter-success-headline {
+    font-family: "Geist", sans-serif;
+    font-size: 52px;
+    font-weight: 500;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+  }
+  .newsletter-success-sub {
+    font-family: "Geist", sans-serif;
+    font-size: 16px;
+    color: rgba(232, 230, 224, 0.45);
+    line-height: 1.7;
+  }
+
+  @media (max-width: 768px) {
+    #newsletter {
+      padding: 80px 24px;
+    }
+
+    .newsletter-headline {
+      font-size: 36px;
+    }
+
+    .newsletter-form-row {
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .newsletter-input {
+      border-right: 1px solid rgba(232, 230, 224, 0.2);
+    }
+
+    .newsletter-btn {
+      width: 100%;
+    }
+
+    .newsletter-name-row {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    .newsletter-form-row {
+      max-width: 100%;
+    }
+
+    .newsletter-name-input {
+      padding: 10px 8px;
+      font-size: 13px;
+      min-width: 0;
+      flex: 1;
+    }
+    .newsletter-name-input:last-child {
+      border-right: 1px solid rgba(232, 230, 224, 0.2);
+    }
+    .newsletter-input {
+      padding: 10px 12px;
+    }
+    .newsletter-btn {
+      padding: 10px 20px;
+    }
+  }
+</style>
+
+<script>
+  const targets = [
+    document.querySelector(".newsletter-headline"),
+    document.querySelector(".newsletter-sub"),
+    document.querySelector(".newsletter-name-row"),
+    document.querySelector(".newsletter-form-row"),
+  ].filter(Boolean);
+  const obs = new IntersectionObserver(
+    (entries) => {
+      if (entries[0].isIntersecting) {
+        targets.forEach((el) => el!.classList.add("nl-in"));
+        obs.disconnect();
+      }
+    },
+    { threshold: 0.15 },
+  );
+  const section = document.getElementById("newsletter");
+  if (section) obs.observe(section);
+</script>
+
+<script>
+  const submitBtn = document.getElementById("nl-submit");
+  const firstInput = document.getElementById(
+    "nl-firstname",
+  ) as HTMLInputElement;
+  const lastInput = document.getElementById("nl-lastname") as HTMLInputElement;
+  const emailInput = document.getElementById("nl-email") as HTMLInputElement;
+  const errorMsg = document.getElementById("nl-error")!;
+  const formWrap = document.getElementById("newsletter-form-wrap")!;
+  const successWrap = document.getElementById("newsletter-success")!;
+
+  if (!submitBtn) throw new Error("Submit button not found");
+
+  function isValidEmail(val: string) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
+  }
+
+  submitBtn.addEventListener("click", () => {
+    let valid = true;
+
+    [firstInput, lastInput, emailInput].forEach((el) => {
+      el.classList.remove("error");
+    });
+    errorMsg!.classList.remove("visible");
+
+    if (!firstInput.value.trim()) {
+      firstInput.classList.add("error");
+      valid = false;
+    }
+    if (!lastInput.value.trim()) {
+      lastInput.classList.add("error");
+      valid = false;
+    }
+    if (!emailInput.value.trim() || !isValidEmail(emailInput.value)) {
+      emailInput.classList.add("error");
+      valid = false;
+    }
+
+    if (!valid) {
+      errorMsg.classList.add("visible");
+      return;
+    }
+
+    formWrap.style.transition = "opacity 0.4s ease";
+    formWrap.style.opacity = "0";
+    setTimeout(() => {
+      formWrap.style.display = "none";
+      successWrap.style.display = "flex";
+      requestAnimationFrame(() => {
+        successWrap.classList.add("visible");
+      });
+    }, 400);
+  });
+</script>

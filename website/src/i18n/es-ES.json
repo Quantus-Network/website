@@ -715,6 +715,10 @@
     "no_posts_found": "No se encontraron publicaciones.",
     "featured_label": "Destacado",
     "related_posts": "Entradas relacionadas",
+    "post": {
+      "back_to_blog": "Volver al blog",
+      "author": "Equipo Quantus"
+    },
     "meta": {
       "title": "Quantus Blog | Últimas Noticias y Perspectivas Cuánticas",
       "description": "Manténgase al día con las últimas noticias, contenido educativo y perspectivas de Quantus Network."

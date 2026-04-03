@@ -1,14 +1,5 @@
 ---
-import BrandLogo from "@/assets/brand/brand-logo.svg";
-import BrandName from "@/assets/brand/brand-name.svg";
-
-import LanguageSwitcher from "@/components/ui/LanguageSwitcher.astro";
-import Separator from "@/components/ui/Separator.astro";
-import SiteSocials from "@/components/ui/SiteSocials.astro";
-import SphereDecoration from "@/components/ui/SphereDecoration.astro";
-import SubscribeForm from "@/components/ui/SubscribeForm.astro";
 import { FOOTER_NAVIGATIONS } from "@/constants/footer-navigations";
-
 import { applyStyles } from "@/utils/apply-styles";
 import {
   createTranslator,
@@ -28,116 +19,74 @@ const isCurrentPage = (href: string) =>
 
 <footer
   id="footer"
-  class="border-footer-separator relative flex flex-col overflow-hidden border-t px-4 pb-[56px] backdrop-blur-lg md:pb-[30px]"
+  class="border-content-8 bg-void relative z-50 grid min-h-[calc(100vh-66px)] grid-cols-1 overflow-hidden border-t md:grid-cols-2"
 >
-  <SphereDecoration
-    variant="4"
-    size={124}
-    class="absolute top-48 right-12 -z-10 min-[453px]:top-44 min-[482px]:top-36 md:top-80 md:left-[40%]"
-  />
-  <SphereDecoration
-    variant="5"
-    size={318}
-    class="absolute -right-[6.3rem] -bottom-[9.3rem] -z-10"
-  />
-  <SphereDecoration
-    variant="6"
-    size={240}
-    class="absolute -bottom-32 left-24 -z-10 hidden md:block"
-  />
-
+  <!-- Background Glows -->
   <div
-    class="max-w-content flex w-full flex-col items-center gap-9 pt-[76px] pb-9 md:mx-auto md:flex-row md:justify-between md:pt-[57px] md:pb-[67px]"
+    class="pointer-events-none absolute -bottom-[100px] -left-[100px] z-0 h-[500px] w-[500px] bg-[radial-gradient(circle,var(--color-flare-12)_0%,transparent_70%)]"
   >
-    <div>
-      <h2 class="font-small-title">{t("footer.newsletter.title")}</h2>
-      <p class="font-body-mobile text-text-content-secondary md:font-body">
-        {t("footer.newsletter.description")}
-      </p>
-    </div>
-
-    <SubscribeForm />
+  </div>
+  <div
+    class="pointer-events-none absolute -top-[80px] -right-[80px] z-0 h-[450px] w-[450px] bg-[radial-gradient(circle,var(--color-flare-8)_0%,transparent_70%)]"
+  >
   </div>
 
-  <div class="max-w-content mx-auto w-full">
-    <Separator />
+  <!-- Left Column -->
+  <div
+    class="border-content-8 p-content-edges-mobile md:p-content-edges relative z-10 flex flex-col justify-between border-b md:border-r md:border-b-0"
+  >
+    <a
+      href={getLocalizedPath(locale, "/")}
+      class="text-content-12 font-primary text-[clamp(32px,10vw,56px)] leading-none font-medium -tracking-[0.02em] no-underline md:text-[clamp(48px,6vw,80px)]"
+    >
+      {t("footer.brand")}
+    </a>
+    <div class="mt-8 flex flex-col gap-2 md:mt-0">
+      <span class="text-content-25 font-mono text-xs tracking-[0.08em]">
+        {t("footer.copyright", { year })}
+      </span>
+      <span class="text-content-25 font-mono text-xs tracking-[0.08em]">
+        {t("footer.rights")}
+      </span>
+    </div>
   </div>
 
+  <!-- Right Column -->
   <div
-    class="max-w-content flex w-full flex-col md:mx-auto md:flex-row md:justify-between md:gap-x-6 md:pt-[56px]"
+    class="p-content-edges-mobile md:p-content-edges relative z-10 flex flex-col justify-between"
   >
-    <div
-      class="flex flex-col items-center gap-4 pt-[116px] md:items-end md:pt-0"
-    >
-      <div class="shrink-0">
-        <a
-          href={getLocalizedPath(locale, "/")}
-          class="flex items-center gap-3 hover:brightness-125"
-        >
-          <BrandLogo
-            title="Quantus's brand logo"
-            class="min-[360px]:h-[61px] min-[360px]:w-[65px] md:h-[75px] md:w-[80px]"
-          />
-          <BrandName
-            title="Quantus's brand name"
-            class="min-[360px]:h-[35px] min-[360px]:w-[256px] md:h-[43px] md:w-[316px]"
-          />
-        </a>
-      </div>
-
-      <p
-        class="font-body-mobile text-text-content-secondary md:font-body text-center md:max-w-[316px] md:text-left"
-      >
-        {t("footer.description")}
-      </p>
-    </div>
-
-    <div
-      class="flex justify-center gap-x-[68px] pt-[48px] md:pt-0 lg:gap-x-[104px]"
-    >
+    <div class="grid grid-cols-2 gap-8 md:grid-cols-3 md:gap-10">
       {
-        FOOTER_NAVIGATIONS.map((navigation) => (
-          <div class="flex flex-col gap-y-5">
-            <h3 class="font-tag">{t(navigation.label)}</h3>
-
-            <ul class="flex flex-col gap-y-4">
-              {navigation.children.map((navItem) => (
-                <li>
-                  <a
-                    href={getLocalizedPath(locale, navItem.href)}
-                    target={navItem?.target}
-                    rel={navItem?.rel}
-                    class={applyStyles(
-                      "font-small text-text-content-secondary transition-colors duration-200 hover:text-white",
-                      isCurrentPage(navItem.href) && "text-white",
-                    )}
-                  >
-                    {t(navItem.label)}
-                  </a>
-                </li>
-              ))}
-            </ul>
+        FOOTER_NAVIGATIONS.map((section) => (
+          <div class="flex flex-col">
+            <span class="text-content-30 mb-6 block font-mono text-xs tracking-[0.16em] uppercase">
+              {t(section.label)}
+            </span>
+            {section.children.map((link) => (
+              <a
+                href={
+                  link.href.startsWith("http")
+                    ? link.href
+                    : getLocalizedPath(locale, link.href)
+                }
+                target={link.target}
+                rel={link.rel}
+                class={applyStyles(
+                  "text-content-55 hover:text-content-90 mb-3.5 block text-[13px] no-underline transition-colors duration-200",
+                  isCurrentPage(link.href) && "text-content-90",
+                )}
+              >
+                {t(link.label)}
+              </a>
+            ))}
           </div>
         ))
       }
     </div>
-  </div>
-
-  <div
-    class="max-w-content mx-auto flex w-full flex-col items-center gap-10 pt-[98px] text-center md:pt-[83px] lg:flex-row"
-  >
-    <div class="order-1 max-w-[300px] grow">
-      <LanguageSwitcher class="max-w-[200px]" />
-    </div>
-
-    <div class="order-3 grow lg:order-2">
-      <p id="footer-copyright" class="font-small text-text-content-secondary">
-        {t("footer.copyright", { year })}
-      </p>
-    </div>
-
-    <div class="order-2 max-w-[300px] grow lg:order-3">
-      <SiteSocials />
+    <div class="mt-10 flex flex-col gap-1 md:mt-0">
+      <span class="text-content-20 font-mono text-xs tracking-[0.12em]">
+        {t("footer.built_on")}
+      </span>
     </div>
   </div>
 </footer>

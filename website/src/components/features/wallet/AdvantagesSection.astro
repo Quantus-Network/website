@@ -1,0 +1,87 @@
+---
+import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
+---
+
+<section id="wallet-diff">
+  <div class="wallet-divider"></div>
+  <div class="wallet-diff-grid">
+    <div class="wallet-diff-left wallet-animate" data-delay="0">
+      <span class="wallet-section-eyebrow">
+        {t("wallet.advantage.eyebrow")}
+      </span>
+      <h2 class="wallet-section-h2 wallet-diff-h2">
+        {t("wallet.advantage.heading")}
+      </h2>
+    </div>
+    <div class="wallet-diff-right wallet-animate" data-delay="0.15">
+      <p class="wallet-diff-body">
+        {t("wallet.advantage.body")}
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  #wallet-diff {
+    background: #0e0e0e;
+    position: relative;
+    z-index: 50;
+    padding: 120px 52px 48px;
+  }
+
+  .wallet-diff-grid {
+    display: grid;
+    grid-template-columns: 55fr 45fr;
+    gap: 80px;
+    align-items: start;
+    margin-top: 64px;
+  }
+
+  .wallet-section-eyebrow {
+    font-family: "Geist Mono", monospace;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(232, 230, 224, 0.35);
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .wallet-section-h2 {
+    font-family: "Geist", sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    line-height: 1.05;
+  }
+
+  .wallet-diff-h2 {
+    font-size: 42px;
+  }
+
+  .wallet-diff-body {
+    font-family: "Geist", sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    color: rgba(232, 230, 224, 0.65);
+    padding-top: 8px;
+  }
+
+  @media (max-width: 768px) {
+    #wallet-diff {
+      padding: 80px 24px 48px;
+    }
+    .wallet-diff-grid {
+      grid-template-columns: 1fr;
+      gap: 32px;
+      margin-top: 40px;
+    }
+    .wallet-diff-h2 {
+      font-size: 28px;
+    }
+  }
+</style>

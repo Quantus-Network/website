@@ -715,6 +715,10 @@
     "no_posts_found": "Keine Beiträge gefunden.",
     "featured_label": "Hervorgehoben",
     "related_posts": "Ähnliche Beiträge",
+    "post": {
+      "back_to_blog": "Zurück zum Blog",
+      "author": "Quantus-Team"
+    },
     "meta": {
       "title": "Quantus Blog | Aktuelle Nachrichten & Quantum Insights",
       "description": "Bleiben Sie auf dem Laufenden mit den neuesten Nachrichten, Bildungsinhalten und Einblicken aus dem Quantus Network."

@@ -707,6 +707,10 @@
     "no_posts_found": "포스트를 찾을 수 없습니다.",
     "featured_label": "주요",
     "related_posts": "관련 게시물",
+    "post": {
+      "back_to_blog": "블로그로 돌아가기",
+      "author": "Quantus 팀"
+    },
     "meta": {
       "title": "Quantus 블로그 | 최신 뉴스 및 양자 통찰력",
       "description": "Quantus Network의 최신 뉴스, 교육 콘텐츠 및 통찰력을 받아보세요."

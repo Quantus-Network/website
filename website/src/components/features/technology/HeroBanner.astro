@@ -1,0 +1,482 @@
+---
+import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
+---
+
+<section id="tech-hero">
+  <div class="tech-hero-inner">
+    <span class="tech-eyebrow" id="tech-eyebrow">
+      {t("technology.hero_banner.eyebrow")}
+    </span>
+    <h1 class="tech-hero-h1" id="tech-h1">
+      {t("technology.hero_banner.title_line1")}<br />{
+        t("technology.hero_banner.title_line2")
+      }
+    </h1>
+    <p class="tech-hero-sub" id="tech-sub">
+      {t("technology.hero_banner.sub")}
+    </p>
+  </div>
+  <div class="tech-hero-visual">
+    <svg
+      viewBox="0 0 500 500"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      style="width:100%;max-width:580px;display:block;opacity:0.4;animation:lattice-spin 40s linear infinite;"
+    >
+      <!-- Outer hexagonal frame -->
+      <polygon
+        points="250,40 420,145 420,355 250,460 80,355 80,145"
+        stroke="rgba(232,230,224,0.4)"
+        stroke-width="0.75"
+        fill="none"
+        stroke-dasharray="4,4"></polygon>
+      <!-- Inner hexagon -->
+      <polygon
+        points="250,110 370,177 370,323 250,390 130,323 130,177"
+        stroke="rgba(232,230,224,0.25)"
+        stroke-width="0.75"
+        fill="none"></polygon>
+      <!-- Centre point -->
+      <circle
+        cx="250"
+        cy="250"
+        r="5"
+        fill="#FF6B35"
+        stroke="#FF6B35"
+        stroke-width="1"></circle>
+      <!-- Spokes from centre to outer vertices -->
+      <line
+        x1="250"
+        y1="250"
+        x2="250"
+        y2="40"
+        stroke="rgba(232,230,224,0.15)"
+        stroke-width="0.75"></line>
+      <line
+        x1="250"
+        y1="250"
+        x2="420"
+        y2="145"
+        stroke="rgba(232,230,224,0.15)"
+        stroke-width="0.75"></line>
+      <line
+        x1="250"
+        y1="250"
+        x2="420"
+        y2="355"
+        stroke="rgba(232,230,224,0.15)"
+        stroke-width="0.75"></line>
+      <line
+        x1="250"
+        y1="250"
+        x2="250"
+        y2="460"
+        stroke="rgba(232,230,224,0.15)"
+        stroke-width="0.75"></line>
+      <line
+        x1="250"
+        y1="250"
+        x2="80"
+        y2="355"
+        stroke="rgba(232,230,224,0.15)"
+        stroke-width="0.75"></line>
+      <line
+        x1="250"
+        y1="250"
+        x2="80"
+        y2="145"
+        stroke="rgba(232,230,224,0.15)"
+        stroke-width="0.75"></line>
+      <!-- Spokes from centre to inner vertices -->
+      <line
+        x1="250"
+        y1="250"
+        x2="250"
+        y2="110"
+        stroke="rgba(255,107,53,0.2)"
+        stroke-width="0.75"></line>
+      <line
+        x1="250"
+        y1="250"
+        x2="370"
+        y2="177"
+        stroke="rgba(255,107,53,0.2)"
+        stroke-width="0.75"></line>
+      <line
+        x1="250"
+        y1="250"
+        x2="370"
+        y2="323"
+        stroke="rgba(255,107,53,0.2)"
+        stroke-width="0.75"></line>
+      <line
+        x1="250"
+        y1="250"
+        x2="250"
+        y2="390"
+        stroke="rgba(255,107,53,0.2)"
+        stroke-width="0.75"></line>
+      <line
+        x1="250"
+        y1="250"
+        x2="130"
+        y2="323"
+        stroke="rgba(255,107,53,0.2)"
+        stroke-width="0.75"></line>
+      <line
+        x1="250"
+        y1="250"
+        x2="130"
+        y2="177"
+        stroke="rgba(255,107,53,0.2)"
+        stroke-width="0.75"></line>
+      <!-- Cross connections outer -->
+      <line
+        x1="250"
+        y1="40"
+        x2="420"
+        y2="145"
+        stroke="rgba(232,230,224,0.1)"
+        stroke-width="0.5"></line>
+      <line
+        x1="420"
+        y1="145"
+        x2="420"
+        y2="355"
+        stroke="rgba(232,230,224,0.1)"
+        stroke-width="0.5"></line>
+      <line
+        x1="420"
+        y1="355"
+        x2="250"
+        y2="460"
+        stroke="rgba(232,230,224,0.1)"
+        stroke-width="0.5"></line>
+      <line
+        x1="250"
+        y1="460"
+        x2="80"
+        y2="355"
+        stroke="rgba(232,230,224,0.1)"
+        stroke-width="0.5"></line>
+      <line
+        x1="80"
+        y1="355"
+        x2="80"
+        y2="145"
+        stroke="rgba(232,230,224,0.1)"
+        stroke-width="0.5"></line>
+      <line
+        x1="80"
+        y1="145"
+        x2="250"
+        y2="40"
+        stroke="rgba(232,230,224,0.1)"
+        stroke-width="0.5"></line>
+      <!-- Cross connections inner -->
+      <line
+        x1="250"
+        y1="110"
+        x2="370"
+        y2="177"
+        stroke="rgba(255,107,53,0.1)"
+        stroke-width="0.5"></line>
+      <line
+        x1="370"
+        y1="177"
+        x2="370"
+        y2="323"
+        stroke="rgba(255,107,53,0.1)"
+        stroke-width="0.5"></line>
+      <line
+        x1="370"
+        y1="323"
+        x2="250"
+        y2="390"
+        stroke="rgba(255,107,53,0.1)"
+        stroke-width="0.5"></line>
+      <line
+        x1="250"
+        y1="390"
+        x2="130"
+        y2="323"
+        stroke="rgba(255,107,53,0.1)"
+        stroke-width="0.5"></line>
+      <line
+        x1="130"
+        y1="323"
+        x2="130"
+        y2="177"
+        stroke="rgba(255,107,53,0.1)"
+        stroke-width="0.5"></line>
+      <line
+        x1="130"
+        y1="177"
+        x2="250"
+        y2="110"
+        stroke="rgba(255,107,53,0.1)"
+        stroke-width="0.5"></line>
+      <!-- Outer vertex dots -->
+      <circle cx="250" cy="40" r="3" fill="rgba(232,230,224,0.5)"></circle>
+      <circle cx="420" cy="145" r="3" fill="rgba(232,230,224,0.5)"></circle>
+      <circle cx="420" cy="355" r="3" fill="rgba(232,230,224,0.5)"></circle>
+      <circle cx="250" cy="460" r="3" fill="rgba(232,230,224,0.5)"></circle>
+      <circle cx="80" cy="355" r="3" fill="rgba(232,230,224,0.5)"></circle>
+      <circle cx="80" cy="145" r="3" fill="rgba(232,230,224,0.5)"></circle>
+      <!-- Inner vertex dots orange -->
+      <circle
+        cx="250"
+        cy="110"
+        r="3"
+        fill="rgba(255,107,53,0.6)"
+        stroke="#FF6B35"
+        stroke-width="0.75"></circle>
+      <circle
+        cx="370"
+        cy="177"
+        r="3"
+        fill="rgba(255,107,53,0.6)"
+        stroke="#FF6B35"
+        stroke-width="0.75"></circle>
+      <circle
+        cx="370"
+        cy="323"
+        r="3"
+        fill="rgba(255,107,53,0.6)"
+        stroke="#FF6B35"
+        stroke-width="0.75"></circle>
+      <circle
+        cx="250"
+        cy="390"
+        r="3"
+        fill="rgba(255,107,53,0.6)"
+        stroke="#FF6B35"
+        stroke-width="0.75"></circle>
+      <circle
+        cx="130"
+        cy="323"
+        r="3"
+        fill="rgba(255,107,53,0.6)"
+        stroke="#FF6B35"
+        stroke-width="0.75"></circle>
+      <circle
+        cx="130"
+        cy="177"
+        r="3"
+        fill="rgba(255,107,53,0.6)"
+        stroke="#FF6B35"
+        stroke-width="0.75"></circle>
+      <!-- Mid-ring dots -->
+      <circle
+        cx="250"
+        cy="250"
+        r="60"
+        stroke="rgba(232,230,224,0.06)"
+        stroke-width="0.75"
+        fill="none"
+        stroke-dasharray="3,6"></circle>
+      <circle
+        cx="250"
+        cy="250"
+        r="120"
+        stroke="rgba(232,230,224,0.04)"
+        stroke-width="0.75"
+        fill="none"
+        stroke-dasharray="3,6"></circle>
+    </svg>
+  </div>
+</section>
+
+<style>
+  #tech-hero {
+    position: relative;
+    height: 100vh;
+    background: #0e0e0e;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 0 52px;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  /* Dot lattice background */
+  #tech-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(
+      circle,
+      rgba(232, 230, 224, 0.12) 1px,
+      transparent 1px
+    );
+    background-size: 28px 28px;
+    -webkit-mask-image: radial-gradient(
+      ellipse 80% 80% at 50% 50%,
+      transparent 30%,
+      rgba(0, 0, 0, 0.6) 60%,
+      black 100%
+    );
+    mask-image: radial-gradient(
+      ellipse 80% 80% at 50% 50%,
+      transparent 30%,
+      rgba(0, 0, 0, 0.6) 60%,
+      black 100%
+    );
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Orange accent lines -top right corner */
+  #tech-hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 320px;
+    height: 320px;
+    background:
+      linear-gradient(to bottom, #ff6b35 1px, transparent 1px),
+      linear-gradient(to right, #ff6b35 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.06;
+    pointer-events: none;
+    z-index: 0;
+    -webkit-mask-image: radial-gradient(
+      circle at top right,
+      black 0%,
+      transparent 70%
+    );
+    mask-image: radial-gradient(circle at top right, black 0%, transparent 70%);
+  }
+
+  .tech-hero-inner {
+    position: relative;
+    z-index: 2;
+  }
+
+  .tech-hero-visual {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+    padding-right: 20px;
+  }
+
+  @keyframes lattice-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .tech-eyebrow {
+    font-family: "Geist Mono", monospace;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #ff6b35;
+    display: block;
+    margin-bottom: 24px;
+    opacity: 0;
+    transform: translateY(6px);
+    transition:
+      opacity 0.55s ease 0.1s,
+      transform 0.55s ease 0.1s;
+  }
+  .tech-eyebrow.in {
+    opacity: 1;
+    transform: none;
+  }
+
+  .tech-hero-h1 {
+    font-family: "Geist", sans-serif;
+    font-size: clamp(36px, 4.5vw, 68px);
+    font-weight: 500;
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+    color: #ffffff;
+    margin-bottom: 28px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition:
+      opacity 0.65s ease 0.25s,
+      transform 0.65s ease 0.25s;
+  }
+  .tech-hero-h1.in {
+    opacity: 1;
+    transform: none;
+  }
+
+  .tech-hero-sub {
+    font-family: "Geist", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(232, 230, 224, 0.55);
+    line-height: 1.6;
+    max-width: 560px;
+    opacity: 0;
+    transform: translateY(6px);
+    transition:
+      opacity 0.55s ease 0.42s,
+      transform 0.55s ease 0.42s;
+  }
+  .tech-hero-sub.in {
+    opacity: 1;
+    transform: none;
+  }
+
+  @media (max-width: 768px) {
+    #tech-hero {
+      grid-template-columns: 1fr;
+      height: auto;
+      min-height: 100vh;
+      padding: 120px 24px 80px;
+    }
+    .tech-hero-visual {
+      display: none;
+    }
+    .tech-hero-h1 {
+      white-space: normal !important;
+      font-size: clamp(28px, 8vw, 40px) !important;
+    }
+    .tech-hero-sub {
+      font-size: 15px;
+    }
+  }
+</style>
+
+<script>
+  const eyebrow = document.getElementById("tech-eyebrow")!;
+  const h1 = document.getElementById("tech-h1")!;
+  const sub = document.getElementById("tech-sub")!;
+
+  // Animate hero in on load
+  window.addEventListener("load", () => {
+    setTimeout(() => eyebrow.classList.add("in"), 100);
+    setTimeout(() => h1.classList.add("in"), 200);
+    setTimeout(() => sub.classList.add("in"), 350);
+  });
+
+  // Animate orange dividers on scroll
+  document.querySelectorAll(".tech-section-divider").forEach((divider) => {
+    const obs = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          divider.classList.add("expanded");
+          obs.disconnect();
+        }
+      },
+      { threshold: 0.1 },
+    );
+    obs.observe(divider);
+  });
+</script>

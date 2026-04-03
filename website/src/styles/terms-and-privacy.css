@@ -1,0 +1,85 @@
+#policy-hero {
+  padding: 160px 52px 0;
+  background: #0e0e0e;
+}
+
+.policy-eyebrow {
+  font-family: "Geist Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #ff6b35;
+  display: block;
+}
+
+.policy-h1 {
+  font-family: "Geist", sans-serif;
+  font-size: 52px;
+  font-weight: 500;
+  color: #ffffff;
+  margin-top: 16px;
+}
+
+.policy-meta {
+  font-family: "Geist Mono", monospace;
+  font-size: 12px;
+  color: rgba(232, 230, 224, 0.35);
+  margin-top: 16px;
+  display: block;
+}
+
+.policy-divider {
+  display: block;
+  height: 1px;
+  background: #ff6b35;
+  margin-top: 48px;
+  width: 100%;
+}
+
+#policy-content {
+  padding: 0 52px 120px;
+  max-width: 860px;
+}
+
+.policy-sub-h3 {
+  display: block;
+  font-family: "Geist", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #ff6b35;
+  margin-top: 48px;
+  margin-bottom: 16px;
+}
+
+.policy-body {
+  font-family: "Geist", sans-serif;
+  font-size: 15px;
+  color: rgba(232, 230, 224, 0.7);
+  line-height: 1.75;
+  margin-bottom: 12px;
+}
+
+.policy-list {
+  padding-left: 20px;
+  list-style: disc;
+  color: rgba(232, 230, 224, 0.7);
+  font-family: "Geist", sans-serif;
+  font-size: 15px;
+  line-height: 1.75;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 768px) {
+  #policy-hero {
+    padding: 120px 24px 0;
+  }
+  #policy-content {
+    padding: 0 24px 80px;
+  }
+  .policy-h1 {
+    font-size: 36px;
+  }
+}

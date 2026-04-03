@@ -1,18 +1,13 @@
 ---
-import { MenuIcon, XIcon } from "@lucide/astro";
-import DesktopMenu from "./desktop-menu/DesktopMenu.astro";
-import MobileMenu from "./mobile-menu/MobileMenu.astro";
-
-import BrandLogo from "@/assets/brand/brand-logo.svg";
-import BrandName from "@/assets/brand/brand-name.svg";
-
-import Separator from "@/components/ui/Separator.astro";
-import Button from "@/components/ui/Button.astro";
+import LogoLong from "@/assets/brand/logo-long.svg";
 import {
   createTranslator,
   getLocaleFromUrl,
   getLocalizedPath,
 } from "@/utils/i18n";
+import { SITE_NAVIGATIONS } from "@/constants/site-navigations";
+import Button from "../../ui/Button.astro";
+import { applyStyles } from "@/utils/apply-styles";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
@@ -20,177 +15,241 @@ const t = await createTranslator(locale);
 
 <nav
   id="navbar"
-  class="bg-navbar-body navbar-desktop:pt-[50px] fixed top-0 z-10 h-[139px] w-full pt-[70px] transition-opacity"
-  role="navigation"
-  aria-label="Main navigation"
+  class="bg-navbar border-border px-content-edges-mobile lg:px-content-edges [&.scrolled]:bg-navbar-scrolled fixed top-0 right-0 left-0 z-1000 flex items-center justify-between border-b py-4 opacity-0 backdrop-blur-xs transition-all duration-500 ease-in-out lg:py-5 [&.scrolled]:backdrop-blur-md [&.visible]:opacity-100"
 >
-  <div
-    class="navbar-desktop:px-20 navbar-desktop:pb-[50px] navbar-desktop:max-w-navbar mx-auto px-[30px] pb-[30px]"
+  <a href={getLocalizedPath(locale, "/")} class="block leading-none">
+    <LogoLong class="block h-[26px] w-auto" />
+  </a>
+
+  <ul
+    class="nav-links absolute left-1/2 hidden -translate-x-1/2 list-none gap-4 lg:flex xl:gap-8"
   >
-    <div class="flex items-center justify-between">
-      <!-- Logo/Brand -->
-      <div class="flex-shrink-0">
-        <a
-          href={getLocalizedPath(locale, "/")}
-          class="flex items-center gap-3 hover:brightness-125"
-        >
-          <BrandLogo title="Quantus's brand logo" />
-          <BrandName title="Quantus's brand name" />
-        </a>
-      </div>
+    {
+      SITE_NAVIGATIONS.map((item) => (
+        <li>
+          <a
+            href={getLocalizedPath(locale, item.href)}
+            class={applyStyles(
+              "after:bg-flare font-navbar-link text-muted relative no-underline transition-all duration-200 ease-in-out after:absolute after:bottom-[-2px] after:left-0 after:h-px after:w-0 after:transition-all after:duration-250 after:content-[''] hover:text-white hover:opacity-100 hover:after:w-full [&.nav-active]:text-white [&.nav-active]:after:bottom-[-4px] [&.nav-active]:after:h-[2px] [&.nav-active]:after:w-full",
+            )}
+          >
+            {t(item.label)}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
 
-      <DesktopMenu />
+  <div class="flex items-center gap-4">
+    <Button
+      class="wallet-cta-link hidden lg:block"
+      href="#"
+      target="_blank"
+      rel="noopener"
+      variant="outline"
+      size="small">{t("navbar.download_wallet")}</Button
+    >
 
-      <!-- CTA Button (Desktop) -->
-      <div class="navbar-desktop:block hidden">
-        <Button target="_self" href={getLocalizedPath(locale, "/app")}
-          >{t("navbar.cta")}</Button
-        >
-      </div>
+    <button
+      class="nav-hamburger group flex h-9 w-9 cursor-pointer items-center justify-center border-none bg-none p-1 lg:hidden"
+      id="nav-hamburger"
+      aria-label={t("navbar.open_menu")}
+      aria-expanded="false"
+    >
+      <svg
+        class="hamburger-icon group-[.open]:hidden"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <line
+          x1="3"
+          y1="6"
+          x2="21"
+          y2="6"
+          stroke="#E8E6E0"
+          stroke-width="1.5"
+          stroke-linecap="square"></line>
+        <line
+          x1="3"
+          y1="12"
+          x2="21"
+          y2="12"
+          stroke="#E8E6E0"
+          stroke-width="1.5"
+          stroke-linecap="square"></line>
+        <line
+          x1="3"
+          y1="18"
+          x2="21"
+          y2="18"
+          stroke="#E8E6E0"
+          stroke-width="1.5"
+          stroke-linecap="square"></line>
+      </svg>
 
-      <!-- Mobile menu button -->
-      <div class="navbar-desktop:hidden">
-        <button
-          id="mobile-menu-button"
-          type="button"
-          class="inline-flex cursor-pointer items-center justify-center rounded-md p-2 text-white"
-          aria-controls="mobile-menu"
-          aria-expanded="false"
-          aria-label="Toggle main menu"
-        >
-          <span class="sr-only">Open main menu</span>
-          <!-- Menu icon (hamburger) -->
-          <MenuIcon class="menu-icon block size-5" aria-hidden="true" />
-
-          <!-- Close icon (X) -->
-          <XIcon class="close-icon hidden size-5" aria-hidden="true" />
-        </button>
-      </div>
-    </div>
+      <svg
+        class="close-icon hidden group-[.open]:block"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <line
+          x1="4"
+          y1="4"
+          x2="20"
+          y2="20"
+          stroke="#E8E6E0"
+          stroke-width="1.5"
+          stroke-linecap="square"></line>
+        <line
+          x1="20"
+          y1="4"
+          x2="4"
+          y2="20"
+          stroke="#E8E6E0"
+          stroke-width="1.5"
+          stroke-linecap="square"></line>
+      </svg>
+    </button>
   </div>
-
-  <Separator class="absolute bottom-0" />
-  <MobileMenu locale={locale} />
 </nav>
 
-<!-- Script for mobile menu toggling -->
+<div
+  class="mobile-menu bg-void fixed inset-0 z-999 hidden flex-col gap-8 px-8 pt-20 pb-10"
+  id="mobile-nav-menu"
+>
+  <div class="mobile-menu-links flex flex-1 flex-col">
+    {
+      SITE_NAVIGATIONS.map((item) => (
+        <a
+          href={getLocalizedPath(locale, item.href)}
+          class="font-navbar-link-mobile text-content border-content-10 flex items-center justify-between border-b py-[18px]"
+        >
+          {t(item.label)}
+        </a>
+      ))
+    }
+  </div>
+
+  <Button
+    class="wallet-cta-link py-[14px]"
+    href="#"
+    target="_blank"
+    rel="noopener"
+    variant="primary">{t("navbar.download_wallet")}</Button
+  >
+</div>
+
 <script>
-  const mobileMenuButton = document.querySelector<HTMLDivElement>(
-    "#mobile-menu-button",
-  );
-  const mobileMenu = document.querySelector(".mobile-menu");
-  const menuIcon = document.querySelector(".menu-icon");
-  const closeIcon = document.querySelector(".close-icon");
+  const hamburger = document.getElementById("nav-hamburger");
+  const mobileMenu = document.getElementById("mobile-nav-menu");
 
-  if (!mobileMenuButton || !mobileMenu || !menuIcon || !closeIcon)
-    throw Error(
-      "Mobile navbar elements can't be selected, failed attaching event listener",
-    );
+  function openMenu() {
+    mobileMenu?.classList.remove("hidden");
+    mobileMenu?.classList.add("flex");
+    hamburger?.classList.add("open");
+    hamburger?.setAttribute("aria-expanded", "true");
+    const closeLabel = hamburger?.getAttribute("data-aria-close");
+    if (closeLabel) hamburger?.setAttribute("aria-label", closeLabel);
+    document.body.style.overflow = "hidden";
+  }
 
-  mobileMenuButton.addEventListener("click", function () {
-    const isExpanded =
-      mobileMenuButton.getAttribute("aria-expanded") === "true";
+  function closeMenu() {
+    mobileMenu?.classList.add("hidden");
+    mobileMenu?.classList.remove("flex");
+    hamburger?.classList.remove("open");
+    hamburger?.setAttribute("aria-expanded", "false");
+    document.body.style.overflow = "";
+  }
 
-    // Toggle menu visibility
-    mobileMenu.classList.toggle("hidden");
-    mobileMenu.classList.toggle("flex");
-
-    // Toggle icons
-    menuIcon.classList.toggle("hidden");
-    closeIcon.classList.toggle("hidden");
-
-    // Update aria-expanded attribute
-    mobileMenuButton.setAttribute("aria-expanded", (!isExpanded).toString());
+  hamburger?.addEventListener("click", () => {
+    const isOpen = hamburger.getAttribute("aria-expanded") === "true";
+    isOpen ? closeMenu() : openMenu();
   });
 
-  // Close menu when clicking outside
-  document.addEventListener("click", function (event) {
+  document.addEventListener("click", (e) => {
     if (
-      !mobileMenuButton.contains(event.target as Node) &&
-      !mobileMenu.contains(event.target as Node)
+      mobileMenu &&
+      !mobileMenu.classList.contains("hidden") &&
+      !mobileMenu.contains(e.target as Node) &&
+      !hamburger?.contains(e.target as Node)
     ) {
-      if (!mobileMenu.classList.contains("hidden")) {
-        mobileMenu.classList.add("hidden");
-        mobileMenu.classList.remove("flex");
-
-        menuIcon.classList.remove("hidden");
-        closeIcon.classList.add("hidden");
-        mobileMenuButton.setAttribute("aria-expanded", "false");
-      }
+      closeMenu();
     }
   });
 
-  // Handle escape key
-  document.addEventListener("keydown", function (event) {
-    if (event.key === "Escape" && !mobileMenu.classList.contains("hidden")) {
-      mobileMenu.classList.add("hidden");
-      mobileMenu.classList.remove("flex");
-
-      menuIcon.classList.remove("hidden");
-      closeIcon.classList.add("hidden");
-      mobileMenuButton.setAttribute("aria-expanded", "false");
-      mobileMenuButton.focus();
-    }
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeMenu();
   });
 </script>
 
-<!-- Script for handling dissapear and appear of navbar -->
 <script>
-  const navbarEl = document.getElementById("navbar");
+  import { getWalletLink } from "@/scripts/shared/get-wallet-link";
 
-  let prevScrollOffsetRef = 0;
-  let prevScrollDirection: "idle" | "down" | "up" = "idle";
+  const walletLink = getWalletLink();
 
-  const handleToggleOpacity = (e: Event) => {
-    // The logic here is using the navbar height as reference so we not have empty area when the navbar is hidden.
-    const isLgWidth = window?.innerWidth >= 992;
-    const isMdWidth = window?.innerWidth >= 768;
-    const isXsWidth = window?.innerWidth < 405;
-    const isTransitionWidth = !isMdWidth && !isXsWidth;
+  document.querySelectorAll(".wallet-cta-link").forEach((el) => {
+    console.log(el);
+    (el as HTMLAnchorElement).href = walletLink;
+  });
+</script>
 
-    let validOffsetThreshold = 86.87;
-    if (isTransitionWidth) validOffsetThreshold = 158.87;
-    if (isXsWidth) validOffsetThreshold = 176.87;
-    if (isLgWidth) validOffsetThreshold = 131.87;
+<script>
+  import { getLocaleFromUrl, getLocalizedPath } from "@/utils/i18n";
 
-    const currentOffset = window?.pageYOffset;
-    const isValidOffset = window?.pageYOffset > validOffsetThreshold;
+  const locale = getLocaleFromUrl(location.pathname);
 
-    const isJustScrollingUp =
-      prevScrollDirection !== "up" && prevScrollOffsetRef > currentOffset;
-    const isJustScrollingDown =
-      prevScrollDirection !== "down" && prevScrollOffsetRef < currentOffset;
-
-    if ((isJustScrollingUp || isJustScrollingDown) && isValidOffset) {
-      navbarEl?.classList.toggle("opacity-0");
-      navbarEl?.classList.toggle("pointer-events-none");
-
-      prevScrollDirection = isJustScrollingUp ? "up" : "down";
+  const updateLinkStatus = (link: HTMLAnchorElement, isActive: boolean) => {
+    if (isActive) {
+      link.classList.add("nav-active");
+      link.setAttribute("aria-current", "page");
+    } else {
+      link.classList.remove("nav-active");
+      link.removeAttribute("aria-current");
     }
-
-    prevScrollOffsetRef = currentOffset;
   };
 
-  window.addEventListener("scroll", handleToggleOpacity);
+  const checkIsActive = (link: HTMLAnchorElement) => {
+    const linkPath = new URL(link.href).pathname + new URL(link.href).hash;
+    const currentPath = location.pathname + location.hash;
+    return currentPath === getLocalizedPath(locale, linkPath);
+  };
+
+  const nav = document.getElementById("navbar") as HTMLElement;
+  const links = nav?.querySelectorAll("a");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > window.innerHeight * 0.5) {
+      nav.classList.add("scrolled");
+    } else {
+      nav.classList.remove("scrolled");
+    }
+  });
+
+  links?.forEach((link) => {
+    updateLinkStatus(link, checkIsActive(link));
+
+    link.addEventListener("click", () => {
+      // Small timeout to allow hash change if it's an anchor
+      setTimeout(() => {
+        links.forEach((val) => {
+          updateLinkStatus(val, checkIsActive(val));
+        });
+      }, 0);
+    });
+  });
+
+  // Also handle hashchange for anchor links
+  window.addEventListener("hashchange", () => {
+    links?.forEach((link) => {
+      updateLinkStatus(link, checkIsActive(link));
+    });
+  });
+
+  setTimeout(() => nav.classList.add("visible"), 100);
 </script>
-
-<style>
-  /* High contrast mode support */
-  @media (prefers-contrast: high) {
-    nav {
-      border-width: 2px;
-    }
-
-    a:focus {
-      outline: 2px solid;
-      outline-offset: 2px;
-    }
-  }
-
-  /* Reduced motion support */
-  @media (prefers-reduced-motion: reduce) {
-    * {
-      transition-duration: 0.01ms !important;
-    }
-  }
-</style>

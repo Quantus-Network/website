@@ -715,6 +715,10 @@
     "no_posts_found": "Tidak ada postingan yang ditemukan.",
     "featured_label": "Unggulan",
     "related_posts": "Postingan Terkait",
+    "post": {
+      "back_to_blog": "Kembali ke Blog",
+      "author": "Tim Quantus"
+    },
     "meta": {
       "title": "Blog Quantus | Berita Terbaru & Wawasan Kuantum",
       "description": "Tetap terinformasi dengan berita terbaru, konten edukasi, dan wawasan dari Jaringan Quantus."

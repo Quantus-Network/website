@@ -1,12 +1,13 @@
 ---
 import "../../styles/global.css";
-import "@fontsource/prompt/200.css";
-import "@fontsource/prompt/300.css";
-import "@fontsource/prompt/400.css";
-import "@fontsource/prompt/600.css";
-import "@fontsource/prompt/700.css";
-import "@fontsource/prompt/900.css";
-import "@fontsource/inter/900.css";
+
+// Main fonts
+import "@fontsource/geist/300.css";
+import "@fontsource/geist/400.css";
+import "@fontsource/geist/500.css";
+import "@fontsource/geist-mono/300.css";
+import "@fontsource/geist-mono/400.css";
+import "@fontsource/geist-mono/500.css";
 
 // Whitepapers Fonts
 import "@fontsource/ibm-plex-sans/400.css";
@@ -32,7 +33,7 @@ import {
 import { generateBreadcrumbs } from "@/utils/build-json-ld";
 import { SITE_NAVIGATIONS } from "@/constants/site-navigations";
 import CookieConsent from "@/components/ui/CookieConsent.astro";
-import Toast from "../ui/Toast.astro";
+import Toast from "@/components/ui/Toast.astro";
 import env from "@/config";
 
 interface Props extends SEOProps {
@@ -93,7 +94,7 @@ const breadcrumbs = generateBreadcrumbs({
       titleTemplate={undefined}
     />
   </head>
-  <body class="flex grow flex-col pt-[139px]" data-locale={currentLocale}>
+  <body class="flex grow flex-col" data-locale={currentLocale}>
     <script
       type="application/ld+json"
       set:html={JSON.stringify(breadcrumbs).replace(/</g, "\\u003c")}
@@ -120,7 +121,8 @@ const breadcrumbs = generateBreadcrumbs({
   </body>
 </html>
 
-<script>
+<!-- Temporary disabled for now until we have a proper i18n content -->
+<!-- <script>
   import {
     DEFAULT_LOCALE,
     getLocaleFromUrl,
@@ -156,4 +158,4 @@ const breadcrumbs = generateBreadcrumbs({
       window.location.replace(newPath);
     }
   }
-</script>
+</script> -->

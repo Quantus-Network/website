@@ -1,0 +1,433 @@
+---
+import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
+---
+
+<section id="solution">
+  <!-- PART 1: orange divider -->
+  <div id="sol-divider"></div>
+
+  <!-- PART 2: typewriter -->
+  <div id="typewriter-block">
+    <span class="sol-tw-eyebrow">{t("home.solution.eyebrow")}</span>
+    <div
+      id="typewriter-text"
+      data-i18n-typewriter={t("home.solution.typewriter_text")}
+    >
+      <span id="tw-cursor">|</span>
+    </div>
+  </div>
+
+  <!-- PART 3: pillars -->
+  <div id="pillars-wrap">
+    <div id="pillars">
+      <!-- Card 1 -->
+      <div class="pillar-card">
+        <div>
+          <span class="pillar-title">
+            {t("home.solution.pillars.pqc.title")}
+          </span>
+          <div class="pillar-specs">
+            <div class="pillar-spec-row">
+              <span class="pillar-spec-label">
+                {t("home.solution.pillars.pqc.specs.algorithm.label")}
+              </span><span class="pillar-spec-value">
+                {t("home.solution.pillars.pqc.specs.algorithm.value")}
+              </span>
+              >
+            </div>
+            <div class="pillar-spec-row">
+              <span class="pillar-spec-label">
+                {t("home.solution.pillars.pqc.specs.standard.label")}
+              </span><span class="pillar-spec-value">
+                {t("home.solution.pillars.pqc.specs.standard.value")}
+              </span>
+              >
+            </div>
+            <div class="pillar-spec-row">
+              <span class="pillar-spec-label">
+                {t("home.solution.pillars.pqc.specs.layer.label")}
+              </span><span class="pillar-spec-value">
+                {t("home.solution.pillars.pqc.specs.layer.value")}
+              </span>
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="pillar-card">
+        <div>
+          <span class="pillar-title">
+            {t("home.solution.pillars.zk.title")}
+          </span>
+          <div class="pillar-specs">
+            <div class="pillar-spec-row">
+              <span class="pillar-spec-label">
+                {t("home.solution.pillars.zk.specs.type.label")}
+              </span><span class="pillar-spec-value">
+                {t("home.solution.pillars.zk.specs.type.value")}
+              </span>
+              >
+            </div>
+            <div class="pillar-spec-row">
+              <span class="pillar-spec-label">
+                {t("home.solution.pillars.zk.specs.purpose.label")}
+              </span><span class="pillar-spec-value">
+                {t("home.solution.pillars.zk.specs.purpose.value")}
+              </span>
+              >
+            </div>
+            <div class="pillar-spec-row">
+              <span class="pillar-spec-label">
+                {t("home.solution.pillars.zk.specs.throughput.label")}
+              </span><span class="pillar-spec-value">
+                {t("home.solution.pillars.zk.specs.throughput.value")}
+              </span>
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="pillar-card">
+        <div>
+          <span class="pillar-title">
+            {t("home.solution.pillars.arch.title")}
+          </span>
+          <div class="pillar-specs">
+            <div class="pillar-spec-row">
+              <span class="pillar-spec-label">
+                {t("home.solution.pillars.arch.specs.type.label")}
+              </span><span class="pillar-spec-value">
+                {t("home.solution.pillars.arch.specs.type.value")}
+              </span>
+              >
+            </div>
+            <div class="pillar-spec-row">
+              <span class="pillar-spec-label">
+                {t("home.solution.pillars.arch.specs.approach.label")}
+              </span><span class="pillar-spec-value">
+                {t("home.solution.pillars.arch.specs.approach.value")}
+              </span>
+              >
+            </div>
+            <div class="pillar-spec-row">
+              <span class="pillar-spec-label">
+                {t("home.solution.pillars.arch.specs.migration.label")}
+              </span><span class="pillar-spec-value">
+                {t("home.solution.pillars.arch.specs.migration.value")}
+              </span>
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  #solution {
+    position: relative;
+    z-index: 50;
+    background: #0e0e0e;
+    min-height: 100vh;
+    padding-bottom: 48px;
+  }
+
+  /* PART 1 — divider line */
+  #sol-divider {
+    width: 0;
+    height: 1px;
+    background: #ff6b35;
+    transition: width 0.8s ease-out;
+  }
+  #sol-divider.expanded {
+    width: 100%;
+  }
+
+  /* PART 2 — typewriter block */
+  #typewriter-block {
+    padding: 80px 52px 60px;
+    position: relative;
+    transition: opacity 0.4s ease;
+  }
+  #typewriter-block.fade-out {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .sol-tw-eyebrow {
+    display: block;
+    font-family: "Geist Mono", monospace;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(232, 230, 224, 0.35);
+    margin-bottom: 40px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  .sol-tw-eyebrow.visible {
+    opacity: 1;
+  }
+  #typewriter-text {
+    font-family: "Geist", sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+    color: rgba(232, 230, 224, 0.9);
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    white-space: pre-wrap;
+  }
+  #tw-cursor {
+    display: inline;
+    color: #ff6b35;
+    animation: twblink 0.7s step-end infinite;
+  }
+  #tw-cursor.hidden {
+    display: none;
+  }
+  @keyframes twblink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+
+  /* PART 3 — pillars */
+  #pillars {
+    margin: 0 52px;
+    border: 1px solid rgba(232, 230, 224, 0.08);
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  #pillars.vis {
+    opacity: 1;
+    transform: none;
+    transition:
+      opacity 0.8s ease,
+      transform 0.8s ease;
+  }
+
+  .pillar-card {
+    padding: 24px 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 1px solid rgba(232, 230, 224, 0.08);
+    transition: background 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  .pillar-card:last-child {
+    border-right: none;
+  }
+  .pillar-card:hover {
+    background: rgba(232, 230, 224, 0.04);
+  }
+  .pillar-card.in-1 {
+    opacity: 1;
+    transform: none;
+    transition:
+      opacity 0.8s ease 0s,
+      transform 0.8s ease 0s,
+      background 0.3s ease;
+  }
+  .pillar-card.in-2 {
+    opacity: 1;
+    transform: none;
+    transition:
+      opacity 0.8s ease 0.18s,
+      transform 0.8s ease 0.18s,
+      background 0.3s ease;
+  }
+  .pillar-card.in-3 {
+    opacity: 1;
+    transform: none;
+    transition:
+      opacity 0.8s ease 0.35s,
+      transform 0.8s ease 0.35s,
+      background 0.3s ease;
+  }
+
+  .pillar-title {
+    font-family: "Geist Mono", monospace;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #ff6b35;
+    display: block;
+    margin-bottom: 18px;
+    transition: color 0.3s ease;
+  }
+  .pillar-card:hover .pillar-title {
+    color: rgba(232, 230, 224, 0.6);
+  }
+
+  .pillar-specs {
+    display: flex;
+    flex-direction: column;
+  }
+  .pillar-spec-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid rgba(232, 230, 224, 0.06);
+    padding: 7px 0;
+  }
+  .pillar-spec-label {
+    font-family: "Geist Mono", monospace;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(232, 230, 224, 0.28);
+  }
+  .pillar-spec-value {
+    font-family: "Geist Mono", monospace;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(232, 230, 224, 0.72);
+    text-align: right;
+  }
+  .pillar-status {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 16px;
+  }
+  .pillar-status-dot {
+    width: 4px;
+    height: 4px;
+    background: #4ade80;
+    border-radius: 50%;
+    flex-shrink: 0;
+    animation: pd 2s ease infinite;
+  }
+  .pillar-status-label {
+    font-family: "Geist Mono", monospace;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #4ade80;
+  }
+  .pillars-bottom-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(232, 230, 224, 0.08);
+    padding: 16px 28px;
+    grid-column: 1 / -1;
+  }
+  .pillars-source {
+    font-family: "Geist Mono", monospace;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(232, 230, 224, 0.2);
+  }
+  /* bottom spacer after pillars */
+  #pillars-wrap {
+    padding-bottom: 80px;
+    margin: 0 0;
+  }
+
+  @media (max-width: 768px) {
+    #typewriter-block {
+      padding: 48px 24px 40px;
+    }
+
+    #typewriter-text {
+      font-size: 26px;
+    }
+
+    #pillars {
+      margin: 0 16px;
+      grid-template-columns: 1fr;
+    }
+
+    .pillar-card {
+      border-right: none;
+      border-bottom: 1px solid rgba(232, 230, 224, 0.08);
+    }
+
+    .pillar-card:last-child {
+      border-bottom: none;
+    }
+  }
+</style>
+
+<script>
+  const twText = document.getElementById("typewriter-text") as HTMLElement;
+  const TEXT = twText?.dataset.i18nTypewriter as string;
+  const CHAR_DELAY = 28;
+
+  const divider = document.getElementById("sol-divider")!;
+  const twBlock = document.getElementById("typewriter-block")!;
+  const twEyebrow = twBlock.querySelector(".sol-tw-eyebrow")!;
+  const twCursor = document.getElementById("tw-cursor")!;
+  const pillarsEl = document.getElementById("pillars")!;
+  const pillarCards = pillarsEl.querySelectorAll(".pillar-card");
+
+  /* ── PART 1: divider animates width on scroll into view ── */
+  const divObs = new IntersectionObserver(
+    (entries) => {
+      if (entries[0].isIntersecting) {
+        divider.classList.add("expanded");
+        divObs.disconnect();
+        startSequence();
+      }
+    },
+    { threshold: 0.1 },
+  );
+  divObs.observe(divider);
+
+  /* ── Sequence ── */
+  function startSequence() {
+    // Eyebrow fades in 0.9s after divider
+    setTimeout(() => twEyebrow.classList.add("visible"), 900);
+
+    // Typing starts 1.5s after section visible
+    setTimeout(() => {
+      typeOut(TEXT, 0, () => {
+        // Typing done — remove cursor, then animate pillars in after 400ms
+        twCursor.classList.add("hidden");
+        setTimeout(showPillars, 400);
+      });
+    }, 1500);
+  }
+
+  /* ── Typewriter: single string, char by char ── */
+  const typeOut = (text: string, idx: number, onDone: () => void) => {
+    if (idx >= text.length) {
+      onDone();
+      return;
+    }
+    twText.insertBefore(document.createTextNode(text[idx]), twCursor);
+    setTimeout(() => typeOut(text, idx + 1, onDone), CHAR_DELAY);
+  };
+
+  /* ── Pillars animate in after typing ── */
+  const showPillars = () => {
+    pillarsEl.classList.add("vis");
+    pillarCards[0].classList.add("in-1");
+    pillarCards[1].classList.add("in-2");
+    pillarCards[2].classList.add("in-3");
+  };
+</script>

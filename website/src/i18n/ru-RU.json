@@ -715,6 +715,10 @@
     "no_posts_found": "Посты не найдены.",
     "featured_label": "Избранное",
     "related_posts": "Похожие сообщения",
+    "post": {
+      "back_to_blog": "Назад к блогу",
+      "author": "Команда Quantus"
+    },
     "meta": {
       "title": "Блог Quantus | Последние новости и квантовые инсайты",
       "description": "Будьте в курсе последних новостей, образовательного контента и инсайтов от Quantus Network."

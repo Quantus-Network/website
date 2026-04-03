@@ -49,7 +49,9 @@ const styleVersion = entry.data.version === "0.3.1" ? "v1" : "v2";
 <Layout {...metadata} jsonLd={jsonLd}>
   <section
     id="whitepaper-section"
-    class:list={["lg:max-w-content mx-auto px-[30px] py-10 lg:py-20 2xl:px-0"]}
+    class:list={[
+      "lg:max-w-content px-content-edges-mobile mx-auto pt-30 pb-10 lg:pb-20 2xl:px-0",
+    ]}
   >
     {
       entry.data.pdfCover && (
@@ -102,7 +104,7 @@ const styleVersion = entry.data.version === "0.3.1" ? "v1" : "v2";
 
     {
       entry.data.changelog.length > 0 && (
-        <footer class="mt-16 border-t border-white/10 pt-8 print:border-black/10">
+        <div class="mt-16 border-t border-white/10 pt-8 print:border-black/10">
           <h2 class="mb-4 text-lg font-semibold text-white/80 print:text-black/80">
             {t("whitepaper.changelog")}
           </h2>
@@ -114,7 +116,7 @@ const styleVersion = entry.data.version === "0.3.1" ? "v1" : "v2";
               </li>
             ))}
           </ul>
-        </footer>
+        </div>
       )
     }
   </section>
@@ -146,9 +148,12 @@ const styleVersion = entry.data.version === "0.3.1" ? "v1" : "v2";
             tocLinks.forEach((link) => {
               const slug = (link as HTMLElement).dataset.headingSlug;
               if (slug === id) {
-                link.classList.add("!border-quantus-blue", "!text-white");
+                link.classList.add("!border-whitepaper-primary", "!text-white");
               } else {
-                link.classList.remove("!border-quantus-blue", "!text-white");
+                link.classList.remove(
+                  "!border-whitepaper-primary",
+                  "!text-white",
+                );
               }
             });
           }
