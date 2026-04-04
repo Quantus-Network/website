@@ -558,23 +558,6 @@
       "eyebrow": "BLOG",
       "heading": "Dari tim Quantus.",
       "sub": "Pendalaman teknis, pembaruan protokol, dan perspektif tentang lanskap ancaman kuantum.",
-      "posts": {
-        "post1": {
-          "date": "24 MAR",
-          "tag": "PEMBARUAN",
-          "title": "Halving Kedua: Bukti ZK 4x Lebih Cepat dalam Dua Minggu"
-        },
-        "post2": {
-          "date": "16 MAR",
-          "tag": "PEMBARUAN",
-          "title": "Tanda Tangan Aman Kuantum, Penskalaan ZK, dan Bukti Wormhole 2x Lebih Cepat"
-        },
-        "post3": {
-          "date": "07 MAR",
-          "tag": "PROTOKOL",
-          "title": "Transaksi Wormhole"
-        }
-      },
       "view_all": "BACA SEMUA POSTINGAN →"
     }
   },

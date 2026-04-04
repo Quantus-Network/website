@@ -558,23 +558,6 @@
       "eyebrow": "BLOG",
       "heading": "Del equipo de Quantus.",
       "sub": "Inmersiones técnicas profundas, actualizaciones del protocolo y perspectivas sobre el panorama de las amenazas cuánticas.",
-      "posts": {
-        "post1": {
-          "date": "24 MAR",
-          "tag": "ACTUALIZACIÓN",
-          "title": "Segundo Halving: Pruebas ZK 4 veces más rápidas en dos semanas"
-        },
-        "post2": {
-          "date": "16 MAR",
-          "tag": "ACTUALIZACIÓN",
-          "title": "Firmas seguras cuánticamente, escalado ZK y pruebas Wormhole 2 veces más rápidas"
-        },
-        "post3": {
-          "date": "07 MAR",
-          "tag": "PROTOCOLO",
-          "title": "Transacciones Wormhole"
-        }
-      },
       "view_all": "LEER TODAS LAS PUBLICACIONES →"
     }
   },

@@ -558,23 +558,6 @@
       "eyebrow": "BLOG",
       "heading": "From the Quantus team.",
       "sub": "Technical deep-dives, protocol updates, and perspectives on the quantum threat landscape.",
-      "posts": {
-        "post1": {
-          "date": "MAR 24",
-          "tag": "UPDATE",
-          "title": "Second Halving: 4x Faster ZK Proofs in Two Weeks"
-        },
-        "post2": {
-          "date": "MAR 16",
-          "tag": "UPDATE",
-          "title": "Quantum-Safe Signatures, ZK Scaling, and 2x Faster Wormhole Proofs"
-        },
-        "post3": {
-          "date": "MAR 07",
-          "tag": "PROTOCOL",
-          "title": "Wormhole Transactions"
-        }
-      },
       "view_all": "READ ALL POSTS →"
     }
   },
