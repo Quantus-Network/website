@@ -1,0 +1,97 @@
+---
+import Layout from "@/components/layout/Layout.astro";
+import { BlogList } from "@/components/features/blog/BlogList";
+import { getCollection } from "astro:content";
+import {
+  getLocaleFromUrl,
+  getLocalizedPath,
+  createTranslator,
+  SUPPORTED_LOCALES,
+} from "@/utils/i18n";
+import { createMetadata } from "@/utils/create-metadata";
+
+export async function getStaticPaths() {
+  return SUPPORTED_LOCALES.map((lang) => ({ params: { lang } }));
+}
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
+
+const posts = await getCollection("blog", ({ id }) => {
+  return id.toLowerCase().startsWith(`${locale.toLowerCase()}/`);
+});
+
+console.log(posts);
+
+const sortedPosts = posts.sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+
+// Map posts to a simple serializable format for the React component
+const serializablePosts = sortedPosts.map((post) => ({
+  id: post.id,
+  slug: post.id.split("/").slice(1).join("/"),
+  data: {
+    title: post.data.title,
+    description: post.data.description,
+    pubDate: post.data.pubDate.toISOString(),
+    tags: post.data.tags,
+    heroImage: post.data.heroImage,
+    heroAlt: post.data.heroAlt,
+    featured: post.data.featured,
+  },
+}));
+
+const translations = await import(`../../../i18n/${locale}.json`);
+const tagsMap = translations.default.blog?.tags || {};
+
+const metadata = createMetadata({
+  title: t("blog.meta.title"),
+  description: t("blog.meta.description"),
+  pathname: Astro.url.pathname,
+});
+---
+
+<Layout {...metadata}>
+  <!-- Hero -->
+  <section class="bg-void relative overflow-hidden px-6 pt-40 pb-20 md:px-13">
+    <!-- Dot grid background -->
+    <div
+      class="pointer-events-none absolute inset-0 z-0"
+      style="background-image: radial-gradient(circle, rgba(232,230,224,0.12) 1px, transparent 1px); background-size: 28px 28px; -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, transparent 30%, rgba(0,0,0,0.6) 60%, black 100%); mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, transparent 30%, rgba(0,0,0,0.6) 60%, black 100%);"
+    >
+    </div>
+    <div class="relative z-1">
+      <span
+        class="text-flare block font-mono text-xs tracking-[0.22em] uppercase"
+      >
+        {t("blog.hero.eyebrow")}
+      </span>
+      <h1
+        class="mt-4 text-[clamp(36px,4vw,64px)] leading-tight font-medium text-white"
+      >
+        {t("blog.hero.heading")}
+      </h1>
+      <p class="text-content-60 mt-4 max-w-[480px] text-lg">
+        {t("blog.hero.sub")}
+      </p>
+      <span class="bg-flare mt-12 block h-px w-full"></span>
+    </div>
+  </section>
+
+  <!-- Posts -->
+  <section class="px-6 pt-20 pb-30 md:px-13">
+    <BlogList
+      client:load
+      posts={serializablePosts}
+      locale={locale}
+      localizedBlogPath={getLocalizedPath(locale, "/blog")}
+      localizedTagPath={getLocalizedPath(locale, "/blog/tags")}
+      searchPlaceholder={t("blog.search_placeholder")}
+      noPostsFoundText={t("blog.no_posts_found")}
+      featuredLabel={t("blog.featured_label")}
+      readLabel={t("blog.card.read")}
+      tagsMap={tagsMap}
+    />
+  </section>
+</Layout>

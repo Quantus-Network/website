@@ -1,0 +1,49 @@
+---
+import Layout from "@/components/layout/Layout.astro";
+import {
+  createTranslator,
+  getLocaleFromUrl,
+  SUPPORTED_LOCALES,
+} from "@/utils/i18n";
+import { createMetadata } from "@/utils/create-metadata";
+import { JsonLdGraph } from "@/utils/build-json-ld";
+import {
+  androidAppJsonLd,
+  iosAppJsonLd,
+  organizationJsonLd,
+  websiteJsonLd,
+} from "@/constants/default-jsonld";
+import HeroBanner from "@/components/features/technology/HeroBanner.astro";
+import ArchitectureSection from "@/components/features/technology/ArchitectureSection.astro";
+import CryptographySection from "@/components/features/technology/CryptographySection.astro";
+import ScalabilitySection from "@/components/features/technology/ScalabilitySection.astro";
+import ConsensusSection from "@/components/features/technology/ConsensusSection.astro";
+import CtaSection from "@/components/features/technology/CtaSection.astro";
+
+export async function getStaticPaths() {
+  return SUPPORTED_LOCALES.map((lang) => ({ params: { lang } }));
+}
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
+
+const metadata = createMetadata({
+  title: t("technology.meta.title"),
+  description: t("technology.meta.description"),
+  pathname: Astro.url.pathname,
+});
+
+const jsonLd = JsonLdGraph({
+  "@context": "https://schema.org",
+  "@graph": [websiteJsonLd, organizationJsonLd, iosAppJsonLd, androidAppJsonLd],
+});
+---
+
+<Layout {...metadata} jsonLd={jsonLd}>
+  <HeroBanner />
+  <ArchitectureSection />
+  <CryptographySection />
+  <ScalabilitySection />
+  <ConsensusSection />
+  <CtaSection />
+</Layout>

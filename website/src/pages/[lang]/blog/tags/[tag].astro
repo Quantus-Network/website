@@ -1,0 +1,122 @@
+---
+import Layout from "@/components/layout/Layout.astro";
+import Card from "@/components/features/blog/Card.astro";
+import { getCollection } from "astro:content";
+import {
+  getLocaleFromUrl,
+  getLocalizedPath,
+  createTranslator,
+  SUPPORTED_LOCALES,
+} from "@/utils/i18n";
+import { createMetadata } from "@/utils/create-metadata";
+
+export async function getStaticPaths() {
+  const allPosts = await getCollection("blog");
+  const paths = [];
+
+  for (const lang of SUPPORTED_LOCALES) {
+    const langPosts = allPosts.filter((post) =>
+      post.id.toLowerCase().startsWith(`${lang.toLowerCase()}/`),
+    );
+    const uniqueTags = [
+      ...new Set(langPosts.flatMap((post) => post.data.tags)),
+    ];
+
+    for (const tag of uniqueTags) {
+      paths.push({
+        params: { lang, tag },
+      });
+    }
+  }
+
+  return paths;
+}
+
+const { tag } = Astro.params;
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
+
+const posts = await getCollection("blog", ({ id, data }) => {
+  return (
+    id.toLowerCase().startsWith(`${locale.toLowerCase()}/`) &&
+    data.tags.includes(tag)
+  );
+});
+
+const sortedPosts = posts.sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+
+const metadata = createMetadata({
+  title: t("blog.tag.meta.title", { tag }),
+  description: t("blog.tag.meta.description", { tag }),
+  pathname: Astro.url.pathname,
+  noindex: true,
+  nofollow: true,
+});
+---
+
+<Layout {...metadata}>
+  <!-- Hero -->
+  <section class="bg-void relative overflow-hidden px-6 pt-40 pb-20 md:px-13">
+    <div
+      class="pointer-events-none absolute inset-0 z-0"
+      style="background-image: radial-gradient(circle, rgba(232,230,224,0.12) 1px, transparent 1px); background-size: 28px 28px; -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, transparent 30%, rgba(0,0,0,0.6) 60%, black 100%); mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, transparent 30%, rgba(0,0,0,0.6) 60%, black 100%);"
+    >
+    </div>
+    <div class="relative z-1">
+      <span
+        class="text-flare block font-mono text-xs tracking-[0.22em] uppercase"
+      >
+        {t("blog.hero.eyebrow")}
+      </span>
+      <h1
+        class="mt-4 text-[clamp(36px,4vw,64px)] leading-tight font-medium text-white"
+      >
+        {t("blog.hero.heading")}
+      </h1>
+      <p
+        class="text-content-40 mt-3 font-mono text-sm tracking-[0.14em] uppercase"
+      >
+        {t("blog.tag.heading", { tag })}
+      </p>
+      <a
+        href={getLocalizedPath(locale, "/blog")}
+        class="text-content-35 hover:text-content-70 mt-5 inline-block font-mono text-xs tracking-[0.14em] uppercase transition-colors"
+      >
+        {t("blog.tag.back_link")}
+      </a>
+      <span class="bg-flare mt-10 block h-px w-full"></span>
+    </div>
+  </section>
+
+  <!-- Posts -->
+  <section class="px-6 pt-20 pb-30 md:px-13">
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {
+        sortedPosts.map((post) => (
+          <Card
+            title={post.data.title}
+            description={post.data.description}
+            pubDate={post.data.pubDate}
+            href={getLocalizedPath(
+              locale,
+              `/blog/${post.id.split("/").slice(1).join("/")}`,
+            )}
+            tags={post.data.tags}
+            heroImage={post.data.heroImage}
+            heroAlt={post.data.heroAlt}
+            featured={post.data.featured}
+          />
+        ))
+      }
+      {
+        sortedPosts.length === 0 && (
+          <p class="text-content-35 col-span-full text-center font-mono text-sm tracking-wider uppercase">
+            {t("blog.no_posts_found")}
+          </p>
+        )
+      }
+    </div>
+  </section>
+</Layout>
