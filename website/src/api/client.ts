@@ -7,6 +7,7 @@ import type {
 } from "./node-rpc-service";
 import env from "@/config";
 import NodeRpcService from "./node-rpc-service";
+import type { EthereumAddressData } from "@/interfaces/EthereumSecurity";
 
 // Types for API responses
 interface ChainStatsData {
@@ -75,6 +76,14 @@ const createApiClient = () => {
   const nodeRpc = new NodeRpcService();
 
   const methods = {
+    /**
+     * Get Ethereum security analysis
+     */
+    getEthereumSecurityAnalysis: async (addressOrEnsName: string): Promise<EthereumAddressData | null> => {
+      const data = await fetch(`${env.TASK_MASTER_URL}/risk-checker/${addressOrEnsName}`);
+      return (await data.json())?.data as EthereumAddressData | null;
+    },
+
     /**
      * Submit a contact form inquiry
      */

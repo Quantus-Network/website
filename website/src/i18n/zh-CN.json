@@ -72,7 +72,8 @@
         "grade": "> 等级          {grade}",
         "risk": "> 风险等级      {risk}",
         "exposure": "> 密钥暴露      {exposure}",
-        "advice": "> 建议: {advice}"
+        "advice": "> 建议:",
+        "advice_bullet": ">   · {advice}"
       },
       "risk_level": {
         "very_low": "极低",
@@ -85,10 +86,27 @@
         "exposed": "已暴露",
         "not_yet": "尚未暴露"
       },
-      "advice_by_score": {
-        "high": "您的暴露程度有限。随着量子时间线的演变，请保持关注。",
-        "mid": "考虑在 Q-Day 到来之前迁移到 Quantus。",
-        "low": "立即将资产转移到量子安全地址。"
+      "recommendations": {
+        "smart_contract": "This is a smart contract. Smart contract quantum security analysis coming soon!",
+        "public_key_exposed": "Your public key has been exposed through outgoing transactions, making it vulnerable to quantum attacks. Consider moving the funds to a new address.",
+        "public_key_safe": "Excellent! No outgoing transactions mean your public key remains secure.",
+        "balance_very_high": "Your high balance makes your address more attractive to a quantum attacker. Consider splitting your funds into multiple addresses with smaller balances.",
+        "balance_high": "Your high balance makes your address more attractive to a quantum attacker. Consider splitting your funds into multiple addresses with smaller balances.",
+        "balance_medium": "Your high balance makes your address more attractive to a quantum attacker. Consider splitting your funds into multiple addresses with smaller balances.",
+        "balance_low": "Your high balance makes your address more attractive to a quantum attacker. Consider splitting your funds into multiple addresses with smaller balances.",
+        "receive_only": "Consider using this address only for receiving funds to maintain quantum security.",
+        "empty_address": "Empty address has minimal quantum risk exposure."
+      },
+      "exposure_duration": {
+        "less_than_a_day": "less than a day",
+        "one_day": "1 day",
+        "days": "{count} days",
+        "one_month": "1 month",
+        "months": "{count} months",
+        "one_year": "1 year",
+        "one_year_months": "1 year, {months} months",
+        "years": "{count} years",
+        "years_months": "{count} years, {months} months"
       }
     }
   },
@@ -612,21 +630,14 @@
     "cookies_tracking": {
       "title": "Cookie 和追踪",
       "intro": "我们的网站使用 Cookie 用于：",
-      "items": [
-        "基本的网站功能",
-        "了解网站使用情况的分析",
-        "性能改进"
-      ],
+      "items": ["基本的网站功能", "了解网站使用情况的分析", "性能改进"],
       "note": "您可以通过浏览器设置控制 Cookie，但这可能会影响网站功能。"
     },
     "data_security": {
       "title": "数据安全与保留",
       "intro": "我们实施标准的安全措施来保护您的数据，包括加密和安全存储。然而，没有任何在线服务是完全安全的。",
       "technical": "保留期限：",
-      "retention_items": [
-        "网站分析：26 个月",
-        "时事通讯订阅：直到您退订"
-      ]
+      "retention_items": ["网站分析：26 个月", "时事通讯订阅：直到您退订"]
     },
     "your_rights": {
       "title": "您的权利",

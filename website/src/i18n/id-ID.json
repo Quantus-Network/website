@@ -72,7 +72,8 @@
         "grade": "> Grade            {grade}",
         "risk": "> Tingkat risiko   {risk}",
         "exposure": "> Paparan kunci    {exposure}",
-        "advice": "> Saran: {advice}"
+        "advice": "> Saran:",
+        "advice_bullet": ">   · {advice}"
       },
       "risk_level": {
         "very_low": "Sangat rendah",
@@ -85,10 +86,27 @@
         "exposed": "Terpapar",
         "not_yet": "Belum terpapar"
       },
-      "advice_by_score": {
-        "high": "Paparan Anda terbatas. Tetap terinformasi seiring perkembangan lini masa kuantum.",
-        "mid": "Pertimbangkan untuk bermigrasi ke Quantus sebelum Q-Day tiba.",
-        "low": "Segera pindahkan aset ke alamat yang aman secara kuantum."
+      "recommendations": {
+        "smart_contract": "This is a smart contract. Smart contract quantum security analysis coming soon!",
+        "public_key_exposed": "Your public key has been exposed through outgoing transactions, making it vulnerable to quantum attacks. Consider moving the funds to a new address.",
+        "public_key_safe": "Excellent! No outgoing transactions mean your public key remains secure.",
+        "balance_very_high": "Your high balance makes your address more attractive to a quantum attacker. Consider splitting your funds into multiple addresses with smaller balances.",
+        "balance_high": "Your high balance makes your address more attractive to a quantum attacker. Consider splitting your funds into multiple addresses with smaller balances.",
+        "balance_medium": "Your high balance makes your address more attractive to a quantum attacker. Consider splitting your funds into multiple addresses with smaller balances.",
+        "balance_low": "Your high balance makes your address more attractive to a quantum attacker. Consider splitting your funds into multiple addresses with smaller balances.",
+        "receive_only": "Consider using this address only for receiving funds to maintain quantum security.",
+        "empty_address": "Empty address has minimal quantum risk exposure."
+      },
+      "exposure_duration": {
+        "less_than_a_day": "less than a day",
+        "one_day": "1 day",
+        "days": "{count} days",
+        "one_month": "1 month",
+        "months": "{count} months",
+        "one_year": "1 year",
+        "one_year_months": "1 year, {months} months",
+        "years": "{count} years",
+        "years_months": "{count} years, {months} months"
       }
     }
   },
