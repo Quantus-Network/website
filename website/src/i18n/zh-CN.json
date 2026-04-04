@@ -281,7 +281,11 @@
         },
         "prize": {
           "title": "奖品：",
-          "content": ["第一名：300 USDC", "第二名：150 USDC", "第三名：50 USDC"]
+          "content": [
+            "第一名：300 USDC",
+            "第二名：150 USDC",
+            "第三名：50 USDC"
+          ]
         },
         "win": {
           "title": "如何获胜：",
@@ -478,7 +482,10 @@
     "fees": {
       "title": "手续费与销毁",
       "intro": "为支持长期网络安全，虫洞 (wormhole) 交易收取 **0.1% 的交易量费用**：",
-      "points": ["**50%** 支付给矿工", "**50%** 被销毁"],
+      "points": [
+        "**50%** 支付给矿工",
+        "**50%** 被销毁"
+      ],
       "note": "随着网络使用增长，这将带来通缩压力。"
     },
     "funding": {
@@ -658,14 +665,21 @@
       "cookies_tracking": {
         "title": "Cookie 和跟踪",
         "intro": "我们的网站使用 Cookie 来：",
-        "items": ["实现网站基本功能", "进行分析以了解网站使用情况", "提升性能"],
+        "items": [
+          "实现网站基本功能",
+          "进行分析以了解网站使用情况",
+          "提升性能"
+        ],
         "note": "您可以通过浏览器设置控制 Cookie，但这可能会影响网站功能。"
       },
       "data_security": {
         "title": "数据安全和保留",
         "intro": "我们实施标准安全措施来保护您的数据，包括加密和安全存储。但是，没有哪个在线服务是完全安全的。",
         "technical_data": "技术数据：",
-        "retention_items": ["网站分析：26 个月", "新闻通讯订阅：直到您取消订阅"]
+        "retention_items": [
+          "网站分析：26 个月",
+          "新闻通讯订阅：直到您取消订阅"
+        ]
       },
       "your_rights": {
         "title": "您的权利",
@@ -839,5 +853,88 @@
     "name_required": "需要姓名。",
     "message_required": "需要消息。",
     "subscribe_failed": "添加到候补列表失败。"
+  },
+  "quantum_risk_checker": {
+    "meta": {
+      "title": "Q-Day Checker | Quantus - Assess Your Quantum Risk",
+      "description": "Is your digital security ready for Q-Day? Use the Quantus Q-Day Checker to assess your vulnerability to quantum computing threats and learn how to protect your assets."
+    },
+    "hero_banner": {
+      "eyebrow": "Quantum risk checker",
+      "title": "Is your wallet exposed?",
+      "sub": "Enter any Ethereum address. We will scan its transaction history and balance to calculate your quantum vulnerability. Know your risk before Q-Day arrives.",
+      "tool_label": "Quantum risk scanner v1.0",
+      "field_label": "Ethereum address or ENS name",
+      "input_placeholder": "0x...",
+      "validation_error": "Please enter a valid Ethereum address (0x... 42 characters) or ENS name (example.eth).",
+      "scan_button": "Check now →",
+      "fine_print": "Reads public blockchain data only. No private keys required.",
+      "reset_link": "Check another address →"
+    },
+    "definition": {
+      "eyebrow": "The quantum deadline",
+      "title": "Q-Day is coming.",
+      "body_1": "Q-Day is the moment quantum computers become powerful enough to break the cryptography securing most of today's digital assets. Once your public key is exposed, a sufficiently powerful quantum computer can derive your private key and drain your wallet without your knowledge.",
+      "body_2": "The window to act is open. It will not stay that way."
+    },
+    "method": {
+      "eyebrow": "How it works",
+      "title": "Two risk factors. One score.",
+      "intro": "The Quantum Risk Checker scans any Ethereum address or ENS name and calculates a Quantum Readiness Score based on two signals:",
+      "signal_1_title": "Public key exposure",
+      "signal_1_body": "Every outgoing transaction permanently exposes your public key on-chain. The longer it has been exposed, the higher the risk.",
+      "signal_2_title": "Balance sensitivity",
+      "signal_2_body": "The higher the balance in an exposed wallet, the more attractive the target. High balance combined with an exposed key means maximum risk."
+    },
+    "advice": {
+      "eyebrow": "What to do next",
+      "title_line1": "Got risk?",
+      "title_line2": "Here's what to do about it.",
+      "body": "If your wallet is exposed, the only real solution is moving your assets to a quantum-secure address. The Quantus wallet is built on a chain where every transaction is signed with post-quantum cryptography, meaning your assets are protected not just today, but when quantum computers arrive.",
+      "cta": "Download the Quantus wallet →",
+      "footer_note": "The Quantum Risk Checker is built by Quantus, the quantum-secure L1 blockchain."
+    },
+    "checker": {
+      "errors": {
+        "empty": "Please enter an Ethereum address or ENS name.",
+        "invalid": "Please enter a valid Ethereum address (0x... 42 characters) or ENS name.",
+        "ens_failed": "Could not resolve ENS name. Make sure it is correct or use a 0x address."
+      },
+      "buttons": {
+        "check_now": "Check now →",
+        "resolving": "Resolving ENS...",
+        "scanning": "Scanning..."
+      },
+      "terminal": {
+        "init": "> Initializing quantum risk scan...",
+        "address": "> Address: {address}",
+        "checking_pk": "> Checking public key exposure...",
+        "analyzing_balance": "> Analyzing balance sensitivity...",
+        "calculating": "> Calculating quantum readiness score...",
+        "prompt": ">",
+        "complete": "> Scan complete",
+        "readiness": "> Readiness score  {score}",
+        "grade": "> Grade           {grade}",
+        "risk": "> Risk level      {risk}",
+        "exposure": "> Key exposure    {exposure}",
+        "advice": "> Advice: {advice}"
+      },
+      "risk_level": {
+        "very_low": "Very low",
+        "low": "Low",
+        "medium": "Medium",
+        "high": "High",
+        "very_high": "Very high"
+      },
+      "exposure": {
+        "exposed": "Exposed",
+        "not_yet": "Not yet exposed"
+      },
+      "advice_by_score": {
+        "high": "Your exposure is limited. Stay informed as quantum timelines evolve.",
+        "mid": "Consider migrating to Quantus before Q-Day arrives.",
+        "low": "Move assets to a quantum-secure address immediately."
+      }
+    }
   }
 }

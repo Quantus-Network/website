@@ -1,24 +1,28 @@
+---
+import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
+---
+
 <section id="what-qday">
   <div class="qrc-divider"></div>
   <div class="qrc-section-inner">
-    <span class="qrc-eyebrow qrc-animate" data-delay="0"
-      >THE QUANTUM DEADLINE</span
-    >
+    <span class="qrc-eyebrow qrc-animate" data-delay="0">
+      {t("quantum_risk_checker.definition.eyebrow")}
+    </span>
     <h2
       class="qrc-h2 qrc-animate"
       data-delay="0.15"
       style="font-size:clamp(28px,3.2vw,48px);"
     >
-      Q-Day is coming.
+      {t("quantum_risk_checker.definition.title")}
     </h2>
     <p class="qrc-body qrc-animate" data-delay="0.3" style="margin-top:28px;">
-      Q-Day is the moment quantum computers become powerful enough to break the
-      cryptography securing most of today's digital assets. Once your public key
-      is exposed, a sufficiently powerful quantum computer can derive your
-      private key and drain your wallet without your knowledge.
+      {t("quantum_risk_checker.definition.body_1")}
     </p>
     <p class="qrc-body qrc-animate" data-delay="0.4" style="margin-top:20px;">
-      The window to act is open. It will not stay that way.
+      {t("quantum_risk_checker.definition.body_2")}
     </p>
   </div>
 </section>

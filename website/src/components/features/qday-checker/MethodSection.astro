@@ -1,28 +1,38 @@
+---
+import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
+---
+
 <section id="how-it-works">
   <div class="qrc-divider"></div>
   <div class="qrc-section-inner">
-    <span class="qrc-eyebrow qrc-animate" data-delay="0">HOW IT WORKS</span>
+    <span class="qrc-eyebrow qrc-animate" data-delay="0">
+      {t("quantum_risk_checker.method.eyebrow")}
+    </span>
     <h2 class="qrc-h2 qrc-animate" data-delay="0.1" style="margin-top:16px;">
-      Two risk factors. One score.
+      {t("quantum_risk_checker.method.title")}
     </h2>
     <p class="qrc-intro qrc-animate" data-delay="0.2">
-      The Quantum Risk Checker scans any Ethereum address or ENS name and
-      calculates a Quantum Readiness Score based on two signals:
+      {t("quantum_risk_checker.method.intro")}
     </p>
 
     <div class="qrc-signal-grid">
       <div class="qrc-signal-card qrc-animate" data-delay="0.1">
-        <span class="qrc-signal-title">PUBLIC KEY EXPOSURE</span>
+        <span class="qrc-signal-title">
+          {t("quantum_risk_checker.method.signal_1_title")}
+        </span>
         <p class="qrc-signal-body">
-          Every outgoing transaction permanently exposes your public key
-          on-chain. The longer it has been exposed, the higher the risk.
+          {t("quantum_risk_checker.method.signal_1_body")}
         </p>
       </div>
       <div class="qrc-signal-card qrc-animate" data-delay="0.2">
-        <span class="qrc-signal-title">BALANCE SENSITIVITY</span>
+        <span class="qrc-signal-title">
+          {t("quantum_risk_checker.method.signal_2_title")}
+        </span>
         <p class="qrc-signal-body">
-          The higher the balance in an exposed wallet, the more attractive the
-          target. High balance combined with an exposed key means maximum risk.
+          {t("quantum_risk_checker.method.signal_2_body")}
         </p>
       </div>
     </div>

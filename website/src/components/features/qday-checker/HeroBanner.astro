@@ -1,11 +1,63 @@
+---
+import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
+
+const checkerI18n = {
+  errors: {
+    empty: t("quantum_risk_checker.checker.errors.empty"),
+    invalid: t("quantum_risk_checker.checker.errors.invalid"),
+    ensFailed: t("quantum_risk_checker.checker.errors.ens_failed"),
+  },
+  buttons: {
+    checkNow: t("quantum_risk_checker.checker.buttons.check_now"),
+    resolving: t("quantum_risk_checker.checker.buttons.resolving"),
+    scanning: t("quantum_risk_checker.checker.buttons.scanning"),
+  },
+  terminal: {
+    init: t("quantum_risk_checker.checker.terminal.init"),
+    address: t("quantum_risk_checker.checker.terminal.address"),
+    checkingPk: t("quantum_risk_checker.checker.terminal.checking_pk"),
+    analyzingBalance: t("quantum_risk_checker.checker.terminal.analyzing_balance"),
+    calculating: t("quantum_risk_checker.checker.terminal.calculating"),
+    prompt: t("quantum_risk_checker.checker.terminal.prompt"),
+    complete: t("quantum_risk_checker.checker.terminal.complete"),
+    readiness: t("quantum_risk_checker.checker.terminal.readiness"),
+    grade: t("quantum_risk_checker.checker.terminal.grade"),
+    risk: t("quantum_risk_checker.checker.terminal.risk"),
+    exposure: t("quantum_risk_checker.checker.terminal.exposure"),
+    advice: t("quantum_risk_checker.checker.terminal.advice"),
+  },
+  riskLevel: {
+    very_low: t("quantum_risk_checker.checker.risk_level.very_low"),
+    low: t("quantum_risk_checker.checker.risk_level.low"),
+    medium: t("quantum_risk_checker.checker.risk_level.medium"),
+    high: t("quantum_risk_checker.checker.risk_level.high"),
+    very_high: t("quantum_risk_checker.checker.risk_level.very_high"),
+  },
+  exposureLabel: {
+    exposed: t("quantum_risk_checker.checker.exposure.exposed"),
+    not_yet: t("quantum_risk_checker.checker.exposure.not_yet"),
+  },
+  adviceByScore: {
+    high: t("quantum_risk_checker.checker.advice_by_score.high"),
+    mid: t("quantum_risk_checker.checker.advice_by_score.mid"),
+    low: t("quantum_risk_checker.checker.advice_by_score.low"),
+  },
+};
+---
+
 <section id="qrc-hero">
   <div class="qrc-hero-left">
-    <span class="qrc-hero-eyebrow" id="qrc-eyebrow">QUANTUM RISK CHECKER</span>
-    <h1 class="qrc-hero-h1" id="qrc-h1">Is your wallet exposed?</h1>
+    <span class="qrc-hero-eyebrow" id="qrc-eyebrow">
+      {t("quantum_risk_checker.hero_banner.eyebrow")}
+    </span>
+    <h1 class="qrc-hero-h1" id="qrc-h1">
+      {t("quantum_risk_checker.hero_banner.title")}
+    </h1>
     <p class="qrc-hero-sub" id="qrc-sub">
-      Enter any Ethereum address. We will scan its transaction history and
-      balance to calculate your quantum vulnerability. Know your risk before
-      Q-Day arrives.
+      {t("quantum_risk_checker.hero_banner.sub")}
     </p>
   </div>
 
@@ -14,32 +66,37 @@
       <div class="qrc-dot"></div>
       <div class="qrc-dot"></div>
       <div class="qrc-dot"></div>
-      <span class="qrc-tool-label">QUANTUM RISK SCANNER v1.0</span>
+      <span class="qrc-tool-label">
+        {t("quantum_risk_checker.hero_banner.tool_label")}
+      </span>
     </div>
     <div class="qrc-tool-body">
       <div id="qrc-input-state">
-        <label class="qrc-field-label" for="qrc-address-input"
-          >ETHEREUM ADDRESS OR ENS NAME</label
-        >
+        <label class="qrc-field-label" for="qrc-address-input">
+          {t("quantum_risk_checker.hero_banner.field_label")}
+        </label>
         <input
           type="text"
           id="qrc-address-input"
-          placeholder="0x..."
+          placeholder={t("quantum_risk_checker.hero_banner.input_placeholder")}
           autocomplete="off"
           spellcheck="false"
         />
-        <span id="qrc-error"
-          >Please enter a valid Ethereum address (0x... 42 characters) or ENS
-          name (example.eth).</span
-        >
-        <button id="qrc-scan-btn">CHECK NOW →</button>
-        <span class="qrc-fine-print"
-          >Reads public blockchain data only. No private keys required.</span
-        >
+        <span id="qrc-error">
+          {t("quantum_risk_checker.hero_banner.validation_error")}
+        </span>
+        <button id="qrc-scan-btn" type="button">
+          {t("quantum_risk_checker.hero_banner.scan_button")}
+        </button>
+        <span class="qrc-fine-print">
+          {t("quantum_risk_checker.hero_banner.fine_print")}
+        </span>
       </div>
       <div id="qrc-terminal">
         <div id="qrc-lines"></div>
-        <span id="qrc-reset">CHECK ANOTHER ADDRESS →</span>
+        <span id="qrc-reset" role="button" tabindex="0">
+          {t("quantum_risk_checker.hero_banner.reset_link")}
+        </span>
       </div>
     </div>
   </div>
@@ -464,19 +521,15 @@
   );
 </script>
 
-<script>
-  /* ── CHECKER LOGIC ── */
-  const btn = document.getElementById("qrc-scan-btn") as HTMLButtonElement;
-  const input = document.getElementById(
-    "qrc-address-input",
-  ) as HTMLInputElement;
-  const error = document.getElementById("qrc-error")!;
-  const terminal = document.getElementById("qrc-terminal")!;
-  const linesContainer = document.getElementById("qrc-lines")!;
-  const inputState = document.getElementById("qrc-input-state")!;
-  const resetLink = document.getElementById("qrc-reset")!;
+<script define:vars={{ checkerI18n }}>
+  const btn = document.getElementById("qrc-scan-btn");
+  const input = document.getElementById("qrc-address-input");
+  const error = document.getElementById("qrc-error");
+  const terminal = document.getElementById("qrc-terminal");
+  const linesContainer = document.getElementById("qrc-lines");
+  const resetLink = document.getElementById("qrc-reset");
 
-  function getScore(address: string) {
+  function getScore(address) {
     let hash = 0;
     for (let i = 0; i < address.length; i++) {
       hash = (hash << 5) - hash + address.charCodeAt(i);
@@ -485,7 +538,7 @@
     return 35 + (Math.abs(hash) % 66);
   }
 
-  function getGrade(score: number) {
+  function getGrade(score) {
     if (score >= 90) return "A+";
     if (score >= 80) return "A";
     if (score >= 70) return "B";
@@ -494,59 +547,65 @@
     return "F";
   }
 
-  function getRiskLevel(score: number) {
-    if (score >= 90) return "VERY LOW";
-    if (score >= 75) return "LOW";
-    if (score >= 60) return "MEDIUM";
-    if (score >= 45) return "HIGH";
-    return "VERY HIGH";
+  function getRiskLevelKey(score) {
+    if (score >= 90) return "very_low";
+    if (score >= 75) return "low";
+    if (score >= 60) return "medium";
+    if (score >= 45) return "high";
+    return "very_high";
   }
 
-  function getExposure(score: number) {
-    return score < 65 ? "EXPOSED" : "NOT YET EXPOSED";
+  function getExposureKey(score) {
+    return score < 65 ? "exposed" : "not_yet";
   }
 
-  function getAdvice(score: number) {
-    if (score >= 75)
-      return "Your exposure is limited. Stay informed as quantum timelines evolve.";
-    if (score >= 55)
-      return "Consider migrating to Quantus before Q-Day arrives.";
-    return "Move assets to a quantum-secure address immediately.";
+  function getAdviceKey(score) {
+    if (score >= 75) return "high";
+    if (score >= 55) return "mid";
+    return "low";
   }
 
-  function getScoreColor(score: number) {
+  function getScoreColor(score) {
     if (score >= 70) return "#4ade80";
     if (score >= 50) return "#FF6B35";
     return "#ef4444";
   }
 
-  function getExposureColor(exposure: string) {
-    return exposure === "EXPOSED" ? "#ef4444" : "#4ade80";
+  function getExposureColor(key) {
+    return key === "exposed" ? "#ef4444" : "#4ade80";
   }
 
-  btn.addEventListener("click", async () => {
+  function tpl(str, vars) {
+    let out = str;
+    for (const k of Object.keys(vars)) {
+      out = out.replaceAll("{" + k + "}", String(vars[k]));
+    }
+    return out;
+  }
+
+  btn?.addEventListener("click", async () => {
+    if (!btn || !input || !error || !terminal || !linesContainer) return;
     const raw = input.value.trim();
     error.style.display = "none";
 
     if (!raw) {
-      error.textContent = "Please enter an Ethereum address or ENS name.";
+      error.textContent = checkerI18n.errors.empty;
       error.style.display = "block";
       return;
     }
 
     let addr = raw;
 
-    // ENS resolution
     if (
       raw.toLowerCase().endsWith(".eth") ||
       (!raw.startsWith("0x") && raw.includes("."))
     ) {
-      btn.textContent = "RESOLVING ENS...";
+      btn.textContent = checkerI18n.buttons.resolving;
       btn.disabled = true;
       input.disabled = true;
 
       try {
-        const response = await fetch("https://cloudflare-eth.com", {
+        await fetch("https://cloudflare-eth.com", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -565,7 +624,6 @@
           }),
         });
 
-        // Use a simpler ENS resolution via public API
         const ensResponse = await fetch(
           `https://api.ensideas.com/ens/resolve/${encodeURIComponent(raw)}`,
         );
@@ -573,103 +631,101 @@
 
         if (ensData && ensData.address) {
           addr = ensData.address;
-          btn.textContent = "SCANNING...";
+          btn.textContent = checkerI18n.buttons.scanning;
         } else {
           throw new Error("Could not resolve ENS name");
         }
       } catch (e) {
-        btn.textContent = "CHECK NOW →";
+        btn.textContent = checkerI18n.buttons.checkNow;
         btn.disabled = false;
         input.disabled = false;
-        error.textContent =
-          "Could not resolve ENS name. Make sure it is correct or use a 0x address.";
+        error.textContent = checkerI18n.errors.ensFailed;
         error.style.display = "block";
         return;
       }
     } else if (!raw.startsWith("0x") || raw.length !== 42) {
-      error.textContent =
-        "Please enter a valid Ethereum address (0x... 42 characters) or ENS name.";
+      error.textContent = checkerI18n.errors.invalid;
       error.style.display = "block";
       return;
     } else {
-      btn.textContent = "SCANNING...";
+      btn.textContent = checkerI18n.buttons.scanning;
       btn.disabled = true;
       input.disabled = true;
     }
 
     const score = getScore(addr);
     const grade = getGrade(score);
-    const risk = getRiskLevel(score);
-    const exposure = getExposure(score);
-    const advice = getAdvice(score);
+    const riskKey = getRiskLevelKey(score);
+    const risk = checkerI18n.riskLevel[riskKey];
+    const exposureKey = getExposureKey(score);
+    const exposure = checkerI18n.exposureLabel[exposureKey];
+    const adviceKey = getAdviceKey(score);
+    const advice = checkerI18n.adviceByScore[adviceKey];
     const scoreColor = getScoreColor(score);
-    const exposureColor = getExposureColor(exposure);
+    const exposureColor = getExposureColor(exposureKey);
     const shortAddr = addr.slice(0, 10) + "..." + addr.slice(-6);
     const displayLabel = raw.toLowerCase().endsWith(".eth")
       ? raw + " (" + shortAddr + ")"
       : shortAddr;
 
+    const T = checkerI18n.terminal;
     const lines = [
+      { text: T.init, delay: 0, color: "rgba(232,230,224,0.5)" },
       {
-        text: "> INITIALIZING QUANTUM RISK SCAN...",
-        delay: 0,
-        color: "rgba(232,230,224,0.5)",
-      },
-      {
-        text: "> ADDRESS: " + displayLabel,
+        text: tpl(T.address, { address: displayLabel }),
         delay: 300,
         color: "rgba(232,230,224,0.7)",
       },
       {
-        text: "> CHECKING PUBLIC KEY EXPOSURE...",
+        text: T.checkingPk,
         delay: 700,
         color: "rgba(232,230,224,0.5)",
       },
       {
-        text: "> ANALYZING BALANCE SENSITIVITY...",
+        text: T.analyzingBalance,
         delay: 1100,
         color: "rgba(232,230,224,0.5)",
       },
       {
-        text: "> CALCULATING QUANTUM READINESS SCORE...",
+        text: T.calculating,
         delay: 1500,
         color: "rgba(232,230,224,0.5)",
       },
-      { text: ">", delay: 1900, color: "rgba(232,230,224,0.3)" },
-      { text: "> SCAN COMPLETE", delay: 2100, color: "#FF6B35" },
+      { text: T.prompt, delay: 1900, color: "rgba(232,230,224,0.3)" },
+      { text: T.complete, delay: 2100, color: "#FF6B35" },
       {
-        text: "> " + "\u2500".repeat(44),
+        text: T.prompt + " " + "\u2500".repeat(44),
         delay: 2300,
         color: "rgba(232,230,224,0.15)",
       },
       {
-        text: "> READINESS SCORE  " + score,
+        text: tpl(T.readiness, { score }),
         delay: 2500,
         color: scoreColor,
         bold: true,
       },
       {
-        text: "> GRADE           " + grade,
+        text: tpl(T.grade, { grade }),
         delay: 2650,
         color: "rgba(232,230,224,0.8)",
       },
       {
-        text: "> RISK LEVEL      " + risk,
+        text: tpl(T.risk, { risk }),
         delay: 2800,
         color: "rgba(232,230,224,0.8)",
       },
       {
-        text: "> KEY EXPOSURE    " + exposure,
+        text: tpl(T.exposure, { exposure }),
         delay: 2950,
         color: exposureColor,
       },
       {
-        text: "> " + "\u2500".repeat(44),
+        text: T.prompt + " " + "\u2500".repeat(44),
         delay: 3100,
         color: "rgba(232,230,224,0.15)",
       },
       {
-        text: "> ADVICE: " + advice,
+        text: tpl(T.advice, { advice }),
         delay: 3250,
         color: "rgba(232,230,224,0.6)",
       },
@@ -678,11 +734,11 @@
     linesContainer.innerHTML = "";
     terminal.style.display = "block";
 
-    lines.forEach(({ text, delay, color, bold }) => {
+    lines.forEach(({ text: lineText, delay, color, bold }) => {
       setTimeout(() => {
         const span = document.createElement("span");
         span.className = "qrc-line";
-        span.textContent = text;
+        span.textContent = lineText;
         span.style.color = color;
         if (bold) span.style.fontWeight = "500";
         span.style.opacity = "1";
@@ -692,23 +748,31 @@
 
     setTimeout(() => {
       btn.style.display = "none";
-      resetLink.style.display = "block";
+      if (resetLink) resetLink.style.display = "block";
     }, 3400);
   });
 
-  resetLink.addEventListener("click", () => {
+  resetLink?.addEventListener("click", () => {
+    if (!btn || !input || !terminal || !linesContainer || !error) return;
     input.value = "";
     input.disabled = false;
     terminal.style.display = "none";
     linesContainer.innerHTML = "";
-    btn.textContent = "CHECK NOW \u2192";
+    btn.textContent = checkerI18n.buttons.checkNow;
     btn.disabled = false;
     btn.style.display = "block";
     resetLink.style.display = "none";
     error.style.display = "none";
   });
 
-  input.addEventListener("keydown", (e) => {
-    if (e.key === "Enter") btn.click();
+  resetLink?.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      resetLink.click();
+    }
+  });
+
+  input?.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") btn?.click();
   });
 </script>

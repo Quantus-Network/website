@@ -9,6 +9,89 @@
     "download_wallet": "Download Wallet",
     "open_menu": "Open menu"
   },
+  "quantum_risk_checker": {
+    "meta": {
+      "title": "Q-Day Checker | Quantus - Assess Your Quantum Risk",
+      "description": "Is your digital security ready for Q-Day? Use the Quantus Q-Day Checker to assess your vulnerability to quantum computing threats and learn how to protect your assets."
+    },
+    "hero_banner": {
+      "eyebrow": "Quantum risk checker",
+      "title": "Is your wallet exposed?",
+      "sub": "Enter any Ethereum address. We will scan its transaction history and balance to calculate your quantum vulnerability. Know your risk before Q-Day arrives.",
+      "tool_label": "Quantum risk scanner v1.0",
+      "field_label": "Ethereum address or ENS name",
+      "input_placeholder": "0x...",
+      "validation_error": "Please enter a valid Ethereum address (0x... 42 characters) or ENS name (example.eth).",
+      "scan_button": "Check now →",
+      "fine_print": "Reads public blockchain data only. No private keys required.",
+      "reset_link": "Check another address →"
+    },
+    "definition": {
+      "eyebrow": "The quantum deadline",
+      "title": "Q-Day is coming.",
+      "body_1": "Q-Day is the moment quantum computers become powerful enough to break the cryptography securing most of today's digital assets. Once your public key is exposed, a sufficiently powerful quantum computer can derive your private key and drain your wallet without your knowledge.",
+      "body_2": "The window to act is open. It will not stay that way."
+    },
+    "method": {
+      "eyebrow": "How it works",
+      "title": "Two risk factors. One score.",
+      "intro": "The Quantum Risk Checker scans any Ethereum address or ENS name and calculates a Quantum Readiness Score based on two signals:",
+      "signal_1_title": "Public key exposure",
+      "signal_1_body": "Every outgoing transaction permanently exposes your public key on-chain. The longer it has been exposed, the higher the risk.",
+      "signal_2_title": "Balance sensitivity",
+      "signal_2_body": "The higher the balance in an exposed wallet, the more attractive the target. High balance combined with an exposed key means maximum risk."
+    },
+    "advice": {
+      "eyebrow": "What to do next",
+      "title_line1": "Got risk?",
+      "title_line2": "Here's what to do about it.",
+      "body": "If your wallet is exposed, the only real solution is moving your assets to a quantum-secure address. The Quantus wallet is built on a chain where every transaction is signed with post-quantum cryptography, meaning your assets are protected not just today, but when quantum computers arrive.",
+      "cta": "Download the Quantus wallet →",
+      "footer_note": "The Quantum Risk Checker is built by Quantus, the quantum-secure L1 blockchain."
+    },
+    "checker": {
+      "errors": {
+        "empty": "Please enter an Ethereum address or ENS name.",
+        "invalid": "Please enter a valid Ethereum address (0x... 42 characters) or ENS name.",
+        "ens_failed": "Could not resolve ENS name. Make sure it is correct or use a 0x address."
+      },
+      "buttons": {
+        "check_now": "Check now →",
+        "resolving": "Resolving ENS...",
+        "scanning": "Scanning..."
+      },
+      "terminal": {
+        "init": "> Initializing quantum risk scan...",
+        "address": "> Address: {address}",
+        "checking_pk": "> Checking public key exposure...",
+        "analyzing_balance": "> Analyzing balance sensitivity...",
+        "calculating": "> Calculating quantum readiness score...",
+        "prompt": ">",
+        "complete": "> Scan complete",
+        "readiness": "> Readiness score  {score}",
+        "grade": "> Grade           {grade}",
+        "risk": "> Risk level      {risk}",
+        "exposure": "> Key exposure    {exposure}",
+        "advice": "> Advice: {advice}"
+      },
+      "risk_level": {
+        "very_low": "Very low",
+        "low": "Low",
+        "medium": "Medium",
+        "high": "High",
+        "very_high": "Very high"
+      },
+      "exposure": {
+        "exposed": "Exposed",
+        "not_yet": "Not yet exposed"
+      },
+      "advice_by_score": {
+        "high": "Your exposure is limited. Stay informed as quantum timelines evolve.",
+        "mid": "Consider migrating to Quantus before Q-Day arrives.",
+        "low": "Move assets to a quantum-secure address immediately."
+      }
+    }
+  },
   "home": {
     "meta": {
       "title": "Quantus - Quantum-Secure Encrypted Money",
@@ -209,8 +292,8 @@
   },
   "technology": {
     "meta": {
-      "title": "Technology - Quantum-Secure Encrypted Money",
-      "description": "Quantus: Quantum-secure encrypted money. Download our wallet for post-quantum protected assets."
+      "title": "Technology | Quantus - Quantum-Secure Encrypted Money",
+      "description": "Explore the technical foundations of Quantus. Learn about our NIST-standard post-quantum cryptography, recursive ZK-proofs, and scalable Layer 1 architecture."
     },
     "hero_banner": {
       "eyebrow": "The Protocol",
@@ -297,8 +380,8 @@
   },
   "wallet": {
     "meta": {
-      "title": "Wallet - Quantum-Secure Encrypted Money",
-      "description": "Quantus: Quantum-secure encrypted money. Download our wallet for post-quantum protected assets."
+      "title": "Wallet | Quantus - Secure Your Assets Against Quantum Threats",
+      "description": "Download the Quantus wallet for iOS and Android. Experience quantum-secure encrypted money with reversible transactions and private-by-default security."
     },
     "hero_banner": {
       "eyebrow": "THE QUANTUS WALLET",
@@ -363,8 +446,8 @@
   },
   "about": {
     "meta": {
-      "title": "About - Quantum-Secure Encrypted Money",
-      "description": "Quantus: Quantum-secure encrypted money. Download our wallet for post-quantum protected assets."
+      "title": "About Us | Quantus - Building a Post-Quantum Financial System",
+      "description": "Meet the team behind Quantus. We are engineers and researchers dedicated to building permanent economic freedom through quantum-secure infrastructure."
     },
     "hero": {
       "eyebrow": "ABOUT QUANTUS",
@@ -399,8 +482,8 @@
   },
   "community": {
     "meta": {
-      "title": "Community - Quantum-Secure Encrypted Money",
-      "description": "Quantus: Quantum-secure encrypted money. Download our wallet for post-quantum protected assets."
+      "title": "Community | Quantus - Join the Quantum-Secure Future",
+      "description": "Connect with the Quantus community. Join our Telegram, follow us on social media, and stay updated with the latest protocol news and events."
     },
     "hero": {
       "eyebrow": "COMMUNITY",
@@ -469,8 +552,8 @@
   },
   "privacy": {
     "meta": {
-      "title": "Quantus Network - Privacy Policy",
-      "description": "Read Quantus Network's Privacy Policy to understand how we collect, use, and protect your information across our apps and website."
+      "title": "Quantus - Privacy Policy",
+      "description": "Read Quantus's Privacy Policy to understand how we collect, use, and protect your information across our apps and website."
     },
     "hero": {
       "eyebrow": "LEGAL",
@@ -480,7 +563,7 @@
     "information_collect": {
       "title": "Information We Collect",
       "from_apps": "From Our Apps:",
-      "from_apps_content": "We do not collect personal information through the Quantus Network applications.",
+      "from_apps_content": "We do not collect personal information through Quantus applications.",
       "from_website": "From Our Website we automatically collect:",
       "from_website_items": [
         "IP address (anonymized through Google Analytics)",
@@ -577,8 +660,8 @@
   },
   "terms": {
     "meta": {
-      "title": "Quantus Network - Terms of Service",
-      "description": "Read Quantus Network's Terms of Service for usage rules, responsibilities, and legal disclaimers for our apps and blockchain services."
+      "title": "Quantus - Terms of Service",
+      "description": "Read Quantus's Terms of Service for usage rules, responsibilities, and legal disclaimers for our apps and blockchain services."
     },
     "hero": {
       "eyebrow": "LEGAL",
@@ -587,13 +670,13 @@
     },
     "what_we_provide": {
       "title": "What We Provide",
-      "intro": "Quantus Network offers:",
+      "intro": "Quantus offers:",
       "items": [
         "Mobile apps (available on App Store and Google Play)",
         "Desktop applications with integrated mining functionality",
         "Access to our open-source code",
         "Community newsletter and updates",
-        "Access to the Quantus Network blockchain"
+        "Access to the Quantus blockchain"
       ]
     },
     "what_you_cannot_do": {
@@ -689,16 +772,16 @@
   },
   "account": {
     "meta": {
-      "title": "Quantus Network - Quantum-Secure Layer 1 Blockchain",
-      "description": "A quantum-secure, open-source Layer 1 blockchain built with post-quantum cryptography and zk-proof scalability to future-proof your digital assets."
+      "title": "Secure Your Crypto | Quantus Account",
+      "description": "Create your Quantus account to secure your digital assets against quantum threats. Join the next generation of encrypted, quantum-safe money."
     },
     "title": "Secure Your Crypto Now",
     "tag": "Be invulnerable to quantum threats"
   },
   "invite": {
     "meta": {
-      "title": "Quantus Network - Quantum-Secure Layer 1 Blockchain",
-      "description": "A quantum-secure, open-source Layer 1 blockchain built with post-quantum cryptography and zk-proof scalability to future-proof your digital assets."
+      "title": "Join Quantus | Secure Your Crypto Invitation",
+      "description": "You've been invited to join Quantus. Secure your assets with the first quantum-secure Layer 1 blockchain built for the future of digital finance."
     },
     "title": "You're Invited to Secure Your Crypto",
     "code": {
@@ -707,7 +790,7 @@
     }
   },
   "blog": {
-    "title": "The latest news from the Quantus Network.",
+    "title": "The latest news from the Quantus.",
     "hero": {
       "heading": "The Quantus Blog.",
       "sub": "Protocol updates, technical deep-dives, and perspectives on the quantum threat landscape."
@@ -722,12 +805,12 @@
     },
     "meta": {
       "title": "Quantus Blog | Latest News & Quantum Insights",
-      "description": "Stay updated with the latest news, educational content, and insights from the Quantus Network."
+      "description": "Stay updated with the latest news, educational content, and insights from Quantus."
     },
     "tag": {
       "meta": {
-        "title": "Blog - #{tag} | Quantus Network",
-        "description": "Browse all blog posts tagged with #{tag} on the Quantus Network."
+        "title": "Blog - #{tag} | Quantus",
+        "description": "Browse all blog posts tagged with #{tag} on Quantus."
       },
       "heading": "Posts tagged with {tag}",
       "back_link": "← Back to all posts"
@@ -744,7 +827,6 @@
       "crypto": "Crypto",
       "defi": "DeFi",
       "bitcoin": "Bitcoin",
-      "quantus-network": "Quantus Network",
       "business": "Business",
       "network-state": "Network State",
       "innovation": "Innovation",
@@ -824,7 +906,7 @@
   "whitepaper": {
     "meta": {
       "title": "Quantus Whitepaper | Technical Foundations of Quantum Security",
-      "description": "Read the Quantus Network whitepaper. Explore our technical approach to post-quantum cryptography, zero-knowledge proofs, and secure Layer 1 blockchain architecture."
+      "description": "Read Quantus whitepaper. Explore our technical approach to post-quantum cryptography, zero-knowledge proofs, and secure Layer 1 blockchain architecture."
     },
     "title": "Quantus Whitepaper",
     "on_this_page": "On this page",
