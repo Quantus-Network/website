@@ -68,78 +68,12 @@ export interface RaidLeaderboardEntrant {
   last_activity: string;
 }
 
-interface LeaderboardOptions {
-  page?: number;
-  pageSize?: number;
-  filterByReferralCode?: string;
-}
-
-export interface LeaderboardResponse {
-  data: LeaderboardEntrant[];
-  meta: {
-    page: number;
-    page_size: number;
-    total_items: number;
-    total_pages: number;
-  };
-}
-
-export interface RaidLeaderboardResponse {
-  data: RaidLeaderboardEntrant[];
-  meta: {
-    page: number;
-    page_size: number;
-    total_items: number;
-    total_pages: number;
-  };
-}
-
 type ApiResponse<T = any> = Promise<Response>;
 
 const createApiClient = () => {
   const nodeCounter = new NodeCounterService();
 
   const methods = {
-    fetchRaidLeaderboard: (
-      options: LeaderboardOptions,
-    ): ApiResponse<RaidLeaderboardResponse> => {
-      const firstRaid = 1;
-      let url = `${env.TASK_MASTER_URL}/raid-quests/leaderboards/${firstRaid}`;
-
-      let queryParams = [];
-      if (options.page) queryParams.push(`page=${options.page}`);
-      if (options.pageSize) queryParams.push(`page_size=${options.pageSize}`);
-      if (options.filterByReferralCode)
-        queryParams.push(`referral_code=${options.filterByReferralCode}`);
-
-      if (queryParams.length != 0) url = url + "?" + queryParams.join("&");
-
-      return fetch(url, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-    },
-    fetchLeaderboard: (
-      options: LeaderboardOptions,
-    ): ApiResponse<LeaderboardResponse> => {
-      let url = `${env.TASK_MASTER_URL}/addresses/leaderboard`;
-
-      let queryParams = [];
-      if (options.page) queryParams.push(`page=${options.page}`);
-      if (options.pageSize) queryParams.push(`page_size=${options.pageSize}`);
-      if (options.filterByReferralCode)
-        queryParams.push(`referral_code=${options.filterByReferralCode}`);
-
-      if (queryParams.length != 0) url = url + "?" + queryParams.join("&");
-
-      return fetch(url, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-    },
-
     /**
      * Fetch blockchain statistics including transaction and account counts
      */
