@@ -1,5 +1,6 @@
 ---
 import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+import Button from "@/components/ui/Button.astro";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
@@ -42,9 +43,9 @@ const t = await createTranslator(locale);
           placeholder={t("home.newsletter.email_placeholder")}
           aria-label={t("home.newsletter.email_aria")}
         />
-        <button class="newsletter-btn" type="button" id="nl-submit">
+        <Button id="nl-submit" class="newsletter-btn">
           {t("home.newsletter.submit_label")}
-        </button>
+        </Button>
       </div>
       <span class="newsletter-error-msg" id="nl-error">
         {t("home.newsletter.error_message")}
@@ -173,21 +174,8 @@ const t = await createTranslator(locale);
     border-color: rgba(232, 230, 224, 0.5);
   }
   .newsletter-btn {
-    background: #ff6b35;
-    color: #0e0e0e;
-    border: 1px solid #ff6b35;
     padding: 14px 28px;
-    font-family: "Geist Mono", monospace;
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    cursor: pointer;
-    border-radius: 0;
-    transition: opacity 0.2s;
     white-space: nowrap;
-  }
-  .newsletter-btn:hover {
-    opacity: 0.85;
   }
   .newsletter-fine {
     font-family: "Geist Mono", monospace;
@@ -321,7 +309,9 @@ const t = await createTranslator(locale);
 </script>
 
 <script>
-  const submitBtn = document.getElementById("nl-submit");
+  import apiClient from "@/api/client";
+
+  const submitBtn = document.getElementById("nl-submit") as HTMLButtonElement;
   const firstInput = document.getElementById(
     "nl-firstname",
   ) as HTMLInputElement;
@@ -337,7 +327,18 @@ const t = await createTranslator(locale);
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
   }
 
-  submitBtn.addEventListener("click", () => {
+  function setLoading(loading: boolean, originalText?: string) {
+    submitBtn.disabled = loading;
+    if (loading) {
+      submitBtn.dataset.originalText = submitBtn.innerText;
+      submitBtn.innerText = "SUBMITTING...";
+    } else {
+      submitBtn.innerText =
+        originalText ?? submitBtn.dataset.originalText ?? "";
+    }
+  }
+
+  submitBtn.addEventListener("click", async () => {
     let valid = true;
 
     [firstInput, lastInput, emailInput].forEach((el) => {
@@ -363,14 +364,34 @@ const t = await createTranslator(locale);
       return;
     }
 
-    formWrap.style.transition = "opacity 0.4s ease";
-    formWrap.style.opacity = "0";
-    setTimeout(() => {
-      formWrap.style.display = "none";
-      successWrap.style.display = "flex";
-      requestAnimationFrame(() => {
-        successWrap.classList.add("visible");
-      });
-    }, 400);
+    setLoading(true);
+
+    try {
+      const resp = await apiClient.subscribe(
+        emailInput.value,
+        firstInput.value,
+        lastInput.value,
+      );
+      const data = await resp.json();
+
+      if (resp.status !== 201 && data.error) {
+        window.toast.error(data.error);
+        setLoading(false);
+        return;
+      }
+
+      formWrap.style.transition = "opacity 0.4s ease";
+      formWrap.style.opacity = "0";
+      setTimeout(() => {
+        formWrap.style.display = "none";
+        successWrap.style.display = "flex";
+        requestAnimationFrame(() => {
+          successWrap.classList.add("visible");
+        });
+      }, 400);
+    } catch (error) {
+      window.toast.error((error as Error).message);
+      setLoading(false);
+    }
   });
 </script>

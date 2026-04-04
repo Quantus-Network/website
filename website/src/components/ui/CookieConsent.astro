@@ -11,12 +11,12 @@ const t = await createTranslator(locale);
 <!-- Cookie Consent Banner -->
 <div
   id="cookie-consent-banner"
-  class="border-footer-separator bg-bg-primary fixed inset-x-4 bottom-4 z-50 hidden rounded-lg border p-6 shadow-lg md:right-4 md:left-auto md:max-w-[450px]"
+  class="border-border-med bg-void fixed inset-x-4 bottom-4 z-50 hidden rounded-lg border p-6 shadow-lg md:right-4 md:left-auto md:max-w-[450px]"
 >
   <div class="flex flex-col gap-4">
     <div class="space-y-2">
-      <h3 class="font-small-title">{t("cookie.title")}</h3>
-      <p class="font-body-mobile">
+      <h3 class="text-2xl">{t("cookie.title")}</h3>
+      <p>
         {t("cookie.notice")}
         <a href={privacyPolicyUrl} class="underline">{t("cookie.link")}</a>.
       </p>

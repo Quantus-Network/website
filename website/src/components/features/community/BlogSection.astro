@@ -1,8 +1,45 @@
 ---
-import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+import { getCollection } from "astro:content";
+import {
+  createTranslator,
+  getLocaleFromUrl,
+  getLocalizedPath,
+  DEFAULT_LOCALE,
+} from "@/utils/i18n";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
+
+let localePosts = await getCollection("blog", ({ id }) => {
+  return id.toLowerCase().startsWith(`${locale.toLowerCase()}/`);
+});
+if (localePosts.length === 0) {
+  localePosts = await getCollection("blog", ({ id }) => {
+    return id.toLowerCase().startsWith(`${DEFAULT_LOCALE.toLowerCase()}/`);
+  });
+}
+
+const recentPosts = localePosts
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
+
+const translations = await import(`../../../i18n/${locale}.json`);
+const tagsMap: Record<string, string> = translations.default.blog?.tags ?? {};
+
+function formatDate(date: Date): string {
+  return date
+    .toLocaleDateString("en-US", { month: "short", day: "2-digit" })
+    .toUpperCase();
+}
+
+function getTagLabel(tag: string): string {
+  return (tagsMap[tag] ?? tag.replace(/-/g, " ")).toUpperCase();
+}
+
+function getBlogUrl(postId: string): string {
+  const slug = postId.split("/").slice(1).join("/");
+  return getLocalizedPath(locale, `/blog/${slug}`);
+}
 ---
 
 <section id="comm-blog">
@@ -18,71 +55,31 @@ const t = await createTranslator(locale);
       {t("community.blog.sub")}
     </p>
 
-    <a
-      href="blog/weekly-update-03-24-2026.html"
-      class="comm-blog-row comm-animate"
-      data-delay="0"
-    >
-      <div class="comm-blog-row-left">
-        <div class="comm-blog-row-top">
-          <span class="comm-blog-date">
-            {t("community.blog.posts.post1.date")}
-          </span>
-          <span class="comm-blog-tag">
-            {t("community.blog.posts.post1.tag")}
-          </span>
-        </div>
-        <span class="comm-blog-title">
-          {t("community.blog.posts.post1.title")}
-        </span>
-      </div>
-      <span class="comm-blog-arrow">→</span>
-    </a>
+    {
+      recentPosts.map((post, i) => (
+        <a
+          href={getBlogUrl(post.id)}
+          class="comm-blog-row comm-animate"
+          data-delay={String(i * 0.1)}
+        >
+          <div class="comm-blog-row-left">
+            <div class="comm-blog-row-top">
+              <span class="comm-blog-date">
+                {formatDate(post.data.pubDate)}
+              </span>
+              <span class="comm-blog-tag">
+                {getTagLabel(post.data.tags[0] ?? "")}
+              </span>
+            </div>
+            <span class="comm-blog-title">{post.data.title}</span>
+          </div>
+          <span class="comm-blog-arrow">→</span>
+        </a>
+      ))
+    }
 
     <a
-      href="blog/weekly-update-03-16-2026.html"
-      class="comm-blog-row comm-animate"
-      data-delay="0.1"
-    >
-      <div class="comm-blog-row-left">
-        <div class="comm-blog-row-top">
-          <span class="comm-blog-date">
-            {t("community.blog.posts.post2.date")}
-          </span>
-          <span class="comm-blog-tag">
-            {t("community.blog.posts.post2.tag")}
-          </span>
-        </div>
-        <span class="comm-blog-title">
-          {t("community.blog.posts.post2.title")}
-        </span>
-      </div>
-      <span class="comm-blog-arrow">→</span>
-    </a>
-
-    <a
-      href="blog/weekly-update-03-07-2026.html"
-      class="comm-blog-row comm-animate"
-      data-delay="0.2"
-    >
-      <div class="comm-blog-row-left">
-        <div class="comm-blog-row-top">
-          <span class="comm-blog-date">
-            {t("community.blog.posts.post3.date")}
-          </span>
-          <span class="comm-blog-tag">
-            {t("community.blog.posts.post3.tag")}
-          </span>
-        </div>
-        <span class="comm-blog-title">
-          {t("community.blog.posts.post3.title")}
-        </span>
-      </div>
-      <span class="comm-blog-arrow">→</span>
-    </a>
-
-    <a
-      href="blog/index.html"
+      href={getLocalizedPath(locale, "/blog")}
       class="comm-blog-view-all comm-animate"
       data-delay="0.3">{t("community.blog.view_all")}</a
     >

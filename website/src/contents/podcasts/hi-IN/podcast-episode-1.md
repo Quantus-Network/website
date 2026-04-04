@@ -12,7 +12,6 @@ tags:
     "defi",
     "blockchain",
     "bitcoin",
-    "quantus-network",
     "business",
     "network-state",
     "innovation",

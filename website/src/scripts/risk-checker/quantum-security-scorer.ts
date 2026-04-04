@@ -4,6 +4,45 @@ import type {
   QuantumSecurityScore,
 } from "@/interfaces/EthereumSecurity";
 
+export type RiskLevelKey = "very_low" | "low" | "medium" | "high" | "very_high";
+
+export type RecommendationKey =
+  | "smart_contract"
+  | "public_key_exposed"
+  | "public_key_safe"
+  | "balance_very_high"
+  | "balance_high"
+  | "balance_medium"
+  | "balance_low"
+  | "receive_only"
+  | "empty_address";
+
+export type ExposureDurationResult =
+  | { key: "less_than_a_day" }
+  | { key: "one_day" }
+  | { key: "days"; count: number }
+  | { key: "one_month" }
+  | { key: "months"; count: number }
+  | { key: "one_year" }
+  | { key: "one_year_months"; months: number }
+  | { key: "years"; count: number }
+  | { key: "years_months"; count: number; months: number };
+
+export interface QuantumSecurityScoreI18n extends Omit<
+  QuantumSecurityScore,
+  "riskLevel" | "recommendations"
+> {
+  riskLevel: RiskLevelKey;
+  recommendations: RecommendationKey[];
+}
+
+export interface EthereumSecurityAnalysisI18n extends Omit<
+  EthereumSecurityAnalysis,
+  "securityScore"
+> {
+  securityScore: QuantumSecurityScoreI18n;
+}
+
 const getGrade = (score: number): QuantumSecurityScore["grade"] => {
   if (score >= 95) return "A+";
   if (score >= 85) return "A";
@@ -14,72 +53,48 @@ const getGrade = (score: number): QuantumSecurityScore["grade"] => {
   return "F";
 };
 
-const getRiskLevel = (score: number): QuantumSecurityScore["riskLevel"] => {
-  if (score >= 90) return "Very Low";
-  if (score >= 75) return "Low";
-  if (score >= 60) return "Medium";
-  if (score >= 40) return "High";
-  return "Very High";
+const getRiskLevelKey = (score: number): RiskLevelKey => {
+  if (score >= 90) return "very_low";
+  if (score >= 75) return "low";
+  if (score >= 60) return "medium";
+  if (score >= 40) return "high";
+  return "very_high";
 };
 
-/**
- * Calculate quantum security score for an Ethereum address
- * Scoring factors:
- * - No outgoing transactions (public key not exposed): Higher score
- * - Lower balance: Higher score (less at risk)
- * - Duration of public key exposure: Longer exposure = higher risk
- */
 export const calculateQuantumSecurityScore = (
   addressData: EthereumAddressData,
-): QuantumSecurityScore => {
-  let score = 100; // Start with perfect score
-  const recommendations: string[] = [];
+): QuantumSecurityScoreI18n => {
+  let score = 100;
+  const recommendations: RecommendationKey[] = [];
 
   if (addressData.isSmartContract) {
-    // For now, use the same logic but you can customize this
-    recommendations.push(
-      "This is a smart contract. Smart contract quantum security analysis coming soon!",
-    );
+    recommendations.push("smart_contract");
   } else {
-    // Factor 1: Public Key Exposure (most critical)
     const publicKeyExposedPenalty = addressData.hasOutgoingTransactions
       ? 40
       : 0;
     score -= publicKeyExposedPenalty;
 
     if (addressData.hasOutgoingTransactions) {
-      recommendations.push(
-        "Your public key has been exposed through outgoing transactions, making it vulnerable to quantum attacks. Consider moving the funds to a new address.",
-      );
+      recommendations.push("public_key_exposed");
     } else {
-      recommendations.push(
-        "Excellent! No outgoing transactions mean your public key remains secure.",
-      );
+      recommendations.push("public_key_safe");
     }
 
-    // Factor 2: Balance Risk (higher balance = higher risk if compromised)
     let balanceRiskFactor = 0;
 
     if (addressData.balanceEth > 10000) {
       balanceRiskFactor = 55;
-      recommendations.push(
-        "Your high balance makes your address more attractive to a quantum attacker. Consider splitting your funds into multiple addresses with smaller balances.",
-      );
+      recommendations.push("balance_very_high");
     } else if (addressData.balanceEth > 1000) {
       balanceRiskFactor = 40;
-      recommendations.push(
-        "Your high balance makes your address more attractive to a quantum attacker. Consider splitting your funds into multiple addresses with smaller balances.",
-      );
+      recommendations.push("balance_high");
     } else if (addressData.balanceEth > 100) {
       balanceRiskFactor = 30;
-      recommendations.push(
-        "Your high balance makes your address more attractive to a quantum attacker. Consider splitting your funds into multiple addresses with smaller balances.",
-      );
+      recommendations.push("balance_medium");
     } else if (addressData.balanceEth > 10) {
       balanceRiskFactor = 20;
-      recommendations.push(
-        "Your high balance makes your address more attractive to a quantum attacker. Consider splitting your funds into multiple addresses with smaller balances.",
-      );
+      recommendations.push("balance_low");
     } else if (addressData.balanceEth > 1) {
       balanceRiskFactor = 10;
     } else if (addressData.balanceEth > 0) {
@@ -88,53 +103,41 @@ export const calculateQuantumSecurityScore = (
 
     score -= balanceRiskFactor;
 
-    // Add positive recommendations for good security
     if (!addressData.hasOutgoingTransactions && addressData.balanceEth > 0) {
-      recommendations.push(
-        "Consider using this address only for receiving funds to maintain quantum security.",
-      );
+      recommendations.push("receive_only");
     }
 
     if (addressData.balanceEth === 0) {
-      recommendations.push("Empty address has minimal quantum risk exposure.");
+      recommendations.push("empty_address");
     }
   }
 
-  // Ensure score doesn't go below 0
   score = Math.max(0, score);
 
   return {
     score: Math.round(score),
     grade: getGrade(score),
-    riskLevel: getRiskLevel(score),
+    riskLevel: getRiskLevelKey(score),
     recommendations,
   };
 };
 
-/**
- * Generate complete security analysis for an Ethereum address
- */
 export const generateSecurityAnalysis = (
   addressData: EthereumAddressData,
-): EthereumSecurityAnalysis => {
+): EthereumSecurityAnalysisI18n => {
   const securityScore = calculateQuantumSecurityScore(addressData);
 
   const publicKeyExposed =
     addressData.hasOutgoingTransactions && !addressData.isSmartContract;
 
-  // Calculate exposure duration risk (0-1 scale)
   let exposureDurationRisk = 0;
   if (addressData.daysSinceFirstTransaction) {
     const days = addressData.daysSinceFirstTransaction;
-    if (days > 365 * 2)
-      exposureDurationRisk = 1.0; // 2+ years
-    else if (days > 365)
-      exposureDurationRisk = 0.8; // 1+ years
-    else if (days > 180)
-      exposureDurationRisk = 0.6; // 6+ months
-    else if (days > 90)
-      exposureDurationRisk = 0.4; // 3+ months
-    else if (days > 30) exposureDurationRisk = 0.2; // 1+ months
+    if (days > 365 * 2) exposureDurationRisk = 1.0;
+    else if (days > 365) exposureDurationRisk = 0.8;
+    else if (days > 180) exposureDurationRisk = 0.6;
+    else if (days > 90) exposureDurationRisk = 0.4;
+    else if (days > 30) exposureDurationRisk = 0.2;
   }
 
   let balanceRiskFactor = 0;
@@ -157,9 +160,6 @@ export const generateSecurityAnalysis = (
   };
 };
 
-/**
- * Format ETH balance for display
- */
 export const formatEthBalance = (balance: number): string => {
   if (balance === 0) return "0 ETH";
   if (balance < 0.001) return `${balance.toExponential(2)} ETH`;
@@ -168,90 +168,34 @@ export const formatEthBalance = (balance: number): string => {
   return `${balance.toLocaleString()} ETH`;
 };
 
-/**
- * Format days since exposure for display
- */
-export const formatExposureDuration = (days: number): string => {
-  if (days < 1) return "less than a day";
-  if (days === 1) return "1 day";
-  if (days < 30) return `${days} days`;
+export const getExposureDuration = (days: number): ExposureDurationResult => {
+  if (days < 1) return { key: "less_than_a_day" };
+  if (days === 1) return { key: "one_day" };
+  if (days < 30) return { key: "days", count: days };
   if (days < 365) {
     const months = Math.floor(days / 30);
-    return months === 1 ? "1 month" : `${months} months`;
+    return months === 1
+      ? { key: "one_month" }
+      : { key: "months", count: months };
   }
-  const years = Math.floor(days / 365);
-  const remainingMonths = Math.floor((days % 365) / 30);
-  if (years === 1) {
-    return remainingMonths > 0 ? `1 year, ${remainingMonths} months` : "1 year";
+  const count = Math.floor(days / 365);
+  const months = Math.floor((days % 365) / 30);
+  if (count === 1) {
+    return months > 0
+      ? { key: "one_year_months", months }
+      : { key: "one_year" };
   }
-  return remainingMonths > 0
-    ? `${years} years, ${remainingMonths} months`
-    : `${years} years`;
+  return months > 0
+    ? { key: "years_months", count, months }
+    : { key: "years", count };
 };
 
-// Determines the text color class based on the grade for emphasis
-export const getGradeColorClass = (
-  grade: QuantumSecurityScore["grade"],
-): string => {
-  switch (grade) {
-    case "A+":
-      return "text-[var(--color-quantus-green)]";
-    case "A":
-      return "text-[var(--color-quantus-aqua)]";
-    case "B":
-      return "text-[var(--color-quantus-yellow)]";
-    case "C":
-      return "text-[var(--color-quantus-orange)]";
-    case "D":
-      return "text-[var(--color-quantus-purple)]";
-    case "E":
-      return "text-[var(--color-quantus-dark-pink)]";
-    case "F":
-      return "text-[var(--color-quantus-red)]";
-    default:
-      return "text-[var(--color-quantus-red)]";
-  }
+export const getScoreColor = (score: number): string => {
+  if (score >= 70) return "#4ade80";
+  if (score >= 50) return "#FF6B35";
+  return "#ef4444";
 };
 
-// Determines the grade og image based on the grade
-export const getOgImageFileName = (
-  grade: QuantumSecurityScore["grade"],
-): String => {
-  switch (grade) {
-    case "A+":
-      return "Qday_score_A+.png";
-    case "A":
-      return "Qday_score_A.png";
-    case "B":
-      return "Qday_score_B.png";
-    case "C":
-      return "Qday_score_C.png";
-    case "D":
-      return "Qday_score_D.png";
-    case "E":
-      return "Qday_score_E.png";
-    case "F":
-      return "Qday_score_F.png";
-    default:
-      return "Qday_score_F.png";
-  }
-};
-
-export const splitAddressIntoChunks = (
-  address: string,
-  chunkSize: number = 3,
-) => {
-  if (chunkSize <= 0) throw new Error("Chunk size must be a positive integer.");
-  if (address.length === 0) throw new Error("Address must not be empty.");
-
-  const chunks: string[] = [];
-
-  for (let i = 0; i < address.length; i += chunkSize) {
-    let endIndex = i + chunkSize;
-    if (endIndex > address.length) endIndex = address.length;
-
-    chunks.push(address.substring(i, endIndex));
-  }
-
-  return chunks;
+export const getExposureColor = (publicKeyExposed: boolean): string => {
+  return publicKeyExposed ? "#ef4444" : "#4ade80";
 };

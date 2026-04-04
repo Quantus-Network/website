@@ -1,64 +1,84 @@
+---
+import { getCollection } from "astro:content";
+import {
+  getLocaleFromUrl,
+  getLocalizedPath,
+  DEFAULT_LOCALE,
+  createTranslator,
+} from "@/utils/i18n";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
+
+// Fetch posts for the current locale, fall back to DEFAULT_LOCALE if none exist
+let localePosts = await getCollection("blog", ({ id }) => {
+  return id.toLowerCase().startsWith(`${locale.toLowerCase()}/`);
+});
+if (localePosts.length === 0) {
+  localePosts = await getCollection("blog", ({ id }) => {
+    return id.toLowerCase().startsWith(`${DEFAULT_LOCALE.toLowerCase()}/`);
+  });
+}
+
+const recentPosts = localePosts
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
+
+const translations = await import(`../../../i18n/${locale}.json`);
+const tagsMap: Record<string, string> = translations.default.blog?.tags ?? {};
+
+function formatDate(date: Date): string {
+  return date
+    .toLocaleDateString("en-US", { month: "short", day: "2-digit" })
+    .toUpperCase();
+}
+
+function getTagLabel(tag: string): string {
+  return (tagsMap[tag] ?? tag.replace(/-/g, " ")).toUpperCase();
+}
+
+function getBlogUrl(postId: string): string {
+  const slug = postId.split("/").slice(1).join("/");
+  return getLocalizedPath(locale, `/blog/${slug}`);
+}
+---
+
 <section id="blog">
   <div class="blog-divider"></div>
 
   <div class="blog-inner">
-    <span class="blog-eyebrow">Latest from Quantus</span>
-    <h2 class="blog-headline">Stay ahead of the quantum shift.</h2>
+    <span class="blog-eyebrow">{t("home.blog_section.eyebrow")}</span>
+    <h2 class="blog-headline">{t("home.blog_section.headline")}</h2>
 
-    <span class="blog-section-label">Blogs</span>
+    <span class="blog-section-label">{t("home.blog_section.blogs_label")}</span>
     <div class="blog-feed">
-      <a href="blog/weekly-update-03-24-2026.html" class="blog-row">
-        <div class="blog-row-top">
-          <span class="blog-row-date">MAR 24</span>
-          <span class="blog-row-tag">UPDATE</span>
-        </div>
-        <div class="blog-row-bottom">
-          <span class="blog-row-title"
-            >Second Halving: 4x Faster ZK Proofs in Two Weeks</span
-          >
-          <span class="blog-row-desc"
-            >Another 2x cut to prover time, Poseidon hashing, mining fix, Senoti
-            rate limits, and whitepaper launch.</span
-          >
-          <span class="blog-row-arrow">→</span>
-        </div>
-      </a>
-      <a href="blog/weekly-update-03-16-2026.html" class="blog-row">
-        <div class="blog-row-top">
-          <span class="blog-row-date">MAR 16</span>
-          <span class="blog-row-tag">UPDATE</span>
-        </div>
-        <div class="blog-row-bottom">
-          <span class="blog-row-title"
-            >Quantum-Safe Signatures, ZK Scaling, and 2x Faster Wormhole Proofs</span
-          >
-          <span class="blog-row-desc"
-            >Weekly update on ML-DSA signature scaling, ZK aggregation, wormhole
-            proof speedup, and security reviews.</span
-          >
-          <span class="blog-row-arrow">→</span>
-        </div>
-      </a>
-      <a href="blog/weekly-update-03-07-2026.html" class="blog-row">
-        <div class="blog-row-top">
-          <span class="blog-row-date">MAR 07</span>
-          <span class="blog-row-tag">PROTOCOL</span>
-        </div>
-        <div class="blog-row-bottom">
-          <span class="blog-row-title">Wormhole Transactions</span>
-          <span class="blog-row-desc"
-            >Weekly update covering wormhole transactions, private block rewards
-            for miners, and consensus bug fixes.</span
-          >
-          <span class="blog-row-arrow">→</span>
-        </div>
-      </a>
-      <a href="blog/index.html" class="blog-view-all">VIEW ALL POSTS →</a>
+      {
+        recentPosts.map((post) => (
+          <a href={getBlogUrl(post.id)} class="blog-row">
+            <div class="blog-row-top">
+              <span class="blog-row-date">{formatDate(post.data.pubDate)}</span>
+              <span class="blog-row-tag">
+                {getTagLabel(post.data.tags[0] ?? "")}
+              </span>
+            </div>
+            <div class="blog-row-bottom">
+              <span class="blog-row-title">{post.data.title}</span>
+              <span class="blog-row-desc">{post.data.description}</span>
+              <span class="blog-row-arrow">→</span>
+            </div>
+          </a>
+        ))
+      }
+      <a href={getLocalizedPath(locale, "/blog")} class="blog-view-all"
+        >{t("home.blog_section.view_all")}</a
+      >
     </div>
 
     <!-- Podcast grid -->
     <div class="blog-podcast-wrap">
-      <span class="blog-section-label">QDAY Podcast</span>
+      <span class="blog-section-label"
+        >{t("home.blog_section.podcast_label")}</span
+      >
       <div class="blog-podcast-grid">
         <!-- Left: EP. 18 — half width -->
         <div class="blog-pod-left">
@@ -83,7 +103,7 @@
             <a
               href="https://www.youtube.com/watch?v=wz6d0qRRHLs"
               target="_blank"
-              class="blog-pod-cta">WATCH ON YOUTUBE →</a
+              class="blog-pod-cta">{t("home.blog_section.watch_on_youtube")}</a
             >
           </div>
         </div>
@@ -98,16 +118,19 @@
             <a
               href="https://www.youtube.com/watch?v=tASGl64WSms"
               target="_blank"
-              class="blog-pod-cta">WATCH ON YOUTUBE →</a
+              class="blog-pod-cta">{t("home.blog_section.watch_on_youtube")}</a
             >
           </div>
           <div class="blog-pod-right-bottom">
             <a
               href="https://www.youtube.com/@QuantusNetwork"
               target="_blank"
-              class="blog-pod-view-all">VIEW ALL EPISODES →</a
+              class="blog-pod-view-all"
+              >{t("home.blog_section.view_all_episodes")}</a
             >
-            <span class="blog-pod-view-sub">18 episodes on QDay Podcast</span>
+            <span class="blog-pod-view-sub"
+              >{t("home.blog_section.episodes_count", { count: 18 })}</span
+            >
           </div>
         </div>
       </div><!-- /.blog-podcast-grid -->

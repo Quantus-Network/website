@@ -6,8 +6,13 @@ import {
   getLocaleFromUrl,
   getLocalizedPath,
   createTranslator,
+  SUPPORTED_LOCALES,
 } from "@/utils/i18n";
 import { createMetadata } from "@/utils/create-metadata";
+
+export async function getStaticPaths() {
+  return SUPPORTED_LOCALES.map((lang) => ({ params: { lang } }));
+}
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
@@ -15,6 +20,8 @@ const t = await createTranslator(locale);
 const posts = await getCollection("blog", ({ id }) => {
   return id.toLowerCase().startsWith(`${locale.toLowerCase()}/`);
 });
+
+console.log(posts);
 
 const sortedPosts = posts.sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
@@ -35,7 +42,7 @@ const serializablePosts = sortedPosts.map((post) => ({
   },
 }));
 
-const translations = await import(`../../i18n/${locale}.json`);
+const translations = await import(`../../../i18n/${locale}.json`);
 const tagsMap = translations.default.blog?.tags || {};
 
 const metadata = createMetadata({

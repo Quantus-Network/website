@@ -194,16 +194,11 @@ const t = await createTranslator(locale);
   const walletLink = getWalletLink();
 
   document.querySelectorAll(".wallet-cta-link").forEach((el) => {
-    console.log(el);
     (el as HTMLAnchorElement).href = walletLink;
   });
 </script>
 
 <script>
-  import { getLocaleFromUrl, getLocalizedPath } from "@/utils/i18n";
-
-  const locale = getLocaleFromUrl(location.pathname);
-
   const updateLinkStatus = (link: HTMLAnchorElement, isActive: boolean) => {
     if (isActive) {
       link.classList.add("nav-active");
@@ -217,7 +212,8 @@ const t = await createTranslator(locale);
   const checkIsActive = (link: HTMLAnchorElement) => {
     const linkPath = new URL(link.href).pathname + new URL(link.href).hash;
     const currentPath = location.pathname + location.hash;
-    return currentPath === getLocalizedPath(locale, linkPath);
+
+    return currentPath === linkPath;
   };
 
   const nav = document.getElementById("navbar") as HTMLElement;

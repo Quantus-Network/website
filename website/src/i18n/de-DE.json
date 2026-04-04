@@ -1,732 +1,832 @@
 {
-  "home": {
-    "meta": {
-      "title": "Quantus Network - Quantensichere Layer-1-Blockchain",
-      "description": "Quantus: Quantensichere Layer-1-Blockchain. Lade unsere Wallet herunter für post-quanten-geschützte Assets."
-    }
-  },
   "navbar": {
     "about": "Über uns",
-    "foundations": "Grundlagen",
-    "app": "App",
-    "team": "Team",
-    "roadmap": "Roadmap",
-    "events": "Events",
-    "blog": "Blog",
-    "contact": "Kontakt",
-    "checker": "Qday Risiko-Checker",
-    "quests": "Quests",
-    "launch": "Launch",
-    "cta": "An der Public BETA teilnehmen"
+    "technology": "Technologie",
+    "wallet": "Wallet",
+    "community": "Community",
+    "quantum_risk_checker": "Q-Day Checker",
+    "quan": "Quan",
+    "download_wallet": "Wallet herunterladen",
+    "open_menu": "Menü öffnen"
   },
-  "hero": {
-    "tagline": "willkommen in der zukunft",
-    "title": "Quantensichere deine Krypto",
-    "subtitle": "Quantus Network, die L1-Blockchain für das Quantenzeitalter",
-    "cta_primary": "An der Public BETA teilnehmen",
-    "cta_secondary": "Whitepaper lesen",
-    "stats": {
-      "blocktime": "Blockzeit",
-      "seconds": "Sek",
-      "transactions": "Transaktionen",
-      "addresses": "Adressen",
-      "nodes": "Nodes"
-    }
-  },
-  "video": {
-    "title": "Bauen Sie Werte auf Kryptographie, die Bestand hat.",
-    "description": "Quantus ist für Menschen da, die sehen, was kommt: die nächste Welle der Innovation. Eine zukunftssichere, quantensichere Blockchain, die den Wert von heute gegen die Bedrohungen von morgen sichern kann."
-  },
-  "benefits": {
-    "title": "Die Zukunft ist Quantum",
-    "description": "Quantus Network ist eine Layer-1-Blockchain, die entwickelt wurde, um im Quantenzeitalter zu bestehen. Gesichert durch Post-Quantum-Kryptographie und skaliert mit Zero-Knowledge-Proofs, liefert sie ein Maß an Sicherheit, Skalierbarkeit und Benutzerfreundlichkeit, das heutige Chains nicht erreichen können. Ein von Grund auf neues Design, das die kommende Welle der Quantentechnologie vorwegnimmt.",
-    "cards": {
-      "quantum_secure": {
-        "title": "Quantensicher auf jeder Ebene",
-        "description": "Gesichert durch NIST-gestützte Post-Quantum-Kryptographie, ist jede Schicht von Quantus – von Transaktionssignaturen bis zur P2P-Kommunikation – so konzipiert, dass sie Angriffen widersteht, die heutige Blockchains brechen würden. Gebaut, um zu überdauern, und bereit, sich mit dem Quantenzeitalter weiterzuentwickeln."
+  "quantum_risk_checker": {
+    "meta": {
+      "title": "Q-Day Checker | Quantus - Bewerten Sie Ihr Quantenrisiko",
+      "description": "Ist Ihre digitale Sicherheit bereit für den Q-Day? Nutzen Sie den Quantus Q-Day Checker, um Ihre Anfälligkeit für Bedrohungen durch Quantencomputing zu bewerten und zu erfahren, wie Sie Ihr Vermögen schützen können."
+    },
+    "hero_banner": {
+      "eyebrow": "Quantenrisiko-Checker",
+      "title": "Ist Ihre Wallet gefährdet?",
+      "sub": "Geben Sie eine beliebige Ethereum-Adresse ein. Wir scannen die Transaktionshistorie und den Kontostand, um Ihre Quanten-Anfälligkeit zu berechnen. Kennen Sie Ihr Risiko, bevor der Q-Day kommt.",
+      "tool_label": "Quantenrisiko-Scanner v1.0",
+      "field_label": "Ethereum-Adresse oder ENS-Name",
+      "input_placeholder": "0x...",
+      "validation_error": "Bitte geben Sie eine gültige Ethereum-Adresse (0x... 42 Zeichen) oder einen ENS-Namen (beispiel.eth) ein.",
+      "scan_button": "Jetzt prüfen →",
+      "fine_print": "Liest nur öffentliche Blockchain-Daten. Keine Private Keys erforderlich.",
+      "reset_link": "Andere Adresse prüfen →"
+    },
+    "definition": {
+      "eyebrow": "Die Quanten-Deadline",
+      "title": "Der Q-Day kommt.",
+      "body_1": "Der Q-Day ist der Moment, in dem Quantencomputer leistungsstark genug werden, um die Kryptografie zu brechen, die die meisten heutigen digitalen Vermögenswerte sichert. Sobald Ihr Public Key exponiert ist, kann ein ausreichend leistungsstarker Quantencomputer Ihren Private Key ableiten und Ihre Wallet ohne Ihr Wissen leeren.",
+      "body_2": "Das Zeitfenster zum Handeln ist offen. Das wird nicht so bleiben."
+    },
+    "method": {
+      "eyebrow": "Wie es funktioniert",
+      "title": "Zwei Risikofaktoren. Ein Score.",
+      "intro": "Der Quantenrisiko-Checker scannt jede Ethereum-Adresse oder jeden ENS-Namen und berechnet einen Quantum Readiness Score basierend auf zwei Signalen:",
+      "signal_1_title": "Public Key Exposition",
+      "signal_1_body": "Jede ausgehende Transaktion exponiert Ihren Public Key dauerhaft auf der Chain. Je länger er exponiert ist, desto höher ist das Risiko.",
+      "signal_2_title": "Kontostand-Sensitivität",
+      "signal_2_body": "Je höher das Guthaben in einer exponierten Wallet ist, desto attraktiver ist das Ziel. Ein hohes Guthaben in Kombination mit einem exponierten Key bedeutet maximales Risiko."
+    },
+    "advice": {
+      "eyebrow": "Was als Nächstes zu tun ist",
+      "title_line1": "Risiko erkannt?",
+      "title_line2": "Das können Sie dagegen tun.",
+      "body": "Wenn Ihre Wallet exponiert ist, besteht die einzige wirkliche Lösung darin, Ihr Vermögen auf eine quantensichere Adresse zu übertragen. Die Quantus-Wallet basiert auf einer Chain, bei der jede Transaktion mit Post-Quanten-Kryptografie signiert wird. Das bedeutet, dass Ihr Vermögen nicht nur heute geschützt ist, sondern auch dann, wenn Quantencomputer Realität werden.",
+      "cta": "Quantus-Wallet herunterladen →",
+      "footer_note": "Der Quantenrisiko-Checker wurde von Quantus entwickelt, der quantensicheren L1-Blockchain."
+    },
+    "checker": {
+      "errors": {
+        "empty": "Bitte geben Sie eine Ethereum-Adresse oder einen ENS-Namen ein.",
+        "invalid": "Bitte geben Sie eine gültige Ethereum-Adresse (0x... 42 Zeichen) oder einen ENS-Namen ein.",
+        "ens_failed": "ENS-Name konnte nicht aufgelöst werden. Stellen Sie sicher, dass er korrekt ist, oder verwenden Sie eine 0x-Adresse."
       },
-      "zero_knowledge": {
-        "title": "Zero-Knowledge by Design",
-        "description": "Rekursive Zero-Knowledge-Proofs halten das Netzwerk schnell. Anstatt alles neu zu verarbeiten, verifizieren Nodes kompakte Beweise – das reduziert den Overhead und stellt sicher, dass das System unter realer Nachfrage reibungslos wächst."
+      "buttons": {
+        "check_now": "Jetzt prüfen →",
+        "resolving": "Löse ENS auf...",
+        "scanning": "Scanne..."
       },
-      "security_control": {
-        "title": "Sicherheit, die Sie kontrollieren",
-        "description": "Bei Quantus haben Sie das Sagen. Sie entscheiden, wie Vermögenswerte bewegt werden, wie sie geschützt sind und wem Sie vertrauen. Die Komplexität wird im Hintergrund gehandhabt, sodass sich Ihre Erfahrung klar, sicher und für die Quantenzukunft gebaut anfühlt."
+      "terminal": {
+        "init": "> Initialisiere Quantenrisiko-Scan...",
+        "address": "> Adresse: {address}",
+        "checking_pk": "> Prüfe Public Key Exposition...",
+        "analyzing_balance": "> Analysiere Kontostand-Sensitivität...",
+        "calculating": "> Berechne Quantum Readiness Score...",
+        "prompt": ">",
+        "complete": "> Scan abgeschlossen",
+        "readiness": "> Readiness Score   {score}",
+        "grade": "> Note              {grade}",
+        "risk": "> Risikostufe       {risk}",
+        "exposure": "> Key-Exposition    {exposure}",
+        "advice": "> Empfehlung:",
+        "advice_bullet": ">   · {advice}"
+      },
+      "risk_level": {
+        "very_low": "Sehr niedrig",
+        "low": "Niedrig",
+        "medium": "Mittel",
+        "high": "Hoch",
+        "very_high": "Sehr hoch"
+      },
+      "exposure": {
+        "exposed": "Exponiert",
+        "not_yet": "Noch nicht exponiert"
+      },
+      "recommendations": {
+        "smart_contract": "Dies ist ein Smart Contract. Die Quantensicherheitsanalyse für Smart Contracts folgt in Kürze!",
+        "public_key_exposed": "Ihr Public Key wurde durch ausgehende Transaktionen exponiert, was ihn anfällig für Quantenangriffe macht. Erwägen Sie, das Guthaben auf eine neue Adresse zu übertragen.",
+        "public_key_safe": "Hervorragend! Keine ausgehenden Transaktionen bedeuten, dass Ihr Public Key sicher bleibt.",
+        "balance_very_high": "Ihr hohes Guthaben macht Ihre Adresse zu einem attraktiveren Ziel für Quantenangreifer. Erwägen Sie, Ihr Guthaben auf mehrere Adressen mit kleineren Beträgen aufzuteilen.",
+        "balance_high": "Ihr hohes Guthaben macht Ihre Adresse zu einem attraktiveren Ziel für Quantenangreifer. Erwägen Sie, Ihr Guthaben auf mehrere Adressen mit kleineren Beträgen aufzuteilen.",
+        "balance_medium": "Ihr Guthaben macht Ihre Adresse zu einem Ziel für Quantenangreifer. Erwägen Sie, Ihr Guthaben auf mehrere Adressen mit kleineren Beträgen aufzuteilen.",
+        "balance_low": "Ihr Guthaben ist niedrig, aber es besteht weiterhin ein Risiko, wenn der Key exponiert ist. Erwägen Sie, Ihr Guthaben auf mehrere Adressen mit kleineren Beträgen aufzuteilen.",
+        "receive_only": "Erwägen Sie, diese Adresse nur für den Empfang von Geldern zu verwenden, um die Quantensicherheit zu gewährleisten.",
+        "empty_address": "Eine leere Adresse hat ein minimales Quantenrisiko."
+      },
+      "exposure_duration": {
+        "less_than_a_day": "weniger als einen Tag",
+        "one_day": "1 Tag",
+        "days": "{count} Tage",
+        "one_month": "1 Monat",
+        "months": "{count} Monate",
+        "one_year": "1 Jahr",
+        "one_year_months": "1 Jahr, {months} Monate",
+        "years": "{count} Jahre",
+        "years_months": "{count} Jahre, {months} Monate"
       }
     }
   },
-  "app": {
+  "home": {
     "meta": {
-      "title": "Quantus Wallet herunterladen | Quantensichere Krypto-App",
-      "description": "Quantus: Quantensichere Layer-1-Blockchain. Lade unsere Wallet herunter für post-quanten-geschützte Assets."
+      "title": "Quantus - Quantensicheres verschlüsseltes Geld",
+      "description": "Quantus: Quantensicheres verschlüsseltes Geld. Laden Sie unsere Wallet für post-quantengeschützte Vermögenswerte herunter."
     },
-    "tagline": "Ihr quantensicheres Gateway ist bereit",
-    "title": "Quantus Wallet herunterladen",
-    "description": "Die Quantus App legt Quantensicherheit und Zero-Knowledge-Skalierbarkeit direkt in Ihre Hände. Jeder Schutzmechanismus läuft unbemerkt im Hintergrund, sodass Sie sich auf das Wesentliche konzentrieren können: Werte mit Klarheit, Vertrauen und Kontrolle zu bewegen.",
-    "benefits": {
-      "reversible_transactions": {
-        "title": "Umkehrbare Transaktionen",
-        "description": "Legen Sie für jede Sendung ein Zeitfenster für die Umkehrbarkeit fest. Einen Fehler gemacht? Die versprochene Ware nicht erhalten? Wieder mal vertippt? Kehren Sie die Transaktion einfach um, bevor der Timer abläuft."
+    "loader": {
+      "lines": {
+        "protocol": "> QUANTUS PROTOCOL v0.9.1-bell",
+        "integrity": "> SYSTEM INTEGRITY <span class=\"ok\">[PASS]</span>",
+        "nist_module": "> NIST FIPS 204 MODULE LOADED <span class=\"ok\">[OK]</span>",
+        "initializing": "> INITIALIZING <span class=\"ac\">ML-DSA / DILITHIUM-5</span>...",
+        "signature_scheme": "> POST-QUANTUM SIGNATURE SCHEME <span class=\"ok\">ACTIVE</span>",
+        "p2p_layer": "> P2P COMM LAYER → <span class=\"ac\">PQ-ENCRYPTED TUNNEL</span>",
+        "zk_engine": "> RECURSIVE ZK PROOF ENGINE <span class=\"ok\">READY</span>",
+        "syncing": "> SYNCING BELL TESTNET... PEERS: <span class=\"ac\">247</span>",
+        "chladni": "> CHLADNI FIELD VISUALIZER <span class=\"ac\">LOADING</span>",
+        "prompt": "> <span class=\"blink\"></span>"
+      }
+    },
+    "hero_banner": {
+      "eyebrow": "Quantensicheres verschlüsseltes Geld",
+      "title_line1": "Die Blockchain, die",
+      "title_line2": "Quantencomputer nicht brechen können.",
+      "cta_whitepaper": "Whitepaper lesen",
+      "cta_download_wallet": "Wallet herunterladen",
+      "freq": {
+        "wave_mode": "WELLENMODUS (m,n)",
+        "move_cursor": "CURSOR BEWEGEN, UM FREQUENZ ZU ÄNDERN"
       },
-      "readable_checkphrases": {
-        "title": "Lesbare Prüfphrasen",
-        "description": "Keine Paranoia mehr beim Kopieren und Einfügen. Senden Sie mit Vertrauen, indem Sie einzigartige, menschenfreundliche Prüfphrasen verwenden, die Sie tatsächlich wiedererkennen. Keine Tippfehler, keine ähnlich aussehenden Scams, nur klare, unmissverständliche Ziele."
+      "ticker": {
+        "block_height": "BLOCKHÖHE",
+        "tps": "TPS",
+        "uptime": "UPTIME",
+        "validators": "VALIDATOREN",
+        "mainnet": "MAINNET: ??"
+      }
+    },
+    "problem": {
+      "eyebrow": "Die Bedrohung",
+      "status_label": "Bedrohungsstufe: Kritisch",
+      "headline": "3 Billionen $ in Krypto. Null Quantenabwehr.",
+      "qubits": {
+        "label": "Qubits zum Brechen von Bitcoin",
+        "value": "2.400",
+        "sub": "logische Qubits erforderlich für einen kryptografisch relevanten Quantencomputer"
       },
-      "security_guardians": {
-        "title": "Sicherheitswächter",
-        "description": "Sie wählen Ihre vertrauenswürdigen Verbündeten und geben ihnen die Macht, einzugreifen und eine Übertragung abzufangen, bevor sie durchgeführt wird. Ein Sicherheitsnetz nach Ihrem eigenen Entwurf, das Ihr Vermögen schützt, wenn Sie es nicht können."
+      "chains": {
+        "bitcoin": {
+          "name": "Bitcoin",
+          "enc": "ECDSA-256"
+        },
+        "ethereum": {
+          "name": "Ethereum",
+          "enc": "ECDSA-256"
+        },
+        "solana": {
+          "name": "Solana",
+          "enc": "ED25519"
+        },
+        "quantus": {
+          "name": "Quantus",
+          "enc_primary": "ML-DSA",
+          "enc_secondary": "DILITHIUM-5",
+          "note": "NIST FIPS 204"
+        }
       },
-      "beneficiary_recovery": {
-        "title": "Begünstigte & Wiederherstellung",
-        "description": "Planen Sie langfristig. Weisen Sie ein Wiederherstellungskonto oder einen Begünstigten zu, der Ihr Guthaben erbt, falls Sie nicht mehr da sind. Ihr Vermögen bleibt geschützt, selbst bei unerwarteten Ereignissen. Betrachten Sie es als Ihr Testament, durchgesetzt durch Code."
+      "tags": {
+        "vulnerable": "Anfällig",
+        "secure": "Sicher"
+      },
+      "source": "Quelle: NIST Post-Quantum Cryptography Standardization · 2024"
+    },
+    "solution": {
+      "eyebrow": "Warum Quantus",
+      "typewriter_text": "Quantus ist quantensicheres, privates und skalierbares Geld. Es nutzt NIST-zugelassene Post-Quanten-Kryptografie, ZK für die Skalierung und PoW-Mining. Maximal faire Tokenomics nach dem Vorbild von Bitcoin.",
+      "pillars": {
+        "pqc": {
+          "title": "Post-Quanten-Kryptografie",
+          "specs": {
+            "algorithm": {
+              "label": "Algorithmus",
+              "value": "ML-DSA / Dilithium-5"
+            },
+            "standard": {
+              "label": "Standard",
+              "value": "NIST FIPS 204"
+            },
+            "layer": {
+              "label": "Ebene",
+              "value": "Signaturen · P2P · SSH"
+            }
+          }
+        },
+        "zk": {
+          "title": "Rekursive ZK-Proofs",
+          "specs": {
+            "type": {
+              "label": "Typ",
+              "value": "Rekursive STARKs"
+            },
+            "purpose": {
+              "label": "Zweck",
+              "value": "Skalierbarkeit"
+            },
+            "throughput": {
+              "label": "Durchsatz",
+              "value": "4.200 TPS"
+            }
+          }
+        },
+        "arch": {
+          "title": "Clean-Slate-Architektur",
+          "specs": {
+            "type": {
+              "label": "Typ",
+              "value": "Layer 1"
+            },
+            "approach": {
+              "label": "Ansatz",
+              "value": "Grundaufbau"
+            },
+            "migration": {
+              "label": "Migration",
+              "value": "Nicht erforderlich"
+            }
+          }
+        }
+      }
+    },
+    "ecosystem": {
+      "eyebrow": "Das Ökosystem",
+      "headline": "Tools. Einstiegspunkte zu Quantus.",
+      "cards": {
+        "wallet": {
+          "label": "Wallet",
+          "description": "Download für iOS und Android.",
+          "beta": "Public Beta Live",
+          "app_store": "App Store",
+          "google_play": "Google Play"
+        },
+        "technology": {
+          "label": "Whitepaper",
+          "description": "Erfahren Sie mehr über Quantus.",
+          "nist_badge": "NIST FIPS 204",
+          "whitepaper_cta": "Whitepaper lesen"
+        },
+        "network": {
+          "label": "Netzwerk",
+          "description": "Netzwerkaktivität anzeigen.",
+          "validators": "247 aktive Validatoren",
+          "explorer_cta": "Explorer anzeigen"
+        }
+      }
+    },
+    "community": {
+      "eyebrow": "Community",
+      "headline": "Machen Sie mit. Bleiben Sie in Kontakt.",
+      "cards": {
+        "telegram": {
+          "label": "Telegram",
+          "description": "Diskussion beitreten",
+          "cta": "Telegram beitreten"
+        },
+        "x": {
+          "label": "X",
+          "description": "Für Updates folgen",
+          "cta": "Auf X folgen"
+        },
+        "instagram": {
+          "label": "Instagram",
+          "description": "Hinter den Kulissen",
+          "cta": "Auf IG folgen"
+        },
+        "youtube": {
+          "label": "YouTube",
+          "description": "Ansehen und lernen",
+          "cta": "Auf YouTube ansehen"
+        }
+      }
+    },
+    "newsletter": {
+      "headline": "Das Fenster ist offen.",
+      "sub": "Erhalten Sie Quanten-Sicherheits-Updates, Protokoll-News und frühen Zugang direkt in Ihren Posteingang.",
+      "first_name_placeholder": "Vorname",
+      "first_name_aria": "Vorname",
+      "last_name_placeholder": "Nachname",
+      "last_name_aria": "Nachname",
+      "email_placeholder": "E-Mail eingeben",
+      "email_aria": "E-Mail-Adresse",
+      "submit_label": "ABONNIEREN",
+      "error_message": "Bitte füllen Sie jedes Feld mit einem gültigen Wert aus.",
+      "fine_print": "Kein Spam. Jederzeit abbestellbar.",
+      "success": {
+        "headline": "Sie sind dabei.",
+        "sub": "Wir halten Sie auf dem Laufenden."
+      }
+    },
+    "blog_section": {
+      "eyebrow": "Aktuelles von Quantus",
+      "headline": "Bleib dem Quantensprung voraus.",
+      "blogs_label": "Blogs",
+      "view_all": "ALLE BEITRÄGE ANZEIGEN →",
+      "podcast_label": "QDAY Podcast",
+      "view_all_episodes": "ALLE EPISODEN ANZEIGEN →",
+      "episodes_count": "{count} Episoden im QDay Podcast",
+      "watch_on_youtube": "AUF YOUTUBE ANSEHEN →"
+    }
+  },
+  "technology": {
+    "meta": {
+      "title": "Technologie | Quantus - Quantensicheres verschlüsseltes Geld",
+      "description": "Erkunden Sie die technischen Grundlagen von Quantus. Erfahren Sie mehr über unsere NIST-Standard-Post-Quanten-Kryptografie, rekursive ZK-Proofs und die skalierbare Layer-1-Architektur."
+    },
+    "hero_banner": {
+      "eyebrow": "Das Protokoll",
+      "title_line1": "Quantensicheres",
+      "title_line2": "verschlüsseltes Geld.",
+      "sub": "Skaliert mit Zero-Knowledge-Proofs. Gesichert durch Proof of Work."
+    },
+    "architecture": {
+      "title": "Architektur",
+      "subtitle": "Keine Migration. Keine Kompromisse.",
+      "content": "Jede bestehende Blockchain wurde gebaut, bevor Quantencomputer eine reale Bedrohung darstellten. Das bedeutet, dass ihre Sicherheit auf Zeit geliehen ist. Quantus ist die nächste Generation, mit Post-Quanten-Kryptografie als Fundament. Keine mühsame Migration erforderlich.",
+      "cards": {
+        "signatures": {
+          "title": "Quantensichere Signaturen",
+          "body": "Jede Transaktion auf Quantus wird mit ML-DSA-87 signiert. Der höchste Sicherheitsstandard, der von Organisationen wie Cloudflare und Signal übernommen wird."
+        },
+        "network_layer": {
+          "title": "Gesicherte Netzwerkschicht",
+          "body": "Die meisten Chains sichern nur Transaktionen. Quantus sichert alles – einschließlich der Kommunikation zwischen den Nodes. Es gibt keine Schwachstelle im Stack."
+        },
+        "scale": {
+          "title": "Auf Skalierung ausgelegt",
+          "body": "Post-Quanten-Signaturen sind größer als klassische. Wir haben das mit einem Zero-Knowledge-Proof-System gelöst, das Tausende von Transaktionen in einen einzigen verifizierbaren Proof komprimiert – ohne die Sicherheit zu opfern."
+        }
+      }
+    },
+    "cryptography": {
+      "title": "Kryptografie",
+      "subtitle": "Der Standard, den Quantencomputer nicht brechen können.",
+      "content": "Post-Quanten-Kryptografie ist da.",
+      "columns": {
+        "meaning": {
+          "title": "Was das bedeutet",
+          "body": "Klassische Blockchains nutzen Elliptic Curve Cryptography. Ein ausreichend leistungsstarker Quantencomputer kann diese brechen – Private Keys aus Public Keys ableiten, Transaktionen fälschen, Gelder stehlen. ML-DSA, der von Quantus verwendete Algorithmus, weist keine bekannten Quanten-Anfälligkeiten auf. Seine Sicherheit basiert auf einer Klasse mathematischer Probleme, die Quantencomputer nicht effizient lösen können."
+        },
+        "urgency": {
+          "title": "Warum es jetzt wichtig ist",
+          "body": "Pre-Quanten-Chains stehen vor einer schwierigen Migration. Sie müssen neue kryptografische Standards implementieren, jeden Nutzer zur Migration bewegen und entscheiden, was mit nicht migrierten Coins geschehen soll, während sie gleichzeitig herausfinden müssen, wie sie PQC skalieren können. Das Fenster für die Migration schließt sich. Quantus muss nicht migrieren. Es hat dort angefangen."
+        }
+      },
+      "table": {
+        "headers": {
+          "property": "Eigenschaft",
+          "ecdsa": "ECDSA",
+          "mldsa": "ML-DSA"
+        },
+        "rows": {
+          "quantum_resistant": "Quantenresistent",
+          "nist_approved": "NIST-zugelassen",
+          "security_level": "Sicherheitsstufe",
+          "signature_scheme": "Signaturschema",
+          "shor_vulnerable": "Anfällig für Shor-Algorithmus"
+        },
+        "values": {
+          "ecdsa_security": "NIST Level 1",
+          "mldsa_security": "NIST Level 5",
+          "ecdsa_scheme": "Elliptic Curve",
+          "mldsa_scheme": "Module Lattice"
+        }
+      }
+    },
+    "scalability": {
+      "title": "Skalierbarkeit",
+      "subtitle": "Überlegenes Geld skalieren.",
+      "content": "Post-Quanten-Kryptografie bringt einen Trade-off mit sich – größere Signaturen bedeuten weniger Transaktionen pro Block. Jede Chain, die an Quantensicherheit arbeitet, wird gegen diese Wand stoßen. Quantus hat das bereits gelöst.",
+      "stat": {
+        "label": "Durchsatz-Verbesserung",
+        "value": "223×",
+        "sub": "vs. rohe Post-Quanten-Transaktionen mit ZK-Proof-Aggregation"
+      },
+      "description": "Tausende Transaktionen. Ein kompakter Proof. On-Chain verifiziert."
+    },
+    "consensus": {
+      "title": "Konsens",
+      "subtitle": "Proof-of-Work. Gebaut für ZK.",
+      "body": "Quantus nutzt Proof-of-Work-Konsens. Dasselbe praxiserprobte Modell wie Bitcoin. Eine Änderung: Die Hash-Funktion ist für Zero-Knowledge-Proof-Systeme optimiert. Das bedeutet, dass die ZK-Infrastruktur von Quantus nativ und effizient ist und nicht nachträglich hinzugefügt wurde."
+    },
+    "cta": {
+      "title": "Das vollständige technische Bild.",
+      "sub": "Protokollarchitektur, kryptografische Annahmen und das komplette Sicherheitsmodell – im Quantus-Whitepaper.",
+      "primary_cta": "Whitepaper lesen",
+      "secondary_cta": "Netzwerk erkunden"
+    }
+  },
+  "wallet": {
+    "meta": {
+      "title": "Wallet | Quantus - Sichern Sie Ihr Vermögen gegen Quantenbedrohungen",
+      "description": "Laden Sie die Quantus-Wallet für iOS und Android herunter. Erleben Sie quantensicheres verschlüsseltes Geld mit reversiblen Transaktionen und standardmäßiger Privatsphäre."
+    },
+    "hero_banner": {
+      "eyebrow": "DIE QUANTUS-WALLET",
+      "title": "Überlegenes Geld. In Ihrer Tasche.",
+      "sub": "Senden, empfangen und speichern Sie quantensicheres, wertbeständiges Geld. Verfügbar für iOS und Android.",
+      "cta_app_store": "Im App Store herunterladen",
+      "cta_google_play": "Bei Google Play herunterladen"
+    },
+    "advantage": {
+      "eyebrow": "ANDERS GEBAUT",
+      "heading": "Sicherheit wie in einem sicheren Hafen.",
+      "body": "Ihre Wallet ist nur so sicher wie die darunterliegende Blockchain. Andere Chains nutzen Elliptic Curve Cryptography, die ein ausreichend leistungsstarker Quantencomputer brechen kann. Quantus ist anders gebaut. Post-Quanten-Kryptografie ist das Fundament der Chain, kein nachträglich hinzugefügtes Feature. Ihre Wallet erbt diese Sicherheit."
+    },
+    "features": {
+      "eyebrow": "FEATURES",
+      "heading": "Für Menschen gebaut.",
+      "cards": {
+        "reversible": {
+          "title": "Reversible Transaktionen",
+          "body": "Verabschieden Sie sich von Testtransaktionen. Legen Sie ein Zeitfenster für ausgehende Überweisungen fest. Meinung geändert? Abbrechen, bevor das Fenster schließt. Ein Sicherheitsnetz, das die Finalität nicht beeinträchtigt."
+        },
+        "checkphrases": {
+          "title": "Check-Phrases",
+          "body": "Nie wieder Tippfehler. Jede Quantus-Adresse hat eine menschenlesbare Check-Phrase. Eine kurze Folge einprägsamer Wörter, die aus Ihrer Adresse generiert werden. Überprüfen Sie die Phrase, bevor Sie senden. Schutz vor Tippfehlern, Copy-Paste-Manipulationen und Address-Poisoning-Angriffen."
+        },
+        "high_security": {
+          "title": "Hochsicherheits-Accounts",
+          "body": "Für Institutionen und fortgeschrittene Nutzer. Erstellen Sie einen Dead-Man-Switch oder weisen Sie Ihrem Account einen Guardian zu, der bösartige Transaktionen rückgängig machen kann. Guardians können Transaktionen während der Reversal-Periode stornieren, aber nicht in Ihrem Namen Geld ausgeben. Opt-in und kombinierbar."
+        },
+        "encrypt": {
+          "title": "Standardmäßig privat",
+          "body": "Privatsphäre ist ein Recht. Dasselbe Zero-Knowledge-Proof-Design, das Quantus auf 3.800 TPS skaliert, schützt auch Ihre Privatsphäre. Ihre Transaktionen, Ihr Kontostand und Ihre Historie gehören Ihnen."
+        }
+      }
+    },
+    "issues": {
+      "eyebrow": "WARUM ES WICHTIG IST",
+      "heading": "Ihre Wallet heute. Auch morgen noch sicher, wenn die Quantencomputer kommen.",
+      "body": "Der Q-Day wird nicht im Fernsehen übertragen. Mit der Quantus-Wallet müssen Sie nicht darüber nachdenken. Sie stehen bereits auf der richtigen Seite des Wandels.",
+      "stats": {
+        "tps": {
+          "value": "3.800",
+          "label": "TPS AUF QUANTUS"
+        },
+        "security": {
+          "value": "NIST 5",
+          "label": "SICHERHEITSSTUFE"
+        },
+        "migration": {
+          "value": "0",
+          "label": "MIGRATION ERFORDERLICH"
+        }
       }
     },
     "cta": {
-      "tagline": "Public Beta jetzt live",
-      "title": "Sie sagen, Quantum ist Jahre entfernt. Dasselbe sagten sie über KI.",
-      "button": "Tritt der Quantenwelle bei"
+      "title": "Besitzen Sie quantensicheres Geld.",
+      "sub": "Kostenloser Download. Weltweit verfügbar.",
+      "primary_cta": "Im App Store herunterladen",
+      "secondary_cta": "Bei Google Play herunterladen",
+      "note": "Public Beta jetzt für iOS und Android verfügbar"
+    }
+  },
+  "about": {
+    "meta": {
+      "title": "Über uns | Quantus - Aufbau eines Post-Quanten-Finanzsystems",
+      "description": "Lernen Sie das Team hinter Quantus kennen. Wir sind Ingenieure und Forscher, die sich dem Aufbau dauerhafter wirtschaftlicher Freiheit durch quantensichere Infrastruktur verschrieben haben."
+    },
+    "hero": {
+      "eyebrow": "ÜBER QUANTUS",
+      "title": "Gebaut von Menschen, die die Bedrohung sahen, bevor sie offensichtlich war.",
+      "sub": "Quantus ist ein Team aus Ingenieuren, Forschern und Experten, die die Infrastruktur für ein Post-Quanten-Finanzsystem aufbauen."
+    },
+    "team": {
+      "eyebrow": "DAS TEAM",
+      "heading": "Die Menschen, die es bauen."
+    },
+    "mission": {
+      "eyebrow": "MISSION",
+      "heading": "Dauerhafte wirtschaftliche Freiheit",
+      "body1": "Jede Entscheidung, die wir treffen – vom Protokolldesign bis zum User Interface –, basiert auf tiefem technischem Wissen und Respekt vor Einfachheit.",
+      "body2": "Wir konzentrieren uns auf das Wesentliche: mathematisch bewiesene Sicherheit, hohe Leistung und ein Produkterlebnis, das sich mühelos anfühlt.",
+      "body3": "Wir bauen mit Präzision. Wir bewegen uns schnell, ohne Abkürzungen zu nehmen. Und wir entwickeln für die Welt von morgen, nicht für die von gestern."
+    },
+    "advisors": {
+      "eyebrow": "BERATER"
+    },
+    "investors": {
+      "eyebrow": "UNTERSTÜTZT DURCH"
+    },
+    "contact": {
+      "eyebrow": "KONTAKT",
+      "heading": "Wollen Sie mit uns arbeiten oder mehr erfahren?",
+      "body": "Für Partnerschaften, Presse- und Investitionsanfragen:",
+      "email": "hello@quantus.com",
+      "subject": "Anfrage über Quantus-Website",
+      "cta": "SCHREIBEN SIE UNS EINE NACHRICHT →"
+    }
+  },
+  "community": {
+    "meta": {
+      "title": "Community | Quantus - Werden Sie Teil der quantensicheren Zukunft",
+      "description": "Vernetzen Sie sich mit der Quantus-Community. Treten Sie unserem Telegram bei, folgen Sie uns auf Social Media und bleiben Sie über die neuesten Protokoll-News und Events informiert."
+    },
+    "hero": {
+      "eyebrow": "COMMUNITY",
+      "heading": "Die Menschen, die die quantensichere Zukunft bauen.",
+      "sub": "Werden Sie Teil der Quantus-Community. Forscher und Early Adopter, die die Quantenbedrohung verstanden haben, bevor der Mainstream aufmerksam wurde."
+    },
+    "events": {
+      "eyebrow": "EVENTS",
+      "heading": "Treffen Sie uns persönlich.",
+      "card": {
+        "date_label": "QDAY — APRIL 2026",
+        "title": "Ein Community-Event, das das Quantus-Netzwerk und Quantencomputing-Forscher zusammenbringt.",
+        "cta": "BENACHRICHTIGT WERDEN →",
+        "status": "DETAILS FOLGEN IN KÜRZE"
+      }
+    },
+    "podcast": {
+      "eyebrow": "PODCAST",
+      "heading": "QDay — Der Quanten-Sicherheits-Podcast.",
+      "body": "Moderiert von Christopher Smith. Gespräche an der Schnittstelle von Quantencomputing, Blockchain-Sicherheit und der Zukunft digitaler Finanzen.",
+      "cta_spotify": "AUF SPOTIFY ANHÖREN →",
+      "cta_apple": "AUF APPLE PODCASTS ANHÖREN →",
+      "episode": {
+        "title": "EP. 18: Ist die Quantenbedrohung wirklich so nah?",
+        "meta": "1:27:02 · VOR 9 TAGEN"
+      }
+    },
+    "telegram": {
+      "eyebrow": "DISKUSSION BEITRETEN",
+      "heading": "Finden Sie Ihren Platz in der Community.",
+      "body": "Vernetzen Sie sich mit Forschern und Early Adoptern in der Quantus-Telegram-Community.",
+      "cta": "TELEGRAM BEITRETEN →"
+    },
+    "socials": {
+      "eyebrow": "FOLGEN SIE UNS",
+      "platforms": {
+        "x": "X (TWITTER)",
+        "instagram": "INSTAGRAM",
+        "github": "GITHUB",
+        "youtube": "YOUTUBE"
+      }
+    },
+    "blog": {
+      "eyebrow": "BLOG",
+      "heading": "Vom Quantus-Team.",
+      "sub": "Technische Deep-Dives, Protokoll-Updates und Perspektiven auf die Quantenbedrohungslandschaft.",
+      "view_all": "ALLE BEITRÄGE LESEN →"
+    }
+  },
+  "privacy": {
+    "meta": {
+      "title": "Quantus - Datenschutzrichtlinie",
+      "description": "Lesen Sie die Datenschutzrichtlinie von Quantus, um zu verstehen, wie wir Ihre Informationen in unseren Apps und auf unserer Website sammeln, verwenden und schützen."
+    },
+    "hero": {
+      "eyebrow": "RECHTLICHES",
+      "title": "Datenschutzrichtlinie",
+      "last_updated": "Zuletzt aktualisiert: 12. Juni 2025"
+    },
+    "information_collect": {
+      "title": "Informationen, die wir sammeln",
+      "from_apps": "Von unseren Apps:",
+      "from_apps_content": "Wir sammeln keine personenbezogenen Daten über Quantus-Anwendungen.",
+      "from_website": "Von unserer Website sammeln wir automatisch:",
+      "from_website_items": [
+        "IP-Adresse (anonymisiert über Google Analytics)",
+        "Browser- und Geräteinformationen",
+        "Besuchte Seiten und Nutzungsmuster",
+        "Geografischer Standort (nur Land und Region)"
+      ],
+      "from_you": "Direkt von Ihnen:",
+      "from_you_items": [
+        "E-Mail-Adresse (wenn Sie unseren Newsletter abonnieren)",
+        "Informationen, die Sie uns bei der Kontaktaufnahme zur Verfügung stellen"
+      ],
+      "technical": "Technische Daten:",
+      "technical_items": [
+        "App-Absturzberichte und Fehlerprotokolle",
+        "Netzwerkkonnektivitätsinformationen (zur Verbesserung der Leistung)"
+      ]
+    },
+    "how_we_use": {
+      "title": "Wie wir Informationen verwenden",
+      "intro": "Wir verwenden die gesammelten Informationen, um:",
+      "items": [
+        "Unsere Website und Anwendungen zu verbessern",
+        "Newsletter-Updates zu versenden (mit Ihrer Einwilligung)",
+        "Die Nutzung zu analysieren, um das Nutzererlebnis zu verbessern",
+        "Missbrauch zu überwachen und unsere Dienste zu schützen",
+        "Gesetzliche Verpflichtungen zu erfüllen"
+      ],
+      "we_do_not": "Was wir nicht tun:",
+      "we_do_not_items": [
+        "Ihre Daten an Dritte verkaufen oder vermieten",
+        "Ihre Private Keys oder Transaktionsdaten speichern",
+        "Ihre Daten für gezielte Werbung verwenden"
+      ]
+    },
+    "information_sharing": {
+      "title": "Weitergabe von Informationen",
+      "intro": "Wir können Informationen teilen mit:",
+      "items": [
+        "Analyse-Anbietern (Google Analytics für Website-Daten)",
+        "Dienstleistern, die beim Betrieb unserer Website helfen",
+        "Rechtsbehörden, wenn dies gesetzlich vorgeschrieben ist"
+      ],
+      "note": "Wir teilen nur aggregierte, anonymisierte Daten, die Sie nicht identifizieren können."
+    },
+    "cookies_tracking": {
+      "title": "Cookies und Tracking",
+      "intro": "Unsere Website verwendet Cookies für:",
+      "items": [
+        "Grundlegende Website-Funktionalität",
+        "Analysen zum Verständnis der Website-Nutzung",
+        "Leistungsverbesserungen"
+      ],
+      "note": "Sie können Cookies über Ihre Browsereinstellungen steuern, was jedoch die Funktionalität der Website beeinträchtigen kann."
+    },
+    "data_security": {
+      "title": "Datensicherheit und Aufbewahrung",
+      "intro": "Wir implementieren Standard-Sicherheitsmaßnahmen zum Schutz Ihrer Daten, einschließlich Verschlüsselung und sicherer Speicherung. Dennoch ist kein Online-Dienst absolut sicher.",
+      "technical": "Aufbewahrungsfristen:",
+      "retention_items": [
+        "Website-Analysen: 26 Monate",
+        "Newsletter-Abonnements: Bis zur Abmeldung"
+      ]
+    },
+    "your_rights": {
+      "title": "Ihre Rechte",
+      "general": "Sie können: Die Kommunikation jederzeit abbestellen.",
+      "california": "Für Einwohner Kaliforniens: Sie haben zusätzliche Rechte unter dem CCPA, einschließlich des Rechts zu erfahren, welche personenbezogenen Daten wir sammeln, und des Rechts auf Löschung.",
+      "eu_uk": "Für Einwohner der EU und des Vereinigten Königreichs: Sie haben Rechte unter der DSGVO, einschließlich der Datenübertragbarkeit und des Rechts auf Widerspruch gegen die Verarbeitung."
+    },
+    "international_transfers": {
+      "title": "Internationale Übertragungen",
+      "content": "Ihre Informationen können in den Vereinigten Staaten verarbeitet werden. Wir gewährleisten angemessenen Schutz für internationale Datentransfers."
+    },
+    "childrens_privacy": {
+      "title": "Privatsphäre von Kindern",
+      "content": "Unsere Dienste sind nicht für Personen unter 18 Jahren bestimmt. Wir sammeln nicht wissentlich Informationen von Minderjährigen."
+    },
+    "additional_info": {
+      "title": "Zusätzliche Informationen",
+      "regulatory": "Einhaltung gesetzlicher Vorschriften:",
+      "regulatory_items": [
+        "Nutzer müssen die lokalen Kryptowährungsvorschriften einhalten",
+        "Einige Funktionen können in bestimmten Gerichtsbarkeiten eingeschränkt sein",
+        "Wir behalten uns das Recht vor, den Zugang basierend auf rechtlichen Anforderungen einzuschränken"
+      ]
+    },
+    "contact_info": {
+      "title": "Kontakt",
+      "address": "Quantus Labs LLC\n30 N Gould St #52155\nSheridan, WY 82801",
+      "note": "Bei Fragen zu dieser Richtlinie oder zur Ausübung Ihrer Datenschutzrechte nutzen Sie bitte unser",
+      "link": "Kontaktformular"
+    }
+  },
+  "terms": {
+    "meta": {
+      "title": "Quantus - Nutzungsbedingungen",
+      "description": "Lesen Sie die Nutzungsbedingungen von Quantus für Nutzungsregeln, Verantwortlichkeiten und rechtliche Hinweise für unsere Apps und Blockchain-Dienste."
+    },
+    "hero": {
+      "eyebrow": "RECHTLICHES",
+      "title": "Nutzungsbedingungen",
+      "last_updated": "Zuletzt aktualisiert: 12. Juni 2025"
+    },
+    "what_we_provide": {
+      "title": "Was wir anbieten",
+      "intro": "Quantus bietet:",
+      "items": [
+        "Mobile Apps (verfügbar im App Store und bei Google Play)",
+        "Desktop-Anwendungen mit integrierter Mining-Funktionalität",
+        "Zugang zu unserem Open-Source-Code",
+        "Community-Newsletter und Updates",
+        "Zugang zur Quantus-Blockchain"
+      ]
+    },
+    "what_you_cannot_do": {
+      "title": "Was Sie nicht tun dürfen",
+      "intro": "Sie dürfen unsere Dienste nicht nutzen, um:",
+      "items": [
+        "Illegale Aktivitäten auszuüben",
+        "Malware zu verbreiten oder Systeme zu hacken",
+        "Exportkontrollen oder Sanktionen zu verletzen",
+        "Den Netzwerkbetrieb zu stören",
+        "Falsche Informationen bereitzustellen"
+      ]
+    },
+    "mining_participation": {
+      "title": "Mining und Netzwerkteilnahme",
+      "items": [
+        "Die Mining-Funktionalität dient Bildungszwecken und der Netzwerkteilnahme",
+        "Sie müssen die lokalen Energie- und Mining-Vorschriften einhalten",
+        "Wir geben keine Garantien für Mining-Profitabilität oder Belohnungen",
+        "Netzwerkfunktionen können sich mit der Entwicklung des Protokolls ändern"
+      ]
+    },
+    "dispute_resolution": {
+      "title": "Streitbeilegung",
+      "content": "Alle Streitigkeiten werden durch ein verbindliches Schiedsverfahren in Wyoming gemäß den Regeln der American Arbitration Association beigelegt. Diese Bedingungen unterliegen dem Recht von Wyoming. Wir können den Zugang kündigen, wenn Sie gegen diese Bedingungen verstoßen."
+    },
+    "your_responsibilities": {
+      "title": "Ihre Verantwortlichkeiten",
+      "intro": "Sie sind allein verantwortlich für:",
+      "items": [
+        "Die Sicherung Ihrer Wallet-Zugangsdaten und Ihrer Seed-Phrase",
+        "Die Einhaltung lokaler Gesetze bezüglich Kryptowährungen und Mining",
+        "Das Verständnis der Risiken der Blockchain-Technologie",
+        "Verlorene Private Keys können von uns nicht wiederhergestellt werden"
+      ]
+    },
+    "non_custodial": {
+      "title": "Non-Custodial-Design",
+      "intro": "Wichtig: Wir speichern oder greifen nicht auf Ihre Private Keys, Seed-Phrasen oder digitalen Vermögenswerte zu. Sie haben die volle Kontrolle und Verantwortung für Ihre Wallet und Ihr Vermögen.",
+      "items": [
+        "Wir können verlorene Private Keys oder Seed-Phrasen nicht wiederherstellen",
+        "Wir können Transaktionen auf der Blockchain nicht rückgängig machen",
+        "Wir können Ihr Vermögen nicht einfrieren oder kontrollieren",
+        "Sie sind für die Sicherung Ihrer Wallet-Zugangsdaten verantwortlich",
+        "Sichern Sie Ihre Seed-Phrase immer an einem sicheren Ort"
+      ]
+    },
+    "disclaimers": {
+      "title": "Haftungsausschlüsse und Einschränkungen",
+      "intro": "Unsere Dienste werden ohne Gewährleistung bereitgestellt. Kryptowährungen sind mit erheblichen Verlustrisiken verbunden. Soweit gesetzlich zulässig:",
+      "items": [
+        "Haften wir nicht für indirekte oder Folgeschäden",
+        "Übersteigt unsere Gesamthaftung nicht 1 $",
+        "Stimmen Sie zu, uns von Ansprüchen freizustellen, die aus Ihrer Nutzung unserer Dienste resultieren"
+      ]
+    },
+    "contact": {
+      "title": "Kontakt",
+      "address": "Quantus Labs LLC\n30 N Gould St #52155\nSheridan, WY 82801",
+      "note": "Bei Fragen zu diesen Bedingungen senden Sie bitte eine E-Mail an:",
+      "email": "hello@quantus.com"
+    }
+  },
+  "footer": {
+    "brand": "Quantus",
+    "copyright": "© {year} Quantus.",
+    "rights": "Alle Rechte vorbehalten.",
+    "built_on": "GEBAUT AUF BELL TESTNET",
+    "sections": {
+      "protocol": "Protokoll",
+      "community": "Community",
+      "company": "Unternehmen"
+    },
+    "links": {
+      "whitepaper": "Whitepaper",
+      "technology": "Technologie",
+      "network": "Netzwerk",
+      "wallet": "Wallet",
+      "research": "Forschung",
+      "documentation": "Dokumentation",
+      "telegram": "Telegram",
+      "x": "X (Twitter)",
+      "instagram": "Instagram",
+      "youtube": "YouTube",
+      "about": "Über uns",
+      "blog": "Blog",
+      "podcast": "QDay Podcast",
+      "contact": "Kontakt",
+      "privacy": "Datenschutzrichtlinie",
+      "terms": "Nutzungsbedingungen",
+      "coingecko": "CoinGecko"
     }
   },
   "account": {
     "meta": {
-      "title": "Quantus Network - Quantensichere Layer-1-Blockchain",
-      "description": "Eine quantensichere Open-Source-Layer-1-Blockchain, die mit Post-Quantum-Kryptographie und zk-Proof-Skalierbarkeit entwickelt wurde, um Ihre digitalen Vermögenswerte zukunftssicher zu machen."
+      "title": "Sichern Sie Ihre Krypto-Assets | Quantus-Account",
+      "description": "Erstellen Sie Ihren Quantus-Account, um Ihre digitalen Vermögenswerte gegen Quantenbedrohungen zu sichern. Werden Sie Teil der nächsten Generation von verschlüsseltem, quantensicherem Geld."
     },
-    "title": "Sichere jetzt deine Krypto",
-    "tag": "Sei unverwundbar gegenüber Quantenbedrohungen"
+    "title": "Sichern Sie jetzt Ihre Krypto-Assets",
+    "tag": "Werden Sie unverwundbar gegen Quantenbedrohungen"
   },
   "invite": {
     "meta": {
-      "title": "Quantus Network - Quantensichere Layer-1-Blockchain",
-      "description": "Eine quantensichere Open-Source-Layer-1-Blockchain, die mit Post-Quantum-Kryptographie und zk-Proof-Skalierbarkeit entwickelt wurde, um Ihre digitalen Vermögenswerte zukunftssicher zu machen."
+      "title": "Quantus beitreten | Einladung zur Krypto-Sicherung",
+      "description": "Sie wurden eingeladen, Quantus beizutreten. Sichern Sie Ihr Vermögen mit der ersten quantensicheren Layer-1-Blockchain, die für die Zukunft der digitalen Finanzen gebaut wurde."
     },
-    "title": "Du bist eingeladen, deine Krypto zu sichern",
+    "title": "Sie sind eingeladen, Ihre Krypto-Assets zu sichern",
     "code": {
       "label": "Empfehlungscode",
       "copy": "Empfehlungscode kopiert!"
     }
   },
-  "team": {
-    "title": "Das Kernteam",
-    "description": "Gegründet von erfahrenen Ingenieuren aus frühen Krypto-Startups und ehemaligen CTO-Rollen. Das Team kombiniert tiefgreifendes Fachwissen in angewandter Kryptographie und Zero-Knowledge-Systemen mit der nachgewiesenen Fähigkeit, sichere und skalierbare Infrastruktur zu liefern.",
-    "cta": "Kontakt aufnehmen",
-    "members": {
-      "chris": {
-        "title": "Chief Executive Officer",
-        "bio": "Als Technologiepionier und Unternehmer an der Spitze von KI, Blockchain und Quantencomputing bringt Chris eine seltene Mischung aus tiefem technischem Fachwissen und philosophischem Denken mit. Er hat das letzte Jahrzehnt damit verbracht, Werkzeuge zu entwickeln, die Individuen stärken und digitales Vertrauen neu definieren.",
-        "achievements": [
-          "Gründer von BitMesh, Lunyr (LUN) und FactoryDAO (FVT)",
-          "Früher Mitwirkender an grundlegenden Bitcoin-Bibliotheken",
-          "Ehemaliger KI-Teamleiter bei Tensor Spark, spezialisiert auf angewandtes maschinelles Lernen",
-          "Privater Berater für Cybersicherheit und Wiederherstellung digitaler Vermögenswerte für HNW-Personen",
-          "Fokus: Kryptographie, Komplexitätstheorie, Algebraische Topologie, Quantencomputing"
-        ]
-      },
-      "joe": {
-        "title": "Chief Operating Officer"
-      },
-      "nik": {
-        "title": "Senior Software Engineer"
-      },
-      "cezary": {
-        "title": "Senior Software Engineer"
-      },
-      "rob": {
-        "title": "Dev Ops"
-      }
-    }
-  },
-  "roadmap": {
-    "title": "Roadmap",
-    "timeline": {
-      "heisenberg": {
-        "date": "DEZ 2024",
-        "title": "Heisenberg Inception",
-        "content": "Finanzierung gesichert, Substrate ausgewählt"
-      },
-      "resonance": {
-        "date": "JULI 2025",
-        "title": "Resonance Alpha",
-        "content": "Öffentliches Testnet, Dilithium-Signaturen, umkehrbare Transaktionen"
-      },
-      "schrodinger": {
-        "date": "OKT 2025",
-        "title": "Schrödinger Beta",
-        "content": "Public Beta Start, Funktionen vollständig, bereit für Audit"
-      },
-      "bell": {
-        "date": "Q1 2026",
-        "title": "Bell Mainnet",
-        "content": "Mainnet-Start, QUAN-Token-Start"
-      },
-      "planck": {
-        "date": "Q2 2026",
-        "title": "Planck Upgrades",
-        "content": "Hochsicherheitskonten, Multisignatur-Konten, Hardware-Wallet-Integration"
-      },
-      "dirac": {
-        "date": "Q3 2026",
-        "title": "Dirac Expansion",
-        "content": "Verschränkte Adressen, Brücke zu Solana"
-      }
-    }
-  },
-  "events": {
-    "title": "Treffen Sie uns",
-    "upcoming": "KOMMENDES EVENT:",
-    "token2049": {
-      "title": "Token 2049",
-      "date": "1.-2. OKTOBER 2025 MARINA BAY SANDS - Singapur",
-      "description": "Treffen Sie uns und plaudern Sie mit uns über Quantum, Blockchain, Kunst, Musik oder irgendetwas anderes!",
-      "additional": "Wir werden das ganze Wochenende dort sein!",
-      "cta": "Event-Details"
-    }
-  },
-  "socials": {
-    "title": "Folgen Sie uns für unterhaltsame Inhalte, Podcasts, Interviews, Zauberei und mehr!"
-  },
-  "checker": {
-    "meta": {
-      "title": "Quantum Risk Checker | Scannen Sie Ihre Wallet oder ENS auf Q-Day-Risiko",
-      "description": "Überprüfen Sie jede Ethereum-Wallet oder jeden ENS-Namen auf Quantenbedrohungen. Erhalten Sie sofort Ihren Q-Day-Risiko-Score und sehen Sie, wie sicher Ihre Krypto wirklich ist."
-    },
-    "subtitle": "QUANTENRISIKO-CHECKER",
-    "title": "Sind Sie am Qday sicher?",
-    "description": "Analysieren Sie Ihre Ethereum-Adresse auf Schwachstellen durch Quantencomputing. Unser Tool prüft Transaktionsverlauf und Guthaben, um eine umfassende Risikobewertung der Quantensicherheit zu erstellen.",
-    "form": {
-      "label": "Ethereum-Adresse",
-      "placeholder": "Geben Sie Ihre Wallet-Adresse ein",
-      "btn": "Analysieren"
-    },
-    "definition": {
-      "title": "Die Quanten-Deadline",
-      "paragraph_one": "Q-Day ist der Moment, in dem Quantencomputer die Kryptographie brechen können, die den Großteil der heutigen digitalen Welt sichert. Die Algorithmen hinter sicheren Webverbindungen, Software-Updates, Banksystemen und E-Mails, wie RSA und Elliptic-Curve-Kryptographie, wären nicht länger sicher.",
-      "paragraph_two": "Sogar Daten, die Jahre zuvor verschlüsselt wurden, könnten jetzt gesammelt und später entschlüsselt werden, wodurch vertrauliche Informationen von Regierungen, Unternehmen und Einzelpersonen offengelegt würden."
-    },
-    "consequence": {
-      "title": "Was bedeutet der Q-Day für Blockchains und digitale Vermögenswerte",
-      "paragraph_one": "Blockchains sind auf digitale Signaturen mit elliptischen Kurven angewiesen, um den Besitz von Geldern nachzuweisen. Bei Ethereum zum Beispiel legt jede ausgehende Transaktion den öffentlichen Schlüssel einer Wallet dauerhaft offen.",
-      "paragraph_two": "Ein Quantencomputer könnte einen öffentlichen Schlüssel verwenden, um den privaten Schlüssel mathematisch abzuleiten, was Angreifern ermöglichen würde, gültige Signaturen zu fälschen und Vermögenswerte ohne Wissen der Besitzer zu übertragen.",
-      "paragraph_three": "Ein netzwerkweiter Wettlauf um die Einführung quantensicherer Protokolle würde folgen, aber bis dahin könnten unvorbereitete Chains bereits kompromittiert sein.",
-      "invitation_one": "Nutzen Sie unseren",
-      "product": "Quantenrisiko-Scanner",
-      "invitation_two": "um zu sehen, wie anfällig Ihre Adresse ist, und handeln Sie, bevor der Qday kommt."
-    },
-    "method": {
-      "title": "Wie es funktioniert",
-      "subtitle": "Der Quantenrisiko-Scanner scannt jede Ethereum-Adresse und gibt ihr einen Quantenbereitschafts-Score, ein Risikoniveau und eine Note.",
-      "factor_title": "Zwei primäre Risikofaktoren bestimmen den Score:",
-      "factors": [
-        {
-          "title": "Offenlegung des öffentlichen Schlüssels",
-          "content": "Ob die Adresse jemals eine Transaktion gesendet und ihren Schlüssel offengelegt hat."
-        },
-        {
-          "title": "Guthaben-Sensitivität",
-          "content": "Je höher das ETH-Guthaben, desto attraktiver das Ziel."
-        }
-      ],
-      "factor_usage": "Aus diesen Signalen berechnen wir einen numerischen Score und ordnen ihn einfachen A-F-Noten und Risikoniveaus zu, die klar genug sind, damit Sie handeln können.",
-      "analysis_title": "Was Ihre Analyse liefern wird:",
-      "analysis_items": [
-        "Sicherheits-Score: 35 - 100",
-        "Risikoniveau: Sehr hoch / Hoch / Mittel / Niedrig / Sehr niedrig",
-        "Note: F / D / C / B / A / A+",
-        "Schlüssel-Offenlegungsstatus: Offengelegt oder Noch nicht offengelegt",
-        "Rat: praktische nächste Schritte"
-      ]
-    }
-  },
-  "quests": {
-    "meta": {
-      "title": "Quantus Quests | Nimm am Spiel teil & verdiene Belohnungen im Quantus Network",
-      "description": "Nimm an Quantus Quests teil – unterhaltsame Blockchain-Herausforderungen mit echten Belohnungen. Sammle Punkte, erklimme die Bestenliste und sichere dir deinen Airdrop-Anteil im Quantus Network."
-    },
-    "hero": {
-      "welcome": "Willkommen zu",
-      "title": "Quantus Quests",
-      "description": "Quantus Quests sind eine Reihe von Herausforderungen, die darauf abzielen, unsere frühesten und aktivsten Community-Mitglieder zu belohnen. Durch das Abschließen von Quests sichern Sie sich Ihren Status als Early Adopter und verdienen USDC."
-    },
-    "shill": {
-      "info": {
-        "code": "QUEST #001",
-        "name_one": "KÖNIG",
-        "name_two": "DES",
-        "name_three": "SHILL",
-        "description": "Ein Kampf um einen Preispool von 500 $ USDC, erhöhte Airdrop-Punkte und den ultimativen Titel: Der König des Shill.",
-        "play_guide": {
-          "title": "Spielanleitung",
-          "guides": [
-            "Lade die Quantus App herunter.",
-            "Gehe zum Tab „Quantus Quests“, um deinen Empfehlungslink (den Qcat) zu finden.",
-            "Teile deinen Code mit deinen Freunden & Feinden.",
-            "Beobachte das Live-Leaderboard, um deine Position in Echtzeit zu verfolgen."
-          ]
-        }
-      },
-      "leaderboard": {
-        "title": "Bestenliste",
-        "referrals": "Empfehlungen",
-        "table": {
-          "rank": "Rang",
-          "address": "Adresse",
-          "referrals": "Empfehlungen"
-        }
-      },
-      "rules": {
-        "title": "Die Spielregeln",
-        "goal": {
-          "title": "Das Ziel:",
-          "content": "Werbe die meisten Benutzer für das Quantus Wallet mit deinem einzigartigen Einladungscode. Nur Empfehlungen, die eine Wallet erstellen, werden gezählt."
-        },
-        "prize": {
-          "title": "Die Preise:",
-          "content": [
-            "1. Platz: 300 $ USDC",
-            "2. Platz: 150 $ USDC",
-            "3. Platz: 50 $ USDC"
-          ]
-        },
-        "win": {
-          "title": "So gewinnst du:",
-          "content": "Halte den 1. Platz für 72 aufeinanderfolgende Stunden.",
-          "card": {
-            "title": "Der Quanten-Twist",
-            "content_one": "Der 1. Platz auf der Bestenliste wird durch eine live, umkehrbare 10.000 QUAN-Transaktion repräsentiert. Wenn ein anderer Benutzer dich überholt, wird die Transaktion automatisch umgekehrt und an den neuen Führenden gesendet. Der Anspruch auf den 300 $ USDC-Preis bewegt sich mit.",
-            "content_two": "Um den Hauptpreis zu gewinnen, musst du den 1. Platz beanspruchen und ihn 72 aufeinanderfolgende Stunden halten. Sobald du das schaffst, wird die 10.000 QUAN-Transaktion finalisiert, der Preis ist gesichert und die Herausforderung endet."
-          }
-        }
-      }
-    },
-    "raid": {
-      "info": {
-        "code": "QUEST #002",
-        "name_one": "KÖNIG",
-        "name_two": "DES",
-        "name_three": "SHILL",
-        "description": "Ein Kampf um einen Preispool von 500 USDC und den ultimativen Titel: Der King of the Shill.",
-        "play_guide": {
-          "title": "Spielanleitung",
-          "guides": [
-            "Lade die Quantus-App herunter.",
-            "Gehe zum Reiter Quantus Quests (The Qcat).",
-            "Verknüpfe dein ETH- und X-Konto, um teilnahmeberechtigt zu sein.",
-            "Prüfe das Raid-Ziel in der Telegram-Gruppe.",
-            "Führe einen Raid auf das Ziel durch, indem du darauf antwortest.",
-            "Füge es deiner Raid-Einreichung hinzu.",
-            "Beobachte die Bestenliste, um deine Position zu verfolgen.",
-            "Die Bestenliste wird alle 24 Stunden aktualisiert."
-          ]
-        }
-      },
-      "leaderboard": {
-        "title": "Bestenliste",
-        "impressions": "Impressionen",
-        "table": {
-          "rank": "Rang",
-          "address": "Adresse",
-          "impressions": "Impressionen"
-        }
-      },
-      "rules": {
-        "title": "Die Spielregeln",
-        "goal": {
-          "title": "Das Ziel:",
-          "content": "Sammle die meisten Impressionen durch einen oder mehrere Raid-Versuche. Es werden nur gültige eigene Antworten auf das Raid-Ziel gezählt."
-        },
-        "prize": {
-          "title": "Die Preise:",
-          "content": [
-            "1. Platz: 300 $ USDC",
-            "2. Platz: 150 $ USDC",
-            "3. Platz: 50 $ USDC"
-          ]
-        },
-        "win": {
-          "title": "Wie man gewinnt:",
-          "content": "Halte den 1. Platz für 72 aufeinanderfolgende Stunden.",
-          "card": {
-            "title": "Der Quantus-Twist",
-            "content_one": "Der 1. Platz auf der Bestenliste wird durch eine aktive, rückgängig machbare Transaktion von 10.000 QUAN repräsentiert. Wenn ein anderer Benutzer dich überholt, wird die Transaktion automatisch rückgängig gemacht und an den neuen Anführer gesendet. Der Anspruch auf den Preis von 300 $ USDC wandert mit.",
-            "content_two": "Um den Hauptpreis zu gewinnen, musst du den 1. Platz beanspruchen und ihn für 72 aufeinanderfolgende Stunden halten. Sobald du das schaffst, wird die 10.000 QUAN-Transaktion finalisiert, der Preis gesichert und die Herausforderung endet."
-          }
-        }
-      }
-    }
-  },
-  "footer": {
-    "newsletter": {
-      "title": "Abonnieren Sie unseren Newsletter",
-      "description": "Alpha-Alarm! Erhalten Sie Ihre wöchentliche Nachrichten-Blast mit Vorschauen, Updates, Nachrichtenübersicht, Bildungsinhalten und mehr",
-      "placeholder": {
-        "email": "E-Mail",
-        "firstname": "Vorname",
-        "lastname": "Nachname"
-      },
-      "button": "Abonnieren",
-      "success": "Willkommen bei der Quantensicherheit 🎉",
-      "error": "Fehler: Etwas läuft schief."
-    },
-    "description": "Eine quantensichere Layer-1-Blockchain für Menschen, die schützen wollen, was zählt: ihr Vermögen, ihre Zukunft und ihre Freiheit.",
-    "copyright": "Copyright © {year} Quantus Network",
-    "navigation": {
-      "resources": {
-        "title": "Ressourcen",
-        "community": "Community",
-        "documentation": "Dokumentation",
-        "tech_support": "Technischer Support"
-      },
-      "info": {
-        "title": "Info",
-        "company": "Unternehmen",
-        "blog": "Blog",
-        "terms": "Allgemeine Geschäftsbedingungen",
-        "privacy": "Datenschutzrichtlinie"
-      }
-    }
-  },
-  "contact": {
-    "meta": {
-      "title": "Quantus Network kontaktieren | Support oder Partnerschaftsinfo",
-      "description": "Wenden Sie sich an das Quantus Network-Team für Support, Partnerschafts- oder Medienanfragen. Wir helfen Ihnen, schnell den richtigen Experten zu finden."
-    },
-    "title": "Kontakt aufnehmen",
-    "subtitle": "Melden Sie sich, und lassen Sie uns gemeinsam ein Universum voller Möglichkeiten schaffen!",
-    "form": {
-      "name": "Name",
-      "email": "E-Mail",
-      "message": "Nachricht",
-      "submit": "Senden",
-      "success": "Wir werden Ihre Nachricht so schnell wie möglich bearbeiten.",
-      "error": "Fehler: Etwas läuft schief."
-    },
-    "quote": {
-      "text": "Die Atome oder Elementarteilchen selbst sind nicht real; sie bilden eher eine Welt von Potentialitäten oder Möglichkeiten als eine von Dingen oder Tatsachen.",
-      "author": "Werner Heisenberg"
-    }
-  },
-  "launch": {
-    "meta": {
-      "title": "Quantus Tokenomics & Launch-Zuteilung",
-      "description": "QUAN-Tokenversorgung, Verteilung und Launch-Zuteilung. Feste Versorgung von 21 Mio. QUAN mit fairer Launch-Mechanik."
-    },
-    "title": "Quantus Tokenomics & Launch-Zuteilung",
-    "overview": {
-      "title": "Überblick",
-      "content": "Quantus hat eine feste maximale Versorgung von **21.000.000 QUAN**. Der Token wird über ein initiales Token Generation Event (TGE) und langfristiges Proof-of-Work-Mining ausgegeben. Diese Struktur soll Pre-Mining vermeiden, Insider-Vorteile minimieren und langfristige Netzwerksicherheit mit Nutzerbeteiligung in Einklang bringen."
-    },
-    "supply": {
-      "title": "Tokenversorgung",
-      "max_supply": "Maximalversorgung:",
-      "max_supply_value": "21.000.000 QUAN",
-      "tge_supply": "TGE-geprägte Versorgung:",
-      "tge_supply_value": "7.350.000 QUAN (35%)",
-      "mining_supply": "Mining-Emissionen:",
-      "mining_supply_value": "13.650.000 QUAN (65%) über ~40 Jahre",
-      "note": "Die Mining-Emission folgt einer exponentiell abfallenden Blockbelohnungskurve: Die Ausgabe ist in den frühen Jahren höher und verlangsamt sich mit der Zeit, wenn sich die Versorgung dem Maximum nähert."
-    },
-    "tge": {
-      "title": "Launch-Zuteilung (TGE)",
-      "intro": "Die folgenden Token werden beim Token Generation Event geprägt und verteilt:",
-      "table": {
-        "category": "Kategorie",
-        "percent": "% der Versorgung",
-        "quan": "QUAN",
-        "private_sale": "Privatverkauf",
-        "public_sale": "Öffentlicher Verkauf",
-        "dex_liquidity": "DEX-Liquidität",
-        "total": "Gesamt beim TGE"
-      },
-      "note_1": "Alle Privat- und öffentlichen Verkaufstoken sind beim Launch vollständig liquid. Es gibt keine Investor-Sperren oder Vesting-Pläne.",
-      "note_2": "Öffentliche Verkaufserlöse (USDC) werden 1:1 mit QUAN gepaart und direkt in einen Liquiditätspool eingezahlt. Wenn der volle 10%-Öffentliche Verkauf ausgeschöpft wird, werden weitere 10% geprägt — 100% der öffentlichen Verkaufserlöse fließen in den LP."
-    },
-    "mining": {
-      "title": "Mining-basierte Verteilung (65%)",
-      "intro": "Die verbleibenden 65% der Versorgung — **13.650.000 QUAN** — werden über etwa 40 Jahre per Proof-of-Work-Mining verteilt.",
-      "ownership_title": "Endgültige Eigentümerschaft der Mining-Emissionen:",
-      "table": {
-        "recipient": "Empfänger",
-        "percent": "% der Gesamtversorgung",
-        "miners": "Miner",
-        "company": "Unternehmen (Dev-Steuer)"
-      }
-    },
-    "company": {
-      "title": "Ausrichtung des Unternehmens",
-      "intro": "Quantus betreibt kein Pre-Mining und reserviert keine Token für das Team.",
-      "content": "Stattdessen wird das Unternehmen über eine Dev-Steuer auf Blockbelohnungen vergütet:",
-      "points": [
-        "Ein Teil jeder Blockbelohnung fließt an das Unternehmen. Das wirkt wie Vesting auf Protokollebene — Token werden über etwa 5 Jahre gemeinsam mit dem Netzwerk verdient.",
-        "So wird das frühe Versorgungskurvenproblem von Bitcoin vermieden, bei dem frühe Miner massive Bestände anhäufen und dauerhaftes Überhang-Risiko entsteht."
-      ]
-    },
-    "vesting": {
-      "title": "Sperren & Vesting",
-      "mark_tge": "TGE",
-      "mark_y1": "J1",
-      "mark_y2": "J2",
-      "mark_y3": "J3",
-      "mark_y4": "J4+",
-      "row_investors": "Investoren",
-      "investors_bar": "100% liquid Tag 1",
-      "row_dex": "DEX-Liquidität",
-      "dex_bar": "Beim TGE ins LP gepaart",
-      "row_team": "Team & Gründer",
-      "cliff": "Cliff",
-      "linear_monthly": "Linear monatlich",
-      "row_advisors": "Berater",
-      "row_company": "Unternehmen (Dev-Steuer)",
-      "company_bar": "Über Blockbelohnungen ~5 J."
-    },
-    "vesting_summary": "Alle Privat- und öffentlichen Verkaufstoken sind beim TGE vollständig liquid. Team und Berater vesting über vier Jahre mit einjährigem Cliff. Unternehmenstoken werden nie pre-mined — sie werden schrittweise über die Dev-Steuer auf Blockbelohnungen verdient.",
-    "fees": {
-      "title": "Gebühren & Burning",
-      "intro": "Zur langfristigen Netzwerksicherheit fallen auf Wormhole-Transaktionen **0,1% Volumengebühr** an:",
-      "points": ["**50%** gehen an Miner", "**50%** werden verbrannt"],
-      "note": "Mit wachsender Nutzung entsteht deflationärer Druck."
-    },
-    "funding": {
-      "title": "Finanzierungshistorie",
-      "intro": "Zwei Privatrunden sind abgeschlossen; 7% der Gesamtversorgung wurden verkauft. Tokenbewertung ist 2x Eigenkapitalbewertung — Branchenstandard, in allen Verträgen verankert. Künftige Finanzierung nur über Tokenverkäufe.",
-      "table": {
-        "round": "Runde",
-        "raised": "Eingesammelt",
-        "valuation": "Tokenbewertung",
-        "lead": "Lead",
-        "total": "Gesamt",
-        "pr1": "Privatrunde 1",
-        "pr2": "Privatrunde 2",
-        "raised_pr1": "$1.65M",
-        "raised_pr2": "$770K",
-        "val_pr1": "$40M",
-        "val_pr2": "$100M",
-        "lead_pr2": "Balaji Srinivasan",
-        "dash": "—",
-        "raised_total": "$2.42M"
-      }
-    },
-    "chart": {
-      "miners": "Miner",
-      "private": "Privat",
-      "company": "Unternehmen",
-      "public": "Öffentlich",
-      "liquidity": "Liquidität"
-    }
-  },
-  "about": {
-    "meta": {
-      "title": "Über Quantus Network | Unsere Vision für eine quantensichere Zukunft",
-      "description": "Entdecken Sie die Mission von Quantus Network, ein quantensicheres Blockchain-Ökosystem aufzubauen. Erfahren Sie, wer wir sind, was unsere Ziele sind und wie wir die nächste Ära der Krypto schützen."
-    },
-    "title": "Unternehmensdetails",
-    "content": {
-      "p1": "Quantus Labs LLC ist ein Technologieunternehmen mit das sich auf den Aufbau von Infrastruktur für dezentralisierte, zensurresistente Technologien konzentriert. Unser Vorzeigeprojekt, Quantus Network, ist eine Layer-1-Blockchain, die darauf ausgelegt ist, vom ersten Tag an einfach, quelloffen und im Besitz der Community zu sein.",
-      "p2": "Wir glauben an die Kraft offener Protokolle, Proof-of-Work und souveränen Besitz. Die Quantus Network App – verfügbar für Desktop und Mobilgeräte – ermöglicht es Benutzern, digitale Vermögenswerte zu speichern, neue Blöcke zu minen und ohne Zwischenhändler an einer faireren finanziellen Zukunft teilzunehmen.",
-      "p3": "Wir verpflichten uns zu Transparenz, Datenschutz und der Stärkung von Einzelpersonen durch sichere, selbstverwaltete Werkzeuge.",
-      "address_label": "Firmenadresse:"
-    },
-    "address": {
-      "company": "Quantus Labs LLC",
-      "street": "30 N Gould St #52155",
-      "city": "Sheridan, WY 82801",
-      "country": "USA"
-    }
-  },
-  "tos": {
-    "meta": {
-      "title": "Quantus Network - Nutzungsbedingungen & Datenschutzrichtlinie",
-      "description": "Lesen Sie die Nutzungsbedingungen und die Datenschutzrichtlinie von Quantus Network. Erfahren Sie, wie wir Ihre Daten schützen, Transparenz gewährleisten und Ihr Krypto-Erlebnis sicher halten."
-    },
-    "title": "Quantus Network Richtlinien",
-    "last_updated": "Zuletzt aktualisiert: 12. Juni 2025",
-    "intro": "Diese Richtlinie erklärt, wie Quantus Labs LLC („Quantus“, „wir“ oder „uns“) Ihre Informationen sammelt, verwendet und schützt, wenn Sie quantus.com, unsere mobilen Apps, Desktop-Anwendungen nutzen oder anderweitig mit uns interagieren. Wir können diese Richtlinie von Zeit zu Zeit aktualisieren. Wenn wir Änderungen vornehmen, werden wir Sie benachrichtigen, indem wir das Datum oben in dieser Richtlinie überarbeiten und gegebenenfalls zusätzliche Hinweise auf unserer Website bereitstellen.",
-    "service_title": "Nutzungsbedingungen",
-    "privacy_title": "Datenschutzrichtlinie",
-    "terms": {
-      "what_we_provide": {
-        "title": "Was wir bereitstellen",
-        "intro": "Quantus Network bietet:",
-        "items": [
-          "Mobile Apps (verfügbar im App Store und bei Google Play)",
-          "Desktop-Anwendungen mit integrierter Mining-Funktionalität",
-          "Zugang zu unserem Open-Source-Code",
-          "Community-Newsletter und Updates",
-          "Zugang zur Quantus Network Blockchain"
-        ]
-      },
-      "what_you_cannot_do": {
-        "title": "Was Sie nicht tun dürfen",
-        "intro": "Sie dürfen unsere Dienste nicht nutzen, um:",
-        "items": [
-          "Sich an illegalen Aktivitäten zu beteiligen",
-          "Malware zu verbreiten oder Systeme zu hacken",
-          "Exportkontrollen oder Sanktionen zu verletzen",
-          "Den Netzwerkbetrieb zu stören",
-          "Falsche Informationen bereitzustellen"
-        ]
-      },
-      "mining_participation": {
-        "title": "Mining und Netzwerkteilnahme",
-        "items": [
-          "Die Mining-Funktionalität dient Bildungszwecken und der Netzwerkteilnahme",
-          "Sie müssen lokale Energie- und Mining-Vorschriften einhalten",
-          "Wir geben keine Garantien hinsichtlich der Rentabilität des Minings oder der Belohnungen",
-          "Netzwerkfunktionen können sich ändern, während sich das Protokoll entwickelt"
-        ]
-      },
-      "dispute_resolution": {
-        "title": "Streitbeilegung",
-        "content": "Etwaige Streitigkeiten werden durch ein bindendes Schiedsverfahren in Wyoming gemäß den Regeln der American Arbitration Association beigelegt. Diese Bedingungen unterliegen dem Recht von Wyoming. Wir können den Zugang beenden, wenn Sie gegen diese Bedingungen verstoßen"
-      },
-      "your_responsibilities": {
-        "title": "Ihre Verantwortlichkeiten",
-        "intro": "Sie sind allein verantwortlich für:",
-        "items": [
-          "Die Sicherung Ihrer Wallet-Anmeldeinformationen und Seed-Phrase",
-          "Die Einhaltung lokaler Gesetze bezüglich Kryptowährung und Mining",
-          "Das Verständnis der Risiken der Blockchain-Technologie",
-          "Verlorene private Schlüssel können von uns nicht wiederhergestellt werden"
-        ]
-      },
-      "non_custodial": {
-        "title": "Nicht-Verwahrendes Design",
-        "intro": "Wichtig: Wir speichern oder greifen nicht auf Ihre privaten Schlüssel, Seed-Phrases oder digitalen Vermögenswerte zu. Sie haben die volle Kontrolle und Verantwortung für Ihre Wallet und Ihre Vermögenswerte.",
-        "items": [
-          "Wir können verlorene private Schlüssel oder Seed-Phrases nicht wiederherstellen",
-          "Wir können Transaktionen auf der Blockchain nicht rückgängig machen",
-          "Wir können Ihre Vermögenswerte nicht einfrieren oder kontrollieren",
-          "Sie sind für die Sicherung Ihrer Wallet-Anmeldeinformationen verantwortlich",
-          "Sichern Sie Ihre Seed-Phrase immer an einem sicheren Ort"
-        ]
-      },
-      "disclaimers": {
-        "title": "Haftungsausschlüsse und Beschränkungen",
-        "intro": "Unsere Dienste werden „wie besehen“ ohne Gewährleistungen bereitgestellt. Kryptowährung birgt ein erhebliches Verlustrisiko. Soweit gesetzlich zulässig:",
-        "items": [
-          "Wir haften nicht für indirekte oder Folgeschäden",
-          "Unsere Gesamthaftung übersteigt nicht 1 $",
-          "Sie erklären sich damit einverstanden, uns von Ansprüchen freizustellen, die sich aus Ihrer Nutzung unserer Dienste ergeben"
-        ]
-      }
-    },
-    "privacy": {
-      "information_collect": {
-        "title": "Welche Informationen wir sammeln",
-        "from_apps": "Von unseren Apps:",
-        "from_apps_content": "Wir sammeln keine persönlichen Informationen über die Quantus Network-Anwendungen.",
-        "from_website": "Von unserer Website sammeln wir automatisch:",
-        "from_website_items": [
-          "IP-Adresse (anonymisiert durch Google Analytics)",
-          "Browser- und Geräteinformationen",
-          "Besuchte Seiten und Nutzungsmuster",
-          "Geographischer Standort (nur Land/Region)"
-        ],
-        "from_you": "Direkt von Ihnen:",
-        "from_you_items": [
-          "E-Mail-Adresse (wenn Sie unseren Newsletter abonnieren)",
-          "Informationen, die Sie bereitstellen, wenn Sie uns kontaktieren"
-        ],
-        "technical": "Technische Daten:",
-        "technical_items": [
-          "Absturzberichte und Fehlerprotokolle der Anwendung",
-          "Netzwerkkonnektivitätsinformationen (zur Verbesserung der Leistung)"
-        ]
-      },
-      "how_we_use": {
-        "title": "Wie wir Informationen verwenden",
-        "intro": "Wir verwenden gesammelte Informationen, um:",
-        "items": [
-          "Unsere Website und Anwendungen zu verbessern",
-          "Newsletter-Updates zu senden (mit Ihrer Zustimmung)",
-          "Die Nutzung zu analysieren, um die Benutzererfahrung zu verbessern",
-          "Auf Missbrauch zu überwachen und unsere Dienste zu schützen",
-          "Gesetzlichen Verpflichtungen nachzukommen"
-        ],
-        "we_do_not": "Wir tun nicht:",
-        "we_do_not_items": [
-          "Ihre Daten an Dritte verkaufen oder vermieten",
-          "Ihre privaten Schlüssel oder Transaktionsdaten speichern",
-          "Ihre Daten für gezielte Werbung verwenden"
-        ]
-      },
-      "information_sharing": {
-        "title": "Informationsweitergabe",
-        "intro": "Wir können Informationen weitergeben an:",
-        "items": [
-          "Analyseanbieter (Google Analytics für Website-Daten)",
-          "Dienstleister, die beim Betrieb unserer Website helfen",
-          "Justizbehörden, wenn dies gesetzlich vorgeschrieben ist"
-        ],
-        "note": "Wir geben nur aggregierte, anonymisierte Daten weiter, die Sie nicht identifizieren können."
-      },
-      "cookies_tracking": {
-        "title": "Cookies und Tracking",
-        "intro": "Unsere Website verwendet Cookies für:",
-        "items": [
-          "Wesentliche Website-Funktionalität",
-          "Analysen, um die Seitennutzung zu verstehen",
-          "Leistungsverbesserungen"
-        ],
-        "note": "Sie können Cookies über Ihre Browsereinstellungen steuern, dies kann jedoch die Funktionalität der Website beeinträchtigen."
-      },
-      "data_security": {
-        "title": "Datensicherheit und -aufbewahrung",
-        "intro": "Wir implementieren Standard-Sicherheitsmaßnahmen zum Schutz Ihrer Daten, einschließlich Verschlüsselung und sicherer Speicherung. Kein Online-Dienst ist jedoch vollkommen sicher.",
-        "technical_data": "Technische Daten:",
-        "retention_items": [
-          "Website-Analysen: 26 Monate",
-          "Newsletter-Abonnements: Bis Sie sich abmelden"
-        ]
-      },
-      "your_rights": {
-        "title": "Ihre Rechte",
-        "general": "Sie können: Kommunikationen jederzeit abbestellen",
-        "california": "Für Einwohner Kaliforniens: Sie haben zusätzliche Rechte gemäß CCPA, einschließlich des Rechts zu erfahren, welche persönlichen Informationen wir sammeln, und des Rechts auf Löschung.",
-        "eu_uk": "Für Einwohner der EU/UK: Sie haben Rechte gemäß DSGVO, einschließlich Datenübertragbarkeit und das Recht, der Verarbeitung zu widersprechen."
-      },
-      "international_transfers": {
-        "title": "Internationale Übertragungen",
-        "content": "Ihre Informationen können in den Vereinigten Staaten verarbeitet werden. Wir gewährleisten angemessenen Schutz für internationale Datenübertragungen."
-      },
-      "childrens_privacy": {
-        "title": "Privatsphäre von Kindern",
-        "content": "Unsere Dienste sind nicht für Personen unter 18 Jahren bestimmt. Wir sammeln nicht wissentlich Informationen von Minderjährigen."
-      },
-      "additional_info": {
-        "title": "Zusätzliche Informationen",
-        "regulatory": "Einhaltung von Vorschriften",
-        "regulatory_items": [
-          "Benutzer müssen lokale Kryptowährungsvorschriften einhalten",
-          "Einige Funktionen können in bestimmten Gerichtsbarkeiten eingeschränkt sein",
-          "Wir behalten uns das Recht vor, den Zugang aufgrund gesetzlicher Anforderungen zu beschränken"
-        ]
-      },
-      "contact_info": {
-        "title": "Kontaktieren Sie uns",
-        "address": "Quantus Labs LLC\n30 N Gould St #52155\nSheridan, WY 82801",
-        "note": "Bei Fragen zu dieser Richtlinie oder zur Ausübung Ihrer Datenschutzrechte nutzen Sie bitte unser",
-        "link": "Kontaktformular"
-      }
-    }
-  },
   "blog": {
-    "title": "Die neuesten Nachrichten aus dem Quantus Network.",
+    "title": "Die neuesten Nachrichten von Quantus.",
+    "hero": {
+      "eyebrow": "Vom Quantus-Team",
+      "heading": "Der Quantus-Blog.",
+      "sub": "Protokoll-Updates, technische Deep-Dives und Perspektiven auf die Quantenbedrohungslandschaft."
+    },
+    "card": {
+      "read": "Lesen"
+    },
     "search_placeholder": "Beiträge suchen...",
     "no_posts_found": "Keine Beiträge gefunden.",
     "featured_label": "Hervorgehoben",
     "related_posts": "Ähnliche Beiträge",
     "post": {
       "back_to_blog": "Zurück zum Blog",
-      "author": "Quantus-Team"
+      "author": "Quantus-Team",
+      "updated": "Aktualisiert"
     },
     "meta": {
-      "title": "Quantus Blog | Aktuelle Nachrichten & Quantum Insights",
-      "description": "Bleiben Sie auf dem Laufenden mit den neuesten Nachrichten, Bildungsinhalten und Einblicken aus dem Quantus Network."
+      "title": "Quantus-Blog | Neueste Nachrichten & Quanten-Einblicke",
+      "description": "Bleiben Sie auf dem Laufenden mit den neuesten Nachrichten, Bildungsinhalten und Einblicken von Quantus."
     },
     "tag": {
       "meta": {
-        "title": "Blog - #{tag} | Quantus Network",
-        "description": "Durchsuchen Sie alle Blog-Beiträge mit dem Tag #{tag} im Quantus Network."
+        "title": "Blog - #{tag} | Quantus",
+        "description": "Alle Blogbeiträge mit dem Tag #{tag} auf Quantus durchsuchen."
       },
       "heading": "Beiträge mit dem Tag {tag}",
       "back_link": "← Zurück zu allen Beiträgen"
@@ -734,7 +834,7 @@
     "tags": {
       "weekly-update": "Wöchentliches Update",
       "threshold-signatures": "Threshold-Signaturen",
-      "post-quantum-cryptography": "Post-Quanten-Kryptographie",
+      "post-quantum-cryptography": "Post-Quanten-Kryptografie",
       "dilithium": "Dilithium",
       "zero-knowledge-proofs": "Zero-Knowledge-Proofs",
       "quantum-safe": "Quantensicher",
@@ -743,11 +843,10 @@
       "crypto": "Krypto",
       "defi": "DeFi",
       "bitcoin": "Bitcoin",
-      "quantus-network": "Quantus Network",
       "business": "Business",
       "network-state": "Netzwerkstaat",
       "innovation": "Innovation",
-      "quantum-computing": "Quantencomputer",
+      "quantum-computing": "Quantencomputing",
       "gpu-mining": "GPU-Mining",
       "dirac-network": "Dirac-Netzwerk",
       "blockchain-architecture": "Blockchain-Architektur",
@@ -771,8 +870,8 @@
       "ama": "AMA",
       "substrate": "Substrate",
       "poseidon": "Poseidon",
-      "dirac-testnet": "Dirac-Testnetz",
-      "mobile-wallet": "Mobile Wallet",
+      "dirac-testnet": "Dirac-Testnet",
+      "mobile-wallet": "Mobile-Wallet",
       "wallet": "Wallet",
       "pow": "Proof of Work",
       "libp2p": "libp2p",
@@ -782,11 +881,11 @@
       "referral": "Empfehlung",
       "governance": "Governance",
       "treasury": "Treasury",
-      "conviction-voting": "Conviction Voting",
-      "gamification": "Gamifizierung",
+      "conviction-voting": "Conviction-Voting",
+      "gamification": "Gamification",
       "plonky3": "Plonky3",
       "liberland": "Liberland",
-      "schrodinger-testnet": "Schrödinger-Testnetz",
+      "schrodinger-testnet": "Schrödinger-Testnet",
       "pqc": "PQC",
       "mpc": "MPC",
       "multisig": "Multisig",
@@ -795,10 +894,10 @@
       "biohacking": "Biohacking",
       "rpc": "RPC",
       "scalability": "Skalierbarkeit",
-      "privacy": "Privatsphäre",
+      "privacy": "Datenschutz",
       "security": "Sicherheit",
       "guardian": "Guardian",
-      "time-lock": "Zeitsperre",
+      "time-lock": "Time-Lock",
       "fraud-prevention": "Betrugsprävention",
       "coingecko": "CoinGecko",
       "quantum-resistant": "Quantenresistent",
@@ -806,43 +905,43 @@
       "research": "Forschung",
       "notification-system": "Benachrichtigungssystem",
       "keystone": "Keystone",
-      "heisenberg-testnet": "Heisenberg-Testnetz",
-      "performance": "Performance",
+      "heisenberg-testnet": "Heisenberg-Testnet",
+      "performance": "Leistung",
       "prover": "Prover",
       "infrastructure": "Infrastruktur",
       "consensus": "Konsens"
     }
   },
   "cookie": {
-    "title": "Cookie-Zustimmung",
-    "notice": "Diese Website verwendet Cookies, um die Interessen ihrer Leser besser zu verstehen und auf sie einzugehen. Erfahren Sie mehr in der",
+    "title": "Cookie-Einwilligung",
+    "notice": "Diese Website verwendet Cookies, um die Interessen ihrer Leser besser zu verstehen und darauf einzugehen. Erfahren Sie mehr in der",
     "link": "Datenschutzrichtlinie und den Nutzungsbedingungen",
     "accept": "Akzeptieren",
     "decline": "Ablehnen"
   },
   "whitepaper": {
     "meta": {
-      "title": "Quantus Whitepaper | Technische Grundlagen der Quantensicherheit",
-      "description": "Lesen Sie das Quantus Network Whitepaper. Entdecken Sie unseren technischen Ansatz für Post-Quanten-Kryptographie, Zero-Knowledge-Proofs und eine sichere Layer-1-Blockchain-Architektur."
+      "title": "Quantus-Whitepaper | Technische Grundlagen der Quantensicherheit",
+      "description": "Lesen Sie das Quantus-Whitepaper. Erkunden Sie unseren technischen Ansatz für Post-Quanten-Kryptografie, Zero-Knowledge-Proofs und die sichere Layer-1-Blockchain-Architektur."
     },
-    "title": "Quantus Whitepaper",
+    "title": "Quantus-Whitepaper",
     "on_this_page": "Auf dieser Seite",
     "version": "Version",
-    "version_selector": "Version auswählen",
-    "latest": "Neueste",
+    "version_selector": "Version wählen",
+    "latest": "Aktuell",
     "download_pdf": "PDF herunterladen",
     "last_updated": "Zuletzt aktualisiert",
-    "changelog": "Änderungsprotokoll",
+    "changelog": "Changelog",
     "authors": "Autoren",
     "published": "Veröffentlicht",
     "classification": "Klassifizierung",
-    "abstract": "Zusammenfassung",
-    "back_to_top": "Nach oben",
-    "tag_line": "quantensicher, verschlüsseltes Geld",
+    "abstract": "Abstract",
+    "back_to_top": "Zurück nach oben",
+    "tag_line": "quantensicheres verschlüsseltes Geld",
     "whitepaper": "Whitepaper"
   },
   "common": {
-    "loading": "Wird geladen...",
+    "loading": "Lade...",
     "error": "Fehler",
     "success": "Erfolg",
     "email_required": "E-Mail ist erforderlich.",

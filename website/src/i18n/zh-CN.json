@@ -1,721 +1,825 @@
 {
-  "home": {
-    "meta": {
-      "title": "Quantus Network - 量子安全的第一层区块链",
-      "description": "Quantus：量子安全的第一层区块链。下载我们的钱包，保护您的资产免受后量子威胁。"
-    }
-  },
   "navbar": {
-    "about": "关于",
-    "foundations": "基础",
-    "app": "应用",
-    "team": "团队",
-    "roadmap": "路线图",
-    "events": "活动",
-    "blog": "博客",
-    "contact": "联系",
-    "checker": "Qday 风险检查器",
-    "quests": "任务",
-    "launch": "发布",
-    "cta": "加入公开测试版"
+    "about": "关于我们",
+    "technology": "技术",
+    "wallet": "钱包",
+    "community": "社区",
+    "quantum_risk_checker": "Q-Day 检测器",
+    "quan": "Quan",
+    "download_wallet": "下载钱包",
+    "open_menu": "打开菜单"
   },
-  "hero": {
-    "tagline": "欢迎来到未来",
-    "title": "量子安全保护您的加密资产",
-    "subtitle": "Quantus Network，为量子时代打造的 L1 区块链",
-    "cta_primary": "加入公开测试版",
-    "cta_secondary": "阅读白皮书",
-    "stats": {
-      "blocktime": "出块时间",
-      "seconds": "秒",
-      "transactions": "交易",
-      "addresses": "地址",
-      "nodes": "节点"
-    }
-  },
-  "video": {
-    "title": "在持久的密码学基础上创造价值。",
-    "description": "Quantus 为那些预见未来的人们而来；这是创新的下一波浪潮。一个面向未来、量子安全的区块链，能够保护今天的价值免受明天的威胁。"
-  },
-  "benefits": {
-    "title": "未来是量子的",
-    "description": "Quantus Network 是一个为在量子时代蓬勃发展而设计的第一层区块链。它采用后量子密码学保护安全，并利用零知识证明进行扩展，提供了当今区块链无法比拟的安全性、可扩展性和可用性。这是一个预见即将到来的量子技术浪潮的全新设计。",
-    "cards": {
-      "quantum_secure": {
-        "title": "每一层都实现量子安全",
-        "description": "Quantus 的每一层，从交易签名到 P2P 通信，都采用 NIST 支持的后量子密码学进行保护，旨在抵御那些能破解当今区块链的攻击。它为持久而生，并准备好与量子时代一同进化。"
+  "quantum_risk_checker": {
+    "meta": {
+      "title": "Q-Day 检测器 | Quantus - 评估您的量子风险",
+      "description": "您的数字安全是否已为 Q-Day 做好准备？使用 Quantus Q-Day 检测器评估您对量子计算威胁的脆弱性，并学习如何保护您的资产。"
+    },
+    "hero_banner": {
+      "eyebrow": "量子风险检测器",
+      "title": "您的钱包是否暴露？",
+      "sub": "输入任何以太坊地址。我们将扫描其交易历史和余额，以计算您的量子脆弱性。在 Q-Day 到来之前了解您的风险。",
+      "tool_label": "量子风险扫描器 v1.0",
+      "field_label": "以太坊地址或 ENS 名称",
+      "input_placeholder": "0x...",
+      "validation_error": "请输入有效的以太坊地址（0x... 42 个字符）或 ENS 名称（example.eth）。",
+      "scan_button": "立即检测 →",
+      "fine_print": "仅读取公共区块链数据。不需要私钥（private keys）。",
+      "reset_link": "检测另一个地址 →"
+    },
+    "definition": {
+      "eyebrow": "量子最后期限",
+      "title": "Q-Day 即将来临。",
+      "body_1": "Q-Day 是指量子计算机变得足够强大，能够破解保护当今大多数数字资产的加密技术。一旦您的公钥（public key）暴露，足够强大的量子计算机就可以推导出您的私钥（private key），并在您不知情的情况下清空您的钱包。",
+      "body_2": "行动的窗口已经开启，但不会永远开启。"
+    },
+    "method": {
+      "eyebrow": "工作原理",
+      "title": "两个风险因素，一个分数。",
+      "intro": "量子风险检测器扫描任何以太坊地址或 ENS 名称，并根据两个信号计算量子就绪分数（Quantum Readiness Score）：",
+      "signal_1_title": "公钥暴露",
+      "signal_1_body": "每笔转出交易都会在链上永久暴露您的公钥。暴露时间越长，风险越高。",
+      "signal_2_title": "余额敏感度",
+      "signal_2_body": "暴露钱包中的余额越高，目标就越有吸引力。高余额结合暴露的密钥意味着最高风险。"
+    },
+    "advice": {
+      "eyebrow": "下一步该做什么",
+      "title_line1": "存在风险？",
+      "title_line2": "以下是应对措施。",
+      "body": "如果您的钱包已经暴露，唯一的真正解决方案是将资产转移到量子安全地址。Quantus 钱包建立在每笔交易都使用后量子加密技术签署的链上，这意味着您的资产不仅在今天受到保护，在量子计算机到来时也同样安全。",
+      "cta": "下载 Quantus 钱包 →",
+      "footer_note": "Q-Day 检测器由量子安全 L1 区块链 Quantus 构建。"
+    },
+    "checker": {
+      "errors": {
+        "empty": "请输入以太坊地址或 ENS 名称。",
+        "invalid": "请输入有效的以太坊地址（0x... 42 个字符）或 ENS 名称。",
+        "ens_failed": "无法解析 ENS 名称。请确保其正确或使用 0x 地址。"
       },
-      "zero_knowledge": {
-        "title": "零知识设计",
-        "description": "递归零知识证明保持网络高速运行。节点无需重新处理所有内容，只需验证紧凑的证明——这减少了开销，并确保系统在实际需求下平稳增长。"
+      "buttons": {
+        "check_now": "立即检测 →",
+        "resolving": "正在解析 ENS...",
+        "scanning": "正在扫描..."
       },
-      "security_control": {
-        "title": "由您掌控的安全",
-        "description": "Quantus 让您掌控一切。您决定资产如何转移、如何受保护以及信任谁。复杂性在后台处理，因此您的体验清晰、安全，并为量子未来而打造。"
+      "terminal": {
+        "init": "> 正在初始化量子风险扫描...",
+        "address": "> 地址: {address}",
+        "checking_pk": "> 正在检查公钥暴露情况...",
+        "analyzing_balance": "> 正在分析余额敏感度...",
+        "calculating": "> 正在计算量子就绪分数...",
+        "prompt": ">",
+        "complete": "> 扫描完成",
+        "readiness": "> 就绪分数      {score}",
+        "grade": "> 等级          {grade}",
+        "risk": "> 风险等级      {risk}",
+        "exposure": "> 密钥暴露      {exposure}",
+        "advice": "> 建议:",
+        "advice_bullet": ">   · {advice}"
+      },
+      "risk_level": {
+        "very_low": "极低",
+        "low": "低",
+        "medium": "中等",
+        "high": "高",
+        "very_high": "极高"
+      },
+      "exposure": {
+        "exposed": "已暴露",
+        "not_yet": "尚未暴露"
+      },
+      "recommendations": {
+        "smart_contract": "这是一个智能合约。智能合约量子安全分析即将推出！",
+        "public_key_exposed": "您的公钥已通过转出交易暴露，使其容易受到量子攻击。请考虑将资金转移到新地址。",
+        "public_key_safe": "太棒了！没有转出交易意味着您的公钥仍然安全。",
+        "balance_very_high": "您的高额余额使您的地址对量子攻击者更具吸引力。请考虑将资金分散到余额较小的多个地址中。",
+        "balance_high": "您的高额余额使您的地址对量子攻击者更具吸引力。请考虑将资金分散到余额较小的多个地址中。",
+        "balance_medium": "您的余额使您的地址对量子攻击者具有一定的吸引力。请考虑将资金分散到余额较小的多个地址中。",
+        "balance_low": "您的余额较低，但如果公钥暴露，仍存在一定风险。请考虑将资金分散到余额较小的多个地址中。",
+        "receive_only": "请考虑仅使用此地址接收资金，以维持量子安全性。",
+        "empty_address": "空地址的量子风险暴露最小。"
+      },
+      "exposure_duration": {
+        "less_than_a_day": "不到一天",
+        "one_day": "1 天",
+        "days": "{count} 天",
+        "one_month": "1 个月",
+        "months": "{count} 个月",
+        "one_year": "1 年",
+        "one_year_months": "1 年 {months} 个月",
+        "years": "{count} 年",
+        "years_months": "{count} 年 {months} 个月"
       }
     }
   },
-  "app": {
+  "home": {
     "meta": {
-      "title": "下载 Quantus 钱包 | 量子安全加密应用",
-      "description": "Quantus：量子安全的第一层区块链。下载我们的钱包，保护您的资产免受后量子威胁。"
+      "title": "Quantus - 量子安全加密货币",
+      "description": "Quantus：量子安全加密货币。下载我们的钱包以获得后量子保护资产。"
     },
-    "tagline": "您的量子安全网关已准备就绪",
-    "title": "下载 Quantus 钱包",
-    "description": "Quantus 应用将量子安全和零知识可扩展性直接交到您的手中。每一项安全措施都在后台静默运行，因此您可以专注于重要的事情：清晰、自信、可控地转移价值。",
-    "benefits": {
-      "reversible_transactions": {
-        "title": "可逆交易",
-        "description": "为每一次发送设置一个可逆转的时间窗口。操作失误？没有收到您应得的商品？手滑点错了？只需在计时器结束前撤销该交易。"
+    "loader": {
+      "lines": {
+        "protocol": "> QUANTUS 协议 v0.9.1-bell",
+        "integrity": "> 系统完整性 <span class=\"ok\">[通过]</span>",
+        "nist_module": "> NIST FIPS 204 模块已加载 <span class=\"ok\">[正常]</span>",
+        "initializing": "> 正在初始化 <span class=\"ac\">ML-DSA / DILITHIUM-5</span>...",
+        "signature_scheme": "> 后量子签名方案 <span class=\"ok\">激活</span>",
+        "p2p_layer": "> P2P 通信层 → <span class=\"ac\">PQ 加密隧道</span>",
+        "zk_engine": "> 递归 ZK 证明引擎 <span class=\"ok\">就绪</span>",
+        "syncing": "> 正在同步 BELL 测试网... 节点: <span class=\"ac\">247</span>",
+        "chladni": "> 克拉尼场可视化器 <span class=\"ac\">正在加载</span>",
+        "prompt": "> <span class=\"blink\"></span>"
+      }
+    },
+    "hero_banner": {
+      "eyebrow": "量子安全加密货币",
+      "title_line1": "量子计算机无法",
+      "title_line2": "破解的区块链。",
+      "cta_whitepaper": "阅读白皮书",
+      "cta_download_wallet": "下载钱包",
+      "freq": {
+        "wave_mode": "波形模式 (m,n)",
+        "move_cursor": "移动光标以切换频率"
       },
-      "readable_checkphrases": {
-        "title": "可读的核对短语",
-        "description": "不再有复制粘贴的偏执。使用您能真正识别的、独特且人类友好的核对短语，自信地发送。没有拼写错误，没有仿冒诈骗，只有清晰无误的目的地。"
+      "ticker": {
+        "block_height": "区块高度",
+        "tps": "TPS",
+        "uptime": "运行时间",
+        "validators": "验证者",
+        "mainnet": "主网: ??"
+      }
+    },
+    "problem": {
+      "eyebrow": "威胁",
+      "status_label": "威胁等级：危急",
+      "headline": "3 万亿美元加密资产。量子防御为零。",
+      "qubits": {
+        "label": "破解比特币所需的量子比特",
+        "value": "2,400",
+        "sub": "具有密码学意义的量子计算机所需的逻辑量子比特"
       },
-      "security_guardians": {
-        "title": "安全守护者",
-        "description": "您选择您信任的盟友，并赋予他们在转账完成前介入并拦截的权力。这是您自己设计的安全网，在您无法操作时保护您的资产。"
+      "chains": {
+        "bitcoin": {
+          "name": "Bitcoin",
+          "enc": "ECDSA-256"
+        },
+        "ethereum": {
+          "name": "Ethereum",
+          "enc": "ECDSA-256"
+        },
+        "solana": {
+          "name": "Solana",
+          "enc": "ED25519"
+        },
+        "quantus": {
+          "name": "Quantus",
+          "enc_primary": "ML-DSA",
+          "enc_secondary": "DILITHIUM-5",
+          "note": "NIST FIPS 204"
+        }
       },
-      "beneficiary_recovery": {
-        "title": "受益人与恢复",
-        "description": "为长远做计划。指定一个恢复账户或受益人，以便在您不在时继承您的资金。即使发生意外事件，您的资产也能得到保护。把它想象成您的遗嘱，由代码强制执行。"
+      "tags": {
+        "vulnerable": "脆弱",
+        "secure": "安全"
+      },
+      "source": "来源：NIST 后量子密码学标准化 · 2024"
+    },
+    "solution": {
+      "eyebrow": "为什么选择 Quantus",
+      "typewriter_text": "Quantus 是量子安全、私密且可扩展的货币。它使用 NIST 批准的后量子密码学、用于扩展的 ZK 以及 PoW 挖矿。以比特币为模型的最高公平代币经济学。",
+      "pillars": {
+        "pqc": {
+          "title": "后量子密码学",
+          "specs": {
+            "algorithm": {
+              "label": "算法",
+              "value": "ML-DSA / Dilithium-5"
+            },
+            "standard": {
+              "label": "标准",
+              "value": "NIST FIPS 204"
+            },
+            "layer": {
+              "label": "层级",
+              "value": "签名 · P2P · SSH"
+            }
+          }
+        },
+        "zk": {
+          "title": "递归 ZK 证明",
+          "specs": {
+            "type": {
+              "label": "类型",
+              "value": "递归 STARKs"
+            },
+            "purpose": {
+              "label": "用途",
+              "value": "可扩展性"
+            },
+            "throughput": {
+              "label": "吞吐量",
+              "value": "4,200 TPS"
+            }
+          }
+        },
+        "arch": {
+          "title": "全新架构",
+          "specs": {
+            "type": {
+              "label": "类型",
+              "value": "Layer 1"
+            },
+            "approach": {
+              "label": "方法",
+              "value": "从零构建"
+            },
+            "migration": {
+              "label": "迁移",
+              "value": "不需要"
+            }
+          }
+        }
+      }
+    },
+    "ecosystem": {
+      "eyebrow": "生态系统",
+      "headline": "工具。进入 Quantus 的入口。",
+      "cards": {
+        "wallet": {
+          "label": "钱包",
+          "description": "在 iOS 和 Android 上下载。",
+          "beta": "公开测试版已上线",
+          "app_store": "App Store",
+          "google_play": "Google Play"
+        },
+        "technology": {
+          "label": "白皮书",
+          "description": "了解 Quantus。",
+          "nist_badge": "NIST FIPS 204",
+          "whitepaper_cta": "阅读白皮书"
+        },
+        "network": {
+          "label": "网络",
+          "description": "查看网络活动。",
+          "validators": "247 个活跃验证者",
+          "explorer_cta": "查看浏览器"
+        }
+      }
+    },
+    "community": {
+      "eyebrow": "社区",
+      "headline": "参与其中。保持联系。",
+      "cards": {
+        "telegram": {
+          "label": "Telegram",
+          "description": "加入对话",
+          "cta": "加入 Telegram"
+        },
+        "x": {
+          "label": "X",
+          "description": "关注更新",
+          "cta": "在 X 上关注"
+        },
+        "instagram": {
+          "label": "Instagram",
+          "description": "幕后花絮",
+          "cta": "在 IG 上关注"
+        },
+        "youtube": {
+          "label": "YouTube",
+          "description": "观看与学习",
+          "cta": "在 YouTube 上观看"
+        }
+      }
+    },
+    "newsletter": {
+      "headline": "窗口已开启。",
+      "sub": "直接在您的收件箱中获取量子安全更新、协议新闻和早期访问权限。",
+      "first_name_placeholder": "名",
+      "first_name_aria": "名",
+      "last_name_placeholder": "姓",
+      "last_name_aria": "姓",
+      "email_placeholder": "输入您的电子邮件",
+      "email_aria": "电子邮件地址",
+      "submit_label": "订阅",
+      "error_message": "请在每个字段中填写有效值。",
+      "fine_print": "没有垃圾邮件。随时退订。",
+      "success": {
+        "headline": "您已加入。",
+        "sub": "我们将让您保持领先。"
+      }
+    },
+    "blog_section": {
+      "eyebrow": "来自 Quantus 的最新动态",
+      "headline": "抢先应对量子变革。",
+      "blogs_label": "博客",
+      "view_all": "查看所有文章 →",
+      "podcast_label": "QDAY 播客",
+      "view_all_episodes": "查看所有剧集 →",
+      "episodes_count": "QDay 播客共 {count} 集",
+      "watch_on_youtube": "在 YOUTUBE 上观看 →"
+    }
+  },
+  "technology": {
+    "meta": {
+      "title": "技术 | Quantus - 量子安全加密货币",
+      "description": "探索 Quantus 的技术基础。了解我们的 NIST 标准后量子密码学、递归 ZK 证明和可扩展的 Layer 1 架构。"
+    },
+    "hero_banner": {
+      "eyebrow": "协议",
+      "title_line1": "量子安全",
+      "title_line2": "加密货币。",
+      "sub": "通过零知识证明进行扩展。由工作量证明（PoW）保护。"
+    },
+    "architecture": {
+      "title": "架构",
+      "subtitle": "无需迁移。不作妥协。",
+      "content": "现有的每个区块链都是在量子计算机成为真正威胁之前构建的。这意味着它们的安全性是借来的时间。Quantus 是下一代区块链，以后量子密码学为基础。不需要繁琐的迁移。",
+      "cards": {
+        "signatures": {
+          "title": "量子安全签名",
+          "body": "Quantus 上的每笔交易都使用 ML-DSA-87 签署。这是 Cloudflare 和 Signal 等组织采用的最高安全标准。"
+        },
+        "network_layer": {
+          "title": "安全的网络层",
+          "body": "大多数链只保护交易。Quantus 保护一切——包括节点之间的通信。技术栈中没有薄弱环节。"
+        },
+        "scale": {
+          "title": "为扩展而生",
+          "body": "后量子签名的体积比传统签名大。我们通过零知识证明系统解决了这个问题，该系统可以将数千笔交易压缩成一个可验证的证明，且不牺牲安全性。"
+        }
+      }
+    },
+    "cryptography": {
+      "title": "密码学",
+      "subtitle": "量子无法破解的标准。",
+      "content": "后量子密码学已经到来。",
+      "columns": {
+        "meaning": {
+          "title": "这意味着什么",
+          "body": "传统区块链使用椭圆曲线密码学。足够强大的量子计算机可以破解它——从公钥推导出私钥、伪造交易、窃取资金。Quantus 使用的算法 ML-DSA 没有已知的量子脆弱性。其安全性基于量子计算机无法高效解决的一类数学问题。"
+        },
+        "urgency": {
+          "title": "为什么现在很重要",
+          "body": "前量子链面临着艰难的迁移。他们需要实施新的加密标准，让每个用户都进行迁移，并决定如何处理未迁移的代币，同时还要弄清楚如何扩展 PQC。迁移的窗口正在关闭。Quantus 不需要迁移，它从一开始就具备这些特性。"
+        }
+      },
+      "table": {
+        "headers": {
+          "property": "属性",
+          "ecdsa": "ECDSA",
+          "mldsa": "ML-DSA"
+        },
+        "rows": {
+          "quantum_resistant": "抗量子",
+          "nist_approved": "NIST 批准",
+          "security_level": "安全等级",
+          "signature_scheme": "签名方案",
+          "shor_vulnerable": "易受 Shor 算法攻击"
+        },
+        "values": {
+          "ecdsa_security": "NIST 1 级",
+          "mldsa_security": "NIST 5 级",
+          "ecdsa_scheme": "椭圆曲线",
+          "mldsa_scheme": "模块格"
+        }
+      }
+    },
+    "scalability": {
+      "title": "可扩展性",
+      "subtitle": "扩展优质货币。",
+      "content": "后量子密码学存在权衡——更大的签名意味着每个区块的交易更少。每个致力于量子安全的链都会遇到这道墙。Quantus 已经解决了这个问题。",
+      "stat": {
+        "label": "吞吐量提升",
+        "value": "223×",
+        "sub": "对比使用 ZK 证明聚合的原始后量子交易"
+      },
+      "description": "数千笔交易。一个精简证明。链上验证。"
+    },
+    "consensus": {
+      "title": "共识",
+      "subtitle": "工作量证明。为 ZK 而生。",
+      "body": "Quantus 使用工作量证明（PoW）共识。与比特币相同且经过实战检验的模型。一个改变：哈ッシュ函数针对零知识证明系统进行了优化。这意味着 Quantus 的 ZK 基础设施是原生的且高效的，而不是后期补丁。"
+    },
+    "cta": {
+      "title": "完整的技术图景。",
+      "sub": "协议架构、加密假设和完整的安全模型——尽在 Quantus 白皮书中。",
+      "primary_cta": "阅读白皮书",
+      "secondary_cta": "探索网络"
+    }
+  },
+  "wallet": {
+    "meta": {
+      "title": "钱包 | Quantus - 保护您的资产免受量子威胁",
+      "description": "下载适用于 iOS 和 Android 的 Quantus 钱包。体验具备可撤销交易和默认隐私安全功能的量子安全加密货币。"
+    },
+    "hero_banner": {
+      "eyebrow": "QUANTUS 钱包",
+      "title": "优质货币。就在您的口袋里。",
+      "sub": "发送、接收和存储量子安全的稳健货币。支持 iOS 和 Android。",
+      "cta_app_store": "在 App Store 下载",
+      "cta_google_play": "在 Google Play 下载"
+    },
+    "advantage": {
+      "eyebrow": "与众不同的构建",
+      "heading": "避风港般的安全。",
+      "body": "您的钱包安全性取决于其底层的区块链。其他链使用椭圆曲线密码学，这种加密方式可以被足够强大的量子计算机破解。Quantus 的构建方式截然不同。后量子密码学是链的基础，而不是额外添加的功能。您的钱包继承了这种安全性。"
+    },
+    "features": {
+      "eyebrow": "功能",
+      "heading": "为人类而建。",
+      "cards": {
+        "reversible": {
+          "title": "可撤销交易",
+          "body": "告别测试交易。为转出交易设置时间窗口。改变主意了？在窗口关闭前撤销。这是一个不损害最终性的安全网。"
+        },
+        "checkphrases": {
+          "title": "校验短语",
+          "body": "再也不会输入错误。每个 Quantus 地址都有一个人类可读的校验短语。这是根据您的地址生成的一串简短且易记的单词。发送前验证短语。防止拼写错误、复制粘贴篡改和地址投毒攻击。"
+        },
+        "high_security": {
+          "title": "高安全性账户",
+          "body": "适用于机构和高级用户。创建死人开关或为您的账户分配监护人（guardian），监护人可以撤销恶意交易。监护人可以在撤销期内取消交易，但不能代表您消费。可选且可组合。"
+        },
+        "encrypt": {
+          "title": "默认私密",
+          "body": "隐私是一项权利。使 Quantus 扩展到 3,800 TPS 的零知识证明设计同时也保护了您的隐私。您的交易、余额和历史记录都属于您自己。"
+        }
+      }
+    },
+    "issues": {
+      "eyebrow": "为什么这很重要",
+      "heading": "今天的钱包，在量子时代依然安全。",
+      "body": "Q-day 不会通过电视转播。Quantus 钱包意味着您无需为此担心。您已经站在了变革的正确一边。",
+      "stats": {
+        "tps": {
+          "value": "3,800",
+          "label": "QUANTUS 的 TPS"
+        },
+        "security": {
+          "value": "NIST 5",
+          "label": "安全等级"
+        },
+        "migration": {
+          "value": "0",
+          "label": "无需迁移"
+        }
       }
     },
     "cta": {
-      "tagline": "公开测试版现已上线",
-      "title": "他们说量子还很遥远。他们对人工智能也曾这么说。",
-      "button": "加入量子浪潮"
+      "title": "拥有量子安全货币。",
+      "sub": "免费下载。全球可用。",
+      "primary_cta": "在 App Store 下载",
+      "secondary_cta": "在 Google Play 下载",
+      "note": "公开测试版现已在 iOS 和 Android 上线"
+    }
+  },
+  "about": {
+    "meta": {
+      "title": "关于我们 | Quantus - 构建后量子金融系统",
+      "description": "认识 Quantus 背后的团队。我们是致力于通过量子安全基础设施构建永久经济自由的工程师和研究人员。"
+    },
+    "hero": {
+      "eyebrow": "关于 QUANTUS",
+      "title": "由在威胁显现之前就预见到它的人们所构建。",
+      "sub": "Quantus 是一个由工程师、研究人员和运营人员组成的团队，致力于构建后量子金融系统的基础设施。"
+    },
+    "team": {
+      "eyebrow": "团队",
+      "heading": "构建者们。"
+    },
+    "mission": {
+      "eyebrow": "使命",
+      "heading": "永久的经济自由",
+      "body1": "从协议设计到用户界面，我们的每一个决定都基于深厚的技术知识和对简洁的尊重。",
+      "body2": "我们专注于基础：经过数学证明的安全性、高性能以及轻松的产品体验。",
+      "body3": "我们精密构建。我们快速行动且不走捷径。我们为即将到来的世界而设计，而不是为了已经过去的世界。"
+    },
+    "advisors": {
+      "eyebrow": "顾问"
+    },
+    "investors": {
+      "eyebrow": "支持机构"
+    },
+    "contact": {
+      "eyebrow": "联系我们",
+      "heading": "想与我们合作或了解更多？",
+      "body": "关于合作伙伴、媒体和投资咨询：",
+      "email": "hello@quantus.com",
+      "subject": "来自 Quantus 网站的咨询",
+      "cta": "给我们发送消息 →"
+    }
+  },
+  "community": {
+    "meta": {
+      "title": "社区 | Quantus - 加入量子安全的未来",
+      "description": "连接 Quantus 社区。加入我们的 Telegram，在社交媒体上关注我们，并随时了解最新的协议新闻和活动。"
+    },
+    "hero": {
+      "eyebrow": "社区",
+      "heading": "构建量子安全未来的人们。",
+      "sub": "加入 Quantus 社区。他们是在主流社会意识到量子威胁之前就已理解它的研究人员和早期采用者。"
+    },
+    "events": {
+      "eyebrow": "活动",
+      "heading": "与我们线下见面。",
+      "card": {
+        "date_label": "QDAY — 2026 年 4 月",
+        "title": "一个汇聚 Quantus 网络和量子计算研究人员的社区活动。",
+        "cta": "获取通知 →",
+        "status": "详情即将公布"
+      }
+    },
+    "podcast": {
+      "eyebrow": "播客",
+      "heading": "QDay — 量子安全播客。",
+      "body": "由 Christopher Smith 主持。探讨量子计算、区块链安全和数字金融未来的跨界对话。",
+      "cta_spotify": "在 SPOTIFY 上收听 →",
+      "cta_apple": "在 APPLE PODCASTS 上收听 →",
+      "episode": {
+        "title": "第 18 集：量子威胁真的那么近吗？",
+        "meta": "1:27:02 · 9 天前"
+      }
+    },
+    "telegram": {
+      "eyebrow": "加入对话",
+      "heading": "找到您的社区角落。",
+      "body": "在 Quantus Telegram 社区中与研究人员和早期采用者建立联系。",
+      "cta": "加入 TELEGRAM →"
+    },
+    "socials": {
+      "eyebrow": "关注我们",
+      "platforms": {
+        "x": "X (TWITTER)",
+        "instagram": "INSTAGRAM",
+        "github": "GITHUB",
+        "youtube": "YOUTUBE"
+      }
+    },
+    "blog": {
+      "eyebrow": "博客",
+      "heading": "来自 Quantus 团队。",
+      "sub": "技术深度分析、协议更新以及对量子威胁格局的见解。",
+      "view_all": "阅读所有文章 →"
+    }
+  },
+  "privacy": {
+    "meta": {
+      "title": "Quantus - 隐私政策",
+      "description": "阅读 Quantus 的隐私政策，了解我们如何在我们的应用程序和网站中收集、使用和保护您的信息。"
+    },
+    "hero": {
+      "eyebrow": "法律",
+      "title": "隐私政策",
+      "last_updated": "最后更新：2025 年 6 月 12 日"
+    },
+    "information_collect": {
+      "title": "我们收集的信息",
+      "from_apps": "来自我们的应用程序：",
+      "from_apps_content": "我们不会通过 Quantus 应用程序收集个人信息。",
+      "from_website": "来自我们的网站，我们会自动收集：",
+      "from_website_items": [
+        "IP 地址（通过 Google Analytics 匿名化）",
+        "浏览器和设备信息",
+        "访问的页面和使用模式",
+        "地理位置（仅限国家和地区）"
+      ],
+      "from_you": "直接来自您：",
+      "from_you_items": [
+        "电子邮件地址（如果您订阅了我们的时事通讯）",
+        "您在联系我们时提供的信息"
+      ],
+      "technical": "技术数据：",
+      "technical_items": [
+        "应用程序崩溃报告和错误日志",
+        "网络连接信息（用于提高性能）"
+      ]
+    },
+    "how_we_use": {
+      "title": "我们如何使用信息",
+      "intro": "我们将收集的信息用于：",
+      "items": [
+        "改进我们的网站和应用程序",
+        "发送时事通讯更新（经您同意）",
+        "分析使用情况以增强用户体验",
+        "监控滥用并保护我们的服务",
+        "遵守法律义务"
+      ],
+      "we_do_not": "我们不会：",
+      "we_do_not_items": [
+        "向第三方出售或出租您的数据",
+        "存储您的私钥或交易数据",
+        "将您的数据用于定向广告"
+      ]
+    },
+    "information_sharing": {
+      "title": "信息共享",
+      "intro": "我们可能会与以下各方共享信息：",
+      "items": [
+        "分析提供商（用于网站数据的 Google Analytics）",
+        "帮助运营我们网站的服务提供商",
+        "法律要求的法律部门"
+      ],
+      "note": "我们仅共享无法识别您身份的汇总、匿名数据。"
+    },
+    "cookies_tracking": {
+      "title": "Cookie 和追踪",
+      "intro": "我们的网站使用 Cookie 用于：",
+      "items": ["基本的网站功能", "了解网站使用情况的分析", "性能改进"],
+      "note": "您可以通过浏览器设置控制 Cookie，但这可能会影响网站功能。"
+    },
+    "data_security": {
+      "title": "数据安全与保留",
+      "intro": "我们实施标准的安全措施来保护您的数据，包括加密和安全存储。然而，没有任何在线服务是完全安全的。",
+      "technical": "保留期限：",
+      "retention_items": ["网站分析：26 个月", "时事通讯订阅：直到您退订"]
+    },
+    "your_rights": {
+      "title": "您的权利",
+      "general": "您可以：随时退订通讯。",
+      "california": "对于加州居民：根据 CCPA，您享有额外权利，包括了解我们收集哪些个人信息的权利和删除权。",
+      "eu_uk": "对于欧盟和英国居民：根据 GDPR，您享有数据可移植权和反对处理权等权利。"
+    },
+    "international_transfers": {
+      "title": "国际转移",
+      "content": "您的信息可能会在美国进行处理。我们确保对国际数据转移提供适当的保护。"
+    },
+    "childrens_privacy": {
+      "title": "儿童隐私",
+      "content": "我们的服务不面向 18 岁以下的任何人。我们不会故意收集未成年人的信息。"
+    },
+    "additional_info": {
+      "title": "附加信息",
+      "regulatory": "合规性：",
+      "regulatory_items": [
+        "用户必须遵守当地的加密货币法规",
+        "某些功能在某些司法管辖区可能会受到限制",
+        "我们保留根据法律要求限制访问的权利"
+      ]
+    },
+    "contact_info": {
+      "title": "联系我们",
+      "address": "Quantus Labs LLC\n30 N Gould St #52155\nSheridan, WY 82801",
+      "note": "关于本政策的问题或行使您的隐私权，请使用我们的",
+      "link": "联系表单"
+    }
+  },
+  "terms": {
+    "meta": {
+      "title": "Quantus - 服务条款",
+      "description": "阅读 Quantus 的服务条款，了解我们的应用程序和区块链服务的使用规则、责任和法律免责声明。"
+    },
+    "hero": {
+      "eyebrow": "法律",
+      "title": "服务条款",
+      "last_updated": "最后更新：2025 年 6 月 12 日"
+    },
+    "what_we_provide": {
+      "title": "我们提供的服务",
+      "intro": "Quantus 提供：",
+      "items": [
+        "移动应用程序（可在 App Store 和 Google Play 获取）",
+        "集成了挖矿功能的桌面应用程序",
+        "访问我们的开源代码",
+        "社区时事通讯和更新",
+        "访问 Quantus 区块链"
+      ]
+    },
+    "what_you_cannot_do": {
+      "title": "禁止行为",
+      "intro": "您不得将我们的服务用于：",
+      "items": [
+        "从事非法活动",
+        "传播恶意软件或攻击系统",
+        "违反出口管制或制裁",
+        "干扰网络运营",
+        "提供虚假信息"
+      ]
+    },
+    "mining_participation": {
+      "title": "挖矿与网络参与",
+      "items": [
+        "挖矿功能仅用于教育和网络参与",
+        "您必须遵守当地的能源和挖矿法规",
+        "我们不保证挖矿的盈利性或奖励",
+        "网络功能可能会随着协议的演变而改变"
+      ]
+    },
+    "dispute_resolution": {
+      "title": "争议解决",
+      "content": "任何争议将根据美国仲裁协会规则在怀俄明州通过具有约束力的仲裁解决。这些条款受怀俄明州法律管辖。如果您违反这些条款，我们可能会终止您的访问权限。"
+    },
+    "your_responsibilities": {
+      "title": "您的责任",
+      "intro": "您对以下事项承担全部责任：",
+      "items": [
+        "保护您的钱包凭据和助记词",
+        "遵守当地关于加密货币和挖矿的法律",
+        "了解区块链技术的风险",
+        "丢失的私钥无法由我们恢复"
+      ]
+    },
+    "non_custodial": {
+      "title": "非托管设计",
+      "intro": "重要提示：我们不存储或访问您的私钥、助记词或数字资产。您对自己的钱包和资产拥有完全的控制权和责任。",
+      "items": [
+        "我们无法恢复丢失的私钥或助记词",
+        "我们无法撤销区块链上的交易",
+        "我们无法冻结或控制您的资产",
+        "您负责保护您的钱包凭据",
+        "请务必在安全位置备份您的助记词"
+      ]
+    },
+    "disclaimers": {
+      "title": "免责声明与限制",
+      "intro": "我们的服务按“原样”提供，不作任何保证。加密货币涉及巨大的损失风险。在法律允许的最大范围内：",
+      "items": [
+        "我们不对任何间接或后果性损害负责",
+        "我们的总责任不超过 1 美元",
+        "您同意赔偿因您使用我们的服务而产生的索赔"
+      ]
+    },
+    "contact": {
+      "title": "联系我们",
+      "address": "Quantus Labs LLC\n30 N Gould St #52155\nSheridan, WY 82801",
+      "note": "关于这些条款的问题，请发送电子邮件至：",
+      "email": "hello@quantus.com"
+    }
+  },
+  "footer": {
+    "brand": "Quantus",
+    "copyright": "© {year} Quantus.",
+    "rights": "保留所有权利。",
+    "built_on": "基于 BELL 测试网构建",
+    "sections": {
+      "protocol": "协议",
+      "community": "社区",
+      "company": "公司"
+    },
+    "links": {
+      "whitepaper": "白皮书",
+      "technology": "技术",
+      "network": "网络",
+      "wallet": "钱包",
+      "research": "研究",
+      "documentation": "文档",
+      "telegram": "Telegram",
+      "x": "X (Twitter)",
+      "instagram": "Instagram",
+      "youtube": "YouTube",
+      "about": "关于我们",
+      "blog": "博客",
+      "podcast": "QDay 播客",
+      "contact": "联系我们",
+      "privacy": "隐私政策",
+      "terms": "服务条款",
+      "coingecko": "CoinGecko"
     }
   },
   "account": {
     "meta": {
-      "title": "Quantus Network - 量子安全的第一层区块链",
-      "description": "一个量子安全的开源第一层区块链，采用后量子密码学和 zk-proof 可扩展性构建，为您的数字资产提供未来保障。"
+      "title": "保护您的加密资产 | Quantus 账户",
+      "description": "创建您的 Quantus 账户，保护您的数字资产免受量子威胁。加入下一代加密量子安全货币。"
     },
     "title": "立即保护您的加密资产",
-    "tag": "免受量子威胁"
+    "tag": "在量子威胁面前坚不可摧"
   },
   "invite": {
     "meta": {
-      "title": "Quantus Network - 量子安全的第一层区块链",
-      "description": "一个量子安全的开源第一层区块链，采用后量子密码学和 zk-proof 可扩展性构建，为您的数字资产提供未来保障。"
+      "title": "加入 Quantus | 保护加密资产邀请",
+      "description": "您已被邀请加入 Quantus。使用首个为未来数字金融构建的量子安全 Layer 1 区块链保护您的资产。"
     },
-    "title": "邀请您来保护您的加密资产",
+    "title": "邀请您保护加密资产",
     "code": {
       "label": "推荐码",
       "copy": "推荐码已复制！"
     }
   },
-  "team": {
-    "title": "核心团队",
-    "description": "团队由来自早期加密创业公司和前 CTO 角色的资深工程师创立。团队将应用密码学和零知识系统的深厚专业知识与交付安全、可扩展基础设施的成熟能力相结合。",
-    "cta": "取得联系",
-    "members": {
-      "chris": {
-        "title": "首席执行官",
-        "bio": "作为站在人工智能、区块链和量子计算前沿的技术先驱和企业家，Chris 罕见地融合了深厚的技术专长和哲学思考。在过去的十年里，他一直致力于构建能够赋权个人并重新定义数字信任的工具。",
-        "achievements": [
-          "BitMesh、Lunyr (LUN) 和 FactoryDAO (FVT) 的创始人",
-          "比特币基础库的早期贡献者",
-          "前 Tensor Spark 人工智能团队负责人，专注于应用机器学习",
-          "为高净值人士提供私人网络安全和数字资产恢复顾问",
-          "专注领域：密码学、复杂性理论、代数拓扑学、量子计算"
-        ]
-      },
-      "joe": {
-        "title": "首席运营官"
-      },
-      "nik": {
-        "title": "高级软件工程师"
-      },
-      "cezary": {
-        "title": "高级软件工程师"
-      },
-      "rob": {
-        "title": "开发运维"
-      }
-    }
-  },
-  "roadmap": {
-    "title": "路线图",
-    "timeline": {
-      "heisenberg": {
-        "date": "2024 年 12 月",
-        "title": "Heisenberg 初始",
-        "content": "资金到位，选定 Substrate"
-      },
-      "resonance": {
-        "date": "2025 年 7 月",
-        "title": "Resonance Alpha",
-        "content": "公开测试网，Dilithium 签名，可逆交易"
-      },
-      "schrodinger": {
-        "date": "2025 年 10 月",
-        "title": "Schrödinger Beta",
-        "content": "公开测试版启动，功能完善，准备审计"
-      },
-      "bell": {
-        "date": "2026 年第一季度",
-        "title": "Bell 主网",
-        "content": "主网启动，QUAN 代币发布"
-      },
-      "planck": {
-        "date": "2026 年第二季度",
-        "title": "Planck 升级",
-        "content": "高安全性账户，多重签名账户，硬件钱包集成"
-      },
-      "dirac": {
-        "date": "2026 年第三季度",
-        "title": "Dirac 扩展",
-        "content": "纠缠地址，桥接到 Solana"
-      }
-    }
-  },
-  "events": {
-    "title": "来见见我们",
-    "upcoming": "即将举行的活动：",
-    "token2049": {
-      "title": "Token 2049",
-      "date": "2025 年 10 月 1-2 日 - 新加坡滨海湾金沙",
-      "description": "来和我们见面，聊聊量子、区块链、艺术、音乐或任何事情！",
-      "additional": "我们整个周末都会在那里！",
-      "cta": "活动详情"
-    }
-  },
-  "socials": {
-    "title": "关注我们，获取有趣的内容、播客、采访、技术魔法等！"
-  },
-  "checker": {
-    "meta": {
-      "title": "量子风险检查器 | 扫描您的钱包或 ENS 的 Q-Day 风险",
-      "description": "检查任何以太坊钱包或 ENS 名称是否存在量子威胁。立即获取您的 Q-Day 风险评分，看看您的加密资产到底有多安全。"
-    },
-    "subtitle": "量子风险检查器",
-    "title": "您在 Qday（量子日）安全吗？",
-    "description": "分析您的以太坊地址是否存在量子计算漏洞。我们的工具会检查交易历史和余额，以提供全面的量子安全风险评估。",
-    "form": {
-      "label": "以太坊地址",
-      "placeholder": "输入您的钱包地址",
-      "btn": "分析"
-    },
-    "definition": {
-      "title": "量子最后期限",
-      "paragraph_one": "Q-Day（量子日）是指量子计算机能够破解当今大多数数字世界所依赖的密码学的时刻。安全网络连接、软件更新、银行系统和电子邮件背后的算法，如 RSA 和椭圆曲线密码学，将不再安全。",
-      "paragraph_two": "即使是多年前加密的数据，也可能现在被收集，然后在未来被解密，从而暴露政府、企业和个人的机密信息。"
-    },
-    "consequence": {
-      "title": "Q-day 对区块链和数字资产意味着什么",
-      "paragraph_one": "区块链依赖椭圆曲线数字签名来证明资金所有权。例如，在以太坊上，每笔转出交易都会永久暴露钱包的公钥。",
-      "paragraph_two": "量子计算机可以利用公钥通过数学推导出私钥，从而允许攻击者伪造有效签名并在所有者不知情的情况下转移资产。",
-      "paragraph_three": "随后，整个网络将争相采用量子安全的协议，但到那时，毫无准备的区块链可能早已被攻破。",
-      "invitation_one": "使用我们的",
-      "product": "量子风险扫描器",
-      "invitation_two": "查看您的地址有多脆弱，并在 Qday 到来之前采取行动。"
-    },
-    "method": {
-      "title": "工作原理",
-      "subtitle": "量子风险扫描器会扫描任何以太坊地址，并为其提供一个量子准备分数、一个风险等级和一个评级。",
-      "factor_title": "两个主要风险因素决定了分数：",
-      "factors": [
-        {
-          "title": "公钥暴露",
-          "content": "该地址是否曾发送过交易并泄露了其密钥。"
-        },
-        {
-          "title": "余额敏感性",
-          "content": "ETH 余额越高，目标吸引力就越大。"
-        }
-      ],
-      "factor_usage": "根据这些信号，我们计算出一个数值分数，并将其映射为简单的 A-F 评级和风险等级，清晰到足以让您采取行动。",
-      "analysis_title": "您的分析将提供：",
-      "analysis_items": [
-        "安全分数：35 - 100",
-        "风险等级：非常高 / 高 / 中 / 低 / 非常低",
-        "评级：F / D / C / B / A / A+",
-        "密钥暴露状态：已暴露或尚未暴露",
-        "建议：实用的后续步骤"
-      ]
-    }
-  },
-  "quests": {
-    "meta": {
-      "title": "Quantus 任务 | 加入游戏并在 Quantus 网络上赚取奖励",
-      "description": "参与 Quantus 任务 — 赢取真实奖励的有趣区块链挑战。在 Quantus 网络上赚取积分、攀登排行榜并确保您的空投份额。"
-    },
-    "hero": {
-      "welcome": "欢迎来到",
-      "title": "Quantus 任务",
-      "description": "Quantus 任务是为奖励我们最早且最活跃的社区成员而设计的一系列挑战。通过完成任务，确保您早期采用者的身份，并赚取 USDC。"
-    },
-    "shill": {
-      "info": {
-        "code": "任务 #001",
-        "name_one": "宣传",
-        "name_two": "之",
-        "name_three": "王",
-        "description": "一场争夺 500 美元 USDC 奖金池、额外空投积分以及最终头衔“宣传之王”的战斗。",
-        "play_guide": {
-          "title": "如何参与",
-          "guides": [
-            "下载 Quantus 应用。",
-            "转到 Quantus 任务标签页，找到您的推荐链接 (Qcat)。",
-            "将您的代码分享给您的朋友和“敌人”。",
-            "观看实时排行榜，跟踪您的实时排名。"
-          ]
-        }
-      },
-      "leaderboard": {
-        "title": "排行榜",
-        "referrals": "推荐数",
-        "table": {
-          "rank": "排名",
-          "address": "地址",
-          "referrals": "推荐数"
-        }
-      },
-      "rules": {
-        "title": "游戏规则",
-        "goal": {
-          "title": "目标：",
-          "content": "使用您独特的邀请码推荐最多的用户使用 Quantus 钱包。只有创建了钱包的推荐才会被计算在内。"
-        },
-        "prize": {
-          "title": "奖品：",
-          "content": ["第一名：300 USDC", "第二名：150 USDC", "第三名：50 USDC"]
-        },
-        "win": {
-          "title": "如何获胜：",
-          "content": "连续 72 小时保持第一名的位置。",
-          "card": {
-            "title": "量子扭转",
-            "content_one": "排行榜上的第一名由一笔实时的、可逆转的 10,000 QUAN 交易代表。如果另一位用户超越了您，该交易将自动逆转并发送给新的领先者。300 USDC 奖金的申领权也随之转移。",
-            "content_two": "要赢得大奖，您必须夺得第一名并连续保持 72 小时。一旦您做到了，这笔 10,000 QUAN 的交易将最终确定，奖金被锁定，挑战结束。"
-          }
-        }
-      }
-    },
-    "raid": {
-      "info": {
-        "code": "QUEST #002",
-        "name_one": "宣传",
-        "name_two": "之",
-        "name_three": "王",
-        "description": "一场为了 500 USDC 奖池及终极头衔“Shill 之王”而展开的对决。",
-        "play_guide": {
-          "title": "玩法说明",
-          "guides": [
-            "下载 Quantus 应用程序。",
-            "进入 Quantus Quests 标签页 (The Qcat)。",
-            "关联您的 ETH 和 X 账号以获取资格。",
-            "在 Telegram 群组中查看突袭目标。",
-            "通过回复目标推文来进行突袭。",
-            "将其添加到您的突袭提交中。",
-            "关注排行榜以追踪您的排名。",
-            "排行榜每 24 小时更新一次。"
-          ]
-        }
-      },
-      "leaderboard": {
-        "title": "排行榜",
-        "impressions": "曝光量",
-        "table": {
-          "rank": "排名",
-          "address": "地址",
-          "impressions": "曝光量"
-        }
-      },
-      "rules": {
-        "title": "游戏规则",
-        "goal": {
-          "title": "目标：",
-          "content": "通过一次或多次突袭尝试积累最多的曝光量。仅计算对自己有效的突袭目标回复。"
-        },
-        "prize": {
-          "title": "奖品：",
-          "content": [
-            "第一名：$300 USDC",
-            "第二名：$150 USDC",
-            "第三名：$50 USDC"
-          ]
-        },
-        "win": {
-          "title": "如何获胜：",
-          "content": "连续 72 小时保持第一名的位置。",
-          "card": {
-            "title": "量子反转 (Quantum Twist)",
-            "content_one": "排行榜第一名的位置由一笔实时的、可撤销的 10,000 QUAN 交易代表。如果其他用户超过您，该交易将自动撤销并发送给新的领先者。$300 USDC 奖金的索取权也随之转移。",
-            "content_two": "要赢得大奖，您必须占据第一名并保持 72 小时。一旦达成，10,000 QUAN 交易将最终确认，奖金锁定，挑战结束。"
-          }
-        }
-      }
-    }
-  },
-  "footer": {
-    "newsletter": {
-      "title": "订阅我们的新闻通讯",
-      "description": "Alpha 警报！获取您的每周新闻快讯，包含抢先看、更新、新闻综述、教育内容等",
-      "placeholder": {
-        "email": "电子邮件",
-        "firstname": "名字",
-        "lastname": "姓氏"
-      },
-      "button": "订阅",
-      "success": "欢迎来到量子安全 🎉",
-      "error": "错误：出现了一些问题。"
-    },
-    "description": "一个量子安全的第一层区块链，为那些希望保护重要事物的人们而设；他们的资产、他们的未来和他们的自由。",
-    "copyright": "版权所有 © {year} Quantus Network",
-    "navigation": {
-      "resources": {
-        "title": "资源",
-        "community": "社区",
-        "documentation": "文档",
-        "tech_support": "技术支持"
-      },
-      "info": {
-        "title": "信息",
-        "company": "公司",
-        "blog": "博客",
-        "terms": "条款与条件",
-        "privacy": "隐私政策"
-      }
-    }
-  },
-  "contact": {
-    "meta": {
-      "title": "联系 Quantus Network | 获取支持或合作信息",
-      "description": "如需支持、合作或媒体咨询，请联系 Quantus Network 团队。我们将帮您快速联系到合适的专家。"
-    },
-    "title": "取得联系",
-    "subtitle": "联系我们，让我们一起创造一个充满可能性的宇宙！",
-    "form": {
-      "name": "姓名",
-      "email": "电子邮件",
-      "message": "消息",
-      "submit": "发送",
-      "success": "我们将尽快处理您的消息。",
-      "error": "错误：出现了一些问题。"
-    },
-    "quote": {
-      "text": "原子或基本粒子本身并非真实存在；它们构成的是一个充满潜能或可能性的世界，而非一个由事物或事实构成的世界。",
-      "author": "维尔纳·海森堡 (Werner Heisenberg)"
-    }
-  },
-  "launch": {
-    "meta": {
-      "title": "Quantus 代币经济学与发行分配",
-      "description": "QUAN 代币供应、分配与发行分配详情。固定供应量 2100 万 QUAN，采用公平发行机制。"
-    },
-    "title": "Quantus 代币经济学与发行分配",
-    "overview": {
-      "title": "概述",
-      "content": "Quantus 的最大固定供应量为 **21,000,000 QUAN**。代币通过初始代币生成事件 (TGE) 与长期工作量证明挖矿相结合的方式发行。该结构旨在避免预挖、最大程度减少内部人士优势，并使长期网络安全与用户参与保持一致。"
-    },
-    "supply": {
-      "title": "代币供应",
-      "max_supply": "最大供应量：",
-      "max_supply_value": "21,000,000 QUAN",
-      "tge_supply": "TGE 铸造供应量：",
-      "tge_supply_value": "7,350,000 QUAN (35%)",
-      "mining_supply": "挖矿释放量：",
-      "mining_supply_value": "13,650,000 QUAN (65%)，约 40 年释放",
-      "note": "挖矿释放遵循指数衰减的区块奖励曲线，这意味着早期发行量较高，随着供应接近最大值而逐渐放缓。"
-    },
-    "tge": {
-      "title": "发行分配 (TGE)",
-      "intro": "以下代币在代币生成事件 (TGE) 时铸造并分配：",
-      "table": {
-        "category": "类别",
-        "percent": "占供应比例",
-        "quan": "QUAN",
-        "private_sale": "私募",
-        "public_sale": "公募",
-        "dex_liquidity": "DEX 流动性",
-        "total": "TGE 合计"
-      },
-      "note_1": "所有私募与公募代币在上线时完全流通。不设投资者锁仓或归属期。",
-      "note_2": "公募所得 (USDC) 与 QUAN 按 1:1 配对并直接存入流动性池。若 10% 公募份额全部售罄，将再铸造 10% 与之匹配——100% 的公募所得进入流动性池 (LP)。"
-    },
-    "mining": {
-      "title": "基于挖矿的分配 (65%)",
-      "intro": "剩余 65% 的供应量 — **13,650,000 QUAN** — 通过工作量证明挖矿在约 40 年内分配。",
-      "ownership_title": "挖矿释放的最终归属：",
-      "table": {
-        "recipient": "接收方",
-        "percent": "占总供应比例",
-        "miners": "矿工",
-        "company": "公司（开发者税）"
-      }
-    },
-    "company": {
-      "title": "公司与网络对齐",
-      "intro": "Quantus 不进行预挖，也不为团队预留代币。",
-      "content": "相反，公司通过区块奖励上的开发者税获得补偿：",
-      "points": [
-        "每块奖励的一部分分配给公司。这相当于协议层面的归属安排——代币随网络发展在约 5 年内逐步获得。",
-        "这避免了比特币早期供应曲线问题：早期矿工囤积大量持仓，导致持续的抛压风险。"
-      ]
-    },
-    "vesting": {
-      "title": "锁仓与归属",
-      "mark_tge": "TGE",
-      "mark_y1": "第1年",
-      "mark_y2": "第2年",
-      "mark_y3": "第3年",
-      "mark_y4": "第4年+",
-      "row_investors": "投资者",
-      "investors_bar": "100% 首日即流通",
-      "row_dex": "DEX 流动性",
-      "dex_bar": "TGE 时配对入 LP",
-      "row_team": "团队与创始人",
-      "cliff": "锁定期",
-      "linear_monthly": "按月线性释放",
-      "row_advisors": "顾问",
-      "row_company": "公司（开发者税）",
-      "company_bar": "通过区块奖励获得 ~5年"
-    },
-    "vesting_summary": "所有私募与公募代币在 TGE 时完全流通。团队与顾问分四年归属，含一年锁定期。公司代币从不预挖——通过区块奖励上的开发者税逐步获得。",
-    "fees": {
-      "title": "手续费与销毁",
-      "intro": "为支持长期网络安全，虫洞 (wormhole) 交易收取 **0.1% 的交易量费用**：",
-      "points": ["**50%** 支付给矿工", "**50%** 被销毁"],
-      "note": "随着网络使用增长，这将带来通缩压力。"
-    },
-    "funding": {
-      "title": "融资历史",
-      "intro": "两轮融资已结束，共出售总供应量的 7%。代币估值为股权估值的 2 倍——行业标准，已体现在所有合同之中。未来融资仅通过代币销售进行。",
-      "table": {
-        "round": "轮次",
-        "raised": "募集金额",
-        "valuation": "代币估值",
-        "lead": "领投",
-        "total": "合计",
-        "pr1": "私募第一轮",
-        "pr2": "私募第二轮",
-        "raised_pr1": "$1.65M",
-        "raised_pr2": "$770K",
-        "val_pr1": "$40M",
-        "val_pr2": "$100M",
-        "lead_pr2": "Balaji Srinivasan",
-        "dash": "—",
-        "raised_total": "$2.42M"
-      }
-    },
-    "chart": {
-      "miners": "矿工",
-      "private": "私募",
-      "company": "公司",
-      "public": "公募",
-      "liquidity": "流动性"
-    }
-  },
-  "about": {
-    "meta": {
-      "title": "关于 Quantus Network | 我们对量子安全未来的愿景",
-      "description": "了解 Quantus Network 构建量子安全区块链生态系统的使命。了解我们是谁、我们的目标，以及我们如何保护下一个加密时代。"
-    },
-    "title": "公司详情",
-    "content": {
-      "p1": "Quantus Labs LLC 是一家总部位于美国怀俄明州的科技公司，致力于构建去中心化、抗审查技术的底层基础设施。我们的核心项目 Quantus Network 是一种 Layer 1 区块链，旨在从第一天起就保持简单、开源且由社区共有。",
-      "p2": "我们相信开放协议、工作量证明和主权所有权的力量。Quantus Network 应用（可在桌面和移动设备上使用）让用户无需中介即可存储数字资产、挖掘新区块并参与更公平的金融未来。",
-      "p3": "我们致力于通过安全的、自我托管的工具来实现透明度、保护隐私和赋权个人。",
-      "address_label": "公司地址："
-    },
-    "address": {
-      "company": "Quantus Labs LLC",
-      "street": "30 N Gould St #52155",
-      "city": "Sheridan, WY 82801",
-      "country": "USA"
-    }
-  },
-  "tos": {
-    "meta": {
-      "title": "Quantus Network - 服务条款和隐私政策",
-      "description": "阅读 Quantus Network 的服务条款和隐私政策。了解我们如何保护您的数据、确保透明度，并保护您的加密体验安全。"
-    },
-    "title": "Quantus Network 政策",
-    "last_updated": "最后更新：2025 年 6 月 12 日",
-    "intro": "本政策解释了当您使用 quantus.com、我们的移动应用、桌面应用或以其他方式与我们互动时，Quantus Labs LLC（“Quantus”、“我们”）如何收集、使用和保护您的信息。我们可能会不时更新本政策。如果我们做出更改，我们将通过修改本政策顶部的日期来通知您，并在适当时在我们的网站上提供额外通知。",
-    "service_title": "服务条款",
-    "privacy_title": "隐私政策",
-    "terms": {
-      "what_we_provide": {
-        "title": "我们提供什么",
-        "intro": "Quantus Network 提供：",
-        "items": [
-          "移动应用（可在 App Store 和 Google Play 上获取）",
-          "具有集成挖矿功能的桌面应用",
-          "访问我们的开源代码",
-          "社区新闻通讯和更新",
-          "访问 Quantus Network 区块链"
-        ]
-      },
-      "what_you_cannot_do": {
-        "title": "您不能做什么",
-        "intro": "您不得使用我们的服务进行：",
-        "items": [
-          "从事非法活动",
-          "分发恶意软件或破解系统",
-          "违反出口管制或制裁",
-          "干扰网络运营",
-          "提供虚假信息"
-        ]
-      },
-      "mining_participation": {
-        "title": "挖矿和网络参与",
-        "items": [
-          "挖矿功能用于教育和网络参与",
-          "您必须遵守当地的能源和挖矿法规",
-          "我们不保证挖矿的盈利能力或奖励",
-          "网络功能可能会随着协议的发展而变化"
-        ]
-      },
-      "dispute_resolution": {
-        "title": "争议解决",
-        "content": "任何争议将根据美国仲裁协会的规则，在怀俄明州通过具有约束力的仲裁解决。本条款受怀俄明州法律管辖。如果您违反这些条款，我们可能会终止您的访问权限"
-      },
-      "your_responsibilities": {
-        "title": "您的责任",
-        "intro": "您全权负责：",
-        "items": [
-          "保护您的钱包凭证和助记词",
-          "遵守有关加密货币和挖矿的当地法律",
-          "了解区块链技术的风险",
-          "我们无法恢复丢失的私钥"
-        ]
-      },
-      "non_custodial": {
-        "title": "非托管设计",
-        "intro": "重要提示：我们不存储或访问您的私钥、助记词或数字资产。您对您的钱包和资产拥有完全的控制权和责任。",
-        "items": [
-          "我们无法恢复丢失的私钥或助记词",
-          "我们无法逆转区块链上的交易",
-          "我们无法冻结或控制您的资产",
-          "您有责任保护您的钱包凭证",
-          "始终在安全的地方备份您的助记词"
-        ]
-      },
-      "disclaimers": {
-        "title": "免责声明和责任限制",
-        "intro": "我们的服务按“原样”提供，不含任何保证。加密货币涉及重大的损失风险。在法律允许的最大范围内：",
-        "items": [
-          "我们不对任何间接或后果性损害负责",
-          "我们的总责任不超过 1 美元",
-          "您同意就因您使用我们服务而引起的索赔向我们提供赔偿"
-        ]
-      }
-    },
-    "privacy": {
-      "information_collect": {
-        "title": "我们收集的信息",
-        "from_apps": "来自我们的应用：",
-        "from_apps_content": "我们不通过 Quantus Network 应用收集个人信息。",
-        "from_website": "来自我们的网站，我们自动收集：",
-        "from_website_items": [
-          "IP 地址（通过 Google Analytics 匿名化）",
-          "浏览器和设备信息",
-          "访问的页面和使用模式",
-          "地理位置（仅限国家/地区）"
-        ],
-        "from_you": "直接来自您：",
-        "from_you_items": [
-          "电子邮件地址（如果您订阅我们的新闻通讯）",
-          "您在联系我们时提供的信息"
-        ],
-        "technical": "技术数据：",
-        "technical_items": [
-          "应用崩溃报告和错误日志",
-          "网络连接信息（以提高性能）"
-        ]
-      },
-      "how_we_use": {
-        "title": "我们如何使用信息",
-        "intro": "我们使用收集到的信息来：",
-        "items": [
-          "改进我们的网站和应用",
-          "发送新闻通讯更新（经您同意）",
-          "分析使用情况以增强用户体验",
-          "监控滥用行为并保护我们的服务",
-          "遵守法律义务"
-        ],
-        "we_do_not": "我们不会：",
-        "we_do_not_items": [
-          "向第三方出售或出租您的数据",
-          "存储您的私钥或交易数据",
-          "将您的数据用于定向广告"
-        ]
-      },
-      "information_sharing": {
-        "title": "信息共享",
-        "intro": "我们可能与以下各方共享信息：",
-        "items": [
-          "分析提供商（Google Analytics 用于网站数据）",
-          "帮助运营我们网站的服务提供商",
-          "法律要求时的法律当局"
-        ],
-        "note": "我们只共享无法识别您身份的、聚合的、匿名化的数据。"
-      },
-      "cookies_tracking": {
-        "title": "Cookie 和跟踪",
-        "intro": "我们的网站使用 Cookie 来：",
-        "items": ["实现网站基本功能", "进行分析以了解网站使用情况", "提升性能"],
-        "note": "您可以通过浏览器设置控制 Cookie，但这可能会影响网站功能。"
-      },
-      "data_security": {
-        "title": "数据安全和保留",
-        "intro": "我们实施标准安全措施来保护您的数据，包括加密和安全存储。但是，没有哪个在线服务是完全安全的。",
-        "technical_data": "技术数据：",
-        "retention_items": ["网站分析：26 个月", "新闻通讯订阅：直到您取消订阅"]
-      },
-      "your_rights": {
-        "title": "您的权利",
-        "general": "您可以：随时取消订阅我们的通讯",
-        "california": "对于加州居民：根据 CCPA，您拥有额外权利，包括了解我们收集了哪些个人信息的权利和删除的权利。",
-        "eu_uk": "对于欧盟/英国居民：根据 GDPR，您拥有权利，包括数据可移植权和反对处理的权利。"
-      },
-      "international_transfers": {
-        "title": "国际传输",
-        "content": "您的信息可能会在美国处理。我们确保为国际数据传输提供适当的保护。"
-      },
-      "childrens_privacy": {
-        "title": "儿童隐私",
-        "content": "我们的服务不适用于 18 岁以下的任何人。我们不会故意收集未成年人的信息。"
-      },
-      "additional_info": {
-        "title": "附加信息",
-        "regulatory": "监管合规",
-        "regulatory_items": [
-          "用户必须遵守当地的加密货币法规",
-          "某些功能可能在某些司法管辖区受到限制",
-          "我们保留根据法律要求限制访问的权利"
-        ]
-      },
-      "contact_info": {
-        "title": "联系我们",
-        "address": "Quantus Labs LLC\n30 N Gould St #52155\nSheridan, WY 82801",
-        "note": "有关本政策的问题或行使您的隐私权，请使用我们的",
-        "link": "联系表格"
-      }
-    }
-  },
   "blog": {
-    "title": "来自 Quantus Network 的最新动态。",
+    "title": "来自 Quantus 的最新消息。",
+    "hero": {
+      "eyebrow": "来自 Quantus 团队",
+      "heading": "Quantus 博客。",
+      "sub": "协议更新、技术深度分析以及对量子威胁格局的见解。"
+    },
+    "card": {
+      "read": "阅读"
+    },
     "search_placeholder": "搜索文章...",
     "no_posts_found": "未找到文章。",
     "featured_label": "精选",
     "related_posts": "相关文章",
     "post": {
       "back_to_blog": "返回博客",
-      "author": "Quantus 团队"
+      "author": "Quantus 团队",
+      "updated": "已更新"
     },
     "meta": {
       "title": "Quantus 博客 | 最新消息与量子见解",
-      "description": "获取 Quantus Network 的最新消息、教育内容和见解。"
+      "description": "随时了解来自 Quantus 的最新消息、教育内容和见解。"
     },
     "tag": {
       "meta": {
-        "title": "博客 - #{tag} | Quantus Network",
-        "description": "浏览 Quantus Network 上带有 #{tag} 标签的所有博客文章。"
+        "title": "博客 - #{tag} | Quantus",
+        "description": "浏览 Quantus 上所有带有 #{tag} 标签的博客文章。"
       },
       "heading": "带有 {tag} 标签的文章",
       "back_link": "← 返回所有文章"
@@ -732,7 +836,6 @@
       "crypto": "加密货币",
       "defi": "DeFi",
       "bitcoin": "比特币",
-      "quantus-network": "Quantus 网络",
       "business": "商业",
       "network-state": "网络国家",
       "innovation": "创新",
@@ -750,12 +853,12 @@
       "freedom": "自由",
       "poseidon2": "Poseidon2",
       "chain-architecture": "链架构",
-      "wormhole": "Wormhole",
-      "binance-blockchain-week": "Binance Blockchain Week",
-      "lattice-cryptography": "格子密码学",
+      "wormhole": "虫洞",
+      "binance-blockchain-week": "币安区块链周",
+      "lattice-cryptography": "格密码学",
       "polkadot-sdk": "Polkadot SDK",
       "audit": "审计",
-      "miner-app": "矿机应用",
+      "miner-app": "矿工 App",
       "ml-dsa": "ML-DSA",
       "ama": "AMA",
       "substrate": "Substrate",
@@ -770,23 +873,23 @@
       "plonky2": "Plonky2",
       "referral": "推荐",
       "governance": "治理",
-      "treasury": "国库",
+      "treasury": "财库",
       "conviction-voting": "信念投票",
       "gamification": "游戏化",
       "plonky3": "Plonky3",
-      "liberland": "自由地",
+      "liberland": "利伯兰",
       "schrodinger-testnet": "薛定谔测试网",
       "pqc": "PQC",
       "mpc": "MPC",
       "multisig": "多重签名",
-      "zk-aggregator": "ZK 聚合器",
       "indexer": "索引器",
+      "zk-aggregator": "ZK 聚合器",
       "biohacking": "生物黑客",
       "rpc": "RPC",
       "scalability": "可扩展性",
       "privacy": "隐私",
       "security": "安全",
-      "guardian": "守护者",
+      "guardian": "监护人",
       "time-lock": "时间锁",
       "fraud-prevention": "反欺诈",
       "coingecko": "CoinGecko",
@@ -795,16 +898,16 @@
       "research": "研究",
       "notification-system": "通知系统",
       "keystone": "Keystone",
-      "heisenberg-testnet": "Heisenberg 测试网",
+      "heisenberg-testnet": "海森堡测试网",
       "performance": "性能",
-      "prover": "证明器",
+      "prover": "证明者",
       "infrastructure": "基础设施",
       "consensus": "共识"
     }
   },
   "cookie": {
     "title": "Cookie 同意",
-    "notice": "本网站使用 Cookie 以更好地了解读者的兴趣并满足他们的需求。在",
+    "notice": "本网站使用 Cookie 以更好地了解读者的兴趣并提供相应服务。了解更多信息请参阅",
     "link": "隐私政策和服务条款",
     "accept": "接受",
     "decline": "拒绝"
@@ -812,7 +915,7 @@
   "whitepaper": {
     "meta": {
       "title": "Quantus 白皮书 | 量子安全的技术基础",
-      "description": "阅读 Quantus Network 白皮书。探索我们在后量子密码学、零知识证明和安全的第一层区块链架构方面的技术方案。"
+      "description": "阅读 Quantus 白皮书。探索我们关于后量子密码学、零知识证明和安全 Layer 1 区块链架构的技术方法。"
     },
     "title": "Quantus 白皮书",
     "on_this_page": "本页内容",
@@ -823,21 +926,21 @@
     "last_updated": "最后更新",
     "changelog": "更新日志",
     "authors": "作者",
-    "published": "发布",
+    "published": "发布日期",
     "classification": "分类",
     "abstract": "摘要",
     "back_to_top": "返回顶部",
-    "tag_line": "量子安全，加密货币",
+    "tag_line": "量子安全加密货币",
     "whitepaper": "白皮书"
   },
   "common": {
-    "loading": "加载中...",
+    "loading": "正在加载...",
     "error": "错误",
     "success": "成功",
-    "email_required": "需要电子邮件。",
-    "first_name_required": "名字是必填项。",
-    "name_required": "需要姓名。",
-    "message_required": "需要消息。",
-    "subscribe_failed": "添加到候补列表失败。"
+    "email_required": "电子邮件是必填项。",
+    "first_name_required": "名是必填项。",
+    "name_required": "姓名是必填项。",
+    "message_required": "消息是必填项。",
+    "subscribe_failed": "无法添加到等待名单。"
   }
 }

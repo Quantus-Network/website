@@ -1,0 +1,237 @@
+---
+import "@/styles/terms-and-privacy.css";
+
+import Layout from "@/components/layout/Layout.astro";
+import {
+  createTranslator,
+  getLocaleFromUrl,
+  SUPPORTED_LOCALES,
+} from "@/utils/i18n";
+import { createMetadata } from "@/utils/create-metadata";
+import { JsonLdGraph } from "@/utils/build-json-ld";
+import {
+  androidAppJsonLd,
+  iosAppJsonLd,
+  organizationJsonLd,
+  websiteJsonLd,
+} from "@/constants/default-jsonld";
+
+export async function getStaticPaths() {
+  return SUPPORTED_LOCALES.map((lang) => ({ params: { lang } }));
+}
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
+
+const metadata = createMetadata({
+  title: t("privacy.meta.title"),
+  description: t("privacy.meta.description"),
+  pathname: Astro.url.pathname,
+});
+
+const jsonLd = JsonLdGraph({
+  "@context": "https://schema.org",
+  "@graph": [websiteJsonLd, organizationJsonLd, iosAppJsonLd, androidAppJsonLd],
+});
+
+const infoCollectWebsiteItems = t(
+  "privacy.information_collect.from_website_items",
+) as string[];
+const infoCollectFromYouItems = t(
+  "privacy.information_collect.from_you_items",
+) as string[];
+const infoCollectTechnicalItems = t(
+  "privacy.information_collect.technical_items",
+) as string[];
+
+const howWeUseItems = t("privacy.how_we_use.items") as string[];
+const howWeUseDoNotItems = t("privacy.how_we_use.we_do_not_items") as string[];
+
+const infoSharingItems = t("privacy.information_sharing.items") as string[];
+
+const cookiesItems = t("privacy.cookies_tracking.items") as string[];
+
+const dataSecurityRetentionItems = t(
+  "privacy.data_security.retention_items",
+) as string[];
+
+const additionalInfoRegulatoryItems = t(
+  "privacy.additional_info.regulatory_items",
+) as string[];
+---
+
+<Layout {...metadata} jsonLd={jsonLd}>
+  <!-- HERO -->
+  <section id="policy-hero">
+    <span class="policy-eyebrow">
+      {t("privacy.hero.eyebrow")}
+    </span>
+    <h1 class="policy-h1">
+      {t("privacy.hero.title")}
+    </h1>
+    <span class="policy-meta">
+      {t("privacy.hero.last_updated")}
+    </span>
+    <div class="policy-divider"></div>
+  </section>
+
+  <!-- CONTENT -->
+  <section id="policy-content">
+    <span class="policy-sub-h3">
+      {t("privacy.information_collect.title")}
+    </span>
+
+    <p class="policy-body">
+      {t("privacy.information_collect.from_apps")}{" "}
+      {t("privacy.information_collect.from_apps_content")}
+    </p>
+
+    <p class="policy-body">
+      {t("privacy.information_collect.from_website")}
+    </p>
+    <ul class="policy-list">
+      {infoCollectWebsiteItems.map((item) => <li>{item}</li>)}
+    </ul>
+
+    <p class="policy-body">
+      {t("privacy.information_collect.from_you")}
+    </p>
+    <ul class="policy-list">
+      {infoCollectFromYouItems.map((item) => <li>{item}</li>)}
+    </ul>
+
+    <p class="policy-body">
+      {t("privacy.information_collect.technical")}
+    </p>
+    <ul class="policy-list">
+      {infoCollectTechnicalItems.map((item) => <li>{item}</li>)}
+    </ul>
+
+    <span class="policy-sub-h3">
+      {t("privacy.how_we_use.title")}
+    </span>
+
+    <p class="policy-body">
+      {t("privacy.how_we_use.intro")}
+    </p>
+    <ul class="policy-list">
+      {howWeUseItems.map((item) => <li>{item}</li>)}
+    </ul>
+
+    <p class="policy-body">
+      {t("privacy.how_we_use.we_do_not")}
+    </p>
+    <ul class="policy-list">
+      {howWeUseDoNotItems.map((item) => <li>{item}</li>)}
+    </ul>
+
+    <span class="policy-sub-h3">
+      {t("privacy.information_sharing.title")}
+    </span>
+
+    <p class="policy-body">
+      {t("privacy.information_sharing.intro")}
+    </p>
+    <ul class="policy-list">
+      {infoSharingItems.map((item) => <li>{item}</li>)}
+    </ul>
+    <p class="policy-body">
+      {t("privacy.information_sharing.note")}
+    </p>
+
+    <span class="policy-sub-h3">
+      {t("privacy.cookies_tracking.title")}
+    </span>
+
+    <p class="policy-body">
+      {t("privacy.cookies_tracking.intro")}
+    </p>
+    <ul class="policy-list">
+      {cookiesItems.map((item) => <li>{item}</li>)}
+    </ul>
+    <p class="policy-body">
+      {t("privacy.cookies_tracking.note")}
+    </p>
+
+    <span class="policy-sub-h3">
+      {t("privacy.data_security.title")}
+    </span>
+
+    <p class="policy-body">
+      {t("privacy.data_security.intro")}
+    </p>
+
+    <p class="policy-body">
+      {t("privacy.data_security.technical")}
+    </p>
+    <ul class="policy-list">
+      {dataSecurityRetentionItems.map((item) => <li>{item}</li>)}
+    </ul>
+
+    <span class="policy-sub-h3">
+      {t("privacy.your_rights.title")}
+    </span>
+
+    <p class="policy-body">
+      {t("privacy.your_rights.general")}
+    </p>
+
+    <p class="policy-body">
+      {t("privacy.your_rights.california")}
+    </p>
+
+    <p class="policy-body">
+      {t("privacy.your_rights.eu_uk")}
+    </p>
+
+    <span class="policy-sub-h3">
+      {t("privacy.international_transfers.title")}
+    </span>
+
+    <p class="policy-body">
+      {t("privacy.international_transfers.content")}
+    </p>
+
+    <span class="policy-sub-h3">
+      {t("privacy.childrens_privacy.title")}
+    </span>
+
+    <p class="policy-body">
+      {t("privacy.childrens_privacy.content")}
+    </p>
+
+    <span class="policy-sub-h3">
+      {t("privacy.additional_info.title")}
+    </span>
+
+    <p class="policy-body">
+      {t("privacy.additional_info.regulatory")}
+    </p>
+    <ul class="policy-list">
+      {additionalInfoRegulatoryItems.map((item) => <li>{item}</li>)}
+    </ul>
+
+    <span class="policy-sub-h3">
+      {t("privacy.contact_info.title")}
+    </span>
+
+    <p class="policy-body">
+      {
+        (t("privacy.contact_info.address") as string)
+          .split("\n")
+          .map((line, idx, arr) => (
+            <>
+              {line}
+              {idx < arr.length - 1 && <br />}
+            </>
+          ))
+      }
+    </p>
+    <p class="policy-body">
+      {t("privacy.contact_info.note")}{" "}
+      <a href="/contact/" style="color:#FF6B35;text-decoration:none;">
+        {t("privacy.contact_info.link")}
+      </a>
+    </p>
+  </section>
+</Layout>

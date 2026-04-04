@@ -6,16 +6,30 @@ import {
   getLocaleFromUrl,
   getLocalizedPath,
   createTranslator,
+  SUPPORTED_LOCALES,
 } from "@/utils/i18n";
 import { createMetadata } from "@/utils/create-metadata";
 
 export async function getStaticPaths() {
   const allPosts = await getCollection("blog");
-  const uniqueTags = [...new Set(allPosts.flatMap((post) => post.data.tags))];
+  const paths = [];
 
-  return uniqueTags.map((tag) => ({
-    params: { tag },
-  }));
+  for (const lang of SUPPORTED_LOCALES) {
+    const langPosts = allPosts.filter((post) =>
+      post.id.toLowerCase().startsWith(`${lang.toLowerCase()}/`),
+    );
+    const uniqueTags = [
+      ...new Set(langPosts.flatMap((post) => post.data.tags)),
+    ];
+
+    for (const tag of uniqueTags) {
+      paths.push({
+        params: { lang, tag },
+      });
+    }
+  }
+
+  return paths;
 }
 
 const { tag } = Astro.params;
