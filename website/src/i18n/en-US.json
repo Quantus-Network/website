@@ -306,6 +306,16 @@
         "headline": "You're in.",
         "sub": "We'll keep you ahead of the curve."
       }
+    },
+    "blog_section": {
+      "eyebrow": "Latest from Quantus",
+      "headline": "Stay ahead of the quantum shift.",
+      "blogs_label": "Blogs",
+      "view_all": "VIEW ALL POSTS →",
+      "podcast_label": "QDAY Podcast",
+      "view_all_episodes": "VIEW ALL EPISODES →",
+      "episodes_count": "{count} episodes on QDay Podcast",
+      "watch_on_youtube": "WATCH ON YOUTUBE →"
     }
   },
   "technology": {

@@ -306,6 +306,16 @@
         "headline": "Anda sudah terdaftar.",
         "sub": "Kami akan membuat Anda tetap unggul."
       }
+    },
+    "blog_section": {
+      "eyebrow": "Terbaru dari Quantus",
+      "headline": "Tetap selangkah lebih maju dari pergeseran kuantum.",
+      "blogs_label": "Blog",
+      "view_all": "LIHAT SEMUA POSTINGAN →",
+      "podcast_label": "Podcast QDAY",
+      "view_all_episodes": "LIHAT SEMUA EPISODE →",
+      "episodes_count": "{count} episode di QDay Podcast",
+      "watch_on_youtube": "TONTON DI YOUTUBE →"
     }
   },
   "technology": {

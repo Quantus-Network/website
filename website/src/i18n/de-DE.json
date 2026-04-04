@@ -306,6 +306,16 @@
         "headline": "Sie sind dabei.",
         "sub": "Wir halten Sie auf dem Laufenden."
       }
+    },
+    "blog_section": {
+      "eyebrow": "Aktuelles von Quantus",
+      "headline": "Bleib dem Quantensprung voraus.",
+      "blogs_label": "Blogs",
+      "view_all": "ALLE BEITRÄGE ANZEIGEN →",
+      "podcast_label": "QDAY Podcast",
+      "view_all_episodes": "ALLE EPISODEN ANZEIGEN →",
+      "episodes_count": "{count} Episoden im QDay Podcast",
+      "watch_on_youtube": "AUF YOUTUBE ANSEHEN →"
     }
   },
   "technology": {

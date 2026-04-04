@@ -306,6 +306,16 @@
         "headline": "登録完了。",
         "sub": "最新情報をお届けします。"
       }
+    },
+    "blog_section": {
+      "eyebrow": "Quantus からの最新情報",
+      "headline": "量子シフトの先を行く。",
+      "blogs_label": "ブログ",
+      "view_all": "すべての投稿を見る →",
+      "podcast_label": "QDAY ポッドキャスト",
+      "view_all_episodes": "すべてのエピソードを見る →",
+      "episodes_count": "QDay Podcast 全{count}エピソード",
+      "watch_on_youtube": "YOUTUBEで見る →"
     }
   },
   "technology": {

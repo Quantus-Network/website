@@ -306,6 +306,16 @@
         "headline": "등록되었습니다.",
         "sub": "최신 정보를 계속 전달해 드리겠습니다."
       }
+    },
+    "blog_section": {
+      "eyebrow": "Quantus 최신 소식",
+      "headline": "양자 전환을 앞서 나가세요.",
+      "blogs_label": "블로그",
+      "view_all": "모든 게시물 보기 →",
+      "podcast_label": "QDAY 팟캐스트",
+      "view_all_episodes": "모든 에피소드 보기 →",
+      "episodes_count": "QDay 팟캐스트 {count}개 에피소드",
+      "watch_on_youtube": "YOUTUBE에서 보기 →"
     }
   },
   "technology": {

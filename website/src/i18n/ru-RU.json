@@ -306,6 +306,16 @@
         "headline": "Вы подписаны.",
         "sub": "Мы будем держать вас в курсе событий."
       }
+    },
+    "blog_section": {
+      "eyebrow": "Последнее от Quantus",
+      "headline": "Будьте впереди квантового сдвига.",
+      "blogs_label": "Блоги",
+      "view_all": "СМОТРЕТЬ ВСЕ ЗАПИСИ →",
+      "podcast_label": "Подкаст QDAY",
+      "view_all_episodes": "СМОТРЕТЬ ВСЕ ЭПИЗОДЫ →",
+      "episodes_count": "{count} эпизодов в подкасте QDay",
+      "watch_on_youtube": "СМОТРЕТЬ НА YOUTUBE →"
     }
   },
   "technology": {

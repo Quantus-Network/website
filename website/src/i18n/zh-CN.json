@@ -306,6 +306,16 @@
         "headline": "您已加入。",
         "sub": "我们将让您保持领先。"
       }
+    },
+    "blog_section": {
+      "eyebrow": "来自 Quantus 的最新动态",
+      "headline": "抢先应对量子变革。",
+      "blogs_label": "博客",
+      "view_all": "查看所有文章 →",
+      "podcast_label": "QDAY 播客",
+      "view_all_episodes": "查看所有剧集 →",
+      "episodes_count": "QDay 播客共 {count} 集",
+      "watch_on_youtube": "在 YOUTUBE 上观看 →"
     }
   },
   "technology": {
@@ -630,14 +640,21 @@
     "cookies_tracking": {
       "title": "Cookie 和追踪",
       "intro": "我们的网站使用 Cookie 用于：",
-      "items": ["基本的网站功能", "了解网站使用情况的分析", "性能改进"],
+      "items": [
+        "基本的网站功能",
+        "了解网站使用情况的分析",
+        "性能改进"
+      ],
       "note": "您可以通过浏览器设置控制 Cookie，但这可能会影响网站功能。"
     },
     "data_security": {
       "title": "数据安全与保留",
       "intro": "我们实施标准的安全措施来保护您的数据，包括加密和安全存储。然而，没有任何在线服务是完全安全的。",
       "technical": "保留期限：",
-      "retention_items": ["网站分析：26 个月", "时事通讯订阅：直到您退订"]
+      "retention_items": [
+        "网站分析：26 个月",
+        "时事通讯订阅：直到您退订"
+      ]
     },
     "your_rights": {
       "title": "您的权利",

@@ -306,6 +306,16 @@
         "headline": "आप शामिल हैं।",
         "sub": "हम आपको सबसे आगे रखेंगे।"
       }
+    },
+    "blog_section": {
+      "eyebrow": "Quantus से नवीनतम",
+      "headline": "क्वांटम बदलाव से आगे रहें।",
+      "blogs_label": "ब्लॉग",
+      "view_all": "सभी पोस्ट देखें →",
+      "podcast_label": "QDAY पॉडकास्ट",
+      "view_all_episodes": "सभी एपिसोड देखें →",
+      "episodes_count": "QDay Podcast पर {count} एपिसोड",
+      "watch_on_youtube": "YOUTUBE पर देखें →"
     }
   },
   "technology": {

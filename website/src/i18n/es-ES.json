@@ -306,6 +306,16 @@
         "headline": "Ya está dentro.",
         "sub": "Le mantendremos a la vanguardia."
       }
+    },
+    "blog_section": {
+      "eyebrow": "Lo último de Quantus",
+      "headline": "Adelántate al cambio cuántico.",
+      "blogs_label": "Blogs",
+      "view_all": "VER TODAS LAS PUBLICACIONES →",
+      "podcast_label": "Podcast QDAY",
+      "view_all_episodes": "VER TODOS LOS EPISODIOS →",
+      "episodes_count": "{count} episodios en QDay Podcast",
+      "watch_on_youtube": "VER EN YOUTUBE →"
     }
   },
   "technology": {
