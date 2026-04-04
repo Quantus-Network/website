@@ -1,5 +1,4 @@
 ---
-import { applyStyles } from "@/utils/apply-styles";
 import {
   SUPPORTED_LOCALES,
   getLocaleFromUrl,
@@ -9,46 +8,20 @@ import {
 
 interface LocaleInfo {
   code: string;
-  name: string;
   nativeName: string;
   flag: string;
 }
 
 const localeInfo: Record<string, LocaleInfo> = {
-  "en-US": {
-    code: "en-US",
-    name: "English",
-    nativeName: "English",
-    flag: "🇺🇸",
-  },
-  "zh-CN": { code: "zh-CN", name: "Chinese", nativeName: "中文", flag: "🇨🇳" },
-  "ko-KR": { code: "ko-KR", name: "Korean", nativeName: "한국어", flag: "🇰🇷" },
-  "id-ID": {
-    code: "id-ID",
-    name: "Indonesian",
-    nativeName: "Bahasa Indonesia",
-    flag: "🇮🇩",
-  },
-  "ja-JP": {
-    code: "ja-JP",
-    name: "Japanese",
-    nativeName: "日本語",
-    flag: "🇯🇵",
-  },
-  "ru-RU": {
-    code: "ru-RU",
-    name: "Russian",
-    nativeName: "Русский",
-    flag: "🇷🇺",
-  },
-  "es-ES": {
-    code: "es-ES",
-    name: "Spanish",
-    nativeName: "Español",
-    flag: "🇪🇸",
-  },
-  "de-DE": { code: "de-DE", name: "German", nativeName: "Deutsch", flag: "🇩🇪" },
-  "hi-IN": { code: "hi-IN", name: "Hindi", nativeName: "हिन्दी", flag: "🇮🇳" },
+  "en-US": { code: "en-US", nativeName: "English", flag: "🇺🇸" },
+  "zh-CN": { code: "zh-CN", nativeName: "中文", flag: "🇨🇳" },
+  "ko-KR": { code: "ko-KR", nativeName: "한국어", flag: "🇰🇷" },
+  "id-ID": { code: "id-ID", nativeName: "Bahasa Indonesia", flag: "🇮🇩" },
+  "ja-JP": { code: "ja-JP", nativeName: "日本語", flag: "🇯🇵" },
+  "ru-RU": { code: "ru-RU", nativeName: "Русский", flag: "🇷🇺" },
+  "es-ES": { code: "es-ES", nativeName: "Español", flag: "🇪🇸" },
+  "de-DE": { code: "de-DE", nativeName: "Deutsch", flag: "🇩🇪" },
+  "hi-IN": { code: "hi-IN", nativeName: "हिन्दी", flag: "🇮🇳" },
 };
 
 const currentLocale = getLocaleFromUrl(Astro.url.pathname);
@@ -57,258 +30,103 @@ const currentPath = removeLocaleFromUrl(Astro.url.pathname);
 export interface Props {
   id?: string;
   class?: string;
-  variant?: "dropdown" | "buttons";
-  label?: string;
-  disabled?: boolean;
 }
 
-const {
-  id = "language-switcher",
-  class: className,
-  variant = "dropdown",
-  label,
-  disabled = false,
-  ...rest
-} = Astro.props;
+const { id = "language-switcher", class: className } = Astro.props;
 ---
 
-<div class={applyStyles("language-switcher-wrapper", className)}>
-  {
-    label && (
-      <label for={id} class="language-switcher-label">
-        {label}
-      </label>
-    )
-  }
+<div class:list={["relative", className]}>
+  <button
+    id={id}
+    type="button"
+    aria-haspopup="listbox"
+    aria-expanded="false"
+    aria-label="Choose language"
+    class="font-mono group flex cursor-pointer items-center gap-2 border-none bg-transparent p-0 text-[11px] tracking-widest uppercase text-content-45 transition-colors duration-200 hover:text-[rgba(232,230,224,0.8)]"
+  >
+    <span class="text-sm leading-none">{localeInfo[currentLocale]?.flag}</span>
+    <span>{localeInfo[currentLocale]?.nativeName}</span>
+    <svg
+      class="h-3 w-3 transition-transform duration-200 group-[.open]:rotate-180"
+      viewBox="0 0 12 12"
+      fill="none"
+      aria-hidden="true"
+    >
+      <path
+        d="M2.5 4.5L6 8L9.5 4.5"
+        stroke="currentColor"
+        stroke-width="1.2"
+        stroke-linecap="square"></path>
+    </svg>
+  </button>
 
-  {
-    variant === "dropdown" && (
-      <div class="language-switcher">
-        <select
-          id={id}
-          class="language-select font-button"
-          aria-label="Choose language"
-          disabled={disabled}
-          {...rest}
-        >
-          {SUPPORTED_LOCALES.map((locale) => (
-            <option
-              value={locale}
-              selected={locale === currentLocale}
-              data-url={addLocaleToUrl(currentPath, locale)}
-            >
-              {localeInfo[locale].flag} {localeInfo[locale].nativeName}
-            </option>
-          ))}
-        </select>
-
-        <svg
-          class="language-select-arrow"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-          aria-hidden="true"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-            clip-rule="evenodd"
-          />
-        </svg>
-      </div>
-    )
-  }
-
-  {
-    variant === "buttons" && (
-      <div class="language-switcher-buttons">
-        {SUPPORTED_LOCALES.map((locale) => (
+  <ul
+    id={`${id}-listbox`}
+    role="listbox"
+    aria-label="Language options"
+    class="border-content-8 bg-void absolute bottom-full left-0 z-50 mb-2 hidden min-w-[160px] flex-col border py-1"
+  >
+    {
+      SUPPORTED_LOCALES.map((locale) => (
+        <li role="option" aria-selected={locale === currentLocale}>
           <a
             href={addLocaleToUrl(currentPath, locale)}
-            class={applyStyles(
-              "language-button font-button",
-              locale === currentLocale && "active",
-              disabled && "disabled",
-            )}
-            aria-current={locale === currentLocale ? "page" : undefined}
-            tabindex={disabled ? -1 : undefined}
+            class:list={[
+              "font-mono flex items-center gap-2.5 px-4 py-2.5 text-[11px] tracking-widest uppercase no-underline transition-colors duration-150",
+              locale === currentLocale
+                ? "text-content-90 bg-[rgba(232,230,224,0.05)]"
+                : "text-content-45 hover:text-content-70 hover:bg-[rgba(232,230,224,0.03)]",
+            ]}
           >
-            <span class="language-flag">{localeInfo[locale].flag}</span>
-            <span class="language-name">{localeInfo[locale].nativeName}</span>
+            <span class="text-sm leading-none">{localeInfo[locale].flag}</span>
+            <span>{localeInfo[locale].nativeName}</span>
+            {locale === currentLocale && (
+              <span class="bg-flare ml-auto h-1 w-1 shrink-0 rounded-full" />
+            )}
           </a>
-        ))}
-      </div>
-    )
-  }
+        </li>
+      ))
+    }
+  </ul>
 </div>
 
-<style>
-  .language-switcher-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    width: 100%;
-  }
-
-  .language-switcher-label {
-    font-weight: 600;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-    color: var(--color-text-title-primary);
-  }
-
-  .language-switcher {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-  }
-
-  .language-select {
-    border-radius: 100px;
-    background: var(--color-input-body);
-    border: 2px solid transparent;
-    padding: 0.625rem 3rem 0.625rem 1.25rem;
-    color: var(--color-input-text);
-    transition: all 0.2s ease-in-out;
-    outline: none;
-    width: 100%;
-    box-sizing: border-box;
-    cursor: pointer;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-  }
-
-  .language-select:focus {
-    border-color: var(--color-input-focus);
-    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
-  }
-
-  .language-select:hover {
-    border-color: rgba(0, 123, 255, 0.3);
-  }
-
-  .language-select:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-    background: #f8f9fa;
-  }
-
-  .language-select-arrow {
-    position: absolute;
-    right: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 1.25rem;
-    height: 1.25rem;
-    color: var(--color-input-text);
-    pointer-events: none;
-    transition: all 0.2s ease-in-out;
-  }
-
-  .language-select:focus + .language-select-arrow {
-    color: var(--color-input-focus);
-  }
-
-  .language-switcher-buttons {
-    display: flex;
-    gap: 0.25rem;
-    background: var(--color-form-input-body);
-    border: 1px solid var(--color-form-input-body-border);
-    padding: 0.25rem;
-    border-radius: var(--radius-quantus);
-    backdrop-filter: blur(10px);
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .language-button {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 0.75rem;
-    border-radius: calc(var(--radius-quantus) - 0.25rem);
-    text-decoration: none;
-    color: var(--color-form-input-text);
-    transition: all 0.2s ease-in-out;
-    position: relative;
-    flex: 1;
-    justify-content: center;
-    min-width: 0;
-  }
-
-  .language-button:hover:not(.disabled) {
-    background: rgba(255, 255, 255, 0.1);
-    color: var(--color-text-title-primary);
-  }
-
-  .language-button.active {
-    background: var(--color-button-primary);
-    color: var(--color-text-title-primary);
-  }
-
-  .language-button.disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-  }
-
-  .language-flag {
-    font-size: 1rem;
-    flex-shrink: 0;
-  }
-
-  .language-name {
-    font-size: 0.875rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  /* Reduced motion support */
-  @media (prefers-reduced-motion: reduce) {
-    .language-select,
-    .language-button,
-    .language-select-arrow {
-      transition: none;
-    }
-  }
-
-  /* Mobile responsive */
-  @media (max-width: 768px) {
-    .language-name {
-      display: none;
-    }
-
-    .language-button {
-      padding: 0.5rem;
-    }
-
-    .language-switcher-buttons {
-      justify-content: center;
-    }
-  }
-</style>
-
 <script>
-  const languageSelects = document.querySelectorAll(".language-select");
+  function initLanguageSwitcher(trigger: HTMLElement) {
+    const listbox = document.getElementById(`${trigger.id}-listbox`);
+    if (!listbox) return;
 
-  languageSelects.forEach((select) => {
-    // Handle language change
-    select.addEventListener("change", function (this: any) {
-      const selectedOption = this.options[this.selectedIndex];
-      const url = location.search
-        ? selectedOption.dataset.url + location.search
-        : selectedOption.dataset.url;
+    function open() {
+      trigger.classList.add("open");
+      trigger.setAttribute("aria-expanded", "true");
+      listbox!.classList.remove("hidden");
+      listbox!.classList.add("flex");
+    }
 
-      if (url) window.location.href = url;
+    function close() {
+      trigger.classList.remove("open");
+      trigger.setAttribute("aria-expanded", "false");
+      listbox!.classList.add("hidden");
+      listbox!.classList.remove("flex");
+    }
+
+    trigger.addEventListener("click", () => {
+      const isOpen = trigger.getAttribute("aria-expanded") === "true";
+      isOpen ? close() : open();
     });
 
-    // Enhanced focus management
-    select.addEventListener("focus", function () {
-      select.setAttribute("data-focused", "true");
+    document.addEventListener("click", (e) => {
+      if (
+        !trigger.contains(e.target as Node) &&
+        !listbox!.contains(e.target as Node)
+      ) {
+        close();
+      }
     });
 
-    select.addEventListener("blur", function () {
-      select.removeAttribute("data-focused");
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") close();
     });
-  });
+  }
+
+  document.querySelectorAll<HTMLElement>("[aria-haspopup='listbox']").forEach(initLanguageSwitcher);
 </script>
