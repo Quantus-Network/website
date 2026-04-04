@@ -6,13 +6,14 @@ export interface NodeData {
   timestamp: number;
 }
 
-export interface NodeCounterState {
+export interface NodeRpcState {
   count: number | null;
+  blockHeight: number | null;
   status: "disconnected" | "connecting" | "connected" | "error";
   statusMessage: string;
 }
 
-export interface NodeCounterOptions {
+export interface NodeRpcOptions {
   wsUrl?: string;
   maxReconnectAttempts?: number;
   reconnectDelay?: number;
@@ -20,20 +21,20 @@ export interface NodeCounterOptions {
   nodeTimeout?: number;
 }
 
-export type NodeCounterListener = (state: NodeCounterState) => void;
+export type NodeRpcListener = (state: NodeRpcState) => void;
 
 /**
  * Node Counter Service
  * Manages WebSocket connection to substrate network and tracks connected nodes
  */
-class NodeCounterService {
+class NodeRpcService {
   private ws: WebSocket | null = null;
-  private listeners: Set<NodeCounterListener> = new Set();
+  private listeners: Set<NodeRpcListener> = new Set();
   private reconnectAttempts = 0;
   private heartbeatIntervalId: number | null = null;
   private isConnecting = false;
 
-  private options: Required<NodeCounterOptions> = {
+  private options: Required<NodeRpcOptions> = {
     wsUrl: "wss://a1-dirac.quantus.cat",
     maxReconnectAttempts: 5,
     reconnectDelay: 1000,
@@ -41,20 +42,23 @@ class NodeCounterService {
     nodeTimeout: 300000, // 5 minutes
   };
 
-  private state: NodeCounterState = {
+  private state: NodeRpcState = {
     count: null,
+    blockHeight: null,
     status: "disconnected",
     statusMessage: "Not connected",
   };
 
-  constructor(options: NodeCounterOptions = {}) {
+  private blockHeightSubscriptionId: string | null = null;
+
+  constructor(options: NodeRpcOptions = {}) {
     this.options = { ...this.options, ...options };
   }
 
   /**
    * Subscribe to state changes
    */
-  subscribe(listener: NodeCounterListener): () => void {
+  subscribe(listener: NodeRpcListener): () => void {
     this.listeners.add(listener);
 
     // Immediately call with current state
@@ -69,7 +73,7 @@ class NodeCounterService {
   /**
    * Get current state snapshot
    */
-  getState(): NodeCounterState {
+  getState(): NodeRpcState {
     return {
       ...this.state,
     };
@@ -104,9 +108,20 @@ class NodeCounterService {
   disconnect(): void {
     this.cleanup();
     if (this.ws) {
+      if (this.blockHeightSubscriptionId && this.ws.readyState === WebSocket.OPEN) {
+        this.ws.send(
+          JSON.stringify({
+            id: 3,
+            jsonrpc: "2.0",
+            method: "chain_unsubscribeNewHeads",
+            params: [this.blockHeightSubscriptionId],
+          }),
+        );
+      }
       this.ws.close();
       this.ws = null;
     }
+    this.blockHeightSubscriptionId = null;
     this.updateState("disconnected", "Disconnected");
     this.isConnecting = false;
   }
@@ -126,15 +141,25 @@ class NodeCounterService {
       this.reconnectAttempts = 0;
       this.updateState("connected", "Connected to network");
 
-      // Subscribe to system health (includes peer count)
-      const healthRequest = {
-        id: 1,
-        jsonrpc: "2.0",
-        method: "system_health",
-        params: [],
-      };
+      // Request system health (includes peer count)
+      this.ws?.send(
+        JSON.stringify({
+          id: 1,
+          jsonrpc: "2.0",
+          method: "system_health",
+          params: [],
+        }),
+      );
 
-      this.ws?.send(JSON.stringify(healthRequest));
+      // Subscribe to new block heads for live block height
+      this.ws?.send(
+        JSON.stringify({
+          id: 2,
+          jsonrpc: "2.0",
+          method: "chain_subscribeNewHeads",
+          params: [],
+        }),
+      );
     };
 
     this.ws.onmessage = (event) => {
@@ -174,12 +199,26 @@ class NodeCounterService {
         textData = data;
       }
 
-      const message = await JSON.parse(textData);
+      const message = JSON.parse(textData);
 
-      if (message.id == 1 && message.result?.peers > 0) {
-        const nodeCount = message.result.peers;
-        this.state.count = nodeCount;
+      // system_health response — peer count as validator/node count
+      if (message.id === 1 && message.result != null) {
+        this.state.count = message.result.peers ?? this.state.count;
+        this.notifyListeners();
+      }
 
+      // chain_subscribeNewHeads confirmation — store subscription id
+      if (message.id === 2 && message.result != null) {
+        this.blockHeightSubscriptionId = message.result;
+      }
+
+      // chain_subscribeNewHeads notification — live block height
+      if (
+        message.method === "chain_newHead" &&
+        message.params?.result?.number != null
+      ) {
+        const hexNumber = message.params.result.number as string;
+        this.state.blockHeight = parseInt(hexNumber, 16);
         this.notifyListeners();
       }
     } catch (error) {
@@ -189,7 +228,7 @@ class NodeCounterService {
   }
 
   private updateState(
-    status: NodeCounterState["status"],
+    status: NodeRpcState["status"],
     statusMessage: string,
   ): void {
     this.state.status = status;
@@ -239,4 +278,4 @@ class NodeCounterService {
   }
 }
 
-export default NodeCounterService;
+export default NodeRpcService;

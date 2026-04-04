@@ -1,11 +1,12 @@
-import NodeCounterService from "./node-counter-service";
+
 import type {
-  NodeCounterListener,
+  NodeRpcListener,
   NodeData,
-  NodeCounterOptions,
-  NodeCounterState,
-} from "./node-counter-service";
+  NodeRpcOptions,
+  NodeRpcState,
+} from "./node-rpc-service";
 import env from "@/config";
+import NodeRpcService from "./node-rpc-service";
 
 // Types for API responses
 interface ChainStatsData {
@@ -71,44 +72,9 @@ export interface RaidLeaderboardEntrant {
 type ApiResponse<T = any> = Promise<Response>;
 
 const createApiClient = () => {
-  const nodeCounter = new NodeCounterService();
+  const nodeRpc = new NodeRpcService();
 
   const methods = {
-    /**
-     * Fetch blockchain statistics including transaction and account counts
-     */
-    chainStats: (): ApiResponse<GraphQLResponse<ChainStatsData>> => {
-      const query = `
-        query GetStatus {
-          allTransactions: eventsConnection(
-            orderBy: id_ASC, 
-            where: {
-              OR: {
-                type_in: [TRANSFER, REVERSIBLE_TRANSFER]
-              }
-            }
-          ) {
-            totalCount
-          }
-          allAccounts: accountsConnection(
-            orderBy: id_ASC
-          ) {
-            totalCount
-          }
-        }
-      `;
-
-      return fetch(env.GRAPHQL_URL, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-        method: "POST",
-        body: JSON.stringify({
-          query,
-        }),
-      });
-    },
-
     /**
      * Submit a contact form inquiry
      */
@@ -148,77 +114,52 @@ const createApiClient = () => {
     },
 
     /**
-     * Helper method to handle GraphQL responses with proper error checking
-     */
-    async handleGraphQLResponse<T>(response: Response): Promise<T> {
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-
-      const data: GraphQLResponse<T> = await response.json();
-
-      if (data.errors && data.errors.length > 0) {
-        throw new Error(`GraphQL error: ${data.errors[0].message}`);
-      }
-
-      if (!data.data) {
-        throw new Error("No data returned from GraphQL query");
-      }
-
-      return data.data;
-    },
-
-    /**
-     * Convenience method to get chain stats with automatic error handling
-     */
-    async getChainStats(): Promise<ChainStatsData> {
-      const response = await methods.chainStats();
-      return methods.handleGraphQLResponse<ChainStatsData>(response);
-    },
-
-    /**
      * Node Counter Methods
      */
-    nodeCounter: {
+    nodeRpc: {
       /**
-       * Subscribe to node count updates
+       * Subscribe to node RPC updates
        * @param listener Callback function that receives state updates
        * @returns Unsubscribe function
        */
-      subscribe: (listener: NodeCounterListener) =>
-        nodeCounter.subscribe(listener),
+      subscribe: (listener: NodeRpcListener) => nodeRpc.subscribe(listener),
 
       /**
        * Get current node counter state
        */
-      getState: () => nodeCounter.getState(),
+      getState: () => nodeRpc.getState(),
 
       /**
        * Start the WebSocket connection to track nodes
        */
-      connect: () => nodeCounter.connect(),
+      connect: () => nodeRpc.connect(),
 
       /**
        * Disconnect from the node tracking WebSocket
        */
-      disconnect: () => nodeCounter.disconnect(),
+      disconnect: () => nodeRpc.disconnect(),
 
       /**
        * Check if currently connected
        */
-      isConnected: () => nodeCounter.isConnected(),
+      isConnected: () => nodeRpc.isConnected(),
 
       /**
        * Get just the current node count (convenience method)
        */
-      getCount: () => nodeCounter.getState().count,
+      getCount: () => nodeRpc.getState().count,
+
+      /**
+       * Get the current block height
+       */
+      getBlockHeight: () => nodeRpc.getState().blockHeight,
 
       /**
        * Get current connection status
        */
       getStatus: () => ({
-        status: nodeCounter.getState().status,
-        message: nodeCounter.getState().statusMessage,
+        status: nodeRpc.getState().status,
+        message: nodeRpc.getState().statusMessage,
       }),
     },
   };
@@ -236,7 +177,7 @@ export type {
   ContactData,
   SubscribeData,
   NodeData,
-  NodeCounterState,
-  NodeCounterOptions,
-  NodeCounterListener,
+  NodeRpcState,
+  NodeRpcOptions,
+  NodeRpcListener,
 };
