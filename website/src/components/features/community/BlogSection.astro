@@ -64,8 +64,12 @@ function getBlogUrl(postId: string): string {
         >
           <div class="comm-blog-row-left">
             <div class="comm-blog-row-top">
-              <span class="comm-blog-date">{formatDate(post.data.pubDate)}</span>
-              <span class="comm-blog-tag">{getTagLabel(post.data.tags[0] ?? "")}</span>
+              <span class="comm-blog-date">
+                {formatDate(post.data.pubDate)}
+              </span>
+              <span class="comm-blog-tag">
+                {getTagLabel(post.data.tags[0] ?? "")}
+              </span>
             </div>
             <span class="comm-blog-title">{post.data.title}</span>
           </div>

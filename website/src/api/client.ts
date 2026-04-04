@@ -1,4 +1,3 @@
-
 import type {
   NodeRpcListener,
   NodeData,
@@ -79,8 +78,12 @@ const createApiClient = () => {
     /**
      * Get Ethereum security analysis
      */
-    getEthereumSecurityAnalysis: async (addressOrEnsName: string): Promise<EthereumAddressData | null> => {
-      const data = await fetch(`${env.TASK_MASTER_URL}/risk-checker/${addressOrEnsName}`);
+    getEthereumSecurityAnalysis: async (
+      addressOrEnsName: string,
+    ): Promise<EthereumAddressData | null> => {
+      const data = await fetch(
+        `${env.TASK_MASTER_URL}/risk-checker/${addressOrEnsName}`,
+      );
       return (await data.json())?.data as EthereumAddressData | null;
     },
 

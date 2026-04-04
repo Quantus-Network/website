@@ -28,14 +28,18 @@ export type ExposureDurationResult =
   | { key: "years"; count: number }
   | { key: "years_months"; count: number; months: number };
 
-export interface QuantumSecurityScoreI18n
-  extends Omit<QuantumSecurityScore, "riskLevel" | "recommendations"> {
+export interface QuantumSecurityScoreI18n extends Omit<
+  QuantumSecurityScore,
+  "riskLevel" | "recommendations"
+> {
   riskLevel: RiskLevelKey;
   recommendations: RecommendationKey[];
 }
 
-export interface EthereumSecurityAnalysisI18n
-  extends Omit<EthereumSecurityAnalysis, "securityScore"> {
+export interface EthereumSecurityAnalysisI18n extends Omit<
+  EthereumSecurityAnalysis,
+  "securityScore"
+> {
   securityScore: QuantumSecurityScoreI18n;
 }
 
@@ -170,7 +174,9 @@ export const getExposureDuration = (days: number): ExposureDurationResult => {
   if (days < 30) return { key: "days", count: days };
   if (days < 365) {
     const months = Math.floor(days / 30);
-    return months === 1 ? { key: "one_month" } : { key: "months", count: months };
+    return months === 1
+      ? { key: "one_month" }
+      : { key: "months", count: months };
   }
   const count = Math.floor(days / 365);
   const months = Math.floor((days % 365) / 30);

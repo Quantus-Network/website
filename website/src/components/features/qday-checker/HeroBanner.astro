@@ -771,18 +771,20 @@ const checkerI18n = {
     linesContainer.innerHTML = "";
     terminal.style.display = "block";
 
-    lines.forEach(({ text: lineText, delay, color, bold, uppercase, indent }) => {
-      setTimeout(() => {
-        const span = document.createElement("span");
-        span.className = indent ? "qrc-line qrc-line--indent" : "qrc-line";
-        span.textContent = lineText;
-        span.style.color = color;
-        if (bold) span.style.fontWeight = "500";
-        if (uppercase) span.style.textTransform = "uppercase";
-        span.style.opacity = "1";
-        linesContainer.appendChild(span);
-      }, delay);
-    });
+    lines.forEach(
+      ({ text: lineText, delay, color, bold, uppercase, indent }) => {
+        setTimeout(() => {
+          const span = document.createElement("span");
+          span.className = indent ? "qrc-line qrc-line--indent" : "qrc-line";
+          span.textContent = lineText;
+          span.style.color = color;
+          if (bold) span.style.fontWeight = "500";
+          if (uppercase) span.style.textTransform = "uppercase";
+          span.style.opacity = "1";
+          linesContainer.appendChild(span);
+        }, delay);
+      },
+    );
 
     const lastDelay = lines[lines.length - 1]?.delay ?? 0;
     setTimeout(() => {

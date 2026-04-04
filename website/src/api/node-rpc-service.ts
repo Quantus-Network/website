@@ -108,7 +108,10 @@ class NodeRpcService {
   disconnect(): void {
     this.cleanup();
     if (this.ws) {
-      if (this.blockHeightSubscriptionId && this.ws.readyState === WebSocket.OPEN) {
+      if (
+        this.blockHeightSubscriptionId &&
+        this.ws.readyState === WebSocket.OPEN
+      ) {
         this.ws.send(
           JSON.stringify({
             id: 3,

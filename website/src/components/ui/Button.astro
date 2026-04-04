@@ -54,12 +54,7 @@ const sizeClasses = {
   !href && (
     <button
       type={type}
-      class={applyStyles(
-        baseClasses,
-        variantClasses,
-        sizeClasses,
-        className,
-      )}
+      class={applyStyles(baseClasses, variantClasses, sizeClasses, className)}
       disabled={disabled}
       aria-label={ariaLabel}
       aria-describedby={ariaDescribedBy}
@@ -74,12 +69,7 @@ const sizeClasses = {
 {
   href && (
     <a
-      class={applyStyles(
-        baseClasses,
-        variantClasses,
-        sizeClasses,
-        className,
-      )}
+      class={applyStyles(baseClasses, variantClasses, sizeClasses, className)}
       href={href}
       target={target}
       rel={rel}

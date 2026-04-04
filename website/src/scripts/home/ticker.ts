@@ -24,11 +24,11 @@ export const buildTicker = () => {
     items.forEach(({ lbl, val, live, mainnet, id }) => {
       const el = document.createElement("div");
       el.className = "t-item";
-      const idAttr =
-        !!id ? ` id="ticker-${id}"`
-          : mainnet && copyIdx === 0
-            ? ' id="ticker-mainnet"'
-            : "";
+      const idAttr = !!id
+        ? ` id="ticker-${id}"`
+        : mainnet && copyIdx === 0
+          ? ' id="ticker-mainnet"'
+          : "";
       el.innerHTML = `${live ? '<div class="tdot"></div>' : ""}
         ${lbl ? '<span class="t-lbl">' + lbl + "</span>" : ""}
         <span class="t-val${live ? " live" : ""}"${idAttr}>${val}</span>`;
