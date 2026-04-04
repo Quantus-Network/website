@@ -87,26 +87,26 @@
         "not_yet": "Aún no expuesta"
       },
       "recommendations": {
-        "smart_contract": "This is a smart contract. Smart contract quantum security analysis coming soon!",
-        "public_key_exposed": "Your public key has been exposed through outgoing transactions, making it vulnerable to quantum attacks. Consider moving the funds to a new address.",
-        "public_key_safe": "Excellent! No outgoing transactions mean your public key remains secure.",
-        "balance_very_high": "Your high balance makes your address more attractive to a quantum attacker. Consider splitting your funds into multiple addresses with smaller balances.",
-        "balance_high": "Your high balance makes your address more attractive to a quantum attacker. Consider splitting your funds into multiple addresses with smaller balances.",
-        "balance_medium": "Your high balance makes your address more attractive to a quantum attacker. Consider splitting your funds into multiple addresses with smaller balances.",
-        "balance_low": "Your high balance makes your address more attractive to a quantum attacker. Consider splitting your funds into multiple addresses with smaller balances.",
-        "receive_only": "Consider using this address only for receiving funds to maintain quantum security.",
-        "empty_address": "Empty address has minimal quantum risk exposure."
+        "smart_contract": "Esta es un contrato inteligente. ¡Análisis de seguridad cuántica de contratos inteligentes próximamente!",
+        "public_key_exposed": "Su clave pública ha sido expuesta a través de transacciones salientes, lo que la hace vulnerable a ataques cuánticos. Considere mover los fondos a una nueva dirección.",
+        "public_key_safe": "¡Excelente! Ninguna transacción saliente significa que su clave pública permanece segura.",
+        "balance_very_high": "Su alto saldo hace que su dirección sea más atractiva para un atacante cuántico. Considere dividir sus fondos en múltiples direcciones con saldos más pequeños.",
+        "balance_high": "Su alto saldo hace que su dirección sea más atractiva para un atacante cuántico. Considere dividir sus fondos en múltiples direcciones con saldos más pequeños.",
+        "balance_medium": "Su saldo hace que su dirección sea atractiva para un atacante cuántico. Considere dividir sus fondos en múltiples direcciones con saldos más pequeños.",
+        "balance_low": "Su saldo es bajo, pero sigue habiendo riesgo si la clave está expuesta. Considere dividir sus fondos en múltiples direcciones con saldos más pequeños.",
+        "receive_only": "Considere usar esta dirección solo para recibir fondos para mantener la seguridad cuántica.",
+        "empty_address": "La dirección vacía tiene una exposición mínima al riesgo cuántico."
       },
       "exposure_duration": {
-        "less_than_a_day": "less than a day",
-        "one_day": "1 day",
-        "days": "{count} days",
-        "one_month": "1 month",
-        "months": "{count} months",
-        "one_year": "1 year",
-        "one_year_months": "1 year, {months} months",
-        "years": "{count} years",
-        "years_months": "{count} years, {months} months"
+        "less_than_a_day": "menos de un día",
+        "one_day": "1 día",
+        "days": "{count} días",
+        "one_month": "1 mes",
+        "months": "{count} meses",
+        "one_year": "1 año",
+        "one_year_months": "1 año, {months} meses",
+        "years": "{count} años",
+        "years_months": "{count} años, {months} meses"
       }
     }
   },
@@ -664,7 +664,7 @@
     },
     "contact_info": {
       "title": "Contáctenos",
-      "address": "Quantus Labs LLC\n20 N Gould St 52783\nSheridan, WY 82801",
+      "address": "Quantus Labs LLC\n30 N Gould St #52155\nSheridan, WY 82801",
       "note": "Para preguntas sobre esta política o para ejercer sus derechos de privacidad, por favor use nuestro",
       "link": "formulario de contacto"
     }
@@ -746,7 +746,7 @@
     },
     "contact": {
       "title": "Contáctenos",
-      "address": "Quantus Labs LLC\n20 N Gould St 52783\nSheridan, WY 82801",
+      "address": "Quantus Labs LLC\n30 N Gould St #52155\nSheridan, WY 82801",
       "note": "Para preguntas sobre estos términos, por favor envíe un correo electrónico a:",
       "email": "hello@quantus.com"
     }

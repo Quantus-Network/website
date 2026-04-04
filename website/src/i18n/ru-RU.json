@@ -87,26 +87,26 @@
         "not_yet": "Еще не раскрыт"
       },
       "recommendations": {
-        "smart_contract": "This is a smart contract. Smart contract quantum security analysis coming soon!",
-        "public_key_exposed": "Your public key has been exposed through outgoing transactions, making it vulnerable to quantum attacks. Consider moving the funds to a new address.",
-        "public_key_safe": "Excellent! No outgoing transactions mean your public key remains secure.",
-        "balance_very_high": "Your high balance makes your address more attractive to a quantum attacker. Consider splitting your funds into multiple addresses with smaller balances.",
-        "balance_high": "Your high balance makes your address more attractive to a quantum attacker. Consider splitting your funds into multiple addresses with smaller balances.",
-        "balance_medium": "Your high balance makes your address more attractive to a quantum attacker. Consider splitting your funds into multiple addresses with smaller balances.",
-        "balance_low": "Your high balance makes your address more attractive to a quantum attacker. Consider splitting your funds into multiple addresses with smaller balances.",
-        "receive_only": "Consider using this address only for receiving funds to maintain quantum security.",
-        "empty_address": "Empty address has minimal quantum risk exposure."
+        "smart_contract": "Это смарт-контракт. Анализ квантовой безопасности смарт-контрактов скоро появится!",
+        "public_key_exposed": "Ваш публичный ключ был раскрыт через исходящие транзакции, что делает его уязвимым для квантовых атак. Рассмотрите возможность перевода средств на новый адрес.",
+        "public_key_safe": "Отлично! Отсутствие исходящих транзакций означает, что ваш публичный ключ остается в безопасности.",
+        "balance_very_high": "Ваш высокий баланс делает ваш адрес более привлекательной целью для квантового злоумышленника. Рассмотрите возможность разделения ваших средств на несколько адресов с меньшими балансами.",
+        "balance_high": "Ваш высокий баланс делает ваш адрес более привлекательной целью для квантового злоумышленника. Рассмотрите возможность разделения ваших средств на несколько адресов с меньшими балансами.",
+        "balance_medium": "Ваш баланс делает ваш адрес целью для квантового злоумышленника. Рассмотрите возможность разделения ваших средств на несколько адресов с меньшими балансами.",
+        "balance_low": "Ваш баланс низок, но риск сохраняется, если ключ раскрыт. Рассмотрите возможность разделения ваших средств на несколько адресов с меньшими балансами.",
+        "receive_only": "Рассмотрите возможность использования этого адреса только для получения средств для поддержания квантовой безопасности.",
+        "empty_address": "Пустой адрес имеет минимальный риск квантового воздействия."
       },
       "exposure_duration": {
-        "less_than_a_day": "less than a day",
-        "one_day": "1 day",
-        "days": "{count} days",
-        "one_month": "1 month",
-        "months": "{count} months",
-        "one_year": "1 year",
-        "one_year_months": "1 year, {months} months",
-        "years": "{count} years",
-        "years_months": "{count} years, {months} months"
+        "less_than_a_day": "меньше одного дня",
+        "one_day": "1 день",
+        "days": "{count} дн.",
+        "one_month": "1 месяц",
+        "months": "{count} мес.",
+        "one_year": "1 год",
+        "one_year_months": "1 год, {months} мес.",
+        "years": "{count} лет",
+        "years_months": "{count} лет, {months} мес."
       }
     }
   },
@@ -664,7 +664,7 @@
     },
     "contact_info": {
       "title": "Свяжитесь с нами",
-      "address": "Quantus Labs LLC\n20 N Gould St 52783\nSheridan, WY 82801",
+      "address": "Quantus Labs LLC\n30 N Gould St #52155\nSheridan, WY 82801",
       "note": "По вопросам этой политики или для реализации ваших прав на конфиденциальность, пожалуйста, используйте нашу",
       "link": "контактную форму"
     }
@@ -746,7 +746,7 @@
     },
     "contact": {
       "title": "Свяжитесь с нами",
-      "address": "Quantus Labs LLC\n20 N Gould St 52783\nSheridan, WY 82801",
+      "address": "Quantus Labs LLC\n30 N Gould St #52155\nSheridan, WY 82801",
       "note": "По вопросам, касающимся этих условий, пожалуйста, пишите на почту:",
       "email": "hello@quantus.com"
     }

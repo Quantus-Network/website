@@ -87,26 +87,26 @@
         "not_yet": "未露出"
       },
       "recommendations": {
-        "smart_contract": "This is a smart contract. Smart contract quantum security analysis coming soon!",
-        "public_key_exposed": "Your public key has been exposed through outgoing transactions, making it vulnerable to quantum attacks. Consider moving the funds to a new address.",
-        "public_key_safe": "Excellent! No outgoing transactions mean your public key remains secure.",
-        "balance_very_high": "Your high balance makes your address more attractive to a quantum attacker. Consider splitting your funds into multiple addresses with smaller balances.",
-        "balance_high": "Your high balance makes your address more attractive to a quantum attacker. Consider splitting your funds into multiple addresses with smaller balances.",
-        "balance_medium": "Your high balance makes your address more attractive to a quantum attacker. Consider splitting your funds into multiple addresses with smaller balances.",
-        "balance_low": "Your high balance makes your address more attractive to a quantum attacker. Consider splitting your funds into multiple addresses with smaller balances.",
-        "receive_only": "Consider using this address only for receiving funds to maintain quantum security.",
-        "empty_address": "Empty address has minimal quantum risk exposure."
+        "smart_contract": "これはスマートコントラクトです。スマートコントラクトの量子セキュリティ分析は近日公開予定です！",
+        "public_key_exposed": "公開鍵が出金取引を通じて露出しており、量子攻撃に対して脆弱になっています。資金を新しいアドレスに移動することを検討してください。",
+        "public_key_safe": "素晴らしい！出金取引がないため、公開鍵は安全に保たれています。",
+        "balance_very_high": "高額な残高は、量子攻撃者にとってあなたのアドレスをより魅力的な標的にします。資金をより少額の複数のアドレスに分割することを検討してください。",
+        "balance_high": "高額な残高は、量子攻撃者にとってあなたのアドレスをより魅力的な標的にします。資金をより少額の複数のアドレスに分割することを検討してください。",
+        "balance_medium": "残高があるため、量子攻撃者にとって標的となる可能性があります。資金をより少額の複数のアドレスに分割することを検討してください。",
+        "balance_low": "残高は低いですが、鍵が露出している場合はリスクが残ります。資金をより少額の複数のアドレスに分割することを検討してください。",
+        "receive_only": "量子セキュリティを維持するために、このアドレスを受信用のみに使用することを検討してください。",
+        "empty_address": "空のアドレスは量子リスクの露出が最小限です。"
       },
       "exposure_duration": {
-        "less_than_a_day": "less than a day",
-        "one_day": "1 day",
-        "days": "{count} days",
-        "one_month": "1 month",
-        "months": "{count} months",
-        "one_year": "1 year",
-        "one_year_months": "1 year, {months} months",
-        "years": "{count} years",
-        "years_months": "{count} years, {months} months"
+        "less_than_a_day": "1日未満",
+        "one_day": "1日",
+        "days": "{count}日",
+        "one_month": "1ヶ月",
+        "months": "{count}ヶ月",
+        "one_year": "1年",
+        "one_year_months": "1年{months}ヶ月",
+        "years": "{count}年",
+        "years_months": "{count}年{months}ヶ月"
       }
     }
   },
@@ -664,7 +664,7 @@
     },
     "contact_info": {
       "title": "お問い合わせ",
-      "address": "Quantus Labs LLC\n20 N Gould St 52783\nSheridan, WY 82801",
+      "address": "Quantus Labs LLC\n30 N Gould St #52155\nSheridan, WY 82801",
       "note": "本ポリシーに関する質問やプライバシー権の行使については、以下を使用してください：",
       "link": "お問い合わせフォーム"
     }
@@ -746,7 +746,7 @@
     },
     "contact": {
       "title": "お問い合わせ",
-      "address": "Quantus Labs LLC\n20 N Gould St 52783\nSheridan, WY 82801",
+      "address": "Quantus Labs LLC\n30 N Gould St #52155\nSheridan, WY 82801",
       "note": "本規約に関する質問は、メールでお問い合わせください：",
       "email": "hello@quantus.com"
     }

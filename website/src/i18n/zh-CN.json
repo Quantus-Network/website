@@ -87,26 +87,26 @@
         "not_yet": "尚未暴露"
       },
       "recommendations": {
-        "smart_contract": "This is a smart contract. Smart contract quantum security analysis coming soon!",
-        "public_key_exposed": "Your public key has been exposed through outgoing transactions, making it vulnerable to quantum attacks. Consider moving the funds to a new address.",
-        "public_key_safe": "Excellent! No outgoing transactions mean your public key remains secure.",
-        "balance_very_high": "Your high balance makes your address more attractive to a quantum attacker. Consider splitting your funds into multiple addresses with smaller balances.",
-        "balance_high": "Your high balance makes your address more attractive to a quantum attacker. Consider splitting your funds into multiple addresses with smaller balances.",
-        "balance_medium": "Your high balance makes your address more attractive to a quantum attacker. Consider splitting your funds into multiple addresses with smaller balances.",
-        "balance_low": "Your high balance makes your address more attractive to a quantum attacker. Consider splitting your funds into multiple addresses with smaller balances.",
-        "receive_only": "Consider using this address only for receiving funds to maintain quantum security.",
-        "empty_address": "Empty address has minimal quantum risk exposure."
+        "smart_contract": "这是一个智能合约。智能合约量子安全分析即将推出！",
+        "public_key_exposed": "您的公钥已通过转出交易暴露，使其容易受到量子攻击。请考虑将资金转移到新地址。",
+        "public_key_safe": "太棒了！没有转出交易意味着您的公钥仍然安全。",
+        "balance_very_high": "您的高额余额使您的地址对量子攻击者更具吸引力。请考虑将资金分散到余额较小的多个地址中。",
+        "balance_high": "您的高额余额使您的地址对量子攻击者更具吸引力。请考虑将资金分散到余额较小的多个地址中。",
+        "balance_medium": "您的余额使您的地址对量子攻击者具有一定的吸引力。请考虑将资金分散到余额较小的多个地址中。",
+        "balance_low": "您的余额较低，但如果公钥暴露，仍存在一定风险。请考虑将资金分散到余额较小的多个地址中。",
+        "receive_only": "请考虑仅使用此地址接收资金，以维持量子安全性。",
+        "empty_address": "空地址的量子风险暴露最小。"
       },
       "exposure_duration": {
-        "less_than_a_day": "less than a day",
-        "one_day": "1 day",
-        "days": "{count} days",
-        "one_month": "1 month",
-        "months": "{count} months",
-        "one_year": "1 year",
-        "one_year_months": "1 year, {months} months",
-        "years": "{count} years",
-        "years_months": "{count} years, {months} months"
+        "less_than_a_day": "不到一天",
+        "one_day": "1 天",
+        "days": "{count} 天",
+        "one_month": "1 个月",
+        "months": "{count} 个月",
+        "one_year": "1 年",
+        "one_year_months": "1 年 {months} 个月",
+        "years": "{count} 年",
+        "years_months": "{count} 年 {months} 个月"
       }
     }
   },
@@ -623,21 +623,14 @@
     "cookies_tracking": {
       "title": "Cookie 和追踪",
       "intro": "我们的网站使用 Cookie 用于：",
-      "items": [
-        "基本的网站功能",
-        "了解网站使用情况的分析",
-        "性能改进"
-      ],
+      "items": ["基本的网站功能", "了解网站使用情况的分析", "性能改进"],
       "note": "您可以通过浏览器设置控制 Cookie，但这可能会影响网站功能。"
     },
     "data_security": {
       "title": "数据安全与保留",
       "intro": "我们实施标准的安全措施来保护您的数据，包括加密和安全存储。然而，没有任何在线服务是完全安全的。",
       "technical": "保留期限：",
-      "retention_items": [
-        "网站分析：26 个月",
-        "时事通讯订阅：直到您退订"
-      ]
+      "retention_items": ["网站分析：26 个月", "时事通讯订阅：直到您退订"]
     },
     "your_rights": {
       "title": "您的权利",
@@ -664,7 +657,7 @@
     },
     "contact_info": {
       "title": "联系我们",
-      "address": "Quantus Labs LLC\n20 N Gould St 52783\nSheridan, WY 82801",
+      "address": "Quantus Labs LLC\n30 N Gould St #52155\nSheridan, WY 82801",
       "note": "关于本政策的问题或行使您的隐私权，请使用我们的",
       "link": "联系表单"
     }
@@ -746,7 +739,7 @@
     },
     "contact": {
       "title": "联系我们",
-      "address": "Quantus Labs LLC\n20 N Gould St 52783\nSheridan, WY 82801",
+      "address": "Quantus Labs LLC\n30 N Gould St #52155\nSheridan, WY 82801",
       "note": "关于这些条款的问题，请发送电子邮件至：",
       "email": "hello@quantus.com"
     }

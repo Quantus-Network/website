@@ -87,26 +87,26 @@
         "not_yet": "अभी तक उजागर नहीं"
       },
       "recommendations": {
-        "smart_contract": "This is a smart contract. Smart contract quantum security analysis coming soon!",
-        "public_key_exposed": "Your public key has been exposed through outgoing transactions, making it vulnerable to quantum attacks. Consider moving the funds to a new address.",
-        "public_key_safe": "Excellent! No outgoing transactions mean your public key remains secure.",
-        "balance_very_high": "Your high balance makes your address more attractive to a quantum attacker. Consider splitting your funds into multiple addresses with smaller balances.",
-        "balance_high": "Your high balance makes your address more attractive to a quantum attacker. Consider splitting your funds into multiple addresses with smaller balances.",
-        "balance_medium": "Your high balance makes your address more attractive to a quantum attacker. Consider splitting your funds into multiple addresses with smaller balances.",
-        "balance_low": "Your high balance makes your address more attractive to a quantum attacker. Consider splitting your funds into multiple addresses with smaller balances.",
-        "receive_only": "Consider using this address only for receiving funds to maintain quantum security.",
-        "empty_address": "Empty address has minimal quantum risk exposure."
+        "smart_contract": "यह एक स्मार्ट कॉन्ट्रैक्ट है। स्मार्ट कॉन्ट्रैक्ट क्वांटम सुरक्षा विश्लेषण जल्द ही आ रहा है!",
+        "public_key_exposed": "आउटगोइंग ट्रांजैक्शन के माध्यम से आपकी पब्लिक की उजागर हो गई है, जिससे यह क्वांटम हमलों के प्रति संवेदनशील हो गई है। फंड को नए पते पर ले जाने पर विचार करें।",
+        "public_key_safe": "बहुत बढ़िया! कोई आउटगोइंग ट्रांजैक्शन नहीं होने का मतलब है कि आपकी पब्लिक की सुरक्षित है।",
+        "balance_very_high": "आपका उच्च बैलेंस आपके पते को क्वांटम हमलावर के लिए अधिक आकर्षक बनाता है। अपने फंड को छोटे बैलेंस वाले कई पतों में विभाजित करने पर विचार करें।",
+        "balance_high": "आपका उच्च बैलेंस आपके पते को क्वांटम हमलावर के लिए अधिक आकर्षक बनाता है। अपने फंड को छोटे बैलेंस वाले कई पतों में विभाजित करने पर विचार करें।",
+        "balance_medium": "आपका बैलेंस आपके पते को क्वांटम हमलावर के लिए आकर्षक बनाता है। अपने फंड को छोटे बैलेंस वाले कई पतों में विभाजित करने पर विचार करें।",
+        "balance_low": "आपका बैलेंस कम है, लेकिन यदि की (key) उजागर है तो जोखिम बना रहता है। अपने फंड को छोटे बैलेंस वाले कई पतों में विभाजित करने पर विचार करें।",
+        "receive_only": "क्वांटम सुरक्षा बनाए रखने के लिए इस पते का उपयोग केवल फंड प्राप्त करने के लिए करने पर विचार करें।",
+        "empty_address": "खाली पते में न्यूनतम क्वांटम जोखिम एक्सपोज़र होता है।"
       },
       "exposure_duration": {
-        "less_than_a_day": "less than a day",
-        "one_day": "1 day",
-        "days": "{count} days",
-        "one_month": "1 month",
-        "months": "{count} months",
-        "one_year": "1 year",
-        "one_year_months": "1 year, {months} months",
-        "years": "{count} years",
-        "years_months": "{count} years, {months} months"
+        "less_than_a_day": "एक दिन से कम",
+        "one_day": "1 दिन",
+        "days": "{count} दिन",
+        "one_month": "1 महीना",
+        "months": "{count} महीने",
+        "one_year": "1 साल",
+        "one_year_months": "1 साल, {months} महीने",
+        "years": "{count} साल",
+        "years_months": "{count} साल, {months} महीने"
       }
     }
   },
@@ -664,7 +664,7 @@
     },
     "contact_info": {
       "title": "संपर्क करें",
-      "address": "Quantus Labs LLC\n20 N Gould St 52783\nSheridan, WY 82801",
+      "address": "Quantus Labs LLC\n30 N Gould St #52155\nSheridan, WY 82801",
       "note": "इस नीति के बारे में प्रश्नों के लिए या अपने गोपनीयता अधिकारों का प्रयोग करने के लिए, कृपया हमारे",
       "link": "संपर्क फ़ॉर्म का उपयोग करें"
     }
@@ -746,7 +746,7 @@
     },
     "contact": {
       "title": "संपर्क करें",
-      "address": "Quantus Labs LLC\n20 N Gould St 52783\nSheridan, WY 82801",
+      "address": "Quantus Labs LLC\n30 N Gould St #52155\nSheridan, WY 82801",
       "note": "इन शर्तों के बारे में प्रश्नों के लिए, कृपया ईमेल करें:",
       "email": "hello@quantus.com"
     }

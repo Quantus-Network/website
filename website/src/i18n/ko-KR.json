@@ -87,26 +87,26 @@
         "not_yet": "아직 노출되지 않음"
       },
       "recommendations": {
-        "smart_contract": "This is a smart contract. Smart contract quantum security analysis coming soon!",
-        "public_key_exposed": "Your public key has been exposed through outgoing transactions, making it vulnerable to quantum attacks. Consider moving the funds to a new address.",
-        "public_key_safe": "Excellent! No outgoing transactions mean your public key remains secure.",
-        "balance_very_high": "Your high balance makes your address more attractive to a quantum attacker. Consider splitting your funds into multiple addresses with smaller balances.",
-        "balance_high": "Your high balance makes your address more attractive to a quantum attacker. Consider splitting your funds into multiple addresses with smaller balances.",
-        "balance_medium": "Your high balance makes your address more attractive to a quantum attacker. Consider splitting your funds into multiple addresses with smaller balances.",
-        "balance_low": "Your high balance makes your address more attractive to a quantum attacker. Consider splitting your funds into multiple addresses with smaller balances.",
-        "receive_only": "Consider using this address only for receiving funds to maintain quantum security.",
-        "empty_address": "Empty address has minimal quantum risk exposure."
+        "smart_contract": "이것은 스마트 컨트랙트입니다. 스마트 컨트랙트 양자 보안 분석 기능이 곧 추가될 예정입니다!",
+        "public_key_exposed": "출금 거래를 통해 공개 키가 노출되어 양자 공격에 취약해졌습니다. 자금을 새 주소로 옮기는 것을 고려해 보세요.",
+        "public_key_safe": "훌륭합니다! 출금 거래가 없으므로 공개 키가 안전하게 유지되고 있습니다.",
+        "balance_very_high": "높은 잔액은 양자 공격자에게 귀하의 주소를 더 매력적인 표적으로 만듭니다. 자금을 더 적은 잔액의 여러 주소로 나누는 것을 고려해 보세요.",
+        "balance_high": "높은 잔액은 양자 공격자에게 귀하의 주소를 더 매력적인 표적으로 만듭니다. 자금을 더 적은 잔액의 여러 주소로 나누는 것을 고려해 보세요.",
+        "balance_medium": "잔액이 있어 양자 공격자의 표적이 될 수 있습니다. 자금을 더 적은 잔액의 여러 주소로 나누는 것을 고려해 보세요.",
+        "balance_low": "잔액은 낮지만 키가 노출된 경우 위험이 따릅니다. 자금을 더 적은 잔액의 여러 주소로 나누는 것을 고려해 보세요.",
+        "receive_only": "양자 보안을 유지하기 위해 이 주소를 수신 전용으로 사용하는 것을 고려해 보세요.",
+        "empty_address": "빈 주소는 양자 위험 노출이 최소화됩니다."
       },
       "exposure_duration": {
-        "less_than_a_day": "less than a day",
-        "one_day": "1 day",
-        "days": "{count} days",
-        "one_month": "1 month",
-        "months": "{count} months",
-        "one_year": "1 year",
-        "one_year_months": "1 year, {months} months",
-        "years": "{count} years",
-        "years_months": "{count} years, {months} months"
+        "less_than_a_day": "하루 미만",
+        "one_day": "1일",
+        "days": "{count}일",
+        "one_month": "1개월",
+        "months": "{count}개월",
+        "one_year": "1년",
+        "one_year_months": "1년 {months}개월",
+        "years": "{count}년",
+        "years_months": "{count}년 {months}개월"
       }
     }
   },
@@ -664,7 +664,7 @@
     },
     "contact_info": {
       "title": "문의하기",
-      "address": "Quantus Labs LLC\n20 N Gould St 52783\nSheridan, WY 82801",
+      "address": "Quantus Labs LLC\n30 N Gould St #52155\nSheridan, WY 82801",
       "note": "본 방침에 대한 질문이나 프라이버시 권리 행사를 원하시면 다음을 이용해 주세요.",
       "link": "문의 양식"
     }
@@ -746,7 +746,7 @@
     },
     "contact": {
       "title": "문의하기",
-      "address": "Quantus Labs LLC\n20 N Gould St 52783\nSheridan, WY 82801",
+      "address": "Quantus Labs LLC\n30 N Gould St #52155\nSheridan, WY 82801",
       "note": "본 약관에 대한 문의는 다음 이메일로 보내주세요.",
       "email": "hello@quantus.com"
     }
