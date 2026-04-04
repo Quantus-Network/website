@@ -792,8 +792,12 @@
   "blog": {
     "title": "The latest news from the Quantus.",
     "hero": {
+      "eyebrow": "From the Quantus team",
       "heading": "The Quantus Blog.",
       "sub": "Protocol updates, technical deep-dives, and perspectives on the quantum threat landscape."
+    },
+    "card": {
+      "read": "Read"
     },
     "search_placeholder": "Search posts...",
     "no_posts_found": "No posts found.",
@@ -801,7 +805,8 @@
     "related_posts": "Related Posts",
     "post": {
       "back_to_blog": "Back to Blog",
-      "author": "Quantus Team"
+      "author": "Quantus Team",
+      "updated": "Updated"
     },
     "meta": {
       "title": "Quantus Blog | Latest News & Quantum Insights",

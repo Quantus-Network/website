@@ -720,7 +720,8 @@
     "related_posts": "Ähnliche Beiträge",
     "post": {
       "back_to_blog": "Zurück zum Blog",
-      "author": "Quantus-Team"
+      "author": "Quantus-Team",
+      "updated": "Aktualisiert"
     },
     "meta": {
       "title": "Quantus Blog | Aktuelle Nachrichten & Quantum Insights",
@@ -814,6 +815,14 @@
       "prover": "Prover",
       "infrastructure": "Infrastruktur",
       "consensus": "Konsens"
+    },
+    "hero": {
+      "eyebrow": "Vom Quantus-Team",
+      "heading": "Der Quantus-Blog.",
+      "sub": "Protokoll-Updates, technische Deep-Dives und Perspektiven zur Quantenbedrohung."
+    },
+    "card": {
+      "read": "Lesen"
     }
   },
   "cookie": {

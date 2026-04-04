@@ -720,7 +720,8 @@
     "related_posts": "संबंधित पोस्ट",
     "post": {
       "back_to_blog": "ब्लॉग पर वापस जाएं",
-      "author": "Quantus टीम"
+      "author": "Quantus टीम",
+      "updated": "अपडेट"
     },
     "meta": {
       "title": "क्वांटस ब्लॉग | नवीनतम समाचार और क्वांटम अंतर्दृष्टि",
@@ -814,6 +815,14 @@
       "prover": "प्रूवर",
       "infrastructure": "इंफ्रास्ट्रक्चर",
       "consensus": "आम सहमति"
+    },
+    "hero": {
+      "eyebrow": "Quantus टीम की ओर से",
+      "heading": "Quantus ब्लॉग।",
+      "sub": "प्रोटोकॉल अपडेट, तकनीकी गहराई, और क्वांटम खतरे पर दृष्टिकोण।"
+    },
+    "card": {
+      "read": "पढ़ें"
     }
   },
   "cookie": {

@@ -110,6 +110,8 @@ const articleSchema: WithContext<Article> = {
         {
           updatedDate && (
             <p class="text-content-40 mt-3 font-mono text-[11px] tracking-[0.08em] normal-case not-italic">
+              {t("blog.post.updated")}
+              {" "}
               {updatedDate.toLocaleDateString(currentLocale, {
                 year: "numeric",
                 month: "long",

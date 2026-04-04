@@ -29,6 +29,7 @@ interface Props {
   noPostsFoundText: string;
   searchPlaceholder: string;
   featuredLabel: string;
+  readLabel: string;
   tagsMap: Record<string, string>;
 }
 
@@ -87,6 +88,7 @@ export const BlogList: React.FC<Props> = ({
   noPostsFoundText,
   searchPlaceholder,
   featuredLabel,
+  readLabel,
   tagsMap,
 }) => {
   const [query, setQuery] = useState("");
@@ -185,7 +187,7 @@ export const BlogList: React.FC<Props> = ({
                 />
                 <div className="bg-void/55 absolute inset-0 flex items-center justify-center opacity-0 backdrop-blur-xs transition-opacity duration-250 group-hover:opacity-100">
                   <span className="text-flare font-mono text-[13px] font-medium tracking-[0.2em]">
-                    READ
+                    {readLabel}
                   </span>
                 </div>
               </div>
@@ -251,7 +253,7 @@ export const BlogList: React.FC<Props> = ({
                   />
                   <div className="bg-void/55 absolute inset-0 flex items-center justify-center opacity-0 backdrop-blur-xs transition-opacity duration-250 group-hover:opacity-100">
                     <span className="text-flare font-mono text-[13px] font-medium tracking-[0.2em]">
-                      READ
+                      {readLabel}
                     </span>
                   </div>
                 </div>

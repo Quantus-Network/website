@@ -3,16 +3,17 @@ import Layout from "@/components/layout/Layout.astro";
 import { BlogList } from "@/components/features/blog/BlogList";
 import { getCollection } from "astro:content";
 import {
-  DEFAULT_LOCALE,
+  getLocaleFromUrl,
   getLocalizedPath,
   createTranslator,
 } from "@/utils/i18n";
 import { createMetadata } from "@/utils/create-metadata";
 
-const t = await createTranslator(DEFAULT_LOCALE);
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
 
 const posts = await getCollection("blog", ({ id }) => {
-  return id.toLowerCase().startsWith(`${DEFAULT_LOCALE.toLowerCase()}/`);
+  return id.toLowerCase().startsWith(`${locale.toLowerCase()}/`);
 });
 
 const sortedPosts = posts.sort(
@@ -34,7 +35,7 @@ const serializablePosts = sortedPosts.map((post) => ({
   },
 }));
 
-const translations = await import(`../../i18n/${DEFAULT_LOCALE}.json`);
+const translations = await import(`../../i18n/${locale}.json`);
 const tagsMap = translations.default.blog?.tags || {};
 
 const metadata = createMetadata({
@@ -57,7 +58,7 @@ const metadata = createMetadata({
       <span
         class="text-flare block font-mono text-xs tracking-[0.22em] uppercase"
       >
-        FROM THE QUANTUS TEAM
+        {t("blog.hero.eyebrow")}
       </span>
       <h1
         class="mt-4 text-[clamp(36px,4vw,64px)] leading-tight font-medium text-white"
@@ -76,12 +77,13 @@ const metadata = createMetadata({
     <BlogList
       client:load
       posts={serializablePosts}
-      locale={DEFAULT_LOCALE}
-      localizedBlogPath={getLocalizedPath(DEFAULT_LOCALE, "/blog")}
-      localizedTagPath={getLocalizedPath(DEFAULT_LOCALE, "/blog/tags")}
+      locale={locale}
+      localizedBlogPath={getLocalizedPath(locale, "/blog")}
+      localizedTagPath={getLocalizedPath(locale, "/blog/tags")}
       searchPlaceholder={t("blog.search_placeholder")}
       noPostsFoundText={t("blog.no_posts_found")}
       featuredLabel={t("blog.featured_label")}
+      readLabel={t("blog.card.read")}
       tagsMap={tagsMap}
     />
   </section>

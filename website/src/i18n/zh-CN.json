@@ -720,7 +720,8 @@
     "related_posts": "相关文章",
     "post": {
       "back_to_blog": "返回博客",
-      "author": "Quantus 团队"
+      "author": "Quantus 团队",
+      "updated": "更新于"
     },
     "meta": {
       "title": "Quantus 博客 | 最新消息与量子见解",
@@ -814,6 +815,14 @@
       "prover": "证明器",
       "infrastructure": "基础设施",
       "consensus": "共识"
+    },
+    "hero": {
+      "eyebrow": "来自 Quantus 团队",
+      "heading": "Quantus 博客。",
+      "sub": "协议更新、技术深读与量子威胁领域的观点。"
+    },
+    "card": {
+      "read": "阅读"
     }
   },
   "cookie": {

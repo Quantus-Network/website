@@ -720,7 +720,8 @@
     "related_posts": "Entradas relacionadas",
     "post": {
       "back_to_blog": "Volver al blog",
-      "author": "Equipo Quantus"
+      "author": "Equipo Quantus",
+      "updated": "Actualizado"
     },
     "meta": {
       "title": "Quantus Blog | Últimas Noticias y Perspectivas Cuánticas",
@@ -814,6 +815,14 @@
       "prover": "Probador",
       "infrastructure": "Infraestructura",
       "consensus": "Consenso"
+    },
+    "hero": {
+      "eyebrow": "Del equipo Quantus",
+      "heading": "El blog de Quantus.",
+      "sub": "Actualizaciones del protocolo, análisis técnicos y perspectivas sobre el panorama de amenazas cuánticas."
+    },
+    "card": {
+      "read": "Leer"
     }
   },
   "cookie": {

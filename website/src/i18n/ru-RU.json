@@ -720,7 +720,8 @@
     "related_posts": "Похожие сообщения",
     "post": {
       "back_to_blog": "Назад к блогу",
-      "author": "Команда Quantus"
+      "author": "Команда Quantus",
+      "updated": "Обновлено"
     },
     "meta": {
       "title": "Блог Quantus | Последние новости и квантовые инсайты",
@@ -814,6 +815,14 @@
       "prover": "Prover",
       "infrastructure": "Инфраструктура",
       "consensus": "Консенсус"
+    },
+    "hero": {
+      "eyebrow": "От команды Quantus",
+      "heading": "Блог Quantus.",
+      "sub": "Обновления протокола, технические разборы и взгляд на квантовые угрозы."
+    },
+    "card": {
+      "read": "Читать"
     }
   },
   "cookie": {

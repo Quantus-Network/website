@@ -720,7 +720,8 @@
     "related_posts": "Postingan Terkait",
     "post": {
       "back_to_blog": "Kembali ke Blog",
-      "author": "Tim Quantus"
+      "author": "Tim Quantus",
+      "updated": "Diperbarui"
     },
     "meta": {
       "title": "Blog Quantus | Berita Terbaru & Wawasan Kuantum",
@@ -814,6 +815,14 @@
       "prover": "Prover",
       "infrastructure": "Infrastruktur",
       "consensus": "Konsensus"
+    },
+    "hero": {
+      "eyebrow": "Dari tim Quantus",
+      "heading": "Blog Quantus.",
+      "sub": "Pembaruan protokol, ulasan teknis, dan sudut pandang tentang ancaman kuantum."
+    },
+    "card": {
+      "read": "Baca"
     }
   },
   "cookie": {

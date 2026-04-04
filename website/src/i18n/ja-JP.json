@@ -720,7 +720,8 @@
     "related_posts": "関連記事",
     "post": {
       "back_to_blog": "ブログに戻る",
-      "author": "Quantusチーム"
+      "author": "Quantusチーム",
+      "updated": "更新"
     },
     "meta": {
       "title": "Quantusブログ | 最新ニュースと量子インサイト",
@@ -814,6 +815,14 @@
       "prover": "プローバー",
       "infrastructure": "インフラストラクチャ",
       "consensus": "合意形成"
+    },
+    "hero": {
+      "eyebrow": "Quantusチームより",
+      "heading": "Quantusブログ。",
+      "sub": "プロトコルのアップデート、技術的な深掘り、量子脅威に関する視点。"
+    },
+    "card": {
+      "read": "読む"
     }
   },
   "cookie": {
