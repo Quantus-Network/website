@@ -42,7 +42,7 @@ const { id = "language-switcher", class: className } = Astro.props;
     aria-haspopup="listbox"
     aria-expanded="false"
     aria-label="Choose language"
-    class="font-mono group flex cursor-pointer items-center gap-2 border-none bg-transparent p-0 text-[11px] tracking-widest uppercase text-content-45 transition-colors duration-200 hover:text-[rgba(232,230,224,0.8)]"
+    class="group text-content-45 flex cursor-pointer items-center gap-2 border-none bg-transparent p-0 font-mono text-[11px] tracking-widest uppercase transition-colors duration-200 hover:text-[rgba(232,230,224,0.8)]"
   >
     <span class="text-sm leading-none">{localeInfo[currentLocale]?.flag}</span>
     <span>{localeInfo[currentLocale]?.nativeName}</span>
@@ -72,7 +72,7 @@ const { id = "language-switcher", class: className } = Astro.props;
           <a
             href={addLocaleToUrl(currentPath, locale)}
             class:list={[
-              "font-mono flex items-center gap-2.5 px-4 py-2.5 text-[11px] tracking-widest uppercase no-underline transition-colors duration-150",
+              "flex items-center gap-2.5 px-4 py-2.5 font-mono text-[11px] tracking-widest uppercase no-underline transition-colors duration-150",
               locale === currentLocale
                 ? "text-content-90 bg-[rgba(232,230,224,0.05)]"
                 : "text-content-45 hover:text-content-70 hover:bg-[rgba(232,230,224,0.03)]",
@@ -128,5 +128,7 @@ const { id = "language-switcher", class: className } = Astro.props;
     });
   }
 
-  document.querySelectorAll<HTMLElement>("[aria-haspopup='listbox']").forEach(initLanguageSwitcher);
+  document
+    .querySelectorAll<HTMLElement>("[aria-haspopup='listbox']")
+    .forEach(initLanguageSwitcher);
 </script>
