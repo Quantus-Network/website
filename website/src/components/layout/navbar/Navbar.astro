@@ -220,7 +220,7 @@ const t = await createTranslator(locale);
   const links = nav?.querySelectorAll("a");
 
   window.addEventListener("scroll", () => {
-    if (window.scrollY > window.innerHeight * 0.5) {
+    if (window.scrollY > nav.clientHeight) {
       nav.classList.add("scrolled");
     } else {
       nav.classList.remove("scrolled");

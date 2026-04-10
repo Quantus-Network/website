@@ -10,7 +10,7 @@
   --color-border: rgba(232, 230, 224, 0.08);
   --color-border-med: rgba(232, 230, 224, 0.16);
   --color-navbar: rgba(14, 14, 14, 0.3);
-  --color-navbar-scrolled: rgba(14, 14, 14, 0.95);
+  --color-navbar-scrolled: rgba(14, 14, 14, 0.85);
 
   /* Common content alpha variants from redesign pages */
   --color-content-90: rgba(232, 230, 224, 0.9);
