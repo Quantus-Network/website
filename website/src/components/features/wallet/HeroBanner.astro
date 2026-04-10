@@ -142,6 +142,17 @@ const t = await createTranslator(locale);
     opacity: 1;
     transform: none;
   }
+
+  @media (max-width: 768px) {
+    .wallet-divider {
+      margin-left: -24px;
+      margin-right: -24px;
+    }
+
+    .wallet-divider.expanded {
+      width: calc(100% + 48px);
+    }
+  }
 </style>
 
 <style>
