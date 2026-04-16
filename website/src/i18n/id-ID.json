@@ -916,7 +916,10 @@
       "performance": "Performa",
       "prover": "Pembukti",
       "infrastructure": "Infrastruktur",
-      "consensus": "Konsensus"
+      "consensus": "Konsensus",
+      "mining": "Penambangan",
+      "testnet": "Testnet",
+      "subsquid": "Subsquid"
     }
   },
   "cookie": {

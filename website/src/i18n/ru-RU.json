@@ -916,7 +916,10 @@
       "performance": "Производительность",
       "prover": "Проверщик",
       "infrastructure": "Инфраструктура",
-      "consensus": "Консенсус"
+      "consensus": "Консенсус",
+      "mining": "Майнинг",
+      "testnet": "Тестнет",
+      "subsquid": "Subsquid"
     }
   },
   "cookie": {

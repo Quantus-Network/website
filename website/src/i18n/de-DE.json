@@ -916,7 +916,10 @@
       "performance": "Leistung",
       "prover": "Prover",
       "infrastructure": "Infrastruktur",
-      "consensus": "Konsens"
+      "consensus": "Konsens",
+      "mining": "Mining",
+      "testnet": "Testnet",
+      "subsquid": "Subsquid"
     }
   },
   "cookie": {

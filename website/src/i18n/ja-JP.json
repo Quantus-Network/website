@@ -916,7 +916,10 @@
       "performance": "パフォーマンス",
       "prover": "プルーバー",
       "infrastructure": "インフラストラクチャ",
-      "consensus": "コンセンサス"
+      "consensus": "コンセンサス",
+      "mining": "マイニング",
+      "testnet": "テストネット",
+      "subsquid": "Subsquid"
     }
   },
   "cookie": {

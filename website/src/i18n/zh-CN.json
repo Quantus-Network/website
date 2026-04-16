@@ -909,7 +909,10 @@
       "performance": "性能",
       "prover": "证明者",
       "infrastructure": "基础设施",
-      "consensus": "共识"
+      "consensus": "共识",
+      "mining": "挖矿",
+      "testnet": "测试网",
+      "subsquid": "Subsquid"
     }
   },
   "cookie": {

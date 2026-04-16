@@ -916,7 +916,10 @@
       "performance": "प्रदर्शन",
       "prover": "प्रूवर",
       "infrastructure": "बुनियादी ढांचा",
-      "consensus": "कंसेंसस"
+      "consensus": "कंसेंसस",
+      "mining": "माइनिंग",
+      "testnet": "टेस्टनेट",
+      "subsquid": "Subsquid"
     }
   },
   "cookie": {

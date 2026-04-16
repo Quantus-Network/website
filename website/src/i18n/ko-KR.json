@@ -916,7 +916,10 @@
       "performance": "성능",
       "prover": "증명자",
       "infrastructure": "인프라",
-      "consensus": "합의"
+      "consensus": "합의",
+      "mining": "마이닝",
+      "testnet": "테스트넷",
+      "subsquid": "Subsquid"
     }
   },
   "cookie": {
