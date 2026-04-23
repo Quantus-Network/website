@@ -771,7 +771,8 @@
       "contact": "联系我们",
       "privacy": "隐私政策",
       "terms": "服务条款",
-      "coingecko": "CoinGecko"
+      "coingecko": "CoinGecko",
+      "blockspot": "Blockspot.io"
     }
   },
   "account": {
@@ -907,6 +908,7 @@
       "keystone": "Keystone",
       "heisenberg-testnet": "海森堡测试网",
       "performance": "性能",
+      "planck": "普朗克",
       "prover": "证明者",
       "infrastructure": "基础设施",
       "consensus": "共识",

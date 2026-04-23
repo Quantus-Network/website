@@ -778,7 +778,8 @@
       "contact": "문의",
       "privacy": "개인정보 처리방침",
       "terms": "서비스 약관",
-      "coingecko": "CoinGecko"
+      "coingecko": "CoinGecko",
+      "blockspot": "Blockspot.io"
     }
   },
   "account": {
@@ -914,6 +915,7 @@
       "keystone": "Keystone",
       "heisenberg-testnet": "Heisenberg 테스트넷",
       "performance": "성능",
+      "planck": "플랑크",
       "prover": "증명자",
       "infrastructure": "인프라",
       "consensus": "합의",
