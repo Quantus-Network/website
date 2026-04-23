@@ -82,6 +82,12 @@ export const FOOTER_NAVIGATIONS: Navigation[] = [
         target: "_blank",
         rel: "noopener",
       },
+      {
+        label: "footer.links.blockspot",
+        href: "https://blockspot.io/coin/quantus/",
+        target: "_blank",
+        rel: "noopener",
+      }
     ],
   },
 ] as const;
