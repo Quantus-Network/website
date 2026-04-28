@@ -778,7 +778,8 @@
       "contact": "Контакты",
       "privacy": "Политика конфиденциальности",
       "terms": "Условия использования",
-      "coingecko": "CoinGecko"
+      "coingecko": "CoinGecko",
+      "blockspot": "Blockspot.io"
     }
   },
   "account": {
@@ -914,6 +915,7 @@
       "keystone": "Keystone",
       "heisenberg-testnet": "Heisenberg Testnet",
       "performance": "Производительность",
+      "planck": "Планк",
       "prover": "Проверщик",
       "infrastructure": "Инфраструктура",
       "consensus": "Консенсус",

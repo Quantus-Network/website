@@ -778,7 +778,8 @@
       "contact": "Kontakt",
       "privacy": "Datenschutzrichtlinie",
       "terms": "Nutzungsbedingungen",
-      "coingecko": "CoinGecko"
+      "coingecko": "CoinGecko",
+      "blockspot": "Blockspot.io"
     }
   },
   "account": {
@@ -914,6 +915,7 @@
       "keystone": "Keystone",
       "heisenberg-testnet": "Heisenberg-Testnet",
       "performance": "Leistung",
+      "planck": "Planck",
       "prover": "Prover",
       "infrastructure": "Infrastruktur",
       "consensus": "Konsens",

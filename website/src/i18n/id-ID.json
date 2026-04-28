@@ -778,7 +778,8 @@
       "contact": "Kontak",
       "privacy": "Kebijakan Privasi",
       "terms": "Ketentuan Layanan",
-      "coingecko": "CoinGecko"
+      "coingecko": "CoinGecko",
+      "blockspot": "Blockspot.io"
     }
   },
   "account": {
@@ -914,6 +915,7 @@
       "keystone": "Keystone",
       "heisenberg-testnet": "Testnet Heisenberg",
       "performance": "Performa",
+      "planck": "Planck",
       "prover": "Pembukti",
       "infrastructure": "Infrastruktur",
       "consensus": "Konsensus",
