@@ -140,3 +140,6 @@ vite.config.ts.timestamp-*
 
 # Astro
 .astro
+
+# Mac OS
+.DS_Store

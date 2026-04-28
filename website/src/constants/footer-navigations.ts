@@ -32,7 +32,7 @@ export const FOOTER_NAVIGATIONS: Navigation[] = [
       },
       {
         label: "footer.links.documentation",
-        href: "https://github.com/Quantus-Network/chain",
+        href: "https://docs.quantus.com/",
         target: "_blank",
         rel: "noopener",
       },
