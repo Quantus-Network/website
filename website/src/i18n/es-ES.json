@@ -141,7 +141,7 @@
       },
       "ticker": {
         "block_height": "ALTURA DE BLOQUE",
-        "tps": "TPS",
+        "qtps": "QTPS",
         "uptime": "TIEMPO DE ACTIVIDAD",
         "validators": "VALIDADORES",
         "mainnet": "MAINNET: ??"
@@ -216,7 +216,7 @@
             },
             "throughput": {
               "label": "Rendimiento",
-              "value": "4,200 TPS"
+              "value": "50 QTPS"
             }
           }
         },
@@ -441,7 +441,7 @@
         },
         "encrypt": {
           "title": "Privado por defecto",
-          "body": "La privacidad es un derecho. El mismo diseño de pruebas de conocimiento cero que escala Quantus a 3,800 TPS también protege su privacidad. Sus transacciones, saldo e historial son suyos."
+          "body": "La privacidad es un derecho. El mismo diseño de pruebas de conocimiento cero que escala Quantus a 50 QTPS también protege su privacidad. Sus transacciones, saldo e historial son suyos."
         }
       }
     },
@@ -450,9 +450,9 @@
       "heading": "Su billetera hoy. Sigue siendo segura cuando llegue la computación cuántica.",
       "body": "El Q-day no será televisado. La billetera Quantus significa que no tiene que pensar en ello. Ya está en el lado correcto del cambio.",
       "stats": {
-        "tps": {
-          "value": "3,800",
-          "label": "TPS EN QUANTUS"
+        "qtps": {
+          "value": "50",
+          "label": "QTPS EN QUANTUS"
         },
         "security": {
           "value": "NIST 5",

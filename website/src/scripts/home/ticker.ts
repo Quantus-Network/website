@@ -6,7 +6,7 @@ export const buildTicker = () => {
 
   const labels = {
     blockHeight: track.dataset.i18nBlockHeight || "BLOCK HEIGHT",
-    tps: track.dataset.i18nTps || "TPS",
+    qtps: track.dataset.i18nQtps || "QTPS",
     uptime: track.dataset.i18nUptime || "UPTIME",
     validators: track.dataset.i18nValidators || "VALIDATORS",
     mainnet: track.dataset.i18nMainnet || "MAINNET: ??",
@@ -14,7 +14,7 @@ export const buildTicker = () => {
 
   const items = [
     { lbl: labels.blockHeight, val: "—", live: true, id: "block-height" },
-    { lbl: labels.tps, val: "3,800", live: false },
+    { lbl: labels.qtps, val: "50", live: false },
     { lbl: labels.uptime, val: "99.97%", live: false },
     { lbl: labels.validators, val: "—", live: true, id: "validators" },
     { lbl: "", val: labels.mainnet, live: false, mainnet: true },

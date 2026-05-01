@@ -141,7 +141,7 @@
       },
       "ticker": {
         "block_height": "BLOCK HEIGHT",
-        "tps": "TPS",
+        "qtps": "QTPS",
         "uptime": "UPTIME",
         "validators": "VALIDATORS",
         "mainnet": "MAINNET: ??"
@@ -216,7 +216,7 @@
             },
             "throughput": {
               "label": "Throughput",
-              "value": "4,200 TPS"
+              "value": "50 QTPS"
             }
           }
         },
@@ -441,7 +441,7 @@
         },
         "encrypt": {
           "title": "Private By Default",
-          "body": "Privacy is a right. The same zero-knowledge proof design that scales Quantus to 3,800 TPS also protects your privacy. Your transactions, balance, and history are yours."
+          "body": "Privacy is a right. The same zero-knowledge proof design that scales Quantus to 50 QTPS also protects your privacy. Your transactions, balance, and history are yours."
         }
       }
     },
@@ -450,9 +450,9 @@
       "heading": "Your wallet today. Still safe when quantum arrives.",
       "body": "Q-day will not be televised. The Quantus wallet means you do not have to think about it. You are already on the right side of the shift.",
       "stats": {
-        "tps": {
-          "value": "3,800",
-          "label": "TPS ON QUANTUS"
+        "qtps": {
+          "value": "50",
+          "label": "QTPS ON QUANTUS"
         },
         "security": {
           "value": "NIST 5",

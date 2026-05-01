@@ -141,7 +141,7 @@
       },
       "ticker": {
         "block_height": "블록 높이",
-        "tps": "TPS",
+        "qtps": "QTPS",
         "uptime": "업타임",
         "validators": "검증인",
         "mainnet": "MAINNET: ??"
@@ -216,7 +216,7 @@
             },
             "throughput": {
               "label": "처리량",
-              "value": "4,200 TPS"
+              "value": "50 QTPS"
             }
           }
         },
@@ -450,8 +450,8 @@
       "heading": "오늘의 지갑. 양자가 와도 안전합니다.",
       "body": "Q-day는 텔레비전으로 중계되지 않을 것입니다. Quantus 지갑을 사용하면 그것에 대해 걱정할 필요가 없습니다. 귀하는 이미 변화의 올바른 쪽에 서 있습니다.",
       "stats": {
-        "tps": {
-          "value": "3,800",
+        "qtps": {
+          "value": "50",
           "label": "QUANTUS 처리량"
         },
         "security": {

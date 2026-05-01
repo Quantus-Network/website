@@ -141,7 +141,7 @@
       },
       "ticker": {
         "block_height": "区块高度",
-        "tps": "TPS",
+        "qtps": "QTPS",
         "uptime": "运行时间",
         "validators": "验证者",
         "mainnet": "主网: ??"
@@ -216,7 +216,7 @@
             },
             "throughput": {
               "label": "吞吐量",
-              "value": "4,200 TPS"
+              "value": "50 QTPS"
             }
           }
         },
@@ -441,7 +441,7 @@
         },
         "encrypt": {
           "title": "默认私密",
-          "body": "隐私是一项权利。使 Quantus 扩展到 3,800 TPS 的零知识证明设计同时也保护了您的隐私。您的交易、余额和历史记录都属于您自己。"
+          "body": "隐私是一项权利。使 Quantus 扩展到 50 QTPS 的零知识证明设计同时也保护了您的隐私。您的交易、余额和历史记录都属于您自己。"
         }
       }
     },
@@ -450,9 +450,9 @@
       "heading": "今天的钱包，在量子时代依然安全。",
       "body": "Q-day 不会通过电视转播。Quantus 钱包意味着您无需为此担心。您已经站在了变革的正确一边。",
       "stats": {
-        "tps": {
-          "value": "3,800",
-          "label": "QUANTUS 的 TPS"
+        "qtps": {
+          "value": "50",
+          "label": "QUANTUS 的 QTPS"
         },
         "security": {
           "value": "NIST 5",

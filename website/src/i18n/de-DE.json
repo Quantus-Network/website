@@ -141,7 +141,7 @@
       },
       "ticker": {
         "block_height": "BLOCKHÖHE",
-        "tps": "TPS",
+        "qtps": "QTPS",
         "uptime": "UPTIME",
         "validators": "VALIDATOREN",
         "mainnet": "MAINNET: ??"
@@ -216,7 +216,7 @@
             },
             "throughput": {
               "label": "Durchsatz",
-              "value": "4.200 TPS"
+              "value": "50 QTPS"
             }
           }
         },
@@ -441,7 +441,7 @@
         },
         "encrypt": {
           "title": "Standardmäßig privat",
-          "body": "Privatsphäre ist ein Recht. Dasselbe Zero-Knowledge-Proof-Design, das Quantus auf 3.800 TPS skaliert, schützt auch Ihre Privatsphäre. Ihre Transaktionen, Ihr Kontostand und Ihre Historie gehören Ihnen."
+          "body": "Privatsphäre ist ein Recht. Dasselbe Zero-Knowledge-Proof-Design, das Quantus auf 50 QTPS skaliert, schützt auch Ihre Privatsphäre. Ihre Transaktionen, Ihr Kontostand und Ihre Historie gehören Ihnen."
         }
       }
     },
@@ -450,9 +450,9 @@
       "heading": "Ihre Wallet heute. Auch morgen noch sicher, wenn die Quantencomputer kommen.",
       "body": "Der Q-Day wird nicht im Fernsehen übertragen. Mit der Quantus-Wallet müssen Sie nicht darüber nachdenken. Sie stehen bereits auf der richtigen Seite des Wandels.",
       "stats": {
-        "tps": {
-          "value": "3.800",
-          "label": "TPS AUF QUANTUS"
+        "qtps": {
+          "value": "50",
+          "label": "QTPS AUF QUANTUS"
         },
         "security": {
           "value": "NIST 5",

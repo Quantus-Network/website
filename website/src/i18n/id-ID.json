@@ -141,7 +141,7 @@
       },
       "ticker": {
         "block_height": "TINGGI BLOK",
-        "tps": "TPS",
+        "qtps": "QTPS",
         "uptime": "UPTIME",
         "validators": "VALIDATOR",
         "mainnet": "MAINNET: ??"
@@ -216,7 +216,7 @@
             },
             "throughput": {
               "label": "Throughput",
-              "value": "4,200 TPS"
+              "value": "50 QTPS"
             }
           }
         },
@@ -441,7 +441,7 @@
         },
         "encrypt": {
           "title": "Pribadi Secara Default",
-          "body": "Privasi adalah hak. Desain bukti zero-knowledge yang sama yang menskalakan Quantus hingga 3.800 TPS juga melindungi privasi Anda. Transaksi, saldo, dan riwayat Anda adalah milik Anda."
+          "body": "Privasi adalah hak. Desain bukti zero-knowledge yang sama yang menskalakan Quantus hingga 50 QTPS juga melindungi privasi Anda. Transaksi, saldo, dan riwayat Anda adalah milik Anda."
         }
       }
     },
@@ -450,9 +450,9 @@
       "heading": "Dompet Anda hari ini. Tetap aman saat kuantum tiba.",
       "body": "Q-day tidak akan disiarkan di televisi. Dompet Quantus berarti Anda tidak perlu memikirkannya. Anda sudah berada di sisi perubahan yang benar.",
       "stats": {
-        "tps": {
-          "value": "3,800",
-          "label": "TPS DI QUANTUS"
+        "qtps": {
+          "value": "50",
+          "label": "QTPS DI QUANTUS"
         },
         "security": {
           "value": "NIST 5",

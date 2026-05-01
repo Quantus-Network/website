@@ -141,7 +141,7 @@
       },
       "ticker": {
         "block_height": "ブロック高",
-        "tps": "TPS",
+        "qtps": "QTPS",
         "uptime": "稼働時間",
         "validators": "バリデーター",
         "mainnet": "メインネット: ??"
@@ -216,7 +216,7 @@
             },
             "throughput": {
               "label": "スループット",
-              "value": "4,200 TPS"
+              "value": "50 QTPS"
             }
           }
         },
@@ -450,8 +450,8 @@
       "heading": "今日のウォレット。量子が来ても安全。",
       "body": "Q-dayはテレビで放映されることはありません。Quantusウォレットを使えば、それについて考える必要はありません。あなたはすでに変化の正しい側にいます。",
       "stats": {
-        "tps": {
-          "value": "3,800",
+        "qtps": {
+          "value": "50",
           "label": "QUANTUSのスループット"
         },
         "security": {
