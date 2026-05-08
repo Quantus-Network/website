@@ -915,7 +915,9 @@
       "consensus": "共识",
       "mining": "挖矿",
       "testnet": "测试网",
-      "subsquid": "Subsquid"
+      "subsquid": "Subsquid",
+      "mithril": "Mithril",
+      "network-school": "Network School"
     }
   },
   "cookie": {

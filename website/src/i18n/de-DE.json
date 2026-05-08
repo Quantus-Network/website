@@ -922,7 +922,9 @@
       "consensus": "Konsens",
       "mining": "Mining",
       "testnet": "Testnet",
-      "subsquid": "Subsquid"
+      "subsquid": "Subsquid",
+      "mithril": "Mithril",
+      "network-school": "Network School"
     }
   },
   "cookie": {

@@ -922,7 +922,9 @@
       "consensus": "コンセンサス",
       "mining": "マイニング",
       "testnet": "テストネット",
-      "subsquid": "Subsquid"
+      "subsquid": "Subsquid",
+      "mithril": "Mithril",
+      "network-school": "Network School"
     }
   },
   "cookie": {
