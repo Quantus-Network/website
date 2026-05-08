@@ -29,6 +29,8 @@ const t = await createTranslator(locale);
         <li>
           <a
             href={getLocalizedPath(locale, item.href)}
+            target={item.target}
+            rel={item.rel}
             class={applyStyles(
               "after:bg-flare font-navbar-link text-muted relative no-underline transition-all duration-200 ease-in-out after:absolute after:bottom-[-2px] after:left-0 after:h-px after:w-0 after:transition-all after:duration-250 after:content-[''] hover:text-white hover:opacity-100 hover:after:w-full [&.nav-active]:text-white [&.nav-active]:after:bottom-[-4px] [&.nav-active]:after:h-[2px] [&.nav-active]:after:w-full",
             )}
