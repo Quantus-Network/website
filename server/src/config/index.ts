@@ -24,6 +24,7 @@ export default {
   appName: "Resonance_Network",
   nodeEnv: process.env.NODE_ENV,
   email: {
+    token: process.env.EMAIL_TOKEN,
     host: process.env.EMAIL_HOST,
     port: Number(process.env.EMAIL_PORT),
     auth: {

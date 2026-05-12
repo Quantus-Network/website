@@ -13,6 +13,7 @@ import { Inquiry } from "./interfaces/Inquiry.js";
 import Mail from "nodemailer/lib/mailer/index.js";
 import axios from "axios";
 import { DatabaseError } from "pg";
+import { EmailPayload } from "./interfaces/EmailPayload.js";
 
 const dbClient = await db();
 const emailClient = emailTransporter();
@@ -62,6 +63,12 @@ app.post("/api/waitlist", async (req, res) => {
   }
 });
 app.post("/api/inquiries", async (req, res) => {
+  const token = req.headers.authorization?.split(" ")[1];
+  if (token !== env.email.token) {
+    res.status(401).json({ error: "Unauthorized!" });
+    return;
+  }
+
   const { email, message, name } = req.body as Inquiry;
 
   if (!name) {
@@ -88,6 +95,41 @@ app.post("/api/inquiries", async (req, res) => {
     emailClient.sendMail(contactUsMailOptions);
 
     res.status(200).json({ message: "Success sending!", email });
+  } catch (error) {
+    res.status(400).json({ error: "Failed sending." });
+  }
+});
+app.post("/api/send-email", async (req, res) => {
+  const { from, to, subject, html } = req.body as EmailPayload;
+
+  if (!from) {
+    res.status(400).json({ error: "From is required!" });
+    return;
+  }
+  if (!to) {
+    res.status(400).json({ error: "To is required!" });
+    return;
+  }
+  if (!subject) {
+    res.status(400).json({ error: "Subject is required!" });
+    return;
+  }
+  if (!html) {
+    res.status(400).json({ error: "HTML is required!" });
+    return;
+  }
+
+  const contactUsMailOptions: Mail.Options = {
+    from,
+    to,
+    subject,
+    html,
+  };
+
+  try {
+    emailClient.sendMail(contactUsMailOptions);
+
+    res.status(200).json({ message: "Success sending!" });
   } catch (error) {
     res.status(400).json({ error: "Failed sending." });
   }
