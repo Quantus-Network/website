@@ -212,6 +212,8 @@ const t = await createTranslator(locale);
   };
 
   const checkIsActive = (link: HTMLAnchorElement) => {
+    if (link.href.includes("docs")) return false;
+
     const linkPath = new URL(link.href).pathname + new URL(link.href).hash;
     const currentPath = location.pathname + location.hash;
 
