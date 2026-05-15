@@ -16,6 +16,8 @@ export default {
     "https://quantus.com",
     "http://www.quantus.com",
     "https://www.quantus.com",
+    "https://q.day",
+    "http://q.day",
   ],
   apiBaseUrl: process.env.API_BASE_URL,
   webBaseUrl: process.env.WEB_BASE_URL,
@@ -33,6 +35,7 @@ export default {
     },
     sender: process.env.EMAIL_SENDER,
     receiver: process.env.EMAIL_RECEIVER,
+    sponsorshipReceiver: process.env.EMAIL_SPONSORSHIP_RECEIVER,
   },
   newsletter: {
     baseUrl: process.env.NEWSLETTER_BASE_URL,

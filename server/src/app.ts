@@ -13,7 +13,7 @@ import { Inquiry } from "./interfaces/Inquiry.js";
 import Mail from "nodemailer/lib/mailer/index.js";
 import axios from "axios";
 import { DatabaseError } from "pg";
-import { EmailPayload } from "./interfaces/EmailPayload.js";
+import { EmailPayload, SponsorshipPayload } from "./interfaces/EmailPayload.js";
 
 const dbClient = await db();
 const emailClient = emailTransporter();
@@ -46,7 +46,7 @@ app.post("/api/waitlist", async (req, res) => {
         headers: {
           Authorization: `Bearer ${env.newsletter.apiToken}`,
         },
-      }
+      },
     );
 
     res.status(201).json({ message: "Success adding to newsletter.", email });
@@ -63,12 +63,6 @@ app.post("/api/waitlist", async (req, res) => {
   }
 });
 app.post("/api/inquiries", async (req, res) => {
-  const token = req.headers.authorization?.split(" ")[1];
-  if (token !== env.email.token) {
-    res.status(401).json({ error: "Unauthorized!" });
-    return;
-  }
-
   const { email, message, name } = req.body as Inquiry;
 
   if (!name) {
@@ -102,6 +96,12 @@ app.post("/api/inquiries", async (req, res) => {
 app.post("/api/send-email", async (req, res) => {
   const { from, to, subject, html } = req.body as EmailPayload;
 
+  const token = req.headers.authorization?.split(" ")[1];
+  if (token !== env.email.token) {
+    res.status(401).json({ error: "Unauthorized!" });
+    return;
+  }
+
   if (!from) {
     res.status(400).json({ error: "From is required!" });
     return;
@@ -119,7 +119,7 @@ app.post("/api/send-email", async (req, res) => {
     return;
   }
 
-  const contactUsMailOptions: Mail.Options = {
+  const sendMailOptions: Mail.Options = {
     from,
     to,
     subject,
@@ -127,7 +127,64 @@ app.post("/api/send-email", async (req, res) => {
   };
 
   try {
-    emailClient.sendMail(contactUsMailOptions);
+    emailClient.sendMail(sendMailOptions);
+
+    res.status(200).json({ message: "Success sending!" });
+  } catch (error) {
+    res.status(400).json({ error: "Failed sending." });
+  }
+});
+app.post("/api/sponsorships", async (req, res) => {
+  const {
+    name,
+    email,
+    phone,
+    designation,
+    organization,
+    investmentTier,
+    additionalInfo,
+  } = req.body as SponsorshipPayload;
+
+  const token = req.headers.authorization?.split(" ")[1];
+  if (token !== env.email.token) {
+    res.status(401).json({ error: "Unauthorized!" });
+    return;
+  }
+
+  if (!name) {
+    res.status(400).json({ error: "Name is required!" });
+    return;
+  }
+  if (!email) {
+    res.status(400).json({ error: "Email is required!" });
+    return;
+  }
+  if (!designation) {
+    res.status(400).json({ error: "Designation is required!" });
+    return;
+  }
+  if (!organization) {
+    res.status(400).json({ error: "Organization is required!" });
+    return;
+  }
+  if (!investmentTier) {
+    res.status(400).json({ error: "Investment tier is required!" });
+    return;
+  }
+
+  let text = `${name} is inquiring for a sponsorship, \n\nemail: ${email}\ndesignation: ${designation}\norganization: ${organization}\ninvestment tier: ${investmentTier}`;
+  if (phone) text += `\nphone: ${phone}`;
+  if (additionalInfo) text += `\nadditional info: ${additionalInfo}`;
+
+  const sponsorshipMailOptions: Mail.Options = {
+    from: `Sponsorship Request - Q.Day <${env.email.sender}>`,
+    to: env.email.sponsorshipReceiver,
+    subject: "New Sponsorship Request",
+    text,
+  };
+
+  try {
+    emailClient.sendMail(sponsorshipMailOptions);
 
     res.status(200).json({ message: "Success sending!" });
   } catch (error) {
