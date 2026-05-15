@@ -145,12 +145,6 @@ app.post("/api/sponsorships", async (req, res) => {
     additionalInfo,
   } = req.body as SponsorshipPayload;
 
-  const token = req.headers.authorization?.split(" ")[1];
-  if (token !== env.email.token) {
-    res.status(401).json({ error: "Unauthorized!" });
-    return;
-  }
-
   if (!name) {
     res.status(400).json({ error: "Name is required!" });
     return;
