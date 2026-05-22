@@ -926,6 +926,8 @@
       "testnet": "テストネット",
       "subsquid": "Subsquid",
       "mithril": "Mithril",
+      "mainnet": "メインネット",
+      "q-day": "Q-Day",
       "network-school": "Network School"
     }
   },

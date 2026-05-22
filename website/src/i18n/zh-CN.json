@@ -919,6 +919,8 @@
       "testnet": "测试网",
       "subsquid": "Subsquid",
       "mithril": "Mithril",
+      "mainnet": "主网",
+      "q-day": "Q-Day",
       "network-school": "Network School"
     }
   },

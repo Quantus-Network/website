@@ -926,6 +926,8 @@
       "testnet": "Testnet",
       "subsquid": "Subsquid",
       "mithril": "Mithril",
+      "mainnet": "Mainnet",
+      "q-day": "Q-Day",
       "network-school": "Network School"
     }
   },
