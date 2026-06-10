@@ -928,7 +928,9 @@
       "mithril": "Mithril",
       "mainnet": "메인넷",
       "q-day": "Q-Day",
-      "network-school": "Network School"
+      "network-school": "Network School",
+      "ecdsa": "ECDSA",
+      "litep2p": "litep2p"
     }
   },
   "cookie": {

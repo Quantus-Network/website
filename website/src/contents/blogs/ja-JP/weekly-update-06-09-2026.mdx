@@ -1,0 +1,101 @@
+---
+title: "Quantus Weekly: ビットコイン署名を破るコストは下がり続けている"
+description: "Google Quantum AI の非公開 ZK 回路、ECDSA.fail の公開スコアボード、Network School QDay 220名超参加、litep2p 移行、証明スタック監査、モバイルウォレット v1.5.0。"
+pubDate: "2026-06-09"
+heroImage: "/blog/covers/weekly-update-06-09-2026.webp"
+heroAlt: "Quantus Weekly: ビットコイン署名を破るコストは下がり続けている"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "quantum",
+    "bitcoin",
+    "post-quantum",
+    "ecdsa",
+    "zk-proofs",
+    "q-day",
+    "network-school",
+    "mobile",
+    "litep2p",
+    "security",
+    "ml-dsa",
+  ]
+---
+
+import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
+
+ビットコイン署名を破るコストは下がり続けている。
+
+ブレークスルーの一部は秘密裏に、別のものは公開の場で起きている。
+
+3月、Google Quantum AI は楕円曲線署名攻撃のリソース見積もりを10分の1にした論文を発表した。
+
+そして奇妙なことをした。
+
+最適化された回路をゼロ知識証明で検証し、回路自体は非公開のままにした。ブログ記事には「米国政府と協力した」と書かれていた。
+
+ZK証明は情報を隠すツールだ。国家安全保障に関する情報を隠すために ZK 証明が使われたのは初めて見た。
+
+Justin Drake が論文の共著者で、秘密保持の文脈に違和感があり、内部告発の能力にも制限があったと述べた。
+
+<TwitterEmbed url="https://x.com/drakefjustin/status/2061793725299224676" />
+
+最近、[@eigenlabs](https://x.com/eigenlabs) が問題の核心を ECDSA (dot) fail という公開スコアボードに変えた。
+
+誰でも回路を提出できる。検証器は Google 自身の ZK ハーネスを流用して採点する。
+
+<TwitterEmbed url="https://x.com/sreeramkannan/status/2061612465797144668" />
+
+正式な量子トレーニングを受けていない学部生が Codex のサブスクリプションとエージェントで、Google が非公開にした数値の50%以内に到達した。18歳の開発者は週末と1万ドルの AI 費用、カスタムエージェントスウォームで80%まで押し上げた。その後公開し、3日以内にリーダーボードが Google の基準点を超えた。
+
+これは今日ビットコインを破るわけではない。
+
+しかし AI エージェントが公開の場で毎日 Shor アルゴリズムのコストを削っており、小さな最適化が積み重なる証拠だ。
+
+<TwitterEmbed url="https://x.com/defijangle/status/2062821128289329604" />
+
+執筆時点で、オープンソースコミュニティは Google の回路を40%以上改善している。
+
+この傾向に量子コンピュータのハードウェア工学におけるブレークスルーが重なれば、Q-Day はここにある。
+
+だから話すべきだ。
+
+先週末、[@ns](https://x.com/ns) で QDay を開催した。220名以上が参加。業界、アカデミア、ビルダーが一つの問いに取り組んだ。
+
+パブリックブロックチェーンは量子コンピュータの前でどう生き残るか？
+
+<TwitterEmbed url="https://x.com/QuantusNetwork/status/2064002930274131980" />
+
+付随レポートも公開した。ブロックチェーンへの量子脅威と今後のロードマップを最速で把握する方法だ。
+
+<TwitterEmbed url="https://x.com/QuantusNetwork/status/2059624449993806039" />
+
+今週出荷したその他の内容：
+
+### Github Activity（マージされた PR 27件）：
+
+![Github Stats](/blog/assets/github-stats-weekly-update-06-09-2026.webp)
+
+### Core Tech & ZK：
+
+- libp2p から litep2p に切り替え、Quantus により軽量なネットワークスタック、低オーバーヘッド、ピア動作への直接的な制御を提供。
+- Plonky2 と ZK 回路を含む証明スタック全体でセキュリティ監査を実施し修正をリリース。
+- ML-DSA ポスト量子署名実装を強化し、RPC コード面の監査を完了。メインネット前にノードの外部攻撃面を縮小。
+
+### Web & Mobile App Updates：
+
+- モバイルウォレット v1.5.0 のリリースを提出。
+- ウォレットの取引履歴ポーリングバグを修正。
+- エクスプローラー UX を改善、特に wormhole セクション。
+- Quantus ショップシステムを改善。
+
+### Content & Partnerships：
+
+- [The State of Quantum レポート](https://x.com/QuantusNetwork/status/2059624449993806039) を読む
+- Network School で [QDay を開催、220名以上参加](https://x.com/QuantusNetwork/status/2064002930274131980)
+
+量子の時代は来る。
+
+私たち次第だ。
+
+Stay frosty, quants.

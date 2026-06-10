@@ -1,0 +1,101 @@
+---
+title: "Quantus 周报：破解比特币签名的成本持续下降"
+description: "Google Quantum AI 的保密 ZK 电路、ECDSA.fail 公开排行榜、Network School QDay 220+ 参与者、litep2p 迁移、证明栈审计，以及移动钱包 v1.5.0。"
+pubDate: "2026-06-09"
+heroImage: "/blog/covers/weekly-update-06-09-2026.webp"
+heroAlt: "Quantus 周报：破解比特币签名的成本持续下降"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "quantum",
+    "bitcoin",
+    "post-quantum",
+    "ecdsa",
+    "zk-proofs",
+    "q-day",
+    "network-school",
+    "mobile",
+    "litep2p",
+    "security",
+    "ml-dsa",
+  ]
+---
+
+import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
+
+破解比特币签名的成本持续下降。
+
+有些突破是保密的，有些则在公开进行。
+
+三月，Google Quantum AI 发表了一篇论文，将攻击椭圆曲线签名的资源估算降低了 10 倍。
+
+然后他们做了一件奇怪的事。
+
+他们用零知识证明验证了优化后的电路，却把电路本身保密。博客文章称他们「与美国政府进行了合作」。
+
+ZK 证明是一种信息隐藏工具。这是我第一次看到 ZK 证明被用于隐藏与国家安全相关的信息。
+
+Justin Drake 是论文合著者之一，他表示对保密背景感到不安，且自己在吹哨方面的能力受到限制。
+
+<TwitterEmbed url="https://x.com/drakefjustin/status/2061793725299224676" />
+
+最近，[@eigenlabs](https://x.com/eigenlabs) 将问题的核心转化为一个名为 ECDSA (dot) fail 的公开排行榜。
+
+任何人都可以提交电路。验证器改编自 Google 自己的 ZK 框架，对其进行评分。
+
+<TwitterEmbed url="https://x.com/sreeramkannan/status/2061612465797144668" />
+
+一名没有正式量子训练背景、仅订阅了 Codex 的本科生，借助智能体将结果推进到 Google 保密数值的 50% 以内。一名 18 岁开发者用一个周末和 1 万美元 AI 开销，配合自定义智能体集群，将结果推到 80%。随后他们向公众开放。三天内，排行榜超过了 Google 的参考点。
+
+这今天还不会攻破比特币。
+
+但这证明 AI 智能体每天都在公开削减 Shor 算法的成本，而微小的优化会不断叠加。
+
+<TwitterEmbed url="https://x.com/defijangle/status/2062821128289329604" />
+
+在撰写本文时，开源社区已将 Google 的电路改进了 40% 以上。
+
+将这一趋势与量子计算机硬件工程方面的任何突破结合起来，Q-Day 就会到来。
+
+所以我们应该讨论它。
+
+上周末我们在 [@ns](https://x.com/ns) 举办了 QDay。超过 220 人到场：行业、学术界和建设者，共同研究一个问题。
+
+公链如何在量子计算机面前生存？
+
+<TwitterEmbed url="https://x.com/QuantusNetwork/status/2064002930274131980" />
+
+我们还发布了一份配套报告。这是最快了解区块链量子威胁及未来路线图的方式。
+
+<TwitterEmbed url="https://x.com/QuantusNetwork/status/2059624449993806039" />
+
+以下是本周我们交付的其他内容：
+
+### GitHub 活动（已合并 27 个拉取请求）：
+
+![Github Stats](/blog/assets/github-stats-weekly-update-06-09-2026.webp)
+
+### 核心技术与 ZK：
+
+- 从 libp2p 切换到 litep2p，为 Quantus 提供更精简的网络栈、更低开销，以及对节点行为的更直接控制。
+- 对证明栈进行安全审计并发布修复，涵盖 Plonky2 和我们的 ZK 电路。
+- 强化 ML-DSA 后量子签名实现，并完成 RPC 代码面的审计，在主网前缩小节点的外部攻击面。
+
+### 网页与移动应用更新：
+
+- 提交移动钱包 v1.5.0 发布。
+- 修复钱包交易历史轮询 bug。
+- 改进浏览器 UX，尤其是 wormhole 部分。
+- 改进 Quantus 商店系统。
+
+### 内容与合作伙伴：
+
+- 阅读 [The State of Quantum 报告](https://x.com/QuantusNetwork/status/2059624449993806039)
+- 在 Network School 举办 [QDay，220+ 参与者](https://x.com/QuantusNetwork/status/2064002930274131980)
+
+量子时代正在到来。
+
+取决于我们。
+
+保持冷静，quants。

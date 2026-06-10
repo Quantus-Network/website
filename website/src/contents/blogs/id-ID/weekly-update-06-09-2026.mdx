@@ -1,0 +1,101 @@
+---
+title: "Quantus Weekly: Biaya Memecahkan Tanda Tangan Bitcoin Terus Turun"
+description: "Sirkuit ZK rahasia Google Quantum AI, papan skor publik ECDSA.fail, QDay di Network School dengan 220+ peserta, migrasi litep2p, audit stack proving, dan dompet seluler v1.5.0."
+pubDate: "2026-06-09"
+heroImage: "/blog/covers/weekly-update-06-09-2026.webp"
+heroAlt: "Quantus Weekly: Biaya Memecahkan Tanda Tangan Bitcoin Terus Turun"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "quantum",
+    "bitcoin",
+    "post-quantum",
+    "ecdsa",
+    "zk-proofs",
+    "q-day",
+    "network-school",
+    "mobile",
+    "litep2p",
+    "security",
+    "ml-dsa",
+  ]
+---
+
+import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
+
+Biaya memecahkan tanda tangan Bitcoin terus turun.
+
+Beberapa terobosan bersifat rahasia, yang lain terjadi di depan umum.
+
+Pada Maret, Google Quantum AI menerbitkan makalah yang memangkas estimasi sumber daya untuk menyerang tanda tangan kurva eliptik sebesar 10x.
+
+Lalu mereka melakukan sesuatu yang aneh.
+
+Mereka memvalidasi sirkuit yang dioptimalkan dengan bukti zero-knowledge dan merahasiakan sirkuitnya sendiri. Posting blog menyebut mereka «berkolaborasi dengan pemerintah AS.»
+
+Bukti ZK adalah alat untuk menyembunyikan informasi. Ini pertama kalinya saya melihat bukti ZK dipakai untuk menyembunyikan informasi terkait keamanan nasional.
+
+Justin Drake ikut menulis makalah tersebut dan mengatakan konteks kerahasiaan itu tidak nyaman baginya, dan kemampuannya untuk membongkar dibatasi.
+
+<TwitterEmbed url="https://x.com/drakefjustin/status/2061793725299224676" />
+
+Baru-baru ini, [@eigenlabs](https://x.com/eigenlabs) mengambil inti masalah dan mengubahnya menjadi papan skor publik bernama ECDSA (dot) fail.
+
+Siapa pun bisa mengirim sirkuit. Verifier, yang dimodifikasi dari harness ZK Google sendiri, menilainya.
+
+<TwitterEmbed url="https://x.com/sreeramkannan/status/2061612465797144668" />
+
+Seorang mahasiswa tanpa pelatihan kuantum formal dan langganan Codex memakai agen untuk mendekati 50% dari angka yang ditahan Google. Seorang berusia 18 tahun menghabiskan akhir pekan dan $10K biaya AI dengan enjambre agen kustom dan mendorongnya ke 80%. Lalu mereka membukanya ke publik. Dalam tiga hari, papan peringkat melampaui titik referensi Google.
+
+Ini tidak memecahkan Bitcoin hari ini.
+
+Tapi ini bukti bahwa agen AI setiap hari memangkas biaya algoritma Shor secara terbuka, dan optimasi kecil saling bertambah.
+
+<TwitterEmbed url="https://x.com/defijangle/status/2062821128289329604" />
+
+Komunitas open source telah mencapai peningkatan lebih dari 40% dibanding sirkuit Google pada saat penulisan ini.
+
+Gabungkan tren ini dengan terobosan pada salah satu pendekatan perangkat keras untuk rekayasa komputer kuantum, dan Q-Day ada di sini.
+
+Jadi kita harus membicarakannya.
+
+Akhir pekan lalu kami mengadakan QDay di [@ns](https://x.com/ns). Lebih dari 220 orang hadir: industri, akademisi, dan builder, semua mengerjakan satu pertanyaan.
+
+Bagaimana blockchain publik bertahan dari komputer kuantum?
+
+<TwitterEmbed url="https://x.com/QuantusNetwork/status/2064002930274131980" />
+
+Kami juga menerbitkan laporan pendamping. Cara tercepat untuk memahami ancaman kuantum terhadap blockchain dan peta jalan ke depan.
+
+<TwitterEmbed url="https://x.com/QuantusNetwork/status/2059624449993806039" />
+
+Berikut hal lain yang kami rilis minggu ini:
+
+### Aktivitas Github (27 pull request yang digabungkan):
+
+![Github Stats](/blog/assets/github-stats-weekly-update-06-09-2026.webp)
+
+### Core Tech & ZK:
+
+- Beralih dari libp2p ke litep2p, memberi Quantus stack jaringan yang lebih ringan, overhead lebih rendah, dan kontrol lebih langsung atas perilaku peer.
+- Menjalankan audit keamanan dan merilis perbaikan di seluruh stack proving, mencakup Plonky2 dan sirkuit ZK kami.
+- Memperkuat implementasi tanda tangan post-kuantum ML-DSA dan menyelesaikan audit permukaan kode RPC, mengurangi permukaan serangan eksternal node menjelang mainnet.
+
+### Pembaruan Web & Aplikasi Seluler:
+
+- Dompet seluler v1.5.0 diajukan untuk rilis.
+- Memperbaiki bug polling riwayat transaksi dompet.
+- Meningkatkan UX explorer, terutama bagian wormhole.
+- Meningkatkan sistem toko Quantus.
+
+### Konten & Kemitraan:
+
+- Baca [laporan The State of Quantum](https://x.com/QuantusNetwork/status/2059624449993806039)
+- Mengadakan [QDay di Network School dengan 220+ peserta](https://x.com/QuantusNetwork/status/2064002930274131980)
+
+Kuantum akan datang.
+
+Terserah kita.
+
+Stay frosty, quants.

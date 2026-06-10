@@ -1,0 +1,101 @@
+---
+title: "Quantus Weekly: 비트코인 서명을 깨는 비용이 계속 내려가고 있습니다"
+description: "Google Quantum AI의 비공개 ZK 회로, ECDSA.fail 공개 스코어보드, Network School QDay 220명 이상 참석, litep2p 마이그레이션, 증명 스택 감사, 모바일 지갑 v1.5.0."
+pubDate: "2026-06-09"
+heroImage: "/blog/covers/weekly-update-06-09-2026.webp"
+heroAlt: "Quantus Weekly: 비트코인 서명을 깨는 비용이 계속 내려가고 있습니다"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "quantum",
+    "bitcoin",
+    "post-quantum",
+    "ecdsa",
+    "zk-proofs",
+    "q-day",
+    "network-school",
+    "mobile",
+    "litep2p",
+    "security",
+    "ml-dsa",
+  ]
+---
+
+import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
+
+비트코인 서명을 깨는 비용이 계속 내려가고 있습니다.
+
+어떤 돌파는 비밀리에, 다른 것들은 공개적으로 일어나고 있습니다.
+
+3월, Google Quantum AI는 타원곡선 서명 공격에 필요한 자원 추정치를 10배 줄인 논문을 발표했습니다.
+
+그다음 이상한 일을 했습니다.
+
+최적화된 회로를 영지식 증명으로 검증한 뒤, 회로 자체는 비공개로 유지했습니다. 블로그 글에는 미국 정부와 「협력했다」고 적혀 있었습니다.
+
+ZK 증명은 정보를 숨기는 도구입니다. 국가 안보와 관련된 정보를 숨기는 데 ZK 증명이 쓰인 것은 처음 봤습니다.
+
+Justin Drake가 논문 공저자로 참여했으며, 비밀 유지 맥락이 마음에 들지 않았고 내부 고발 능력에도 제한이 있었다고 말했습니다.
+
+<TwitterEmbed url="https://x.com/drakefjustin/status/2061793725299224676" />
+
+최근 [@eigenlabs](https://x.com/eigenlabs)는 문제의 핵심을 ECDSA (dot) fail이라는 공개 스코어보드로 바꿨습니다.
+
+누구나 회로를 제출할 수 있습니다. 검증기는 Google 자체 ZK 하네스를 개조해 점수를 매깁니다.
+
+<TwitterEmbed url="https://x.com/sreeramkannan/status/2061612465797144668" />
+
+정식 양자 교육 없이 Codex 구독만 한 학부생이 에이전트로 Google이 공개하지 않은 수치의 50% 이내에 도달했습니다. 18세 개발자는 주말과 1만 달러 AI 비용, 커스텀 에이전트 스웜으로 80%까지 밀어 올렸습니다. 이후 공개했고, 3일 만에 리더보드가 Google 기준점을 넘었습니다.
+
+이것이 오늘 비트코인을 깨지는 않습니다.
+
+하지만 AI 에이전트가 공개적으로 매일 Shor 알고리즘 비용을 깎고 있으며, 작은 최적화가 누적된다는 증거입니다.
+
+<TwitterEmbed url="https://x.com/defijangle/status/2062821128289329604" />
+
+작성 시점 기준으로 오픈소스 커뮤니티는 Google 회로 대비 40% 이상 개선했습니다.
+
+이 추세에 양자 컴퓨터 하드웨어 공학의 돌파가 더해지면 Q-Day는 여기 있습니다.
+
+그래서 이야기해야 합니다.
+
+지난 주말 [@ns](https://x.com/ns)에서 QDay를 열었습니다. 220명 이상이 참석했습니다. 업계, 학계, 빌더가 한 질문에 모였습니다.
+
+공개 블록체인은 양자 컴퓨터 앞에서 어떻게 살아남을까?
+
+<TwitterEmbed url="https://x.com/QuantusNetwork/status/2064002930274131980" />
+
+함께 보고서도 발표했습니다. 블록체인 양자 위협과 로드맵을 가장 빠르게 파악하는 방법입니다.
+
+<TwitterEmbed url="https://x.com/QuantusNetwork/status/2059624449993806039" />
+
+이번 주에 추가로 출시한 내용:
+
+### Github 활동 (머지된 PR 27건):
+
+![Github Stats](/blog/assets/github-stats-weekly-update-06-09-2026.webp)
+
+### 코어 기술 & ZK:
+
+- libp2p에서 litep2p로 전환해 Quantus에 더 가벼운 네트워킹 스택, 낮은 오버헤드, 피어 동작에 대한 더 직접적인 제어를 제공.
+- Plonky2와 ZK 회로를 포함한 증명 스택 전반에 보안 감사를 수행하고 수정 사항 배포.
+- ML-DSA 포스트 양자 서명 구현을 강화하고 RPC 코드 표면 감사를 완료해 메인넷 전 노드 외부 공격 표면 축소.
+
+### 웹·모바일 앱 업데이트:
+
+- 모바일 지갑 v1.5.0 릴리스 제출.
+- 지갑 거래 내역 폴링 버그 수정.
+- 익스플로러 UX 개선, 특히 wormhole 섹션.
+- Quantus 샵 시스템 개선.
+
+### 콘텐츠 & 파트너십:
+
+- [The State of Quantum 보고서](https://x.com/QuantusNetwork/status/2059624449993806039) 읽기
+- Network School에서 [QDay 개최, 220명 이상 참석](https://x.com/QuantusNetwork/status/2064002930274131980)
+
+양자 시대가 옵니다.
+
+우리에게 달려 있습니다.
+
+Stay frosty, quants.

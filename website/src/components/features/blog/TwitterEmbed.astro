@@ -1,0 +1,42 @@
+---
+interface Props {
+  url: string;
+}
+
+const { url } = Astro.props;
+---
+
+<div class="twitter-embed not-prose my-8 flex justify-center">
+  <blockquote class="twitter-tweet" data-dnt="true" data-theme="dark">
+    <a href={url}></a>
+  </blockquote>
+</div>
+
+<script>
+  const TWITTER_WIDGETS_SRC = "https://platform.twitter.com/widgets.js";
+
+  function ensureTwitterWidgets() {
+    // @ts-expect-error twttr is injected by Twitter's widgets.js
+    if (window.twttr?.widgets) {
+      // @ts-expect-error twttr is injected by Twitter's widgets.js
+      window.twttr.widgets.load();
+      return;
+    }
+
+    if (document.querySelector(`script[src="${TWITTER_WIDGETS_SRC}"]`)) {
+      return;
+    }
+
+    const script = document.createElement("script");
+    script.src = TWITTER_WIDGETS_SRC;
+    script.async = true;
+    script.charset = "utf-8";
+    script.onload = () => {
+      // @ts-expect-error twttr is injected by Twitter's widgets.js
+      window.twttr?.widgets?.load();
+    };
+    document.body.appendChild(script);
+  }
+
+  ensureTwitterWidgets();
+</script>

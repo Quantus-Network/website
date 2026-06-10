@@ -1,0 +1,101 @@
+---
+title: "Quantus Weekly: The Cost of Breaking Bitcoin Keeps Dropping"
+description: "Google Quantum AI's secret ZK circuits, ECDSA.fail's public scoreboard, QDay at Network School with 220+ attendees, litep2p migration, proving-stack audits, and mobile wallet v1.5.0."
+pubDate: "2026-06-09"
+heroImage: "/blog/covers/weekly-update-06-09-2026.webp"
+heroAlt: "Quantus Weekly: The Cost of Breaking Bitcoin Keeps Dropping"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "quantum",
+    "bitcoin",
+    "post-quantum",
+    "ecdsa",
+    "zk-proofs",
+    "q-day",
+    "network-school",
+    "mobile",
+    "litep2p",
+    "security",
+    "ml-dsa",
+  ]
+---
+
+import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
+
+The cost of breaking Bitcoin's signatures keeps dropping.
+
+Some breakthroughs are secret, others are happening in public.
+
+In March, Google Quantum AI published a paper that cut the resource estimate for attacking elliptic-curve signatures by 10x.
+
+Then they did something strange.
+
+They validated the optimized circuits with a zero-knowledge proof and kept the circuits themselves secret. The blog post said they "engaged with the U.S. government."
+
+A ZK proof is an information hiding tool. This is the first time I've seen a ZK proof used to hide information related to national security.
+
+Justin Drake co-authored the paper and said the context around the secrecy did not sit well with him, and that he was limited in his ability to whistleblow.
+
+<TwitterEmbed url="https://x.com/drakefjustin/status/2061793725299224676" />
+
+Recently, [@eigenlabs](https://x.com/eigenlabs) took the core of the problem and turned it into a public scoreboard called ECDSA (dot) fail.
+
+Anyone can submit a circuit. The verifier, repurposed from Google's own ZK harness, scores it.
+
+<TwitterEmbed url="https://x.com/sreeramkannan/status/2061612465797144668" />
+
+An undergrad with no formal quantum training and a Codex subscription used agents to get within 50% of Google's withheld number. An 18-year-old spent a weekend and $10K of AI spend with a custom agent swarm and pushed it to 80%. Then they opened it to the public. Within three days the leaderboard passed Google's reference point.
+
+This does not break Bitcoin today.
+
+But it is proof that AI agents are shaving the cost of Shor's algorithm in the open, every day, and small optimizations compound.
+
+<TwitterEmbed url="https://x.com/defijangle/status/2062821128289329604" />
+
+The open source community has made above a 40% improvement over Google's circuit at the time of writing this.
+
+Pair this trend with a breakthrough in any of the hardware approaches to engineering quantum computers and Q-Day is here.
+
+So we should talk about it.
+
+Last weekend we hosted QDay at [@ns](https://x.com/ns). Over 220 people showed up: industry, academics, and builders, all working on one question.
+
+How do public blockchains survive quantum computers?
+
+<TwitterEmbed url="https://x.com/QuantusNetwork/status/2064002930274131980" />
+
+We also published an accompanying report. The fastest way to get up to speed on the quantum threat to blockchains and the roadmap ahead.
+
+<TwitterEmbed url="https://x.com/QuantusNetwork/status/2059624449993806039" />
+
+Here's what else we shipped this week:
+
+### Github Activity (27 merged pull requests):
+
+![Github Stats](/blog/assets/github-stats-weekly-update-06-09-2026.webp)
+
+### Core Tech & ZK:
+
+- Switched from libp2p to litep2p, giving Quantus a leaner networking stack with lower overhead and more direct control over peer behavior.
+- Ran security audits and shipped fixes across the proving stack, covering Plonky2 and our ZK circuits.
+- Hardened the ML-DSA post-quantum signature implementation and finished an audit of the RPC code surface, reducing the node's external attack surface ahead of mainnet.
+
+### Web & Mobile App Updates:
+
+- Submitted mobile wallet v1.5.0 for release.
+- Fixed wallet transaction history polling bug.
+- Improved explorer UX, especially the wormhole section.
+- Improved the Quantus shop system.
+
+### Content & Partnerships:
+
+- Read [The State of Quantum Report](https://x.com/QuantusNetwork/status/2059624449993806039)
+- Hosted [QDay at Network School with 220+ attendees](https://x.com/QuantusNetwork/status/2064002930274131980)
+
+Quantum is coming.
+
+It's up to us.
+
+Stay frosty, quants.
