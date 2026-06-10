@@ -35,7 +35,7 @@ class NodeRpcService {
   private isConnecting = false;
 
   private options: Required<NodeRpcOptions> = {
-    wsUrl: "wss://a1-dirac.quantus.cat",
+    wsUrl: "wss://a1-planck.quantus.cat",
     maxReconnectAttempts: 5,
     reconnectDelay: 1000,
     heartbeatInterval: 30000,
