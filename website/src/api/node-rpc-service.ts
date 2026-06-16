@@ -15,6 +15,7 @@ export interface NodeRpcState {
 
 export interface NodeRpcOptions {
   wsUrl?: string;
+  chainGenesisHash?: string;
   maxReconnectAttempts?: number;
   reconnectDelay?: number;
   heartbeatInterval?: number;
@@ -23,19 +24,44 @@ export interface NodeRpcOptions {
 
 export type NodeRpcListener = (state: NodeRpcState) => void;
 
+const TELEMETRY_ACTIONS = {
+  FeedVersion: 0,
+  BestBlock: 1,
+  AddedNode: 3,
+  RemovedNode: 4,
+  AddedChain: 11,
+  RemovedChain: 12,
+  SubscribedTo: 13,
+  Pong: 15,
+  TelemetryInfo: 23,
+} as const;
+
+const PLANCK_GENESIS_HASH =
+  "0x4901bf5c57fd3f9e726af399c763de6670dbdb115a91c0237e173f16eef65e72";
+
+const MESSAGE_TIMEOUT_MS = 60_000;
+
 /**
  * Node Counter Service
- * Manages WebSocket connection to substrate network and tracks connected nodes
+ * Manages WebSocket connection to the Quantus telemetry feed and tracks
+ * Planck mainnet node count and block height.
  */
 class NodeRpcService {
   private ws: WebSocket | null = null;
   private listeners: Set<NodeRpcListener> = new Set();
   private reconnectAttempts = 0;
   private heartbeatIntervalId: number | null = null;
+  private messageTimeoutId: number | null = null;
+  private pingTimeoutId: number | null = null;
   private isConnecting = false;
+  private pingId = 0;
+  private pingSentAt: number | null = null;
+  private subscribed = false;
+  private planckChainSeen = false;
 
   private options: Required<NodeRpcOptions> = {
-    wsUrl: "wss://a1-planck.quantus.cat",
+    wsUrl: "wss://feed-telemetry.quantus.cat/feed",
+    chainGenesisHash: PLANCK_GENESIS_HASH,
     maxReconnectAttempts: 5,
     reconnectDelay: 1000,
     heartbeatInterval: 30000,
@@ -48,8 +74,6 @@ class NodeRpcService {
     status: "disconnected",
     statusMessage: "Not connected",
   };
-
-  private blockHeightSubscriptionId: string | null = null;
 
   constructor(options: NodeRpcOptions = {}) {
     this.options = { ...this.options, ...options };
@@ -108,23 +132,11 @@ class NodeRpcService {
   disconnect(): void {
     this.cleanup();
     if (this.ws) {
-      if (
-        this.blockHeightSubscriptionId &&
-        this.ws.readyState === WebSocket.OPEN
-      ) {
-        this.ws.send(
-          JSON.stringify({
-            id: 3,
-            jsonrpc: "2.0",
-            method: "chain_unsubscribeNewHeads",
-            params: [this.blockHeightSubscriptionId],
-          }),
-        );
-      }
       this.ws.close();
       this.ws = null;
     }
-    this.blockHeightSubscriptionId = null;
+    this.subscribed = false;
+    this.planckChainSeen = false;
     this.updateState("disconnected", "Disconnected");
     this.isConnecting = false;
   }
@@ -142,38 +154,22 @@ class NodeRpcService {
     this.ws.onopen = () => {
       this.isConnecting = false;
       this.reconnectAttempts = 0;
+      this.subscribed = false;
+      this.planckChainSeen = false;
       this.updateState("connected", "Connected to network");
-
-      // Request system health (includes peer count)
-      this.ws?.send(
-        JSON.stringify({
-          id: 1,
-          jsonrpc: "2.0",
-          method: "system_health",
-          params: [],
-        }),
-      );
-
-      // Subscribe to new block heads for live block height
-      this.ws?.send(
-        JSON.stringify({
-          id: 2,
-          jsonrpc: "2.0",
-          method: "chain_subscribeNewHeads",
-          params: [],
-        }),
-      );
+      this.resetMessageTimeout();
+      this.sendPing();
     };
 
     this.ws.onmessage = (event) => {
       try {
-        this.handleMessage(event.data);
+        void this.handleMessage(event.data);
       } catch (error) {
         console.error("Error processing message:", error);
       }
     };
 
-    this.ws.onclose = (event) => {
+    this.ws.onclose = () => {
       this.isConnecting = false;
       this.cleanup();
 
@@ -191,43 +187,161 @@ class NodeRpcService {
     };
   }
 
-  private async handleMessage(data: any): Promise<void> {
-    try {
-      let textData = "";
+  private async handleMessage(data: unknown): Promise<void> {
+    let textData = "";
 
-      // Check if the data is a Blob
-      if (data instanceof Blob) {
-        textData = await data.text();
-      } else {
-        textData = data;
-      }
-
-      const message = JSON.parse(textData);
-
-      // system_health response — peer count as validator/node count
-      if (message.id === 1 && message.result != null) {
-        this.state.count = message.result.peers ?? this.state.count;
-        this.notifyListeners();
-      }
-
-      // chain_subscribeNewHeads confirmation — store subscription id
-      if (message.id === 2 && message.result != null) {
-        this.blockHeightSubscriptionId = message.result;
-      }
-
-      // chain_subscribeNewHeads notification — live block height
-      if (
-        message.method === "chain_newHead" &&
-        message.params?.result?.number != null
-      ) {
-        const hexNumber = message.params.result.number as string;
-        this.state.blockHeight = parseInt(hexNumber, 16);
-        this.notifyListeners();
-      }
-    } catch (error) {
-      // Non-JSON messages are logged but not processed
-      console.debug("Received non-JSON message:", data);
+    if (data instanceof Blob) {
+      textData = await data.text();
+    } else if (data instanceof ArrayBuffer) {
+      textData = new TextDecoder("utf-8").decode(data);
+    } else {
+      textData = String(data);
     }
+
+    this.resetMessageTimeout();
+
+    const messages = this.deserializeFeed(textData);
+    let stateChanged = false;
+
+    for (const { action, payload } of messages) {
+      switch (action) {
+        case TELEMETRY_ACTIONS.BestBlock: {
+          const [bestBlock] = payload as [number, number, unknown?];
+          if (typeof bestBlock === "number") {
+            this.state.blockHeight = bestBlock;
+            stateChanged = true;
+          }
+          break;
+        }
+
+        case TELEMETRY_ACTIONS.AddedChain: {
+          const [, genesisHash, nodeCount] = payload as [
+            string,
+            string,
+            number,
+          ];
+          if (genesisHash === this.options.chainGenesisHash) {
+            this.planckChainSeen = true;
+            this.state.count = nodeCount;
+            stateChanged = true;
+            this.maybeSubscribeToChain();
+          }
+          break;
+        }
+
+        case TELEMETRY_ACTIONS.RemovedChain: {
+          const genesisHash = payload as string;
+          if (genesisHash === this.options.chainGenesisHash) {
+            this.planckChainSeen = false;
+            this.state.count = null;
+            stateChanged = true;
+          }
+          break;
+        }
+
+        case TELEMETRY_ACTIONS.Pong: {
+          this.handlePong(String(payload));
+          break;
+        }
+
+        case TELEMETRY_ACTIONS.SubscribedTo:
+        case TELEMETRY_ACTIONS.FeedVersion:
+        case TELEMETRY_ACTIONS.TelemetryInfo:
+        case TELEMETRY_ACTIONS.AddedNode:
+        case TELEMETRY_ACTIONS.RemovedNode:
+          break;
+
+        default:
+          break;
+      }
+    }
+
+    if (stateChanged) {
+      this.notifyListeners();
+    }
+  }
+
+  private deserializeFeed(data: string): Array<{ action: number; payload: unknown }> {
+    const json = JSON.parse(data) as unknown;
+
+    if (!Array.isArray(json) || json.length === 0 || json.length % 2 !== 0) {
+      throw new Error("Invalid telemetry feed message");
+    }
+
+    const messages = new Array<{ action: number; payload: unknown }>(
+      json.length / 2,
+    );
+
+    for (let index = 0; index < messages.length; index += 1) {
+      messages[index] = {
+        action: json[index * 2] as number,
+        payload: json[index * 2 + 1],
+      };
+    }
+
+    return messages;
+  }
+
+  private maybeSubscribeToChain(): void {
+    if (
+      this.subscribed ||
+      !this.ws ||
+      this.ws.readyState !== WebSocket.OPEN ||
+      !this.planckChainSeen
+    ) {
+      return;
+    }
+
+    this.ws.send(`subscribe:${this.options.chainGenesisHash}`);
+    this.subscribed = true;
+  }
+
+  private sendPing(): void {
+    if (!this.ws || this.ws.readyState !== WebSocket.OPEN) {
+      return;
+    }
+
+    if (this.pingSentAt != null) {
+      this.handleConnectionError();
+      return;
+    }
+
+    this.pingId += 1;
+    this.pingSentAt = Date.now();
+    this.ws.send(`ping:${this.pingId}`);
+  }
+
+  private handlePong(id: string): void {
+    if (this.pingSentAt == null) {
+      return;
+    }
+
+    if (Number(id) !== this.pingId) {
+      this.handleConnectionError();
+      return;
+    }
+
+    const latency = Date.now() - this.pingSentAt;
+    this.pingSentAt = null;
+
+    if (this.pingTimeoutId != null) {
+      clearTimeout(this.pingTimeoutId);
+    }
+
+    this.pingTimeoutId = window.setTimeout(
+      () => this.sendPing(),
+      Math.max(0, this.options.heartbeatInterval - latency),
+    );
+  }
+
+  private resetMessageTimeout(): void {
+    if (this.messageTimeoutId != null) {
+      clearTimeout(this.messageTimeoutId);
+    }
+
+    this.messageTimeoutId = window.setTimeout(() => {
+      this.handleConnectionError();
+    }, MESSAGE_TIMEOUT_MS);
   }
 
   private updateState(
@@ -251,10 +365,22 @@ class NodeRpcService {
   }
 
   private cleanup(): void {
-    if (this.heartbeatIntervalId) {
+    if (this.heartbeatIntervalId != null) {
       clearInterval(this.heartbeatIntervalId);
       this.heartbeatIntervalId = null;
     }
+
+    if (this.messageTimeoutId != null) {
+      clearTimeout(this.messageTimeoutId);
+      this.messageTimeoutId = null;
+    }
+
+    if (this.pingTimeoutId != null) {
+      clearTimeout(this.pingTimeoutId);
+      this.pingTimeoutId = null;
+    }
+
+    this.pingSentAt = null;
   }
 
   private handleConnectionError(): void {
