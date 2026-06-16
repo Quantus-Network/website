@@ -144,7 +144,7 @@
         "block_height": "BLOCKHÖHE",
         "qtps": "QTPS",
         "uptime": "UPTIME",
-        "validators": "VALIDATOREN",
+        "nodes": "NODES",
         "mainnet": "MAINNET: ??"
       }
     },

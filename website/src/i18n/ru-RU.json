@@ -144,7 +144,7 @@
         "block_height": "ВЫСОТА БЛОКА",
         "qtps": "QTPS",
         "uptime": "АПТАЙМ",
-        "validators": "ВАЛИДАТОРЫ",
+        "nodes": "УЗЛЫ",
         "mainnet": "MAINNET: ??"
       }
     },

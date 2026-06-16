@@ -144,7 +144,7 @@
         "block_height": "ブロック高",
         "qtps": "QTPS",
         "uptime": "稼働時間",
-        "validators": "バリデーター",
+        "nodes": "ノード",
         "mainnet": "メインネット: ??"
       }
     },

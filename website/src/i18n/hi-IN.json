@@ -144,7 +144,7 @@
         "block_height": "ब्लॉक ऊंचाई",
         "qtps": "QTPS",
         "uptime": "अपटाइम",
-        "validators": "वैलिडेटर्स",
+        "nodes": "नोड्स",
         "mainnet": "MAINNET: ??"
       }
     },

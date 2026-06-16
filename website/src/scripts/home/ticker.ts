@@ -8,7 +8,7 @@ export const buildTicker = () => {
     blockHeight: track.dataset.i18nBlockHeight || "BLOCK HEIGHT",
     qtps: track.dataset.i18nQtps || "QTPS",
     uptime: track.dataset.i18nUptime || "UPTIME",
-    validators: track.dataset.i18nValidators || "VALIDATORS",
+    nodes: track.dataset.i18nNodes || "NODES",
     mainnet: track.dataset.i18nMainnet || "MAINNET: ??",
   };
 
@@ -16,7 +16,7 @@ export const buildTicker = () => {
     { lbl: labels.blockHeight, val: "—", live: true, id: "block-height" },
     { lbl: labels.qtps, val: "50", live: false },
     { lbl: labels.uptime, val: "99.97%", live: false },
-    { lbl: labels.validators, val: "—", live: true, id: "validators" },
+    { lbl: labels.nodes, val: "—", live: true, id: "nodes" },
     { lbl: "", val: labels.mainnet, live: false, mainnet: true },
   ];
 
@@ -36,7 +36,7 @@ export const buildTicker = () => {
     });
   });
 
-  const validatorsEls = document.querySelectorAll("#ticker-validators");
+  const nodesEls = document.querySelectorAll("#ticker-nodes");
   const blockHeightEls = document.querySelectorAll("#ticker-block-height");
 
   apiClient.nodeRpc.connect();
@@ -49,7 +49,7 @@ export const buildTicker = () => {
     }
 
     if (state.count != null) {
-      validatorsEls.forEach((el) => {
+      nodesEls.forEach((el) => {
         el.textContent = state.count?.toLocaleString() ?? "-";
       });
     }

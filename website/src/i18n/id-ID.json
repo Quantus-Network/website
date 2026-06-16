@@ -144,7 +144,7 @@
         "block_height": "TINGGI BLOK",
         "qtps": "QTPS",
         "uptime": "UPTIME",
-        "validators": "VALIDATOR",
+        "nodes": "NODE",
         "mainnet": "MAINNET: ??"
       }
     },

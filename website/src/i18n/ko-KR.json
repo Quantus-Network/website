@@ -144,7 +144,7 @@
         "block_height": "블록 높이",
         "qtps": "QTPS",
         "uptime": "업타임",
-        "validators": "검증인",
+        "nodes": "노드",
         "mainnet": "MAINNET: ??"
       }
     },

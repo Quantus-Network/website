@@ -144,7 +144,7 @@
         "block_height": "区块高度",
         "qtps": "QTPS",
         "uptime": "运行时间",
-        "validators": "验证者",
+        "nodes": "节点",
         "mainnet": "主网: ??"
       }
     },
