@@ -1,8 +1,23 @@
 ---
 import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+import {
+  formatEpisodeMeta,
+  getLatestPodcastEpisodes,
+  getYoutubeThumbnail,
+  getYoutubeUrl,
+} from "@/utils/podcast";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
+
+const [latestEpisode] = getLatestPodcastEpisodes(1);
+const latestMeta = formatEpisodeMeta(
+  latestEpisode.releaseDate,
+  locale,
+  latestEpisode.duration,
+);
+const latestUrl = getYoutubeUrl(latestEpisode.youtubeId);
+const latestThumbnail = getYoutubeThumbnail(latestEpisode.youtubeId);
 ---
 
 <section id="podcast">
@@ -32,14 +47,10 @@ const t = await createTranslator(locale);
       </div>
       <div class="comm-animate" data-delay="0.15">
         <div class="pod-thumb">
-          <a
-            href="https://www.youtube.com/watch?v=wz6d0qRRHLs"
-            target="_blank"
-            rel="noopener"
-          >
+          <a href={latestUrl} target="_blank" rel="noopener">
             <img
-              src="https://img.youtube.com/vi/wz6d0qRRHLs/maxresdefault.jpg"
-              alt="QDay Podcast Episode 18"
+              src={latestThumbnail}
+              alt={`QDay Podcast Episode ${latestEpisode.episode}`}
             />
             <div class="pod-play-overlay">
               <div class="pod-play-circle">
@@ -53,12 +64,8 @@ const t = await createTranslator(locale);
             </div>
           </a>
         </div>
-        <span class="pod-episode-title">
-          {t("community.podcast.episode.title")}
-        </span>
-        <span class="pod-episode-meta">
-          {t("community.podcast.episode.meta")}
-        </span>
+        <span class="pod-episode-title">{latestEpisode.title}</span>
+        <span class="pod-episode-meta">{latestMeta}</span>
       </div>
     </div>
   </div>

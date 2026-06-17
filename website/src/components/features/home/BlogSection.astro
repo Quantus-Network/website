@@ -1,11 +1,21 @@
 ---
 import { getCollection } from "astro:content";
 import {
+  PODCAST_TOTAL_EPISODES,
+  PODCAST_YOUTUBE_CHANNEL,
+} from "@/constants/podcast-episodes";
+import {
   getLocaleFromUrl,
   getLocalizedPath,
   DEFAULT_LOCALE,
   createTranslator,
 } from "@/utils/i18n";
+import {
+  formatEpisodeMeta,
+  getLatestPodcastEpisodes,
+  getYoutubeThumbnail,
+  getYoutubeUrl,
+} from "@/utils/podcast";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
@@ -41,6 +51,22 @@ function getBlogUrl(postId: string): string {
   const slug = postId.split("/").slice(1).join("/");
   return getLocalizedPath(locale, `/blog/${slug}`);
 }
+
+const [latestEpisode, previousEpisode] = getLatestPodcastEpisodes(2);
+const latestMeta = formatEpisodeMeta(
+  latestEpisode.releaseDate,
+  locale,
+  latestEpisode.duration,
+);
+const latestUrl = getYoutubeUrl(latestEpisode.youtubeId);
+const latestThumbnail = getYoutubeThumbnail(latestEpisode.youtubeId);
+
+const previousMeta = formatEpisodeMeta(
+  previousEpisode.releaseDate,
+  locale,
+  previousEpisode.duration,
+);
+const previousUrl = getYoutubeUrl(previousEpisode.youtubeId);
 ---
 
 <section id="blog">
@@ -80,56 +106,52 @@ function getBlogUrl(postId: string): string {
         >{t("home.blog_section.podcast_label")}</span
       >
       <div class="blog-podcast-grid">
-        <!-- Left: EP. 18 — half width -->
+        <!-- Left half width -->
         <div class="blog-pod-left">
           <div class="blog-pod-thumb">
             <a
-              href="https://www.youtube.com/watch?v=wz6d0qRRHLs"
+              href={latestUrl}
               target="_blank"
               style="display:block;line-height:0;"
             >
               <img
-                src="https://img.youtube.com/vi/wz6d0qRRHLs/maxresdefault.jpg"
-                alt="EP.18 thumbnail"
+                src={latestThumbnail}
+                alt={`Episode ${latestEpisode.episode} thumbnail`}
                 style="width:100%;height:100%;object-fit:cover;display:block;"
               />
             </a>
           </div>
           <div class="blog-pod-left-text">
-            <p class="blog-pod-ep-title">
-              EP. 18 — Is the Quantum threat really that close?
-            </p>
-            <span class="blog-pod-meta">1:27:02 · 9 DAYS AGO</span>
-            <a
-              href="https://www.youtube.com/watch?v=wz6d0qRRHLs"
-              target="_blank"
-              class="blog-pod-cta">{t("home.blog_section.watch_on_youtube")}</a
+            <p class="blog-pod-ep-title">{latestEpisode.title}</p>
+            <span class="blog-pod-meta">{latestMeta}</span>
+            <a href={latestUrl} target="_blank" class="blog-pod-cta"
+              >{t("home.blog_section.watch_on_youtube")}</a
             >
           </div>
         </div>
 
-        <!-- Right col: EP17 + View All side by side -->
+        <!-- Right col: Prev eps + View All side by side -->
         <div class="blog-pod-right-col">
           <div class="blog-pod-right-top">
-            <p class="blog-pod-ep-title-sm">
-              EP. 17 — Building A New Sound Money System
-            </p>
-            <span class="blog-pod-meta-sm">1:12:56 · 1 MONTH AGO</span>
-            <a
-              href="https://www.youtube.com/watch?v=tASGl64WSms"
-              target="_blank"
-              class="blog-pod-cta">{t("home.blog_section.watch_on_youtube")}</a
+            <p class="blog-pod-ep-title-sm">{previousEpisode.title}</p>
+            <span class="blog-pod-meta-sm">{previousMeta}</span>
+            <a href={previousUrl} target="_blank" class="blog-pod-cta"
+              >{t("home.blog_section.watch_on_youtube")}</a
             >
           </div>
           <div class="blog-pod-right-bottom">
             <a
-              href="https://www.youtube.com/@QuantusNetwork"
+              href={PODCAST_YOUTUBE_CHANNEL}
               target="_blank"
               class="blog-pod-view-all"
               >{t("home.blog_section.view_all_episodes")}</a
             >
             <span class="blog-pod-view-sub"
-              >{t("home.blog_section.episodes_count", { count: 18 })}</span
+              >{
+                t("home.blog_section.episodes_count", {
+                  count: PODCAST_TOTAL_EPISODES,
+                })
+              }</span
             >
           </div>
         </div>

@@ -534,11 +534,7 @@
       "heading": "QDay — The quantum security podcast.",
       "body": "Hosted by Christopher Smith. Conversations at the intersection of quantum computing, blockchain security, and the future of digital finance.",
       "cta_spotify": "LISTEN ON SPOTIFY →",
-      "cta_apple": "LISTEN ON APPLE PODCASTS →",
-      "episode": {
-        "title": "EP. 18: Is the Quantum threat really that close?",
-        "meta": "1:27:02 · 9 DAYS AGO"
-      }
+      "cta_apple": "LISTEN ON APPLE PODCASTS →"
     },
     "telegram": {
       "eyebrow": "JOIN THE CONVERSATION",

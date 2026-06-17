@@ -534,11 +534,7 @@
       "heading": "QDay — El podcast de seguridad cuántica.",
       "body": "Presentado por Christopher Smith. Conversaciones en la intersección de la computación cuántica, la seguridad de la blockchain y el futuro de las finanzas digitales.",
       "cta_spotify": "ESCUCHAR EN SPOTIFY →",
-      "cta_apple": "ESCUCHAR EN APPLE PODCASTS →",
-      "episode": {
-        "title": "EP. 18: ¿Está la amenaza cuántica realmente tan cerca?",
-        "meta": "1:27:02 · HACE 9 DÍAS"
-      }
+      "cta_apple": "ESCUCHAR EN APPLE PODCASTS →"
     },
     "telegram": {
       "eyebrow": "ÚNASE A LA CONVERSACIÓN",
