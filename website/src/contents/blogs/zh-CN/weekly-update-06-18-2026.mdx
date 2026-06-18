@@ -1,0 +1,125 @@
+---
+title: "Quantus 周报：升级区块链就是政治"
+description: "波普尔标准、OSS 破坏手册，以及 Bitcoin 升级政治为何重要。此外：Planck 测试网上的无分叉 runtime 升级、ZK 聚合器内存削减、Dilithium 加固和移动钱包修复。"
+pubDate: "2026-06-18"
+heroImage: "/blog/covers/weekly-update-06-18-2026.webp"
+heroAlt: "Quantus 周报：升级区块链就是政治"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "quantum",
+    "bitcoin",
+    "post-quantum",
+    "governance",
+    "runtime-upgrade",
+    "zk-proofs",
+    "testnet",
+    "planck",
+    "dilithium",
+    "mobile",
+    "infrastructure",
+    "subsquid",
+    "q-day",
+  ]
+---
+
+import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
+
+「好的政治制度，是那些尽可能容易判断统治者或政策是否犯错，并在犯错时能够非暴力地移除统治者或政策的制度。」
+
+波普尔标准。
+
+升级区块链就是政治。
+
+可预测性是好货币的美德。僵化是自杀协议。
+
+必须有一种方式，在不引发 contentious 硬分叉的情况下升级过时的密码学并交付协议改进。
+
+如果 Bitcoin 无法做出应对多年前就已预警的存在性威胁所需的变更，那就是一次治理实验的失败。
+
+但主权点对点电子现金是一项崇高的使命，所以我们该怎么办？
+
+## 恶意还是无能
+
+战略情报局（OSS）是二战时期 CIA 的前身。
+
+他们出版过一本《简单破坏现场手册》，用来训练被占领国家的普通公民从内部破坏敌方组织。
+
+策略包括：
+
+- 频繁提出无关议题。
+
+每当量子话题出现，激光眼们总会说「银行和传统系统同样脆弱，也需要升级」。这完全无关，因为银行已经在运行 PQC 试点。
+
+Cloudflare 已用混合后量子密钥交换保护大部分人类 TLS 流量，Signal 和 iMessage 等应用也已部署后量子方案。
+
+但如果你在 X 上发推讨论 Bitcoin 的量子风险，看看会发生什么。
+
+那才是你会听到的主要话术。
+
+- 绝不允许高效捷径。
+
+Bitcoin 极端主义者往往更愿意讨论 Blockstream 的新「PQC」——SHRINCS 和 SHRIMPS，而不是现有、广泛接受的后量子方案。
+
+NIST 和开源社区花了数年时间加固我们已有的算法，但 Bitcoin 主流意见却是：应该从零开始，自研 Bitcoin 专用密码学。
+
+- 在有关键工作要做时开会。
+
+「量子真的是威胁吗？」
+
+Satoshi 本人说过是。量子行业不断下调破解 secp256k1 的资源估算。
+
+每个标准机构都指向在 2030 年前采取某种行动。
+
+我们不需要再开一场争论时间线的会议。是时候交付一种量子安全地址类型了。
+
+## 替代方案是什么？
+
+需要一种高效且足够去中心化的方式来更新区块链。
+
+上周我们测试了 [@QuantusNetwork](https://x.com/@QuantusNetwork) 的 runtime 升级。
+
+我们在 Planck 测试网上执行了这次无分叉升级。
+
+我们重建了 ZK 聚合器，内存占用降至原来的四分之一。证明现在以 7 个为一组批量处理。
+
+这意味着证明生成可以在手机等简单本地硬件上运行，未来人们将直接在移动设备上生成自己的私密交易。
+
+以下是上周我们交付的其他内容。
+
+### GitHub 活动（已合并 8 个拉取请求）：
+
+![Github Stats](/blog/assets/github-stats-weekly-update-06-18-2026.webp)
+
+### 核心技术与 ZK：
+
+- 执行 runtime 升级（v0.7.1-q-day-2）。
+- 新证明格式与旧版不同，CLI 需要更新以保持兼容。
+- 加固 Dilithium 阈值密钥重分享。
+- 开始设计并构建 ZK 电路的形式化验证方案。
+- 交付链上修复和 AI 辅助审计工作。
+
+### 网络与基础设施：
+
+- 发布带修复的新版 GUI 矿工。
+- 部署支持多签和更新提案事件索引的新 Subsquid 索引器。
+- 更新 CLI Subsquid 客户端。
+- 修复节点 DNS 问题并更新 Grafana 监控。
+
+### 网页与移动应用更新：
+
+- 大量移动钱包修复与改进。
+- 文档站点响应式 UX 优化并新增搜索。
+
+### 内容与合作伙伴：
+
+发布 Chris 的 QDay 主题演讲：
+
+<TwitterEmbed url="https://x.com/QuantusNetwork/status/2066731387458355672" />
+
+- 在 [@superai_conf](https://x.com/@superai_conf) 代表 Quantus 出席
+
+取决于我们。
+
+Stay frosty, quants.

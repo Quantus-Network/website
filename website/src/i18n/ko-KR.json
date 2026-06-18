@@ -926,6 +926,7 @@
       "q-day": "Q-Day",
       "network-school": "Network School",
       "ecdsa": "ECDSA",
+      "runtime-upgrade": "런타임 업그레이드",
       "litep2p": "litep2p"
     }
   },

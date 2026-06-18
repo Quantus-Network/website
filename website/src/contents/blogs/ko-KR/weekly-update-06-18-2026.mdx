@@ -1,0 +1,125 @@
+---
+title: "Quantus Weekly: 블록체인 업그레이드는 정치다"
+description: "포퍼의 기준, OSS 파괴 공작 매뉴얼, 그리고 Bitcoin 업그레이드 정치가 왜 중요한지. 더불어 Planck 테스트넷의 포크 없는 runtime 업그레이드, ZK 애그리게이터 메모리 절감, Dilithium 강화, 모바일 지갑 수정."
+pubDate: "2026-06-18"
+heroImage: "/blog/covers/weekly-update-06-18-2026.webp"
+heroAlt: "Quantus Weekly: 블록체인 업그레이드는 정치다"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "quantum",
+    "bitcoin",
+    "post-quantum",
+    "governance",
+    "runtime-upgrade",
+    "zk-proofs",
+    "testnet",
+    "planck",
+    "dilithium",
+    "mobile",
+    "infrastructure",
+    "subsquid",
+    "q-day",
+  ]
+---
+
+import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
+
+"좋은 정치 제도란 통치자나 정책이 실수인지 가능한 한 쉽게 감지하고, 실수일 때 폭력 없이 통치자나 정책을 제거할 수 있게 만드는 제도다."
+
+포퍼의 기준.
+
+블록체인 업그레이드는 정치다.
+
+예측 가능성은 좋은 화폐의 미덕이다. 경직화는 자살 협약이다.
+
+더 이상 사용되지 않는 암호를 업그레이드하고, 논쟁적인 하드 포크 없이 프로토콜 개선을 출시할 방법이 있어야 한다.
+
+Bitcoin이 수년 전부터 예고된 존재적 위협에 대응하기 위해 필요한 변경을 할 수 없다면, 그것은 거버넌스 실험의 실패다.
+
+하지만 주권적 P2P 전자 현금은 고귀한 사명이다. 그렇다면 우리는 무엇을 해야 할까?
+
+## 악의인가, 무능인가
+
+Office of Strategic Services(OSS)는 2차 대전 시기 CIA의 전신이었다.
+
+그들은 "Simple Sabotage Field Manual"을 출판했다. 점령된 국가의 일반 시민을 훈련시켜 적 조직을 내부에서 파괴 공작하도록 쓴 것이다.
+
+전략에는 다음이 포함된다:
+
+- 관련 없는 이슈를 자주 끌어올린다.
+
+양자 이야기가 나올 때마다 레이저 아이들은 "은행과 기존 시스템도 취약하고 업그레이드가 필요하다"고 말한다. 전혀 관련 없다. 은행은 이미 PQC를 시험하는 파일럿을 운영 중이기 때문이다.
+
+Cloudflare는 이미 대부분의 인간 TLS 트래픽을 하이브리드 포스트 양자 키 교환으로 보호하고 있으며, Signal과 iMessage 같은 앱도 포스트 양자를 배포했다.
+
+하지만 Bitcoin의 양자 위험에 대해 트윗하면 어떤 일이 벌어지는지 지켜보라.
+
+그것이 주된 talking point가 될 것이다.
+
+- 효율적인 지름길을 절대 허용하지 않는다.
+
+Bitcoin 맥시들은 널리 인정받는 기존 PQC 스킴 대신 Blockstream의 새로운 "PQC"인 SHRINCS와 SHRIMPS를 논의하는 것을 선호한다.
+
+NIST와 오픈소스 커뮤니티는 우리가 가진 알고리즘을 강화하는 데 수년을 썼지만, Bitcoin 주류 의견은 처음부터 시작해 Bitcoin 전용 암호를 직접 만들어야 한다는 것이다.
+
+- 중요한 작업이 있을 때 회의를 연다.
+
+"양자가 정말 위협인가?"
+
+Satoshi 본인도 그렇다고 했다. 양자 산업은 secp256k1을 깨는 데 필요한 자원 추정치를 계속 낮추고 있다.
+
+모든 표준 기구가 2030년까지 조치를 취하라고 지적한다.
+
+타임라인을 논쟁하는 또 다른 회의를 부를 필요는 없다. 양자 안전 주소 타입을 출시할 때다.
+
+## 대안은 무엇인가?
+
+블록체인을 업데이트하는 효율적이고 충분히 탈중앙화된 방법이 필요하다.
+
+지난주 [@QuantusNetwork](https://x.com/@QuantusNetwork) runtime 업그레이드를 테스트했다.
+
+Planck 테스트넷에서 이 포크 없는 업그레이드를 실행했다.
+
+ZK 애그리게이터를 재구축해 메모리 사용량을 4분의 1로 줄였다. 증명은 이제 7개씩 배치 처리된다.
+
+이는 증명 생성이 스마트폰 같은 단순한 로컬 하드웨어에서 실행될 수 있음을 의미한다. 앞으로 사람들은 모바일 기기에서 직접 프라이빗 트랜잭션을 생성할 것이다.
+
+지난주 추가로 출시한 내용:
+
+### Github 활동 (머지된 PR 8건):
+
+![Github Stats](/blog/assets/github-stats-weekly-update-06-18-2026.webp)
+
+### 코어 기술 & ZK:
+
+- runtime 업그레이드 실행 (v0.7.1-q-day-2).
+- 새 증명은 이전과 다른 형식을 사용하므로 호환성을 위해 CLI 업데이트가 필요.
+- Dilithium 임계값 키 리셰어링 강화.
+- ZK 회로를 형식적으로 검증하는 방법 설계 및 구축 시작.
+- 체인 수정 및 AI 지원 감사 작업 출시.
+
+### 네트워크 & 인프라:
+
+- 수정 사항이 포함된 GUI 마이너 새 버전 출시.
+- 멀티시그 지원 및 업데이트된 제안 이벤트 인덱싱을 갖춘 새 Subsquid 인덱서 배포.
+- CLI Subsquid 클라이언트 업데이트.
+- 노드의 DNS 문제 수정 및 Grafana 모니터링 업데이트.
+
+### 웹·모바일 앱 업데이트:
+
+- 다수의 모바일 지갑 수정 및 개선.
+- 문서 사이트를 반응형 UX 패스로 개선하고 검색 추가.
+
+### 콘텐츠 & 파트너십:
+
+Chris의 QDay 기조연설 공개:
+
+<TwitterEmbed url="https://x.com/QuantusNetwork/status/2066731387458355672" />
+
+- [@superai_conf](https://x.com/@superai_conf)에서 Quantus 대표
+
+우리에게 달려 있습니다.
+
+Stay frosty, quants.

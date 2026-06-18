@@ -1,0 +1,125 @@
+---
+title: "Quantus Weekly: Ein Blockchain-Upgrade ist Politik"
+description: "Poppers Kriterium, das OSS-Sabotagehandbuch und warum Bitcoins Upgrade-Politik zählt. Außerdem: forklose Runtime-Upgrades auf dem Planck-Testnet, ZK-Aggregator mit weniger Speicher, Dilithium-Härtung und Mobile-Wallet-Fixes."
+pubDate: "2026-06-18"
+heroImage: "/blog/covers/weekly-update-06-18-2026.webp"
+heroAlt: "Quantus Weekly: Ein Blockchain-Upgrade ist Politik"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "quantum",
+    "bitcoin",
+    "post-quantum",
+    "governance",
+    "runtime-upgrade",
+    "zk-proofs",
+    "testnet",
+    "planck",
+    "dilithium",
+    "mobile",
+    "infrastructure",
+    "subsquid",
+    "q-day",
+  ]
+---
+
+import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
+
+„Gute politische Institutionen sind diejenigen, die es so leicht wie möglich machen festzustellen, ob ein Herrscher oder eine Politik ein Fehler ist, und Herrscher oder Politiken ohne Gewalt zu entfernen, wenn sie es sind.“
+
+Poppers Kriterium.
+
+Ein Blockchain-Upgrade ist Politik.
+
+Vorhersehbarkeit ist eine Tugend guten Geldes. Verknöcherung ist ein Selbstmordpakt.
+
+Es muss einen Weg geben, veraltete Kryptographie zu upgraden und Protokollverbesserungen auszuliefern, ohne umstrittene Hard Forks.
+
+Wenn Bitcoin die Änderungen nicht vornehmen kann, die nötig sind, um auf eine existenzielle Bedrohung zu reagieren, die Jahre im Voraus angekündigt wurde, ist es ein gescheitertes Governance-Experiment.
+
+Aber souveränes Peer-to-Peer-Electronic Cash ist eine edle Mission – also, was sollen wir tun?
+
+## Bosheit oder Inkompetenz
+
+Das Office of Strategic Services (OSS) war der WW2-Vorgänger der CIA.
+
+Sie veröffentlichten ein „Simple Sabotage Field Manual“. Es sollte gewöhnliche Bürger in besetzten Ländern trainieren, feindliche Organisationen von innen zu sabotieren.
+
+Strategien umfassen:
+
+- Irrelevante Themen häufig ansprechen.
+
+Immer wenn Quantum zur Sprache kommt, sagen die Laser-Augen: „Banken und traditionelle Systeme sind auch verwundbar und müssen ebenfalls upgraden.“ Völlig irrelevant, denn Banken führen bereits Pilotprojekte mit PQC durch.
+
+Cloudflare schützt bereits den Großteil des menschlichen TLS-Traffics mit hybridem Post-Quantum-Key-Exchange, und Apps wie Signal und iMessage haben Post-Quantum ausgerollt.
+
+Aber schau, was passiert, wenn du über das Quantum-Risiko für Bitcoin tweetest.
+
+Das ist der Haupttalking point, den du hören wirst.
+
+- Nie effiziente Abkürzungen zulassen.
+
+Bitcoin-Maxis diskutieren lieber SHRINCS und SHRIMPS, neuartige „PQC“ von Blockstream, statt bestehender, weit anerkannter PQC-Schemata.
+
+NIST und die Open-Source-Community haben Jahre damit verbracht, die Algorithmen zu härten, die wir haben – aber die Mainline-Bitcoin-Meinung ist, wir sollten von null anfangen und unsere eigene Bitcoin-spezifische Kryptographie bauen.
+
+- Meetings abhalten, wenn kritische Arbeit ansteht.
+
+„Ist Quantum wirklich eine Bedrohung?“
+
+Satoshi selbst sagte, es ist eine. Die Quantum-Industrie senkt weiterhin Schätzungen für das Brechen von secp256k1.
+
+Jeder Standardisierungsgremium weist darauf hin, bis 2030 Maßnahmen zu ergreifen.
+
+Wir brauchen kein weiteres Meeting, um die Timelines zu debattieren. Es ist Zeit, einen quantensicheren Adresstyp auszuliefern.
+
+## Was ist die Alternative?
+
+Es braucht einen effizienten und hinreichend dezentralen Weg, Blockchains zu aktualisieren.
+
+Letzte Woche haben wir Runtime-Upgrades von [@QuantusNetwork](https://x.com/@QuantusNetwork) getestet.
+
+Wir führten dieses forklose Upgrade auf unserem Planck-Testnet durch.
+
+Wir haben unseren ZK-Aggregator neu gebaut, sodass er nur noch ein Viertel des Speichers braucht. Proofs werden jetzt in Gruppen von sieben gebündelt.
+
+Das bedeutet, dass das Proving auf einfacher lokaler Hardware wie einem Smartphone laufen kann – in Zukunft werden Menschen ihre privaten Transaktionen direkt auf dem Mobilgerät generieren.
+
+Das haben wir letzte Woche außerdem ausgeliefert.
+
+### Github-Aktivität (8 zusammengeführte Pull-Requests):
+
+![Github Stats](/blog/assets/github-stats-weekly-update-06-18-2026.webp)
+
+### Core Tech & ZK:
+
+- Runtime-Upgrade ausgeführt (v0.7.1-q-day-2).
+- Die neuen Proofs nutzen ein anderes Format als die alten, daher erfordert die CLI ein Update für Kompatibilität.
+- Dilithium-Threshold-Key-Resharing gehärtet.
+- Mit dem Design und Aufbau einer formalen Verifikation unseres ZK-Schaltkreises begonnen.
+- Chain-Fixes und AI-unterstützte Audit-Arbeit ausgeliefert.
+
+### Network & Infra:
+
+- Neue Version des GUI-Miners mit Fixes veröffentlicht.
+- Neuen Subsquid-Indexer mit Multisig-Support und aktualisierter Proposal-Event-Indexierung deployed.
+- CLI-Subsquid-Client aktualisiert.
+- DNS-Problem im Node behoben und Grafana-Monitoring aktualisiert.
+
+### Web & Mobile App Updates:
+
+- Viele Mobile-Wallet-Fixes und Verbesserungen.
+- Docs-Site mit responsivem UX-Pass verbessert und Suche hinzugefügt.
+
+### Content & Partnerschaften:
+
+Chris' QDay-Keynote veröffentlicht:
+
+<TwitterEmbed url="https://x.com/QuantusNetwork/status/2066731387458355672" />
+
+- Quantus auf der [@superai_conf](https://x.com/@superai_conf) vertreten
+
+Es liegt an uns.
+
+Stay frosty, quants.

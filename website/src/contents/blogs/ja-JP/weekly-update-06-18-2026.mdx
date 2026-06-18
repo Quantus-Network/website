@@ -1,0 +1,125 @@
+---
+title: "Quantus Weekly: ブロックチェーンのアップグレードは政治である"
+description: "ポパーの基準、OSS の破壊工作マニュアル、そして Bitcoin のアップグレード政治がなぜ重要か。加えて Planck テストネットでのフォークレス runtime アップグレード、ZK アグリゲーターのメモリ削減、Dilithium の強化、モバイルウォレットの修正。"
+pubDate: "2026-06-18"
+heroImage: "/blog/covers/weekly-update-06-18-2026.webp"
+heroAlt: "Quantus Weekly: ブロックチェーンのアップグレードは政治である"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "quantum",
+    "bitcoin",
+    "post-quantum",
+    "governance",
+    "runtime-upgrade",
+    "zk-proofs",
+    "testnet",
+    "planck",
+    "dilithium",
+    "mobile",
+    "infrastructure",
+    "subsquid",
+    "q-day",
+  ]
+---
+
+import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
+
+「良い政治制度とは、統治者や政策が誤りかどうかを可能な限り容易に見抜き、誤りであれば暴力なしに統治者や政策を取り除けるようにする制度である。」
+
+ポパーの基準。
+
+ブロックチェーンのアップグレードは政治である。
+
+予測可能性は良い通貨の美徳である。硬直化は自殺協定である。
+
+非推奨の暗号をアップグレードし、争いの的となるハードフォークなしにプロトコル改善を出荷する方法がなければならない。
+
+Bitcoin が何年も前から予告されてきた存在的脅威に対応するために必要な変更を行えないなら、それはガバナンスの失敗実験である。
+
+しかし、主権的なピアツーピア電子キャッシュは高潔な使命である。では、私たちは何をすべきか？
+
+## 悪意か、無能か
+
+Office of Strategic Services（OSS）は、第二次世界大戦における CIA の前身である。
+
+彼らは「Simple Sabotage Field Manual」を出版した。占領下の国の一般市民を訓練し、組織内部から敵組織を破壊工作するためのものだった。
+
+戦略には以下が含まれる：
+
+- 無関係な問題を頻繁に持ち出す。
+
+量子の話が出るたびに、レーザーアイは「銀行や従来のシステムも脆弱で、アップグレードが必要だ」と言う。全く無関係だ。銀行はすでに PQC を試験するパイロットを走らせている。
+
+Cloudflare はすでに人間の TLS トラフィックの大部分をハイブリッドポスト量子鍵交換で保護しており、Signal や iMessage などのアプリもポスト量子を展開済みだ。
+
+しかし Bitcoin への量子リスクについてツイートすると何が起きるか見てほしい。
+
+それが主な talking point になる。
+
+- 効率的な近道を決して許さない。
+
+Bitcoin マキシは、広く受け入れられている既存の PQC スキームより、Blockstream の新しい「PQC」である SHRINCS や SHRIMPS を議論することを好む。
+
+NIST とオープンソースコミュニティは、私たちが持つアルゴリズムを強化するのに何年も費やしてきた。しかし Bitcoin 主流の意見は、ゼロから始めて Bitcoin 専用の暗号を自作すべきだというものだ。
+
+- 重要な作業があるときに会議を開く。
+
+「量子は本当に脅威なのか？」
+
+Satoshi 自身がそうだと言った。量子業界は secp256k1 を破る見積もりを下げ続けている。
+
+すべての標準化機関が 2030 年までに何らかの対策を取るよう指摘している。
+
+タイムラインを議論する会議をまた開く必要はない。量子安全なアドレスタイプを出荷する時だ。
+
+## 代替案は何か？
+
+ブロックチェーンを更新する効率的で、十分に分散化された方法が必要である。
+
+先週、[@QuantusNetwork](https://x.com/@QuantusNetwork) の runtime アップグレードをテストした。
+
+Planck テストネットでこのフォークレスアップグレードを実行した。
+
+ZK アグリゲーターを再構築し、メモリ使用量を 4 分の 1 に削減した。証明は 7 件ずつバッチ処理されるようになった。
+
+これにより、証明生成はスマートフォンのようなシンプルなローカルハードウェアで動作可能になる。将来、人々はモバイル端末上で直接プライベートトランザクションを生成するだろう。
+
+先週出荷したその他の内容：
+
+### Github Activity（マージされた PR 8件）：
+
+![Github Stats](/blog/assets/github-stats-weekly-update-06-18-2026.webp)
+
+### Core Tech & ZK：
+
+- runtime アップグレードを実行（v0.7.1-q-day-2）。
+- 新しい証明は旧形式と異なるため、互換性維持のために CLI の更新が必要。
+- Dilithium 閾値鍵リシェアリングを強化。
+- ZK 回路を形式的に検証する仕組みの設計・構築を開始。
+- チェーン修正と AI 支援監査作業を出荷。
+
+### Network & Infra：
+
+- 修正を含む GUI マイナーの新バージョンをリリース。
+- マルチシグ対応と更新された提案イベントインデックス付きの新 Subsquid インデクサーをデプロイ。
+- CLI Subsquid クライアントを更新。
+- ノードの DNS 問題を修正し、Grafana モニタリングを更新。
+
+### Web & Mobile App Updates：
+
+- 多数のモバイルウォレット修正と改善。
+- ドキュメントサイトをレスポンシブ UX パスで改善し、検索を追加。
+
+### Content & Partnerships：
+
+Chris の QDay キーノートを公開：
+
+<TwitterEmbed url="https://x.com/QuantusNetwork/status/2066731387458355672" />
+
+- [@superai_conf](https://x.com/@superai_conf) で Quantus を代表
+
+私たち次第だ。
+
+Stay frosty, quants.

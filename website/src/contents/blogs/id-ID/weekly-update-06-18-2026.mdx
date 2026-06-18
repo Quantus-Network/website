@@ -1,0 +1,125 @@
+---
+title: "Quantus Weekly: Mengupgrade Blockchain Adalah Politik"
+description: "Kriteria Popper, manual sabotase OSS, dan mengapa politik upgrade Bitcoin penting. Plus: runtime upgrade tanpa fork di testnet Planck, pemotongan memori agregator ZK, pengerasan Dilithium, dan perbaikan dompet seluler."
+pubDate: "2026-06-18"
+heroImage: "/blog/covers/weekly-update-06-18-2026.webp"
+heroAlt: "Quantus Weekly: Mengupgrade Blockchain Adalah Politik"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "quantum",
+    "bitcoin",
+    "post-quantum",
+    "governance",
+    "runtime-upgrade",
+    "zk-proofs",
+    "testnet",
+    "planck",
+    "dilithium",
+    "mobile",
+    "infrastructure",
+    "subsquid",
+    "q-day",
+  ]
+---
+
+import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
+
+"Institusi politik yang baik adalah institusi yang membuat sedemikian rupa sehingga semudah mungkin mendeteksi apakah seorang penguasa atau kebijakan adalah kesalahan, dan menghapus penguasa atau kebijakan tanpa kekerasan ketika memang demikian."
+
+Kriteria Popper.
+
+Mengupgrade blockchain adalah politik.
+
+Prediktabilitas adalah kebajikan uang yang baik. Pengerasan (ossification) adalah pakta bunuh diri.
+
+Harus ada cara untuk mengupgrade kriptografi yang sudah usang dan mengirim perbaikan protokol tanpa hard fork yang penuh konflik.
+
+Jika Bitcoin tidak bisa melakukan perubahan yang diperlukan untuk merespons ancaman eksistensial yang sudah disinyalir bertahun-tahun sebelumnya, itu adalah eksperimen tata kelola yang gagal.
+
+Tapi uang elektronik peer-to-peer yang berdaulat adalah misi mulia, jadi apa yang harus kita lakukan?
+
+## Kejahatan atau Incompetence
+
+Office of Strategic Services (OSS) adalah pendahulu CIA pada masa WW2.
+
+Mereka menerbitkan "Simple Sabotage Field Manual." Buku itu ditulis untuk melatih warga biasa di negara-negara yang diduduki agar mensabotase organisasi musuh dari dalam.
+
+Strateginya meliputi:
+
+- Sering mengangkat isu yang tidak relevan.
+
+Setiap quantum dibahas, laser eyes selalu bilang "bank dan sistem tradisional juga rentan dan perlu upgrade." Sama sekali tidak relevan karena bank sudah menjalankan pilot uji PQC.
+
+Cloudflare sudah melindungi sebagian besar lalu lintas TLS manusia dengan pertukaran kunci post-quantum hybrid, dan aplikasi seperti Signal dan iMessage sudah menerapkan post-quantum.
+
+Tapi perhatikan apa yang terjadi jika Anda tweet tentang risiko quantum terhadap Bitcoin.
+
+Itulah talking point utama yang akan Anda dengar.
+
+- Jangan pernah mengizinkan jalan pintas yang efisien.
+
+Bitcoin maxis sering lebih suka membahas SHRINCS dan SHRIMPS, "PQC" novel dari Blockstream, daripada skema PQC yang sudah mapan dan diterima luas.
+
+NIST dan komunitas open source menghabiskan bertahun-tahun mengerasi algoritma yang kita miliki, tapi opini mainstream Bitcoin adalah kita harus mulai dari nol dan membuat kriptografi khusus Bitcoin sendiri.
+
+- Mengadakan rapat ketika ada pekerjaan kritis yang harus dilakukan.
+
+"Apakah quantum benar-benar ancaman?"
+
+Satoshi sendiri bilang iya. Industri quantum terus menurunkan estimasi untuk memecahkan secp256k1.
+
+Setiap badan standar menunjuk ke tindakan sebelum 2030.
+
+Kita tidak perlu rapat lagi untuk debat timeline. Saatnya mengirim tipe alamat quantum-secure.
+
+## Apa alternatifnya?
+
+Harus ada cara yang efisien dan cukup terdesentralisasi untuk memperbarui blockchain.
+
+Minggu lalu kami menguji runtime upgrade [@QuantusNetwork](https://x.com/@QuantusNetwork).
+
+Kami menjalankan upgrade tanpa fork ini di testnet Planck kami.
+
+Kami membangun ulang agregator ZK kami agar hanya memakai seperempat memori. Proof sekarang di-batch dalam kelompok tujuh.
+
+Artinya proving bisa berjalan di hardware lokal sederhana seperti ponsel, sehingga di masa depan orang akan menghasilkan transaksi pribadi mereka langsung di perangkat mobile.
+
+Berikut yang kami kirim minggu lalu.
+
+### Aktivitas Github (8 pull request yang digabungkan):
+
+![Github Stats](/blog/assets/github-stats-weekly-update-06-18-2026.webp)
+
+### Core Tech & ZK:
+
+- Menjalankan runtime upgrade (v0.7.1-q-day-2).
+- Proof baru memakai format berbeda dari yang lama, jadi CLI sekarang memerlukan update agar tetap kompatibel.
+- Mengerasi threshold key resharing Dilithium.
+- Mulai merancang dan membangun cara untuk memverifikasi sirkuit ZK kami secara formal.
+- Mengirim perbaikan chain dan pekerjaan audit berbantuan AI.
+
+### Network & Infra:
+
+- Merilis versi baru GUI miner dengan perbaikan.
+- Men-deploy indexer Subsquid baru dengan dukungan multisig dan indeks event proposal yang diperbarui.
+- Memperbarui klien CLI Subsquid.
+- Memperbaiki masalah DNS di node dan memperbarui monitoring Grafana.
+
+### Web & Mobile App Updates:
+
+- Banyak perbaikan dan peningkatan dompet seluler.
+- Meningkatkan situs docs dengan UX responsif dan menambahkan pencarian.
+
+### Content & Partnerships:
+
+Merilis keynote QDay Chris:
+
+<TwitterEmbed url="https://x.com/QuantusNetwork/status/2066731387458355672" />
+
+- Mewakili Quantus di [@superai_conf](https://x.com/@superai_conf)
+
+Terserah kita.
+
+Stay frosty, quants.

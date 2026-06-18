@@ -1,0 +1,125 @@
+---
+title: "Quantus Weekly: ब्लॉकचेन अपग्रेड करना राजनीति है"
+description: "Popper का मानदंड, OSS sabotage manual, और Bitcoin के upgrade politics क्यों मायने रखते हैं। साथ ही: Planck testnet पर forkless runtime upgrades, ZK aggregator memory cuts, Dilithium hardening, और mobile wallet fixes।"
+pubDate: "2026-06-18"
+heroImage: "/blog/covers/weekly-update-06-18-2026.webp"
+heroAlt: "Quantus Weekly: ब्लॉकचेन अपग्रेड करना राजनीति है"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "quantum",
+    "bitcoin",
+    "post-quantum",
+    "governance",
+    "runtime-upgrade",
+    "zk-proofs",
+    "testnet",
+    "planck",
+    "dilithium",
+    "mobile",
+    "infrastructure",
+    "subsquid",
+    "q-day",
+  ]
+---
+
+import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
+
+"अच्छी राजनीतिक संस्थाएँ वे हैं जो यह पता लगाना जितना संभव हो उतना आसान बनाती हैं कि कोई शासक या नीति गलती है या नहीं, और जब वे गलती हों तो हिंसा के बिना शासकों या नीतियों को हटाना।"
+
+Popper का मानदंड।
+
+ब्लॉकचेन अपग्रेड करना राजनीति है।
+
+Predictability अच्छे पैसे का गुण है। Ossification एक suicide pact है।
+
+Deprecated cryptography को upgrade करने और contentious hard forks के बिना protocol improvements ship करने का कोई रास्ता होना चाहिए।
+
+अगर Bitcoin उन बदलावों को नहीं कर सकता जो किसी existential threat का जवाब देने के लिए ज़रूरी हैं — जिसकी चेतावनी सालों पहले दी जा चुकी थी — तो यह governance में एक असफल experiment है।
+
+लेकिन sovereign peer to peer electronic cash एक noble mission है, तो हमें क्या करना चाहिए?
+
+## दुर्भावना या अक्षमता
+
+Office of Strategic Services (OSS) WW2 में CIA का पूर्ववर्ती था।
+
+उन्होंने "Simple Sabotage Field Manual" प्रकाशित किया। इसे occupied countries के आम नागरिकों को train करने के लिए लिखा गया था ताकि वे enemy organizations को अंदर से sabotage कर सकें।
+
+Strategies में शामिल हैं:
+
+- अप्रासंगिक मुद्दों को बार-बार उठाना।
+
+जब भी quantum का ज़िक्र होता है, laser eyes हमेशा कहते हैं: "banks और traditional systems भी vulnerable हैं और उन्हें भी upgrade करना होगा।" पूरी तरह irrelevant, क्योंकि banks पहले से PQC test करने वाले pilots चला रहे हैं।
+
+Cloudflare पहले से अधिकांश human TLS traffic को hybrid post-quantum key exchange से protect करता है, और Signal व iMessage जैसी apps ने post-quantum deploy कर दिया है।
+
+लेकिन देखिए क्या होता है अगर आप Bitcoin के quantum risk पर tweet करें।
+
+वही main talking point है जो आप सुनेंगे।
+
+- Efficient shortcuts कभी allow न करना।
+
+Bitcoin maxis अक्सर मौजूदा, widely accepted PQC schemes के बजाय Blockstream के novel "PQC" — SHRINCS और SHRIMPS — discuss करना prefer करते हैं।
+
+NIST और open source community ने वर्षों तक हमारे पास मौजूद algorithms को harden करने में लगाया, लेकिन mainline Bitcoin opinion यह है कि हमें scratch से शुरू करके अपनी Bitcoin-specific cryptography बनानी चाहिए।
+
+- जब critical work pending हो तब meetings बुलाना।
+
+"क्या quantum सच में threat है?"
+
+Satoshi ने खुद कहा था कि है। Quantum industry secp256k1 break करने के estimates लगातार कम करती जा रही है।
+
+हर standards body 2030 तक कुछ action लेने की बात करता है।
+
+Timelines पर debate करने के लिए हमें एक और meeting की ज़रूरत नहीं। Quantum secure address type ship करने का समय है।
+
+## विकल्प क्या है?
+
+Blockchains को update करने का efficient और adequately decentralized तरीका होना चाहिए।
+
+पिछले सप्ताह हमने [@QuantusNetwork](https://x.com/@QuantusNetwork) runtime upgrades test किए।
+
+हमने यह forkless upgrade अपने Planck testnet पर run किया।
+
+हमने ZK aggregator को rebuild किया ताकि वह memory का सिर्फ एक चौथाई use करे। Proofs अब सात के groups में batch होते हैं।
+
+इसका मतलब proving simple local hardware जैसे phone पर चल सकती है — भविष्य में लोग अपने mobile device पर directly private transactions generate करेंगे।
+
+पिछले सप्ताह हमने यह भी ship किया।
+
+### Github Activity (8 merged pull requests):
+
+![Github Stats](/blog/assets/github-stats-weekly-update-06-18-2026.webp)
+
+### Core Tech & ZK:
+
+- Runtime upgrade execute किया (v0.7.1-q-day-2)।
+- नए proofs का format पुराने से अलग है, इसलिए compatible रहने के लिए CLI update ज़रूरी है।
+- Dilithium threshold key resharing hardened।
+- ZK circuit को formally verify करने का तरीका design और build करना शुरू किया।
+- Chain fixes और AI-assisted audit work ship की।
+
+### Network & Infra:
+
+- Fixes के साथ GUI miner का नया version release किया।
+- Multisig support और updated proposal event indexing के साथ नया Subsquid indexer deploy किया।
+- CLI Subsquid client update किया।
+- Node में DNS issue fix किया और Grafana monitoring update किया।
+
+### Web & Mobile App Updates:
+
+- कई mobile wallet fixes और improvements।
+- Docs site को responsive UX pass से improve किया और search add किया।
+
+### Content & Partnerships:
+
+Chris का QDay keynote release किया:
+
+<TwitterEmbed url="https://x.com/QuantusNetwork/status/2066731387458355672" />
+
+- [@superai_conf](https://x.com/@superai_conf) पर Quantus का प्रतिनिधित्व किया
+
+यह हम पर निर्भर है।
+
+Stay frosty, quants.
