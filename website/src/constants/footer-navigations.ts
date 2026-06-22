@@ -36,6 +36,12 @@ export const FOOTER_NAVIGATIONS: Navigation[] = [
         target: "_blank",
         rel: "noopener noreferrer",
       },
+      {
+        label: "footer.links.github",
+        href: "https://github.com/Quantus-Network",
+        target: "_blank",
+        rel: "noopener noreferrer",
+      },
     ],
   },
   {
