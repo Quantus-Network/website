@@ -8,7 +8,7 @@ const env = {
   API_URL: "https://api.quantus.com/api",
   TASK_MASTER_URL: "https://quests.quantus.com/api",
   // TASK_MASTER_URL: "http://localhost:3000/api",
-  GRAPHQL_URL: "https://subsquid.quantus.com/graphql",
+  GRAPHQL_URL: "https://sub2.quantus.com/v1/graphql",
 };
 
 export default env;

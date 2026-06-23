@@ -1,0 +1,54 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Quantus Quests API",
+    "version": "1.0.0",
+    "description": "Task Master API for quests, leaderboards, and Ethereum risk analysis."
+  },
+  "servers": [{ "url": "https://quests.quantus.com" }],
+  "paths": {
+    "/health": {
+      "get": {
+        "summary": "Service health",
+        "operationId": "getHealth",
+        "responses": {
+          "200": {
+            "description": "Service is healthy",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "healthy": { "type": "boolean" },
+                    "service": { "type": "string" },
+                    "version": { "type": "string" },
+                    "timestamp": { "type": "string", "format": "date-time" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/risk-checker/{addressOrEnsName}": {
+      "get": {
+        "summary": "Get Ethereum quantum risk analysis",
+        "operationId": "getRiskAnalysis",
+        "parameters": [
+          {
+            "name": "addressOrEnsName",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string" },
+            "description": "Ethereum address or ENS name"
+          }
+        ],
+        "responses": {
+          "200": { "description": "Risk analysis result" },
+          "400": { "description": "Invalid address or ENS name" }
+        }
+      }
+    }
+  }
+}

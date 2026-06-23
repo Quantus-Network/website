@@ -1,7 +1,13 @@
 /.well-known/api-catalog
   Content-Type: application/linkset+json; profile="https://www.rfc-editor.org/info/rfc9727"
 
-/.well-known/*
+/.well-known/openapi/*
+  Content-Type: application/json
+
+/.well-known/assetlinks.json
+  Content-Type: application/json
+
+/.well-known/apple-app-site-association
   Content-Type: application/json
 
 # Agent discovery Link headers (RFC 8288 / RFC 9727)

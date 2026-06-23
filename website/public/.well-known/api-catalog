@@ -1,16 +1,65 @@
 {
   "linkset": [
     {
-      "anchor": "https://www.quantus.com/.well-known/api-catalog",
-      "item": [
-        { "href": "https://api.quantus.com/api" },
-        { "href": "https://quests.quantus.com/api" },
-        { "href": "https://subsquid.quantus.com/graphql" }
+      "anchor": "https://api.quantus.com/api",
+      "service-desc": [
+        {
+          "href": "https://www.quantus.com/.well-known/openapi/website-api.json",
+          "type": "application/json"
+        }
       ],
       "service-doc": [
         {
           "href": "https://docs.quantus.com/",
           "type": "text/html"
+        }
+      ],
+      "status": [
+        {
+          "href": "https://api.quantus.com/",
+          "type": "text/plain"
+        }
+      ]
+    },
+    {
+      "anchor": "https://quests.quantus.com/api",
+      "service-desc": [
+        {
+          "href": "https://www.quantus.com/.well-known/openapi/quests-api.json",
+          "type": "application/json"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://docs.quantus.com/",
+          "type": "text/html"
+        }
+      ],
+      "status": [
+        {
+          "href": "https://quests.quantus.com/health",
+          "type": "application/json"
+        }
+      ]
+    },
+    {
+      "anchor": "https://sub2.quantus.com/v1/graphql",
+      "service-desc": [
+        {
+          "href": "https://www.quantus.com/.well-known/openapi/indexer-api.json",
+          "type": "application/json"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://docs.quantus.com/",
+          "type": "text/html"
+        }
+      ],
+      "status": [
+        {
+          "href": "https://sub2.quantus.com/health",
+          "type": "application/json"
         }
       ]
     }

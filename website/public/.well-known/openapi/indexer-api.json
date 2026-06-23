@@ -1,0 +1,55 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Quantus Indexer GraphQL API",
+    "version": "1.0.0",
+    "description": "GraphQL indexer for Quantus chain statistics and on-chain data."
+  },
+  "servers": [{ "url": "https://sub2.quantus.com" }],
+  "paths": {
+    "/health": {
+      "get": {
+        "summary": "Service health",
+        "operationId": "getHealth",
+        "responses": {
+          "200": {
+            "description": "Indexer is healthy",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/graphql": {
+      "post": {
+        "summary": "GraphQL query endpoint",
+        "operationId": "graphqlQuery",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["query"],
+                "properties": {
+                  "query": { "type": "string" },
+                  "variables": { "type": "object", "additionalProperties": true },
+                  "operationName": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": { "description": "GraphQL response" }
+        }
+      }
+    }
+  }
+}
