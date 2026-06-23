@@ -2,6 +2,11 @@
 import Layout from "@/components/layout/Layout.astro";
 import Button from "@/components/ui/Button.astro";
 import { createMetadata } from "@/utils/create-metadata";
+import { SUPPORTED_LOCALES } from "@/utils/i18n";
+
+export async function getStaticPaths() {
+  return SUPPORTED_LOCALES.map((lang) => ({ params: { lang } }));
+}
 
 const metadata = createMetadata({
   title: "404 Not Found",
