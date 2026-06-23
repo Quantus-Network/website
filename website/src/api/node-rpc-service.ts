@@ -261,7 +261,9 @@ class NodeRpcService {
     }
   }
 
-  private deserializeFeed(data: string): Array<{ action: number; payload: unknown }> {
+  private deserializeFeed(
+    data: string,
+  ): Array<{ action: number; payload: unknown }> {
     const json = JSON.parse(data) as unknown;
 
     if (!Array.isArray(json) || json.length === 0 || json.length % 2 !== 0) {

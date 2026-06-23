@@ -39,7 +39,10 @@
                 "required": ["query"],
                 "properties": {
                   "query": { "type": "string" },
-                  "variables": { "type": "object", "additionalProperties": true },
+                  "variables": {
+                    "type": "object",
+                    "additionalProperties": true
+                  },
                   "operationName": { "type": "string" }
                 }
               }

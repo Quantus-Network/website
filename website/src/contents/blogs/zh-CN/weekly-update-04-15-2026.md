@@ -72,7 +72,7 @@ Quantus 采用工作量证明，最大供应量为 2,100 万 QUAN。
 ### Content & Partnerships
 
 - Chris 做客 [@mobymedia](https://x.com/mobymedia) 播客：[https://x.com/mobymedia/status/2043401794227949568](https://x.com/mobymedia/status/2043401794227949568)
-- 与 [@ethan_t_c_](https://x.com/ethan_t_c_) 和 [@YuviLightman](https://x.com/YuviLightman) 发布后量子零知识证明播客：[https://x.com/QuantusNetwork/status/2042047089660563948](https://x.com/QuantusNetwork/status/2042047089660563948)
+- 与 [@ethan*t_c*](https://x.com/ethan_t_c_) 和 [@YuviLightman](https://x.com/YuviLightman) 发布后量子零知识证明播客：[https://x.com/QuantusNetwork/status/2042047089660563948](https://x.com/QuantusNetwork/status/2042047089660563948)
 - 出席新加坡 GitEx。
 - 在 Network School 与 Dr. [@zina_cinker](https://x.com/zina_cinker) 举办满座场次：[https://x.com/QuantusNetwork/status/2044051045832384538](https://x.com/QuantusNetwork/status/2044051045832384538)
 - Chris 参加 [@ArcanumVentures](https://x.com/ArcanumVentures) 第 47 期直播（4 月 16 日周四 14:00 UTC / 新加坡 22:00）：[https://x.com/ArcanumVentures/status/2044023122102223157](https://x.com/ArcanumVentures/status/2044023122102223157)

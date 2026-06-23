@@ -1,10 +1,8 @@
 interface Navigation {
-
   href: string;
   label: string;
   target?: string;
   rel?: string;
-
 }
 
 export const SITE_NAVIGATIONS: Navigation[] = [
@@ -13,8 +11,10 @@ export const SITE_NAVIGATIONS: Navigation[] = [
   { href: "/about/", label: "navbar.about" },
   { href: "/community/", label: "navbar.community" },
   {
-    href: "https://docs.quantus.com/", target: "_blank",
-    rel: "noopener noreferrer", label: "navbar.docs"
+    href: "https://docs.quantus.com/",
+    target: "_blank",
+    rel: "noopener noreferrer",
+    label: "navbar.docs",
   },
   {
     href: "/quantum-risk-checker/",
