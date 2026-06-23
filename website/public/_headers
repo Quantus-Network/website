@@ -7,22 +7,31 @@
 # Agent discovery Link headers (RFC 8288 / RFC 9727)
 /
   Link: </.well-known/api-catalog>; rel="api-catalog", <https://docs.quantus.com/>; rel="service-doc"
+  Vary: Accept
 /zh-CN/
   Link: </.well-known/api-catalog>; rel="api-catalog", <https://docs.quantus.com/>; rel="service-doc"
+  Vary: Accept
 /ko-KR/
   Link: </.well-known/api-catalog>; rel="api-catalog", <https://docs.quantus.com/>; rel="service-doc"
+  Vary: Accept
 /id-ID/
   Link: </.well-known/api-catalog>; rel="api-catalog", <https://docs.quantus.com/>; rel="service-doc"
+  Vary: Accept
 /ja-JP/
   Link: </.well-known/api-catalog>; rel="api-catalog", <https://docs.quantus.com/>; rel="service-doc"
+  Vary: Accept
 /ru-RU/
   Link: </.well-known/api-catalog>; rel="api-catalog", <https://docs.quantus.com/>; rel="service-doc"
+  Vary: Accept
 /es-ES/
   Link: </.well-known/api-catalog>; rel="api-catalog", <https://docs.quantus.com/>; rel="service-doc"
+  Vary: Accept
 /de-DE/
   Link: </.well-known/api-catalog>; rel="api-catalog", <https://docs.quantus.com/>; rel="service-doc"
+  Vary: Accept
 /hi-IN/
   Link: </.well-known/api-catalog>; rel="api-catalog", <https://docs.quantus.com/>; rel="service-doc"
+  Vary: Accept
 
 # Cache static assets with long cache lifetimes
 # Font files - cache for 1 year (immutable)
@@ -87,6 +96,11 @@
 /_astro/*
   Cache-Control: public, max-age=31536000, immutable
 
-# HTML files - no cache
+# HTML files - no cache; vary by Accept for markdown negotiation
 /*.html
   Cache-Control: no-cache
+  Vary: Accept
+
+/_markdown-cache/*
+  Cache-Control: no-cache
+  X-Robots-Tag: noindex
