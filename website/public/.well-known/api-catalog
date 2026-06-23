@@ -1,0 +1,18 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://www.quantus.com/.well-known/api-catalog",
+      "item": [
+        { "href": "https://api.quantus.com/api" },
+        { "href": "https://quests.quantus.com/api" },
+        { "href": "https://subsquid.quantus.com/graphql" }
+      ],
+      "service-doc": [
+        {
+          "href": "https://docs.quantus.com/",
+          "type": "text/html"
+        }
+      ]
+    }
+  ]
+}

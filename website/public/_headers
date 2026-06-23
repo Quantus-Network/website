@@ -1,5 +1,28 @@
+/.well-known/api-catalog
+  Content-Type: application/linkset+json; profile="https://www.rfc-editor.org/info/rfc9727"
+
 /.well-known/*
   Content-Type: application/json
+
+# Agent discovery Link headers (RFC 8288 / RFC 9727)
+/
+  Link: </.well-known/api-catalog>; rel="api-catalog", <https://docs.quantus.com/>; rel="service-doc"
+/zh-CN/
+  Link: </.well-known/api-catalog>; rel="api-catalog", <https://docs.quantus.com/>; rel="service-doc"
+/ko-KR/
+  Link: </.well-known/api-catalog>; rel="api-catalog", <https://docs.quantus.com/>; rel="service-doc"
+/id-ID/
+  Link: </.well-known/api-catalog>; rel="api-catalog", <https://docs.quantus.com/>; rel="service-doc"
+/ja-JP/
+  Link: </.well-known/api-catalog>; rel="api-catalog", <https://docs.quantus.com/>; rel="service-doc"
+/ru-RU/
+  Link: </.well-known/api-catalog>; rel="api-catalog", <https://docs.quantus.com/>; rel="service-doc"
+/es-ES/
+  Link: </.well-known/api-catalog>; rel="api-catalog", <https://docs.quantus.com/>; rel="service-doc"
+/de-DE/
+  Link: </.well-known/api-catalog>; rel="api-catalog", <https://docs.quantus.com/>; rel="service-doc"
+/hi-IN/
+  Link: </.well-known/api-catalog>; rel="api-catalog", <https://docs.quantus.com/>; rel="service-doc"
 
 # Cache static assets with long cache lifetimes
 # Font files - cache for 1 year (immutable)
