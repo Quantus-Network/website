@@ -6,6 +6,8 @@ import mdx from "@astrojs/mdx";
 import react from "@astrojs/react";
 import rehypeExternalLinks from "./src/utils/rehype-external-links.ts";
 import playformCompress from "@playform/compress";
+import markdownForAgents from "astro-markdown-for-agents";
+import { markdownForAgentsOptions } from "./markdown-for-agents.config.mjs";
 
 const SITE_BASE_URL = process.env.SITE_BASE_URL || "https://www.quantus.com";
 const DEFAULT_LOCALE = "en-US";
@@ -99,5 +101,6 @@ export default defineConfig({
     mdx(),
     react(),
     playformCompress(),
+    markdownForAgents(markdownForAgentsOptions),
   ],
 });

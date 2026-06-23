@@ -141,5 +141,8 @@ vite.config.ts.timestamp-*
 # Astro
 .astro
 
+# Cloudflare Wrangler
+.wrangler
+
 # Mac OS
 .DS_Store

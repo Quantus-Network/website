@@ -72,7 +72,7 @@ Quantus प्रूफ ऑफ वर्क है। अधिकतम आप�
 ### Content & Partnerships
 
 - Chris [@mobymedia](https://x.com/mobymedia) पॉडकास्ट पर: [https://x.com/mobymedia/status/2043401794227949568](https://x.com/mobymedia/status/2043401794227949568)
-- [@ethan_t_c_](https://x.com/ethan_t_c_) और [@YuviLightman](https://x.com/YuviLightman) के साथ पोस्ट-क्वांटम ज़ीरो-नॉलेज प्रूफ़ पॉडकास्ट प्रकाशित: [https://x.com/QuantusNetwork/status/2042047089660563948](https://x.com/QuantusNetwork/status/2042047089660563948)
+- [@ethan*t_c*](https://x.com/ethan_t_c_) और [@YuviLightman](https://x.com/YuviLightman) के साथ पोस्ट-क्वांटम ज़ीरो-नॉलेज प्रूफ़ पॉडकास्ट प्रकाशित: [https://x.com/QuantusNetwork/status/2042047089660563948](https://x.com/QuantusNetwork/status/2042047089660563948)
 - सिंगापुर में GitEx में भाग लिया।
 - Dr. [@zina_cinker](https://x.com/zina_cinker) के साथ Network School पर फुल-हाउस सत्र: [https://x.com/QuantusNetwork/status/2044051045832384538](https://x.com/QuantusNetwork/status/2044051045832384538)
 - Chris [@ArcanumVentures](https://x.com/ArcanumVentures) ep. 47 लाइव गुरुवार 16 अप्रैल, 14:00 UTC / 22:00 सिंगापुर: [https://x.com/ArcanumVentures/status/2044023122102223157](https://x.com/ArcanumVentures/status/2044023122102223157)

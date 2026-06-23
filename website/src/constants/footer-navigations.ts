@@ -93,7 +93,7 @@ export const FOOTER_NAVIGATIONS: Navigation[] = [
         href: "https://blockspot.io/coin/quantus/",
         target: "_blank",
         rel: "noopener noreferrer",
-      }
+      },
     ],
   },
 ] as const;

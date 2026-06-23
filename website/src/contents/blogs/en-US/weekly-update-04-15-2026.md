@@ -72,7 +72,7 @@ Here's what else we shipped this week:
 ### Content & Partnerships
 
 - Chris on [@mobymedia](https://x.com/mobymedia) podcast: [https://x.com/mobymedia/status/2043401794227949568](https://x.com/mobymedia/status/2043401794227949568)
-- Published Post-Quantum zero-knowledge proofs podcast with [@ethan_t_c_](https://x.com/ethan_t_c_) and [@YuviLightman](https://x.com/YuviLightman): [https://x.com/QuantusNetwork/status/2042047089660563948](https://x.com/QuantusNetwork/status/2042047089660563948)
+- Published Post-Quantum zero-knowledge proofs podcast with [@ethan*t_c*](https://x.com/ethan_t_c_) and [@YuviLightman](https://x.com/YuviLightman): [https://x.com/QuantusNetwork/status/2042047089660563948](https://x.com/QuantusNetwork/status/2042047089660563948)
 - Attended GitEx in Singapore.
 - Hosted a full-house session with Dr. [@zina_cinker](https://x.com/zina_cinker) at Network School: [https://x.com/QuantusNetwork/status/2044051045832384538](https://x.com/QuantusNetwork/status/2044051045832384538)
 - Chris joining [@ArcanumVentures](https://x.com/ArcanumVentures) ep. 47 live Thursday April 16, 2pm UTC / 10pm Singapore: [https://x.com/ArcanumVentures/status/2044023122102223157](https://x.com/ArcanumVentures/status/2044023122102223157)

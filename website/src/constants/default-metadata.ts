@@ -8,12 +8,12 @@ const title = {
 const description =
   "Quantus: Quantum-secure Layer 1 blockchain. Download our wallet for post-quantum protected assets.";
 const image = {
-  url: `${env.SITE_BASE_URL}/banner-small.jpeg`,
-  secureUrl: `${env.SITE_BASE_URL}/banner-small.jpeg`,
+  url: `${env.SITE_BASE_URL}/quantus-banner.png`,
+  secureUrl: `${env.SITE_BASE_URL}/quantus-banner.png`,
   alt: "Banner with gradient text reading 'Quantum Secure Your Crypto' in pink, purple, and yellow tones on a dark background with abstract circular shapes.",
-  width: 600,
-  height: 200,
-  type: "image/jpeg",
+  width: 6000,
+  height: 3140,
+  type: "image/png",
 };
 
 const defaultMetadata: SEOProps = {

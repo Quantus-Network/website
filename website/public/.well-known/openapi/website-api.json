@@ -1,0 +1,110 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Quantus Website API",
+    "version": "1.0.0",
+    "description": "Public endpoints for contact inquiries, waitlist subscriptions, and sponsorship requests."
+  },
+  "servers": [{ "url": "https://api.quantus.com" }],
+  "paths": {
+    "/": {
+      "get": {
+        "summary": "Service health",
+        "operationId": "getHealth",
+        "responses": {
+          "200": {
+            "description": "API is running"
+          }
+        }
+      }
+    },
+    "/api/inquiries": {
+      "post": {
+        "summary": "Submit a contact inquiry",
+        "operationId": "createInquiry",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["name", "email", "message"],
+                "properties": {
+                  "name": { "type": "string" },
+                  "email": { "type": "string", "format": "email" },
+                  "message": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": { "description": "Inquiry sent successfully" },
+          "400": { "description": "Validation error" }
+        }
+      }
+    },
+    "/api/waitlist": {
+      "post": {
+        "summary": "Subscribe to the waitlist",
+        "operationId": "joinWaitlist",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["email", "firstName"],
+                "properties": {
+                  "email": { "type": "string", "format": "email" },
+                  "firstName": { "type": "string" },
+                  "lastName": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": { "description": "Added to waitlist" },
+          "409": { "description": "Duplicate entry" }
+        }
+      }
+    },
+    "/api/sponsorships": {
+      "post": {
+        "summary": "Submit a sponsorship request",
+        "operationId": "createSponsorship",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "name",
+                  "email",
+                  "designation",
+                  "organization",
+                  "investmentTier"
+                ],
+                "properties": {
+                  "name": { "type": "string" },
+                  "email": { "type": "string", "format": "email" },
+                  "phone": { "type": "string" },
+                  "designation": { "type": "string" },
+                  "organization": { "type": "string" },
+                  "investmentTier": { "type": "string" },
+                  "additionalInfo": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": { "description": "Sponsorship request sent" },
+          "400": { "description": "Validation error" }
+        }
+      }
+    }
+  }
+}
