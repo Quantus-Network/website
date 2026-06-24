@@ -154,7 +154,7 @@
       "headline": "$3 trillion in crypto. Zero quantum defense.",
       "qubits": {
         "label": "Qubits to Break Bitcoin",
-        "value": "2,400",
+        "value": "1,200",
         "sub": "logical qubits required for a cryptographically relevant quantum computer"
       },
       "chains": {

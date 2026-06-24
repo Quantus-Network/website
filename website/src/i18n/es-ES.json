@@ -154,7 +154,7 @@
       "headline": "$3 billones en cripto. Cero defensa cuántica.",
       "qubits": {
         "label": "Qubits para romper Bitcoin",
-        "value": "2,400",
+        "value": "1,200",
         "sub": "qubits lógicos requeridos para una computadora cuántica criptográficamente relevante"
       },
       "chains": {
