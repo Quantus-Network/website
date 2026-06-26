@@ -1,0 +1,93 @@
+---
+title: "Quantus Weekly: スーツ組が Q-pilled になってきた"
+description: "BlackRock とホワイトハウスが、ポスト量子移行は実行問題であることを確認。加えて ZK 形式検証、コンセンサス bug 修正、JavaScript SDK、runtime セキュリティ統合、モバイルガバナンス通知。"
+pubDate: "2026-06-26"
+heroImage: "/blog/covers/weekly-update-06-26-2026.webp"
+heroAlt: "Quantus Weekly: スーツ組が Q-pilled になってきた"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "quantum",
+    "post-quantum",
+    "pqc",
+    "nist",
+    "ml-kem",
+    "ml-dsa",
+    "blackrock",
+    "zk-proofs",
+    "formal-verification",
+    "consensus",
+    "javascript-sdk",
+    "runtime",
+    "security",
+    "mobile",
+    "governance",
+    "subsquid",
+    "q-day",
+  ]
+---
+
+import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
+
+スーツ組が Q-pilled になってきた。
+
+今週、BlackRock は量子コンピューティングとブロックチェーンに関するレポートを公開し、ホワイトハウスは PQC 移行のタイムラインを加速する大統領令を発令した。
+
+両者ともに確認していること：
+
+- ポスト量子への移行は実行問題である（もはやイデオロギー論争ではない）。
+- 楕円曲線暗号は危険にさらされている。
+- NIST 標準（ML-KEM、ML-DSA、SLH-DSA）が解決策である。
+- 難しいのは調整である。
+- 移行は 5 年以内に完了する必要がある。
+
+暗号市場には 2 兆ドル以上がリスクにさらされており、Q-Day 前に可能な限り多くを守ることが私たちの目標である。
+
+今週出荷した内容は以下のとおり。
+
+### Github Activity（12 merged pull requests）:
+
+![Github Stats](/blog/assets/github-stats-weekly-update-06-26-2026.webp)
+
+### Core Tech & ZK:
+
+- ZK 回路と Plonky2 の一部について形式検証を進めた。
+- 偶発的な一時的 reorg を引き起こしていたコンセンサス bug を修正した。
+- セキュリティ監査に先立ち、runtime のセキュリティクリティカルなコードを単一の監査可能な面に統合した。
+- Web3 統合を容易にする JavaScript SDK をリリースした。
+- runtime セキュリティを強化し、runtime コード面をレビューした。
+
+### Network & Infra:
+
+- マイナーへのリマインダー：最近の runtime アップグレードでは、報酬を請求するために CLI の更新が必要である。
+- ノード更新の Subsquid デプロイ戦略を改善した。
+
+### Web & Mobile App Updates:
+
+- 通知受信時に残高と履歴を更新する機能を追加した。
+- 技術ガバナンス通知とセキュリティモニタリングを追加した。
+
+### Content & Partnerships:
+
+Joe Mattia の QDay 基調講演全文：
+
+<TwitterEmbed url="https://x.com/QuantusNetwork/status/2067598271586193660" />
+
+Chris が wenaltseason の X space に参加し、crypto への量子脅威について議論した：
+
+<TwitterEmbed url="https://x.com/YuviLightman/status/2070158435677835606" />
+
+### Industry Updates:
+
+- BlackRock がデジタル資産の量子リスクに関するホワイトペーパーを公開した。ここで解説した：
+
+<TwitterEmbed url="https://x.com/QuantusNetwork/status/2069750424907714587" />
+
+- ホワイトハウスが、連邦システムのポスト量子暗号への移行期限を定めた大統領令を発令した。
+
+<TwitterEmbed url="https://x.com/QuantusNetwork/status/2069232335699239102" />
+
+私たち次第だ。
+
+Stay frosty, quants.

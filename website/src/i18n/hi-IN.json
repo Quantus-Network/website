@@ -928,7 +928,13 @@
       "network-school": "Network School",
       "ecdsa": "ECDSA",
       "runtime-upgrade": "रनटाइम अपग्रेड",
-      "litep2p": "litep2p"
+      "litep2p": "litep2p",
+      "nist": "NIST",
+      "ml-kem": "ML-KEM",
+      "blackrock": "BlackRock",
+      "formal-verification": "औपचारिक सत्यापन",
+      "javascript-sdk": "JavaScript SDK",
+      "runtime": "रनटाइम"
     }
   },
   "cookie": {

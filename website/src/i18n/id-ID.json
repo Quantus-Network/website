@@ -928,7 +928,13 @@
       "network-school": "Network School",
       "ecdsa": "ECDSA",
       "runtime-upgrade": "Upgrade Runtime",
-      "litep2p": "litep2p"
+      "litep2p": "litep2p",
+      "nist": "NIST",
+      "ml-kem": "ML-KEM",
+      "blackrock": "BlackRock",
+      "formal-verification": "Verifikasi Formal",
+      "javascript-sdk": "SDK JavaScript",
+      "runtime": "Runtime"
     }
   },
   "cookie": {
