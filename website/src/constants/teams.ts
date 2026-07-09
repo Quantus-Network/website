@@ -40,16 +40,6 @@ export const TEAMS = [
     },
   },
   {
-    id: "ethan-cemer",
-    name: "Ethan Cemer",
-    role: "Zero-Knowledge Engineer",
-    social: {
-      platform: "X",
-      url: "https://x.com/ethan_t_c_",
-      username: "@ethan_t_c_",
-    },
-  },
-  {
     id: "jonathan-angle",
     name: "Jonathan Angle",
     role: "Communications Director",
