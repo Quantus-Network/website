@@ -934,7 +934,10 @@
       "blackrock": "BlackRock",
       "formal-verification": "形式検証",
       "javascript-sdk": "JavaScript SDK",
-      "runtime": "ランタイム"
+      "runtime": "ランタイム",
+      "cold-storage": "コールドストレージ",
+      "miner": "マイナー",
+      "open-source": "オープンソース"
     }
   },
   "cookie": {

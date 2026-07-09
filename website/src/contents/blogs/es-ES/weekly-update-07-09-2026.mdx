@@ -1,0 +1,91 @@
+---
+title: "Quantus Weekly: Construimos el marcador"
+description: "migration.fail rastrea la capitalización de mercado cripto post-cuántica en un 0,046%. Además: soporte de billetera de hardware Keystone en v1.5.5, agregación de pruebas ZK, streaming ML-DSA para hardware embebido y miner v3.3.1."
+pubDate: "2026-07-09"
+heroImage: "/blog/covers/weekly-update-07-09-2026.webp"
+heroAlt: "Quantus Weekly: Construimos el marcador"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "quantum",
+    "post-quantum",
+    "keystone",
+    "hardware-wallet",
+    "mobile",
+    "multisig",
+    "cold-storage",
+    "zk-proofs",
+    "ml-dsa",
+    "dilithium",
+    "miner",
+    "subsquid",
+    "open-source",
+  ]
+---
+
+import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
+
+Todas las cadenas dicen que se volverán post-cuánticas.
+
+Así que construimos un marcador.
+
+[Migration.fail](https://migration.fail/) rastrea el porcentaje de capitalización de mercado cripto que funciona con criptografía resistente a la computación cuántica.
+
+Ahora mismo es 0,046%.
+
+Básicamente cero.
+
+Más de 2 billones de dólares tienen que moverse desde direcciones pre-cuánticas y volverse post-cuánticas.
+
+Así que estamos construyendo el destino.
+
+Enviamos v1.5.5 de la app Quantus con soporte de billetera de hardware Keystone.
+
+Ahora QUAN tiene soporte tanto de multisig como de almacenamiento en frío.
+
+Todo es de código abierto en GitHub.
+
+Toda la industria tendrá que ir a lo post-cuántico; ahora puedes seguir el progreso en tiempo real en [migration.fail](https://migration.fail/).
+
+Esto es lo más que construimos:
+
+### Actividad en Github (22 pull requests fusionados):
+
+![Github Stats](/blog/assets/github-stats-weekly-update-07-09-2026.webp)
+
+### Core Tech y ZK
+
+- Fusionada la agregación de pruebas de segunda capa en los circuitos ZK, lo que nos permite agregar pruebas ya agregadas para un nuevo salto en el rendimiento.
+- Reducido el pico de memoria para la firma ML-DSA-87 mediante streaming de la matriz de claves, lo que hace que Dilithium sea práctico en hardware embebido como Keystone.
+- Endurecido el recompartido de firmas umbral y mejorado el comportamiento de tiempo constante en nuestra librería Dilithium.
+- Resueltos los hallazgos de severidad media y baja de nuestra revisión interna de la cadena, reforzando los primitivos FRAME y las dependencias.
+- Corregidos hallazgos adicionales de la revisión interna en el código de hash Poseidon.
+- Corregidos activos retenidos huérfanos en la recuperación de transferencias reversibles en la cadena.
+- Añadida una suite de smoke y fuzz tests de quantus exercise al CLI de Quantus, además de una función de actualización.
+
+### Red e infraestructura
+
+- Lanzados miner v3.3.0 y v3.3.1 con mejor soporte GPU en Windows y correcciones en la selección del adaptador GPU para duplicación multi-backend y errores de falta de memoria.
+- Mejorado el flujo de configuración de minería y añadido un script de configuración de minería al sitio de documentación.
+- Añadido soporte de eventos de gobernanza técnica a Subsquid
+
+### Actualizaciones web y de la app móvil
+
+- Enviada v1.5.5 de la app móvil a la App Store con soporte de billetera de hardware Keystone: actualizaciones de firmware, soporte multisig en el firmware, endurecimiento de seguridad en el manejo de claves y corrección de un bug de integración. Nuestro fork de firmware es de código abierto en GitHub.
+- Resueltos todos los hallazgos de severidad media de nuestra revisión interna del firmware Keystone, añadiendo pruebas de conformidad de cadena, firma hedged y vinculación de dispositivo.
+- Lanzado [migration.fail](https://migration.fail/).
+- Añadido soporte de múltiples frases semilla a la billetera móvil.
+- Refactorizado el flujo de envío y enviadas correcciones de UX en toda la app móvil.
+- Endurecido el flujo de copia de frase semilla y el análisis de transacciones, y añadido feedback háptico a la entrada de cantidad.
+- Enviadas correcciones de exactitud de la revisión interna del runtime v12.
+
+### Contenido y alianzas
+
+- Chris Smith ([@YuviLightman](https://x.com/@YuviLightman)) apareció en el Asia Tech Podcast:
+
+<TwitterEmbed url="https://x.com/ATPinsights/status/2074067155881246942" />
+
+Depende de nosotros.
+
+Stay frosty, quants.

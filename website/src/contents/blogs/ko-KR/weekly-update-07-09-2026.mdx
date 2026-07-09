@@ -1,0 +1,91 @@
+---
+title: "Quantus Weekly: 스코어보드를 만들었습니다"
+description: "migration.fail은 포스트 양자 암호화 시장 시가총액 비중을 0.046%로 추적합니다. 또한 v1.5.5 Keystone 하드웨어 지갑 지원, ZK 증명 집계, 임베디드 하드웨어용 ML-DSA 스트리밍, miner v3.3.1."
+pubDate: "2026-07-09"
+heroImage: "/blog/covers/weekly-update-07-09-2026.webp"
+heroAlt: "Quantus Weekly: 스코어보드를 만들었습니다"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "quantum",
+    "post-quantum",
+    "keystone",
+    "hardware-wallet",
+    "mobile",
+    "multisig",
+    "cold-storage",
+    "zk-proofs",
+    "ml-dsa",
+    "dilithium",
+    "miner",
+    "subsquid",
+    "open-source",
+  ]
+---
+
+import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
+
+모든 체인이 포스트 양자가 될 것이라고 말합니다.
+
+그래서 우리는 스코어보드를 만들었습니다.
+
+[Migration.fail](https://migration.fail/)은 양자 내성 암호화로 운영되는 암호화폐 시장 시가총액 비중을 추적합니다.
+
+현재 0.046%입니다.
+
+사실상 제로입니다.
+
+2조 달러 이상이 양자 이전 주소에서 이동해 포스트 양자가 되어야 합니다.
+
+그래서 우리는 목적지를 만들고 있습니다.
+
+Keystone 하드웨어 지갑 지원이 포함된 Quantus app v1.5.5를 출시했습니다.
+
+이제 QUAN은 멀티시그와 콜드 스토리지를 모두 지원합니다.
+
+모두 GitHub에서 오픈 소스입니다.
+
+업계 전체가 포스트 양자로 가야 하며, 이제 [migration.fail](https://migration.fail/)에서 실시간 진행 상황을 확인할 수 있습니다.
+
+이번 주 추가로 구축한 내용:
+
+### Github 활동 (머지된 PR 22건):
+
+![Github Stats](/blog/assets/github-stats-weekly-update-07-09-2026.webp)
+
+### 코어 기술 & ZK
+
+- ZK 회로에 두 번째 레이어 증명 집계를 머지하여, 이미 집계된 증명을 다시 집계해 처리량을 한 단계 더 높였습니다.
+- 키 행렬 스트리밍으로 ML-DSA-87 서명의 피크 메모리를 줄여 Keystone 같은 임베디드 하드웨어에서 Dilithium을 실용적으로 만들었습니다.
+- 임계값 서명 리셰어링을 강화하고 Dilithium 라이브러리의 상수 시간 동작을 개선했습니다.
+- 내부 체인 리뷰의 중·저위험 발견 사항을 해소하고 FRAME 프리미티브와 의존성을 강화했습니다.
+- Poseidon 해싱 코드의 추가 내부 리뷰 발견 사항을 수정했습니다.
+- 체인의 가역 전송 복구에서 고아화된 보유 자산을 수정했습니다.
+- Quantus CLI에 quantus exercise 스모크 및 퍼즈 테스트 스위트와 업데이트 기능을 추가했습니다.
+
+### 네트워크 & 인프라
+
+- Windows GPU 지원 개선 및 멀티 백엔드 중복·메모리 부족 오류에 대한 GPU 어댑터 선택 수정이 포함된 miner v3.3.0 및 v3.3.1을 출시했습니다.
+- 마이닝 설정 흐름을 개선하고 문서 사이트에 마이닝 설정 스크립트를 추가했습니다.
+- Subsquid에 tech governance 이벤트 지원을 추가했습니다
+
+### 웹·모바일 앱 업데이트
+
+- Keystone 하드웨어 지갑 지원이 포함된 모바일 app v1.5.5를 App Store에 출시: 펌웨어 업데이트, 펌웨어 내 멀티시그 지원, 키 처리 보안 강화, 통합 bug 수정. 펌웨어 fork는 GitHub에서 오픈 소스입니다.
+- 내부 Keystone 펌웨어 리뷰의 모든 중위험 발견 사항을 해소하고, 체인 적합성 테스트, 헤지드 서명, 디바이스 바인딩을 추가했습니다.
+- [migration.fail](https://migration.fail/)을 출시했습니다.
+- 모바일 지갑에 다중 시드 문구 지원을 추가했습니다.
+- 전송 흐름을 리팩터링하고 모바일 app 전반에 UX 수정을 출시했습니다.
+- 시드 문구 복사 흐름과 트랜잭션 파싱을 강화하고, 금액 입력에 햅틱 피드백을 추가했습니다.
+- 내부 v12 runtime 리뷰의 정확성 수정을 출시했습니다.
+
+### 콘텐츠 & 파트너십
+
+- Chris Smith([@YuviLightman](https://x.com/@YuviLightman))가 Asia Tech Podcast에 출연했습니다:
+
+<TwitterEmbed url="https://x.com/ATPinsights/status/2074067155881246942" />
+
+우리에게 달려 있습니다.
+
+Stay frosty, quants.

@@ -1,0 +1,91 @@
+---
+title: "Quantus Weekly: हमने स्कोरबोर्ड बनाया"
+description: "migration.fail पोस्ट-क्वांटम क्रिप्टो मार्केट कैप का 0.046% ट्रैक करता है। साथ ही: v1.5.5 में Keystone हार्डवेयर वॉलेट सपोर्ट, ZK प्रूफ एग्रीगेशन, एम्बेडेड हार्डवेयर के लिए ML-DSA स्ट्रीमिंग, और miner v3.3.1।"
+pubDate: "2026-07-09"
+heroImage: "/blog/covers/weekly-update-07-09-2026.webp"
+heroAlt: "Quantus Weekly: हमने स्कोरबोर्ड बनाया"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "quantum",
+    "post-quantum",
+    "keystone",
+    "hardware-wallet",
+    "mobile",
+    "multisig",
+    "cold-storage",
+    "zk-proofs",
+    "ml-dsa",
+    "dilithium",
+    "miner",
+    "subsquid",
+    "open-source",
+  ]
+---
+
+import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
+
+हर चेन कहती है कि वे पोस्ट-क्वांटम बनेंगी।
+
+इसलिए हमने एक स्कोरबोर्ड बनाया।
+
+[Migration.fail](https://migration.fail/) उस क्रिप्टो मार्केट कैप का प्रतिशत ट्रैक करता है जो क्वांटम-रेज़िस्टेंट क्रिप्टोग्राफी पर चलता है।
+
+अभी यह 0.046% है।
+
+मूलतः शून्य।
+
+$2T से अधिक को प्री-क्वांटम पते से हटकर पोस्ट-क्वांटम बनना होगा।
+
+इसलिए हम मंज़िल बना रहे हैं।
+
+हमने Keystone हार्डवेयर वॉलेट सपोर्ट के साथ Quantus app v1.5.5 शिप किया।
+
+अब QUAN में मल्टीसिग और कोल्ड स्टोरेज दोनों का सपोर्ट है।
+
+यह सब GitHub पर ओपन सोर्स है।
+
+पूरे उद्योग को पोस्ट-क्वांटम जाना होगा — अब आप [migration.fail](https://migration.fail/) पर रीयल-टाइम प्रगति देख सकते हैं।
+
+इस हफ़्ते हमने यह भी बनाया:
+
+### Github Activity (22 merged pull requests):
+
+![Github Stats](/blog/assets/github-stats-weekly-update-07-09-2026.webp)
+
+### Core Tech & ZK
+
+- ZK सर्किट में दूसरी परत का प्रूफ एग्रीगेशन मर्ज किया, जिससे पहले से एग्रीगेट किए प्रूफ को फिर एग्रीगेट कर थ्रूपुट और बढ़ सके।
+- की मैट्रिक्स स्ट्रीमिंग से ML-DSA-87 साइनिंग की पीक मेमोरी कम की, जिससे Dilithium Keystone जैसे एम्बेडेड हार्डवेयर पर व्यावहारिक हो गया।
+- थ्रेशोल्ड सिग्नेचर रीशेयरिंग को मज़बूत किया और Dilithium लाइब्रेरी में constant-time व्यवहार सुधारा।
+- आंतरिक चेन रिव्यू के मध्यम और निम्न-स्तरीय निष्कर्ष साफ़ किए, FRAME प्रिमिटिव और dependencies को मज़बूत किया।
+- Poseidon हैशिंग कोड में अतिरिक्त आंतरिक रिव्यू निष्कर्ष ठीक किए।
+- चेन में reversible-transfer रिकवरी पर orphaned held assets ठीक किए।
+- Quantus CLI में quantus exercise smoke और fuzz टेस्ट सुइट, साथ ही अपडेट फ़ीचर जोड़ा।
+
+### Network & Infra
+
+- Windows GPU सपोर्ट में सुधार और multi-backend duplication व out-of-memory errors के लिए GPU adapter selection fixes के साथ miner v3.3.0 और v3.3.1 रिलीज़ किए।
+- माइनिंग सेटअप फ़्लो सुधारा और docs साइट पर माइनिंग सेटअप स्क्रिप्ट जोड़ी।
+- Subsquid में tech governance event सपोर्ट जोड़ा
+
+### Web & Mobile App Updates
+
+- Keystone हार्डवेयर वॉलेट सपोर्ट के साथ मोबाइल app v1.5.5 App Store पर शिप: firmware अपडेट, firmware में multisig सपोर्ट, key handling की सुरक्षा मज़बूती, और एक integration bug fix। हमारा firmware fork GitHub पर ओपन सोर्स है।
+- आंतरिक Keystone firmware रिव्यू के सभी मध्यम-स्तरीय निष्कर्ष साफ़ किए, chain conformance tests, hedged signing, और device binding जोड़े।
+- [migration.fail](https://migration.fail/) लॉन्च किया।
+- मोबाइल वॉलेट में multiple seed phrase सपोर्ट जोड़ा।
+- send फ़्लो रिफैक्टर किया और मोबाइल app में UX fixes शिप किए।
+- copy seed phrase फ़्लो और transaction parsing मज़बूत किए, amount input में haptic feedback जोड़ा।
+- आंतरिक v12 runtime रिव्यू से correctness fixes शिप किए।
+
+### Content & Partnerships
+
+- Chris Smith ([@YuviLightman](https://x.com/@YuviLightman)) Asia Tech Podcast में उपस्थित हुए:
+
+<TwitterEmbed url="https://x.com/ATPinsights/status/2074067155881246942" />
+
+यह हम पर निर्भर है।
+
+Stay frosty, quants.

@@ -1,0 +1,91 @@
+---
+title: "Quantus 周报：我们打造了记分板"
+description: "migration.fail 追踪后量子加密市场占比，目前为 0.046%。此外：v1.5.5 支持 Keystone 硬件钱包、ZK 证明聚合、面向嵌入式硬件的 ML-DSA 流式处理，以及 miner v3.3.1。"
+pubDate: "2026-07-09"
+heroImage: "/blog/covers/weekly-update-07-09-2026.webp"
+heroAlt: "Quantus 周报：我们打造了记分板"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "quantum",
+    "post-quantum",
+    "keystone",
+    "hardware-wallet",
+    "mobile",
+    "multisig",
+    "cold-storage",
+    "zk-proofs",
+    "ml-dsa",
+    "dilithium",
+    "miner",
+    "subsquid",
+    "open-source",
+  ]
+---
+
+import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
+
+每条链都说自己会变成后量子。
+
+所以我们做了一个记分板。
+
+[Migration.fail](https://migration.fail/) 追踪运行抗量子密码学的加密市场市值占比。
+
+现在是 0.046%。
+
+基本等于零。
+
+超过 2 万亿美元需要从量子前地址迁移，变成后量子。
+
+所以我们正在打造目的地。
+
+我们发布了 Quantus app v1.5.5，支持 Keystone 硬件钱包。
+
+现在 QUAN 同时支持多重签名和冷存储。
+
+全部开源在 GitHub 上。
+
+整个行业都需要走向后量子，现在你可以在 [migration.fail](https://migration.fail/) 实时查看进展。
+
+以下是我们本周交付的其他内容：
+
+### GitHub 活动（已合并 22 个拉取请求）：
+
+![Github Stats](/blog/assets/github-stats-weekly-update-07-09-2026.webp)
+
+### 核心技术与 ZK
+
+- 在 ZK 电路中合并了第二层证明聚合，可以对已聚合的证明再次聚合，进一步提升吞吐量。
+- 通过流式传输密钥矩阵，降低了 ML-DSA-87 签名的峰值内存占用，使 Dilithium 在 Keystone 等嵌入式硬件上变得实用。
+- 强化了阈值签名重分享，并改进了 Dilithium 库的恒定时间行为。
+- 清除了内部链审查中的中低风险发现，加固了 FRAME 原语和依赖项。
+- 修复了 Poseidon 哈希代码中的额外内部审查发现。
+- 修复了链上可逆转账恢复中遗留的持有资产问题。
+- 为 Quantus CLI 添加了 quantus exercise 冒烟测试和模糊测试套件，以及更新功能。
+
+### 网络与基础设施
+
+- 发布 miner v3.3.0 和 v3.3.1，改进了 Windows GPU 支持，并修复了多后端重复和内存不足错误相关的 GPU 适配器选择问题。
+- 改进了挖矿设置流程，并在文档站点添加了挖矿设置脚本。
+- 为 Subsquid 添加了技术治理事件支持
+
+### 网页与移动应用更新
+
+- 向 App Store 发布了支持 Keystone 硬件钱包的移动 app v1.5.5：固件更新、固件中的多重签名支持、密钥处理安全加固，以及一个集成 bug 修复。我们的固件 fork 在 GitHub 上开源。
+- 清除了内部 Keystone 固件审查中的所有中等发现，添加了链一致性测试、对冲签名和设备绑定。
+- 上线了 [migration.fail](https://migration.fail/)。
+- 为移动钱包添加了多种助记词支持。
+- 重构了发送流程，并在移动 app 中发布了 UX 修复。
+- 加固了复制助记词流程和交易解析，并为金额输入添加了触觉反馈。
+- 发布了内部 v12 runtime 审查的正确性修复。
+
+### 内容与合作伙伴
+
+- Chris Smith（[@YuviLightman](https://x.com/@YuviLightman)）做客 Asia Tech Podcast：
+
+<TwitterEmbed url="https://x.com/ATPinsights/status/2074067155881246942" />
+
+取决于我们。
+
+保持冷静，quants。

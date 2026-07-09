@@ -934,7 +934,10 @@
       "blackrock": "BlackRock",
       "formal-verification": "Verifikasi Formal",
       "javascript-sdk": "SDK JavaScript",
-      "runtime": "Runtime"
+      "runtime": "Runtime",
+      "cold-storage": "Cold Storage",
+      "miner": "Miner",
+      "open-source": "Open Source"
     }
   },
   "cookie": {

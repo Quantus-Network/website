@@ -1,0 +1,91 @@
+---
+title: "Quantus Weekly: スコアボードを作った"
+description: "migration.fail はポスト量子暗号の暗号市場時価総額シェアを 0.046% で追跡。加えて v1.5.5 の Keystone ハードウェアウォレット対応、ZK 証明集約、組み込みハードウェア向け ML-DSA ストリーミング、miner v3.3.1。"
+pubDate: "2026-07-09"
+heroImage: "/blog/covers/weekly-update-07-09-2026.webp"
+heroAlt: "Quantus Weekly: スコアボードを作った"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "quantum",
+    "post-quantum",
+    "keystone",
+    "hardware-wallet",
+    "mobile",
+    "multisig",
+    "cold-storage",
+    "zk-proofs",
+    "ml-dsa",
+    "dilithium",
+    "miner",
+    "subsquid",
+    "open-source",
+  ]
+---
+
+import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
+
+すべてのチェーンがポスト量子になると言っている。
+
+だから私たちはスコアボードを作った。
+
+[Migration.fail](https://migration.fail/) は、量子耐性暗号で動作する暗号市場時価総額の割合を追跡している。
+
+現時点では 0.046%。
+
+ほぼゼロだ。
+
+2 兆ドル以上が量子前アドレスから移行し、ポスト量子になる必要がある。
+
+だから私たちは行き先を作っている。
+
+Keystone ハードウェアウォレット対応を含む Quantus app v1.5.5 を出荷した。
+
+QUAN はマルチシグとコールドストレージの両方に対応した。
+
+すべて GitHub 上でオープンソースだ。
+
+業界全体がポスト量子に移行する必要があり、進捗は [migration.fail](https://migration.fail/) でリアルタイムに確認できる。
+
+今週追加で構築した内容は以下のとおり。
+
+### Github Activity（マージされた PR 22件）：
+
+![Github Stats](/blog/assets/github-stats-weekly-update-07-09-2026.webp)
+
+### Core Tech & ZK
+
+- ZK 回路に第二層の証明集約をマージし、すでに集約された証明をさらに集約してスループットを一段引き上げた。
+- 鍵行列のストリーミングにより ML-DSA-87 署名のピークメモリを削減し、Keystone のような組み込みハードウェアで Dilithium を実用的にした。
+- しきい値署名のリシェアリングを強化し、Dilithium ライブラリの定数時間動作を改善した。
+- 内部チェーンレビューの中・低リスク指摘を解消し、FRAME プリミティブと依存関係を強化した。
+- Poseidon ハッシュコードの追加の内部レビュー指摘を修正した。
+- チェーン上の可逆転送リカバリにおける孤立した保留資産を修正した。
+- Quantus CLI に quantus exercise のスモークテストとファズテストスイート、およびアップデート機能を追加した。
+
+### Network & Infra
+
+- Windows GPU サポートの改善、マルチバックエンド重複およびメモリ不足エラーに対する GPU アダプター選択の修正を含む miner v3.3.0 および v3.3.1 をリリースした。
+- マイニングセットアップフローを改善し、ドキュメントサイトにマイニングセットアップスクリプトを追加した。
+- Subsquid に tech governance イベントサポートを追加した
+
+### Web & Mobile App Updates
+
+- Keystone ハードウェアウォレット対応を含むモバイル app v1.5.5 を App Store に出荷：ファームウェア更新、ファームウェア内マルチシグ対応、鍵処理のセキュリティ強化、統合 bug 修正。ファームウェア fork は GitHub 上でオープンソース。
+- 内部 Keystone ファームウェアレビューの中リスク指摘をすべて解消し、チェーン適合テスト、ヘッジ署名、デバイスバインディングを追加した。
+- [migration.fail](https://migration.fail/) をローンチした。
+- モバイルウォレットに複数シードフレーズ対応を追加した。
+- 送信フローをリファクタリングし、モバイル app 全体で UX 修正を出荷した。
+- シードフレーズコピーフローとトランザクション解析を強化し、金額入力に触覚フィードバックを追加した。
+- 内部 v12 runtime レビューからの正確性修正を出荷した。
+
+### Content & Partnerships
+
+- Chris Smith（[@YuviLightman](https://x.com/@YuviLightman)）が Asia Tech Podcast に出演：
+
+<TwitterEmbed url="https://x.com/ATPinsights/status/2074067155881246942" />
+
+私たち次第だ。
+
+Stay frosty, quants.

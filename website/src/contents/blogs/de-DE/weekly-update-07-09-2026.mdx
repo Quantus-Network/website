@@ -1,0 +1,91 @@
+---
+title: "Quantus Weekly: Wir haben die Rangliste gebaut"
+description: "migration.fail verfolgt den Anteil der Krypto-Marktkapitalisierung mit Post-Quantum-Kryptografie bei 0,046 %. Außerdem: Keystone-Hardware-Wallet-Support in v1.5.5, ZK-Proof-Aggregation, ML-DSA-Streaming für Embedded-Hardware und Miner v3.3.1."
+pubDate: "2026-07-09"
+heroImage: "/blog/covers/weekly-update-07-09-2026.webp"
+heroAlt: "Quantus Weekly: Wir haben die Rangliste gebaut"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "quantum",
+    "post-quantum",
+    "keystone",
+    "hardware-wallet",
+    "mobile",
+    "multisig",
+    "cold-storage",
+    "zk-proofs",
+    "ml-dsa",
+    "dilithium",
+    "miner",
+    "subsquid",
+    "open-source",
+  ]
+---
+
+import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
+
+Jede Chain sagt, sie werde post-quantum.
+
+Also haben wir eine Rangliste gebaut.
+
+[Migration.fail](https://migration.fail/) verfolgt den Prozentsatz der Krypto-Marktkapitalisierung, der auf quantenresistenter Kryptografie läuft.
+
+Aktuell sind es 0,046 %.
+
+Praktisch null.
+
+Über 2 Billionen Dollar müssen von Pre-Quantum-Adressen weg und post-quantum werden.
+
+Also bauen wir das Ziel.
+
+Wir haben v1.5.5 der Quantus-App mit Keystone-Hardware-Wallet-Support ausgeliefert.
+
+QUAN hat jetzt sowohl Multisig- als auch Cold-Storage-Support.
+
+Alles ist Open Source auf GitHub.
+
+Die gesamte Branche muss post-quantum werden – den Fortschritt in Echtzeit kannst du auf [migration.fail](https://migration.fail/) verfolgen.
+
+Das haben wir außerdem gebaut:
+
+### Github-Aktivität (22 zusammengeführte Pull-Requests):
+
+![Github Stats](/blog/assets/github-stats-weekly-update-07-09-2026.webp)
+
+### Core Tech & ZK
+
+- Second-Layer-Proof-Aggregation in den ZK-Schaltkreisen gemergt, sodass wir bereits aggregierte Proofs erneut aggregieren und den Durchsatz weiter steigern können.
+- Spitzen-Speicher für ML-DSA-87-Signierung durch Streaming der Schlüsselmatrix reduziert, wodurch Dilithium auf Embedded-Hardware wie dem Keystone praktikabel wird.
+- Threshold-Signature-Resharing gehärtet und Constant-Time-Verhalten in unserer Dilithium-Bibliothek verbessert.
+- Medium- und Low-Findings aus unserem internen Chain-Review behoben und FRAME-Primitive sowie Abhängigkeiten gehärtet.
+- Zusätzliche interne Review-Findings im Poseidon-Hashing-Code behoben.
+- Verwaiste gehaltene Assets bei der Reversible-Transfer-Recovery in der Chain behoben.
+- Eine quantus-exercise-Smoke- und Fuzz-Test-Suite zum Quantus-CLI hinzugefügt, plus ein Update-Feature.
+
+### Network & Infra
+
+- Miner v3.3.0 und v3.3.1 mit verbessertem Windows-GPU-Support und Fixes bei der GPU-Adapter-Auswahl für Multi-Backend-Duplizierung und Out-of-Memory-Fehler veröffentlicht.
+- Mining-Setup-Flow verbessert und ein Mining-Setup-Skript zur Docs-Site hinzugefügt.
+- Tech-Governance-Event-Support zu Subsquid hinzugefügt
+
+### Web & Mobile App Updates
+
+- Mobile-App v1.5.5 mit Keystone-Hardware-Wallet-Support im App Store veröffentlicht: Firmware-Updates, Multisig-Support in der Firmware, Sicherheitshärtung der Schlüsselverarbeitung und ein Integrations-Bugfix. Unser Firmware-Fork ist Open Source auf GitHub.
+- Alle Medium-Findings aus unserem internen Keystone-Firmware-Review behoben, mit Chain-Conformance-Tests, Hedged Signing und Device Binding.
+- [migration.fail](https://migration.fail/) gestartet.
+- Mehrfach-Seed-Phrase-Support zur Mobile Wallet hinzugefügt.
+- Send-Flow refaktoriert und UX-Fixes in der gesamten Mobile App ausgeliefert.
+- Copy-Seed-Phrase-Flow und Transaktions-Parsing gehärtet sowie haptisches Feedback bei der Betragseingabe hinzugefügt.
+- Korrektheits-Fixes aus dem internen v12-Runtime-Review ausgeliefert.
+
+### Content & Partnerschaften
+
+- Chris Smith ([@YuviLightman](https://x.com/@YuviLightman)) war im Asia Tech Podcast zu Gast:
+
+<TwitterEmbed url="https://x.com/ATPinsights/status/2074067155881246942" />
+
+Es liegt an uns.
+
+Stay frosty, quants.
