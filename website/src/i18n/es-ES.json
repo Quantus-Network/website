@@ -118,14 +118,14 @@
     },
     "loader": {
       "lines": {
-        "protocol": "> PROTOCOLO QUANTUS v0.9.1-bell",
+        "protocol": "> PROTOCOLO QUANTUS v0.7.1-q-day-2",
         "integrity": "> INTEGRIDAD DEL SISTEMA <span class=\"ok\">[PASADO]</span>",
         "nist_module": "> MÓDULO NIST FIPS 204 CARGADO <span class=\"ok\">[OK]</span>",
         "initializing": "> INICIALIZANDO <span class=\"ac\">ML-DSA / DILITHIUM-5</span>...",
         "signature_scheme": "> ESQUEMA DE FIRMA POST-CUÁNTICA <span class=\"ok\">ACTIVO</span>",
         "p2p_layer": "> CAPA DE COMUNICACIÓN P2P → <span class=\"ac\">TÚNEL ENCRIPTADO PQ</span>",
         "zk_engine": "> MOTOR DE PRUEBAS ZK RECURSIVAS <span class=\"ok\">LISTO</span>",
-        "syncing": "> SINCRONIZANDO BELL TESTNET... PARES: <span class=\"ac\">247</span>",
+        "syncing": "> SINCRONIZANDO PLANCK TESTNET... PARES: <span class=\"ac\">247</span>",
         "chladni": "> VISUALIZADOR DE CAMPO CHLADNI <span class=\"ac\">CARGANDO</span>",
         "prompt": "> <span class=\"blink\"></span>"
       }
@@ -151,10 +151,10 @@
     "problem": {
       "eyebrow": "La Amenaza",
       "status_label": "Nivel de Amenaza: Crítico",
-      "headline": "$3 billones en cripto. Cero defensa cuántica.",
+      "headline": "$2.3 billones en cripto. Cero defensa cuántica.",
       "qubits": {
         "label": "Qubits para romper Bitcoin",
-        "value": "1,200",
+        "value": "824",
         "sub": "qubits lógicos requeridos para una computadora cuántica criptográficamente relevante"
       },
       "chains": {
@@ -752,7 +752,7 @@
     "brand": "Quantus",
     "copyright": "© {year} Quantus.",
     "rights": "Todos los derechos reservados.",
-    "built_on": "CONSTRUIDO SOBRE BELL TESTNET",
+    "built_on": "CONSTRUIDO SOBRE PLANCK TESTNET",
     "sections": {
       "protocol": "Protocolo",
       "community": "Comunidad",

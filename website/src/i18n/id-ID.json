@@ -118,14 +118,14 @@
     },
     "loader": {
       "lines": {
-        "protocol": "> PROTOKOL QUANTUS v0.9.1-bell",
+        "protocol": "> PROTOKOL QUANTUS v0.7.1-q-day-2",
         "integrity": "> INTEGRITAS SISTEM <span class=\"ok\">[LULUS]</span>",
         "nist_module": "> MODUL NIST FIPS 204 DIMUAT <span class=\"ok\">[OK]</span>",
         "initializing": "> MENGINISIALISASI <span class=\"ac\">ML-DSA / DILITHIUM-5</span>...",
         "signature_scheme": "> SKEMA TANDA TANGAN PASCA-KUANTUM <span class=\"ok\">AKTIF</span>",
         "p2p_layer": "> LAPISAN KOMUNIKASI P2P → <span class=\"ac\">TEROWONGAN TERENKRIPSI PQ</span>",
         "zk_engine": "> MESIN BUKTI ZK REKURSIF <span class=\"ok\">SIAP</span>",
-        "syncing": "> MENYINKRONKAN BELL TESTNET... PEER: <span class=\"ac\">247</span>",
+        "syncing": "> MENYINKRONKAN PLANCK TESTNET... PEER: <span class=\"ac\">247</span>",
         "chladni": "> VISUALISASI MEDAN CHLADNI <span class=\"ac\">MEMUAT</span>",
         "prompt": "> <span class=\"blink\"></span>"
       }
@@ -151,10 +151,10 @@
     "problem": {
       "eyebrow": "Ancaman",
       "status_label": "Tingkat Ancaman: Kritis",
-      "headline": "$3 triliun dalam kripto. Nol pertahanan kuantum.",
+      "headline": "$2,3 triliun dalam kripto. Nol pertahanan kuantum.",
       "qubits": {
         "label": "Qubit untuk Memecahkan Bitcoin",
-        "value": "1,200",
+        "value": "824",
         "sub": "qubit logis yang diperlukan untuk komputer kuantum yang relevan secara kriptografis"
       },
       "chains": {
@@ -752,7 +752,7 @@
     "brand": "Quantus",
     "copyright": "© {year} Quantus.",
     "rights": "Seluruh hak cipta dilindungi undang-undang.",
-    "built_on": "DIBANGUN DI ATAS BELL TESTNET",
+    "built_on": "DIBANGUN DI ATAS PLANCK TESTNET",
     "sections": {
       "protocol": "Protokol",
       "community": "Komunitas",

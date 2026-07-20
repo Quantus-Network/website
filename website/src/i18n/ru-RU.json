@@ -118,14 +118,14 @@
     },
     "loader": {
       "lines": {
-        "protocol": "> ПРОТОКОЛ QUANTUS v0.9.1-bell",
+        "protocol": "> ПРОТОКОЛ QUANTUS v0.7.1-q-day-2",
         "integrity": "> ЦЕЛОСТНОСТЬ СИСТЕМЫ <span class=\"ok\">[ПРОЙДЕНО]</span>",
         "nist_module": "> МОДУЛЬ NIST FIPS 204 ЗАГРУЖЕН <span class=\"ok\">[OK]</span>",
         "initializing": "> ИНИЦИАЛИЗАЦИЯ <span class=\"ac\">ML-DSA / DILITHIUM-5</span>...",
         "signature_scheme": "> ПОСТКВАНТОВАЯ СХЕМА ПОДПИСИ <span class=\"ok\">АКТИВНА</span>",
         "p2p_layer": "> P2P COMM LAYER → <span class=\"ac\">PQ-ЗАШИФРОВАННЫЙ ТУННЕЛЬ</span>",
         "zk_engine": "> РЕКУРСИВНЫЙ ДВИЖОК ZK-ДОКАЗАТЕЛЬСТВ <span class=\"ok\">ГОТОВ</span>",
-        "syncing": "> СИНХРОНИЗАЦИЯ BELL TESTNET... ПИРЫ: <span class=\"ac\">247</span>",
+        "syncing": "> СИНХРОНИЗАЦИЯ PLANCK TESTNET... ПИРЫ: <span class=\"ac\">247</span>",
         "chladni": "> ВИЗУАЛИЗАТОР ПОЛЯ ХЛАДНИ <span class=\"ac\">ЗАГРУЗКА</span>",
         "prompt": "> <span class=\"blink\"></span>"
       }
@@ -151,10 +151,10 @@
     "problem": {
       "eyebrow": "Угроза",
       "status_label": "Уровень угрозы: Критический",
-      "headline": "$3 трлн в крипто. Ноль квантовой защиты.",
+      "headline": "$2,3 трлн в крипто. Ноль квантовой защиты.",
       "qubits": {
         "label": "Кубиты для взлома Bitcoin",
-        "value": "1,200",
+        "value": "824",
         "sub": "логических кубитов требуется для криптографически значимого квантового компьютера"
       },
       "chains": {
@@ -752,7 +752,7 @@
     "brand": "Quantus",
     "copyright": "© {year} Quantus.",
     "rights": "Все права защищены.",
-    "built_on": "ПОСТРОЕНО НА BELL TESTNET",
+    "built_on": "ПОСТРОЕНО НА PLANCK TESTNET",
     "sections": {
       "protocol": "Протокол",
       "community": "Сообщество",

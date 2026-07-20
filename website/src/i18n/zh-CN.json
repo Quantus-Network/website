@@ -118,14 +118,14 @@
     },
     "loader": {
       "lines": {
-        "protocol": "> QUANTUS 协议 v0.9.1-bell",
+        "protocol": "> QUANTUS 协议 v0.7.1-q-day-2",
         "integrity": "> 系统完整性 <span class=\"ok\">[通过]</span>",
         "nist_module": "> NIST FIPS 204 模块已加载 <span class=\"ok\">[正常]</span>",
         "initializing": "> 正在初始化 <span class=\"ac\">ML-DSA / DILITHIUM-5</span>...",
         "signature_scheme": "> 后量子签名方案 <span class=\"ok\">激活</span>",
         "p2p_layer": "> P2P 通信层 → <span class=\"ac\">PQ 加密隧道</span>",
         "zk_engine": "> 递归 ZK 证明引擎 <span class=\"ok\">就绪</span>",
-        "syncing": "> 正在同步 BELL 测试网... 节点: <span class=\"ac\">247</span>",
+        "syncing": "> 正在同步 PLANCK 测试网... 节点: <span class=\"ac\">247</span>",
         "chladni": "> 克拉尼场可视化器 <span class=\"ac\">正在加载</span>",
         "prompt": "> <span class=\"blink\"></span>"
       }
@@ -151,10 +151,10 @@
     "problem": {
       "eyebrow": "威胁",
       "status_label": "威胁等级：危急",
-      "headline": "3 万亿美元加密资产。量子防御为零。",
+      "headline": "2.3 万亿美元加密资产。量子防御为零。",
       "qubits": {
         "label": "破解比特币所需的量子比特",
-        "value": "1,200",
+        "value": "824",
         "sub": "具有密码学意义的量子计算机所需的逻辑量子比特"
       },
       "chains": {
@@ -745,7 +745,7 @@
     "brand": "Quantus",
     "copyright": "© {year} Quantus.",
     "rights": "保留所有权利。",
-    "built_on": "基于 BELL 测试网构建",
+    "built_on": "基于 PLANCK 测试网构建",
     "sections": {
       "protocol": "协议",
       "community": "社区",

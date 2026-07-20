@@ -118,14 +118,14 @@
     },
     "loader": {
       "lines": {
-        "protocol": "> QUANTUS PROTOCOL v0.9.1-bell",
+        "protocol": "> QUANTUS PROTOCOL v0.7.1-q-day-2",
         "integrity": "> SYSTEM INTEGRITY <span class=\"ok\">[PASS]</span>",
         "nist_module": "> NIST FIPS 204 MODULE LOADED <span class=\"ok\">[OK]</span>",
         "initializing": "> INITIALIZING <span class=\"ac\">ML-DSA / DILITHIUM-5</span>...",
         "signature_scheme": "> POST-QUANTUM SIGNATURE SCHEME <span class=\"ok\">ACTIVE</span>",
         "p2p_layer": "> P2P COMM LAYER → <span class=\"ac\">PQ-ENCRYPTED TUNNEL</span>",
         "zk_engine": "> RECURSIVE ZK PROOF ENGINE <span class=\"ok\">READY</span>",
-        "syncing": "> SYNCING BELL TESTNET... PEERS: <span class=\"ac\">247</span>",
+        "syncing": "> SYNCING PLANCK TESTNET... PEERS: <span class=\"ac\">247</span>",
         "chladni": "> CHLADNI FIELD VISUALIZER <span class=\"ac\">LOADING</span>",
         "prompt": "> <span class=\"blink\"></span>"
       }
@@ -151,10 +151,10 @@
     "problem": {
       "eyebrow": "खतरा",
       "status_label": "खतरे का स्तर: गंभीर",
-      "headline": "क्रिप्टो में $3 ट्रिलियन। शून्य क्वांटम रक्षा।",
+      "headline": "क्रिप्टो में $2.3 ट्रिलियन। शून्य क्वांटम रक्षा।",
       "qubits": {
         "label": "बिटकॉइन तोड़ने के लिए क्यूबिट्स",
-        "value": "1,200",
+        "value": "824",
         "sub": "क्रिप्टोग्राफ़िक रूप से प्रासंगिक क्वांटम कंप्यूटर के लिए आवश्यक लॉजिकल क्यूबिट्स"
       },
       "chains": {
@@ -752,7 +752,7 @@
     "brand": "Quantus",
     "copyright": "© {year} Quantus.",
     "rights": "सर्वाधिकार सुरक्षित।",
-    "built_on": "BELL टेस्टनेट पर निर्मित",
+    "built_on": "PLANCK टेस्टनेट पर निर्मित",
     "sections": {
       "protocol": "प्रोटोकॉल",
       "community": "कम्युनिटी",
