@@ -1,0 +1,80 @@
+---
+title: "Quantus Weekly: リンク以外のすべて"
+description: "刷新されたブロックエクスプローラーが explorer.quantus.com で公開。ワームホール転送の可視化、V12 セキュリティ指摘の解消、Subsquid インデックス、モバイルウォレット 1.5.7、ロイター報道も。"
+pubDate: "2026-07-19"
+heroImage: "/blog/covers/weekly-update-07-19-2026.webp"
+heroAlt: "Quantus Weekly: リンク以外のすべて"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "quantum",
+    "post-quantum",
+    "block-explorer",
+    "wormhole",
+    "zk-proofs",
+    "security",
+    "dilithium",
+    "mobile",
+    "multisig",
+    "keystone",
+    "subsquid",
+    "reuters",
+  ]
+---
+
+import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
+
+刷新されたブロックエクスプローラーが [explorer.quantus.com](https://explorer.quantus.com) で公開されました。
+
+![Quantus ブロックチェーンエクスプローラー刷新ホームページ](/blog/assets/quantus-blockchain-explorer-redesign-homepage.webp)
+
+Quantus では、透明なトランザクションと暗号化トランザクションの 2 種類を扱えます。
+
+透明なトランザクションは、他のブロックチェーンのトランザクションと同じように見えます。
+
+暗号化トランザクション（現在は CLI で可能で、まもなくモバイルアプリにも対応予定）はワームホール転送を使います。
+
+ワームホール転送は 2 ステップです。
+
+まず、コインをワームホールアドレスに送ります。そのアドレスは、あなただけが知る秘密のハッシュのハッシュなので、誰もそこから支出できません。チェーンから見れば、コインは焼却されたことになります。その後、資金が入ったワームホールアドレスのどれか一つに対応する秘密を知っていることを示すゼロ知識証明をチェーンに提出し（どれかは明かさない）、新しいアドレスへコインがミントされます。
+
+だからエクスプローラーは、存在するすべてを見せます。入っていくコイン、出てくるコイン、金額、証明。見せられないのは、どの入口がどの出口に対応するかだけです。そのリンクはチェーンに一度も触れないからです。
+
+先週はさらに、ZK 回路と Dilithium 署名ライブラリに関する V12 セキュリティレビューの高・中重大度の指摘をすべて解消し、モバイルウォレット 1.5.7 を出荷しました。
+
+先週ほかに届けたもの：
+
+### Github Activity（マージされた PR 14件）：
+
+![Github Stats](/blog/assets/github-stats-weekly-update-07-19-2026.webp)
+
+### Core Tech & ZK
+
+- ZK 回路と Dilithium 署名ライブラリに関する V12 セキュリティレビューの高・中重大度の指摘をすべて解消。
+- 活性チェック、署名済みトランスクリプトの受け入れ、新しいセッション ID 方式で閾値署名の再共有を強化。
+
+### Network & Infra
+
+- チェーンインデクサー Subsquid に統一トランザクションインデックスを追加。
+- マイニングプールを使った PoW キャプチャを追加し、ボットを排除。
+
+### Web & Mobile App Updates
+
+- [explorer.quantus.com](https://explorer.quantus.com) で刷新されたブロックエクスプローラーを公開。
+- モバイルウォレット v1.5.7 を出荷。
+- Web アプリのマルチシグ提案が、任意のローカル署名者からの承認を受け付けるようになり、Keystone ハードウェアウォレットにも対応。
+- マルチシグ UX の改善と、Web アプリのアカウントメニュー刷新を出荷。
+- Keystone ファームウェアにマルチシグ機能を追加し、マスターフィンガープリント不一致で Quantus 署名が止まる不具合を修正。
+
+### Content & Partnerships
+
+- ロイターが「Crypto firms prepare defenses as quantum threat to encryption draws nearer」で Chris を引用：
+
+<TwitterEmbed url="https://x.com/QuantusNetwork/status/2077333342815388084" />
+
+- 同記事は Yahoo Finance、US News、Investing.com、MSN、TradingView、The Economic Times、Khaleej Times、The Star Malaysia に配信され、Forbes Mexico、NTV Turkey、Boursorama France でも翻訳転載。
+
+私たち次第だ。
+
+Stay frosty, quants.

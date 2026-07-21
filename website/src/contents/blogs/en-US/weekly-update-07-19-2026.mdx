@@ -1,0 +1,80 @@
+---
+title: "Quantus Weekly: Everything but the Link"
+description: "Our redesigned block explorer is live at explorer.quantus.com. Plus: wormhole transfer visibility, V12 security findings cleared, Subsquid indexing, mobile wallet 1.5.7, and Reuters coverage."
+pubDate: "2026-07-19"
+heroImage: "/blog/covers/weekly-update-07-19-2026.webp"
+heroAlt: "Quantus Weekly: Everything but the Link"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "quantum",
+    "post-quantum",
+    "block-explorer",
+    "wormhole",
+    "zk-proofs",
+    "security",
+    "dilithium",
+    "mobile",
+    "multisig",
+    "keystone",
+    "subsquid",
+    "reuters",
+  ]
+---
+
+import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
+
+Our redesigned block explorer is live at [explorer.quantus.com](https://explorer.quantus.com).
+
+![Quantus blockchain explorer redesign homepage](/blog/assets/quantus-blockchain-explorer-redesign-homepage.webp)
+
+Quantus allows two types of transactions: transparent and encrypted.
+
+Transparent transactions look like any other blockchain transaction.
+
+Encrypted transactions (currently possible using the CLI but coming to our mobile app soon) use wormhole transfers.
+
+A wormhole transfer happens in two steps.
+
+First you send coins to a wormhole address. That address is a hash of a hash of a secret only you know, so nothing can ever spend from it. As far as the chain is concerned, you burned them. Later you hand the chain a zero-knowledge proof that says I know the secret behind one of the funded wormhole addresses, without revealing which one, and it mints your coins to a fresh address.
+
+So the explorer shows you everything that exists: coins going in, coins coming out, the amounts, the proof. The one thing it can't show you is which entry matches which exit, because that link never touches the chain.
+
+Last week we also cleared every high and medium severity finding from our V12 security review, across the ZK circuits and the Dilithium signature library, and shipped mobile wallet 1.5.7.
+
+Here's what else we built last week:
+
+### Github Activity (14 merged pull requests):
+
+![Github Stats](/blog/assets/github-stats-weekly-update-07-19-2026.webp)
+
+### Core Tech & ZK
+
+- Cleared all high and medium severity findings from our V12 security review across the ZK circuits and the Dilithium signature library.
+- Hardened threshold signature resharing with liveness checks, signed transcript acceptance, and a new session ID scheme.
+
+### Network & Infra
+
+- Added unified transaction indexing to Subsquid, our chain indexer.
+- Added a proof-of-work captcha that uses our mining pool to keep bots out.
+
+### Web & Mobile App Updates
+
+- Launched the redesigned block explorer at [explorer.quantus.com](https://explorer.quantus.com).
+- Shipped mobile wallet v1.5.7.
+- Multisig proposals in the web app now accept approval from any local signer, with Keystone hardware wallet support.
+- Shipped multisig UX improvements and a redesigned account menu in the web app.
+- Added more multisig functions to the Keystone firmware and fixed a bug where Quantus signing stuck on a master fingerprint mismatch.
+
+### Content & Partnerships
+
+- Reuters quoted Chris in "Crypto firms prepare defenses as quantum threat to encryption draws nearer":
+
+<TwitterEmbed url="https://x.com/QuantusNetwork/status/2077333342815388084" />
+
+- The story syndicated to Yahoo Finance, US News, Investing.com, MSN, TradingView, The Economic Times, Khaleej Times, and The Star Malaysia, with translated pickups in Forbes Mexico, NTV Turkey, and Boursorama France.
+
+It's up to us.
+
+Stay frosty, quants.

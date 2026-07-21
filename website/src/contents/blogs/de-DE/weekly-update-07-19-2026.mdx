@@ -1,0 +1,80 @@
+---
+title: "Quantus Weekly: Alles außer dem Link"
+description: "Unser neu gestalteter Block-Explorer ist live unter explorer.quantus.com. Plus: Sichtbarkeit von Wormhole-Transfers, V12-Sicherheitsbefunde bereinigt, Subsquid-Indexierung, Mobile Wallet 1.5.7 und Reuters-Berichterstattung."
+pubDate: "2026-07-19"
+heroImage: "/blog/covers/weekly-update-07-19-2026.webp"
+heroAlt: "Quantus Weekly: Alles außer dem Link"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "quantum",
+    "post-quantum",
+    "block-explorer",
+    "wormhole",
+    "zk-proofs",
+    "security",
+    "dilithium",
+    "mobile",
+    "multisig",
+    "keystone",
+    "subsquid",
+    "reuters",
+  ]
+---
+
+import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
+
+Unser neu gestalteter Block-Explorer ist live unter [explorer.quantus.com](https://explorer.quantus.com).
+
+![Quantus Blockchain-Explorer Redesign-Homepage](/blog/assets/quantus-blockchain-explorer-redesign-homepage.webp)
+
+Quantus erlaubt zwei Arten von Transaktionen: transparente und verschlüsselte.
+
+Transparente Transaktionen sehen aus wie jede andere Blockchain-Transaktion.
+
+Verschlüsselte Transaktionen (aktuell über die CLI möglich, bald auch in unserer Mobile App) nutzen Wormhole-Transfers.
+
+Ein Wormhole-Transfer läuft in zwei Schritten ab.
+
+Zuerst sendest du Coins an eine Wormhole-Adresse. Diese Adresse ist ein Hash eines Hashs eines Secrets, das nur du kennst – deshalb kann niemand jemals davon ausgeben. Für die Chain hast du sie verbrannt. Später übergibst du der Chain einen Zero-Knowledge-Proof, der sagt: Ich kenne das Secret hinter einer der finanzierten Wormhole-Adressen, ohne preiszugeben, welche, und sie mintet deine Coins an eine frische Adresse.
+
+Der Explorer zeigt dir also alles, was existiert: Coins, die hineingehen, Coins, die herauskommen, die Beträge, den Proof. Das Einzige, was er nicht zeigen kann, ist, welcher Eingang zu welchem Ausgang gehört – denn dieser Link berührt die Chain nie.
+
+Letzte Woche haben wir außerdem alle High- und Medium-Severity-Findings aus unserem V12-Security-Review über die ZK-Circuits und die Dilithium-Signaturbibliothek bereinigt und Mobile Wallet 1.5.7 ausgeliefert.
+
+Das haben wir letzte Woche außerdem gebaut:
+
+### Github-Aktivität (14 zusammengeführte Pull-Requests):
+
+![Github Stats](/blog/assets/github-stats-weekly-update-07-19-2026.webp)
+
+### Core Tech & ZK
+
+- Alle High- und Medium-Severity-Findings aus unserem V12-Security-Review über die ZK-Circuits und die Dilithium-Signaturbibliothek bereinigt.
+- Threshold-Signature-Resharing mit Liveness-Checks, akzeptierten signierten Transcripts und einem neuen Session-ID-Schema gehärtet.
+
+### Network & Infra
+
+- Einheitliche Transaktionsindexierung zu Subsquid, unserem Chain-Indexer, hinzugefügt.
+- Ein Proof-of-Work-Captcha hinzugefügt, das unseren Mining-Pool nutzt, um Bots fernzuhalten.
+
+### Web & Mobile App Updates
+
+- Den neu gestalteten Block-Explorer unter [explorer.quantus.com](https://explorer.quantus.com) gestartet.
+- Mobile Wallet v1.5.7 ausgeliefert.
+- Multisig-Proposals in der Web-App akzeptieren jetzt Freigaben von jedem lokalen Signer, mit Keystone-Hardware-Wallet-Support.
+- Multisig-UX-Verbesserungen und ein neu gestaltetes Account-Menü in der Web-App ausgeliefert.
+- Weitere Multisig-Funktionen zur Keystone-Firmware hinzugefügt und einen Bug behoben, bei dem Quantus-Signing wegen eines Master-Fingerprint-Mismatches hängen blieb.
+
+### Content & Partnerschaften
+
+- Reuters zitierte Chris in „Crypto firms prepare defenses as quantum threat to encryption draws nearer“:
+
+<TwitterEmbed url="https://x.com/QuantusNetwork/status/2077333342815388084" />
+
+- Die Story wurde von Yahoo Finance, US News, Investing.com, MSN, TradingView, The Economic Times, Khaleej Times und The Star Malaysia übernommen, mit übersetzten Aufgriffen in Forbes Mexico, NTV Turkey und Boursorama France.
+
+Es liegt an uns.
+
+Stay frosty, quants.

@@ -937,7 +937,9 @@
       "runtime": "रनटाइम",
       "cold-storage": "कोल्ड स्टोरेज",
       "miner": "माइनर",
-      "open-source": "ओपन सोर्स"
+      "open-source": "ओपन सोर्स",
+      "block-explorer": "ब्लॉक एक्सप्लोरर",
+      "reuters": "रॉयटर्स"
     }
   },
   "cookie": {

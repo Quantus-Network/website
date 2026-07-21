@@ -937,7 +937,9 @@
       "runtime": "Runtime",
       "cold-storage": "Almacenamiento en Frío",
       "miner": "Minero",
-      "open-source": "Código Abierto"
+      "open-source": "Código Abierto",
+      "block-explorer": "Explorador de Bloques",
+      "reuters": "Reuters"
     }
   },
   "cookie": {

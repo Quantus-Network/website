@@ -937,7 +937,9 @@
       "runtime": "런타임",
       "cold-storage": "콜드 스토리지",
       "miner": "마이너",
-      "open-source": "오픈 소스"
+      "open-source": "오픈 소스",
+      "block-explorer": "블록 탐색기",
+      "reuters": "로이터"
     }
   },
   "cookie": {

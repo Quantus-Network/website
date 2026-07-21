@@ -1,0 +1,80 @@
+---
+title: "Quantus Weekly: Всё, кроме связи"
+description: "Наш обновлённый обозреватель блоков уже работает на explorer.quantus.com. Также: видимость wormhole-переводов, закрытые замечания V12, индексация Subsquid, мобильный кошелёк 1.5.7 и материалы Reuters."
+pubDate: "2026-07-19"
+heroImage: "/blog/covers/weekly-update-07-19-2026.webp"
+heroAlt: "Quantus Weekly: Всё, кроме связи"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "quantum",
+    "post-quantum",
+    "block-explorer",
+    "wormhole",
+    "zk-proofs",
+    "security",
+    "dilithium",
+    "mobile",
+    "multisig",
+    "keystone",
+    "subsquid",
+    "reuters",
+  ]
+---
+
+import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
+
+Наш обновлённый обозреватель блоков уже работает на [explorer.quantus.com](https://explorer.quantus.com).
+
+![Главная страница редизайна обозревателя блокчейна Quantus](/blog/assets/quantus-blockchain-explorer-redesign-homepage.webp)
+
+Quantus поддерживает два типа транзакций: прозрачные и зашифрованные.
+
+Прозрачные транзакции выглядят как любые другие транзакции в блокчейне.
+
+Зашифрованные транзакции (сейчас доступны через CLI, скоро появятся в мобильном приложении) используют wormhole-переводы.
+
+Wormhole-перевод происходит в два шага.
+
+Сначала вы отправляете монеты на wormhole-адрес. Этот адрес — хеш хеша секрета, известного только вам, поэтому с него никто никогда не сможет потратить средства. Для сети вы их сожгли. Затем вы передаёте сети доказательство с нулевым разглашением: я знаю секрет одного из профинансированных wormhole-адресов, не раскрывая какого именно, и сеть минтит монеты на новый адрес.
+
+Поэтому обозреватель показывает всё, что существует: монеты на входе, монеты на выходе, суммы, доказательство. Единственное, чего он не может показать — какая входная операция соответствует какой выходной, потому что эта связь никогда не попадает в цепь.
+
+На прошлой неделе мы также закрыли все замечания высокой и средней критичности из V12 security review по ZK-схемам и библиотеке подписей Dilithium и выпустили мобильный кошелёк 1.5.7.
+
+Вот что ещё мы сделали на прошлой неделе:
+
+### Github Activity (14 merged pull requests):
+
+![Github Stats](/blog/assets/github-stats-weekly-update-07-19-2026.webp)
+
+### Core Tech & ZK
+
+- Закрыли все замечания высокой и средней критичности из V12 security review по ZK-схемам и библиотеке подписей Dilithium.
+- Усилили перераспределение пороговых подписей: проверки liveness, принятие подписанных транскриптов и новая схема session ID.
+
+### Network & Infra
+
+- Добавили единую индексацию транзакций в Subsquid, наш индексатор сети.
+- Добавили proof-of-work captcha, использующую наш майнинг-пул, чтобы отсекать ботов.
+
+### Web & Mobile App Updates
+
+- Запустили обновлённый обозреватель блоков на [explorer.quantus.com](https://explorer.quantus.com).
+- Выпустили мобильный кошелёк v1.5.7.
+- Мультисиг-предложения в веб-приложении теперь принимают одобрение от любого локального подписанта, с поддержкой аппаратного кошелька Keystone.
+- Выпустили улучшения UX мультисига и обновлённое меню аккаунта в веб-приложении.
+- Добавили больше мультисиг-функций в прошивку Keystone и исправили баг, из-за которого подпись Quantus зависала из-за несовпадения master fingerprint.
+
+### Content & Partnerships
+
+- Reuters процитировало Chris в материале «Crypto firms prepare defenses as quantum threat to encryption draws nearer»:
+
+<TwitterEmbed url="https://x.com/QuantusNetwork/status/2077333342815388084" />
+
+- Материал подхватили Yahoo Finance, US News, Investing.com, MSN, TradingView, The Economic Times, Khaleej Times и The Star Malaysia; переводы вышли в Forbes Mexico, NTV Turkey и Boursorama France.
+
+Это зависит от нас.
+
+Stay frosty, quants.

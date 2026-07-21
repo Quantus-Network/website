@@ -930,7 +930,9 @@
       "runtime": "运行时",
       "cold-storage": "冷存储",
       "miner": "矿工",
-      "open-source": "开源"
+      "open-source": "开源",
+      "block-explorer": "区块浏览器",
+      "reuters": "路透社"
     }
   },
   "cookie": {

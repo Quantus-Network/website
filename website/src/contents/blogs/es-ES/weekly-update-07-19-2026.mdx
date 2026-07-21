@@ -1,0 +1,80 @@
+---
+title: "Quantus Weekly: Todo excepto el enlace"
+description: "Nuestro explorador de bloques rediseñado ya está en vivo en explorer.quantus.com. Además: visibilidad de transferencias wormhole, hallazgos de seguridad V12 resueltos, indexación Subsquid, billetera móvil 1.5.7 y cobertura de Reuters."
+pubDate: "2026-07-19"
+heroImage: "/blog/covers/weekly-update-07-19-2026.webp"
+heroAlt: "Quantus Weekly: Todo excepto el enlace"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "quantum",
+    "post-quantum",
+    "block-explorer",
+    "wormhole",
+    "zk-proofs",
+    "security",
+    "dilithium",
+    "mobile",
+    "multisig",
+    "keystone",
+    "subsquid",
+    "reuters",
+  ]
+---
+
+import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
+
+Nuestro explorador de bloques rediseñado ya está en vivo en [explorer.quantus.com](https://explorer.quantus.com).
+
+![Página de inicio del rediseño del explorador de blockchain Quantus](/blog/assets/quantus-blockchain-explorer-redesign-homepage.webp)
+
+Quantus permite dos tipos de transacciones: transparentes y cifradas.
+
+Las transacciones transparentes se ven como cualquier otra transacción de blockchain.
+
+Las transacciones cifradas (actualmente posibles con la CLI y pronto en nuestra app móvil) usan transferencias wormhole.
+
+Una transferencia wormhole ocurre en dos pasos.
+
+Primero envías monedas a una dirección wormhole. Esa dirección es un hash de un hash de un secreto que solo tú conoces, así que nadie puede gastar desde ella. Para la cadena, las quemaste. Después entregas a la cadena una prueba de conocimiento cero que dice: conozco el secreto detrás de una de las direcciones wormhole financiadas, sin revelar cuál, y acuña tus monedas en una dirección nueva.
+
+Así que el explorador te muestra todo lo que existe: monedas que entran, monedas que salen, los montos, la prueba. Lo único que no puede mostrarte es qué entrada coincide con qué salida, porque ese enlace nunca toca la cadena.
+
+La semana pasada también resolvimos todos los hallazgos de severidad alta y media de nuestra revisión de seguridad V12, en los circuitos ZK y la librería de firmas Dilithium, y enviamos la billetera móvil 1.5.7.
+
+Esto es lo demás que construimos la semana pasada:
+
+### Actividad en Github (14 pull requests fusionados):
+
+![Github Stats](/blog/assets/github-stats-weekly-update-07-19-2026.webp)
+
+### Core Tech y ZK
+
+- Resueltos todos los hallazgos de severidad alta y media de nuestra revisión de seguridad V12 en los circuitos ZK y la librería de firmas Dilithium.
+- Endurecido el recompartido de firmas umbral con comprobaciones de liveness, aceptación de transcripts firmados y un nuevo esquema de ID de sesión.
+
+### Red e infraestructura
+
+- Añadida indexación unificada de transacciones a Subsquid, nuestro indexador de cadena.
+- Añadido un captcha de proof-of-work que usa nuestro pool de minería para mantener fuera a los bots.
+
+### Actualizaciones web y de la app móvil
+
+- Lanzado el explorador de bloques rediseñado en [explorer.quantus.com](https://explorer.quantus.com).
+- Enviada la billetera móvil v1.5.7.
+- Las propuestas multisig en la app web ahora aceptan aprobación de cualquier firmante local, con soporte de billetera de hardware Keystone.
+- Enviadas mejoras de UX de multisig y un menú de cuenta rediseñado en la app web.
+- Añadidas más funciones multisig al firmware de Keystone y corregido un bug en el que la firma de Quantus se quedaba atascada por un desajuste de huella maestra.
+
+### Contenido y alianzas
+
+- Reuters citó a Chris en «Crypto firms prepare defenses as quantum threat to encryption draws nearer»:
+
+<TwitterEmbed url="https://x.com/QuantusNetwork/status/2077333342815388084" />
+
+- La historia se sindicó a Yahoo Finance, US News, Investing.com, MSN, TradingView, The Economic Times, Khaleej Times y The Star Malaysia, con recogidas traducidas en Forbes Mexico, NTV Turkey y Boursorama France.
+
+Depende de nosotros.
+
+Stay frosty, quants.

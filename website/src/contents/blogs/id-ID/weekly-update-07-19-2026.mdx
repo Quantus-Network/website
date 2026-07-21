@@ -1,0 +1,80 @@
+---
+title: "Quantus Weekly: Segala Sesuatu Kecuali Tautannya"
+description: "Block explorer yang didesain ulang sudah live di explorer.quantus.com. Plus: visibilitas wormhole transfer, temuan keamanan V12 dibersihkan, indeksasi Subsquid, mobile wallet 1.5.7, dan liputan Reuters."
+pubDate: "2026-07-19"
+heroImage: "/blog/covers/weekly-update-07-19-2026.webp"
+heroAlt: "Quantus Weekly: Segala Sesuatu Kecuali Tautannya"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "quantum",
+    "post-quantum",
+    "block-explorer",
+    "wormhole",
+    "zk-proofs",
+    "security",
+    "dilithium",
+    "mobile",
+    "multisig",
+    "keystone",
+    "subsquid",
+    "reuters",
+  ]
+---
+
+import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
+
+Block explorer yang didesain ulang sudah live di [explorer.quantus.com](https://explorer.quantus.com).
+
+![Beranda redesain explorer blockchain Quantus](/blog/assets/quantus-blockchain-explorer-redesign-homepage.webp)
+
+Quantus mendukung dua jenis transaksi: transparan dan terenkripsi.
+
+Transaksi transparan terlihat seperti transaksi blockchain lainnya.
+
+Transaksi terenkripsi (saat ini bisa lewat CLI dan segera hadir di aplikasi mobile kami) menggunakan wormhole transfer.
+
+Wormhole transfer terjadi dalam dua langkah.
+
+Pertama Anda mengirim koin ke alamat wormhole. Alamat itu adalah hash dari hash sebuah secret yang hanya Anda ketahui, jadi tidak ada yang bisa pernah membelanjakan darinya. Bagi chain, Anda membakarnya. Kemudian Anda menyerahkan zero-knowledge proof ke chain yang menyatakan saya tahu secret di balik salah satu alamat wormhole yang sudah didanai, tanpa mengungkapkan yang mana, dan chain mencetak koin Anda ke alamat baru.
+
+Jadi explorer menampilkan semua yang ada: koin masuk, koin keluar, jumlahnya, proof-nya. Satu-satunya yang tidak bisa ditampilkan adalah entri mana yang cocok dengan exit mana, karena tautan itu tidak pernah menyentuh chain.
+
+Minggu lalu kami juga membersihkan semua temuan severity tinggi dan menengah dari review keamanan V12 kami, di sirkuit ZK dan pustaka tanda tangan Dilithium, serta merilis mobile wallet 1.5.7.
+
+Berikut yang kami bangun minggu lalu:
+
+### Github Activity (14 merged pull requests):
+
+![Github Stats](/blog/assets/github-stats-weekly-update-07-19-2026.webp)
+
+### Core Tech & ZK
+
+- Membersihkan semua temuan severity tinggi dan menengah dari review keamanan V12 kami di sirkuit ZK dan pustaka tanda tangan Dilithium.
+- Memperkuat threshold signature resharing dengan pemeriksaan liveness, penerimaan transcript bertanda tangan, dan skema session ID baru.
+
+### Network & Infra
+
+- Menambahkan indeksasi transaksi terpadu ke Subsquid, indexer chain kami.
+- Menambahkan captcha proof-of-work yang menggunakan mining pool kami untuk menahan bot.
+
+### Web & Mobile App Updates
+
+- Meluncurkan block explorer yang didesain ulang di [explorer.quantus.com](https://explorer.quantus.com).
+- Merilis mobile wallet v1.5.7.
+- Proposal multisig di aplikasi web kini menerima persetujuan dari signer lokal mana pun, dengan dukungan hardware wallet Keystone.
+- Merilis peningkatan UX multisig dan menu akun yang didesain ulang di aplikasi web.
+- Menambahkan lebih banyak fungsi multisig ke firmware Keystone dan memperbaiki bug di mana penandatanganan Quantus macet karena ketidakcocokan master fingerprint.
+
+### Content & Partnerships
+
+- Reuters mengutip Chris dalam "Crypto firms prepare defenses as quantum threat to encryption draws nearer":
+
+<TwitterEmbed url="https://x.com/QuantusNetwork/status/2077333342815388084" />
+
+- Cerita tersebut disindikasi ke Yahoo Finance, US News, Investing.com, MSN, TradingView, The Economic Times, Khaleej Times, dan The Star Malaysia, dengan versi terjemahan di Forbes Mexico, NTV Turkey, dan Boursorama France.
+
+Terserah kita.
+
+Stay frosty, quants.

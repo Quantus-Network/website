@@ -1,0 +1,80 @@
+---
+title: "Quantus 周报：唯独看不到那条关联"
+description: "重新设计的区块浏览器已上线 explorer.quantus.com。此外：虫洞转账可见性、V12 安全审查高中风险全部清零、Subsquid 索引、移动钱包 1.5.7，以及路透社报道。"
+pubDate: "2026-07-19"
+heroImage: "/blog/covers/weekly-update-07-19-2026.webp"
+heroAlt: "Quantus 周报：唯独看不到那条关联"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "quantum",
+    "post-quantum",
+    "block-explorer",
+    "wormhole",
+    "zk-proofs",
+    "security",
+    "dilithium",
+    "mobile",
+    "multisig",
+    "keystone",
+    "subsquid",
+    "reuters",
+  ]
+---
+
+import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
+
+我们重新设计的区块浏览器已上线：[explorer.quantus.com](https://explorer.quantus.com)。
+
+![Quantus 区块链浏览器重新设计首页](/blog/assets/quantus-blockchain-explorer-redesign-homepage.webp)
+
+Quantus 支持两种交易类型：透明交易和加密交易。
+
+透明交易看起来和其他区块链交易一样。
+
+加密交易（目前可通过 CLI 完成，很快也会上线移动应用）使用虫洞转账。
+
+虫洞转账分两步。
+
+首先，你把币发送到一个虫洞地址。该地址是你独知密钥的哈希的哈希，因此永远没有人能从中花费。在链看来，你把它们烧掉了。之后，你向链提交一个零知识证明，证明你知道某个已注资虫洞地址背后的密钥，但不揭示是哪一个，链就会把币铸造到一个全新地址。
+
+所以浏览器能展示一切存在的东西：币进去、币出来、金额、证明。唯一展示不了的是哪笔进入对应哪笔退出，因为那条关联从未上链。
+
+上周我们还清零了 V12 安全审查中 ZK 电路与 Dilithium 签名库的所有高、中风险发现，并发布了移动钱包 1.5.7。
+
+以下是我们上周还交付的内容：
+
+### GitHub 活动（已合并 14 个拉取请求）：
+
+![Github Stats](/blog/assets/github-stats-weekly-update-07-19-2026.webp)
+
+### 核心技术与 ZK
+
+- 清零了 V12 安全审查中 ZK 电路与 Dilithium 签名库的所有高、中风险发现。
+- 通过活性检查、已签名 transcript 接受以及新的会话 ID 方案，强化了阈值签名重分享。
+
+### 网络与基础设施
+
+- 为链索引器 Subsquid 添加了统一交易索引。
+- 添加了使用我们矿池的工作量证明验证码，用于阻挡机器人。
+
+### 网页与移动应用更新
+
+- 在 [explorer.quantus.com](https://explorer.quantus.com) 上线重新设计的区块浏览器。
+- 发布移动钱包 v1.5.7。
+- Web 应用中的多重签名提案现在可接受任意本地签名者的批准，并支持 Keystone 硬件钱包。
+- 发布多重签名 UX 改进，以及重新设计的 Web 应用账户菜单。
+- 为 Keystone 固件增加了更多多重签名功能，并修复了 Quantus 签名因主指纹不匹配而卡住的问题。
+
+### 内容与合作伙伴
+
+- 路透社在《Crypto firms prepare defenses as quantum threat to encryption draws nearer》一文中引用了 Chris：
+
+<TwitterEmbed url="https://x.com/QuantusNetwork/status/2077333342815388084" />
+
+- 该报道被 Yahoo Finance、US News、Investing.com、MSN、TradingView、The Economic Times、Khaleej Times 和 The Star Malaysia 转载，并有 Forbes Mexico、NTV Turkey 和 Boursorama France 的翻译转载。
+
+取决于我们。
+
+Stay frosty, quants.

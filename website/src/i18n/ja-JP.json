@@ -937,7 +937,9 @@
       "runtime": "ランタイム",
       "cold-storage": "コールドストレージ",
       "miner": "マイナー",
-      "open-source": "オープンソース"
+      "open-source": "オープンソース",
+      "block-explorer": "ブロックエクスプローラー",
+      "reuters": "ロイター"
     }
   },
   "cookie": {
