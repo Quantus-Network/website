@@ -1,5 +1,7 @@
 ---
 import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+import { ADVISORS } from "@/constants/advisors";
+import { INVESTORS } from "@/constants/investors";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
@@ -12,68 +14,33 @@ const t = await createTranslator(locale);
       {t("about.advisors.eyebrow")}
     </span>
     <div class="advisor-rows">
-      <a
-        href="https://x.com/rargulati"
-        target="_blank"
-        rel="noopener"
-        class="advisor-row about-animate"
-        data-delay="0"
-      >
-        <div>
-          <span class="advisor-name">Raghav Gulati</span>
-          <span class="advisor-role">CEO, Coinlist</span>
-        </div>
-        <span class="advisor-x-link">
-          <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"
-            ><path
-              d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
-            ></path></svg
+      {
+        ADVISORS.map((advisor, index) => (
+          <a
+            href={advisor.social.url}
+            target="_blank"
+            rel="noopener"
+            class="advisor-row about-animate"
+            data-delay={index * 0.1}
           >
-          @rargulati
-        </span>
-      </a>
-
-      <a
-        href="https://x.com/_TomHoward"
-        target="_blank"
-        rel="noopener"
-        class="advisor-row about-animate"
-        data-delay="0.1"
-      >
-        <div>
-          <span class="advisor-name">Tom Howard</span>
-          <span class="advisor-role">Head of Strategy, Coinlist</span>
-        </div>
-        <span class="advisor-x-link">
-          <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"
-            ><path
-              d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
-            ></path></svg
-          >
-          @_TomHoward
-        </span>
-      </a>
-
-      <a
-        href="https://x.com/arjunkhemani"
-        target="_blank"
-        rel="noopener"
-        class="advisor-row about-animate"
-        data-delay="0.2"
-      >
-        <div>
-          <span class="advisor-name">Arjun Khemani</span>
-          <span class="advisor-role">Writer · Crypto Advocate</span>
-        </div>
-        <span class="advisor-x-link">
-          <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"
-            ><path
-              d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
-            ></path></svg
-          >
-          @arjunkhemani
-        </span>
-      </a>
+            <div>
+              <span class="advisor-name">{advisor.name}</span>
+              <span class="advisor-role">{advisor.role}</span>
+            </div>
+            <span class="advisor-x-link">
+              <svg
+                viewBox="0 0 24 24"
+                width="14"
+                height="14"
+                fill="currentColor"
+              >
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+              {advisor.social.username}
+            </span>
+          </a>
+        ))
+      }
     </div>
   </div>
 </section>
@@ -85,47 +52,33 @@ const t = await createTranslator(locale);
       {t("about.investors.eyebrow")}
     </span>
     <div class="advisor-rows">
-      <a
-        href="https://x.com/balajis"
-        target="_blank"
-        rel="noopener"
-        class="advisor-row about-animate"
-        data-delay="0"
-      >
-        <div>
-          <span class="advisor-name">Balaji Srinivasan</span>
-          <span class="advisor-role">Founder, Network School</span>
-        </div>
-        <span class="advisor-x-link">
-          <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"
-            ><path
-              d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
-            ></path></svg
+      {
+        INVESTORS.map((investor, index) => (
+          <a
+            href={investor.social.url}
+            target="_blank"
+            rel="noopener"
+            class="advisor-row about-animate"
+            data-delay={index * 0.1}
           >
-          @balajis
-        </span>
-      </a>
-
-      <a
-        href="https://x.com/nivi"
-        target="_blank"
-        rel="noopener"
-        class="advisor-row about-animate"
-        data-delay="0.1"
-      >
-        <div>
-          <span class="advisor-name">Babak Nivi</span>
-          <span class="advisor-role">Co-Founder, AngelList</span>
-        </div>
-        <span class="advisor-x-link">
-          <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"
-            ><path
-              d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
-            ></path></svg
-          >
-          @nivi
-        </span>
-      </a>
+            <div>
+              <span class="advisor-name">{investor.name}</span>
+              <span class="advisor-role">{investor.role}</span>
+            </div>
+            <span class="advisor-x-link">
+              <svg
+                viewBox="0 0 24 24"
+                width="14"
+                height="14"
+                fill="currentColor"
+              >
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+              {investor.social.username}
+            </span>
+          </a>
+        ))
+      }
     </div>
   </div>
 </section>
