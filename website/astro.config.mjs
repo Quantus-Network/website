@@ -71,7 +71,8 @@ export default defineConfig({
           !page.includes("/tags/") &&
           !page.includes("/account/") &&
           !page.includes("/oauth/") &&
-          !page.includes("/invite/")
+          !page.includes("/invite/") &&
+          !page.includes("/en-US")
         );
       },
       serialize: (item) => {

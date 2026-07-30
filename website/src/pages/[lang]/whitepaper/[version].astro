@@ -4,7 +4,7 @@ import Layout from "@/components/layout/Layout.astro";
 import {
   getLocaleFromUrl,
   createTranslator,
-  SUPPORTED_LOCALES,
+  PREFIXED_LOCALES,
 } from "@/utils/i18n";
 import { JsonLdGraph } from "@/utils/build-json-ld";
 import { getWhitepaperJsonLd } from "@/constants/default-jsonld";
@@ -26,7 +26,7 @@ export async function getStaticPaths() {
   const allEntries = await getCollection("whitepaper");
   const paths: { params: { lang: string; version: string } }[] = [];
 
-  for (const lang of SUPPORTED_LOCALES) {
+  for (const lang of PREFIXED_LOCALES) {
     const langEntries = allEntries.filter((e) =>
       e.id.toLowerCase().startsWith(`${lang.toLowerCase()}/`),
     );

@@ -1,7 +1,7 @@
 ---
 import { type CollectionEntry, getCollection, render } from "astro:content";
 import BlogPost from "@/components/features/blog/BlogPost.astro";
-import { DEFAULT_LOCALE, SUPPORTED_LOCALES, type Locale } from "@/utils/i18n";
+import { DEFAULT_LOCALE, PREFIXED_LOCALES, SUPPORTED_LOCALES, type Locale } from "@/utils/i18n";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
@@ -21,9 +21,9 @@ export async function getStaticPaths() {
     };
   });
 
-  // Filter paths to ensure only supported locales are generated
+  // Prefixed locales only — default English lives at unprefixed /blog/...
   return paths.filter(({ params }) =>
-    SUPPORTED_LOCALES.includes(params.lang as Locale),
+    PREFIXED_LOCALES.includes(params.lang as Locale),
   );
 }
 

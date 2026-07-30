@@ -34,6 +34,11 @@ export const HOMEPAGE_LINK = SUPPORTED_LOCALES.map((locale) => {
 
 export const DEFAULT_LOCALE: Locale = "en-US";
 
+/** Locales that use a URL path prefix (excludes default English at root). */
+export const PREFIXED_LOCALES = SUPPORTED_LOCALES.filter(
+  (locale) => locale !== DEFAULT_LOCALE,
+);
+
 export const LOCALES_MAP: Record<string, string> = {
   // URL-path: hreflang-value
   "en-US": "en-US",
