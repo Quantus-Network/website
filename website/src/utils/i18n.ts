@@ -182,15 +182,7 @@ export async function createTranslator(locale: Locale) {
 export function getLocalizedPath(locale: Locale, pathname: string): string {
   if (pathname.includes("http")) return pathname;
 
-  // If it's the default language, don't add a prefix.
-  if (locale === DEFAULT_LOCALE) {
-    return pathname;
-  }
-
-  // For other languages, add the language prefix.
-  // Make sure the path starts with a slash for consistency.
-  const finalPath = pathname.startsWith("/") ? pathname : `/${pathname}`;
-  return `/${locale}${finalPath}`;
+  return addLocaleToUrl(pathname, locale);
 }
 
 /**
@@ -208,28 +200,44 @@ export function getLocaleFromUrl(pathname: string): Locale {
 }
 
 /**
- * Remove locale from URL pathname
+ * Remove locale from URL pathname.
+ * Strips any supported locale prefix (including nested `/zh-CN/en-US/...`)
+ * and preserves a trailing slash when the input had one.
  */
 export function removeLocaleFromUrl(pathname: string): string {
-  const locale = getLocaleFromUrl(pathname);
+  let path = pathname || "/";
+  const hadTrailingSlash = path.length > 1 && path.endsWith("/");
 
-  if (locale === DEFAULT_LOCALE) {
-    return pathname;
+  while (true) {
+    const segments = path.split("/").filter(Boolean);
+    const potentialLocale = segments[0] as Locale;
+
+    if (!SUPPORTED_LOCALES.includes(potentialLocale)) {
+      break;
+    }
+
+    const rest = segments.slice(1).join("/");
+    path = rest ? `/${rest}` : "/";
   }
 
-  return pathname.replace(`/${locale}`, "") || "/";
+  if (path !== "/" && hadTrailingSlash && !path.endsWith("/")) {
+    path += "/";
+  }
+
+  return path;
 }
 
 /**
  * Add locale to URL pathname
  */
 export function addLocaleToUrl(pathname: string, locale: Locale): string {
-  // Don't add locale for default locale
+  const cleanPath = removeLocaleFromUrl(pathname);
+
+  // Default English lives at the root (no prefix).
   if (locale === DEFAULT_LOCALE) {
-    return pathname;
+    return cleanPath;
   }
 
-  const cleanPath = removeLocaleFromUrl(pathname);
   return `/${locale}${cleanPath === "/" ? "" : cleanPath}`;
 }
 

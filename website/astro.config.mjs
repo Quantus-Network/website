@@ -87,6 +87,27 @@ export default defineConfig({
           item.url = item.url.replace(/^https?:\/\/[^/]+/, baseUrl);
         }
 
+        if (item.links?.length) {
+          item.links = item.links.map((link) => ({
+            ...link,
+            url: link.url.replace(/^https?:\/\/[^/]+/, baseUrl),
+          }));
+
+          // Point x-default at the English (root) alternate
+          const defaultLink = item.links.find(
+            (link) => link.lang === LOCALES_MAP[DEFAULT_LOCALE],
+          );
+          if (
+            defaultLink &&
+            !item.links.some((link) => link.lang === "x-default")
+          ) {
+            item.links.push({
+              url: defaultLink.url,
+              lang: "x-default",
+            });
+          }
+        }
+
         // Check if this is a homepage link using the current base URL
         const homepageLinks = SUPPORTED_LOCALES.map((locale) => {
           if (locale === DEFAULT_LOCALE) return `${baseUrl}/`;

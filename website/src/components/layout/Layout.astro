@@ -28,6 +28,7 @@ import {
   getLocaleFromUrl,
   getTextDirection,
   getAlternateUrls,
+  removeLocaleFromUrl,
   createTranslator,
 } from "@/utils/i18n";
 import { generateBreadcrumbs } from "@/utils/build-json-ld";
@@ -46,7 +47,7 @@ const currentLocale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(currentLocale);
 const textDirection = getTextDirection(currentLocale);
 
-// Fix canonical for default locale duplicate content
+// Fix canonical for default locale duplicate content (e.g. /en-US/about → /about)
 let canonical = metadata.canonical;
 const currentPath = Astro.url.pathname;
 
@@ -54,15 +55,19 @@ if (
   currentLocale === DEFAULT_LOCALE &&
   currentPath.startsWith(`/${DEFAULT_LOCALE}`)
 ) {
-  const rootPath = currentPath.replace(`/${DEFAULT_LOCALE}`, "") || "/";
-  canonical = `${env.SITE_BASE_URL}${rootPath}`;
+  canonical = `${env.SITE_BASE_URL}${removeLocaleFromUrl(currentPath)}`;
 }
 
 const alternates = getAlternateUrls(currentPath);
-const languageAlternates = Object.entries(alternates).map(([lang, path]) => ({
-  href: `${env.SITE_BASE_URL}${path}`,
-  hrefLang: lang,
-}));
+const defaultHref = `${env.SITE_BASE_URL}${alternates[DEFAULT_LOCALE]}`;
+const languageAlternates = [
+  ...Object.entries(alternates).map(([lang, path]) => ({
+    href: `${env.SITE_BASE_URL}${path}`,
+    hrefLang: lang,
+  })),
+  // Fallback language for unmatched locales (Google hreflang requirement)
+  { href: defaultHref, hrefLang: "x-default" },
+];
 
 const breadcrumbs = generateBreadcrumbs({
   pathname: currentPath,
