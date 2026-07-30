@@ -1,0 +1,148 @@
+---
+title: "Quantus Weekly: Der Abstand zwischen zwei Uhren"
+description: "Bitcoins Quantum-Abschlag hat wenig mit Quantencomputern zu tun. Der Markt preist die Lücke zwischen einem schrumpfenden Angriffszeitplan und einer Kultur, die sich nicht hetzen lässt."
+pubDate: "2026-07-30"
+heroImage: "/blog/covers/weekly-update-07-30-2026.webp"
+heroAlt: "Quantus Weekly: Der Abstand zwischen zwei Uhren"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "bitcoin",
+    "quantum",
+    "post-quantum",
+    "bip-360",
+    "consensus",
+    "cryptography",
+    "charles-edwards",
+  ]
+---
+
+import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
+import YouTubeEmbed from "@/components/features/blog/YouTubeEmbed.astro";
+
+Es gibt einen Preis, den Bitcoin jeden Tag zahlt und der nie mit einem Label auf einem Chart erscheint. Er wird nicht in Angst oder Hype gepreist, sondern in Zweifel. Dem stillen, rationalen Zweifel, dass das dezentralste Geld, das je gebaut wurde, sich rechtzeitig darauf einigen kann, sich selbst zu verteidigen.
+
+Einige der schärfsten Allokatoren am Markt glauben, dass dieser Zweifel bereits so viel wert ist wie ein Drittel des Preises.
+
+Wenn sie recht haben, handelt Bitcoin mit einem Abschlag – und das Seltsame ist, dass das sehr wenig mit Quantencomputern selbst zu tun hat.
+
+Die klarste Stimme dazu ist Charles Edwards von Capriole Investments, der dem eine Zahl gegeben hat. Er setzt den fairen Wert von Bitcoin deutlich über dem Kurs an und erklärt die Lücke mit einer einzigen Tatsache: Das Netzwerk hat keinen angenommenen Plan, seine Kryptografie gegen einen Quantencomputer zu verteidigen.
+
+<TwitterEmbed url="https://x.com/caprioleio/status/2062363297014550760" />
+
+## Das Verfallsdatum, das niemand auf das Etikett gedruckt hat
+
+Die meisten Menschen halten Bitcoin, als wäre er ein Naturgesetz – etwas Entdecktes statt etwas Geschriebenes. Das ist eine schmeichelhafte Art, ein Asset zu besitzen, und sie ist falsch.
+
+Bitcoin ist Software, und die Kryptografie, die beweist, wem was gehört, ist Software mit Haltbarkeitsdatum. Ein ausreichend fähiger Quantencomputer – der Art, die ernsthafte Forscher jetzt vor dem nächsten Jahrzehnt erwarten – könnte einen öffentlichen Schlüssel, den das Netzwerk bereits gesehen hat, nehmen und rückwärts zum privaten Schlüssel dahinter arbeiten. Das Schloss, das beweist, dass eine Münze dir gehört, kann mit der Zeit geknackt werden.
+
+Das ist keine Randangst mehr, die unter Kryptografen gehandelt wird, und es ist konkret genug, dass ein glaubwürdiger Investor argumentieren kann, der Markt wende bereits einen Haircut an – und ernst genommen wird, wenn er das tut.
+
+## Die Gefahr liegt in der Signatur, nicht im Mining
+
+Es hilft, präzise zu sein, was tatsächlich gefährdet ist, denn die meiste Berichterstattung ist es nicht.
+
+Quantencomputing bedroht nicht Bitcoins Angebot, seinen Halving-Zeitplan oder den langsamen, vorhersehbaren Tropfen neuer Emission.
+
+Es bedroht Eigentum – und nur Eigentum.
+
+Der verwundbare Teil ist die digitale Signatur, der kryptografische Beweis, den du erzeugst, wenn du deine Coins bewegst. Mining ist ein weitaus kleineres Problem, denn die Quantum-Speedups, die dort greifen, nagen an den Rändern von SHA-256, ohne auch nur annähernd daran zu brechen.
+
+Die gefährliche Oberfläche ist also schmal, gut kartiert und bereits behebbar. Die weitere Welt bereitet sich seit Jahren vor: NIST hat seine post-quantischen Signaturstandards im August 2024 finalisiert, und nationale Sicherheitsbehörden haben Migrationszeitpläne veröffentlicht, die Anbieter bereits dazu drängen, die Werkzeuge zu bauen.
+
+Die Kryptografie, mit anderen Worten, ist der gelöste Teil dieses Problems.
+
+## Die Bedrohung ist nicht mehr theoretisch
+
+Was sich zuletzt verändert hat, ist die Geschwindigkeit.
+
+Die geschätzten Kosten, Bitcoins Signaturen zu brechen, sind öffentlich Papier für Papier eingebrochen: von grob neun Millionen Qubits vor wenigen Jahren auf unter fünfhunderttausend in Googles jüngster Arbeit und in manchen Neutral-Atom-Designs auf niedrige Zehntausende.
+
+Nichts davon bricht Bitcoin heute. Alles davon zieht das Datum näher – und es bewegt sich schneller als die Fähigkeit des Netzwerks zu antworten.
+
+## Der schwere Teil war nie die Kryptografie
+
+Und doch bleibt der Abschlag bestehen, weil das Wort „Konsens“ zwei sehr unterschiedliche Dinge verbirgt – und Bitcoins Stärke in dem einen ist seine Schwäche in dem anderen.
+
+Es gibt On-Chain-Konsens, die mechanische Einigung unter Nodes darüber, welche Blöcke gültig sind, und darin ist Bitcoin hervorragend. Dann gibt es sozialen Konsens, den menschlichen Prozess zu entscheiden, welche Regeln sich ändern sollen und wann – und hier gibt es keinen Node zum Betreiben und keinen Algorithmus, der die Sache klärt.
+
+Es läuft über Vorschläge, Mailinglisten, Konferenzargumente und die gelegentliche Nachricht, die ein Miner in einen Blockheader vergräbt.
+
+Niemand hält die Autorität, ein Unentschieden zu brechen, eine Pattsituation zu beenden – und das ist so by design. Dieses Design ist der ganze Punkt von Bitcoin. Es ist auch das, was eine fristgebundene kryptografische Migration so schwer vorstellbar macht.
+
+Wie schwer, ist keine Meinungssache.
+
+Ethan Heilman, Mitautor des [BIP-360-Vorschlags](https://bip360.org/), des Vorschlags, der üblicherweise als Bitcoins erster Schritt Richtung Quantum-Migration zitiert wird, schätzt, dass selbst im optimistischen Fall – in dem sich morgen alle auf den Weg einigen – voller Schutz etwa sieben Jahre dauern würde.
+
+Grob zweieinhalb Jahre, um die Änderung zu prüfen und zu testen, ein halbes Jahr zur Aktivierung und mehrere weitere, bis Wallets, Exchanges und Lightning folgen.
+
+Sieben Jahre sind der Best Case.
+
+Aber BIP-360 ist keine post-quantische Lösung.
+
+Es führt einen neuen Adresstyp ein, P2MR (pay to Merkle root), der mit post-quantischen Signaturen kompatibel ist, sie aber nicht enthält. Die Opcodes, die diese Signaturen brauchen, existieren in Bitcoin noch nicht, und sie hinzuzufügen erfordert einen weiteren Fork, eine weitere Runde desselben Konsenskampfs. Selbst Halter, die früh zu P2MR wechseln, müssen ein zweites Mal migrieren – zu echten post-quantischen Adressen –, sobald diese existieren.
+
+Es gibt eine letzte Wendung.
+
+Eine P2MR-Adresse versteckt das Script, das sie ausgeben wird, bis zu dem Moment, in dem sie ausgegeben wird – das Netzwerk kann die Migration also nicht sauber beobachten. Das eine Koordinationsproblem, das Bitcoin am klarsten sehen müsste, hält seine eigene Privatsphäre teilweise außer Sichtweite.
+
+## Ein Immunsystem, das darauf trainiert ist, Veränderung abzuweisen
+
+Stell dir Bitcoins Governance als Immunsystem vor, das darauf gebaut ist, alles Unvertraute anzugreifen. Für den Großteil des Netzwerklebens war das ein Geschenk, denn eine leichtsinnige Änderung am Geld kann katastrophal sein und es gibt realistisch nur eine Chance, sauber zu migrieren.
+
+Aber ein Immunsystem, das jede Intervention als Bedrohung behandelt, kann Gift nicht von Medizin unterscheiden.
+
+Wenn die Änderung, die der Körper braucht, dringend ist und von außen kommt, beginnt genau die Maschinerie, die ihn sicher hielt, gegen ihn zu arbeiten. Bitcoin wird, da bin ich sicher, eine umstrittene kryptografische Migration mit all der Geschwindigkeit und Einheit koordinieren, die es einst in den Blocksize-Krieg brachte.
+
+Der Punkt ist nicht, dass Bitcoin sich nicht bewegen kann. Der Punkt ist, dass sein Zeitplan für Bewegung von Kultur gesetzt wird, während die Bedrohung auf einem eigenen Kalender läuft – und die Lücke zwischen diesen beiden Uhren ist das, was der Markt zu preisen begonnen hat.
+
+## Glaubwürdigkeit, nicht Code, ist der Katalysator
+
+Der Abschlag schließt sich nicht, wenn eine Migration ausgeliefert wird.
+
+Er schließt sich früher – an dem Tag, an dem der Markt entscheidet, dass eine gangbare glaubwürdig kommen wird.
+
+Was den Preis bewegt, ist der Glaube, nicht der Code, und dieser Glaube sitzt nicht still, während alle warten.
+
+Charles Edwards argumentiert, er wirke kumulativ: Jedes Jahr ohne glaubwürdigen Plan muss der Markt eine größere Chance einpreisen, dass Bitcoin die Startbahn ausgeht – je länger also das Schweigen hält, desto tiefer wächst der Haircut.
+
+<YouTubeEmbed url="https://www.youtube.com/watch?v=8o_QdWdrvHM&t=77s" />
+
+Ein Asset, das der Markt nicht zuversichtlich bepreisen kann, tendiert dazu, lange billig zu handeln und sich dann auf einmal neu zu bepreisen, in dem Moment, in dem glaubwürdige, entscheidungsrelevante Information ankommt.
+
+Ein Plan, der diesen Glauben verdient, muss für Ingenieure lesbar und für Institutionen investierbar zugleich sein:
+
+- Eine kurze Liste von Signatur-Kandidaten mit ehrlichen Trade-offs.
+- Die sichere Option als Default für gewöhnliche Halter.
+- Eine explizite Antwort für Coins, die nie migrieren werden.
+- Ein Aktivierungspfad, der das Risiko eines Chain-Splits minimiert.
+- Sichtbares Commitment von Wallets, Exchanges und Custodians, die ihn tragen müssten.
+
+Jeder glaubwürdige Schritt dahin sollte den Abschlag komprimieren.
+
+Solange ein solcher Plan nicht offen existiert, bleibt er und wächst.
+
+## Der Zug, den Bitcoin nicht machen kann
+
+All das weist auf eine unbequeme Asymmetrie. Die Mathematik ist seit über einem Jahr bereit. Die Einigung, sie auszurollen, hat sich nicht gebildet, und niemand kann das Datum nennen, an dem sie sich bilden wird.
+
+Das ist in keinem sinnvollen Sinne ein Quantum-Problem, sondern die stehenden Kosten eines Systems, das darauf ausgelegt ist, genau die Art entschiedener, fristgebundener Handlung abzuwehren, die dieser Moment verlangt.
+
+Es gibt natürlich einen anderen Weg zu Quantum-Sicherheit, und er bleibt unerwähnt, weil er undramatisch ist: die Chain vom ersten Block an quantum-sicher bauen, sodass es keine Migration zu koordinieren gibt, keinen Governance-Kampf zu gewinnen und keinen Abschlag zu erheben. Der Trade-off natürlich: Für eine solche Chain wird aus dem Migrationsproblem ein Adoption-Problem.
+
+Ein Netzwerk, das das Problem nie geerbt hat, wartet nicht auf einen Konsens, der sich vielleicht nie rechtzeitig bildet.
+
+Das ist schlicht die Option, die Bitcoin seiner eigenen Natur nach nicht hat.
+
+## Der Abstand zwischen zwei Uhren
+
+Also beobachte die beiden Uhren.
+
+Die eine ist öffentlich und quantifizierbar: die Qubit-Schätzungen, die Papier für Papier fallen; ein Angriff, der vor wenigen Jahren wie Science-Fiction klang, sieht jedes Quartal ein wenig mehr nach Engineering aus.
+
+Die andere ist unsichtbar und kulturell: die langsame Bildung von Einigung unter Menschen, die aus der Weigerung, sich hetzen zu lassen, eine Tugend gemacht haben.
+
+Bitcoins Quantum-Abschlag lebt in dem Abstand zwischen ihnen.
+
+Die eigentliche Frage für jeden, der das Asset hält, ist nicht, ob die Kryptografie repariert werden kann – denn das kann sie, und weitgehend ist sie es schon. Die Frage ist, ob das erfolgreichste Experiment dezentraler Koordination auf einer Frist, die es nicht gewählt hat, das eine Upgrade koordinieren kann, das es sich nicht leisten kann, falsch zu machen.

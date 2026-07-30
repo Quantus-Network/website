@@ -939,7 +939,10 @@
       "miner": "Miner",
       "open-source": "Open Source",
       "block-explorer": "Penjelajah Blok",
-      "reuters": "Reuters"
+      "reuters": "Reuters",
+      "bip-360": "BIP-360",
+      "cryptography": "Kriptografi",
+      "charles-edwards": "Charles Edwards"
     }
   },
   "cookie": {

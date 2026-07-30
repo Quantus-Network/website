@@ -939,7 +939,10 @@
       "miner": "마이너",
       "open-source": "오픈 소스",
       "block-explorer": "블록 탐색기",
-      "reuters": "로이터"
+      "reuters": "로이터",
+      "bip-360": "BIP-360",
+      "cryptography": "암호학",
+      "charles-edwards": "Charles Edwards"
     }
   },
   "cookie": {

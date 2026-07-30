@@ -1,0 +1,89 @@
+---
+interface Props {
+  url: string;
+  title?: string;
+}
+
+function parseYoutubeTime(value: string): number | undefined {
+  if (/^\d+$/.test(value)) {
+    return Number(value);
+  }
+
+  const match = value.match(/^(?:(\d+)h)?(?:(\d+)m)?(?:(\d+)s)?$/i);
+  if (!match) {
+    return undefined;
+  }
+
+  const hours = Number(match[1] ?? 0);
+  const minutes = Number(match[2] ?? 0);
+  const seconds = Number(match[3] ?? 0);
+  return hours * 3600 + minutes * 60 + seconds;
+}
+
+function parseYoutubeUrl(
+  url: string,
+): { videoId: string; start?: number } | null {
+  try {
+    const parsed = new URL(url);
+    const host = parsed.hostname.replace(/^www\./, "");
+    let videoId = "";
+
+    if (host === "youtu.be") {
+      videoId = parsed.pathname.split("/").filter(Boolean)[0] ?? "";
+    } else if (parsed.pathname.startsWith("/embed/")) {
+      videoId = parsed.pathname.split("/")[2] ?? "";
+    } else if (parsed.pathname.startsWith("/shorts/")) {
+      videoId = parsed.pathname.split("/")[2] ?? "";
+    } else if (parsed.pathname.startsWith("/live/")) {
+      videoId = parsed.pathname.split("/")[2] ?? "";
+    } else {
+      videoId = parsed.searchParams.get("v") ?? "";
+    }
+
+    if (!videoId) {
+      return null;
+    }
+
+    const timeParam =
+      parsed.searchParams.get("t") ?? parsed.searchParams.get("start");
+    const start = timeParam ? parseYoutubeTime(timeParam) : undefined;
+
+    return { videoId, start };
+  } catch {
+    return null;
+  }
+}
+
+const { url, title = "YouTube video" } = Astro.props;
+const parsed = parseYoutubeUrl(url);
+
+const embedSrc = parsed
+  ? `https://www.youtube-nocookie.com/embed/${parsed.videoId}${
+      parsed.start ? `?start=${parsed.start}` : ""
+    }`
+  : null;
+---
+
+{
+  embedSrc ? (
+    <div class="youtube-embed not-prose my-8 mx-auto w-full max-w-3xl">
+      <div class="relative aspect-video overflow-hidden rounded-lg bg-black/40">
+        <iframe
+          class="absolute inset-0 h-full w-full border-0"
+          src={embedSrc}
+          title={title}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+        />
+      </div>
+    </div>
+  ) : (
+    <p class="youtube-embed not-prose my-8 text-center">
+      <a href={url} target="_blank" rel="noopener noreferrer">
+        {url}
+      </a>
+    </p>
+  )
+}

@@ -932,7 +932,10 @@
       "miner": "矿工",
       "open-source": "开源",
       "block-explorer": "区块浏览器",
-      "reuters": "路透社"
+      "reuters": "路透社",
+      "bip-360": "BIP-360",
+      "cryptography": "密码学",
+      "charles-edwards": "Charles Edwards"
     }
   },
   "cookie": {

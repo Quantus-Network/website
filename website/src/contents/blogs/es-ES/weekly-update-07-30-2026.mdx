@@ -1,0 +1,148 @@
+---
+title: "Quantus Weekly: La distancia entre dos relojes"
+description: "El descuento cuántico de Bitcoin no tiene que ver con las computadoras cuánticas. Es el mercado valorando la brecha entre un calendario de ataque que se acorta y una cultura que se niega a precipitarse."
+pubDate: "2026-07-30"
+heroImage: "/blog/covers/weekly-update-07-30-2026.webp"
+heroAlt: "Quantus Weekly: La distancia entre dos relojes"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "bitcoin",
+    "quantum",
+    "post-quantum",
+    "bip-360",
+    "consensus",
+    "cryptography",
+    "charles-edwards",
+  ]
+---
+
+import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
+import YouTubeEmbed from "@/components/features/blog/YouTubeEmbed.astro";
+
+Hay un precio que Bitcoin paga cada día y que nunca aparece en un gráfico con una etiqueta. No se cotiza en miedo ni en hype, sino en duda. La duda quieta y racional de que el dinero más descentralizado jamás construido pueda realmente ponerse de acuerdo para defenderse a tiempo.
+
+Algunos de los asignadores más agudos del mercado creen que esa duda ya vale tanto como un tercio del precio.
+
+Si tienen razón, Bitcoin cotiza con descuento, y lo extraño es que tiene muy poco que ver con las computadoras cuánticas en sí.
+
+La voz más clara al respecto es Charles Edwards de Capriole Investments, que le ha puesto un número. Marca el valor justo de Bitcoin bastante por encima de su precio y explica la brecha con un solo hecho: la red no tiene un plan adoptado para defender su criptografía frente a una computadora cuántica.
+
+<TwitterEmbed url="https://x.com/caprioleio/status/2062363297014550760" />
+
+## La fecha de caducidad que nadie imprimió en la etiqueta
+
+La mayoría sostiene Bitcoin como si fuera una ley de la naturaleza, algo descubierto más que escrito. Es una forma halagadora de poseer un activo, y es un error.
+
+Bitcoin es software, y la criptografía que prueba quién posee qué es software con fecha de caducidad. Una computadora cuántica lo bastante capaz —del tipo que investigadores serios esperan ahora antes del próximo decenio— podría tomar una clave pública que la red ya ha visto y trabajar hacia atrás hasta la clave privada detrás. La cerradura que prueba que una moneda es tuya puede, con el tiempo, forzarse.
+
+Esto ya no es una ansiedad marginal entre criptógrafos, y es lo bastante concreto como para que un inversor creíble argumente que el mercado ya aplica un haircut y sea tomado en serio cuando lo hace.
+
+## El peligro está en la firma, no en la minería
+
+Conviene ser preciso sobre qué está realmente en riesgo, porque la mayoría de la cobertura no lo es.
+
+La computación cuántica no amenaza el suministro de Bitcoin, su calendario de halvings ni el goteo lento y predecible de nueva emisión.
+
+Amenaza la propiedad, y solo la propiedad.
+
+La parte vulnerable es la firma digital, la prueba criptográfica que produces cuando mueves tus monedas. La minería es una preocupación mucho menor, porque las aceleraciones cuánticas que aplican allí rozan los bordes de SHA-256 sin acercarse a romperlo.
+
+Así que la superficie peligrosa es estrecha, bien cartografiada y ya reparable. El mundo más amplio lleva años preparándose: NIST finalizó sus estándares de firmas postcuánticas en agosto de 2024, y las agencias de seguridad nacional han publicado plazos de migración que ya empujan a los vendors a construir las herramientas.
+
+La criptografía, en otras palabras, es la parte resuelta de este problema.
+
+## La amenaza dejó de ser teórica
+
+Lo que ha cambiado últimamente es la velocidad.
+
+El coste estimado de romper las firmas de Bitcoin se ha derrumbado en público, paper tras paper: de unos nueve millones de qubits hace unos años a menos de quinientos mil en el trabajo más reciente de Google, y en algunos diseños de átomos neutros a las decenas de miles bajas.
+
+Nada de esto rompe Bitcoin hoy. Todo ello acerca la fecha, y se mueve más rápido que la capacidad de la red para responder.
+
+## Lo difícil nunca fue la criptografía
+
+Y sin embargo el descuento persiste, porque la palabra «consenso» oculta dos cosas muy distintas, y la fortaleza de Bitcoin en una es su debilidad en la otra.
+
+Hay consenso on-chain, el acuerdo mecánico entre nodos sobre qué bloques son válidos, y Bitcoin es soberbio en eso. Luego hay consenso social, el proceso humano de decidir qué reglas deben cambiar y cuándo, y aquí no hay nodo que ejecutar ni algoritmo que resuelva el asunto.
+
+Ocurre a través de propuestas, listas de correo, debates en conferencias y el mensaje ocasional que un minero entierra en un header de bloque.
+
+Nadie tiene la autoridad para desempatar, para acabar un impasse, y eso es así by design. Ese diseño es todo el punto de Bitcoin. También es lo que hace tan difícil imaginar una migración criptográfica con plazo.
+
+Cuán difícil no es cuestión de opinión.
+
+Ethan Heilman, coautor de la [propuesta BIP-360](https://bip360.org/), la propuesta que suele citarse como el primer paso de Bitcoin hacia una migración cuántica, estima que incluso en el caso optimista, en el que mañana todos acuerdan el camino, la protección completa llevaría unos siete años.
+
+Más o menos dos años y medio para revisar y probar el cambio, medio año para activarlo y varios más para que wallets, exchanges y Lightning sigan.
+
+Siete años es el mejor caso.
+
+Pero BIP-360 no es una solución postcuántica.
+
+Introduce un nuevo tipo de dirección, P2MR (pay to Merkle root), compatible con firmas postcuánticas pero que no las contiene. Los opcodes que esas firmas necesitan aún no existen en Bitcoin, y añadirlos exige otro fork, otra ronda de la misma pelea de consenso. Incluso los holders que se muevan pronto a P2MR tendrán que migrar una segunda vez, a direcciones postcuánticas reales, cuando existan.
+
+Hay un giro final.
+
+Una dirección P2MR oculta el script que la gastará hasta el momento en que se gasta, así que la red no puede observar limpiamente cómo ocurre la migración. El problema de coordinación que Bitcoin más necesita ver con claridad es el que su propia privacidad mantiene en parte fuera de vista.
+
+## Un sistema inmune afinado para rechazar el cambio
+
+Piensa en la gobernanza de Bitcoin como un sistema inmune construido para atacar cualquier cosa desconocida. Durante la mayor parte de la vida de la red eso ha sido un regalo, porque un cambio descuidado en el dinero puede ser catastrófico y en la práctica solo hay una oportunidad de migrar limpiamente.
+
+Pero un sistema inmune que trata cada intervención como una amenaza no puede distinguir un veneno de una medicina.
+
+Cuando el cambio que el cuerpo necesita es urgente y viene de fuera, la misma maquinaria que lo mantuvo a salvo empieza a trabajar en su contra. Bitcoin, estoy seguro, coordinará una migración criptográfica conflictiva con toda la velocidad y unidad que una vez llevó a la guerra del tamaño de bloque.
+
+El punto no es que Bitcoin no pueda moverse. Es que su calendario para moverse lo fija la cultura, mientras la amenaza corre en un calendario propio, y la brecha entre esos dos relojes es lo que el mercado ha empezado a cotizar.
+
+## La credibilidad, no el código, es el catalizador
+
+El descuento no se cierra cuando se despliega una migración.
+
+Se cierra antes, el día en que el mercado decide que una viable creíblemente llegará.
+
+Lo que mueve el precio es la creencia, no el código, y esa creencia no se queda quieta mientras todos esperan.
+
+Charles Edwards argumenta que se acumula: cada año sin un plan creíble, el mercado debe cotizar una mayor probabilidad de que a Bitcoin se le acabe la pista, así que cuanto más dure el silencio, más profundo crece el haircut.
+
+<YouTubeEmbed url="https://www.youtube.com/watch?v=8o_QdWdrvHM&t=77s" />
+
+Un activo que el mercado no puede cotizar con confianza tiende a negociarse barato durante un largo tramo y luego a repreciarse de golpe en el momento en que llega información creíble y relevante para decidir.
+
+Un plan que gane esa creencia tiene que ser legible para ingenieros e invertible para instituciones al mismo tiempo:
+
+- Una lista corta de candidatos de firma con trade-offs honestos.
+- La opción segura hecha el default para holders ordinarios.
+- Una respuesta explícita para monedas que nunca migrarán.
+- Un camino de activación que minimice el riesgo de un chain split.
+- Compromiso visible de las wallets, exchanges y custodios que tendrían que ejecutarlo.
+
+Cada paso creíble hacia eso debería comprimir el descuento.
+
+Hasta que tal plan exista a la vista, permanece y crece.
+
+## El movimiento que Bitcoin no puede hacer
+
+Todo esto apunta a una asimetría incómoda. Las matemáticas llevan listas más de un año. El acuerdo para desplegarlas no se ha formado, y nadie puede nombrar la fecha en que se formará.
+
+Eso no es un problema cuántico en ningún sentido significativo, sino el coste permanente de un sistema diseñado para resistir exactamente el tipo de acción decisiva y acotada en el tiempo que este momento pide.
+
+Hay, por supuesto, otra forma de alcanzar seguridad cuántica, y queda sin mencionar porque es poco dramática: construir la cadena cuántico-segura desde su primer bloque, de modo que no haya migración que coordinar, ni pelea de gobernanza que ganar, ni descuento que cobrar. Por supuesto, el trade-off es que para tal cadena el problema de migración se convierte en un problema de adopción.
+
+Una red que nunca heredó el problema no espera un consenso que quizá nunca se forme a tiempo.
+
+Esa es simplemente la opción que Bitcoin, por su propia naturaleza, no tiene.
+
+## La distancia entre dos relojes
+
+Así que observa los dos relojes.
+
+Uno es público y cuantificable: las estimaciones de qubits que caen paper tras paper; un ataque que hace unos años sonaba a ciencia ficción se parece un poco más a ingeniería cada trimestre.
+
+El otro es invisible y cultural: la lenta formación de acuerdo entre personas que han hecho virtud de negarse a que las apuren.
+
+El descuento cuántico de Bitcoin vive en la distancia entre ellos.
+
+La verdadera pregunta para quien sostiene el activo no es si la criptografía se puede arreglar, porque se puede, y en gran medida ya se ha arreglado. La pregunta es si el experimento más exitoso de coordinación descentralizada puede coordinar, en un plazo que no eligió, la única actualización que no puede permitirse equivocar.

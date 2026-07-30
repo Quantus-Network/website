@@ -939,7 +939,10 @@
       "miner": "マイナー",
       "open-source": "オープンソース",
       "block-explorer": "ブロックエクスプローラー",
-      "reuters": "ロイター"
+      "reuters": "ロイター",
+      "bip-360": "BIP-360",
+      "cryptography": "暗号技術",
+      "charles-edwards": "Charles Edwards"
     }
   },
   "cookie": {
