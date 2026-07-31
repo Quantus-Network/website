@@ -1,6 +1,6 @@
 ---
 title: "Quantus Weekly: Actualizar una blockchain es política"
-description: "Criterio de Popper, sabotaje OSS y política de upgrades de Bitcoin. Plus: runtime sin fork en Planck, menos memoria ZK, Dilithium endurecido y fixes móviles."
+description: "Criterio de Popper, sabotaje OSS y política de upgrades en Bitcoin. Plus: upgrades Planck sin fork, menos memoria ZK, Dilithium reforzado y fixes en wallet."
 pubDate: "2026-06-18"
 heroImage: "/blog/covers/weekly-update-06-18-2026.webp"
 heroAlt: "Quantus Weekly: Actualizar una blockchain es política"
@@ -26,95 +26,95 @@ tags:
 
 import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
 
-«Las buenas instituciones políticas son aquellas que hacen lo más fácil posible detectar si un gobernante o una política es un error, y eliminar gobernantes o políticas sin violencia cuando lo son».
+«Las buenas instituciones políticas son aquellas que hacen lo más fácil posible detectar si un gobernante o una política es un error, y destituir gobernantes o políticas sin violencia cuando lo son».
 
-El criterio de Popper.
+El Criterio de Popper.
 
 Actualizar una blockchain es política.
 
-La previsibilidad es una virtud del buen dinero. La osificación es un pacto suicida.
+La predictibilidad es una virtud del buen dinero. La osificación es un pacto suicida.
 
 Tiene que haber una forma de actualizar criptografía obsoleta y enviar mejoras de protocolo sin hard forks conflictivos.
 
-Si Bitcoin no puede hacer los cambios necesarios para responder a una amenaza existencial anunciada con años de antelación, es un experimento fallido de gobernanza.
+Si Bitcoin no puede hacer los cambios necesarios para responder a una amenaza existencial anunciada con años de antelación, es un experimento de gobernanza fallido.
 
-Pero el efectivo electrónico peer-to-peer soberano es una misión noble, así que ¿qué debemos hacer?
+Pero el efectivo electrónico soberano entre pares es una misión noble, así que ¿qué debemos hacer?
 
-## ¿Malicia o incompetencia?
+## Malicia o incompetencia
 
 La Office of Strategic Services (OSS) fue el predecesor de la CIA en la Segunda Guerra Mundial.
 
-Publicaron un «Simple Sabotage Field Manual». Lo escribieron para entrenar a ciudadanos comunes en países ocupados a sabotear organizaciones enemigas desde dentro.
+Publicaron un «Simple Sabotage Field Manual». Lo escribieron para entrenar a ciudadanos ordinarios en países ocupados a sabotear organizaciones enemigas desde dentro.
 
 Las estrategias incluyen:
 
-- Plantear temas irrelevantes con frecuencia.
+- Sacar a relucir temas irrelevantes con frecuencia.
 
-Siempre que surge el tema cuántico, los ojos láser dicen: «los bancos y los sistemas tradicionales también son vulnerables y también necesitan actualizarse». Totalmente irrelevante, porque los bancos ya están ejecutando pilotos probando PQC.
+Cada vez que surge lo cuántico, los ojos láser siempre dicen «los bancos y los sistemas tradicionales también son vulnerables y también tienen que actualizarse». Totalmente irrelevante, porque los bancos ya están ejecutando pilotos probando PQC.
 
 Cloudflare ya protege la mayor parte del tráfico TLS humano con intercambio de claves post-cuántico híbrido, y apps como Signal e iMessage han desplegado post-cuántico.
 
-Pero mira qué pasa si publicas en X sobre el riesgo cuántico para Bitcoin.
+Pero fíjate qué pasa si publicas un tweet sobre el riesgo cuántico para Bitcoin.
 
-Ese es el argumento principal que escucharás.
+Ese es el argumento principal que oirás.
 
 - Nunca permitir atajos eficientes.
 
-Los maxis de Bitcoin suelen preferir discutir SHRINCS y SHRIMPS, «PQC» novedoso de Blockstream, en lugar de esquemas PQC ampliamente aceptados.
+Los maxis de Bitcoin suelen preferir hablar de SHRINCS y SHRIMPS, «PQC» novedoso de Blockstream, en lugar de esquemas PQC ampliamente aceptados que ya existen.
 
-NIST y la comunidad open source pasaron años endureciendo los algoritmos que tenemos, pero la opinión mainstream de Bitcoin es que deberíamos empezar de cero y crear nuestra propia criptografía específica para Bitcoin.
+NIST y la comunidad open source pasaron años endureciendo los algoritmos que tenemos, pero la opinión mayoritaria en Bitcoin es que deberíamos considerar empezar de cero e inventar criptografía específica para Bitcoin.
 
-- Celebrar reuniones cuando hay trabajo crítico por hacer.
+- Convocar reuniones cuando hay trabajo crítico por hacer.
 
-«¿Es el quantum realmente una amenaza?»
+«¿Es lo cuántico realmente una amenaza?»
 
 El propio Satoshi dijo que sí. La industria cuántica sigue reduciendo las estimaciones para romper secp256k1.
 
-Todos los organismos de estándares apuntan a tomar alguna acción antes de 2030.
+Todos los organismos de normalización apuntan a tomar alguna acción antes de 2030.
 
-No necesitamos otra reunión debatiendo los plazos. Es hora de enviar un tipo de dirección cuánticamente segura.
+No necesitamos convocar otra reunión debatiendo los plazos. Es hora de enviar un tipo de dirección cuánticamente seguro.
 
 ## ¿Cuál es la alternativa?
 
-Tiene que haber una forma eficiente y suficientemente descentralizada de actualizar blockchains.
+Tiene que existir una forma eficiente y suficientemente descentralizada de actualizar blockchains.
 
-La semana pasada probamos las actualizaciones de runtime de [@QuantusNetwork](https://x.com/@QuantusNetwork).
+La semana pasada probamos upgrades de runtime de [@QuantusNetwork](https://x.com/@QuantusNetwork).
 
-Ejecutamos esta actualización sin fork en nuestro testnet Planck.
+Ejecutamos este upgrade sin fork en nuestra testnet Planck.
 
 Reconstruimos nuestro agregador ZK para usar una cuarta parte de la memoria. Las pruebas ahora se agrupan en lotes de siete.
 
-Eso significa que la generación de pruebas puede ejecutarse en hardware local sencillo como un teléfono, así que en el futuro la gente generará sus propias transacciones privadas directamente en su dispositivo móvil.
+Eso significa que el proving puede ejecutarse en hardware local sencillo como un teléfono, así que en el futuro la gente generará sus propias transacciones privadas directamente en su dispositivo móvil.
 
-Esto es lo más que enviamos la semana pasada.
+Esto es lo demás que enviamos la semana pasada.
 
-### Actividad en Github (8 pull requests fusionados):
+### Actividad en GitHub (incluyendo 8 pull requests fusionados):
 
 ![Github Stats](/blog/assets/github-stats-weekly-update-06-18-2026.webp)
 
-### Core Tech y ZK:
+### Tecnología central y ZK:
 
-- Ejecutada la actualización de runtime (v0.7.1-q-day-2).
+- Ejecución del upgrade de runtime (v0.7.1-q-day-2).
 - Las nuevas pruebas usan un formato distinto al anterior, así que la CLI ahora requiere una actualización para mantener la compatibilidad.
-- Endurecido el resharing de claves umbral Dilithium.
-- Comenzado el diseño y construcción de una forma de verificar formalmente nuestro circuito ZK.
-- Enviadas correcciones de cadena y trabajo de auditoría asistido por IA.
+- Endurecimiento del resharing de claves threshold Dilithium.
+- Inicio del diseño y construcción de una forma de verificar formalmente nuestro circuito ZK.
+- Correcciones de cadena y trabajo de auditoría asistido por IA.
 
 ### Red e infraestructura:
 
-- Lanzada una nueva versión del minero GUI con correcciones.
-- Desplegado un nuevo indexador Subsquid con soporte multisig e indexación actualizada de eventos de propuestas.
-- Actualizado el cliente CLI de Subsquid.
-- Corregido un problema de DNS en el nodo y actualizado el monitoreo de Grafana.
+- Lanzamiento de una nueva versión del minero GUI con correcciones.
+- Despliegue de un nuevo indexador Subsquid con soporte multisig e indexación actualizada de eventos de propuestas.
+- Actualización del cliente Subsquid de la CLI.
+- Corrección de un problema DNS en el nodo y actualización del monitoreo Grafana.
 
-### Actualizaciones web y de la app móvil:
+### Web y app móvil:
 
-- Muchas correcciones y mejoras de la billetera móvil.
-- Mejorado el sitio de documentación con un pase de UX responsive y búsqueda añadida.
+- Muchas correcciones y mejoras en la wallet móvil.
+- Mejora del sitio de docs con un pase de UX responsive y adición de búsqueda.
 
 ### Contenido y alianzas:
 
-Publicada la keynote de Chris en QDay:
+Publicamos la keynote de Chris en QDay:
 
 <TwitterEmbed url="https://x.com/QuantusNetwork/status/2066731387458355672" />
 

@@ -1,6 +1,6 @@
 ---
 title: "Quantus Weekly: POS móvil, PolyFri y dinero P2P"
-description: Modo POS en wallet v1.2.2, enmascaramiento PolyFri en el probador y limpieza del hasher Poseidon. Protección DDoS para pruebas ZK y alfa del rediseño móvil.
+description: "Modo POS en wallet v1.2.2, enmascaramiento PolyFri en el probador y limpieza del hasher Poseidon. Protección DDoS para pruebas ZK y alfa del rediseño móvil."
 
 pubDate: "2026-03-31"
 heroImage: "/blog/covers/weekly-update-03-31-2026.webp"
@@ -51,13 +51,13 @@ Esta semana lanzamos el modo punto de venta en la app móvil de Quantus.
 
 El comerciante muestra un código QR de factura. El cliente lo escanea. El pago se confirma al instante. Dinero electrónico entre pares, resistente a la computación cuántica.
 
-Esto es lo más que lanzamos esta semana:
+Esto es lo demás que lanzamos esta semana:
 
 ### Actividad en GitHub (24 pull requests fusionados):
 
 ![Github Stats](/blog/assets/github-stats-weekly-update-03-31-2026.webp)
 
-### Core Tech y ZK:
+### Tecnología principal y ZK:
 
 - Implementado enmascaramiento PolyFri en el probador en la ruta nativa, sustituyendo el costoso ocultamiento de filas en el builder.
 - Refactor y limpieza del hasher Poseidon con actualizaciones en todo el sistema.

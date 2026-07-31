@@ -1,9 +1,9 @@
 ---
-title: "Quantus Weekly: Todo excepto el enlace"
-description: "Explorador rediseñado en explorer.quantus.com—plus transferencias wormhole, V12 resuelto, indexación Subsquid, billetera 1.5.7 y cobertura de Reuters."
+title: "Quantus Weekly: Todo Excepto el Vínculo"
+description: "El explorador rediseñado ya está en explorer.quantus.com: transferencias wormhole, hallazgos V12 resueltos, wallet 1.5.7 y cobertura de Reuters."
 pubDate: "2026-07-19"
 heroImage: "/blog/covers/weekly-update-07-19-2026.webp"
-heroAlt: "Quantus Weekly: Todo excepto el enlace"
+heroAlt: "Quantus Weekly: Todo Excepto el Vínculo"
 featured: false
 tags:
   [
@@ -25,55 +25,55 @@ tags:
 
 import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
 
-Nuestro explorador de bloques rediseñado ya está en vivo en [explorer.quantus.com](https://explorer.quantus.com).
+Nuestro explorador de bloques rediseñado ya está disponible en [explorer.quantus.com](https://explorer.quantus.com).
 
-![Página de inicio del rediseño del explorador de blockchain Quantus](/blog/assets/quantus-blockchain-explorer-redesign-homepage.webp)
+![Quantus blockchain explorer redesign homepage](/blog/assets/quantus-blockchain-explorer-redesign-homepage.webp)
 
 Quantus permite dos tipos de transacciones: transparentes y cifradas.
 
 Las transacciones transparentes se ven como cualquier otra transacción de blockchain.
 
-Las transacciones cifradas (actualmente posibles con la CLI y pronto en nuestra app móvil) usan transferencias wormhole.
+Las transacciones cifradas (actualmente posibles usando la CLI, y próximamente en nuestra app móvil) usan transferencias wormhole.
 
 Una transferencia wormhole ocurre en dos pasos.
 
-Primero envías monedas a una dirección wormhole. Esa dirección es un hash de un hash de un secreto que solo tú conoces, así que nadie puede gastar desde ella. Para la cadena, las quemaste. Después entregas a la cadena una prueba de conocimiento cero que dice: conozco el secreto detrás de una de las direcciones wormhole financiadas, sin revelar cuál, y acuña tus monedas en una dirección nueva.
+Primero envías monedas a una dirección wormhole. Esa dirección es el hash de un hash de un secreto que solo tú conoces, así que nada puede gastar desde ella. Para la cadena, las quemaste. Después le entregas a la cadena una prueba de conocimiento cero que dice: conozco el secreto detrás de una de las direcciones wormhole con fondos, sin revelar cuál, y esta acuña tus monedas hacia una dirección nueva.
 
-Así que el explorador te muestra todo lo que existe: monedas que entran, monedas que salen, los montos, la prueba. Lo único que no puede mostrarte es qué entrada coincide con qué salida, porque ese enlace nunca toca la cadena.
+Así que el explorador te muestra todo lo que existe: monedas que entran, monedas que salen, los montos, la prueba. Lo único que no puede mostrarte es qué entrada corresponde a qué salida, porque ese vínculo nunca toca la cadena.
 
-La semana pasada también resolvimos todos los hallazgos de severidad alta y media de nuestra revisión de seguridad V12, en los circuitos ZK y la librería de firmas Dilithium, y enviamos la billetera móvil 1.5.7.
+La semana pasada también resolvimos todos los hallazgos de severidad alta y media de nuestra revisión de seguridad V12, tanto en los circuitos ZK como en la biblioteca de firmas Dilithium, y lanzamos la wallet móvil 1.5.7.
 
 Esto es lo demás que construimos la semana pasada:
 
-### Actividad en Github (14 pull requests fusionados):
+### Actividad en GitHub (14 pull requests fusionados):
 
 ![Github Stats](/blog/assets/github-stats-weekly-update-07-19-2026.webp)
 
-### Core Tech y ZK
+### Núcleo Técnico y ZK
 
-- Resueltos todos los hallazgos de severidad alta y media de nuestra revisión de seguridad V12 en los circuitos ZK y la librería de firmas Dilithium.
-- Endurecido el recompartido de firmas umbral con comprobaciones de liveness, aceptación de transcripts firmados y un nuevo esquema de ID de sesión.
+- Resolvimos todos los hallazgos de severidad alta y media de nuestra revisión de seguridad V12 en los circuitos ZK y la biblioteca de firmas Dilithium.
+- Endurecimos el resharing de firmas por umbral con verificaciones de liveness, aceptación de transcripciones firmadas y un nuevo esquema de ID de sesión.
 
-### Red e infraestructura
+### Red e Infraestructura
 
-- Añadida indexación unificada de transacciones a Subsquid, nuestro indexador de cadena.
-- Añadido un captcha de proof-of-work que usa nuestro pool de minería para mantener fuera a los bots.
+- Añadimos indexado unificado de transacciones a Subsquid, nuestro indexador de cadena.
+- Añadimos un captcha de prueba de trabajo que usa nuestro pool de minería para mantener alejados a los bots.
 
-### Actualizaciones web y de la app móvil
+### Actualizaciones de Web y App Móvil
 
-- Lanzado el explorador de bloques rediseñado en [explorer.quantus.com](https://explorer.quantus.com).
-- Enviada la billetera móvil v1.5.7.
-- Las propuestas multisig en la app web ahora aceptan aprobación de cualquier firmante local, con soporte de billetera de hardware Keystone.
-- Enviadas mejoras de UX de multisig y un menú de cuenta rediseñado en la app web.
-- Añadidas más funciones multisig al firmware de Keystone y corregido un bug en el que la firma de Quantus se quedaba atascada por un desajuste de huella maestra.
+- Lanzamos el explorador de bloques rediseñado en [explorer.quantus.com](https://explorer.quantus.com).
+- Lanzamos la wallet móvil v1.5.7.
+- Las propuestas multisig en la app web ahora aceptan aprobación de cualquier firmante local, con soporte para la hardware wallet Keystone.
+- Lanzamos mejoras de UX en multisig y un menú de cuenta rediseñado en la app web.
+- Añadimos más funciones multisig al firmware Keystone y corregimos un bug donde la firma de Quantus se atascaba por un desajuste de master fingerprint.
 
-### Contenido y alianzas
+### Contenido y Alianzas
 
-- Reuters citó a Chris en «Crypto firms prepare defenses as quantum threat to encryption draws nearer»:
+- Reuters citó a Chris en "Crypto firms prepare defenses as quantum threat to encryption draws nearer":
 
 <TwitterEmbed url="https://x.com/QuantusNetwork/status/2077333342815388084" />
 
-- La historia se sindicó a Yahoo Finance, US News, Investing.com, MSN, TradingView, The Economic Times, Khaleej Times y The Star Malaysia, con recogidas traducidas en Forbes Mexico, NTV Turkey y Boursorama France.
+- La historia se sindicó a Yahoo Finance, US News, Investing.com, MSN, TradingView, The Economic Times, Khaleej Times y The Star Malaysia, con réplicas traducidas en Forbes México, NTV Turquía y Boursorama Francia.
 
 Depende de nosotros.
 

@@ -1,10 +1,9 @@
 ---
-title: "Quantus Weekly: romper firmas Bitcoin cuesta menos"
-description: Google ocultó circuitos ZK de criptoanálisis cuántico. ECDSA.fail hace público el costo, QDay reunió a 220 personas y migramos la red a litep2p.
-
+title: "Quantus Weekly: Romper Bitcoin cuesta cada vez menos"
+description: "Circuitos ZK secretos de Google Quantum AI, scoreboard ECDSA.fail, QDay en Network School (220+), migración litep2p, auditorías de proving y wallet v1.5.0."
 pubDate: "2026-06-09"
 heroImage: "/blog/covers/weekly-update-06-09-2026.webp"
-heroAlt: "Quantus Weekly: romper firmas Bitcoin cuesta menos"
+heroAlt: "Quantus Weekly: Romper Bitcoin cuesta cada vez menos"
 featured: false
 tags:
   [
@@ -25,19 +24,19 @@ tags:
 
 import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
 
-El costo de romper las firmas de Bitcoin sigue bajando.
+El coste de romper las firmas de Bitcoin sigue bajando.
 
 Algunos avances son secretos; otros ocurren en público.
 
-En marzo, Google Quantum AI publicó un artículo que redujo en 10x la estimación de recursos para atacar firmas de curva elíptica.
+En marzo, Google Quantum AI publicó un paper que redujo en 10x la estimación de recursos para atacar firmas de curva elíptica.
 
 Luego hicieron algo extraño.
 
-Validaron los circuitos optimizados con una prueba de conocimiento cero y mantuvieron los circuitos en secreto. La entrada del blog decía que «colaboraron con el gobierno de EE. UU.»
+Validaron los circuitos optimizados con una prueba de conocimiento cero y mantuvieron los circuitos en secreto. El blog post decía que «colaboraron con el gobierno de EE. UU.».
 
-Una prueba ZK es una herramienta para ocultar información. Es la primera vez que veo una prueba ZK usada para ocultar información relacionada con la seguridad nacional.
+Una prueba ZK es una herramienta para ocultar información. Es la primera vez que veo una prueba ZK usada para esconder información relacionada con la seguridad nacional.
 
-Justin Drake coescribió el artículo y dijo que el contexto de secreto no le sentó bien, y que tenía limitada su capacidad de denunciar.
+Justin Drake coautoró el paper y dijo que el contexto en torno al secretismo no le sentaba bien, y que tenía limitada su capacidad de denunciarlo.
 
 <TwitterEmbed url="https://x.com/drakefjustin/status/2061793725299224676" />
 
@@ -47,53 +46,53 @@ Cualquiera puede enviar un circuito. El verificador, reutilizado del propio harn
 
 <TwitterEmbed url="https://x.com/sreeramkannan/status/2061612465797144668" />
 
-Un estudiante universitario sin formación cuántica formal y con una suscripción a Codex usó agentes para acercarse al 50% del número que Google retuvo. Un joven de 18 años pasó un fin de semana y 10.000 $ en gasto de IA con un enjambre de agentes personalizado y lo llevó al 80%. Luego lo abrieron al público. En tres días, la tabla de clasificación superó el punto de referencia de Google.
+Un estudiante universitario sin formación cuántica formal y con una suscripción a Codex usó agentes para acercarse al 50 % del número retenido por Google. Un joven de 18 años pasó un fin de semana y 10.000 $ en gasto de IA con un enjambre de agentes personalizado y lo empujó al 80 %. Luego lo abrieron al público. En tres días, la tabla de clasificación superó el punto de referencia de Google.
 
 Esto no rompe Bitcoin hoy.
 
-Pero es prueba de que los agentes de IA están reduciendo el costo del algoritmo de Shor en abierto, cada día, y que las pequeñas optimizaciones se acumulan.
+Pero demuestra que los agentes de IA están recortando el coste del algoritmo de Shor en abierto, cada día, y que las pequeñas optimizaciones se acumulan.
 
 <TwitterEmbed url="https://x.com/defijangle/status/2062821128289329604" />
 
-La comunidad open source ha logrado más de un 40% de mejora sobre el circuito de Google al escribir esto.
+La comunidad open source ha logrado más de un 40 % de mejora sobre el circuito de Google en el momento de escribir esto.
 
-Si unes esta tendencia con un avance en cualquiera de los enfoques de hardware para ingeniería de computadoras cuánticas, Q-Day está aquí.
+Combina esta tendencia con un avance en cualquiera de los enfoques de hardware para construir ordenadores cuánticos y Q-Day está aquí.
 
-Así que debemos hablar de ello.
+Así que deberíamos hablar de ello.
 
-El fin de semana pasado organizamos QDay en [@ns](https://x.com/ns). Más de 220 personas asistieron: industria, academia y builders, todos trabajando en una pregunta.
+El fin de semana pasado organizamos QDay en [@ns](https://x.com/ns). Más de 220 personas asistieron: industria, academia y builders, todos trabajando en una sola pregunta.
 
-¿Cómo sobreviven las blockchains públicas a las computadoras cuánticas?
+¿Cómo sobreviven las blockchains públicas a los ordenadores cuánticos?
 
 <TwitterEmbed url="https://x.com/QuantusNetwork/status/2064002930274131980" />
 
-También publicamos un informe de acompañamiento. La forma más rápida de ponerse al día sobre la amenaza cuántica a las blockchains y el roadmap por delante.
+También publicamos un informe complementario. La forma más rápida de ponerte al día sobre la amenaza cuántica a las blockchains y el roadmap por delante.
 
 <TwitterEmbed url="https://x.com/QuantusNetwork/status/2059624449993806039" />
 
-Esto es lo más que enviamos esta semana:
+Esto es lo demás que enviamos esta semana:
 
-### Actividad en Github (27 pull requests fusionados):
+### Actividad en GitHub (27 pull requests fusionados):
 
 ![Github Stats](/blog/assets/github-stats-weekly-update-06-09-2026.webp)
 
-### Core Tech y ZK:
+### Tecnología central y ZK:
 
-- Cambio de libp2p a litep2p, dando a Quantus una pila de red más ligera, menor sobrecarga y control más directo del comportamiento de los peers.
-- Auditorías de seguridad y correcciones en todo el stack de pruebas, cubriendo Plonky2 y nuestros circuitos ZK.
-- Endurecimiento de la implementación de firmas post-cuánticas ML-DSA y auditoría de la superficie de código RPC, reduciendo la superficie de ataque externa del nodo antes del mainnet.
+- Cambio de libp2p a litep2p, dando a Quantus una pila de red más ligera, con menos overhead y control más directo sobre el comportamiento de peers.
+- Auditorías de seguridad y correcciones en la pila de proving, cubriendo Plonky2 y nuestros circuitos ZK.
+- Endurecimiento de la implementación de firmas post-cuánticas ML-DSA y finalización de una auditoría de la superficie de código RPC, reduciendo la superficie de ataque externa del nodo antes de mainnet.
 
 ### Web y app móvil:
 
-- Billetera móvil v1.5.0 enviada para lanzamiento.
-- Corrección del bug de polling del historial de transacciones de la billetera.
-- Mejora de la UX del explorador, especialmente la sección wormhole.
+- Envío de la wallet móvil v1.5.0 para publicación.
+- Corrección del bug de polling del historial de transacciones en la wallet.
+- Mejora de la UX del explorer, especialmente la sección wormhole.
 - Mejora del sistema de tienda Quantus.
 
 ### Contenido y alianzas:
 
-- Leer [el informe The State of Quantum](https://x.com/QuantusNetwork/status/2059624449993806039)
-- Organizar [QDay en Network School con más de 220 asistentes](https://x.com/QuantusNetwork/status/2064002930274131980)
+- Lee [The State of Quantum Report](https://x.com/QuantusNetwork/status/2059624449993806039)
+- Organizamos [QDay en Network School con más de 220 asistentes](https://x.com/QuantusNetwork/status/2064002930274131980)
 
 Lo cuántico se acerca.
 

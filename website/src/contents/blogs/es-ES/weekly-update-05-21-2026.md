@@ -1,6 +1,6 @@
 ---
 title: "Quantus Weekly: Q-Day está a la vuelta de la esquina"
-description: Q-Day es el 6 de junio. Cerramos auditoría Dilithium DKG, enviamos updates de minero y notificaciones, fijamos la billetera y lanzamos el sitio Q-Day.
+description: "Q-Day es el 6 de junio. Esta semana: auditoría Dilithium DKG cerrada, updates de miner y notificaciones, fixes en wallet y nueva web del summit Q-Day."
 
 pubDate: "2026-05-21"
 heroImage: "/blog/covers/weekly-update-05-21-2026.webp"
@@ -28,28 +28,28 @@ Q-Day en [@ns](https://x.com/@ns) está [a la vuelta de la esquina](https://x.co
 
 6 de junio.
 
-Seguimos a tope hasta el mainnet, pero habrá más anuncios antes de Q-Day.
+Estamos concentrados hasta mainnet, pero habrá más anuncios antes de Q-Day.
 
 Esto es lo que enviamos esta semana:
 
-### Core Tech y ZK
+### Tecnología central y ZK
 
-- Completamos la atención de ítems de auditoría en Dilithium DKG de umbral, el flujo de generación distribuida de claves para firmas de umbral.
-- Atendimos varios ítems de revisión en pallets.
+- Finalizada la resolución de problemas de auditoría en el DKG Dilithium threshold, el flujo de generación distribuida de claves para firmas threshold.
+- Abordados varios puntos de revisión en pallets.
 
-### Red e infra
+### Red e infraestructura
 
-- Lanzamos una nueva versión del minero con mejoras de UX en el GUI miner.
-- Actualizamos la infraestructura de notificaciones para que funcione correctamente con Planck.
-- Duplicamos el número de nodos de minería comunitarios en las últimas 3 semanas.
+- Lanzamiento de una nueva versión del minero con mejoras de UX en el minero GUI.
+- Actualización de la infraestructura de notificaciones para funcionar correctamente con Planck.
+- Duplicado el número de nodos mineros comunitarios en las últimas 3 semanas.
 
 ### Web y app móvil
 
-- Correcciones de errores en la app móvil.
-- Corregimos el manejo de enlaces de pago en la billetera.
-- Actualizamos el manejo de notificaciones remotas de la billetera.
+- Correcciones de bugs en la app móvil.
+- Corrección del manejo de enlaces de pago en la wallet.
+- Actualización del manejo de notificaciones remotas en la wallet.
 
 ### Contenido y alianzas
 
-- Lanzamos el sitio renovado de la cumbre Q-Day en q (dot) day.
-- Comenzamos a publicar anuncios de speakers de Q-Day en [@QuantusNetwork](https://x.com/@QuantusNetwork) X.
+- Lanzamiento del sitio renovado del summit Q-Day en q (dot) day.
+- Comenzamos a publicar anuncios de ponentes de Q-Day en X de [@QuantusNetwork](https://x.com/@QuantusNetwork).

@@ -1,6 +1,6 @@
 ---
 title: "Quantus Weekly: auditorías Eiger y agregador compacto"
-description: Semana de limpieza: ítems de auditoría con Eiger, CLI refactorizada y bugs corregidos en miner e indexador. Pruebas wormhole en el agregador compacto 2x8.
+description: "Semana de limpieza: ítems de auditoría con Eiger, CLI refactorizada y bugs corregidos en miner e indexador. Pruebas wormhole en el agregador compacto 2x8."
 
 pubDate: "2026-04-29"
 heroImage: "/blog/covers/weekly-update-04-29-2026.webp"
@@ -36,19 +36,19 @@ Esto es lo que construimos esta semana:
 
 ![Github Stats](/blog/assets/github-stats-weekly-update-04-29-2026.webp)
 
-### Core Tech y ZK
+### Tecnología principal y ZK
 
 - Atendimos múltiples ítems de auditoría de Eiger.
 - Ejecutamos pruebas de integración wormhole en el agregador compacto 2x8.
 - Refactorizamos la CLI de Quantus para compatibilidad, ciclo de vida de transacciones y estimación de comisiones.
 
-### Red e infra
+### Red e infraestructura
 
 - Corrimos pruebas de estrés en el testnet Planck.
 - Mejoramos el rendimiento del indexador Subsquid y corregimos un pico de uso de CPU. Esta semana Subsquid afectó la UX móvil (saldos que no cargaban); ya está resuelto.
 - Lanzamos Quantus miner v3.1.0 con corrección de un bug de minería por GPU.
 
-### Web y app móvil
+### Actualizaciones web y app móvil
 
 - Lanzamos wallet móvil 1.3.4 y 1.3.5.
 - Mejoras de diseño en wallet móvil; el flujo de onboarding llega a continuación.

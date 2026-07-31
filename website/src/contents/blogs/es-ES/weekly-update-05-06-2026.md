@@ -1,10 +1,10 @@
 ---
-title: "Quantus Weekly: La aplicación definitiva es el dinero"
-description: Reescribimos Dilithium DKG para Mithril, enviamos fixes de firmas de umbral, expusimos helpers de Wormhole SDK y lanzamos Wallet v1.4.0 en TestFlight.
+title: "Quantus Weekly: La killer app es el dinero"
+description: "Esta semana reescribimos DKG Dilithium para Mithril, corregimos firmas threshold, abrimos helpers Wormhole en el SDK y lanzamos wallet v1.4.0 en TestFlight."
 
 pubDate: "2026-05-06"
 heroImage: "/blog/covers/weekly-update-05-06-2026.webp"
-heroAlt: "Quantus Weekly: La aplicación definitiva es el dinero"
+heroAlt: "Quantus Weekly: La killer app es el dinero"
 featured: false
 tags:
   [
@@ -26,61 +26,61 @@ tags:
   ]
 ---
 
-Hay algo que creo que el mercado está asimilando lentamente.
+Hay algo en lo que creemos y el mercado empieza a despertar poco a poco.
 
-Una aplicación cripto definitiva creará y capturará más valor que cualquier otra.
+Una sola killer app de cripto creará y capturará más valor que cualquier otra.
 
-No son las stablecoins, los mercados de predicción o DeFi.
+No son las stablecoins, los mercados de predicción ni el DeFi.
 
-Definitivamente no es la Web3, las redes sociales o las colecciones de PFP.
+Definitivamente no es web3, las redes sociales ni las colecciones de PFP.
 
 Es el dinero. La idea que dio origen a la industria.
 
-El primer pensamiento es un pensamiento puro. Efectivo electrónico de igual a igual.
+El primer pensamiento es un pensamiento puro. Efectivo electrónico entre pares.
 
-El dinero seguro, privado y escalable es la oportunidad de billones de dólares.
+Dinero seguro, privado y escalable es la oportunidad de varios billones de dólares.
 
-Esta semana, reescribimos la generación de claves distribuidas de Quantus para las claves Dilithium para que coincida con el documento Mithril actualizado y enviamos correcciones en nuestra implementación de firma de umbral.
+Esta semana reescribimos la generación distribuida de claves de Quantus para claves Dilithium, alineada con el paper actualizado de Mithril, y enviamos correcciones en nuestra implementación de firmas threshold.
 
-Así podrás fragmentar una clave Quantus entre varias partes. Importante para nuestras integraciones seguras.
+Así podrás fragmentar una clave de Quantus entre varias partes. Importante para nuestras integraciones seguras.
 
-Abordamos un elemento de auditoría en la especificación de Wormhole y expusimos ayudantes en el SDK de la CLI pública de Quantus, abriendo el soporte de transacciones privadas a desarrolladores externos. Wormhole es cómo logramos la privacidad post-cuántica escalable.
+Abordamos un punto de auditoría en la especificación de Wormhole y expusimos helpers en el SDK público de la CLI de Quantus, abriendo el soporte de transacciones privadas a desarrolladores externos. Wormhole es cómo logramos privacidad post-cuántica escalable.
 
-También lanzamos la billetera v1.4.0 con un rediseño completo que simplifica y embellece la experiencia de la aplicación móvil (actualmente en TestFlight).
+También lanzamos la wallet v1.4.0 con un rediseño completo que simplifica y embellece la experiencia de la app móvil (actualmente en TestFlight).
 
-### Actividad en Github (16 pull requests fusionados):
+### Actividad en GitHub (16 pull requests fusionados):
 
-![Estadísticas de Github](/blog/assets/github-stats-weekly-update-05-06-2026.webp)
+![Github Stats](/blog/assets/github-stats-weekly-update-05-06-2026.webp)
 
-### Tecnología principal y ZK:
+### Tecnología central y ZK:
 
-- Se reescribió la generación de claves distribuidas para las claves Dilithium para que coincida con el documento Mithril actualizado.
-- Se reforzó la implementación de la firma de umbral contra tres hallazgos de auditoría.
-- Se actualizó la especificación de Wormhole para abordar un elemento de auditoría sobre las salidas de cambio.
-- Se expusieron los ayudantes de Wormhole en el SDK de la CLI pública de Quantus y se agregaron flujos de trabajo de ejemplo de depósito a acuñación de extremo a extremo.
-- Se refactorizó el ciclo de vida de las transacciones de la CLI con estados distintos de enviado, incluido y finalizado, análisis exacto de tarifas decimales, verificaciones de compatibilidad de versiones más estrictas y transferencias por lotes con detección de desbordamiento.
-- Se creó una herramienta de evaluación comparativa para mejorar el algoritmo de ajuste de dificultad.
-- Se investigaron y evaluaron diferentes topologías de árboles de agregación y su uso de CPU.
-- Se corrigieron errores ortográficos en la frase de verificación humana.
+- Reescritura de la generación distribuida de claves Dilithium para alinearla con el paper actualizado de Mithril.
+- Endurecimiento de la implementación de firmas threshold frente a tres hallazgos de auditoría.
+- Actualización de la especificación de Wormhole para abordar un punto de auditoría sobre outputs de cambio.
+- Exposición de helpers de Wormhole en el SDK público de la CLI de Quantus y adición de flujos de ejemplo de depósito a mint de extremo a extremo.
+- Refactorización del ciclo de vida de transacciones de la CLI con estados distintos de enviado, incluido y finalizado, parsing decimal exacto de comisiones, comprobaciones de compatibilidad de versión más estrictas y transferencias por lotes con control de desbordamiento.
+- Construcción de una herramienta de benchmarking para mejorar el algoritmo de ajuste de dificultad.
+- Investigación y benchmarking de distintas topologías de árbol de agregación y su uso de CPU.
+- Corrección de errores ortográficos en la frase de verificación humana.
 
 ### Red e infraestructura:
 
-- Se amplió la suite de pruebas de estrés con el modo Wormhole y se ejecutó muchas veces en la red de prueba Planck.
-- Se movió el indexador de blockchain Subsquid a un servidor de nivel de producción y se agregaron datos estadísticos de cuentas y cadenas.
-- Se evaluaron las consultas del Explorador y se eliminaron las costosas.
-- Se actualizaron todos los sistemas operativos de los VPS y se documentó la infraestructura.
-- Se actualizó el stack del minero y se probó la aplicación del minero en Windows.
+- Ampliación de la suite de stress test con modo wormhole y ejecución repetida en la testnet Planck.
+- Migración del indexador blockchain Subsquid a un servidor de grado producción y adición de datos de estadísticas de cuentas y cadena.
+- Benchmarking de consultas del Explorer y eliminación de las más costosas.
+- Actualización de todos los sistemas operativos de los VPS y documentación de la infraestructura.
+- Actualización del miner-stack y pruebas de miner-app en Windows.
 
-### Actualizaciones de la aplicación web y móvil:
+### Web y app móvil:
 
-- Se envió el minero GUI para Planck (v0.4.1) con funcionalidad de reclamo.
-- Se lanzó la billetera v1.4.0 (actualmente en TestFlight) con un rediseño completo de la interfaz de usuario y tipos de cambio reales.
-- Correcciones de errores de la billetera: estilo del saldo de la página de inicio, estilo del componente de actividad y la pantalla de recepción.
-- Task Master: se agregó un endpoint de tipos de cambio y se actualizó la dependencia de checksum.
-- Se actualizó el sitio web de Quantus: se apuntó el enlace de la documentación a docs (punto) quantus (punto) com, se actualizó la visualización de TPS y se publicó la actualización semanal.
+- Lanzamiento del minero GUI para Planck (v0.4.1) con funcionalidad de claim.
+- Lanzamiento de la wallet v1.4.0 (actualmente en TestFlight) con rediseño completo de la UI y tipos de cambio reales.
+- Correcciones en la wallet: estilo del saldo en la página principal, estilo del componente de actividad y pantalla de recepción.
+- Task Master: adición de un endpoint de tipos de cambio y actualización de la dependencia de checksum.
+- Actualización del sitio web de Quantus: enlace de docs apuntando a docs (dot) quantus (dot) com, actualización del display de TPS y publicación del weekly update.
 
-### Contenido y asociaciones:
+### Contenido y alianzas:
 
-- Se actualizó la marca del podcast en Spotify, Apple y YouTube.
-- Se vendió el primer par de gafas Quantus por [$QUAN](https://x.com/search?q=%24QUAN&src=cashtag_click) en Network School.
-- Quantus tuvo un stand en la feria NS, incorporando usuarios de la aplicación y registrados para el Q-day.
+- Actualización del branding del podcast en Spotify, Apple y YouTube.
+- Venta del primer par de Quantus Glasses por [$QUAN](https://x.com/search?q=%24QUAN&src=cashtag_click) en Network School.
+- Quantus tuvo un stand en la feria de NS, incorporando usuarios de la app y registrados de Q-Day.

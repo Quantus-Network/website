@@ -1,10 +1,10 @@
 ---
-title: "Quantus Weekly: activos nativos y riesgo cuántico"
-description: Sin activos envueltos: solo QUAN nativo con ML-DSA-87 y agregación ZK. El mercado descuenta Bitcoin ante un CRQC antes de una migración post-cuántica.
+title: "Quantus Weekly: Activos nativos y riesgo cuántico"
+description: "Por qué el capital descuenta Bitcoin por riesgo cuántico, nuestra apuesta por activos nativos y avances en threshold Dilithium y agregación ZK esta semana."
 
 pubDate: "2026-01-21"
 heroImage: "/blog/covers/weekly-update-01-21-2026.webp"
-heroAlt: "Quantus Weekly: activos nativos y riesgo cuántico"
+heroAlt: "Quantus Weekly: Activos nativos y riesgo cuántico"
 featured: false
 tags:
   [
@@ -19,52 +19,52 @@ tags:
   ]
 ---
 
-Si te preguntas por qué el oro está subiendo y Bitcoin está luchando, lee esto. No hay nada misterioso al respecto.
+Si te preguntas por qué el oro se dispara y Bitcoin se resiente, lee esto. No hay nada misterioso.
 
-![Resumen de la entrevista de Nic Carter](/blog/assets/nic-carter-x-post-about-bitcoin-underperformance-due-to-quantum.webp)
+![Resumen de la entrevista a Nic Carter](/blog/assets/nic-carter-x-post-about-bitcoin-underperformance-due-to-quantum.webp)
 
-Los asignadores de capital están descontando Bitcoin en proporción a las probabilidades de que un ordenador cuántico criptográficamente relevante (CRQC) se lance antes de que Bitcoin se actualice a la criptografía post-cuántica. Ya sea que la comunidad de Bitcoin acepte esto o no, el mercado ya lo ha hecho.
+Los asignadores de capital están descontando Bitcoin en proporción a las probabilidades de que un ordenador cuántico criptográficamente relevante (CRQC) llegue antes de que Bitcoin actualice a criptografía poscuántica. Tanto si la comunidad de Bitcoin lo acepta como si no, el mercado ya lo ha hecho.
 
-Algunas cadenas se actualizarán a tiempo. Bitcoin probablemente no lo hará. Por ejemplo, recientemente Vitalik instó a una actualización de PQC.
+Algunas cadenas se actualizarán a tiempo. Bitcoin probablemente no. Por ejemplo, recientemente Vitalik instó a una actualización PQC.
 
-No tenemos forma de saber con precisión cuándo es la fecha límite, o qué cadenas se actualizarán a tiempo. Lo que significa que tuvimos que tomar decisiones de diseño difíciles en torno al soporte de activos externos en @QuantusNetwork.
+No tenemos forma de saber con precisión cuándo es la fecha límite, ni qué cadenas se actualizarán a tiempo. Eso significa que tuvimos que tomar decisiones de diseño difíciles sobre soportar activos externos en @QuantusNetwork.
 
-Si la cadena de origen de un activo envuelto (wrapped) se ve comprometida, también lo hacen los poseedores del activo envuelto. Así que decidimos que @QuantusNetwork no podía soportar ningún activo envuelto.
+Si la cadena de origen de un activo envuelto se ve comprometida, también lo están sus titulares. Por eso decidimos que @QuantusNetwork no podía soportar activos envueltos.
 
-Estamos construyendo infraestructura para permitir el puente (bridging) sin permisos desde cualquier lugar hacia el dinero seguro cuántico más resistente jamás creado. Una vez que estés en nuestra cadena con QUAN nativo, estarás protegido por ML-DSA-87 (el nivel de seguridad más alto del NIST) con un rendimiento impresionante a través de la agregación ZK.
+Estamos construyendo infraestructura para permitir bridging permissionless desde cualquier lugar hacia el dinero nativo cuántico-seguro más resistente jamás creado. Una vez en nuestra cadena con QUAN nativo, estás protegido por ML-DSA-87 (el nivel de seguridad más alto de NIST) con un throughput brutal gracias a la agregación ZK.
 
-No quiero anunciar nada aquí, pero siempre puedes abrir nuestro GitHub y echar un vistazo 👀
+No quiero anunciar nada aquí, pero siempre puedes abrir nuestro GitHub y comprobarlo 👀
 
-Esto es lo que más enviamos esta semana, para que cuando llegue el día Q, estemos listos:
+Esto es lo más que lanzamos esta semana, para que cuando llegue el Q-day, estemos listos:
 
-### Actividad en Github (7 pull requests fusionados):
+### Actividad en GitHub (7 pull requests fusionados):
 
-![Estadísticas de Github](/blog/assets/github-stats-weekly-update-01-21-2026.webp)
+![Estadísticas de GitHub](/blog/assets/github-stats-weekly-update-01-21-2026.webp)
 
-### Tecnología Core y ZK
+### Tecnología central y ZK
 
-- Integración de firmas de umbral Dilithium en el sistema MPC de otro protocolo.
-- Construcción de POC para la gestión de tesorería personalizada utilizando el pallet multisig de Parity.
-- Implementación de la primera iteración del pallet multisig personalizado con pruebas y benchmarks.
-- Corrección de un error que impedía los binarios de circuitos habilitados para ZK en el pallet ZK-aggregator.
-- Actualización del verificador ZK-aggregator onchain para soportar cantidades de salida cuantizadas.
-- Corrección del script de ejemplo de ZK-aggregator de extremo a extremo para los nuevos serializadores de elementos de campo.
+- Integramos firmas threshold Dilithium en el sistema MPC de otro protocolo.
+- Construimos un POC para gestión de tesorería personalizada usando el pallet multisig de Parity.
+- Implementamos la primera iteración del pallet multisig personalizado con tests y benchmarks.
+- Parcheamos un bug que impedía los binarios de circuitos con ZK en el pallet ZK-aggregator.
+- Actualizamos el verificador on-chain del ZK-aggregator para soportar cantidades de salida cuantizadas.
+- Corregimos el script de ejemplo end-to-end del ZK-aggregator para los nuevos serializadores de elementos de campo.
 
-### Actualizaciones de la Aplicación Web y Móvil
+### Actualizaciones web y app móvil
 
-- Construcción de la UX móvil para soportar funciones de retraso fijo e interceptación para cuentas de alta seguridad (aún en pruebas).
-- Escáner de bloques y funciones de alta seguridad añadidas a la CLI con una mejor gestión de errores.
-- Actualizaciones de Subsquid (indexador) para el manejo de alta seguridad y corrección del hasher para el último Poseidon.
-- Lanzamiento de la sección de blog en el sitio web de Quantus con soporte para etiquetas y comienzo de la carga del historial de actualizaciones semanales.
-- Whitepaper actualizado a la v3.1, corrección de los valores de distribución del gráfico de tokenomics.
+- Construimos UX móvil para soportar delay fijo e intercept en cuentas de alta seguridad (aún en pruebas).
+- Añadimos block scanner y funciones de alta seguridad a la CLI con mejor manejo de errores.
+- Actualizaciones de Subsquid (indexer) para manejo de alta seguridad y corrección del hasher para el Poseidon más reciente.
+- Lanzamos la sección de blog en el sitio web de Quantus con soporte de tags y comenzamos a subir el backlog de actualizaciones semanales.
+- Whitepaper actualizado a v3.1; corregidos los valores de distribución del gráfico tokenómico.
 
-### Contenido y Alianzas
+### Contenido y alianzas
 
-- Los podcasts ahora se están subiendo a Apple Podcasts.
-- Inicio de conversaciones con 2 plataformas de lanzamiento (launchpads) de tokens.
+- Los podcasts ya se suben a Apple Podcasts.
+- Iniciamos conversaciones con 2 launchpads de tokens.
 - Mejoras en la página de comparación de blockchains de Quantum Canary.
-- Podcast con AJ sobre biohacking y auto-optimización: https://x.com/QuantusNetwork/status/2012526120869286161
+- Podcast con AJ sobre biohacking y autooptimización: https://x.com/QuantusNetwork/status/2012526120869286161
 
-### Actualizaciones de la Industria
+### Actualidad del sector
 
-- Artículo de Quantum Canary discutiendo cómo los CRQCs amenazan las monedas de Satoshi: https://x.com/QuantumCanary_/status/2011706634868047982
+- Artículo de Quantum Canary sobre cómo los CRQC amenazan las monedas de Satoshi: https://x.com/QuantumCanary_/status/2011706634868047982

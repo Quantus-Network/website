@@ -1,6 +1,6 @@
 ---
 title: "Quantus Weekly: Planck, CLI y prover el doble de rápido"
-description: Planck admite transacciones privadas poscuánticas. Más de la mitad de mineros migraron, recompensas por CLI y el rendimiento agregado del prover se duplicó.
+description: "Planck admite transacciones privadas poscuánticas. Más de la mitad de mineros migraron, recompensas por CLI y el rendimiento agregado del prover se duplicó."
 pubDate: "2026-04-22"
 heroImage: "/blog/covers/weekly-update-04-22-2026.webp"
 heroAlt: "Quantus Weekly: Planck, CLI y prover el doble de rápido"
@@ -49,7 +49,7 @@ Y hubo más entregas esta semana.
 
 ![Github Stats](/blog/assets/github-stats-weekly-update-04-22-2026.webp)
 
-### Core Tech y ZK
+### Tecnología principal y ZK
 
 - Rendimiento del prover agregado duplicado con arquitectura de prueba partida 2x8 (sin ZK en cada bundle de 8 hojas; envoltura ZK sobre la prueba raíz).
 - Envío de nuestro artículo de investigación ZK como preprint.
@@ -60,7 +60,7 @@ Y hubo más entregas esta semana.
 - Corrección en CLI para recuperación de saldo vía wormhole.
 - Miembros del Tech Collective ejecutaron con éxito una actualización en runtime.
 
-### Red e infra
+### Red e infraestructura
 
 - Planck: cambios nuevos fusionados y publicados; testnet interno Planck en marcha.
 - Pruebas de estrés: nueva estrategia y varias ejecuciones.
@@ -73,7 +73,7 @@ Y hubo más entregas esta semana.
 - Minero MVP de punta a punta en Apple Silicon y Linux; depurando minería GPU en Linux.
 - Skill de minería con IA (SKILL.md); en pruebas, minería en marcha en menos de dos minutos.
 
-### Web y app móvil
+### Actualizaciones web y app móvil
 
 - [docs.quantus.com](https://docs.quantus.com) en vivo.
 - Desplegada la landing de [q.day](https://q.day).

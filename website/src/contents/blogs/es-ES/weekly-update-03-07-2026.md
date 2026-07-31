@@ -1,6 +1,6 @@
 ---
 title: "Quantus Weekly: Transacciones Wormhole"
-description: Transacciones wormhole, recompensas de bloque privadas para mineros, correcciones de consenso y actualizaciones de la billetera esta semana.
+description: "Transacciones wormhole, recompensas de bloque privadas para mineros, correcciones de consenso y actualizaciones de la billetera esta semana."
 
 pubDate: "2026-03-07"
 heroImage: "/blog/covers/weekly-update-03-07-2026.webp"
@@ -38,9 +38,9 @@ Las claves públicas de Dilithium son masivas. No caben en 32 bytes. Por lo tant
 
 La privacidad es impuesta por el protocolo, sin necesidad de optar por ella.
 
-Esta semana, integramos esto en la aplicación del minero. In la próxima red de pruebas, todas las recompensas de bloque se dirigirán a través de direcciones wormhole por defecto.
+Esta semana integramos esto en la aplicación del minero. En la próxima red de pruebas, todas las recompensas de bloque se dirigirán a través de direcciones wormhole por defecto.
 
-Esto es lo que más hemos construido esta semana.
+Esto es lo demás que hemos construido esta semana.
 
 ### Actividad en Github (11 pull requests fusionados):
 

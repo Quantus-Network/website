@@ -1,10 +1,9 @@
 ---
-title: "Quantus Weekly: minería GPU 9x y refactorización ZK"
-description: El minero GPU rinde unas 9 veces más que la versión CPU. Refactor del circuito de agregación ZK, reuniones con inversores en EAU y avances en tokenómica.
-
+title: "Quantus Weekly: avance GPU y refactor ZK"
+description: "Avance de ~9x en minería GPU, refactor del circuito de agregación ZK y reuniones estratégicas en EAU sobre tokenomics y lanzamiento."
 pubDate: "2025-12-15"
 heroImage: "/blog/covers/weekly-update-12-15-2025.webp"
-heroAlt: "Quantus Weekly: minería GPU 9x y refactorización ZK"
+heroAlt: "Quantus Weekly: avance GPU y refactor ZK"
 featured: false
 tags:
   [
@@ -17,42 +16,42 @@ tags:
   ]
 ---
 
-Esta semana el equipo logró un gran avance en el rendimiento de la minería. Nuestro nuevo minero por GPU ahora funciona aproximadamente 9 veces más rápido que la versión para CPU.
+Esta semana el equipo logró un avance en el rendimiento de minería. Nuestro nuevo minero GPU ahora corre ~9x más rápido que la versión CPU.
 
-También completamos una refactorización de nuestro circuito de agregación ZK, lo que nos permitió eliminar miles de líneas de código.
+También completamos un refactor de nuestro circuito de agregación ZK, lo que nos permitió eliminar miles de líneas de código.
 
-Durante su estancia en los Emiratos Árabes Unidos, el equipo se reunió con asesores e inversores. Estas reuniones consolidaron nuestra visión del producto y aclararon la tokenómica y la estrategia de lanzamiento del token. También se realizaron progresos significativos en el desarrollo de negocios (BD) para apoyar el lanzamiento del token.
+Mientras estábamos en EAU, el equipo se reunió con asesores e inversores. Estas reuniones solidificaron nuestra visión de producto y aclararon tokenomics y estrategia de lanzamiento del token. También hubo avances significativos de BD para apoyar el lanzamiento del token.
 
-Informe semanal de actividad en Github que incluye 10 pull requests fusionados: https://github.com/Quantus-Network/n8n-workflows/blob/main/github/weekly-update-2025-12-16-23:23:47.md
+Informe semanal de actividad en Github con 10 pull requests fusionados: https://github.com/Quantus-Network/n8n-workflows/blob/main/github/weekly-update-2025-12-16-23:23:47.md
 
 ## Core Tech & ZK
 
-- Migración de nuestras pruebas de transferencia del agregador ZK a un pallet dedicado, incluyendo actualizaciones en el CLI, los circuitos y la lógica de Poseidon. Esta refactorización nos permitió eliminar miles de líneas de código.
-- Diseño de una solución para hacer genérico el hasher de almacenamiento Poseidon.
-- Fusión de cambios pendientes y resolución de problemas de calidad de código relacionados con transferencias reversibles.
+- Migramos nuestras pruebas de transferencia del agregador ZK a un pallet dedicado, incluyendo actualizaciones a la CLI, circuitos y lógica Poseidon. Este refactor nos permitió eliminar miles de líneas de código.
+- Diseñamos una solución para hacer genérico el storage hasher de Poseidon.
+- Fusionamos cambios pendientes y resolvimos problemas de calidad de código relacionados con transferencias reversibles.
 
 ## Network & Infra
 
-- El minero por GPU es ahora ~9 veces más rápido que el minero por CPU.
-- Lanzamiento del CLI v0.3.1, unificación de la bandera de finalización y mejora del formato de direcciones.
-- Ejecución de una actualización del runtime y actualización de la especificación de la cadena.
-- Despliegue de un nuevo BootNode.
-- Finalización de comprobaciones de seguridad y actualizaciones en todos los servidores.
-- Despliegue de comprobaciones de salud en contenedores para el servicio de indexación Subsquid.
+- El minero GPU ahora es ~9x más rápido que el minero CPU.
+- Publicamos CLI v0.3.1, flag de finalización unificado y formato de direcciones mejorado.
+- Ejecutamos una actualización de runtime y actualizamos la especificación de la cadena.
+- Desplegamos un nuevo BootNode.
+- Completamos revisiones de seguridad y actualizaciones en todos los servidores.
+- Desplegamos health checks containerizados para el servicio de indexación Subsquid.
 
 ## Web & Mobile App Updates
 
-- Avance en la integración de la billetera de hardware. Ahora se analizan códigos QR en Keystone y se firman mensajes de prueba.
-- Inicio de la implementación de la funcionalidad de billetera de hardware multi-billetera (mnemónica) en la aplicación móvil.
-- Actualización de los formularios del sitio web e integración con nuestro proveedor de correo electrónico.
-- Optimización de rusx para consultas por lotes, evitando problemas de limitación de tasa.
+- Avanzamos la integración del hardware wallet. Ahora parseamos códigos QR en Keystone y firmamos mensajes dummy.
+- Comenzamos a implementar funcionalidad de hardware wallet multi-wallet (mnemonic) en la app móvil.
+- Actualizamos formularios del sitio web e los integramos con nuestro proveedor de email.
+- Optimizamos rusx para agrupar consultas, evitando problemas de rate-limiting.
 
 ## Content & Partnerships
 
-- Asistencia al Solana Breakpoint y prueba de nuestro posicionamiento/memes de "Bitcoin Cuánticamente Seguro".
-- Reunión con asesores en los Emiratos Árabes Unidos para discutir el lanzamiento del token, la tokenómica y la estrategia GTM de Quantus.
-- El episodio con Tom Howard ya está disponible: https://x.com/QuantusNetwork/status/2000585749914427684
+- Asistimos a Solana Breakpoint y probamos nuestro posicionamiento/memes de «Quantum Secure Bitcoin».
+- Nos reunimos con asesores en EAU para discutir el lanzamiento del token, tokenomics y la estrategia GTM de Quantus.
+- Episodio con Tom Howard en vivo: https://x.com/QuantusNetwork/status/2000585749914427684
 
-## Industry Updates
+## Actualizaciones de la Industria
 
-- Quantum Canary lanzó una página completa de comparación de blockchains "Quantum Ready": https://www.quantumcanary.org/is-your-blockchain-quantum-ready
+- Quantum Canary publicó una página comparativa completa «Quantum Ready» para blockchains: https://www.quantumcanary.org/is-your-blockchain-quantum-ready

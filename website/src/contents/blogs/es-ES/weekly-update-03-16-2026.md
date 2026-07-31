@@ -1,6 +1,6 @@
 ---
 title: "Quantus Weekly: ML-DSA y Wormhole el doble de rápido"
-description: Firmas ML-DSA 70 veces más grandes que Bitcoin, escaladas con agregación ZK. Pruebas wormhole el doble de rápidas, revisiones de seguridad y nodos testnet.
+description: "Firmas ML-DSA 70 veces más grandes que Bitcoin, escaladas con agregación ZK. Pruebas wormhole el doble de rápidas, revisiones de seguridad y nodos testnet."
 
 pubDate: "2026-03-16"
 heroImage: "/blog/covers/weekly-update-03-16-2026.webp"
@@ -56,7 +56,7 @@ Esto es lo demás que hemos construido esta semana:
 
 ![Github Stats](/blog/assets/github-stats-weekly-update-03-16-2026.webp)
 
-### Core Tech y ZK:
+### Tecnología principal y ZK:
 
 - Las pruebas de agregación Wormhole son ahora 2x más rápidas, usando un probador serializado en lugar de reconstruir dinámicamente.
 - Finalizado el refactor y separación del builder/prover de circuitos para qp-zk-circuits.

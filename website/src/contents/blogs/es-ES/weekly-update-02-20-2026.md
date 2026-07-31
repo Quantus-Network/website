@@ -1,10 +1,10 @@
 ---
-title: "Quantus Semanal: investigación abierta post-cuántica"
-description: Abrimos research.quantus.com para revisión pública de decisiones de protocolo. Agregación ZK multi-máquina, pallet multifirma y notificaciones móviles.
+title: "Quantus Weekly: Investigación abierta y PQC"
+description: "Lanzamiento de research.quantus.com, agregación de pruebas ZK, merge del pallet multisig y actualizaciones del wallet móvil. Resumen semanal de Quantus."
 
 pubDate: "2026-02-20"
 heroImage: "/blog/covers/weekly-update-02-20-2026.webp"
-heroAlt: "Quantus Semanal: investigación abierta post-cuántica"
+heroAlt: "Quantus Weekly: Investigación abierta y PQC"
 featured: false
 tags:
   [
@@ -18,47 +18,47 @@ tags:
   ]
 ---
 
-La criptografía post-cuántica es demasiado nueva para lanzarse en una blockchain a puerta cerrada.
+La criptografía poscuántica es demasiado nueva para lanzarla en una blockchain a puerta cerrada.
 
 Esta semana lanzamos [research.quantus.com](https://research.quantus.com/).
 
-Es un foro público para que criptógrafos y desarrolladores analicen cualquier decisión de protocolo que hayamos tomado. Los investigadores ya están realizando pruebas de estrés en las superficies de ataque de Poseidon2.
+Es un foro público para que criptógrafos y desarrolladores desmonten cualquier decisión de protocolo que hayamos tomado. Investigadores ya están sometiendo a estrés las superficies de ataque de Poseidon2.
 
-El NIST finalizó los estándares post-cuánticos el año pasado. Ese fue el paso uno. El paso dos es que cada equipo de protocolo en cripto los implemente realmente. No hay un manual establecido para construir una cadena cuánticamente segura, así que estamos construyendo el estándar.
+NIST finalizó los estándares poscuánticos el año pasado. Ese fue el paso uno. El paso dos es que cada equipo de protocolo en cripto los implemente de verdad. No hay un playbook establecido para construir una cadena cuántico-segura, así que estamos construyendo el estándar.
 
-Si estás trabajando en seguridad post-cuántica, la puerta está abierta.
+Si trabajas en seguridad poscuántica, la puerta está abierta.
 
-Aquí está lo que más construimos esta semana.
+Esto es lo más que construimos esta semana.
 
 ### Actividad en GitHub (4 pull requests fusionados):
 
-![Estadísticas de Github](/blog/assets/github-stats-weekly-update-02-20-2026.webp)
+![Estadísticas de GitHub](/blog/assets/github-stats-weekly-update-02-20-2026.webp)
 
-### Tecnología Principal y ZK
+### Tecnología central y ZK
 
-- Se actualizaron los circuitos ZK para admitir la agregación de pruebas en múltiples máquinas con verificación en cadena.
-- Se fusionó el pallet de multifirma, brindando soporte completo de multifirma con cuentas de alta seguridad.
+- Actualizamos los circuitos ZK para soportar agregación de pruebas multi-máquina con verificación on-chain.
+- Fusionamos el pallet multisig, entregando soporte multisig completo con cuentas de alta seguridad.
 
-### Red e Infraestructura
+### Red e infraestructura
 
-- Se desarrolló el sistema de notificación Senoti: servicio de registro de dispositivos, servicio de observador de blockchain y trabajador principal con configuración de CI y despliegue.
-- Se mejoró el bot de faucet en Telegram para responder mejor al aumento de actividad.
-- Se añadieron flujos de trabajo de gestión de lanzamientos para qp-plonky2 y qp-zk-circuits.
+- Desarrollamos el sistema de notificaciones Senoti: servicio de registro de dispositivos, servicio blockchain watcher y worker central con CI y despliegue configurados.
+- Mejoramos el bot del faucet en Telegram para responder mejor al aumento de actividad.
+- Añadimos workflows de gestión de releases para qp-plonky2 y qp-zk-circuits.
 
-### Actualizaciones de la Aplicación Web y Móvil
+### Actualizaciones web y app móvil
 
-- Se lanzó [research.quantus.com](https://research.quantus.com/), un foro basado en Discourse para la investigación criptográfica y la discusión técnica.
-- Se actualizó el sitio web de Quantus: se renovó la página del whitepaper, se añadió un gráfico circular de asignación de tokens a /launch, se añadió la integración con CoinGecko y se publicaron todas las actualizaciones semanales como entradas de blog.
-- Se actualizó el diseño de la billetera y se envió a TestFlight. Nueva versión próximamente en la App Store.
-- Correcciones de errores y de UX en la billetera móvil.
-- Se integró la base de FCM para el manejo de notificaciones push en la billetera móvil.
+- Lanzamos [research.quantus.com](https://research.quantus.com/), un foro basado en Discourse para investigación criptográfica y discusión técnica.
+- Actualizamos el sitio web de Quantus: página del whitepaper renovada, gráfico circular de asignación de tokens en /launch, integración con CoinGecko y publicación de todas las actualizaciones semanales como posts del blog.
+- Actualizamos el diseño del wallet y lo enviamos a TestFlight. Nueva versión próximamente en App Store.
+- Correcciones de bugs y UX en el wallet móvil.
+- Integramos la base FCM para manejo de push notifications en el wallet móvil.
 
-### Contenido y Alianzas
+### Contenido y alianzas
 
-- Chris apareció en el [podcast Bad Crypto](https://x.com/QuantusNetwork/status/2023752636387012675) y en el [espacio de wenaltseason](https://x.com/wenaltseason/status/2022402584041193831).
-- El equipo llegó a Network School y está instalando una oficina.
+- Chris apareció en el [Bad Crypto podcast](https://x.com/QuantusNetwork/status/2023752636387012675) y en el [wenaltseason space](https://x.com/wenaltseason/status/2022402584041193831).
+- El equipo llegó a Network School y está montando una oficina.
 
-### Actualizaciones de la Industria
+### Actualidad del sector
 
-- Quantum Canary: ¿Pueden las computadoras cuánticas romper Monero? [Enlace](https://x.com/QuantumCanary_/status/2024204427159359931)
-- Quantum Canary: ¿Qué tan descentralizado es DeFi? [Enlace](https://x.com/QuantumCanary_/status/2021846672834539665)
+- Quantum Canary: ¿Pueden los ordenadores cuánticos romper Monero? [Enlace](https://x.com/QuantumCanary_/status/2024204427159359931)
+- Quantum Canary: ¿Qué tan descentralizado está DeFi? [Enlace](https://x.com/QuantumCanary_/status/2021846672834539665)

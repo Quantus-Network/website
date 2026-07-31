@@ -1,10 +1,10 @@
 ---
-title: "Quantus Weekly: La billetera debe ser simple"
-description: Lanzamiento de Wallet v1.2.0, Tesorería con multifirma, actualizaciones del testnet Heisenberg y mejoras de rendimiento esta semana.
+title: "Quantus Weekly: El wallet debe ser simple"
+description: "Lanzamiento del Wallet v1.2.0, Treasury con multisig, actualizaciones del testnet Heisenberg y mejoras de rendimiento. Resumen semanal de Quantus."
 
 pubDate: "2026-02-27"
 heroImage: "/blog/covers/weekly-update-02-27-2026.webp"
-heroAlt: "Quantus Weekly: La billetera debe ser simple"
+heroAlt: "Quantus Weekly: El wallet debe ser simple"
 featured: false
 tags:
   [
@@ -18,72 +18,72 @@ tags:
   ]
 ---
 
-Cada billetera cripto importante está agregando funciones basura que no quiero.
+Cada wallet cripto importante añade funciones basura que no quiero.
 
-No quiero una aplicación de redes sociales que también guarde mi dinero.
+No quiero una app de redes sociales que además guarde mi dinero.
 
-¿Alguna vez has notado que no existe una billetera de bitcoin "oficial", altamente opinada, fácil de usar y de autocustodia?
+¿Has notado que no existe un wallet de Bitcoin "oficial", muy opinado, fácil de usar y de autocustodia?
 
-Lo mismo ocurre con Ethereum y Solana.
+Lo mismo pasa con Ethereum y Solana.
 
-Las fundaciones construyen la cadena y dejan la interfaz a terceros. Los terceros necesitan ingresos. Los ingresos significan funciones. Las funciones significan ruido.
+Las fundaciones construyen la cadena y dejan la interfaz a terceros. Los terceros necesitan ingresos. Ingresos significa funciones. Funciones significa ruido.
 
-Así que ahora tu billetera tiene un agregador de swaps, un feed social, tokens en tendencia, galerías de NFT y notificaciones push sobre monedas de las que nunca has oído hablar.
+Así que ahora tu wallet tiene un agregador de swaps, un feed social, tokens en tendencia, galerías NFT y push notifications sobre monedas que nunca has oído.
 
-Nosotros construimos Quantus y construimos la billetera.
+Construimos Quantus y construimos el wallet.
 
-Mismo equipo, mismo producto. La aplicación que enviamos a la App Store esta semana no tiene anuncios, ni feeds de tokens, ni funciones sociales, ni nombres de usuario reclamables.
+Mismo equipo, mismo producto. La app que lanzamos en App Store esta semana no tiene anuncios, feeds de tokens, funciones sociales ni usernames reclamables.
 
-Ábrela, ves tu saldo, envías o recibes.
+La abres, ves tu saldo, envías o recibes.
 
-Rediseñamos la interfaz desde cero para que sea altamente opinada con valores predeterminados que eliminen la mayor carga cognitiva posible del usuario.
+Rediseñamos la interfaz desde cero para ser muy opinados, con defaults que eliminan la mayor carga cognitiva posible del usuario.
 
-También redujimos drásticamente el tiempo de carga del historial de transacciones de la billetera. Ya no hay que esperar a que se carguen el saldo y las transacciones anteriores después de abrir la aplicación.
+También redujimos drásticamente el tiempo de carga del historial de transacciones del wallet. Se acabó esperar a que carguen el saldo y las transacciones anteriores al abrir la app.
 
-El dinero privado cuánticamente seguro debería ser fácil de usar e idealmente aburrido.
+El dinero privado cuántico-seguro debería ser simple de usar e idealmente aburrido.
 
-Dejaremos la emoción para las cadenas pre-cuánticas en el Qday.
+Dejaremos la emoción a las cadenas pre-cuánticas en el Q-day.
 
-Todo es de código abierto. Cualquiera puede construir su propia billetera. Pero siempre habrá una oficial que simplemente funcione.
+Todo es open source. Cualquiera puede construir su propio wallet. Pero siempre habrá uno oficial que simplemente funciona.
 
 ### Actividad en GitHub (4 pull requests fusionados):
 
-![Estadísticas de Github](/blog/assets/github-stats-weekly-update-02-27-2026.webp)
+![Estadísticas de GitHub](/blog/assets/github-stats-weekly-update-02-27-2026.webp)
 
-### Tecnología Central y ZK
+### Tecnología central y ZK
 
-- La Tesorería con multifirma se fusionó e incluyó en el nuevo lanzamiento de la red de pruebas Heisenberg.
-- Todos los cambios pendientes se fusionaron y lanzaron. Se creó, lanzó y desplegó el nuevo génesis de Heisenberg.
-- Se eliminaron las reglas de gobernanza heredadas relacionadas con la gestión de la Tesorería.
-- CLI extendido con nuevos comandos de Multifirma y Tesorería. Los detalles de las cuentas de alta seguridad ahora son visibles en la vista de la billetera.
-- Se agregó el barajado de pruebas y la anulación de cuentas de salida duplicadas para aumentar la privacidad de las transacciones agregadas de wormhole.
-- Se dividió wormhole en constructor de circuitos y probador para acelerar la agregación de pruebas.
-- Se actualizó el flujo de trabajo de lanzamiento de circuitos ZK y se publicaron nuevos artefactos.
-- Se resolvió el problema de dependencia del pallet Revive.
+- Treasury con multisig fusionado e incluido en el nuevo release del testnet Heisenberg.
+- Todos los cambios pendientes fusionados y publicados. Nuevo genesis de Heisenberg creado, publicado y desplegado.
+- Eliminadas reglas de governance heredadas relacionadas con la gestión del Treasury.
+- CLI ampliada con nuevos comandos Multisig y Treasury. Detalles de cuentas de alta seguridad ahora visibles en la vista del wallet.
+- Añadido proof shuffling y zeroing out de cuentas de salida duplicadas para aumentar la privacidad de transacciones wormhole agregadas.
+- Separamos wormhole en circuit builder y prover para acelerar la agregación de pruebas.
+- Workflow de release de circuitos ZK actualizado y nuevos artefactos publicados.
+- Resuelto el issue de dependencia del pallet Revive.
 
-### Red e Infraestructura
+### Red e infraestructura
 
-- Sistema de notificaciones (Senoti): se agregó redundancia al observador de bloques para la mejor selección de red.
-- Se actualizó Senoti para manejar múltiples direcciones por dispositivo.
-- Se agregó redundancia RPC para el servidor Subsquid.
-- Las alertas de monitoreo se actualizaron y redirigieron a los canales apropiados.
+- Sistema de notificaciones (Senoti): añadido failover al block watcher para mejor selección de red.
+- Actualizamos Senoti para manejar varias direcciones por dispositivo.
+- Failover RPC añadido para el servidor Subsquid.
+- Alertas de monitorización actualizadas y redirigidas a los canales correspondientes.
 
-### Actualizaciones de aplicaciones web y móviles
+### Actualizaciones web y app móvil
 
-- Se envió Wallet v1.2.0 a la App Store de iOS.
-- Se redujo el tiempo promedio de carga del historial de transacciones de más de 1 minuto a menos de 5 segundos.
-- Se enviaron las versiones de Wallet 75, 76, 77 con la corrección de la pantalla de inicio de Android y otras correcciones de errores.
-- Se agregó el flujo de trabajo de artefactos de lanzamiento para las versiones de la billetera.
-- Se actualizó el componente toaster y se limpió la versión heredada.
-- Se agregó soporte de notificación remota para registrar direcciones existentes, desregistro de dispositivos FCM al restablecer y eliminación de notificaciones de nuevas direcciones de billetera.
-- Se agregó una lista de palabras felices para las frases de verificación (check-phrases).
-- Se refactorizó Subsquid para centrarse más en los extrínsecos con soporte para el cálculo de la puntuación de privacidad y transacciones de wormhole.
-- Se refactorizó el explorador para reflejar la arquitectura actualizada de Subsquid.
+- Lanzamos Wallet v1.2.0 en iOS App Store.
+- Reducimos el tiempo medio de carga del historial de transacciones de más de 1 minuto a menos de 5 segundos.
+- Lanzamos builds 75, 76 y 77 del Wallet con corrección de splash screen en Android y otras correcciones.
+- Añadimos workflow de artefactos de release para builds del wallet.
+- Actualizamos el componente toaster y limpiamos la versión legacy.
+- Añadimos soporte de notificaciones remotas para registrar direcciones existentes, desregistro de dispositivos FCM al reset y eliminación de notificaciones de nuevas direcciones del wallet.
+- Añadimos lista de happy words para check-phrases.
+- Refactorizamos Subsquid para ser más extrinsics-focused con soporte para cálculo de privacy score y transacciones wormhole.
+- Refactorizamos el explorer para reflejar la arquitectura actualizada de Subsquid.
 
-### Contenido y Alianzas
+### Contenido y alianzas
 
-- Podcast con Nik Heger, "Construyendo un nuevo sistema de dinero sólido"
+- Podcast con Nik Heger, "Building A New Sound Money System"
 
-### Actualizaciones de la Industria
+### Actualidad del sector
 
-- Análisis de Quantum Canary sobre si [la blockchain Tempo de Stripe será cuánticamente segura.](https://x.com/QuantumCanary_/status/2024797352616509754)
+- Análisis de Quantum Canary sobre si [la blockchain Tempo de Stripe será cuántico-segura.](https://x.com/QuantumCanary_/status/2024797352616509754)

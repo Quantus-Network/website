@@ -1,9 +1,9 @@
 ---
-title: "Quantus Weekly: Construimos el marcador"
-description: "migration.fail rastrea cripto post-cuántica al 0,046%. Plus: Keystone en v1.5.5, agregación de pruebas ZK, streaming ML-DSA embebido y miner v3.3.1."
+title: "Quantus Weekly: Construimos el Marcador"
+description: "migration.fail rastrea la capitalización poscuántica: apenas el 0,046%. Además, soporte Keystone en v1.5.5, agregación ZK, streaming ML-DSA y miner v3.3.1."
 pubDate: "2026-07-09"
 heroImage: "/blog/covers/weekly-update-07-09-2026.webp"
-heroAlt: "Quantus Weekly: Construimos el marcador"
+heroAlt: "Quantus Weekly: Construimos el Marcador"
 featured: false
 tags:
   [
@@ -26,61 +26,61 @@ tags:
 
 import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
 
-Todas las cadenas dicen que se volverán post-cuánticas.
+Todas las cadenas dicen que se volverán poscuánticas.
 
 Así que construimos un marcador.
 
-[Migration.fail](https://migration.fail/) rastrea el porcentaje de capitalización de mercado cripto que funciona con criptografía resistente a la computación cuántica.
+[Migration.fail](https://migration.fail/) rastrea el porcentaje de la capitalización de mercado cripto que corre sobre criptografía resistente a la computación cuántica.
 
 Ahora mismo es 0,046%.
 
-Básicamente cero.
+Prácticamente cero.
 
-Más de 2 billones de dólares tienen que moverse desde direcciones pre-cuánticas y volverse post-cuánticas.
+Más de 2 billones de dólares tienen que migrar desde direcciones precuánticas y volverse poscuánticas.
 
 Así que estamos construyendo el destino.
 
-Enviamos v1.5.5 de la app Quantus con soporte de billetera de hardware Keystone.
+Lanzamos la v1.5.5 de la app Quantus con soporte para la hardware wallet Keystone.
 
-Ahora QUAN tiene soporte tanto de multisig como de almacenamiento en frío.
+Ahora QUAN tiene tanto multisig como almacenamiento en frío.
 
 Todo es de código abierto en GitHub.
 
-Toda la industria tendrá que ir a lo post-cuántico; ahora puedes seguir el progreso en tiempo real en [migration.fail](https://migration.fail/).
+Toda la industria va a tener que volverse poscuántica, y ahora puedes seguir el progreso en tiempo real en [migration.fail](https://migration.fail/).
 
-Esto es lo más que construimos:
+Esto es lo demás que construimos:
 
-### Actividad en Github (22 pull requests fusionados):
+### Actividad en GitHub (22 pull requests fusionados):
 
 ![Github Stats](/blog/assets/github-stats-weekly-update-07-09-2026.webp)
 
-### Core Tech y ZK
+### Núcleo Técnico y ZK
 
-- Fusionada la agregación de pruebas de segunda capa en los circuitos ZK, lo que nos permite agregar pruebas ya agregadas para un nuevo salto en el rendimiento.
-- Reducido el pico de memoria para la firma ML-DSA-87 mediante streaming de la matriz de claves, lo que hace que Dilithium sea práctico en hardware embebido como Keystone.
-- Endurecido el recompartido de firmas umbral y mejorado el comportamiento de tiempo constante en nuestra librería Dilithium.
-- Resueltos los hallazgos de severidad media y baja de nuestra revisión interna de la cadena, reforzando los primitivos FRAME y las dependencias.
-- Corregidos hallazgos adicionales de la revisión interna en el código de hash Poseidon.
-- Corregidos activos retenidos huérfanos en la recuperación de transferencias reversibles en la cadena.
-- Añadida una suite de smoke y fuzz tests de quantus exercise al CLI de Quantus, además de una función de actualización.
+- Fusionamos la agregación de pruebas de segunda capa en los circuitos ZK, lo que nos permite agregar pruebas ya agregadas para dar otro salto en el rendimiento.
+- Redujimos la memoria pico de la firma ML-DSA-87 haciendo streaming de la matriz de claves, lo que hace que Dilithium sea viable en hardware embebido como el Keystone.
+- Endurecimos el resharing de firmas por umbral y mejoramos el comportamiento de tiempo constante en nuestra biblioteca Dilithium.
+- Resolvimos hallazgos de severidad media y baja de nuestra revisión interna de la cadena, endureciendo primitivas FRAME y dependencias.
+- Corregimos hallazgos adicionales de la revisión interna en el código de hashing Poseidon.
+- Corregimos activos retenidos huérfanos en la recuperación de transferencias reversibles en la cadena.
+- Añadimos una suite de pruebas smoke y fuzz de ejercicios quantus a la CLI de Quantus, además de una función de actualización.
 
-### Red e infraestructura
+### Red e Infraestructura
 
-- Lanzados miner v3.3.0 y v3.3.1 con mejor soporte GPU en Windows y correcciones en la selección del adaptador GPU para duplicación multi-backend y errores de falta de memoria.
-- Mejorado el flujo de configuración de minería y añadido un script de configuración de minería al sitio de documentación.
-- Añadido soporte de eventos de gobernanza técnica a Subsquid
+- Lanzamos el miner v3.3.0 y v3.3.1 con mejor soporte de GPU en Windows y correcciones en la selección de adaptador GPU para la duplicación multi-backend y errores de falta de memoria.
+- Mejoramos el flujo de configuración de minería y añadimos un script de configuración de minería al sitio de documentación.
+- Añadimos soporte de eventos de gobernanza técnica a Subsquid.
 
-### Actualizaciones web y de la app móvil
+### Actualizaciones de Web y App Móvil
 
-- Enviada v1.5.5 de la app móvil a la App Store con soporte de billetera de hardware Keystone: actualizaciones de firmware, soporte multisig en el firmware, endurecimiento de seguridad en el manejo de claves y corrección de un bug de integración. Nuestro fork de firmware es de código abierto en GitHub.
-- Resueltos todos los hallazgos de severidad media de nuestra revisión interna del firmware Keystone, añadiendo pruebas de conformidad de cadena, firma hedged y vinculación de dispositivo.
-- Lanzado [migration.fail](https://migration.fail/).
-- Añadido soporte de múltiples frases semilla a la billetera móvil.
-- Refactorizado el flujo de envío y enviadas correcciones de UX en toda la app móvil.
-- Endurecido el flujo de copia de frase semilla y el análisis de transacciones, y añadido feedback háptico a la entrada de cantidad.
-- Enviadas correcciones de exactitud de la revisión interna del runtime v12.
+- Lanzamos la v1.5.5 de la app móvil en la App Store con soporte para la hardware wallet Keystone: actualizaciones de firmware, soporte multisig en el firmware, endurecimiento de seguridad en el manejo de claves y una corrección de bug de integración. Nuestro fork de firmware es de código abierto en GitHub.
+- Resolvimos todos los hallazgos de severidad media de nuestra revisión interna del firmware Keystone, añadiendo pruebas de conformidad de cadena, firma hedged y vinculación de dispositivo.
+- Lanzamos [migration.fail](https://migration.fail/).
+- Añadimos soporte para múltiples frases semilla en la wallet móvil.
+- Refactorizamos el flujo de envío y lanzamos correcciones de UX en toda la app móvil.
+- Endurecimos el flujo de copiar la frase semilla y el parseo de transacciones, y añadimos retroalimentación háptica al ingresar montos.
+- Lanzamos correcciones de precisión provenientes de la revisión interna del runtime v12.
 
-### Contenido y alianzas
+### Contenido y Alianzas
 
 - Chris Smith ([@YuviLightman](https://x.com/@YuviLightman)) apareció en el Asia Tech Podcast:
 

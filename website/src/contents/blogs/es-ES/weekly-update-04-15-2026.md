@@ -1,6 +1,6 @@
 ---
 title: "Quantus Weekly: testnet Planck y recompensas tempranas"
-description: Lanzamos el testnet Planck para estrés previo al mainnet. Mineros tempranos ganan más recompensas, migración en un clic y minería GPU ya disponible.
+description: "Lanzamos el testnet Planck para estrés previo al mainnet. Mineros tempranos ganan más recompensas, migración en un clic y minería GPU ya disponible."
 
 pubDate: "2026-04-15"
 heroImage: "/blog/covers/weekly-update-04-15-2026.webp"
@@ -48,9 +48,9 @@ La app de minería con UI sencilla sigue mejorándose, pero si eres un minero m�
 
 Este testnet es el ensayo general. El hashrate subirá rápido cuando la cadena esté en vivo, y querrás tener el equipo afinado para el día uno.
 
-Esto es lo más que lanzamos esta semana:
+Esto es lo demás que lanzamos esta semana:
 
-### Core Tech & ZK
+### Tecnología principal y ZK
 
 - Lanzamos un nuevo testnet.
 - Eliminamos el pallet sudo de cara al mainnet.
@@ -58,19 +58,19 @@ Esto es lo más que lanzamos esta semana:
 - Corregimos el mempool de estado único.
 - Actualizamos Poseidon a la última versión.
 
-### Network & Infra
+### Red e infraestructura
 
 - Actualizamos la documentación del nodo con requisitos mínimos de red.
 - Actualizamos el indexador Subsquid a la última versión de la cadena, corregimos tipos de eventos/extrínsecos reversibles y cancelados y publicamos la imagen Docker v0.6.0.
 - Añadimos limitación de tasa al endpoint del comprobador de riesgo de Task Master y actualizamos la política CORS.
 
-### Web & Mobile App Updates
+### Actualizaciones web y app móvil
 
 - Restauramos el flujo de alta seguridad en la app móvil y lanzamos mejoras de UX.
 - Rediseñamos la página principal del monedero, actualizamos botones, iconos y componentes de la lista de transacciones e integramos la nueva consulta GraphQL para el indexador Subsquid más reciente.
 - Corregimos la animación de la página del monedero móvil, un fallo del banner hero de la página de inicio y el oscurecimiento de la barra de navegación al hacer scroll en rutas que no son la home.
 
-### Content & Partnerships
+### Contenido y alianzas
 
 - Chris en el podcast de [@mobymedia](https://x.com/mobymedia): [https://x.com/mobymedia/status/2043401794227949568](https://x.com/mobymedia/status/2043401794227949568)
 - Publicamos el podcast sobre pruebas de conocimiento cero post-cuánticas con [@ethan*t_c*](https://x.com/ethan_t_c_) y [@YuviLightman](https://x.com/YuviLightman): [https://x.com/QuantusNetwork/status/2042047089660563948](https://x.com/QuantusNetwork/status/2042047089660563948)

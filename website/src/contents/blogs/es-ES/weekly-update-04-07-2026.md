@@ -1,6 +1,6 @@
 ---
 title: "Quantus Weekly: día Q, on-spend y libertad económica"
-description: Google y Oratomic reducen las estimaciones de cúbits para romper ECC. Ataques on-spend frente a bloques de 10 minutos y la fecha límite PQC de Google en 2029.
+description: "Google y Oratomic reducen las estimaciones de cúbits para romper ECC. Ataques on-spend frente a bloques de 10 minutos y la fecha límite PQC de Google en 2029."
 
 pubDate: "2026-04-07"
 heroImage: "/blog/covers/weekly-update-04-07-2026.webp"
@@ -48,7 +48,7 @@ Bitcoin ha lanzado tres actualizaciones mayores de protocolo en la última déca
 
 La ventana para una migración ordenada se cierra ahora mismo y quizá ya pasó. Ahora es existencial.
 
-Por eso fijamos esta semana nuestra estrella polar: libertad económica permanente. Tres palabras en la base de todo lo que construye Quantus. El nuevo [quantus.com](https://quantus.com) está en línea con un rebranding completo e identidad visual alrededor de esa misión.
+Por eso fijamos esta semana nuestra estrella polar: Libertad Económica Permanente. Tres palabras en la base de todo lo que construye Quantus. El nuevo [quantus.com](https://quantus.com) está en línea con un rebranding completo e identidad visual alrededor de esa misión.
 
 Permanente, porque la criptografía es postcuántica de nivel NIST 5.
 
@@ -62,7 +62,7 @@ Libertad, porque nos resistimos a quienes quieren controlarte.
 
 ![Github Stats](/blog/assets/github-stats-weekly-update-04-07-2026.webp)
 
-### Core Tech y ZK
+### Tecnología principal y ZK
 
 - Nueva estrategia de enmascaramiento para qp-plonky2 hace las pruebas hoja con ZK 6× más rápidas sin aumentar el tamaño nativo del trace.
 - CLI refactorizada para que la app móvil y la del minero compartan el mismo código ZK.
@@ -70,7 +70,7 @@ Libertad, porque nos resistimos a quienes quieren controlarte.
 - Abordados hallazgos de auditorías de seguridad.
 - Corregida la generación de claves en cadena y en la CLI.
 
-### Red e infra
+### Red e infraestructura
 
 - Monitorización ampliada con nuevos paneles y canales de alerta renovados con notificaciones por Telegram.
 - Pila de logs actualizada con rotación de historial.
@@ -78,7 +78,7 @@ Libertad, porque nos resistimos a quienes quieren controlarte.
 - Rebranding de telemetría y Grafana alineado con la nueva identidad de marca.
 - Corrección de build/release de la CLI.
 
-### Web y app móvil
+### Actualizaciones web y app móvil
 
 - Lanzamiento del [quantus.com](https://quantus.com) rediseñado, reconstruido con Astro y soporte de localización.
 - Nuevos logotipos y pantallas de inicio en la app móvil.

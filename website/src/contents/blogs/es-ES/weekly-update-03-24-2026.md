@@ -1,6 +1,6 @@
 ---
 title: "Quantus Weekly: halving ZK y pruebas 4x más rápidas"
-description: Segundo halving en la pipeline ZK: pruebas wormhole cuatro veces más rápidas en dos semanas. Optimizaciones Poseidon, minería corregida y whitepaper publicado.
+description: "Segundo halving en la pipeline ZK: pruebas wormhole cuatro veces más rápidas en dos semanas. Optimizaciones Poseidon, minería corregida y whitepaper publicado."
 
 pubDate: "2026-03-24"
 heroImage: "/blog/covers/weekly-update-03-24-2026.webp"
@@ -46,13 +46,13 @@ Pero la liquidación debe sentirse y ser extremadamente rápida.
 
 Estamos reduciendo esos segundos.
 
-Esto es lo que más lanzamos esta semana:
+Esto es lo demás que lanzamos esta semana:
 
 ### Actividad en GitHub (12 pull requests fusionados):
 
 ![Github Stats](/blog/assets/github-stats-weekly-update-03-24-2026.webp)
 
-### Core Tech y ZK:
+### Tecnología principal y ZK:
 
 - Otro 50 % menos de tiempo de probador con optimizaciones de base de datos amigables con ZK. Segunda semana seguida con mejora 2x en la pipeline de pruebas.
 - Hashing no inyectivo implementado en Poseidon, con nuevos lanzamientos versionados de qp-poseidon-constants.
