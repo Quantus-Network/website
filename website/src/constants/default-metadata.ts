@@ -41,8 +41,8 @@ const defaultMetadata: SEOProps = {
     description,
     image: image.url,
     imageAlt: image.alt,
-    site: env.SITE_BASE_URL,
-    creator: "Quantus Labs",
+    site: "@QuantusNetwork",
+    creator: "@QuantusNetwork",
     card: "summary_large_image",
   },
 };
