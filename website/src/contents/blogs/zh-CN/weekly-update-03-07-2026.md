@@ -1,5 +1,5 @@
 ---
-title: "Quantus 每周动态：虫洞交易 | Quantus 网络"
+title: "Quantus 每周动态：虫洞交易最新进展"
 description: 每周更新，涵盖虫洞交易、矿工私人区块奖励、共识漏洞修复和钱包更新。更多协议更新与研究详情，请参阅 Quantus 博客文章。 Quantus。
 
 pubDate: "2026-03-07"

@@ -1,5 +1,5 @@
 ---
-title: "Quantus 周报：杀手级应用是货币 | Quantus 网络"
+title: "Quantus 周报：杀手级应用就是货币"
 description: 本周我们为 Mithril 重写了 Dilithium DKG，发布了阈值签名修复程序，公开了 Wormhole SDK 助手，并在 TestFlight 上发布了美化后的钱包 v1.4.0。
 
 pubDate: "2026-05-06"

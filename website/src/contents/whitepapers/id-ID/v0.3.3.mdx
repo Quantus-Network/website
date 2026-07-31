@@ -1,5 +1,5 @@
 ---
-title: "Quantus Network Whitepaper"
+title: "Quantus Whitepaper"
 version: "0.3.3"
 publishedDate: "2026-03-21"
 updatedDate: "2026-03-21"
@@ -29,7 +29,7 @@ toc:
         text: Krisis Migrasi
     fondasi:
       - slug: chapter-04
-        text: Arsitektur Quantus Network
+        text: Arsitektur Quantus
     transaksi-reversibel:
       - slug: chapter-05
         text: Pelestarian Kekayaan
@@ -72,7 +72,7 @@ bukan merupakan penawaran untuk menjual, ajakan untuk membeli,
 atau rekomendasi untuk sekuritas, investasi, atau produk keuangan
 apa pun. Pembaca harus melakukan uji tuntas sendiri dan
 berkonsultasi dengan profesional yang berkualifikasi sebelum membuat keputusan investasi
-apa pun. Quantus Network tidak memberikan pernyataan atau jaminan
+apa pun. Quantus tidak memberikan pernyataan atau jaminan
 mengenai keakuratan atau kelengkapan informasi di sini._
 
 <h2
@@ -87,7 +87,7 @@ mengenai keakuratan atau kelengkapan informasi di sini._
     { title: "Pendahuluan", number: "01" },
     { title: "Ancaman Kuantum terhadap Blockchain", number: "02" },
     { title: "Krisis Migrasi", number: "03" },
-    { title: "Arsitektur Quantus Network", number: "04" },
+    { title: "Arsitektur Quantus", number: "04" },
     { title: "Pelestarian Kekayaan", number: "05" },
     { title: "Tokenomik dan Tata Kelola", number: "06" },
     { title: "Peta jalan", number: "07" },
@@ -117,7 +117,7 @@ yang sensitif.
 
 ### Proposisi nilai unik
 
-Dinamai dari kata Latin untuk "berapa banyak", Quantus Network
+Dinamai dari kata Latin untuk "berapa banyak", Quantus
 menghadirkan uang privat yang skalabel dan aman secara kuantum. Quantus bukan
 platform smart contract serba guna. Seperti restoran dengan beberapa
 menu yang sangat disempurnakan, Quantus menyediakan:
@@ -298,15 +298,15 @@ berbulan-bulan atau bertahun-tahun sementara koin rentan kuantum tetap terpapar.
 
 <CalloutV2 title="JAWABAN QUANTUS">
   Tantangan yang bertumpuk ini membuat retrofit keamanan kuantum ke chain yang
-  ada sangat sulit. Quantus Network menghindari ini dengan membangun keamanan
+  ada sangat sulit. Quantus menghindari ini dengan membangun keamanan
   kuantum ke dalam chain sejak hari pertama.
 </CalloutV2>
 
-<ChapterHeading number="04" title="Arsitektur Quantus Network" />
+<ChapterHeading number="04" title="Arsitektur Quantus" />
 
 ### Fondasi
 
-Quantus Network dibangun di atas Substrate, SDK blockchain
+Quantus dibangun di atas Substrate, SDK blockchain
 yang dikembangkan oleh Parity Technologies, tim di balik Ethereum dan
 Polkadot. Substrate sangat modular, memungkinkan penggantian komponen dengan mudah sehingga kami dapat fokus pada apa yang membuat Quantus unik.
 
@@ -320,7 +320,7 @@ Quantus meningkatkan Substrate dengan:
 
 ### Primitif kriptografi pasca-kuantum
 
-Quantus Network menggunakan PQC yang distandarisasi NIST untuk memastikan
+Quantus menggunakan PQC yang distandarisasi NIST untuk memastikan
 keamanan transaksi dan komunikasi jaringan terhadap
 ancaman kuantum. Inti integritas transaksi adalah **ML-DSA**
 (Module-Lattice-based Digital Signature Algorithm, sebelumnya dikenal sebagai
@@ -362,7 +362,7 @@ Untuk detail teknis implementasi lihat [QIP-0006](https://github.com/Quantus-Net
 
 ### LibP2P - Jaringan aman kuantum
 
-Quantus Network mengamankan komunikasi node peer-to-peer (P2P)
+Quantus mengamankan komunikasi node peer-to-peer (P2P)
 menggunakan kombinasi ML-DSA untuk autentikasi
 dan **ML-KEM** (Module-Lattice-based Key Encapsulation
 Mechanism, sebelumnya CRYSTALS-Kyber) untuk enkripsi. Integrasi ini memperluas PQC ke stack jaringan libp2p, memodifikasi
@@ -393,7 +393,7 @@ Untuk detail teknis implementasi lihat [QIP-0004](https://github.com/Quantus-Net
 ### Penskalaan PQC - alamat wormhole
 
 Untuk mengatasi tantangan penskalaan yang melekat dalam kriptografi
-pasca-kuantum, Quantus Network memperkenalkan skema tanda tangan pasca-kuantum agregatif inovatif bernama **"Wormhole Addresses"**.
+pasca-kuantum, Quantus memperkenalkan skema tanda tangan pasca-kuantum agregatif inovatif bernama **"Wormhole Addresses"**.
 Sistem ini memanfaatkan bukti zero-knowledge (ZKP)
 yang dihasilkan melalui sistem pembuatan bukti Plonky2 (pada dasarnya STARKs) untuk
 memindahkan verifikasi saldo off-chain, memungkinkan chain memverifikasi
@@ -501,7 +501,7 @@ Untuk detail teknis lebih lanjut tentang implementasi lihat [QIP-0005](https://g
 
 ### Mekanisme konsensus
 
-Quantus Network menggunakan algoritma konsensus Proof-of-Work (PoW)
+Quantus menggunakan algoritma konsensus Proof-of-Work (PoW)
 yang mempertahankan sifat menguntungkan konsensus Bitcoin
 sementara meningkatkan kompatibilitas dengan sistem bukti ZK dengan
 mengganti SHA-256 dengan **Poseidon2**.
@@ -529,7 +529,7 @@ dapat dihindari.
 
 ### Transaksi reversibel
 
-Quantus Network menawarkan transaksi reversibel yang dapat dikonfigurasi pengguna.
+Quantus menawarkan transaksi reversibel yang dapat dikonfigurasi pengguna.
 Pengirim menetapkan jendela waktu di mana mereka dapat membatalkan transfer
 keluar. Ini mencegah pencurian dan memperbaiki kesalahan tanpa mengorbankan
 finalitas. Sistem menggunakan pallet Substrate "scheduler" yang dimodifikasi
@@ -543,7 +543,7 @@ Untuk detail teknis lebih lanjut lihat [QIP-0009](https://github.com/Quantus-Net
 
 ### Frasa pemeriksaan
 
-Quantus Network memperkenalkan "check-phrases," checksum yang dapat dibaca manusia dan aman secara kriptografis
+Quantus memperkenalkan "check-phrases," checksum yang dapat dibaca manusia dan aman secara kriptografis
 untuk alamat blockchain. Alamat di-hash untuk menghasilkan urutan kata pendek yang mudah diingat
 dari daftar mnemonik BIP-39. Check-phrases melindungi
 dari typo, manipulasi, dan serangan racun alamat. Fungsi derivasi kunci 50.000 iterasi
@@ -573,7 +573,7 @@ Untuk detail teknis lebih lanjut lihat [QIP-0011](https://github.com/Quantus-Net
 ### Pemulihan kunci
 
 Banyak kekayaan kripto ikut ke kubur bersama pemiliknya.
-Quantus Network menawarkan cara sederhana untuk menentukan alamat pemulihan
+Quantus menawarkan cara sederhana untuk menentukan alamat pemulihan
 yang dapat menarik dana Anda kapan saja, tunduk pada penundaan tetap. Selama
 waktu ini, pemilik dapat menolak pemulihan jika mereka memiliki akses ke
 kunci. Fitur ini memungkinkan survivorship: pengguna memiliki wasiat on-chain
@@ -594,7 +594,7 @@ tantangan:
   yang tidak ada pada lattice (kunci publik tidak tertutup di bawah operasi aljabar
   apa pun).
 
-Quantus Network mengatasi masalah pertama dengan menggunakan keluaran
+Quantus mengatasi masalah pertama dengan menggunakan keluaran
 HMAC sebagai entropi untuk membangun kunci privat secara deterministik,
 bukan sebagai kunci privat itu sendiri. Masalah kedua kurang kritis dan
 tetap pertanyaan riset terbuka apakah kriptografi lattice
@@ -604,7 +604,7 @@ Untuk detail teknis lebih lanjut lihat [QIP-0002](https://github.com/Quantus-Net
 
 <ChapterHeading number="06" title="Tokenomik dan Tata Kelola" />
 
-Quantus Network berada di lingkungan yang berubah, dan kami tidak dapat
+Quantus berada di lingkungan yang berubah, dan kami tidak dapat
 menganggap semuanya benar pada percobaan pertama. Oleh karena itu,
 kami memilih titik awal sederhana dan memungkinkan
 sistem tata kelola membuat perubahan seiring informasi baru
@@ -615,7 +615,7 @@ antara berbagai pengelola node.
 
 ### Hadiah blok
 
-Quantus Network menggunakan model tokenomik lugas yang meniru
+Quantus menggunakan model tokenomik lugas yang meniru
 Bitcoin. Ada pasokan maksimum **21.000.000 koin** dan heuristik sederhana
 menentukan hadiah setiap blok:
 
@@ -633,7 +633,7 @@ tahun.
 
 ### Alokasi investor
 
-Quantus Network dibangun dengan bantuan investor yang mengambil
+Quantus dibangun dengan bantuan investor yang mengambil
 risiko besar dalam pendanaan. Investor privat tunduk pada jadwal vesting 4 tahun,
 seperti tim. Investor penjualan publik akan sepenuhnya likuid pada hari pertama. Dana yang terkumpul dalam penjualan publik akan
 dicocokkan dengan token dan digunakan untuk likuiditas (DEX, CEX, dan market
@@ -667,7 +667,7 @@ dimatikan, disesuaikan atau dialihkan sesuai suara pemegang token.
 
 ### Peningkatan tanpa fork
 
-Quantus Network mendukung peningkatan "tanpa fork" melalui
+Quantus mendukung peningkatan "tanpa fork" melalui
 peningkatan runtime Substrate, memungkinkan logika inti blockchain
 ("runtime") berkembang tanpa hard fork yang dapat mengganggu
 jaringan atau memecah komunitas. Ini dicapai melalui referendum tata kelola on-chain, di mana proposal yang disetujui memicu swap runtime
@@ -684,7 +684,7 @@ proses peningkatan.
 
 ### Sistem tata kelola
 
-Quantus Network mewarisi kerangka tata kelola dari
+Quantus mewarisi kerangka tata kelola dari
 sistem OpenGov Polkadot melalui Substrate. Pemegang token
 berpartisipasi melalui **conviction voting**, di mana mereka setuju mengunci
 aset untuk periode bervariasi untuk memperkuat bobot suara. Penguatan ini dapat berkisar dari 1x (tanpa kunci) hingga 6x (kunci maksimum).
@@ -767,7 +767,7 @@ Peta jalan saat ini hingga 2026, dapat berubah.
 
 <ChapterHeading number="08" title="Risiko" />
 
-Membangun Quantus Network disertai risiko inheren.
+Membangun Quantus disertai risiko inheren.
 
 ### Masalah implementasi
 
@@ -781,7 +781,7 @@ Kekacauan atau pintu belakang potensial dalam standar pasca-kuantum terpilih
 kasus terburuk, kekacauan tersebut memungkinkan penyerang memalsukan
 tanda tangan dengan menurunkan kunci privat dari publik, mewakili
 mode kegagalan katastrofik chain. Jika kekacauan tersebut diumumkan,
-Quantus Network dapat ditingkatkan ke algoritma baru,
+Quantus dapat ditingkatkan ke algoritma baru,
 tetapi jika dieksploitasi jarang mungkin tidak pernah
 terdeteksi.
 

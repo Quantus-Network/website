@@ -1,5 +1,5 @@
 ---
-title: "Quantus Network Whitepaper"
+title: "Quantus Whitepaper"
 version: "0.3.3"
 publishedDate: "2026-03-21"
 updatedDate: "2026-03-21"
@@ -29,7 +29,7 @@ toc:
         text: 迁移危机
     基础:
       - slug: chapter-04
-        text: Quantus Network 架构
+        text: Quantus 架构
     可逆交易:
       - slug: chapter-05
         text: 财富保全
@@ -71,7 +71,7 @@ _本白皮书仅供信息参考，
 不构成出售要约、购买要约招揽，
 或对任何证券、投资或金融产品的推荐。读者在做出投资决策前应自行尽职调查，
 并咨询合格专业人士。
-Quantus Network 不对本文所含信息的准确性或完整性作出任何陈述或保证。_
+Quantus 不对本文所含信息的准确性或完整性作出任何陈述或保证。_
 
 <h2
   id="contents"
@@ -85,7 +85,7 @@ Quantus Network 不对本文所含信息的准确性或完整性作出任何陈�
     { title: "引言", number: "01" },
     { title: "区块链面临的量子威胁", number: "02" },
     { title: "迁移危机", number: "03" },
-    { title: "Quantus Network 架构", number: "04" },
+    { title: "Quantus 架构", number: "04" },
     { title: "财富保全", number: "05" },
     { title: "代币经济学与治理", number: "06" },
     { title: "路线图", number: "07" },
@@ -115,7 +115,7 @@ Quantus Network 不对本文所含信息的准确性或完整性作出任何陈�
 
 ### 独特价值主张
 
-Quantus Network 以拉丁语中表示「多少」的词命名，
+Quantus 以拉丁语中表示「多少」的词命名，
 提供可扩展、量子安全的隐私货币。Quantus 不是通用
 智能合约平台。如同一家只提供少数几道
 精心打磨菜品的餐厅，Quantus 提供：
@@ -276,15 +276,15 @@ SPHINCS+ 可产生高达 41 KB 的签名，而像 FALCON 这类尺寸优化格�
 许多人会先发送试探交易。臃肿的 PQC 签名压制吞吐时，网络将面临持续数月或数年的队列，而量子脆弱资金仍暴露在外。
 
 <CalloutV2 title="QUANTUS 的回应">
-  这些叠加的挑战使向现有链添加量子安全变得极其困难。 Quantus Network
+  这些叠加的挑战使向现有链添加量子安全变得极其困难。 Quantus
   通过从第一天起将量子安全内置于链上来规避这一问题。
 </CalloutV2>
 
-<ChapterHeading number="04" title="Quantus Network 架构" />
+<ChapterHeading number="04" title="Quantus 架构" />
 
 ### 基础
 
-Quantus Network 构建于 Substrate 之上，这是由曾参与 Ethereum 与
+Quantus 构建于 Substrate 之上，这是由曾参与 Ethereum 与
 Polkadot 的 Parity Technologies 开发的区块链 SDK。Substrate 高度模块化，便于替换组件以聚焦 Quantus 的独特之处。
 
 Quantus 对 Substrate 的增强包括：
@@ -296,7 +296,7 @@ Quantus 对 Substrate 的增强包括：
 
 ### 后量子密码原语
 
-Quantus Network 采用 NIST 标准化的 PQC，确保交易与网络通信在
+Quantus 采用 NIST 标准化的 PQC，确保交易与网络通信在
 量子威胁下的安全。交易完整性的核心是 **ML-DSA**
 （基于模格的数字签名算法，曾名
 CRYSTALS-Dilithium），一种基于格的签名方案，因其在安全性、效率与实现便利性之间的平衡而被选中。ML-DSA 利用
@@ -324,7 +324,7 @@ Substrate，未来若情况需要，添加这些替代相对容易。
 
 ### LibP2P — 量子安全的网络
 
-Quantus Network 通过结合 ML-DSA 认证
+Quantus 通过结合 ML-DSA 认证
 与 **ML-KEM**（基于模格的密钥封装机制，
 曾名 CRYSTALS-Kyber）加密，保护点对点（P2P）节点通信。该集成将 PQC 延伸至 libp2p 栈，修改
 核心组件以实现抗量子：ML-DSA-87 签名用于对等身份，ML-KEM-768 用于传输安全
@@ -342,7 +342,7 @@ P2P 层在量子安全分析中常被忽视。
 
 ### PQC 扩展 — wormhole 地址
 
-为应对后量子密码固有的扩展挑战，Quantus Network 引入一种创新的聚合后量子签名方案 **「Wormhole Addresses」**。
+为应对后量子密码固有的扩展挑战，Quantus 引入一种创新的聚合后量子签名方案 **「Wormhole Addresses」**。
 该系统利用 Plonky2 证明系统（本质为 STARK）生成的零知识证明（ZKP），
 将余额验证移出链上，使链仅需验证单一紧凑证明而无需处理单笔签名。
 Wormhole Addresses 可用一条证明验证大量
@@ -425,7 +425,7 @@ nullifier 精确、地址不可花费、
 
 ### 共识机制
 
-Quantus Network 使用工作量证明（PoW）共识算法，
+Quantus 使用工作量证明（PoW）共识算法，
 在保留比特币共识理想性质的同时，
 通过将 SHA-256 替换为 **Poseidon2** 以更好兼容 ZK 证明系统。
 
@@ -447,7 +447,7 @@ Poseidon2 是 Poseidon 哈希的改进。为使用 SHA-256 等传统哈希的
 
 ### 可逆交易
 
-Quantus Network 提供用户可配置的可逆交易。
+Quantus 提供用户可配置的可逆交易。
 发送方可设定时间窗口，在此期间可取消对外转账。这有助于遏制盗窃并在不牺牲终局性的前提下纠正错误。系统使用修改过的 Substrate「scheduler」 pallet
 与时间戳。钱包为发送方显示倒计时（带取消按钮）并为接收方显示。
 
@@ -458,7 +458,7 @@ Quantus Network 提供用户可配置的可逆交易。
 
 ### 校验短语
 
-Quantus Network 引入「check-phrases」，一种可读且密码学安全的区块链地址校验和。对地址哈希生成来自 BIP-39 词表的短词序列。校验短语有助于防范笔误、篡改与地址投毒攻击。50,000 次迭代的密钥派生函数提高彩虹表攻击成本。大额交易用户仍应逐字核对地址。
+Quantus 引入「check-phrases」，一种可读且密码学安全的区块链地址校验和。对地址哈希生成来自 BIP-39 词表的短词序列。校验短语有助于防范笔误、篡改与地址投毒攻击。50,000 次迭代的密钥派生函数提高彩虹表攻击成本。大额交易用户仍应逐字核对地址。
 
 更多技术细节见 [QIP-0008](https://github.com/Quantus-Network/improvement-proposals/blob/main/qip-0008.md)。
 
@@ -474,7 +474,7 @@ Quantus Network 引入「check-phrases」，一种可读且密码学安全的区
 ### 密钥恢复
 
 许多加密财富随持有人离世而永久丢失。
-Quantus Network 提供简单方式指定可随时提款的恢复地址，但受固定延迟约束。延迟期间，若持有人仍能访问密钥，可拒绝恢复。该功能实现链上「遗嘱」而无需法院或正式继承程序。
+Quantus 提供简单方式指定可随时提款的恢复地址，但受固定延迟约束。延迟期间，若持有人仍能访问密钥，可拒绝恢复。该功能实现链上「遗嘱」而无需法院或正式继承程序。
 
 ### HD-Lattice
 
@@ -486,20 +486,20 @@ Quantus Network 提供简单方式指定可随时提款的恢复地址，但受�
 - HMAC-SHA512 输出无法直接构成格私钥（格上采样的多项式需满足特定性质）。
 - 非硬化密钥派生依赖椭圆曲线加法，格上不存在（公钥对任意代数运算不封闭）。
 
-Quantus Network 对第一点将 HMAC 输出用作熵以确定性构建私钥，
+Quantus 对第一点将 HMAC 输出用作熵以确定性构建私钥，
 而非直接作为密钥本身。第二点重要性较低，格密码能否适配仍是开放研究问题。
 
 更多技术细节见 [QIP-0002](https://github.com/Quantus-Network/improvement-proposals/tree/main/qip-0002)。
 
 <ChapterHeading number="06" title="代币经济学与治理" />
 
-Quantus Network 处于变化环境中，无法假设
+Quantus 处于变化环境中，无法假设
 一次就做对。因此我们选择简单起点，并允许治理系统随新信息演进。该设计使区块链成为可适应环境的活体。尤其 Substrate 的治理流程
 可在各节点运营商最小协调下对链进行深度变更。
 
 ### 区块奖励
 
-Quantus Network 采用模仿比特币的简单代币模型。最大供应为 **2,100 万枚**，简单启发式决定每块奖励：
+Quantus 采用模仿比特币的简单代币模型。最大供应为 **2,100 万枚**，简单启发式决定每块奖励：
 
 ```
 block_reward = (max_supply - current_supply) / constant
@@ -509,7 +509,7 @@ block_reward = (max_supply - current_supply) / constant
 
 ### 投资者分配
 
-Quantus Network 在投资者承担高风险资助下建成。私募投资者受 4 年归属期约束，
+Quantus 在投资者承担高风险资助下建成。私募投资者受 4 年归属期约束，
 与团队一致。公募投资者首日即可全额流通。公募所募资金将
 与代币配对并用于流动性（DEX、CEX 与做市商）。这些投资者分配与流动性构成唯一「预挖」。其余代币须挖至存在。
 
@@ -535,7 +535,7 @@ Quantus Network 在投资者承担高风险资助下建成。私募投资者受 
 
 ### 无分叉升级
 
-Quantus Network 通过 Substrate 的 runtime 升级支持「无分叉」升级，使区块链核心逻辑（「runtime」）演进而无需扰乱网络或分裂社区的硬分叉。通过链上治理公投实现：获批提案激活 runtime 替换——在单一块内用新 WASM 代码 blob 替换旧 blob，保持状态连续与
+Quantus 通过 Substrate 的 runtime 升级支持「无分叉」升级，使区块链核心逻辑（「runtime」）演进而无需扰乱网络或分裂社区的硬分叉。通过链上治理公投实现：获批提案激活 runtime 替换——在单一块内用新 WASM 代码 blob 替换旧 blob，保持状态连续与
 运营。该路径减少停机与风险，
 赋能社区随实际使用迭代完善协议。
 
@@ -543,7 +543,7 @@ Quantus Network 通过 Substrate 的 runtime 升级支持「无分叉」升级�
 
 ### 治理体系
 
-Quantus Network 通过 Substrate 继承 Polkadot 的 OpenGov 框架。代币持有人通过 **信念投票** 参与，将资产锁定不同时长以放大投票权重。放大倍数可从 1x（不锁定）到 6x（最长锁定）。
+Quantus 通过 Substrate 继承 Polkadot 的 OpenGov 框架。代币持有人通过 **信念投票** 参与，将资产锁定不同时长以放大投票权重。放大倍数可从 1x（不锁定）到 6x（最长锁定）。
 该设计通过将影响力与承诺绑定以鼓励长期一致。
 
 提案按多条投票轨道「origins」分类。每条 origin 有定制参数，如批准阈值（例如高影响变更需绝对多数）、防垃圾最低押金、准备 / 执行期与决策时限以避免僵局。多轨道设计可并行处理从日常国库支出到关键 runtime 升级的各类公投。
@@ -604,7 +604,7 @@ Quantus 原样采用该体系，但初期采用极简配置以降低早期复杂
 
 <ChapterHeading number="08" title="风险" />
 
-构建 Quantus Network 存在固有风险。
+构建 Quantus 存在固有风险。
 
 ### 实现问题
 
@@ -612,7 +612,7 @@ Quantus 原样采用该体系，但初期采用极简配置以降低早期复杂
 
 ### NIST 算法选择问题
 
-已选后量子标准（如 ML-DSA、ML-KEM）在标准化后可能暴露缺陷或后门。最坏情况下，此类缺陷可使攻击者通过公钥伪造签名推导私钥，构成链的灾难性失效模式。若缺陷公开，Quantus Network 可升级至新算法，
+已选后量子标准（如 ML-DSA、ML-KEM）在标准化后可能暴露缺陷或后门。最坏情况下，此类缺陷可使攻击者通过公钥伪造签名推导私钥，构成链的灾难性失效模式。若缺陷公开，Quantus 可升级至新算法，
 但若被低调利用可能永远无法
 发现。
 

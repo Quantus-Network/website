@@ -1,5 +1,5 @@
 ---
-title: "Quantus Network Whitepaper"
+title: "Quantus Whitepaper"
 version: "0.3.1"
 publishedDate: "2026-01-14"
 updatedDate: "2026-01-14"
@@ -28,7 +28,7 @@ Hasilnya adalah kegagalan sistem yang katastrofik. Tanpa pemutakhiran tahan kuan
 
 ### Proposisi Nilai Unik
 
-Dinamakan berdasarkan kata Latin untuk "seberapa banyak", Quantus Network menghadirkan pelestarian kekayaan yang skalabel dan aman secara kuantum. Quantus bukanlah platform smart contract. Sebaliknya, seperti restoran kelas atas tanpa menu, Quantus fokus melakukan sejumlah kecil hal dengan lebih baik daripada chain lainnya.
+Dinamakan berdasarkan kata Latin untuk "seberapa banyak", Quantus menghadirkan pelestarian kekayaan yang skalabel dan aman secara kuantum. Quantus bukanlah platform smart contract. Sebaliknya, seperti restoran kelas atas tanpa menu, Quantus fokus melakukan sejumlah kecil hal dengan lebih baik daripada chain lainnya.
 
 Secara khusus, Quantus menggunakan:
 
@@ -119,11 +119,11 @@ Dalam konteks blockchain, ukuran yang membengkak ini menjadi masalah penskalaan 
 
 **Tantangan penskalaan ini harus diatasi oleh semua blockchain di masa depan. Bitcoin, misalnya, akan memiliki jauh kurang dari 1 TPS jika ukuran blok maksimum tidak ditingkatkan.**
 
-## Arsitektur Quantus Network
+## Arsitektur Quantus
 
 ### Primitif Kriptografi Pasca-Kuantum
 
-Quantus Network menggunakan primitif **PQC standar NIST** untuk memastikan keamanan transaksi dan komunikasi jaringan terhadap ancaman kuantum. Inti dari integritas transaksi adalah **ML-DSA (Module-Lattice-based Digital Signature Algorithm**, sebelumnya dikenal sebagai CRYSTALS-Dilithium), sebuah skema signature berbasis lattice yang dipilih karena keseimbangan keamanan, efisiensi, dan kemudahan implementasi. **ML-DSA memanfaatkan tingkat kesulitan masalah** seperti Learning With Errors (LWE) dan Short Integer Solution (SIS) di atas module lattices, memberikan ketahanan yang kuat terhadap serangan klasik dan kuantum, termasuk dari algoritma Shor.
+Quantus menggunakan primitif **PQC standar NIST** untuk memastikan keamanan transaksi dan komunikasi jaringan terhadap ancaman kuantum. Inti dari integritas transaksi adalah **ML-DSA (Module-Lattice-based Digital Signature Algorithm**, sebelumnya dikenal sebagai CRYSTALS-Dilithium), sebuah skema signature berbasis lattice yang dipilih karena keseimbangan keamanan, efisiensi, dan kemudahan implementasi. **ML-DSA memanfaatkan tingkat kesulitan masalah** seperti Learning With Errors (LWE) dan Short Integer Solution (SIS) di atas module lattices, memberikan ketahanan yang kuat terhadap serangan klasik dan kuantum, termasuk dari algoritma Shor.
 
 Untuk signature transaksi, **Quantus mengintegrasikan ML-DSA-87**, set parameter yang menawarkan tingkat keamanan tertinggi (NIST Security Level 5, setara dengan keamanan klasik 256-bit dan keamanan kuantum 128-bit) untuk **melindungi dari potensi terobosan kriptanalitik dalam masalah lattice**. Pilihan ini memprioritaskan kehati-hatian, karena kriptografi lattice relatif baru dan kurang teruji dibandingkan skema klasik. Parameter yang lebih besar memitigasi risiko dari potensi kemajuan dalam kriptanalisis lattice, yang masih akan menyisakan ukuran kunci yang lebih kecil sebagai target yang lebih empuk.
 
@@ -143,7 +143,7 @@ Untuk detail teknis tentang implementasi, lihat [QIP-0006](https://github.com/Qu
 
 #### LibP2P
 
-**Quantus Network mengamankan komunikasi node peer-to-peer (P2P) menggunakan kombinasi ML-DSA untuk autentikasi dan ML-KEM (Module-Lattice-based Key Encapsulation Mechanism, sebelumnya CRYSTALS-Kyber) untuk enkripsi.**
+**Quantus mengamankan komunikasi node peer-to-peer (P2P) menggunakan kombinasi ML-DSA untuk autentikasi dan ML-KEM (Module-Lattice-based Key Encapsulation Mechanism, sebelumnya CRYSTALS-Kyber) untuk enkripsi.**
 
 Integrasi ini memperluas PQC ke tumpukan jaringan libp2p, memodifikasi komponen inti untuk ketahanan kuantum: menggunakan signature ML-DSA-87 untuk identitas peer dan ML-KEM-768 untuk keamanan transport (memperluas handshake Noise dengan pesan KEM tambahan untuk rahasia bersama yang tahan kuantum).
 
@@ -155,7 +155,7 @@ Untuk detail teknis tentang implementasi, lihat [QIP-0004](https://github.com/Qu
 
 ### Penskalaan PQC
 
-Untuk mengatasi tantangan penskalaan yang melekat dalam kriptografi pasca-kuantum, **Quantus Network memperkenalkan skema signature pasca-kuantum teragregasi yang inovatif yang disebut “Wormhole Addresses”.** Sistem ini memanfaatkan zero-knowledge proofs (ZKPs) yang dihasilkan melalui sistem pembuktian Plonky2 (pada dasarnya STARKs) untuk memindahkan verifikasi saldo ke luar rantai (off-chain), memungkinkan chain untuk memverifikasi satu bukti ringkas tanpa memproses signature individu.
+Untuk mengatasi tantangan penskalaan yang melekat dalam kriptografi pasca-kuantum, **Quantus memperkenalkan skema signature pasca-kuantum teragregasi yang inovatif yang disebut “Wormhole Addresses”.** Sistem ini memanfaatkan zero-knowledge proofs (ZKPs) yang dihasilkan melalui sistem pembuktian Plonky2 (pada dasarnya STARKs) untuk memindahkan verifikasi saldo ke luar rantai (off-chain), memungkinkan chain untuk memverifikasi satu bukti ringkas tanpa memproses signature individu.
 
 **Wormhole Addresses memungkinkan verifikasi sejumlah besar transaksi dengan satu bukti**, dengan input publik (misalnya, nullifier, storage root, alamat keluar, dan jumlah) menjadi faktor pembatas utama. Ini mengurangi permintaan penyimpanan per transaksi yang diamortisasi menjadi **sekitar 256 byte tambahan per transaksi, jauh lebih kecil daripada skema signature PQC mana pun yang diketahui.**
 
@@ -233,7 +233,7 @@ Untuk detail teknis lebih lanjut tentang implementasi, lihat [QIP-0005](https://
 
 ### Mekanisme Konsensus
 
-**Quantus Network menggunakan algoritma konsensus Proof-of-Work (PoW) yang mempertahankan properti yang diinginkan dari algoritma konsensus Bitcoin sambil meningkatkan kompatibilitas dengan sistem ZK-proof dengan mengganti SHA-256 dengan Poseidon2.**
+**Quantus menggunakan algoritma konsensus Proof-of-Work (PoW) yang mempertahankan properti yang diinginkan dari algoritma konsensus Bitcoin sambil meningkatkan kompatibilitas dengan sistem ZK-proof dengan mengganti SHA-256 dengan Poseidon2.**
 
 Penting untuk dicatat bahwa perubahan ini tidak dilakukan untuk keamanan kuantum. Fungsi hash kriptografi seperti SHA-256 diperlemah tetapi tidak dihancurkan oleh algoritma kuantum, terutama algoritma Grover. Beberapa skema signature pasca-kuantum menggunakan hash aman sebagai blok pembangun karena alasan ini.
 
@@ -241,13 +241,13 @@ Poseidon2 adalah penyempurnaan dari fungsi hash Poseidon. Membuat SNARK atau STA
 
 ## Pelestarian Kekayaan
 
-**Ada banyak risiko dalam mengelola kunci mata uang kripto. Kebanyakan dari mereka dapat dihindari. Quantus Network menanamkan kemudahan penggunaan ke dalam chain itu sendiri, memungkinkan non-ahli untuk bertransaksi dengan tenang.**
+**Ada banyak risiko dalam mengelola kunci mata uang kripto. Kebanyakan dari mereka dapat dihindari. Quantus menanamkan kemudahan penggunaan ke dalam chain itu sendiri, memungkinkan non-ahli untuk bertransaksi dengan tenang.**
 
 ### Transaksi yang Dapat Dianulir (Reversible)
 
 <Grid gap="2rem">
   <Column ratio={2}>
-    **Quantus Network menawarkan transaksi yang dapat dibatalkan yang dapat dikonfigurasi pengguna, memungkinkan pengirim untuk menetapkan jendela waktu di mana mereka dapat membatalkan transfer keluar, meningkatkan pencegahan pencurian dan koreksi kesalahan tanpa mengorbankan ireversibilitas inti blockchain.** Memanfaatkan "scheduler pallet" Substrate yang dimodifikasi yang menggunakan stempel waktu untuk penundaan intuitif, sistem ini memungkinkan klien untuk menjadwalkan transfer melalui antarmuka sederhana, menampilkan hitung mundur di dompet baik untuk pengirim (dengan tombol batal) maupun penerima (menunjukkan penyelesaian jika tidak dibatalkan). Ini menyeimbangkan finalitas cepat untuk perdagangan dengan fleksibilitas bagi pengguna yang khawatir membuat kesalahan atau ingin melakukan setoran dengan itikad baik tanpa layanan escrow.
+    **Quantus menawarkan transaksi yang dapat dibatalkan yang dapat dikonfigurasi pengguna, memungkinkan pengirim untuk menetapkan jendela waktu di mana mereka dapat membatalkan transfer keluar, meningkatkan pencegahan pencurian dan koreksi kesalahan tanpa mengorbankan ireversibilitas inti blockchain.** Memanfaatkan "scheduler pallet" Substrate yang dimodifikasi yang menggunakan stempel waktu untuk penundaan intuitif, sistem ini memungkinkan klien untuk menjadwalkan transfer melalui antarmuka sederhana, menampilkan hitung mundur di dompet baik untuk pengirim (dengan tombol batal) maupun penerima (menunjukkan penyelesaian jika tidak dibatalkan). Ini menyeimbangkan finalitas cepat untuk perdagangan dengan fleksibilitas bagi pengguna yang khawatir membuat kesalahan atau ingin melakukan setoran dengan itikad baik tanpa layanan escrow.
 
     **Transaksi yang dapat dibatalkan membentuk blok pembangun yang kuat untuk protokol keamanan baru sambil mempertahankan desentralisasi melalui penegakan on-chain.**
 
@@ -264,7 +264,7 @@ Poseidon2 adalah penyempurnaan dari fungsi hash Poseidon. Membuat SNARK atau STA
 
 <Grid gap="2rem">
   <Column ratio={2}>
-    Quantus Network memperkenalkan “check-phrases,” checksum yang aman secara kriptografis dan dapat dibaca manusia untuk alamat blockchain dan data lain yang memerlukan verifikasi manusia. **Dengan melakukan hashing pada alamat untuk menghasilkan urutan kata pendek yang mudah diingat dari daftar mnemonik BIP-39, check-phrase memungkinkan pemeriksaan integritas yang cepat dan bebas kesalahan, melindungi dari salah ketik, perusakan, dan serangan seperti peracunan alamat (address poisoning).** Alat ini memungkinkan pengguna untuk memverifikasi alamat dengan percaya diri selama transfer tanpa bergantung pada tampilan yang terpotong atau checksum yang lemah. Fungsi derivasi kunci 50.000 iterasi digunakan untuk memastikan bahwa pembuatan rainbow table untuk checksum tertentu sangat mahal. Tentu saja, untuk transaksi besar, pengguna harus tetap memeriksa setiap huruf alamat secara manual untuk kebenarannya.
+    Quantus memperkenalkan “check-phrases,” checksum yang aman secara kriptografis dan dapat dibaca manusia untuk alamat blockchain dan data lain yang memerlukan verifikasi manusia. **Dengan melakukan hashing pada alamat untuk menghasilkan urutan kata pendek yang mudah diingat dari daftar mnemonik BIP-39, check-phrase memungkinkan pemeriksaan integritas yang cepat dan bebas kesalahan, melindungi dari salah ketik, perusakan, dan serangan seperti peracunan alamat (address poisoning).** Alat ini memungkinkan pengguna untuk memverifikasi alamat dengan percaya diri selama transfer tanpa bergantung pada tampilan yang terpotong atau checksum yang lemah. Fungsi derivasi kunci 50.000 iterasi digunakan untuk memastikan bahwa pembuatan rainbow table untuk checksum tertentu sangat mahal. Tentu saja, untuk transaksi besar, pengguna harus tetap memeriksa setiap huruf alamat secara manual untuk kebenarannya.
 
     Untuk detail teknis lebih lanjut, silakan lihat [QIP-0008](https://github.com/Quantus-Network/improvement-proposals/blob/main/qip-0008.md).
 
@@ -279,7 +279,7 @@ Poseidon2 adalah penyempurnaan dari fungsi hash Poseidon. Membuat SNARK atau STA
 
 <Grid gap="2rem">
   <Column ratio={2}>
-    Quantus Network menawarkan kemampuan untuk meningkatkan akun apa pun menjadi “akun keamanan tinggi” yang memberlakukan periode pembatalan wajib pada semua transfer keluar, memungkinkan akun “wali” (guardian) yang ditunjuk seperti dompet perangkat keras, multisig, atau bahkan pihak ketiga tepercaya pilihan pengguna untuk secara eksklusif membatalkan transaksi mencurigakan selama periode pembatalan, mengirimkan dana ke wali alih-alih pengirim atau penerima. Fitur permanen yang bersifat opsional ini dibangun di atas transfer yang dapat dibatalkan, di mana pengguna menentukan penundaan dan pencegat saat aktivasi, mencegah pencuri menonaktifkannya.
+    Quantus menawarkan kemampuan untuk meningkatkan akun apa pun menjadi “akun keamanan tinggi” yang memberlakukan periode pembatalan wajib pada semua transfer keluar, memungkinkan akun “wali” (guardian) yang ditunjuk seperti dompet perangkat keras, multisig, atau bahkan pihak ketiga tepercaya pilihan pengguna untuk secara eksklusif membatalkan transaksi mencurigakan selama periode pembatalan, mengirimkan dana ke wali alih-alih pengirim atau penerima. Fitur permanen yang bersifat opsional ini dibangun di atas transfer yang dapat dibatalkan, di mana pengguna menentukan penundaan dan pencegat saat aktivasi, mencegah pencuri menonaktifkannya.
 
     Pencegat itu sendiri dapat berupa akun keamanan tinggi lainnya dengan walinya sendiri, memungkinkan hierarki yang dapat disusun di mana setiap wali memiliki izin yang lebih tinggi daripada akun yang dilindunginya. Desain ini meniru pembatalan yang diperintahkan pengadilan pada keuangan tradisional tetapi dengan kontrol pengguna. Ini menyeimbangkan keamanan dan kenyamanan untuk akun bernilai tinggi, memberikan waktu untuk mendeteksi dan menanggapi aktivitas yang tidak sah tanpa mengorbankan finalitas blockchain untuk aliran yang sah.
 
@@ -294,7 +294,7 @@ Poseidon2 adalah penyempurnaan dari fungsi hash Poseidon. Membuat SNARK atau STA
 
 ### Pemulihan Kunci
 
-Banyak kekayaan kripto telah terkubur bersama pemiliknya. Quantus Network menawarkan cara sederhana untuk menentukan alamat pemulihan yang dapat menarik dana Anda kapan saja, tergantung pada penundaan tetap. Selama waktu ini, pemilik dapat menolak pemulihan jika mereka memiliki akses ke kunci tersebut. Fitur ini memungkinkan kelangsungan hidup: pengguna memiliki wasiat on-chain tanpa memerlukan pengadilan atau harta warisan.
+Banyak kekayaan kripto telah terkubur bersama pemiliknya. Quantus menawarkan cara sederhana untuk menentukan alamat pemulihan yang dapat menarik dana Anda kapan saja, tergantung pada penundaan tetap. Selama waktu ini, pemilik dapat menolak pemulihan jika mereka memiliki akses ke kunci tersebut. Fitur ini memungkinkan kelangsungan hidup: pengguna memiliki wasiat on-chain tanpa memerlukan pengadilan atau harta warisan.
 
 ### HD-Lattice
 
@@ -305,17 +305,17 @@ Mengadaptasi ini ke skema lattice seperti Dilithium melibatkan dua tantangan:
 - Output HMAC-SHA512 tidak dapat secara langsung membentuk kunci privat lattice, yang memerlukan polinomial “basis yang baik” melalui sampling penolakan (rejection sampling).
 - Derivasi kunci non-hardened mengandalkan penambahan kurva eliptik, yang tidak ada dalam lattice (kunci publik tidak tertutup di bawah operasi aljabar apa pun).
 
-Quantus Network mengatasi masalah pertama dengan menggunakan output HMAC sebagai entropi untuk membangun kunci privat secara deterministik, bukan sebagai kunci privat itu sendiri. Masalah kedua kurang kritis dan tetap menjadi pertanyaan penelitian terbuka apakah kriptografi lattice dapat diadaptasi untuk mengatasinya.
+Quantus mengatasi masalah pertama dengan menggunakan output HMAC sebagai entropi untuk membangun kunci privat secara deterministik, bukan sebagai kunci privat itu sendiri. Masalah kedua kurang kritis dan tetap menjadi pertanyaan penelitian terbuka apakah kriptografi lattice dapat diadaptasi untuk mengatasinya.
 
 Untuk detail teknis lebih lanjut, lihat [QIP-0002](https://github.com/Quantus-Network/improvement-proposals/tree/main/qip-0002).
 
 ## Tokenomics dan Tata Kelola
 
-Quantus Network ada dalam lingkungan yang berubah, dan kami tidak dapat berasumsi bahwa kami akan melakukan segalanya dengan benar pada percobaan pertama. Untuk alasan ini, kami memilih titik awal yang sederhana dan membiarkan sistem tata kelola melakukan perubahan saat informasi baru diperoleh. Desain ini membuat blockchain menjadi entitas hidup yang dapat beradaptasi dengan lingkungannya sesuka hati. Secara khusus, proses tata kelola Substrate memungkinkan perubahan mendalam pada chain dengan koordinasi minimal di antara berbagai node-runner.
+Quantus ada dalam lingkungan yang berubah, dan kami tidak dapat berasumsi bahwa kami akan melakukan segalanya dengan benar pada percobaan pertama. Untuk alasan ini, kami memilih titik awal yang sederhana dan membiarkan sistem tata kelola melakukan perubahan saat informasi baru diperoleh. Desain ini membuat blockchain menjadi entitas hidup yang dapat beradaptasi dengan lingkungannya sesuka hati. Secara khusus, proses tata kelola Substrate memungkinkan perubahan mendalam pada chain dengan koordinasi minimal di antara berbagai node-runner.
 
 ### Hadiah Blok (Block Rewards)
 
-Quantus Network menggunakan model tokenomics langsung yang meniru Bitcoin. Ada pasokan maksimum 21.000.000 koin dan heuristik sederhana menentukan hadiah setiap blok.
+Quantus menggunakan model tokenomics langsung yang meniru Bitcoin. Ada pasokan maksimum 21.000.000 koin dan heuristik sederhana menentukan hadiah setiap blok.
 
 ```
 block_reward = (max_supply-current_supply) / constant
@@ -342,7 +342,7 @@ Setiap pembakaran dari biaya atau lainnya mengurangi current_supply dan pada das
 
 ### Alokasi Investor
 
-Quantus Network dibangun dengan bantuan investor malaikat (angel investors) yang mengambil risiko besar dalam mendanainya. Untuk menghindari kelebihan pasokan yang diciptakan oleh penguncian investor (investor-lockups), kami membuat semua investor, publik dan swasta, likuid pada hari pertama. Alokasi ini akan menjadi satu-satunya "pre-mine". Semua token lainnya harus ditambang untuk ada. Tergantung pada keberhasilan penjualan publik, bagian ini akan mewakili 20-30% dari total pasokan.
+Quantus dibangun dengan bantuan investor malaikat (angel investors) yang mengambil risiko besar dalam mendanainya. Untuk menghindari kelebihan pasokan yang diciptakan oleh penguncian investor (investor-lockups), kami membuat semua investor, publik dan swasta, likuid pada hari pertama. Alokasi ini akan menjadi satu-satunya "pre-mine". Semua token lainnya harus ditambang untuk ada. Tergantung pada keberhasilan penjualan publik, bagian ini akan mewakili 20-30% dari total pasokan.
 
 ### Alokasi Perusahaan
 
@@ -360,11 +360,11 @@ Transaksi standar akan memiliki biaya yang diberikan kepada penambang, memberika
 
 ### Pemutakhiran Tanpa Fork (Forkless Upgrades)
 
-Quantus Network mendukung pemutakhiran “tanpa fork” melalui pemutakhiran runtime Substrate, memungkinkan logika inti blockchain (“runtime”) untuk berkembang tanpa hard fork yang dapat mengganggu jaringan atau memecah komunitas. Hal ini dicapai melalui referendum tata kelola on-chain, di mana proposal yang disetujui memicu pertukaran runtime, yang pada dasarnya mengganti blob kode WASM yang ada dengan yang baru dalam satu blok, memastikan kelangsungan status dan operasi. Jalur pemutakhiran ini meminimalkan waktu henti dan risiko, memberdayakan komunitas untuk menyempurnakan protokol secara iteratif.
+Quantus mendukung pemutakhiran “tanpa fork” melalui pemutakhiran runtime Substrate, memungkinkan logika inti blockchain (“runtime”) untuk berkembang tanpa hard fork yang dapat mengganggu jaringan atau memecah komunitas. Hal ini dicapai melalui referendum tata kelola on-chain, di mana proposal yang disetujui memicu pertukaran runtime, yang pada dasarnya mengganti blob kode WASM yang ada dengan yang baru dalam satu blok, memastikan kelangsungan status dan operasi. Jalur pemutakhiran ini meminimalkan waktu henti dan risiko, memberdayakan komunitas untuk menyempurnakan protokol secara iteratif.
 
 ### Sistem Tata Kelola
 
-Quantus Network mewarisi kerangka tata kelolanya dari sistem OpenGov Polkadot melalui Substrate. Pemegang token berpartisipasi melalui conviction voting, di mana mereka setuju untuk mengunci aset mereka untuk periode yang bervariasi guna memperkuat bobot suara mereka. Penguatan ini dapat berkisar dari 1x (tanpa penguncian) hingga 6x (penguncian maksimum). Desain ini mendorong keselarasan jangka panjang dengan mengaitkan pengaruh dengan komitmen.
+Quantus mewarisi kerangka tata kelolanya dari sistem OpenGov Polkadot melalui Substrate. Pemegang token berpartisipasi melalui conviction voting, di mana mereka setuju untuk mengunci aset mereka untuk periode yang bervariasi guna memperkuat bobot suara mereka. Penguatan ini dapat berkisar dari 1x (tanpa penguncian) hingga 6x (penguncian maksimum). Desain ini mendorong keselarasan jangka panjang dengan mengaitkan pengaruh dengan komitmen.
 
 Proposal dikategorikan ke dalam beberapa jalur pemungutan suara yang disebut “origins”. Setiap origin memiliki parameter yang disesuaikan seperti ambang persetujuan (misalnya, supermayoritas untuk perubahan berdampak tinggi), setoran minimum untuk mencegah spam, periode persiapan/pemberlakuan, dan garis waktu keputusan untuk mencegah kebuntuan. Desain multi-jalur ini memungkinkan pemrosesan paralel dari berbagai referendum, mulai dari pengeluaran perbendaharaan rutin hingga pemutakhiran runtime yang kritis.
 
@@ -418,10 +418,10 @@ Pendekatan bertahap ini memungkinkan jaringan untuk berkembang secara organik me
 
 ## Risiko
 
-Membangun Quantus Network datang dengan risiko yang melekat.
+Membangun Quantus datang dengan risiko yang melekat.
 
 - **Masalah Implementasi:** Cacat dalam logika perangkat lunak dapat menyebabkan kegagalan serius bahkan pada sistem yang dirancang paling baik sekalipun.
-- **Masalah Pemilihan Algoritma NIST:** Potensi cacat atau pintu belakang (backdoor) dalam standar pasca-kuantum yang dipilih (misalnya, ML-DSA, ML-KEM) yang dapat muncul setelah standardisasi. Dalam kasus terburuk, cacat seperti itu akan memungkinkan penyerang untuk memalsukan signature dengan menurunkan kunci privat dari kunci publik, yang mewakili mode kegagalan katastrofik dari chain. Jika cacat seperti itu dipublikasikan, Quantus Network dapat ditingkatkan ke algoritma baru, tetapi jika cacat tersebut dieksploitasi secara hemat, mereka mungkin tidak akan pernah ditemukan.
+- **Masalah Pemilihan Algoritma NIST:** Potensi cacat atau pintu belakang (backdoor) dalam standar pasca-kuantum yang dipilih (misalnya, ML-DSA, ML-KEM) yang dapat muncul setelah standardisasi. Dalam kasus terburuk, cacat seperti itu akan memungkinkan penyerang untuk memalsukan signature dengan menurunkan kunci privat dari kunci publik, yang mewakili mode kegagalan katastrofik dari chain. Jika cacat seperti itu dipublikasikan, Quantus dapat ditingkatkan ke algoritma baru, tetapi jika cacat tersebut dieksploitasi secara hemat, mereka mungkin tidak akan pernah ditemukan.
 - **Garis Waktu Komputasi Kuantum:** Terobosan kuantum mungkin tiba jauh lebih lambat dari yang diantisipasi, menunda kebutuhan akan PQC; sebaliknya, pengembangan rahasia (misalnya oleh pemerintah) dapat menyebabkan ancaman mendadak jika komunitas blockchain gagal memperbarui dengan cepat.
 - **Pertimbangan Lain:** Hambatan adopsi umum, ketidakpastian peraturan dalam keuangan/blockchain, dan volatilitas inheren dari ekosistem kripto.
 
@@ -437,7 +437,7 @@ Membangun Quantus Network datang dengan risiko yang melekat.
   </Column>
 
   <Column>
-      Kami percaya pada kekuatan protokol terbuka, proof-of-work, dan kepemilikan berdaulat. Aplikasi Quantus Network, tersedia di desktop dan seluler, memungkinkan pengguna menyimpan aset digital, menambang blok baru, dan berpartisipasi dalam masa depan keuangan yang lebih adil tanpa perantara.
+      Kami percaya pada kekuatan protokol terbuka, proof-of-work, dan kepemilikan berdaulat. Aplikasi Quantus, tersedia di desktop dan seluler, memungkinkan pengguna menyimpan aset digital, menambang blok baru, dan berpartisipasi dalam masa depan keuangan yang lebih adil tanpa perantara.
 
       Kami berkomitmen pada transparansi, privasi, dan pemberdayaan individu melalui alat penyimpanan mandiri (self-custodial) yang aman.
 

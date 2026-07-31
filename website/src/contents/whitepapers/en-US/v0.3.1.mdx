@@ -1,5 +1,5 @@
 ---
-title: "Quantus Network Whitepaper"
+title: "Quantus Whitepaper"
 version: "0.3.1"
 publishedDate: "2026-01-14"
 updatedDate: "2026-01-14"
@@ -35,7 +35,7 @@ crypto economy risks sudden devaluation from such attacks.
 
 ### Unique Value Proposition
 
-Named after the Latin word for "how much", Quantus Network delivers scalable,
+Named after the Latin word for "how much", Quantus delivers scalable,
 quantum-secure wealth preservation. Quantus is not a smart contract platform.
 Instead, like a high-end restaurant with no menu, Quantus is focused on doing a
 small number of things better than any other chain.
@@ -189,11 +189,11 @@ especially for resource-constrained users or validators.
 future. Bitcoin, for example, will have much less than 1 TPS if the max block size
 is not increased.**
 
-## Quantus Network Architecture
+## Quantus Architecture
 
 ### Post-Quantum Cryptographic Primitives
 
-Quantus Network employs **NIST-standardized PQC** primitives to ensure the
+Quantus employs **NIST-standardized PQC** primitives to ensure the
 security of transactions and network communications against quantum threats.
 At the core of transaction integrity is **ML-DSA (Module-Lattice-based Digital
 Signature Algorithm**, formerly known as CRYSTALS-Dilithium), a lattice-based
@@ -233,7 +233,7 @@ For technical details about the implementation see [QIP-0006](https://github.com
 
 #### LibP2P
 
-**Quantus Network secures peer-to-peer (P2P) node communications using a
+**Quantus secures peer-to-peer (P2P) node communications using a
 combination of ML-DSA for authentication and ML-KEM (Module-Lattice-based
 Key Encapsulation Mechanism, formerly CRYSTALS-Kyber) for encryption.**
 
@@ -261,7 +261,7 @@ For technical details about the implementation see [QIP-0004](https://github.com
 ### Scaling PQC
 
 To address the scaling challenges inherent in post-quantum cryptography,
-**Quantus Network introduces an innovative aggregated post-quantum signature
+**Quantus introduces an innovative aggregated post-quantum signature
 scheme called “Wormhole Addresses”.** This system leverages zero-knowledge
 proofs (ZKPs) generated via the Plonky2 proving system (basically STARKs) to
 move balance verification off-chain, allowing the chain to verify a single compact
@@ -376,7 +376,7 @@ For more technical details about the implementation see [QIP-0005](https://githu
 
 ### Consensus Mechanism
 
-**Quantus Network uses a Proof-of-Work (PoW) consensus
+**Quantus uses a Proof-of-Work (PoW) consensus
 algorithm that preserves the desirable properties of Bitcoin’s
 consensus algorithm while improving compatibility with
 ZK-proof systems by switching out SHA-256 with Poseidon2.**
@@ -396,14 +396,14 @@ maximize the efficiency.
 ## Wealth Preservation
 
 **There are many risks in managing cryptocurrency keys. Most of them are avoidable.
-Quantus Network bakes ease-of-use into the chain itself, enabling non-experts to
+Quantus bakes ease-of-use into the chain itself, enabling non-experts to
 transact with peace-of-mind.**
 
 ### Reversible Transactions
 
 <Grid gap="2rem">
   <Column ratio={2}>
-    **Quantus Network offers user-configurable reversible
+    **Quantus offers user-configurable reversible
     transactions, enabling senders to set a time window
     during which they can cancel outgoing transfers,
     enhancing theft deterrence and error correction without
@@ -434,7 +434,7 @@ transact with peace-of-mind.**
 
 <Grid gap="2rem">
   <Column ratio={2}>
-    Quantus Network introduces “check-phrases,” a
+    Quantus introduces “check-phrases,” a
     cryptographically-secure human-readable checksum for
     blockchain addresses and other data requiring human
     verification. **By hashing the address to generate a short
@@ -462,7 +462,7 @@ transact with peace-of-mind.**
 
 <Grid gap="2rem">
   <Column ratio={2}>
-    Quantus Network offers the ability to upgrade any
+    Quantus offers the ability to upgrade any
     account to a “high-security account” which enforces
     mandatory reversal periods on all outgoing transfers,
     allowing a designated “guardian” account such as
@@ -496,7 +496,7 @@ transact with peace-of-mind.**
 
 ### Key Recovery
 
-Many crypto-fortunes have gone to the grave with their owners. Quantus Network
+Many crypto-fortunes have gone to the grave with their owners. Quantus
 offers a simple way to specify a recovery address that can pull your funds at any
 time, subject to a fixed delay. During this time, the owner can deny recovery if they
 have access to the key. This feature enables survivorship: users have an on-chain
@@ -513,7 +513,7 @@ Adapting this to lattice schemes like Dilithium involves two challenges:
 - HMAC-SHA512 outputs can’t directly form lattice private keys, which require “good basis” polynomials via rejection sampling.
 - Non-hardened key derivation relies on elliptic curve addition, absent in lattices (public keys aren’t closed under any algebraic operation).
 
-Quantus Network addresses the first issue by using the output of the HMAC as
+Quantus addresses the first issue by using the output of the HMAC as
 entropy to deterministically construct the private key, not as the private key itself.
 The second issue is less critical and remains an open research question whether
 lattice cryptography can be adapted to address it.
@@ -522,7 +522,7 @@ For more technical details see [QIP-0002](https://github.com/Quantus-Network/imp
 
 ## Tokenomics and Governance
 
-Quantus Network exists in a changing environment, and we cannot assume that we
+Quantus exists in a changing environment, and we cannot assume that we
 will get everything right on the first try. For this reason, we choose a simple starting
 point and allow the governance system to make changes as new information is
 acquired. This design makes the blockchain a living entity that can adapt to its
@@ -531,7 +531,7 @@ changes to the chain with minimal coordination among the various node-runners.
 
 ### Block Rewards
 
-Quantus Network employs a straightforward tokenomics model imitating that of
+Quantus employs a straightforward tokenomics model imitating that of
 Bitcoin. There is a maximum supply of 21,000,000 coins and a simple heuristic
 determines the reward each block.
 
@@ -564,7 +564,7 @@ of any burns, 99% of the coins will be emitted in about 40 years.
 
 ### Investor Allocation
 
-Quantus Network was built with the help of angel investors who took great risk
+Quantus was built with the help of angel investors who took great risk
 in funding it. To avoid the supply overhangs that investor-lockups create, we are
 making all investors, public and private, liquid on day one. This allocation will
 be the only “pre-mine”. All other tokens will have to be mined into existence.
@@ -597,7 +597,7 @@ be split among the miner, the proof aggregator, and a burn.
 
 ### Forkless Upgrades
 
-Quantus Network supports “forkless” upgrades through Substrate’s runtime upgrades,
+Quantus supports “forkless” upgrades through Substrate’s runtime upgrades,
 allowing the blockchain’s core logic (the “runtime”) to evolve without hard forks
 that could disrupt the network or split the community. This is achieved via on-chain
 governance referenda, where approved proposals trigger a runtime swap, essentially
@@ -607,7 +607,7 @@ empowering the community to iteratively refine the protocol.
 
 ### Governance System
 
-Quantus Network inherits its governance framework from Polkadot’s OpenGov system
+Quantus inherits its governance framework from Polkadot’s OpenGov system
 via Substrate. Token holders participate via conviction voting, where they agree to lock
 their assets for varying periods to amplify their vote’s weight. This amplification can
 range from 1x (no lock) to 6x (maximum lockup). This design encourages long-term
@@ -674,7 +674,7 @@ votes without burdening users with unnecessary complexity at the beginning.
 
 ## Risks
 
-Building Quantus Network comes with inherent risks.
+Building Quantus comes with inherent risks.
 
 - **Implementation Issues:** Flaws in software logic can cause serious failures in
   even the best designed systems.
@@ -683,7 +683,7 @@ Building Quantus Network comes with inherent risks.
   standardization. In the worst case, such flaws would allow an attacker to
   forge signatures by deriving a private key from the public, representing
   a catastrophic failure mode of the chain. If such flaws were made public,
-  Quantus Network could be upgraded to a new algorithm, but if such flaws are
+  Quantus could be upgraded to a new algorithm, but if such flaws are
   exploited sparingly they may never be discovered.
 - **Quantum Computing Timelines:** Quantum breakthroughs might arrive much
   later than anticipated, delaying the need for PQC; conversely, secretive
@@ -706,7 +706,7 @@ Building Quantus Network comes with inherent risks.
   <Column>
       We believe in the power of open
       protocols, proof-of-work, and sovereign
-      ownership. The Quantus Network app,
+      ownership. The Quantus app,
       available on desktop and mobile, lets users
       store digital assets, mine new blocks, and
       participate in a fairer financial future without
