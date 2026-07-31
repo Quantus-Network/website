@@ -1,9 +1,9 @@
 ---
-title: "Quantus Weekly：普朗克测试网、CLI 领取奖励与证明器吞吐翻倍"
-description: "普朗克是首个支持 Quantus 后量子隐私交易的测试网；多数矿工本周完成迁移，可通过 CLI 将挖矿奖励申领至移动钱包的透明地址；docs.quantus.com 提供节点、矿工与领奖指南；2x8 分片架构使聚合证明器速度翻倍。"
+title: "Quantus 每周动态：Planck 领奖与证明器翻倍"
+description: "Planck 是首个支持后量子隐私交易的测试网；矿工完成迁移、CLI 申领奖励至移动钱包、docs 上线，聚合证明器经 2x8 架构吞吐翻倍。"
 pubDate: "2026-04-22"
 heroImage: "/blog/covers/weekly-update-04-22-2026.webp"
-heroAlt: "Quantus Weekly：普朗克测试网、CLI 领取奖励与证明器吞吐翻倍"
+heroAlt: "Quantus 每周动态：Planck 领奖与证明器翻倍"
 featured: false
 tags:
   [
@@ -21,9 +21,9 @@ tags:
   ]
 ---
 
-普朗克是我们首个支持 Quantus 后量子隐私交易的测试网。
+Planck 是我们首个支持 Quantus 后量子隐私交易的测试网。
 
-本周已有超过半数矿工迁移到普朗克。
+本周已有超过半数矿工迁移到 Planck。
 
 当其他链还在争论量子威胁是否真实时，我们已在公开场合对解决方案进行压力测试。
 
@@ -39,17 +39,17 @@ tags:
 
 余额会重置，但在设置的「mining rewards」中仍可查看你在以往测试网上挖出的每个区块的记账。
 
-我们也在统计各账户在普朗克上挖出的区块数量。
+我们也在统计各账户在 Planck 上挖出的区块数量。
 
 本周通过 2x8 分片架构，聚合证明器速度也实现翻倍。
 
 本周还有更多交付。
 
-### GitHub 动态（已合并 27 个拉取请求）：
+### GitHub 活动（已合并 27 个拉取请求）：
 
 ![Github Stats](/blog/assets/github-stats-weekly-update-04-22-2026.webp)
 
-### 核心技术 & ZK
+### 核心技术与 ZK
 
 - 通过 2x8 分片证明架构将聚合证明器性能翻倍（每个 8 叶 bundle 不做 ZK，在根证明上套 ZK 封装）。
 - 已提交 ZK 研究论文预印本。
@@ -62,18 +62,18 @@ tags:
 
 ### 网络与基础设施
 
-- 普朗克：新变更已合并发布；内部普朗克测试网运行中。
+- Planck：新变更已合并发布；内部 Planck 测试网运行中。
 - 压力测试：实施新策略并完成多轮运行。
 - 水龙头：改进 Twitter 相关异常处理，扩展指标以便更细粒度监控。
-- 刷新并扩展普朗克与水龙头的监控面板。
+- 刷新并扩展 Planck 与水龙头的监控面板。
 - 实现更精细的告警策略。
 - A1-Planck 节点迁至德国；A2-Planck 节点迁至美国。
-- 面向普朗克测试网更新 Subsquid：修复余额变动、哈希器改回 blake2b、增加挖矿奖励展示。
-- 浏览器更新至普朗克测试网并正确合并虫洞分支。
+- 面向 Planck 测试网更新 Subsquid：修复余额变动、哈希器改回 blake2b、增加挖矿奖励展示。
+- 浏览器更新至 Planck 测试网并正确合并虫洞分支。
 - 在 Apple Silicon 与 Linux 上端到端跑通 MVP 矿工；Linux GPU 挖矿仍在排查。
 - 编写 AI 挖矿技能（SKILL.md）；测试中约两分钟内跑通挖矿。
 
-### 网站与移动应用
+### 网页与移动应用更新
 
 - [docs.quantus.com](https://docs.quantus.com) 上线。
 - 部署 [q.day](https://q.day) 落地页。

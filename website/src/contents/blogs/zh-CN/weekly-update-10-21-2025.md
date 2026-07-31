@@ -1,10 +1,9 @@
 ---
-title: Quantus 每周动态：Plonky2 Poseidon2 门电路与链上治理
-description: 每周更新：在 Plonky2 中实现 Poseidon2 门电路，新增链上治理与国库功能，以及完成应用内推荐系统。更多协议更新与研究详情，请参阅 Quantus 博客文章。
-
+title: "Quantus 每周动态：Poseidon2 门电路与链上治理"
+description: "本周 Poseidon2 落地为 Plonky2 门电路，链上治理与国库功能上线，应用内推荐完成，并启动 GPU 矿工 Icicle 绑定与共识机制审计跟进。"
 pubDate: "2025-10-21"
 heroImage: "/blog/covers/weekly-update-10-21-2025.webp"
-heroAlt: "Quantus 每周动态：Plonky2 Poseidon2 门电路与链上治理"
+heroAlt: "Quantus 每周动态：Poseidon2 门电路与链上治理"
 featured: false
 tags:
   [

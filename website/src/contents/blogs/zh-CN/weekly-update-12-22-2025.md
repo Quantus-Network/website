@@ -1,7 +1,6 @@
 ---
-title: Quantus 每周动态：GPU 挖矿与 Dirac 压力测试
-description: 每周更新，涵盖支持 GPU 的 Quantus Miner v2.0.2 发布、Dirac 网络压力测试以及链架构更新。更多协议更新与研究详情，请参阅 Quantus 博客文章。
-
+title: "Quantus 每周动态：GPU 挖矿与 Dirac 压力测试"
+description: "正式发布支持 GPU 的 Quantus Miner v2.0.2，并对 Dirac 完成压力测试；链架构更新支持 2100 万枚代币供应上限，并移除旧归属与国库托盘。"
 pubDate: "2025-12-22"
 heroImage: "/blog/covers/weekly-update-12-22-2025.webp"
 heroAlt: "Quantus 每周动态：GPU 挖矿与 Dirac 压力测试"
@@ -18,7 +17,7 @@ tags:
   ]
 ---
 
-本周，我们正式发布了支持 GPU 的 Quantus Miner v2.0.2，并成功对 Dirac 网络进行了压力测试。
+本周，我们正式发布了支持 GPU 的 Quantus Miner v2.0.2，并成功对 Dirac 进行了压力测试。
 
 我们还更新了链架构以支持 2100 万枚代币的供应上限，并通过移除旧的归属（vesting）和国库（treasury）托盘清理了代码库。
 
@@ -36,7 +35,7 @@ tags:
 - 对 Dirac 进行了压力测试，以观察链超载如何影响出块时间。
 - 发布了 Quantus Miner v2.0.2，该版本现在正式支持 GPU 挖矿：https://github.com/Quantus-Network/quantus-miner/releases/tag/v2.0.2
 
-## Web 与移动应用更新
+## 网页与移动应用更新
 
 - 完成了移动端硬件钱包签名流程，包括二维码签名传输、多钱包支持和取消链接功能。
 - 实施了“突袭任务”（Raid Quests），通过 Telegram、网站和 Task Master 进行内部追踪，以激励社区在 X 上的互动。钱包实施正在进行中。

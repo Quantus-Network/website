@@ -1,9 +1,9 @@
 ---
-title: "Quantus Weekly：销售点、PolyFri 掩码与 P2P 电子现金"
-description: "v1.2.2 移动端 POS 模式、PolyFri 证明端原生路径掩码、Poseidon 哈希器清理、链上 ZK 证明 DDoS 防护、网站改版 alpha，以及 Quantum Canary 谈建造量子计算机之难。"
+title: "Quantus 每周动态：POS 模式与点对点电子现金"
+description: "钱包 v1.2.2 上线销售点模式；PolyFri 证明端掩码、Poseidon 清理、链上 ZK 的 DDoS 防护，以及为何点对点电子现金对 Quantus 仍至关重要。"
 pubDate: "2026-03-31"
 heroImage: "/blog/covers/weekly-update-03-31-2026.webp"
-heroAlt: "Quantus Weekly：销售点、PolyFri 掩码与 P2P 电子现金"
+heroAlt: "Quantus 每周动态：POS 模式与点对点电子现金"
 featured: false
 tags:
   [
@@ -20,7 +20,7 @@ tags:
 
 > 点对点电子现金系统。
 
-这是比特币白皮书标题。
+这是比特币白皮书的标题。
 
 十七年过去，行情好的时候比特币每秒大约只能处理七笔交易。
 
@@ -50,7 +50,7 @@ P2P 电子现金会扩容。会保护隐私。不可随意增发。具有主权�
 
 商户展示发票二维码。顾客扫码。支付即时确认。抗量子、点对点、电子现金。
 
-本周其他交付如下：
+本周其他交付如下。
 
 ### GitHub 活动（已合并 24 个拉取请求）：
 
@@ -65,7 +65,7 @@ P2P 电子现金会扩容。会保护隐私。不可随意增发。具有主权�
 
 - 为链上 ZK 证明增加 DDoS 防护。
 
-### 网页与移动应用：
+### 网页与移动应用更新：
 
 - 向应用商店发布移动应用 v1.2.2，含销售点模式与即时确认。
 - 部署网站改版的 alpha 版本。

@@ -1,10 +1,9 @@
 ---
-title: Quantus Weekly：春季清理、Eiger 审计与紧凑聚合器
-description: 推进 Eiger 审计整改、重构 CLI、修复矿工与索引器，并完成虫洞集成测试；发布钱包 1.3.4/1.3.5、矿工 v3.1.0，以及 Planck 测试网矿工工作坊。
-
+title: "Quantus 每周动态：审计与紧凑聚合器"
+description: "春季清理：推进 Eiger 审计整改、重构 CLI、修复矿工与索引器；在将证明器提速一倍的紧凑聚合器上跑通虫洞测试，并发布钱包与矿工新版本。"
 pubDate: "2026-04-29"
 heroImage: "/blog/covers/weekly-update-04-29-2026.webp"
-heroAlt: "Quantus Weekly：春季清理、Eiger 审计与紧凑聚合器"
+heroAlt: "Quantus 每周动态：审计与紧凑聚合器"
 featured: false
 tags:
   [
@@ -28,15 +27,15 @@ tags:
 
 在 ZK 方面，虫洞流程现已顺畅跑通我们上周交付的 2x8 紧凑聚合器。这一架构将证明器性能翻倍，意味着更快、更可扩展的隐私交易。面向用户，我们发布了移动钱包 1.3.4 与 1.3.5，以及修复 GPU 缺陷的 Quantus 矿工 v3.1.0。文档也已更新，覆盖从挖矿到申领奖励的完整流程。
 
-我们在 Network School 举办了首场普朗克测试网矿工工作坊。
+我们在 Network School 举办了首场 Planck 测试网矿工工作坊。
 
 以下是本周交付要点：
 
-### GitHub 动态（已合并 26 个拉取请求）：
+### GitHub 活动（已合并 26 个拉取请求）：
 
 ![Github Stats](/blog/assets/github-stats-weekly-update-04-29-2026.webp)
 
-### 核心技术 & ZK
+### 核心技术与 ZK
 
 - 处理来自 Eiger 的多项审计事项。
 - 在 2x8 紧凑聚合器上运行虫洞集成测试。
@@ -44,11 +43,11 @@ tags:
 
 ### 网络与基础设施
 
-- 对普朗克测试网进行压力测试。
+- 对 Planck 测试网进行压力测试。
 - 提升 Subsquid 索引器性能并修复 CPU 占用尖峰。本周 Subsquid 曾导致移动应用体验问题（余额无法加载），现已解决。
 - 发布 Quantus 矿工 v3.1.0，修复 GPU 挖矿缺陷。
 
-### 网站与移动应用
+### 网页与移动应用更新
 
 - 发布移动钱包 1.3.4 与 1.3.5。
 - 移动钱包设计改进；下一步上线引导流程。
@@ -64,7 +63,7 @@ tags:
 
 ### 内容与合作伙伴
 
-- 在 Network School 举办首场普朗克测试网矿工工作坊，4 人以上从零完成挖矿上手。
+- 在 Network School 举办首场 Planck 测试网矿工工作坊，4 人以上从零完成挖矿上手。
 - 在 EthKL 聚会进行宣讲。
 - 确认 Q-Day 赞助商。
 - 赞助 NS Marathon，现场提供 Quantus 椰子。

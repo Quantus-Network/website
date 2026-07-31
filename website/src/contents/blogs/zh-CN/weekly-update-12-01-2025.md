@@ -1,7 +1,6 @@
 ---
-title: Quantus 每周动态：格子密码学审计与 Keystone 集成
-description: 每周更新：格子密码学库审计圆满完成，Polkadot SDK 网络更新发布，以及 Keystone 硬件钱包新增支持。更多协议更新与研究详情，请参阅 Quantus 博客文章。
-
+title: "Quantus 每周动态：格子密码学审计与 Keystone 集成"
+description: "rusty-crystals 格子密码审计问题全部关闭，Polkadot SDK 网络层对齐更新；开源 Keystone 固件新增 Quantus 地址支持，并入驻 The Quantum Insider。"
 pubDate: "2025-12-01"
 heroImage: "/blog/covers/weekly-update-12-01-2025.webp"
 heroAlt: "Quantus 每周动态：格子密码学审计与 Keystone 集成"
@@ -17,7 +16,7 @@ tags:
   ]
 ---
 
-上周，团队解决了格子密码学库 (rusty-crystals) 审计中提出的所有问题，并发布了网络更新以适配最新的 Polkadot SDK。我们还在开源的 Keystone 硬件钱包固件上实现了 Quantus 地址支持，并成功入驻市场情报平台“The Quantum Insider”。
+上周，我们解决了格子密码学库 (rusty-crystals) 审计中提出的所有问题，并发布了网络更新以适配最新的 Polkadot SDK。我们还在开源的 Keystone 硬件钱包固件上实现了 Quantus 地址支持，并成功入驻市场情报平台“The Quantum Insider”。
 
 每周 Github 活动报告，包括 17 个已合并的拉取请求：https://github.com/Quantus-Network/n8n-workflows/blob/main/github/weekly-update-2025-12-01-11:59:59.md
 

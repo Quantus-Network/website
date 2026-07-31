@@ -1,10 +1,9 @@
 ---
-title: "Quantus 周报：杀手级应用就是货币"
-description: 本周我们为 Mithril 重写了 Dilithium DKG，发布了阈值签名修复程序，公开了 Wormhole SDK 助手，并在 TestFlight 上发布了美化后的钱包 v1.4.0。
-
+title: "Quantus 每周动态：杀手级应用是货币"
+description: "本周重写 Dilithium DKG 以对齐 Mithril，修复门限签名，开放 Wormhole SDK 辅助接口，并发布钱包 v1.4.0（TestFlight）。"
 pubDate: "2026-05-06"
 heroImage: "/blog/covers/weekly-update-05-06-2026.webp"
-heroAlt: "Quantus 周报：杀手级应用是货币"
+heroAlt: "Quantus 每周动态：杀手级应用是货币"
 featured: false
 tags:
   [
@@ -26,61 +25,61 @@ tags:
   ]
 ---
 
-我相信市场正在慢慢意识到一些事情。
+我相信市场正慢慢醒悟到一件事。
 
-一个杀手级的加密应用将比任何其他应用创造并捕获更多的价值。
+有一款杀手级加密应用，将创造并捕获比其他任何应用都更多的价值。
 
-它不是稳定币、预测市场或 DeFi。
+它不是稳定币、预测市场，也不是 DeFi。
 
-它绝对不是 Web3、社交网络或 PFP 收藏品。
+更不是 web3、社交网络，或头像 NFT 合集。
 
-它是货币。这个行业诞生的初衷。
+它是货币——催生整个行业的那个念头。
 
-最初的想法是纯粹的想法。点对点电子现金。
+最初的想法是纯粹的想法：点对点电子现金。
 
-安全、私密且可扩展的货币是数万亿美元的机会。
+安全、私密、可扩展的货币，才是万亿美元级的机会。
 
-本周，我们重写了 Quantus 针对 Dilithium 密钥的分布式密钥生成（DKG），以匹配更新后的 Mithril 论文，并发布了阈值签名实现的修复程序。
+本周，我们重写了 Quantus 的 Dilithium 密钥分布式密钥生成（DKG），以对齐更新后的 Mithril 论文，并在门限签名实现中修复了多项问题。
 
-因此，您将能够在多个参与方之间分片（shard）Quantus 密钥。这对于我们的安全集成至关重要。
+这样你就能把一把 Quantus 密钥分片到多方。这对我们的安全集成很重要。
 
-我们解决了 Wormhole 规范中的一个审计项，并公开了 Quantus CLI SDK 中的助手工具，向外部开发人员开放了私有交易支持。Wormhole 是我们实现可扩展后量子隐私的方式。
+我们处理了 Wormhole 规范中的一项审计问题，并在公开的 Quantus CLI SDK 中暴露了辅助接口，向外部开发者开放隐私交易支持。Wormhole 是我们实现可扩展后量子隐私的方式。
 
-我们还发布了钱包 v1.4.0，通过全新的皮肤简化并美化了移动应用体验（目前已在 TestFlight 上线）。
+我们还发布了钱包 v1.4.0，全面换肤，简化并美化了移动端体验（目前在 TestFlight）。
 
-### Github 活动（16 个已合并的拉取请求）：
+### Github 动态（合并 16 个拉取请求）：
 
-![Github 统计](/blog/assets/github-stats-weekly-update-05-06-2026.webp)
+![Github Stats](/blog/assets/github-stats-weekly-update-05-06-2026.webp)
 
 ### 核心技术与 ZK：
 
-- 重写了 Dilithium 密钥的分布式密钥生成，以匹配更新后的 Mithril 论文。
-- 针对三项审计发现加固了阈值签名实现。
-- 更新了 Wormhole 规范，以解决关于找零输出（change outputs）的审计项。
-- 公开了 Quantus CLI SDK 中的 Wormhole 助手，并添加了端到端的 deposit-to-mint 示例工作流。
-- 重构了 CLI 交易生命周期，具有明确的已提交、已包含和已完成状态，精确的小数费用解析，更严格的版本兼容性检查，以及感知溢出的批量转账。
-- 构建了基准测试工具以改进难度调整算法。
-- 研究并测试了不同的聚合树拓扑及其 CPU 使用情况。
-- 修复了人类助记词（checkphrase）中的拼写错误。
+- 重写 Dilithium 密钥的分布式密钥生成，以对齐更新后的 Mithril 论文。
+- 针对三项审计发现加固门限签名实现。
+- 更新 Wormhole 规范，处理找零输出相关的审计项。
+- 在公开 Quantus CLI SDK 中暴露 Wormhole 辅助接口，并加入端到端 deposit-to-mint 示例工作流。
+- 重构 CLI 交易生命周期：区分已提交、已包含、已最终确认状态，精确小数手续费解析，更严格的版本兼容检查，以及溢出感知的批量转账。
+- 构建基准测试工具，改进难度调整算法。
+- 调研并基准测试不同聚合树拓扑及其 CPU 占用。
+- 修正人工校验短语中的拼写错误。
 
 ### 网络与基础设施：
 
-- 扩展了带有 Wormhole 模式的压力测试套件，并在 Planck 测试网上运行了多次。
-- 将 Subsquid 区块链索引器迁移到生产级服务器，并添加了账户和链统计数据。
-- 对 Explorer 查询进行了基准测试，并删除了耗时较长的查询。
-- 更新了所有 VPS 操作系统并记录了基础设施文档。
-- 更新了矿工栈（miner-stack）并在 Windows 上测试了矿工应用。
+- 扩展压力测试套件，加入 wormhole 模式，并在 Planck 测试网上多次运行。
+- 将 Subsquid 区块链索引器迁至生产级服务器，并增加账户与链统计数据。
+- 对 Explorer 查询做基准测试，移除高成本查询。
+- 更新全部 VPS 操作系统并完善基础设施文档。
+- 更新 miner-stack，并在 Windows 上测试 miner-app。
 
-### 网页与移动应用更新：
+### Web 与移动应用更新：
 
-- 发布了具有提取（claim）功能的 Planck GUI 矿工（v0.4.1）。
-- 发布了钱包 v1.4.0（目前在 TestFlight 上），具有全新的 UI 皮肤和实时汇率。
-- 钱包错误修复：首页余额样式、活动组件样式和接收屏幕。
-- Task Master：添加了汇率端点并更新了校验和依赖项。
-- 更新了 Quantus 网站：将文档链接指向 docs (dot) quantus (dot) com，更新了 TPS 显示，并发布了周报。
+- 发布 Planck GUI 矿工（v0.4.1），支持领取功能。
+- 发布钱包 v1.4.0（目前在 TestFlight）：全面 UI 换肤，并接入真实汇率。
+- 钱包 bug 修复：首页余额样式、活动组件样式，以及收款页。
+- Task Master：新增汇率端点，并更新校验和依赖。
+- 更新 Quantus 官网：文档链接指向 docs (dot) quantus (dot) com，更新 TPS 展示，并发布周报。
 
-### 内容与合作伙伴：
+### 内容与合作：
 
-- 更新了 Spotify、Apple 和 YouTube 上的播客品牌。
-- 在 Network School 以 [$QUAN](https://x.com/search?q=%24QUAN&src=cashtag_click) 的价格售出了第一副 Quantus 眼镜。
-- Quantus 在 NS 集市设有展位，引导应用用户和 Q-day 注册者。
+- 更新 Spotify、Apple 与 YouTube 上的播客品牌形象。
+- 在 Network School 用 [$QUAN](https://x.com/search?q=%24QUAN&src=cashtag_click) 售出第一副 Quantus 眼镜。
+- Quantus 在 NS 市集设展位，引导应用用户与 Q-Day 报名者。

@@ -1,10 +1,9 @@
 ---
-title: Quantus 每周动态：Dirac 测试网发布与格子密码学审计
-description: 每周更新：发布 Dirac 测试网，完成 PoW 算法和格子密码学库的整链更新，以及多项基础设施改进。更多协议更新与研究详情，请参阅 Quantus 博客文章。
-
+title: "Quantus 每周动态：Dirac 测试网与格子密码学审计"
+description: "Dirac 测试网发布，完成整链 PoW 算法与 qp-rusty-crystals 格子密码库更新；该库已含恒定时间签名并进入外部审计，钱包与 libp2p 已集成。矿工请升级。"
 pubDate: "2025-11-10"
 heroImage: "/blog/covers/weekly-update-11-10-2025.webp"
-heroAlt: "Quantus 每周动态：Dirac 测试网发布与格子密码学审计"
+heroAlt: "Quantus 每周动态：Dirac 测试网与格子密码学审计"
 featured: false
 tags:
   [
@@ -18,7 +17,7 @@ tags:
   ]
 ---
 
-本周，团队发布了 Dirac 测试网，完成了全链范围内对工作量证明 (PoW) 算法和格子密码学库 qp-rusty-crystals 的更新。该核心库目前正在接受外部审计，并包含恒定时间 (constant-time) 签名。此次更新现已集成到移动钱包和 libp2p 中。
+本周，我们发布了 Dirac 测试网，完成了全链范围内对工作量证明 (PoW) 算法和格子密码学库 qp-rusty-crystals 的更新。该核心库目前正在接受外部审计，并包含恒定时间 (constant-time) 签名。此次更新现已集成到移动钱包和 libp2p 中。
 
 **如果您是矿工，请务必更新至新的 DIRAC 测试网**
 
@@ -34,7 +33,7 @@ tags:
 - 完成了区块头验证电路的实现。
 - 将区块头哈希器更新至新版本，消除了电路填充 (padding)。
 - 调查并解决了区块头中缺少摘要日志 (digest logs) 的漏洞。
-- 为虫洞 (wormhole) 示例二进制文件增加了缓存功能，以保存最新证明，方便调试。
+- 为 wormhole 示例二进制文件增加了缓存功能，以保存最新证明，方便调试。
 - 开始实现 GHOSTDAG 共识论文。
 
 ## 网络与基础设施

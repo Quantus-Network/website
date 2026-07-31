@@ -1,9 +1,9 @@
 ---
-title: "Quantus 每周动态：Plonky3 Poseidon2 集成与自由地播客"
-description: "每周更新：将 Plonky3 Poseidon2 哈希移植到 ZK 电路，Rusty Crystals 的内存优化，以及与自由地 (Liberland) 总统的播客。"
+title: "Quantus 每周动态：Poseidon2 与 Liberland 播客"
+description: "我们将 Plonky3 Poseidon2 移植到 ZK 电路，Rusty Crystals 内存优化约 80%，设计可逆交易游戏化，并与 Liberland 总统 Vit Jedlička 录制播客。"
 pubDate: "2025-10-14"
 heroImage: "/blog/covers/weekly-update-10-14-2025.webp"
-heroAlt: "Quantus 每周动态：Plonky3 Poseidon2 集成与自由地播客"
+heroAlt: "Quantus 每周动态：Poseidon2 与 Liberland 播客"
 featured: false
 tags:
   [
@@ -33,9 +33,9 @@ tags:
 
 ## 内容
 
-- 与自由地 (Liberland) 总统 Vit Jedlička 的播客已上线：https://www.youtube.com/watch?v=_hy-SaPRzpk&t
+- 与 Liberland 总统 Vit Jedlička 的播客已上线：https://www.youtube.com/watch?v=_hy-SaPRzpk&t
 - 与投资者和 KOL 进行了大量接触。
-- 为推荐计划和晋升系统设计了图形。
+- 为推荐计划和晋级系统设计了图形。
 
 ## 行业动态
 

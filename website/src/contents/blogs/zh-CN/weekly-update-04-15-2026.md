@@ -1,9 +1,9 @@
 ---
-title: "Quantus Weekly：Planck 测试网上线与早期挖矿奖励"
-description: "为何早期算力至关重要、Planck 测试网已对矿工开放、TestFlight 与应用商店迁移、新链上的 GPU 挖矿，以及本周核心、基础设施、钱包与社区动态。"
+title: "Quantus 每周动态：Planck 测试网挖矿奖励"
+description: "Planck 测试网已对早期矿工开放；TestFlight 与应用商店迁移推进，GPU 挖矿上新链，本周另有核心、Subsquid 与钱包更新。"
 pubDate: "2026-04-15"
 heroImage: "/blog/covers/weekly-update-04-15-2026.webp"
-heroAlt: "Quantus Weekly：Planck 测试网上线与早期挖矿奖励"
+heroAlt: "Quantus 每周动态：Planck 测试网挖矿奖励"
 featured: false
 tags:
   [
@@ -49,7 +49,7 @@ Quantus 采用工作量证明，最大供应量为 2,100 万 QUAN。
 
 本周其余交付如下：
 
-### Core Tech & ZK
+### 核心技术与 ZK
 
 - 上线新测试网。
 - 为主网准备移除 sudo pallet。
@@ -57,23 +57,23 @@ Quantus 采用工作量证明，最大供应量为 2,100 万 QUAN。
 - 修复单状态内存池。
 - 将 Poseidon 更新至最新版本。
 
-### Network & Infra
+### 网络与基础设施
 
 - 更新节点文档，注明最低网络要求。
 - 将 Subsquid 索引器更新至最新链版本，修正可逆与已取消的事件/外部交易类型，并发布 Docker 镜像 v0.6.0。
 - 为 Task Master 风险检查接口增加速率限制，并更新 CORS 策略。
 
-### Web & Mobile App Updates
+### 网页与移动应用更新
 
 - 恢复移动应用高安全流程并发布体验修复。
 - 重新设计钱包首页，更新按钮、图标与交易列表组件，并集成面向最新 Subsquid 索引器的新 GraphQL 查询。
 - 修复移动钱包页面动画、首页横幅问题，以及非首页路由下滚动时导航栏变暗的问题。
 
-### Content & Partnerships
+### 内容与合作伙伴
 
 - Chris 做客 [@mobymedia](https://x.com/mobymedia) 播客：[https://x.com/mobymedia/status/2043401794227949568](https://x.com/mobymedia/status/2043401794227949568)
 - 与 [@ethan*t_c*](https://x.com/ethan_t_c_) 和 [@YuviLightman](https://x.com/YuviLightman) 发布后量子零知识证明播客：[https://x.com/QuantusNetwork/status/2042047089660563948](https://x.com/QuantusNetwork/status/2042047089660563948)
 - 出席新加坡 GitEx。
 - 在 Network School 与 Dr. [@zina_cinker](https://x.com/zina_cinker) 举办满座场次：[https://x.com/QuantusNetwork/status/2044051045832384538](https://x.com/QuantusNetwork/status/2044051045832384538)
 - Chris 参加 [@ArcanumVentures](https://x.com/ArcanumVentures) 第 47 期直播（4 月 16 日周四 14:00 UTC / 新加坡 22:00）：[https://x.com/ArcanumVentures/status/2044023122102223157](https://x.com/ArcanumVentures/status/2044023122102223157)
-- 继续分发《量子现状》报告并推进评论功能。
+- 继续分发《量子现状》报告并落实反馈意见。

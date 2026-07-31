@@ -1,6 +1,6 @@
 ---
 title: "Quantus 每周动态：PoW 审计完成与 Dirac 测试网上线"
-description: "每周更新：Equilibrium 完成了对我们 PoW 算法和 Poseidon 哈希函数的审计，实现了区块头的 ZK 证明生成，并上线了 Dirac 测试网。"
+description: "Equilibrium 完成我们的 PoW 与 Poseidon 审计，区块头 ZK 证明落地，Dirac 测试网上线，双端应用商店同步更新钱包与矿机应用。"
 pubDate: "2025-11-17"
 heroImage: "/blog/covers/weekly-update-11-17-2025.webp"
 heroAlt: "Quantus 每周动态：PoW 审计完成与 Dirac 测试网上线"
@@ -19,7 +19,7 @@ tags:
   ]
 ---
 
-本周，团队完成了 Equilibrium 对我们工作量证明 (PoW) 算法和 Poseidon 哈希函数的审计，并向各大应用商店发布了更新后的应用。
+本周，我们完成了 Equilibrium 对我们工作量证明 (PoW) 算法和 Poseidon 哈希函数的审计，并向各大应用商店发布了更新后的应用。
 
 ## 开发新闻
 

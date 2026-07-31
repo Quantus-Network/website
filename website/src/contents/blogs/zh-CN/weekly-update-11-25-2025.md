@@ -1,7 +1,6 @@
 ---
-title: Quantus 每周动态：ZK 交易聚合与矿机应用发布
-description: 每周更新：完成 ZK 交易聚合第一步，发布矿机应用 v0.1.0，以及 GPU 挖矿实现的最新进展。更多协议更新与研究详情，请参阅 Quantus 博客文章。
-
+title: "Quantus 每周动态：ZK 交易聚合与矿机应用发布"
+description: "本周完成链端与 CLI 的首步 ZK 交易聚合，以真实转账验证取代模拟测试；Miner App v0.1.0 发布，GPU 挖矿实现约完成八成。"
 pubDate: "2025-11-25"
 heroImage: "/blog/covers/weekly-update-11-25-2025.webp"
 heroAlt: "Quantus 每周动态：ZK 交易聚合与矿机应用发布"
@@ -17,7 +16,7 @@ tags:
   ]
 ---
 
-本周，团队完成了链端和 CLI 的 ZK 交易聚合第一步，用真实的转账验证取代了模拟测试。我们还发布了矿机应用 (Miner App) v0.1.0 二进制文件，现已可用。
+本周，我们完成了链端和 CLI 的 ZK 交易聚合第一步，用真实的转账验证取代了模拟测试。我们还发布了矿机应用 (Miner App) v0.1.0 二进制文件，现已可用。
 
 ## 开发新闻
 
@@ -25,7 +24,7 @@ tags:
 
 ## 核心技术
 
-- 在链上创建了新的 qp-header 原语，该原语与我们的虫洞电路字段对齐，取代了 Substrate 的通用区块头。
+- 在链上创建了新的 qp-header 原语，该原语与我们的 wormhole 电路字段对齐，取代了 Substrate 的通用区块头。
 - 更新了聚合电路，以支持区块头验证和相邻区块之间的连接。
 - 挖矿算法的 GPU 实现已完成约 80%。
 - 完成了 rusty-crystals 审计的第一阶段，大部分问题已得到解决。
@@ -56,4 +55,4 @@ tags:
 
 ## 行业动态
 
-- Scott Anderson 更新了他对运行 Shor 算法的容错量子计算机的时间线预测，调整为“在下届美国总统大选之前”：https://scottaaronson.blog/?p=9325
+- Scott Aaronson 更新了他对运行 Shor 算法的容错量子计算机的时间线预测，调整为“在下届美国总统大选之前”：https://scottaaronson.blog/?p=9325

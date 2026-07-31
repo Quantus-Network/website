@@ -1,10 +1,9 @@
 ---
-title: Quantus 每周动态：量子安全签名、ZK 扩展与虫洞证明 2 倍速
-description: 每周更新：ML-DSA 签名规模、ZK 聚合、虫洞证明加速、安全审计、测试网节点与 Quantum Canary 内容。更多协议更新与研究详情，请参阅 Quantus 博客文章。
-
+title: "Quantus 每周动态：胖签名与更快的虫洞"
+description: "ML-DSA 签名比比特币大约 70 倍；本周推进量子安全签名扩展、虫洞证明提速 2 倍，并推进 ZK 聚合、审计与 Planck 测试网节点。"
 pubDate: "2026-03-16"
 heroImage: "/blog/covers/weekly-update-03-16-2026.webp"
-heroAlt: "Quantus 每周动态：量子安全签名、ZK 扩展与虫洞证明 2 倍速"
+heroAlt: "Quantus 每周动态：胖签名与更快的虫洞"
 featured: false
 tags:
   [
@@ -78,7 +77,7 @@ tags:
 
 ### 网页与移动应用更新：
 
-- 移动钱包 build 82：代码清理与 UI 标准化（表单、脚手架、图标按钮、账户重构）。
+- 移动钱包 build 82：代码清理与 UI 标准化（面板、脚手架、图标按钮、账户重构）。
 - 更新移动钱包链历史服务与交易历史 UI，以支持最新 Subsquid 数据模型。
 - 网站：优化页面索引，将每周更新作为博客发布，修复博客搜索以包含标题。
 - 浏览器：将可逆交易视图拆分为独立事件类型（已计划、已执行、已取消）。

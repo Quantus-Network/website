@@ -1,9 +1,9 @@
 ---
-title: "Quantus Weekly：Q 日估算、链上花费攻击风险与永久经济自由"
-description: "Google 与 Oratomic 对攻破 ECC 的量子比特估算、相对比特币 10 分钟出块的链上花费攻击、Google 将后量子迁移截止延至 2029 年，以及 Quantus 以「永久经济自由」为核心的品牌重塑，另含 ZK、基础设施与应用更新。"
+title: "Quantus 每周动态：Q 日估算与链上花费风险"
+description: "Google 与 Oratomic 下调攻破 ECC 所需量子比特；比特币 10 分钟出块面临链上花费风险；Quantus 以「永久经济自由」完成品牌重塑。"
 pubDate: "2026-04-07"
 heroImage: "/blog/covers/weekly-update-04-07-2026.webp"
-heroAlt: "Quantus Weekly：Q 日估算、链上花费攻击风险与永久经济自由"
+heroAlt: "Quantus 每周动态：Q 日估算与链上花费风险"
 featured: false
 tags:
   [
@@ -33,7 +33,7 @@ Google 团队结合预计算，估计攻击窗口为 9 分钟。
 
 这意味着攻击者可以拦截进行中的交易、破解发送方密钥，并在网络确认原始交易之前广播欺诈性替换交易。这被称为链上花费（on-spend）攻击。
 
-当链上花费攻击成为现实时，即使对量子攻击者隐藏公钥，也不足以防止你的聪（sats）被盗。
+当链上花费攻击成为现实时，即使对量子攻击者隐藏公钥，也不足以防止你的聪被盗。
 
 Google 将自身后量子迁移截止日期推迟到 2029 年。更有趣的是，他们公布了攻破 ECC-256 的资源估算（量子比特数量、时间），却未公开执行密码破解本身的详细技术方案。
 
@@ -57,11 +57,11 @@ Google 将自身后量子迁移截止日期推迟到 2029 年。更有趣的是�
 
 [@QuantusNetwork](https://x.com/QuantusNetwork) 是量子安全的加密货币。以下是我们本周交付的其他内容。
 
-### GitHub 动态（已合并 13 个拉取请求）：
+### GitHub 活动（已合并 13 个拉取请求）：
 
 ![Github Stats](/blog/assets/github-stats-weekly-update-04-07-2026.webp)
 
-### 核心技术 & ZK
+### 核心技术与 ZK
 
 - qp-plonky2 采用新的盲化策略，使 ZK 叶子证明速度提升 6 倍，且不增加原生 trace 长度。
 - 重构 CLI，使移动应用与矿工应用共享同一套 ZK 代码。
@@ -77,7 +77,7 @@ Google 将自身后量子迁移截止日期推迟到 2029 年。更有趣的是�
 - 遥测与 Grafana 品牌更新以匹配新视觉识别。
 - 修复 CLI 构建与发布流程。
 
-### 网站与移动应用
+### 网页与移动应用更新
 
 - 上线重设计的 [quantus.com](https://quantus.com)，基于 Astro 重建并支持本地化。
 - 移动应用新 Logo 与启动画面。

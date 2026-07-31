@@ -1,9 +1,9 @@
 ---
-title: "Quantus 每周动态：第二次减半 — 两周内 ZK 证明提速 4 倍"
-description: "再次将证明器时间减半、Poseidon 哈希、挖矿修复、Senoti 限流、白皮书上线、iOS 兑换审核，以及 Quantum Canary 谈 Solana 量子安全等。"
+title: "Quantus 每周动态：第二次减半，证明提速 4 倍"
+description: "连续两周将证明器时间减半，两周内 ZK 证明提速 4 倍；另含 Poseidon 更新、挖矿修复、Senoti 限流、白皮书上线与 Quantum Canary。"
 pubDate: "2026-03-24"
 heroImage: "/blog/covers/weekly-update-03-24-2026.webp"
-heroAlt: "Quantus 每周动态：第二次减半 — 两周内 ZK 证明提速 4 倍"
+heroAlt: "Quantus 每周动态：第二次减半，证明提速 4 倍"
 featured: false
 tags:
   [
@@ -35,7 +35,7 @@ tags:
 
 用户点击发送时，希望收款方立刻看到资金。
 
-我们的虫洞交易（切断发送方与接收方关联）需要 ZK 证明。
+我们的虫洞交易——切断发送方与接收方关联的那些——需要 ZK 证明。
 
 ZK 证明在结算前增加时间。每过一秒，收款方每次刷新却看不到资金，都是失败。
 
@@ -45,7 +45,7 @@ ZK 证明在结算前增加时间。每过一秒，收款方每次刷新却看�
 
 我们正在把秒数一点点磨掉。
 
-本周其他交付如下：
+本周其他交付如下。
 
 ### GitHub 活动（已合并 12 个拉取请求）：
 
@@ -64,7 +64,7 @@ ZK 证明在结算前增加时间。每过一秒，收款方每次刷新却看�
 - 为 Senoti 通知服务的设备注册接口增加速率限制。
 - 浏览器更新：合并最新改动、解决冲突并调整 API。
 
-### 网页与移动应用：
+### 网页与移动应用更新：
 
 - 在网站发布新版白皮书，样式与内容已更新。
 - 将上期周报发布为 [quantus.com/blog](https://quantus.com/blog) 上的博文。

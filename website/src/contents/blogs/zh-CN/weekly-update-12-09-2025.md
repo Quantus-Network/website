@@ -1,10 +1,9 @@
 ---
-title: Quantus 每周动态：Poseidon2 优化与链架构重构
-description: 每周更新：Poseidon2 门电路提速 8.3 倍，重大链架构重构移除 9,000 行代码，以及来自币安区块链周的最新消息。更多协议更新与研究详情，请参阅 Quantus 博客文章。
-
+title: "Quantus 每周动态：Poseidon2 提速与链架构精简"
+description: "Poseidon2 门电路优化后提速 8.3 倍，链架构重构删减约九千行代码；团队分享币安区块链周与 Solana Breakpoint 见闻，并继续推进量子安全建设。"
 pubDate: "2025-12-09"
 heroImage: "/blog/covers/weekly-update-12-09-2025.webp"
-heroAlt: "Quantus 每周动态：Poseidon2 优化与链架构重构"
+heroAlt: "Quantus 每周动态：Poseidon2 提速与链架构精简"
 featured: false
 tags:
   [
@@ -43,17 +42,17 @@ tags:
 
 ## 核心技术与 ZK
 
-- 优化了 Poseidon2 门电路。将每次置换的电路追踪行数从 31 行减少到 1 行。这使门电路提速 8.3 倍，并使大型虫洞证明器（wormhole prover）的总速度提升了 4.5 倍。
-- 重构了链架构，使用交易扩展（transaction extensions）来记录虫洞证明。这消除了对 balances pallet 自定义分支的需求，移除了约 9,000 行代码。
-- 为虫洞转账增加了资产 ID（Asset ID）支持。
+- 优化了 Poseidon2 门电路。将每次置换的电路追踪行数从 31 行减少到 1 行。这使门电路提速 8.3 倍，并使大型 wormhole prover 的总速度提升了 4.5 倍。
+- 重构了链架构，使用交易扩展（transaction extensions）来记录 wormhole 证明。这消除了对 balances pallet 自定义分支的需求，移除了约 9,000 行代码。
+- 为 wormhole 转账增加了资产 ID（Asset ID）支持。
 - 解决了 qp-rusty-crystals 审计中提出的问题。
 
 ## 网络与基础设施
 
 - 改进了 GPU 矿机实现。
 - 更新并合并了 sc-network，包括对对等节点广播的修复，以实现更顺畅的节点同步。
-- 归档了 Schrödinger（旧测试网）的网络历史记录。
-- 调试并改进了我们的 subsquid 架构。增加了新的监控脚本和重启协议，以提高浏览器和钱包的数据运行时间。
+- 归档了 Schrodinger（旧测试网）的网络历史记录。
+- 调试并改进了我们的 Subsquid 架构。增加了新的监控脚本和重启协议，以提高浏览器和钱包的数据运行时间。
 
 ## 网页与移动应用更新
 
