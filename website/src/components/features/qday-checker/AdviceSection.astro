@@ -32,7 +32,10 @@ const t = await createTranslator(locale);
       class="qrc-cta-btn qrc-animate wallet-cta-link"
       data-delay="0.45"
       target="_blank"
-      rel="noopener">{t("quantum_risk_checker.advice.cta")}</a
+      rel="noopener"
+      data-track="wallet_store_click"
+      data-track-cta-location="risk_checker_advice"
+      >{t("quantum_risk_checker.advice.cta")}</a
     >
     <span class="qrc-footer-note qrc-animate" data-delay="0.6">
       {t("quantum_risk_checker.advice.footer_note")}

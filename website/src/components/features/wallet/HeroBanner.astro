@@ -23,6 +23,9 @@ const t = await createTranslator(locale);
         class="wallet-btn-primary"
         target="_blank"
         rel="noopener"
+        data-track="wallet_store_click"
+        data-track-store="ios"
+        data-track-cta-location="wallet_hero"
       >
         {t("wallet.hero_banner.cta_app_store")}
       </a>
@@ -31,6 +34,9 @@ const t = await createTranslator(locale);
         class="wallet-btn-secondary"
         target="_blank"
         rel="noopener"
+        data-track="wallet_store_click"
+        data-track-store="android"
+        data-track-cta-location="wallet_hero"
       >
         {t("wallet.hero_banner.cta_google_play")}
       </a>

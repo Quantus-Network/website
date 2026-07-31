@@ -41,6 +41,9 @@ const t = await createTranslator(locale);
 
 <script>
   import env from "@/config";
+  import { initAnalyticsDelegation } from "@/scripts/shared/analytics";
+
+  initAnalyticsDelegation();
 
   class CookieConsentManager {
     private gaId: string;

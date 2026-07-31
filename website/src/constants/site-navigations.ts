@@ -3,6 +3,9 @@ interface Navigation {
   label: string;
   target?: string;
   rel?: string;
+  /** GA4 event name when this link is clicked */
+  track?: string;
+  trackParams?: Record<string, string>;
 }
 
 export const SITE_NAVIGATIONS: Navigation[] = [
@@ -15,6 +18,8 @@ export const SITE_NAVIGATIONS: Navigation[] = [
     target: "_blank",
     rel: "noopener noreferrer",
     label: "navbar.docs",
+    track: "docs_click",
+    trackParams: { cta_location: "nav" },
   },
   {
     href: "/quantum-risk-checker/",
