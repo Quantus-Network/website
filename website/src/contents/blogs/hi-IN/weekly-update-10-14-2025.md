@@ -1,9 +1,10 @@
 ---
-title: "क्वांटस वीकली: Plonky3 Poseidon2 इंटीग्रेशन और लिबरलैंड पॉडकास्ट"
-description: "साप्ताहिक अपडेट जिसमें ZK सर्किट में Plonky3 Poseidon2 हैश की पोर्टिंग, Rusty Crystals में मेमोरी ऑप्टिमाइज़ेशन, और लिबरलैंड के राष्ट्रपति के साथ पॉडकास्ट शामिल है।"
+title: "क्वांटस वीकली: Poseidon2 और लिबरलैंड पॉडकास्ट"
+description: साप्ताहिक अपडेट जिसमें ZK सर्किट में Plonky3 Poseidon2 हैश की पोर्टिंग, Rusty Crystals में मेमोरी ऑप्टिमाइज़ेशन, और लिबरलैंड के राष्ट्रपति के साथ पॉडकास्ट।
+
 pubDate: "2025-10-14"
 heroImage: "/blog/covers/weekly-update-10-14-2025.webp"
-heroAlt: "क्वांटस वीकली: Plonky3 Poseidon2 इंटीग्रेशन और लिबरलैंड पॉडकास्ट"
+heroAlt: "क्वांटस वीकली: Poseidon2 और लिबरलैंड पॉडकास्ट"
 featured: false
 tags:
   [

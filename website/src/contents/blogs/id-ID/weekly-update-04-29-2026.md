@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: spring cleaning, audit Eiger, dan compact aggregator"
-description: "Menuntaskan banyak item audit bersama Eiger, merefaktor CLI, memperbaiki bug miner dan indexer, serta menjalankan tes integrasi wormhole di compact aggregator baru. Alur wormhole ZK kini bersih lewat compact aggregator 2x8 yang dirilis minggu lalu. Dompet mobile 1.3.4–1.3.5, miner v3.1.0 dengan perbaikan bug GPU, dokumentasi mining hingga klaim hadiah, serta workshop miner testnet Planck pertama di Network School."
+title: "Quantus Weekly: Audit Eiger dan Compact Aggregator"
+description: Audit Eiger, refactor CLI, bugfix miner/indexer, tes wormhole di compact aggregator, dompet 1.3.4–1.3.5, miner v3.1.0, dan workshop Planck.
+
 pubDate: "2026-04-29"
 heroImage: "/blog/covers/weekly-update-04-29-2026.webp"
-heroAlt: "Quantus Weekly: spring cleaning, audit Eiger, dan compact aggregator"
+heroAlt: "Quantus Weekly: Audit Eiger dan Compact Aggregator"
 featured: false
 tags:
   [

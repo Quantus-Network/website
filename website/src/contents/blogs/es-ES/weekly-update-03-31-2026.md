@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: punto de venta, enmascaramiento PolyFri y dinero electrónico P2P"
-description: "Modo POS móvil en v1.2.2, enmascaramiento PolyFri en el probador, limpieza del hasher Poseidon, protección DDoS para pruebas ZK en cadena, alfa del rediseño web y Quantum Canary sobre computación cuántica."
+title: "Quantus Weekly: POS móvil, PolyFri y dinero P2P"
+description: Modo POS en wallet v1.2.2, enmascaramiento PolyFri en el probador y limpieza del hasher Poseidon. Protección DDoS para pruebas ZK y alfa del rediseño móvil.
+
 pubDate: "2026-03-31"
 heroImage: "/blog/covers/weekly-update-03-31-2026.webp"
-heroAlt: "Quantus Weekly: punto de venta, enmascaramiento PolyFri y dinero electrónico P2P"
+heroAlt: "Quantus Weekly: POS móvil, PolyFri y dinero P2P"
 featured: false
 tags:
   [

@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: Lattice-Crypto-Audit und Keystone-Integration"
-description: "Wöchentliches Update über das erfolgreiche Audit unserer Lattice-Crypto-Bibliothek, Networking-Updates für das Polkadot SDK und neue Hardware-Wallet-Unterstützung auf Keystone."
+title: "Quantus Weekly: Lattice-Audit und Keystone-Integration"
+description: Alle Audit-Funde in qp-rusty-crystals behoben, Polkadot-SDK-Networking aktualisiert, Quantus-Adressen in Keystone-Firmware und Listung bei The Quantum Insider.
+
 pubDate: "2025-12-01"
 heroImage: "/blog/covers/weekly-update-12-01-2025.webp"
-heroAlt: "Quantus Weekly: Lattice-Crypto-Audit und Keystone-Integration"
+heroAlt: "Quantus Weekly: Lattice-Audit und Keystone-Integration"
 featured: false
 tags:
   [

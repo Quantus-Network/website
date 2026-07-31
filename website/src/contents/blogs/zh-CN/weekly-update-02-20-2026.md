@@ -1,6 +1,7 @@
 ---
-title: "Quantus 每周动态：开放研究与后量子标准"
-description: "每周更新内容包括 research.quantus.com 的上线、ZK 证明聚合、多重签名托盘合并以及移动钱包更新。"
+title: Quantus 每周动态：开放研究与后量子标准
+description: 每周更新内容包括 research.quantus.com 的上线、ZK 证明聚合、多重签名托盘合并以及移动钱包更新。更多协议更新与研究详情，请参阅 Quantus 博客文章。
+
 pubDate: "2026-02-20"
 heroImage: "/blog/covers/weekly-update-02-20-2026.webp"
 heroAlt: "Quantus 每周动态：开放研究与后量子标准"

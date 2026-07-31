@@ -1,9 +1,9 @@
 ---
-title: "Quantus Weekly: Оптимизация Poseidon2 и рефакторинг архитектуры сети"
-description: "Еженедельное обновление: ускорение гейтов Poseidon2 в 8,3 раза, масштабный рефакторинг архитектуры сети с удалением 9 000 строк кода и новости с Binance Blockchain Week."
+title: "Quantus Weekly: Poseidon2 ×8,3 и рефакторинг сети"
+description: "Гейты Poseidon2 ускорены в 8,3 раза, архитектура сети упрощена с удалением 9000 строк кода, новости с Binance Blockchain Week и Solana Breakpoint."
 pubDate: "2025-12-09"
 heroImage: "/blog/covers/weekly-update-12-09-2025.webp"
-heroAlt: "Quantus Weekly: Оптимизация Poseidon2 и рефакторинг архитектуры сети"
+heroAlt: "Quantus Weekly: Poseidon2 ×8,3 и рефакторинг сети"
 featured: false
 tags:
   [

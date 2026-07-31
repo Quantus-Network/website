@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: ZK Transaction Aggregation and Miner App Release"
-description: "Weekly update covering the first step of ZK transaction aggregation, the release of Miner App v0.1.0, and progress on the GPU mining implementation."
+title: "Quantus Weekly: ZK Aggregation and Miner App"
+description: "First ZK transaction aggregation lands for chain and CLI with real transfer verification, Miner App v0.1.0 ships, and GPU mining work continues."
+
 pubDate: "2025-11-25"
 heroImage: "/blog/covers/weekly-update-11-25-2025.webp"
-heroAlt: "Quantus Weekly: ZK Transaction Aggregation and Miner App Release"
+heroAlt: "Quantus Weekly: ZK Aggregation and Miner App"
 featured: false
 tags:
   [

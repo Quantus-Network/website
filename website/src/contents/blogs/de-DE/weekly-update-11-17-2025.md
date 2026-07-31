@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: PoW-Audit abgeschlossen und Start des Dirac-Testnetzes"
-description: "Wöchentliches Update über den Abschluss unseres PoW- und Poseidon-Hash-Audits durch Equilibrium, ZK-Proof-Generierung für Block-Header und den Start des Dirac-Testnetzes."
+title: "Quantus Weekly: PoW-Audit und Dirac-Testnet-Start"
+description: Equilibrium-Audit für PoW und Poseidon abgeschlossen. ZK-Proofs für Block-Header live, Dirac-Release finalisiert und Mobile Wallet v1.1.1 veröffentlicht.
+
 pubDate: "2025-11-17"
 heroImage: "/blog/covers/weekly-update-11-17-2025.webp"
-heroAlt: "Quantus Weekly: PoW-Audit abgeschlossen und Start des Dirac-Testnetzes"
+heroAlt: "Quantus Weekly: PoW-Audit und Dirac-Testnet-Start"
 featured: false
 tags:
   [

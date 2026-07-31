@@ -1,5 +1,5 @@
 ---
-title: "Quantus Network Whitepaper"
+title: "Quantus Whitepaper"
 version: "0.3.1"
 publishedDate: "2026-01-14"
 updatedDate: "2026-01-14"
@@ -28,7 +28,7 @@ Das Ergebnis wäre ein katastrophaler Systemausfall. Ohne proaktive quantenresis
 
 ### Einzigartiges Wertversprechen
 
-Benannt nach dem lateinischen Wort für „wie viel“, bietet Quantus Network skalierbare, quantensichere Vermögenserhaltung. Quantus ist keine Smart-Contract-Plattform. Stattdessen konzentriert sich Quantus, wie ein High-End-Restaurant ohne Speisekarte, darauf, eine kleine Anzahl von Dingen besser zu machen als jede andere chain.
+Benannt nach dem lateinischen Wort für „wie viel“, bietet Quantus skalierbare, quantensichere Vermögenserhaltung. Quantus ist keine Smart-Contract-Plattform. Stattdessen konzentriert sich Quantus, wie ein High-End-Restaurant ohne Speisekarte, darauf, eine kleine Anzahl von Dingen besser zu machen als jede andere chain.
 
 Konkret nutzt Quantus:
 
@@ -119,11 +119,11 @@ Im Blockchain-Kontext führen diese aufgeblähten Größen zu systemischen Skali
 
 **Diese Skalierungsherausforderungen müssen in Zukunft von allen Blockchains angegangen werden. Bitcoin zum Beispiel wird weit weniger als 1 TPS haben, wenn die maximale Blockgröße nicht erhöht wird.**
 
-## Quantus Network Architektur
+## Quantus Architektur
 
 ### Post-Quanten-kryptografische Primitive
 
-Quantus Network verwendet **NIST-standardisierte PQC**-Primitive, um die Sicherheit von Transaktionen und Netzwerkkommunikation gegen Quantenbedrohungen zu gewährleisten. Das Herzstück der Transaktionsintegrität ist **ML-DSA (Module-Lattice-based Digital Signature Algorithm**, früher bekannt als CRYSTALS-Dilithium), ein gitterbasiertes Signaturschema, das aufgrund seines Gleichgewichts zwischen Sicherheit, Effizienz und Implementierungsfreundlichkeit ausgewählt wurde. **ML-DSA nutzt die Schwierigkeit von Problemen** wie Learning With Errors (LWE) und Short Integer Solution (SIS) über Modulgitter und bietet robusten Widerstand gegen sowohl klassische als auch Quantenangriffe, einschließlich solcher durch den Shor-Algorithmus.
+Quantus verwendet **NIST-standardisierte PQC**-Primitive, um die Sicherheit von Transaktionen und Netzwerkkommunikation gegen Quantenbedrohungen zu gewährleisten. Das Herzstück der Transaktionsintegrität ist **ML-DSA (Module-Lattice-based Digital Signature Algorithm**, früher bekannt als CRYSTALS-Dilithium), ein gitterbasiertes Signaturschema, das aufgrund seines Gleichgewichts zwischen Sicherheit, Effizienz und Implementierungsfreundlichkeit ausgewählt wurde. **ML-DSA nutzt die Schwierigkeit von Problemen** wie Learning With Errors (LWE) und Short Integer Solution (SIS) über Modulgitter und bietet robusten Widerstand gegen sowohl klassische als auch Quantenangriffe, einschließlich solcher durch den Shor-Algorithmus.
 
 Für Transaktionssignaturen **integriert Quantus ML-DSA-87**, den Parametersatz, der das höchste Sicherheitsniveau bietet (NIST Security Level 5, entspricht 256-Bit klassischer und 128-Bit Quantensicherheit), um **gegen potenzielle kryptanalytische Durchbrüche bei Gitterproblemen zu schützen**. Diese Wahl priorisiert Vorsicht, da die Gitterkryptografie relativ neu und weniger praxiserprobt ist als klassische Schemata. Die größeren Parameter mildern Risiken durch potenzielle Fortschritte in der Gitterkryptanalyse ab, die kleinere Schlüsselgrößen immer noch als leichtere Ziele belassen würden.
 
@@ -143,7 +143,7 @@ Technische Details zur Implementierung finden Sie in [QIP-0006](https://github.c
 
 #### LibP2P
 
-**Quantus Network sichert die Peer-to-Peer (P2P) Node-Kommunikation durch eine Kombination aus ML-DSA für die Authentifizierung und ML-KEM (Module-Lattice-based Key Encapsulation Mechanism, früher CRYSTALS-Kyber) für die Verschlüsselung.**
+**Quantus sichert die Peer-to-Peer (P2P) Node-Kommunikation durch eine Kombination aus ML-DSA für die Authentifizierung und ML-KEM (Module-Lattice-based Key Encapsulation Mechanism, früher CRYSTALS-Kyber) für die Verschlüsselung.**
 
 Diese Integration erweitert PQC auf den libp2p-Netzwerkstack und modifiziert Kernkomponenten für Quantenresistenz: Verwendung von ML-DSA-87-signature für die Peer-Identität und ML-KEM-768 für die Transportsicherheit (Erweiterung des Noise-Handshakes um eine zusätzliche KEM-Nachricht für quantenresistente Shared Secrets).
 
@@ -155,7 +155,7 @@ Technische Details zur Implementierung finden Sie in [QIP-0004](https://github.c
 
 ### Skalierung von PQC
 
-Um die der Post-Quanten-Kryptografie inhärenten Skalierungsherausforderungen anzugehen, **führt Quantus Network ein innovatives aggregiertes Post-Quanten-Signaturschema namens „Wormhole Addresses“ ein.** Dieses System nutzt Zero-Knowledge-Beweise (ZKPs), die über das Plonky2-Beweissystem (im Grunde STARKs) generiert werden, um die Kontostand-Verifizierung off-chain zu verlagern. Dies ermöglicht es der chain, einen einzigen kompakten Beweis zu verifizieren, ohne einzelne signature verarbeiten zu müssen.
+Um die der Post-Quanten-Kryptografie inhärenten Skalierungsherausforderungen anzugehen, **führt Quantus ein innovatives aggregiertes Post-Quanten-Signaturschema namens „Wormhole Addresses“ ein.** Dieses System nutzt Zero-Knowledge-Beweise (ZKPs), die über das Plonky2-Beweissystem (im Grunde STARKs) generiert werden, um die Kontostand-Verifizierung off-chain zu verlagern. Dies ermöglicht es der chain, einen einzigen kompakten Beweis zu verifizieren, ohne einzelne signature verarbeiten zu müssen.
 
 **Wormhole-Adressen ermöglichen die Verifizierung einer großen Anzahl von Transaktionen mit einem einzigen Beweis**, wobei die öffentlichen Inputs (z. B. Nullifier, Storage Root, Exit-Adressen und Beträge) zum primären limitierenden Faktor werden. Dies reduziert den amortisierten Speicherbedarf pro Transaktion auf **etwa 256 zusätzliche Bytes pro Transaktion, was viel kleiner ist als jedes bekannte PQC-Signaturschema.**
 
@@ -233,7 +233,7 @@ Weitere technische Details zur Implementierung finden Sie in [QIP-0005](https://
 
 ### Konsensmechanismus
 
-**Quantus Network verwendet einen Proof-of-Work (PoW) Konsensalgorithmus, der die wünschenswerten Eigenschaften des Bitcoin-Konsensalgorithmus beibehält und gleichzeitig die Kompatibilität mit ZK-Beweissystemen verbessert, indem SHA-256 durch Poseidon2 ersetzt wird.**
+**Quantus verwendet einen Proof-of-Work (PoW) Konsensalgorithmus, der die wünschenswerten Eigenschaften des Bitcoin-Konsensalgorithmus beibehält und gleichzeitig die Kompatibilität mit ZK-Beweissystemen verbessert, indem SHA-256 durch Poseidon2 ersetzt wird.**
 
 Wichtig ist, dass diese Änderung nicht aus Gründen der Quantensicherheit erfolgt. Kryptografische Hash-Funktionen wie SHA-256 werden durch Quantenalgorithmen, insbesondere Grover, geschwächt, aber nicht zerstört. Einige Post-Quanten-Signaturschemata verwenden aus diesem Grund sichere Hashes als Baustein.
 
@@ -241,13 +241,13 @@ Poseidon2 ist eine Weiterentwicklung der Poseidon-Hash-Funktion. Das Erstellen v
 
 ## Vermögenserhaltung
 
-**Bei der Verwaltung von Kryptowährungsschlüsseln gibt es viele Risiken. Die meisten davon sind vermeidbar. Quantus Network integriert Benutzerfreundlichkeit direkt in die chain selbst und ermöglicht es auch Laien, beruhigt Transaktionen durchzuführen.**
+**Bei der Verwaltung von Kryptowährungsschlüsseln gibt es viele Risiken. Die meisten davon sind vermeidbar. Quantus integriert Benutzerfreundlichkeit direkt in die chain selbst und ermöglicht es auch Laien, beruhigt Transaktionen durchzuführen.**
 
 ### Reversible Transaktionen
 
 <Grid gap="2rem">
   <Column ratio={2}>
-    **Quantus Network bietet benutzerkonfigurierbare reversible Transaktionen an, die es Sendern ermöglichen, ein Zeitfenster festzulegen, in dem sie ausgehende Überweisungen stornieren können. Dies verbessert die Diebstahlsabschreckung und Fehlerkorrektur, ohne die grundlegende Irreversibilität der Blockchain zu opfern.** Unter Nutzung eines modifizierten Substrate „Scheduler Pallets“, das Zeitstempel für intuitive Verzögerungen verwendet, ermöglicht das System den Clients, Überweisungen über eine einfache Schnittstelle zu planen. In den Wallets werden Countdowns sowohl für den Sender (mit einem Abbrechen-Button) als auch für den Empfänger (Anzeige des Abschlusses, wenn nicht storniert) angezeigt. Dies balanciert schnelle Finalität für den Handel mit Flexibilität für Nutzer aus, die besorgt sind, Fehler zu machen oder eine Anzahlung in gutem Glauben ohne Treuhandservice leisten möchten.
+    **Quantus bietet benutzerkonfigurierbare reversible Transaktionen an, die es Sendern ermöglichen, ein Zeitfenster festzulegen, in dem sie ausgehende Überweisungen stornieren können. Dies verbessert die Diebstahlsabschreckung und Fehlerkorrektur, ohne die grundlegende Irreversibilität der Blockchain zu opfern.** Unter Nutzung eines modifizierten Substrate „Scheduler Pallets“, das Zeitstempel für intuitive Verzögerungen verwendet, ermöglicht das System den Clients, Überweisungen über eine einfache Schnittstelle zu planen. In den Wallets werden Countdowns sowohl für den Sender (mit einem Abbrechen-Button) als auch für den Empfänger (Anzeige des Abschlusses, wenn nicht storniert) angezeigt. Dies balanciert schnelle Finalität für den Handel mit Flexibilität für Nutzer aus, die besorgt sind, Fehler zu machen oder eine Anzahlung in gutem Glauben ohne Treuhandservice leisten möchten.
 
     **Reversible Transaktionen bilden einen leistungsstarken Baustein für neuartige Sicherheitsprotokolle, während die Dezentralisierung durch On-Chain-Durchsetzung gewahrt bleibt.**
 
@@ -264,7 +264,7 @@ Poseidon2 ist eine Weiterentwicklung der Poseidon-Hash-Funktion. Das Erstellen v
 
 <Grid gap="2rem">
   <Column ratio={2}>
-    Quantus Network führt „check-phrases“ ein, eine kryptografisch sichere, für Menschen lesbare Prüfsumme für Blockchain-Adressen und andere Daten, die eine menschliche Verifizierung erfordern. **Durch das Hashen der Adresse zur Erzeugung einer kurzen Sequenz einprägsamer Wörter aus der BIP-39-Mnemonic-Liste ermöglichen check-phrases schnelle, fehlerfreie Integritätsprüfungen und schützen vor Tippfehlern, Manipulationen und Angriffen wie Address Poisoning.** Dieses Tool ermöglicht es Nutzern, Adressen während Überweisungen sicher zu verifizieren, ohne sich auf verkürzte Anzeigen oder schwache Prüfsummen verlassen zu müssen. Eine Schlüsselableitungsfunktion mit 50.000 Iterationen wird verwendet, um sicherzustellen, dass das Erstellen einer Rainbow Table für gegebene Prüfsummen sehr teuer ist. Natürlich sollten Nutzer bei großen Transaktionen weiterhin jeden Buchstaben der Adresse manuell auf Richtigkeit prüfen.
+    Quantus führt „check-phrases“ ein, eine kryptografisch sichere, für Menschen lesbare Prüfsumme für Blockchain-Adressen und andere Daten, die eine menschliche Verifizierung erfordern. **Durch das Hashen der Adresse zur Erzeugung einer kurzen Sequenz einprägsamer Wörter aus der BIP-39-Mnemonic-Liste ermöglichen check-phrases schnelle, fehlerfreie Integritätsprüfungen und schützen vor Tippfehlern, Manipulationen und Angriffen wie Address Poisoning.** Dieses Tool ermöglicht es Nutzern, Adressen während Überweisungen sicher zu verifizieren, ohne sich auf verkürzte Anzeigen oder schwache Prüfsummen verlassen zu müssen. Eine Schlüsselableitungsfunktion mit 50.000 Iterationen wird verwendet, um sicherzustellen, dass das Erstellen einer Rainbow Table für gegebene Prüfsummen sehr teuer ist. Natürlich sollten Nutzer bei großen Transaktionen weiterhin jeden Buchstaben der Adresse manuell auf Richtigkeit prüfen.
 
     Weitere technische Details finden Sie in [QIP-0008](https://github.com/Quantus-Network/improvement-proposals/blob/main/qip-0008.md).
 
@@ -279,7 +279,7 @@ Poseidon2 ist eine Weiterentwicklung der Poseidon-Hash-Funktion. Das Erstellen v
 
 <Grid gap="2rem">
   <Column ratio={2}>
-    Quantus Network bietet die Möglichkeit, jedes Konto zu einem „Hochsicherheitskonto“ aufzuwerten, das obligatorische Stornierungsfristen für alle ausgehenden Überweisungen erzwingt. Dies ermöglicht es einem benannten „Guardian“-Konto, wie z. B. einem Hardware-Wallet, einem Multisig oder sogar einem vom Nutzer gewählten vertrauenswürdigen Dritten, verdächtige Transaktionen während der Stornierungsfrist exklusiv zu stornieren. Dabei werden die Gelder an den Guardian gesendet statt an den Sender oder Empfänger. Diese optionale, permanente Funktion baut auf reversiblen Überweisungen auf, bei denen Nutzer bei der Aktivierung die Verzögerung und den Interzeptor festlegen, was Diebe daran hindert, die Funktion zu deaktivieren.
+    Quantus bietet die Möglichkeit, jedes Konto zu einem „Hochsicherheitskonto“ aufzuwerten, das obligatorische Stornierungsfristen für alle ausgehenden Überweisungen erzwingt. Dies ermöglicht es einem benannten „Guardian“-Konto, wie z. B. einem Hardware-Wallet, einem Multisig oder sogar einem vom Nutzer gewählten vertrauenswürdigen Dritten, verdächtige Transaktionen während der Stornierungsfrist exklusiv zu stornieren. Dabei werden die Gelder an den Guardian gesendet statt an den Sender oder Empfänger. Diese optionale, permanente Funktion baut auf reversiblen Überweisungen auf, bei denen Nutzer bei der Aktivierung die Verzögerung und den Interzeptor festlegen, was Diebe daran hindert, die Funktion zu deaktivieren.
 
     Der Interzeptor kann selbst ein weiteres Hochsicherheitskonto mit eigenem Guardian sein, was komponierbare Hierarchien ermöglicht, in denen jeder Guardian übergeordnete Berechtigungen für das von ihm geschützte Konto hat. Dieses Design ahmt gerichtlich angeordnete Rückbuchungen im traditionellen Finanzwesen nach, jedoch unter der Kontrolle des Nutzers. Es balanciert Sicherheit und Komfort für hochwertige Konten aus und gibt Zeit, unbefugte Aktivitäten zu erkennen und darauf zu reagieren, ohne die Blockchain-Finalität für legitime Abläufe zu beeinträchtigen.
 
@@ -294,7 +294,7 @@ Poseidon2 ist eine Weiterentwicklung der Poseidon-Hash-Funktion. Das Erstellen v
 
 ### Schlüsselwiederherstellung
 
-Viele Krypto-Vermögen sind mit ihren Besitzern ins Grab gegangen. Quantus Network bietet eine einfache Möglichkeit, eine Wiederherstellungsadresse anzugeben, die Ihr Guthaben jederzeit abheben kann, vorbehaltlich einer festen Verzögerung. Während dieser Zeit kann der Besitzer die Wiederherstellung ablehnen, wenn er Zugriff auf den Schlüssel hat. Diese Funktion ermöglicht die Nachfolge: Nutzer haben ein On-Chain-Testament ohne die Notwendigkeit von Gerichten oder Nachlässen.
+Viele Krypto-Vermögen sind mit ihren Besitzern ins Grab gegangen. Quantus bietet eine einfache Möglichkeit, eine Wiederherstellungsadresse anzugeben, die Ihr Guthaben jederzeit abheben kann, vorbehaltlich einer festen Verzögerung. Während dieser Zeit kann der Besitzer die Wiederherstellung ablehnen, wenn er Zugriff auf den Schlüssel hat. Diese Funktion ermöglicht die Nachfolge: Nutzer haben ein On-Chain-Testament ohne die Notwendigkeit von Gerichten oder Nachlässen.
 
 ### HD-Lattice
 
@@ -305,17 +305,17 @@ Die Anpassung an Gitter-Schemata wie Dilithium bringt zwei Herausforderungen mit
 - HMAC-SHA512-Outputs können nicht direkt Gitter-Privatschlüssel bilden, da diese „gute Basis“-Polynome über Rejection Sampling erfordern.
 - Die nicht-gehärtete (non-hardened) Schlüsselableitung beruht auf elliptischer Kurvenaddition, die in Gittern fehlt (öffentliche Schlüssel sind unter keiner algebraischen Operation abgeschlossen).
 
-Quantus Network adressiert das erste Problem, indem es den Output des HMAC als Entropie verwendet, um den privaten Schlüssel deterministisch zu konstruieren, statt als den privaten Schlüssel selbst. Das zweite Problem ist weniger kritisch und es bleibt eine offene Forschungsfrage, ob die Gitterkryptografie angepasst werden kann, um es zu adressieren.
+Quantus adressiert das erste Problem, indem es den Output des HMAC als Entropie verwendet, um den privaten Schlüssel deterministisch zu konstruieren, statt als den privaten Schlüssel selbst. Das zweite Problem ist weniger kritisch und es bleibt eine offene Forschungsfrage, ob die Gitterkryptografie angepasst werden kann, um es zu adressieren.
 
 Weitere technische Details finden Sie in [QIP-0002](https://github.com/Quantus-Network/improvement-proposals/tree/main/qip-0002).
 
 ## Tokenomics und Governance
 
-Quantus Network existiert in einem sich verändernden Umfeld, und wir können nicht davon ausgehen, dass wir beim ersten Versuch alles richtig machen werden. Aus diesem Grund wählen wir einen einfachen Ausgangspunkt und erlauben dem Governance-System, Änderungen vorzunehmen, sobald neue Informationen vorliegen. Dieses Design macht die Blockchain zu einer lebendigen Einheit, die sich nach Belieben an ihre Umgebung anpassen kann. Insbesondere der Substrate-Governance-Prozess ermöglicht tiefgreifende Änderungen an der chain mit minimaler Koordination unter den verschiedenen Node-Betreibern.
+Quantus existiert in einem sich verändernden Umfeld, und wir können nicht davon ausgehen, dass wir beim ersten Versuch alles richtig machen werden. Aus diesem Grund wählen wir einen einfachen Ausgangspunkt und erlauben dem Governance-System, Änderungen vorzunehmen, sobald neue Informationen vorliegen. Dieses Design macht die Blockchain zu einer lebendigen Einheit, die sich nach Belieben an ihre Umgebung anpassen kann. Insbesondere der Substrate-Governance-Prozess ermöglicht tiefgreifende Änderungen an der chain mit minimaler Koordination unter den verschiedenen Node-Betreibern.
 
 ### Block-Belohnungen
 
-Quantus Network verwendet ein einfaches Tokenomics-Modell, das dem von Bitcoin nachempfunden ist. Es gibt ein maximales Angebot von 21.000.000 Coins und eine einfache Heuristik bestimmt die Belohnung pro Block.
+Quantus verwendet ein einfaches Tokenomics-Modell, das dem von Bitcoin nachempfunden ist. Es gibt ein maximales Angebot von 21.000.000 Coins und eine einfache Heuristik bestimmt die Belohnung pro Block.
 
 ```
 block_reward = (max_supply-current_supply) / constant
@@ -342,7 +342,7 @@ Jegliche Burns aus Gebühren oder anderweitig reduzieren den current_supply und 
 
 ### Investoren-Allokation
 
-Quantus Network wurde mit Hilfe von Angel-Investoren aufgebaut, die ein großes Risiko bei der Finanzierung eingegangen sind. Um die Angebotsüberhänge zu vermeiden, die Investoren-Lockups erzeugen, machen wir alle Investoren, ob öffentlich oder privat, vom ersten Tag an liquide. Diese Allokation wird das einzige „Pre-Mine“ sein. Alle anderen Token müssen durch Mining erschaffen werden. Je nach Erfolg der öffentlichen Verkäufe wird dieser Anteil 20–30 % des Gesamtangebots ausmachen.
+Quantus wurde mit Hilfe von Angel-Investoren aufgebaut, die ein großes Risiko bei der Finanzierung eingegangen sind. Um die Angebotsüberhänge zu vermeiden, die Investoren-Lockups erzeugen, machen wir alle Investoren, ob öffentlich oder privat, vom ersten Tag an liquide. Diese Allokation wird das einzige „Pre-Mine“ sein. Alle anderen Token müssen durch Mining erschaffen werden. Je nach Erfolg der öffentlichen Verkäufe wird dieser Anteil 20–30 % des Gesamtangebots ausmachen.
 
 ### Unternehmens-Allokation
 
@@ -360,11 +360,11 @@ Standardtransaktionen haben eine Gebühr, die an die Miner geht und einen Anreiz
 
 ### Forkless Upgrades
 
-Quantus Network unterstützt „forkless“ Upgrades durch Substrate-Runtime-Upgrades. Dies ermöglicht es der Kernlogik der Blockchain (der „Runtime“), sich weiterzuentwickeln, ohne dass Hard Forks erforderlich sind, die das Netzwerk stören oder die Community spalten könnten. Dies wird über On-Chain-Governance-Referenden erreicht, bei denen genehmigte Vorschläge einen Runtime-Swap auslösen. Dabei wird im Wesentlichen der bestehende WASM-Code-Blob in einem einzigen Block durch einen neuen ersetzt, was die Kontinuität von Zustand und Betrieb gewährleistet. Dieser Upgrade-Pfad minimiert Ausfallzeiten und Risiken und ermöglicht es der Community, das Protokoll iterativ zu verfeinern.
+Quantus unterstützt „forkless“ Upgrades durch Substrate-Runtime-Upgrades. Dies ermöglicht es der Kernlogik der Blockchain (der „Runtime“), sich weiterzuentwickeln, ohne dass Hard Forks erforderlich sind, die das Netzwerk stören oder die Community spalten könnten. Dies wird über On-Chain-Governance-Referenden erreicht, bei denen genehmigte Vorschläge einen Runtime-Swap auslösen. Dabei wird im Wesentlichen der bestehende WASM-Code-Blob in einem einzigen Block durch einen neuen ersetzt, was die Kontinuität von Zustand und Betrieb gewährleistet. Dieser Upgrade-Pfad minimiert Ausfallzeiten und Risiken und ermöglicht es der Community, das Protokoll iterativ zu verfeinern.
 
 ### Governance-System
 
-Quantus Network übernimmt sein Governance-Framework vom OpenGov-System von Polkadot über Substrate. Token-Inhaber nehmen über Conviction Voting teil, wobei sie zustimmen, ihre Assets für unterschiedliche Zeiträume zu sperren, um das Gewicht ihrer Stimme zu verstärken. Diese Verstärkung kann von 1x (keine Sperre) bis 6x (maximale Sperre) reichen. Dieses Design fördert die langfristige Ausrichtung, indem Einfluss an Engagement gebunden wird.
+Quantus übernimmt sein Governance-Framework vom OpenGov-System von Polkadot über Substrate. Token-Inhaber nehmen über Conviction Voting teil, wobei sie zustimmen, ihre Assets für unterschiedliche Zeiträume zu sperren, um das Gewicht ihrer Stimme zu verstärken. Diese Verstärkung kann von 1x (keine Sperre) bis 6x (maximale Sperre) reichen. Dieses Design fördert die langfristige Ausrichtung, indem Einfluss an Engagement gebunden wird.
 
 Vorschläge werden in mehrere Abstimmungstracks unterteilt, die „Origins“ genannt werden. Jede Origin hat maßgeschneiderte Parameter wie Zustimmungsschwellen (z. B. Supermajorität für weitreichende Änderungen), Mindesteinlagen zur Abschreckung von Spam, Vorbereitungs-/Inkrafttretensfristen und Entscheidungszeitpläne zur Vermeidung von Stillstand. Dieses Multi-Track-Design ermöglicht die parallele Bearbeitung verschiedener Referenden, von routinemäßigen Treasury-Ausgaben bis hin zu kritischen Runtime-Upgrades.
 
@@ -414,10 +414,10 @@ Dieser phasenweise Ansatz ermöglicht es dem Netzwerk, sich organisch über zuk�
 
 ## Risiken
 
-Der Aufbau von Quantus Network ist mit inhärenten Risiken verbunden.
+Der Aufbau von Quantus ist mit inhärenten Risiken verbunden.
 
 - **Implementierungsprobleme:** Fehler in der Softwarelogik können selbst in den am besten konzipierten Systemen zu schwerwiegenden Ausfällen führen.
-- **Probleme bei der NIST-Algorithmenauswahl:** Potenzielle Schwachstellen oder Backdoors in den ausgewählten Post-Quanten-Standards (z. B. ML-DSA, ML-KEM), die nach der Standardisierung auftreten könnten. Im schlimmsten Fall würden solche Schwachstellen es einem Angreifer ermöglichen, signature zu fälschen, indem er einen privaten Schlüssel aus dem öffentlichen ableitet, was einen katastrophalen Ausfallmodus der chain darstellt. Sollten solche Schwachstellen öffentlich werden, könnte Quantus Network auf einen neuen Algorithmus aufgerüstet werden. Wenn solche Schwachstellen jedoch nur spärlich ausgenutzt werden, werden sie möglicherweise nie entdeckt.
+- **Probleme bei der NIST-Algorithmenauswahl:** Potenzielle Schwachstellen oder Backdoors in den ausgewählten Post-Quanten-Standards (z. B. ML-DSA, ML-KEM), die nach der Standardisierung auftreten könnten. Im schlimmsten Fall würden solche Schwachstellen es einem Angreifer ermöglichen, signature zu fälschen, indem er einen privaten Schlüssel aus dem öffentlichen ableitet, was einen katastrophalen Ausfallmodus der chain darstellt. Sollten solche Schwachstellen öffentlich werden, könnte Quantus auf einen neuen Algorithmus aufgerüstet werden. Wenn solche Schwachstellen jedoch nur spärlich ausgenutzt werden, werden sie möglicherweise nie entdeckt.
 - **Quantencomputing-Zeitpläne:** Quantendurchbrüche könnten viel später als erwartet eintreten, was die Notwendigkeit für PQC verzögert. Umgekehrt könnte eine geheimnisvolle Entwicklung (z. B. durch Regierungen) zu plötzlichen Bedrohungen führen, wenn die Blockchain-Community es versäumt, schnell Upgrades durchzuführen.
 - **Andere Überlegungen:** Allgemeine Adoptionsbarrieren, regulatorische Unsicherheiten im Finanz-/Blockchain-Bereich und die inhärente Volatilität von Krypto-Ökosystemen.
 
@@ -433,7 +433,7 @@ Der Aufbau von Quantus Network ist mit inhärenten Risiken verbunden.
   </Column>
 
   <Column>
-      Wir glauben an die Kraft offener Protokolle, Proof-of-Work und souveränes Eigentum. Die Quantus Network App, verfügbar für Desktop und Mobilgeräte, ermöglicht es Nutzern, digitale Assets zu speichern, neue Blöcke zu minen und an einer faireren finanziellen Zukunft ohne Zwischenhändler teilzunehmen.
+      Wir glauben an die Kraft offener Protokolle, Proof-of-Work und souveränes Eigentum. Die Quantus App, verfügbar für Desktop und Mobilgeräte, ermöglicht es Nutzern, digitale Assets zu speichern, neue Blöcke zu minen und an einer faireren finanziellen Zukunft ohne Zwischenhändler teilzunehmen.
 
       Wir setzen uns für Transparenz, Privatsphäre und die Stärkung des Einzelnen durch sichere Self-Custodial-Tools ein.
 

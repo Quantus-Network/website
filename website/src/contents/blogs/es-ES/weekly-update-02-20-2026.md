@@ -1,9 +1,10 @@
 ---
-title: "Quantus Semanal: Investigación abierta y el estándar post-cuántico"
-description: "Actualización semanal que cubre el lanzamiento de research.quantus.com, agregación de pruebas ZK, fusión del pallet de multifirma y actualizaciones de la billetera móvil."
+title: "Quantus Semanal: investigación abierta post-cuántica"
+description: Abrimos research.quantus.com para revisión pública de decisiones de protocolo. Agregación ZK multi-máquina, pallet multifirma y notificaciones móviles.
+
 pubDate: "2026-02-20"
 heroImage: "/blog/covers/weekly-update-02-20-2026.webp"
-heroAlt: "Quantus Semanal: Investigación abierta y el estándar post-cuántico"
+heroAlt: "Quantus Semanal: investigación abierta post-cuántica"
 featured: false
 tags:
   [

@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: Threshold Dilithium Signaturen und verteilte Koordination"
-description: "Wöchentliches Update zu Threshold Signaturen, ZK-Circuit-Verbesserungen, Mobile-Wallet-Updates und Community-Inhalten."
+title: "Quantus Weekly: Threshold Dilithium und Koordination"
+description: Threshold Dilithium ermöglicht verteiltes Signieren mit einer On-Chain-Signatur. Updates zu ZK-Circuits, Mobile Wallet und Community-Inhalten.
+
 pubDate: "2026-01-13"
 heroImage: "/blog/covers/weekly-update-01-13-2026.webp"
-heroAlt: "Quantus Weekly: Threshold Dilithium Signaturen und verteilte Koordination"
+heroAlt: "Quantus Weekly: Threshold Dilithium und Koordination"
 featured: false
 tags:
   [

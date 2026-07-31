@@ -1,6 +1,7 @@
 ---
-title: "Quantus 每周动态：GPU 挖矿与 Dirac 压力测试"
-description: "每周更新，涵盖支持 GPU 的 Quantus Miner v2.0.2 发布、Dirac 网络压力测试以及链架构更新。"
+title: Quantus 每周动态：GPU 挖矿与 Dirac 压力测试
+description: 每周更新，涵盖支持 GPU 的 Quantus Miner v2.0.2 发布、Dirac 网络压力测试以及链架构更新。更多协议更新与研究详情，请参阅 Quantus 博客文章。
+
 pubDate: "2025-12-22"
 heroImage: "/blog/covers/weekly-update-12-22-2025.webp"
 heroAlt: "Quantus 每周动态：GPU 挖矿与 Dirac 压力测试"

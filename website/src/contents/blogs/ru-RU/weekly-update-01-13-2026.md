@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: Пороговые подписи Dilithium и распределенная координация"
-description: "Еженедельное обновление, охватывающее пороговые подписи, улучшения ZK-схем, обновления мобильного кошелька и контент сообщества."
+title: "Quantus Weekly: пороговые подписи Dilithium"
+description: "На этой неделе внедрены пороговые подписи Dilithium для распределённой координации, снижены накладные расходы ZK-схем и обновлён мобильный кошелёк Quantus."
+
 pubDate: "2026-01-13"
 heroImage: "/blog/covers/weekly-update-01-13-2026.webp"
-heroAlt: "Quantus Weekly: Пороговые подписи Dilithium и распределенная координация"
+heroAlt: "Quantus Weekly: пороговые подписи Dilithium"
 featured: false
 tags:
   [

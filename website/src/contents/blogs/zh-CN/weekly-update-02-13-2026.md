@@ -1,6 +1,7 @@
 ---
-title: "Quantus 每周动态：绘制量子安全未来蓝图"
-description: "每周更新内容包括 CoinGecko 上线、多重签名优化、ZK 聚合器重构以及移动应用 v1.1.5 版本发布。"
+title: Quantus 每周动态：绘制量子安全未来蓝图
+description: 每周更新内容包括 CoinGecko 上线、多重签名优化、ZK 聚合器重构以及移动应用 v1.1.5 版本发布。更多协议更新与研究详情，请参阅 Quantus 博客文章。
+
 pubDate: "2026-02-13"
 heroImage: "/blog/covers/weekly-update-02-13-2026.webp"
 heroAlt: "Quantus 每周动态：绘制量子安全未来蓝图"

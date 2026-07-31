@@ -1,6 +1,7 @@
 ---
 title: "Quantus Semanal: Mapeando el futuro cuánticamente seguro"
-description: "Actualización semanal que cubre nuestra inclusión en CoinGecko, optimizaciones de multifirma, refactorización del agregador ZK y el lanzamiento de la versión 1.1.5 de la aplicación móvil."
+description: Inclusión en CoinGecko, optimizaciones de multifirma, refactor del agregador ZK y lanzamiento de la app móvil v1.1.5 esta semana.
+
 pubDate: "2026-02-13"
 heroImage: "/blog/covers/weekly-update-02-13-2026.webp"
 heroAlt: "Quantus Semanal: Mapeando el futuro cuánticamente seguro"

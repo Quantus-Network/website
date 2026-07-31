@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: Q-Day-Schätzungen, On-Spend-Risiko und dauerhafte ökonomische Freiheit"
-description: "Qubit-Schätzungen von Google und Oratomic zum Knacken von ECC, On-Spend-Angriffe versus Bitcoins 10-Minuten-Blöcke, Googles PQC-Frist 2029 und Quantus’ Rebranding um dauerhafte ökonomische Freiheit—plus ZK, Infra und App-Updates."
+title: "Quantus Weekly: Q-Day-Schätzungen und On-Spend-Risiko"
+description: Google und Oratomic senken Qubit-Schätzungen für ECC-Brüche. On-Spend-Angriffe bedrohen Bitcoin, Quantus setzt auf dauerhafte ökonomische Freiheit mit Rebrand.
+
 pubDate: "2026-04-07"
 heroImage: "/blog/covers/weekly-update-04-07-2026.webp"
-heroAlt: "Quantus Weekly: Q-Day-Schätzungen, On-Spend-Risiko und dauerhafte ökonomische Freiheit"
+heroAlt: "Quantus Weekly: Q-Day-Schätzungen und On-Spend-Risiko"
 featured: false
 tags:
   [

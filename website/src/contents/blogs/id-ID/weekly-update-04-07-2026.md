@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: perkiraan Q-Day, risiko on-spend, dan kebebasan ekonomi permanen"
-description: "Perkiraan qubit Google dan Oratomic untuk memecahkan ECC, serangan on-spend versus blok Bitcoin 10 menit, tenggat PQC Google 2029, dan rebrand Quantus di sekitar kebebasan ekonomi permanen—plus ZK, infrastruktur, dan pembaruan aplikasi."
+title: "Quantus Weekly: Perkiraan Q-Day dan Risiko On-Spend"
+description: Estimasi qubit Google dan Oratomic untuk ECC, serangan on-spend vs blok 10 menit, tenggat PQC 2029, dan rebrand Quantus soal kebebasan ekonomi.
+
 pubDate: "2026-04-07"
 heroImage: "/blog/covers/weekly-update-04-07-2026.webp"
-heroAlt: "Quantus Weekly: perkiraan Q-Day, risiko on-spend, dan kebebasan ekonomi permanen"
+heroAlt: "Quantus Weekly: Perkiraan Q-Day dan Risiko On-Spend"
 featured: false
 tags:
   [

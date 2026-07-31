@@ -1,6 +1,7 @@
 ---
-title: "Quantus 每周动态：Dirac 测试网发布与格子密码学审计"
-description: "每周更新：发布 Dirac 测试网，完成 PoW 算法和格子密码学库的整链更新，以及多项基础设施改进。"
+title: Quantus 每周动态：Dirac 测试网发布与格子密码学审计
+description: 每周更新：发布 Dirac 测试网，完成 PoW 算法和格子密码学库的整链更新，以及多项基础设施改进。更多协议更新与研究详情，请参阅 Quantus 博客文章。
+
 pubDate: "2025-11-10"
 heroImage: "/blog/covers/weekly-update-11-10-2025.webp"
 heroAlt: "Quantus 每周动态：Dirac 测试网发布与格子密码学审计"

@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: оценки дня Q, риск on-spend и постоянная экономическая свобода"
-description: "Оценки Google и Oratomic по числу кубитов для взлома ECC, атаки on-spend против 10-минутных блоков Bitcoin, дедлайн Google по ПКК в 2029 году и ребрендинг Quantus вокруг постоянной экономической свободы — плюс ZK, инфраструктура и приложения."
+title: "Quantus Weekly: Q-day, on-spend и ребрендинг Quantus"
+description: "Оценки Google и Oratomic снижают число кубитов для взлома ECC, атаки on-spend угрожают Bitcoin, Google переносит ПКК на 2029 год — и ребрендинг Quantus."
+
 pubDate: "2026-04-07"
 heroImage: "/blog/covers/weekly-update-04-07-2026.webp"
-heroAlt: "Quantus Weekly: оценки дня Q, риск on-spend и постоянная экономическая свобода"
+heroAlt: "Quantus Weekly: Q-day, on-spend и ребрендинг Quantus"
 featured: false
 tags:
   [

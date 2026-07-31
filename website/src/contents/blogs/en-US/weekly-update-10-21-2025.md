@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: Plonky2 Poseidon2 Gate and On-chain Governance"
-description: "Weekly update featuring the implementation of Poseidon2 gate in Plonky2, new on-chain governance and treasury functions, and the completion of the in-app referral system."
+title: "Quantus Weekly: Poseidon2 Gate and Governance"
+description: "Poseidon2 lands as a Plonky2 gate, on-chain governance and treasury functions ship, in-app referrals complete, and GPU miner Icicle bindings begin."
+
 pubDate: "2025-10-21"
 heroImage: "/blog/covers/weekly-update-10-21-2025.webp"
-heroAlt: "Quantus Weekly: Plonky2 Poseidon2 Gate and On-chain Governance"
+heroAlt: "Quantus Weekly: Poseidon2 Gate and Governance"
 featured: false
 tags:
   [

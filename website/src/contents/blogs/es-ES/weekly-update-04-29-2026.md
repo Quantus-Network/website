@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: limpieza de primavera, auditorías con Eiger y el agregador compacto"
-description: "Cerramos ítems de auditoría con Eiger, refactorizamos la CLI, corregimos fallos en miner e indexador y ejecutamos pruebas de integración wormhole en el nuevo agregador compacto. El flujo wormhole en ZK ya recorre sin fricción el agregador compacto 2x8 lanzado la semana pasada. Wallet móvil 1.3.4 y 1.3.5, miner v3.1.0 con arreglo GPU, documentación de minería a reclamo de recompensas y el primer taller de miners del testnet Planck en Network School."
+title: "Quantus Weekly: auditorías Eiger y agregador compacto"
+description: Semana de limpieza: ítems de auditoría con Eiger, CLI refactorizada y bugs corregidos en miner e indexador. Pruebas wormhole en el agregador compacto 2x8.
+
 pubDate: "2026-04-29"
 heroImage: "/blog/covers/weekly-update-04-29-2026.webp"
-heroAlt: "Quantus Weekly: limpieza de primavera, auditorías con Eiger y el agregador compacto"
+heroAlt: "Quantus Weekly: auditorías Eiger y agregador compacto"
 featured: false
 tags:
   [

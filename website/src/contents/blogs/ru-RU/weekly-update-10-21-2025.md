@@ -1,6 +1,6 @@
 ---
 title: "Quantus Weekly: Гейт Poseidon2 в Plonky2 и ончейн-управление"
-description: "Еженедельное обновление: реализация гейта Poseidon2 в Plonky2, новые функции ончейн-управления и казначейства, а также завершение работы над внутриигровой реферальной системой."
+description: "Гейт Poseidon2 в Plonky2, новые функции ончейн-управления и казначейства, а также завершение внутриигровой реферальной системы."
 pubDate: "2025-10-21"
 heroImage: "/blog/covers/weekly-update-10-21-2025.webp"
 heroAlt: "Quantus Weekly: Гейт Poseidon2 в Plonky2 и ончейн-управление"

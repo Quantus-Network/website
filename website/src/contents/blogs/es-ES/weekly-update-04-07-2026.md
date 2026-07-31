@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: estimaciones del día Q, riesgo on-spend y libertad económica permanente"
-description: "Estimaciones de cúbits de Google y Oratomic para romper ECC, ataques on-spend frente a los bloques de 10 minutos de Bitcoin, la fecha límite PQC de Google en 2029 y el rebranding de Quantus en torno a la libertad económica permanente, más ZK, infra y novedades de la app."
+title: "Quantus Weekly: día Q, on-spend y libertad económica"
+description: Google y Oratomic reducen las estimaciones de cúbits para romper ECC. Ataques on-spend frente a bloques de 10 minutos y la fecha límite PQC de Google en 2029.
+
 pubDate: "2026-04-07"
 heroImage: "/blog/covers/weekly-update-04-07-2026.webp"
-heroAlt: "Quantus Weekly: estimaciones del día Q, riesgo on-spend y libertad económica permanente"
+heroAlt: "Quantus Weekly: día Q, on-spend y libertad económica"
 featured: false
 tags:
   [

@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: POS, маскирование PolyFri и P2P-электронные деньги"
-description: "Мобильный режим POS в v1.2.2, маскирование на стороне прувера PolyFri на нативном пути, чистка хешера Poseidon, защита от DDoS для ZK-доказательств в сети, альфа редизайна сайта и Quantum Canary о сложности создания квантовых компьютеров."
+title: "Quantus Weekly: POS, PolyFri и P2P-деньги"
+description: "Мобильный режим POS в v1.2.2, маскирование PolyFri на нативном пути прувера, защита ZK-доказательств от DDoS и шаг к настоящим P2P-электронным деньгам."
+
 pubDate: "2026-03-31"
 heroImage: "/blog/covers/weekly-update-03-31-2026.webp"
-heroAlt: "Quantus Weekly: POS, маскирование PolyFri и P2P-электронные деньги"
+heroAlt: "Quantus Weekly: POS, PolyFri и P2P-деньги"
 featured: false
 tags:
   [

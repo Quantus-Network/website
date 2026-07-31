@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: Native Assets, ZK Aggregation, and Bitcoin's Quantum Risk"
-description: "Weekly update featuring our decision on native-only assets for quantum security, Dilithium threshold signatures, and progress on ZK aggregation and custom multisig pallets."
+title: "Quantus Weekly: Native Assets and Quantum Risk"
+description: "Why capital is discounting Bitcoin for quantum risk, our native-only assets decision, Dilithium threshold work, and progress on ZK aggregation this week."
+
 pubDate: "2026-01-21"
 heroImage: "/blog/covers/weekly-update-01-21-2026.webp"
-heroAlt: "Quantus Weekly: Native Assets, ZK Aggregation, and Bitcoin's Quantum Risk"
+heroAlt: "Quantus Weekly: Native Assets and Quantum Risk"
 featured: false
 tags:
   [

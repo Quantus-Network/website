@@ -1,6 +1,7 @@
 ---
 title: "Quantus Weekly: GPUマイニングの画期的進歩とZKリファクタリング"
-description: "GPUマイニングの9倍のパフォーマンス向上、ZK集約サーキットのリファクタリング、およびUAEでの戦略的会議を網羅した週刊アップデート。"
+description: GPUマイニングの9倍のパフォーマンス向上、ZK集約サーキットのリファクタリング、およびUAEでの戦略的会議を網羅した週刊アップデート。プロトコル更新と研究の詳細はQuantusブログでご覧ください。
+
 pubDate: "2025-12-15"
 heroImage: "/blog/covers/weekly-update-12-15-2025.webp"
 heroAlt: "Quantus Weekly: GPUマイニングの画期的進歩とZKリファクタリング"

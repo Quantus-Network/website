@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: Q-Day steht kurz bevor"
-description: "Q-Day ist am 6. Juni. Diese Woche haben wir Audit-Punkte beim Threshold-Dilithium-DKG abgeschlossen, Miner- und Benachrichtigungs-Updates ausgeliefert, Mobile-Wallet-Bugs behoben und die überarbeitete Q-Day-Summit-Website gestartet."
+title: "Quantus Weekly: Q-Day am 6. Juni — Mainnet naht"
+description: Q-Day bei der Network School am 6. Juni. Threshold-Dilithium-DKG-Audit abgeschlossen, Miner-UX verbessert und Q-Day-Summit-Website überarbeitet.
+
 pubDate: "2026-05-21"
 heroImage: "/blog/covers/weekly-update-05-21-2026.webp"
-heroAlt: "Quantus Weekly: Q-Day steht kurz bevor"
+heroAlt: "Quantus Weekly: Q-Day am 6. Juni — Mainnet naht"
 featured: false
 tags:
   [

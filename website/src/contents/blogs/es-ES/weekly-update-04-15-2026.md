@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: Lanzamiento del testnet Planck y recompensas de minería temprana"
-description: "Por qué importa el hashrate temprano, el testnet Planck ya está activo para mineros, migración de la app en TestFlight y tiendas, minería con GPU en la nueva cadena, y novedades de Core, infra, wallet y comunidad."
+title: "Quantus Weekly: testnet Planck y recompensas tempranas"
+description: Lanzamos el testnet Planck para estrés previo al mainnet. Mineros tempranos ganan más recompensas, migración en un clic y minería GPU ya disponible.
+
 pubDate: "2026-04-15"
 heroImage: "/blog/covers/weekly-update-04-15-2026.webp"
-heroAlt: "Quantus Weekly: Lanzamiento del testnet Planck y recompensas de minería temprana"
+heroAlt: "Quantus Weekly: testnet Planck y recompensas tempranas"
 featured: false
 tags:
   [

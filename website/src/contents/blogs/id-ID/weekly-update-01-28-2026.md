@@ -1,6 +1,7 @@
 ---
 title: "Quantus Weekly: Deniable RPCs dan Audit Keamanan Neodyme"
-description: "Update mingguan yang menampilkan Deniable RPC baru kami untuk privasi yang ditingkatkan, penyelesaian audit keamanan Neodyme untuk Rusty Crystals, dan alamat ZK privat untuk semua token."
+description: Deniable RPC untuk privasi lebih kuat, audit keamanan Neodyme untuk Rusty Crystals selesai, dan alamat ZK privat untuk semua token.
+
 pubDate: "2026-01-28"
 heroImage: "/blog/covers/weekly-update-01-28-2026.webp"
 heroAlt: "Quantus Weekly: Deniable RPCs dan Audit Keamanan Neodyme"

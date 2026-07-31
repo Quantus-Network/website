@@ -1,9 +1,9 @@
 ---
-title: "Quantus Weekly: testnet Planck, recompensas por CLI y el doble de rendimiento del prover"
-description: "Planck es nuestro primer testnet para transacciones privadas poscuánticas: los mineros migran, las recompensas se reclaman por CLI a una dirección transparente en la wallet móvil, docs.quantus.com incluye una guía de minería, y el prover agregado duplica velocidad con arquitectura partida 2x8."
+title: "Quantus Weekly: Planck, CLI y prover el doble de rápido"
+description: Planck admite transacciones privadas poscuánticas. Más de la mitad de mineros migraron, recompensas por CLI y el rendimiento agregado del prover se duplicó.
 pubDate: "2026-04-22"
 heroImage: "/blog/covers/weekly-update-04-22-2026.webp"
-heroAlt: "Quantus Weekly: testnet Planck, recompensas por CLI y el doble de rendimiento del prover"
+heroAlt: "Quantus Weekly: Planck, CLI y prover el doble de rápido"
 featured: false
 tags:
   [

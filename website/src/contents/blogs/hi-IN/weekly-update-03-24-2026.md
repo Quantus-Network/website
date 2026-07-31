@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: दूसरा हाफ़िंग — दो हफ़्तों में ZK प्रूफ़ 4x तेज़"
-description: "प्रूवर समय में 2x और कटौती, Poseidon हैशिंग, माइनिंग फ़िक्स, Senoti रेट लिमिट, व्हाइटपेपर लॉन्च, iOS स्वैप रिव्यू, और Solana पर क्वांटम सुरक्षा पर Quantum Canary।"
+title: "Quantus Weekly: दूसरा हाफ़िंग, ZK प्रूफ़ 4x तेज़"
+description: दो हफ़्तों में प्रूवर समय में 2x और कटौती, Poseidon हैशिंग, माइनिंग फ़िक्स, Senoti रेट लिमिट, व्हाइटपेपर लॉन्च, iOS स्वैप रिव्यू, और Quantum Canary।
+
 pubDate: "2026-03-24"
 heroImage: "/blog/covers/weekly-update-03-24-2026.webp"
-heroAlt: "Quantus Weekly: दूसरा हाफ़िंग — दो हफ़्तों में ZK प्रूफ़ 4x तेज़"
+heroAlt: "Quantus Weekly: दूसरा हाफ़िंग, ZK प्रूफ़ 4x तेज़"
 featured: false
 tags:
   [

@@ -1,6 +1,7 @@
 ---
 title: "Quantus Weekly: Hochsicherheitskonten und Betrugsprävention"
-description: "Wöchentliches Update über unsere neuen Hochsicherheitskonten mit anpassbaren Zeitsperren und Guardians, Multisig-Integrationstests und die neue Funktion zur Wiederherstellung von Geldern."
+description: Hochsicherheitskonten mit Zeitsperren und Guardians, Multisig-Tests und die neue Funktion zur Wiederherstellung von Geldern diese Woche.
+
 pubDate: "2026-02-04"
 heroImage: "/blog/covers/weekly-update-02-04-2026.webp"
 heroAlt: "Quantus Weekly: Hochsicherheitskonten und Betrugsprävention"

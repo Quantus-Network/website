@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: Avance en Minería por GPU y Refactorización ZK"
-description: "Actualización semanal que cubre un aumento de rendimiento de 9x en la minería por GPU, la refactorización del circuito de agregación ZK y reuniones estratégicas en los Emiratos Árabes Unidos."
+title: "Quantus Weekly: minería GPU 9x y refactorización ZK"
+description: El minero GPU rinde unas 9 veces más que la versión CPU. Refactor del circuito de agregación ZK, reuniones con inversores en EAU y avances en tokenómica.
+
 pubDate: "2025-12-15"
 heroImage: "/blog/covers/weekly-update-12-15-2025.webp"
-heroAlt: "Quantus Weekly: Avance en Minería por GPU y Refactorización ZK"
+heroAlt: "Quantus Weekly: minería GPU 9x y refactorización ZK"
 featured: false
 tags:
   [

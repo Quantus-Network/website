@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: Quantum-Safe Signatures, ZK Scaling, and 2x Faster Wormhole Proofs"
-description: "Weekly update on ML-DSA signature scaling, ZK aggregation, wormhole proof speedup, security reviews, testnet nodes, and Quantum Canary content."
+title: "Quantus Weekly: Fat Signatures, Faster Wormholes"
+description: "ML-DSA signatures are 70x larger than Bitcoin’s—this week we scaled quantum-safe signing, sped up wormhole proofs 2x, and pushed ZK aggregation forward."
+
 pubDate: "2026-03-16"
 heroImage: "/blog/covers/weekly-update-03-16-2026.webp"
-heroAlt: "Quantus Weekly: Quantum-Safe Signatures, ZK Scaling, and 2x Faster Wormhole Proofs"
+heroAlt: "Quantus Weekly: Fat Signatures, Faster Wormholes"
 featured: false
 tags:
   [

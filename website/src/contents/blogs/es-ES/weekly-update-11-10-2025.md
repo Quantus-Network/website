@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: Lanzamiento de Dirac Testnet y Auditoría de Lattice Crypto"
-description: "Actualización semanal que presenta el lanzamiento de la testnet Dirac, finalizando las actualizaciones del algoritmo PoW y la librería de criptografía de redes, y nuevas mejoras de infraestructura."
+title: "Quantus Weekly: testnet Dirac y auditoría lattice"
+description: Lanzamos la testnet Dirac con PoW y qp-rusty-crystals actualizados. Firmas de tiempo constante, circuito de cabecera de bloque y auditoría externa en curso.
+
 pubDate: "2025-11-10"
 heroImage: "/blog/covers/weekly-update-11-10-2025.webp"
-heroAlt: "Quantus Weekly: Lanzamiento de Dirac Testnet y Auditoría de Lattice Crypto"
+heroAlt: "Quantus Weekly: testnet Dirac y auditoría lattice"
 featured: false
 tags:
   [

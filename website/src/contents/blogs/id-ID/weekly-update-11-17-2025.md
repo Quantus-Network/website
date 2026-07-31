@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: Audit PoW Selesai dan Peluncuran Dirac Testnet"
-description: "Update mingguan yang menampilkan penyelesaian audit PoW dan fungsi hash Poseidon kami oleh Equilibrium, pembuatan bukti ZK untuk header blok, dan peluncuran testnet Dirac."
+title: "Quantus Weekly: Audit PoW Selesai, Dirac Testnet Live"
+description: Update mingguan tentang penyelesaian audit PoW dan hash Poseidon oleh Equilibrium, pembuatan bukti ZK untuk header blok, dan peluncuran testnet Dirac.
+
 pubDate: "2025-11-17"
 heroImage: "/blog/covers/weekly-update-11-17-2025.webp"
-heroAlt: "Quantus Weekly: Audit PoW Selesai dan Peluncuran Dirac Testnet"
+heroAlt: "Quantus Weekly: Audit PoW Selesai, Dirac Testnet Live"
 featured: false
 tags:
   [

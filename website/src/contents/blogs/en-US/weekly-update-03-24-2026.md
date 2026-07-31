@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: Second Halving — 4x Faster ZK Proofs in Two Weeks"
-description: "Another 2x cut to prover time, Poseidon hashing, mining fix, Senoti rate limits, whitepaper launch, iOS swap review, and Quantum Canary on Solana quantum security."
+title: "Quantus Weekly: Second Halving, 4x Faster Proofs"
+description: "A second prover-time cut delivers 4x faster ZK proofs in two weeks, with Poseidon work, mining fixes, Senoti limits, whitepaper launch, and Quantum Canary."
+
 pubDate: "2026-03-24"
 heroImage: "/blog/covers/weekly-update-03-24-2026.webp"
-heroAlt: "Quantus Weekly: Second Halving — 4x Faster ZK Proofs in Two Weeks"
+heroAlt: "Quantus Weekly: Second Halving, 4x Faster Proofs"
 featured: false
 tags:
   [

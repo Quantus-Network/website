@@ -1,9 +1,9 @@
 ---
-title: "Quantus Weekly: Интеграция Plonky3 Poseidon2 и подкаст с Либерлендом"
-description: "Еженедельное обновление: перенос хеша Plonky3 Poseidon2 в ZK-схемы, оптимизация памяти в Rusty Crystals и подкаст с президентом Либерленда."
+title: "Quantus Weekly: Plonky3 Poseidon2 и подкаст Либерленда"
+description: "Plonky3 Poseidon2 интегрирован в ZK-схемы, память Rusty Crystals оптимизирована на 80%, добавлена реферальная программа и подкаст с президентом Либерленда."
 pubDate: "2025-10-14"
 heroImage: "/blog/covers/weekly-update-10-14-2025.webp"
-heroAlt: "Quantus Weekly: Интеграция Plonky3 Poseidon2 и подкаст с Либерлендом"
+heroAlt: "Quantus Weekly: Plonky3 Poseidon2 и подкаст Либерленда"
 featured: false
 tags:
   [

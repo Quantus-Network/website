@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: स्प्रिंग क्लीनिंग, Eiger ऑडिट और कॉम्पैक्ट एग्रीगेटर"
-description: "Eiger के साथ कई ऑडिट बिंदु सुलझाए, CLI रिफैक्टर, माइनर व इंडेक्सर में बग फिक्स, नए कॉम्पैक्ट एग्रीगेटर पर वर्महोल इंटीग्रेशन टेस्ट। ZK वर्महोल फ्लो अब पिछले सप्ताह शिप किए 2x8 कॉम्पैक्ट एग्रीगेटर से साफ चलता है। मोबाइल वॉलेट 1.3.4–1.3.5, GPU फिक्स के साथ माइनर v3.1.0, माइनिंग से इनाम क्लेम तक दस्तावेज़, और Network School में Planck टेस्टनेट का पहला माइनर वर्कशॉप।"
+title: "Quantus Weekly: Eiger ऑडिट और Compact Aggregator"
+description: Eiger के साथ कई ऑडिट बिंदु सुलझाए, CLI रिफैक्टर, माइनर व इंडेक्सर में बग फिक्स, और नए कॉम्पैक्ट एग्रीगेटर पर वर्महोल इंटीग्रेशन टेस्ट।
+
 pubDate: "2026-04-29"
 heroImage: "/blog/covers/weekly-update-04-29-2026.webp"
-heroAlt: "Quantus Weekly: स्प्रिंग क्लीनिंग, Eiger ऑडिट और कॉम्पैक्ट एग्रीगेटर"
+heroAlt: "Quantus Weekly: Eiger ऑडिट और Compact Aggregator"
 featured: false
 tags:
   [

@@ -46,7 +46,7 @@ export const organizationJsonLd: Organization = {
   "@type": "Organization",
   name: "Quantus Labs LLC",
   description:
-    "Quantus Labs LLC is a technology company based in Wyoming, USA, focused on building infrastructure for decentralized, censorship-resistant technologies. Our flagship project, Quantus Network is a Layer 1 blockchain designed to be simple, open-source, and community-owned from day one.",
+    "Quantus Labs LLC is a technology company based in Wyoming, USA, focused on building infrastructure for decentralized, censorship-resistant technologies. Our flagship project, Quantus is a Layer 1 blockchain designed to be simple, open-source, and community-owned from day one.",
   url: env.SITE_BASE_URL,
   logo: {
     "@type": "ImageObject",
@@ -81,7 +81,7 @@ export const iosAppJsonLd: MobileApplication = {
   "@type": "MobileApplication",
   name: "Quantus",
   description:
-    "The post-quantum secure crypto wallet for the Quantus Network. Enjoy instant, reversible transactions and HD multi-account management.",
+    "The post-quantum secure crypto wallet for Quantus. Enjoy instant, reversible transactions and HD multi-account management.",
   operatingSystem: "iOS",
   applicationCategory: "FinanceApplication",
   installUrl: APP_LINKS.ios,
@@ -93,7 +93,7 @@ export const androidAppJsonLd: MobileApplication = {
   "@type": "MobileApplication",
   name: "Quantus",
   description:
-    "The post-quantum secure crypto wallet for the Quantus Network. Enjoy instant, reversible transactions and HD multi-account management.",
+    "The post-quantum secure crypto wallet for Quantus. Enjoy instant, reversible transactions and HD multi-account management.",
   operatingSystem: "Android",
   applicationCategory: "FinanceApplication",
   installUrl: APP_LINKS.android,
@@ -103,17 +103,17 @@ export const androidAppJsonLd: MobileApplication = {
 export const whitepaperJsonLd: TechArticle = {
   "@id": `${env.SITE_BASE_URL}/whitepaper`,
   "@type": "TechArticle",
-  headline: "Quantus Network Whitepaper",
+  headline: "Quantus Whitepaper",
   description:
-    "The official whitepaper for Quantus Network, detailing the versioned history, protocol, and architecture of the network.",
+    "The official whitepaper for Quantus, detailing the versioned history, protocol, and architecture of the network.",
   author: {
     "@type": "Organization",
-    name: "Quantus Network",
+    name: "Quantus",
     url: "https://github.com/Quantus-Network",
   },
   publisher: {
     "@type": "Organization",
-    name: "Quantus Network",
+    name: "Quantus",
     logo: {
       "@type": "ImageObject",
       url: "https://github.com/Quantus-Network.png",
@@ -123,7 +123,7 @@ export const whitepaperJsonLd: TechArticle = {
   about: {
     "@type": "Thing",
     name: "Blockchain Protocol",
-    description: "Technical specification of the Quantus Network protocol.",
+    description: "Technical specification of the Quantus protocol.",
   },
 };
 

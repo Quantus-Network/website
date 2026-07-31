@@ -1,6 +1,7 @@
 ---
-title: "Quantus 每周动态：GPU 挖矿突破与 ZK 重构"
-description: "每周更新，涵盖 GPU 挖矿性能提升 9 倍、ZK 聚合电路重构以及在阿联酋的战略会议。"
+title: Quantus 每周动态：GPU 挖矿突破与 ZK 重构
+description: 每周更新，涵盖 GPU 挖矿性能提升 9 倍、ZK 聚合电路重构以及在阿联酋的战略会议。更多协议更新与研究详情，请参阅 Quantus 博客文章。
+
 pubDate: "2025-12-15"
 heroImage: "/blog/covers/weekly-update-12-15-2025.webp"
 heroAlt: "Quantus 每周动态：GPU 挖矿突破与 ZK 重构"

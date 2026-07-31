@@ -1,6 +1,7 @@
 ---
 title: "Quantus Weekly: Rilis Dirac Testnet dan Audit Lattice Crypto"
-description: "Update mingguan yang menampilkan rilis testnet Dirac, memfinalisasi pembaruan pada algoritma PoW dan perpustakaan kriptografi lattice, serta peningkatan infrastruktur baru."
+description: Rilis testnet Dirac, finalisasi update algoritma PoW dan pustaka kriptografi lattice, plus peningkatan infrastruktur baru minggu ini.
+
 pubDate: "2025-11-10"
 heroImage: "/blog/covers/weekly-update-11-10-2025.webp"
 heroAlt: "Quantus Weekly: Rilis Dirac Testnet dan Audit Lattice Crypto"

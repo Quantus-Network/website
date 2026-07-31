@@ -1,6 +1,6 @@
 ---
 title: "Quantus Weekly: The State of Quantum रिपोर्ट"
-description: "हमने क्रिप्टो के प्रति क्वांटम जोखिम पर अपनी शोध रिपोर्ट जारी की, जिसे प्रमुख आउटलेट्स ने कवर किया। इस सप्ताह: ZK रिपो में ऑडिट फिक्स, GPU माइनर थ्रॉटलिंग, मोबाइल वॉलेट अपडेट, Q-Day साइट और Quantus शॉप लॉन्च।"
+description: "क्रिप्टो पर क्वांटम जोखिम की शोध रिपोर्ट प्रमुख मीडिया में। इस सप्ताह: ZK ऑडिट फिक्स, GPU थ्रॉटलिंग, वॉलेट अपडेट, Q-Day साइट और शॉप।"
 pubDate: "2026-05-29"
 heroImage: "/blog/covers/weekly-update-05-29-2026.webp"
 heroAlt: "Quantus Weekly: The State of Quantum रिपोर्ट"

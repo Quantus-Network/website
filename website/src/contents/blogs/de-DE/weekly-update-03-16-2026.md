@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: Quantensichere Signaturen, ZK-Skalierung und 2x schnellere Wormhole-Beweise"
-description: "Wöchentliches Update zu ML-DSA-Signatur-Skalierung, ZK-Aggregation, Wormhole-Beweis-Beschleunigung, Sicherheitsprüfungen, Testnet-Knoten und Quantum Canary-Inhalten."
+title: "Quantus Weekly: ML-DSA-Skalierung und 2× Wormhole-Beweise"
+description: ML-DSA-Signaturen sind 70× größer als Bitcoins. Quantus skaliert mit ZK-Aggregation auf 3.500 TPS, halbierte Beweiszeiten und 2× schnellere Wormhole-Beweise.
+
 pubDate: "2026-03-16"
 heroImage: "/blog/covers/weekly-update-03-16-2026.webp"
-heroAlt: "Quantus Weekly: Quantensichere Signaturen, ZK-Skalierung und 2x schnellere Wormhole-Beweise"
+heroAlt: "Quantus Weekly: ML-DSA-Skalierung und 2× Wormhole-Beweise"
 featured: false
 tags:
   [

@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: Cuentas de alta seguridad y prevención de fraude"
-description: "Actualización semanal que presenta nuestras nuevas cuentas de alta seguridad con bloqueos de tiempo personalizables y guardianes, pruebas de integración multisig y la nueva funcionalidad de recuperación de fondos."
+title: "Quantus Weekly: cuentas de alta seguridad antifraude"
+description: Cuentas de alta seguridad con bloqueos de tiempo y guardianes que cancelan transacciones sospechosas. Pruebas multisig y recuperación de fondos en cadena.
+
 pubDate: "2026-02-04"
 heroImage: "/blog/covers/weekly-update-02-04-2026.webp"
-heroAlt: "Quantus Weekly: Cuentas de alta seguridad y prevención de fraude"
+heroAlt: "Quantus Weekly: cuentas de alta seguridad antifraude"
 featured: false
 tags:
   [

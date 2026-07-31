@@ -1,6 +1,7 @@
 ---
 title: "Quantus Weekly: Q-Day Sudah di Depan Mata"
-description: "Q-Day jatuh pada 6 Juni. Minggu ini kami menuntaskan item audit threshold Dilithium DKG, merilis pembaruan miner dan notifikasi, memperbaiki bug dompet seluler, dan meluncurkan situs kembali summit Q-Day."
+description: Q-Day jatuh pada 6 Juni. Audit Dilithium DKG selesai, update miner dan notifikasi, bug dompet diperbaiki, dan situs summit Q-Day diluncurkan.
+
 pubDate: "2026-05-21"
 heroImage: "/blog/covers/weekly-update-05-21-2026.webp"
 heroAlt: "Quantus Weekly: Q-Day Sudah di Depan Mata"

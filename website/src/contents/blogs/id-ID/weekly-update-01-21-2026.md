@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: Aset Native, Agregasi ZK, dan Risiko Kuantum Bitcoin"
-description: "Update mingguan yang menampilkan keputusan kami tentang aset khusus native untuk keamanan kuantum, tanda tangan ambang Dilithium, dan kemajuan pada agregasi ZK dan pallet multisig kustom."
+title: "Quantus Weekly: Aset Native dan Risiko Kuantum"
+description: Update mingguan yang menampilkan keputusan aset native untuk keamanan kuantum, tanda tangan ambang Dilithium, dan kemajuan agregasi ZK serta multisig kustom.
+
 pubDate: "2026-01-21"
 heroImage: "/blog/covers/weekly-update-01-21-2026.webp"
-heroAlt: "Quantus Weekly: Aset Native, Agregasi ZK, dan Risiko Kuantum Bitcoin"
+heroAlt: "Quantus Weekly: Aset Native dan Risiko Kuantum"
 featured: false
 tags:
   [

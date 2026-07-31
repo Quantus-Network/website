@@ -1,6 +1,7 @@
 ---
-title: "Quantus 每周动态：格子密码学审计与 Keystone 集成"
-description: "每周更新：格子密码学库审计圆满完成，Polkadot SDK 网络更新发布，以及 Keystone 硬件钱包新增支持。"
+title: Quantus 每周动态：格子密码学审计与 Keystone 集成
+description: 每周更新：格子密码学库审计圆满完成，Polkadot SDK 网络更新发布，以及 Keystone 硬件钱包新增支持。更多协议更新与研究详情，请参阅 Quantus 博客文章。
+
 pubDate: "2025-12-01"
 heroImage: "/blog/covers/weekly-update-12-01-2025.webp"
 heroAlt: "Quantus 每周动态：格子密码学审计与 Keystone 集成"

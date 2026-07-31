@@ -1,6 +1,7 @@
 ---
 title: "Quantus Weekly: Diracテストネットのリリースと格子暗号の監査"
-description: "今週のアップデート：Diracテストネットのリリース、PoWアルゴリズムと格子暗号ライブラリの更新完了、新しいインフラの改善など。"
+description: 今週のアップデート：Diracテストネットのリリース、PoWアルゴリズムと格子暗号ライブラリの更新完了、新しいインフラの改善など。プロトコル更新と研究の詳細はQuantusブログでご覧ください。
+
 pubDate: "2025-11-10"
 heroImage: "/blog/covers/weekly-update-11-10-2025.webp"
 heroAlt: "Quantus Weekly: Diracテストネットのリリースと格子暗号の監査"

@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: Activos Nativos, Agregación ZK y el Riesgo Cuántico de Bitcoin"
-description: "Actualización semanal que destaca nuestra decisión sobre activos solo nativos para la seguridad cuántica, firmas de umbral Dilithium y progreso en la agregación ZK y pallets multisig personalizados."
+title: "Quantus Weekly: activos nativos y riesgo cuántico"
+description: Sin activos envueltos: solo QUAN nativo con ML-DSA-87 y agregación ZK. El mercado descuenta Bitcoin ante un CRQC antes de una migración post-cuántica.
+
 pubDate: "2026-01-21"
 heroImage: "/blog/covers/weekly-update-01-21-2026.webp"
-heroAlt: "Quantus Weekly: Activos Nativos, Agregación ZK y el Riesgo Cuántico de Bitcoin"
+heroAlt: "Quantus Weekly: activos nativos y riesgo cuántico"
 featured: false
 tags:
   [

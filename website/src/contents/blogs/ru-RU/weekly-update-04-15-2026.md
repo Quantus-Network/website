@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: Запуск тестовой сети Planck и награды ранним майнерам"
-description: "Почему важен ранний хешрейт, тестовая сеть Planck уже доступна майнерам, миграция приложения через TestFlight и магазины, GPU-майнинг в новой сети — а также обновления ядра, инфраструктуры, кошелька и сообщества за неделю."
+title: "Quantus Weekly: запуск тестнета Planck и награды PoW"
+description: "Запущен тестнет Planck для стресс-теста Quantus перед mainnet: ранний хешрейт важен, миграция через TestFlight и GPU-майнинг с наградами за блоки."
+
 pubDate: "2026-04-15"
 heroImage: "/blog/covers/weekly-update-04-15-2026.webp"
-heroAlt: "Quantus Weekly: Запуск тестовой сети Planck и награды ранним майнерам"
+heroAlt: "Quantus Weekly: запуск тестнета Planck и награды PoW"
 featured: false
 tags:
   [

@@ -1,6 +1,7 @@
 ---
-title: "Quantus 每周更新：阈值 Dilithium 签名与分布式协调"
-description: "每周更新涵盖阈值签名、ZK 电路改进、移动钱包更新和社区内容。"
+title: Quantus 每周更新：阈值 Dilithium 签名与分布式协调
+description: 每周更新涵盖阈值签名、ZK 电路改进、移动钱包更新和社区内容。更多协议更新与研究详情，请参阅 Quantus 博客文章。 Quantus。 Quantus。
+
 pubDate: "2026-01-13"
 heroImage: "/blog/covers/weekly-update-01-13-2026.webp"
 heroAlt: "Quantus 每周更新：阈值 Dilithium 签名与分布式协调"

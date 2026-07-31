@@ -1,6 +1,7 @@
 ---
 title: "Quantus Weekly: Q-Day अब बहुत करीब है"
-description: "Q-Day 6 जून को है। इस सप्ताह हमने threshold Dilithium DKG के ऑडिट आइटम पूरे किए, माइनर और नोटिफिकेशन अपडेट शिप किए, मोबाइल वॉलेट बग ठीक किए, और ताज़ा Q-Day समिट साइट लॉन्च की।"
+description: Q-Day 6 जून को है। Threshold Dilithium DKG ऑडिट पूरे, माइनर और नोटिफिकेशन अपडेट, वॉलेट बग फिक्स, और नया Q-Day समिट साइट लॉन्च।
+
 pubDate: "2026-05-21"
 heroImage: "/blog/covers/weekly-update-05-21-2026.webp"
 heroAlt: "Quantus Weekly: Q-Day अब बहुत करीब है"

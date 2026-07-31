@@ -1,9 +1,9 @@
 ---
-title: "Quantus Weekly: тестнет Planck, награды через CLI и удвоенная производительность prover"
-description: "Planck — первый тестнет с поддержкой постквантовых приватных транзакций Quantus: миграция майнеров, вывод наград через CLI на прозрачный адрес в мобильном кошельке, mining guide на docs.quantus.com, а скорость агрегированного prover удвоилась за счёт архитектуры с разбиением 2x8."
+title: "Quantus Weekly: Planck, награды через CLI, prover ×2"
+description: "Planck — первый тестнет с постквантовыми приватными транзакциями: миграция майнеров, награды через CLI на прозрачный адрес и prover в 2 раза быстрее."
 pubDate: "2026-04-22"
 heroImage: "/blog/covers/weekly-update-04-22-2026.webp"
-heroAlt: "Quantus Weekly: тестнет Planck, награды через CLI и удвоенная производительность prover"
+heroAlt: "Quantus Weekly: Planck, награды через CLI, prover ×2"
 featured: false
 tags:
   [
