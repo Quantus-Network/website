@@ -1,10 +1,9 @@
 ---
-title: "Quantus Weekly: Q-day, on-spend и ребрендинг Quantus"
-description: "Оценки Google и Oratomic снижают число кубитов для взлома ECC, атаки on-spend угрожают Bitcoin, Google переносит ПКК на 2029 год — и ребрендинг Quantus."
-
+title: "Quantus Weekly: Q-Day, on-spend и ребрендинг"
+description: "Google и Oratomic снижают оценки кубитов для взлома ECC, атаки on-spend угрожают Bitcoin, а Quantus фиксирует миссию: постоянная экономическая свобода."
 pubDate: "2026-04-07"
 heroImage: "/blog/covers/weekly-update-04-07-2026.webp"
-heroAlt: "Quantus Weekly: Q-day, on-spend и ребрендинг Quantus"
+heroAlt: "Quantus Weekly: Q-Day, on-spend и ребрендинг"
 featured: false
 tags:
   [
@@ -58,11 +57,11 @@ Google сдвинул собственный дедлайн миграции н�
 
 [@QuantusNetwork](https://x.com/QuantusNetwork) — это квантово-стойкие зашифрованные деньги. Вот что ещё мы выпустили на этой неделе.
 
-### Активность на GitHub (13 объединённых pull request):
+### GitHub Activity (13 merged pull requests):
 
 ![Github Stats](/blog/assets/github-stats-weekly-update-04-07-2026.webp)
 
-### Core Tech и ZK
+### Core Tech & ZK
 
 - Новая стратегия блайндинга для qp-plonky2 ускоряет ZK-листовые доказательства в 6 раз без роста нативного размера trace.
 - Рефакторинг CLI: мобильное приложение и приложение майнера используют один и тот же ZK-код.
@@ -70,7 +69,7 @@ Google сдвинул собственный дедлайн миграции н�
 - Устранены замечания из аудитов безопасности.
 - Исправлена генерация ключей в сети и в CLI.
 
-### Сеть и инфраструктура
+### Network & Infra
 
 - Расширен мониторинг: новые дашборды и обновлённые каналы оповещений с уведомлениями в Telegram.
 - Обновлён стек логов с ротацией истории.
@@ -78,14 +77,14 @@ Google сдвинул собственный дедлайн миграции н�
 - Ребрендинг телеметрии и Grafana под новую айдентику.
 - Исправление сборки/релиза CLI.
 
-### Веб и мобильное приложение
+### Web & Mobile App Updates
 
 - Запуск обновлённого [quantus.com](https://quantus.com) на Astro с поддержкой локализации.
 - Новые логотипы и splash screen для мобильного приложения.
 - Улучшена производительность отправки в мобильном приложении.
 - Выпущены версии мобильного приложения 1.2.3, 1.3.0 и 1.3.1.
 
-### Контент и партнёрства
+### Content & Partnerships
 
 - Опубликован анонс ребрендинга в [@QuantusNetwork](https://x.com/QuantusNetwork).
 - Опубликован анонс whitepaper в [@QuantusNetwork](https://x.com/QuantusNetwork).

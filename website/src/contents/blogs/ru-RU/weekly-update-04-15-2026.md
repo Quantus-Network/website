@@ -1,10 +1,9 @@
 ---
-title: "Quantus Weekly: запуск тестнета Planck и награды PoW"
+title: "Quantus Weekly: тестнет Planck и награды PoW"
 description: "Запущен тестнет Planck для стресс-теста Quantus перед mainnet: ранний хешрейт важен, миграция через TestFlight и GPU-майнинг с наградами за блоки."
-
 pubDate: "2026-04-15"
 heroImage: "/blog/covers/weekly-update-04-15-2026.webp"
-heroAlt: "Quantus Weekly: запуск тестнета Planck и награды PoW"
+heroAlt: "Quantus Weekly: тестнет Planck и награды PoW"
 featured: false
 tags:
   [
@@ -73,7 +72,7 @@ Quantus — это proof of work. Максимальное предложени�
 ### Content & Partnerships
 
 - Chris в подкасте [@mobymedia](https://x.com/mobymedia): [https://x.com/mobymedia/status/2043401794227949568](https://x.com/mobymedia/status/2043401794227949568)
-- Выпущен подкаст о пост-квантовых доказательствах с нулевым разглашением с [@ethan*t_c*](https://x.com/ethan_t_c_) и [@YuviLightman](https://x.com/YuviLightman): [https://x.com/QuantusNetwork/status/2042047089660563948](https://x.com/QuantusNetwork/status/2042047089660563948)
+- Выпущен подкаст о постквантовых доказательствах с нулевым разглашением с [@ethan*t_c*](https://x.com/ethan_t_c_) и [@YuviLightman](https://x.com/YuviLightman): [https://x.com/QuantusNetwork/status/2042047089660563948](https://x.com/QuantusNetwork/status/2042047089660563948)
 - Участие в GitEx в Сингапуре.
 - Полный зал на сессии с Dr. [@zina_cinker](https://x.com/zina_cinker) в Network School: [https://x.com/QuantusNetwork/status/2044051045832384538](https://x.com/QuantusNetwork/status/2044051045832384538)
 - Chris в эфире [@ArcanumVentures](https://x.com/ArcanumVentures), выпуск 47, в четверг 16 апреля, 14:00 UTC / 22:00 по Сингапуру: [https://x.com/ArcanumVentures/status/2044023122102223157](https://x.com/ArcanumVentures/status/2044023122102223157)

@@ -1,9 +1,9 @@
 ---
-title: "Quantus Weekly: отчёт The State of Quantum"
-description: "Отчёт о квантовом риске для крипто попал в крупные издания. На этой неделе: аудит ZK, троттлинг GPU-майнера, кошелёк, сайт Q-Day и магазин."
+title: "Quantus Weekly: отчёт State of Quantum"
+description: "Наш отчёт о квантовом риске для крипты попал в крупные СМИ. На этой неделе: фиксы ZK-аудита, троттлинг GPU-майнера, обновления кошелька, сайт Q-Day и шоп."
 pubDate: "2026-05-29"
 heroImage: "/blog/covers/weekly-update-05-29-2026.webp"
-heroAlt: "Quantus Weekly: отчёт The State of Quantum"
+heroAlt: "Quantus Weekly: отчёт State of Quantum"
 featured: false
 tags:
   [
@@ -24,11 +24,11 @@ tags:
   ]
 ---
 
-На этой неделе мы опубликовали исследовательский отчёт о квантовом риске для крипто: [The State of Quantum: то, что криптоиндустрия не может игнорировать](https://x.com/QuantusNetwork/status/2059624449993806039).
+На этой неделе мы выпустили исследовательский отчёт о квантовом риске для крипты — [The State of Quantum: What Crypto Can't Afford to Ignore](https://x.com/QuantusNetwork/status/2059624449993806039).
 
-О нём написали Blockchain Reporter, MEXC, CoinMarketCap Community, Metaverse Post, crypto (dot) news, Yellow, ForkLog и The Coin Headlines.
+Отчёт подхватили Blockchain Reporter, MEXC, CoinMarketCap Community, Metaverse Post, crypto (dot) news, Yellow, ForkLog и The Coin Headlines.
 
-Особая благодарность всем, кто помог с отчётом:
+Отдельное спасибо всем, кто помог с отчётом:
 
 - [@NEARProtocol](https://x.com/@NEARProtocol)
 - [@near_intents](https://x.com/@near_intents)
@@ -50,36 +50,36 @@ tags:
 - [@YuviLightman](https://x.com/@YuviLightman)
 - [@JoeMattia](https://x.com/@JoeMattia)
 
-Что ещё сделали за неделю:
+Вот что ещё выкатили на этой неделе:
 
-### Core Tech и ZK
+### Core Tech & ZK
 
-- Закрыли пункты аудита в qp-plonky2, qp-poseidon и qp-rusty-crystals.
-- Оптимизировали гейт Poseidon2, ужесточили конфигурацию проводов ZK-схемы и добавили инструменты профилирования памяти в qp-zk-circuits.
+- Закрыли пункты аудита по qp-plonky2, qp-poseidon и qp-rusty-crystals.
+- Оптимизировали гейт Poseidon2, ужесточили конфигурацию проводов ZK-схем и добавили инструменты профилирования памяти в qp-zk-circuits.
 
-### Сеть и инфраструктура
+### Network & Infra
 
-- Добавили опциональный троттлинг GPU-майнера, чтобы майнеры могли делить GPU с AI-inference нагрузками.
-- Исправили поведение корректировки сложности сети и улучшили поддержку Docker-образов chain-ноды.
-- Добавили данные multisig-событий, общее число майнеров и повысили лимиты API в Subsquid.
+- Добавили опциональный троттлинг GPU-майнера, чтобы майнеры могли делить GPU с AI-инференсом.
+- Исправили поведение корректировки сложности цепи и улучшили поддержку Docker-образа ноды.
+- В Subsquid добавили данные событий мультисига, общее число майнеров и повысили API rate limits.
 
-### Веб и мобильное приложение
+### Web & Mobile App Updates
 
-- Добавили языковую поддержку мобильного кошелька, pull-to-refresh и исправления бесконечной прокрутки.
-- Исправили мобильный POS-режим и обработку pay/send intent, включая cold-start и проверку десятичного разделителя.
-- Развернули новый сайт Q-Day с email-интеграцией для запросов спонсоров на q (dot) day.
-- Развернули магазин Quantus для продажи мерча за токены QUAN testnet на ивентах и в NS.
-- Исправления таблицы лидеров майнинга в Quantus Explorer.
+- Добавили поддержку языков в мобильном кошельке, фиксы pull-to-refresh и infinite scroll.
+- Исправили мобильный POS-режим и обработку pay/send intent’ов, включая cold-start и валидацию десятичного разделителя.
+- Задеплоили новый сайт Q-Day с email-интеграцией для запросов спонсоров на q (dot) day.
+- Задеплоили шоп Quantus: мерч за тестовые токены QUAN на ивентах и в NS.
+- Фиксы майнинг-лидерборда в explorer Quantus.
 
-### Контент и партнёрства
+### Content & Partnerships
 
-- Опубликовали отчёт The State of Quantum: [https://x.com/QuantusNetwork/status/2059624449993806039](https://x.com/QuantusNetwork/status/2059624449993806039)
-- Blockchain Reporter осветил отчёт: [https://x.com/blockchainrptr/status/2059620914300613023](https://x.com/blockchainrptr/status/2059620914300613023)
-- Metaverse Post осветил отчёт: [https://x.com/mpost_io/status/2059922639926530375](https://x.com/mpost_io/status/2059922639926530375)
-- ForkLog осветил отчёт: [https://x.com/ForkLog/status/2059917147317444833](https://x.com/ForkLog/status/2059917147317444833)
+- Выпустили отчёт The State of Quantum: [https://x.com/QuantusNetwork/status/2059624449993806039](https://x.com/QuantusNetwork/status/2059624449993806039)
+- Blockchain Reporter об отчёте: [https://x.com/blockchainrptr/status/2059620914300613023](https://x.com/blockchainrptr/status/2059620914300613023)
+- Metaverse Post об отчёте: [https://x.com/mpost_io/status/2059922639926530375](https://x.com/mpost_io/status/2059922639926530375)
+- ForkLog об отчёте: [https://x.com/ForkLog/status/2059917147317444833](https://x.com/ForkLog/status/2059917147317444833)
 - MEXC, CoinMarketCap, Yellow, crypto (dot) news и The Coin Headlines тоже осветили отчёт.
-- Quip поделился взглядом на раздел отчёта о governance Bitcoin: [https://x.com/quipnetwork/status/2059663890943013153](https://x.com/quipnetwork/status/2059663890943013153)
-- Murtuza Merchant осветил выводы отчёта о масштабируемости и governance Bitcoin: [https://x.com/murtuza_merc/status/2059674137824510023](https://x.com/murtuza_merc/status/2059674137824510023)
-- Chris в интервью основателя на Blockchain Reporter о квантовом риске, Bitcoin, стейблкоинах, privacy-инструментах и миграции блокчейнов: [https://x.com/blockchainrptr/status/2059666209663307921](https://x.com/blockchainrptr/status/2059666209663307921)
-- Опубликовали интервью Metaverse Post о временной blockchain-privacy и post-quantum ZK-архитектуре: [https://x.com/QuantusNetwork/status/2059274094797893727](https://x.com/QuantusNetwork/status/2059274094797893727)
-- Соцпосты к Q-Day 6 июня у [@ns](https://x.com/@ns) — хайп, анонсы партнёров и спикеров.
+- Quip поделился взглядом на раздел отчёта про governance Bitcoin: [https://x.com/quipnetwork/status/2059663890943013153](https://x.com/quipnetwork/status/2059663890943013153)
+- Murtuza Merchant осветил выводы отчёта про масштабируемость и governance Bitcoin: [https://x.com/murtuza_merc/status/2059674137824510023](https://x.com/murtuza_merc/status/2059674137824510023)
+- Chris дал интервью Blockchain Reporter как фаундер: квантовый риск, Bitcoin, стейблкоины, инструменты приватности и миграция блокчейнов: [https://x.com/blockchainrptr/status/2059666209663307921](https://x.com/blockchainrptr/status/2059666209663307921)
+- Опубликовали интервью Metaverse Post о временной приватности блокчейна и постквантовой ZK-архитектуре: [https://x.com/QuantusNetwork/status/2059274094797893727](https://x.com/QuantusNetwork/status/2059274094797893727)
+- Соцпосты про Q-Day 6 июня на [@ns](https://x.com/@ns): хайп, партнёры и анонсы спикеров.

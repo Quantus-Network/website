@@ -1,9 +1,9 @@
 ---
-title: "Quantus Weekly: Planck, награды через CLI, prover ×2"
+title: "Quantus Weekly: Planck, CLI-награды, prover ×2"
 description: "Planck — первый тестнет с постквантовыми приватными транзакциями: миграция майнеров, награды через CLI на прозрачный адрес и prover в 2 раза быстрее."
 pubDate: "2026-04-22"
 heroImage: "/blog/covers/weekly-update-04-22-2026.webp"
-heroAlt: "Quantus Weekly: Planck, награды через CLI, prover ×2"
+heroAlt: "Quantus Weekly: Planck, CLI-награды, prover ×2"
 featured: false
 tags:
   [
@@ -45,11 +45,11 @@ Planck — наш первый тестнет с поддержкой постк
 
 И это не всё, что мы выпустили.
 
-### Активность на GitHub (27 объединённых pull request):
+### GitHub Activity (27 merged pull requests):
 
 ![Github Stats](/blog/assets/github-stats-weekly-update-04-22-2026.webp)
 
-### Core Tech и ZK
+### Core Tech & ZK
 
 - Удвоена производительность агрегированного prover за счёт архитектуры доказательств 2x8 (без ZK на каждом 8-листовом пакете, ZK-обёртка на корневом доказательстве).
 - Исследовательская статья по ZK отправлена на препринт.
@@ -60,7 +60,7 @@ Planck — наш первый тестнет с поддержкой постк
 - Исправление восстановления баланса через wormhole в CLI.
 - Участники Tech Collective успешно выполнили обновление runtime.
 
-### Сеть и инфраструктура
+### Network & Infra
 
 - Planck: новые изменения смержены и выпущены; работает внутренний тестнет Planck.
 - Стресс-тесты: новая стратегия, несколько прогонов.
@@ -73,7 +73,7 @@ Planck — наш первый тестнет с поддержкой постк
 - MVP-майнер прогнан end-to-end на Apple Silicon и Linux; GPU-майнинг на Linux всё ещё в отладке.
 - Создан AI-скилл для майнинга (SKILL.md); в тестах майнинг запускался менее чем за две минуты.
 
-### Веб и мобильное приложение
+### Web & Mobile App Updates
 
 - Запущен [docs.quantus.com](https://docs.quantus.com).
 - Развёрнута лендинг-страница [q.day](https://q.day).
@@ -82,7 +82,7 @@ Planck — наш первый тестнет с поддержкой постк
 - Обновлены экраны деталей транзакции, получения и активности.
 - Обновлено руководство по майнингу.
 
-### Контент и партнёрства
+### Content & Partnerships
 
 - Регистраций Q-Day больше 100. Подробнее на [q.day](https://q.day).
 - Получены и учтены комментарии внешних участников к State of Quantum Report.
