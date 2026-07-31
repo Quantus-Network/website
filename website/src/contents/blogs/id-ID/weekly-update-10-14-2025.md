@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: Integrasi Plonky3 Poseidon2 dan Podcast Liberland"
-description: "Update mingguan yang menampilkan pemindahan hash Plonky3 Poseidon2 ke sirkuit ZK, optimasi memori di Rusty Crystals, dan podcast dengan Presiden Liberland."
+title: "Quantus Weekly: Poseidon2 Plonky3 dan Podcast Liberland"
+description: Update mingguan yang menampilkan pemindahan hash Plonky3 Poseidon2 ke sirkuit ZK, optimasi memori di Rusty Crystals, dan podcast dengan Presiden Liberland.
+
 pubDate: "2025-10-14"
 heroImage: "/blog/covers/weekly-update-10-14-2025.webp"
-heroAlt: "Quantus Weekly: Integrasi Plonky3 Poseidon2 dan Podcast Liberland"
+heroAlt: "Quantus Weekly: Poseidon2 Plonky3 dan Podcast Liberland"
 featured: false
 tags:
   [

@@ -1,6 +1,7 @@
 ---
 title: "Quantus 위클리: 임계값 딜리슘(Dilithium) 서명 및 분산 조정"
-description: "임계값 서명, ZK 회로 개선, 모바일 지갑 업데이트 및 커뮤니티 콘텐츠를 다루는 주간 업데이트입니다."
+description: 임계값 서명, ZK 회로 개선, 모바일 지갑 업데이트 및 커뮤니티 콘텐츠를 다루는 주간 업데이트입니다. 프로토콜 업데이트와 연구는 Quantus 블로그에서 더 읽어보세요.
+
 pubDate: "2026-01-13"
 heroImage: "/blog/covers/weekly-update-01-13-2026.webp"
 heroAlt: "Quantus 위클리: 임계값 딜리슘(Dilithium) 서명 및 분산 조정"

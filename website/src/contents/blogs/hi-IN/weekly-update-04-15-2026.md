@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: Planck टेस्टनेट लॉन्च और शीघ्र माइनिंग पुरस्कार"
-description: "प्रारंभिक हैशरेट क्यों मायने रखती है, Planck टेस्टनेट माइनरों के लिए लाइव है, TestFlight और स्टोर पर ऐप माइग्रेशन, नई चेन पर GPU माइनिंग—और इस सप्ताह के कोर, इन्फ्रा, वॉलेट और कम्युनिटी अपडेट।"
+title: "Quantus Weekly: Planck टेस्टनेट और माइनिंग पुरस्कार"
+description: प्रारंभिक हैशरेट क्यों मायने रखती है, Planck टेस्टनेट माइनरों के लिए लाइव है, TestFlight और स्टोर पर ऐप माइग्रेशन, नई चेन पर GPU माइनिंग।
+
 pubDate: "2026-04-15"
 heroImage: "/blog/covers/weekly-update-04-15-2026.webp"
-heroAlt: "Quantus Weekly: Planck टेस्टनेट लॉन्च और शीघ्र माइनिंग पुरस्कार"
+heroAlt: "Quantus Weekly: Planck टेस्टनेट और माइनिंग पुरस्कार"
 featured: false
 tags:
   [

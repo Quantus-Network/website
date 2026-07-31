@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: Auditoría de Criptografía de Redes e Integración de Keystone"
-description: "Actualización semanal que cubre la auditoría exitosa de nuestra librería de criptografía de redes, actualizaciones de red para el SDK de Polkadot y nuevo soporte de billetera de hardware en Keystone."
+title: "Quantus Weekly: auditoría lattice e integración Keystone"
+description: Resolvimos la auditoría de qp-rusty-crystals y alineamos la red con el SDK de Polkadot. Soporte Quantus en Keystone, wallet v1.1.2 y podcast en Apple y Spotify.
+
 pubDate: "2025-12-01"
 heroImage: "/blog/covers/weekly-update-12-01-2025.webp"
-heroAlt: "Quantus Weekly: Auditoría de Criptografía de Redes e Integración de Keystone"
+heroAlt: "Quantus Weekly: auditoría lattice e integración Keystone"
 featured: false
 tags:
   [

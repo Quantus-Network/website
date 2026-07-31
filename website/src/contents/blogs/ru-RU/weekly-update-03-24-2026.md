@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: второе уполовинивание — ZK-доказательства в 4 раза быстрее за две недели"
-description: "Ещё одно сокращение времени прувера вдвое, хеширование Poseidon, исправление майнинга, лимиты Senoti, запуск whitepaper, ревью iOS swap и Quantum Canary о квантовой безопасности Solana."
+title: "Quantus Weekly: ZK в 4× быстрее за две недели"
+description: "Второе уполовинивание ZK-конвейера: доказательства wormhole в 4 раза быстрее за 14 дней, обновлён Poseidon, исправлен майнинг и опубликован whitepaper Quantus."
+
 pubDate: "2026-03-24"
 heroImage: "/blog/covers/weekly-update-03-24-2026.webp"
-heroAlt: "Quantus Weekly: второе уполовинивание — ZK-доказательства в 4 раза быстрее за две недели"
+heroAlt: "Quantus Weekly: ZK в 4× быстрее за две недели"
 featured: false
 tags:
   [

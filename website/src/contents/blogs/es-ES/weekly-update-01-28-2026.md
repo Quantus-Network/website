@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: RPC Denegables y Auditoría de Seguridad de Neodyme"
-description: "Actualización semanal que destaca nuestros nuevos RPC denegables para una mayor privacidad, la finalización de la auditoría de seguridad de Neodyme para Rusty Crystals y direcciones ZK privadas para todos los tokens."
+title: "Quantus Weekly: RPC denegables y auditoría Neodyme"
+description: RPC denegables con búsqueda inconsciente para privacidad real en wallet e infraestructura. Neodyme completó la auditoría de Rusty Crystals Dilithium.
+
 pubDate: "2026-01-28"
 heroImage: "/blog/covers/weekly-update-01-28-2026.webp"
-heroAlt: "Quantus Weekly: RPC Denegables y Auditoría de Seguridad de Neodyme"
+heroAlt: "Quantus Weekly: RPC denegables y auditoría Neodyme"
 featured: false
 tags:
   [

@@ -1,9 +1,10 @@
 ---
-title: "Quantus Mingguan: Tanda Tangan Threshold Dilithium dan Koordinasi Terdistribusi"
-description: "Pembaruan mingguan yang mencakup tanda tangan threshold, peningkatan sirkuit ZK, pembaruan dompet seluler, dan konten komunitas."
+title: "Quantus Mingguan: Tanda Tangan Threshold Dilithium"
+description: Minggu ini kami merilis tanda tangan threshold Dilithium untuk koordinasi terdistribusi, peningkatan sirkuit ZK, pembaruan dompet seluler, dan konten komunitas.
+
 pubDate: "2026-01-13"
 heroImage: "/blog/covers/weekly-update-01-13-2026.webp"
-heroAlt: "Quantus Mingguan: Tanda Tangan Threshold Dilithium dan Koordinasi Terdistribusi"
+heroAlt: "Quantus Mingguan: Tanda Tangan Threshold Dilithium"
 featured: false
 tags:
   [

@@ -1,6 +1,7 @@
 ---
 title: "Quantus ウィークリー: しきい値 Dilithium 署名と分散型コーディネーション"
-description: "しきい値署名、ZK 回路の改善、モバイルウォレットのアップデート、コミュニティコンテンツを網羅した週刊アップデート。"
+description: しきい値署名、ZK 回路の改善、モバイルウォレットのアップデート、コミュニティコンテンツを網羅した週刊アップデート。プロトコル更新と研究の詳細はQuantusブログでご覧ください。
+
 pubDate: "2026-01-13"
 heroImage: "/blog/covers/weekly-update-01-13-2026.webp"
 heroAlt: "Quantus ウィークリー: しきい値 Dilithium 署名と分散型コーディネーション"

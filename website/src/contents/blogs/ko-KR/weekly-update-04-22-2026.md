@@ -1,6 +1,7 @@
 ---
 title: "Quantus Weekly: 플랑크 테스트넷, CLI 보상 청구, 프로버 처리량 2배"
-description: "플랑크는 양자 내성 프라이빗 트랜잭션을 지원하는 첫 테스트넷입니다. 마이너 이주가 진행 중이며, CLI로 모바일 지갑의 투명 주소로 채굴 보상을 청구할 수 있고, docs.quantus.com에 노드·마이너·보상 청구 가이드가 있습니다. 2x8 분할 아키텍처로 집계 프로버 속도가 두 배로 올랐습니다."
+description: 플랑크는 양자 내성 프라이빗 트랜잭션을 지원하는 첫 테스트넷입니다. 마이너 이주가 진행 중이며, CLI로 모바일 지갑의 투명 주소로 채굴 보상을 청구할 수 있고, docs.quantus.com에 노드·마이너·보상 청구 가이드가 있습니다.
+
 pubDate: "2026-04-22"
 heroImage: "/blog/covers/weekly-update-04-22-2026.webp"
 heroAlt: "Quantus Weekly: 플랑크 테스트넷, CLI 보상 청구, 프로버 처리량 2배"

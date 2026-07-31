@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: POS, masking PolyFri, dan uang elektronik P2P"
-description: "Mode POS mobile di v1.2.2, masking sisi prover PolyFri di jalur native, pembersihan hasher Poseidon, perlindungan DDoS untuk bukti ZK on-chain, alpha redesain situs, dan Quantum Canary tentang membangun komputer kuantum."
+title: "Quantus Weekly: Mode POS dan Uang Elektronik P2P"
+description: Mode POS mobile di v1.2.2, masking PolyFri di jalur native, pembersihan hasher Poseidon, perlindungan DDoS bukti ZK on-chain, dan alpha redesain situs web.
+
 pubDate: "2026-03-31"
 heroImage: "/blog/covers/weekly-update-03-31-2026.webp"
-heroAlt: "Quantus Weekly: POS, masking PolyFri, dan uang elektronik P2P"
+heroAlt: "Quantus Weekly: Mode POS dan Uang Elektronik P2P"
 featured: false
 tags:
   [

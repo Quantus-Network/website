@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: Gate Poseidon2 Plonky2 dan Tata Kelola On-chain"
-description: "Update mingguan yang menampilkan implementasi gate Poseidon2 di Plonky2, fungsi tata kelola on-chain dan treasury baru, serta penyelesaian sistem referensi dalam aplikasi."
+title: "Quantus Weekly: Gate Poseidon2 dan Tata Kelola On-Chain"
+description: Update mingguan yang menampilkan implementasi gate Poseidon2 di Plonky2, fungsi tata kelola on-chain dan treasury baru, serta penyelesaian sistem referensi.
+
 pubDate: "2025-10-21"
 heroImage: "/blog/covers/weekly-update-10-21-2025.webp"
-heroAlt: "Quantus Weekly: Gate Poseidon2 Plonky2 dan Tata Kelola On-chain"
+heroAlt: "Quantus Weekly: Gate Poseidon2 dan Tata Kelola On-Chain"
 featured: false
 tags:
   [

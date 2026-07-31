@@ -1,6 +1,7 @@
 ---
-title: "Quantus 每周动态：ZK 交易聚合与矿机应用发布"
-description: "每周更新：完成 ZK 交易聚合第一步，发布矿机应用 v0.1.0，以及 GPU 挖矿实现的最新进展。"
+title: Quantus 每周动态：ZK 交易聚合与矿机应用发布
+description: 每周更新：完成 ZK 交易聚合第一步，发布矿机应用 v0.1.0，以及 GPU 挖矿实现的最新进展。更多协议更新与研究详情，请参阅 Quantus 博客文章。
+
 pubDate: "2025-11-25"
 heroImage: "/blog/covers/weekly-update-11-25-2025.webp"
 heroAlt: "Quantus 每周动态：ZK 交易聚合与矿机应用发布"

@@ -1,6 +1,7 @@
 ---
-title: "Quantus 每周动态：Poseidon2 优化与链架构重构"
-description: "每周更新：Poseidon2 门电路提速 8.3 倍，重大链架构重构移除 9,000 行代码，以及来自币安区块链周的最新消息。"
+title: Quantus 每周动态：Poseidon2 优化与链架构重构
+description: 每周更新：Poseidon2 门电路提速 8.3 倍，重大链架构重构移除 9,000 行代码，以及来自币安区块链周的最新消息。更多协议更新与研究详情，请参阅 Quantus 博客文章。
+
 pubDate: "2025-12-09"
 heroImage: "/blog/covers/weekly-update-12-09-2025.webp"
 heroAlt: "Quantus 每周动态：Poseidon2 优化与链架构重构"

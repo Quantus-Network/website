@@ -1,6 +1,7 @@
 ---
 title: "Quantus Weekly: Akun Keamanan Tinggi dan Pencegahan Penipuan"
-description: "Update mingguan yang menampilkan akun keamanan tinggi baru kami dengan kunci waktu dan guardian yang dapat disesuaikan, pengujian integrasi multisig, dan fungsionalitas pemulihan dana baru."
+description: Update mingguan tentang akun keamanan tinggi dengan kunci waktu dan guardian, pengujian integrasi multisig, dan fitur pemulihan dana baru untuk pengguna.
+
 pubDate: "2026-02-04"
 heroImage: "/blog/covers/weekly-update-02-04-2026.webp"
 heroAlt: "Quantus Weekly: Akun Keamanan Tinggi dan Pencegahan Penipuan"

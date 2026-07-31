@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: POS, PolyFri मास्किंग और P2P इलेक्ट्रॉनिक कैश"
-description: "v1.2.2 में मोबाइल POS मोड, नेटिव पाथ पर PolyFri प्रूवर-साइड मास्किंग, Poseidon हैशर सफ़ाई, चेन पर ZK प्रूफ के लिए DDoS सुरक्षा, वेबसाइट रीडिज़ाइन अल्फ़ा, और क्वांटम कंप्यूटर बनाने की कठिनाई पर Quantum Canary।"
+title: "Quantus Weekly: POS मोड और P2P इलेक्ट्रॉनिक कैश"
+description: v1.2.2 में मोबाइल POS मोड, PolyFri प्रूवर-साइड मास्किंग, Poseidon हैशर सफ़ाई, ZK प्रूफ DDoS सुरक्षा, वेबसाइट रीडिज़ाइन अल्फ़ा, और P2P इलेक्ट्रॉनिक कैश।
+
 pubDate: "2026-03-31"
 heroImage: "/blog/covers/weekly-update-03-31-2026.webp"
-heroAlt: "Quantus Weekly: POS, PolyFri मास्किंग और P2P इलेक्ट्रॉनिक कैश"
+heroAlt: "Quantus Weekly: POS मोड और P2P इलेक्ट्रॉनिक कैश"
 featured: false
 tags:
   [

@@ -12,8 +12,8 @@
   },
   "quantum_risk_checker": {
     "meta": {
-      "title": "Q-Day Checker | Quantus - Bewerten Sie Ihr Quantenrisiko",
-      "description": "Ist Ihre digitale Sicherheit bereit für den Q-Day? Nutzen Sie den Quantus Q-Day Checker, um Ihre Anfälligkeit für Bedrohungen durch Quantencomputing zu bewerten und zu erfahren, wie Sie Ihr Vermögen schützen können."
+      "title": "Q-Day Checker | Quantus Quantenrisiko",
+      "description": "Ist Ihre digitale Sicherheit bereit für den Q-Day? Nutzen Sie den Quantus Q-Day Checker, um Quantenrisiken zu bewerten und Ihr Vermögen besser zu schützen."
     },
     "hero_banner": {
       "eyebrow": "Quantenrisiko-Checker",
@@ -114,7 +114,7 @@
   "home": {
     "meta": {
       "title": "Quantus - Quantensicheres verschlüsseltes Geld",
-      "description": "Quantus: Quantensicheres verschlüsseltes Geld. Laden Sie unsere Wallet für post-quantengeschützte Vermögenswerte herunter."
+      "description": "Quantus ist quantensicheres Geld auf einer Layer-1-Blockchain. Laden Sie die Wallet für post-quantengeschützte Assets und private Transfers jetzt herunter."
     },
     "loader": {
       "lines": {
@@ -321,8 +321,8 @@
   },
   "technology": {
     "meta": {
-      "title": "Technologie | Quantus - Quantensicheres verschlüsseltes Geld",
-      "description": "Erkunden Sie die technischen Grundlagen von Quantus. Erfahren Sie mehr über unsere NIST-Standard-Post-Quanten-Kryptografie, rekursive ZK-Proofs und die skalierbare Layer-1-Architektur."
+      "title": "Technologie | Quantus verschlüsseltes Geld",
+      "description": "Erkunden Sie Quantus-Grundlagen: NIST-Post-Quanten-Kryptografie, rekursive ZK-Proofs und eine skalierbare Layer-1-Architektur für sicheres digitales Geld."
     },
     "hero_banner": {
       "eyebrow": "Das Protokoll",
@@ -409,8 +409,8 @@
   },
   "wallet": {
     "meta": {
-      "title": "Wallet | Quantus - Sichern Sie Ihr Vermögen gegen Quantenbedrohungen",
-      "description": "Laden Sie die Quantus-Wallet für iOS und Android herunter. Erleben Sie quantensicheres verschlüsseltes Geld mit reversiblen Transaktionen und standardmäßiger Privatsphäre."
+      "title": "Wallet | Quantus quantensichere Assets",
+      "description": "Laden Sie die Quantus-Wallet für iOS und Android herunter. Erleben Sie quantensicheres Geld mit reversiblen Transaktionen und Privatsphäre standardmäßig."
     },
     "hero_banner": {
       "eyebrow": "DIE QUANTUS-WALLET",
@@ -475,8 +475,8 @@
   },
   "about": {
     "meta": {
-      "title": "Über uns | Quantus - Aufbau eines Post-Quanten-Finanzsystems",
-      "description": "Lernen Sie das Team hinter Quantus kennen. Wir sind Ingenieure und Forscher, die sich dem Aufbau dauerhafter wirtschaftlicher Freiheit durch quantensichere Infrastruktur verschrieben haben."
+      "title": "Über uns | Das Team hinter Quantus",
+      "description": "Lernen Sie das Team hinter Quantus kennen. Wir sind Ingenieure und Forscher, die wirtschaftliche Freiheit durch quantensichere Layer-1-Infrastruktur aufbauen."
     },
     "hero": {
       "eyebrow": "ÜBER QUANTUS",
@@ -511,8 +511,8 @@
   },
   "community": {
     "meta": {
-      "title": "Community | Quantus - Werden Sie Teil der quantensicheren Zukunft",
-      "description": "Vernetzen Sie sich mit der Quantus-Community. Treten Sie unserem Telegram bei, folgen Sie uns auf Social Media und bleiben Sie über die neuesten Protokoll-News und Events informiert."
+      "title": "Community | Treten Sie Quantus bei",
+      "description": "Vernetzen Sie sich mit der Quantus-Community. Treten Sie Telegram bei, folgen Sie uns in Social Media und bleiben Sie zu Protokoll-News und Events informiert."
     },
     "hero": {
       "eyebrow": "COMMUNITY",
@@ -524,7 +524,7 @@
       "heading": "Treffen Sie uns persönlich.",
       "card": {
         "date_label": "QDAY — APRIL 2026",
-        "title": "Ein Community-Event, das das Quantus-Netzwerk und Quantencomputing-Forscher zusammenbringt.",
+        "title": "Ein Community-Event, das Quantus und Quantencomputing-Forscher zusammenbringt.",
         "cta": "BENACHRICHTIGT WERDEN →",
         "status": "DETAILS FOLGEN IN KÜRZE"
       }
@@ -560,8 +560,8 @@
   },
   "privacy": {
     "meta": {
-      "title": "Quantus - Datenschutzrichtlinie",
-      "description": "Lesen Sie die Datenschutzrichtlinie von Quantus, um zu verstehen, wie wir Ihre Informationen in unseren Apps und auf unserer Website sammeln, verwenden und schützen."
+      "title": "Datenschutz | Quantus schützt Ihre Daten",
+      "description": "Lesen Sie die Datenschutzrichtlinie von Quantus und erfahren Sie, wie wir Ihre Daten in Apps, Wallet und Website erheben, nutzen und schützen."
     },
     "hero": {
       "eyebrow": "RECHTLICHES",
@@ -668,8 +668,8 @@
   },
   "terms": {
     "meta": {
-      "title": "Quantus - Nutzungsbedingungen",
-      "description": "Lesen Sie die Nutzungsbedingungen von Quantus für Nutzungsregeln, Verantwortlichkeiten und rechtliche Hinweise für unsere Apps und Blockchain-Dienste."
+      "title": "Nutzungsbedingungen | Quantus Rechtliches",
+      "description": "Lesen Sie die Nutzungsbedingungen von Quantus zu Regeln, Pflichten und rechtlichen Hinweisen für Apps, Wallet und Blockchain-Dienste im Netzwerk."
     },
     "hero": {
       "eyebrow": "RECHTLICHES",
@@ -782,16 +782,16 @@
   },
   "account": {
     "meta": {
-      "title": "Sichern Sie Ihre Krypto-Assets | Quantus-Account",
-      "description": "Erstellen Sie Ihren Quantus-Account, um Ihre digitalen Vermögenswerte gegen Quantenbedrohungen zu sichern. Werden Sie Teil der nächsten Generation von verschlüsseltem, quantensicherem Geld."
+      "title": "Krypto sichern | Quantus-Account jetzt",
+      "description": "Erstellen Sie Ihren Quantus-Account, um digitale Vermögenswerte gegen Quantenbedrohungen zu schützen. Werden Sie Teil der nächsten Generation sicheren Geldes."
     },
     "title": "Sichern Sie jetzt Ihre Krypto-Assets",
     "tag": "Werden Sie unverwundbar gegen Quantenbedrohungen"
   },
   "invite": {
     "meta": {
-      "title": "Quantus beitreten | Einladung zur Krypto-Sicherung",
-      "description": "Sie wurden eingeladen, Quantus beizutreten. Sichern Sie Ihr Vermögen mit der ersten quantensicheren Layer-1-Blockchain, die für die Zukunft der digitalen Finanzen gebaut wurde."
+      "title": "Quantus beitreten | Krypto-Einladung",
+      "description": "Sie wurden eingeladen, Quantus beizutreten. Sichern Sie Ihr Vermögen mit der ersten quantensicheren Layer-1-Blockchain für die Zukunft digitaler Finanzen."
     },
     "title": "Sie sind eingeladen, Ihre Krypto-Assets zu sichern",
     "code": {
@@ -819,13 +819,13 @@
       "updated": "Aktualisiert"
     },
     "meta": {
-      "title": "Quantus-Blog | Neueste Nachrichten & Quanten-Einblicke",
-      "description": "Bleiben Sie auf dem Laufenden mit den neuesten Nachrichten, Bildungsinhalten und Einblicken von Quantus."
+      "title": "Quantus-Blog | News und Quanten-Einblicke",
+      "description": "Bleiben Sie mit Quantus-News, Leitfäden und Quanten-Einblicken auf dem Laufenden. Folgen Sie Wochenupdates zu Protokoll, Forschung und Produktreleases."
     },
     "tag": {
       "meta": {
-        "title": "Blog - #{tag} | Quantus",
-        "description": "Alle Blogbeiträge mit dem Tag #{tag} auf Quantus durchsuchen."
+        "title": "Quantus-Blog | Beiträge mit Tag #{tag}",
+        "description": "Durchsuchen Sie Quantus-Blogbeiträge mit dem Tag #{tag}. Finden Sie News, Research und Lernartikel zu quantensicherer Blockchain-Technologie und Updates."
       },
       "heading": "Beiträge mit dem Tag {tag}",
       "back_link": "← Zurück zu allen Beiträgen"
@@ -954,8 +954,8 @@
   },
   "whitepaper": {
     "meta": {
-      "title": "Quantus-Whitepaper | Technische Grundlagen der Quantensicherheit",
-      "description": "Lesen Sie das Quantus-Whitepaper. Erkunden Sie unseren technischen Ansatz für Post-Quanten-Kryptografie, Zero-Knowledge-Proofs und die sichere Layer-1-Blockchain-Architektur."
+      "title": "Quantus-Whitepaper | Quantensicherheit",
+      "description": "Lesen Sie das Quantus-Whitepaper. Erkunden Sie Post-Quanten-Kryptografie, Zero-Knowledge-Proofs und unsere sichere Layer-1-Blockchain-Architektur im Detail."
     },
     "title": "Quantus-Whitepaper",
     "on_this_page": "Auf dieser Seite",

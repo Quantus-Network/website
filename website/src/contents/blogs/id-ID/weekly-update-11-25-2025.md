@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: Agregasi Transaksi ZK dan Rilis Aplikasi Miner"
-description: "Update mingguan yang mencakup langkah pertama agregasi transaksi ZK, rilis Miner App v0.1.0, dan kemajuan implementasi penambangan GPU."
+title: "Quantus Weekly: Agregasi ZK dan Rilis Miner App"
+description: Update mingguan yang mencakup langkah pertama agregasi transaksi ZK, rilis Miner App v0.1.0, dan kemajuan implementasi penambangan GPU.
+
 pubDate: "2025-11-25"
 heroImage: "/blog/covers/weekly-update-11-25-2025.webp"
-heroAlt: "Quantus Weekly: Agregasi Transaksi ZK dan Rilis Aplikasi Miner"
+heroAlt: "Quantus Weekly: Agregasi ZK dan Rilis Miner App"
 featured: false
 tags:
   [

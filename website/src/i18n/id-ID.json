@@ -12,8 +12,8 @@
   },
   "quantum_risk_checker": {
     "meta": {
-      "title": "Pemeriksa Q-Day | Quantus - Nilai Risiko Kuantum Anda",
-      "description": "Apakah keamanan digital Anda siap untuk Q-Day? Gunakan Pemeriksa Q-Day Quantus untuk menilai kerentanan Anda terhadap ancaman komputasi kuantum dan pelajari cara melindungi aset Anda."
+      "title": "Pemeriksa Q-Day | Risiko Kuantum Quantus",
+      "description": "Apakah keamanan digital Anda siap untuk Q-Day? Gunakan Pemeriksa Q-Day Quantus untuk menilai risiko komputasi kuantum dan cara melindungi aset Anda hari ini."
     },
     "hero_banner": {
       "eyebrow": "Pemeriksa risiko kuantum",
@@ -113,8 +113,8 @@
   },
   "home": {
     "meta": {
-      "title": "Quantus - Uang Terenkripsi Aman Secara Kuantum",
-      "description": "Quantus: Uang terenkripsi aman secara kuantum. Unduh dompet kami untuk aset yang dilindungi pasca-kuantum."
+      "title": "Quantus - Uang Terenkripsi Aman Kuantum",
+      "description": "Quantus adalah uang terenkripsi aman kuantum di blockchain Lapisan 1. Unduh dompet untuk aset terlindungi pasca-kuantum dan transfer privat yang aman."
     },
     "loader": {
       "lines": {
@@ -321,8 +321,8 @@
   },
   "technology": {
     "meta": {
-      "title": "Teknologi | Quantus - Uang Terenkripsi Aman Secara Kuantum",
-      "description": "Jelajahi landasan teknis Quantus. Pelajari tentang kriptografi pasca-kuantum standar NIST kami, bukti ZK rekursif, dan arsitektur Lapisan 1 yang terukur."
+      "title": "Teknologi | Uang Terenkripsi Quantus",
+      "description": "Jelajahi fondasi teknis Quantus: kriptografi pasca-kuantum standar NIST, bukti ZK rekursif, dan arsitektur Lapisan 1 yang skalabel untuk uang aman kuantum."
     },
     "hero_banner": {
       "eyebrow": "Protokol",
@@ -409,8 +409,8 @@
   },
   "wallet": {
     "meta": {
-      "title": "Dompet | Quantus - Amankan Aset Anda Terhadap Ancaman Kuantum",
-      "description": "Unduh dompet Quantus untuk iOS dan Android. Rasakan uang terenkripsi aman secara kuantum dengan transaksi yang dapat dibatalkan dan keamanan pribadi secara default."
+      "title": "Dompet | Aset Aman Kuantum Quantus",
+      "description": "Unduh dompet Quantus untuk iOS dan Android. Rasakan uang terenkripsi aman kuantum dengan transaksi yang dapat dibalik dan privasi sebagai default."
     },
     "hero_banner": {
       "eyebrow": "DOMPET QUANTUS",
@@ -475,8 +475,8 @@
   },
   "about": {
     "meta": {
-      "title": "Tentang Kami | Quantus - Membangun Sistem Keuangan Pasca-Kuantum",
-      "description": "Temui tim di balik Quantus. Kami adalah insinyur dan peneliti yang berdedikasi untuk membangun kebebasan ekonomi permanen melalui infrastruktur yang aman secara kuantum."
+      "title": "Tentang Kami | Tim di Balik Quantus",
+      "description": "Temui tim di balik Quantus. Kami adalah insinyur dan peneliti yang membangun kebebasan ekonomi lewat infrastruktur Lapisan 1 yang aman secara kuantum."
     },
     "hero": {
       "eyebrow": "TENTANG QUANTUS",
@@ -511,8 +511,8 @@
   },
   "community": {
     "meta": {
-      "title": "Komunitas | Quantus - Bergabunglah dengan Masa Depan Aman Secara Kuantum",
-      "description": "Terhubung dengan komunitas Quantus. Bergabunglah dengan Telegram kami, ikuti kami di media sosial, dan tetap terupdate dengan berita dan acara protokol terbaru."
+      "title": "Komunitas | Bergabung dengan Quantus",
+      "description": "Terhubung dengan komunitas Quantus. Gabung Telegram, ikuti media sosial, dan tetap update berita protokol, acara, serta kemajuan blockchain aman kuantum."
     },
     "hero": {
       "eyebrow": "KOMUNITAS",
@@ -560,8 +560,8 @@
   },
   "privacy": {
     "meta": {
-      "title": "Quantus - Kebijakan Privasi",
-      "description": "Baca Kebijakan Privasi Quantus untuk memahami bagaimana kami mengumpulkan, menggunakan, dan melindungi informasi Anda di seluruh aplikasi dan situs web kami."
+      "title": "Kebijakan Privasi | Perlindungan Quantus",
+      "description": "Baca Kebijakan Privasi Quantus untuk memahami cara kami mengumpulkan, menggunakan, dan melindungi informasi Anda di aplikasi, dompet, dan situs web."
     },
     "hero": {
       "eyebrow": "LEGAL",
@@ -668,8 +668,8 @@
   },
   "terms": {
     "meta": {
-      "title": "Quantus - Ketentuan Layanan",
-      "description": "Baca Ketentuan Layanan Quantus untuk aturan penggunaan, tanggung jawab, dan penafian hukum untuk aplikasi dan layanan blockchain kami."
+      "title": "Ketentuan Layanan | Aturan Hukum Quantus",
+      "description": "Baca Ketentuan Layanan Quantus tentang aturan penggunaan, tanggung jawab, dan disclaimer hukum untuk aplikasi, dompet, serta layanan jaringan blockchain."
     },
     "hero": {
       "eyebrow": "LEGAL",
@@ -782,16 +782,16 @@
   },
   "account": {
     "meta": {
-      "title": "Amankan Kripto Anda | Akun Quantus",
-      "description": "Buat akun Quantus Anda untuk mengamankan aset digital Anda terhadap ancaman kuantum. Bergabunglah dengan generasi berikutnya dari uang aman kuantum yang terenkripsi."
+      "title": "Amankan Kripto | Akun Quantus Anda",
+      "description": "Buat akun Quantus untuk mengamankan aset digital dari ancaman kuantum. Bergabunglah dengan generasi baru uang terenkripsi yang aman secara kuantum."
     },
     "title": "Amankan Kripto Anda Sekarang",
     "tag": "Menjadi kebal terhadap ancaman kuantum"
   },
   "invite": {
     "meta": {
-      "title": "Bergabung dengan Quantus | Undangan Amankan Kripto Anda",
-      "description": "Anda telah diundang untuk bergabung dengan Quantus. Amankan aset Anda dengan blockchain Lapisan 1 aman kuantum pertama yang dibangun untuk masa depan keuangan digital."
+      "title": "Gabung Quantus | Undangan Amankan Kripto",
+      "description": "Anda diundang bergabung dengan Quantus. Amankan aset dengan blockchain Lapisan 1 aman kuantum pertama yang dibangun untuk masa depan keuangan digital."
     },
     "title": "Anda Diundang untuk Mengamankan Kripto Anda",
     "code": {
@@ -819,13 +819,13 @@
       "updated": "Diperbarui"
     },
     "meta": {
-      "title": "Blog Quantus | Berita Terbaru & Wawasan Kuantum",
-      "description": "Tetap terupdate dengan berita terbaru, konten edukasi, dan wawasan dari Quantus."
+      "title": "Blog Quantus | Berita dan Wawasan Kuantum",
+      "description": "Tetap update berita Quantus, panduan edukasi, dan wawasan keamanan kuantum. Ikuti pembaruan mingguan protokol, riset, serta rilis produk terbaru kami."
     },
     "tag": {
       "meta": {
-        "title": "Blog - #{tag} | Quantus",
-        "description": "Jelajahi semua postingan blog yang ditandai dengan #{tag} di Quantus."
+        "title": "Blog Quantus | Tag Postingan #{tag}",
+        "description": "Jelajahi postingan blog Quantus dengan tag #{tag}. Temukan berita, catatan riset, dan artikel edukasi tentang teknologi blockchain aman kuantum."
       },
       "heading": "Postingan ditandai dengan {tag}",
       "back_link": "← Kembali ke semua postingan"
@@ -954,8 +954,8 @@
   },
   "whitepaper": {
     "meta": {
-      "title": "Whitepaper Quantus | Landasan Teknis Keamanan Kuantum",
-      "description": "Baca whitepaper Quantus. Jelajahi pendekatan teknis kami terhadap kriptografi pasca-kuantum, bukti zero-knowledge, dan arsitektur blockchain Lapisan 1 yang aman."
+      "title": "Whitepaper Quantus | Keamanan Kuantum",
+      "description": "Baca whitepaper Quantus. Jelajahi pendekatan kami pada kriptografi pasca-kuantum, bukti zero-knowledge, dan arsitektur blockchain Lapisan 1 yang aman."
     },
     "title": "Whitepaper Quantus",
     "on_this_page": "Di halaman ini",

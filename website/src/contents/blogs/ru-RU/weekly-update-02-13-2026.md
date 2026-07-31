@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: Картографирование квантово-безопасного будущего"
-description: "Еженедельное обновление, включающее листинг на CoinGecko, оптимизацию мультиподписи, рефакторинг ZK-агрегатора и выпуск мобильного приложения v1.1.5."
+title: "Quantus Weekly: листинг CoinGecko и квантовое будущее"
+description: "Quantus попал на CoinGecko, оптимизирована мультиподпись, обновлён ZK-агрегатор и выпущено мобильное приложение v1.1.5 — квантово-безопасные деньги на карте."
+
 pubDate: "2026-02-13"
 heroImage: "/blog/covers/weekly-update-02-13-2026.webp"
-heroAlt: "Quantus Weekly: Картографирование квантово-безопасного будущего"
+heroAlt: "Quantus Weekly: листинг CoinGecko и квантовое будущее"
 featured: false
 tags:
   [

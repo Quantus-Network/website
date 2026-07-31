@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: Frühjahrsputz, Eiger-Audits und der Kompakt-Aggregator"
-description: "Audit-Themen mit Eiger abgearbeitet, CLI refaktoriert, Bugs bei Miner und Indexer behoben sowie Wormhole-Integrationstests auf dem neuen Kompakt-Aggregator gefahren. Der Wormhole-Flow in ZK läuft sauber durch den 2x8-Kompakt-Aggregator vom Vorgang. Mobile Wallet 1.3.4/1.3.5, Miner v3.1.0 mit GPU-Fix, Docs für Mining bis Reward-Claim und der erste Planck-Testnet-Miner-Workshop bei der Network School."
+title: "Quantus Weekly: Eiger-Audits und Kompakt-Aggregator"
+description: Frühjahrsputz: Eiger-Audit-Punkte abgearbeitet, Wormhole-Tests auf dem 2×8-Kompakt-Aggregator, CLI refaktoriert und Mobile-Wallet-Releases 1.3.4/1.3.5.
+
 pubDate: "2026-04-29"
 heroImage: "/blog/covers/weekly-update-04-29-2026.webp"
-heroAlt: "Quantus Weekly: Frühjahrsputz, Eiger-Audits und der Kompakt-Aggregator"
+heroAlt: "Quantus Weekly: Eiger-Audits und Kompakt-Aggregator"
 featured: false
 tags:
   [

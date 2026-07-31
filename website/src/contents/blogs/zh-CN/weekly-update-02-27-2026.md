@@ -1,6 +1,7 @@
 ---
-title: "Quantus 每周更新：钱包应当保持简单"
-description: "每周更新涵盖了钱包 v1.2.0 的发布、带有多重签名的国库、Heisenberg 测试网更新以及性能改进。"
+title: Quantus 每周更新：钱包应当保持简单
+description: 每周更新涵盖了钱包 v1.2.0 的发布、带有多重签名的国库、Heisenberg 测试网更新以及性能改进。更多协议更新与研究详情，请参阅 Quantus 博客文章。
+
 pubDate: "2026-02-27"
 heroImage: "/blog/covers/weekly-update-02-27-2026.webp"
 heroAlt: "Quantus 每周更新：钱包应当保持简单"

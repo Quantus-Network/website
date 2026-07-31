@@ -1,6 +1,7 @@
 ---
-title: "Quantus 每周动态：高安全账户与反欺诈"
-description: "每周更新：我们推出了具有可自定义时间锁和守护者的全新高安全账户，多重签名集成测试，以及全新的资金回收功能。"
+title: Quantus 每周动态：高安全账户与反欺诈
+description: 每周更新：我们推出了具有可自定义时间锁和守护者的全新高安全账户，多重签名集成测试，以及全新的资金回收功能。更多协议更新与研究详情，请参阅 Quantus 博客文章。
+
 pubDate: "2026-02-04"
 heroImage: "/blog/covers/weekly-update-02-04-2026.webp"
 heroAlt: "Quantus 每周动态：高安全账户与反欺诈"

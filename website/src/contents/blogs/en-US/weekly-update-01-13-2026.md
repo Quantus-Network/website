@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: Threshold Dilithium Signatures and Distributed Coordination"
-description: "Weekly update covering threshold signatures, ZK circuit improvements, mobile wallet updates, and community content."
+title: "Quantus Weekly: Dilithium Threshold Signatures"
+description: "This week we shipped Dilithium threshold signatures for distributed coordination, plus ZK circuit work, mobile wallet updates, and community content."
+
 pubDate: "2026-01-13"
 heroImage: "/blog/covers/weekly-update-01-13-2026.webp"
-heroAlt: "Quantus Weekly: Threshold Dilithium Signatures and Distributed Coordination"
+heroAlt: "Quantus Weekly: Dilithium Threshold Signatures"
 featured: false
 tags:
   [

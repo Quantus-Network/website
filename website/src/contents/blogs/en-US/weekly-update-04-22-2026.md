@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: Planck Testnet, CLI Reward Claims, and 2x Prover Throughput"
-description: "Planck is live as our first testnet for post-quantum private transactions—miners are migrating, rewards are claimable to the mobile wallet via CLI, docs.quantus.com ships a mining guide, and aggregated prover speed doubles on a 2x8 split architecture."
+title: "Quantus Weekly: Planck Claims, 2x Prover Speed"
+description: "Planck is our first testnet for post-quantum private transactions. Miners migrate, CLI reward claims hit the wallet, and prover throughput doubles again."
+
 pubDate: "2026-04-22"
 heroImage: "/blog/covers/weekly-update-04-22-2026.webp"
-heroAlt: "Quantus Weekly: Planck Testnet, CLI Reward Claims, and 2x Prover Throughput"
+heroAlt: "Quantus Weekly: Planck Claims, 2x Prover Speed"
 featured: false
 tags:
   [

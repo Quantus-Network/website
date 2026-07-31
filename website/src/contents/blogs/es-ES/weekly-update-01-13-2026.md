@@ -1,9 +1,10 @@
 ---
-title: "Semanario Quantus: Firmas Dilithium de Umbral y Coordinación Distribuida"
-description: "Actualización semanal que cubre firmas de umbral, mejoras en circuitos ZK, actualizaciones de la billetera móvil y contenido de la comunidad."
+title: "Quantus Semanal: firmas Dilithium de umbral"
+description: Lanzamos firmas Dilithium de umbral para custodios y apps entre redes. Circuitos ZK más ligeros, agregación wormhole en cadena y mejoras en la wallet móvil.
+
 pubDate: "2026-01-13"
 heroImage: "/blog/covers/weekly-update-01-13-2026.webp"
-heroAlt: "Semanario Quantus: Firmas Dilithium de Umbral y Coordinación Distribuida"
+heroAlt: "Quantus Semanal: firmas Dilithium de umbral"
 featured: false
 tags:
   [

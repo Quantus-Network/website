@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: Plonky2 Poseidon2-Gate und On-Chain-Governance"
-description: "Wöchentliches Update über die Implementierung des Poseidon2-Gates in Plonky2, neue On-Chain-Governance- und Treasury-Funktionen sowie die Fertigstellung des In-App-Empfehlungssystems."
+title: "Quantus Weekly: Poseidon2-Gate und On-Chain-Governance"
+description: Poseidon2-Gate in Plonky2 implementiert, On-Chain-Governance und Treasury getestet, GPU-Miner-Integration gestartet und Wallet an App Stores ausgeliefert.
+
 pubDate: "2025-10-21"
 heroImage: "/blog/covers/weekly-update-10-21-2025.webp"
-heroAlt: "Quantus Weekly: Plonky2 Poseidon2-Gate und On-Chain-Governance"
+heroAlt: "Quantus Weekly: Poseidon2-Gate und On-Chain-Governance"
 featured: false
 tags:
   [

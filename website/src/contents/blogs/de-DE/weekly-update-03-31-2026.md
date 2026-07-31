@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: Point of Sale, PolyFri-Maskierung und P2P-Elektronikgeld"
-description: "Mobiles POS in v1.2.2, PolyFri-Maskierung auf der Prover-Seite, Poseidon-Hasher bereinigt, DDoS-Schutz für ZK-Beweise on-chain, Website-Alpha und Quantum Canary zum Bau von Quantencomputern."
+title: "Quantus Weekly: Point of Sale und P2P-Elektronikgeld"
+description: Mobile App v1.2.2 bringt POS-Zahlungen per QR-Code. PolyFri-Maskierung beschleunigt Proofs, DDoS-Schutz für ZK-Beweise und Alpha des Website-Redesigns.
+
 pubDate: "2026-03-31"
 heroImage: "/blog/covers/weekly-update-03-31-2026.webp"
-heroAlt: "Quantus Weekly: Point of Sale, PolyFri-Maskierung und P2P-Elektronikgeld"
+heroAlt: "Quantus Weekly: Point of Sale und P2P-Elektronikgeld"
 featured: false
 tags:
   [

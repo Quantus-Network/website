@@ -1,6 +1,7 @@
 ---
 title: "Quantus Weekly: Q-Day Is Right Around the Corner"
-description: "Q-Day is June 6th. This week we closed out threshold Dilithium DKG audit items, shipped miner and notification updates, fixed mobile wallet bugs, and launched the refreshed Q-Day summit site."
+description: Q-Day is June 6th. This week we closed out threshold Dilithium DKG audit items, shipped miner and notification updates, fixed mobile wallet bugs, and launched.
+
 pubDate: "2026-05-21"
 heroImage: "/blog/covers/weekly-update-05-21-2026.webp"
 heroAlt: "Quantus Weekly: Q-Day Is Right Around the Corner"

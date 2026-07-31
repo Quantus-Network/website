@@ -37,7 +37,7 @@ https://x.com/YuviLightman
 **Joe Mattia**  
 https://x.com/JoeMattia
 
-**Quantus Network**  
+**Quantus**  
 https://www.quantus.com/  
 https://t.me/quantusnetwork  
 https://linktr.ee/quantusnetwork

@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: Integración de Plonky3 Poseidon2 y Podcast de Liberland"
-description: "Actualización semanal que destaca la migración del hash Plonky3 Poseidon2 a circuitos ZK, la optimización de memoria en Rusty Crystals y un podcast con el presidente de Liberland."
+title: "Quantus Weekly: Plonky3 Poseidon2 y podcast Liberland"
+description: Migramos el hash Plonky3 Poseidon2 a circuitos ZK, optimizamos memoria en Rusty Crystals un 80% y publicamos un podcast en vivo con el presidente de Liberland.
+
 pubDate: "2025-10-14"
 heroImage: "/blog/covers/weekly-update-10-14-2025.webp"
-heroAlt: "Quantus Weekly: Integración de Plonky3 Poseidon2 y Podcast de Liberland"
+heroAlt: "Quantus Weekly: Plonky3 Poseidon2 y podcast Liberland"
 featured: false
 tags:
   [

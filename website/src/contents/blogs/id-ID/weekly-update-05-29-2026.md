@@ -1,6 +1,6 @@
 ---
 title: "Quantus Weekly: Laporan The State of Quantum"
-description: "Kami merilis laporan riset tentang risiko kuantum bagi kripto, dengan liputan di media besar. Minggu ini: perbaikan audit di repo ZK, throttling miner GPU, pembaruan dompet seluler, situs Q-Day, dan toko Quantus."
+description: "Kami merilis laporan riset tentang risiko kuantum bagi kripto, dengan liputan di media besar. Minggu ini: perbaikan audit di repo ZK, throttling miner GPU."
 pubDate: "2026-05-29"
 heroImage: "/blog/covers/weekly-update-05-29-2026.webp"
 heroAlt: "Quantus Weekly: Laporan The State of Quantum"

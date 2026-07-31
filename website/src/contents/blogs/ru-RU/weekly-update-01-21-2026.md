@@ -1,9 +1,9 @@
 ---
-title: "Quantus Weekly: Нативные активы, ZK-агрегация и квантовый риск Биткоина"
-description: "Еженедельное обновление: наше решение о поддержке только нативных активов для квантовой безопасности, пороговые подписи Dilithium и прогресс в ZK-агрегации и кастомных мультисиг-паллетах."
+title: "Quantus Weekly: нативные активы и квантовый риск BTC"
+description: "Quantus отказывается от wrapped-активов ради квантовой безопасности: только нативный QUAN с ML-DSA-87, пороговые подписи Dilithium и прогресс ZK-агрегации."
 pubDate: "2026-01-21"
 heroImage: "/blog/covers/weekly-update-01-21-2026.webp"
-heroAlt: "Quantus Weekly: Нативные активы, ZK-агрегация и квантовый риск Биткоина"
+heroAlt: "Quantus Weekly: нативные активы и квантовый риск BTC"
 featured: false
 tags:
   [

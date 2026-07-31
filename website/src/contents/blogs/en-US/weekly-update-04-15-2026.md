@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: Planck Testnet Launch and Early Mining Rewards"
-description: "Why early hashrate matters, Planck testnet is live for miners, app migration on TestFlight and stores, GPU mining on the new chain—and Core, infra, wallet, and community updates from the week."
+title: "Quantus Weekly: Planck Testnet Mining Rewards"
+description: "Planck testnet is live for early miners. App migration hits TestFlight and stores, GPU mining moves to the new chain, with Core, infra, and wallet updates."
+
 pubDate: "2026-04-15"
 heroImage: "/blog/covers/weekly-update-04-15-2026.webp"
-heroAlt: "Quantus Weekly: Planck Testnet Launch and Early Mining Rewards"
+heroAlt: "Quantus Weekly: Planck Testnet Mining Rewards"
 featured: false
 tags:
   [

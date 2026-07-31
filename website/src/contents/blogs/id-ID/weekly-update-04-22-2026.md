@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: testnet Planck, klaim hadiah lewat CLI, dan throughput prover 2x"
-description: "Planck adalah testnet pertama untuk transaksi privat pascakuantum Quantus—miner bermigrasi, hadiah bisa diklaim lewat CLI ke alamat transparan di dompet mobile, docs.quantus.com berisi panduan mining, dan kecepatan prover agregat berlipat dua lewat arsitektur split 2x8."
+title: "Quantus Weekly: Planck, Klaim CLI, Prover 2x Lebih Cepat"
+description: Planck adalah testnet pertama untuk transaksi privat pascakuantum Quantus—miner bermigrasi, hadiah bisa diklaim lewat CLI ke alamat transparan di dompet.
+
 pubDate: "2026-04-22"
 heroImage: "/blog/covers/weekly-update-04-22-2026.webp"
-heroAlt: "Quantus Weekly: testnet Planck, klaim hadiah lewat CLI, dan throughput prover 2x"
+heroAlt: "Quantus Weekly: Planck, Klaim CLI, Prover 2x Lebih Cepat"
 featured: false
 tags:
   [

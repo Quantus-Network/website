@@ -1,6 +1,7 @@
 ---
 title: "Quantus Weekly: The Killer App is Money"
-description: "This week we rewrote Dilithium DKG for Mithril, shipped threshold signature fixes, exposed Wormhole SDK helpers, and released a beautified wallet v1.4.0 on TestFlight."
+description: "This week we rewrote Dilithium DKG for Mithril, shipped threshold signature fixes, exposed Wormhole SDK helpers, and released wallet v1.4.0 on TestFlight."
+
 pubDate: "2026-05-06"
 heroImage: "/blog/covers/weekly-update-05-06-2026.webp"
 heroAlt: "Quantus Weekly: The Killer App is Money"

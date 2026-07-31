@@ -1,9 +1,9 @@
 ---
-title: "Quantus Weekly: Завершен аудит PoW и запуск тестовой сети Dirac"
-description: "Еженедельное обновление: завершение аудита нашего алгоритма PoW и хэш-функции Poseidon компанией Equilibrium, генерация ZK-доказательств для заголовков блоков и запуск тестовой сети Dirac."
+title: "Quantus Weekly: аудит PoW и запуск тестнета Dirac"
+description: "Equilibrium завершила аудит PoW и Poseidon — все проблемы решены, выпущены обновления в App Store и Google Play, ZK-доказательства для заголовков блоков."
 pubDate: "2025-11-17"
 heroImage: "/blog/covers/weekly-update-11-17-2025.webp"
-heroAlt: "Quantus Weekly: Завершен аудит PoW и запуск тестовой сети Dirac"
+heroAlt: "Quantus Weekly: аудит PoW и запуск тестнета Dirac"
 featured: false
 tags:
   [

@@ -1,6 +1,7 @@
 ---
 title: "Quantus Weekly: Killer App Sebenarnya Adalah Uang"
-description: "Minggu ini kami menulis ulang Dilithium DKG untuk Mithril, merilis perbaikan threshold signature, mengekspos helper Wormhole SDK, dan meluncurkan wallet v1.4.0 yang dipercantik di TestFlight."
+description: Minggu ini kami menulis ulang Dilithium DKG untuk Mithril, merilis perbaikan threshold signature, mengekspos helper Wormhole SDK, dan meluncurkan wallet v1.4.0.
+
 pubDate: "2026-05-06"
 heroImage: "/blog/covers/weekly-update-05-06-2026.webp"
 heroAlt: "Quantus Weekly: Killer App Sebenarnya Adalah Uang"

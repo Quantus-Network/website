@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: Native Assets, ZK-Aggregation und Bitcoins Quantenrisiko"
-description: "Wöchentliches Update über unsere Entscheidung für rein native Assets zur Quantensicherheit, Dilithium-Threshold-Signaturen und Fortschritte bei ZK-Aggregation und benutzerdefinierten Multisig-Pallets."
+title: "Quantus Weekly: Native Assets und Bitcoins Quantenrisiko"
+description: Quantus lehnt Wrapped Assets ab und setzt auf natives QUAN mit ML-DSA-87 und ZK-Aggregation. Updates zu Threshold-Signaturen, Multisig und dem Blog-Launch.
+
 pubDate: "2026-01-21"
 heroImage: "/blog/covers/weekly-update-01-21-2026.webp"
-heroAlt: "Quantus Weekly: Native Assets, ZK-Aggregation und Bitcoins Quantenrisiko"
+heroAlt: "Quantus Weekly: Native Assets und Bitcoins Quantenrisiko"
 featured: false
 tags:
   [

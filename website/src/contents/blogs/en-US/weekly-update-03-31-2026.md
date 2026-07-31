@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: Point of Sale, PolyFri Masking, and P2P Electronic Cash"
-description: "Mobile POS mode in v1.2.2, PolyFri prover-side masking, Poseidon hasher cleanup, ZK proof DDoS protection, website alpha, and Quantum Canary on building quantum computers."
+title: "Quantus Weekly: POS Mode and P2P Electronic Cash"
+description: "Mobile point-of-sale in wallet v1.2.2, PolyFri masking, Poseidon cleanup, ZK DDoS protection, and why peer-to-peer electronic cash still matters for Quantus."
+
 pubDate: "2026-03-31"
 heroImage: "/blog/covers/weekly-update-03-31-2026.webp"
-heroAlt: "Quantus Weekly: Point of Sale, PolyFri Masking, and P2P Electronic Cash"
+heroAlt: "Quantus Weekly: POS Mode and P2P Electronic Cash"
 featured: false
 tags:
   [

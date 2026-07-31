@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: Auditoría de PoW Completada y Lanzamiento de Dirac Testnet"
-description: "Actualización semanal que destaca la finalización de nuestra auditoría de PoW y función hash Poseidon por Equilibrium, generación de pruebas ZK para cabeceras de bloque y el lanzamiento de la testnet Dirac."
+title: "Quantus Weekly: auditoría PoW y testnet Dirac"
+description: Equilibrium completó la auditoría de PoW y Poseidon. Pruebas ZK para cabeceras de bloque con datos dinámicos, Dirac desplegado y apps actualizadas en tiendas.
+
 pubDate: "2025-11-17"
 heroImage: "/blog/covers/weekly-update-11-17-2025.webp"
-heroAlt: "Quantus Weekly: Auditoría de PoW Completada y Lanzamiento de Dirac Testnet"
+heroAlt: "Quantus Weekly: auditoría PoW y testnet Dirac"
 featured: false
 tags:
   [

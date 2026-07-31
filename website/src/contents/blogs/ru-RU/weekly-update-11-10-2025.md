@@ -1,9 +1,9 @@
 ---
-title: "Quantus Weekly: Выпуск тестовой сети Dirac и аудит решетчатой криптографии"
-description: "Еженедельное обновление: запуск тестовой сети Dirac, завершение обновлений алгоритма PoW и библиотеки решетчатой криптографии, а также новые улучшения инфраструктуры."
+title: "Quantus Weekly: тестнет Dirac и аудит решётки qp-rusty"
+description: "Запущена тестовая сеть Dirac с обновлённым PoW и библиотекой qp-rusty-crystals: подписи с константным временем, внешний аудит и интеграция в мобильный кошелёк."
 pubDate: "2025-11-10"
 heroImage: "/blog/covers/weekly-update-11-10-2025.webp"
-heroAlt: "Quantus Weekly: Выпуск тестовой сети Dirac и аудит решетчатой криптографии"
+heroAlt: "Quantus Weekly: тестнет Dirac и аудит решётки qp-rusty"
 featured: false
 tags:
   [

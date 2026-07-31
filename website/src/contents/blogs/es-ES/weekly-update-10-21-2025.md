@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: Puerta Poseidon2 en Plonky2 y Gobernanza On-chain"
-description: "Actualización semanal que destaca la implementación de la puerta Poseidon2 en Plonky2, nuevas funciones de gobernanza on-chain y tesorería, y la finalización del sistema de referidos en la aplicación."
+title: "Quantus Weekly: Poseidon2 en Plonky2 y gobernanza"
+description: Puerta Poseidon2 en Plonky2, gobernanza on-chain con votación por convicción y tesorería. Wallet en tiendas, referidos completos y auditoría de consenso.
+
 pubDate: "2025-10-21"
 heroImage: "/blog/covers/weekly-update-10-21-2025.webp"
-heroAlt: "Quantus Weekly: Puerta Poseidon2 en Plonky2 y Gobernanza On-chain"
+heroAlt: "Quantus Weekly: Poseidon2 en Plonky2 y gobernanza"
 featured: false
 tags:
   [

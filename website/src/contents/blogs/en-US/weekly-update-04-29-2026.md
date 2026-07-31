@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: Spring Cleaning, Eiger Audits, and the Compact Aggregator"
-description: "Audit items cleared with Eiger, CLI refactored, miner and indexer fixes, wormhole tests on the 2x8 compact aggregator, mobile wallet 1.3.4–1.3.5, miner v3.1.0, docs for mining through rewards, and the first Planck testnet miner workshop at Network School."
+title: "Quantus Weekly: Audits and the Compact Aggregator"
+description: "Spring cleaning: Eiger audit items cleared, CLI refactored, miner and indexer fixes, and wormhole tests on the compact aggregator that doubled prover speed."
+
 pubDate: "2026-04-29"
 heroImage: "/blog/covers/weekly-update-04-29-2026.webp"
-heroAlt: "Quantus Weekly: Spring Cleaning, Eiger Audits, and the Compact Aggregator"
+heroAlt: "Quantus Weekly: Audits and the Compact Aggregator"
 featured: false
 tags:
   [

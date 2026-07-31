@@ -1,9 +1,9 @@
 ---
-title: "Quantus Weekly: Квантово-безопасные подписи, ZK-масштабирование и доказательства Wormhole в 2 раза быстрее"
-description: "Еженедельный обзор: масштабирование подписей ML-DSA, ZK-агрегация, ускорение доказательств wormhole, аудиты безопасности, тестнет-ноды и материалы Quantum Canary."
+title: "Quantus Weekly: ML-DSA, ZK-масштаб и wormhole ×2"
+description: "Подписи ML-DSA в 70 раз больше Bitcoin: Quantus масштабирует их через ZK-агрегацию до 3500 TPS, ускоряет wormhole вдвое и проходит аудиты безопасности."
 pubDate: "2026-03-16"
 heroImage: "/blog/covers/weekly-update-03-16-2026.webp"
-heroAlt: "Quantus Weekly: Квантово-безопасные подписи, ZK-масштабирование и доказательства Wormhole в 2 раза быстрее"
+heroAlt: "Quantus Weekly: ML-DSA, ZK-масштаб и wormhole ×2"
 featured: false
 tags:
   [

@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: Poseidon2 Optimization and Chain Architecture Refactor"
-description: "Weekly update featuring 8.3x faster Poseidon2 gates, a major chain architecture refactor removing 9,000 lines of code, and updates from Binance Blockchain Week."
+title: "Quantus Weekly: Faster Poseidon2, Leaner Chain"
+description: "Poseidon2 gates run 8.3x faster after optimization, a chain refactor drops about 9,000 lines, and the team shares notes from Binance Blockchain Week."
+
 pubDate: "2025-12-09"
 heroImage: "/blog/covers/weekly-update-12-09-2025.webp"
-heroAlt: "Quantus Weekly: Poseidon2 Optimization and Chain Architecture Refactor"
+heroAlt: "Quantus Weekly: Faster Poseidon2, Leaner Chain"
 featured: false
 tags:
   [

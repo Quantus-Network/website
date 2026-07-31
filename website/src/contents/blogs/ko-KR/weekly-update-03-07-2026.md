@@ -1,6 +1,7 @@
 ---
 title: "Quantus Weekly: 웜홀 트랜잭션"
-description: "웜홀 트랜잭션, 채굴자를 위한 프라이빗 블록 보상, 합의 버그 수정 및 지갑 업데이트를 다루는 주간 업데이트입니다."
+description: 웜홀 트랜잭션, 채굴자를 위한 프라이빗 블록 보상, 합의 버그 수정 및 지갑 업데이트를 다루는 주간 업데이트입니다. 프로토콜 업데이트와 연구는 Quantus 블로그에서 더 읽어보세요.
+
 pubDate: "2026-03-07"
 heroImage: "/blog/covers/weekly-update-03-07-2026.webp"
 heroAlt: "Quantus Weekly: 웜홀 트랜잭션"

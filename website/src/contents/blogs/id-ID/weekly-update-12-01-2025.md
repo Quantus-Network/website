@@ -1,6 +1,7 @@
 ---
 title: "Quantus Weekly: Audit Lattice Crypto dan Integrasi Keystone"
-description: "Update mingguan yang mencakup keberhasilan audit perpustakaan kripto lattice kami, pembaruan jaringan untuk Polkadot SDK, dan dukungan dompet perangkat keras baru di Keystone."
+description: Update mingguan yang mencakup keberhasilan audit perpustakaan kripto lattice kami, pembaruan jaringan untuk Polkadot SDK, dan dukungan dompet perangkat keras.
+
 pubDate: "2025-12-01"
 heroImage: "/blog/covers/weekly-update-12-01-2025.webp"
 heroAlt: "Quantus Weekly: Audit Lattice Crypto dan Integrasi Keystone"

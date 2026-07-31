@@ -3,10 +3,10 @@ import type { SEOProps } from "astro-seo";
 
 const title = {
   template: `%s | ${env.SITE_NAME}`,
-  default: "Quantus Network - Quantum-Secure Layer 1 Blockchain",
+  default: "Quantus - Quantum-Secure Encrypted Money",
 };
 const description =
-  "Quantus: Quantum-secure Layer 1 blockchain. Download our wallet for post-quantum protected assets.";
+  "Quantus is quantum-secure encrypted money on Layer 1. Download the wallet for post-quantum protected assets, private transfers, and reversible transactions.";
 const image = {
   url: `${env.SITE_BASE_URL}/quantus-banner.png`,
   secureUrl: `${env.SITE_BASE_URL}/quantus-banner.png`,

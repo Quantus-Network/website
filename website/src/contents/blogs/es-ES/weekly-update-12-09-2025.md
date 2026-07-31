@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: Optimización de Poseidon2 y Refactorización de la Arquitectura de Cadena"
-description: "Actualización semanal que presenta puertas Poseidon2 8.3 veces más rápidas, una importante refactorización de la arquitectura de la cadena que elimina 9,000 líneas de código y actualizaciones de la Binance Blockchain Week."
+title: "Quantus Weekly: Poseidon2 8x y refactor de cadena"
+description: Puertas Poseidon2 8,3 veces más rápidas y refactor de arquitectura que elimina 9.000 líneas. Avances wormhole, Binance Blockchain Week y Solana Breakpoint.
+
 pubDate: "2025-12-09"
 heroImage: "/blog/covers/weekly-update-12-09-2025.webp"
-heroAlt: "Quantus Weekly: Optimización de Poseidon2 y Refactorización de la Arquitectura de Cadena"
+heroAlt: "Quantus Weekly: Poseidon2 8x y refactor de cadena"
 featured: false
 tags:
   [

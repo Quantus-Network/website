@@ -12,8 +12,8 @@
   },
   "quantum_risk_checker": {
     "meta": {
-      "title": "Q-Day 检测器 | Quantus - 评估您的量子风险",
-      "description": "您的数字安全是否已为 Q-Day 做好准备？使用 Quantus Q-Day 检测器评估您对量子计算威胁的脆弱性，并学习如何保护您的资产。"
+      "title": "Q-Day 检测器 | Quantus 量子风险评估工具",
+      "description": "您的数字安全是否已为 Q-Day 做好准备？使用 Quantus Q-Day 检测器评估您对量子计算威胁的脆弱性，并学习如何保护资产。立即检测并开始采取防护措施。"
     },
     "hero_banner": {
       "eyebrow": "量子风险检测器",
@@ -113,8 +113,8 @@
   },
   "home": {
     "meta": {
-      "title": "Quantus - 量子安全加密货币",
-      "description": "Quantus：量子安全加密货币。下载我们的钱包以获得后量子保护资产。"
+      "title": "Quantus - 量子安全加密货币与 Layer 1",
+      "description": "Quantus 是运行在 Layer 1 区块链上的量子安全加密货币。下载钱包以获得后量子保护资产，体验私密转账与可撤销交易，守护下一代数字财富。"
     },
     "loader": {
       "lines": {
@@ -321,8 +321,8 @@
   },
   "technology": {
     "meta": {
-      "title": "技术 | Quantus - 量子安全加密货币",
-      "description": "探索 Quantus 的技术基础。了解我们的 NIST 标准后量子密码学、递归 ZK 证明和可扩展的 Layer 1 架构。"
+      "title": "技术 | Quantus 量子安全加密货币基础",
+      "description": "探索 Quantus 的技术基础。了解 NIST 标准后量子密码学、递归 ZK 证明和可扩展的 Layer 1 架构，如何在量子时代仍能保障资金安全与隐私。"
     },
     "hero_banner": {
       "eyebrow": "协议",
@@ -409,8 +409,8 @@
   },
   "wallet": {
     "meta": {
-      "title": "钱包 | Quantus - 保护您的资产免受量子威胁",
-      "description": "下载适用于 iOS 和 Android 的 Quantus 钱包。体验具备可撤销交易和默认隐私安全功能的量子安全加密货币。"
+      "title": "钱包 | 用 Quantus 抵御量子威胁保护资产",
+      "description": "下载适用于 iOS 和 Android 的 Quantus 钱包。体验具备可撤销交易和默认隐私安全功能的量子安全加密货币，随时随地安全管理数字资产。"
     },
     "hero_banner": {
       "eyebrow": "QUANTUS 钱包",
@@ -475,8 +475,8 @@
   },
   "about": {
     "meta": {
-      "title": "关于我们 | Quantus - 构建后量子金融系统",
-      "description": "认识 Quantus 背后的团队。我们是致力于通过量子安全基础设施构建永久经济自由的工程师和研究人员。"
+      "title": "关于我们 | 构建后量子金融的 Quantus 团队",
+      "description": "认识 Quantus 背后的团队。我们是致力于通过量子安全基础设施构建永久经济自由的工程师和研究人员。了解我们的使命、愿景、路线图与核心价值观。"
     },
     "hero": {
       "eyebrow": "关于 QUANTUS",
@@ -511,8 +511,8 @@
   },
   "community": {
     "meta": {
-      "title": "社区 | Quantus - 加入量子安全的未来",
-      "description": "连接 Quantus 社区。加入我们的 Telegram，在社交媒体上关注我们，并随时了解最新的协议新闻和活动。"
+      "title": "社区 | 加入 Quantus 量子安全的未来",
+      "description": "连接 Quantus 社区。加入我们的 Telegram，在社交媒体上关注我们，并随时了解最新的协议新闻、活动与开发进展。欢迎立即参与讨论。"
     },
     "hero": {
       "eyebrow": "社区",
@@ -560,8 +560,8 @@
   },
   "privacy": {
     "meta": {
-      "title": "Quantus - 隐私政策",
-      "description": "阅读 Quantus 的隐私政策，了解我们如何在我们的应用程序和网站中收集、使用和保护您的信息。"
+      "title": "隐私政策 | Quantus 如何保护您的个人信息",
+      "description": "阅读 Quantus 的隐私政策，了解我们如何在应用程序、钱包和网站中收集、使用和保护您的信息。我们坚持透明、负责任的数据处理与安全保障实践。"
     },
     "hero": {
       "eyebrow": "法律",
@@ -620,14 +620,21 @@
     "cookies_tracking": {
       "title": "Cookie 和追踪",
       "intro": "我们的网站使用 Cookie 用于：",
-      "items": ["基本的网站功能", "了解网站使用情况的分析", "性能改进"],
+      "items": [
+        "基本的网站功能",
+        "了解网站使用情况的分析",
+        "性能改进"
+      ],
       "note": "您可以通过浏览器设置控制 Cookie，但这可能会影响网站功能。"
     },
     "data_security": {
       "title": "数据安全与保留",
       "intro": "我们实施标准的安全措施来保护您的数据，包括加密和安全存储。然而，没有任何在线服务是完全安全的。",
       "technical": "保留期限：",
-      "retention_items": ["网站分析：26 个月", "时事通讯订阅：直到您退订"]
+      "retention_items": [
+        "网站分析：26 个月",
+        "时事通讯订阅：直到您退订"
+      ]
     },
     "your_rights": {
       "title": "您的权利",
@@ -661,8 +668,8 @@
   },
   "terms": {
     "meta": {
-      "title": "Quantus - 服务条款",
-      "description": "阅读 Quantus 的服务条款，了解我们的应用程序和区块链服务的使用规则、责任和法律免责声明。"
+      "title": "服务条款 | Quantus 网络应用与服务约定",
+      "description": "阅读 Quantus 的服务条款，了解应用程序和区块链服务的使用规则、责任和法律免责声明。请在使用相关产品与网络服务前仔细阅读全部条款与条件。"
     },
     "hero": {
       "eyebrow": "法律",
@@ -775,16 +782,16 @@
   },
   "account": {
     "meta": {
-      "title": "保护您的加密资产 | Quantus 账户",
-      "description": "创建您的 Quantus 账户，保护您的数字资产免受量子威胁。加入下一代加密量子安全货币。"
+      "title": "保护您的加密资产 | 创建 Quantus 账户",
+      "description": "创建您的 Quantus 账户，保护数字资产免受量子威胁。加入下一代加密量子安全货币生态，开启更安全、更便捷的链上资产管理与转账的全新体验。"
     },
     "title": "立即保护您的加密资产",
     "tag": "在量子威胁面前坚不可摧"
   },
   "invite": {
     "meta": {
-      "title": "加入 Quantus | 保护加密资产邀请",
-      "description": "您已被邀请加入 Quantus。使用首个为未来数字金融构建的量子安全 Layer 1 区块链保护您的资产。"
+      "title": "加入 Quantus | 保护加密资产的专属邀请",
+      "description": "您已被邀请加入 Quantus。使用首个为未来数字金融构建的量子安全 Layer 1 区块链保护您的资产，并开始安全转账、存储与链上互动体验。"
     },
     "title": "邀请您保护加密资产",
     "code": {
@@ -812,13 +819,13 @@
       "updated": "已更新"
     },
     "meta": {
-      "title": "Quantus 博客 | 最新消息与量子见解",
-      "description": "随时了解来自 Quantus 的最新消息、教育内容和见解。"
+      "title": "Quantus 博客 | 最新消息与量子安全见解",
+      "description": "随时了解来自 Quantus 的最新消息、教育内容和量子安全见解。通过每周更新跟踪协议进展、研究成果与产品发布，不错过任何关键项目最新动态。"
     },
     "tag": {
       "meta": {
-        "title": "博客 - #{tag} | Quantus",
-        "description": "浏览 Quantus 上所有带有 #{tag} 标签的博客文章。"
+        "title": "Quantus 博客 | #{tag} 标签文章汇总",
+        "description": "浏览 Quantus 上所有带有 #{tag} 标签的博客文章。查找有关量子安全区块链技术与协议更新的新闻、研究笔记、教程和教育内容完整汇总。"
       },
       "heading": "带有 {tag} 标签的文章",
       "back_link": "← 返回所有文章"
@@ -948,7 +955,7 @@
   "whitepaper": {
     "meta": {
       "title": "Quantus 白皮书 | 量子安全的技术基础",
-      "description": "阅读 Quantus 白皮书。探索我们关于后量子密码学、零知识证明和安全 Layer 1 区块链架构的技术方法。"
+      "description": "阅读 Quantus 白皮书。探索我们关于后量子密码学、零知识证明和安全 Layer 1 区块链架构的技术方法，深入了解协议设计与安全模型细节。"
     },
     "title": "Quantus 白皮书",
     "on_this_page": "本页内容",

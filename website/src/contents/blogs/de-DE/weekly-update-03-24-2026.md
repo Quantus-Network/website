@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: Zweites Halving — 4x schnellere ZK-Beweise in zwei Wochen"
-description: "Erneute Halbierung der Prover-Zeit, Poseidon-Hashing, Mining-Fix, Senoti-Rate-Limits, Whitepaper-Launch, iOS-Swap-Review und Quantum Canary zu Solana und Quantensicherheit."
+title: "Quantus Weekly: 4× schnellere ZK-Beweise in zwei Wochen"
+description: Zweites Halving der Prover-Zeit: 4× schnellere ZK-Beweise in 14 Tagen. Außerdem Poseidon-Hashing, Mining-Fix, Whitepaper-Launch und iOS-Swap-Review.
+
 pubDate: "2026-03-24"
 heroImage: "/blog/covers/weekly-update-03-24-2026.webp"
-heroAlt: "Quantus Weekly: Zweites Halving — 4x schnellere ZK-Beweise in zwei Wochen"
+heroAlt: "Quantus Weekly: 4× schnellere ZK-Beweise in zwei Wochen"
 featured: false
 tags:
   [

@@ -1,6 +1,7 @@
 ---
 title: "Quantus Weekly: ZKトランザクション集約とマイナーアプリのリリース"
-description: "今週のアップデート：ZKトランザクション集約の第一段階完了、マイナーアプリv0.1.0のリリース、GPUマイニング実装の進捗状況など。"
+description: 今週のアップデート：ZKトランザクション集約の第一段階完了、マイナーアプリv0.1.0のリリース、GPUマイニング実装の進捗状況など。プロトコル更新と研究の詳細はQuantusブログでご覧ください。
+
 pubDate: "2025-11-25"
 heroImage: "/blog/covers/weekly-update-11-25-2025.webp"
 heroAlt: "Quantus Weekly: ZKトランザクション集約とマイナーアプリのリリース"

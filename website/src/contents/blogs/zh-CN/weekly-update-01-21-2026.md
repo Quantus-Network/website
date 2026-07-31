@@ -1,6 +1,7 @@
 ---
-title: "Quantus 每周动态：原生资产、ZK 聚合与比特币的量子风险"
-description: "每周更新：我们决定仅支持原生资产以确保量子安全，Dilithium 门限签名，以及 ZK 聚合和自定义多重签名 pallet 的进展。"
+title: Quantus 每周动态：原生资产、ZK 聚合与比特币的量子风险
+description: 每周更新：我们决定仅支持原生资产以确保量子安全，Dilithium 门限签名，以及 ZK 聚合和自定义多重签名 pallet 的进展。更多协议更新与研究详情，请参阅 Quantus 博客文章。
+
 pubDate: "2026-01-21"
 heroImage: "/blog/covers/weekly-update-01-21-2026.webp"
 heroAlt: "Quantus 每周动态：原生资产、ZK 聚合与比特币的量子风险"

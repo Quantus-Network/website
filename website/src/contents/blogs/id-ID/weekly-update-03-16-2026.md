@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: Tanda Tangan Quantum-Safe, Skalabilitas ZK, dan Bukti Wormhole 2x Lebih Cepat"
-description: "Pembaruan mingguan tentang penskalaan tanda tangan ML-DSA, agregasi ZK, percepatan bukti wormhole, tinjauan keamanan, node testnet, dan konten Quantum Canary."
+title: "Quantus Weekly: Tanda Tangan Aman, Wormhole 2x Lebih Cepat"
+description: Pembaruan mingguan tentang penskalaan tanda tangan ML-DSA, agregasi ZK, percepatan bukti wormhole, tinjauan keamanan, node testnet, dan konten Quantum Canary.
+
 pubDate: "2026-03-16"
 heroImage: "/blog/covers/weekly-update-03-16-2026.webp"
-heroAlt: "Quantus Weekly: Tanda Tangan Quantum-Safe, Skalabilitas ZK, dan Bukti Wormhole 2x Lebih Cepat"
+heroAlt: "Quantus Weekly: Tanda Tangan Aman, Wormhole 2x Lebih Cepat"
 featured: false
 tags:
   [

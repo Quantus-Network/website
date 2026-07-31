@@ -1,6 +1,7 @@
 ---
 title: "Quantus Weekly: PoW Audit Completed and Dirac Testnet Launch"
-description: "Weekly update featuring the completion of our PoW and Poseidon hash audit by Equilibrium, ZK proof generation for block headers, and the launch of the Dirac testnet."
+description: Weekly update featuring the completion of our PoW and Poseidon hash audit by Equilibrium, ZK proof generation for block headers, and the launch of the Dirac.
+
 pubDate: "2025-11-17"
 heroImage: "/blog/covers/weekly-update-11-17-2025.webp"
 heroAlt: "Quantus Weekly: PoW Audit Completed and Dirac Testnet Launch"

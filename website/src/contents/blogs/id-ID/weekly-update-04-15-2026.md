@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: Peluncuran Testnet Planck dan Hadiah Mining Awal"
-description: "Mengapa hashrate awal penting, testnet Planck sudah siap untuk miner, migrasi aplikasi lewat TestFlight dan toko aplikasi, mining GPU di chain baru—serta pembaruan inti, infra, wallet, dan komunitas minggu ini."
+title: "Quantus Weekly: Testnet Planck dan Hadiah Mining Awal"
+description: Mengapa hashrate awal penting, testnet Planck sudah siap untuk miner, migrasi aplikasi lewat TestFlight dan toko aplikasi, serta mining GPU di chain baru.
+
 pubDate: "2026-04-15"
 heroImage: "/blog/covers/weekly-update-04-15-2026.webp"
-heroAlt: "Quantus Weekly: Peluncuran Testnet Planck dan Hadiah Mining Awal"
+heroAlt: "Quantus Weekly: Testnet Planck dan Hadiah Mining Awal"
 featured: false
 tags:
   [

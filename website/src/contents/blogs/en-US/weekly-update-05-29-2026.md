@@ -1,6 +1,6 @@
 ---
 title: "Quantus Weekly: The State of Quantum Report"
-description: "We released our research report on quantum risk to crypto, with coverage across major outlets. This week: audit fixes across ZK repos, GPU miner throttling, mobile wallet updates, Q-Day site and Quantus shop launches, and more."
+description: "We released our research report on quantum risk to crypto, with coverage across major outlets. This week: audit fixes across ZK repos, GPU miner throttling."
 pubDate: "2026-05-29"
 heroImage: "/blog/covers/weekly-update-05-29-2026.webp"
 heroAlt: "Quantus Weekly: The State of Quantum Report"

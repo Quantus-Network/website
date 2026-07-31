@@ -1,6 +1,7 @@
 ---
 title: "Quantus 위클리: GPU 채굴 혁신 및 ZK 리팩토링"
-description: "GPU 채굴 성능 9배 향상, ZK 집계 회로 리팩토링 및 UAE에서의 전략적 회의를 다루는 주간 업데이트입니다."
+description: GPU 채굴 성능 9배 향상, ZK 집계 회로 리팩토링 및 UAE에서의 전략적 회의를 다루는 주간 업데이트입니다. 프로토콜 업데이트와 연구는 Quantus 블로그에서 더 읽어보세요.
+
 pubDate: "2025-12-15"
 heroImage: "/blog/covers/weekly-update-12-15-2025.webp"
 heroAlt: "Quantus 위클리: GPU 채굴 혁신 및 ZK 리팩토링"

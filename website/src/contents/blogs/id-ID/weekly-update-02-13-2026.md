@@ -1,9 +1,10 @@
 ---
-title: "Quantus Mingguan: Memetakan Masa Depan yang Aman Secara Kuantum"
-description: "Pembaruan mingguan yang mencakup listing CoinGecko kami, optimalisasi multisig, refactoring ZK-aggregator, dan rilis aplikasi seluler v1.1.5."
+title: "Quantus Mingguan: Masa Depan Aman Secara Kuantum"
+description: Pembaruan mingguan yang mencakup listing CoinGecko kami, optimalisasi multisig, refactoring ZK-aggregator, dan rilis aplikasi seluler v1.1.5.
+
 pubDate: "2026-02-13"
 heroImage: "/blog/covers/weekly-update-02-13-2026.webp"
-heroAlt: "Quantus Mingguan: Memetakan Masa Depan yang Aman Secara Kuantum"
+heroAlt: "Quantus Mingguan: Masa Depan Aman Secara Kuantum"
 featured: false
 tags:
   [

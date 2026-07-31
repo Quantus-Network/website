@@ -1,5 +1,5 @@
 const env = {
-  SITE_NAME: "Quantus Network",
+  SITE_NAME: "Quantus",
   SITE_BASE_URL:
     typeof process !== "undefined" && process.env?.SITE_BASE_URL
       ? process.env.SITE_BASE_URL

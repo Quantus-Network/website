@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: Lattice Crypto Audit and Keystone Integration"
-description: "Weekly update covering the successful audit of our lattice crypto library, networking updates for Polkadot SDK, and new hardware wallet support on Keystone."
+title: "Quantus Weekly: Lattice Audit and Keystone Wallet"
+description: "Rusty Crystals lattice audit findings are closed, Polkadot SDK networking is updated, and Quantus addresses land on Keystone open-source hardware firmware."
+
 pubDate: "2025-12-01"
 heroImage: "/blog/covers/weekly-update-12-01-2025.webp"
-heroAlt: "Quantus Weekly: Lattice Crypto Audit and Keystone Integration"
+heroAlt: "Quantus Weekly: Lattice Audit and Keystone Wallet"
 featured: false
 tags:
   [

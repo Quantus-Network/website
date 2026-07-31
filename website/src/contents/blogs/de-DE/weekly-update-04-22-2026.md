@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: Planck-Testnet, Mining-Belohnungen per CLI und doppelter Prover-Durchsatz"
-description: "Planck ist unser erstes Testnet für Post-Quantum-Privattransaktionen—Miners migrieren, Belohnungen lassen sich per CLI in eine transparente Adresse im Mobile Wallet holen, docs.quantus.com liefert eine Mining-Anleitung, und die aggregierte Prover-Geschwindigkeit verdoppelt sich mit einer 2x8-Split-Architektur."
+title: "Quantus Weekly: Planck-Testnet, doppelter Prover-Durchsatz"
+description: Planck unterstützt private Post-Quantum-Transaktionen. Mining-Belohnungen per CLI, docs.quantus.com live und aggregierte Prover-Geschwindigkeit verdoppelt.
+
 pubDate: "2026-04-22"
 heroImage: "/blog/covers/weekly-update-04-22-2026.webp"
-heroAlt: "Quantus Weekly: Planck-Testnet, Mining-Belohnungen per CLI und doppelter Prover-Durchsatz"
+heroAlt: "Quantus Weekly: Planck-Testnet, doppelter Prover-Durchsatz"
 featured: false
 tags:
   [

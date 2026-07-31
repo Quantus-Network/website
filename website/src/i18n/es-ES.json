@@ -12,8 +12,8 @@
   },
   "quantum_risk_checker": {
     "meta": {
-      "title": "Verificador Q-Day | Quantus - Evalúe su Riesgo Cuántico",
-      "description": "¿Está su seguridad digital lista para el Q-Day? Use el Verificador Q-Day de Quantus para evaluar su vulnerabilidad a las amenazas de la computación cuántica y aprenda cómo proteger sus activos."
+      "title": "Verificador Q-Day | Riesgo Quantus",
+      "description": "¿Está lista su seguridad digital para el Q-Day? Use el Verificador Q-Day de Quantus para evaluar riesgos cuánticos y aprender a proteger sus activos hoy."
     },
     "hero_banner": {
       "eyebrow": "Verificador de riesgo cuántico",
@@ -113,8 +113,8 @@
   },
   "home": {
     "meta": {
-      "title": "Quantus - Dinero Encriptado Seguro Cuánticamente",
-      "description": "Quantus: Dinero encriptado seguro cuánticamente. Descargue nuestra billetera para activos protegidos post-cuánticamente."
+      "title": "Quantus - Dinero Encriptado Post-Cuántico",
+      "description": "Quantus es dinero encriptado seguro cuánticamente en una blockchain de Capa 1. Descargue la billetera para activos protegidos y transferencias privadas."
     },
     "loader": {
       "lines": {
@@ -321,8 +321,8 @@
   },
   "technology": {
     "meta": {
-      "title": "Tecnología | Quantus - Dinero Encriptado Seguro Cuánticamente",
-      "description": "Explore los fundamentos técnicos de Quantus. Conozca nuestra criptografía post-cuántica estándar del NIST, pruebas ZK recursivas y arquitectura escalable de Capa 1."
+      "title": "Tecnología | Dinero Encriptado Quantus",
+      "description": "Explore los fundamentos técnicos de Quantus: criptografía post-cuántica NIST, pruebas ZK recursivas y una arquitectura de Capa 1 escalable para dinero seguro."
     },
     "hero_banner": {
       "eyebrow": "El Protocolo",
@@ -409,8 +409,8 @@
   },
   "wallet": {
     "meta": {
-      "title": "Billetera | Quantus - Proteja sus Activos contra Amenazas Cuánticas",
-      "description": "Descargue la billetera Quantus para iOS y Android. Experimente el dinero encriptado seguro cuánticamente con transacciones reversibles y seguridad privada por defecto."
+      "title": "Billetera | Activos Seguros Quantus",
+      "description": "Descargue la billetera Quantus para iOS y Android. Experimente dinero encriptado seguro cuánticamente con transacciones reversibles y privacidad por defecto."
     },
     "hero_banner": {
       "eyebrow": "LA BILLETERA QUANTUS",
@@ -475,8 +475,8 @@
   },
   "about": {
     "meta": {
-      "title": "Sobre nosotros | Quantus - Construyendo un Sistema Financiero Post-Cuántico",
-      "description": "Conozca al equipo detrás de Quantus. Somos ingenieros e investigadores dedicados a construir la libertad económica permanente a través de una infraestructura segura cuánticamente."
+      "title": "Sobre nosotros | Equipo Quantus",
+      "description": "Conozca al equipo de Quantus. Somos ingenieros e investigadores que construyen libertad económica permanente con infraestructura de Capa 1 segura cuánticamente."
     },
     "hero": {
       "eyebrow": "SOBRE QUANTUS",
@@ -511,8 +511,8 @@
   },
   "community": {
     "meta": {
-      "title": "Comunidad | Quantus - Únase al Futuro Seguro Cuánticamente",
-      "description": "Conéctese con la comunidad de Quantus. Únase a nuestro Telegram, síganos en las redes sociales y manténgase actualizado con las últimas noticias y eventos del protocolo."
+      "title": "Comunidad | Únase al futuro Quantus",
+      "description": "Conéctese con la comunidad Quantus. Únase a Telegram, síganos en redes sociales y manténgase al día con noticias del protocolo, eventos y avances de la red."
     },
     "hero": {
       "eyebrow": "COMUNIDAD",
@@ -560,8 +560,8 @@
   },
   "privacy": {
     "meta": {
-      "title": "Quantus - Política de Privacidad",
-      "description": "Lea la Política de Privacidad de Quantus para entender cómo recopilamos, utilizamos y protegemos su información en nuestras aplicaciones y sitio web."
+      "title": "Política de Privacidad | Protección Quantus",
+      "description": "Lea la Política de Privacidad de Quantus para entender cómo recopilamos, usamos y protegemos su información en apps, billetera y sitio web oficial."
     },
     "hero": {
       "eyebrow": "LEGAL",
@@ -668,8 +668,8 @@
   },
   "terms": {
     "meta": {
-      "title": "Quantus - Términos de Servicio",
-      "description": "Lea los Términos de Servicio de Quantus para conocer las reglas de uso, responsabilidades y avisos legales de nuestras aplicaciones y servicios de blockchain."
+      "title": "Términos de Servicio | Condiciones Quantus",
+      "description": "Lea los Términos de Servicio de Quantus sobre reglas de uso, responsabilidades y avisos legales de apps, billetera y servicios de la red blockchain."
     },
     "hero": {
       "eyebrow": "LEGAL",
@@ -783,15 +783,15 @@
   "account": {
     "meta": {
       "title": "Asegure sus Criptos | Cuenta Quantus",
-      "description": "Cree su cuenta Quantus para asegurar sus activos digitales contra amenazas cuánticas. Únase a la próxima generación de dinero encriptado y seguro cuánticamente."
+      "description": "Cree su cuenta Quantus para proteger activos digitales frente a amenazas cuánticas. Únase a la próxima generación de dinero encriptado y seguro cuánticamente."
     },
     "title": "Asegure sus Criptos Ahora",
     "tag": "Sea invulnerable a las amenazas cuánticas"
   },
   "invite": {
     "meta": {
-      "title": "Únase a Quantus | Invitación para Asegurar sus Criptos",
-      "description": "Ha sido invitado a unirse a Quantus. Asegure sus activos con la primera blockchain de Capa 1 segura cuánticamente construida para el futuro de las finanzas digitales."
+      "title": "Únase a Quantus | Invitación de Seguridad",
+      "description": "Ha sido invitado a unirse a Quantus. Proteja sus activos con la primera blockchain de Capa 1 segura cuánticamente para el futuro de las finanzas digitales."
     },
     "title": "Está invitado a asegurar sus criptos",
     "code": {
@@ -819,13 +819,13 @@
       "updated": "Actualizado"
     },
     "meta": {
-      "title": "Blog de Quantus | Últimas Noticias y Perspectivas Cuánticas",
-      "description": "Manténgase actualizado con las últimas noticias, contenido educativo y perspectivas de Quantus."
+      "title": "Blog Quantus | Noticias e Ideas Cuánticas",
+      "description": "Manténgase al día con noticias de Quantus, guías e ideas sobre seguridad cuántica. Siga actualizaciones semanales del protocolo, investigación y producto."
     },
     "tag": {
       "meta": {
-        "title": "Blog - #{tag} | Quantus",
-        "description": "Explore todas las publicaciones del blog etiquetadas con #{tag} en Quantus."
+        "title": "Blog Quantus | Etiqueta #{tag}",
+        "description": "Explore publicaciones del blog Quantus con la etiqueta #{tag}. Encuentre noticias, investigación y artículos sobre blockchain segura cuánticamente."
       },
       "heading": "Publicaciones etiquetadas con {tag}",
       "back_link": "← Volver a todas las publicaciones"
@@ -954,8 +954,8 @@
   },
   "whitepaper": {
     "meta": {
-      "title": "Whitepaper de Quantus | Fundamentos Técnicos de la Seguridad Cuántica",
-      "description": "Lea el whitepaper de Quantus. Explore nuestro enfoque técnico de la criptografía post-cuántica, las pruebas de conocimiento cero y la arquitectura segura de blockchain de Capa 1."
+      "title": "Whitepaper Quantus | Seguridad Cuántica",
+      "description": "Lea el whitepaper de Quantus. Explore criptografía post-cuántica, pruebas de conocimiento cero y la arquitectura de blockchain de Capa 1 segura en detalle."
     },
     "title": "Whitepaper de Quantus",
     "on_this_page": "En esta página",

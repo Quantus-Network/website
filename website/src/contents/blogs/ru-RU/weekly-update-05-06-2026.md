@@ -1,6 +1,7 @@
 ---
 title: "Quantus Weekly: Главное приложение — это деньги"
-description: "На этой неделе мы переписали Dilithium DKG для Mithril, выпустили исправления для пороговых подписей, открыли вспомогательные инструменты Wormhole SDK и выпустили обновленный кошелек v1.4.0 в TestFlight."
+description: На этой неделе мы переписали Dilithium DKG для Mithril, выпустили исправления для пороговых подписей, открыли вспомогательные инструменты Wormhole SDK и.
+
 pubDate: "2026-05-06"
 heroImage: "/blog/covers/weekly-update-05-06-2026.webp"
 heroAlt: "Quantus Weekly: Главное приложение — это деньги"

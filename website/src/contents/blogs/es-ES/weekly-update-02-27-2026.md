@@ -1,6 +1,7 @@
 ---
 title: "Quantus Weekly: La billetera debe ser simple"
-description: "Actualización semanal que cubre el lanzamiento de Wallet v1.2.0, Tesorería con multifirma, actualizaciones de la red de pruebas Heisenberg y mejoras de rendimiento."
+description: Actualización semanal que cubre el lanzamiento de Wallet v1.2.0, Tesorería con multifirma, actualizaciones de la red de pruebas Heisenberg y mejoras de.
+
 pubDate: "2026-02-27"
 heroImage: "/blog/covers/weekly-update-02-27-2026.webp"
 heroAlt: "Quantus Weekly: La billetera debe ser simple"

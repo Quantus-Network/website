@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: Q-डे अनुमान, ऑन-स्पेंड जोखिम और स्थायी आर्थिक स्वतंत्रता"
-description: "ECC तोड़ने के लिए Google और Oratomic के क्यूबिट अनुमान, बिटकॉइन के 10-मिनट ब्लॉक के मुकाबले ऑन-स्पेंड हमले, Google की 2029 PQC समयसीमा, और स्थायी आर्थिक स्वतंत्रता के इर्द-गिर्द Quantus का रीब्रांडिंग—साथ में ZK, इन्फ्रा और ऐप अपडेट।"
+title: "Quantus Weekly: Q-डे अनुमान और ऑन-स्पेंड जोखिम"
+description: ECC तोड़ने के लिए Google और Oratomic के क्यूबिट अनुमान, बिटकॉइन के 10-मिनट ब्लॉक के मुकाबले ऑन-स्पेंड हमले, Google की 2029 PQC समयसीमा, और Quantus रीब्रांड।
+
 pubDate: "2026-04-07"
 heroImage: "/blog/covers/weekly-update-04-07-2026.webp"
-heroAlt: "Quantus Weekly: Q-डे अनुमान, ऑन-स्पेंड जोखिम और स्थायी आर्थिक स्वतंत्रता"
+heroAlt: "Quantus Weekly: Q-डे अनुमान और ऑन-स्पेंड जोखिम"
 featured: false
 tags:
   [

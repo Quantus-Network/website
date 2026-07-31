@@ -1,9 +1,9 @@
 ---
-title: "Quantus Weekly: Аудит решетчатой криптографии и интеграция с Keystone"
-description: "Еженедельное обновление: успешный аудит нашей библиотеки решетчатой криптографии, обновления сети для Polkadot SDK и поддержка аппаратного кошелька Keystone."
+title: "Quantus Weekly: аудит решётки и интеграция Keystone"
+description: "Устранены все замечания аудита qp-rusty-crystals, сеть обновлена под Polkadot SDK, адреса Quantus добавлены в прошивку аппаратного кошелька Keystone."
 pubDate: "2025-12-01"
 heroImage: "/blog/covers/weekly-update-12-01-2025.webp"
-heroAlt: "Quantus Weekly: Аудит решетчатой криптографии и интеграция с Keystone"
+heroAlt: "Quantus Weekly: аудит решётки и интеграция Keystone"
 featured: false
 tags:
   [

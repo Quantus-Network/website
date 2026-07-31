@@ -1,6 +1,7 @@
 ---
 title: "Quantus Weekly: Q-Day уже совсем близко"
-description: "Q-Day — 6 июня. На этой неделе мы закрыли пункты аудита threshold Dilithium DKG, выпустили обновления майнера и уведомлений, исправили баги мобильного кошелька и запустили обновлённый сайт саммита Q-Day."
+description: Q-Day — 6 июня. На этой неделе мы закрыли пункты аудита threshold Dilithium DKG, выпустили обновления майнера и уведомлений, исправили баги мобильного кошелька.
+
 pubDate: "2026-05-21"
 heroImage: "/blog/covers/weekly-update-05-21-2026.webp"
 heroAlt: "Quantus Weekly: Q-Day уже совсем близко"

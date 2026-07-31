@@ -1,6 +1,7 @@
 ---
-title: "Quantus 每周动态：量子安全签名、ZK 扩展与虫洞证明 2 倍速"
-description: "每周更新：ML-DSA 签名规模、ZK 聚合、虫洞证明加速、安全审计、测试网节点与 Quantum Canary 内容。"
+title: Quantus 每周动态：量子安全签名、ZK 扩展与虫洞证明 2 倍速
+description: 每周更新：ML-DSA 签名规模、ZK 聚合、虫洞证明加速、安全审计、测试网节点与 Quantum Canary 内容。更多协议更新与研究详情，请参阅 Quantus 博客文章。
+
 pubDate: "2026-03-16"
 heroImage: "/blog/covers/weekly-update-03-16-2026.webp"
 heroAlt: "Quantus 每周动态：量子安全签名、ZK 扩展与虫洞证明 2 倍速"

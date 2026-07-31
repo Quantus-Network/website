@@ -1,6 +1,7 @@
 ---
 title: "Quantus Weekly: 更公平的启动"
-description: "早期的比特币矿工可以用笔记本电脑每天挖出数千个 BTC。在 Quantus，我们优先考虑让挖矿从第一天起就触手可及。"
+description: 早期的比特币矿工可以用笔记本电脑每天挖出数千个 BTC。在 Quantus，我们优先考虑让挖矿从第一天起就触手可及。更多协议更新与研究详情，请参阅 Quantus 博客文章。
+
 pubDate: "2026-05-13"
 heroImage: "/blog/covers/weekly-update-05-13-2026.webp"
 heroAlt: "Quantus Weekly: 更公平的启动"

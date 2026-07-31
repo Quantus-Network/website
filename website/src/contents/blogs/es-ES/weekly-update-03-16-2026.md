@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: Firmas cuántico-seguras, escalado ZK y pruebas Wormhole 2x más rápidas"
-description: "Actualización semanal sobre escalado de firmas ML-DSA, agregación ZK, aceleración de pruebas wormhole, revisiones de seguridad, nodos testnet y contenido de Quantum Canary."
+title: "Quantus Weekly: ML-DSA y Wormhole el doble de rápido"
+description: Firmas ML-DSA 70 veces más grandes que Bitcoin, escaladas con agregación ZK. Pruebas wormhole el doble de rápidas, revisiones de seguridad y nodos testnet.
+
 pubDate: "2026-03-16"
 heroImage: "/blog/covers/weekly-update-03-16-2026.webp"
-heroAlt: "Quantus Weekly: Firmas cuántico-seguras, escalado ZK y pruebas Wormhole 2x más rápidas"
+heroAlt: "Quantus Weekly: ML-DSA y Wormhole el doble de rápido"
 featured: false
 tags:
   [

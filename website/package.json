@@ -10,7 +10,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "format:check": "prettier --check .",
-    "format:write": "prettier --write ."
+    "format:write": "prettier --write .",
+    "check:seo-meta": "node scripts/check-seo-meta.mjs"
   },
   "dependencies": {
     "@fontsource/geist": "^5.2.8",

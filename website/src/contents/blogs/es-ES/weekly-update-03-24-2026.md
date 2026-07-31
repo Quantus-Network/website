@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: segundo halving — pruebas ZK 4x más rápidas en dos semanas"
-description: "Otro recorte 2x al tiempo del probador, hashing Poseidon, corrección de minería, límites de tasa en Senoti, lanzamiento del whitepaper, revisión del swap en iOS y Quantum Canary sobre Solana y seguridad cuántica."
+title: "Quantus Weekly: halving ZK y pruebas 4x más rápidas"
+description: Segundo halving en la pipeline ZK: pruebas wormhole cuatro veces más rápidas en dos semanas. Optimizaciones Poseidon, minería corregida y whitepaper publicado.
+
 pubDate: "2026-03-24"
 heroImage: "/blog/covers/weekly-update-03-24-2026.webp"
-heroAlt: "Quantus Weekly: segundo halving — pruebas ZK 4x más rápidas en dos semanas"
+heroAlt: "Quantus Weekly: halving ZK y pruebas 4x más rápidas"
 featured: false
 tags:
   [

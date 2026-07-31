@@ -1,9 +1,10 @@
 ---
-title: "Quantus Weekly: Offene Forschung und der Post-Quantum-Standard"
-description: "Wöchentliches Update über den Start von research.quantus.com, ZK-Proof-Aggregation, Multisig-Pallet-Merge und Mobile-Wallet-Updates."
+title: "Quantus Weekly: Forschungsforum und Post-Quantum-Standard"
+description: Start von research.quantus.com für offene Kryptografie-Forschung. ZK-Proof-Aggregation, Multisig-Pallet-Merge und Mobile-Wallet-Updates diese Woche.
+
 pubDate: "2026-02-20"
 heroImage: "/blog/covers/weekly-update-02-20-2026.webp"
-heroAlt: "Quantus Weekly: Offene Forschung und der Post-Quantum-Standard"
+heroAlt: "Quantus Weekly: Forschungsforum und Post-Quantum-Standard"
 featured: false
 tags:
   [
