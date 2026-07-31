@@ -1,10 +1,9 @@
 ---
-title: "Quantus Weekly: Halving Kedua, Bukti ZK 4x Lebih Cepat"
-description: Prover 2× lebih cepat lagi, hashing Poseidon, perbaikan mining, rate limit Senoti, whitepaper, review swap iOS, dan Quantum Canary soal Solana.
-
+title: "Quantus Weekly: Halving Kedua, Bukti 4x Lebih Cepat"
+description: "Pemotongan waktu prover kedua: bukti ZK 4x lebih cepat dalam dua minggu, plus Poseidon, perbaikan mining, Senoti, whitepaper, dan Quantum Canary."
 pubDate: "2026-03-24"
 heroImage: "/blog/covers/weekly-update-03-24-2026.webp"
-heroAlt: "Quantus Weekly: Halving Kedua, Bukti ZK 4x Lebih Cepat"
+heroAlt: "Quantus Weekly: Halving Kedua, Bukti 4x Lebih Cepat"
 featured: false
 tags:
   [
@@ -18,66 +17,66 @@ tags:
   ]
 ---
 
-2 adalah angka yang istimewa.
+2 adalah angka spesial.
 
 2+2 = 4. 2x2 = 4. 2² = 4.
 
-Itu satu-satunya angka di mana penjumlahan, perkalian, dan eksponensiasi memberi jawaban yang sama.
+Ini satu-satunya angka di mana penjumlahan, perkalian, dan eksponensial semuanya memberi jawaban yang sama.
 
-Dua minggu lalu kami membuat kemajuan besar mengoptimalkan pipeline pembuktian ZK kami.
+Dua minggu lalu kami membuat kemajuan signifikan mengoptimalkan pipeline proving ZK kami.
 
-Minggu lalu kami memangkas waktu prover menjadi setengah (membagi 2).
+Minggu lalu kami memotong waktu prover setengahnya (membaginya 2).
 
-Minggu ini kami memangkas lagi menjadi setengah (halving kedua).
+Minggu ini kami memotongnya lagi setengahnya (halving kedua).
 
 4x lebih cepat dalam 14 hari.
 
-Setiap milidetik di pipeline pembuktian penting untuk kecepatan dan UX transaksi privat kami.
+Setiap milidetik di pipeline proving penting untuk kecepatan dan UX transaksi privat kami.
 
-Saat pengguna mengetuk kirim, mereka ingin penerima langsung melihat dananya.
+Saat pengguna menekan kirim, mereka ingin penerima langsung melihat dana mereka.
 
-Transaksi wormhole kami —yang memutus hubungan antara pengirim dan penerima— memerlukan bukti ZK.
+Transaksi wormhole kami, yang memutus tautan antara pengirim dan penerima, memerlukan bukti ZK.
 
-Bukti ZK menambah waktu sebelum settlement. Setiap detik berlalu dan setiap kali penerima menyegarkan layar tanpa melihat dana adalah kegagalan.
+Bukti ZK menambah waktu sebelum settlement. Setiap detik yang berlalu dan setiap kali penerima me-refresh layar tanpa melihat dana mereka adalah kegagalan.
 
 Ada trik UI yang bisa memperbaiki pengalaman, dan itu bagus.
 
-Tapi settlement harus terasa dan benar-benar sangat cepat.
+Tapi settlement perlu terasa dan benar-benar sangat cepat.
 
-Kami terus mengurangi detik-detik itu.
+Kami terus menggerus detik-detik itu.
 
-Berikut yang lainnya kami rilis minggu ini:
+Berikut hal lain yang kami rilis minggu ini.
 
-### Aktivitas GitHub (12 pull request yang di-merge):
+### GitHub Activity (12 merged pull requests):
 
 ![Github Stats](/blog/assets/github-stats-weekly-update-03-24-2026.webp)
 
 ### Core Tech & ZK:
 
-- Pengurangan 50% lagi pada waktu prover lewat optimasi basis data yang ramah ZK. Minggu kedua berturut-turut dengan peningkatan 2x pada pipeline pembuktian.
-- Hashing non-injektif diimplementasikan di Poseidon, dengan rilis berversi baru untuk qp-poseidon-constants.
-- Perbaikan penyesuaian kesulitan untuk kasus tepi pada algoritma mining.
-- Tinjauan berbasis AI untuk semua pallet dan crate utama, dengan laporan bug untuk isu yang ditandai.
-- PR pembersihan di-merge untuk masalah yang teridentifikasi saat tinjauan codebase.
+- Pengurangan 50% lagi pada waktu prover melalui optimasi database ramah-ZK. Minggu kedua berturut-turut dengan peningkatan 2x pada pipeline proving.
+- Non-injective hashing diimplementasikan di Poseidon, dengan rilis versi baru untuk qp-poseidon-constants.
+- Perbaikan difficulty adjustment untuk edge case di algoritma mining.
+- Review berbasis AI untuk semua pallet dan crate utama, dengan laporan bug diajukan untuk isu yang terflag.
+- PR pembersihan digabungkan untuk isu yang teridentifikasi selama review codebase.
 
-### Jaringan & Infrastruktur:
+### Network & Infra:
 
-- Menambahkan rate limiting pada registrar perangkat layanan notifikasi Senoti.
-- Explorer diperbarui: merge perubahan terbaru, konflik diselesaikan, API disesuaikan.
+- Menambahkan rate limiting ke device registrar layanan notifikasi Senoti.
+- Explorer diperbarui: menggabungkan perubahan terbaru, menyelesaikan konflik, dan menyesuaikan API.
 
-### Web & Aplikasi Mobile:
+### Web & Mobile App Updates:
 
-- Menerbitkan whitepaper baru di situs dengan gaya dan konten yang diperbarui.
-- Menerbitkan pembaruan mingguan terakhir sebagai posting blog di [quantus.com/blog](https://quantus.com/blog).
-- Fitur langganan peek pool transaksi diimplementasikan dan diuji end-to-end.
+- Menerbitkan whitepaper baru di website dengan styling dan konten yang diperbarui.
+- Menerbitkan weekly update terakhir sebagai blog post di [quantus.com/blog](https://quantus.com/blog).
+- Fitur subscription transaction pool peek diimplementasikan dan diuji end to end.
 - Memulai proses review Apple untuk fitur swap di aplikasi iOS.
 
-### Konten & Kemitraan:
+### Content & Partnerships:
 
-- Menyelesai draf 20 halaman laporan industri «State of Quantum» dan mulai mengedarkan untuk komentar. Hubungi kami jika tertarik.
-- Menambah rekrutan marketing untuk media sosial.
+- Menyelesaikan draf 20 halaman laporan industri "State of Quantum" kami dan mulai mendistribusikannya untuk komentar. Hubungi kami jika Anda tertarik.
+- Menambahkan rekrutan marketing untuk media sosial.
 - Tanggal acara Q-Day dikonfirmasi: 25 April di Network School.
 
-### Pembaruan Industri:
+### Industry Updates:
 
 - Quantum Canary: [Can Solana Ever Be Quantum Secure?](https://x.com/QuantumCanary_/status/2036278620499616199)

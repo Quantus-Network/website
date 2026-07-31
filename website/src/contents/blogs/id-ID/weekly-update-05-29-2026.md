@@ -1,9 +1,9 @@
 ---
-title: "Quantus Weekly: Laporan The State of Quantum"
-description: "Laporan riset risiko kuantum untuk kripto mendapat liputan besar. Minggu ini: audit ZK, throttling miner GPU, update dompet, situs Q-Day, dan toko."
+title: "Quantus Weekly: Laporan State of Quantum"
+description: "Laporan riset risiko quantum kami masuk media besar. Minggu ini: perbaikan audit ZK, throttling GPU miner, pembaruan wallet, peluncuran situs Q-Day dan toko."
 pubDate: "2026-05-29"
 heroImage: "/blog/covers/weekly-update-05-29-2026.webp"
-heroAlt: "Quantus Weekly: Laporan The State of Quantum"
+heroAlt: "Quantus Weekly: Laporan State of Quantum"
 featured: false
 tags:
   [
@@ -24,11 +24,11 @@ tags:
   ]
 ---
 
-Minggu ini kami merilis laporan riset tentang risiko kuantum bagi kripto: [The State of Quantum: Ancaman Kuantum yang Tak Bisa Diabaikan Industri Kripto](https://x.com/QuantusNetwork/status/2059624449993806039).
+Minggu ini, kami merilis laporan riset tentang risiko quantum terhadap kripto, [The State of Quantum: What Crypto Can't Afford to Ignore](https://x.com/QuantusNetwork/status/2059624449993806039).
 
-Laporan tersebut diliput oleh Blockchain Reporter, MEXC, CoinMarketCap Community, Metaverse Post, crypto (dot) news, Yellow, ForkLog, dan The Coin Headlines.
+Laporan ini diliput Blockchain Reporter, MEXC, CoinMarketCap Community, Metaverse Post, crypto (dot) news, Yellow, ForkLog, dan The Coin Headlines.
 
-Terima kasih khusus kepada semua yang berkontribusi pada laporan:
+Terima kasih khusus kepada semua yang membantu kontribusi laporan:
 
 - [@NEARProtocol](https://x.com/@NEARProtocol)
 - [@near_intents](https://x.com/@near_intents)
@@ -50,36 +50,36 @@ Termasuk penulis dan editor:
 - [@YuviLightman](https://x.com/@YuviLightman)
 - [@JoeMattia](https://x.com/@JoeMattia)
 
-Berikut yang lebih kami rilis minggu ini:
+Inilah yang lainnya kami kirimkan minggu ini:
 
 ### Core Tech & ZK
 
 - Menangani isu audit di qp-plonky2, qp-poseidon, dan qp-rusty-crystals.
-- Mengoptimalkan gate Poseidon2, memperketat konfigurasi wire sirkuit ZK, dan menambahkan tooling profil memori di qp-zk-circuits.
+- Mengoptimalkan gate Poseidon2, memperketat konfigurasi wire sirkuit ZK, dan menambahkan tooling profiling memori ke qp-zk-circuits.
 
 ### Network & Infra
 
-- Menambahkan throttling miner GPU opsional agar miner dapat berbagi GPU dengan beban inferensi AI.
-- Memperbaiki perilaku penyesuaian kesulitan chain dan meningkatkan dukungan image Docker node chain.
-- Menambahkan data event multisig, jumlah total miner, dan meningkatkan batas rate API di Subsquid.
+- Menambahkan throttling GPU miner opsional agar miner bisa berbagi GPU dengan workload inferensi AI.
+- Memperbaiki perilaku penyesuaian difficulty chain dan meningkatkan dukungan image Docker node chain.
+- Menambahkan data event multisig, total jumlah miner, dan meningkatkan rate limit API di Subsquid.
 
-### Pembaruan Aplikasi Web & Seluler
+### Web & Mobile App Updates
 
-- Menambahkan dukungan bahasa dompet seluler, pull-to-refresh, dan perbaikan infinite scroll.
-- Memperbaiki mode POS seluler dan penanganan intent pay/send, termasuk pemrosesan cold-start dan validasi pemisah desimal.
-- Mendeploy situs Q-Day baru dengan integrasi email untuk pertanyaan sponsor di q (dot) day.
-- Mendeploy toko Quantus untuk menjual merch dengan token QUAN testnet di acara dan NS.
-- Perbaikan papan peringkat penambangan di Quantus explorer.
+- Menambahkan dukungan bahasa wallet mobile, perbaikan pull-to-refresh dan infinite scroll.
+- Memperbaiki mode POS mobile dan penanganan intent pay/send, termasuk pemrosesan cold-start dan validasi pemisah desimal.
+- Men-deploy situs Q-Day baru dengan integrasi email untuk pertanyaan sponsor di q (dot) day.
+- Men-deploy toko Quantus untuk menjual merch dengan token testnet QUAN di acara dan NS.
+- Perbaikan leaderboard mining explorer Quantus.
 
-### Konten & Kemitraan
+### Content & Partnerships
 
 - Merilis laporan The State of Quantum: [https://x.com/QuantusNetwork/status/2059624449993806039](https://x.com/QuantusNetwork/status/2059624449993806039)
 - Blockchain Reporter meliput laporan: [https://x.com/blockchainrptr/status/2059620914300613023](https://x.com/blockchainrptr/status/2059620914300613023)
 - Metaverse Post meliput laporan: [https://x.com/mpost_io/status/2059922639926530375](https://x.com/mpost_io/status/2059922639926530375)
 - ForkLog meliput laporan: [https://x.com/ForkLog/status/2059917147317444833](https://x.com/ForkLog/status/2059917147317444833)
 - MEXC, CoinMarketCap, Yellow, crypto (dot) news, dan The Coin Headlines juga meliput laporan.
-- Quip berbagi pandangan tentang bagian tata kelola Bitcoin dalam laporan: [https://x.com/quipnetwork/status/2059663890943013153](https://x.com/quipnetwork/status/2059663890943013153)
-- Murtuza Merchant meliput temuan skalabilitas dan tata kelola Bitcoin dalam laporan: [https://x.com/murtuza_merc/status/2059674137824510023](https://x.com/murtuza_merc/status/2059674137824510023)
-- Chris di wawancara founder Blockchain Reporter tentang risiko kuantum, Bitcoin, stablecoin, alat privasi, dan migrasi blockchain: [https://x.com/blockchainrptr/status/2059666209663307921](https://x.com/blockchainrptr/status/2059666209663307921)
-- Mempublikasikan wawancara Metaverse Post tentang privasi blockchain sementara dan arsitektur ZK pasca-kuantum: [https://x.com/QuantusNetwork/status/2059274094797893727](https://x.com/QuantusNetwork/status/2059274094797893727)
-- Posting sosial untuk Q-Day 6 Juni di [@ns](https://x.com/@ns), termasuk hype, pengumuman mitra dan pembicara.
+- Quip membagikan pandangannya tentang bagian governance Bitcoin laporan: [https://x.com/quipnetwork/status/2059663890943013153](https://x.com/quipnetwork/status/2059663890943013153)
+- Murtuza Merchant meliput temuan skalabilitas dan governance Bitcoin laporan: [https://x.com/murtuza_merc/status/2059674137824510023](https://x.com/murtuza_merc/status/2059674137824510023)
+- Chris bergabung dengan Blockchain Reporter untuk wawancara founder tentang risiko quantum, Bitcoin, stablecoin, alat privasi, dan migrasi blockchain: [https://x.com/blockchainrptr/status/2059666209663307921](https://x.com/blockchainrptr/status/2059666209663307921)
+- Mempublikasikan wawancara Metaverse Post tentang privasi blockchain sementara dan arsitektur ZK post-quantum: [https://x.com/QuantusNetwork/status/2059274094797893727](https://x.com/QuantusNetwork/status/2059274094797893727)
+- Posting sosial untuk Q-Day 6 Juni di [@ns](https://x.com/@ns), termasuk hype, pengumuman partner dan pembicara.

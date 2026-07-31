@@ -1,7 +1,6 @@
 ---
 title: "Quantus Weekly: Aset Native dan Risiko Kuantum"
-description: Update mingguan yang menampilkan keputusan aset native untuk keamanan kuantum, tanda tangan ambang Dilithium, dan kemajuan agregasi ZK serta multisig kustom.
-
+description: "Mengapa modal mendiskon Bitcoin karena risiko kuantum, keputusan aset native-only kami, pekerjaan threshold Dilithium, dan progres ZK aggregation minggu ini."
 pubDate: "2026-01-21"
 heroImage: "/blog/covers/weekly-update-01-21-2026.webp"
 heroAlt: "Quantus Weekly: Aset Native dan Risiko Kuantum"
@@ -19,52 +18,52 @@ tags:
   ]
 ---
 
-Jika Anda bertanya-tanya mengapa Emas melonjak dan Bitcoin kesulitan, baca ini. Tidak ada yang misterius tentang hal itu.
+Kalau Anda penasaran kenapa emas melesat dan Bitcoin tertekan, baca ini. Tidak ada misteri di baliknya.
 
 ![Ringkasan wawancara Nic Carter](/blog/assets/nic-carter-x-post-about-bitcoin-underperformance-due-to-quantum.webp)
 
-Alokator modal mendiskon Bitcoin sebanding dengan peluang komputer kuantum yang relevan secara kriptografis (CRQC) muncul sebelum Bitcoin ditingkatkan ke kriptografi pasca-kuantum. Apakah komunitas Bitcoin menerima ini atau tidak, pasar sudah menerimanya.
+Alokator modal mendiskon Bitcoin sebanding dengan peluang komputer kuantum kriptografis relevan (CRQC) dirilis sebelum Bitcoin upgrade ke kriptografi pasca-kuantum. Komunitas Bitcoin menerima atau tidak, pasar sudah bergerak.
 
-Beberapa rantai akan ditingkatkan tepat waktu. Bitcoin mungkin tidak. Sebagai contoh, baru-baru ini Vitalik mendesak peningkatan PQC.
+Beberapa chain akan upgrade tepat waktu. Bitcoin mungkin tidak. Baru-baru ini, misalnya, Vitalik menyerukan upgrade PQC.
 
-Kami tidak memiliki cara untuk mengetahui secara pasti kapan tenggat waktunya, atau rantai mana yang akan ditingkatkan tepat waktu. Yang berarti kami harus membuat keputusan desain yang sulit seputar dukungan aset eksternal di @QuantusNetwork.
+Kami tidak bisa tahu persis kapan batas waktunya, atau chain mana yang akan upgrade tepat waktu. Artinya kami harus membuat keputusan desain sulit seputar dukungan aset eksternal di @QuantusNetwork.
 
-Jika rantai asal aset yang dibungkus (wrapped asset) dikompromikan, begitu juga pemegang aset yang dibungkus tersebut. Jadi kami memutuskan @QuantusNetwork tidak dapat mendukung aset yang dibungkus apa pun.
+Jika chain asal aset wrapped dikompromikan, pemegang aset wrapped ikut terdampak. Jadi kami putuskan @QuantusNetwork tidak bisa mendukung aset wrapped apa pun.
 
-Kami sedang membangun infrastruktur untuk memungkinkan bridging tanpa izin dari mana saja ke uang aman kuantum paling tangguh yang pernah dibuat. Setelah Anda berada di rantai kami memegang QUAN native, Anda dilindungi oleh ML-DSA-87 (tingkat keamanan tertinggi NIST) dengan throughput yang sangat tinggi melalui agregasi ZK.
+Kami membangun infrastruktur untuk bridging permissionless dari mana pun ke uang quantum-secure paling tangguh yang pernah dibuat. Setelah Anda di chain kami memegang QUAN native, Anda dilindungi ML-DSA-87 (tingkat keamanan tertinggi NIST) dengan throughput luar biasa via ZK aggregation.
 
-Saya tidak ingin mengumumkan apa pun di sini, tetapi Anda selalu dapat membuka GitHub kami dan memeriksa 👀
+Tidak ingin mengumumkan apa pun di sini, tapi Anda selalu bisa buka GitHub kami dan cek 👀
 
-Inilah hal lain yang kami luncurkan minggu ini, jadi ketika hari Q tiba, kami siap:
+Berikut hal lain yang kami rilis minggu ini, supaya saat Q-day tiba, kami siap:
 
-### Aktivitas Github (7 pull request yang digabungkan):
+### Github Activity (7 merged pull requests):
 
-![Statistik Github](/blog/assets/github-stats-weekly-update-01-21-2026.webp)
+![Github Stats](/blog/assets/github-stats-weekly-update-01-21-2026.webp)
 
 ### Core Tech & ZK
 
-- Mengintegrasikan tanda tangan ambang Dilithium ke dalam sistem MPC protokol lain.
-- Membangun POC untuk manajemen treasury kustom menggunakan pallet multisig Parity.
-- Mengimplementasikan iterasi pertama pallet multisig kustom dengan pengujian dan benchmark.
-- Memperbaiki bug yang mencegah binari sirkuit berkemampuan ZK pada pallet ZK-aggregator.
-- Memperbarui verifikator ZK-aggregator onchain untuk mendukung jumlah output yang dikuantisasi.
-- Memperbaiki skrip contoh ZK-aggregator end-to-end untuk serializer elemen field baru.
+- Mengintegrasikan tanda tangan threshold Dilithium ke sistem MPC protokol lain.
+- Membangun POC untuk treasury management kustom menggunakan Parity multisig pallet.
+- Mengimplementasikan iterasi pertama multisig pallet kustom dengan tes dan benchmark.
+- Mem-patch bug yang mencegah binary sirkuit ZK-enabled di pallet ZK-aggregator.
+- Memperbarui verifier ZK-aggregator on-chain untuk mendukung jumlah output quantized.
+- Memperbaiki skrip contoh ZK-aggregator end-to-end untuk serializer field element baru.
 
-### Pembaruan Aplikasi Web & Seluler
+### Web & Mobile App Updates
 
-- Membangun UX seluler untuk mendukung fitur penundaan tetap dan intersep untuk akun keamanan tinggi (masih dalam pengujian).
-- Pemindai blok dan fitur keamanan tinggi ditambahkan ke CLI dengan penanganan kesalahan yang ditingkatkan.
-- Pembaruan Subsquid (indexer) untuk penanganan keamanan tinggi dan perbaikan hasher untuk Poseidon terbaru.
-- Meluncurkan bagian blog di situs web Quantus dengan dukungan tag dan mulai mengunggah backlog pembaruan mingguan.
-- Whitepaper diperbarui ke v3.1, memperbaiki nilai distribusi bagan tokenomik.
+- Membangun UX mobile untuk mendukung fixed delay dan fitur intercept untuk akun keamanan tinggi (masih dalam pengujian).
+- Block scanner dan fitur keamanan tinggi ditambahkan ke CLI dengan error handling yang lebih baik.
+- Pembaruan Subsquid (indexer) untuk penanganan keamanan tinggi dan perbaikan hasher Poseidon terbaru.
+- Merilis bagian blog di situs Quantus dengan dukungan tag dan mulai mengunggah backlog weekly update.
+- Whitepaper diperbarui ke v3.1, memperbaiki nilai distribusi chart tokenomik.
 
-### Konten & Kemitraan
+### Content & Partnerships
 
-- Podcast sekarang sedang diunggah ke Apple Podcasts.
-- Memulai percakapan dengan 2 launchpad token.
+- Podcast kini diunggah ke Apple Podcasts.
+- Memulai percakapan dengan 2 token launchpad.
 - Peningkatan halaman perbandingan blockchain Quantum Canary.
-- Podcast dengan AJ tentang biohacking dan optimasi diri: https://x.com/QuantusNetwork/status/2012526120869286161
+- Podcast dengan AJ tentang biohacking dan self optimization: https://x.com/QuantusNetwork/status/2012526120869286161
 
-### Pembaruan Industri
+### Industry Updates
 
-- Artikel Quantum Canary yang membahas bagaimana CRQC mengancam Koin Satoshi: https://x.com/QuantumCanary_/status/2011706634868047982
+- Artikel Quantum Canary tentang bagaimana CRQC mengancam Koin Satoshi: https://x.com/QuantumCanary_/status/2011706634868047982

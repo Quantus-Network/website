@@ -1,9 +1,10 @@
 ---
-title: "Quantus Mingguan: Penambangan GPU dan Pengujian Stres Dirac"
-description: "Pembaruan mingguan yang mencakup perilisan Quantus Miner v2.0.2 dengan dukungan GPU, pengujian stres jaringan Dirac, dan pembaruan arsitektur chain."
+title: "Quantus Mingguan: GPU Mining dan Stress Test Dirac"
+description: "Quantus Miner v2.0.2 dengan dukungan GPU rilis, jaringan Dirac distres-test, dan arsitektur chain diperbarui untuk batas pasokan 21 juta koin."
+
 pubDate: "2025-12-22"
 heroImage: "/blog/covers/weekly-update-12-22-2025.webp"
-heroAlt: "Quantus Mingguan: Penambangan GPU dan Pengujian Stres Dirac"
+heroAlt: "Quantus Mingguan: GPU Mining dan Stress Test Dirac"
 featured: false
 tags:
   [
@@ -17,37 +18,37 @@ tags:
   ]
 ---
 
-Minggu ini, kami secara resmi merilis Quantus Miner v2.0.2 dengan dukungan GPU dan berhasil melakukan pengujian stres pada jaringan Dirac.
+Minggu ini, kami secara resmi merilis Quantus Miner v2.0.2 dengan dukungan GPU dan berhasil melakukan stress test jaringan Dirac.
 
-Kami juga memperbarui arsitektur chain untuk mendukung batas pasokan 21 juta koin dan membersihkan codebase dengan menghapus pallet vesting dan treasury lama.
+Kami juga memperbarui arsitektur chain untuk mendukung batas pasokan koin 21 juta dan membersihkan codebase dengan menghapus pallet vesting dan treasury legacy.
 
-Laporan aktivitas Github mingguan termasuk 6 pull request yang digabungkan: https://github.com/Quantus-Network/n8n-workflows/blob/main/github/weekly-update-2025-12-23-07:50:14.md/
+Laporan aktivitas Github mingguan, termasuk 6 pull request yang digabungkan: https://github.com/Quantus-Network/n8n-workflows/blob/main/github/weekly-update-2025-12-23-07:50:14.md/
 
-## Core Tech & ZK
+## Inti Tech & ZK
 
-- Memperbarui spesifikasi chain untuk mencerminkan batas pasokan koin 21 juta yang baru.
-- Menyederhanakan arsitektur inti chain dengan menghapus pallet vesting dan treasury.
-- Menyelesaikan dukungan hashing penyimpanan Poseidon generik untuk mencegah panic pada runtime.
+- Memperbarui spesifikasi chain agar mencerminkan batas pasokan koin 21 juta yang baru.
+- Menyederhanakan arsitektur chain inti dengan menghapus pallet vesting dan treasury.
+- Menyelesaikan dukungan generic Poseidon storage hashing untuk mencegah panic di runtime.
 - Menambahkan dukungan Asset ID ke sirkuit ZK dan CLI kami.
 
 ## Network & Infra
 
-- Pengujian stres Dirac untuk mengamati bagaimana kelebihan beban pada chain berdampak pada waktu blok.
-- Menerbitkan Quantus Miner v2.0.2, yang sekarang secara resmi mendukung penambangan GPU: https://github.com/Quantus-Network/quantus-miner/releases/tag/v2.0.2
+- Melakukan stress test Dirac untuk mengamati bagaimana overload chain memengaruhi block times.
+- Menerbitkan Quantus Miner v2.0.2, yang sekarang resmi mendukung GPU mining: https://github.com/Quantus-Network/quantus-miner/releases/tag/v2.0.2
 
-## Web & Mobile App Updates
+## Pembaruan Web & Aplikasi Mobile
 
-- Memfinalisasi alur penandatanganan hardware wallet di seluler, termasuk transmisi tanda tangan kode QR, dukungan multi-wallet, dan fungsionalitas pelepasan tautan.
-- Mengimplementasikan "Raid Quests" dengan telegram, situs web, dan pelacakan internal melalui Task Master untuk memberi insentif pada keterlibatan komunitas di X. Implementasi dompet sedang dalam proses.
-- Menyelesaikan kesalahan CORS backend dan meningkatkan pelacakan data untuk interaksi sosial.
-- Memperbaiki bug block explorer yang memengaruhi pelaporan hadiah penambang dan peralihan jaringan.
+- Menyelesaikan alur penandatanganan dompet hardware di mobile, termasuk transmisi tanda tangan QR code, dukungan multi-wallet, dan fungsionalitas unlinking.
+- Mengimplementasikan "Raid Quests" dengan telegram, website, dan pelacakan internal via Task Master untuk mendorong engagement komunitas di X. Implementasi dompet sedang berlangsung.
+- Menyelesaikan error CORS backend dan meningkatkan pelacakan data untuk interaksi sosial.
+- Memperbaiki bug block explorer yang memengaruhi pelaporan reward miner dan network switching.
 
-## Content & Partnerships
+## Konten & Kemitraan
 
 - Mengamankan investasi dari dua mitra strategis yang ditemui di Peer Summit.
-- Menyelesaikan pertemuan mengenai strategi peluncuran dan menyusun draf whitepaper yang diperbarui yang mencerminkan tokenomics dan GTM baru.
-- Episode dengan Cezary, arsitek perangkat lunak veteran dan insinyur sistem: https://www.youtube.com/watch?v=2TDMR7bECR8
+- Menyelesaikan pertemuan terkait strategi peluncuran dan menyusun whitepaper yang diperbarui yang mencerminkan tokenomics dan GTM baru.
+- Episode dengan Cezary, veteran software architect dan systems engineer: https://www.youtube.com/watch?v=2TDMR7bECR8
 
-## Industry Updates
+## Pembaruan Industri
 
-- Artikel dari Quantum Canary yang menganalisis risiko serangan tingkat negara terhadap Bitcoin: https://www.quantumcanary.org/insights/how-credible-is-a-state-level-attack-on-bitcoin
+- Artikel dari Quantum Canary menganalisis risiko serangan level negara terhadap Bitcoin: https://www.quantumcanary.org/insights/how-credible-is-a-state-level-attack-on-bitcoin

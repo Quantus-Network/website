@@ -1,10 +1,9 @@
 ---
-title: "Quantus Weekly: Akun Keamanan Tinggi dan Pencegahan Penipuan"
-description: Update mingguan tentang akun keamanan tinggi dengan kunci waktu dan guardian, pengujian integrasi multisig, dan fitur pemulihan dana baru untuk pengguna.
-
+title: "Quantus Weekly: Akun Keamanan Tinggi & Anti-Penipuan"
+description: "Akun keamanan tinggi dengan time lock dan guardian yang bisa dikustom, pengujian integrasi multisig, dan fitur recover funds baru minggu ini."
 pubDate: "2026-02-04"
 heroImage: "/blog/covers/weekly-update-02-04-2026.webp"
-heroAlt: "Quantus Weekly: Akun Keamanan Tinggi dan Pencegahan Penipuan"
+heroAlt: "Quantus Weekly: Akun Keamanan Tinggi dan Anti-Penipuan"
 featured: false
 tags:
   [
@@ -18,42 +17,42 @@ tags:
   ]
 ---
 
-Chainalysis memperkirakan $17 miliar dalam kripto dicuri pada tahun 2025. Penawarannya adalah "jadilah bank Anda sendiri." Sisi lainnya adalah "jadilah tim keamanan Anda sendiri." Agar jelas, "rekening bank Swiss di saku Anda, tetapi hanya untuk pakar keamanan siber" tetaplah sangat keren. Namun industri ini melakukan hal yang merugikan bagi orang awam yang tidak bersalah yang hancur karena memindahkan kekayaan bersih mereka ke onchain tanpa tahu apa itu kriptografi asimetris.
+Chainalysis memperkirakan $17 miliar kripto dicuri pada 2025. Pitch-nya: "jadi bank sendiri." Separuh lainnya: "jadi tim keamanan sendiri." Jujur saja, "rekening Swiss di saku Anda, tapi cuma untuk ahli cybersecurity" tetap sangat keren. Tapi industri mengecewakan normies yang tak bersalah yang kehilangan seluruh kekayaan on-chain tanpa tahu apa itu kriptografi asimetris.
 
-Jadi ketika Anda mengatakan "jadilah bank Anda sendiri", Anda juga harus menyebutkan bahwa bank memiliki departemen penipuan, pemantauan transaksi, dan periode pembalikan. Mereka menangkap aktivitas mencurigakan, membekukan akun, dan mencegat transaksi berbahaya. Anda meninggalkan semua itu ketika Anda memegang kunci Anda sendiri.
+Jadi kalau Anda bilang "jadi bank sendiri", sebut juga bahwa bank punya departemen fraud, pemantauan transaksi, dan periode reversal. Mereka menangkap aktivitas mencurigakan, membekukan akun, dan mencegat transaksi berbahaya. Semua itu Anda tinggalkan saat mengambil kustodi kunci sendiri.
 
-Sayangnya, "gunakan dompet perangkat keras dan verifikasi semua yang Anda tanda tangani setiap saat" adalah saran yang tidak membantu. Jika Bybit melakukan blind signing pada multisig cold storage mereka, mungkin tidak ada yang melakukan cukup banyak. Tidak masuk akal untuk mengharapkan pengguna beroperasi pada tingkat keamanan yang cukup tinggi. Tidak dapat dipertahankan jika "kehilangan semua uang Anda" menjadi hasil dari penggunaan aplikasi Anda.
+Sayangnya, "pakai hardware wallet dan verifikasi persis semua yang Anda tandatangani setiap kali" bukan saran yang membantu. Kalau Bybit saja yolo blind signing di cold storage multisig mereka, mungkin tidak ada yang cukup hati-hati. Mengharapkan pengguna beroperasi di level keamanan tinggi tidak realistis. "Kehilangan semua uang" sebagai outcome memakai aplikasi Anda tidak bisa diterima.
 
-Jadi mana yang lebih buruk, kehilangan semua uang Anda atau asumsi kepercayaan? Tergantung pada asumsi kepercayaannya, bukan? Ada jalan tengah antara "tidak mempercayai siapa pun" dan "mempercayai bank." Percayalah pada seseorang yang Anda pilih: teman, anggota keluarga, multisig dengan pengacara Anda atau keponakan yang paham teknologi, dead man's switch.
+Jadi mana yang lebih buruk, kehilangan semua uang atau asumsi trust? Tergantung asumsi trust-nya, kan? Ada jalan tengah antara "trust no one" dan "trust bank." Trust seseorang yang Anda pilih: teman, anggota keluarga, multisig dengan pengacara atau keponakan yang paham teknologi, dead man's switch.
 
-Kami telah membangun itu ke dalam [@QuantusNetwork](https://x.com/@QuantusNetwork). Akun keamanan tinggi di Quantus memiliki kunci waktu yang dapat disesuaikan pada setiap transaksi keluar. Selama jendela itu, guardian yang ditunjuk dapat mencegat dan membatalkan transaksi. Seorang guardian tidak dapat menandatangani atas nama Anda, tetapi mereka dapat menghentikan transaksi keluar apa pun.
+Kami membangunnya ke [@QuantusNetwork](https://x.com/@QuantusNetwork). Akun keamanan tinggi di Quantus punya time lock yang bisa dikustom untuk setiap transaksi keluar. Selama jendela itu, guardian yang ditunjuk bisa mencegat dan membatalkan transaksi. Guardian tidak bisa menandatangani atas nama Anda, tapi bisa menghentikan transaksi keluar apa pun.
 
-Jadi jika pencuri memiliki kunci Anda. Mereka tidak selalu memiliki kemampuan untuk mengambil semua yang Anda miliki. Anda memilih guardian dan Anda mengatur jendelanya. Mungkin itu penundaan 24 jam dengan pasangan Anda untuk transaksi apa pun yang lebih besar dari $1.000. Mungkin itu dompet perangkat keras yang Anda simpan di kotak penyimpanan aman. Mungkin itu layanan profesional yang memantau aktivitas untuk potensi penipuan secara real time.
+Jadi kalau pencuri punya kunci Anda, mereka belum tentu bisa ambil semua yang Anda miliki. Anda pilih guardian dan tentukan jendelanya. Mungkin delay 24 jam dengan pasangan untuk transaksi di atas $1.000. Mungkin hardware wallet di safe deposit box. Mungkin layanan profesional yang memantau aktivitas fraud secara real time.
 
-Minggu ini kami mulai menguji integrasi multisig untuk akun guardian. Kami juga menambahkan fungsionalitas pemulihan dana ke rantai, sehingga transaksi yang dicegat dapat ditarik kembali ke pemilik aslinya.
+Minggu ini kami mulai menguji integrasi multisig untuk akun guardian. Kami juga menambahkan fungsi recover funds ke chain, sehingga transaksi yang dicegat bisa dikembalikan ke pemilik asli.
 
-Berikut adalah hal lain yang kami luncurkan minggu ini:
+Berikut hal lain yang kami rilis minggu ini:
 
-### Aktivitas GitHub (5 pull request yang digabungkan):
+### GitHub Activity (5 merged pull requests):
 
-![Statistik Github](/blog/assets/github-stats-weekly-update-02-04-2026.webp)
+![Github Stats](/blog/assets/github-stats-weekly-update-02-04-2026.webp)
 
 ### Core Tech & ZK
 
 - Pallet multisig untuk akun keamanan tinggi dalam fase pengujian dengan perintah CLI.
-- Menambahkan fungsionalitas pemulihan dana ke rantai untuk akun keamanan tinggi.
-- Memperbarui qp-plonky2 dengan perubahan yang dibuat pada repo plonky2 asli.
+- Menambahkan fungsi recover funds ke chain untuk akun keamanan tinggi.
+- Memperbarui qp-plonky2 sesuai perubahan di repo plonky2 asli.
 
-### Pembaruan Aplikasi Web & Seluler
+### Web & Mobile App Updates
 
-- Merombak UI layar quest dengan gradien dan integrasi dompet.
-- Membersihkan aset yang tidak digunakan dalam aplikasi.
+- Merefaktor UI layar quests dengan gradien dan integrasi wallet.
+- Membersihkan aset yang tidak terpakai di aplikasi.
 
-### Konten & Kemitraan
+### Content & Partnerships
 
-- Akun [@QuantusNetwork](https://x.com/@QuantusNetwork) dan [@YuviLightman](https://x.com/@YuviLightman) keduanya melampaui 1k+ pengikut.
+- Akun [@QuantusNetwork](https://x.com/@QuantusNetwork) dan [@YuviLightman](https://x.com/@YuviLightman) keduanya melewati 1k+ followers.
 - Podcast dengan Henry Love tentang AI dan produktivitas (di Youtube kami).
 
-### Pembaruan Industri
+### Industry Updates
 
-- Quantum Canary: ["Akankah Zcash Menggantikan Bitcoin?"](https://x.com/QuantumCanary_/status/2016327421797294286)
+- Quantum Canary: ["Will Zcash Replace Bitcoin?"](https://x.com/QuantumCanary_/status/2016327421797294286)

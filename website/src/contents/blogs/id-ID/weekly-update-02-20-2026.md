@@ -1,9 +1,9 @@
 ---
-title: "Quantus Mingguan: Riset Terbuka dan Standar Pasca-Kuantum"
-description: "Pembaruan mingguan yang mencakup peluncuran research.quantus.com, agregasi bukti ZK, penggabungan pallet multisig, dan pembaruan dompet seluler."
+title: "Quantus Weekly: Riset Terbuka & Standar Pasca-Kuantum"
+description: "Update mingguan: peluncuran research.quantus.com, agregasi bukti ZK, merge pallet multisig, dan pembaruan wallet mobile."
 pubDate: "2026-02-20"
 heroImage: "/blog/covers/weekly-update-02-20-2026.webp"
-heroAlt: "Quantus Mingguan: Riset Terbuka dan Standar Pasca-Kuantum"
+heroAlt: "Quantus Weekly: Riset Terbuka dan Standar Pasca-Kuantum"
 featured: false
 tags:
   [
@@ -17,47 +17,47 @@ tags:
   ]
 ---
 
-Kriptografi pasca-kuantum terlalu baru untuk diluncurkan dalam blockchain di balik pintu tertutup.
+Kriptografi pasca-kuantum terlalu baru untuk dikembangkan di blockchain di balik pintu tertutup.
 
 Minggu ini kami meluncurkan [research.quantus.com](https://research.quantus.com/).
 
-Ini adalah forum publik bagi para kriptografer dan pengembang untuk membedah setiap keputusan protokol yang pernah kami buat. Para peneliti sudah mulai melakukan stress-test pada permukaan serangan Poseidon2.
+Ini forum publik bagi kriptografer dan developer untuk menelaah setiap keputusan protokol yang pernah kami buat. Peneliti sudah stress-testing permukaan serangan Poseidon2.
 
-NIST memfinalisasi standar pasca-kuantum tahun lalu. Itu adalah langkah pertama. Langkah kedua adalah setiap tim protokol dalam kripto benar-benar mengimplementasikannya. Tidak ada buku panduan yang mapan untuk membangun chain yang aman secara kuantum, jadi kami sedang membangun standarnya.
+NIST memfinalisasi standar pasca-kuantum tahun lalu. Itu langkah satu. Langkah dua: setiap tim protokol di kripto benar-benar mengimplementasikannya. Belum ada playbook baku untuk membangun chain quantum-secure, jadi kami membangun standarnya.
 
-Jika Anda sedang mengerjakan keamanan pasca-kuantum, pintu kami terbuka lebar.
+Kalau Anda mengerjakan keamanan pasca-kuantum, pintunya terbuka.
 
-Inilah hal lain yang kami bangun minggu ini.
+Berikut hal lain yang kami bangun minggu ini.
 
-### Aktivitas GitHub (4 pull request yang digabungkan):
+### GitHub Activity (4 merged pull requests):
 
-![Statistik Github](/blog/assets/github-stats-weekly-update-02-20-2026.webp)
+![Github Stats](/blog/assets/github-stats-weekly-update-02-20-2026.webp)
 
-### Teknologi Inti & ZK
+### Core Tech & ZK
 
-- Memperbarui sirkuit ZK untuk mendukung agregasi bukti multi-mesin dengan verifikasi onchain.
-- Menggabungkan pallet multisig, memberikan dukungan multisig penuh dengan akun keamanan tinggi.
+- Memperbarui sirkuit ZK untuk mendukung proof aggregation multi-mesin dengan verifikasi on-chain.
+- Menggabungkan pallet multisig, menghadirkan dukungan multisig penuh dengan akun keamanan tinggi.
 
-### Jaringan & Infrastruktur
+### Network & Infra
 
-- Mengembangkan sistem notifikasi Senoti: layanan pendaftar perangkat, layanan pemantau blockchain, dan pekerja inti dengan pengaturan CI dan deployment.
-- Meningkatkan bot faucet di Telegram untuk merespons peningkatan aktivitas dengan lebih baik.
-- Menambahkan alur kerja manajemen rilis untuk qp-plonky2 dan qp-zk-circuits.
+- Mengembangkan sistem notifikasi Senoti: device registrar service, blockchain watcher service, dan core worker dengan setup CI dan deployment.
+- Meningkatkan faucet bot di Telegram agar lebih responsif terhadap peningkatan aktivitas.
+- Menambahkan release management workflow untuk qp-plonky2 dan qp-zk-circuits.
 
-### Pembaruan Aplikasi Web & Seluler
+### Web & Mobile App Updates
 
 - Meluncurkan [research.quantus.com](https://research.quantus.com/), forum berbasis Discourse untuk riset kriptografi dan diskusi teknis.
-- Memperbarui situs web Quantus: menyegarkan halaman whitepaper, menambahkan diagram lingkaran alokasi token ke /launch, menambahkan integrasi CoinGecko, dan menerbitkan semua pembaruan mingguan sebagai postingan blog.
-- Memperbarui desain dompet dan mengirimkannya ke TestFlight. Versi baru akan segera hadir di App Store.
-- Perbaikan bug dan UX di dompet seluler.
-- Mengintegrasikan basis FCM untuk penanganan notifikasi push di dompet seluler.
+- Memperbarui situs Quantus: halaman whitepaper diperbarui, pie chart alokasi token ditambahkan ke /launch, integrasi CoinGecko, dan semua weekly update diterbitkan sebagai blog post.
+- Memperbarui desain wallet dan dirilis ke TestFlight. Versi baru segera ke App Store.
+- Perbaikan bug dan UX di wallet mobile.
+- Mengintegrasikan basis FCM untuk penanganan push notification di wallet mobile.
 
-### Konten & Kemitraan
+### Content & Partnerships
 
-- Chris muncul di [podcast Bad Crypto](https://x.com/QuantusNetwork/status/2023752636387012675) dan [wenaltseason space](https://x.com/wenaltseason/status/2022402584041193831).
-- Tim tiba di Network School & sedang menyiapkan kantor.
+- Chris muncul di [Bad Crypto podcast](https://x.com/QuantusNetwork/status/2023752636387012675) dan [wenaltseason space](https://x.com/wenaltseason/status/2022402584041193831).
+- Tim tiba di Network School dan menyiapkan kantor.
 
-### Pembaruan Industri
+### Industry Updates
 
-- Quantum Canary: Bisakah Komputer Kuantum Membobol Monero? [Link](https://x.com/QuantumCanary_/status/2024204427159359931)
-- Quantum Canary: Seberapa Terdesentralisasi DeFi? [Link](https://x.com/QuantumCanary_/status/2021846672834539665)
+- Quantum Canary: Can Quantum Computers Break Monero? [Link](https://x.com/QuantumCanary_/status/2024204427159359931)
+- Quantum Canary: How Decentralized is DeFi? [Link](https://x.com/QuantumCanary_/status/2021846672834539665)

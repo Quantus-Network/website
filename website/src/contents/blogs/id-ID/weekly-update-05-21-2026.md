@@ -1,6 +1,6 @@
 ---
 title: "Quantus Weekly: Q-Day Sudah di Depan Mata"
-description: Q-Day jatuh pada 6 Juni. Audit Dilithium DKG selesai, update miner dan notifikasi, bug dompet diperbaiki, dan situs summit Q-Day diluncurkan.
+description: "Q-Day 6 Juni. Minggu ini: temuan audit Dilithium DKG ditutup, pembaruan miner dan notifikasi, perbaikan wallet, dan situs summit Q-Day yang diperbarui."
 
 pubDate: "2026-05-21"
 heroImage: "/blog/covers/weekly-update-05-21-2026.webp"
@@ -28,28 +28,28 @@ Q-Day di [@ns](https://x.com/@ns) [sudah di depan mata](https://x.com/QuantusNet
 
 6 Juni.
 
-Kami fokus penuh hingga mainnet, tetapi masih ada pengumuman lain sebelum Q-Day.
+Kami fokus sampai mainnet, tapi masih ada pengumuman sebelum Q-Day.
 
-Berikut yang kami rilis minggu ini:
+Inilah yang kami kirimkan minggu ini:
 
 ### Core Tech & ZK
 
-- Menyelesaikan penanganan isu audit pada threshold Dilithium DKG, alur distributed key generation untuk threshold signature.
-- Menangani beberapa item tinjauan di pallets.
+- Menyelesaikan penanganan isu audit pada threshold Dilithium DKG, alur distributed key generation untuk tanda tangan threshold.
+- Menangani beberapa item review di pallets.
 
 ### Network & Infra
 
 - Merilis versi miner baru dengan peningkatan UX GUI miner.
-- Memperbarui infrastruktur notifikasi agar berfungsi dengan benar pada Planck.
-- Menggandakan jumlah node penambangan komunitas dalam 3 minggu terakhir.
+- Memperbarui infrastruktur notifikasi agar berfungsi dengan benar di Planck.
+- Menggandakan jumlah node mining komunitas dalam 3 minggu terakhir.
 
-### Pembaruan Aplikasi Web & Seluler
+### Web & Mobile App Updates
 
-- Perbaikan bug di aplikasi seluler.
-- Memperbaiki penanganan tautan pembayaran dompet.
-- Memperbarui penanganan notifikasi jarak jauh dompet.
+- Perbaikan bug di aplikasi mobile.
+- Memperbaiki penanganan payment link wallet.
+- Memperbarui penanganan remote notification wallet.
 
-### Konten & Kemitraan
+### Content & Partnerships
 
 - Meluncurkan situs summit Q-Day yang diperbarui di q (dot) day.
-- Mulai mempublikasikan pengumuman pembicara Q-Day di [@QuantusNetwork](https://x.com/@QuantusNetwork) X.
+- Mulai mempublikasikan pengumuman pembicara Q-Day di X [@QuantusNetwork](https://x.com/@QuantusNetwork).

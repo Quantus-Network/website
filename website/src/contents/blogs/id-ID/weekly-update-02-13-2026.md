@@ -1,10 +1,9 @@
 ---
-title: "Quantus Mingguan: Masa Depan Aman Secara Kuantum"
-description: Pembaruan mingguan yang mencakup listing CoinGecko kami, optimalisasi multisig, refactoring ZK-aggregator, dan rilis aplikasi seluler v1.1.5.
-
+title: "Quantus Weekly: Memetakan Masa Depan Quantum-Secure"
+description: "Minggu ini Quantus terlisting di CoinGecko, plus optimasi multisig, refactoring ZK-aggregator, dan rilis mobile app v1.1.5 ke app store."
 pubDate: "2026-02-13"
 heroImage: "/blog/covers/weekly-update-02-13-2026.webp"
-heroAlt: "Quantus Mingguan: Masa Depan Aman Secara Kuantum"
+heroAlt: "Quantus Weekly: Memetakan Masa Depan Quantum-Secure"
 featured: false
 tags:
   [
@@ -18,54 +17,54 @@ tags:
   ]
 ---
 
-Fra Mauro menghabiskan waktu bertahun-tahun di dalam sebuah biara dekat Venesia menggambar peta seluruh dunia yang dikenal.
+Fra Mauro menghabiskan bertahun-tahun di biara dekat Venesia menggambar peta seluruh dunia yang dikenal.
 
-Dia tidak pernah berlayar ke mana pun.
+Ia tidak pernah berlayar ke mana pun.
 
-Pedagang dan pelaut mengunjungi biara dan menggambarkan apa yang mereka lihat. Fra Mauro menyilangkan setiap akun dengan akun lainnya. Dia menolak klaim yang tidak terbukti, dan terus merevisi.
+Pedagang dan pelaut datang ke biara dan menceritakan apa yang mereka lihat. Fra Mauro memverifikasi setiap laporan dengan yang lain. Ia menolak klaim yang tidak konsisten, dan terus merevisi.
 
-Hasilnya menunjukkan tempat-tempat yang belum pernah didengar oleh kebanyakan orang Eropa. Afrika Timur. Samudra Hindia. Asia Tenggara. Wilayah yang ada tetapi tidak nyata bagi siapa pun yang belum pernah ke sana.
+Hasilnya menampilkan tempat-tempat yang sebagian besar orang Eropa belum pernah dengar. Afrika Timur. Samudra Hindia. Asia Tenggara. Wilayah yang ada tapi belum nyata bagi siapa pun yang belum pernah ke sana.
 
-Quantus menetapkan standar untuk uang yang aman secara kuantum.
+Quantus menetapkan standar untuk uang quantum-secure.
 
-Tapi kita harus ada di peta.
+Tapi kami harus ada di peta.
 
-Minggu ini, Quantus terdaftar di [@coingecko](https://x.com/@coingecko).
+Minggu ini, Quantus terlisting di [@coingecko](https://x.com/@coingecko).
 
-Ada kategori yang disebut \"quantum resistant\" (tahan kuantum), dan kapitalisasi pasarnya kurang dari $5 miliar.
+Ada kategori "quantum resistant", dan market cap-nya kurang dari $5 miliar.
 
-Segera seluruh kapitalisasi pasar kripto akan menjadi \"quantum resistant\", karena setiap chain akan ditingkatkan atau menjadi nol.
+Segera seluruh market cap kripto akan jadi "quantum resistant", karena setiap chain akan upgrade atau menuju nol.
 
-Tapi untuk saat ini kategorinya kecil, dan bahkan di antara chain yang ada dalam daftar, masih banyak pekerjaan yang harus dilakukan.
+Tapi untuk saat ini kategorinya kecil, dan bahkan di antara chain yang ada di daftar, masih banyak pekerjaan yang harus dilakukan.
 
-Jadi inilah hal lain yang kami luncurkan minggu ini.
+Jadi berikut hal lain yang kami rilis minggu ini.
 
-### Aktivitas GitHub (7 pull request yang digabungkan):
+### GitHub Activity (7 merged pull requests):
 
-![Statistik Github](/blog/assets/github-stats-weekly-update-02-13-2026.webp)
+![Github Stats](/blog/assets/github-stats-weekly-update-02-13-2026.webp)
 
-### Teknologi Inti & ZK
+### Core Tech & ZK
 
-- Mengimplementasikan dan menguji versi sederhana terakhir dari multisig dengan optimalisasi dan perbaikan akurasi bobot.
-- Melakukan refactoring qp-plonky2 untuk memisahkan verifikator dari prover secara bersih.
-- Memperbaiki agregasi ZK dan menambahkan privasi serta fleksibilitas tambahan ke dalamnya.
-- Memperbarui alur kerja rilis qp-zk-circuit.
-- Meningkatkan pemilihan kata frase cek untuk kegunaan yang lebih baik.
-- Menambahkan multisend partisi acak ke CLI.
-- Melakukan benchmark prover Plonky3 terhadap implementasi Poseidon2 kami.
+- Mengimplementasikan dan menguji versi multisig final yang disederhanakan dengan perbaikan optimasi dan akurasi weight.
+- Merefaktor qp-plonky2 untuk memisahkan verifier dari prover dengan bersih.
+- Memperbaiki ZK-aggregation dan menambahkan privasi serta fleksibilitas ekstra.
+- Memperbarui release workflow qp-zk-circuit.
+- Meningkatkan pemilihan kata check-phrase untuk usability yang lebih baik.
+- Menambahkan random-partition multisend ke CLI.
+- Membenchmark prover Plonky3 terhadap implementasi Poseidon2 kami.
 
-### Pembaruan Aplikasi Web & Seluler
+### Web & Mobile App Updates
 
-- Meluncurkan aplikasi seluler v1.1.5 ke kedua toko aplikasi.
-- Mengimplementasikan layar misi baru dengan perbaikan bug untuk tampilan peringkat.
-- Menerbitkan halaman peluncuran di [quantus.com/launch](https://quantus.com/launch).
-- Menyederhanakan desain UX untuk agregator ZK, yang sekarang disebut \"akun terenkripsi.\"
+- Merilis Mobile app v1.1.5 ke kedua app store.
+- Mengimplementasikan layar quests baru dengan perbaikan bug tampilan rank.
+- Menerbitkan halaman launch di [quantus.com/launch](https://quantus.com/launch).
+- Menyederhanakan desain UX untuk ZK-aggregator, kini disebut "encrypted accounts."
 
-### Konten & Kemitraan
+### Content & Partnerships
 
-- Terdaftar di CoinGecko.
+- Terlisting di CoinGecko.
 - Podcast dengan Jangle dan Chris di Youtube kami.
 
-### Pembaruan Industri
+### Industry Updates
 
-- Quantum Canary: \"[Berhenti Berdebat Tentang Filter: Apa Arti Garis Waktu Kuantum Vitalik yang Dipercepat Bagi Investor](https://x.com/QuantumCanary_/status/2021092653891486027)\".
+- Quantum Canary: "[Stop Arguing About Filters: What Vitalik's Accelerated Quantum Timeline Means For Investors](https://x.com/QuantumCanary_/status/2021092653891486027)".

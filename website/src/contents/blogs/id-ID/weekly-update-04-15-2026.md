@@ -1,10 +1,9 @@
 ---
-title: "Quantus Weekly: Testnet Planck dan Hadiah Mining Awal"
-description: Mengapa hashrate awal penting, testnet Planck sudah siap untuk miner, migrasi aplikasi lewat TestFlight dan toko aplikasi, serta mining GPU di chain baru.
-
+title: "Quantus Weekly: Hadiah Mining Planck Testnet"
+description: "Planck testnet live untuk miner awal. Migrasi aplikasi ke TestFlight dan store, mining GPU pindah ke chain baru, plus update Core, infra, dan wallet."
 pubDate: "2026-04-15"
 heroImage: "/blog/covers/weekly-update-04-15-2026.webp"
-heroAlt: "Quantus Weekly: Testnet Planck dan Hadiah Mining Awal"
+heroAlt: "Quantus Weekly: Hadiah Mining Planck Testnet"
 featured: false
 tags:
   [
@@ -20,61 +19,61 @@ tags:
   ]
 ---
 
-Hashrate di awal sangat penting.
+Hashrate awal penting.
 
-Separuh dari pasokan 21 juta Bitcoin dikeluarkan dalam empat tahun pertama, saat belum ada yang memperhatikan.
+Setengah dari 21M supply Bitcoin diemit dalam empat tahun pertama, saat belum ada yang memperhatikan.
 
-Siapa pun bisa menambang, dan reward blok awal adalah 50 BTC.
+Siapa saja bisa mining, dan hadiah blok awal 50 BTC.
 
-Beberapa siklus komputasi saja bisa mengubah nasib selamanya.
+Beberapa siklus komputasi bisa saja mengubah garis keturunan.
 
-Quantus adalah proof of work. Pasokan maksimum 21 juta QUAN.
+Quantus adalah proof of work. Max supply 21M QUAN.
 
-Seperti Bitcoin, miner awal mendapat bagian reward lebih besar untuk mem-bootstrap jaringan.
+Sama seperti Bitcoin, miner awal mendapat lebih banyak hadiah untuk bootstrapping jaringan.
 
-Hari ini kami meluncurkan testnet Planck.
+Hari ini kami meluncurkan Planck testnet.
 
-Kami menguji beban Quantus sebelum mainnet.
+Kami stress-test Quantus sebelum mainnet.
 
-Jika Anda memakai aplikasi lewat TestFlight, Anda akan diminta migrasi satu klik.
+Jika Anda memakai aplikasi di TestFlight, Anda akan diminta migrasi satu klik.
 
-Jika Anda mengunduh aplikasi dari App Store iOS atau Google Play, pembaruan akan bergulir dalam beberapa hari ke depan.
+Jika Anda mengunduh aplikasi dari iOS atau Google Play store, update akan bergulir dalam beberapa hari ke depan.
 
-Jika Anda menambang Quantus, Anda bisa mulai menambang testnet Planck sekarang.
+Jika Anda mining Quantus, Anda bisa mulai mining Planck testnet sekarang.
 
-Lihat wiki repo chain untuk panduan mining terbaru, termasuk implementasi GPU kami (lebih efisien daripada miner CPU).
+Lihat wiki repo chain untuk panduan mining yang diperbarui termasuk implementasi GPU kami (yang lebih efisien dari miner CPU).
 
-Aplikasi miner UI sederhana masih ditingkatkan, tetapi jika Anda miner yang lebih teknis, Anda seharusnya sudah bisa menambang testnet baru sekarang. Beri tahu kami jika ada kendala.
+Aplikasi miner UI sederhana masih ditingkatkan, tapi jika Anda miner yang lebih teknis, Anda seharusnya bisa mulai mining testnet baru sekarang. Beri tahu kami jika ada masalah.
 
-Testnet ini adalah latihan. Hashrate akan naik cepat setelah chain hidup, dan Anda ingin setup sudah siap sejak hari pertama.
+Testnet ini latihan. Hashrate akan naik cepat setelah chain live, dan Anda ingin setup siap untuk hari pertama.
 
-Berikut yang lain kami kirimkan minggu ini:
+Berikut hal lain yang kami rilis minggu ini:
 
 ### Core Tech & ZK
 
 - Meluncurkan testnet baru.
-- Menghapus pallet sudo menyiapkan mainnet.
-- Memperbaiki sinkronisasi jaringan.
-- Memperbaiki mempool status tunggal.
+- Menghapus pallet sudo sebagai persiapan mainnet.
+- Memperbaiki network sync.
+- Memperbaiki single state mem pool.
 - Memperbarui Poseidon ke versi terbaru.
 
 ### Network & Infra
 
 - Memperbarui dokumentasi node dengan persyaratan jaringan minimum.
-- Memperbarui indexer Subsquid ke versi chain terbaru, memperbaiki tipe event dan ekstrinsik untuk transaksi reversible dan cancelled, serta merilis image Docker v0.6.0.
-- Menambahkan pembatasan laju ke endpoint pemeriksa risiko Task Master dan memperbarui kebijakan CORS.
+- Memperbarui indexer Subsquid ke versi chain terbaru, memperbaiki tipe extrinsic event reversible dan cancelled, dan merilis Docker image v0.6.0.
+- Menambahkan rate limiting ke endpoint Task Master risk checker dan memperbarui kebijakan CORS.
 
 ### Web & Mobile App Updates
 
-- Mengembalikan alur keamanan tinggi di aplikasi mobile dan merilis perbaikan UX.
-- Mendesain ulang beranda wallet, memperbarui tombol, ikon, dan komponen daftar transaksi, serta mengintegrasikan query GraphQL baru untuk indexer Subsquid terbaru.
-- Memperbaiki animasi halaman wallet mobile, bug banner hero beranda, dan navbar yang menggelap saat scroll di rute selain beranda.
+- Memulihkan alur high-security di aplikasi mobile dan merilis perbaikan UX.
+- Mendesain ulang homepage wallet, memperbarui tombol, ikon, dan komponen daftar transaksi, serta mengintegrasikan query GraphQL baru untuk indexer Subsquid terbaru.
+- Memperbaiki animasi halaman mobile wallet, bug hero banner homepage, dan navbar darken-on-scroll di rute non-homepage.
 
 ### Content & Partnerships
 
 - Chris di podcast [@mobymedia](https://x.com/mobymedia): [https://x.com/mobymedia/status/2043401794227949568](https://x.com/mobymedia/status/2043401794227949568)
-- Menerbitkan podcast bukti zero-knowledge pasca-kuantum dengan [@ethan*t_c*](https://x.com/ethan_t_c_) dan [@YuviLightman](https://x.com/YuviLightman): [https://x.com/QuantusNetwork/status/2042047089660563948](https://x.com/QuantusNetwork/status/2042047089660563948)
+- Menerbitkan podcast Post-Quantum zero-knowledge proofs dengan [@ethan*t_c*](https://x.com/ethan_t_c_) dan [@YuviLightman](https://x.com/YuviLightman): [https://x.com/QuantusNetwork/status/2042047089660563948](https://x.com/QuantusNetwork/status/2042047089660563948)
 - Menghadiri GitEx di Singapura.
-- Meng-host sesi full house dengan Dr. [@zina_cinker](https://x.com/zina_cinker) di Network School: [https://x.com/QuantusNetwork/status/2044051045832384538](https://x.com/QuantusNetwork/status/2044051045832384538)
-- Chris bergabung dengan [@ArcanumVentures](https://x.com/ArcanumVentures) ep. 47 live Kamis 16 April, 14.00 UTC / 22.00 Singapura: [https://x.com/ArcanumVentures/status/2044023122102223157](https://x.com/ArcanumVentures/status/2044023122102223157)
-- Melanjutkan distribusi laporan State of Quantum dan mengimplementasikan komentar.
+- Menyelenggarakan sesi penuh dengan Dr. [@zina_cinker](https://x.com/zina_cinker) di Network School: [https://x.com/QuantusNetwork/status/2044051045832384538](https://x.com/QuantusNetwork/status/2044051045832384538)
+- Chris bergabung [@ArcanumVentures](https://x.com/ArcanumVentures) ep. 47 live Kamis 16 April, 14:00 UTC / 22:00 Singapura: [https://x.com/ArcanumVentures/status/2044023122102223157](https://x.com/ArcanumVentures/status/2044023122102223157)
+- Melanjutkan distribusi State of Quantum report dan mengimplementasikan komentar.

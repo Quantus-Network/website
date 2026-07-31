@@ -1,10 +1,10 @@
 ---
-title: "Quantus Weekly: Agregasi ZK dan Rilis Miner App"
-description: Update mingguan yang mencakup langkah pertama agregasi transaksi ZK, rilis Miner App v0.1.0, dan kemajuan implementasi penambangan GPU.
+title: "Quantus Mingguan: Agregasi ZK dan Miner App"
+description: "Agregasi transaksi ZK pertama untuk chain dan CLI dengan verifikasi transfer nyata, Miner App v0.1.0 rilis, dan pekerjaan GPU mining berlanjut."
 
 pubDate: "2025-11-25"
 heroImage: "/blog/covers/weekly-update-11-25-2025.webp"
-heroAlt: "Quantus Weekly: Agregasi ZK dan Rilis Miner App"
+heroAlt: "Quantus Mingguan: Agregasi ZK dan Miner App"
 featured: false
 tags:
   [
@@ -17,43 +17,43 @@ tags:
   ]
 ---
 
-Minggu ini tim menyelesaikan langkah pertama agregasi transaksi ZK untuk chain dan CLI, mengganti pengujian mock dengan verifikasi transfer yang sebenarnya. Kami juga merilis binary Miner App v0.1.0, yang sekarang sudah tersedia.
+Minggu ini tim menyelesaikan langkah pertama agregasi transaksi ZK untuk chain dan CLI, mengganti mock test dengan verifikasi transfer aktual. Kami juga merilis binary Miner App v0.1.0, yang sekarang tersedia.
 
 ## Berita Pengembangan
 
-- Laporan aktivitas Github mingguan termasuk 150+ total event: https://github.com/Quantus-Network/n8n-workflows/blob/main/github/weekly-update-2025-11-24-12:01:16.md
+- Laporan aktivitas Github mingguan, termasuk 150+ total events: https://github.com/Quantus-Network/n8n-workflows/blob/main/github/weekly-update-2025-11-24-12:01:16.md
 
-## Core Tech
+## Inti Tech
 
-- Membuat primitif qp-header baru di chain yang selaras dengan sirkuit wormhole kami, menggantikan header generik Substrate.
-- Memperbarui sirkuit agregasi untuk mendukung verifikasi header blok dan koneksi antara blok yang berdekatan.
-- Implementasi GPU dari algoritma penambangan sudah selesai sekitar 80%.
-- Menyelesaikan fase pertama audit rusty-crystals, masalah sebagian besar telah diatasi.
-- Melakukan audit internal untuk panic di runtime (terinspirasi oleh bug unwrap Cloudflare baru-baru ini).
+- Membuat primitif qp-header baru di chain yang field-aligned dengan sirkuit wormhole kami, menggantikan header generik Substrate.
+- Memperbarui sirkuit agregasi untuk mendukung verifikasi block header dan koneksi antar block yang berdekatan.
+- Implementasi GPU algoritma mining sekitar 80% selesai.
+- Menyelesaikan fase pertama audit rusty-crystals, sebagian besar isu sudah ditangani.
+- Melakukan audit internal untuk panic di runtime (terinspirasi bug Cloudflare unwrap baru-baru ini).
 - Menambahkan perintah vesting ke CLI untuk pallet Substrate standar.
 
 ## Network & Infra
 
-- Merampingkan deployment Subsquid menjadi hanya satu skrip.
-- Membuat Docker image & proses rilis untuk Quantus-Miner.
-- Mendeploy Miner-stack (Docker Compose + monitoring stack + dokumentasi).
+- Menyederhanakan deployment Subsquid menjadi hanya satu skrip.
+- Membuat image Docker & proses rilis untuk Quantus-Miner.
+- Men-deploy Miner-stack (Docker Compose + monitoring stack + dokumentasi).
 - Menambahkan dashboard monitoring & alert untuk Explorer & Task Master.
 
-## Web & Mobile App Updates
+## Pembaruan Web & Aplikasi Mobile
 
-- Meluncurkan sistem referensi dalam aplikasi dan metrik pelacakan acara yang menghadap pengguna (Quantus Quests).
-- Merilis binary aplikasi miner untuk semua platform: https://github.com/Quantus-Network/quantus-apps/releases/tag/miner-v0.1.0 meskipun baru mac yang telah diuji secara menyeluruh.
-- Memperbaiki masalah migrasi dan berbagai laporan bug lainnya di dompet seluler.
+- Meluncurkan sistem referral in-app dan metrik pelacakan event untuk pengguna (Quantus Quests).
+- Merilis binary miner app untuk semua platform: https://github.com/Quantus-Network/quantus-apps/releases/tag/miner-v0.1.0 hanya mac yang sudah diuji secara menyeluruh.
+- Memperbaiki masalah migrasi dan berbagai laporan bug lainnya di dompet mobile.
 - Merefaktor widget layar kirim agar dapat diuji dan menambahkan unit/widget test.
-- Memperbarui halaman Quests di situs web dengan fungsionalitas pencarian.
-- Memperbarui endpoint leaderboard Task Master untuk mendukung pencarian dan menambahkan peringkat dalam hasil.
+- Memperbarui halaman Quests di website dengan fungsionalitas pencarian.
+- Memperbarui endpoint leaderboard Task Master untuk mendukung pencarian dan menambahkan rank di hasil.
 
-## Content & Partnerships
+## Konten & Kemitraan
 
-- AMA komunitas pertama melalui X space: https://x.com/QuantusNetwork/status/1991341042390692210
-- Podcast dengan James, Pendiri Ârc: https://www.youtube.com/watch?v=eac4aRF50qU
-- Mendapatkan dua penasihat / KOL baru.
+- AMA komunitas pertama via X space: https://x.com/QuantusNetwork/status/1991341042390692210
+- Podcast dengan James, Founder Ârc: https://www.youtube.com/watch?v=eac4aRF50qU
+- Mengakuisisi dua advisor / KOL baru.
 
-## Industry Updates
+## Pembaruan Industri
 
-- Scott Anderson memperbarui lini masa untuk komputer kuantum toleran kesalahan yang menjalankan algoritma Shor menjadi \"sebelum pemilihan presiden AS berikutnya\": https://scottaaronson.blog/?p=9325
+- Scott Anderson memperbarui timeline-nya untuk komputer kuantum fault-tolerant yang menjalankan algoritma Shor menjadi "sebelum pemilihan presiden AS berikutnya": https://scottaaronson.blog/?p=9325
