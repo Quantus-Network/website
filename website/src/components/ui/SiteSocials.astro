@@ -1,6 +1,7 @@
 ---
 import { SITE_SOCIALS, type SiteSocial } from "@/constants/site-socials";
 import { applyStyles } from "@/utils/apply-styles";
+import { trackAttrs } from "@/scripts/shared/analytics";
 
 import SocialX from "@/assets/socials/social-x.svg";
 import SocialIG from "@/assets/socials/social-ig.svg";
@@ -17,6 +18,21 @@ export interface Props {
 const { class: className } = Astro.props;
 
 const socials = Object.entries(SITE_SOCIALS) as [SiteSocial, string][];
+
+const COMMUNITY_CHANNELS = new Set<SiteSocial>([
+  "telegram",
+  "x",
+  "instagram",
+  "youtube",
+]);
+
+function socialTrackAttrs(social: SiteSocial) {
+  if (!COMMUNITY_CHANNELS.has(social)) return {};
+  return trackAttrs("community_click", {
+    channel: social,
+    cta_location: "site_socials",
+  });
+}
 ---
 
 <div class={applyStyles("flex gap-2 min-[360px]:gap-3 flex-wrap", className)}>
@@ -27,6 +43,7 @@ const socials = Object.entries(SITE_SOCIALS) as [SiteSocial, string][];
         target="_blank"
         rel="noopener noreferrer"
         class="text-button-icon bg-button-icon-body flex size-9 cursor-pointer items-center justify-center rounded-full hover:brightness-125 min-[360px]:size-10"
+        {...socialTrackAttrs(social[0])}
       >
         {social[0] === "x" && <SocialX title="Quantus's X account" />}
         {social[0] === "instagram" && (

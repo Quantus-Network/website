@@ -5,6 +5,9 @@ interface Navigation {
     label: string;
     target?: string;
     rel?: string;
+    /** GA4 event name when this link is clicked */
+    track?: string;
+    trackParams?: Record<string, string>;
   }[];
 }
 
@@ -22,6 +25,8 @@ export const FOOTER_NAVIGATIONS: Navigation[] = [
         href: "https://explorer.quantus.com/",
         target: "_blank",
         rel: "noopener noreferrer",
+        track: "explorer_click",
+        trackParams: { cta_location: "footer" },
       },
       { label: "footer.links.wallet", href: "/wallet" },
       {
@@ -35,6 +40,8 @@ export const FOOTER_NAVIGATIONS: Navigation[] = [
         href: "https://docs.quantus.com/",
         target: "_blank",
         rel: "noopener noreferrer",
+        track: "docs_click",
+        trackParams: { cta_location: "footer" },
       },
       {
         label: "footer.links.github",
@@ -52,24 +59,32 @@ export const FOOTER_NAVIGATIONS: Navigation[] = [
         href: "https://t.me/quantusnetwork",
         target: "_blank",
         rel: "noopener noreferrer",
+        track: "community_click",
+        trackParams: { channel: "telegram", cta_location: "footer" },
       },
       {
         label: "footer.links.x",
         href: "https://x.com/QuantusNetwork",
         target: "_blank",
         rel: "noopener noreferrer",
+        track: "community_click",
+        trackParams: { channel: "x", cta_location: "footer" },
       },
       {
         label: "footer.links.instagram",
         href: "https://www.instagram.com/quantusnetwork/",
         target: "_blank",
         rel: "noopener noreferrer",
+        track: "community_click",
+        trackParams: { channel: "instagram", cta_location: "footer" },
       },
       {
         label: "footer.links.youtube",
         href: "https://www.youtube.com/@QuantusNetwork",
         target: "_blank",
         rel: "noopener noreferrer",
+        track: "community_click",
+        trackParams: { channel: "youtube", cta_location: "footer" },
       },
     ],
   },

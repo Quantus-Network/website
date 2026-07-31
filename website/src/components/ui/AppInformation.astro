@@ -45,6 +45,9 @@ const t = await createTranslator(locale);
       href={APP_LINKS.ios}
       target="_blank"
       rel="noopener noreferrer"
+      data-track="wallet_store_click"
+      data-track-store="ios"
+      data-track-cta-location="account"
     >
       {t("app.download.ios")}
     </Button>
@@ -54,6 +57,9 @@ const t = await createTranslator(locale);
       href={APP_LINKS.android}
       target="_blank"
       rel="noopener noreferrer"
+      data-track="wallet_store_click"
+      data-track-store="android"
+      data-track-cta-location="account"
     >
       {t("app.download.android")}
     </Button>

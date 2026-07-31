@@ -19,6 +19,9 @@ const t = await createTranslator(locale);
       class="wallet-btn-primary"
       target="_blank"
       rel="noopener"
+      data-track="wallet_store_click"
+      data-track-store="ios"
+      data-track-cta-location="wallet_cta"
     >
       {t("wallet.cta.primary_cta")}
     </a>
@@ -27,6 +30,9 @@ const t = await createTranslator(locale);
       class="wallet-btn-secondary"
       target="_blank"
       rel="noopener"
+      data-track="wallet_store_click"
+      data-track-store="android"
+      data-track-cta-location="wallet_cta"
     >
       {t("wallet.cta.secondary_cta")}
     </a>

@@ -3,7 +3,7 @@ import Layout from "@/components/layout/Layout.astro";
 import {
   createTranslator,
   getLocaleFromUrl,
-  SUPPORTED_LOCALES,
+  PREFIXED_LOCALES,
 } from "@/utils/i18n";
 import { createMetadata } from "@/utils/create-metadata";
 import { JsonLdGraph } from "@/utils/build-json-ld";
@@ -19,7 +19,7 @@ import MethodSection from "@/components/features/qday-checker/MethodSection.astr
 import AdviceSection from "@/components/features/qday-checker/AdviceSection.astro";
 
 export async function getStaticPaths() {
-  return SUPPORTED_LOCALES.map((lang) => ({ params: { lang } }));
+  return PREFIXED_LOCALES.map((lang) => ({ params: { lang } }));
 }
 
 const locale = getLocaleFromUrl(Astro.url.pathname);

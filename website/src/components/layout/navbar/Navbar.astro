@@ -8,6 +8,7 @@ import {
 import { SITE_NAVIGATIONS } from "@/constants/site-navigations";
 import Button from "../../ui/Button.astro";
 import { applyStyles } from "@/utils/apply-styles";
+import { trackAttrs } from "@/scripts/shared/analytics";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
@@ -34,6 +35,7 @@ const t = await createTranslator(locale);
             class={applyStyles(
               "after:bg-flare font-navbar-link text-muted relative no-underline transition-all duration-200 ease-in-out after:absolute after:bottom-[-2px] after:left-0 after:h-px after:w-0 after:transition-all after:duration-250 after:content-[''] hover:text-white hover:opacity-100 hover:after:w-full [&.nav-active]:text-white [&.nav-active]:after:bottom-[-4px] [&.nav-active]:after:h-[2px] [&.nav-active]:after:w-full",
             )}
+            {...trackAttrs(item.track, item.trackParams)}
           >
             {t(item.label)}
           </a>
@@ -49,7 +51,10 @@ const t = await createTranslator(locale);
       target="_blank"
       rel="noopener"
       variant="outline"
-      size="small">{t("navbar.download_wallet")}</Button
+      size="small"
+      data-track="wallet_store_click"
+      data-track-cta-location="nav"
+      >{t("navbar.download_wallet")}</Button
     >
 
     <button
@@ -131,6 +136,9 @@ const t = await createTranslator(locale);
         <a
           href={getLocalizedPath(locale, item.href)}
           class="font-navbar-link-mobile text-content border-content-10 flex items-center justify-between border-b py-[18px]"
+          target={item.target}
+          rel={item.rel}
+          {...trackAttrs(item.track, item.trackParams)}
         >
           {t(item.label)}
         </a>
@@ -143,7 +151,10 @@ const t = await createTranslator(locale);
     href="#"
     target="_blank"
     rel="noopener"
-    variant="primary">{t("navbar.download_wallet")}</Button
+    variant="primary"
+    data-track="wallet_store_click"
+    data-track-cta-location="nav_mobile"
+    >{t("navbar.download_wallet")}</Button
   >
 </div>
 
@@ -192,11 +203,20 @@ const t = await createTranslator(locale);
 
 <script>
   import { getWalletLink } from "@/scripts/shared/get-wallet-link";
+  import { storeFromHref } from "@/scripts/shared/analytics";
 
   const walletLink = getWalletLink();
+  const store = storeFromHref(walletLink);
 
   document.querySelectorAll(".wallet-cta-link").forEach((el) => {
-    (el as HTMLAnchorElement).href = walletLink;
+    const anchor = el as HTMLAnchorElement;
+    anchor.href = walletLink;
+    if (store) {
+      anchor.dataset.trackStore = store;
+    }
+    if (!anchor.dataset.track) {
+      anchor.dataset.track = "wallet_store_click";
+    }
   });
 </script>
 

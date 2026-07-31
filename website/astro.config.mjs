@@ -71,7 +71,8 @@ export default defineConfig({
           !page.includes("/tags/") &&
           !page.includes("/account/") &&
           !page.includes("/oauth/") &&
-          !page.includes("/invite/")
+          !page.includes("/invite/") &&
+          !page.includes("/en-US")
         );
       },
       serialize: (item) => {
@@ -84,6 +85,27 @@ export default defineConfig({
         // Replace production URLs with the correct base URL if env var is set
         if (envBaseUrl && item.url) {
           item.url = item.url.replace(/^https?:\/\/[^/]+/, baseUrl);
+        }
+
+        if (item.links?.length) {
+          item.links = item.links.map((link) => ({
+            ...link,
+            url: link.url.replace(/^https?:\/\/[^/]+/, baseUrl),
+          }));
+
+          // Point x-default at the English (root) alternate
+          const defaultLink = item.links.find(
+            (link) => link.lang === LOCALES_MAP[DEFAULT_LOCALE],
+          );
+          if (
+            defaultLink &&
+            !item.links.some((link) => link.lang === "x-default")
+          ) {
+            item.links.push({
+              url: defaultLink.url,
+              lang: "x-default",
+            });
+          }
         }
 
         // Check if this is a homepage link using the current base URL

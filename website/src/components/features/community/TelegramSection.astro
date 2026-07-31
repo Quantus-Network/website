@@ -22,7 +22,11 @@ const t = await createTranslator(locale);
       target="_blank"
       rel="noopener"
       class="telegram-btn comm-animate"
-      data-delay="0.45">{t("community.telegram.cta")}</a
+      data-delay="0.45"
+      data-track="community_click"
+      data-track-channel="telegram"
+      data-track-cta-location="community_telegram"
+      >{t("community.telegram.cta")}</a
     >
   </div>
 </section>

@@ -128,6 +128,9 @@ const t = await createTranslator(locale);
               target="_blank"
               rel="noopener"
               class="eco-dl-tag"
+              data-track="wallet_store_click"
+              data-track-store="ios"
+              data-track-cta-location="home_ecosystem"
             >
               {t("home.ecosystem.cards.wallet.app_store")}
             </a>
@@ -136,6 +139,9 @@ const t = await createTranslator(locale);
               target="_blank"
               rel="noopener"
               class="eco-dl-tag"
+              data-track="wallet_store_click"
+              data-track-store="android"
+              data-track-cta-location="home_ecosystem"
             >
               {t("home.ecosystem.cards.wallet.google_play")}
             </a>
@@ -340,7 +346,14 @@ const t = await createTranslator(locale);
             {t("home.ecosystem.cards.network.validators")}
           </div>
           <div class="eco-dl-tags">
-            <a href="#" class="eco-dl-tag">
+            <a
+              href="https://explorer.quantus.com/"
+              target="_blank"
+              rel="noopener"
+              class="eco-dl-tag"
+              data-track="explorer_click"
+              data-track-cta-location="home_ecosystem"
+            >
               {t("home.ecosystem.cards.network.explorer_cta")}
             </a>
           </div>

@@ -583,6 +583,7 @@ const checkerI18n = {
     type RiskLevelKey,
     type RecommendationKey,
   } from "@/scripts/risk-checker/quantum-security-scorer";
+  import { trackEvent } from "@/scripts/shared/analytics";
 
   type CheckerI18nShape = {
     errors: { empty: string; invalid: string; ensFailed: string };
@@ -675,6 +676,11 @@ const checkerI18n = {
       window.toast.error("No data returned from API");
       return;
     }
+
+    trackEvent("risk_check_complete", {
+      checker_version: "v1",
+      completion_status: "success",
+    });
 
     const {
       address,

@@ -310,6 +310,7 @@ const t = await createTranslator(locale);
 
 <script>
   import apiClient from "@/api/client";
+  import { trackEvent } from "@/scripts/shared/analytics";
 
   const submitBtn = document.getElementById("nl-submit") as HTMLButtonElement;
   const firstInput = document.getElementById(
@@ -374,11 +375,18 @@ const t = await createTranslator(locale);
       );
       const data = await resp.json();
 
-      if (resp.status !== 201 && data.error) {
-        window.toast.error(data.error);
+      if (resp.status !== 201) {
+        if (data.error) {
+          window.toast.error(data.error);
+        }
         setLoading(false);
         return;
       }
+
+      trackEvent("generate_lead", {
+        lead_type: "newsletter",
+        form_id: "homepage_newsletter",
+      });
 
       formWrap.style.transition = "opacity 0.4s ease";
       formWrap.style.opacity = "0";

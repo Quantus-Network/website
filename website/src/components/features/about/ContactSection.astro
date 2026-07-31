@@ -21,6 +21,8 @@ const t = await createTranslator(locale);
       href="mailto:hello@quantus.com"
       class="contact-email about-animate"
       data-delay="0.45"
+      data-track="contact_email_click"
+      data-track-cta-location="about_contact"
     >
       {t("about.contact.email")}
     </a>
@@ -28,6 +30,8 @@ const t = await createTranslator(locale);
       href="mailto:hello@quantus.com?subject=Enquiry%20from%20Quantus%20Website"
       class="contact-cta about-animate"
       data-delay="0.6"
+      data-track="contact_email_click"
+      data-track-cta-location="about_contact"
     >
       {t("about.contact.cta")}
     </a>

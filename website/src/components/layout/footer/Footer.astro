@@ -7,6 +7,7 @@ import {
   getLocalizedPath,
 } from "@/utils/i18n";
 import LanguageSwitcher from "@/components/ui/LanguageSwitcher.astro";
+import { trackAttrs } from "@/scripts/shared/analytics";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
@@ -79,6 +80,7 @@ const isCurrentPage = (href: string) =>
                   "text-content-55 hover:text-content-90 mb-3.5 block text-[13px] no-underline transition-colors duration-200",
                   isCurrentPage(link.href) && "text-content-90",
                 )}
+                {...trackAttrs(link.track, link.trackParams)}
               >
                 {t(link.label)}
               </a>
