@@ -1,10 +1,9 @@
 ---
-title: "Quantus Weekly: GPU-Mining und Dirac-Netzwerk-Stresstest"
-description: Quantus Miner v2.0.2 mit GPU-Support, Dirac-Netzwerk-Stresstests und Aktualisierungen der Chain-Architektur im Wochenupdate.
-
+title: "Quantus Weekly: GPU-Mining und Dirac-Stresstest"
+description: "Quantus Miner v2.0.2 mit GPU-Support veröffentlicht, Dirac-Netzwerk erfolgreich stress-getestet, Chain-Architektur für 21M-Cap angepasst."
 pubDate: "2025-12-22"
 heroImage: "/blog/covers/weekly-update-12-22-2025.webp"
-heroAlt: "Quantus Weekly: GPU-Mining und Dirac-Netzwerk-Stresstest"
+heroAlt: "Quantus Weekly: GPU-Mining und Dirac-Stresstest"
 featured: false
 tags:
   [
@@ -18,37 +17,37 @@ tags:
   ]
 ---
 
-Diese Woche haben wir offiziell den Quantus Miner v2.0.2 mit GPU-Unterstützung veröffentlicht und das Dirac-Netzwerk erfolgreich einem Stresstest unterzogen.
+Diese Woche haben wir Quantus Miner v2.0.2 mit GPU-Support offiziell veröffentlicht und das Dirac-Netzwerk erfolgreich stress-getestet.
 
-Wir haben auch die Chain-Architektur aktualisiert, um eine Obergrenze von 21 Millionen Coins zu unterstützen, und die Codebasis bereinigt, indem wir veraltete Vesting- und Treasury-Pallets entfernt haben.
+Außerdem haben wir die Chain-Architektur für ein 21M-Coin-Supply-Cap angepasst und die Codebase bereinigt, indem wir Legacy-Vesting- und Treasury-Pallets entfernt haben.
 
-Wöchentlicher Github-Aktivitätsbericht mit 6 gemergten Pull-Requests: https://github.com/Quantus-Network/n8n-workflows/blob/main/github/weekly-update-2025-12-23-07:50:14.md/
+Wöchentlicher Github-Aktivitätsbericht mit 6 gemergten Pull Requests: https://github.com/Quantus-Network/n8n-workflows/blob/main/github/weekly-update-2025-12-23-07:50:14.md/
 
-## Core Tech & ZK
+## Core-Tech & ZK
 
-- Die Chain-Spezifikation wurde aktualisiert, um die neue Obergrenze von 21 Millionen Coins widerzuspiegeln.
-- Vereinfachung der Core-Chain-Architektur durch Entfernen der Vesting- und Treasury-Pallets.
-- Abschluss der generischen Poseidon-Storage-Hashing-Unterstützung, um Panics in der Runtime zu verhindern.
-- Unterstützung für Asset-IDs in unseren ZK-Circuits und dem CLI hinzugefügt.
+- Chain-Spezifikation aktualisiert, um das neue 21M-Coin-Supply-Cap widerzuspiegeln.
+- Kern-Chain-Architektur vereinfacht durch Entfernung der Vesting- und Treasury-Pallets.
+- Generischen Poseidon-Storage-Hashing-Support abgeschlossen, um Panics im Runtime zu verhindern.
+- Asset-ID-Support in unsere ZK-Circuits und die CLI hinzugefügt.
 
-## Network & Infra
+## Netzwerk & Infra
 
-- Stresstest von Dirac durchgeführt, um zu beobachten, wie sich eine Überlastung der Chain auf die Blockzeiten auswirkt.
-- Veröffentlichung von Quantus Miner v2.0.2, der nun offiziell GPU-Mining unterstützt: https://github.com/Quantus-Network/quantus-miner/releases/tag/v2.0.2
+- Dirac stress-getestet, um zu beobachten, wie Netzwerk-Überlastung die Block-Zeiten beeinflusst.
+- Quantus Miner v2.0.2 veröffentlicht, der jetzt offiziell GPU-Mining unterstützt: https://github.com/Quantus-Network/quantus-miner/releases/tag/v2.0.2
 
-## Web & Mobile App Updates
+## Web- & Mobile-App-Updates
 
-- Finalisierung des Hardware-Wallet-Signier-Flows auf dem Handy, einschließlich QR-Code-Signaturübertragung, Unterstützung für mehrere Wallets und Unlinking-Funktionalität.
-- Implementierung von „Raid Quests“ mit Telegram, Website und internem Tracking über Task Master, um das Community-Engagement auf X zu fördern. Wallet-Implementierung in Arbeit.
-- Behebung von Backend-CORS-Fehlern und Verbesserung des Daten-Trackings für soziale Interaktionen.
-- Behebung von Block-Explorer-Fehlern, die die Berichterstattung über Miner-Belohnungen und den Netzwerkwechsel betrafen.
+- Hardware-Wallet-Signing-Flow auf Mobile finalisiert, inkl. QR-Code-Signatur-Übertragung, Multi-Wallet-Support und Unlinking-Funktionalität.
+- „Raid Quests“ mit Telegram, Website und internem Tracking via Task Master implementiert, um Community-Engagement auf X zu incentivieren. Wallet-Implementierung in Arbeit.
+- Backend-CORS-Fehler behoben und Data-Tracking für Social Interactions verbessert.
+- Block-Explorer-Bugs behoben, die Miner-Rewards-Reporting und Netzwerk-Wechsel betrafen.
 
-## Content & Partnerships
+## Content & Partnerschaften
 
-- Sicherung von Investitionen von zwei strategischen Partnern, die auf dem Peer Summit getroffen wurden.
-- Abschluss von Treffen zur Launch-Strategie und Entwurf eines aktualisierten Whitepapers, das die neue Tokenomics und GTM widerspiegelt.
-- Episode mit Cezary, erfahrenem Softwarearchitekten und Systemingenieur: https://www.youtube.com/watch?v=2TDMR7bECR8
+- Investment von zwei strategischen Partnern gesichert, die wir beim Peer Summit kennengelernt haben.
+- Meetings zum Launch-Strategie abgeschlossen und aktualisiertes Whitepaper mit neuer Tokenomics und GTM entworfen.
+- Episode mit Cezary, erfahrener Software-Architekt und Systems Engineer: https://www.youtube.com/watch?v=2TDMR7bECR8
 
-## Industry Updates
+## Branchen-Updates
 
 - Artikel von Quantum Canary zur Analyse des Risikos eines staatlichen Angriffs auf Bitcoin: https://www.quantumcanary.org/insights/how-credible-is-a-state-level-attack-on-bitcoin

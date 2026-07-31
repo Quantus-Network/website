@@ -1,10 +1,9 @@
 ---
-title: "Quantus Weekly: Eiger-Audits und Kompakt-Aggregator"
-description: Frühjahrsputz: Eiger-Audit-Punkte abgearbeitet, Wormhole-Tests auf dem 2×8-Kompakt-Aggregator, CLI refaktoriert und Mobile-Wallet-Releases 1.3.4/1.3.5.
-
+title: "Quantus Weekly: Audits und der Compact Aggregator"
+description: "Frühjahrsputz: Eiger-Audit erledigt, CLI refaktoriert, Miner- und Indexer-Fixes, Wormhole-Tests am Compact Aggregator mit doppelter Prover-Geschwindigkeit."
 pubDate: "2026-04-29"
 heroImage: "/blog/covers/weekly-update-04-29-2026.webp"
-heroAlt: "Quantus Weekly: Eiger-Audits und Kompakt-Aggregator"
+heroAlt: "Quantus Weekly: Audits und der Compact Aggregator"
 featured: false
 tags:
   [
@@ -24,48 +23,48 @@ tags:
 
 Frühjahrsputz-Woche.
 
-Wir haben Audit-Themen mit Eiger abgearbeitet, die CLI refaktoriert, Bugs bei Miner und Indexer behoben und Wormhole-Integrationstests auf dem neuen Kompakt-Aggregator ausgeführt.
+Wir haben Audit-Items mit Eiger abgearbeitet, die CLI refaktoriert, Bugs in Miner und Indexer behoben und Wormhole-Integrationstests am neuen Compact Aggregator durchgeführt.
 
-Auf der ZK-Seite läuft der Wormhole-Flow nun sauber durch den 2x8-Kompakt-Aggregator, den wir letzte Woche ausgeliefert haben—die Architektur, die die Prover-Performance verdoppelt hat und damit schnellere, skalierbarere private Transaktionen ermöglicht. Für Nutzer haben wir zwei Mobile-Wallet-Releases (1.3.4 und 1.3.5) sowie Quantus Miner v3.1.0 mit GPU-Bugfix ausgeliefert. Außerdem haben wir die Docs aktualisiert, um den kompletten Weg vom Mining bis zum Einfordern der Rewards abzudecken.
+Bei ZK läuft der Wormhole-Flow jetzt sauber durch den 2×8 Compact Aggregator, den wir letzte Woche ausgeliefert haben. Das ist die Architektur, die die Prover-Performance verdoppelt hat — schnellere, skalierbarere, private Transaktionen. Auf der Nutzerseite haben wir zwei Mobile-Wallet-Releases (1.3.4 und 1.3.5) und Quantus Miner v3.1.0 mit GPU-Bugfix ausgeliefert. Unsere Docs decken jetzt den kompletten Flow von Mining bis Reward-Claim ab.
 
-Wir haben unseren ersten Planck-Testnet-Miner-Workshop bei der Network School veranstaltet.
+Wir haben unseren ersten Planck-Testnet-Miner-Workshop bei Network School ausgerichtet.
 
-Das haben wir diese Woche gebaut:
+Das haben wir diese Woche alles gebaut:
 
-### GitHub-Aktivität (26 zusammengeführte Pull Requests):
+### GitHub-Aktivität (26 gemergte Pull Requests):
 
 ![Github Stats](/blog/assets/github-stats-weekly-update-04-29-2026.webp)
 
 ### Core Tech & ZK
 
-- Mehrere Audit-Punkte von Eiger bearbeitet.
-- Wormhole-Integrationstests auf dem 2x8-Kompakt-Aggregator ausgeführt.
-- Quantus CLI refaktoriert für Kompatibilität, Transaktionslebenszyklus und Gebührenschätzung.
+- Mehrere Audit-Items von Eiger adressiert.
+- Wormhole-Integrationstests am 2×8 Compact Aggregator durchgeführt.
+- Quantus CLI refaktoriert — Kompatibilität, Transaction Lifecycle und Fee Estimation behoben.
 
 ### Netzwerk & Infra
 
-- Stresstests auf dem Planck-Testnet durchgeführt.
-- Subsquid-Indexer-Performance verbessert und CPU-Spike behoben. Subsquid hat diese Woche die Mobile-App-UX gestört (Salden luden nicht)—jetzt behoben.
-- Quantus Miner v3.1.0 mit Fix für GPU-Mining ausgeliefert.
+- Stress Tests auf dem Planck-Testnet durchgeführt.
+- Subsquid-Indexer-Performance verbessert und CPU-Usage-Spike behoben. Subsquid verursachte diese Woche UX-Probleme in der Mobile App (Balances laden nicht) — jetzt behoben.
+- Quantus Miner v3.1.0 mit GPU-Mining-Bugfix ausgeliefert.
 
 ### Web- & Mobile-App-Updates
 
 - Mobile Wallet 1.3.4 und 1.3.5 ausgeliefert.
-- Design-Verbesserungen im Mobile Wallet; Onboarding-Flow folgt als Nächstes.
-- Flows für Account Management, Settings, Onboarding, Home Screen Skeleton, POS Enable, Empty State und Miner Rewards für das Wallet designed.
-- Wormhole-Flow-UX fürs Wallet kartiert.
-- [docs.quantus.com](https://docs.quantus.com) aktualisiert für End-to-End-Mining bis zum Einfordern der Rewards.
-- Deepwikis in den Repos für CLI, Monitoring, Chain, Website und ZK-Schaltungen aufgefrischt.
+- Mobile-Wallet-Design-Verbesserungen. Onboarding-Flow kommt als Nächstes.
+- Account Management, Settings, Onboarding, Home Screen Skeleton, POS Enable, Empty State und Miner Rewards Flows für die Wallet designed.
+- Wormhole-Flow-UX für die Wallet gemappt.
+- [docs.quantus.com](https://docs.quantus.com) aktualisiert — end-to-end von Mining bis Reward-Claim.
+- Deepwikis über CLI, Monitoring, Chain, Website und ZK-Circuits-Repos aktualisiert.
 
-### Mobile-Wallet-Analytik
+### Mobile-Wallet-Analysen
 
-- Nutzer gesamt: 2.252
+- Gesamtnutzer: 2.252
 - MAU: 1.048
 
 ### Content & Partnerschaften
 
-- Erster Planck-Testnet-Miner-Workshop bei der Network School; mehr als vier Personen von null bis Mining.
-- Pitch beim EthKL-Meetup.
+- Unseren ersten Planck-Testnet-Miner-Workshop bei Network School ausgerichtet. 4+ Personen von null auf Mining.
+- Pitch beim EthKL Meetup.
 - Q-Day-Sponsoren bestätigt.
-- NS Marathon mit Quantus-Kokosnüssen gesponsort.
-- Neuer Podcast [über die Quantus-Architektur](https://x.com/QuantusNetwork/status/2047178654396862837).
+- NS Marathon mit Quantus-Kokosnüssen gesponsert.
+- Neuer Podcast [über die Quantus-Architektur](https://x.com/QuantusNetwork/status/2047178654396862837) veröffentlicht.

@@ -1,10 +1,9 @@
 ---
-title: "Quantus Weekly: Point of Sale und P2P-Elektronikgeld"
-description: Mobile App v1.2.2 bringt POS-Zahlungen per QR-Code. PolyFri-Maskierung beschleunigt Proofs, DDoS-Schutz für ZK-Beweise und Alpha des Website-Redesigns.
-
+title: "Quantus Weekly: POS-Modus und P2P-E-Cash"
+description: "Mobiles POS in Wallet v1.2.2, PolyFri-Masking, Poseidon-Cleanup, ZK-DDoS-Schutz — und warum P2P-Electronic-Cash für Quantus zählt."
 pubDate: "2026-03-31"
 heroImage: "/blog/covers/weekly-update-03-31-2026.webp"
-heroAlt: "Quantus Weekly: Point of Sale und P2P-Elektronikgeld"
+heroAlt: "Quantus Weekly: POS-Modus und P2P-E-Cash"
 featured: false
 tags:
   [
@@ -19,39 +18,39 @@ tags:
   ]
 ---
 
-> Ein Peer-to-Peer-System für elektronisches Bargeld.
+> A Peer-to-Peer Electronic Cash System.
 
-So heißt der Titel des Bitcoin-Whitepapers.
+Das ist der Titel des Bitcoin-Whitepapers.
 
 Siebzehn Jahre später verarbeitet Bitcoin an guten Tagen sieben Transaktionen pro Sekunde.
 
-Ich kann mich nicht erinnern, wann ich zuletzt eine Bitcoin-„Skalierungslösung“ sah, die keine bankähnliche zentrale Dienstleistung war.
+Ich erinnere mich nicht, wann ich zuletzt eine Bitcoin-„Skalierungslösung“ gesehen habe, die kein bankähnlicher zentralisierter Dienst war.
 
-Aber P2P-Elektronikgeld war eine Idee, deren Zeit gekommen war.
+Aber P2P-Electronic-Cash war eine Idee, deren Zeit gekommen war.
 
-Während die Bitcoin-Community also nach Ausreden suchte, die Chain nicht zu skalieren, pushten die Anzüge „Stablecoins“.
+Während die Bitcoin-Community jede Ausrede suchte, die Chain nicht zu skalieren, pushten die Anzugträger „Stablecoins“.
 
-Tokenisiertes Fiat. Das Vermögen schmilzt dahin, während andere mehr drucken und es an ihre Freunde verteilen.
+Tokenisiertes Fiat. Vermögen schwindet, während Leute, die euch nicht mögen, mehr drucken und an Freunde verteilen.
 
-Jetzt auf deiner Lieblings-Blockchain!
+Jetzt auf eurer Lieblings-Blockchain!
 
-Stablecoins haben ein Angebot von über 315 Milliarden Dollar überschritten. Die große Mehrheit durch Staatsanleihen gedeckt, in Banken gehalten, mit Einfrierfunktionen und vollständig nachverfolgbar.
+Stablecoins haben über 315 Milliarden Dollar Supply überschritten. Die große Mehrheit durch Staatsschulden gedeckt, in Banken gehalten, mit Freeze-Funktionen und vollständig nachverfolgbar.
 
-Während das um sich griff, jubelte die Branche.
+Während das wucherte, jubelte die Branche.
 
-Wir haben aufgehört, Cypherpunk-Geld weiterzuentwickeln, und jetzt haben wir das elektronische Bargeld, das uns unsere Strippenzieher geben: Dollar auf Schienen, kontrolliert von multinationalen Konzernen, von Anzugträgern gebilligt.
+Wir haben aufgehört, Cypherpunk-Geld weiterzuentwickeln — und jetzt haben wir das Electronic Cash, das uns unsere Handlanger gegeben haben: Dollar auf Schienen, kontrolliert von Multis, anzuggeprüft.
 
 Echsen-Geld in einer Cypherpunk-Clownsmaske.
 
-P2P-Elektronikgeld wird skalieren. Es wird privat sein. Nicht nachdruckbar. Souverän. Quantensicher.
+P2P-Electronic-Cash wird skalieren. Es wird privat sein. Es wird nicht druckbar sein. Es wird souverän sein. Es wird quantensicher sein.
 
-Sie können ihr Fiat-Müll behalten.
+Die mögen ihr Fiat-Müll behalten.
 
-Diese Woche haben wir den Point-of-Sale-Modus in der Quantus-Mobile-App ausgeliefert.
+Diese Woche haben wir den Point-of-Sale-Modus in der Quantus-Mobile-App ausgerollt.
 
-Ein Händler zeigt einen Rechnungs-QR-Code. Der Kunde scannt. Die Zahlung bestätigt sofort. Quantensicher, Peer-to-Peer, elektronisches Bargeld.
+Ein Händler zeigt einen Rechnungs-QR-Code. Der Kunde scannt. Zahlung bestätigt sofort. Quantensicheres, Peer-to-Peer-Electronic-Cash.
 
-Das haben wir diese Woche noch geliefert:
+Das ist diese Woche sonst noch shipped:
 
 ### GitHub-Aktivität (24 gemergte Pull Requests):
 
@@ -59,25 +58,25 @@ Das haben wir diese Woche noch geliefert:
 
 ### Core Tech & ZK:
 
-- PolyFri-Maskierung auf der Prover-Seite im nativen Pfad implementiert und teures Row-Blinding auf der Builder-Seite ersetzt.
+- PolyFri Prover-seitiges Masking auf dem nativen Pfad implementiert — kostspieliges Builder-seitiges Row Blinding ersetzt.
 - Poseidon-Hasher refaktoriert und bereinigt, mit systemweiten Updates.
 
-### Netzwerk & Infrastruktur:
+### Netzwerk & Infra:
 
-- DDoS-Schutz für ZK-Beweise on-chain ergänzt.
+- DDoS-Schutz für ZK-Proofs onchain hinzugefügt.
 
 ### Web- & Mobile-App-Updates:
 
-- Mobile App v1.2.2 mit Point-of-Sale-Modus und Sofortbestätigung in die App Stores gebracht.
-- Alpha-Version des Website-Redesigns bereitgestellt.
-- Inhalte der Seite [quantus.com/launch](https://quantus.com/launch) aktualisiert.
-- Remote-Config-System für das Wallet implementiert.
+- Mobile App v1.2.2 in die App Stores gebracht — mit Point-of-Sale-Modus und Instant Confirmation.
+- Alpha-Version des Website-Redesigns deployed.
+- Inhalt der Seite [quantus.com/launch](https://quantus.com/launch) aktualisiert.
+- Remote-Configs-System für die Wallet implementiert.
 
 ### Content & Partnerschaften:
 
-- Event „Death of the CEX“ an der Network School ausgerichtet.
-- Unseren State-of-Quantum-Report zur Prüfung und zum Kommentar an mehrere Akademiker und Builder verteilt.
+- „Death of the CEX“-Event bei Network School ausgerichtet.
+- Unseren State of Quantum Report an mehrere Akademiker und Builder zur Review/Kommentierung verteilt.
 
 ### Branchen-Updates:
 
-- Quantum Canary: [Warum ist es so schwer, einen Quantencomputer zu bauen?](https://x.com/QuantumCanary_/status/2038832028725223690)
+- Quantum Canary: [Why Is It So Hard to Build a Quantum Computer?](https://x.com/QuantumCanary_/status/2038832028725223690)

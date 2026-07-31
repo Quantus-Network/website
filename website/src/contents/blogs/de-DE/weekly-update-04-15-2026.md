@@ -1,10 +1,9 @@
 ---
-title: "Quantus Weekly: Planck-Testnet und Belohnungen fürs Mining"
-description: Planck-Testnet ist live: frühe Miner sichern mehr Belohnungen. App-Migration über TestFlight und Stores, GPU-Mining-Guide und Core-Chain-Fixes.
-
+title: "Quantus Weekly: Planck-Testnet-Mining-Belohnungen"
+description: "Planck-Testnet ist live für Early Miner. App-Migration in TestFlight und Stores, GPU-Mining auf der neuen Chain — plus Core-, Infra- und Wallet-Updates."
 pubDate: "2026-04-15"
 heroImage: "/blog/covers/weekly-update-04-15-2026.webp"
-heroAlt: "Quantus Weekly: Planck-Testnet und Belohnungen fürs Mining"
+heroAlt: "Quantus Weekly: Planck-Testnet-Mining-Belohnungen"
 featured: false
 tags:
   [
@@ -22,59 +21,59 @@ tags:
 
 Frühe Hashrate zählt.
 
-Die Hälfte des 21-Mio.-Bitcoin-Angebots wurde in den ersten vier Jahren ausgegeben, als noch niemand hingeschaut hat.
+Die Hälfte des 21M-Bitcoin-Angebots wurde in den ersten vier Jahren emittiert — als niemand hingeschaut hat.
 
 Jeder konnte minen, und frühe Blockbelohnungen lagen bei 50 BTC.
 
-Ein paar Rechenzyklen hätten die Linie für immer ändern können.
+Ein paar Compute-Zyklen hätten die Blutlinie pensionieren können.
 
-Quantus ist Proof of Work. Maximales Angebot von 21 Mio. QUAN.
+Quantus ist Proof of Work. Max Supply 21M QUAN.
 
-Wie bei Bitcoin erhalten frühe Miner mehr Belohnungen fürs Hochfahren des Netzwerks.
+Wie bei Bitcoin bekommen Early Miner mehr Belohnungen fürs Bootstrappen des Netzwerks.
 
 Heute haben wir unser Planck-Testnet gestartet.
 
-Wir stresstesten Quantus vor dem Mainnet.
+Wir stress-testen Quantus vor dem Mainnet.
 
-Wenn du die App über TestFlight nutzt, wirst du zur Ein-Klick-Migration aufgefordert.
+Wer die App auf TestFlight nutzt, wird zur One-Click-Migration aufgefordert.
 
-Wenn du die App aus dem iOS- oder Google-Play-Store geladen hast, rollt das Update in den nächsten Tagen aus.
+Wer die App aus dem iOS- oder Google-Play-Store geladen hat, bekommt das Update in den nächsten Tagen.
 
-Wenn du Quantus minst, kannst du jetzt mit dem Mining im Planck-Testnet beginnen.
+Wer Quantus mined, kann jetzt das Planck-Testnet minen.
 
-Sieh dir das Chain-Repo-Wiki für einen aktualisierten Mining-Guide an, einschließlich unserer GPU-Implementierung (die effizienter ist als der CPU-Miner).
+Im Chain-Repo-Wiki findet ihr einen aktualisierten Mining-Guide inklusive unserer GPU-Implementierung (effizienter als der CPU-Miner).
 
-Die einfache UI-Miner-App wird noch verbessert, aber wenn du technischer unterwegs bist, solltest du das neue Testnet jetzt minen können. Melde dich, falls du auf Probleme stößt.
+Die einfache UI-Miner-App wird noch upgegradet — technische Miner sollten das neue Testnet aber schon starten können. Meldet euch, wenn etwas hakt.
 
-Dieses Testnet ist die Generalprobe. Die Hashrate wird steigen, sobald die Chain live ist—und du willst dein Setup für Tag eins eingestellt haben.
+Dieses Testnet ist die Generalprobe. Die Hashrate steigt schnell, sobald die Chain live ist — und ihr wollt euer Setup für Tag eins eingestellt haben.
 
 Das haben wir diese Woche sonst noch ausgeliefert:
 
 ### Core Tech & ZK
 
 - Neues Testnet gestartet.
-- Sudo-Pallet für das Mainnet entfernt.
-- Netzwerk-Sync behoben.
-- Single-State-Mempool behoben.
+- Sudo-Pallet als Mainnet-Vorbereitung entfernt.
+- Network Sync behoben.
+- Single-State-Mem-Pool behoben.
 - Poseidon auf die neueste Version aktualisiert.
 
-### Network & Infra
+### Netzwerk & Infra
 
-- Node-Dokumentation mit Mindest-Netzanforderungen aktualisiert.
-- Subsquid-Indexer auf die neueste Chain-Version aktualisiert, Typen für reversible und stornierte Event-Extrinsics korrigiert und Docker-Image v0.6.0 veröffentlicht.
-- Rate Limiting für den Task-Master-Risiko-Checker-Endpunkt ergänzt und CORS-Richtlinie aktualisiert.
+- Node-Dokumentation mit minimalen Netzwerkanforderungen aktualisiert.
+- Subsquid-Indexer auf die neueste Chain-Version aktualisiert, reversible und cancelled Event-Extrinsic-Typen behoben, Docker Image v0.6.0 released.
+- Rate Limiting für den Task-Master-Risk-Checker-Endpoint hinzugefügt und CORS-Policy aktualisiert.
 
-### Web & Mobile App Updates
+### Web- & Mobile-App-Updates
 
-- High-Security-Flow in der Mobile-App wiederhergestellt und UX-Fixes ausgeliefert.
-- Wallet-Homepage neu gestaltet, Buttons, Icons und Transaktionslisten-Komponenten aktualisiert und neue GraphQL-Abfrage für den aktuellen Subsquid-Indexer integriert.
-- Animation der Mobile-Wallet-Seite, Bug am Hero-Banner der Homepage und Abdunkeln der Navbar beim Scrollen auf Nicht-Startseiten-Routen behoben.
+- High-Security-Flow in der Mobile App wiederhergestellt und UX-Fixes ausgeliefert.
+- Wallet-Homepage redesigned, Buttons, Icons und Transaction-List-Komponenten aktualisiert, neue GraphQL-Query für den neuesten Subsquid-Indexer integriert.
+- Mobile-Wallet-Page-Animation, Homepage-Hero-Banner-Bug und Navbar-Darken-on-Scroll auf Nicht-Homepage-Routen behoben.
 
-### Content & Partnerships
+### Content & Partnerschaften
 
 - Chris im [@mobymedia](https://x.com/mobymedia)-Podcast: [https://x.com/mobymedia/status/2043401794227949568](https://x.com/mobymedia/status/2043401794227949568)
-- Podcast zu Post-Quantum-Zero-Knowledge-Beweisen mit [@ethan*t_c*](https://x.com/ethan_t_c_) und [@YuviLightman](https://x.com/YuviLightman) veröffentlicht: [https://x.com/QuantusNetwork/status/2042047089660563948](https://x.com/QuantusNetwork/status/2042047089660563948)
+- Post-Quantum-Zero-Knowledge-Proofs-Podcast mit [@ethan*t_c*](https://x.com/ethan_t_c_) und [@YuviLightman](https://x.com/YuviLightman) veröffentlicht: [https://x.com/QuantusNetwork/status/2042047089660563948](https://x.com/QuantusNetwork/status/2042047089660563948)
 - GitEx in Singapur besucht.
-- Ausverkaufte Session mit Dr. [@zina_cinker](https://x.com/zina_cinker) an der Network School: [https://x.com/QuantusNetwork/status/2044051045832384538](https://x.com/QuantusNetwork/status/2044051045832384538)
-- Chris bei [@ArcanumVentures](https://x.com/ArcanumVentures) Folge 47 live am Donnerstag, 16. April, 14:00 UTC / 22:00 Singapur: [https://x.com/ArcanumVentures/status/2044023122102223157](https://x.com/ArcanumVentures/status/2044023122102223157)
-- Verteilung des State-of-Quantum-Reports fortgesetzt und Kommentarfunktion umgesetzt.
+- Vollbesetzte Session mit Dr. [@zina_cinker](https://x.com/zina_cinker) bei Network School: [https://x.com/QuantusNetwork/status/2044051045832384538](https://x.com/QuantusNetwork/status/2044051045832384538)
+- Chris bei [@ArcanumVentures](https://x.com/ArcanumVentures) Ep. 47 live Donnerstag, 16. April, 14:00 UTC / 22:00 Singapur: [https://x.com/ArcanumVentures/status/2044023122102223157](https://x.com/ArcanumVentures/status/2044023122102223157)
+- State of Quantum Report weiter verteilt und Kommentare umgesetzt.

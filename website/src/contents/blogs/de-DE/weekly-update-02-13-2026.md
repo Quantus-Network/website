@@ -1,9 +1,9 @@
 ---
-title: "Quantus Weekly: Die quantensichere Zukunft kartografieren"
-description: "Wöchentliches Update über unsere Listung auf CoinGecko, Multisig-Optimierungen, ZK-Aggregator-Refactoring und die Veröffentlichung der mobilen App v1.1.5."
+title: "Quantus Weekly: Die quantensichere Zukunft kartieren"
+description: "Weekly Update: CoinGecko-Listing, Multisig-Optimierungen, ZK-Aggregator-Refactoring und Mobile-App v1.1.5 – das war diese Woche bei Quantus."
 pubDate: "2026-02-13"
 heroImage: "/blog/covers/weekly-update-02-13-2026.webp"
-heroAlt: "Quantus Weekly: Die quantensichere Zukunft kartografieren"
+heroAlt: "Quantus Weekly: Die quantensichere Zukunft kartieren"
 featured: false
 tags:
   [
@@ -17,54 +17,54 @@ tags:
   ]
 ---
 
-Fra Mauro verbrachte Jahre in einem Kloster in der Nähe von Venedig damit, eine Karte der gesamten bekannten Welt zu zeichnen.
+Fra Mauro verbrachte Jahre in einem Kloster nahe Venedig damit, eine Karte der gesamten bekannten Welt zu zeichnen.
 
 Er ist nie irgendwohin gesegelt.
 
-Kaufleute und Seeleute besuchten das Kloster und beschrieben, was sie gesehen hatten. Fra Mauro glich jeden Bericht mit jedem anderen ab. Er lehnte Behauptungen ab, die nicht standhielten, und überarbeitete sie ständig.
+Kaufleute und Seeleute besuchten das Kloster und beschrieben, was sie gesehen hatten. Fra Mauro gleichte jede Schilderung mit allen anderen ab. Er wies Behauptungen zurück, die nicht standhielten, und überarbeitete ständig.
 
-Das Ergebnis zeigte Orte, von denen die meisten Europäer noch nie gehört hatten. Ostafrika. Der Indische Ozean. Südostasien. Territorium, das existierte, aber für niemanden real war, der nicht dort gewesen war.
+Das Ergebnis zeigte Orte, von denen die meisten Europäer nie gehört hatten. Ostafrika. Der Indische Ozean. Südostasien. Territorien, die existierten, aber für niemanden real waren, der nicht dort gewesen war.
 
 Quantus setzt den Standard für quantensicheres Geld.
 
-Aber wir müssen auf der Karte stehen.
+Aber wir müssen auf der Landkarte stehen.
 
-Diese Woche wurde Quantus auf [@coingecko](https://x.com/@coingecko) gelistet.
+Diese Woche wurde Quantus bei [@coingecko](https://x.com/@coingecko) gelistet.
 
-Es gibt eine Kategorie namens „quantum resistant“ (quantenresistent), und sie hat eine Marktkapitalisierung von weniger als 5 Milliarden US-Dollar.
+Es gibt eine Kategorie „Quantum Resistant“, und sie hat unter 5 Mrd. USD Marktkapitalisierung.
 
-Bald wird die gesamte Krypto-Marktkapitalisierung „quantenresistent“ sein, denn jede Chain wird entweder aufrüsten oder auf Null gehen.
+Bald wird die gesamte Krypto-Marktkapitalisierung „Quantum Resistant“ sein – weil jede Chain entweder upgradet oder auf null geht.
 
-Aber im Moment ist die Kategorie klein, und selbst unter den Chains auf der Liste gibt es noch viel zu tun.
+Aber vorerst ist die Kategorie klein, und selbst unter den Chains auf der Liste gibt es noch viel zu tun.
 
-Hier ist also, was wir diese Woche sonst noch ausgeliefert haben.
+Das haben wir sonst noch diese Woche ausgeliefert.
 
-### GitHub-Aktivität (7 gemergte Pull-Requests):
+### GitHub-Aktivität (7 gemergte Pull Requests):
 
-![Github-Statistiken](/blog/assets/github-stats-weekly-update-02-13-2026.webp)
+![Github Stats](/blog/assets/github-stats-weekly-update-02-13-2026.webp)
 
-### Core Tech & ZK
+### Core-Tech & ZK
 
-- Die endgültige vereinfachte Version von Multisig mit Optimierungen und Korrekturen der Gewichtungsgenauigkeit implementiert und getestet.
-- qp-plonky2 refactored, um den Verifizierer sauber vom Prover zu trennen.
-- ZK-Aggregation korrigiert und zusätzliche Privatsphäre und Flexibilität hinzugefügt.
-- Release-Workflow für qp-zk-circuit aktualisiert.
-- Wortauswahl für Check-Phrasen für bessere Benutzerfreundlichkeit verbessert.
-- Random-Partition Multisend zum CLI hinzugefügt.
-- Benchmarking des Provers von Plonky3 gegen unsere Poseidon2-Implementierung durchgeführt.
+- Finale vereinfachte Version von Multisig implementiert und getestet, mit Optimierungen und Weight-Accuracy-Fixes.
+- qp-plonky2 refaktoriert, um Verifier und Prover sauber zu trennen.
+- ZK-Aggregation repariert und um zusätzliche Privatsphäre und Flexibilität erweitert.
+- qp-zk-circuit-Release-Workflow aktualisiert.
+- Check-Phrase-Wortauswahl für bessere Usability verbessert.
+- Random-Partition-Multisend in der CLI ergänzt.
+- Plonky3-Prover gegen unsere Poseidon2-Implementierung gebenchmarkt.
 
-### Web & Mobile App Updates
+### Web- & Mobile-App-Updates
 
-- Mobile App v1.1.5 in beiden App Stores veröffentlicht.
-- Neue Quests-Bildschirme mit Fehlerbehebungen für die Rang-Anzeige implementiert.
-- Launch-Seite unter [quantus.com/launch](https://quantus.com/launch) veröffentlicht.
-- UX-Design für ZK-Aggregator vereinfacht, jetzt „verschlüsselte Konten“ genannt.
+- Mobile App v1.1.5 in beide App Stores ausgeliefert.
+- Neue Quest-Screens mit Bugfixes für die Rang-Anzeige implementiert.
+- Launch-Page unter [quantus.com/launch](https://quantus.com/launch) veröffentlicht.
+- UX-Design für ZK-Aggregator vereinfacht – jetzt „Encrypted Accounts“ genannt.
 
-### Content & Partnerships
+### Content & Partnerschaften
 
-- Auf CoinGecko gelistet.
-- Podcast mit Jangle und Chris auf unserem Youtube-Kanal.
+- Listing auf CoinGecko.
+- Podcast mit Jangle und Chris auf unserem Youtube.
 
 ### Branchen-Updates
 
-- Quantum Canary: „[Hören Sie auf, über Filter zu streiten: Was Vitaliks beschleunigter Quanten-Zeitplan für Investoren bedeutet](https://x.com/QuantumCanary_/status/2021092653891486027)“.
+- Quantum Canary: „[Stop Arguing About Filters: What Vitalik's Accelerated Quantum Timeline Means For Investors](https://x.com/QuantumCanary_/status/2021092653891486027)“.

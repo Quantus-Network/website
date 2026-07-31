@@ -1,10 +1,10 @@
 ---
-title: "Quantus Weekly: Lattice-Audit und Keystone-Integration"
-description: Alle Audit-Funde in qp-rusty-crystals behoben, Polkadot-SDK-Networking aktualisiert, Quantus-Adressen in Keystone-Firmware und Listung bei The Quantum Insider.
+title: "Quantus Weekly: Lattice-Audit und Keystone-Wallet"
+description: "Audit-Findings in Rusty Crystals geschlossen, Polkadot-SDK-Netzwerk aktualisiert, Quantus-Adressen auf Keystone-Hardware-Wallet-Firmware."
 
 pubDate: "2025-12-01"
 heroImage: "/blog/covers/weekly-update-12-01-2025.webp"
-heroAlt: "Quantus Weekly: Lattice-Audit und Keystone-Integration"
+heroAlt: "Quantus Weekly: Lattice-Audit und Keystone-Wallet"
 featured: false
 tags:
   [
@@ -17,36 +17,36 @@ tags:
   ]
 ---
 
-Letzte Woche hat das Team alle im Audit unserer Lattice-Crypto-Bibliothek (rusty-crystals) aufgeworfenen Probleme behoben und Networking-Updates veröffentlicht, um sie an das neueste Polkadot SDK anzupassen. Wir haben außerdem die Unterstützung von Quantus-Adressen in der Open-Source-Firmware der Keystone-Hardware-Wallet implementiert und unser Profil auf der Market-Intelligence-Plattform „The Quantum Insider“ listen lassen.
+Letzte Woche hat das Team alle im Audit unserer Lattice-Krypto-Bibliothek (rusty-crystals) gemeldeten Issues behoben und Netzwerk-Updates ausgeliefert, um mit dem neuesten Polkadot SDK übereinzustimmen. Außerdem haben wir Quantus-Adress-Support in der Open-Source-Keystone-Hardware-Wallet-Firmware implementiert und unser Profil auf der Market-Intelligence-Plattform „The Quantum Insider“ listen lassen.
 
-Wöchentlicher Github-Aktivitätsbericht inklusive 17 zusammengeführter Pull-Requests: https://github.com/Quantus-Network/n8n-workflows/blob/main/github/weekly-update-2025-12-01-11:59:59.md
+Wöchentlicher Github-Aktivitätsbericht mit 17 gemergten Pull Requests: https://github.com/Quantus-Network/n8n-workflows/blob/main/github/weekly-update-2025-12-01-11:59:59.md
 
 ## Core Tech
 
-- Alle Erkenntnisse aus dem Audit der Kern-Lattice-Kryptografie-Bibliothek (qp-rusty-crystals) wurden behoben.
-- Vorbereitung der ZK-Aggregation-Proofs (Circuits, Benchmarks und QIP-Dokumentation) für das anstehende Audit abgeschlossen.
-- Optimierungen im Plonky2 Poseidon2-Gate und ZK-Trie zur Erhöhung der Proving-Geschwindigkeit gefunden.
-- Rollback von qp-header und Aktualisierung von sc-network zur Anpassung an die neuesten Polkadot SDK-Standards.
+- Alle Findings im Audit der Kern-Lattice-Kryptografie-Bibliothek (qp-rusty-crystals) behoben.
+- ZK-Aggregation-Proof-Vorbereitung (Circuits, Benchmarks und QIP-Dokumentation) für das kommende Audit abgeschlossen.
+- Optimierungen im Plonky2-Poseidon2-Gate und zk-trie für höhere Proving-Geschwindigkeit gefunden.
+- qp-header zurückgerollt und sc-network aktualisiert, um mit den neuesten Polkadot-SDK-Standards übereinzustimmen.
 
 ## Netzwerk & Infra
 
-- Veröffentlichung des Desktop UI Miners für Windows, Bugfixes für Linux und MacOS: https://github.com/Quantus-Network/quantus-apps/releases/latest
-- Behebung einer potenziellen P2P-Sicherheitslücke im Zusammenhang mit Peer-Broadcasting, um zu verhindern, dass bösartige Peers das Netzwerk überlasten.
-- Unterstützung von Quantus-Adressen in der Open-Source-Firmware der Keystone-Hardware-Wallet implementiert (derzeit im Simulator).
+- Desktop-UI-Miner für Windows veröffentlicht, Bugfixes für Linux und macOS: https://github.com/Quantus-Network/quantus-apps/releases/latest
+- Potenzielle P2P-Sicherheitslücke im Peer-Broadcasting gepatcht, um zu verhindern, dass bösartige Peers das Netzwerk überlasten.
+- Quantus-Adress-Support in der Open-Source-Keystone-Hardware-Wallet-Firmware implementiert (aktuell im Simulator).
 
-## Web & Mobile App Updates
+## Web- & Mobile-App-Updates
 
-- Mobile Wallet v1.1.2 in den App Stores veröffentlicht, Behebung von Problemen mit Polling, Transaktionsflüssen und Benachrichtigungen.
-- Aufbau eines Rust SDK für die X-API (rusx) und Hinzufügen von Endpunkten zur Verknüpfung von X- und ETH-Konten für Nutzer-Quests.
+- Mobile Wallet v1.1.2 in die App Stores veröffentlicht – Probleme mit Polling, Transaktions-Flows und Benachrichtigungen behoben.
+- Rust SDK für die X API (rusx) gebaut und Endpoints hinzugefügt, um X- und ETH-Accounts für User Quests zu verknüpfen.
 
 ## Content & Partnerschaften
 
-- Listung auf The Quantum Insider gesichert, was die Backlinks und die Sichtbarkeit für Quanten-Analysten verbessert.
-- Start des Podcasts auf Apple, Spotify und RSS: https://podcasts.apple.com/us/podcast/quantus-podcast/id1855431112
-- Erster Newsletter an E-Mail-Abonnenten versendet.
+- Listing auf The Quantum Insider gesichert – bessere Backlinks und Sichtbarkeit bei Quanten-Analysten.
+- Podcast auf Apple, Spotify und RSS gestartet: https://podcasts.apple.com/us/podcast/quantus-podcast/id1855431112
+- Ersten Newsletter an E-Mail-Abonnenten versendet.
 - Community X Space für diesen Donnerstag geplant: https://x.com/i/spaces/1mnGeNXoZOZJX
 - Podcast mit Brian Chau, ML-Forscher: https://www.youtube.com/watch?v=m_FPbzAcXEk
 
 ## Branchen-Updates
 
-- Quantum Canary veröffentlichte einen strategischen Leitfaden zur Minderung von „Harvest Now, Crack Later“-Bedrohungen und skizzierte einen pragmatischen Migrationspfad unter Verwendung der neu finalisierten NIST-Post-Quanten-Standards: https://www.quantumcanary.org/insights/how-to-verify-your-cryptographys-safety-before-quantum-computers-arrive
+- Quantum Canary veröffentlichte einen strategischen Leitfaden zur Minderung von „Harvest Now, Crack Later“-Bedrohungen mit einem pragmatischen Migrationspfad unter den neu finalisierten NIST-Post-Quantum-Standards: https://www.quantumcanary.org/insights/how-to-verify-your-cryptographys-safety-before-quantum-computers-arrive

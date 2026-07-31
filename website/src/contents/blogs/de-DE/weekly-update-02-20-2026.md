@@ -1,10 +1,9 @@
 ---
-title: "Quantus Weekly: Forschungsforum und Post-Quantum-Standard"
-description: Start von research.quantus.com für offene Kryptografie-Forschung. ZK-Proof-Aggregation, Multisig-Pallet-Merge und Mobile-Wallet-Updates diese Woche.
-
+title: "Quantus Weekly: Open Research und Post-Quantum-Standard"
+description: "Launch von research.quantus.com, ZK-Proof-Aggregation, Multisig-Pallet-Merge und Mobile-Wallet-Updates – das Weekly Update von Quantus diese Woche."
 pubDate: "2026-02-20"
 heroImage: "/blog/covers/weekly-update-02-20-2026.webp"
-heroAlt: "Quantus Weekly: Forschungsforum und Post-Quantum-Standard"
+heroAlt: "Quantus Weekly: Open Research und Post-Quantum-Standard"
 featured: false
 tags:
   [
@@ -18,47 +17,47 @@ tags:
   ]
 ---
 
-Post-Quanten-Kryptographie ist zu neu, um sie hinter verschlossenen Türen in einer Blockchain zu veröffentlichen.
+Post-Quanten-Kryptografie ist zu neu, um sie hinter verschlossenen Türen in einer Blockchain auszuliefern.
 
 Diese Woche haben wir [research.quantus.com](https://research.quantus.com/) gestartet.
 
-Es ist ein öffentliches Forum für Kryptographen und Entwickler, um jede Protokollentscheidung, die wir jemals getroffen haben, unter die Lupe zu nehmen. Forscher testen bereits die Angriffsflächen von Poseidon2 unter Stress.
+Es ist ein öffentliches Forum für Kryptografen und Entwickler, um jede Protokollentscheidung, die wir je getroffen haben, zu hinterfragen. Forscher testen bereits Poseidon2-Angriffsflächen auf Belastbarkeit.
 
-NIST hat letztes Jahr die Post-Quanten-Standards finalisiert. Das war Schritt eins. Schritt zwei ist, dass jedes Protokollteam in der Krypto-Welt sie tatsächlich implementiert. Es gibt kein etabliertes Handbuch für den Bau einer quantensicheren Chain, also bauen wir den Standard.
+NIST hat die Post-Quanten-Standards letztes Jahr finalisiert. Das war Schritt eins. Schritt zwei ist, dass jedes Protokollteam in Crypto sie tatsächlich implementiert. Es gibt kein etabliertes Playbook für den Bau einer quantensicheren Chain – deshalb bauen wir den Standard.
 
-Wenn Sie an Post-Quanten-Sicherheit arbeiten, steht die Tür offen.
+Wenn Sie an Post-Quanten-Sicherheit arbeiten: Die Tür steht offen.
 
-Hier ist, was wir diese Woche sonst noch gebaut haben.
+Das haben wir sonst noch diese Woche gebaut.
 
-### GitHub-Aktivität (4 gemergte Pull-Requests):
+### GitHub-Aktivität (4 gemergte Pull Requests):
 
-![Github-Statistiken](/blog/assets/github-stats-weekly-update-02-20-2026.webp)
+![Github Stats](/blog/assets/github-stats-weekly-update-02-20-2026.webp)
 
-### Core Tech & ZK
+### Core-Tech & ZK
 
-- ZK-Circuits aktualisiert, um Multi-Maschinen-Proof-Aggregation mit Onchain-Verifizierung zu unterstützen.
-- Das Multisig-Pallet gemergt, was volle Multisig-Unterstützung mit Hochsicherheitskonten liefert.
+- ZK-Circuits aktualisiert, um Multi-Machine-Proof-Aggregation mit On-Chain-Verifikation zu unterstützen.
+- Multisig-Pallet gemergt – volle Multisig-Unterstützung mit High-Security-Konten.
 
-### Netzwerk & Infrastruktur
+### Netzwerk & Infra
 
-- Das Senoti-Benachrichtigungssystem entwickelt: Geräte-Registrierungsdienst, Blockchain-Watcher-Dienst und Core-Worker mit CI- und Deployment-Setup.
-- Faucet-Bot in Telegram verbessert, um besser auf erhöhte Aktivität zu reagieren.
-- Release-Management-Workflows für qp-plonky2 und qp-zk-circuits hinzugefügt.
+- Senoti-Benachrichtigungssystem entwickelt: Device-Registrar-Service, Blockchain-Watcher-Service und Core Worker mit CI- und Deployment-Setup.
+- Faucet-Bot in Telegram verbessert, um auf erhöhte Aktivität besser zu reagieren.
+- Release-Management-Workflows für qp-plonky2 und qp-zk-circuits ergänzt.
 
-### Web & Mobile App Updates
+### Web- & Mobile-App-Updates
 
-- [research.quantus.com](https://research.quantus.com/) gestartet, ein auf Discourse basierendes Forum für kryptographische Forschung und technische Diskussionen.
-- Die Quantus-Website aktualisiert: Whitepaper-Seite aufgefrischt, Token-Zuteilungs-Tortendiagramm zu /launch hinzugefügt, CoinGecko-Integration hinzugefügt und alle wöchentlichen Updates als Blog-Beiträge veröffentlicht.
+- [research.quantus.com](https://research.quantus.com/) gestartet – ein Discourse-basiertes Forum für kryptografische Forschung und technische Diskussion.
+- Quantus-Website aktualisiert: Whitepaper-Seite überarbeitet, Token-Allocation-Pie-Chart auf /launch ergänzt, CoinGecko-Integration und alle Weekly Updates als Blogposts veröffentlicht.
 - Wallet-Design aktualisiert und an TestFlight ausgeliefert. Neue Version kommt bald in den App Store.
-- Fehlerbehebungen und UX-Fixes in der mobilen Wallet.
-- FCM-Basis für die Handhabung von Push-Benachrichtigungen in der mobilen Wallet integriert.
+- Bug- und UX-Fixes in der Mobile Wallet.
+- FCM-Basis für Push-Notification-Handling in der Mobile Wallet integriert.
 
 ### Content & Partnerschaften
 
-- Chris war im [Bad Crypto Podcast](https://x.com/QuantusNetwork/status/2023752636387012675) und im [wenaltseason Space](https://x.com/wenaltseason/status/2022402584041193831) zu Gast.
-- Das Team ist an der Network School angekommen und richtet ein Büro ein.
+- Chris war im [Bad Crypto Podcast](https://x.com/QuantusNetwork/status/2023752636387012675) und im [wenaltseason Space](https://x.com/wenaltseason/status/2022402584041193831).
+- Team ist bei Network School angekommen und richtet ein Büro ein.
 
 ### Branchen-Updates
 
-- Quantum Canary: Können Quantencomputer Monero knacken? [Link](https://x.com/QuantumCanary_/status/2024204427159359931)
-- Quantum Canary: Wie dezentral ist DeFi? [Link](https://x.com/QuantumCanary_/status/2021846672834539665)
+- Quantum Canary: Can Quantum Computers Break Monero? [Link](https://x.com/QuantumCanary_/status/2024204427159359931)
+- Quantum Canary: How Decentralized is DeFi? [Link](https://x.com/QuantumCanary_/status/2021846672834539665)

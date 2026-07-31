@@ -1,10 +1,10 @@
 ---
-title: "Quantus Weekly: Threshold Dilithium und Koordination"
-description: Threshold Dilithium ermöglicht verteiltes Signieren mit einer On-Chain-Signatur. Updates zu ZK-Circuits, Mobile Wallet und Community-Inhalten.
+title: "Quantus Weekly: Dilithium-Schwellenwertsignaturen"
+description: "Dilithium-Schwellenwertsignaturen für verteilte Koordination, leichtere ZK-Circuits, Wormhole-Proof-Aggregation und Mobile-Wallet-Updates – unser Weekly Update."
 
 pubDate: "2026-01-13"
 heroImage: "/blog/covers/weekly-update-01-13-2026.webp"
-heroAlt: "Quantus Weekly: Threshold Dilithium und Koordination"
+heroAlt: "Quantus Weekly: Dilithium-Schwellenwertsignaturen"
 featured: false
 tags:
   [
@@ -20,38 +20,38 @@ tags:
 
 Macht und Autorität auf mehrere Parteien verteilt. Verteilte Koordination.
 
-Doch Post-Quanten-Signaturen sind 20- bis 80-mal größer als Bitcoin-Signaturen. Eine traditionelle Multisig-Lösung hat ihre Berechtigung, verursacht aber einen Overhead, der für bestimmte Anwendungsfälle inakzeptabel ist.
+Post-Quanten-Signaturen sind jedoch 20- bis 80-mal größer als Bitcoin-Signaturen. Eine klassische Multisig-Lösung hat ihren Platz, bringt aber Overhead mit sich, der für bestimmte Anwendungsfälle inakzeptabel ist.
 
-Diese Woche haben wir Threshold Dilithium Signaturen veröffentlicht. Dies ermöglicht es einer verteilten Gruppe, Transaktionen zu signieren und eine einzige Signatur on-chain zu generieren. Im Grunde genommen ein Sharding des privaten Schlüssels.
+Diese Woche haben wir Dilithium-Schwellenwertsignaturen ausgeliefert. Damit kann eine verteilte Gruppe Transaktionen signieren und eine einzige Signatur on-chain erzeugen. Im Grunde: einen privaten Schlüssel sharden.
 
-Dies ist notwendig für Custodians, netzwerkübergreifende Anwendungen und die sichere automatisierte Nutzung der Chain.
+Das ist nötig für Custodians, Cross-Network-Anwendungen und die sichere automatisierte Nutzung der Chain.
 
-Wöchentlicher Github-Aktivitätsbericht inklusive 4 gemergter Pull Requests: https://github.com/Quantus-Network/n8n-workflows/blob/main/github/weekly-update-2026-01-13-10:13:26.md
+Wöchentlicher Github-Aktivitätsbericht mit 4 gemergten Pull Requests: https://github.com/Quantus-Network/n8n-workflows/blob/main/github/weekly-update-2026-01-13-10:13:26.md
 
-## Core Tech & ZK
+## Core-Tech & ZK
 
-- Implementierung von Threshold Signaturen, die sicheres verteiltes Signieren ermöglichen.
-- Reduzierung des ZK-Circuit-Overheads.
-- Unterstützung für Proof-Aggregation zum Wormhole-Beispiel-Binary hinzugefügt, laufende Integration in die Chain und CLI.
-- Upgrade unserer ZK-Circuits und des Poseidon-Hashing-Algorithmus zur universellen Handhabung aller Datentypen (Generic Storage Hashing), jetzt in die Chain und CLI integriert.
-- Unterstützung für Proof-Aggregation über Asset-IDs innerhalb der ZK-Circuits hinzugefügt.
-- Optimierung der CLI für eine schnellere Transaktionsverarbeitung und Hinzufügen von hochsicheren Recovery-Skripten.
+- Schwellenwertsignaturen implementiert – sicheres verteiltes Signieren ist damit möglich.
+- Overhead der ZK-Circuits reduziert.
+- Proof-Aggregation im Wormhole-Beispiel-Binary ergänzt; Integration in Chain und CLI läuft.
+- ZK-Circuits und Poseidon-Hashing auf universelle Verarbeitung aller Datentypen (generisches Storage-Hashing) aktualisiert – jetzt in Chain und CLI integriert.
+- Proof-Aggregation über Asset-IDs in den ZK-Circuits unterstützt.
+- CLI für schnellere Transaktionsverarbeitung optimiert und High-Security-Recovery-Skripte ergänzt.
 
-## Web & Mobile App Updates
+## Web- & Mobile-App-Updates
 
-- Veröffentlichung einer neuen Version der UI Mining App mit granularen Schiebereglern für die CPU- und GPU-Nutzung sowie Fixes für das Hashrate-Reporting.
-- Finalisierung und Mergen des vollständigen Hardware-Wallet-Supports in die mobile App.
-- Unterstützung für die Verwaltung mehrerer Accounts innerhalb einer einzigen mobilen Wallet-Instanz hinzugefügt.
-- Implementierung hochsicherer Bildschirme und Beginn der Entwicklung von „Guardian“-Wiederherstellungsabläufen.
-- Verfeinerung des „Senden“-Bildschirms UX, Verbesserung der Fehlerbehandlung, Behebung von Authentifizierungs-Timer-Bugs und Vereinheitlichung der App-Icons.
-- Konfiguration täglicher Datenbank-Backups, Behebung von Systemdiensten und Bereinigung des Task Master Codes (Wallet App Event Tracking).
+- Neue Version der UI-Mining-App mit granularen Slidern für CPU- und GPU-Nutzung sowie Fixes für die Hashrate-Meldung veröffentlicht.
+- Vollständige Hardware-Wallet-Unterstützung in der Mobile App finalisiert und gemergt.
+- Verwaltung mehrerer Konten in einer einzigen Mobile-Wallet-Instanz unterstützt.
+- High-Security-Screens implementiert und Entwicklung der „Guardian“-Recovery-Flows begonnen.
+- UX des Sende-Screens verfeinert, Fehlerbehandlung verbessert, Authentifizierungs-Timer-Bugs behoben und App-Icons vereinheitlicht.
+- Tägliche Datenbank-Backups konfiguriert, Systemdienste repariert und Task-Master-Code bereinigt (Wallet-App-Event-Tracking).
 
 ## Content & Partnerschaften
 
-- Aktualisierung des Whitepapers mit den neuesten Protokolldetails und Einführung eines GitHub-Versionierungssystems: https://github.com/Quantus-Network/whitepaper
-- Veröffentlichung unserer Entstehungsgeschichte „From the Ground Up“: https://x.com/JoeMattia/status/2010619972398297164
-- Podcast mit Sina (@hubsmoke) über die Wiederherstellung des Vertrauens in die Wissenschaft: https://x.com/QuantusNetwork/status/2009929397579723213
+- Whitepaper mit den neuesten Protokolldetails aktualisiert und GitHub-Versionierung eingerichtet: https://github.com/Quantus-Network/whitepaper
+- Lore hat unsere Origin Story „From the Ground Up“ veröffentlicht: https://x.com/JoeMattia/status/2010619972398297164
+- Podcast mit Sina (@hubsmoke) über Vertrauen in die Wissenschaft wiederherstellen: https://x.com/QuantusNetwork/status/2009929397579723213
 
 ## Branchen-Updates
 
-- Quantum Canary hat einen Leitfaden zu quantensicheren Krypto-Wallets veröffentlicht: https://www.quantumcanary.org/insights/quantum-safe-crypto-wallets-your-guide-to-pqc-security
+- Quantum Canary hat einen Leitfaden zu Quantum-Safe-Crypto-Wallets veröffentlicht: https://www.quantumcanary.org/insights/quantum-safe-crypto-wallets-your-guide-to-pqc-security

@@ -1,9 +1,9 @@
 ---
-title: "Quantus Weekly: Die Wallet sollte einfach sein"
-description: "Wöchentliches Update über die Veröffentlichung von Wallet v1.2.0, Treasury mit Multisig, Heisenberg-Testnetz-Updates und Performance-Verbesserungen."
+title: "Quantus Weekly: Die Wallet soll einfach sein"
+description: "Weekly Update: Wallet v1.2.0, Treasury mit Multisig, Heisenberg-Testnet-Updates und Performance-Verbesserungen – das war diese Woche bei Quantus."
 pubDate: "2026-02-27"
 heroImage: "/blog/covers/weekly-update-02-27-2026.webp"
-heroAlt: "Quantus Weekly: Die Wallet sollte einfach sein"
+heroAlt: "Quantus Weekly: Die Wallet soll einfach sein"
 featured: false
 tags:
   [
@@ -17,72 +17,72 @@ tags:
   ]
 ---
 
-Jede größere Krypto-Wallet fügt Müll-Funktionen hinzu, die ich nicht will.
+Jede große Krypto-Wallet packt Müll-Features rein, die ich nicht will.
 
-Ich möchte keine Social-Media-App, die auch mein Geld verwaltet.
+Ich will keine Social-Media-App, die nebenbei mein Geld hält.
 
-Ist Ihnen schon einmal aufgefallen, dass es keine hochgradig meinungsstarke, einfach zu bedienende, selbstverwaltete „offizielle“ Bitcoin-Wallet gibt?
+Ist Ihnen schon aufgefallen, dass es keine klar positionierte, einfach zu bedienende, selbstverwahrte „offizielle“ Bitcoin-Wallet gibt?
 
-Das Gleiche gilt für Ethereum und Solana.
+Gleiches gilt für Ethereum und Solana.
 
-Die Stiftungen bauen die Chain und überlassen das Interface Drittanbietern. Drittanbieter brauchen Einnahmen. Einnahmen bedeuten Funktionen. Funktionen bedeuten Lärm.
+Die Foundations bauen die Chain und überlassen die Oberfläche Dritten. Dritte brauchen Umsatz. Umsatz bedeutet Features. Features bedeuten Lärm.
 
-Jetzt hat Ihre Wallet also einen Swap-Aggregator, einen Social-Feed, Trend-Token, NFT-Galerien und Push-Benachrichtigungen über Coins, von denen Sie noch nie gehört haben.
+Jetzt hat Ihre Wallet einen Swap-Aggregator, einen Social Feed, Trending Tokens, NFT-Galerien und Push-Benachrichtigungen über Coins, von denen Sie nie gehört haben.
 
-Wir haben Quantus gebaut und wir haben die Wallet gebaut.
+Wir haben Quantus gebaut – und wir haben die Wallet gebaut.
 
-Dasselbe Team, dasselbe Produkt. Die App, die wir diese Woche in den App Store gebracht haben, hat keine Werbung, keine Token-Feeds, keine sozialen Funktionen, keine beanspruchbaren Benutzernamen.
+Gleiches Team, gleiches Produkt. Die App, die wir diese Woche in den App Store gebracht haben, hat keine Werbung, keine Token-Feeds, keine Social Features, keine claimbaren Usernames.
 
-Öffnen Sie sie, sehen Sie Ihr Guthaben, senden oder empfangen Sie.
+Öffnen, Guthaben sehen, senden oder empfangen.
 
-Wir haben das Interface von Grund auf neu gestaltet, um hochgradig meinungsstark zu sein, mit Standardeinstellungen, die dem Benutzer so viel kognitive Belastung wie möglich abnehmen.
+Wir haben die Oberfläche von Grund auf neu designt – klar positioniert, mit Defaults, die so viel kognitive Last wie möglich vom Nutzer nehmen.
 
-Wir haben auch die Ladezeit für die Transaktionshistorie der Wallet drastisch reduziert. Kein langes Warten mehr auf Ihr Guthaben und vorherige Transaktionen nach dem Öffnen der App.
+Außerdem haben wir die Ladezeit der Wallet-Transaktionshistorie drastisch reduziert. Kein Warten mehr auf Guthaben und frühere Transaktionen nach dem Öffnen der App.
 
-Quantensicheres privates Geld sollte einfach zu bedienen und im Idealfall langweilig sein.
+Quantensicheres privates Geld soll einfach zu nutzen sein – idealerweise langweilig.
 
-Wir überlassen die Aufregung den prä-quanten Chains am Qday.
+Die Aufregung überlassen wir den Pre-Quanten-Chains am Q-Day.
 
 Alles ist Open Source. Jeder kann seine eigene Wallet bauen. Aber es wird immer eine offizielle geben, die einfach funktioniert.
 
-### GitHub-Aktivität (4 gemergte Pull-Requests):
+### GitHub-Aktivität (4 gemergte Pull Requests):
 
 ![Github Stats](/blog/assets/github-stats-weekly-update-02-27-2026.webp)
 
-### Core Tech & ZK
+### Core-Tech & ZK
 
-- Treasury mit Multisig gemergt und im neuen Heisenberg-Testnetz-Release enthalten.
-- Alle ausstehenden Änderungen gemergt und veröffentlicht. Neue Heisenberg-Genesis erstellt, veröffentlicht und bereitgestellt.
-- Veraltete Governance-Regeln im Zusammenhang mit der Treasury-Verwaltung entfernt.
-- CLI um neue Multisig- und Treasury-Befehle erweitert. Details zu Hochsicherheitskonten sind jetzt in der Wallet-Ansicht sichtbar.
-- Proof-Shuffling und Nullstellung doppelter Exit-Accounts hinzugefügt, um die Privatsphäre aggregierter Wormhole-Transaktionen zu erhöhen.
-- Wormhole in Circuit Builder und Prover aufgeteilt, um die Proof-Aggregation zu beschleunigen.
-- ZK-Circuits-Release-Workflow aktualisiert und neue Artefakte veröffentlicht.
-- Revive-Pallet-Abhängigkeitsproblem gelöst.
+- Treasury mit Multisig gemergt und im neuen Heisenberg-Testnet-Release enthalten.
+- Alle ausstehenden Änderungen gemergt und released. Neue Heisenberg-Genesis erstellt, released und deployed.
+- Legacy-Governance-Regeln für Treasury-Management entfernt.
+- CLI um neue Multisig- und Treasury-Befehle erweitert. High-Security-Kontodetails jetzt in der Wallet-Ansicht sichtbar.
+- Proof Shuffling und Zeroing duplizierter Exit-Accounts ergänzt, um die Privatsphäre aggregierter Wormhole-Transaktionen zu erhöhen.
+- Wormhole in Circuit Builder und Prover aufgeteilt, um Proof-Aggregation zu beschleunigen.
+- ZK-Circuits-Release-Workflow aktualisiert und neue Artifacts veröffentlicht.
+- Revive-Pallet-Dependency-Issue behoben.
 
-### Netzwerk & Infrastruktur
+### Netzwerk & Infra
 
-- Benachrichtigungssystem (Senoti): Failover zum Block-Watcher für die beste Netzwerkauswahl hinzugefügt.
+- Benachrichtigungssystem (Senoti): Failover zum Block Watcher für beste Netzwerkauswahl ergänzt.
 - Senoti aktualisiert, um mehrere Adressen pro Gerät zu verarbeiten.
-- RPC-Failover für Subsquid-Server hinzugefügt.
-- Monitoring-Warnungen aktualisiert und an die entsprechenden Kanäle weitergeleitet.
+- RPC-Failover für Subsquid-Server ergänzt.
+- Monitoring-Alerts aktualisiert und an passende Kanäle umgeleitet.
 
-### Web & Mobile App Updates
+### Web- & Mobile-App-Updates
 
-- Wallet v1.2.0 in den iOS App Store geliefert.
+- Wallet v1.2.0 im iOS App Store ausgeliefert.
 - Durchschnittliche Ladezeit der Transaktionshistorie von über 1 Minute auf unter 5 Sekunden reduziert.
-- Wallet-Builds 75, 76, 77 mit Android-Splash-Screen-Fix und anderen Fehlerbehebungen ausgeliefert.
-- Release-Artefakt-Workflow für Wallet-Builds hinzugefügt.
+- Wallet-Builds 75, 76, 77 mit Android-Splash-Screen-Fix und weiteren Bugfixes ausgeliefert.
+- Release-Artifact-Workflow für Wallet-Builds ergänzt.
 - Toaster-Komponente aktualisiert und Legacy-Version bereinigt.
-- Remote-Benachrichtigungsunterstützung für die Registrierung bestehender Adressen, FCM-Geräteabmeldung beim Zurücksetzen und Entfernung von Benachrichtigungen über neue Wallet-Adressen hinzugefügt.
-- Liste mit „glücklichen Wörtern“ für Prüfphrasen (check-phrases) hinzugefügt.
-- Subsquid refactored, um stärker auf Extrinsics fokussiert zu sein, mit Unterstützung für Privacy-Score-Berechnung und Wormhole-Transaktionen.
-- Explorer refactored, um die aktualisierte Subsquid-Architektur widerzuspiegeln.
+- Remote-Notification-Support für Registrierung bestehender Adressen, FCM-Device-Unregistration bei Reset und Entfernung von Wallet-Adress-Benachrichtigungen ergänzt.
+- Happy-Words-Liste für Check-Phrases ergänzt.
+- Subsquid extrinsics-fokussiert refaktoriert, mit Support für Privacy-Score-Berechnung und Wormhole-Transaktionen.
+- Explorer refaktoriert, um die aktualisierte Subsquid-Architektur widerzuspiegeln.
 
-### Inhalt & Partnerschaften
+### Content & Partnerschaften
 
-- Podcast mit Nik Heger, „Building A New Sound Money System“
+- Podcast mit Nik Heger: „Building A New Sound Money System“
 
 ### Branchen-Updates
 
-- Quantum Canary Analyse darüber, [ob die Tempo-Blockchain von Stripe quantensicher sein wird.](https://x.com/QuantumCanary_/status/2024797352616509754)
+- Quantum-Canary-Analyse, ob [Stripes Tempo-Blockchain quantensicher sein wird.](https://x.com/QuantumCanary_/status/2024797352616509754)

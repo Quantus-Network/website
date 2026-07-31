@@ -1,6 +1,6 @@
 ---
 title: "Quantus Weekly: High-Security Accounts and Fraud Prevention"
-description: High-security accounts with customizable time locks and guardians, multisig integration testing, and a new recover-funds feature this week.
+description: "High-security accounts with customizable time locks and guardians, multisig integration testing, and a new recover-funds feature this week."
 
 pubDate: "2026-02-04"
 heroImage: "/blog/covers/weekly-update-02-04-2026.webp"

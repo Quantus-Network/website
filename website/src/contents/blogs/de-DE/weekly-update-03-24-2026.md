@@ -1,10 +1,9 @@
 ---
-title: "Quantus Weekly: 4× schnellere ZK-Beweise in zwei Wochen"
-description: Zweites Halving der Prover-Zeit: 4× schnellere ZK-Beweise in 14 Tagen. Außerdem Poseidon-Hashing, Mining-Fix, Whitepaper-Launch und iOS-Swap-Review.
-
+title: "Quantus Weekly: Zweites Halving, 4× schnellere Proofs"
+description: "Zweite Halbierung der Prover-Zeit: 4× schnellere ZK-Proofs in zwei Wochen. Poseidon, Mining-Fixes, Senoti-Limits, Whitepaper und Quantum Canary."
 pubDate: "2026-03-24"
 heroImage: "/blog/covers/weekly-update-03-24-2026.webp"
-heroAlt: "Quantus Weekly: 4× schnellere ZK-Beweise in zwei Wochen"
+heroAlt: "Quantus Weekly: Zweites Halving, 4× schnellere Proofs"
 featured: false
 tags:
   [
@@ -20,33 +19,33 @@ tags:
 
 2 ist eine besondere Zahl.
 
-2+2 ist 4. 2x2 ist 4. 2² ist 4.
+2+2 ist 4. 2×2 ist 4. 2² ist 4.
 
-Es ist die einzige Zahl, bei der Addition, Multiplikation und Potenzieren dasselbe Ergebnis liefern.
+Es ist die einzige Zahl, bei der Addition, Multiplikation und Potenzierung dasselbe Ergebnis liefern.
 
-Vor zwei Wochen haben wir unsere ZK-Beweispipeline deutlich optimiert.
+Vor zwei Wochen haben wir unsere ZK-Proving-Pipeline deutlich optimiert.
 
-Letzte Woche haben wir die Prover-Zeit halbiert (Division durch 2).
+Letzte Woche haben wir die Prover-Zeit halbiert (geteilt durch 2).
 
-Diese Woche haben wir sie erneut halbiert (das zweite Halving).
+Diese Woche halbiert — das zweite Halving.
 
-4x schneller in 14 Tagen.
+4× schneller in 14 Tagen.
 
-Jede Millisekunde in der Beweispipeline zählt für Geschwindigkeit und UX unserer privaten Transaktionen.
+Jede Millisekunde in der Proving-Pipeline zählt für Geschwindigkeit und UX unserer privaten Transaktionen.
 
-Wenn Nutzer auf Senden tippen, sollen Empfänger ihre Mittel sofort sehen.
+Wenn ein Nutzer auf Senden tippt, will er, dass der Empfänger die Mittel sofort sieht.
 
-Unsere Wormhole-Transaktionen — die Verbindung zwischen Sender und Empfänger aufbrechen — erfordern einen ZK-Beweis.
+Unsere Wormhole-Transaktionen — die die Verbindung zwischen Sender und Empfänger trennen — brauchen einen ZK-Proof.
 
-Der ZK-Beweis fügt vor der Finalisierung Zeit hinzu. Jede Sekunde und jedes Aktualisieren ohne sichtbare Mittel ist ein Misserfolg.
+Der ZK-Proof kostet zusätzliche Zeit vor dem Settlement. Jede Sekunde, in der der Empfänger den Bildschirm aktualisiert und nichts sieht, ist ein Fehlschlag.
 
-UI-Tricks können die Erfahrung verbessern — das ist gut.
+UI-Tricks können die Erfahrung verbessern — und das ist gut.
 
-Aber die Abwicklung muss sich anfühlen und wirklich extrem schnell sein.
+Aber Settlement muss sich schnell anfühlen und schnell sein.
 
-Wir reduzieren diese Sekunden weiter.
+Wir schleifen diese Sekunden runter.
 
-Das haben wir diese Woche außerdem ausgeliefert:
+Das ist diese Woche sonst noch shipped.
 
 ### GitHub-Aktivität (12 gemergte Pull Requests):
 
@@ -54,29 +53,29 @@ Das haben wir diese Woche außerdem ausgeliefert:
 
 ### Core Tech & ZK:
 
-- Weitere 50 % weniger Prover-Zeit durch ZK-freundliche Datenbankoptimierungen. Zweite Woche in Folge mit 2x Verbesserung der Beweispipeline.
-- Nicht-injektives Hashing in Poseidon implementiert, mit neuen versionierten Releases für qp-poseidon-constants.
-- Anpassung der Schwierigkeit für einen Edge Case im Mining-Algorithmus.
-- KI-gestützte Review aller Pallets und Haupt-Crates, mit Bug-Reports zu markierten Problemen.
-- Aufräum-PRs für Issues aus dem Codebase-Review gemerged.
+- Weitere 50 % Reduktion der Prover-Zeit durch ZK-freundliche Datenbank-Optimierungen. Zweite Woche in Folge mit 2×-Verbesserung der Proving-Pipeline.
+- Nicht-injektives Hashing in Poseidon implementiert, mit versionierten Releases für qp-poseidon-constants.
+- Difficulty-Adjustment-Fix für einen Edge Case im Mining-Algorithmus.
+- KI-gestütztes Review aller Pallets und Main Crates, mit Bug Reports für markierte Issues.
+- Cleanup-PRs für Issues aus dem Codebase-Review gemergt.
 
-### Netzwerk & Infrastruktur:
+### Netzwerk & Infra:
 
-- Rate Limiting für den Geräteregistrar des Senoti-Benachrichtigungsdienstes ergänzt.
-- Explorer aktualisiert: neueste Änderungen gemerged, Konflikte gelöst, API angepasst.
+- Rate Limiting für den Senoti-Notification-Service Device Registrar hinzugefügt.
+- Explorer aktualisiert: neueste Änderungen gemergt, Konflikte gelöst und API angepasst.
 
 ### Web- & Mobile-App-Updates:
 
-- Neues Whitepaper auf der Website mit aktualisiertem Styling und Inhalten veröffentlicht.
-- Letztes Weekly Update als Blog-Post auf [quantus.com/blog](https://quantus.com/blog) veröffentlicht.
-- Peek-Abonnement für den Transaktionspool implementiert und End-to-End getestet.
-- Apple-Review für die Swap-Funktion in der iOS-App begonnen.
+- Neues Whitepaper auf der Website mit aktualisiertem Styling und Inhalt veröffentlicht.
+- Letztes Weekly Update als Blogpost auf [quantus.com/blog](https://quantus.com/blog) veröffentlicht.
+- Transaction-Pool-Peek-Subscription end-to-end implementiert und getestet.
+- Apple-Review-Prozess für unser Swap-Feature in der iOS-App gestartet.
 
 ### Content & Partnerschaften:
 
-- 20-seitigen Entwurf unseres Branchenreports „State of Quantum“ fertiggestellt und zur Kommentierung verteilt. Melde dich bei Interesse.
-- Neue Marketing-Stelle für Social Media besetzt.
-- Q-Day-Termin bestätigt: 25. April an der Network School.
+- 20-seitigen Entwurf unseres „State of Quantum“-Branchenreports fertiggestellt und zur Kommentierung verteilt. Meldet euch, wenn ihr Interesse habt.
+- Marketing-Neueinstellung für Social Media.
+- Q-Day-Event-Datum bestätigt: 25. April bei Network School.
 
 ### Branchen-Updates:
 

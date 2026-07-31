@@ -1,10 +1,9 @@
 ---
-title: "Quantus Weekly: Ein fairer Start"
-description: Frühe Bitcoin-Miner schürften tausende BTC am Laptop. Bei Quantus hat zugängliches Mining vom ersten Tag an absolute Priorität.
-
+title: "Quantus Weekly: Ein fairerer Start"
+description: "Frühe Bitcoin-Miner schürften tausende BTC täglich per Laptop. Bei Quantus machen wir Mining vom ersten Tag an für alle zugänglich."
 pubDate: "2026-05-13"
 heroImage: "/blog/covers/weekly-update-05-13-2026.webp"
-heroAlt: "Quantus Weekly: Ein fairer Start"
+heroAlt: "Quantus Weekly: Ein fairerer Start"
 featured: false
 tags:
   [
@@ -23,57 +22,57 @@ tags:
   ]
 ---
 
-Frühe Bitcoin-Miner konnten mit einem Laptop tausende BTC am Tag minen.
+Frühe Bitcoin-Miner konnten tausende BTC pro Tag auf einem Laptop schürfen.
 
-Bitcoin CPU-Mining war im Grunde nur für 2 Jahre rentabel.
+Bitcoin-CPU-Mining war praktisch nur etwa zwei Jahre lang sinnvoll.
 
-Als das Netzwerk wuchs, stieg auch die Hashrate. GPU-Mining wurde rentabler, dann ASICs.
+Mit dem Wachstum des Netzwerks stieg auch die Hashrate. GPU-Mining wurde attraktiver, dann ASICs.
 
-Als Sie zum ersten Mal von BTC hörten, war das Mining auf Consumer-Hardware bereits tot.
+Als du zum ersten Mal von BTC hörtest, war Mining auf Consumer-Hardware längst tot.
 
-Es gab keine Börse, an der man kaufen konnte.
+Es gab keine Börse zum Kaufen.
 
-Da es keinen Sekundärmarkt gab, gab es keinen „Preis“.
+Ohne Sekundärmarkt gab es keinen „Preis“.
 
-Um einen „Preis“ zu erhalten, schätzte man die Stromkosten pro Coin.
+Um einen „Preis“ zu schätzen, rechnete man Stromkosten pro Coin.
 
-Als man schließlich am Markt kaufen konnte, waren die meisten Coins bereits verteilt.
+Als man endlich am Markt kaufen konnte, waren die meisten Coins bereits verteilt.
 
-Bitcoin emittierte in den ersten vier Jahren über die Hälfte seiner Coins.
+Bitcoin hat in den ersten vier Jahren über die Hälfte seiner Coins emittiert.
 
-Alles ging an die frühen Miner.
+Alles ging an frühe Miner.
 
-Das ist also der Standard für einen „Fair Launch“.
+Das ist der Maßstab für einen „Fair Launch“.
 
-Wir können es wahrscheinlich besser machen.
+Wir können wahrscheinlich besser.
 
-Wenn wir uns auf den Start von [@QuantusNetwork](https://x.com/@QuantusNetwork) vorbereiten, legen wir Priorität darauf, das Mining vom ersten Tag an zugänglich zu machen.
+Wenn wir [@QuantusNetwork](https://x.com/@QuantusNetwork) launchen, priorisieren wir Mining ab Tag eins.
 
-Sie können heute mit wenigen Klicks einen Mining-Node auf unserem Testnet in Betrieb nehmen.
+Heute könnt ihr in wenigen Klicks einen Mining-Node auf unserem Testnet starten.
 
-Letzte Woche haben wir unsere GUI-Miner-App aktualisiert. Selbst wenn Sie nicht technisch versiert sind, können Sie am ersten Tag für das Mainnet-Mining bereit sein.
+Letzte Woche haben wir unsere GUI-Miner-App aktualisiert. Auch ohne technisches Background seid ihr am Mainnet-Start bereit fürs Mining.
 
 ### Core Tech & ZK:
 
-- Prototyp für delegiertes ZK-Proving im Miner erstellt. Diese experimentelle Funktion ermöglicht es Minern, sich für die Proof-Aggregation für Wormhole-Transaktionen als zusätzliche Rolle zu entscheiden.
-- Ergebnisse der Audits von HashCloak und Eiger adressiert.
+- Prototyp für delegiertes ZK-Proving im Miner erstellt. Dieses experimentelle Feature erlaubt Minern, Proof-Aggregation für Wormhole-Transaktionen als zusätzliche Rolle zu übernehmen.
+- HashCloak- und Eiger-Audit-Funde adressiert.
 
-### Network & Infra:
+### Netzwerk & Infra:
 
-- GUI-Miner-Update mit Einlösungs- und Guthabenfunktionen für das Planck-Testnet veröffentlicht. Download und Walkthrough unter docs (dot) quantus (dot) com
-- KI-basiertes Sicherheits-Audit-Framework über alle Pull Requests hinweg bereitgestellt. Erster automatisierter Full-Chain-Sicherheits-Review abgeschlossen.
-- RPC-Nodes einem Penetrationstest unterzogen.
+- GUI-Miner-Update mit Redemption- und Balance-Features für das Planck-Testnet ausgeliefert. Download und Walkthrough unter docs (dot) quantus (dot) com
+- KI-basiertes Security-Audit-Framework über alle Pull Requests deployed. Erste automatisierte Full-Chain-Security-Review abgeschlossen.
+- RPC-Nodes pen-getestet.
 
-### Web & Mobile App Updates:
+### Web- & Mobile-App-Updates:
 
-- Miner-Belohnungsbildschirm und Point-of-Sale-Bildschirm in der Wallet implementiert.
-- Teure Explorer-Abfrage optimiert und vereinheitlichte Account-Events aktualisiert.
-- Korrekturen an der mobilen App.
+- Miner-Reward-Screen und Point-of-Sale-Screen in der Wallet implementiert.
+- Teure Explorer-Query optimiert und Unified-Account-Events aktualisiert.
+- Mobile-App-Fixes.
 
-### Content & Partnerships:
+### Content & Partnerschaften:
 
-- [Chris Smith im Observer](https://x.com/observer/status/2052779135794110592): „Bitcoins Quantencomputing-Governance-Problem.“
-- [Curtis Yarvin Podcast-Episode](https://x.com/QuantusNetwork/status/2052734804869915132) auf allen Plattformen veröffentlicht.
-- Über 30 Personen für die Quantus-App und mehr als 10 Miner an der Network School onboarded.
-- GUI-App-Mining-Leitfaden unter docs (dot) quantus (dot) com veröffentlicht.
-- Balaji als Q-Day-Sprecher bestätigt.
+- [Chris Smith im Observer](https://x.com/observer/status/2052779135794110592): „Bitcoin's quantum computing governance problem.“
+- [Curtis-Yarvin-Podcast-Episode](https://x.com/QuantusNetwork/status/2052734804869915132) auf allen Plattformen veröffentlicht.
+- 30+ Personen in die Quantus-App und 10+ Miner bei Network School onboarded.
+- GUI-App-Mining-Guide auf docs (dot) quantus (dot) com veröffentlicht.
+- Balaji als Q-Day-Speaker bestätigt.

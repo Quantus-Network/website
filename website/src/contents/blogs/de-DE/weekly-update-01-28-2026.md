@@ -1,10 +1,10 @@
 ---
-title: "Quantus Weekly: Deniable RPCs und Neodyme-Sicherheitsaudit"
-description: Neue Deniable RPCs für mehr Privatsphäre, abgeschlossenes Neodyme-Audit für Rusty Crystals und private ZK-Adressen für alle Token.
+title: "Quantus Weekly: Deniable RPCs und Neodyme-Audit"
+description: "Deniable RPCs für stärkere Privatsphäre, abgeschlossenes Neodyme-Rusty-Crystals-Audit und private ZK-Adressen für jeden Token ab Genesis verfügbar."
 
 pubDate: "2026-01-28"
 heroImage: "/blog/covers/weekly-update-01-28-2026.webp"
-heroAlt: "Quantus Weekly: Deniable RPCs und Neodyme-Sicherheitsaudit"
+heroAlt: "Quantus Weekly: Deniable RPCs und Neodyme-Audit"
 featured: false
 tags:
   [
@@ -19,56 +19,56 @@ tags:
   ]
 ---
 
-Deine Wallet verpetzt dich.
+Ihre Wallet verpetzt Sie.
 
-99 % der Privatsphäre-Infrastruktur ist nur Schein. Irgendwo im Stack sickern deine Informationen durch. Deine Wallet kommuniziert mit einem Server, der RPC genannt wird. Dieser RPC-Server sendet Informationen an deine Wallet zurück. Aber um das tun zu können, muss der RPC normalerweise einige Informationen über dich wissen.
+99 % der Privacy-Infrastruktur ist reine Show. Irgendwo im Stack sickern Ihre Daten durch. Ihre Wallet spricht mit einem Server namens RPC. Der RPC-Server sendet Informationen zurück an Ihre Wallet – dafür muss er typischerweise etwas über Sie wissen.
 
-Um beispielsweise dein Guthaben abzurufen, benötigt er möglicherweise deine Transaktionshistorie. Er verknüpft dies wahrscheinlich mit deiner IP-Adresse, deinem ungefähren Standort, deinen Nutzungsgewohnheiten usw. All das nur, damit du dein Guthaben in deiner Wallet sehen kannst.
+Um Ihr Guthaben abzurufen, braucht er vielleicht Ihre Transaktionshistorie. Er verknüpft das wahrscheinlich mit Ihrer IP-Adresse, ungefährem Standort, Nutzungsgewohnheiten usw. Alles nur, damit Sie Ihr Guthaben in der Wallet sehen.
 
-Während also Stacy, die neue Marketing-Mitarbeiterin deines Lieblings-Onchain-Privatsphäre-Tools, in einem X-Space damit prahlt, wie „privat und sicher“ sie sind, hören die Anzugträger einfach die RPC-Verbindung ab.
+Während Stacy, die neue Marketing-Hire Ihres Lieblings-On-Chain-Privacy-Tools, auf einem X-Space damit prahlt, wie „privat und sicher“ sie sind, lauschen die Anzugträger einfach der RPC-Verbindung ab.
 
-Du bist erledigt.
+Sie sind kompromittiert.
 
-Wir haben etwas anderes gebaut. Deniable RPCs verwenden einen Hash-Präfix-Filter, ähnlich wie Oblivious Lookup. Du kannst den Server nach deinen Transaktionen fragen, ohne dass er weiß, wonach du suchst. Der RPC kann nicht feststellen, welche spezifischen Transaktionen du anforderst.
+Wir haben etwas anderes gebaut. Deniable RPCs nutzen einen Hash-Präfix-Filter ähnlich Oblivious Lookup. Sie können den Server nach Ihren Transaktionen fragen, ohne dass er weiß, wonach Sie suchen. Der RPC kann nicht bestimmen, welche konkreten Transaktionen Sie anfordern.
 
-So bewahrt [@QuantusNetwork](https://x.com/@QuantusNetwork) die Privatsphäre onchain und in der Wallet/RPC-Infrastruktur. Wir halten geheim, was du geheim halten willst, auf jeder Ebene des Stacks.
+[Quantus](https://x.com/@QuantusNetwork) bewahrt Privatsphäre on-chain und in der Wallet-/RPC-Infrastruktur. Wir halten geheim, was Sie geheim halten wollen – auf jeder Ebene des Stacks.
 
-Diese Woche haben wir auch den abgeschlossenen [@Neodyme](https://x.com/@Neodyme) Sicherheitsaudit für unsere Rusty Crystals Dilithium-Signaturbibliothek [bekannt gegeben](https://x.com/QuantusNetwork/status/2016390125626773871). Alle Probleme wurden gelöst und Härtungstechniken angewendet. Rusty Crystals ist die beste Dilithium-Signaturbibliothek in Rust, mit voller HD-Wallet-Unterstützung.
+Diese Woche haben wir außerdem das abgeschlossene [@Neodyme](https://x.com/@Neodyme)-Security-Audit für unsere Rusty-Crystals-Dilithium-Signatur-Bibliothek [angekündigt](https://x.com/QuantusNetwork/status/2016390125626773871). Alle Issues behoben und Härtungstechniken angewendet. Rusty Crystals ist die beste Dilithium-Signatur-Bibliothek in Rust, mit voller HD-Wallet-Unterstützung.
 
-Das sind die Highlights. Hier ist, was wir in der letzten Woche sonst noch ausgeliefert haben:
+Das waren die Highlights. Hier ist, was wir sonst noch in der letzten Woche ausgeliefert haben:
 
-### GitHub-Aktivität (19 gemergte Pull-Requests):
+### GitHub-Aktivität (19 gemergte Pull Requests):
 
-![Github-Statistiken](/blog/assets/github-stats-weekly-update-01-28-2026.webp)
+![Github Stats](/blog/assets/github-stats-weekly-update-01-28-2026.webp)
 
-### Core Tech & ZK
+### Core-Tech & ZK
 
-- [@Neodyme](https://x.com/@Neodyme) Audit abgeschlossen, alle Probleme gelöst. Härtungstechniken angewendet, einschließlich Nullsetzen des Speichers nach Gebrauch. [Post hier](https://x.com/QuantusNetwork/status/2016390125626773871).
-- Deniable RPCs via Präfix-Hashing ausgeliefert. Benutzer haben nun plausible Abstreitbarkeit beim Verbinden mit RPC-Knoten (Oblivious Lookup).
-- Private ZK-Adressen für alle Token bei Genesis aktiviert.
-- Kontinuierliche Block-Erstellung reduziert die durchschnittliche Zeit bis zur Aufnahme einer Transaktion um über 50 %.
-- Unnötige Pallets entfernt, was die Runtime vereinfacht.
-- Multisig-Pallet feature-complete mit aktualisierter Dokumentation. Chain- und CLI-Integration warten auf Review.
-- Fuzzer für ZK-Aggregator-Schaltkreise überarbeitet und Testabdeckung für Miner-Gebühren und Burned-Gebühren erweitert.
+- [@Neodyme](https://x.com/@Neodyme)-Audit abgeschlossen, alle Issues behoben. Härtungstechniken angewendet, inklusive Memory Zeroing nach Nutzung. [Post hier](https://x.com/QuantusNetwork/status/2016390125626773871).
+- Deniable RPCs via Prefix Hashing ausgeliefert. Nutzer haben jetzt plausible Abstreitbarkeit beim Verbinden mit RPC-Nodes (Oblivious Lookup).
+- Private ZK-Adressen für alle Tokens ab Genesis aktiviert.
+- Continuous Block-Building reduziert die durchschnittliche Zeit bis zur Transaktionsaufnahme um über 50 %.
+- Unnötige Pallets entfernt – Runtime vereinfacht.
+- Multisig-Pallet feature-complete mit aktualisierter Dokumentation. Chain- und CLI-Integration wartet auf Review.
+- Fuzzer für ZK-Aggregator-Circuits überarbeitet und Testabdeckung für Miner Fees und Burned Fees erweitert.
 
-### Web & Mobile App Updates
+### Web- & Mobile-App-Updates
 
-- Mobile App v1.1.5 (Build 65) mit High-Security-Pull-Funktion ausgeliefert.
-- Demo-Videos für High-Security-Funktionen erstellt.
-- Explorer- und Faucet-Verbesserungen: Fehler- und High-Security-Events zu Blockdetails hinzugefügt, Suche nach Fehlertyp und verbessertes Filtern von Gruppennachrichten.
-- Task Master Bugfixes für Leaderboard, Raid-Einreichung und Metriken.
-- Subsquid-Dockerfile und GitHub-Action für Docker-Image-Generierung korrigiert.
-- Website-Blog-UX aktualisiert und SEO-Probleme behoben.
+- Mobile App v1.1.5 (Build 65) mit High-Security-Pull-Feature ausgeliefert.
+- Demo-Videos für High-Security-Features erstellt.
+- Explorer- und Faucet-Verbesserungen: Fehler- und High-Security-Events in Block-Details, Suche nach Fehlertyp und verbesserte Gruppennachrichten-Filterung.
+- Task-Master-Bugfixes für Leaderboard, Raid-Einreichung und Metriken.
+- Subsquid-Dockerfile und GitHub Action für Docker-Image-Generierung repariert.
+- Website-Blog-UX aktualisiert und SEO-Issues behoben.
 
 ### Content & Partnerschaften
 
 - Über 1.000 Mitglieder auf Telegram erreicht.
-- Veranstaltungsort für Side-Event auf der Token2049 Dubai gebucht.
-- Das Team hat beschlossen, für unseren nächsten Sprint zu [@ns](https://x.com/@ns) zurückzukehren.
-- Neuen Designer für das Mobile-App-Redesign eingestellt.
-- Ersten mittelgroßen Content Creator für Video-Kollaborationen eingestellt. Aufbau unseres Creator-Rosters.
+- Venue für Side Event bei Token2049 Dubai gebucht.
+- Das Team kehrt für unseren nächsten Sprint nach [@ns](https://x.com/@ns) zurück.
+- Neuen Designer für Mobile-App-Redesign eingestellt.
+- Unseren ersten mittelgroßen Content Creator für Video-Kollabs eingestellt. Wir bauen unser Creator-Roster auf.
 
 ### Branchen-Updates
 
-- [@QuantumCanary\_](https://x.com/@QuantumCanary_) Artikel [über Zcash](https://x.com/QuantumCanary_/status/2016327421797294286).
-- [@QuantumCanary\_](https://x.com/@QuantumCanary_) veröffentlichte ihre „[Blockchain Vergleichstabelle](https://x.com/QuantumCanary_/status/2015734605450731824)“.
+- [@QuantumCanary\_](https://x.com/@QuantumCanary_)-Artikel [zu Zcash](https://x.com/QuantumCanary_/status/2016327421797294286).
+- [@QuantumCanary\_](https://x.com/@QuantumCanary_) hat ihre „[Blockchain Comparison Table](https://x.com/QuantumCanary_/status/2015734605450731824)“ veröffentlicht.

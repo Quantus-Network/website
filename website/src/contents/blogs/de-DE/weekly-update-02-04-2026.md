@@ -1,10 +1,10 @@
 ---
-title: "Quantus Weekly: Hochsicherheitskonten und Betrugsprävention"
-description: Hochsicherheitskonten mit Zeitsperren und Guardians, Multisig-Tests und die neue Funktion zur Wiederherstellung von Geldern diese Woche.
+title: "Quantus Weekly: High-Security-Konten und Betrugsschutz"
+description: "High-Security-Konten mit Time Locks und Guardians, Multisig-Integration im Test und neues Recover-Funds-Feature – unser Weekly Update dieser Woche."
 
 pubDate: "2026-02-04"
 heroImage: "/blog/covers/weekly-update-02-04-2026.webp"
-heroAlt: "Quantus Weekly: Hochsicherheitskonten und Betrugsprävention"
+heroAlt: "Quantus Weekly: High-Security-Konten und Betrugsschutz"
 featured: false
 tags:
   [
@@ -18,42 +18,42 @@ tags:
   ]
 ---
 
-Chainalysis schätzt, dass im Jahr 2025 Krypto im Wert von 17 Milliarden US-Dollar gestohlen wurde. Das Versprechen war „Sei deine eigene Bank“. Die andere Hälfte lautet „Sei dein eigenes Sicherheitsteam“. Um es klar zu sagen: „Ein Schweizer Bankkonto in deiner Tasche, aber nur für Cybersicherheitsexperten“ ist immer noch wahnsinnig beeindruckend. Aber die Branche hat unschuldigen Normalbürgern einen Bärendienst erwiesen, die ruiniert wurden, indem sie ihr Nettovermögen onchain verschoben haben, ohne überhaupt zu wissen, was asymmetrische Kryptografie ist.
+Chainalysis schätzte, dass 2025 Krypto im Wert von 17 Mrd. USD gestohlen wurde. Das Versprechen lautete: „Sei deine eigene Bank.“ Die andere Hälfte heißt: „Sei dein eigenes Sicherheitsteam.“ Klar, „ein Schweizer Bankkonto in der Tasche – aber nur für Cybersecurity-Experten“ ist immer noch verdammt cool. Aber die Branche hat unschuldigen Laien einen Bärendienst erwiesen, die ihr Vermögen on-chain verschoben, ohne zu wissen, was asymmetrische Kryptografie ist.
 
-Wenn man also sagt „Sei deine eigene Bank“, sollte man auch erwähnen, dass Banken Betrugsabteilungen, Transaktionsüberwachung und Umkehrfristen haben. Sie erkennen verdächtige Aktivitäten, frieren Konten ein und fangen bösartige Transaktionen ab. All das lässt man hinter sich, wenn man die Verwahrung seiner eigenen Schlüssel übernimmt.
+Wenn Sie also sagen „Sei deine eigene Bank“, sollten Sie auch erwähnen, dass Banken Betrugsabteilungen, Transaktionsüberwachung und Stornierungsfristen haben. Sie erkennen verdächtige Aktivitäten, frieren Konten ein und fangen bösartige Transaktionen ab. All das lassen Sie hinter sich, wenn Sie die Verwahrung Ihrer Keys übernehmen.
 
-Leider ist „Verwenden Sie eine Hardware-Wallet und überprüfen Sie jedes Mal genau alles, was Sie signieren“ ein wenig hilfreicher Rat. Wenn Bybit auf ihrer Cold-Storage-Multisig blind signiert, tut wahrscheinlich niemand genug. Es ist unzumutbar zu erwarten, dass Benutzer auf einem ausreichend hohen Sicherheitsniveau agieren. Es ist unhaltbar, dass der „Verlust Ihres gesamten Geldes“ ein Ergebnis der Nutzung Ihrer App ist.
+Leider ist „Nutze eine Hardware-Wallet und verifiziere jedes Mal genau alles, was du signierst“ wenig hilfreich. Wenn Bybit beim Cold-Storage-Multisig blind signiert, macht wahrscheinlich niemand genug. Es ist unzumutbar, von Nutzern ein so hohes Sicherheitsniveau zu erwarten. Dass „alles verlieren“ eine Folge der App-Nutzung sein kann, ist untragbar.
 
-Was ist also schlimmer: sein ganzes Geld zu verlieren oder eine Vertrauensannahme? Das hängt von der Vertrauensannahme ab, oder? Es gibt einen Mittelweg zwischen „Vertraue niemandem“ und „Vertraue einer Bank“. Vertraue jemandem, den du wählst: einem Freund, einem Familienmitglied, einer Multisig mit deinem Anwalt oder deinem technisch versierten Neffen, einem Totmannschalter.
+Was ist schlimmer – alles verlieren oder eine Vertrauensannahme? Kommt auf die Vertrauensannahme an, oder? Es gibt einen Mittelweg zwischen „trau niemandem“ und „trau einer Bank“. Vertrauen Sie jemandem Ihrer Wahl: einem Freund, einem Familienmitglied, einem Multisig mit Ihrem Anwalt oder technikaffinen Neffen, einem Dead-Man's-Switch.
 
-Das haben wir in [@QuantusNetwork](https://x.com/@QuantusNetwork) eingebaut. Hochsicherheitskonten auf Quantus haben eine anpassbare Zeitsperre für jede ausgehende Transaktion. Während dieses Fensters kann ein benannter Guardian die Transaktion abfangen und stornieren. Ein Guardian kann nicht in Ihrem Namen signieren, aber er kann jede ausgehende Transaktion stoppen.
+Das haben wir in [Quantus](https://x.com/@QuantusNetwork) eingebaut. High-Security-Konten auf Quantus haben einen anpassbaren Time Lock für jede ausgehende Transaktion. In diesem Fenster kann ein designierter Guardian die Transaktion abfangen und stornieren. Ein Guardian kann nicht in Ihrem Namen signieren – aber er kann jede ausgehende Transaktion stoppen.
 
-Wenn also ein Dieb Ihre Schlüssel hat, hat er nicht unbedingt die Möglichkeit, alles zu nehmen, was Sie besitzen. Sie wählen den Guardian und legen das Zeitfenster fest. Vielleicht ist es eine 24-stündige Verzögerung mit Ihrem Ehepartner für jede Transaktion, die größer als 1.000 US-Dollar ist. Vielleicht ist es eine Hardware-Wallet, die Sie in einem Bankschließfach aufbewahren. Vielleicht ist es ein professioneller Service, der Aktivitäten in Echtzeit auf potenziellen Betrug überwacht.
+Hat also ein Dieb Ihre Keys, hat er nicht automatisch die Möglichkeit, alles zu nehmen. Sie wählen den Guardian und legen das Fenster fest. Vielleicht 24 Stunden Verzögerung mit Ihrem Partner für Transaktionen über 1.000 USD. Vielleicht eine Hardware-Wallet im Banksafe. Vielleicht ein professioneller Dienst, der Aktivitäten in Echtzeit auf Betrug überwacht.
 
-Diese Woche haben wir mit dem Testen der Multisig-Integration für Guardian-Konten begonnen. Wir haben außerdem eine Funktion zur Wiederherstellung von Geldern zur Chain hinzugefügt, sodass abgefangene Transaktionen an den ursprünglichen Eigentümer zurückgefordert werden können.
+Diese Woche haben wir die Multisig-Integration für Guardian-Konten getestet. Außerdem haben wir Recover-Funds-Funktionalität in die Chain eingebaut, damit abgefangene Transaktionen an den ursprünglichen Besitzer zurückgeholt werden können.
 
-Hier ist, was wir diese Woche sonst noch ausgeliefert haben:
+Das haben wir sonst noch diese Woche ausgeliefert:
 
-### GitHub-Aktivität (5 gemergte Pull-Requests):
+### GitHub-Aktivität (5 gemergte Pull Requests):
 
-![Github-Statistiken](/blog/assets/github-stats-weekly-update-02-04-2026.webp)
+![Github Stats](/blog/assets/github-stats-weekly-update-02-04-2026.webp)
 
-### Core Tech & ZK
+### Core-Tech & ZK
 
-- Multisig-Pallet für Hochsicherheitskonten in der Testphase mit CLI-Befehlen.
-- Funktion zur Wiederherstellung von Geldern zur Chain für Hochsicherheitskonten hinzugefügt.
-- qp-plonky2 auf den neuesten Stand mit den Änderungen im ursprünglichen plonky2-Repo gebracht.
+- Multisig-Pallet für High-Security-Konten in Testphase mit CLI-Befehlen.
+- Recover-Funds-Funktionalität für High-Security-Konten in der Chain ergänzt.
+- qp-plonky2 auf den Stand der Änderungen im Original-plonky2-Repo gebracht.
 
-### Web & Mobile App Updates
+### Web- & Mobile-App-Updates
 
-- UI der Quests-Bildschirme mit Gradienten und Wallet-Integration überarbeitet.
-- Unbenutzte Assets in der App aufgeräumt.
+- Quest-Screens-UI mit Gradients und Wallet-Integration refaktoriert.
+- Ungenutzte Assets in der App bereinigt.
 
 ### Content & Partnerschaften
 
-- [@QuantusNetwork](https://x.com/@QuantusNetwork) und [@YuviLightman](https://x.com/@YuviLightman) Konten haben beide die Marke von 1.000 Followern überschritten.
+- [Quantus](https://x.com/@QuantusNetwork) und [@YuviLightman](https://x.com/@YuviLightman) haben jeweils über 1.000 Follower erreicht.
 - Podcast mit Henry Love über KI und Produktivität (auf unserem Youtube).
 
 ### Branchen-Updates
 
-- Quantum Canary: [„Wird Zcash Bitcoin ersetzen?“](https://x.com/QuantumCanary_/status/2016327421797294286)
+- Quantum Canary: [„Will Zcash Replace Bitcoin?“](https://x.com/QuantumCanary_/status/2016327421797294286)
