@@ -1,6 +1,6 @@
 ---
 title: "Quantus Weekly: Transacciones Wormhole"
-description: Actualización semanal que cubre transacciones wormhole, recompensas de bloque privadas para mineros, correcciones de errores de consenso y actualizaciones de.
+description: Transacciones wormhole, recompensas de bloque privadas para mineros, correcciones de consenso y actualizaciones de la billetera esta semana.
 
 pubDate: "2026-03-07"
 heroImage: "/blog/covers/weekly-update-03-07-2026.webp"

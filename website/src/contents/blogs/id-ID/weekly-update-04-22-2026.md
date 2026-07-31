@@ -1,6 +1,6 @@
 ---
 title: "Quantus Weekly: Planck, Klaim CLI, Prover 2x Lebih Cepat"
-description: Planck adalah testnet pertama untuk transaksi privat pascakuantum Quantus—miner bermigrasi, hadiah bisa diklaim lewat CLI ke alamat transparan di dompet.
+description: "Planck: testnet pertama transaksi privat pascakuantum Quantus—migrasi miner, klaim hadiah CLI, panduan di docs, dan prover agregat 2× lebih cepat."
 
 pubDate: "2026-04-22"
 heroImage: "/blog/covers/weekly-update-04-22-2026.webp"

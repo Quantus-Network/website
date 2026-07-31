@@ -1,6 +1,6 @@
 ---
 title: "Quantus Weekly: отчёт The State of Quantum"
-description: "Мы опубликовали исследовательский отчёт о квантовом риске для крипто — его подхватили крупные издания. На этой неделе: правки по аудиту в ZK-репозиториях."
+description: "Отчёт о квантовом риске для крипто попал в крупные издания. На этой неделе: аудит ZK, троттлинг GPU-майнера, кошелёк, сайт Q-Day и магазин."
 pubDate: "2026-05-29"
 heroImage: "/blog/covers/weekly-update-05-29-2026.webp"
 heroAlt: "Quantus Weekly: отчёт The State of Quantum"

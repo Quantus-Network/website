@@ -1,6 +1,6 @@
 ---
 title: "Quantus Weekly: Ein fairer Start"
-description: Frühe Bitcoin-Miner konnten mit einem Laptop tausende BTC am Tag minen. Bei Quantus legen wir Priorität darauf, das Mining vom ersten Tag an zugänglich zu.
+description: Frühe Bitcoin-Miner schürften tausende BTC am Laptop. Bei Quantus hat zugängliches Mining vom ersten Tag an absolute Priorität.
 
 pubDate: "2026-05-13"
 heroImage: "/blog/covers/weekly-update-05-13-2026.webp"

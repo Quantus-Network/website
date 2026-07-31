@@ -1,6 +1,6 @@
 ---
 title: "Quantus Weekly: Отрицаемые RPC и аудит безопасности Neodyme"
-description: "Еженедельное обновление: наши новые отрицаемые RPC для повышения конфиденциальности, завершение аудита безопасности Neodyme для Rusty Crystals и приватные."
+description: "Отрицаемые RPC для большей приватности, завершённый аудит Neodyme для Rusty Crystals и приватные ZK-адреса для всех токенов."
 pubDate: "2026-01-28"
 heroImage: "/blog/covers/weekly-update-01-28-2026.webp"
 heroAlt: "Quantus Weekly: Отрицаемые RPC и аудит безопасности Neodyme"

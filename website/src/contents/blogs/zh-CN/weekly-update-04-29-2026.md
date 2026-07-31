@@ -1,6 +1,6 @@
 ---
 title: Quantus Weekly：春季清理、Eiger 审计与紧凑聚合器
-description: 与 Eiger 推进多项审计整改，重构 CLI，修复矿工与索引器问题，并在新的紧凑聚合器上完成虫洞集成测试；ZK 侧虫洞流程已顺畅跑通上周交付的 2x8 紧凑聚合器；发布移动钱包 1.3.4 / 1.3.5、修复 GPU 问题的 Quantus 矿工 v3.1.0
+description: 推进 Eiger 审计整改、重构 CLI、修复矿工与索引器，并完成虫洞集成测试；发布钱包 1.3.4/1.3.5、矿工 v3.1.0，以及 Planck 测试网矿工工作坊。
 
 pubDate: "2026-04-29"
 heroImage: "/blog/covers/weekly-update-04-29-2026.webp"

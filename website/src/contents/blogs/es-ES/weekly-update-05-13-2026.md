@@ -1,6 +1,6 @@
 ---
 title: "Quantus Weekly: Un lanzamiento más justo"
-description: Los primeros mineros de Bitcoin podían minar miles de BTC al día con una computadora portátil. En Quantus, priorizamos que la minería sea accesible desde el.
+description: Los primeros mineros de Bitcoin minaban miles de BTC al día en un portátil. En Quantus, la minería accesible cuenta desde el primer día.
 
 pubDate: "2026-05-13"
 heroImage: "/blog/covers/weekly-update-05-13-2026.webp"

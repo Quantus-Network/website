@@ -1,6 +1,6 @@
 ---
 title: "Quantus Weekly: La aplicación definitiva es el dinero"
-description: Esta semana reescribimos Dilithium DKG para Mithril, enviamos correcciones de firmas de umbral, expusimos ayudantes del SDK de Wormhole y lanzamos una.
+description: Reescribimos Dilithium DKG para Mithril, enviamos fixes de firmas de umbral, expusimos helpers de Wormhole SDK y lanzamos Wallet v1.4.0 en TestFlight.
 
 pubDate: "2026-05-06"
 heroImage: "/blog/covers/weekly-update-05-06-2026.webp"

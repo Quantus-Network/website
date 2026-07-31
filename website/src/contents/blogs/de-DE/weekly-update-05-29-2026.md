@@ -1,6 +1,6 @@
 ---
 title: "Quantus Weekly: The State of Quantum Report"
-description: Wir haben unseren Forschungsbericht zum Quantenrisiko für Krypto veröffentlicht – mit Berichterstattung in großen Medien.
+description: "Forschungsbericht zum Quantenrisiko für Krypto mit großer Medienresonanz. Diese Woche: ZK-Audit-Fixes, GPU-Throttling, Wallet-Updates, Q-Day-Site und Shop."
 
 pubDate: "2026-05-29"
 heroImage: "/blog/covers/weekly-update-05-29-2026.webp"

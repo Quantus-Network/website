@@ -1,6 +1,6 @@
 ---
 title: "Quantus Weekly: 스프링 클리닝, Eiger 감사, 컴팩트 어그리게이터"
-description: Eiger 감사 항목 다수 처리, CLI 리팩터링, 마이너·인덱서 버그 수정, 새 컴팩트 어그리게이터에서 웜홀 통합 테스트. ZK 웜홀 플로우는 지난주 출시한 2x8 컴팩트 어그리게이터를 문제 없이 통과.
+description: Eiger 감사·CLI 리팩터·마이너/인덱서 수정·웜홀 통합 테스트. 모바일 지갑 1.3.4·1.3.5, miner v3.1.0, 채굴 문서 갱신, Network School 플랑크 워크숍.
 
 pubDate: "2026-04-29"
 heroImage: "/blog/covers/weekly-update-04-29-2026.webp"

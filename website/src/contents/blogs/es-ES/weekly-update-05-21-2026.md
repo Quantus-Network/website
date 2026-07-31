@@ -1,6 +1,6 @@
 ---
 title: "Quantus Weekly: Q-Day está a la vuelta de la esquina"
-description: Q-Day es el 6 de junio. Esta semana cerramos puntos de auditoría en Dilithium DKG de umbral, enviamos actualizaciones del minero y notificaciones, corregimos.
+description: Q-Day es el 6 de junio. Cerramos auditoría Dilithium DKG, enviamos updates de minero y notificaciones, fijamos la billetera y lanzamos el sitio Q-Day.
 
 pubDate: "2026-05-21"
 heroImage: "/blog/covers/weekly-update-05-21-2026.webp"

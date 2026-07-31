@@ -1,6 +1,6 @@
 ---
 title: "Quantus Weekly: Informe The State of Quantum"
-description: "Publicamos nuestro informe de investigación sobre el riesgo cuántico para las cripto, con cobertura en grandes medios. Esta semana: correcciones de auditoría."
+description: "Publicamos el informe de riesgo cuántico con cobertura en grandes medios. Esta semana: auditoría ZK, throttling GPU, billetera, sitio Q-Day y tienda."
 pubDate: "2026-05-29"
 heroImage: "/blog/covers/weekly-update-05-29-2026.webp"
 heroAlt: "Quantus Weekly: Informe The State of Quantum"

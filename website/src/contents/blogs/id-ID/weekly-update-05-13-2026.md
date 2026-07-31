@@ -1,6 +1,6 @@
 ---
 title: "Quantus Weekly: Peluncuran yang Lebih Adil"
-description: Penambang Bitcoin awal dapat menambang ribuan BTC sehari di laptop. Di Quantus, kami memprioritaskan pembuatan penambangan yang dapat diakses sejak hari.
+description: Penambang Bitcoin awal menambang ribuan BTC sehari di laptop. Di Quantus, penambangan yang mudah diakses jadi prioritas sejak hari pertama.
 
 pubDate: "2026-05-13"
 heroImage: "/blog/covers/weekly-update-05-13-2026.webp"

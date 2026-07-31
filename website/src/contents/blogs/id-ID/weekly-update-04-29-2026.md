@@ -1,6 +1,6 @@
 ---
 title: "Quantus Weekly: Audit Eiger dan Compact Aggregator"
-description: Menuntaskan banyak item audit bersama Eiger, merefaktor CLI, memperbaiki bug miner dan indexer, serta menjalankan tes integrasi wormhole di compact aggregator.
+description: Audit Eiger, refactor CLI, bugfix miner/indexer, tes wormhole di compact aggregator, dompet 1.3.4–1.3.5, miner v3.1.0, dan workshop Planck.
 
 pubDate: "2026-04-29"
 heroImage: "/blog/covers/weekly-update-04-29-2026.webp"

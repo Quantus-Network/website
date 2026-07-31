@@ -1,6 +1,6 @@
 ---
 title: "Quantus Weekly: Halving Kedua, Bukti ZK 4x Lebih Cepat"
-description: Pengurangan 2x lagi pada waktu prover, hashing Poseidon, perbaikan mining, rate limit Senoti, peluncuran whitepaper, review swap iOS, dan Quantum Canary.
+description: Prover 2× lebih cepat lagi, hashing Poseidon, perbaikan mining, rate limit Senoti, whitepaper, review swap iOS, dan Quantum Canary soal Solana.
 
 pubDate: "2026-03-24"
 heroImage: "/blog/covers/weekly-update-03-24-2026.webp"
