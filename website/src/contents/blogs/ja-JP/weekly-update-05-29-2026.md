@@ -1,9 +1,9 @@
 ---
-title: "Quantus Weekly: The State of Quantum レポート"
-description: "暗号資産への量子リスクに関する調査レポートを公開し、主要メディアで取り上げられました。今週は ZK リポの監査対応、GPU マイナーのスロットル、モバイルウォレット更新、Q-Day サイトと Quantus ショップの展開など。"
+title: "Quantus Weekly: 量子リスク調査レポート"
+description: "暗号資産への量子リスク調査レポートが主要メディアで報じられました。今週はZK監査修正、GPUマイナースロットル、ウォレット更新、Q-Dayサイト・ショップ公開。"
 pubDate: "2026-05-29"
 heroImage: "/blog/covers/weekly-update-05-29-2026.webp"
-heroAlt: "Quantus Weekly: The State of Quantum レポート"
+heroAlt: "Quantus Weekly: 量子リスク調査レポート"
 featured: false
 tags:
   [
@@ -24,11 +24,11 @@ tags:
   ]
 ---
 
-今週、暗号資産への量子リスクに関する調査レポート [The State of Quantum: 暗号資産が見過ごせない量子リスク](https://x.com/QuantusNetwork/status/2059624449993806039) を公開しました。
+今週、暗号資産への量子リスクに関する調査レポート『The State of Quantum: What Crypto Can't Afford to Ignore』を[公開しました](https://x.com/QuantusNetwork/status/2059624449993806039)。
 
-レポートは Blockchain Reporter、MEXC、CoinMarketCap Community、Metaverse Post、crypto (dot) news、Yellow、ForkLog、The Coin Headlines などで取り上げられました。
+レポートはBlockchain Reporter、MEXC、CoinMarketCap Community、Metaverse Post、crypto (dot) news、Yellow、ForkLog、The Coin Headlinesなど各所で取り上げられました。
 
-レポート作成にご協力いただいた皆さんに特別な感謝を：
+レポート作成に協力してくださった皆さんに特別な感謝を：
 
 - [@NEARProtocol](https://x.com/@NEARProtocol)
 - [@near_intents](https://x.com/@near_intents)
@@ -43,43 +43,43 @@ tags:
 - [@SwaynesWord](https://x.com/@SwaynesWord)
 - [@tx_track](https://x.com/@tx_track)
 
-著者・編集者を含め：
+著者・編集者の皆さんも含め：
 
 - [@defijangle](https://x.com/@defijangle)
 - [@j_in_marketing](https://x.com/@j_in_marketing)
 - [@YuviLightman](https://x.com/@YuviLightman)
 - [@JoeMattia](https://x.com/@JoeMattia)
 
-今週のその他のリリース内容：
+今週出荷したその他の内容：
 
 ### Core Tech & ZK
 
-- qp-plonky2、qp-poseidon、qp-rusty-crystals の監査項目に対応。
-- Poseidon2 ゲートを最適化し、ZK 回路のワイヤ設定を厳格化。qp-zk-circuits にメモリプロファイリングツールを追加。
+- qp-plonky2、qp-poseidon、qp-rusty-crystals全体の監査指摘事項に対応しました。
+- Poseidon2ゲートを最適化し、ZK回路ワイヤー設定を厳格化。qp-zk-circuitsにメモリプロファイリングツールを追加しました。
 
-### ネットワーク & インフラ
+### Network & Infra
 
-- マイナーが AI 推論ワークロードと GPU を共有できるよう、オプションの GPU マイナースロットルを追加。
-- チェーンの難易度調整の挙動を修正し、チェーンノードの Docker イメージサポートを改善。
-- Subsquid にマルチシグイベントデータ、マイナー総数、API レート制限の引き上げを追加。
+- AI推論ワークロードとGPUを共有できるよう、オプションのGPUマイナースロットルを追加しました。
+- チェーン難易度調整の挙動を修正し、チェーンノードDockerイメージサポートを改善しました。
+- Subsquidにマルチシグイベントデータ、総マイナー数を追加し、APIレート制限を引き上げました。
 
-### Web & モバイルアプリ
+### Web & Mobile App Updates
 
-- モバイルウォレットの言語サポート、プルツーリフレッシュ、無限スクロールの修正を追加。
-- モバイル POS モードと pay/send インテント処理を修正（コールドスタート処理、小数点区切りの検証を含む）。
-- q (dot) day でスポンサー問い合わせ用メール連携付きの新 Q-Day サイトを展開。
-- イベントや NS で QUAN テストネットトークンによるグッズ販売の Quantus ショップを展開。
-- Quantus エクスプローラーのマイニングリーダーボードを修正。
+- モバイルウォレットの言語サポート、プルツーリフレッシュ、無限スクロールの修正を追加しました。
+- モバイルPOSモードとpay/sendインテント処理を修正（コールドスタート処理、小数点区切り検証を含む）。
+- スポンサー問い合わせ用メール連携付き新Q-Dayサイトをq (dot) dayに展開しました。
+- イベントやNS向けにQUANテストネットトークンでグッズを販売するQuantusショップを展開しました。
+- Quantus Explorerマイニングリーダーボードの修正。
 
-### コンテンツ & パートナーシップ
+### Content & Partnerships
 
-- The State of Quantum レポートを公開: [https://x.com/QuantusNetwork/status/2059624449993806039](https://x.com/QuantusNetwork/status/2059624449993806039)
-- Blockchain Reporter がレポートを取材: [https://x.com/blockchainrptr/status/2059620914300613023](https://x.com/blockchainrptr/status/2059620914300613023)
-- Metaverse Post がレポートを取材: [https://x.com/mpost_io/status/2059922639926530375](https://x.com/mpost_io/status/2059922639926530375)
-- ForkLog がレポートを取材: [https://x.com/ForkLog/status/2059917147317444833](https://x.com/ForkLog/status/2059917147317444833)
-- MEXC、CoinMarketCap、Yellow、crypto (dot) news、The Coin Headlines もレポートを取材。
-- Quip がレポートの Bitcoin ガバナンス章について見解を共有: [https://x.com/quipnetwork/status/2059663890943013153](https://x.com/quipnetwork/status/2059663890943013153)
-- Murtuza Merchant がレポートの Bitcoin スケーラビリティ・ガバナンスの知見を取材: [https://x.com/murtuza_merc/status/2059674137824510023](https://x.com/murtuza_merc/status/2059674137824510023)
-- Chris が Blockchain Reporter の創業者インタビューに登場（量子リスク、Bitcoin、ステーブルコイン、プライバシーツール、ブロックチェーン移行）: [https://x.com/blockchainrptr/status/2059666209663307921](https://x.com/blockchainrptr/status/2059666209663307921)
-- 一時的なブロックチェーンプライバシーとポスト量子 ZK アーキテクチャに関する Metaverse Post インタビューを公開: [https://x.com/QuantusNetwork/status/2059274094797893727](https://x.com/QuantusNetwork/status/2059274094797893727)
-- 6 月 6 日の [@ns](https://x.com/@ns) Q-Day 向けソーシャル投稿（ハイプ、パートナー・スピーカー発表を含む）。
+- The State of Quantumレポートを公開：[https://x.com/QuantusNetwork/status/2059624449993806039](https://x.com/QuantusNetwork/status/2059624449993806039)
+- Blockchain Reporterがレポートを報道：[https://x.com/blockchainrptr/status/2059620914300613023](https://x.com/blockchainrptr/status/2059620914300613023)
+- Metaverse Postがレポートを報道：[https://x.com/mpost_io/status/2059922639926530375](https://x.com/mpost_io/status/2059922639926530375)
+- ForkLogがレポートを報道：[https://x.com/ForkLog/status/2059917147317444833](https://x.com/ForkLog/status/2059917147317444833)
+- MEXC、CoinMarketCap、Yellow、crypto (dot) news、The Coin Headlinesもレポートを報道しました。
+- QuipがレポートのBitcoinガバナンス章について見解を共有：[https://x.com/quipnetwork/status/2059663890943013153](https://x.com/quipnetwork/status/2059663890943013153)
+- Murtuza MerchantがレポートのBitcoinスケーラビリティ・ガバナンス所見を報道：[https://x.com/murtuza_merc/status/2059674137824510023](https://x.com/murtuza_merc/status/2059674137824510023)
+- ChrisがBlockchain Reporterの創業者インタビューに登場（量子リスク、Bitcoin、ステーブルコイン、プライバシーツール、ブロックチェーン移行）：[https://x.com/blockchainrptr/status/2059666209663307921](https://x.com/blockchainrptr/status/2059666209663307921)
+- 一時的ブロックチェーンプライバシーとポスト量子ZKアーキテクチャに関するMetaverse Postインタビューを公開：[https://x.com/QuantusNetwork/status/2059274094797893727](https://x.com/QuantusNetwork/status/2059274094797893727)
+- 6月6日[@ns](https://x.com/@ns)でのQ-Day向けソーシャル投稿（ハイプ、パートナー・スピーカー発表を含む）。

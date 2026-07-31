@@ -1,9 +1,9 @@
 ---
-title: "Quantus Weekly: オープンリサーチとポスト量子標準"
-description: "research.quantus.comのローンチ、ZK証明のアグリゲーション、マルチシグ・パレットの統合、モバイルウォレットのアップデートを含む週刊アップデート。"
+title: "Quantus Weekly: オープンリサーチとPQC標準"
+description: "research.quantus.comの公開、ZK証明集約、マルチシグパレットのマージ、モバイルウォレットの更新など、今週のQuantus週刊アップデートをお届けします。"
 pubDate: "2026-02-20"
 heroImage: "/blog/covers/weekly-update-02-20-2026.webp"
-heroAlt: "Quantus Weekly: オープンリサーチとポスト量子標準"
+heroAlt: "Quantus Weekly: オープンリサーチとPQC標準"
 featured: false
 tags:
   [
@@ -17,47 +17,47 @@ tags:
   ]
 ---
 
-ポスト量子暗号は、密室でブロックチェーンに導入するにはあまりにも新しい技術です。
+ポスト量子暗号は新しすぎて、閉ざされたドアの裏でブロックチェーンに載せるべきではありません。
 
-今週、私たちは [research.quantus.com](https://research.quantus.com/) をローンチしました。
+今週、[research.quantus.com](https://research.quantus.com/)を公開しました。
 
-これは、暗号学者や開発者が、私たちがこれまでに行ってきたプロトコルの決定を精査するための公開フォーラムです。研究者たちはすでにPoseidon2の攻撃対象領域のストレステストを開始しています。
+暗号学者と開発者が、私たちがこれまで下したプロトコル判断を公開フォーラムで検証できる場所です。研究者はすでにPoseidon2の攻撃面をストレステストしています。
 
-NISTは昨年、ポスト量子標準を最終決定しました。それがステップ1でした。ステップ2は、暗号業界のすべてのプロトコルチームが実際にそれらを実装することです。量子安全なチェーンを構築するための確立されたプレイブックは存在しないため、私たちがその標準を構築しています。
+NISTは昨年ポスト量子標準を確定しました。それが第一歩です。第二歩は、暗号資産のすべてのプロトコルチームが実際にそれを実装すること。量子セキュアなチェーンを構築する確立された playbook はないので、私たちが標準を築いています。
 
-ポスト量子セキュリティに取り組んでいるなら、ドアは開かれています。
+ポスト量子セキュリティに取り組んでいる方、扉は開いています。
 
-今週構築したその他の内容は以下の通りです。
+今週構築したその他の内容は以下のとおりです。
 
-### GitHubアクティビティ（4件のプルリクエストをマージ）：
+### GitHub Activity（4件のマージ済みプルリクエスト）：
 
-![Github統計](/blog/assets/github-stats-weekly-update-02-20-2026.webp)
+![Github Stats](/blog/assets/github-stats-weekly-update-02-20-2026.webp)
 
-### コア技術 & ZK
+### Core Tech & ZK
 
-- オンチェーン検証を伴うマルチマシン証明アグリゲーションをサポートするためにZK回路を更新。
-- マルチシグ・パレットをマージし、高セキュリティアカウントによる完全なマルチシグサポートを提供。
+- オンチェーン検証付きマルチマシン証明集約をサポートするようZK回路を更新しました。
+- マルチシグパレットをマージし、高セキュリティ口座付き完全マルチシグサポートを提供しました。
 
-### ネットワーク & インフラ
+### Network & Infra
 
-- Senoti通知システムを開発：デバイス登録サービス、ブロックチェーン監視サービス、およびCI/デプロイ設定を伴うコアワーカー。
-- Telegramのフォーセットボットを改善し、アクティビティの増加により良く対応。
-- qp-plonky2およびqp-zk-circuitsのリリース管理ワークフローを追加。
+- Senoti通知システムを開発：デバイス登録サービス、ブロックチェーンウォッチャーサービス、CIとデプロイ設定付きコアワーカー。
+- 活動増加に対応するようTelegramフォーセットボットを改善しました。
+- qp-plonky2とqp-zk-circuits向けリリース管理ワークフローを追加しました。
 
-### ウェブ & モバイルアプリのアップデート
+### Web & Mobile App Updates
 
-- 暗号研究と技術的議論のためのDiscourseベースのフォーラム [research.quantus.com](https://research.quantus.com/) をローンチ。
-- Quantusウェブサイトを更新：ホワイトペーパーページの刷新、/launchへのトークン配分円グラフの追加、CoinGecko統合の追加、およびすべての週刊アップデートをブログ記事として公開。
-- ウォレットのデザインを更新し、TestFlightに出荷。新バージョンは間もなくApp Storeに登場予定。
-- モバイルウォレットのバグ修正とUX改善。
-- モバイルウォレットにプッシュ通知処理のためのFCMベースを統合。
+- 暗号学研究と技術議論向けDiscourseベースのフォーラム[research.quantus.com](https://research.quantus.com/)を公開しました。
+- Quantusウェブサイトを更新：ホワイトペーパーページを刷新、/launchにトークン配分円グラフを追加、CoinGecko統合、すべての週刊アップデートをブログ記事として公開。
+- ウォレットデザインを更新しTestFlightにリリース。App Store向け新版も間もなく公開予定。
+- モバイルウォレットのバグとUX修正。
+- モバイルウォレットにプッシュ通知処理用FCMベースを統合しました。
 
-### コンテンツ & パートナーシップ
+### Content & Partnerships
 
-- Chrisが [Bad Crypto podcast](https://x.com/QuantusNetwork/status/2023752636387012675) と [wenaltseason space](https://x.com/wenaltseason/status/2022402584041193831) に出演。
-- チームがNetwork Schoolに到着し、オフィスを設置中。
+- Chrisが[Bad Cryptoポッドキャスト](https://x.com/QuantusNetwork/status/2023752636387012675)と[wenaltseasonスペース](https://x.com/wenaltseason/status/2022402584041193831)に出演しました。
+- チームがNetwork Schoolに到着し、オフィスを設置中です。
 
-### 業界アップデート
+### Industry Updates
 
-- Quantum Canary: 量子コンピュータはMoneroを破れるか？ [リンク](https://x.com/QuantumCanary_/status/2024204427159359931)
-- Quantum Canary: DeFiはどの程度分散化されているか？ [リンク](https://x.com/QuantumCanary_/status/2021846672834539665)
+- Quantum Canary：量子コンピュータはMoneroを破れるか？[Link](https://x.com/QuantumCanary_/status/2024204427159359931)
+- Quantum Canary：DeFiはどれだけ分散化されているか？[Link](https://x.com/QuantumCanary_/status/2021846672834539665)

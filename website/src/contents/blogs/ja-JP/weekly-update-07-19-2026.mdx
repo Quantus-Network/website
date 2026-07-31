@@ -1,9 +1,9 @@
 ---
-title: "Quantus Weekly: リンク以外のすべて"
-description: "刷新されたブロックエクスプローラーが explorer.quantus.com で公開。ワームホール転送の可視化、V12 セキュリティ指摘の解消、Subsquid、モバイルウォレット 1.5.7、ロイター報道も掲載。"
+title: "Quantus Weekly: つながりだけが見えない"
+description: "刷新されたエクスプローラーがexplorer.quantus.comで公開。ワームホールの可視性、V12指摘の全解消、Subsquidインデックス、ウォレット1.5.7、ロイター報道も。"
 pubDate: "2026-07-19"
 heroImage: "/blog/covers/weekly-update-07-19-2026.webp"
-heroAlt: "Quantus Weekly: リンク以外のすべて"
+heroAlt: "Quantus Weekly: つながりだけが見えない"
 featured: false
 tags:
   [
@@ -25,56 +25,56 @@ tags:
 
 import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
 
-刷新されたブロックエクスプローラーが [explorer.quantus.com](https://explorer.quantus.com) で公開されました。
+刷新されたブロックエクスプローラーが [explorer.quantus.com](https://explorer.quantus.com) で公開された。
 
-![Quantus ブロックチェーンエクスプローラー刷新ホームページ](/blog/assets/quantus-blockchain-explorer-redesign-homepage.webp)
+![Quantus blockchain explorer redesign homepage](/blog/assets/quantus-blockchain-explorer-redesign-homepage.webp)
 
-Quantus では、透明なトランザクションと暗号化トランザクションの 2 種類を扱えます。
+Quantusには2種類のトランザクションがある。透明なものと、暗号化されたものだ。
 
-透明なトランザクションは、他のブロックチェーンのトランザクションと同じように見えます。
+透明なトランザクションは、他のブロックチェーンのトランザクションと同じように見える。
 
-暗号化トランザクション（現在は CLI で可能で、まもなくモバイルアプリにも対応予定）はワームホール転送を使います。
+暗号化されたトランザクション（現時点ではCLIから利用可能で、モバイルアプリへの対応も近く予定）は、ワームホール転送を使う。
 
-ワームホール転送は 2 ステップです。
+ワームホール転送は2段階で行われる。
 
-まず、コインをワームホールアドレスに送ります。そのアドレスは、あなただけが知る秘密のハッシュのハッシュなので、誰もそこから支出できません。チェーンから見れば、コインは焼却されたことになります。その後、資金が入ったワームホールアドレスのどれか一つに対応する秘密を知っていることを示すゼロ知識証明をチェーンに提出し（どれかは明かさない）、新しいアドレスへコインがミントされます。
+まずコインをワームホールアドレスへ送る。そのアドレスは、あなただけが知る秘密のハッシュのハッシュであり、そこから資金を使うことは誰にもできない。チェーンの視点では、あなたはそのコインをバーンしたことになる。その後、あなたは資金の入ったワームホールアドレスのいずれかの秘密を知っていることを示すゼロ知識証明をチェーンに提出する。どのアドレスかを明かすことなく、それによってチェーンは新しいアドレスへコインをミントする。
 
-だからエクスプローラーは、存在するすべてを見せます。入っていくコイン、出てくるコイン、金額、証明。見せられないのは、どの入口がどの出口に対応するかだけです。そのリンクはチェーンに一度も触れないからです。
+だからエクスプローラーには、存在するすべてが表示される。入ってくるコイン、出ていくコイン、金額、証明。表示できない唯一のものは、どの入り口がどの出口に対応するかだ。そのつながりはチェーン上に一切現れないからだ。
 
-先週はさらに、ZK 回路と Dilithium 署名ライブラリに関する V12 セキュリティレビューの高・中重大度の指摘をすべて解消し、モバイルウォレット 1.5.7 を出荷しました。
+先週は、ZK回路とDilithium署名ライブラリに関するV12セキュリティレビューの高・中リスク指摘をすべて解消し、モバイルウォレット1.5.7もリリースした。
 
-先週ほかに届けたもの：
+先週構築したその他の内容は以下の通り。
 
-### Github Activity（マージされた PR 14件）：
+### Githubアクティビティ（マージ済みプルリクエスト14件）:
 
 ![Github Stats](/blog/assets/github-stats-weekly-update-07-19-2026.webp)
 
-### Core Tech & ZK
+### コア技術 & ZK
 
-- ZK 回路と Dilithium 署名ライブラリに関する V12 セキュリティレビューの高・中重大度の指摘をすべて解消。
-- 活性チェック、署名済みトランスクリプトの受け入れ、新しいセッション ID 方式で閾値署名の再共有を強化。
+- ZK回路とDilithium署名ライブラリに関するV12セキュリティレビューの高・中リスク指摘をすべて解消した。
+- ライブネスチェック、署名済みトランスクリプトの受理、新しいセッションIDスキームにより、しきい値署名の再シェアリングを強化した。
 
-### Network & Infra
+### ネットワーク & インフラ
 
-- チェーンインデクサー Subsquid に統一トランザクションインデックスを追加。
-- マイニングプールを使った PoW キャプチャを追加し、ボットを排除。
+- チェーンインデクサーのSubsquidに統合トランザクションインデックスを追加した。
+- 私たちのマイニングプールを利用したプルーフ・オブ・ワーク型キャプチャを追加し、ボットの排除に活用した。
 
-### Web & Mobile App Updates
+### Web & モバイルアプリの更新
 
-- [explorer.quantus.com](https://explorer.quantus.com) で刷新されたブロックエクスプローラーを公開。
-- モバイルウォレット v1.5.7 を出荷。
-- Web アプリのマルチシグ提案が、任意のローカル署名者からの承認を受け付けるようになり、Keystone ハードウェアウォレットにも対応。
-- マルチシグ UX の改善と、Web アプリのアカウントメニュー刷新を出荷。
-- Keystone ファームウェアにマルチシグ機能を追加し、マスターフィンガープリント不一致で Quantus 署名が止まる不具合を修正。
+- 刷新されたブロックエクスプローラーを [explorer.quantus.com](https://explorer.quantus.com) でローンチした。
+- モバイルウォレットv1.5.7をリリースした。
+- Webアプリのマルチシグ提案は、任意のローカル署名者からの承認に対応し、Keystoneハードウェアウォレットもサポートするようになった。
+- マルチシグのUX改善と、Webアプリのアカウントメニューの再設計をリリースした。
+- Keystoneファームウェアにマルチシグ機能を追加し、Quantusの署名がマスターフィンガープリントの不一致で固まる不具合を修正した。
 
-### Content & Partnerships
+### コンテンツ & パートナーシップ
 
-- ロイターが「Crypto firms prepare defenses as quantum threat to encryption draws nearer」で Chris を引用：
+- ロイターが「Crypto firms prepare defenses as quantum threat to encryption draws nearer」でChrisを取り上げた:
 
 <TwitterEmbed url="https://x.com/QuantusNetwork/status/2077333342815388084" />
 
-- 同記事は Yahoo Finance、US News、Investing.com、MSN、TradingView、The Economic Times、Khaleej Times、The Star Malaysia に配信され、Forbes Mexico、NTV Turkey、Boursorama France でも翻訳転載。
+- この記事はYahoo Finance、US News、Investing.com、MSN、TradingView、The Economic Times、Khaleej Times、The Star Malaysiaへ転載され、Forbes Mexico、NTV Turkey、Boursorama Franceでも翻訳版が掲載された。
 
-私たち次第だ。
+あとは私たち次第だ。
 
 Stay frosty, quants.

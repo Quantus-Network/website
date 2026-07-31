@@ -1,9 +1,9 @@
 ---
-title: "Quantus Weekly: Q-Dayが目前に迫っています"
-description: "Q-Dayは6月6日です。今週はしきい値Dilithium DKGの監査項目を完了し、マイナーと通知の更新をリリース、モバイルウォレットの不具合を修正し、リフレッシュされたQ-Dayサミットサイトを公開しました。"
+title: "Quantus Weekly: Q-Dayが目前"
+description: "Q-Dayは6月6日。今週はDilithium DKG監査項目の完了、マイナー・通知の更新、ウォレット修正、Q-Dayサミットサイトの刷新をリリースしました。"
 pubDate: "2026-05-21"
 heroImage: "/blog/covers/weekly-update-05-21-2026.webp"
-heroAlt: "Quantus Weekly: Q-Dayが目前に迫っています"
+heroAlt: "Quantus Weekly: Q-Dayが目前"
 featured: false
 tags:
   [
@@ -23,32 +23,32 @@ tags:
   ]
 ---
 
-[@ns](https://x.com/@ns) の Q-Day は[目前に迫っています](https://x.com/QuantusNetwork/status/2041172123968999434)。
+[@ns](https://x.com/@ns)でのQ-Dayは[目前](https://x.com/QuantusNetwork/status/2041172123968999434)です。
 
 6月6日。
 
-メインネットまで一心不乱に取り組んでいますが、Q-Dayの前にもう少し発表があります。
+メインネットまで黙々と進めていますが、Q-Day前にもう少し発表があります。
 
-今週のリリース内容は以下のとおりです。
+今週出荷した内容は以下のとおりです。
 
 ### Core Tech & ZK
 
-- しきい値署名向けの分散鍵生成フローであるしきい値 Dilithium DKG の監査項目への対応を完了。
-- pallets の複数のレビュー項目に対応。
+- 閾値署名向け分散鍵生成フローである閾値Dilithium DKGの監査指摘事項への対応を完了しました。
+- パレット内の複数のレビュー項目に対応しました。
 
-### ネットワーク & インフラ
+### Network & Infra
 
-- GUIマイナーのUX改善を含む新しいマイナーバージョンをリリース。
-- Planck と正しく連携するよう通知インフラを更新。
-- 過去3週間でコミュニティマイニングノード数を2倍に。
+- GUIマイナーUX改善を含む新マイナーバージョンをリリースしました。
+- Planckと正しく連携するよう通知インフラを更新しました。
+- 過去3週間でコミュニティマイニングノード数を2倍に増やしました。
 
-### Web & モバイルアプリ
+### Web & Mobile App Updates
 
 - モバイルアプリのバグ修正。
-- ウォレットの支払いリンク処理を修正。
-- ウォレットのリモート通知処理を更新。
+- ウォレットの決済リンク処理を修正しました。
+- ウォレットのリモート通知処理を修正しました。
 
-### コンテンツ & パートナーシップ
+### Content & Partnerships
 
-- q (dot) day でリフレッシュされた Q-Day サミットサイトを公開。
-- [@QuantusNetwork](https://x.com/@QuantusNetwork) X で Q-Day スピーカー発表の公開を開始。
+- Q-Dayサミットサイトを刷新し、q (dot) dayで公開しました。
+- [@QuantusNetwork](https://x.com/@QuantusNetwork) XでQ-Dayスピーカー発表を開始しました。

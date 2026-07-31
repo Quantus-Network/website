@@ -1,9 +1,9 @@
 ---
-title: "Quantus Weekly: GPUマイニングとDiracストレステスト"
-description: "GPUサポートを備えたQuantus Miner v2.0.2のリリース、Diracネットワークのストレステスト、およびチェーンアーキテクチャのアップデートを網羅した週刊アップデート。"
+title: "Quantus Weekly: GPUマイニングとDirac負荷試験"
+description: "GPU対応Quantus Miner v2.0.2をリリースし、Diracネットワークのストレステストに成功。2100万枚供給上限とチェーンアーキテクチャの更新も完了しました。"
 pubDate: "2025-12-22"
 heroImage: "/blog/covers/weekly-update-12-22-2025.webp"
-heroAlt: "Quantus Weekly: GPUマイニングとDiracストレステスト"
+heroAlt: "Quantus Weekly: GPUマイニングとDirac負荷試験"
 featured: false
 tags:
   [
@@ -17,37 +17,37 @@ tags:
   ]
 ---
 
-今週、GPUサポートを備えたQuantus Miner v2.0.2を正式にリリースし、Diracネットワークのストレステストに成功しました。
+今週、GPU対応のQuantus Miner v2.0.2を正式リリースし、Diracネットワークのストレステストに成功しました。
 
-また、2,100万枚のコイン供給上限をサポートするためにチェーンアーキテクチャを更新し、レガシーなベスティングおよびトレジャリーパレットを削除してコードベースをクリーンアップしました。
+2100万枚の供給上限をサポートするようチェーンアーキテクチャを更新し、レガシーのvestingとtreasuryパレットを削除してコードベースを整理しました。
 
-6つのマージされたプルリクエストを含む週刊Githubアクティビティレポート：https://github.com/Quantus-Network/n8n-workflows/blob/main/github/weekly-update-2025-12-23-07:50:14.md/
+週次Githubアクティビティレポート（6件のマージ済みプルリクエスト）: https://github.com/Quantus-Network/n8n-workflows/blob/main/github/weekly-update-2025-12-23-07:50:14.md/
 
 ## Core Tech & ZK
 
-- 新しい2,100万枚のコイン供給上限を反映するためにチェーン仕様を更新しました。
-- ベスティングおよびトレジャリーパレットを削除することで、コアチェーンアーキテクチャを簡素化しました。
-- ランタイムでのパニックを防ぐため、汎用的なPoseidonストレージハッシュサポートを完了しました。
-- ZKサーキットおよびCLIにアセットIDサポートを追加しました。
+- 新2100万枚供給上限を反映するようチェーン仕様を更新しました。
+- vestingとtreasuryパレットを削除し、コアチェーンアーキテクチャを簡素化しました。
+- runtime内のpanicを防止するため、汎用Poseidonストレージハッシュ対応を完了しました。
+- ZK回路とCLIにAsset ID対応を追加しました。
 
 ## Network & Infra
 
-- チェーンの過負荷がブロック時間にどのように影響するかを観察するために、Diracのストレステストを実施しました。
-- GPUマイニングを正式にサポートしたQuantus Miner v2.0.2を公開しました：https://github.com/Quantus-Network/quantus-miner/releases/tag/v2.0.2
+- Diracをストレステストし、チェーン過負荷がブロック時間に与える影響を観察しました。
+- GPUマイニングを正式サポートするQuantus Miner v2.0.2を公開しました: https://github.com/Quantus-Network/quantus-miner/releases/tag/v2.0.2
 
 ## Web & Mobile App Updates
 
-- QRコードによる署名送信、マルチウォレットサポート、リンク解除機能を含む、モバイル上でのハードウェアウォレット署名フローを完成させました。
-- Xでのコミュニティエンゲージメントを促進するため、Telegram、ウェブサイト、およびTask Masterによる内部トラッキングを備えた「レイドクエスト」を実装しました。ウォレットの実装は進行中です。
-- バックエンドのCORSエラーを解決し、ソーシャルインタラクションのデータトラッキングを改善しました。
-- マイナー報酬の報告とネットワークの切り替えに影響を与えていたブロックエクスプローラーのバグを修正しました。
+- モバイルでのハードウェアウォレット署名フローを完成させました（QRコード署名送信、マルチウォレット対応、リンク解除機能を含む）。
+- Telegram、ウェブサイト、Task Master経由の内部追跡で「Raid Quests」を実装し、X上のコミュニティエンゲージメントを促進しました。ウォレット実装は進行中です。
+- バックエンドCORSエラーを解決し、ソーシャルインタラクションのデータ追跡を改善しました。
+- マイナー報酬レポートとネットワーク切り替えに影響するブロックExplorerのバグを修正しました。
 
 ## Content & Partnerships
 
-- Peer Summitで出会った2社の戦略的パートナーからの投資を確保しました。
-- ローンチ戦略に関する会議を終了し、新しいトークノミクスとGTMを反映した更新版のホワイトペーパーを起草しました。
-- ベテランのソフトウェアアーキテクト兼システムエンジニアであるCezary氏とのエピソード：https://www.youtube.com/watch?v=2TDMR7bECR8
+- Peer Summitで出会った2社の戦略的パートナーから投資を確保しました。
+- ローンチ戦略に関するミーティングを完了し、新トークノミクスとGTMを反映した更新版ホワイトペーパーを起草しました。
+- ベテランソフトウェアアーキテクト兼システムエンジニアCezary氏とのエピソード: https://www.youtube.com/watch?v=2TDMR7bECR8
 
 ## Industry Updates
 
-- ビットコインに対する国家レベルの攻撃のリスクを分析したQuantum Canaryの記事：https://www.quantumcanary.org/insights/how-credible-is-a-state-level-attack-on-bitcoin
+- Quantum Canaryが国家レベルのBitcoin攻撃リスクを分析する記事を公開: https://www.quantumcanary.org/insights/how-credible-is-a-state-level-attack-on-bitcoin

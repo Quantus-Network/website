@@ -1,9 +1,9 @@
 ---
-title: "Quantus Weekly: Poseidon2の最適化とチェーンアーキテクチャの刷新"
-description: "Poseidon2ゲートの8.3倍高速化、9,000行のコードを削減した大規模なチェーンアーキテクチャの刷新、そしてBinance Blockchain Weekからのアップデートをお届けします。"
+title: "Quantus Weekly: 高速Poseidon2と軽量チェーン"
+description: "Poseidon2ゲートを最適化し8.3倍高速化。チェーンをリファクタリングして約9,000行削減。Binance Blockchain Weekでの所感も共有しました。"
 pubDate: "2025-12-09"
 heroImage: "/blog/covers/weekly-update-12-09-2025.webp"
-heroAlt: "Quantus Weekly: Poseidon2の最適化とチェーンアーキテクチャの刷新"
+heroAlt: "Quantus Weekly: 高速Poseidon2と軽量チェーン"
 featured: false
 tags:
   [
@@ -16,52 +16,52 @@ tags:
   ]
 ---
 
-おそらく、[@EliBenSasson氏とScott Aaronson氏のこのインタビュー](https://x.com/Starknet/status/1995865652377395421)をご覧になった方も多いでしょう。
+[@EliBenSassonとScott Aaronsonのインタビュー](https://x.com/Starknet/status/1995865652377395421)をご覧になった方も多いでしょう。
 
-![Nic Carter氏によるインタビューの要約](/blog/assets/nic-carter-x-post-summarizing-eli-be-sasson-and-scott-aaronson.webp)
+![Nic Carter interview summary](/blog/assets/nic-carter-x-post-summarizing-eli-be-sasson-and-scott-aaronson.webp)
 
-インタビューの中で、スコット氏は次のように述べています。「私たちは、世界のサイバーセキュリティ・インフラの多くを、RSA、ディフィー・ヘルマン、楕円曲線暗号といった暗号コードに基づかせることに決めましたが、これらはたまたま量子コンピュータが利用可能な数学的特性を持っていたのです。」
+インタビューでScottはこう述べています。「RSA、Diffie-Hellman、楕円曲線暗号といった暗号コードに、世界のサイバーセキュリティ基盤の多くを基づけることにした。たまたま量子コンピュータが悪用できる数学的性質を持っているだけだ。」
 
-これは受け入れがたい事実です。
+飲み込みにくい現実です。
 
-特に、設計上、大規模なプロトコルのアップグレードを簡単に計画・実行する能力を欠いているビットコインにとってはなおさらです。
+特にBitcoinは、設計上、大規模なプロトコルアップグレードを容易に計画・実行する能力を欠いています。
 
-つまり、ビットコイン・コミュニティにとって最も抵抗の少ない道は、問題の存在を否定することでした。
+つまりBitcoinコミュニティにとって抵抗の最小経路は、問題が存在しないと否定することでした。
 
-![量子脅威に関するCharles Edwards氏の投稿](/blog/assets/charles-edwards-x-post-about-bitcoiner-on-quantum-threat.webp)
+![Charles Edwards on Quantum Threat](/blog/assets/charles-edwards-x-post-about-bitcoiner-on-quantum-threat.webp)
 
-しかし、エラー訂正、量子ビットのスケーリング、フィデリティにおける最近の画期的な進歩により、量子コンピューティングの進歩を否定することは、ビットコイン、ひいては人類の財産権に対する存亡の危機を意味します。
+しかし、エラー訂正、量子ビットスケーリング、忠実度の最近のブレークスルーにより、量子コンピューティングの進展を否定することは、Bitcoin、ひいては人間の財産権にとって実存的リスクを意味します。
 
-ですから、私たちは量子未来の霧に立ち向かい、Q-Dayが到来したときに多くのブロックチェーンが行動を起こせなかったであろうことを受け入れなければなりません。
+量子の未来という霧と向き合い、Q-Day到来時に多くのブロックチェーンが行動できなかったことを受け入れなければなりません。
 
-行動することは私たちの義務です。
+私たちの義務は行動することです。
 
-今週、量子安全なビットコインを構築するために私たちが行ったことは以下の通りです。
+今週、量子セキュアなBitcoinを構築するために行ったことは以下のとおりです。
 
-8つのマージされたプルリクエストを含む週刊Github活動レポート：https://github.com/Quantus-Network/n8n-workflows/blob/main/github/weekly-update-2025-12-09-14:47:41.md
+週次Githubアクティビティレポート（8件のマージ済みプルリクエスト）: https://github.com/Quantus-Network/n8n-workflows/blob/main/github/weekly-update-2025-12-09-14:47:41.md
 
-## コア技術 & ZK
+## Core Tech & ZK
 
-- Poseidon2ゲートを最適化しました。順列あたりの回路トレース行数を31から1に削減しました。これにより、ゲートは8.3倍高速になり、より大きなワームホール・プルーバー全体で4.5倍のスピードアップを実現しました。
-- ワームホール証明を記録するためにトランザクション・エクステンションを使用するようにチェーン・アーキテクチャを刷新しました。これにより、Balancesパレットのカスタムフォークが不要になり、約9,000行のコードが削除されました。
-- ワームホール送金にアセットIDのサポートを追加しました。
-- qp-rusty-crystalsの監査で指摘された問題を解決しました。
+- poseidon2ゲートを最適化しました。1パーミュテーションあたりの回路トレース行数を31から1に削減。ゲートは8.3倍高速化し、より大きなwormhole prover全体では4.5倍の速度向上を実現しました。
+- wormhole証明の記録にトランザクション拡張を使用するようチェーンアーキテクチャをリファクタリングしました。balancesパレットのカスタムフォークが不要になり、約9,000行のコードを削除しました。
+- wormhole転送にAsset ID対応を追加しました。
+- qp-rusty-crystals監査で指摘された問題を解決しました。
 
-## ネットワーク & インフラ
+## Network & Infra
 
-- GPUマイナーの実装を改善しました。
-- sc-networkを更新・マージしました。これには、よりスムーズなノード同期のためのピア・ブロードキャストの修正が含まれています。
-- Schrödinger（旧テストネット）のネットワーク履歴をアーカイブしました。
-- Subsquidアーキテクチャのデバッグと改善を行いました。エクスプローラーとウォレットへのデータ稼働率を向上させるため、新しい監視スクリプトと再起動プロトコルを追加しました。
+- GPUマイナー実装を改善しました。
+- sc-networkを更新・マージし、ピアブロードキャストの修正によりノード同期をスムーズにしました。
+- Schrodinger（旧テストネット）のネットワーク履歴をアーカイブしました。
+- subsquidアーキテクチャをデバッグ・改善しました。新モニタースクリプトと再起動プロトコルを追加し、Explorerとウォレットへのデータ稼働率を向上させました。
 
-## ウェブ & モバイルアプリのアップデート
+## Web & Mobile App Updates
 
-- Keystoneの統合を改善し、PINキャッシュの消去とPIN安全機能を備えたQRコードを追加しました。
-- X OAuthをモバイルアプリに接続するためのrusxリポジトリを公開し、ツイートのクエリと検索をサポートするようにバックエンドをアップグレードしました。
-- 整数処理の問題や誤検知の失敗通知を含む、さまざまなバグを修正したアップデートをリリースしました。
+- Keystone統合を改善し、PINキャッシュ消去とPIN付きQRコードの安全性を追加しました。
+- モバイルアプリへのX OAuth接続用rusxリポジトリを公開し、ツイートクエリと検索をサポートするようバックエンドをアップグレードしました。
+- 整数処理の問題や誤検知の失敗通知を含む各種バグ修正のアップデートをリリースしました。
 
-## コンテンツ & パートナーシップ
+## Content & Partnerships
 
-- ドバイで開催されたBinance Blockchain WeekとSolana Breakpointに参加し、アドバイザーやKOLとの面会、ユーザーのオンボーディングを行っています。
-- 木曜日に予定されている週刊Xスペースにご注目ください。
-- Quantusチームとのポッドキャスト：https://www.youtube.com/watch?v=konWKWrl5hs
+- Binance Blockchain WeekとSolana Breakpointのためドバイに滞在中。顧問、KOL、新規ユーザーとの面会を進めています。
+- 木曜予定の週次X Spaceにもご注目ください。
+- Quantusチームとのポッドキャスト: https://www.youtube.com/watch?v=konWKWrl5hs

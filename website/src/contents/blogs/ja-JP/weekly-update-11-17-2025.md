@@ -1,9 +1,9 @@
 ---
-title: "Quantus Weekly: PoWの監査完了とDiracテストネットの開始"
-description: "今週のアップデート：EquilibriumによるPoWおよびPoseidonハッシュの監査完了、ブロックヘッダーのZK証明生成、Diracテストネットの開始など。"
+title: "Quantus Weekly: PoW監査完了とDiracローンチ"
+description: "EquilibriumによるPoWとPoseidonの監査を完了し、ブロックヘッダー向けZK証明を出荷。Diracテストネットを今週Quantus上でローンチしました。"
 pubDate: "2025-11-17"
 heroImage: "/blog/covers/weekly-update-11-17-2025.webp"
-heroAlt: "Quantus Weekly: PoWの監査完了とDiracテストネットの開始"
+heroAlt: "Quantus Weekly: PoW監査完了とDiracローンチ"
 featured: false
 tags:
   [
@@ -19,50 +19,50 @@ tags:
   ]
 ---
 
-今週、チームはEquilibriumによるプルーフ・オブ・ワーク（PoW）アルゴリズムとPoseidonハッシュ関数の監査を完了し、更新されたアプリを両方のアプリストアにリリースしました。
+今週、チームはEquilibriumによるPoWアルゴリズムとPoseidonハッシュ関数の監査を完了し、更新アプリを両アプリストアへ出荷しました。
 
-## 開発ニュース
+## Development News
 
-- 147件のイベントを含む週刊Github活動レポート：https://github.com/Quantus-Network/n8n-workflows/blob/main/github/weekly-update-2025-11-16-19:27:32.md
-- すべての問題が解決されたPoWアルゴリズムとPoseidonハッシュ関数の監査結果はこちらで確認できます：https://github.com/Quantus-Network/qp-poseidon/tree/main/audits
+- 週次Githubアクティビティレポート（147イベント）: https://github.com/Quantus-Network/n8n-workflows/blob/main/github/weekly-update-2025-11-16-19:27:32.md
+- 全問題を解決したPoWアルゴリズムとPoseidonハッシュ関数の監査はこちら: https://github.com/Quantus-Network/qp-poseidon/tree/main/audits
 
-## コア技術
+## Core Tech
 
-- コマンドラインインターフェース（CLI）をDiracテストネットに対応するように更新しました。
-- ブロックヘッダーの出所に関するZK証明の生成。これは、当社の回路ロジックが静的なダミープルーフだけでなく、動的なデータでも機能することを証明する重要なマイルストーンです。
-- ノードのコマンドラインに関する問題を解決しました。
+- dirac testnetに対応するようCLI（コマンドラインインターフェース）を更新しました。
+- ブロックヘッダー由来のZK証明生成を実装しました。静的ダミー証明だけでなく動的データで回路ロジックが機能することを証明する大きなマイルストーンです。
+- ノードコマンドラインの問題を解決しました。
 
-## ネットワーク & インフラ
+## Network & Infra
 
-- チェーンのマルチアーキテクチャDockerワークフローを修正しました。
-- すべてのノードを更新し、古いテストネットを削除し、新しいダッシュボードとアラートを導入することで、Diracリリースを完了しました。grafana.quantus.catおよびtelemetry.quantus.catを参照してください。
-- 新しいライブラリ、新しいサーバーでFaucetを更新し、メトリクスと紹介リーダーボード用の新しい/kingコマンドを追加しました。
-- GrafanaのPostgreSQLバックエンドによりネットワーク監視を強化し、さまざまな修正と最適化を追加しました。
-- 新しいサーバーにIaC（Infrastructure as Code）をセットアップし、すべてのHeisenbergおよびDiracノードを接続しました。
-- DiracテストネットをサポートするようにSubsquidインデックスサービスを更新し、Prometheusメトリクスを追加しました。
+- チェーン向けマルチアーキテクチャDockerワークフローを修正しました。
+- 全ノードの更新、旧テストネットの削除、新ダッシュボードとアラートの展開によりDiracリリースを完了しました。grafana.quantus.cat と telemetry.quantus.cat をご覧ください。
+- Faucetを新ライブラリと新サーバーで更新し、メトリクスと紹介リーダーボード用の/kingコマンドを追加しました。
+- Grafana向けPostgreSQLバックエンドでネットワーク監視を強化し、各種修正と最適化を行いました。
+- 新サーバーにIaC（Infrastructure as Code）を構築し、Heisenberg & Diracノードをすべて接続しました。
+- SubsquidインデックスサービスをDirac testnet対応に更新し、Prometheusメトリクスを追加しました。
 
-## ウェブ & モバイルアプリのアップデート
+## Web & Mobile App Updates
 
-- モバイルウォレットのバージョン1.1.1をアプリストアにリリースしました。Appleからはさらに情報を求められていますが、まもなく解決される予定です。
-- モバイルウォレットをDiracテストネットに接続するように更新しました。
-- スケジュールされた通知、アカウント名の更新、生体認証に関する問題など、モバイルウォレットのいくつかのバグを修正しました。
-- 新しいDiracチェーンを使用するようにマイナーアプリを更新し、統計レポートを修正しました。
-- マイナーアプリに新しい設定画面とアプリ内バイナリアップデート機能を追加しました。
-- Task MasterアプリケーションをDiracテストネットに移行し、Prometheusメトリクスを追加しました。
-- 今後の紹介機能のために、リーダーボードを確認するための新しいコマンドをFaucetボットに追加しました。
+- モバイルウォレットv1.1.1をアプリストアへリリースしました。Appleから追加情報が求められていますが、まもなく解決予定です。
+- モバイルウォレットをDirac testnetへ接続するよう更新しました。
+- スケジュール通知、アカウント名更新、生体認証に関する複数のモバイルウォレットバグを修正しました。
+- マイナーアプリを新Diracチェーンに対応させ、統計レポートの問題を修正しました。
+- マイナーアプリに新設定画面とアプリ内バイナリ更新機能を追加しました。
+- Task MasterアプリケーションをDirac testnetへ移行し、Prometheusメトリクスを追加しました。
+- 今後の紹介機能向けに、Faucet botにリーダーボード確認コマンドを追加しました。
 
-## コンテンツ & パートナーシップ
+## Content & Partnerships
 
-- 複数の資金調達契約が進行中で、25万ドルの口頭でのコミットメントを得ています。
-- Quantum CanaryとQuantusの両方のSEOを担当するためにThe Quantum Insiderを雇用しました。
-- ソーシャルメディアの成長を追跡するための新しいn8nフローを作成しました（ポッドキャストの購読者が500人を超えました）。
-- DeFiビルダーのJangle氏とのポッドキャスト：https://www.youtube.com/watch?v=FBNEAdhGsGk&t
+- 複数の資金調達契約書を送付し、25万ドルの口頭コミットメントを獲得しました。
+- Quantum CanaryとQuantus双方のSEOをThe Quantum Insiderに依頼しました。
+- ソーシャルメディア成長追跡用の新n8nフローを作成しました（ポッドキャスト登録者が500人を突破）。
+- DeFiビルダーJangle氏とのポッドキャスト: https://www.youtube.com/watch?v=FBNEAdhGsGk&t
 
-## 業界の最新動向
+## Industry Updates
 
-- Quantum Canaryが、量子暗号学者のOr Sattath博士による、クローン不可能な暗号と量子マネーに関するインタビューを公開しました。ビットコインの速度、セキュリティ、プライバシーをアップグレードする可能性を探っています：https://www.quantumcanary.org/insights/or-sattath-interview
-- 448量子ビットの中性原子コンピュータが耐故障性を達成：https://postquantum.com/quantum-research/harvard-fault-tolerant/
+- Quantum Canaryが量子暗号学者Dr. Or Sattath氏へのインタビューを公開。クローン不可能暗号と量子マネー、Bitcoinの速度・セキュリティ・プライバシー向上の可能性を探りました: https://www.quantumcanary.org/insights/or-sattath-interview
+- 448量子ビット中性原子コンピュータがフォルトトレランスを達成: https://postquantum.com/quantum-research/harvard-fault-tolerant/
 
 ## X Spaces
 
-- 今週木曜日の香港時間午前11時に、Xで量子FUDとQuantusについて議論します：https://x.com/i/spaces/1RDGlAZlgPoJL?s=20
+- 木曜11時（香港時間）にQuantum FUDとQuantusについてX Spacesで議論します: https://x.com/i/spaces/1RDGlAZlgPoJL?s=20
