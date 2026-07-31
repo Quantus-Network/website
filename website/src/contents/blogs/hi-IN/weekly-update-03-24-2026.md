@@ -1,10 +1,9 @@
 ---
-title: "Quantus Weekly: दूसरा हाफ़िंग, ZK प्रूफ़ 4x तेज़"
-description: दो हफ़्तों में प्रूवर समय में 2x और कटौती, Poseidon हैशिंग, माइनिंग फ़िक्स, Senoti रेट लिमिट, व्हाइटपेपर लॉन्च, iOS स्वैप रिव्यू, और Quantum Canary।
-
+title: "Quantus Weekly: दूसरा Halving, 4x तेज़ Proofs"
+description: "Prover time में दूसरी कट — दो हफ्तों में ZK proofs 4x तेज़। Poseidon काम, mining fixes, Senoti limits, whitepaper launch और Quantum Canary।"
 pubDate: "2026-03-24"
 heroImage: "/blog/covers/weekly-update-03-24-2026.webp"
-heroAlt: "Quantus Weekly: दूसरा हाफ़िंग, ZK प्रूफ़ 4x तेज़"
+heroAlt: "Quantus Weekly: दूसरा Halving, 4x तेज़ Proofs"
 featured: false
 tags:
   [
@@ -18,66 +17,66 @@ tags:
   ]
 ---
 
-2 एक खास संख्या है।
+2 एक special number है।
 
-2+2 = 4। 2x2 = 4। 2² = 4।
+2+2 = 4। 2×2 = 4। 2² = 4।
 
-यही वह अकेली संख्या है जहाँ जोड़, गुणा और घात सभी एक ही उत्तर देते हैं।
+यही एक number है जहाँ addition, multiplication, और exponentiation — तीनों same answer देते हैं।
 
-दो हफ़्ते पहले हमने अपनी ZK प्रूविंग पाइपलाइन को ऑप्टिमाइज़ करने में बड़ी प्रगति की।
+दो हफ्ते पहले हमने ZK proving pipeline optimize करने में significant progress की।
 
-पिछले हफ़्ते हमने प्रूवर समय आधा कर दिया (2 से भाग देकर)।
+पिछले सप्ताह prover time आधा किया (2 से divide)।
 
-इस हफ़्ते फिर आधा किया (दूसरा हाफ़िंग)।
+इस सप्ताह फिर आधा (दूसरा halving)।
 
 14 दिनों में 4x तेज़।
 
-प्रूविंग पाइपलाइन का हर मिलीसेकंड हमारे निजी लेनदेन की गति और UX के लिए मायने रखता है।
+Proving pipeline में हर millisecond private transactions की speed और UX के लिए matter करती है।
 
-जब उपयोगकर्ता भेजें दबाता है, वह चाहता है कि प्राप्तकर्ता तुरंत धन देखे।
+User send दबाता है, receiver तुरंत funds देखना चाहता है।
 
-हमारे वर्महोल लेनदेन — जो भेजने वाले और पाने वाले के बीच के लिंक को तोड़ते हैं — को ZK प्रूफ़ चाहिए।
+हमारे wormhole transactions — जो sender और receiver के बीच link तोड़ते हैं — ZK proof require करते हैं।
 
-ZK प्रूफ़ निपटान से पहले समय जोड़ता है। हर सेकंड जो बीतता है और हर बार जब प्राप्तकर्ता स्क्रीन रिफ़्रेश करता है और धन नहीं देखता, वह असफलता है।
+ZK proof settlement से पहले extra time add करता है। हर second जो गुज़रता है और हर बार receiver screen refresh करके funds नहीं देखता, वो failure है।
 
-UI तरकीबें अनुभव सुधार सकती हैं, और वे अच्छी हैं।
+UI tricks experience improve कर सकते हैं, और वे अच्छे हैं।
 
-लेकिन निपटान को महसूस और वास्तव में दोनों तरह से अत्यंत तेज़ होना चाहिए।
+लेकिन settlement feel और actually दोनों extremely fast होना चाहिए।
 
-हम उन सेकंडों को कम कर रहे हैं।
+हम उन seconds को grind कर रहे हैं।
 
-इस हफ़्ते और क्या लॉन्च हुआ:
+इस सप्ताह और क्या ship हुआ।
 
-### GitHub गतिविधि (12 मर्ज किए गए पुल रिक्वेस्ट):
+### GitHub Activity (12 merged pull requests):
 
 ![Github Stats](/blog/assets/github-stats-weekly-update-03-24-2026.webp)
 
-### कोर टेक और ZK:
+### Core Tech & ZK:
 
-- ZK-अनुकूल डेटाबेस ऑप्टिमाइज़ेशन से प्रूवर समय में 50% और कमी। प्रूविंग पाइपलाइन में लगातार दूसरे हफ़्ते 2x सुधार।
-- Poseidon में नॉन-इंजेक्टिव हैशिंग लागू, qp-poseidon-constants के नए संस्करणित रिलीज़।
-- माइनिंग एल्गोरिदम में एक एज केस के लिए कठिनाई समायोजन की मरम्मत।
-- सभी पैलेट और मुख्य क्रेट्स की AI-संचालित समीक्षा, चिह्नित मुद्दों पर बग रिपोर्ट।
-- कोडबेस समीक्षा के दौरान पहचाने गए मुद्दों के लिए सफ़ाई PR मर्ज।
+- ZK-friendly database optimizations से prover time में 50% और कमी। Proving pipeline में second consecutive week 2x improvement।
+- Poseidon में non-injective hashing implement, qp-poseidon-constants के नए versioned releases।
+- Mining algorithm में edge case के लिए difficulty adjustment fix।
+- सभी pallets और main crates का AI-driven review, flagged issues पर bug reports file।
+- Codebase review के दौरान identify issues के cleanup PRs merge।
 
-### नेटवर्क और इंफ्रास्ट्रक्चर:
+### Network & Infra:
 
-- Senoti नोटिफ़िकेशन सेवा की डिवाइस रजिस्ट्रार पर रेट लिमिटिंग जोड़ी।
-- एक्सप्लोरर अपडेट: नवीनतम बदलाव मर्ज, कॉन्फ़्लिक्ट सुलझाए, API समायोजित।
+- Senoti notification service device registrar में rate limiting add।
+- Explorer update: latest changes merge, conflicts resolve, API adjust।
 
-### वेब और मोबाइल ऐप:
+### Web & Mobile App Updates:
 
-- नया व्हाइटपेपर वेबसाइट पर अपडेटेड स्टाइलिंग और सामग्री के साथ प्रकाशित।
-- पिछला साप्ताहिक अपडेट [quantus.com/blog](https://quantus.com/blog) पर ब्लॉग पोस्ट के रूप में प्रकाशित।
-- ट्रांज़ैक्शन पूल peek सब्सक्रिप्शन फ़ीचर लागू और अंत से अंत तक परीक्षण।
-- iOS ऐप में स्वैप फ़ीचर के लिए Apple रिव्यू प्रक्रिया शुरू।
+- Website पर नया whitepaper publish — updated styling और content।
+- पिछला weekly update [quantus.com/blog](https://quantus.com/blog) पर blog post के रूप में publish।
+- Transaction pool peek subscription feature implement और end to end test।
+- iOS app में swap feature के लिए Apple review process शुरू।
 
-### सामग्री और साझेदारी:
+### Content & Partnerships:
 
-- «State of Quantum» उद्योग रिपोर्ट का 20 पृष्ठ ड्राफ़्ट पूरा, टिप्पणियों के लिए वितरण शुरू। रुचि हो तो संपर्क करें।
-- सोशल मीडिया के लिए एक मार्केटिंग हायर जोड़ा।
-- Q-Day इवेंट की तारीख पुष्ट: 25 अप्रैल, Network School।
+- "State of Quantum" industry report का 20 page draft complete, comments के लिए distribute शुरू। Interested हों तो reach out करें।
+- Social media के लिए marketing hire add।
+- Q-Day event date confirm: April 25th, Network School।
 
-### उद्योग अपडेट:
+### Industry Updates:
 
 - Quantum Canary: [Can Solana Ever Be Quantum Secure?](https://x.com/QuantumCanary_/status/2036278620499616199)

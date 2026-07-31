@@ -1,10 +1,9 @@
 ---
-title: "Quantus Weekly: Planck, CLI दावा, प्रूवर 2x तेज़"
-description: प्लांक पोस्ट-क्वांटम निजी लेनदेन के लिए हमारा पहला टेस्टनेट है—माइनर माइग्रेट कर रहे हैं, CLI से मोबाइल वॉलेट पर माइनिंग रिवॉर्ड दावा किए जा सकते हैं।
-
+title: "Quantus Weekly: Planck Claims, 2x Prover Speed"
+description: "Planck post-quantum private transactions का पहला testnet। Miners migrate, CLI reward claims wallet में, prover throughput फिर दोगुना — साप्ताहिक अपडेट।"
 pubDate: "2026-04-22"
 heroImage: "/blog/covers/weekly-update-04-22-2026.webp"
-heroAlt: "Quantus Weekly: Planck, CLI दावा, प्रूवर 2x तेज़"
+heroAlt: "Quantus Weekly: Planck Claims, 2x Prover Speed"
 featured: false
 tags:
   [
@@ -22,68 +21,68 @@ tags:
   ]
 ---
 
-प्लांक Quantus के पोस्ट-क्वांटम निजी लेनदेन का समर्थन करने वाला हमारा पहला टेस्टनेट है।
+Planck Quantus के post-quantum private transactions support करने वाला हमारा पहला testnet है।
 
-इस सप्ताह हमारे आधे से अधिक माइनर प्लांक पर चले गए।
+इस सप्ताह हमारे miners का आधे से ज़्यादा Planck पर migrate हुआ।
 
-जब अन्य चेन यह बहस कर रही हैं कि क्वांटम खतरा वास्तविक है या नहीं, हम सार्वजनिक रूप से समाधान का स्ट्रेस-टेस्ट कर रहे हैं।
+दूसरी chains quantum threat real है या नहीं पर argue कर रही हैं, हम public में solution stress-test कर रहे हैं।
 
-अब आप CLI के ज़रिए मोबाइल वॉलेट में पारदर्शी पते पर माइनिंग रिवॉर्ड दावा कर सकते हैं।
+अब CLI से mobile wallet में transparent address पर mining rewards claim कर सकते हैं।
 
-हमने Apple Silicon और Linux पर माइनिंग को अंत-से-अंत सत्यापित किया है।
+Apple Silicon और Linux पर end-to-end mining validate किया।
 
-फिलहाल हमारा मोबाइल UI केवल पारदर्शी पता प्रकार का समर्थन करता है। जल्द और जानकारी।
+Currently mobile UI सिर्फ transparent address type support करता है। जल्द और।
 
-[docs.quantus.com](https://docs.quantus.com) लाइव है, जहाँ नोड सेटअप, माइनर चलाना और मोबाइल वॉलेट में रिवॉर्ड दावा करने की माइनिंग गाइड मिलेगी।
+[docs.quantus.com](https://docs.quantus.com) live है — node setup, miner run, और mobile wallet में rewards claim करने का mining guide वहाँ मिलेगा।
 
-यदि आप पहले Quantus टेस्टनेट संस्करणों पर माइनिंग या उपयोग करते रहे हैं, तो अपडेट पर ऐप माइग्रेशन के लिए संकेत देगा।
+Previous Quantus testnet versions mine या use कर रहे थे तो update पर app migration prompt देगा।
 
-आपका बैलेंस रीसेट हो जाता है, लेकिन सेटिंग्स में «mining rewards» देखने पर पिछले टेस्टनेट पर माइन किए हर ब्लॉक का क्रेडिट बना रहता है।
+Balance reset होता है, लेकिन settings में "mining rewards" देखें तो previous testnets पर mine किए हर block का credit बना रहता है।
 
-हम यह भी ट्रैक कर रहे हैं कि प्लांक पर प्रत्येक खाता कितने ब्लॉक माइन करता है।
+Planck पर हर account कितने blocks mine करता है, वो भी track कर रहे हैं।
 
-2x8 स्प्लिट आर्किटेक्चर के ज़रिए इस सप्ताह हमारी एग्रीगेटेड प्रूवर गति भी दोगुनी हुई।
+Aggregated prover speed इस सप्ताह 2x8 split architecture से दोगुनी हुई।
 
-और इस सप्ताह और भी बहुत कुछ शिप हुआ।
+और इस सप्ताह ship हुआ।
 
-### GitHub गतिविधि (27 मर्ज किए गए pull request):
+### GitHub Activity (27 merged pull requests):
 
 ![Github Stats](/blog/assets/github-stats-weekly-update-04-22-2026.webp)
 
 ### Core Tech & ZK
 
-- 2x8 स्प्लिट प्रूविंग आर्किटेक्चर से एग्रीगेटेड प्रूवर प्रदर्शन दोगुना (प्रत्येक 8-लीफ बंडल पर ZK नहीं, रूट प्रूफ पर ZK रैपर)।
-- ZK शोध पत्र प्रीप्रिंट के लिए जमा।
-- qp-plonky2 पर नए split mask ZK विकल्प में गोपनीयता-लीक बग मिला और पैच किया।
-- थ्रेशोल्ड Dilithium पर ऑडिट बिंदुओं पर काम।
-- CLI के ज़रिए माइनिंग रिवॉर्ड दावा योग्य।
-- CLI hasher को blake2-256 पर अपडेट किया।
-- CLI वर्महोल बैलेंस रिकवरी फिक्स शिप किया।
-- Tech Collective सदस्यों ने रनटाइम अपडेट सफलतापूर्वक चलाया।
+- 2x8 split proving architecture से aggregated prover performance दोगुनी (हर 8-leaf bundle पर ZK नहीं, root proof पर ZK wrapper)।
+- ZK research paper preprint submit।
+- qp-plonky2 पर नए split mask ZK option में privacy-leak bug discover और patch।
+- Threshold Dilithium audit items address।
+- CLI से mining rewards claimable।
+- CLI hasher blake2-256 use करने update।
+- CLI wormhole balance recovery fix ship।
+- Tech Collective members ने runtime update successfully execute किया।
 
-### नेटवर्क & इन्फ्रा
+### Network & Infra
 
-- प्लांक: नए बदलाव मर्ज और रिलीज़; आंतरिक प्लांक टेस्टनेट चल रहा है।
-- स्ट्रेस टेस्ट: नई रणनीति, कई रन।
-- Faucet: Twitter के लिए बेहतर अपवाद हैंडलिंग, विस्तृत मॉनिटरिंग के लिए मेट्रिक्स विस्तार।
-- प्लांक और faucet के लिए मॉनिटरिंग डैशबोर्ड ताज़ा और विस्तृत।
-- अधिक चयनात्मक अलर्टिंग।
-- A1-Planck नोड जर्मनी; A2-Planck नोड US में स्थानांतरित।
-- प्लांक टेस्टनेट के लिए Subsquid अपडेट: बैलेंस मूवमेंट ठीक, hasher blake2b पर वापस, माइनिंग रिवॉर्ड प्रदर्शन।
-- Explorer प्लांक टेस्टनेट पर अपडेट, वर्महोल शाखा सही मर्ज।
-- Apple Silicon और Linux पर MVP माइनर E2E; Linux GPU माइनिंग अभी भी समस्या निवारण।
-- AI माइनिंग स्किल (SKILL.md); परीक्षण में दो मिनट से कम में माइनिंग चालू।
+- Planck: नए changes merge और release; internal Planck testnet running।
+- Stress tests: नई strategy implement, multiple runs execute।
+- Faucet: Twitter exception handling improve, detailed monitoring metrics extend।
+- Planck और faucet monitoring dashboards refresh और extend।
+- Selective alerting implement।
+- A1-Planck node Germany; A2-Planck node US move।
+- Planck testnet Subsquid update: balance movement fix, hasher blake2b revert, mining rewards display add।
+- Explorer Planck testnet update, wormhole branch properly merge।
+- Apple Silicon और Linux पर MVP miner end-to-end; Linux GPU mining troubleshoot जारी।
+- AI mining skill (SKILL.md) build; testing में दो minutes से कम में mining चालू।
 
-### वेब & मोबाइल ऐप
+### Web & Mobile App Updates
 
-- [docs.quantus.com](https://docs.quantus.com) लाइव।
-- [q.day](https://q.day) लैंडिंग पेज डिप्लॉय।
-- नए टेस्टनेट के लिए फिक्स के साथ मोबाइल वॉलेट v1.3.2 और v1.3.3।
-- वॉलेट में माइनिंग रिवॉर्ड दिखाई देते हैं।
-- लेनदेन विवरण, प्राप्त करें और गतिविधि स्क्रीन पुनः डिज़ाइन।
-- माइनिंग गाइड अपडेट।
+- [docs.quantus.com](https://docs.quantus.com) live।
+- [q.day](https://q.day) landing page deploy।
+- नए testnet fixes के साथ mobile wallet v1.3.2 और v1.3.3 ship।
+- Wallet में mining rewards display।
+- Wallet में redesigned transaction details, receive, और activity screens implement।
+- Mining guide update।
 
-### कंटेंट & साझेदारी
+### Content & Partnerships
 
-- Q-Day पंजीकरण 100 पार। और जानें [q.day](https://q.day)।
-- State of Quantum Report पर बाहरी योगदानकर्ताओं की टिप्पणियाँ मिलीं और लागू की गईं।
+- Q-Day registrations 100 cross। [q.day](https://q.day) पर और जानें।
+- State of Quantum Report पर outside contributors के comments receive और implement।

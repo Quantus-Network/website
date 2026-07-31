@@ -1,10 +1,9 @@
 ---
-title: "क्वांटस वीकली: नेटिव एसेट्स और क्वांटम जोखिम"
-description: साप्ताहिक अपडेट जिसमें क्वांटम सुरक्षा के लिए केवल-नेटिव एसेट्स का निर्णय, डिलिथियम थ्रेशोल्ड सिग्नेचर, ZK एग्रीगेशन और कस्टम मल्टीसिग पैलेट पर प्रगति।
-
+title: "Quantus Weekly: Native Assets और Quantum Risk"
+description: "Bitcoin पर quantum risk का असर, native-only assets का फैसला, Dilithium threshold work और ZK aggregation पर इस सप्ताह की प्रगति।"
 pubDate: "2026-01-21"
 heroImage: "/blog/covers/weekly-update-01-21-2026.webp"
-heroAlt: "क्वांटस वीकली: नेटिव एसेट्स और क्वांटम जोखिम"
+heroAlt: "Quantus Weekly: Native Assets और Quantum Risk"
 featured: false
 tags:
   [
@@ -19,52 +18,52 @@ tags:
   ]
 ---
 
-यदि आप सोच रहे हैं कि सोना क्यों बढ़ रहा है और बिटकॉइन संघर्ष कर रहा है, तो इसे पढ़ें। इसमें कुछ भी रहस्यमय नहीं है।
+अगर आप सोच रहे हैं कि Gold क्यों rip कर रहा है और Bitcoin struggle कर रहा है, तो इसे पढ़ें। इसमें कुछ भी mysterious नहीं है।
 
-![निक कार्टर साक्षात्कार सारांश](/blog/assets/nic-carter-x-post-about-bitcoin-underperformance-due-to-quantum.webp)
+![Nic Carter interview summary](/blog/assets/nic-carter-x-post-about-bitcoin-underperformance-due-to-quantum.webp)
 
-पूंजी आवंटक बिटकॉइन को उस संभावना के अनुपात में छूट दे रहे हैं कि बिटकॉइन के पोस्ट-क्वांटम क्रिप्टोग्राफी में अपग्रेड होने से पहले एक क्रिप्टोग्राफिक रूप से प्रासंगिक क्वांटम कंप्यूटर (CRQC) शिप हो जाएगा। चाहे बिटकॉइन समुदाय इसे स्वीकार करे या न करे, बाजार ने पहले ही कर लिया है।
+Capital allocators Bitcoin को उस probability के अनुपात में discount कर रहे हैं कि Bitcoin post-quantum cryptography में upgrade होने से पहले cryptographically relevant quantum computer (CRQC) ship हो जाए। चाहे Bitcoin community इसे accept करे या न करे, market पहले ही कर चुका है।
 
-कुछ चेन समय पर अपग्रेड हो जाएंगी। बिटकॉइन शायद नहीं होगा। उदाहरण के लिए, हाल ही में विटालिक ने PQC अपग्रेड का आग्रह किया था।
+कुछ chains समय पर upgrade हो जाएंगी। Bitcoin शायद नहीं होगा। उदाहरण के लिए, हाल ही में Vitalik ने PQC upgrade का urge किया।
 
-हमारे पास यह जानने का कोई तरीका नहीं है कि समय सीमा वास्तव में कब है, या कौन सी चेन समय पर अपग्रेड होगी। जिसका अर्थ है कि हमें @QuantusNetwork पर बाहरी संपत्तियों का समर्थन करने के बारे में कठिन डिजाइन निर्णय लेने पड़े।
+हमारे पास यह precisely जानने का कोई तरीका नहीं है कि deadline कब है, या कौन सी chains समय पर upgrade होंगी। जिसका मतलब है कि हमें @QuantusNetwork पर external assets support करने के बारे में tough design decisions लेने पड़े।
 
-यदि किसी रैप्ड एसेट (wrapped asset) की मूल चेन से समझौता किया जाता है, तो रैप्ड एसेट धारकों के साथ भी ऐसा ही होता है। इसलिए हमने फैसला किया कि @QuantusNetwork किसी भी रैप्ड एसेट का समर्थन नहीं कर सकता।
+अगर wrapped asset की origin chain compromise हो जाती है, तो wrapped asset holders भी compromise हो जाते हैं। इसलिए हमने decide किया कि @QuantusNetwork किसी भी wrapped assets support नहीं कर सकता।
 
-हम कहीं से भी अब तक बनाए गए सबसे लचीले क्वांटम-सुरक्षित पैसे में अनुमति रहित ब्रिजिंग की अनुमति देने के लिए बुनियादी ढांचा बना रहे हैं। एक बार जब आप हमारी चेन पर नेटिव QUAN धारण कर लेते हैं, तो आप ZK एग्रीगेशन के माध्यम से अत्यधिक थ्रूपुट के साथ ML-DSA-87 (NIST का उच्चतम सुरक्षा स्तर) द्वारा सुरक्षित होते हैं।
+हम infrastructure बना रहे हैं जो anywhere से permissionless bridging allow करे—अब तक बने सबसे resilient quantum-secure money में। एक बार जब आप हमारी chain पर native QUAN hold करते हैं, तो आप ML-DSA-87 (NIST का highest security level) से protected होते हैं, ZK aggregation के through face-melting throughput के साथ।
 
-मैं यहाँ कुछ भी घोषित नहीं करना चाहता, लेकिन आप हमेशा हमारे GitHub को खोल सकते हैं और देख सकते हैं 👀
+मैं यहाँ कुछ announce नहीं करना चाहता, लेकिन आप हमेशा हमारा GitHub खोलकर check कर सकते हैं 👀
 
-यहाँ और क्या है जो हमने इस सप्ताह शिप किया है, ताकि जब Q-day आए, तो हम तैयार रहें:
+यहाँ और क्या है जो हमने इस सप्ताह ship किया, ताकि Q-day आने पर हम ready रहें:
 
-### जीथब गतिविधि (7 मर्ज किए गए पुल रिक्वेस्ट):
+### GitHub Activity (7 merged pull requests):
 
-![जीथब आँकड़े](/blog/assets/github-stats-weekly-update-01-21-2026.webp)
+![Github Stats](/blog/assets/github-stats-weekly-update-01-21-2026.webp)
 
-### कोर टेक और ZK
+### Core Tech & ZK
 
-- डिलिथियम थ्रेशोल्ड सिग्नेचर को दूसरे प्रोटोकॉल के MPC सिस्टम में एकीकृत किया गया।
-- पैरिटी मल्टीसिग पैलेट का उपयोग करके कस्टम ट्रेजरी प्रबंधन के लिए POC बनाया गया।
-- परीक्षणों और बेंचमार्क के साथ कस्टम मल्टीसिग पैलेट का पहला पुनरावृत्ति लागू किया गया।
-- ZK-एग्रीगेटर पैलेट पर ZK-सक्षम सर्किट बायनेरिज़ को रोकने वाले बग को ठीक किया गया।
-- क्वांटाइज्ड आउटपुट मात्रा का समर्थन करने के लिए ऑनचेन ZK-एग्रीगेटर सत्यापनकर्ता को अपडेट किया गया।
-- नए फील्ड एलिमेंट सीरियलाइज़र के लिए एंड-टू-एंड ZK-एग्रीगेटर उदाहरण स्क्रिप्ट को ठीक किया गया।
+- Dilithium threshold signatures को दूसरे protocol के MPC system में integrate किया।
+- Parity multisig pallet use करके custom treasury management के लिए POC build किया।
+- Tests और benchmarks के साथ custom multisig pallet का first iteration implement किया।
+- ZK-aggregator pallet पर ZK-enabled circuit binaries को block करने वाले bug patch किया।
+- Quantized output amounts support करने के लिए onchain ZK-aggregator verifier update किया।
+- New field element serializers के लिए end-to-end ZK-aggregator example script fix किया।
 
-### वेब और मोबाइल ऐप अपडेट
+### Web & Mobile App Updates
 
-- उच्च-सुरक्षा खातों के लिए निश्चित देरी और इंटरसेप्ट सुविधाओं का समर्थन करने के लिए मोबाइल UX बनाया गया (अभी भी परीक्षण चल रहा है)।
-- बेहतर त्रुटि प्रबंधन के साथ CLI में ब्लॉक स्कैनर और उच्च-सुरक्षा सुविधाएँ जोड़ी गईं।
-- उच्च-सुरक्षा हैंडलिंग के लिए सबस्क्विड (इंडेक्सर) अपडेट और नवीनतम पोसीडॉन के लिए हैशर फिक्स।
-- टैग समर्थन के साथ क्वांटस वेबसाइट पर ब्लॉग अनुभाग शिप किया गया और साप्ताहिक अपडेट के बैकलॉग को अपलोड करना शुरू किया गया।
-- व्हाइटपेपर v3.1 में अपडेट किया गया, टोकनॉमिक चार्ट वितरण मूल्यों को ठीक किया गया।
+- High-security accounts के लिए fixed delay और intercept features support करने वाला mobile UX build किया (अभी भी testing)।
+- Improved error handling के साथ CLI में block scanner और high-security features add किए।
+- High-security handling के लिए Subsquid (indexer) updates और latest Poseidon के लिए hasher fix।
+- Tag support के साथ Quantus website पर blog section ship किया और weekly updates का backlog upload करना शुरू किया।
+- Whitepaper v3.1 में update किया, tokenomic chart distribution values fix किए।
 
-### कंटेंट और पार्टनरशिप
+### Content & Partnerships
 
-- पॉडकास्ट अब Apple पॉडकास्ट पर अपलोड किए जा रहे हैं।
-- 2 टोकन लॉन्चपैड के साथ बातचीत शुरू हुई।
-- क्वांटम कैनरी ब्लॉकचेन तुलना पृष्ठ में सुधार।
-- बायोहैकिंग और सेल्फ ऑप्टिमाइजेशन पर AJ के साथ पॉडकास्ट: https://x.com/QuantusNetwork/status/2012526120869286161
+- Podcasts अब Apple Podcasts पर upload हो रहे हैं।
+- 2 token launchpads के साथ conversation शुरू हुई।
+- Quantum Canary blockchain comparison page improvements।
+- Biohacking और self optimization पर AJ के साथ podcast: https://x.com/QuantusNetwork/status/2012526120869286161
 
-### इंडस्ट्री अपडेट
+### Industry Updates
 
-- क्वांटम कैनरी लेख चर्चा कर रहा है कि कैसे CRQCs सातोशी के सिक्कों को खतरे में डालते हैं: https://x.com/QuantumCanary_/status/2011706634868047982
+- Quantum Canary article discuss कर रहा है कि CRQCs Satoshi's Coins को कैसे threaten करते हैं: https://x.com/QuantumCanary_/status/2011706634868047982

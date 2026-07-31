@@ -1,9 +1,9 @@
 ---
-title: "क्वांटस साप्ताहिक: क्वांटम-सुरक्षित भविष्य का मानचित्रण"
-description: "साप्ताहिक अपडेट जिसमें हमारी CoinGecko लिस्टिंग, मल्टीसिग अनुकूलन, ZK-एग्रीगेटर रिफैक्टरिंग और मोबाइल ऐप v1.1.5 रिलीज़ शामिल है।"
+title: "Quantus Weekly: Quantum-Secure Future"
+description: "CoinGecko listing, multisig optimizations, ZK-aggregator refactoring और mobile app v1.1.5 release—इस सप्ताह Quantus की progress।"
 pubDate: "2026-02-13"
 heroImage: "/blog/covers/weekly-update-02-13-2026.webp"
-heroAlt: "क्वांटस साप्ताहिक: क्वांटम-सुरक्षित भविष्य का मानचित्रण"
+heroAlt: "Quantus Weekly: Quantum-Secure Future"
 featured: false
 tags:
   [
@@ -17,54 +17,54 @@ tags:
   ]
 ---
 
-फ्रा मौरो ने वेनिस के पास एक मठ के अंदर पूरे ज्ञात विश्व का मानचित्र बनाने में वर्षों बिताए।
+Fra Mauro ने Venice के पास monastery के अंदर entire known world का map बनाने में years बिताए।
 
-वह कभी कहीं नहीं गया।
+वह कभी sail नहीं किया।
 
-व्यापारी और नाविक मठ में आते थे और जो उन्होंने देखा था उसका वर्णन करते थे। फ्रा मौरो ने हर खाते को हर दूसरे खाते के साथ क्रॉस-रेफरेंस किया। उन्होंने उन दावों को खारिज कर दिया जो टिक नहीं पाए, और लगातार संशोधन किया।
+Merchants और sailors monastery visit करते थे और जो देखा describe करते थे। Fra Mauro ने हर account को दूसरे से cross-reference किया। Claims reject की जो hold up नहीं हुईं, constantly revise किया।
 
-परिणाम ने उन जगहों को दिखाया जिनके बारे में अधिकांश यूरोपीय लोगों ने कभी नहीं सुना था। पूर्वी अफ्रीका। हिंद महासागर। दक्षिण पूर्व एशिया। वह क्षेत्र जो अस्तित्व में था लेकिन किसी भी ऐसे व्यक्ति के लिए वास्तविक नहीं था जो वहां नहीं गया था।
+Result ने places दिखाए जिनके बारे में most Europeans ने कभी नहीं सुना। East Africa। Indian Ocean। Southeast Asia। Territory exist करती थी लेकिन real नहीं थी किसी के लिए जो वहाँ नहीं गया।
 
-क्वांटस क्वांटम-सुरक्षित धन के लिए मानक निर्धारित करता है।
+Quantus quantum-secure money के लिए standard set करता है।
 
-लेकिन हमें मानचित्र पर होना चाहिए।
+लेकिन map पर होना ज़रूरी है।
 
-इस सप्ताह, क्वांटस [@coingecko](https://x.com/@coingecko) पर सूचीबद्ध हो गया।
+इस सप्ताह Quantus [@coingecko](https://x.com/@coingecko) पर listed हुआ।
 
-"quantum resistant" (क्वांटम प्रतिरोधी) नामक एक श्रेणी है, और यह बाजार पूंजीकरण में $5B से कम है।
+"quantum resistant" category है, market cap $5B से कम।
 
-जल्द ही पूरा क्रिप्टो मार्केट कैप "क्वांटम प्रतिरोधी" होगा, क्योंकि हर चेन या तो अपग्रेड होगी या शून्य हो जाएगी।
+जल्द पूरा crypto market cap "quantum resistant" होगा, क्योंकि हर chain या upgrade होगी या zero जाएगी।
 
-लेकिन अभी के लिए श्रेणी छोटी है, और सूची में शामिल चेन के बीच भी, बहुत काम किया जाना बाकी है।
+अभी category छोटी है, और list की chains के बीच भी plenty of work बाकी है।
 
-तो यहाँ और क्या है जो हमने इस सप्ताह शिप किया है।
+तो यहाँ और क्या ship किया इस सप्ताह:
 
-### GitHub गतिविधि (7 मर्ज किए गए पुल अनुरोध):
+### GitHub Activity (7 merged pull requests):
 
-![Github आँकड़े](/blog/assets/github-stats-weekly-update-02-13-2026.webp)
+![Github Stats](/blog/assets/github-stats-weekly-update-02-13-2026.webp)
 
-### कोर टेक और ZK
+### Core Tech & ZK
 
-- अनुकूलन और वजन सटीकता सुधार के साथ मल्टीसिग के अंतिम सरलीकृत संस्करण को कार्यान्वित और परीक्षण किया गया।
-- सत्यापनकर्ता को प्रूवर से सफाई से अलग करने के लिए qp-plonky2 को रिफैक्टर किया गया।
-- ZK-एग्रीगेशन को ठीक किया गया और इसमें अतिरिक्त गोपनीयता और लचीलापन जोड़ा गया।
-- qp-zk-circuit रिलीज़ वर्कफ़्लो को अपडेट किया गया।
-- बेहतर उपयोगिता के लिए चेक-फ़्रेज़ शब्द चयन में सुधार किया गया।
-- CLI में रैंडम-पार्टीशन मल्टीसेंड जोड़ा गया।
-- हमारे Poseidon2 कार्यान्वयन के खिलाफ Plonky3 के प्रूवर का बेंचमार्क किया गया।
+- Optimization और weight accuracy fixes के साथ multisig का final simplified version implement और test किया।
+- Verifier को prover से cleanly separate करने के लिए qp-plonky2 refactor किया।
+- ZK-aggregation fix किया और additional privacy और flexibility add की।
+- qp-zk-circuit release workflow update किया।
+- Better usability के लिए check-phrase word selection improve की।
+- CLI में random-partition multisend add किया।
+- हमारे Poseidon2 implementation के against Plonky3 prover benchmark किया।
 
-### वेब और मोबाइल ऐप अपडेट
+### Web & Mobile App Updates
 
-- मोबाइल ऐप v1.1.5 दोनों ऐप स्टोर पर शिप किया गया।
-- रैंक डिस्प्ले के लिए बगफिक्स के साथ नए क्वेस्ट स्क्रीन को कार्यान्वित किया गया।
-- [quantus.com/launch](https://quantus.com/launch) पर लॉन्च पेज प्रकाशित किया गया।
-- ZK-एग्रीगेटर के लिए सरलीकृत UX डिज़ाइन, जिसे अब "एन्क्रिप्टेड अकाउंट्स" कहा जाता है।
+- Mobile app v1.1.5 दोनों app stores पर ship किया।
+- Rank display bugfixes के साथ new quests screens implement किए।
+- [quantus.com/launch](https://quantus.com/launch) पर launch page publish किया।
+- ZK-aggregator के लिए simplified UX design, अब "encrypted accounts" कहलाता है।
 
-### सामग्री और भागीदारी
+### Content & Partnerships
 
-- CoinGecko पर सूचीबद्ध।
-- हमारे Youtube पर जैंगल और क्रिस के साथ पॉडकास्ट।
+- CoinGecko पर listed।
+- Jangle और Chris के साथ podcast हमारे Youtube पर।
 
-### उद्योग अपडेट
+### Industry Updates
 
-- क्वांटम कैनरी: "[फ़िल्टर के बारे में बहस करना बंद करें: निवेशकों के लिए विटालिक की त्वरित क्वांटम समयरेखा का क्या अर्थ है](https://x.com/QuantumCanary_/status/2021092653891486027)"।
+- Quantum Canary: "[Stop Arguing About Filters: What Vitalik's Accelerated Quantum Timeline Means For Investors](https://x.com/QuantumCanary_/status/2021092653891486027)"।

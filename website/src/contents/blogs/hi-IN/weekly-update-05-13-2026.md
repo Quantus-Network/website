@@ -1,9 +1,9 @@
 ---
-title: "Quantus Weekly: एक निष्पक्ष लॉन्च"
-description: "शुरुआती बिटकॉइन माइनर्स लैपटॉप पर एक दिन में हजारों BTC माइन कर सकते थे। Quantus में, हम पहले दिन से माइनिंग को सुलभ बनाने को प्राथमिकता दे रहे हैं।"
+title: "Quantus Weekly: एक न्यायसंगत Launch"
+description: "शुरुआती Bitcoin miners laptop पर रोज़ हज़ारों BTC mine कर सकते थे। Quantus पर day one से mining accessible बनाना प्राथमिकता है।"
 pubDate: "2026-05-13"
 heroImage: "/blog/covers/weekly-update-05-13-2026.webp"
-heroAlt: "Quantus Weekly: एक निष्पक्ष लॉन्च"
+heroAlt: "Quantus Weekly: एक न्यायसंगत Launch"
 featured: false
 tags:
   [
@@ -22,57 +22,57 @@ tags:
   ]
 ---
 
-शुरुआती बिटकॉइन माइनर्स लैपटॉप पर एक दिन में हजारों BTC माइन कर सकते थे।
+शुरुआती Bitcoin miners laptop पर रोज़ हज़ारों BTC mine कर सकते थे।
 
-बिटकॉइन CPU माइनिंग मूल रूप से केवल 2 वर्षों के लिए व्यवहार्य थी।
+Bitcoin CPU mining basically सिर्फ 2 साल viable था।
 
-जैसे-जैसे नेटवर्क बढ़ा, हैशरेट भी बढ़ा। GPU माइनिंग अधिक व्यवहार्य हो गई, फिर ASICs।
+Network बढ़ने के साथ hashrate भी बढ़ा। GPU mining ज़्यादा viable हुआ, फिर ASICs।
 
-जब तक आपने पहली बार BTC के बारे में सुना, तब तक उपभोक्ता हार्डवेयर पर माइनिंग पहले ही खत्म हो चुकी थी।
+जब आपने पहली बार BTC के बारे में सुना, consumer hardware पर mining पहले ही dead था।
 
-खरीदने के लिए कोई एक्सचेंज नहीं था।
+Buy करने के लिए कोई exchange नहीं था।
 
-चूंकि कोई सेकेंडरी मार्केट नहीं था, इसलिए कोई "कीमत" नहीं थी।
+Secondary market न होने से कोई "price" नहीं था।
 
-"कीमत" प्राप्त करने के लिए, आपने प्रति कॉइन बिजली की लागत का अनुमान लगाया।
+"Price" पाने के लिए, आप per coin electricity costs estimate करते थे।
 
-जब तक आप मार्केट से खरीद सकते थे, तब तक अधिकांश कॉइन वितरित किए जा चुके थे।
+जब market buy possible हुआ, तब तक ज़्यादातर coins distribute हो चुके थे।
 
-बिटकॉइन ने अपने पहले चार वर्षों में अपने आधे से अधिक कॉइन जारी किए।
+Bitcoin ने अपने coins का आधे से ज़्यादा हिस्सा पहले चार सालों में emit किया।
 
-यह सब शुरुआती माइनर्स के पास गया।
+सब कुछ early miners के पास गया।
 
-तो यह "फेयर लॉन्च" (fair launch) का मानक है।
+तो यही "fair launch" का standard है।
 
 हम शायद बेहतर कर सकते हैं।
 
-जब हम [@QuantusNetwork](https://x.com/@QuantusNetwork) लॉन्च करने की तैयारी कर रहे हैं, तो हम पहले दिन से माइनिंग को सुलभ बनाने को प्राथमिकता दे रहे हैं।
+जब हम [@QuantusNetwork](https://x.com/@QuantusNetwork) launch करने की तैयारी करेंगे, day one से mining accessible बनाना प्राथमिकता होगी।
 
-आप आज कुछ ही क्लिक में हमारे टेस्टनेट पर माइनिंग नोड चला सकते हैं।
+आप आज ही कुछ clicks में हमारे testnet पर mining node चला सकते हैं।
 
-पिछले हफ्ते हमने अपना GUI माइनर ऐप अपडेट किया। भले ही आप तकनीकी रूप से दक्ष न हों, आप पहले दिन से मेननेट माइनिंग के लिए तैयार हो सकते हैं।
+पिछले सप्ताह हमने GUI miner app अपडेट किया। भले ही आप technical न हों, day one पर mainnet mining के लिए ready रह सकते हैं।
 
-### Core Tech & ZK:
+### कोर टेक और ZK:
 
-- माइनर में डेलिगेटेड ZK प्रूविंग के लिए प्रोटोटाइप बनाया गया। यह प्रायोगिक विशेषता माइनर्स को अतिरिक्त भूमिका के रूप में वर्महोल लेनदेन के लिए प्रूफ एग्रीगेशन चुनने की अनुमति देगी।
-- HashCloak और Eiger ऑडिट निष्कर्षों को संबोधित किया गया।
+- Miner में delegated ZK proving का prototype बनाया। यह experimental feature miners को wormhole transactions के लिए proof aggregation का additional role opt-in करने देगा।
+- HashCloak और Eiger audit findings address किए।
 
-### Network & Infra:
+### नेटवर्क और इंफ्रा:
 
-- Planck टेस्टनेट के लिए रिडेम्पशन और बैलेंस सुविधाओं के साथ GUI माइनर अपडेट जारी किया गया। डाउनलोड और वॉकथ्रू docs (dot) quantus (dot) com पर उपलब्ध है।
-- सभी पुल रिक्वेस्ट में AI-आधारित सुरक्षा ऑडिट फ्रेमवर्क तैनात किया गया। पहली स्वचालित फुल-चेन सुरक्षा समीक्षा पूरी की गई।
-- RPC नोड्स का पेन-टेस्ट किया गया।
+- Planck testnet के लिए redemption और balance features के साथ GUI miner update ship किया। Download और walkthrough: docs (dot) quantus (dot) com
+- सभी pull requests में AI-based security audit framework deploy किया। पहली automated full-chain security review complete की।
+- RPC nodes pen-test किए।
 
-### Web & Mobile App Updates:
+### वेब और मोबाइल ऐप अपडेट:
 
-- वॉलेट में माइनर रिवॉर्ड स्क्रीन और पॉइंट-ऑफ-सेल स्क्रीन लागू की गई।
-- महंगे एक्सप्लोरर क्वेरी को अनुकूलित किया गया और एकीकृत खाता इवेंट्स को अपडेट किया गया।
-- मोबाइल ऐप सुधार।
+- Wallet में miner reward screen और point-of-sale screen implement किए।
+- Expensive explorer query optimize की और unified account events अपडेट किए।
+- Mobile app fixes।
 
-### Content & Partnerships:
+### कंटेंट और पार्टनरशिप:
 
-- [Chris Smith in Observer](https://x.com/observer/status/2052779135794110592): "बिटकॉइन की क्वांटम कंप्यूटिंग गवर्नेंस समस्या।"
-- सभी प्लेटफार्मों पर [Curtis Yarvin पॉडकास्ट एपिसोड](https://x.com/QuantusNetwork/status/2052734804869915132) प्रकाशित किया गया।
-- नेटवर्क स्कूल में 30+ लोगों को क्वांटस ऐप और 10+ माइनर्स को ऑनबोर्ड किया गया।
-- GUI ऐप माइनिंग गाइड docs (dot) quantus (dot) com पर भेजी गई।
-- बालाजी को Q-Day स्पीकर के रूप में पुष्टि की गई।
+- [Chris Smith in Observer](https://x.com/observer/status/2052779135794110592): "Bitcoin's quantum computing governance problem."
+- [Curtis Yarvin podcast episode](https://x.com/QuantusNetwork/status/2052734804869915132) सभी platforms पर publish किया।
+- Network School पर 30+ लोगों को Quantus app और 10+ miners onboard किए।
+- docs (dot) quantus (dot) com पर GUI app mining guide ship किया।
+- Balaji को Q-Day speaker के रूप में confirm किया।

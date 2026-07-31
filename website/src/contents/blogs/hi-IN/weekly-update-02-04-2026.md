@@ -1,10 +1,9 @@
 ---
-title: "क्वांटस वीकली: हाई-सिक्योरिटी अकाउंट्स और धोखाधड़ी की रोकथाम"
-description: कस्टमाइज़ेबल टाइम लॉक और गार्डियंस वाले नए हाई-सिक्योरिटी अकाउंट्स, मल्टीसिग टेस्टिंग, और नई फंड रिकवरी सुविधा इस सप्ताह।
-
+title: "Quantus Weekly: High-Security Accounts"
+description: "Customizable time locks और guardians वाले high-security accounts, multisig integration testing, और recover-funds feature—इस सप्ताह हमारी shipping।"
 pubDate: "2026-02-04"
 heroImage: "/blog/covers/weekly-update-02-04-2026.webp"
-heroAlt: "क्वांटस वीकली: हाई-सिक्योरिटी अकाउंट्स और धोखाधड़ी की रोकथाम"
+heroAlt: "Quantus Weekly: High-Security Accounts"
 featured: false
 tags:
   [
@@ -18,42 +17,42 @@ tags:
   ]
 ---
 
-चेनैलिसिस (Chainalysis) का अनुमान है कि 2025 में 17 बिलियन डॉलर की क्रिप्टो चोरी हुई थी। विचार यह था कि "अपना बैंक खुद बनें।" दूसरा आधा हिस्सा है "अपनी खुद की सुरक्षा टीम बनें।" स्पष्ट होने के लिए, "आपकी जेब में एक स्विस बैंक खाता, लेकिन केवल साइबर सुरक्षा विशेषज्ञों के लिए" अभी भी अविश्वसनीय रूप से शानदार है। लेकिन उद्योग ने उन निर्दोष लोगों के साथ अन्याय किया जो यह जाने बिना कि असममित क्रिप्टोग्राफी (asymmetric cryptography) क्या है, अपनी कुल संपत्ति को ऑनचेन ले जाकर बर्बाद हो गए।
+Chainalysis estimated $17B crypto 2025 में stolen हुआ। Pitch था "be your own bank." दूसरा half है "be your own security team." Clear रहें—"a Swiss bank account in your pocket, but only for cybersecurity experts" अभी भी insanely badass है। लेकिन industry ने innocent normies के साथ disservice किया जिन्होंने asymmetric cryptography क्या है यह जाने बिना net worth onchain move करके rekt हो गए।
 
-तो जब आप कहते हैं "अपना बैंक खुद बनें" तो आपको यह भी उल्लेख करना चाहिए कि बैंकों में धोखाधड़ी विभाग, लेनदेन की निगरानी और रिवर्सल अवधि होती है। वे संदिग्ध गतिविधि को पकड़ते हैं, खातों को फ्रीज करते हैं और दुर्भावनापूर्ण लेनदेन को बीच में ही रोक देते हैं। जब आप अपनी चाबियों (keys) की कस्टडी खुद लेते हैं, तो आप यह सब पीछे छोड़ देते हैं।
+तो जब आप "be your own bank" कहते हैं, mention करना चाहिए कि banks के fraud departments, transaction monitoring और reversal periods होते हैं। वे suspicious activity catch करते हैं, accounts freeze करते हैं, malicious transactions intercept करते हैं। Keys की custody लेते समय आप यह सब पीछे छोड़ देते हैं।
 
-दुर्भाग्य से, "हार्डवेयर वॉलेट का उपयोग करें और हर बार जो कुछ भी आप साइन करते हैं उसे ठीक से सत्यापित करें" एक अनुपयोगी सलाह है। अगर बायबिट (Bybit) अपने कोल्ड स्टोरेज मल्टीसिग पर आंख बंद करके साइन कर रहा है, तो शायद कोई भी पर्याप्त प्रयास नहीं कर रहा है। उपयोगकर्ताओं से पर्याप्त उच्च सुरक्षा स्तर पर काम करने की उम्मीद करना अनुचित है। आपके ऐप का उपयोग करने का परिणाम "अपना सारा पैसा खोना" होना अस्थिर है।
+Unfortunately, "use a hardware wallet and verify exactly everything you sign every time" unhelpful advice है। अगर Bybit cold storage multisig पर yolo blind signing कर रहा है, शायद कोई enough नहीं कर रहा। Users से high enough security level operate करने की expectation unreasonable है। App use करने का outcome "losing all your money" होना untenable है।
 
-तो क्या बुरा है, अपना सारा पैसा खोना या विश्वास की धारणा (trust assumption)? यह विश्वास की धारणा पर निर्भर करता है, है ना? "किसी पर भरोसा न करें" और "बैंक पर भरोसा करें" के बीच एक मध्यम मार्ग है। किसी ऐसे व्यक्ति पर भरोसा करें जिसे आप चुनते हैं: एक दोस्त, परिवार का सदस्य, आपके वकील या तकनीक-प्रेमी भतीजे के साथ एक मल्टीसिग, एक डेड मैन स्विच।
+तो क्या worse है—losing all your money या trust assumption? Trust assumption पर depend करता है, right? "Trust no one" और "trust a bank" के बीच middle ground है। किसी पर trust करें जिसे आप choose करते हैं: friend, family member, lawyer या tech savvy nephew के साथ multisig, dead man's switch।
 
-हमने उसे [@QuantusNetwork](https://x.com/@QuantusNetwork) में बनाया है। क्वांटस पर हाई-सिक्योरिटी अकाउंट्स में हर आउटगोइंग ट्रांजैक्शन पर एक कस्टमाइज़ेबल टाइम लॉक होता है। उस अवधि के दौरान, एक नामित गार्डियन लेनदेन को रोक सकता है और रद्द कर सकता है। एक गार्डियन आपकी ओर से साइन नहीं कर सकता है, लेकिन वे किसी भी आउटबाउंड ट्रांजैक्शन को बंद कर सकते हैं।
+हमने उसे [@QuantusNetwork](https://x.com/@QuantusNetwork) में build किया। Quantus पर high-security accounts में हर outgoing transaction पर customizable time lock होता है। उस window के दौरान designated guardian transaction intercept और cancel कर सकता है। Guardian आपकी ओर से sign नहीं कर सकता, लेकिन outbound transaction shut down कर सकता है।
 
-तो अगर किसी चोर के पास आपकी चाबियां हैं, तो उनके पास जरूरी नहीं कि वह सब कुछ ले लेने की क्षमता हो जो आपके पास है। आप गार्डियन चुनते हैं और आप अवधि निर्धारित करते हैं। शायद यह $1,000 से बड़े किसी भी लेनदेन के लिए आपके जीवनसाथी के साथ 24 घंटे की देरी है। शायद यह एक हार्डवेयर वॉलेट है जिसे आप सेफ डिपॉजिट बॉक्स में रखते हैं। शायद यह एक पेशेवर सेवा है जो वास्तविक समय में संभावित धोखाधड़ी के लिए गतिविधि की निगरानी करती है।
+अगर thief के पास keys हैं, necessarily everything लेने की ability नहीं है। Guardian choose करते हैं और window set करते हैं। शायद $1,000 से बड़े transaction के लिए spouse के साथ 24-hour delay। शायद safe deposit box में hardware wallet। शायद professional service real time में potential fraud monitor करती है।
 
-इस सप्ताह हमने गार्डियन अकाउंट्स के लिए मल्टीसिग इंटीग्रेशन का परीक्षण शुरू किया। हमने चेन में फंड रिकवरी कार्यक्षमता भी जोड़ी है, ताकि रोके गए लेनदेन को मूल मालिक को वापस दिया जा सके।
+इस सप्ताह हमने guardian accounts के लिए multisig integration testing शुरू की। Chain में recover funds functionality add की, ताकि intercepted transactions original owner को claw back हो सकें।
 
-यहाँ वह सब कुछ है जो हमने इस सप्ताह शिप किया है:
+यहाँ और क्या ship किया इस सप्ताह:
 
-### GitHub गतिविधि (5 मर्ज किए गए पुल रिक्वेस्ट):
+### GitHub Activity (5 merged pull requests):
 
-![जीथब आँकड़े](/blog/assets/github-stats-weekly-update-02-04-2026.webp)
+![Github Stats](/blog/assets/github-stats-weekly-update-02-04-2026.webp)
 
-### कोर टेक और ZK
+### Core Tech & ZK
 
-- CLI कमांड के साथ टेस्टिंग चरण में हाई-सिक्योरिटी अकाउंट्स के लिए मल्टीसिग पैलेट।
-- हाई-सिक्योरिटी अकाउंट्स के लिए चेन में फंड रिकवरी कार्यक्षमता जोड़ी गई।
-- qp-plonky2 को मूल plonky2 रेपो में किए गए परिवर्तनों के साथ अपडेट किया गया।
+- CLI commands के साथ high-security accounts के लिए multisig pallet testing phase में।
+- High-security accounts के लिए chain में recover funds functionality add की।
+- qp-plonky2 को original plonky2 repo changes के साथ up to date किया।
 
-### वेब और मोबाइल ऐप अपडेट
+### Web & Mobile App Updates
 
-- ग्रेडिएंट और वॉलेट इंटीग्रेशन के साथ क्वेस्ट स्क्रीन UI को रिफैक्टर किया गया।
-- ऐप में अप्रयुक्त संपत्तियों (unused assets) को साफ किया गया।
+- Gradients और wallet integration के साथ quests screens UI refactor किया।
+- App में unused assets clean up किए।
 
-### कंटेंट और पार्टनरशिप
+### Content & Partnerships
 
-- [@QuantusNetwork](https://x.com/@QuantusNetwork) और [@YuviLightman](https://x.com/@YuviLightman) दोनों खातों ने 1k+ फॉलोअर्स पार कर लिए हैं।
-- एआई और उत्पादकता पर हेनरी लव के साथ पॉडकास्ट (हमारे यूट्यूब पर)।
+- [@QuantusNetwork](https://x.com/@QuantusNetwork) और [@YuviLightman](https://x.com/@YuviLightman) accounts दोनों 1k+ followers cross किए।
+- AI और productivity पर Henry Love के साथ podcast (हमारे Youtube पर)।
 
-### इंडस्ट्री अपडेट
+### Industry Updates
 
-- क्वांटम कैनरी: ["क्या ज़कैश बिटकॉइन की जगह लेगा?"](https://x.com/QuantumCanary_/status/2016327421797294286)
+- Quantum Canary: ["Will Zcash Replace Bitcoin?"](https://x.com/QuantumCanary_/status/2016327421797294286)

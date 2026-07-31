@@ -1,9 +1,10 @@
 ---
-title: "क्वांटस वीकली: ZK ट्रांजैक्शन एग्रीगेशन और माइनर ऐप रिलीज़"
-description: "साप्ताहिक अपडेट जिसमें ZK ट्रांजैक्शन एग्रीगेशन का पहला चरण, माइनर ऐप v0.1.0 की रिलीज़ और GPU माइनिंग कार्यान्वयन पर प्रगति शामिल है।"
+title: "Quantus Weekly: ZK Aggregation और Miner App"
+description: "Chain और CLI के लिए पहली ZK transaction aggregation आई, mock टेस्ट की जगह वास्तविक transfer verification; Miner App v0.1.0 रिलीज़ और GPU mining जारी।"
+
 pubDate: "2025-11-25"
 heroImage: "/blog/covers/weekly-update-11-25-2025.webp"
-heroAlt: "क्वांटस वीकली: ZK ट्रांजैक्शन एग्रीगेशन और माइनर ऐप रिलीज़"
+heroAlt: "Quantus Weekly: ZK Aggregation और Miner App"
 featured: false
 tags:
   [
@@ -16,43 +17,43 @@ tags:
   ]
 ---
 
-इस सप्ताह टीम ने चेन और CLI दोनों के लिए ZK ट्रांजैक्शन एग्रीगेशन का पहला चरण पूरा किया, मॉक टेस्ट को वास्तविक ट्रांसफर वेरिफिकेशन से बदल दिया। हमने माइनर ऐप v0.1.0 बाइनरी भी रिलीज़ की है, जो अब उपलब्ध है।
+इस सप्ताह टीम ने chain और CLI दोनों के लिए ZK transaction aggregation का पहला चरण पूरा किया, mock tests को actual transfer verification से replace किया। हमने Miner App v0.1.0 binary भी रिलीज़ किया, अब उपलब्ध है।
 
-## डेवलपमेंट न्यूज़
+## विकास समाचार
 
-- साप्ताहिक जीथब गतिविधि रिपोर्ट जिसमें 150+ कुल इवेंट शामिल हैं: https://github.com/Quantus-Network/n8n-workflows/blob/main/github/weekly-update-2025-11-24-12:01:16.md
+- साप्ताहिक Github गतिविधि रिपोर्ट, जिसमें 150+ total events शामिल हैं: https://github.com/Quantus-Network/n8n-workflows/blob/main/github/weekly-update-2025-11-24-12:01:16.md
 
 ## कोर टेक
 
-- चेन पर एक नया qp-header प्रिमिटिव बनाया गया जो हमारे वर्महोल सर्किट के साथ फ़ील्ड-संरेखित है, जो सबस्ट्रेट के जेनेरिक हेडर की जगह लेता है।
-- ब्लॉक हेडर वेरिफिकेशन और आसन्न ब्लॉकों के बीच कनेक्शन का समर्थन करने के लिए एग्रीगेशन सर्किट को अपडेट किया गया।
-- माइनिंग एल्गोरिदम का GPU कार्यान्वयन लगभग 80% पूरा हो गया है।
-- rusty-crystals ऑडिट का पहला चरण पूरा हुआ, मुद्दों को अधिकतर संबोधित किया गया है।
-- रनटाइम में पैनिक के लिए एक आंतरिक ऑडिट आयोजित किया गया (हाल के क्लाउडफ्लेयर अनरैप बग से प्रेरित)।
-- मानक सबस्ट्रेट पैलेट के लिए CLI में वेस्टिंग कमांड जोड़े गए।
+- chain पर नया qp-header primitive बनाया जो हमारे wormhole circuits के साथ field-aligned है, Substrate के generic header को replace करता है।
+- block header verification और adjacent blocks के बीच connections support करने के लिए aggregation circuit अपडेट किया।
+- mining algorithm का GPU implementation लगभग 80% complete है।
+- rusty-crystals audit का पहला phase पूरा, issues का अधिकांश हिस्सा address हो चुका।
+- runtime में panics के लिए internal audit (हाल के Cloudflare unwrap bug से inspired)।
+- standard Substrate pallet के लिए CLI में vesting commands जोड़े।
 
 ## नेटवर्क और इंफ्रा
 
-- सबस्किड (Subsquid) परिनियोजन को केवल एक स्क्रिप्ट तक सुव्यवस्थित किया गया।
-- क्वांटस-माइनर के लिए डॉकर इमेज और रिलीज़ प्रक्रिया बनाई गई।
-- माइनर-स्टैक (डॉकर कंपोज़ + मॉनिटरिंग स्टैक + दस्तावेज़ीकरण) तैनात किया गया।
-- एक्सप्लोरर और टास्क मास्टर के लिए मॉनिटरिंग डैशबोर्ड और अलर्ट जोड़े गए।
+- Subsquid deployment को केवल एक script तक streamline किया।
+- Quantus-Miner के लिए Docker image और release process बनाया।
+- Miner-stack deploy किया (Docker Compose + monitoring stack + documentation)।
+- Explorer और Task Master के लिए monitoring dashboards और alerts जोड़े।
 
 ## वेब और मोबाइल ऐप अपडेट
 
-- इन-ऐप रेफरल सिस्टम और उपयोगकर्ता-सामना करने वाले इवेंट ट्रैकिंग मेट्रिक्स (क्वांटस क्वेस्ट) लॉन्च किए गए।
-- सभी प्लेटफार्मों के लिए माइनर ऐप बाइनरी रिलीज़ की गई: https://github.com/Quantus-Network/quantus-apps/releases/tag/miner-v0.1.0 हालांकि केवल मैक का पूरी तरह से परीक्षण किया गया है।
-- मोबाइल वॉलेट में माइग्रेशन समस्याओं और विभिन्न अन्य बग रिपोर्टों को ठीक किया गया।
-- सेंड स्क्रीन विजेट को टेस्टेबल बनाने के लिए रिफैक्टर किया गया और यूनिट/विजेट टेस्ट जोड़े गए।
-- सर्च कार्यक्षमता के साथ वेबसाइट पर क्वेस्ट पेज को अपडेट किया गया।
-- सर्च का समर्थन करने के लिए टास्क मास्टर लीडरबोर्ड एंडपॉइंट को अपडेट किया गया और परिणामों में रैंक जोड़ी गई।
+- in-app referral system और user-facing event tracking metrics (Quantus Quests) launch किए।
+- सभी platforms के लिए miner app binary रिलीज़: https://github.com/Quantus-Network/quantus-apps/releases/tag/miner-v0.1.0 — mac को ही thoroughly test किया गया है।
+- mobile wallet में migration issues और विभिन्न अन्य bug reports fix किए।
+- send screen widget को testable बनाने के लिए refactor किया और unit/widget tests जोड़े।
+- website पर Quests page को search functionality के साथ अपडेट किया।
+- search support और results में rank के लिए Task Master leaderboard endpoint अपडेट किया।
 
 ## कंटेंट और पार्टनरशिप
 
-- X स्पेस के माध्यम से पहला कम्युनिटी AMA: https://x.com/QuantusNetwork/status/1991341042390692210
-- Ârc के संस्थापक जेम्स के साथ पॉडकास्ट: https://www.youtube.com/watch?v=eac4aRF50qU
-- दो नए सलाहकार / KOLs प्राप्त किए।
+- X space के ज़रिए पहला community AMA: https://x.com/QuantusNetwork/status/1991341042390692210
+- Ârc के Founder James के साथ पॉडकास्ट: https://www.youtube.com/watch?v=eac4aRF50qU
+- दो नए advisors / KOLs acquire किए।
 
-## इंडस्ट्री अपडेट
+## उद्योग अपडेट
 
-- स्कॉट एंडरसन ने शोर के एल्गोरिदम को चलाने वाले फॉल्ट-टोलरेंट क्वांटम कंप्यूटर के लिए अपनी समय सीमा को \"अगले अमेरिकी राष्ट्रपति चुनाव से पहले\" तक अपडेट किया है: https://scottaaronson.blog/?p=9325
+- Scott Anderson ने fault-tolerant quantum computer running Shor's algorithm के timelines को "before the next US presidential election" पर अपडेट किया: https://scottaaronson.blog/?p=9325

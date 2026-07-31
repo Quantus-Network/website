@@ -1,9 +1,9 @@
 ---
-title: "क्वांटस वीकली: GPU माइनिंग सफलता और ZK रिफैक्टर"
-description: "GPU माइनिंग में 9 गुना प्रदर्शन वृद्धि, ZK-एग्रीगेशन सर्किट रिफैक्टर और UAE में रणनीतिक बैठकों को कवर करने वाला साप्ताहिक अपडेट।"
+title: "Quantus Weekly: GPU Mining और ZK Refactor"
+description: "GPU mining में ~9x प्रदर्शन बढ़ोतरी, ZK-aggregation circuit refactor और UAE में रणनीतिक मीटिंग्स — इस सप्ताह की Quantus अपडेट।"
 pubDate: "2025-12-15"
 heroImage: "/blog/covers/weekly-update-12-15-2025.webp"
-heroAlt: "क्वांटस वीकली: GPU माइनिंग सफलता और ZK रिफैक्टर"
+heroAlt: "Quantus Weekly: GPU Mining Breakthrough और ZK Refactor"
 featured: false
 tags:
   [
@@ -16,42 +16,42 @@ tags:
   ]
 ---
 
-इस सप्ताह टीम ने माइनिंग प्रदर्शन में एक बड़ी सफलता हासिल की। हमारा नया GPU माइनर अब CPU संस्करण की तुलना में ~9 गुना तेजी से चल रहा है।
+इस सप्ताह टीम ने mining performance में breakthrough हासिल किया। हमारा नया GPU miner अब CPU version से ~9x तेज़ चल रहा है।
 
-हमने अपने ZK-एग्रीगेशन सर्किट का रिफैक्टर भी पूरा कर लिया है, जिससे हमें हजारों लाइनों के कोड को हटाने की अनुमति मिली।
+हमने अपने ZK-aggregation circuit का refactor भी पूरा किया, जिससे हज़ारों lines of code delete कर सके।
 
-UAE में रहते हुए, टीम ने सलाहकारों और निवेशकों के साथ मुलाकात की। इन बैठकों ने हमारे उत्पाद विजन को मजबूत किया और टोकनोमिक्स और टोकन लॉन्च रणनीति को स्पष्ट किया। टोकन लॉन्च का समर्थन करने के लिए सार्थक BD प्रगति भी की गई थी।
+UAE में रहते हुए, टीम ने advisors और investors से मुलाकात की। इन meetings ने हमारी product vision को solidify किया और tokenomics और token launch strategy clarify की। token launch support के लिए meaningful BD progress भी हुआ।
 
-10 मर्ज किए गए पुल अनुरोधों सहित साप्ताहिक जीथब गतिविधि रिपोर्ट: https://github.com/Quantus-Network/n8n-workflows/blob/main/github/weekly-update-2025-12-16-23:23:47.md
+साप्ताहिक Github गतिविधि रिपोर्ट, जिसमें 10 merged pull requests शामिल हैं: https://github.com/Quantus-Network/n8n-workflows/blob/main/github/weekly-update-2025-12-16-23:23:47.md
 
 ## कोर टेक और ZK
 
-- हमारे ZK-एग्रीगेटर ट्रांसफर प्रूफ को CLI, सर्किट और पोसीडॉन लॉजिक के अपडेट सहित एक समर्पित पैलेट में माइग्रेट किया गया। इस रिफैक्टर ने हमें हजारों लाइनों के कोड को हटाने में सक्षम बनाया।
-- पोसीडॉन स्टोरेज हैशर को जेनेरिक बनाने के लिए एक समाधान तैयार किया गया।
-- लंबित परिवर्तनों को मर्ज किया गया और प्रतिवर्ती हस्तांतरण से संबंधित कोड गुणवत्ता के मुद्दों को हल किया गया।
+- CLI, circuits, और Poseidon logic अपडेट सहित ZK-aggregator transfer proofs को dedicated pallet में migrate किया। इस refactor ने हज़ारों lines of code delete करने में सक्षम बनाया।
+- Poseidon storage hasher को generic बनाने का solution design किया।
+- pending changes merge किए और reversible transfers से जुड़े code quality issues resolve किए।
 
 ## नेटवर्क और इंफ्रा
 
-- GPU माइनर अब CPU माइनर से ~9 गुना तेज है।
-- CLI v0.3.1 जारी किया गया, फाइनलाइजेशन फ्लैग को एकीकृत किया गया और एड्रेस फॉर्मेटिंग में सुधार किया गया।
-- रनटाइम अपग्रेड निष्पादित किया गया और चेन विनिर्देश को अपडेट किया गया।
-- एक नया BootNode तैनात किया गया।
-- सभी सर्वरों पर सुरक्षा जांच और अपडेट पूरे किए गए।
-- सबस्क्विड इंडेक्सिंग सेवा के लिए कंटेनरीकृत स्वास्थ्य जांच तैनात की गई।
+- GPU miner अब CPU miner से ~9x तेज़।
+- CLI v0.3.1 रिलीज़, finalization flag unified और address formatting improve।
+- runtime upgrade execute किया और chain specification अपडेट की।
+- नया BootNode deploy किया।
+- सभी servers पर security checks और updates complete।
+- Subsquid indexing service के लिए containerized health checks deploy किए।
 
 ## वेब और मोबाइल ऐप अपडेट
 
-- हार्डवेयर वॉलेट एकीकरण को आगे बढ़ाया गया। अब कीस्टोन में क्यूआर कोड को पार्स करना और डमी संदेशों पर हस्ताक्षर करना संभव है।
-- मोबाइल ऐप में मल्टी-वॉलेट (मेनेमोनिक) हार्डवेयर वॉलेट कार्यक्षमता को लागू करना शुरू किया।
-- वेबसाइट फॉर्म अपडेट किए गए और उन्हें हमारे ईमेल प्रदाता के साथ एकीकृत किया गया।
-- बैच प्रश्नों के लिए rusx को अनुकूलित किया गया, जिससे दर-सीमित (rate-limiting) समस्याओं को रोका जा सके।
+- hardware wallet integration advance किया। अब Keystone में QR codes parse कर रहे हैं और dummy messages sign कर रहे हैं।
+- mobile app में multi-wallet (mnemonic) hardware wallet functionality implement करना शुरू किया।
+- website forms अपडेट किए और email provider के साथ integrate किए।
+- rate-limiting issues रोकने के लिए rusx को batch queries के लिए optimize किया।
 
-## सामग्री और भागीदारी
+## कंटेंट और पार्टनरशिप
 
-- सोलाना ब्रेकपॉइंट में भाग लिया और हमारे "क्वांटम सिक्योर बिटकॉइन" पोजिशनिंग/मीम्स का परीक्षण किया।
-- टोकन लॉन्च, टोकनोमिक्स और क्वांटस GTM रणनीति पर चर्चा करने के लिए UAE में सलाहकारों के साथ मुलाकात की।
-- टॉम हॉवर्ड के साथ एपिसोड लाइव है: https://x.com/QuantusNetwork/status/2000585749914427684
+- Solana Breakpoint attend किया और हमारी "Quantum Secure Bitcoin" positioning/memes test की।
+- token launch, tokenomics, और Quantus GTM strategy discuss करने के लिए UAE में advisors से मिले।
+- Tom Howard के साथ episode live: https://x.com/QuantusNetwork/status/2000585749914427684
 
 ## उद्योग अपडेट
 
-- क्वांटम कैनरी ने एक व्यापक "क्वांटम रेडी" ब्लॉकचेन तुलना पृष्ठ जारी किया: https://www.quantumcanary.org/is-your-blockchain-quantum-ready
+- Quantum Canary ने comprehensive "Quantum Ready" blockchain comparison page रिलीज़ की: https://www.quantumcanary.org/is-your-blockchain-quantum-ready

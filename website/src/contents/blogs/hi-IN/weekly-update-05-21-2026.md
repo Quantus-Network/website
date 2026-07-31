@@ -1,10 +1,10 @@
 ---
-title: "Quantus Weekly: Q-Day अब बहुत करीब है"
-description: Q-Day 6 जून को है। Threshold Dilithium DKG ऑडिट पूरे, माइनर और नोटिफिकेशन अपडेट, वॉलेट बग फिक्स, और नया Q-Day समिट साइट लॉन्च।
+title: "Quantus Weekly: Q-Day बिल्कुल पास है"
+description: "Q-Day 6 जून है। इस सप्ताह: Dilithium DKG audit items close, miner और notification updates, wallet fixes, और refreshed Q-Day summit site।"
 
 pubDate: "2026-05-21"
 heroImage: "/blog/covers/weekly-update-05-21-2026.webp"
-heroAlt: "Quantus Weekly: Q-Day अब बहुत करीब है"
+heroAlt: "Quantus Weekly: Q-Day बिल्कुल पास है"
 featured: false
 tags:
   [
@@ -24,32 +24,32 @@ tags:
   ]
 ---
 
-[@ns](https://x.com/@ns) पर Q-Day [अब बहुत करीब है](https://x.com/QuantusNetwork/status/2041172123968999434)।
+[@ns](https://x.com/@ns) पर Q-Day [बिल्कुल पास है](https://x.com/QuantusNetwork/status/2041172123968999434)।
 
 6 जून।
 
-मेननेट तक हम पूरी ताकत से काम कर रहे हैं, लेकिन Q-Day से पहले और घोषणाएँ आएँगी।
+Main net तक heads down हैं, लेकिन Q-Day से पहले और announcements आ रहे हैं।
 
-इस सप्ताह जो शिप किया:
+इस सप्ताह हमने जो ship किया:
 
-### Core Tech & ZK
+### कोर टेक और ZK
 
-- threshold Dilithium DKG में ऑडिट मुद्दों का समाधान पूरा किया—threshold signatures के लिए distributed key generation फ़्लो।
-- pallets में कई रिव्यू आइटम संबोधित किए।
+- Threshold Dilithium DKG — threshold signatures के distributed key generation flow — में audit issues address करना पूरा किया।
+- Pallets में कई review items address किए।
 
-### नेटवर्क & इन्फ्रा
+### नेटवर्क और इंफ्रा
 
-- GUI माइनर UX सुधार के साथ नया माइनर संस्करण जारी।
-- Planck के साथ सही काम करने के लिए नोटिफिकेशन इन्फ्रास्ट्रक्चर अपडेट।
-- पिछले 3 सप्ताह में सामुदायिक माइनिंग नोड्स की संख्या दोगुनी।
+- GUI miner UX improvements के साथ नया miner version रिलीज़ किया।
+- Notification infrastructure को Planck के साथ सही काम करने के लिए अपडेट किया।
+- पिछले 3 हफ़्तों में community mining nodes की संख्या दोगुनी की।
 
-### वेब & मोबाइल ऐप
+### वेब और मोबाइल ऐप अपडेट
 
-- मोबाइल ऐप में बग फिक्स।
-- वॉलेट भुगतान लिंक हैंडलिंग ठीक की।
-- वॉलेट रिमोट नोटिफिकेशन हैंडलिंग अपडेट।
+- Mobile app में bug fixes।
+- Wallet payment link handling fix की।
+- Wallet remote notification handling अपडेट की।
 
-### कंटेंट & साझेदारी
+### कंटेंट और पार्टनरशिप
 
-- q (dot) day पर ताज़ा Q-Day समिट वेबसाइट लॉन्च।
-- [@QuantusNetwork](https://x.com/@QuantusNetwork) X पर Q-Day स्पीकर घोषणाएँ प्रकाशित करना शुरू।
+- q (dot) day पर refreshed Q-Day summit website launch की।
+- [@QuantusNetwork](https://x.com/@QuantusNetwork) X पर Q-Day speaker announcements publish करना शुरू किया।

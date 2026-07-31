@@ -1,9 +1,9 @@
 ---
-title: "क्वांटस साप्ताहिक: ओपन रिसर्च और पोस्ट-क्वांटम मानक"
-description: "साप्ताहिक अपडेट जिसमें research.quantus.com का लॉन्च, ZK प्रूफ एग्रीगेशन, मल्टीसिग पैलेट मर्ज और मोबाइल वॉलेट अपडेट शामिल हैं।"
+title: "Quantus Weekly: Open Research Forum"
+description: "research.quantus.com launch, ZK proof aggregation, multisig pallet merge और mobile wallet updates—post-quantum standards पर इस सप्ताह की progress।"
 pubDate: "2026-02-20"
 heroImage: "/blog/covers/weekly-update-02-20-2026.webp"
-heroAlt: "क्वांटस साप्ताहिक: ओपन रिसर्च और पोस्ट-क्वांटम मानक"
+heroAlt: "Quantus Weekly: Open Research Forum"
 featured: false
 tags:
   [
@@ -17,47 +17,47 @@ tags:
   ]
 ---
 
-पोस्ट-क्वांटम क्रिप्टोग्राफी बंद दरवाजों के पीछे ब्लॉकचेन में शिप करने के लिए बहुत नई है।
+Post-quantum cryptography blockchain में closed doors के पीछे ship करने के लिए बहुत new है।
 
-इस सप्ताह हमने [research.quantus.com](https://research.quantus.com/) लॉन्च किया।
+इस सप्ताह हमने [research.quantus.com](https://research.quantus.com/) launch किया।
 
-यह क्रिप्टोग्राफर्स और डेवलपर्स के लिए हमारे द्वारा लिए गए किसी भी प्रोटोकॉल निर्णय का विश्लेषण करने के लिए एक सार्वजनिक मंच है। शोधकर्ता पहले से ही Poseidon2 हमले की सतहों का तनाव-परीक्षण कर रहे हैं।
+यह cryptographers और developers के लिए public forum है—हमारे किसी भी protocol decision को pick apart करने के लिए। Researchers पहले से Poseidon2 attack surfaces stress-test कर रहे हैं।
 
-NIST ने पिछले साल पोस्ट-क्वांटम मानकों को अंतिम रूप दिया था। वह पहला कदम था। दूसरा कदम क्रिप्टो में हर प्रोटोकॉल टीम द्वारा उन्हें वास्तव में लागू करना है। क्वांटम-सुरक्षित चेन बनाने के लिए कोई स्थापित प्लेबुक नहीं है, इसलिए हम मानक बना रहे हैं।
+NIST ने पिछले साल post-quantum standards finalize किए। Step one था। Step two crypto में हर protocol team का उन्हें actually implement करना। Quantum-secure chain build करने का established playbook नहीं है, इसलिए हम standard build कर रहे हैं।
 
-यदि आप पोस्ट-क्वांटम सुरक्षा पर काम कर रहे हैं, तो दरवाजा खुला है।
+अगर post-quantum security पर काम कर रहे हैं, door open है।
 
-यहाँ और क्या है जो हमने इस सप्ताह बनाया है।
+यहाँ और क्या build किया इस सप्ताह:
 
-### GitHub गतिविधि (4 मर्ज किए गए पुल अनुरोध):
+### GitHub Activity (4 merged pull requests):
 
-![Github आँकड़े](/blog/assets/github-stats-weekly-update-02-20-2026.webp)
+![Github Stats](/blog/assets/github-stats-weekly-update-02-20-2026.webp)
 
-### कोर टेक और ZK
+### Core Tech & ZK
 
-- ऑनचेन सत्यापन के साथ मल्टी-मशीन प्रूफ एग्रीगेशन का समर्थन करने के लिए ZK सर्किट को अपडेट किया गया।
-- मल्टीसिग पैलेट को मर्ज किया गया, जिससे उच्च-सुरक्षा खातों के साथ पूर्ण मल्टीसिग समर्थन मिला।
+- Onchain verification के साथ multi-machine proof aggregation support करने के लिए ZK circuits update किए।
+- Multisig pallet merge किया, high-security accounts के साथ full multisig support deliver किया।
 
-### नेटवर्क और इंफ्रा
+### Network & Infra
 
-- सेनोटी (Senoti) अधिसूचना प्रणाली विकसित की गई: डिवाइस रजिस्ट्रार सेवा, ब्लॉकचेन वॉचर सेवा, और CI और परिनियोजन सेटअप के साथ कोर वर्कर।
-- बढ़ी हुई गतिविधि पर बेहतर प्रतिक्रिया देने के लिए टेलीग्राम में फॉसेट बॉट में सुधार किया गया।
-- qp-plonky2 और qp-zk-circuits के लिए रिलीज़ प्रबंधन वर्कफ़्लो जोड़े गए।
+- Senoti notification system develop किया: device registrar service, blockchain watcher service, CI और deployment setup के साथ core worker।
+- Increased activity पर better respond करने के लिए Telegram faucet bot improve किया।
+- qp-plonky2 और qp-zk-circuits के लिए release management workflows add किए।
 
-### वेब और मोबाइल ऐप अपडेट
+### Web & Mobile App Updates
 
-- [research.quantus.com](https://research.quantus.com/) लॉन्च किया गया, जो क्रिप्टोग्राफिक अनुसंधान और तकनीकी चर्चा के लिए एक डिस्कोर्स-आधारित मंच है।
-- क्वांटस वेबसाइट को अपडेट किया गया: व्हाइटपेपर पेज को रिफ्रेश किया गया, /launch में टोकन आवंटन पाई चार्ट जोड़ा गया, CoinGecko एकीकरण जोड़ा गया, और सभी साप्ताहिक अपडेट को ब्लॉग पोस्ट के रूप में प्रकाशित किया गया।
-- वॉलेट डिज़ाइन को अपडेट किया गया और टेस्टफ़्लाइट (TestFlight) पर शिप किया गया। नया संस्करण जल्द ही ऐप स्टोर पर आ रहा है।
-- मोबाइल वॉलेट में बग और UX सुधार।
-- मोबाइल वॉलेट में पुश नोटिफिकेशन हैंडलिंग के लिए FCM बेस को एकीकृत किया गया।
+- [research.quantus.com](https://research.quantus.com/) launch किया, cryptographic research और technical discussion के लिए Discourse-based forum।
+- Quantus website update: whitepaper page refresh, /launch में token allocation pie chart add, CoinGecko integration, सभी weekly updates blog posts publish।
+- Wallet design update और TestFlight पर ship। New version App Store पर soon।
+- Mobile wallet में bug और UX fixes।
+- Mobile wallet में push notification handling के लिए FCM base integrate किया।
 
-### सामग्री और भागीदारी
+### Content & Partnerships
 
-- क्रिस [Bad Crypto पॉडकास्ट](https://x.com/QuantusNetwork/status/2023752636387012675) और [wenaltseason स्पेस](https://x.com/wenaltseason/status/2022402584041193831) पर दिखाई दिए।
-- टीम नेटवर्क स्कूल पहुंची और कार्यालय स्थापित कर रही है।
+- Chris [Bad Crypto podcast](https://x.com/QuantusNetwork/status/2023752636387012675) और [wenaltseason space](https://x.com/wenaltseason/status/2022402584041193831) पर appeared।
+- Team Network School पहुँची और office setup कर रही है।
 
-### उद्योग अपडेट
+### Industry Updates
 
-- क्वांटम कैनरी: क्या क्वांटम कंप्यूटर मोनेरो (Monero) को तोड़ सकते हैं? [लिंक](https://x.com/QuantumCanary_/status/2024204427159359931)
-- क्वांटम कैनरी: DeFi कितना विकेंद्रीकृत है? [लिंक](https://x.com/QuantumCanary_/status/2021846672834539665)
+- Quantum Canary: Can Quantum Computers Break Monero? [Link](https://x.com/QuantumCanary_/status/2024204427159359931)
+- Quantum Canary: How Decentralized is DeFi? [Link](https://x.com/QuantumCanary_/status/2021846672834539665)

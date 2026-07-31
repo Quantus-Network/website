@@ -1,10 +1,10 @@
 ---
-title: "क्वांटस वीकली: लैटिस क्रिप्टो ऑडिट और कीस्टोन एकीकरण"
-description: हमारी लैटिस क्रिप्टो लाइब्रेरी का सफल ऑडिट, Polkadot SDK के लिए नेटवर्किंग अपडेट, और Keystone पर नया हार्डवेयर वॉलेट सपोर्ट।
+title: "Quantus Weekly: Lattice Audit और Keystone"
+description: "Rusty Crystals lattice ऑडिट findings बंद हुईं, Polkadot SDK नेटवर्किंग अपडेट हुई और Quantus पते Keystone open-source hardware firmware पर आए।"
 
 pubDate: "2025-12-01"
 heroImage: "/blog/covers/weekly-update-12-01-2025.webp"
-heroAlt: "क्वांटस वीकली: लैटिस क्रिप्टो ऑडिट और कीस्टोन एकीकरण"
+heroAlt: "Quantus Weekly: Lattice Audit और Keystone Wallet"
 featured: false
 tags:
   [
@@ -17,36 +17,36 @@ tags:
   ]
 ---
 
-पिछले हफ्ते, टीम ने हमारी लैटिस क्रिप्टो लाइब्रेरी (rusty-crystals) के ऑडिट में उठाए गए सभी मुद्दों को संबोधित किया और नवीनतम पोलकाडॉट एसडीके (Polkadot SDK) के साथ संरेखित करने के लिए नेटवर्किंग अपडेट शिप किए। हमने ओपन-सोर्स कीस्टोन (Keystone) हार्डवेयर वॉलेट फर्मवेयर पर क्वांटस एड्रेस सपोर्ट भी लागू किया और मार्केट इंटेलिजेंस प्लेटफॉर्म \"द क्वांटम इनसाइडर\" पर अपनी प्रोफाइल सूचीबद्ध कराई।
+पिछले सप्ताह, टीम ने हमारी lattice crypto library (rusty-crystals) के audit में उठाए गए सभी issues address किए और latest Polkadot SDK के साथ align करने के लिए networking updates ship किए। हमने open-source Keystone hardware wallet firmware पर Quantus address support implement किया और market intelligence platform "The Quantum Insider" पर अपनी profile list करवाई।
 
-साप्ताहिक जीथब गतिविधि रिपोर्ट जिसमें 17 मर्ज किए गए पुल रिक्वेस्ट शामिल हैं: https://github.com/Quantus-Network/n8n-workflows/blob/main/github/weekly-update-2025-12-01-11:59:59.md
+साप्ताहिक Github गतिविधि रिपोर्ट, जिसमें 17 merged pull requests शामिल हैं: https://github.com/Quantus-Network/n8n-workflows/blob/main/github/weekly-update-2025-12-01-11:59:59.md
 
 ## कोर टेक
 
-- कोर लैटिस क्रिप्टोग्राफी लाइब्रेरी (qp-rusty-crystals) के ऑडिट में सभी निष्कर्षों को हल किया गया।
-- आगामी ऑडिट के लिए ZK-एग्रीगेशन प्रूफ तैयारी (सर्किट, बेंचमार्क और QIP दस्तावेज़ीकरण) पूरी की गई।
-- प्रूफिंग गति बढ़ाने के लिए plonky2 poseidon2 गेट और zk-trie में अनुकूलन पाए गए।
-- qp-header को रोल बैक किया गया और नवीनतम पोलकाडॉट एसडीके मानकों के साथ संरेखित करने के लिए sc-network को अपडेट किया गया।
+- core lattice cryptography library (qp-rusty-crystals) के audit में सभी findings resolve किए।
+- upcoming audit के लिए ZK-Aggregation proof preparation (circuits, benchmarks, और QIP documentation) पूरा किया।
+- proving speed बढ़ाने के लिए plonky2 poseidon2 gate और zk-trie में optimizations पाए।
+- qp-header rollback किया और latest Polkadot SDK standards के साथ align करने के लिए sc-network अपडेट किया।
 
 ## नेटवर्क और इंफ्रा
 
-- विंडोज के लिए डेस्कटॉप यूआई माइनर जारी किया गया, लिनक्स और मैकओएस के लिए बग फिक्स: https://github.com/Quantus-Network/quantus-apps/releases/latest
-- दुर्भावनापूर्ण पीयर्स को नेटवर्क ओवरलोड करने से रोकने के लिए पीयर ब्रॉडकास्टिंग से संबंधित एक संभावित P2P सुरक्षा भेद्यता को पैच किया गया।
-- ओपन-सोर्स कीस्टोन हार्डवेयर वॉलेट फर्मवेयर पर क्वांटस एड्रेस सपोर्ट लागू किया गया (वर्तमान में सिम्युलेटर में)।
+- Windows के लिए Desktop UI Miner रिलीज़, Linux और MacOS के bug fixes: https://github.com/Quantus-Network/quantus-apps/releases/latest
+- malicious peers द्वारा network overload से बचने के लिए peer broadcasting से जुड़ी potential P2P security vulnerability patch की।
+- open-source Keystone hardware wallet firmware पर Quantus address support implement किया (वर्तमान में simulator में)।
 
 ## वेब और मोबाइल ऐप अपडेट
 
-- ऐप स्टोर पर मोबाइल वॉलेट v1.1.2 जारी किया गया, जिसमें पोलिंग, ट्रांजेक्शन फ्लो और नोटिफिकेशन से जुड़ी समस्याओं को हल किया गया।
-- X API (rusx) के लिए एक रस्ट एसडीके बनाया गया और उपयोगकर्ता खोजों के लिए X और ETH खातों को जोड़ने के लिए एंडपॉइंट जोड़े गए।
+- polling, transaction flows, और notifications के issues resolve करते हुए App Stores पर Mobile Wallet v1.1.2 रिलीज़।
+- X API (rusx) के लिए Rust SDK build किया और user quests के लिए X और ETH accounts associate करने के endpoints जोड़े।
 
 ## कंटेंट और पार्टनरशिप
 
-- द क्वांटम इनसाइडर पर एक लिस्टिंग सुरक्षित की गई, जिससे क्वांटम विश्लेषकों के लिए बैकलिंक्स और दृश्यता में सुधार हुआ।
-- एप्पल, स्पॉटिफाई और आरएसएस पर पॉडकास्ट लॉन्च किया गया: https://podcasts.apple.com/us/podcast/quantus-podcast/id1855431112
-- ईमेल ग्राहकों को उद्घाटन न्यूज़लेटर भेजा गया।
-- इस गुरुवार के लिए कम्युनिटी X स्पेस निर्धारित: https://x.com/i/spaces/1mnGeNXoZOZJX
-- ब्रायन चाऊ, एमएल शोधकर्ता के साथ पॉडकास्ट: https://www.youtube.com/watch?v=m_FPbzAcXEk
+- The Quantum Insider पर listing secure की, quantum analysts तक backlinks और visibility बेहतर।
+- Apple, Spotify, और RSS पर पॉडकास्ट launch: https://podcasts.apple.com/us/podcast/quantus-podcast/id1855431112
+- email subscribers को inaugural newsletter भेजा।
+- इस गुरुवार community X Space scheduled: https://x.com/i/spaces/1mnGeNXoZOZJX
+- ML Researcher Brian Chau के साथ पॉडकास्ट: https://www.youtube.com/watch?v=m_FPbzAcXEk
 
-## इंडस्ट्री अपडेट
+## उद्योग अपडेट
 
-- क्वांटम कैनरी ने \"अभी हार्वेस्ट करें, बाद में क्रैक करें\" खतरों को कम करने पर एक रणनीतिक गाइड प्रकाशित की, जिसमें नए अंतिम रूप दिए गए NIST पोस्ट-क्वांटम मानकों का उपयोग करते हुए एक व्यावहारिक प्रवासन पथ की रूपरेखा दी गई है: https://www.quantumcanary.org/insights/how-to-verify-your-cryptographys-safety-before-quantum-computers-arrive
+- Quantum Canary ने "Harvest Now, Crack Later" threats mitigate करने पर strategic guide publish की, newly finalized NIST post-quantum standards का उपयोग कर pragmatic migration path outline करते हुए: https://www.quantumcanary.org/insights/how-to-verify-your-cryptographys-safety-before-quantum-computers-arrive

@@ -1,10 +1,9 @@
 ---
-title: "क्वांटस साप्ताहिक: थ्रेशोल्ड डिलिथियम हस्ताक्षर"
-description: इस सप्ताह हमने वितरित समन्वय के लिए थ्रेशोल्ड डिलिथियम हस्ताक्षर जारी किए, साथ में ZK सर्किट सुधार, मोबाइल वॉलेट अपडेट और सामुदायिक सामग्री।
-
+title: "Quantus Weekly: Dilithium Threshold हस्ताक्षर"
+description: "इस सप्ताह हमने distributed coordination के लिए Dilithium threshold signatures शिप किए, साथ में ZK circuits, mobile wallet updates और community content।"
 pubDate: "2026-01-13"
 heroImage: "/blog/covers/weekly-update-01-13-2026.webp"
-heroAlt: "क्वांटस साप्ताहिक: थ्रेशोल्ड डिलिथियम हस्ताक्षर"
+heroAlt: "Quantus Weekly: Dilithium Threshold हस्ताक्षर"
 featured: false
 tags:
   [
@@ -20,38 +19,38 @@ tags:
 
 शक्ति और अधिकार कई पक्षों के बीच विभाजित। वितरित समन्वय।
 
-लेकिन पोस्ट क्वांटम हस्ताक्षर बिटकॉइन हस्ताक्षरों की तुलना में 20x - 80x बड़े होते हैं। एक पारंपरिक मल्टीसिग समाधान का अपना स्थान है लेकिन यह ओवरहेड जोड़ता है जो कुछ उपयोग के मामलों के लिए अस्वीकार्य है।
+लेकिन post-quantum signatures Bitcoin signatures की तुलना में 20x - 80x बड़े होते हैं। एक traditional multisig solution का अपना स्थान है, लेकिन यह ऐसा overhead जोड़ता है जो कुछ use cases के लिए अस्वीकार्य है।
 
-इस सप्ताह हमने थ्रेशोल्ड डिलिथियम हस्ताक्षर जारी किए। यह एक वितरित समूह को लेनदेन पर हस्ताक्षर करने और ऑन-चेन एक एकल हस्ताक्षर उत्पन्न करने में सक्षम बनाता है। मूल रूप से, एक निजी कुंजी को शार्ड करना।
+इस सप्ताह हमने threshold Dilithium signatures शिप किए। यह एक distributed group को transactions पर sign करने और on-chain एक single signature generate करने में सक्षम बनाता है। मूल रूप से, private key को shard करना।
 
-यह कस्टोडियन, क्रॉस-नेटवर्क एप्लिकेशन और चेन के सुरक्षित स्वचालित उपयोग के लिए आवश्यक है।
+यह custodians, cross-network applications और chain के secure automated usage के लिए ज़रूरी है।
 
-4 मर्ज किए गए पुल अनुरोधों सहित साप्ताहिक जीथब गतिविधि रिपोर्ट: https://github.com/Quantus-Network/n8n-workflows/blob/main/github/weekly-update-2026-01-13-10:13:26.md
+4 merged pull requests सहित साप्ताहिक GitHub activity report: https://github.com/Quantus-Network/n8n-workflows/blob/main/github/weekly-update-2026-01-13-10:13:26.md
 
-## कोर टेक और ZK
+## Core Tech & ZK
 
-- थ्रेशोल्ड हस्ताक्षर लागू किए गए, जिससे सुरक्षित वितरित हस्ताक्षर सक्षम हुए।
-- ZK सर्किट ओवरहेड को कम किया गया।
-- वर्महोल उदाहरण बाइनरी में प्रूफ एग्रीगेशन समर्थन जोड़ा गया, चेन और सीएलआई में निरंतर एकीकरण।
-- सभी डेटा प्रकारों (जेनेरिक स्टोरेज हैशिंग) को सार्वभौमिक रूप से संभालने के लिए हमारे ZK सर्किट और पोसीडॉन हैशिंग एल्गोरिदम को अपग्रेड किया गया, अब चेन और सीएलआई में एकीकृत।
-- ZK सर्किट के भीतर एसेट आईडी पर प्रूफ एग्रीगेशन के लिए समर्थन जोड़ा गया।
-- तेजी से लेनदेन प्रसंस्करण के लिए सीएलआई को अनुकूलित किया गया और उच्च-सुरक्षा रिकवरी स्क्रिप्ट जोड़ी गईं।
+- Threshold signatures implement किए, जिससे secure distributed signing enable हुआ।
+- ZK circuit overhead कम किया।
+- Wormhole example binary में proof aggregation support जोड़ा, chain और CLI में ongoing integration।
+- सभी data types (generic storage hashing) को universally handle करने के लिए हमारे ZK circuits और Poseidon hashing algorithm को upgrade किया, अब chain और CLI में integrated।
+- ZK circuits के भीतर asset IDs पर proof aggregation के लिए support जोड़ा।
+- Faster transaction processing के लिए CLI optimize किया और high-security recovery scripts जोड़ीं।
 
-## वेब और मोबाइल ऐप अपडेट
+## Web & Mobile App Updates
 
-- CPU और GPU उपयोग के लिए ग्रैनुलर स्लाइडर्स के साथ UI माइनिंग ऐप का एक नया संस्करण जारी किया गया, साथ ही हैशरेट रिपोर्टिंग के लिए फिक्स।
-- मोबाइल ऐप में पूर्ण हार्डवेयर वॉलेट समर्थन को अंतिम रूप दिया गया और मर्ज किया गया।
-- एकल मोबाइल वॉलेट उदाहरण के भीतर कई खातों के प्रबंधन के लिए समर्थन जोड़ा गया।
-- उच्च-सुरक्षा स्क्रीन लागू की गईं और "गार्जियन" रिकवरी फ्लो पर विकास शुरू हुआ।
-- "भेजें" स्क्रीन UX को परिष्कृत किया गया, त्रुटि हैंडलिंग में सुधार किया गया, प्रमाणीकरण टाइमर बग को ठीक किया गया, और ऐप आइकन को एकीकृत किया गया।
-- दैनिक डेटाबेस बैकअप कॉन्फ़िगर किया गया, सिस्टम सेवाओं को ठीक किया गया, और टास्क मास्टर कोड (वॉलेट ऐप इवेंट ट्रैकिंग) को साफ किया गया।
+- CPU और GPU usage के लिए granular sliders के साथ UI Mining App का नया version release किया, साथ ही hashrate reporting fixes।
+- Mobile app में full hardware wallet support finalize और merge किया।
+- Single mobile wallet instance के भीतर multiple accounts manage करने के लिए support जोड़ा।
+- High-security screens implement कीं और "Guardian" recovery flows पर development शुरू हुआ।
+- "Send" screen UX refine किया, error handling improve की, authentication timer bugs fix किए, और app icons unify किए।
+- Daily database backups configure किए, system services fix किए, और Task Master code (wallet app event tracking) clean up किया।
 
-## सामग्री और भागीदारी
+## Content & Partnerships
 
-- नवीनतम प्रोटोकॉल विवरण के साथ श्वेतपत्र को अपडेट किया गया और एक GitHub वर्जनिंग सिस्टम स्थापित किया गया: https://github.com/Quantus-Network/whitepaper
-- हमारी मूल कहानी "शुरुआत से" (From the Ground Up) जारी की: https://x.com/JoeMattia/status/2010619972398297164
-- विज्ञान में विश्वास बहाल करने पर सीना (@hubsmoke) के साथ पॉडकास्ट: https://x.com/QuantusNetwork/status/2009929397579723213
+- Latest protocol details के साथ whitepaper update किया और GitHub versioning system establish किया: https://github.com/Quantus-Network/whitepaper
+- Lore ने हमारी origin story "From the Ground Up" drop की: https://x.com/JoeMattia/status/2010619972398297164
+- Science में trust restore करने पर Sina (@hubsmoke) के साथ podcast: https://x.com/QuantusNetwork/status/2009929397579723213
 
-## उद्योग अपडेट
+## Industry Updates
 
-- क्वांटम कैनरी ने क्वांटम-सेफ क्रिप्टो वॉलेट्स पर एक गाइड प्रकाशित की: https://www.quantumcanary.org/insights/quantum-safe-crypto-wallets-your-guide-to-pqc-security
+- Quantum Canary ने Quantum-Safe Crypto Wallets पर guide publish की: https://www.quantumcanary.org/insights/quantum-safe-crypto-wallets-your-guide-to-pqc-security

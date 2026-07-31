@@ -1,9 +1,9 @@
 ---
-title: "क्वांटस वीकली: GPU माइनिंग और डिराक स्ट्रेस टेस्टिंग"
-description: "GPU सपोर्ट के साथ क्वांटस माइनर v2.0.2 की रिलीज, डिराक नेटवर्क स्ट्रेस टेस्टिंग और चेन आर्किटेक्चर अपडेट को कवर करने वाला साप्ताहिक अपडेट।"
+title: "Quantus Weekly: GPU Mining और Dirac Stress Test"
+description: "Quantus Miner v2.0.2 GPU सपोर्ट के साथ रिलीज़, Dirac नेटवर्क stress testing और chain architecture अपडेट — इस सप्ताह की Quantus अपडेट।"
 pubDate: "2025-12-22"
 heroImage: "/blog/covers/weekly-update-12-22-2025.webp"
-heroAlt: "क्वांटस वीकली: GPU माइनिंग और डिराक स्ट्रेस टेस्टिंग"
+heroAlt: "Quantus Weekly: GPU Mining और Dirac Stress Testing"
 featured: false
 tags:
   [
@@ -17,37 +17,37 @@ tags:
   ]
 ---
 
-इस सप्ताह, हमने आधिकारिक तौर पर GPU सपोर्ट के साथ क्वांटस माइनर v2.0.2 जारी किया और डिराक नेटवर्क का सफलतापूर्वक स्ट्रेस-टेस्ट किया।
+इस सप्ताह, हमने GPU support के साथ Quantus Miner v2.0.2 officially रिलीज़ किया और Dirac network का stress test सफलतापूर्वक किया।
 
-हमने 21M कॉइन सप्लाई कैप का समर्थन करने के लिए चेन आर्किटेक्चर को भी अपडेट किया और लेगेसी वेस्टिंग और ट्रेजरी पैलेट्स को हटाकर कोडबेस को साफ किया।
+हमने chain architecture को 21M coin supply cap support करने के लिए अपडेट किया और legacy vesting और treasury pallets हटाकर codebase clean up किया।
 
-6 मर्ज किए गए पुल अनुरोधों सहित साप्ताहिक जीथब गतिविधि रिपोर्ट: https://github.com/Quantus-Network/n8n-workflows/blob/main/github/weekly-update-2025-12-23-07:50:14.md/
+साप्ताहिक Github गतिविधि रिपोर्ट, जिसमें 6 merged pull requests शामिल हैं: https://github.com/Quantus-Network/n8n-workflows/blob/main/github/weekly-update-2025-12-23-07:50:14.md/
 
 ## कोर टेक और ZK
 
-- नई 21M कॉइन सप्लाई कैप को प्रतिबिंबित करने के लिए चेन विनिर्देश को अपडेट किया गया।
-- वेस्टिंग और ट्रेजरी पैलेट्स को हटाकर कोर चेन आर्किटेक्चर को सरल बनाया गया।
-- रनटाइम में पैनिक को रोकने के लिए जेनेरिक पोसीडॉन स्टोरेज हैशिंग सपोर्ट पूरा किया गया।
-- हमारे ZK सर्किट और CLI में एसेट आईडी सपोर्ट जोड़ा गया।
+- नए 21M coin supply cap को reflect करने के लिए chain specification अपडेट की।
+- vesting और treasury pallets हटाकर core chain architecture simplify की।
+- runtime में panic रोकने के लिए generic Poseidon storage hashing support complete किया।
+- ZK circuits और CLI में Asset ID support जोड़ा।
 
 ## नेटवर्क और इंफ्रा
 
-- डिराक का स्ट्रेस टेस्ट किया गया ताकि यह देखा जा सके कि चेन को ओवरलोड करने से ब्लॉक समय पर क्या प्रभाव पड़ा।
-- क्वांटस माइनर v2.0.2 प्रकाशित किया गया, जो अब आधिकारिक तौर पर GPU माइनिंग का समर्थन करता है: https://github.com/Quantus-Network/quantus-miner/releases/tag/v2.0.2
+- chain overload होने पर block times पर impact observe करने के लिए Dirac stress test किया।
+- Quantus Miner v2.0.2 publish किया, जो अब officially GPU mining support करता है: https://github.com/Quantus-Network/quantus-miner/releases/tag/v2.0.2
 
 ## वेब और मोबाइल ऐप अपडेट
 
-- मोबाइल पर हार्डवेयर वॉलेट साइनिंग फ्लो को अंतिम रूप दिया गया, जिसमें क्यूआर कोड सिग्नेचर ट्रांसमिशन, मल्टी-वॉलेट सपोर्ट और अनलिंकिंग कार्यक्षमता शामिल है।
-- X पर सामुदायिक जुड़ाव को प्रोत्साहित करने के लिए टेलीग्राम, वेबसाइट और टास्क मास्टर के माध्यम से आंतरिक ट्रैकिंग के साथ "रेड क्वेस्ट" लागू किया गया। वॉलेट कार्यान्वयन प्रगति पर है।
-- बैकएंड CORS त्रुटियों को हल किया गया और सामाजिक इंटरैक्शन के लिए डेटा ट्रैकिंग में सुधार किया गया।
-- माइनर रिवॉर्ड रिपोर्टिंग और नेटवर्क स्विचिंग को प्रभावित करने वाले ब्लॉक एक्सप्लोरर बग्स को ठीक किया गया।
+- mobile पर hardware wallet signing flow finalize किया, QR code signature transmission, multiple-wallet support, और unlinking functionality सहित।
+- X पर community engagement incentivize करने के लिए telegram, website, और Task Master के ज़रिए internal tracking के साथ "Raid Quests" implement किए। Wallet implementation progress में है।
+- backend CORS errors resolve किए और social interactions के लिए data tracking improve की।
+- miner rewards reporting और network switching affect करने वाले block explorer bugs fix किए।
 
-## सामग्री और भागीदारी
+## कंटेंट और पार्टनरशिप
 
-- पीयर समिट में मिले दो रणनीतिक भागीदारों से निवेश सुरक्षित किया।
-- लॉन्च रणनीति के संबंध में बैठकें संपन्न हुईं और नई टोकनोमिक्स और GTM को प्रतिबिंबित करने वाला एक अपडेटेड व्हाइटपेपर तैयार किया गया।
-- अनुभवी सॉफ्टवेयर आर्किटेक्ट और सिस्टम इंजीनियर सेज़री के साथ एपिसोड: https://www.youtube.com/watch?v=2TDMR7bECR8
+- Peer Summit में मिले दो strategic partners से investment secure की।
+- launch strategy पर meetings conclude कीं और नई tokenomics और GTM reflect करते updated whitepaper draft किया।
+- veteran software architect और systems engineer Cezary के साथ episode: https://www.youtube.com/watch?v=2TDMR7bECR8
 
 ## उद्योग अपडेट
 
-- क्वांटम कैनरी का लेख बिटकॉइन पर राज्य-स्तरीय हमले के जोखिम का विश्लेषण करता है: https://www.quantumcanary.org/insights/how-credible-is-a-state-level-attack-on-bitcoin
+- Quantum Canary का Bitcoin पर state-level attack के risk का विश्लेषण: https://www.quantumcanary.org/insights/how-credible-is-a-state-level-attack-on-bitcoin

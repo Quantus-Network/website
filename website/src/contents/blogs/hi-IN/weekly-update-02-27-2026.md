@@ -1,9 +1,9 @@
 ---
-title: "क्वांटस वीकली: वॉलेट सरल होना चाहिए"
-description: "वॉलेट v1.2.0 की रिलीज़, मल्टीसिग के साथ ट्रेजरी, हाइजेनबर्ग टेस्टनेट अपडेट और प्रदर्शन सुधारों को कवर करने वाला साप्ताहिक अपडेट।"
+title: "Quantus Weekly: Wallet सरल होना चाहिए"
+description: "Wallet v1.2.0 release, Treasury with multisig, Heisenberg testnet updates और performance improvements—इस सप्ताह की shipping highlights।"
 pubDate: "2026-02-27"
 heroImage: "/blog/covers/weekly-update-02-27-2026.webp"
-heroAlt: "क्वांटस वीकली: वॉलेट सरल होना चाहिए"
+heroAlt: "Quantus Weekly: Wallet सरल होना चाहिए"
 featured: false
 tags:
   [
@@ -17,72 +17,72 @@ tags:
   ]
 ---
 
-हर प्रमुख क्रिप्टो वॉलेट ऐसे फालतू फीचर्स जोड़ रहा है जो मुझे नहीं चाहिए।
+हर major crypto wallet garbage features add कर रहा है जो मुझे नहीं चाहिए।
 
-मुझे ऐसा सोशल मीडिया ऐप नहीं चाहिए जो मेरे पैसे भी रखता हो।
+मुझे social media app नहीं चाहिए जो money भी hold करे।
 
-क्या आपने कभी गौर किया है कि कोई अत्यधिक राय रखने वाला, उपयोग में आसान, स्व-हिरासत (self-custody), "आधिकारिक" बिटकॉइन वॉलेट क्यों नहीं है?
+Notice किया है कि highly opinionated, easy to use, self custody, "official" Bitcoin wallet क्यों नहीं?
 
-यही बात एथेरियम और सोलाना पर भी लागू होती है।
+Ethereum और Solana पर same।
 
-फाउंडेशन चेन बनाते हैं और इंटरफ़ेस को तीसरे पक्ष पर छोड़ देते हैं। तीसरे पक्ष को राजस्व की आवश्यकता होती है। राजस्व का अर्थ है फीचर्स। फीचर्स का अर्थ है शोर।
+Foundations chain build करते हैं और interface third parties पर छोड़ देते हैं। Third parties को revenue चाहिए। Revenue means features। Features means noise।
 
-तो अब आपके वॉलेट में एक स्वैप एग्रीगेटर, एक सोशल फीड, ट्रेंडिंग टोकन, एनएफटी गैलरी और उन सिक्कों के बारे में पुश नोटिफिकेशन हैं जिनके बारे में आपने कभी सुना भी नहीं है।
+अब wallet में swap aggregator, social feed, trending tokens, NFT galleries, और coins के बारे में push notifications हैं जिनके बारे में कभी सुना नहीं।
 
-हमने क्वांटस बनाया और हमने वॉलेट बनाया।
+हमने Quantus build किया और wallet build किया।
 
-वही टीम, वही उत्पाद। इस सप्ताह हमने ऐप स्टोर पर जो ऐप भेजा है, उसमें कोई विज्ञापन नहीं है, कोई टोकन फीड नहीं है, कोई सोशल फीचर्स नहीं हैं, कोई दावा करने योग्य उपयोगकर्ता नाम नहीं हैं।
+Same team, same product। App Store पर इस सप्ताह ship किया—no ads, no token feeds, no social features, no claimable usernames।
 
-इसे खोलें, आप अपना बैलेंस देखते हैं, भेजते हैं या प्राप्त करते हैं।
+Open करो, balance दिखता है, send या receive।
 
-हमने उपयोगकर्ता पर संज्ञानात्मक भार (cognitive load) को जितना संभव हो सके कम करने के लिए डिफॉल्ट के साथ इंटरफ़ेस को शुरू से ही अत्यधिक राय वाला बनाया है।
+Interface scratch से redesign किया—highly opinionated defaults जो cognitive load जितना हो सके कम करें।
 
-हमने वॉलेट लेनदेन इतिहास के लिए लोड समय को भी नाटकीय रूप से कम कर दिया है। ऐप खोलने के बाद अब आपको अपने बैलेंस और पिछले लेनदेन के लोड होने का इंतज़ार नहीं करना पड़ेगा।
+Wallet transaction history load time dramatically reduce किया। App open करने के बाद balance और previous transactions load होने का wait नहीं।
 
-क्वांटम-सुरक्षित निजी पैसा उपयोग करने में सरल और आदर्श रूप से उबाऊ होना चाहिए।
+Quantum-secure private money use करना simple होना चाहिए, ideally boring।
 
-हम उत्साह को Qday पर पूर्व-क्वांटम चेन के लिए छोड़ देंगे।
+Excitement pre-quantum chains के लिए Qday पर छोड़ देंगे।
 
-सब कुछ ओपन सोर्स है। कोई भी अपना वॉलेट बना सकता है। लेकिन हमेशा एक आधिकारिक वॉलेट होगा जो बस काम करता है।
+Everything open source। कोई अपना wallet build कर सकता है। लेकिन हमेशा official wallet होगा जो just works।
 
-### GitHub गतिविधि (4 मर्ज किए गए पुल अनुरोध):
+### GitHub Activity (4 merged pull requests):
 
 ![Github Stats](/blog/assets/github-stats-weekly-update-02-27-2026.webp)
 
-### कोर टेक और ZK
+### Core Tech & ZK
 
-- मल्टीसिग के साथ ट्रेजरी को मर्ज किया गया और नए हाइजेनबर्ग टेस्टनेट रिलीज़ में शामिल किया गया।
-- सभी लंबित परिवर्तनों को मर्ज और रिलीज़ किया गया। नया हाइजेनबर्ग जेनेसिस बनाया गया, रिलीज़ किया गया और तैनात (deploy) किया गया।
-- ट्रेजरी प्रबंधन से संबंधित पुराने शासन नियमों को हटा दिया गया।
-- CLI को नए मल्टीसिग और ट्रेजरी कमांड के साथ विस्तारित किया गया। उच्च-सुरक्षा खाता विवरण अब वॉलेट व्यू में दिखाई दे रहे हैं।
-- एग्रीगेटेड वर्महोल लेनदेन की गोपनीयता बढ़ाने के लिए प्रूफ शफलिंग और डुप्लिकेट निकास खातों को जीरो करना जोड़ा गया।
-- प्रूफ एग्रीगेशन को गति देने के लिए वर्महोल को सर्किट बिल्डर और प्रूवर में विभाजित किया गया।
-- ZK सर्किट रिलीज़ वर्कफ़्लो अपडेट किया गया और नए आर्टिफ़ैक्ट प्रकाशित किए गए।
-- Revive पैलेट निर्भरता समस्या का समाधान किया गया।
+- Treasury with multisig merge और new Heisenberg testnet release में include।
+- सभी pending changes merge और release। New Heisenberg genesis create, release और deploy।
+- Treasury management से related legacy governance rules remove।
+- CLI extend किया new Multisig और Treasury commands के साथ। High-security account details अब wallet view में visible।
+- Aggregated wormhole transactions की privacy बढ़ाने के लिए proof shuffling और duplicate exit accounts zero out add किया।
+- Proof aggregation speed up करने के लिए wormhole को circuit builder और prover में split किया।
+- ZK circuits release workflow update और new artifacts publish।
+- Revive pallet dependency issue resolve।
 
-### नेटवर्क और इंफ्रा
+### Network & Infra
 
-- अधिसूचना प्रणाली (Senoti): सर्वोत्तम नेटवर्क चयन के लिए ब्लॉक वॉचर में फेलओवर जोड़ा गया।
-- प्रति डिवाइस कई पतों को संभालने के लिए Senoti को अपडेट किया गया।
-- Subsquid सर्वर के लिए RPC फेलओवर जोड़ा गया।
-- निगरानी अलर्ट अपडेट किए गए और उचित चैनलों पर रीडायरेक्ट किए गए।
+- Notification system (Senoti): best network selection के लिए block watcher में failover add।
+- Multiple addresses per device handle करने के लिए Senoti update।
+- Subsquid server के लिए RPC failover add।
+- Monitoring alerts update और appropriate channels redirect।
 
-### वेब और मोबाइल ऐप अपडेट
+### Web & Mobile App Updates
 
-- वॉलेट v1.2.0 को iOS ऐप स्टोर पर भेजा गया।
-- औसत लेनदेन इतिहास लोड समय को 1 मिनट से अधिक से घटाकर 5 सेकंड से कम कर दिया गया।
-- एंड्रॉइड स्प्लैश स्क्रीन फिक्स और अन्य बगफिक्स के साथ वॉलेट बिल्ड 75, 76, 77 भेजे गए।
-- वॉलेट बिल्ड के लिए रिलीज़ आर्टिफ़ैक्ट वर्कफ़्लो जोड़ा गया।
-- टोस्टर घटक को अपडेट किया गया और पुराने संस्करण को साफ किया गया।
-- मौजूदा पतों को पंजीकृत करने, रीसेट पर FCM डिवाइस अनरजिस्ट्रेशन और नए वॉलेट पते की अधिसूचना हटाने के लिए रिमोट अधिसूचना समर्थन जोड़ा गया।
-- चेक-फ्रेजेस (check-phrases) के लिए खुश शब्दों की सूची जोड़ी गई।
-- गोपनीयता स्कोर गणना और वर्महोल लेनदेन के समर्थन के साथ Subsquid को अधिक एक्सट्रिंसिक-केंद्रित (extrinsics-focused) बनाने के लिए रिफैक्टर किया गया।
-- अपडेट किए गए Subsquid आर्किटेक्चर को प्रतिबिंबित करने के लिए एक्सप्लोरर को रिफैक्टर किया गया।
+- Wallet v1.2.0 iOS App Store पर ship।
+- Average transaction history load time 1 minute से कम करके 5 seconds under।
+- Android splash screen fix और other bugfixes के साथ Wallet builds 75, 76, 77 ship।
+- Wallet builds के लिए release artifact workflow add।
+- Toaster component update और legacy version clean up।
+- Existing addresses register, reset पर FCM device unregistration, new wallet address notification removal के लिए remote notification support add।
+- Check-phrases के लिए happy words list add।
+- Privacy score calculation और wormhole transactions support के साथ Subsquid extrinsics-focused refactor।
+- Updated Subsquid architecture reflect करने के लिए explorer refactor।
 
-### सामग्री और भागीदारी
+### Content & Partnerships
 
-- निक हेगर के साथ पॉडकास्ट, "एक नई साउंड मनी सिस्टम का निर्माण"
+- Nik Heger के साथ podcast, "Building A New Sound Money System"
 
-### उद्योग अपडेट
+### Industry Updates
 
-- क्वांटम कैनरी विश्लेषण कि क्या [स्ट्राइप का टेम्पो ब्लॉकचेन क्वांटम सुरक्षित होगा।](https://x.com/QuantumCanary_/status/2024797352616509754)
+- Quantum Canary analysis: क्या [Stripe's Tempo blockchain quantum secure होगा।](https://x.com/QuantumCanary_/status/2024797352616509754)

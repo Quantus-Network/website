@@ -1,9 +1,9 @@
 ---
-title: "Quantus Weekly: लिंक को छोड़कर सब कुछ"
-description: "नया ब्लॉक एक्सप्लोरर explorer.quantus.com पर लाइव—वर्महोल दृश्यता, V12 क्लियर, Subsquid, मोबाइल वॉलेट 1.5.7, और रॉयटर्स कवरेज।"
+title: "Quantus Weekly: लिंक के सिवा सब कुछ"
+description: "रीडिज़ाइन किया गया explorer explorer.quantus.com पर लाइव—साथ ही wormhole विज़िबिलिटी, V12 findings क्लियर, Subsquid indexing, वॉलेट 1.5.7, और Reuters कवरेज।"
 pubDate: "2026-07-19"
 heroImage: "/blog/covers/weekly-update-07-19-2026.webp"
-heroAlt: "Quantus Weekly: लिंक को छोड़कर सब कुछ"
+heroAlt: "Quantus Weekly: लिंक के सिवा सब कुछ"
 featured: false
 tags:
   [
@@ -25,56 +25,56 @@ tags:
 
 import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
 
-हमारा नया डिज़ाइन वाला ब्लॉक एक्सप्लोरर [explorer.quantus.com](https://explorer.quantus.com) पर लाइव है।
+हमारा रीडिज़ाइन किया गया block explorer [explorer.quantus.com](https://explorer.quantus.com) पर लाइव है।
 
-![Quantus ब्लॉकचेन एक्सप्लोरर रीडिज़ाइन होमपेज](/blog/assets/quantus-blockchain-explorer-redesign-homepage.webp)
+![Quantus blockchain explorer redesign homepage](/blog/assets/quantus-blockchain-explorer-redesign-homepage.webp)
 
-Quantus दो तरह के ट्रांज़ैक्शन की अनुमति देता है: ट्रांसपेरेंट और एन्क्रिप्टेड।
+Quantus दो तरह के ट्रांज़ैक्शन की अनुमति देता है: transparent और encrypted।
 
-ट्रांसपेरेंट ट्रांज़ैक्शन किसी भी अन्य ब्लॉकचेन ट्रांज़ैक्शन जैसे दिखते हैं।
+Transparent ट्रांज़ैक्शन किसी भी और ब्लॉकचेन ट्रांज़ैक्शन जैसे दिखते हैं।
 
-एन्क्रिप्टेड ट्रांज़ैक्शन (अभी CLI से संभव, जल्द हमारे मोबाइल ऐप में) वर्महोल ट्रांसफर का उपयोग करते हैं।
+Encrypted ट्रांज़ैक्शन (अभी CLI से मुमकिन हैं, जल्द ही हमारे मोबाइल ऐप में भी आएँगे) wormhole transfers का इस्तेमाल करते हैं।
 
-वर्महोल ट्रांसफर दो चरणों में होता है।
+एक wormhole transfer दो चरणों में होता है।
 
-पहले आप कॉइन एक वर्महोल एड्रेस पर भेजते हैं। वह एड्रेस एक ऐसे सीक्रेट के हैश का हैश है जिसे केवल आप जानते हैं, इसलिए उससे कभी कोई खर्च नहीं कर सकता। चेन के लिए आपने उन्हें जला दिया। बाद में आप चेन को एक ज़ीरो-नॉलेज प्रूफ देते हैं कि मैं फंडेड वर्महोल एड्रेस में से किसी एक के पीछे के सीक्रेट को जानता हूँ, बिना यह बताए कि कौन सा, और वह आपके कॉइन एक नए एड्रेस पर मिंट कर देती है।
+पहले आप coins को एक wormhole address पर भेजते हैं। वह address एक ऐसे secret के hash का hash होता है जो सिर्फ आप जानते हैं, इसलिए उससे कभी कोई खर्च नहीं कर सकता। chain की नज़र में, आपने उन्हें burn कर दिया। बाद में आप chain को एक zero-knowledge proof देते हैं जो कहता है कि मुझे किसी एक फंडेड wormhole address के पीछे का secret पता है, बिना यह बताए कि कौन सा, और chain आपके coins एक नए address पर mint कर देती है।
 
-इसलिए एक्सप्लोरर आपको वह सब दिखाता है जो मौजूद है: अंदर जाने वाले कॉइन, बाहर आने वाले कॉइन, राशियाँ, प्रूफ। एकमात्र चीज़ जो वह नहीं दिखा सकता वह यह है कि कौन-सा एंट्री किस एग्ज़िट से मेल खाता है, क्योंकि वह लिंक कभी चेन पर नहीं आता।
+तो explorer आपको वह सब दिखाता है जो मौजूद है: अंदर आते coins, बाहर जाते coins, राशियाँ, proof। एक चीज़ जो यह नहीं दिखा सकता वह यह है कि कौन सी एंट्री किस एग्ज़िट से मैच करती है, क्योंकि वह लिंक कभी chain को छूता ही नहीं।
 
-पिछले हफ्ते हमने ZK सर्किट और Dilithium सिग्नेचर लाइब्रेरी पर अपने V12 सिक्योरिटी रिव्यू के सभी हाई और मीडियम सिविरिटी निष्कर्ष भी क्लियर किए, और मोबाइल वॉलेट 1.5.7 शिप किया।
+पिछले हफ्ते हमने अपनी V12 सिक्योरिटी रिव्यू से ZK circuits और Dilithium signature library में हर हाई और मीडियम severity finding भी क्लियर की, और मोबाइल वॉलेट 1.5.7 शिप किया।
 
-पिछले हफ्ते हमने और क्या बनाया:
+यहाँ बाकी सब कुछ है जो हमने पिछले हफ्ते बनाया:
 
-### Github Activity (14 merged pull requests):
+### Github एक्टिविटी (14 मर्ज्ड पुल रिक्वेस्ट):
 
 ![Github Stats](/blog/assets/github-stats-weekly-update-07-19-2026.webp)
 
-### Core Tech & ZK
+### कोर टेक और ZK
 
-- ZK सर्किट और Dilithium सिग्नेचर लाइब्रेरी पर अपने V12 सिक्योरिटी रिव्यू के सभी हाई और मीडियम सिविरिटी निष्कर्ष क्लियर किए।
-- लाइवनेस चेक, साइन किए गए ट्रांस्क्रिप्ट स्वीकृति, और नए सेशन ID स्कीम के साथ थ्रेशोल्ड सिग्नेचर रीशेयरिंग को मज़बूत किया।
+- अपनी V12 सिक्योरिटी रिव्यू से ZK circuits और Dilithium signature library में सभी हाई और मीडियम severity findings क्लियर कीं।
+- threshold signature resharing को liveness checks, signed transcript acceptance और एक नई session ID स्कीम से और मजबूत किया।
 
-### Network & Infra
+### नेटवर्क और इंफ्रा
 
-- हमारे चेन इंडेक्सर Subsquid में यूनिफ़ाइड ट्रांज़ैक्शन इंडेक्सिंग जोड़ी।
-- बॉट्स को रोकने के लिए हमारे माइनिंग पूल का उपयोग करने वाला प्रूफ़-ऑफ़-वर्क कैप्चा जोड़ा।
+- अपने chain indexer Subsquid में unified transaction indexing जोड़ी।
+- bots को बाहर रखने के लिए एक proof-of-work captcha जोड़ा जो हमारे mining pool का इस्तेमाल करता है।
 
-### Web & Mobile App Updates
+### वेब और मोबाइल ऐप अपडेट
 
-- [explorer.quantus.com](https://explorer.quantus.com) पर नया डिज़ाइन वाला ब्लॉक एक्सप्लोरर लॉन्च किया।
+- रीडिज़ाइन किया गया block explorer [explorer.quantus.com](https://explorer.quantus.com) पर लॉन्च किया।
 - मोबाइल वॉलेट v1.5.7 शिप किया।
-- वेब ऐप में मल्टीसिग प्रस्ताव अब किसी भी लोकल साइनर की मंज़ूरी स्वीकार करते हैं, Keystone हार्डवेयर वॉलेट सपोर्ट के साथ।
-- वेब ऐप में मल्टीसिग UX सुधार और नया डिज़ाइन वाला अकाउंट मेनू शिप किया।
-- Keystone फ़र्मवेयर में और मल्टीसिग फ़ंक्शन जोड़े और एक बग ठीक किया जहाँ मास्टर फ़िंगरप्रिंट मिसमैच पर Quantus साइनिंग अटक जाती थी।
+- वेब ऐप में multisig proposals अब किसी भी local signer से approval स्वीकार करते हैं, साथ ही Keystone हार्डवेयर वॉलेट सपोर्ट भी।
+- वेब ऐप में multisig UX सुधार और एक रीडिज़ाइन किया गया अकाउंट मेनू शिप किया।
+- Keystone फर्मवेयर में और multisig फंक्शन जोड़े और एक बग फिक्स किया जिसमें master fingerprint mismatch पर Quantus सिग्निंग अटक जाती थी।
 
-### Content & Partnerships
+### कंटेंट और पार्टनरशिप
 
-- Reuters ने "Crypto firms prepare defenses as quantum threat to encryption draws nearer" में Chris को उद्धृत किया:
+- Reuters ने "Crypto firms prepare defenses as quantum threat to encryption draws nearer" में Chris को कोट किया:
 
 <TwitterEmbed url="https://x.com/QuantusNetwork/status/2077333342815388084" />
 
-- कहानी Yahoo Finance, US News, Investing.com, MSN, TradingView, The Economic Times, Khaleej Times और The Star Malaysia पर सिंडिकेट हुई, तथा Forbes Mexico, NTV Turkey और Boursorama France में अनुवादित प्रकाशन हुए।
+- यह स्टोरी Yahoo Finance, US News, Investing.com, MSN, TradingView, The Economic Times, Khaleej Times, और The Star Malaysia पर सिंडिकेट हुई, साथ ही Forbes Mexico, NTV Turkey, और Boursorama France में अनुवादित पिकअप के साथ।
 
-यह हम पर निर्भर है।
+यह हम पर है।
 
 Stay frosty, quants.

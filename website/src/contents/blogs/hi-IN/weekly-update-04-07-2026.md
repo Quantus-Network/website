@@ -1,10 +1,9 @@
 ---
-title: "Quantus Weekly: Q-डे अनुमान और ऑन-स्पेंड जोखिम"
-description: ECC तोड़ने के लिए Google और Oratomic के क्यूबिट अनुमान, बिटकॉइन के 10-मिनट ब्लॉक के मुकाबले ऑन-स्पेंड हमले, Google की 2029 PQC समयसीमा, और Quantus रीब्रांड।
-
+title: "Quantus Weekly: Q-Day Estimates, On-Spend Risk"
+description: "Google और Oratomic ने ECC तोड़ने के qubit estimates घटाए, Bitcoin के 10-minute blocks पर on-spend risk, और economic freedom पर Quantus rebrand।"
 pubDate: "2026-04-07"
 heroImage: "/blog/covers/weekly-update-04-07-2026.webp"
-heroAlt: "Quantus Weekly: Q-डे अनुमान और ऑन-स्पेंड जोखिम"
+heroAlt: "Quantus Weekly: Q-Day Estimates, On-Spend Risk"
 featured: false
 tags:
   [
@@ -20,74 +19,74 @@ tags:
   ]
 ---
 
-बिटकॉइन की क्रिप्टोग्राफी तोड़ने के लिए जरूरी भौतिक क्यूबिट की संख्या अभी 2 करोड़ से घटकर 5 लाख से कम हो गई है।
+Bitcoin की cryptography तोड़ने के लिए ज़रूरी physical qubits की संख्या 20 million से 500,000 से कम हो गई।
 
-Google ने पिछले हफ्ते अपना नया आंकड़ा जारी किया। इसलिए ही आपकी टाइमलाइन पर क्वांटम छा गया।
+Google ने पिछले सप्ताह अपना नया figure publish किया। इसीलिए quantum आपके timeline पर everywhere था।
 
-Oratomic का एक अलग पेपर इसे 19,000 बताता है।
+Oratomic की अलग paper इसे 19,000 पर रखती है।
 
-एक साल में चार ऑर्डर ऑफ मैग्निट्यूड।
+एक साल में चार orders of magnitude।
 
-Google की टीम ने प्रीकंप्यूटेशन के साथ 9-मिनट का अटैक विंडो अनुमानित किया।
+Google की team ने precomputation के साथ 9-minute attack window estimate किया।
 
-बिटकॉइन हर 10 मिनट में एक ब्लॉक कन्फर्म करता है।
+Bitcoin हर 10 minutes में block confirm करता है।
 
-इसका मतलब हमलावर एक लेनदेन को रास्ते में रोक सकता है, भेजने वाले की कुंजी तोड़ सकता है, और नेटवर्क के मूल लेनदेन को कन्फर्म करने से पहले धोखाधड़ी वाला बदलाव प्रसारित कर सकता है। इन्हें ऑन-स्पेंड अटैक कहते हैं।
+इसका मतलब attacker in-flight transaction intercept कर सकता है, sender की key crack कर सकता है, और network original confirm करने से पहले fraudulent replacement broadcast कर सकता है। इन्हें on-spend attacks कहते हैं।
 
-जब ऑन-स्पेंड अटैक हकीकत बन जाएंगे, तब क्वांटम हमलावरों से अपनी पब्लिक कुंजी छिपाना भी आपके सैट्स चोरी होने से नहीं बचा पाएगा।
+जब on-spend attacks reality बनेंगे, quantum attackers से public key छुपाना भी आपके sats चोरी होने से नहीं बचाएगा।
 
-Google ने अपनी पोस्ट-क्वांटम माइग्रेशन समयसीमा 2029 कर दी है। और दिलचस्प बात यह है कि उन्होंने ECC-256 तोड़ने के लिए संसाधन अनुमान (क्यूबिट गिनती, समय) तो प्रकाशित किए, लेकिन क्रिप्टोग्राफिक ब्रेक लागू करने का विस्तृत तकनीकी ब्लूप्रिंट नहीं रखा।
+Google ने अपनी post-quantum migration deadline 2029 पर move की। और interesting यह कि उन्होंने ECC-256 तोड़ने के resource estimates (qubit counts, timing) publish किए, लेकिन cryptographic break execute करने का detailed technical blueprint withhold किया।
 
-वैज्ञानिकों ने इस स्तर पर आत्म-सेंसरशिप आखिरी बार मैनहैटन प्रोजेक्ट से पहले की थी।
+Scientists ने last time इस scale पर self-censor 1945 के Manhattan Project से पहले किया था।
 
-1945 की तरह, न कोई सार्वजनिक रोडमैप होगा, न ऐसी छोटी-छोटी प्रगति की घोषणाएँ जिनसे साफ़ ज़ाहिर हो कि हम X महीने दूर हैं। Q-डे आने पर कोई सूचना नहीं होगी। यह राज्य का रहस्य होगा।
+1945 की तरह, public roadmap या incremental progress announcements नहीं होंगे जो obvious कर दें कि हम X months दूर हैं। Q-day आने पर कोई notification नहीं होगी। State secret रहेगी।
 
-पेपर के शब्दों में, 32-बिट एलिप्टिक कर्व तोड़ना 256-बिट एलिप्टिक कर्व तोड़ने से "काफी मुश्किल नहीं" है। जब कोई छोटी-कुंजी वाला ब्रेक दिखाएगा, सार्वजनिक ब्लॉकचेन के लिए माइग्रेशन विंडो पहले ही बंद हो चुकी होगी।
+Paper के शब्दों में, 32-bit elliptic curves तोड़ना 256-bit elliptic curves से "not substantially harder" है। जब कोई small-key break demonstrate करे, public blockchains के migration window पहले ही close हो चुका होगा।
 
-पिछले दशक में बिटकॉइन ने तीन बड़े प्रोटोकॉल अपडेट जारी किए। आपातकालीन पोस्ट-क्वांटम माइग्रेशन में कम से कम 1–3 साल लगते हैं। व्यवस्थित वाले में 5 से ज़्यादा।
+Bitcoin ने last decade में तीन major protocol updates ship किए। Emergency post-quantum migration को कम से कम 1-3 years चाहिए। Orderly migration को 5 से ज़्यादा।
 
-व्यवस्थित माइग्रेशन की खिड़की अभी बंद हो रही है और शायद पहले ही बीत चुकी है। अब यह अस्तित्व का सवाल है।
+Orderly migration का window अभी close हो रहा है, शायद पहले ही close हो चुका। अब यह existential है।
 
-इसी लिए इस हफ्ते हमने अपना उत्तर सितारा तय किया: स्थायी आर्थिक स्वतंत्रता। तीन शब्द जो Quantus जो कुछ भी बनाता है उसकी नींव हैं। नया [quantus.com](https://quantus.com) पूरे रीब्रांड और उस मिशन के इर्द-गिर्द बनी विज़ुअल पहचान के साथ लाइव है।
+इसीलिए हमने इस सप्ताह north star lock किया: Permanent Economic Freedom। तीन शब्द जो Quantus की हर चीज़ की foundation हैं। नया [quantus.com](https://quantus.com) full rebrand और उस mission पर built visual identity के साथ live हुआ।
 
-स्थायी—क्योंकि क्रिप्टोग्राफी NIST लेवल 5 पोस्ट-क्वांटम है।
+Permanent, क्योंकि cryptography NIST Level 5 post-quantum है।
 
-आर्थिक—क्योंकि क्रिप्टो इसी लिए है। केंद्रीय बैंकों को हिलाना।
+Economic, क्योंकि crypto central banks disrupt करने के लिए है।
 
-स्वतंत्रता—क्योंकि हम उन लोगों का विरोध कर रहे हैं जो आपको नियंत्रित करना चाहते हैं।
+Freedom, क्योंकि हम उन लोगों का विरोध कर रहे हैं जो आपको control करना चाहते हैं।
 
-[@QuantusNetwork](https://x.com/QuantusNetwork) क्वांटम-सुरक्षित एन्क्रिप्टेड मनी है। इस हफ्ते हमने और क्या शिप किया:
+[@QuantusNetwork](https://x.com/QuantusNetwork) quantum-secure encrypted money है। इस सप्ताह और क्या ship हुआ।
 
-### GitHub गतिविधि (13 मर्ज किए गए pull request):
+### GitHub Activity (13 merged pull requests):
 
 ![Github Stats](/blog/assets/github-stats-weekly-update-04-07-2026.webp)
 
 ### Core Tech & ZK
 
-- qp-plonky2 के लिए नई ब्लाइंडिंग रणनीति से ZK-सक्षम लीफ प्रूफ 6× तेज़, native trace का आकार बढ़ाए बिना।
-- CLI को रिफैक्टर किया ताकि मोबाइल ऐप और माइनर ऐप एक ही ZK कोड साझा करें।
-- अपडेटेड ZK सिस्टम के साथ नए टेस्टनेट पर माइनर ऐप चालू।
-- सुरक्षा ऑडिट में मिले मुद्दों पर काम।
-- चेन और CLI में कुंजी जनरेशन ठीक किया।
+- qp-plonky2 के लिए नई blinding strategy से ZK-enabled leaf proofs 6x तेज़, native trace size बढ़े बिना।
+- CLI refactor ताकि mobile app और miner app same ZK code share करें।
+- Updated ZK system पर नए testnet पर miner app चल रहा।
+- Security audits में मिले issues address।
+- Chain और CLI पर key generation fix।
 
-### नेटवर्क & इन्फ्रा
+### Network & Infra
 
-- नए डैशबोर्ड और Telegram सूचनाओं के साथ रीफ़्रेश्ड अलर्ट चैनलों से मॉनिटरिंग बढ़ाई।
-- इतिहास रोटेशन के साथ लॉग स्टैक अपडेट।
-- रिपॉज़िटरी में निर्भरता अपडेट और नए रिलीज़।
-- टेलीमेट्री और Grafana रीब्रांडिंग नई ब्रांड पहचान के अनुरूप।
-- CLI बिल्ड/रिलीज़ फिक्स।
+- नए dashboards और Telegram notifications के साथ monitoring extend।
+- Log stack history rotation के साथ update।
+- Repositories में dependency updates और नए releases।
+- Telemetry और Grafana rebrand के साथ match।
+- CLI build/release fix।
 
-### वेब & मोबाइल ऐप
+### Web & Mobile App Updates
 
-- Astro पर फिर से बनाया गया [quantus.com](https://quantus.com) लाइव, लोकलाइज़ेशन सहायता के साथ।
-- मोबाइल ऐप के लिए नए लोगो और स्प्लैश स्क्रीन।
-- मोबाइल ऐप में भेजने के प्रदर्शन में सुधार।
-- मोबाइल ऐप संस्करण 1.2.3, 1.3.0, और 1.3.1 जारी।
+- Localization support के साथ redesigned [quantus.com](https://quantus.com) launch — Astro पर rebuild।
+- Mobile app के लिए नए logos और splash screens।
+- Mobile app send performance improve।
+- Mobile app versions 1.2.3, 1.3.0, और 1.3.1 ship।
 
-### कंटेंट & साझेदारी
+### Content & Partnerships
 
-- [@QuantusNetwork](https://x.com/QuantusNetwork) पर रीब्रांड घोषणा।
-- [@QuantusNetwork](https://x.com/QuantusNetwork) पर व्हाइटपेपर घोषणा।
-- Scaling & Privacy with Post-Quantum ZK-Proofs, Ethan और Chris के साथ Quantus Youtube पर व्हाइटबोर्ड वीडियो।
-- Network School के अप्रैल उद्घाटन में Quantus, NS Fair पर बूथ और Crypto Payments & Privacy वर्कशॉप सहित।
+- Rebrand announcement [@QuantusNetwork](https://x.com/QuantusNetwork) पर publish।
+- Whitepaper announcement [@QuantusNetwork](https://x.com/QuantusNetwork) पर publish।
+- Scaling & Privacy with Post-Quantum ZK-Proofs — Ethan और Chris के साथ Quantus Youtube whiteboard session video।
+- Network School के April opening में Quantus represent — NS Fair booth और Crypto Payments & Privacy workshop।

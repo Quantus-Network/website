@@ -1,10 +1,9 @@
 ---
-title: "Quantus Weekly: POS मोड और P2P इलेक्ट्रॉनिक कैश"
-description: v1.2.2 में मोबाइल POS मोड, PolyFri प्रूवर-साइड मास्किंग, Poseidon हैशर सफ़ाई, ZK प्रूफ DDoS सुरक्षा, वेबसाइट रीडिज़ाइन अल्फ़ा, और P2P इलेक्ट्रॉनिक कैश।
-
+title: "Quantus Weekly: POS Mode और P2P Cash"
+description: "Wallet v1.2.2 में mobile point-of-sale, PolyFri masking, Poseidon cleanup, ZK DDoS protection — और peer-to-peer electronic cash क्यों अभी भी matter करता है।"
 pubDate: "2026-03-31"
 heroImage: "/blog/covers/weekly-update-03-31-2026.webp"
-heroAlt: "Quantus Weekly: POS मोड और P2P इलेक्ट्रॉनिक कैश"
+heroAlt: "Quantus Weekly: POS Mode और P2P Cash"
 featured: false
 tags:
   [
@@ -21,63 +20,63 @@ tags:
 
 > A Peer-to-Peer Electronic Cash System.
 
-यही बिटकॉइन व्हाइटपेपर का शीर्षक है।
+Bitcoin whitepaper का title।
 
-सत्रह साल बाद, अच्छे दिनों पर बिटकॉइन प्रति सेकंड सात लेनदेन संसाधित करता है।
+सत्रह साल बाद, Bitcoin अच्छे दिन पर सात transactions per second process करता है।
 
-मुझे याद नहीं कि आखिरी बार कब मैंने कोई बिटकॉइन «स्केलिंग समाधान» देखा जो बैंक जैसी केंद्रीकृत सेवा न हो।
+मुझे याद नहीं last time Bitcoin "scaling solution" bank जैसी centralized service के बिना देखा था।
 
-लेकिन P2P इलेक्ट्रॉनिक कैश एक ऐसा विचार था जिसका समय आ चुका था।
+लेकिन P2P electronic cash एक idea था जिसका time आ चुका था।
 
-इसलिए जब बिटकॉइन समुदाय चेन स्केल करने से बचने के बहाने ढूँढ रहा था, सूट «स्टेबलकॉइन» बेच रहे थे।
+Bitcoin community chain scale करने से बचने के बहाने ढूँढ रही थी, suits "stablecoins" shill कर रहे थे।
 
-टोकनाइज़्ड फिएट। जब वे लोग जो आपसे नफ़रत करते हैं और छापकर अपने दोस्तों को देते हैं, तब आपकी संपत्ति घिस जाती है।
+Tokenized fiat। आपकी wealth disintegrate होती रहे जब वे log जो आपसे नफ़रत करते हैं और print करके अपने दोस्तों को दे देते हैं।
 
-अब आपके पसंदीदा ब्लॉकचेन पर!
+अब आपके favorite blockchain पर!
 
-स्टेबलकॉइन की आपूर्ति 315 अरब डॉलर से ऊपर जा चुकी है। अधिकांश सरकारी कर्ज से समर्थित, बैंकों में रखे, फ़्रीज़ फ़ंक्शन के साथ, पूरी तरह ट्रेसेबल।
+Stablecoins $315 billion supply cross कर चुके हैं। ज़्यादातर government debt से backed, banks में held, freeze functions के साथ, और fully traceable।
 
-यह फैलते रहा और उद्योग ने तालियाँ बजाईं।
+Industry ने इस पर cheer किया।
 
-हमने साइफ़रपंक मनी के लिए प्रोडक्ट अपग्रेड शिप करना बंद कर दिया, और अब हमारे पास वह इलेक्ट्रॉनिक कैश है जो हमारे हैंडलर्स ने दिया: रेल्स पर डॉलर, बहुराष्ट्रीय कॉर्पोरेशनों के नियंत्रण में, सूट से मंज़ूर।
+हमने cypherpunk money के product upgrades ship करना बंद कर दिया, और अब हमारे पास वही electronic cash है जो handlers ने दिया: dollars on rails, multinational corporations के control में, suit approved।
 
-साइफ़रपंक जोकर मास्क में छिपकली वाला पैसा।
+Lizard money in a cypherpunk clown mask।
 
-P2P इलेक्ट्रॉनिक कैश स्केल होगा। यह निजी होगा। इसे मनमाने तौर पर प्रिंट नहीं किया जा सकेगा। यह संप्रभु होगा। यह क्वांटम-सुरक्षित होगा।
+P2P electronic cash scale होगा। Private होगा। Unprintable होगा। Sovereign होगा। Quantum secure होगा।
 
-वे अपना फिएट कूड़ा रख लें।
+उन्हें अपना fiat trash रखने दो।
 
-इस हफ़्ते हमने Quantus मोबाइल ऐप में पॉइंट ऑफ़ सेल मोड शिप किया।
+इस सप्ताह हमने Quantus mobile app में point of sale mode ship किया।
 
-व्यापारी इनवॉइस QR दिखाता है। ग्राहक स्कैन करता है। भुगतान तुरंत पुष्ट हो जाता है। क्वांटम-सुरक्षित, पीयर-टू-पीयर, इलेक्ट्रॉनिक कैश।
+Merchant invoice QR code दिखाता है। Customer scan करता है। Payment instantly confirm होती है। Quantum-secure, peer-to-peer, electronic cash।
 
-इस हफ़्ते और क्या लॉन्च हुआ:
+इस सप्ताह और क्या ship हुआ।
 
-### GitHub गतिविधि (24 मर्ज किए गए पुल रिक्वेस्ट):
+### GitHub Activity (24 merged pull requests):
 
 ![Github Stats](/blog/assets/github-stats-weekly-update-03-31-2026.webp)
 
-### कोर टेक और ZK:
+### Core Tech & ZK:
 
-- नेटिव पाथ पर PolyFri प्रूवर-साइड मास्किंग लागू की, महंगे बिल्डर-साइड रो ब्लाइंडिंग की जगह ली।
-- Poseidon हैशर को रीफ़ैक्टर और साफ़ किया, सिस्टम-वाइड अपडेट के साथ।
+- Native path पर PolyFri prover-side masking implement, costly builder-side row blinding replace।
+- Poseidon hasher refactor और cleanup, system-wide updates।
 
-### नेटवर्क और इंफ्रास्ट्रक्चर:
+### Network & Infra:
 
-- चेन पर ZK प्रूफ के लिए DDoS सुरक्षा जोड़ी।
+- Chain पर ZK proofs के लिए DDoS protection add।
 
-### वेब और मोबाइल ऐप:
+### Web & Mobile App Updates:
 
-- पॉइंट ऑफ़ सेल मोड और तत्काल पुष्टि के साथ मोबाइल ऐप v1.2.2 ऐप स्टोर पर शिप किया।
-- वेबसाइट रीडिज़ाइन का अल्फ़ा संस्करण डिप्लॉय किया।
-- [quantus.com/launch](https://quantus.com/launch) पृष्ठ की सामग्री अपडेट की।
-- वॉलेट के लिए रिमोट कॉन्फ़िग सिस्टम लागू किया।
+- Point-of-sale mode और instant confirmation के साथ mobile app v1.2.2 app stores पर ship।
+- Website redesign का alpha version deploy।
+- [quantus.com/launch](https://quantus.com/launch) page content update।
+- Wallet के लिए remote configs system implement।
 
-### सामग्री और साझेदारी:
+### Content & Partnerships:
 
-- Network School पर «Death of the CEX» इवेंट की मेज़बानी की।
-- अपनी State of Quantum रिपोर्ट कई शिक्षाविदों और बिल्डरों को समीक्षा/टिप्पणी के लिए बाँटी।
+- Network School में "Death of the CEX" event host।
+- State of Quantum Report कई academics और builders को review/comment के लिए distribute।
 
-### उद्योग अपडेट:
+### Industry Updates:
 
-- Quantum Canary: [क्वांटम कंप्यूटर बनाना इतना मुश्किल क्यों है?](https://x.com/QuantumCanary_/status/2038832028725223690)
+- Quantum Canary: [Why Is It So Hard to Build a Quantum Computer?](https://x.com/QuantumCanary_/status/2038832028725223690)

@@ -1,10 +1,9 @@
 ---
-title: "Quantus Weekly: Eiger ऑडिट और Compact Aggregator"
-description: Eiger के साथ कई ऑडिट बिंदु सुलझाए, CLI रिफैक्टर, माइनर व इंडेक्सर में बग फिक्स, और नए कॉम्पैक्ट एग्रीगेटर पर वर्महोल इंटीग्रेशन टेस्ट।
-
+title: "Quantus Weekly: Audits और Compact Aggregator"
+description: "Spring cleaning: Eiger audit items clear, CLI refactor, miner और indexer fixes, compact aggregator पर wormhole tests — prover speed दोगुनी।"
 pubDate: "2026-04-29"
 heroImage: "/blog/covers/weekly-update-04-29-2026.webp"
-heroAlt: "Quantus Weekly: Eiger ऑडिट और Compact Aggregator"
+heroAlt: "Quantus Weekly: Audits और Compact Aggregator"
 featured: false
 tags:
   [
@@ -22,50 +21,50 @@ tags:
   ]
 ---
 
-स्प्रिंग क्लीनिंग सप्ताह।
+Spring cleaning week।
 
-हमने Eiger के साथ ऑडिट बिंदुओं को साफ किया, CLI रिफैक्टर किया, माइनर और इंडेक्सर में बग ठीक किए, और नए कॉम्पैक्ट एग्रीगेटर पर वर्महोल इंटीग्रेशन टेस्ट चलाए।
+Eiger के साथ audit items clear किए, CLI refactor, miner और indexer bugs fix, और नए compact aggregator पर wormhole integration tests run किए।
 
-ZK में, वर्महोल फ्लो अब उस 2x8 कॉम्पैक्ट एग्रीगेटर से सही चलता है जिसे हमने पिछले सप्ताह शिप किया—वही आर्किटेक्चर जिसने प्रूवर प्रदर्शन दोगुना किया, यानी तेज़, अधिक स्केलेबल निजी लेनदेन। उपयोगकर्ता पक्ष पर हमने मोबाइल वॉलेट 1.3.4 और 1.3.5 तथा GPU बग फिक्स वाला Quantus माइनर v3.1.0 शिप किया। पूरे माइनिंग से इनाम क्लेम फ्लो को कवर करने के लिए दस्तावेज़ भी अपडेट किए।
+ZK पर, wormhole flow अब cleanly 2x8 compact aggregator से होकर चलता है जो पिछले सप्ताह ship किया — वही architecture जिसने prover performance दोगुनी की, यानी faster, scalable, private transactions। User side पर, दो mobile wallet releases (1.3.4 और 1.3.5) और GPU bug fix के साथ Quantus miner v3.1.0 ship। Docs भी full mining-to-claiming-rewards flow cover करने update किए।
 
-हमने Network School में Planck टेस्टनेट का पहला माइनर वर्कशॉप किया।
+Network School में हमारा पहला Planck testnet miner workshop host किया।
 
-इस सप्ताह जो बनाया:
+इस सप्ताह सब कुछ जो build किया:
 
-### GitHub गतिविधि (26 मर्ज किए गए pull request):
+### GitHub Activity (26 merged pull requests):
 
 ![Github Stats](/blog/assets/github-stats-weekly-update-04-29-2026.webp)
 
 ### Core Tech & ZK
 
-- Eiger से कई ऑडिट बिंदुओं पर काम।
-- 2x8 कॉम्पैक्ट एग्रीगेटर पर वर्महोल इंटीग्रेशन टेस्ट।
-- अनुकूलता, लेनदेन जीवनचक्र और शुल्क अनुमान के लिए Quantus CLI रिफैक्टर।
+- Eiger से multiple audit items address।
+- 2x8 compact aggregator पर wormhole integration tests run।
+- Compatibility, transaction lifecycle, और fee estimation issues के लिए Quantus CLI refactor।
 
-### नेटवर्क & इन्फ्रा
+### Network & Infra
 
-- Planck टेस्टनेट पर स्ट्रेस टेस्ट।
-- Subsquid इंडेक्सर प्रदर्शन बेहतर और CPU स्पाइक फिक्स। इस सप्ताह Subsquid से मोबाइल ऐप UX (बैलेंस न लोड होना) खराब हुआ—अब ठीक।
-- GPU माइनिंग बग फिक्स के साथ Quantus माइनर v3.1.0 शिप।
+- Planck testnet stress tests run।
+- Subsquid indexer performance improve और CPU usage spike fix। Subsquid ने इस सप्ताह mobile app UX issues cause किए (balances load नहीं हो रहे), अब resolved।
+- GPU mining bug fix के साथ Quantus miner v3.1.0 ship।
 
-### वेब & मोबाइल ऐप
+### Web & Mobile App Updates
 
-- मोबाइल वॉलेट 1.3.4 और 1.3.5 शिप।
-- मोबाइल वॉलेट डिज़ाइन सुधार; अगला ऑनबोर्डिंग फ्लो।
-- वॉलेट के लिए Account Management, Settings, Onboarding, Home Screen Skeleton, POS Enable, Empty State और Miner Rewards फ्लो डिज़ाइन।
-- वॉलेट के लिए वर्महोल फ्लो UX मैप।
-- [docs.quantus.com](https://docs.quantus.com) अपडेट—माइनिंग से इनाम क्लेम तक एंड-टू-एंड।
-- CLI, मॉनिटरिंग, चेन, वेबसाइट और ZK सर्किट रेपो में डीपविकि ताज़ा।
+- Mobile wallet 1.3.4 और 1.3.5 ship।
+- Mobile wallet design improvements। Onboarding flow अगला।
+- Wallet के लिए Account Management, Settings, Onboarding, Home Screen Skeleton, POS Enable, Empty State, और Miner Rewards flows design।
+- Wallet के लिए Wormhole flow UX map।
+- End-to-end mining through claiming rewards cover करने [docs.quantus.com](https://docs.quantus.com) update।
+- CLI, monitoring, chain, website, और ZK circuits repos में deepwikis refresh।
 
-### मोबाइल वॉलेट विश्लेषण
+### Mobile Wallet Analytics
 
-- कुल उपयोगकर्ता: 2,252
+- Total users: 2,252
 - MAU: 1,048
 
-### कंटेंट & साझेदारी
+### Content & Partnerships
 
-- Network School में Planck टेस्टनेट पहला माइनर वर्कशॉप—4+ लोग शून्य से माइनिंग तक।
-- EthKL मीटअप में पिच।
-- Q-Day प्रायोजक पुष्ट।
-- Quantus नारियल के साथ NS मैराथन प्रायोजित।
-- नया पॉडकास्ट [Quantus आर्किटेक्चर पर](https://x.com/QuantusNetwork/status/2047178654396862837)।
+- Network School में पहला Planck testnet miner workshop host — 4+ लोग zero to mining।
+- EthKL meetup पर pitch।
+- Q-Day sponsors confirm।
+- NS Marathon Quantus coconuts sponsor।
+- Quantus architecture पर नया podcast [release](https://x.com/QuantusNetwork/status/2047178654396862837)।

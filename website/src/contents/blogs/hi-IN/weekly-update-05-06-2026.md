@@ -1,10 +1,10 @@
 ---
-title: "क्वांटस वीकली: असली किलर ऐप पैसा है"
-description: मिथ्रिल के लिए Dilithium DKG फिर से लिखा, थ्रेशोल्ड सिग्नेचर फिक्स, Wormhole SDK हेल्पर्स, और TestFlight पर Wallet v1.4.0 जारी।
+title: "Quantus Weekly: असली Killer App पैसा है"
+description: "इस सप्ताह Dilithium DKG Mithril के लिए rewrite, threshold signature fixes, Wormhole SDK helpers expose, और wallet v1.4.0 TestFlight पर रिलीज़।"
 
 pubDate: "2026-05-06"
 heroImage: "/blog/covers/weekly-update-05-06-2026.webp"
-heroAlt: "क्वांटस वीकली: असली किलर ऐप पैसा है"
+heroAlt: "Quantus Weekly: असली Killer App पैसा है"
 featured: false
 tags:
   [
@@ -26,61 +26,61 @@ tags:
   ]
 ---
 
-कुछ ऐसा है जिसे मेरा मानना है कि बाजार धीरे-धीरे समझ रहा है।
+मैं एक बात पर विश्वास करता हूँ जिसे बाज़ार धीरे-धीरे समझ रहा है।
 
-एक किलर क्रिप्टो ऐप किसी भी अन्य की तुलना में अधिक मूल्य पैदा करेगा और हासिल करेगा।
+एक killer crypto app किसी भी दूसरे app से ज़्यादा value create और capture करेगी।
 
-यह स्टेबलकॉइन्स, प्रेडिक्शन मार्केट्स या डेफी (DeFi) नहीं है।
+वो stablecoins, prediction markets, या defi नहीं है।
 
-यह निश्चित रूप से वेब3, सोशल नेटवर्क या पीएफपी (PFP) संग्रह नहीं है।
+यह निश्चित रूप से web3, social networks, या pfp collections भी नहीं है।
 
-यह पैसा है। वह विचार जिसने इस उद्योग को जन्म दिया।
+यह पैसा है। वही विचार जिसने पूरे industry को जन्म दिया।
 
-पहला विचार एक शुद्ध विचार है। पीयर-टू-पीयर इलेक्ट्रॉनिक कैश।
+पहला विचार एक शुद्ध विचार होता है। Peer-to-peer electronic cash।
 
-सुरक्षित, निजी और स्केलेबल पैसा कई ट्रिलियन डॉलर का अवसर है।
+Secure, private, और scalable money एक multi-trillion dollar opportunity है।
 
-इस सप्ताह, हमने अपडेटेड मिथ्रिल पेपर से मेल खाने के लिए डिलिथियम कुंजियों के लिए क्वांटस के डिस्ट्रिब्यूटेड की जनरेशन (distributed key generation) को फिर से लिखा और हमारे थ्रेशोल्ड सिग्नेचर कार्यान्वयन में फिक्स शिप किए।
+इस सप्ताह, हमने updated Mithril paper के अनुसार Dilithium keys के लिए Quantus की distributed key generation rewrite की और threshold signature implementation में fixes ship किए।
 
-तो आप कई पक्षों के बीच क्वांटस कुंजी को साझा (shard) कर पाएंगे। हमारे सुरक्षित एकीकरणों के लिए यह महत्वपूर्ण है।
+अब आप Quantus key को multiple parties में shard कर सकेंगे। हमारी secure integrations के लिए यह महत्वपूर्ण है।
 
-हमने वर्महोल विनिर्देश में एक ऑडिट आइटम को संबोधित किया और सार्वजनिक क्वांटस CLI SDK में हेल्पर्स को एक्सपोज़ किया, जिससे बाहरी डेवलपर्स के लिए निजी लेनदेन समर्थन खुल गया। वर्महोल वह तरीका है जिससे हम स्केलेबल पोस्ट-क्वांटम गोपनीयता प्राप्त करते हैं।
+हमने Wormhole specification में एक audit item address किया और public Quantus CLI SDK में helpers expose किए, जिससे private transaction support external developers के लिए खुल गया। Wormhole scalable post-quantum privacy achieve करने का हमारा तरीका है।
 
-हमने मोबाइल ऐप अनुभव को सरल और सुंदर बनाने वाले एक पूर्ण रिस्किन के साथ वॉलेट v1.4.0 भी जारी किया (वर्तमान में टेस्टफ़्लाइट पर)।
+हमने wallet v1.4.0 भी रिलीज़ किया — mobile app experience को simplify और beautify करने वाला full reskin (अभी testflight पर)।
 
-### गिटहब गतिविधि (16 मर्ज किए गए पुल अनुरोध):
+### Github गतिविधि (16 merged pull requests):
 
-![गिटहब आँकड़े](/blog/assets/github-stats-weekly-update-05-06-2026.webp)
+![Github Stats](/blog/assets/github-stats-weekly-update-05-06-2026.webp)
 
 ### कोर टेक और ZK:
 
-- अपडेटेड मिथ्रिल पेपर से मेल खाने के लिए डिलिथियम कुंजियों के लिए डिस्ट्रिब्यूटेड की जनरेशन को फिर से लिखा।
-- तीन ऑडिट निष्कर्षों के खिलाफ थ्रेशोल्ड सिग्नेचर कार्यान्वयन को मजबूत किया।
-- चेंज आउटपुट पर एक ऑडिट आइटम को संबोधित करने के लिए वर्महोल स्पेक को अपडेट किया।
-- सार्वजनिक क्वांटस CLI SDK में वर्महोल हेल्पर्स को एक्सपोज़ किया और एंड-टू-एंड डिपॉजिट-टू-मिंट उदाहरण वर्कफ़्लो जोड़े।
-- CLI ट्रांजेक्शन लाइफसाइकिल को अलग-अलग सबमिट किए गए, शामिल किए गए और अंतिम रूप दिए गए स्टेट्स, सटीक दशमलव शुल्क पार्सिंग, सख्त संस्करण संगतता जांच और ओवरफ्लो-जागरूक बैच ट्रांसफर के साथ रिफैक्टर किया।
-- कठिनाई समायोजन एल्गोरिदम को बेहतर बनाने के लिए एक बेंचमार्किंग टूल बनाया।
-- विभिन्न एग्रीगेशन ट्री टोपोलॉजी और उनके CPU उपयोग की जांच और बेंचमार्क किया।
-- ह्यूमन चेकफ़्रेज़ में वर्तनी की गलतियों को सुधारा।
+- Dilithium keys के लिए distributed key generation को updated Mithril paper के अनुसार rewrite किया।
+- Threshold signature implementation को तीन audit findings के खिलाफ harden किया।
+- Change outputs पर audit item address करने के लिए Wormhole spec अपडेट किया।
+- Public Quantus CLI SDK में Wormhole helpers expose किए और end-to-end deposit-to-mint example workflows जोड़े।
+- CLI transaction lifecycle को distinct submitted, included, और finalized states, exact decimal fee parsing, stricter version compatibility checks, और overflow-aware batch transfers के साथ refactor किया।
+- Difficulty adjustment algorithm improve करने के लिए benchmarking tool बनाया।
+- अलग-अलग aggregation tree topologies और उनके CPU usage की investigation और benchmarking की।
+- Human checkphrase में spelling errors fix किए।
 
 ### नेटवर्क और इंफ्रा:
 
-- वर्महोल मोड के साथ स्ट्रेस-टेस्ट सूट का विस्तार किया और इसे प्लैंक टेस्टनेट पर कई बार चलाया।
-- सबस्क्विड ब्लॉकचेन इंडेक्सर को प्रोडक्शन-ग्रेड सर्वर पर स्थानांतरित किया और अकाउंट और चेन सांख्यिकी डेटा जोड़ा।
-- एक्सप्लोरर प्रश्नों को बेंचमार्क किया और महंगे प्रश्नों को हटा दिया।
-- सभी VPS ऑपरेटिंग सिस्टम को अपडेट किया और इंफ्रास्ट्रक्चर का दस्तावेजीकरण किया।
-- माइनर-स्टैक को अपडेट किया और विंडोज पर माइनर-ऐप का परीक्षण किया।
+- Stress-test suite में wormhole mode extend किया और Planck testnet पर कई बार run किया।
+- Subsquid blockchain indexer को production-grade server पर move किया और account व chain statistics data जोड़ा।
+- Explorer queries benchmark किए और expensive ones remove किए।
+- सभी VPS operating systems अपडेट किए और infrastructure document की।
+- Miner-stack अपडेट किया और Windows पर miner-app test किया।
 
 ### वेब और मोबाइल ऐप अपडेट:
 
-- क्लेम कार्यक्षमता के साथ प्लैंक (v0.4.1) के लिए GUI माइनर शिप किया।
-- पूर्ण UI रिस्किन और वास्तविक विनिमय दरों के साथ वॉलेट v1.4.0 (वर्तमान में टेस्टफ़्लाइट पर) जारी किया।
-- वॉलेट बग फिक्स: होमपेज बैलेंस स्टाइलिंग, एक्टिविटी कंपोनेंट स्टाइलिंग और रिसीव स्क्रीन।
-- टास्क मास्टर: विनिमय दर एंडपॉइंट जोड़ा और चेकसम डिपेंडेंसी को अपडेट किया।
-- क्वांटस वेबसाइट को अपडेट किया: डॉक्स लिंक को docs (dot) quantus (dot) com पर इंगित किया, TPS डिस्प्ले को अपडेट किया और साप्ताहिक अपडेट पोस्ट किया।
+- Planck के लिए GUI miner (v0.4.1) claim functionality के साथ ship किया।
+- Wallet v1.4.0 (अभी TestFlight पर) full UI reskin और real exchange rates के साथ रिलीज़ किया।
+- Wallet bug fixes: homepage balance styling, activity component styling, और receive screen।
+- Task Master: exchange rates endpoint जोड़ा और checksum dependency अपडेट की।
+- Quantus website अपडेट: docs link docs (dot) quantus (dot) com पर point किया, TPS display अपडेट किया, और weekly update post किया।
 
-### सामग्री और भागीदारी:
+### कंटेंट और पार्टनरशिप:
 
-- Spotify, Apple और YouTube पर पॉडकास्ट ब्रांडिंग को अपडेट किया।
-- नेटवर्क स्कूल में [$QUAN](https://x.com/search?q=%24QUAN&src=cashtag_click) के लिए क्वांटस ग्लास की पहली जोड़ी बेची।
-- क्वांटस का NS फेयर में एक बूथ था, जहाँ ऐप उपयोगकर्ताओं और Q-डे पंजीकरणकर्ताओं को ऑनबोर्ड किया गया।
+- Spotify, Apple, और YouTube पर podcast branding अपडेट किया।
+- Network School पर [$QUAN](https://x.com/search?q=%24QUAN&src=cashtag_click) के लिए Quantus Glasses की पहली pair बेची।
+- Quantus का NS fair में booth था, app users और Q-day registrants onboard किए।

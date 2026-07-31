@@ -1,10 +1,10 @@
 ---
-title: "क्वांटस वीकली: Poseidon2 अनुकूलन और चेन आर्किटेक्चर रिफैक्टर"
-description: 8.3× तेज़ Poseidon2 गेट्स, 9,000 लाइनों का चेन आर्किटेक्चर रिफैक्टर, और Binance Blockchain Week के अपडेट इस साप्ताहिक अपडेट में।
+title: "Quantus Weekly: तेज़ Poseidon2, हल्की Chain"
+description: "Poseidon2 gates ऑप्टिमाइज़ेशन के बाद 8.3x तेज़, chain refactor ने ~9,000 लाइनें हटाईं और टीम ने Binance Blockchain Week से नोट्स साझा किए।"
 
 pubDate: "2025-12-09"
 heroImage: "/blog/covers/weekly-update-12-09-2025.webp"
-heroAlt: "क्वांटस वीकली: Poseidon2 अनुकूलन और चेन आर्किटेक्चर रिफैक्टर"
+heroAlt: "Quantus Weekly: तेज़ Poseidon2, हल्की Chain"
 featured: false
 tags:
   [
@@ -17,52 +17,52 @@ tags:
   ]
 ---
 
-आपने शायद [@EliBenSasson और Scott Aaronson के साथ यह साक्षात्कार](https://x.com/Starknet/status/1995865652377395421) देखा होगा।
+शायद आपने [@EliBenSasson और Scott Aaronson के साथ यह interview](https://x.com/Starknet/status/1995865652377395421) देखा
 
-![निक कार्टर साक्षात्कार सारांश](/blog/assets/nic-carter-x-post-summarizing-eli-be-sasson-and-scott-aaronson.webp)
+![Nic Carter interview summary](/blog/assets/nic-carter-x-post-summarizing-eli-be-sasson-and-scott-aaronson.webp)
 
-साक्षात्कार में, स्कॉट ने कहा, "हमने दुनिया के बहुत सारे साइबर सुरक्षा बुनियादी ढांचे को RSA, डिफी-हेलमैन और इलिप्टिक कर्व क्रिप्टोग्राफी जैसे क्रिप्टोग्राफिक कोड पर आधारित करने का फैसला किया है, जिनमें संयोग से ये गणितीय गुण हैं जिनका एक क्वांटम कंप्यूटर फायदा उठाने में सक्षम है।"
+interview में Scott ने कहा "we decided to base so much of the world's cybersecurity infrastructure on cryptographic codes like RSA, diffie-hellman, and elliptic curve cryptography which just so happen to have these mathematical properties that a quantum computer is able to exploit."
 
-यह एक कड़वी सच्चाई है।
+यह निगलना मुश्किल है।
 
-खासकर बिटकॉइन के लिए, जिसमें डिज़ाइन के आधार पर बड़े प्रोटोकॉल अपग्रेड की आसानी से योजना बनाने और निष्पादित करने की क्षमता की कमी है।
+खासकर Bitcoin के लिए, जिसमें design के अनुसार बड़े protocol upgrades plan और execute करने की ability नहीं है।
 
-जिसका अर्थ है कि बिटकॉइन समुदाय के लिए सबसे कम प्रतिरोध का रास्ता यह रहा है कि समस्या के अस्तित्व से ही इनकार किया जाए।
+इसका मतलब Bitcoin community के लिए least resistance का path यह रहा है कि problem exist ही नहीं करती, इसे deny करें।
 
-![क्वांटम खतरे पर चार्ल्स एडवर्ड्स](/blog/assets/charles-edwards-x-post-about-bitcoiner-on-quantum-threat.webp)
+![Charles Edwards on Quantum Threat](/blog/assets/charles-edwards-x-post-about-bitcoiner-on-quantum-threat.webp)
 
-लेकिन त्रुटि सुधार (error correction), क्यूबिट स्केलिंग और फिडेलिटी में हालिया सफलताओं के साथ, क्वांटम कंप्यूटिंग प्रगति से इनकार बिटकॉइन और इसलिए मानवीय संपत्ति अधिकारों के लिए एक अस्तित्वगत जोखिम का प्रतिनिधित्व करता है।
+लेकिन error correction, qubit scaling, और fidelity में recent breakthroughs के साथ, quantum computing progress को deny करना Bitcoin और इसलिए human property rights के लिए existential risk है।
 
-इसलिए हमें क्वांटम भविष्य के धुंध का सामना करना होगा, और यह स्वीकार करना होगा कि जब Q-डे आएगा तो कई ब्लॉकचेन कार्य करने में विफल रहे होंगे।
+इसलिए हमें quantum future के fog का सामना करना होगा, और accept करना होगा कि Q day आने पर कई blockchains act करने में fail हो जाएँगी।
 
-कार्य करना हमारा कर्तव्य है।
+हमारा कर्तव्य act करना है।
 
-यहाँ बताया गया है कि हमने इस सप्ताह क्वांटम सुरक्षित बिटकॉइन बनाने के लिए क्या किया:
+इस सप्ताह quantum secure Bitcoin बनाने के लिए हमने यह किया:
 
-साप्ताहिक जीथब गतिविधि रिपोर्ट जिसमें 8 मर्ज किए गए पुल रिक्वेस्ट शामिल हैं: https://github.com/Quantus-Network/n8n-workflows/blob/main/github/weekly-update-2025-12-09-14:47:41.md
+साप्ताहिक Github गतिविधि रिपोर्ट, जिसमें 8 merged pull requests शामिल हैं: https://github.com/Quantus-Network/n8n-workflows/blob/main/github/weekly-update-2025-12-09-14:47:41.md
 
 ## कोर टेक और ZK
 
-- Poseidon2 गेट को अनुकूलित किया गया। प्रति क्रमपरिवर्तन सर्किट ट्रेस पंक्तियों को 31 से घटाकर 1 कर दिया गया। यह गेट को 8.3 गुना तेज़ बनाता है और बड़े वर्महोल प्रूवर के लिए कुल 4.5 गुना गति प्रदान करता है।
-- वर्महोल प्रूफ रिकॉर्ड करने के लिए ट्रांजैक्शन एक्सटेंशन का उपयोग करने के लिए चेन आर्किटेक्चर को रिफैक्टर किया गया। इसने बैलेंस पैलेट के कस्टम फोर्क की आवश्यकता को समाप्त कर दिया, जिससे लगभग 9,000 लाइनों के कोड को हटा दिया गया।
-- वर्महोल ट्रांसफर में एसेट आईडी सपोर्ट जोड़ा गया।
-- qp-rusty-crystals ऑडिट में उठाए गए मुद्दों का समाधान किया गया।
+- poseidon2 gate optimize किया। circuit trace rows per permutation 31 से 1 तक घटाए। इससे gate 8.3x तेज़ हुआ और बड़े wormhole prover के लिए 4.5x total speedup मिला।
+- wormhole proofs record करने के लिए transaction extensions का उपयोग करने हेतु chain architecture refactor किया। इससे balances pallet के custom fork की ज़रूरत खत्म हुई, लगभग 9,000 lines of code हटीं।
+- wormhole transfers में Asset ID support जोड़ा
+- qp-rusty-crystals audit में उठाए issues resolve किए
 
 ## नेटवर्क और इंफ्रा
 
-- GPU माइनर कार्यान्वयन में सुधार किया गया।
-- sc-network को अपडेट और मर्ज किया गया, जिसमें स्मूथ नोड सिंक्रोनाइज़ेशन के लिए पीयर ब्रॉडकास्टिंग के लिए एक फिक्स शामिल है।
-- श्रोडिंगर (पुराना टेस्टनेट) नेटवर्क इतिहास को आर्काइव किया गया।
-- हमारे subsquid आर्किटेक्चर को डीबग और बेहतर बनाया गया। एक्सप्लोरर और वॉलेट में डेटा अपटाइम में सुधार के लिए एक नया मॉनिटर स्क्रिप्ट और रीस्टार्ट प्रोटोकॉल जोड़ा गया।
+- GPU miner implementation improve किया
+- peer broadcasting fix सहित sc-network अपडेट और merge किया, smoother node synchronization के लिए।
+- Schrodinger (पुराना testnet) network history archive की।
+- subsquid architecture debug और improve की। explorer और wallet तक data uptime बेहतर करने के लिए नया monitor script और restart protocols जोड़े।
 
 ## वेब और मोबाइल ऐप अपडेट
 
-- कीस्टोन एकीकरण में सुधार, पिन कैश वाइपिंग और पिन सुरक्षा के साथ क्यूआर कोड जोड़ा गया।
-- मोबाइल ऐप में X OAuth को जोड़ने के लिए हमारा rusx रेपो प्रकाशित किया गया और ट्वीट क्वेरी और सर्च का समर्थन करने के लिए बैकएंड को अपग्रेड किया गया।
-- विभिन्न बग्स को ठीक करने वाला अपडेट जारी किया गया, जिसमें पूर्णांक हैंडलिंग के मुद्दे और गलत-सकारात्मक विफलता सूचनाएं शामिल हैं।
+- keystone integration improve किया, PIN cache wiping और PIN safety के साथ QR code जोड़ा।
+- mobile app से X OAuth connect करने के लिए rusx repo publish किया और tweet querying और searching support के लिए backend upgrade किया।
+- integer handling issues और false-positive failure notifications सहित विभिन्न bugs fix करते हुए update रिलीज़
 
 ## कंटेंट और पार्टनरशिप
 
-- हम बिनेंस ब्लॉकचेन वीक और सोलाना ब्रेकप्वाइंट के लिए दुबई में हैं, सलाहकारों, KOLs से मिल रहे हैं और उपयोगकर्ताओं को ऑनबोर्ड कर रहे हैं।
-- गुरुवार को निर्धारित हमारे साप्ताहिक X स्पेस पर नज़र रखें।
-- क्वांटस टीम के साथ पॉडकास्ट: https://www.youtube.com/watch?v=konWKWrl5hs
+- हम Binance Blockchain Week और Solana Breakpoint के लिए Dubai में हैं, advisors, KOLs से मिल रहे हैं, और users onboard कर रहे हैं।
+- गुरुवार scheduled हमारे weekly X Space पर नज़र रखें
+- Quantus team के साथ पॉडकास्ट: https://www.youtube.com/watch?v=konWKWrl5hs

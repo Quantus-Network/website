@@ -1,10 +1,9 @@
 ---
-title: "Quantus साप्ताहिक: सुरक्षित हस्ताक्षर, 2x वर्महोल"
-description: ML-DSA सिग्नेचर स्केलिंग, ZK एग्रीगेशन, वर्महोल प्रूफ़ स्पीडअप, सुरक्षा समीक्षा, टेस्टनेट नोड्स और Quantum Canary कंटेंट पर साप्ताहिक अपडेट।
-
+title: "Quantus Weekly: Fat Signatures, तेज़ Wormholes"
+description: "ML-DSA signatures Bitcoin से 70x बड़े — इस सप्ताह quantum-safe signing scale की, wormhole proofs 2x तेज़ हुए, और ZK aggregation में आगे बढ़े।"
 pubDate: "2026-03-16"
 heroImage: "/blog/covers/weekly-update-03-16-2026.webp"
-heroAlt: "Quantus साप्ताहिक: सुरक्षित हस्ताक्षर, 2x वर्महोल"
+heroAlt: "Quantus Weekly: Fat Signatures, तेज़ Wormholes"
 featured: false
 tags:
   [
@@ -18,79 +17,79 @@ tags:
   ]
 ---
 
-बिटकॉइन सिग्नेचर 65 बाइट्स का होता है।
+एक Bitcoin signature 65 bytes का होता है।
 
-एक ML-DSA-87 सिग्नेचर 4,627 बाइट्स का होता है।
+एक ML-DSA-87 signature 4,627 bytes का है।
 
-यानी 70 गुना बड़ा।
+यानी 70x बड़ा।
 
-हर ट्रांजैक्शन पर इसे फैलाएं तो स्केलिंग की समस्या बन जाती है।
+हर transaction में multiply करें — scaling problem।
 
-लेकिन चिंता मत करिए, बिटकॉइन ब्लॉक साइज़ बढ़ाना इतना विवादास्पद तो नहीं होगा।
+पर कोई बात नहीं, Bitcoin block sizes बढ़ाना इतना controversial नहीं होगा।
 
-(वो मज़ाक था)
+(यह joke था)
 
-क्वांटम-सुरक्षित सिग्नेचर इतने भारी हैं कि अगर आज लागू किए जाएं तो बिटकॉइन थ्रूपुट 1 TPS से काफी नीचे गिर जाएगा।
+Quantum-safe signatures इतने fat हैं कि अगर आज implement किए जाएँ तो Bitcoin throughput बिना scaling techniques के 1 TPS से काफी नीचे गिर जाएगा।
 
-[@QuantusNetwork](https://x.com/QuantusNetwork) बिना किसी स्केलिंग तकनीक के प्रति ब्लॉक लगभग 685 ट्रांजैक्शन हासिल कर सकता है।
+[@QuantusNetwork](https://x.com/QuantusNetwork) बिना scaling techniques के प्रति block लगभग 685 transactions achieve करेगा।
 
-लेकिन हम ZK से इन बड़े ट्रांजैक्शन को छोटे प्रूफ़ में एग्रीगेट करते हैं जो ऑनचेन पर जाते हैं।
+लेकिन हम ZK से इन बड़े transactions को छोटे proofs में aggregate करते हैं जो onchain जाते हैं।
 
-सेंडर और रिसीवर के बीच का लिंक तोड़कर यूज़र को प्राइवेसी प्रोटेक्शन भी मिलता है [(पिछले अपडेट में कवर)](https://x.com/YuviLightman/status/2030162754544525495)।
+यह users को privacy protection भी देता है — sender और receiver के बीच link टूट जाता है [(पिछले update में covered)](https://x.com/YuviLightman/status/2030162754544525495)।
 
-57 TPS एन्क्रिप्टेड 3,500 TPS बन जाता है।
+57 TPS encrypted 3,500 TPS बन जाता है।
 
-नया ब्लॉकचेन ट्राइलेमा है: क्वांटम सिक्योरिटी, स्केलैबिलिटी और प्राइवेसी।
+Blockchain trilemma अब quantum security, scalability, और privacy है।
 
-हम ZK से इसे सुलझा रहे हैं।
+हम इसे ZK से solve कर रहे हैं।
 
-इस हफ्ते हमने प्रूविंग टाइम आधा कर दिया।
+इस सप्ताह हमने proving time आधा कर दिया।
 
-वर्महोल एग्रीगेशन प्रूफ़ अब 2x तेज़ सेटल होते हैं।
+Wormhole aggregation proofs अब 2x तेज़ settle होते हैं।
 
-सिग्नेचर अभी भी बहुत बड़े हैं। चेन को फर्क नहीं पड़ता।
+Signatures अभी भी enormous हैं। Chain को farak नहीं पड़ता।
 
-इस हफ्ते और जो बनाया वो यहाँ है:
+इस सप्ताह हमने और क्या build किया:
 
-### GitHub एक्टिविटी (12 मर्ज्ड पुल रिक्वेस्ट):
+### GitHub Activity (12 merged pull requests):
 
 ![Github Stats](/blog/assets/github-stats-weekly-update-03-16-2026.webp)
 
-### कोर टेक और ZK:
+### Core Tech & ZK:
 
-- वर्महोल एग्रीगेशन प्रूफ़ अब 2x तेज़ हैं, डायनैमिक रीबिल्ड की जगह सीरियलाइज़्ड प्रूवर इस्तेमाल हो रहा है।
-- qp-zk-circuits के लिए सर्किट बिल्डर/प्रूवर रिफैक्टर स्प्लिट पूरा।
-- एग्रीगेटर API को डायनैमिक प्रूवर/सर्किट बिल्डर से ऑर्केस्ट्रेशन और आर्टिफैक्ट मैनेजमेंट में रिडिज़ाइन किया।
-- quantus-cli को नए एग्रीगेटर API के साथ अपडेट किया।
-- वर्महोल वेरिफायर ब्लॉब ठीक किए जो चेन में qp-zk-circuits से क्रिप्टोग्राफिक/रिप्रोड्यूसिबल-बिल्ड टाई से रहित थे।
-- सभी सब्सट्रेट पैलेट पर कई सुरक्षा समीक्षाएँ पूरी, 8 फिक्स PR मर्ज किए।
-- सब्सट्रेट पैलेट का फॉर्मल ऑडिट शुरू।
-- मल्टीसिग और ट्रेजरी पैलेट में सुधार।
+- Wormhole aggregation proofs अब 2x तेज़ — serialized prover use करते हैं, dynamically rebuild नहीं।
+- qp-zk-circuits के circuits builder/prover refactor split पूरा।
+- Aggregator API redesign — dynamic prover/circuit builder से orchestration और artifact management की ओर।
+- quantus-cli को नए aggregator API के साथ update किया।
+- Wormhole verifier blobs fix किए जिनमें chain में qp-zk-circuits से cryptographic/reproducible-build tie नहीं था।
+- सभी substrate pallets पर security reviews पूरी, 8 PRs fixes merge।
+- Substrate pallets का formal audit शुरू।
+- Multisig और Treasury pallet improvements।
 
-### नेटवर्क और इन्फ्रा:
+### Network & Infra:
 
-- नए टेस्टनेट प्रोफाइल के साथ दो नए प्लैंक टेस्टनेट नोड डिप्लॉय किए।
-- सब्सट्रेट स्टेट प्रूनिंग जाँच और फिक्स।
-- टेस्टनेट फॉसेट को [@QuantusNetwork](https://x.com/QuantusNetwork) ट्विटर अकाउंट से जोड़ा।
-- Subsquid: बेहतर क्वेरी परफॉर्मेंस के लिए प्रति-यूज़र इवेंट मैपिंग जोड़ी।
-- Subsquid: ऐतिहासिक सटीकता के लिए रिवर्सिबल ट्रांसफर एग्रीगेशन अपडेट।
-- ब्रिजिंग इन्फ्रा: रोज़ेटा API इम्प्लीमेंटेशन, इंटीग्रेशन टेस्ट और MPC साइनिंग अपडेट।
+- नए testnet profile के साथ दो नए Planck testnet nodes deploy।
+- Substrate state pruning investigation और fixes।
+- Testnet faucet [@QuantusNetwork](https://x.com/QuantusNetwork) Twitter account से connect।
+- Subsquid: improved query performance के लिए per-user event mapping।
+- Subsquid: historical accuracy के लिए reversible transfers aggregation update।
+- Bridging infrastructure: Rosetta API implementation, integration tests, और MPC signing updates।
 
-### वेब और मोबाइल ऐप अपडेट:
+### Web & Mobile App Updates:
 
-- मोबाइल वॉलेट बिल्ड 82: कोड क्लीनअप और UI स्टैंडर्डाइज़ेशन (शीट, स्कैफोल्ड, आइकन बटन, अकाउंट रिफैक्टर)।
-- मोबाइल वॉलेट चेन हिस्ट्री सर्विस और ट्रांजैक्शन हिस्ट्री UI को लेटेस्ट Subsquid डेटा मॉडल के लिए अपडेट किया।
-- वेबसाइट: पेज इंडेक्सिंग ऑप्टिमाइज़, वीकली अपडेट ब्लॉग पोस्ट के रूप में जोड़े, ब्लॉग सर्च में टाइटल शामिल करने का फिक्स।
-- एक्सप्लोरर: रिवर्सिबल ट्रांजैक्शन व्यू को अलग इवेंट टाइप (शेड्यूल्ड, एक्ज़ीक्यूटेड, कैंसल्ड) में ओवरहॉल।
-- Quantum Canary वेबसाइट: आर्टिकल टेबल मोबाइल-फ्रेंडली बनाए।
+- Mobile wallet build 82: code cleanup और UI standardization (sheets, scaffold, icon buttons, accounts refactor)।
+- Latest Subsquid data model support के लिए mobile wallet chain history service और transaction history UI update।
+- Website: page indexing optimize, weekly updates blog posts के रूप में add, blog search में titles include fix।
+- Explorer: reversible transaction views को separate event types में overhaul (scheduled, executed, cancelled)।
+- Quantum Canary website: article tables mobile-friendly।
 
-### कंटेंट और पार्टनरशिप:
+### Content & Partnerships:
 
-- भौतिक विज्ञानी और उद्यमी स्टीव ह्सू के साथ क्वांटम कंप्यूटिंग, AI और क्वांटम थ्रेट टाइमलाइन पर पॉडकास्ट।
-- दो मार्केटिंग हायर जोड़े।
-- नेटवर्क स्कूल में क्रिप्टो ऑनबोर्डिंग और प्राइवेसी/OPSEC सिक्योरिटी इवेंट आयोजित।
+- Physicist और entrepreneur Steve Hsu के साथ podcast — quantum computing, AI, और quantum threat timeline।
+- दो marketing hires add।
+- Network School में crypto onboarding और privacy/OPSEC security events host।
 
-### इंडस्ट्री अपडेट:
+### Industry Updates:
 
 - Quantum Canary: [Quantum Arms Dealers](https://x.com/QuantumCanary_/status/2030449972353888574)
 - Quantum Canary: [Bitcoin's Quantum Discount](https://x.com/QuantumCanary_/status/2029730663822401730)

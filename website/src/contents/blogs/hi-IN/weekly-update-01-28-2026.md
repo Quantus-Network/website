@@ -1,10 +1,9 @@
 ---
-title: "क्वांटस वीकली: डिनायबल RPC और नियोडाइम सुरक्षा ऑडिट"
-description: नए डिनायबल RPC से बेहतर गोपनीयता, Rusty Crystals का Neodyme सुरक्षा ऑडिट पूरा, और सभी टोकन के लिए निजी ZK पते इस सप्ताह।
-
+title: "Quantus Weekly: Deniable RPCs और Security Audit"
+description: "Deniable RPCs से मजबूत privacy, Rusty Crystals का Neodyme security audit पूरा, और सभी tokens के लिए private ZK addresses—इस सप्ताह।"
 pubDate: "2026-01-28"
 heroImage: "/blog/covers/weekly-update-01-28-2026.webp"
-heroAlt: "क्वांटस वीकली: डिनायबल RPC और नियोडाइम सुरक्षा ऑडिट"
+heroAlt: "Quantus Weekly: Deniable RPCs और Security Audit"
 featured: false
 tags:
   [
@@ -19,56 +18,56 @@ tags:
   ]
 ---
 
-आपका वॉलेट आपकी जासूसी कर रहा है।
+आपका wallet आपकी जासूसी कर रहा है।
 
-99% गोपनीयता बुनियादी ढांचा केवल एक दिखावा है। यह स्टैक में कहीं न कहीं आपकी जानकारी लीक कर रहा है। आपका वॉलेट RPC नामक सर्वर से बात करता है। वह RPC सर्वर आपके वॉलेट को जानकारी वापस भेजता है। लेकिन ऐसा करने के लिए RPC को आमतौर पर आपके बारे में कुछ जानकारी जानने की आवश्यकता होती है।
+99% privacy infrastructure एक LARP है। Stack में कहीं न कहीं आपकी info leak हो रही है। आपका wallet RPC नामक server से बात करता है। वह RPC server info आपके wallet को वापस भेजता है। लेकिन ऐसा करने के लिए RPC को typically आपके बारे में कुछ information जाननी पड़ती है।
 
-उदाहरण के लिए, आपका बैलेंस निकालने के लिए उसे आपके लेनदेन इतिहास की आवश्यकता हो सकती है। यह संभवतः उसे आपके आईपी पते, अनुमानित स्थान, उपयोग की आदतों आदि के साथ जोड़ता है। यह सब इसलिए ताकि आप अपने वॉलेट में अपना बैलेंस देख सकें।
+उदाहरण के लिए, balance pull करने के लिए उसे transaction history चाहिए हो सकती है। शायद वह इसे आपके IP address, approximate location, usage habits आदि से associate करता है। यह सब इसलिए ताकि आप wallet में balance देख सकें।
 
-तो जबकि आपके पसंदीदा ऑनचेन गोपनीयता टूल की नई मार्केटिंग कर्मचारी स्टेसी एक्स स्पेस पर इस बारे में डिंगें हांक रही है कि वे कितने "निजी और सुरक्षित" हैं, सूट वाले बस RPC कनेक्शन पर जासूसी कर रहे हैं।
+तो जब आपके favorite onchain privacy tool की नई marketing hire Stacy X space पर flex कर रही है कि वे कितने "private and secure" हैं, suits बस RPC connection पर eavesdrop कर रहे हैं।
 
-आप पकड़े गए हैं।
+You're pwned.
 
-हमने कुछ अलग बनाया है। डिनायबल RPC (Deniable RPCs) ऑब्लिवियस लुकअप (oblivious lookup) के समान हैश प्रीफिक्स फ़िल्टर का उपयोग करते हैं। आप सर्वर से अपने लेनदेन के बारे में पूछ सकते हैं बिना उसे यह बताए कि आप क्या ढूंढ रहे हैं। RPC यह निर्धारित नहीं कर सकता कि आप किन विशिष्ट लेनदेन का अनुरोध कर रहे हैं।
+हमने कुछ different build किया। Deniable RPCs oblivious lookup जैसा hash prefix filter use करते हैं। आप server से अपने transactions पूछ सकते हैं बिना यह बताए कि आप क्या ढूंढ रहे हैं। RPC determine नहीं कर सकता कि आप किन specific transactions request कर रहे हैं।
 
-तो [@QuantusNetwork](https://x.com/@QuantusNetwork) ऑनचेन और वॉलेट/RPC बुनियादी ढांचे में गोपनीयता बनाए रखता है। हम स्टैक की हर परत पर उसे गुप्त रख रहे हैं जिसे आप गुप्त रखना चाहते हैं।
+तो [@QuantusNetwork](https://x.com/@QuantusNetwork) onchain और wallet/RPC infrastructure में privacy preserve करता है। Stack की हर layer पर हम secret रख रहे हैं जो आप secret रखना चाहते हैं।
 
-इस सप्ताह हमने अपनी रस्टी क्रिस्टल्स डिलिथियम सिग्नेचर लाइब्रेरी के लिए पूर्ण [@Neodyme](https://x.com/@Neodyme) सुरक्षा ऑडिट की भी [घोषणा](https://x.com/QuantusNetwork/status/2016390125626773871) की। सभी मुद्दों को हल कर दिया गया है और हार्डनिंग तकनीकें लागू की गई हैं। रस्टी क्रिस्टल्स पूर्ण एचडी वॉलेट समर्थन के साथ रस्ट में सबसे अच्छी डिलिथियम सिग्नेचर लाइब्रेरी है।
+इस सप्ताह हमने अपनी Rusty Crystals Dilithium signature library के लिए complete [@Neodyme](https://x.com/@Neodyme) security audit की भी [announcement](https://x.com/QuantusNetwork/status/2016390125626773871) की। सभी issues resolve और hardening techniques apply। Rusty Crystals full HD wallet support के साथ Rust में best Dilithium signature library है।
 
-ये मुख्य अंश थे। यहाँ वह सब कुछ है जो हमने पिछले सप्ताह शिप किया है:
+ये highlights थे। यहाँ वह सब कुछ है जो हमने पिछले सप्ताह ship किया:
 
-### GitHub गतिविधि (19 मर्ज किए गए पुल रिक्वेस्ट):
+### GitHub Activity (19 merged pull requests):
 
-![जीथब आँकड़े](/blog/assets/github-stats-weekly-update-01-28-2026.webp)
+![Github Stats](/blog/assets/github-stats-weekly-update-01-28-2026.webp)
 
-### कोर टेक और ZK
+### Core Tech & ZK
 
-- [@Neodyme](https://x.com/@Neodyme) ऑडिट सभी मुद्दों के समाधान के साथ पूरा हुआ। उपयोग के बाद मेमोरी ज़ीरोइंग सहित हार्डनिंग तकनीकें लागू की गईं। [यहाँ पोस्ट करें](https://x.com/QuantusNetwork/status/2016390125626773871)।
-- प्रीफिक्स हैशिंग के माध्यम से डिनायबल RPC शिप किए गए। RPC नोड्स (ऑब्लिवियस लुकअप) से कनेक्ट करते समय अब उपयोगकर्ताओं के पास प्रशंसनीय खंडन (plausible deniability) है।
-- जेनेसिस पर सभी टोकन के लिए निजी ZK पते सक्षम किए गए।
-- निरंतर ब्लॉक-बिल्डिंग लेनदेन समावेशन तक औसत समय को 50% से अधिक कम कर देती है।
-- अनावश्यक पैलेट हटा दिए गए, जिससे रनटाइम सरल हो गया।
-- मल्टीसिग पैलेट अपडेटेड दस्तावेज़ीकरण के साथ फीचर-पूर्ण। चेन और CLI एकीकरण समीक्षा की प्रतीक्षा कर रहे हैं।
-- ZK-एग्रीगेटर सर्किट के लिए फ़ज़र को नया रूप दिया गया और माइनर शुल्क और बर्न शुल्क के लिए परीक्षण कवरेज का विस्तार किया गया।
+- [@Neodyme](https://x.com/@Neodyme) audit सभी issues resolve के साथ complete। Use के बाद memory zeroing सहित hardening techniques apply। [Post here](https://x.com/QuantusNetwork/status/2016390125626773871)।
+- Prefix hashing के through Deniable RPCs ship किए। RPC nodes (oblivious lookup) से connect करते समय users के पास plausible deniability है।
+- Genesis पर सभी tokens के लिए private ZK addresses enable किए।
+- Continuous block-building transaction inclusion तक average time 50% से अधिक कम करती है।
+- Unnecessary pallets remove किए, runtime simplify हुआ।
+- Multisig pallet updated documentation के साथ feature-complete। Chain और CLI integration review await कर रहे हैं।
+- ZK-aggregator circuits के लिए fuzzer revamp किया और miner fees और burned fees के लिए test coverage expand की।
 
-### वेब और मोबाइल ऐप अपडेट
+### Web & Mobile App Updates
 
-- उच्च सुरक्षा पुल सुविधा के साथ मोबाइल ऐप v1.1.5 (बिल्ड 65) शिप किया गया।
-- उच्च सुरक्षा सुविधाओं के लिए डेमो वीडियो बनाए गए।
-- एक्सप्लोरर और फॉसेट सुधार: ब्लॉक विवरण में त्रुटि और उच्च सुरक्षा इवेंट जोड़े गए, त्रुटि प्रकार द्वारा खोज, और उन्नत समूह संदेश फ़िल्टरिंग।
-- लीडरबोर्ड, रेड सबमिशन और मेट्रिक्स के लिए टास्क मास्टर बग फिक्स।
-- सबस्क्विड डॉकरफाइल और डॉकर इमेज जेनरेशन के लिए जीथब एक्शन को ठीक किया गया।
-- वेबसाइट ब्लॉग UX अपडेट किया गया और SEO मुद्दों को ठीक किया गया।
+- High security pull feature के साथ Mobile App v1.1.5 (build 65) ship किया।
+- High security features के लिए demo videos create किए।
+- Explorer और faucet improvements: block details में error और high security events add किए, error type से search, enhanced group message filtering।
+- Leaderboard, raid submission और metrics के लिए Task Master bug fixes।
+- Subsquid dockerfile और docker image generation के लिए GitHub action fix किया।
+- Website blog UX update किया और SEO issues fix किए।
 
-### कंटेंट और पार्टनरशिप
+### Content & Partnerships
 
-- टेलीग्राम पर 1,000 सदस्यों को पार किया।
-- Token2049 दुबई में साइड इवेंट के लिए स्थान बुक किया गया।
-- टीम ने हमारे अगले स्प्रिंट के लिए [@ns](https://x.com/@ns) पर लौटने का फैसला किया है।
-- मोबाइल ऐप रीडिज़ाइन के लिए एक नया डिज़ाइनर नियुक्त किया गया।
-- वीडियो सहयोग के लिए हमारे पहले मध्यम आकार के कंटेंट क्रिएटर को नियुक्त किया गया। क्रिएटर्स की हमारी सूची बना रहे हैं।
+- Telegram पर 1,000 members cross किए।
+- Token2049 Dubai side event के लिए venue book किया।
+- Team ने next sprint के लिए [@ns](https://x.com/@ns) return करने का decide किया।
+- Mobile app redesign के लिए नया designer hire किया।
+- Video collabs के लिए first medium-sized content creator hire किया। Creators roster build कर रहे हैं।
 
-### इंडस्ट्री अपडेट
+### Industry Updates
 
-- [@QuantumCanary\_](https://x.com/@QuantumCanary_) लेख [Zcash में गोता लगाना](https://x.com/QuantumCanary_/status/2016327421797294286)।
-- [@QuantumCanary\_](https://x.com/@QuantumCanary_) ने अपनी "[ब्लॉकचेन तुलना तालिका](https://x.com/QuantumCanary_/status/2015734605450731824)" प्रकाशित की।
+- [@QuantumCanary\_](https://x.com/@QuantumCanary_) article [Zcash में dive](https://x.com/QuantumCanary_/status/2016327421797294286)।
+- [@QuantumCanary\_](https://x.com/@QuantumCanary_) ने "[Blockchain Comparison Table](https://x.com/QuantumCanary_/status/2015734605450731824)" publish की।

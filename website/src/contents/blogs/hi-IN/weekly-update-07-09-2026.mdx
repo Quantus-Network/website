@@ -1,6 +1,6 @@
 ---
 title: "Quantus Weekly: हमने स्कोरबोर्ड बनाया"
-description: "migration.fail पोस्ट-क्वांटम क्रिप्टो मार्केट कैप 0.046% ट्रैक करता है। Keystone v1.5.5, ZK प्रूफ एग्रीगेशन, ML-DSA स्ट्रीमिंग, और miner v3.3.1।"
+description: "migration.fail पोस्ट-क्वांटम मार्केट कैप ट्रैक करता है, अभी 0.046%। साथ ही v1.5.5 में Keystone सपोर्ट, ZK proof aggregation और miner v3.3.1।"
 pubDate: "2026-07-09"
 heroImage: "/blog/covers/weekly-update-07-09-2026.webp"
 heroAlt: "Quantus Weekly: हमने स्कोरबोर्ड बनाया"
@@ -26,66 +26,66 @@ tags:
 
 import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
 
-हर चेन कहती है कि वे पोस्ट-क्वांटम बनेंगी।
+हर chain कहती है कि वह पोस्ट-क्वांटम बन जाएगी।
 
-इसलिए हमने एक स्कोरबोर्ड बनाया।
+तो हमने एक स्कोरबोर्ड बना दिया।
 
-[Migration.fail](https://migration.fail/) उस क्रिप्टो मार्केट कैप का प्रतिशत ट्रैक करता है जो क्वांटम-रेज़िस्टेंट क्रिप्टोग्राफी पर चलता है।
+[Migration.fail](https://migration.fail/) उस प्रतिशत को ट्रैक करता है जो क्रिप्टो मार्केट कैप में से क्वांटम-रेज़िस्टेंट क्रिप्टोग्राफी पर चलता है।
 
 अभी यह 0.046% है।
 
-मूलतः शून्य।
+लगभग शून्य।
 
-$2T से अधिक को प्री-क्वांटम पते से हटकर पोस्ट-क्वांटम बनना होगा।
+$2 ट्रिलियन से ज़्यादा को प्री-क्वांटम एड्रेस से हटकर पोस्ट-क्वांटम बनना है।
 
-इसलिए हम मंज़िल बना रहे हैं।
+तो हम वह मंज़िल बना रहे हैं।
 
-हमने Keystone हार्डवेयर वॉलेट सपोर्ट के साथ Quantus app v1.5.5 शिप किया।
+हमने Keystone हार्डवेयर वॉलेट सपोर्ट के साथ Quantus ऐप का v1.5.5 शिप किया।
 
-अब QUAN में मल्टीसिग और कोल्ड स्टोरेज दोनों का सपोर्ट है।
+अब QUAN में multisig और cold storage दोनों सपोर्ट हैं।
 
 यह सब GitHub पर ओपन सोर्स है।
 
-पूरे उद्योग को पोस्ट-क्वांटम जाना होगा — अब आप [migration.fail](https://migration.fail/) पर रीयल-टाइम प्रगति देख सकते हैं।
+पूरी इंडस्ट्री को आखिरकार पोस्ट-क्वांटम बनना होगा, और अब आप [migration.fail](https://migration.fail/) पर रीयल-टाइम प्रगति देख सकते हैं।
 
-इस हफ़्ते हमने यह भी बनाया:
+यहाँ बाकी सब कुछ है जो हमने बनाया:
 
-### Github Activity (22 merged pull requests):
+### Github एक्टिविटी (22 मर्ज्ड पुल रिक्वेस्ट):
 
 ![Github Stats](/blog/assets/github-stats-weekly-update-07-09-2026.webp)
 
-### Core Tech & ZK
+### कोर टेक और ZK
 
-- ZK सर्किट में दूसरी परत का प्रूफ एग्रीगेशन मर्ज किया, जिससे पहले से एग्रीगेट किए प्रूफ को फिर एग्रीगेट कर थ्रूपुट और बढ़ सके।
-- की मैट्रिक्स स्ट्रीमिंग से ML-DSA-87 साइनिंग की पीक मेमोरी कम की, जिससे Dilithium Keystone जैसे एम्बेडेड हार्डवेयर पर व्यावहारिक हो गया।
-- थ्रेशोल्ड सिग्नेचर रीशेयरिंग को मज़बूत किया और Dilithium लाइब्रेरी में constant-time व्यवहार सुधारा।
-- आंतरिक चेन रिव्यू के मध्यम और निम्न-स्तरीय निष्कर्ष साफ़ किए, FRAME प्रिमिटिव और dependencies को मज़बूत किया।
-- Poseidon हैशिंग कोड में अतिरिक्त आंतरिक रिव्यू निष्कर्ष ठीक किए।
-- चेन में reversible-transfer रिकवरी पर orphaned held assets ठीक किए।
-- Quantus CLI में quantus exercise smoke और fuzz टेस्ट सुइट, साथ ही अपडेट फ़ीचर जोड़ा।
+- ZK circuits में सेकंड-लेयर proof aggregation मर्ज किया, जिससे हम पहले से aggregate किए गए proofs को फिर से aggregate कर सकते हैं और throughput में एक और कदम आगे बढ़ा सकते हैं।
+- key matrix को स्ट्रीम करके ML-DSA-87 सिग्नेचर के लिए पीक मेमोरी घटाई, जिससे Dilithium Keystone जैसे embedded हार्डवेयर पर व्यावहारिक बन जाता है।
+- threshold signature resharing को और सुरक्षित बनाया और अपनी Dilithium library में constant-time behavior बेहतर किया।
+- अपनी internal chain review से मीडियम और लो findings दूर कीं, FRAME primitives और dependencies को और मजबूत किया।
+- Poseidon hashing कोड में अतिरिक्त internal review findings ठीक कीं।
+- chain पर reversible-transfer recovery में orphaned held assets की समस्या ठीक की।
+- Quantus CLI में एक quantus exercise smoke और fuzz test suite जोड़ी, साथ ही एक अपडेट फीचर भी।
 
-### Network & Infra
+### नेटवर्क और इंफ्रा
 
-- Windows GPU सपोर्ट में सुधार और multi-backend duplication व out-of-memory errors के लिए GPU adapter selection fixes के साथ miner v3.3.0 और v3.3.1 रिलीज़ किए।
-- माइनिंग सेटअप फ़्लो सुधारा और docs साइट पर माइनिंग सेटअप स्क्रिप्ट जोड़ी।
-- Subsquid में tech governance event सपोर्ट जोड़ा
+- Windows पर बेहतर GPU सपोर्ट और multi-backend duplication व out-of-memory errors के लिए GPU adapter selection फिक्स के साथ miner v3.3.0 और v3.3.1 रिलीज़ किए।
+- mining setup flow बेहतर किया और docs साइट पर mining setup script जोड़ा।
+- Subsquid में tech governance event सपोर्ट जोड़ा।
 
-### Web & Mobile App Updates
+### वेब और मोबाइल ऐप अपडेट
 
-- Keystone हार्डवेयर वॉलेट सपोर्ट के साथ मोबाइल app v1.5.5 App Store पर शिप: firmware अपडेट, firmware में multisig सपोर्ट, key handling की सुरक्षा मज़बूती, और एक integration bug fix। हमारा firmware fork GitHub पर ओपन सोर्स है।
-- आंतरिक Keystone firmware रिव्यू के सभी मध्यम-स्तरीय निष्कर्ष साफ़ किए, chain conformance tests, hedged signing, और device binding जोड़े।
+- Keystone हार्डवेयर वॉलेट सपोर्ट के साथ मोबाइल ऐप का v1.5.5 App Store पर शिप किया: फर्मवेयर अपडेट, फर्मवेयर में multisig सपोर्ट, key handling की सुरक्षा को मजबूत करना, और एक इंटीग्रेशन बग फिक्स। हमारा फर्मवेयर fork GitHub पर ओपन सोर्स है।
+- अपनी internal Keystone फर्मवेयर review से सभी मीडियम findings दूर कीं, chain conformance tests, hedged signing और device binding जोड़े।
 - [migration.fail](https://migration.fail/) लॉन्च किया।
-- मोबाइल वॉलेट में multiple seed phrase सपोर्ट जोड़ा।
-- send फ़्लो रिफैक्टर किया और मोबाइल app में UX fixes शिप किए।
-- copy seed phrase फ़्लो और transaction parsing मज़बूत किए, amount input में haptic feedback जोड़ा।
-- आंतरिक v12 runtime रिव्यू से correctness fixes शिप किए।
+- मोबाइल वॉलेट में मल्टीपल सीड फ्रेज़ सपोर्ट जोड़ा।
+- send flow को रीफैक्टर किया और मोबाइल ऐप में UX फिक्स शिप किए।
+- सीड फ्रेज़ कॉपी करने के फ्लो और ट्रांज़ैक्शन पार्सिंग को मजबूत किया, और अमाउंट इनपुट में haptic feedback जोड़ा।
+- internal v12 runtime review से करेक्टनेस फिक्स शिप किए।
 
-### Content & Partnerships
+### कंटेंट और पार्टनरशिप
 
-- Chris Smith ([@YuviLightman](https://x.com/@YuviLightman)) Asia Tech Podcast में उपस्थित हुए:
+- Chris Smith ([@YuviLightman](https://x.com/@YuviLightman)) Asia Tech Podcast पर आए:
 
 <TwitterEmbed url="https://x.com/ATPinsights/status/2074067155881246942" />
 
-यह हम पर निर्भर है।
+यह हम पर है।
 
 Stay frosty, quants.

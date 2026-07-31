@@ -1,10 +1,9 @@
 ---
-title: "Quantus Weekly: Planck टेस्टनेट और माइनिंग पुरस्कार"
-description: प्रारंभिक हैशरेट क्यों मायने रखती है, Planck टेस्टनेट माइनरों के लिए लाइव है, TestFlight और स्टोर पर ऐप माइग्रेशन, नई चेन पर GPU माइनिंग।
-
+title: "Quantus Weekly: Planck Testnet Mining Rewards"
+description: "Planck testnet early miners के लिए live। App migration TestFlight और stores पर, GPU mining नई chain पर — Core, infra और wallet updates।"
 pubDate: "2026-04-15"
 heroImage: "/blog/covers/weekly-update-04-15-2026.webp"
-heroAlt: "Quantus Weekly: Planck टेस्टनेट और माइनिंग पुरस्कार"
+heroAlt: "Quantus Weekly: Planck Testnet Mining Rewards"
 featured: false
 tags:
   [
@@ -20,61 +19,61 @@ tags:
   ]
 ---
 
-प्रारंभिक हैशरेट मायने रखती है।
+Early hashrate matter करता है।
 
-21 मिलियन BTC आपूर्ति का आधा हिस्सा पहले चार वर्षों में जारी हुआ, जब किसी का ध्यान नहीं था।
+21M Bitcoin supply का आधा पहले चार सालों में emit हुआ, जब किसी ने ध्यान नहीं दिया।
 
-कोई भी माइन कर सकता था, और शुरुआती ब्लॉक पुरस्कार 50 BTC थे।
+कोई भी mine कर सकता था, और early block rewards 50 BTC थे।
 
-कुछ कम्प्यूट साइकल ही किस्मत बदल सकते थे।
+कुछ compute cycles bloodline retire कर सकते थे।
 
-Quantus प्रूफ ऑफ वर्क है। अधिकतम आपूर्ति 21 मिलियन QUAN।
+Quantus proof of work है। Max supply 21M QUAN।
 
-बिटकॉइन की तरह, नेटवर्क को बूटस्ट्रैप करने वाले शीघ्र माइनरों को अधिक पुरस्कार मिलते हैं।
+Bitcoin की तरह, early miners network bootstrap करने के लिए rewards का ज़्यादा हिस्सा पाते हैं।
 
-आज हमने अपना Planck टेस्टनेट लॉन्च किया।
+आज हमने Planck testnet launch किया।
 
-हम मेननेट से पहले Quantus का स्ट्रेस टेस्ट कर रहे हैं।
+Mainnet से पहले Quantus stress test कर रहे हैं।
 
-यदि आप TestFlight पर ऐप इस्तेमाल कर रहे हैं, तो आपको एक-क्लिक माइग्रेशन के लिए प्रॉम्प्ट मिलेगा।
+TestFlight पर app use कर रहे हैं तो one-click migration prompt मिलेगा।
 
-यदि आपने iOS या Google Play स्टोर से ऐप डाउनलोड किया है, तो अपडेट अगले कुछ दिनों में आएगा।
+iOS या Google Play store से app download किया है तो update अगले couple of days में roll out होगा।
 
-यदि आप Quantus माइन कर रहे हैं, तो अब Planck टेस्टनेट माइनिंग शुरू कर सकते हैं।
+Quantus mine कर रहे हैं तो अभी Planck testnet mine करना शुरू कर सकते हैं।
 
-चेन रेपो विकी में अपडेटेड माइनिंग गाइड देखें, जिसमें हमारा GPU कार्यान्वयन (CPU माइनर से अधिक कुशल) शामिल है।
+Updated mining guide के लिए chain repo wiki देखें — GPU implementation included (CPU miner से ज़्यादा efficient)।
 
-सरल UI माइनर ऐप अभी भी अपग्रेड हो रहा है, लेकिन यदि आप तकनीकी माइनर हैं तो आप नए टेस्टनेट पर अब माइनिंग शुरू कर सकते हैं। कोई समस्या हो तो बताएं।
+Simple UI miner app अभी upgrade हो रहा है, लेकिन technical miners नए testnet पर mine शुरू कर सकते हैं। Trouble हो तो बताएं।
 
-यह टेस्टनेट रिहर्सल है। चेन लाइव होते ही हैशरेट तेज़ी से बढ़ेगी, और आप पहले दिन के लिए अपना सेटअप तैयार रखना चाहेंगे।
+यह testnet rehearsal है। Chain live होते ही hashrate तेज़ी से climb करेगा, और day one के लिए setup dialed होना चाहिए।
 
-इस सप्ताह हमने और जो भेजा:
+इस सप्ताह और क्या ship हुआ:
 
 ### Core Tech & ZK
 
-- नया टेस्टनेट लॉन्च किया।
-- मेननेट की तैयारी में sudo पैलेट हटाया।
-- नेटवर्क सिंक ठीक किया।
-- सिंगल स्टेट मेम पूल ठीक किया।
-- Poseidon को नवीनतम संस्करण पर अपडेट किया।
+- नया testnet launch।
+- Mainnet preparation के लिए sudo pallet remove।
+- Network sync fix।
+- Single state mem pool fix।
+- Poseidon latest version पर update।
 
 ### Network & Infra
 
-- न्यूनतम नेटवर्क आवश्यकताओं के साथ नोड दस्तावेज़ अपडेट किया।
-- Subsquid इंडेक्सर को नवीनतम चेन संस्करण पर अपडेट किया, रिवर्सिबल और रद्द इवेंट/एक्सट्रिन्सिक प्रकार ठीक किए, और Docker इमेज v0.6.0 जारी की।
-- Task Master जोखिम जाँच एंडपॉइंट पर दर सीमा जोड़ी और CORS नीति अपडेट की।
+- Minimum network requirements के साथ node documentation update।
+- Latest chain version के लिए Subsquid indexer update, reversible और cancelled event extrinsic types fix, Docker image v0.6.0 release।
+- Task Master risk checker endpoint पर rate limiting और CORS policy update।
 
 ### Web & Mobile App Updates
 
-- मोबाइल ऐप में उच्च-सुरक्षा फ़्लो बहाल किया और UX सुधार किए।
-- वॉलेट होमपेज का पुनर्डिज़ाइन, बटन, आइकन और लेनदेन सूची घटक अपडेट, और नवीनतम Subsquid इंडेक्सर के लिए नया GraphQL क्वेरी एकीकृत किया।
-- मोबाइल वॉलेट पेज एनिमेशन, होमपेज हीरो बैनर बग, और गैर-होम रूट्स पर स्क्रॉल पर नेवबार डार्कनिंग ठीक की।
+- Mobile app में high-security flow restore और UX fixes ship।
+- Wallet homepage redesign, buttons, icons, transaction list components update, latest Subsquid indexer के लिए नया GraphQL query integrate।
+- Mobile wallet page animation fix, homepage hero banner bug fix, non-homepage routes पर navbar darken-on-scroll fix।
 
 ### Content & Partnerships
 
-- Chris [@mobymedia](https://x.com/mobymedia) पॉडकास्ट पर: [https://x.com/mobymedia/status/2043401794227949568](https://x.com/mobymedia/status/2043401794227949568)
-- [@ethan*t_c*](https://x.com/ethan_t_c_) और [@YuviLightman](https://x.com/YuviLightman) के साथ पोस्ट-क्वांटम ज़ीरो-नॉलेज प्रूफ़ पॉडकास्ट प्रकाशित: [https://x.com/QuantusNetwork/status/2042047089660563948](https://x.com/QuantusNetwork/status/2042047089660563948)
-- सिंगापुर में GitEx में भाग लिया।
-- Dr. [@zina_cinker](https://x.com/zina_cinker) के साथ Network School पर फुल-हाउस सत्र: [https://x.com/QuantusNetwork/status/2044051045832384538](https://x.com/QuantusNetwork/status/2044051045832384538)
-- Chris [@ArcanumVentures](https://x.com/ArcanumVentures) ep. 47 लाइव गुरुवार 16 अप्रैल, 14:00 UTC / 22:00 सिंगापुर: [https://x.com/ArcanumVentures/status/2044023122102223157](https://x.com/ArcanumVentures/status/2044023122102223157)
-- State of Quantum रिपोर्ट वितरण और टिप्पणियाँ लागू करना जारी।
+- Chris [@mobymedia](https://x.com/mobymedia) podcast पर: [https://x.com/mobymedia/status/2043401794227949568](https://x.com/mobymedia/status/2043401794227949568)
+- Post-Quantum zero-knowledge proofs podcast publish — [@ethan*t_c*](https://x.com/ethan_t_c_) और [@YuviLightman](https://x.com/YuviLightman) के साथ: [https://x.com/QuantusNetwork/status/2042047089660563948](https://x.com/QuantusNetwork/status/2042047089660563948)
+- Singapore में GitEx attend।
+- Network School में Dr. [@zina_cinker](https://x.com/zina_cinker) के साथ full-house session: [https://x.com/QuantusNetwork/status/2044051045832384538](https://x.com/QuantusNetwork/status/2044051045832384538)
+- Chris [@ArcanumVentures](https://x.com/ArcanumVentures) ep. 47 live Thursday April 16, 2pm UTC / 10pm Singapore: [https://x.com/ArcanumVentures/status/2044023122102223157](https://x.com/ArcanumVentures/status/2044023122102223157)
+- State of Quantum report distribute और comments implement जारी।

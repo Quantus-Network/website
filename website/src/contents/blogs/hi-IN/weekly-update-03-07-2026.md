@@ -1,9 +1,9 @@
 ---
-title: "Quantus Weekly: Wormhole ट्रांजेक्शन"
-description: "Wormhole ट्रांजेक्शन, माइनर्स के लिए निजी ब्लॉक रिवॉर्ड, सर्वसम्मति बग फिक्स और वॉलेट अपडेट को कवर करने वाला साप्ताहिक अपडेट।"
+title: "Quantus Weekly: Wormhole ट्रांज़ैक्शन"
+description: "Wormhole ट्रांज़ैक्शन, माइनर्स के निजी ब्लॉक रिवॉर्ड, consensus बग फिक्स और wallet अपडेट — इस सप्ताह Quantus में क्या-क्या शिप हुआ, पूरी जानकारी यहाँ।"
 pubDate: "2026-03-07"
 heroImage: "/blog/covers/weekly-update-03-07-2026.webp"
-heroAlt: "Quantus Weekly: Wormhole ट्रांजेक्शन"
+heroAlt: "Quantus Weekly: Wormhole ट्रांज़ैक्शन"
 featured: false
 tags:
   [
@@ -17,60 +17,60 @@ tags:
   ]
 ---
 
-आप एक न खर्च किए जा सकने वाले पते (unspendable address) पर सिक्के जलाते हैं।
+आप coins को एक unspendable address पर burn करते हैं।
 
-एक ZK प्रूफ उन्हें कहीं नई जगह मिंट करता है।
+एक ZK proof उन्हें कहीं नए स्थान पर mint कर देता है।
 
-निशान मिट गया है।
+Trail गायब।
 
-[@QuantusNetwork](https://x.com/@QuantusNetwork) इन्हें "wormhole" ट्रांजेक्शन कहता है।
+[@QuantusNetwork](https://x.com/@QuantusNetwork) इन्हें "wormhole" transactions कहते हैं।
 
-आप एक wormhole पते पर सिक्के भेजते हैं जो लेज़र पर किसी भी अन्य खाते के समान दिखता है। लेकिन वह पता गणितीय रूप से न खर्च किए जा सकने वाला है। निकालने के लिए, आप ZK प्रूफ के साथ एक रहस्य का ज्ञान सिद्ध करते हैं, और चेन एक ताज़ा निकास पते (exit address) पर समकक्ष सिक्के मिंट करती है।
+आप coins को wormhole address पर भेजते हैं जो ledger पर किसी भी दूसरे account जैसा दिखता है। लेकिन यह address mathematically unspendable है। Withdraw करने के लिए, आप ZK proof से secret का ज्ञान साबित करते हैं, और chain equivalent coins को एक fresh exit address पर mint कर देता है।
 
-कोई भी प्रवेश को निकास से नहीं जोड़ सकता।
+कोई entry को exit से connect नहीं कर सकता।
 
-यहाँ माइनर्स के लिए यह दिलचस्प हो जाता है।
+यहीं miners के लिए बात दिलचस्प हो जाती है।
 
-प्रोटोकॉल के लिए माइनर्स को अपने रिवॉर्ड पते के लिए 32-बाइट प्रीइमेज जमा करने की आवश्यकता होती है। चेन पता बनाने के लिए इसे हैश करती है।
+Protocol miners से अपने reward address के लिए 32-byte preimage submit करने की मांग करता है। Chain उसे hash करके address बनाता है।
 
-Dilithium पब्लिक कीज़ विशाल होती हैं। वे 32 बाइट्स में फिट नहीं हो सकतीं। इसलिए प्रीइमेज एक वास्तविक पब्लिक की नहीं हो सकती, और परिणामी पता एक न खर्च किए जा सकने वाला wormhole पता होने की गारंटी है।
+Dilithium public keys बहुत बड़े हैं। वे 32 bytes में fit नहीं हो सकते। इसलिए preimage एक real public key नहीं हो सकता, और resulting address guaranteed unspendable wormhole address होता है।
 
-गोपनीयता प्रोटोकॉल द्वारा लागू की जाती है, जिसमें किसी ऑप्ट-इन की आवश्यकता नहीं होती है।
+Privacy protocol द्वारा enforce होती है — opt-in की जरूरत नहीं।
 
-इस सप्ताह, हमने इसे माइनर ऐप में बनाया है। अगले टेस्टनेट में, सभी ब्लॉक रिवॉर्ड डिफ़ॉल्ट रूप से wormhole पतों के माध्यम से रूट होंगे।
+इस सप्ताह हमने इसे miner app में build किया। अगले testnet में, सभी block rewards default रूप से wormhole addresses से होकर जाते हैं।
 
-यहाँ वह सब कुछ है जो हमने इस सप्ताह बनाया है।
+इस सप्ताह हमने और क्या build किया, वो यहाँ है।
 
-### Github गतिविधि (11 मर्ज किए गए पुल अनुरोध):
+### GitHub Activity (11 merged pull requests):
 
 ![Github Stats](/blog/assets/github-stats-weekly-update-03-07-2026.webp)
 
-### कोर टेक और ZK:
+### Core Tech & ZK:
 
-- माइनर ऐप में wormhole विड्रॉल बनाया गया, जिससे माइनर्स को डिफ़ॉल्ट रूप से निजी ब्लॉक रिवॉर्ड मिलते हैं।
-- सबसे भारी/सबसे लंबी चेन सर्वसम्मति बग और कई अन्य चेन बग को ठीक किया गया।
-- अपडेटेड कोर लाइब्रेरी जारी की गईं: qp-poseidon v1.1.0, qp-rusty-crystals-hdwallet v2.0.0, qp-dilithium v0.2.2।
+- Miner app में wormhole withdrawals build किए, miners को default रूप से private block rewards मिलते हैं।
+- Heaviest/longest chain consensus bug और कई अन्य chain bugs fix किए।
+- Updated core libraries release की: qp-poseidon v1.1.0, qp-rusty-crystals-hdwallet v2.0.0, qp-dilithium v0.2.2।
 
-### नेटवर्क और इंफ्रा:
+### Network & Infra:
 
-- सबस्ट्रेट डिपेंडेंसीज़ को stable2506 से stable2512-2 में अपडेट किया गया।
-- नई डिपेंडेंसीज़ के साथ CLI, sc-network फोर्क और NEAR फोर्क को अपडेट किया गया।
-- अपडेटेड कोडबेस और टेक कलेक्टिव गवर्नेंस के साथ हाइजेनबर्ग नोड्स का परीक्षण किया गया।
-- Senoti नोटिफिकेशन सिस्टम: RabbitMQ स्टार्टअप गड़बड़ी को ठीक किया गया, डिवाइस रजिस्ट्रार से ऑथ लेयर को हटाया गया, फेलओवर कनेक्शन हैंडलिंग को ठीक किया गया।
+- Substrate dependencies stable2506 से stable2512-2 तक update की।
+- CLI, sc-network fork, और NEAR fork को नई dependencies के साथ update किया।
+- Updated codebase और tech collective governance के साथ Heisenberg nodes test किए।
+- Senoti notification system: RabbitMQ startup glitch fix, device registrar से auth layer हटाया, failover connection handling fix।
 
-### वेब और मोबाइल ऐप अपडेट:
+### Web & Mobile App Updates:
 
-- अपडेटेड ग्राफिक्स के साथ सभी ऐप स्टोर पर वॉलेट v1.2.0 और v1.2.1 शिप किया गया।
-- समीक्षा प्रक्रिया शुरू करने के लिए ऐप स्टोर पर "स्वैप" बटन के साथ मोबाइल ऐप का एक वर्ज़न भेजा गया।
-- वॉलेट और एक्सप्लोरर में अधिक सकारात्मक शब्द सूची के साथ हैप्पी चेकफ़्रेज़ शिप किया गया।
-- Android एज-टू-एडज डिस्प्ले फिक्स।
-- रिकवरी फ़्रेज़ UI अपडेट, बटन कंपोनेंट फिक्स, मानकीकृत आइकन बटन और रीसेट शीट अपडेट।
-- रिमोट नोटिफिकेशन इंटीग्रेशन को अपडेट किया गया और सभी वॉलेट्स के लिए नोटिफिकेशन सपोर्ट का विस्तार किया गया।
+- Updated graphics के साथ wallet v1.2.0 और v1.2.1 सभी app stores पर ship किए।
+- App store review शुरू करने के लिए "swap" button वाला mobile app version push किया।
+- Wallet और explorer में positive word list के साथ happy checkphrase ship किया।
+- Android edge-to-edge display fix।
+- Recovery phrase UI update, button component fixes, standardized icon buttons, और reset sheet update।
+- Remote notification integration update और सभी wallets के लिए notification support expand।
 
-### कंटेंट और पार्टनरशिप:
+### Content & Partnerships:
 
-- नेटवर्क स्कूल में [Tom Howard](https://x.com/_TomHoward), [Chris Smith](https://x.com/YuviLightman), और [Kenbak](https://x.com/k6nb4k) (Cipherscan) के साथ गोपनीयता और क्वांटम सुरक्षा पर एक पैनल चर्चा की मेजबानी की।
+- Network School में privacy और quantum security पर panel discussion host की — [Tom Howard](https://x.com/_TomHoward), [Chris Smith](https://x.com/YuviLightman), और [Kenbak](https://x.com/k6nb4k) (Cipherscan) के साथ।
 
-### इंडस्ट्री अपडेट:
+### Industry Updates:
 
-- ZK और क्वांटम कंप्यूटिंग पर [Quantum Canary लेख](https://x.com/QuantumCanary_/status/2027639894944956645)
+- [Quantum Canary Article](https://x.com/QuantumCanary_/status/2027639894944956645) ZK & Quantum Computing पर
