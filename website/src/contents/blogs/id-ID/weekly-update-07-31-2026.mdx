@@ -1,0 +1,66 @@
+---
+title: "Quantus Weekly: Akun Terenkripsi Live"
+description: "Akun terenkripsi live di wallet Quantus—bukti ZK lokal, transfer privat. Plus runtime v0.8.0 dengan agregasi lapisan kedua dan clear signing Keystone."
+pubDate: "2026-07-31"
+heroImage: "/blog/covers/weekly-update-07-31-2026.webp"
+heroAlt: "Quantus Weekly: Akun Terenkripsi Live"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "quantum",
+    "post-quantum",
+    "encrypted-accounts",
+    "zk-proofs",
+    "wormhole",
+    "runtime",
+    "keystone",
+    "multisig",
+    "mobile",
+    "security",
+    "dilithium",
+    "subsquid",
+    "infra",
+  ]
+---
+
+Akun terenkripsi sudah live di Quantus mobile wallet.
+
+Transaksi terenkripsi menghasilkan zero-knowledge proof secara lokal di ponsel Anda, sehingga siapa pun kini bisa melakukan transfer privat di Quantus.
+
+Kami juga mendorong runtime upgrade. Sorotan utamanya adalah lapisan ke-2 agregasi ZK kami, yang menggabungkan banyak transaksi menjadi satu proof yang diposting onchain, sehingga meningkatkan throughput chain.
+
+Kami juga merilis update firmware Keystone kustom kami untuk mengaktifkan clear signing pada transaksi multisig.
+
+Berikut yang kami bangun minggu lalu:
+
+### Github Activity (5 merged pull requests):
+
+![Github Stats](/blog/assets/github-stats-weekly-update-07-31-2026.webp)
+
+### Core Tech & ZK
+
+- Merilis runtime upgrade v0.8.0-exodus dengan produksi blok yang lebih stabil.
+- Menambahkan agregasi proof lapisan kedua ke wormhole pallet. Public batch menggabungkan banyak transaksi menjadi satu proof yang diposting onchain—cara kami mendapatkan throughput dari tanda tangan post-quantum yang ukurannya sekitar 70x Bitcoin.
+- Memperbarui firmware Keystone kustom untuk mendukung clear signing pada persetujuan multisig.
+- Menyelesaikan lima putaran lagi security review di pustaka tanda tangan Dilithium, sirkuit ZK, dan chain.
+- Merilis quantus-cli v1.6.0 dengan perintah untuk alur agregasi public batch secara penuh.
+
+### Network & Infra
+
+- Menjadikan Subsquid, indexer chain kami, highly available dan memprovisikan infrastrukturnya dengan Terraform.
+- Menjadikan Senoti, layanan notifikasi kami, highly available.
+- Menjalankan stress test k6 terhadap indexer dan mengoptimalkan query mahal yang sudah diketahui di explorer maupun Subsquid.
+- Memperbaiki bug penyimpangan saldo di indexer dan berhenti menghitung reward miner sebagai transaksi normal.
+- Fee volume exit wormhole kini memancarkan event, dan indexer menangkapnya, sehingga miner dapat melihat pendapatan fee wormhole mereka.
+
+### Web & Mobile App Updates
+
+- Merilis akun terenkripsi di mobile wallet, dengan generasi bukti ZK lokal, batch splitting, dan account discovery.
+- Merilis mobile wallet 1.5.9 dan 1.5.10.
+- Memperbaiki tiga temuan dari mobile security review.
+- Membangun ulang tema situs docs agar sesuai brand, memperbarui konten ancaman, dan memperbaiki label testnet.
+
+Terserah kita.
+
+Stay frosty, quants.

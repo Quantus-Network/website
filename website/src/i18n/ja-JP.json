@@ -942,7 +942,9 @@
       "reuters": "ロイター",
       "bip-360": "BIP-360",
       "cryptography": "暗号技術",
-      "charles-edwards": "Charles Edwards"
+      "charles-edwards": "Charles Edwards",
+      "encrypted-accounts": "暗号化アカウント",
+      "infra": "インフラ"
     }
   },
   "cookie": {

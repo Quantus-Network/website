@@ -1,0 +1,66 @@
+---
+title: "Quantus Weekly: Verschlüsselte Konten live"
+description: "Verschlüsselte Konten live im Quantus-Wallet — lokale ZK-Proofs, private Transfers. Plus Runtime v0.8.0, zweite Aggregationsschicht und Keystone Clear Signing."
+pubDate: "2026-07-31"
+heroImage: "/blog/covers/weekly-update-07-31-2026.webp"
+heroAlt: "Quantus Weekly: Verschlüsselte Konten live"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "quantum",
+    "post-quantum",
+    "encrypted-accounts",
+    "zk-proofs",
+    "wormhole",
+    "runtime",
+    "keystone",
+    "multisig",
+    "mobile",
+    "security",
+    "dilithium",
+    "subsquid",
+    "infra",
+  ]
+---
+
+Verschlüsselte Konten sind im Quantus-Mobile-Wallet live.
+
+Verschlüsselte Transaktionen erzeugen Zero-Knowledge-Proofs lokal auf dem Telefon — damit kann jetzt jeder einen privaten Transfer auf Quantus durchführen.
+
+Wir haben außerdem ein Runtime-Upgrade ausgerollt. Der Highlight des Upgrades ist unsere zweite Schicht der ZK-Aggregation: Viele Transaktionen werden zu einem einzigen Proof gebündelt, der onchain gepostet wird — und erhöhen so den Chain-Durchsatz.
+
+Außerdem haben wir ein Update unserer eigenen Keystone-Firmware ausgeliefert, das Clear Signing für Multisig-Transaktionen ermöglicht.
+
+Hier ist, was wir letzte Woche sonst noch gebaut haben:
+
+### GitHub-Aktivität (5 gemergte Pull Requests):
+
+![Github Stats](/blog/assets/github-stats-weekly-update-07-31-2026.webp)
+
+### Core-Tech & ZK
+
+- Runtime-Upgrade v0.8.0-exodus mit stabilerer Blockproduktion ausgeliefert.
+- Zweite Schicht der Proof-Aggregation zum Wormhole-Pallet hinzugefügt. Ein Public Batch bündelt viele Transaktionen zu einem einzigen Proof, der onchain gepostet wird — so holen wir Durchsatz aus Post-Quantum-Signaturen heraus, die etwa 70× so groß sind wie die von Bitcoin.
+- Eigene Keystone-Firmware aktualisiert, um Clear Signing bei Multisig-Freigaben zu unterstützen.
+- Fünf weitere Runden Sicherheitsreview über die Dilithium-Signaturbibliothek, die ZK-Circuits und die Chain abgeschlossen.
+- quantus-cli v1.6.0 mit Befehlen für den vollständigen Public-Batch-Aggregationsfluss veröffentlicht.
+
+### Netzwerk & Infrastruktur
+
+- Subsquid, unseren Chain-Indexer, hochverfügbar gemacht und seine Infrastruktur mit Terraform provisioniert.
+- Senoti, unseren Notification-Service, hochverfügbar gemacht.
+- k6-Stresstests gegen den Indexer gefahren und bekannte teure Queries in Explorer und Subsquid optimiert.
+- Einen Balance-Abweichungsbug im Indexer behoben und Miner-Rewards nicht mehr als normale Transaktionen gezählt.
+- Wormhole-Exit-Volume-Fees emittieren jetzt ein Event, und der Indexer erfasst es — damit Miner ihre Wormhole-Fee-Einnahmen sehen können.
+
+### Web- & Mobile-App-Updates
+
+- Verschlüsselte Konten im Mobile-Wallet ausgeliefert, mit lokaler ZK-Proof-Generierung, Batch-Splitting und Account Discovery.
+- Mobile Wallet 1.5.9 und 1.5.10 ausgeliefert.
+- Drei Befunde aus dem Mobile-Sicherheitsreview behoben.
+- Das Theme der Docs-Site an die Marke angeglichen, Threat-Inhalte aktualisiert und das Testnet-Label korrigiert.
+
+Es liegt an uns.
+
+Bleibt kühl, Quants.

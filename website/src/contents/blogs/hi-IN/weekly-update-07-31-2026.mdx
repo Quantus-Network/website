@@ -1,0 +1,66 @@
+---
+title: "Quantus Weekly: एन्क्रिप्टेड अकाउंट लाइव"
+description: "Quantus वॉलेट में एन्क्रिप्टेड अकाउंट लाइव—लोकल ZK प्रूफ़, प्राइवेट ट्रांसफ़र। साथ में runtime v0.8.0, सेकंड-लेयर एग्रीगेशन और Keystone clear signing।"
+pubDate: "2026-07-31"
+heroImage: "/blog/covers/weekly-update-07-31-2026.webp"
+heroAlt: "Quantus Weekly: एन्क्रिप्टेड अकाउंट लाइव"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "quantum",
+    "post-quantum",
+    "encrypted-accounts",
+    "zk-proofs",
+    "wormhole",
+    "runtime",
+    "keystone",
+    "multisig",
+    "mobile",
+    "security",
+    "dilithium",
+    "subsquid",
+    "infra",
+  ]
+---
+
+Quantus मोबाइल वॉलेट में एन्क्रिप्टेड अकाउंट लाइव हैं।
+
+एन्क्रिप्टेड ट्रांज़ैक्शन आपके फ़ोन पर लोकल ज़ीरो-नॉलेज प्रूफ़ जनरेट करते हैं, इसलिए अब कोई भी Quantus पर प्राइवेट ट्रांसफ़र कर सकता है।
+
+हमने एक runtime upgrade भी पुश किया। अपग्रेड की मुख्य बात हमारी ZK aggregation की दूसरी लेयर है, जो कई ट्रांज़ैक्शन को एक ही प्रूफ़ में बैच करके onchain पोस्ट करती है और chain throughput बढ़ाती है।
+
+हमने multisig ट्रांज़ैक्शन के लिए clear signing सक्षम करने हेतु अपना कस्टम Keystone firmware अपडेट भी शिप किया।
+
+पिछले हफ़्ते हमने और क्या बनाया:
+
+### Github एक्टिविटी (5 मर्ज्ड पुल रिक्वेस्ट):
+
+![Github Stats](/blog/assets/github-stats-weekly-update-07-31-2026.webp)
+
+### कोर टेक और ZK
+
+- ज़्यादा स्थिर ब्लॉक प्रोडक्शन के साथ runtime upgrade v0.8.0-exodus शिप किया।
+- wormhole pallet में सेकंड-लेयर प्रूफ़ aggregation जोड़ी। एक public batch कई ट्रांज़ैक्शन को एक प्रूफ़ में बंडल करके onchain पोस्ट करता है—यही तरीका है जिससे हम Bitcoin से लगभग 70x बड़े post-quantum सिग्नेचर से throughput निकालते हैं।
+- multisig अप्रूवल पर clear signing सपोर्ट के लिए कस्टम Keystone firmware अपडेट किया।
+- Dilithium सिग्नेचर लाइब्रेरी, ZK सर्किट और chain पर पाँच और राउंड security review पूरे किए।
+- पूरे public batch aggregation फ़्लो के कमांड के साथ quantus-cli v1.6.0 रिलीज़ किया।
+
+### नेटवर्क और इंफ्रा
+
+- हमारे chain indexer Subsquid को highly available बनाया और Terraform से उसका इंफ्रा प्रोविज़न किया।
+- हमारी notification सर्विस Senoti को highly available बनाया।
+- indexer पर k6 stress टेस्ट चलाए और explorer व Subsquid दोनों में ज्ञात महँगे क्वेरी ऑप्टिमाइज़ किए।
+- indexer में बैलेंस deviation बग ठीक किया और miner rewards को सामान्य ट्रांज़ैक्शन के रूप में गिनना बंद किया।
+- Wormhole exit volume fees अब एक event emit करती हैं, और indexer उसे कैप्चर करता है, ताकि miner अपनी wormhole fee आय देख सकें।
+
+### वेब और मोबाइल ऐप अपडेट
+
+- मोबाइल वॉलेट में एन्क्रिप्टेड अकाउंट शिप किए—लोकल ZK प्रूफ़ जनरेशन, batch splitting और account discovery के साथ।
+- मोबाइल वॉलेट 1.5.9 और 1.5.10 शिप किए।
+- मोबाइल security review के तीन findings ठीक किए।
+- docs साइट थीम को ब्रांड से मैच करने के लिए फिर से बनाया, threat कंटेंट अपडेट किया, और testnet लेबल सही किया।
+
+यह हम पर है।
+
+Stay frosty, quants.

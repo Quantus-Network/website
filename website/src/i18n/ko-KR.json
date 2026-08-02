@@ -942,7 +942,9 @@
       "reuters": "로이터",
       "bip-360": "BIP-360",
       "cryptography": "암호학",
-      "charles-edwards": "Charles Edwards"
+      "charles-edwards": "Charles Edwards",
+      "encrypted-accounts": "암호화 계정",
+      "infra": "인프라"
     }
   },
   "cookie": {

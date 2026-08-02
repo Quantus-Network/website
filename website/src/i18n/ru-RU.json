@@ -942,7 +942,9 @@
       "reuters": "Reuters",
       "bip-360": "BIP-360",
       "cryptography": "Криптография",
-      "charles-edwards": "Charles Edwards"
+      "charles-edwards": "Charles Edwards",
+      "encrypted-accounts": "Зашифрованные аккаунты",
+      "infra": "Инфра"
     }
   },
   "cookie": {

@@ -1,0 +1,66 @@
+---
+title: "Quantus Weekly: Encrypted Accounts Live"
+description: "Encrypted accounts live in the Quantus wallet—local ZK proofs, private transfers. Plus runtime v0.8.0 with second-layer aggregation and Keystone clear signing."
+pubDate: "2026-07-31"
+heroImage: "/blog/covers/weekly-update-07-31-2026.webp"
+heroAlt: "Quantus Weekly: Encrypted Accounts Live"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "quantum",
+    "post-quantum",
+    "encrypted-accounts",
+    "zk-proofs",
+    "wormhole",
+    "runtime",
+    "keystone",
+    "multisig",
+    "mobile",
+    "security",
+    "dilithium",
+    "subsquid",
+    "infra",
+  ]
+---
+
+Encrypted accounts are live in the Quantus mobile wallet.
+
+Encrypted transactions generate zero-knowledge proofs locally on your phone, so anyone can now make a private transfer on Quantus.
+
+We also pushed a runtime upgrade. The highlight of the upgrade is adding in our 2nd layer of ZK aggregation, which batches many transactions into a single proof posted onchain, raising chain throughput.
+
+We also shipped an update to our custom Keystone firmware to enable clear signing for multisig transactions.
+
+Here's what else we built last week:
+
+### Github Activity (5 merged pull requests):
+
+![Github Stats](/blog/assets/github-stats-weekly-update-07-31-2026.webp)
+
+### Core Tech & ZK
+
+- Shipped runtime upgrade v0.8.0-exodus with more stable block production.
+- Added second-layer proof aggregation to the wormhole pallet. A public batch bundles many transactions into a single proof posted onchain, which is how we get throughput out of post-quantum signatures roughly 70x the size of Bitcoin's.
+- Updated custom Keystone firmware to support clear signing on multisig approvals.
+- Completed five more rounds of security review across the Dilithium signature library, the ZK circuits, and the chain.
+- Released quantus-cli v1.6.0 with commands for the full public batch aggregation flow.
+
+### Network & Infra
+
+- Made Subsquid, our chain indexer, highly available and provisioned its infrastructure with Terraform.
+- Made Senoti, our notification service, highly available.
+- Ran k6 stress tests against the indexer and optimized the known expensive queries in both the explorer and Subsquid.
+- Fixed a balance deviation bug in the indexer and stopped counting miner rewards as normal transactions.
+- Wormhole exit volume fees now emit an event, and the indexer captures it, so miners can see their wormhole fee income.
+
+### Web & Mobile App Updates
+
+- Shipped encrypted accounts in the mobile wallet, with local ZK proof generation, batch splitting, and account discovery.
+- Shipped mobile wallet 1.5.9 and 1.5.10.
+- Fixed three findings from the mobile security review.
+- Rebuilt the docs site theme to match the brand, updated the threat content, and corrected the testnet label.
+
+It's up to us.
+
+Stay frosty, quants.

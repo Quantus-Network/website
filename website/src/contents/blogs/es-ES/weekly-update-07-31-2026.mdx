@@ -1,0 +1,66 @@
+---
+title: "Quantus Weekly: Cuentas Cifradas en Vivo"
+description: "Cuentas cifradas ya en la wallet Quantus: pruebas ZK locales y transferencias privadas. Plus runtime v0.8.0 con agregación de 2ª capa y clear signing Keystone."
+pubDate: "2026-07-31"
+heroImage: "/blog/covers/weekly-update-07-31-2026.webp"
+heroAlt: "Quantus Weekly: Cuentas Cifradas en Vivo"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "quantum",
+    "post-quantum",
+    "encrypted-accounts",
+    "zk-proofs",
+    "wormhole",
+    "runtime",
+    "keystone",
+    "multisig",
+    "mobile",
+    "security",
+    "dilithium",
+    "subsquid",
+    "infra",
+  ]
+---
+
+Las cuentas cifradas ya están disponibles en la wallet móvil de Quantus.
+
+Las transacciones cifradas generan pruebas de conocimiento cero localmente en tu teléfono, así que cualquiera puede hacer ahora una transferencia privada en Quantus.
+
+También lanzamos una actualización del runtime. Lo más destacado es nuestra segunda capa de agregación ZK, que agrupa muchas transacciones en una sola prueba publicada onchain y aumenta el throughput de la chain.
+
+También enviamos una actualización de nuestro firmware personalizado de Keystone para habilitar clear signing en transacciones multisig.
+
+Esto es lo demás que construimos la semana pasada:
+
+### Actividad en GitHub (5 pull requests fusionados):
+
+![Github Stats](/blog/assets/github-stats-weekly-update-07-31-2026.webp)
+
+### Núcleo Técnico y ZK
+
+- Lanzamos el runtime upgrade v0.8.0-exodus con una producción de bloques más estable.
+- Añadimos agregación de pruebas de segunda capa al pallet wormhole. Un public batch agrupa muchas transacciones en una sola prueba publicada onchain: así obtenemos throughput con firmas postcuánticas de un tamaño aproximado de 70× el de Bitcoin.
+- Actualizamos el firmware personalizado de Keystone para soportar clear signing en aprobaciones multisig.
+- Completamos cinco rondas más de revisión de seguridad sobre la biblioteca de firmas Dilithium, los circuitos ZK y la chain.
+- Publicamos quantus-cli v1.6.0 con comandos para el flujo completo de agregación de public batch.
+
+### Red e Infraestructura
+
+- Hicimos altamente disponible Subsquid, nuestro indexador de la chain, y aprovisionamos su infraestructura con Terraform.
+- Hicimos altamente disponible Senoti, nuestro servicio de notificaciones.
+- Ejecutamos pruebas de estrés k6 contra el indexador y optimizamos las consultas costosas conocidas en el explorer y en Subsquid.
+- Corregimos un bug de desviación de balances en el indexador y dejamos de contar las recompensas de miner como transacciones normales.
+- Las fees de volumen de salida wormhole ahora emiten un evento, y el indexador lo captura, para que los miners vean sus ingresos por fees wormhole.
+
+### Actualizaciones de Web y App Móvil
+
+- Lanzamos cuentas cifradas en la wallet móvil, con generación local de pruebas ZK, división de batches y descubrimiento de cuentas.
+- Lanzamos la wallet móvil 1.5.9 y 1.5.10.
+- Corregimos tres hallazgos de la revisión de seguridad móvil.
+- Reconstruimos el tema del sitio de docs para alinearlo con la marca, actualizamos el contenido de amenazas y corregimos la etiqueta de testnet.
+
+Depende de nosotros.
+
+Stay frosty, quants.

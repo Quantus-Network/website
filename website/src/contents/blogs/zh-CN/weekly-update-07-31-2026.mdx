@@ -1,0 +1,66 @@
+---
+title: "Quantus 每周动态：加密账户现已上线"
+description: "Quantus 移动钱包现已支持加密账户，可在手机本地生成 ZK 证明并完成隐私转账。另有运行时 v0.8.0 二层聚合与 Keystone 清晰签名。"
+pubDate: "2026-07-31"
+heroImage: "/blog/covers/weekly-update-07-31-2026.webp"
+heroAlt: "Quantus 每周动态：加密账户现已上线"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "quantum",
+    "post-quantum",
+    "encrypted-accounts",
+    "zk-proofs",
+    "wormhole",
+    "runtime",
+    "keystone",
+    "multisig",
+    "mobile",
+    "security",
+    "dilithium",
+    "subsquid",
+    "infra",
+  ]
+---
+
+Quantus 移动钱包现已支持加密账户。
+
+加密交易会在手机本地生成零知识证明，因此任何人都可以在 Quantus 上进行隐私转账。
+
+我们还推送了一次运行时升级。亮点是加入了第二层 ZK 聚合：将多笔交易打包成一个上链证明，从而提升链吞吐量。
+
+我们还发布了自定义 Keystone 固件更新，为多重签名交易启用清晰签名。
+
+以下是我们上周还交付的内容：
+
+### GitHub 活动（已合并 5 个拉取请求）：
+
+![Github Stats](/blog/assets/github-stats-weekly-update-07-31-2026.webp)
+
+### 核心技术与 ZK
+
+- 发布运行时升级 v0.8.0-exodus，区块生产更稳定。
+- 为虫洞 pallet 增加第二层证明聚合。公开批次将多笔交易打包成一个上链证明——这正是我们从体积约为比特币约 70 倍的后量子签名中挤出吞吐量的方式。
+- 更新自定义 Keystone 固件，支持多重签名批准的清晰签名。
+- 对 Dilithium 签名库、ZK 电路与链又完成了五轮安全审查。
+- 发布 quantus-cli v1.6.0，提供完整公开批次聚合流程的命令。
+
+### 网络与基础设施
+
+- 使我们的链索引器 Subsquid 实现高可用，并用 Terraform 配置其基础设施。
+- 使我们的通知服务 Senoti 实现高可用。
+- 对索引器运行 k6 压力测试，并优化了浏览器与 Subsquid 中已知的高开销查询。
+- 修复了索引器中的余额偏差问题，并不再将矿工奖励计为普通交易。
+- 虫洞退出量手续费现在会发出事件，索引器会捕获它，矿工可以看到自己的虫洞手续费收入。
+
+### 网页与移动应用更新
+
+- 在移动钱包中上线加密账户，支持本地 ZK 证明生成、批次拆分与账户发现。
+- 发布移动钱包 1.5.9 与 1.5.10。
+- 修复了移动端安全审查中的三项发现。
+- 重建文档站点主题以匹配品牌，更新威胁相关内容，并修正了测试网标签。
+
+取决于我们。
+
+Stay frosty, quants.
