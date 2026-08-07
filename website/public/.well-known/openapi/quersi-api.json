@@ -1,11 +1,11 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "Quantus Quests API",
+    "title": "Quantus Quersi API",
     "version": "1.0.0",
-    "description": "Task Master API for quests, leaderboards, and Ethereum risk analysis."
+    "description": "Quersi API for Ethereum risk analysis."
   },
-  "servers": [{ "url": "https://quests.quantus.com" }],
+  "servers": [{ "url": "https://qrc-1.quantus.com" }],
   "paths": {
     "/health": {
       "get": {
