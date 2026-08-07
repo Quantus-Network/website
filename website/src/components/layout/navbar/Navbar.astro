@@ -16,14 +16,14 @@ const t = await createTranslator(locale);
 
 <nav
   id="navbar"
-  class="bg-navbar border-border px-content-edges-mobile lg:px-content-edges [&.scrolled]:bg-navbar-scrolled fixed top-0 right-0 left-0 z-1000 flex items-center justify-between border-b py-4 opacity-0 backdrop-blur-xs transition-all duration-500 ease-in-out lg:py-5 [&.scrolled]:backdrop-blur-md [&.visible]:opacity-100"
+  class="bg-navbar border-border px-content-edges-mobile md:px-content-edges [&.scrolled]:bg-navbar-scrolled fixed top-0 right-0 left-0 z-1000 flex items-center justify-between border-b py-4 opacity-0 backdrop-blur-xs transition-all duration-500 ease-in-out lg:py-5 [&.scrolled]:backdrop-blur-md [&.visible]:opacity-100"
 >
   <a href={getLocalizedPath(locale, "/")} class="block leading-none">
     <LogoLong class="block h-[26px] w-auto" />
   </a>
 
   <ul
-    class="nav-links absolute left-1/2 hidden -translate-x-1/2 list-none gap-4 lg:flex xl:gap-8"
+    class="nav-links absolute left-1/2 hidden -translate-x-1/2 list-none gap-4 min-[1099px]:flex xl:gap-8"
   >
     {
       SITE_NAVIGATIONS.map((item) => (
@@ -46,19 +46,18 @@ const t = await createTranslator(locale);
 
   <div class="flex items-center gap-4">
     <Button
-      class="wallet-cta-link hidden lg:block"
+      class="wallet-cta-link hidden min-[1099px]:block"
       href="#"
       target="_blank"
       rel="noopener"
       variant="outline"
       size="small"
       data-track="wallet_store_click"
-      data-track-cta-location="nav"
-      >{t("navbar.download_wallet")}</Button
+      data-track-cta-location="nav">{t("navbar.download_wallet")}</Button
     >
 
     <button
-      class="nav-hamburger group flex h-9 w-9 cursor-pointer items-center justify-center border-none bg-none p-1 lg:hidden"
+      class="nav-hamburger group flex h-9 w-9 cursor-pointer items-center justify-center border-none bg-none p-1 min-[1099px]:hidden"
       id="nav-hamburger"
       aria-label={t("navbar.open_menu")}
       aria-expanded="false"
@@ -153,8 +152,7 @@ const t = await createTranslator(locale);
     rel="noopener"
     variant="primary"
     data-track="wallet_store_click"
-    data-track-cta-location="nav_mobile"
-    >{t("navbar.download_wallet")}</Button
+    data-track-cta-location="nav_mobile">{t("navbar.download_wallet")}</Button
   >
 </div>
 
