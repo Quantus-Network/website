@@ -51,7 +51,7 @@ Minggu ini tim menyelesaikan langkah pertama agregasi transaksi ZK untuk chain d
 ## Konten & Kemitraan
 
 - AMA komunitas pertama via X space: https://x.com/QuantusNetwork/status/1991341042390692210
-- Podcast dengan James, Founder Ârc: https://www.youtube.com/watch?v=eac4aRF50qU
+- Podcast dengan James, Founder Ârc.
 - Mengakuisisi dua advisor / KOL baru.
 
 ## Pembaruan Industri

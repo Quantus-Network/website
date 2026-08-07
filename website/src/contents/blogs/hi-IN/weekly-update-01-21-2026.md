@@ -62,7 +62,7 @@ Capital allocators Bitcoin को उस probability के अनुपात �
 - Podcasts अब Apple Podcasts पर upload हो रहे हैं।
 - 2 token launchpads के साथ conversation शुरू हुई।
 - Quantum Canary blockchain comparison page improvements।
-- Biohacking और self optimization पर AJ के साथ podcast: https://x.com/QuantusNetwork/status/2012526120869286161
+- Biohacking और self optimization पर AJ के साथ podcast.
 
 ### Industry Updates
 

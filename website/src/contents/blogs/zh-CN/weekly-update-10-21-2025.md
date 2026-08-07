@@ -33,7 +33,7 @@ tags:
 
 ## 内容与合作伙伴
 
-- 与企业家及内容创作者 Khaled Sabbagh 的播客已上线：https://www.youtube.com/watch?v=RZKmiOPzTVw&t
+- 与企业家及内容创作者 Khaled Sabbagh 的播客已上线。
 - 与投资者、潜在社交媒体合作伙伴及顾问进行了多项深入讨论。
 
 ## 行业动态

@@ -34,7 +34,7 @@ tags:
 
 ## Konten & Kemitraan
 
-- Podcast live dengan Khaled Sabbagh, entrepreneur dan content creator: https://www.youtube.com/watch?v=RZKmiOPzTVw&t
+- Podcast live dengan Khaled Sabbagh, entrepreneur dan content creator.
 - Banyak diskusi berkelanjutan dengan investor, calon mitra media sosial, dan advisor.
 
 ## Berita Industri

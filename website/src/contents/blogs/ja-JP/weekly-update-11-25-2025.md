@@ -50,7 +50,7 @@ tags:
 ## Content & Partnerships
 
 - 初のコミュニティAMAをX Spacesで開催: https://x.com/QuantusNetwork/status/1991341042390692210
-- Ârc創設者James氏とのポッドキャスト: https://www.youtube.com/watch?v=eac4aRF50qU
+- Ârc創設者James氏とのポッドキャスト。
 - 新たに2名の顧問/KOLを獲得しました。
 
 ## Industry Updates

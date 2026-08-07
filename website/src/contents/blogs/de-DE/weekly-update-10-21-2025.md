@@ -34,7 +34,7 @@ tags:
 
 ## Content & Partnerschaften
 
-- Podcast live mit Khaled Sabbagh, Unternehmer und Content Creator: https://www.youtube.com/watch?v=RZKmiOPzTVw&t
+- Podcast live mit Khaled Sabbagh, Unternehmer und Content Creator.
 - Viele laufende Gespräche mit Investoren, potenziellen Social-Media-Partnern und Advisors.
 
 ## Branchen-News

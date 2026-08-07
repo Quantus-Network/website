@@ -57,7 +57,7 @@ Quantusは量子セキュアなマネーの基準を設定しています。
 
 - Mobile app v1.1.5を両アプリストアにリリースしました。
 - ランク表示のバグ修正を含む新クエスト画面を実装しました。
-- [quantus.com/launch](https://quantus.com/launch)にローンチページを公開しました。
+- quantus.com/launchにローンチページを公開しました。
 - ZK-aggregatorのUXデザインを簡素化し、「encrypted accounts（暗号化口座）」と名称変更しました。
 
 ### Content & Partnerships

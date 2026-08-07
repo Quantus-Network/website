@@ -51,7 +51,7 @@ Esta semana el equipo completó el primer paso de agregación ZK de transaccione
 ## Content & Partnerships
 
 - Primer AMA comunitario vía X space: https://x.com/QuantusNetwork/status/1991341042390692210
-- Podcast con James, fundador de Ârc: https://www.youtube.com/watch?v=eac4aRF50qU
+- Podcast con James, fundador de Ârc.
 - Incorporamos dos nuevos asesores / KOLs.
 
 ## Actualizaciones de la Industria

@@ -33,7 +33,7 @@ tags:
 
 ## Content & Partnerships
 
-- 起業家・コンテンツクリエイターKhaled Sabbagh氏とのポッドキャストを公開しました: https://www.youtube.com/watch?v=RZKmiOPzTVw&t
+- 起業家・コンテンツクリエイターKhaled Sabbagh氏とのポッドキャストを公開しました。
 - 投資家、潜在的なソーシャルメディアパートナー、顧問との継続的な協議を進めています。
 
 ## Industry News

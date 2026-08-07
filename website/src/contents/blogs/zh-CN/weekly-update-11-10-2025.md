@@ -60,7 +60,7 @@ tags:
 
 ## 内容与合作伙伴
 
-- 与 Remus Boroiu（9 届健美冠军、企业家和创作者）的播客：https://www.youtube.com/watch?v=OtBKnaFAe_8
+- 与 Remus Boroiu（9 届健美冠军、企业家和创作者）的播客。
 - 通过 Chainwire 发布新闻稿。
 
 ## Quantum Canary

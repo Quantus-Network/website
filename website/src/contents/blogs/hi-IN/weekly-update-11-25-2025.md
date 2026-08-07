@@ -51,7 +51,7 @@ tags:
 ## कंटेंट और पार्टनरशिप
 
 - X space के ज़रिए पहला community AMA: https://x.com/QuantusNetwork/status/1991341042390692210
-- Ârc के Founder James के साथ पॉडकास्ट: https://www.youtube.com/watch?v=eac4aRF50qU
+- Ârc के Founder James के साथ पॉडकास्ट.
 - दो नए advisors / KOLs acquire किए।
 
 ## उद्योग अपडेट

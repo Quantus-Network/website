@@ -50,7 +50,7 @@ tags:
 ## Content & Partnerships
 
 - Первая АМА-сессия с сообществом в X space: https://x.com/QuantusNetwork/status/1991341042390692210
-- Подкаст с Джеймсом, основателем Ârc: https://www.youtube.com/watch?v=eac4aRF50qU
+- Подкаст с Джеймсом, основателем Ârc.
 - Привлечены два новых советника / KOL.
 
 ## Industry Updates

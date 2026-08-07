@@ -60,7 +60,7 @@ tags:
 
 ## 콘텐츠 및 파트너십
 
-- 9회 보디빌딩 챔피언이자 기업가·크리에이터 Remus Boroiu와의 팟캐스트: https://www.youtube.com/watch?v=OtBKnaFAe_8
+- 9회 보디빌딩 챔피언이자 기업가·크리에이터 Remus Boroiu와의 팟캐스트.
 - Chainwire를 통해 보도자료를 배포했습니다.
 
 ## 업계 업데이트

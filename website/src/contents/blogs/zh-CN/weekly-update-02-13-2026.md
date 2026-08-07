@@ -57,7 +57,7 @@ Quantus 为量子安全货币设立标准。
 
 - 向两大应用商店发布移动应用 v1.1.5。
 - 实现新任务页，并修复等级显示问题。
-- 在 [quantus.com/launch](https://quantus.com/launch) 发布启动页。
+- 在 quantus.com/launch 发布启动页。
 - 简化 ZK 聚合器 UX，现称「加密账户」。
 
 ### 内容与合作伙伴

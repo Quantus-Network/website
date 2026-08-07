@@ -62,7 +62,7 @@ Berikut hal lain yang kami rilis minggu ini, supaya saat Q-day tiba, kami siap:
 - Podcast kini diunggah ke Apple Podcasts.
 - Memulai percakapan dengan 2 token launchpad.
 - Peningkatan halaman perbandingan blockchain Quantum Canary.
-- Podcast dengan AJ tentang biohacking dan self optimization: https://x.com/QuantusNetwork/status/2012526120869286161
+- Podcast dengan AJ tentang biohacking dan self optimization.
 
 ### Industry Updates
 

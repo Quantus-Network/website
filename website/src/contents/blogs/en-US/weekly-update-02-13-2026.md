@@ -57,7 +57,7 @@ So here's what else we shipped this week.
 
 - Shipped Mobile app v1.1.5 to both app stores.
 - Implemented new quests screens with bugfixes for rank display.
-- Published launch page at [quantus.com/launch](https://quantus.com/launch).
+- Published launch page at quantus.com/launch.
 - Simplified UX design for ZK-aggregator, now called "encrypted accounts."
 
 ### Content & Partnerships

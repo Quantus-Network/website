@@ -34,7 +34,7 @@ tags:
 
 ## Contenido y Alianzas
 
-- Podcast en vivo con Khaled Sabbagh, emprendedor y creador de contenido: https://www.youtube.com/watch?v=RZKmiOPzTVw&t
+- Podcast en vivo con Khaled Sabbagh, emprendedor y creador de contenido.
 - Muchas conversaciones en curso con inversores, posibles socios de redes sociales y asesores.
 
 ## Actualizaciones de la Industria

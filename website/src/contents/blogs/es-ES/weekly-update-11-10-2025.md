@@ -61,7 +61,7 @@ Esta semana el equipo lanzó la testnet Dirac, finalizando la actualización a n
 
 ## Content & Partnerships
 
-- Podcast con Remus Boroiu, campeón de culturismo en 9 ocasiones, emprendedor y creador: https://www.youtube.com/watch?v=OtBKnaFAe_8
+- Podcast con Remus Boroiu, campeón de culturismo en 9 ocasiones, emprendedor y creador.
 - Comunicado de prensa vía Chainwire.
 
 ## Quantum Canary

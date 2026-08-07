@@ -69,7 +69,7 @@ Merchant invoice QR code दिखाता है। Customer scan करता
 
 - Point-of-sale mode और instant confirmation के साथ mobile app v1.2.2 app stores पर ship।
 - Website redesign का alpha version deploy।
-- [quantus.com/launch](https://quantus.com/launch) page content update।
+- quantus.com/launch page content update।
 - Wallet के लिए remote configs system implement।
 
 ### Content & Partnerships:

@@ -60,7 +60,7 @@ tags:
 
 ## Content & Partnerships
 
-- 9度のボディビルチャンピオン、起業家、クリエイターRemus Boroiu氏とのポッドキャスト: https://www.youtube.com/watch?v=OtBKnaFAe_8
+- 9度のボディビルチャンピオン、起業家、クリエイターRemus Boroiu氏とのポッドキャスト。
 - Chainwire経由でプレスリリースを配信しました。
 
 ## Quantum Canary

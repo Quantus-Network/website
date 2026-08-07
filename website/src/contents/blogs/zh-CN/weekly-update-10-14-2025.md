@@ -33,7 +33,7 @@ tags:
 
 ## 内容
 
-- 与 Liberland 总统 Vit Jedlička 的播客已上线：https://www.youtube.com/watch?v=_hy-SaPRzpk&t
+- 与 Liberland 总统 Vit Jedlička 的播客已上线。
 - 与投资者和 KOL 进行了大量接触。
 - 为推荐计划和晋级系统设计了图形。
 

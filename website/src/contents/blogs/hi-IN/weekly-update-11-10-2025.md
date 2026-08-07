@@ -61,7 +61,7 @@ tags:
 
 ## कंटेंट और पार्टनरशिप
 
-- 9-time bodybuilding champion, entrepreneur, और creator Remus Boroiu के साथ पॉडकास्ट: https://www.youtube.com/watch?v=OtBKnaFAe_8
+- 9-time bodybuilding champion, entrepreneur, और creator Remus Boroiu के साथ पॉडकास्ट.
 - Chainwire के ज़रिए press release।
 
 ## Quantum Canary

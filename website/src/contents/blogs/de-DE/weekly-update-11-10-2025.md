@@ -61,7 +61,7 @@ Diese Woche hat das Team das Dirac-Testnet veröffentlicht und damit das chainwe
 
 ## Content & Partnerschaften
 
-- Podcast mit Remus Boroiu, 9-facher Bodybuilding-Champion, Unternehmer und Creator: https://www.youtube.com/watch?v=OtBKnaFAe_8
+- Podcast mit Remus Boroiu, 9-facher Bodybuilding-Champion, Unternehmer und Creator.
 - Pressemitteilung über Chainwire.
 
 ## Quantum Canary
