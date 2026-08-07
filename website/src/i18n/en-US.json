@@ -523,10 +523,10 @@
       "eyebrow": "EVENTS",
       "heading": "Meet us in person.",
       "card": {
-        "date_label": "QDAY — APRIL 2026",
-        "title": "A community event bringing together Quantus and quantum computing researchers.",
-        "cta": "GET NOTIFIED →",
-        "status": "DETAILS COMING SOON"
+        "date_label": "QDAY — 8 OCTOBER 2026",
+        "title": "A QDay Summit on the quantum threat to cryptography. One room. The conversation that can't wait.",
+        "cta": "REGISTER →",
+        "status": "SINGAPORE · INVITE ONLY"
       }
     },
     "podcast": {
