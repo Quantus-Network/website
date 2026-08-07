@@ -33,7 +33,7 @@ tags:
 
 ## Content
 
-- Liberland大統領Vit Jedlička氏とのポッドキャストを公開しました: https://www.youtube.com/watch?v=_hy-SaPRzpk&t
+- Liberland大統領Vit Jedlička氏とのポッドキャストを公開しました。
 - 投資家やKOLへの積極的なアウトリーチを実施しました。
 - 紹介プログラムと進行システム向けのグラフィックを作成しました。
 

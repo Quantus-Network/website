@@ -51,7 +51,7 @@ This week the team completed the first step of ZK transaction aggregation for bo
 ## Content & Partnerships
 
 - First community AMA via X space: https://x.com/QuantusNetwork/status/1991341042390692210
-- Podcast with James, Founder of Ârc: https://www.youtube.com/watch?v=eac4aRF50qU
+- Podcast with James, Founder of Ârc.
 - Acquired two new advisors / KOLs.
 
 ## Industry Updates

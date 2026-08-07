@@ -62,7 +62,7 @@ tags:
 - 播客开始上传至 Apple Podcasts。
 - 与 2 个代币启动平台开启对话。
 - Quantum Canary 区块链对比页改进。
-- 与 AJ 关于生物黑客与自我优化的播客：https://x.com/QuantusNetwork/status/2012526120869286161
+- 与 AJ 关于生物黑客与自我优化的播客。
 
 ### 行业动态
 

@@ -69,7 +69,7 @@ P2P 电子现金会扩容。会保护隐私。不可随意增发。具有主权�
 
 - 向应用商店发布移动应用 v1.2.2，含销售点模式与即时确认。
 - 部署网站改版的 alpha 版本。
-- 更新 [quantus.com/launch](https://quantus.com/launch) 页面内容。
+- 更新 quantus.com/launch 页面内容。
 - 为钱包实现远程配置系统。
 
 ### 内容与合作伙伴：

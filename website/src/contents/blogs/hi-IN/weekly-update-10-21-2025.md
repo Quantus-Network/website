@@ -34,7 +34,7 @@ tags:
 
 ## कंटेंट और पार्टनरशिप
 
-- entrepreneur और content creator Khaled Sabbagh के साथ पॉडकास्ट live: https://www.youtube.com/watch?v=RZKmiOPzTVw&t
+- entrepreneur और content creator Khaled Sabbagh के साथ पॉडकास्ट live.
 - investors, potential social media partners, और advisors के साथ कई चल रही discussions।
 
 ## उद्योग अपडेट

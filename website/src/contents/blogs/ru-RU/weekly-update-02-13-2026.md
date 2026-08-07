@@ -57,7 +57,7 @@ Quantus задаёт стандарт квантово-защищённых де
 
 - Выпущено Mobile app v1.1.5 в оба стора.
 - Новые экраны квестов с багфиксами отображения ранга.
-- Опубликована launch-страница на [quantus.com/launch](https://quantus.com/launch).
+- Опубликована launch-страница на quantus.com/launch.
 - Упрощён UX ZK-aggregator — теперь называется «encrypted accounts».
 
 ### Content & Partnerships

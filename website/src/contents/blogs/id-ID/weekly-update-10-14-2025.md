@@ -34,7 +34,7 @@ tags:
 
 ## Konten
 
-- Podcast live dengan Vit Jedlička, Presiden Liberland: https://www.youtube.com/watch?v=_hy-SaPRzpk&t
+- Podcast live dengan Vit Jedlička, Presiden Liberland.
 - Banyak outreach ke investor dan KOL.
 - Membuat grafis untuk program referral dan sistem progresi.
 

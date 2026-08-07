@@ -63,10 +63,9 @@ export function generateBreadcrumbs({
       }
     }
 
-    // Construct full URL
-    // Ensure we don't double slashes or miss them
+    // Construct full URL with trailing slash (matches canonical redirect target)
     const localePrefix = locale === "en-US" ? "" : `/${locale}`;
-    const url = `${siteBaseUrl}${localePrefix}${currentPath}`;
+    const url = `${siteBaseUrl}${localePrefix}${currentPath}/`;
 
     itemListElement.push({
       "@type": "ListItem",

@@ -63,7 +63,7 @@ tags:
 - Подкасты теперь загружаются в Apple Podcasts.
 - Начали переговоры с двумя token launchpad.
 - Улучшения страницы сравнения блокчейнов Quantum Canary.
-- Подкаст с AJ о биохакинге и самооптимизации: https://x.com/QuantusNetwork/status/2012526120869286161
+- Подкаст с AJ о биохакинге и самооптимизации.
 
 ### Industry Updates
 

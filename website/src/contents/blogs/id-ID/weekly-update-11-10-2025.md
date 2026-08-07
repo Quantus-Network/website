@@ -61,7 +61,7 @@ Minggu ini tim merilis testnet Dirac, menyelesaikan pembaruan chain-wide untuk a
 
 ## Konten & Kemitraan
 
-- Podcast dengan Remus Boroiu, juara bodybuilding 9 kali, entrepreneur, dan creator: https://www.youtube.com/watch?v=OtBKnaFAe_8
+- Podcast dengan Remus Boroiu, juara bodybuilding 9 kali, entrepreneur, dan creator.
 - Press release via Chainwire.
 
 ## Quantum Canary

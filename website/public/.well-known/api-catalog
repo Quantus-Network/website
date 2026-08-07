@@ -22,10 +22,10 @@
       ]
     },
     {
-      "anchor": "https://quests.quantus.com/api",
+      "anchor": "https://qrc-1.quantus.com/api",
       "service-desc": [
         {
-          "href": "https://www.quantus.com/.well-known/openapi/quests-api.json",
+          "href": "https://www.quantus.com/.well-known/openapi/quersi-api.json",
           "type": "application/json"
         }
       ],
@@ -37,7 +37,7 @@
       ],
       "status": [
         {
-          "href": "https://quests.quantus.com/health",
+          "href": "https://qrc-1.quantus.com/health",
           "type": "application/json"
         }
       ]

@@ -50,7 +50,7 @@ tags:
 ## 内容与合作伙伴
 
 - 通过 X space 举行了首场社区 AMA：https://x.com/QuantusNetwork/status/1991341042390692210
-- 与 Ârc 创始人 James 的播客：https://www.youtube.com/watch?v=eac4aRF50qU
+- 与 Ârc 创始人 James 的播客。
 - 签约了两名新的顾问 / KOL。
 
 ## 行业动态

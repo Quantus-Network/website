@@ -63,7 +63,7 @@ Here's what else we shipped this week, so when Q-day comes, we're ready:
 - Podcasts now being uploaded to Apple Podcasts.
 - Started conversation with 2 token launchpads.
 - Quantum Canary blockchain comparison page improvements.
-- Podcast with AJ on biohacking and self optimization: https://x.com/QuantusNetwork/status/2012526120869286161
+- Podcast with AJ on biohacking and self optimization.
 
 ### Industry Updates
 

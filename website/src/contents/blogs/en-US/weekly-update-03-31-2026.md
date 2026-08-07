@@ -70,7 +70,7 @@ Here's what else we shipped this week.
 
 - Shipped mobile app v1.2.2 to the app stores with point-of-sale mode and instant confirmation.
 - Deployed alpha version of the website redesign.
-- Updated [quantus.com/launch](https://quantus.com/launch) page content.
+- Updated quantus.com/launch page content.
 - Implemented remote configs system for the wallet.
 
 ### Content & Partnerships:

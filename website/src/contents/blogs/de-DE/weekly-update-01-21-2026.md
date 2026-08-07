@@ -63,7 +63,7 @@ Das haben wir diese Woche sonst noch ausgeliefert – damit wir bereit sind, wen
 - Podcasts werden jetzt auf Apple Podcasts hochgeladen.
 - Gespräche mit 2 Token-Launchpads begonnen.
 - Verbesserungen auf der Blockchain-Vergleichsseite von Quantum Canary.
-- Podcast mit AJ über Biohacking und Selbstoptimierung: https://x.com/QuantusNetwork/status/2012526120869286161
+- Podcast mit AJ über Biohacking und Selbstoptimierung.
 
 ### Branchen-Updates
 

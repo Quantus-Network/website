@@ -57,7 +57,7 @@ Quantus는 양자 보안 화폐의 기준을 세웁니다.
 
 - 모바일 앱 v1.1.5를 양대 앱 스토어에 출시했습니다.
 - 순위 표시 버그 수정이 포함된 새 퀘스트 화면을 구현했습니다.
-- [quantus.com/launch](https://quantus.com/launch) 런치 페이지를 게시했습니다.
+- quantus.com/launch 런치 페이지를 게시했습니다.
 - ZK-aggregator UX를 단순화했고, 이제 "encrypted accounts(암호화된 계정)"라고 부릅니다.
 
 ### 콘텐츠 및 파트너십

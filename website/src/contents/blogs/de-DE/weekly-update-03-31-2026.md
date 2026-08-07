@@ -69,7 +69,7 @@ Das ist diese Woche sonst noch shipped:
 
 - Mobile App v1.2.2 in die App Stores gebracht — mit Point-of-Sale-Modus und Instant Confirmation.
 - Alpha-Version des Website-Redesigns deployed.
-- Inhalt der Seite [quantus.com/launch](https://quantus.com/launch) aktualisiert.
+- Inhalt der Seite quantus.com/launch aktualisiert.
 - Remote-Configs-System für die Wallet implementiert.
 
 ### Content & Partnerschaften:

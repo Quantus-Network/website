@@ -33,7 +33,7 @@ tags:
 
 ## 콘텐츠 및 파트너십
 
-- 기업가이자 콘텐츠 크리에이터 Khaled Sabbagh와의 팟캐스트를 공개했습니다: https://www.youtube.com/watch?v=RZKmiOPzTVw&t
+- 기업가이자 콘텐츠 크리에이터 Khaled Sabbagh와의 팟캐스트를 공개했습니다.
 - 투자자, 잠재적 소셜 미디어 파트너, 어드바이저와 활발히 논의 중입니다.
 
 ## 업계 뉴스

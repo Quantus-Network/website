@@ -69,7 +69,7 @@ Berikut hal lain yang kami rilis minggu ini.
 
 - Merilis aplikasi mobile v1.2.2 ke app store dengan mode point-of-sale dan konfirmasi instan.
 - Men-deploy versi alpha redesign website.
-- Memperbarui konten halaman [quantus.com/launch](https://quantus.com/launch).
+- Memperbarui konten halaman quantus.com/launch.
 - Mengimplementasikan sistem remote config untuk wallet.
 
 ### Content & Partnerships:

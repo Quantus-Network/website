@@ -33,7 +33,7 @@ tags:
 
 ## 콘텐츠
 
-- Liberland 대통령 Vit Jedlička와의 팟캐스트를 공개했습니다: https://www.youtube.com/watch?v=_hy-SaPRzpk&t
+- Liberland 대통령 Vit Jedlička와의 팟캐스트를 공개했습니다.
 - 투자자 및 KOL 대상 아웃리치를 활발히 진행했습니다.
 - 추천 프로그램 및 진행 시스템용 그래픽을 제작했습니다.
 

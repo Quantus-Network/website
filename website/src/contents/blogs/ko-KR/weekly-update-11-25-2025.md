@@ -50,7 +50,7 @@ tags:
 ## 콘텐츠 및 파트너십
 
 - X Space를 통한 첫 커뮤니티 AMA: https://x.com/QuantusNetwork/status/1991341042390692210
-- Ârc 설립자 James와의 팟캐스트: https://www.youtube.com/watch?v=eac4aRF50qU
+- Ârc 설립자 James와의 팟캐스트.
 - 새 어드바이저/KOL 2명을 영입했습니다.
 
 ## 업계 업데이트

@@ -70,7 +70,7 @@ Esto es lo demás que lanzamos esta semana:
 
 - Publicada la app móvil v1.2.2 en las tiendas con modo punto de venta y confirmación instantánea.
 - Desplegada la versión alfa del rediseño del sitio web.
-- Actualizado el contenido de la página [quantus.com/launch](https://quantus.com/launch).
+- Actualizado el contenido de la página quantus.com/launch.
 - Implementado sistema de configuraciones remotas para la billetera.
 
 ### Contenido y alianzas:

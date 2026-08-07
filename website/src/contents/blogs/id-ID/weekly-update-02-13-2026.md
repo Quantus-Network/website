@@ -57,7 +57,7 @@ Jadi berikut hal lain yang kami rilis minggu ini.
 
 - Merilis Mobile app v1.1.5 ke kedua app store.
 - Mengimplementasikan layar quests baru dengan perbaikan bug tampilan rank.
-- Menerbitkan halaman launch di [quantus.com/launch](https://quantus.com/launch).
+- Menerbitkan halaman launch di quantus.com/launch.
 - Menyederhanakan desain UX untuk ZK-aggregator, kini disebut "encrypted accounts."
 
 ### Content & Partnerships

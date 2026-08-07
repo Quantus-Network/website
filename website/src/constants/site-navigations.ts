@@ -12,6 +12,7 @@ export const SITE_NAVIGATIONS: Navigation[] = [
   { href: "/technology/", label: "navbar.technology" },
   { href: "/wallet/", label: "navbar.wallet" },
   { href: "/about/", label: "navbar.about" },
+  { href: "/blog/", label: "footer.links.blog" },
   { href: "/community/", label: "navbar.community" },
   {
     href: "https://docs.quantus.com/",

@@ -34,7 +34,7 @@ tags:
 
 ## कंटेंट
 
-- Liberland के राष्ट्रपति Vit Jedlička के साथ पॉडकास्ट live: https://www.youtube.com/watch?v=_hy-SaPRzpk&t
+- Liberland के राष्ट्रपति Vit Jedlička के साथ पॉडकास्ट live.
 - investors और KOLs से बहुत outreach।
 - referral program और progression system के लिए graphics बनाए।
 

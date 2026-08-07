@@ -58,7 +58,7 @@ Así que esto es lo más que lanzamos esta semana.
 
 - Lanzamos Mobile app v1.1.5 en ambas tiendas de apps.
 - Implementamos nuevas pantallas de quests con correcciones de bugs en la visualización de rank.
-- Publicamos la página de lanzamiento en [quantus.com/launch](https://quantus.com/launch).
+- Publicamos la página de lanzamiento en quantus.com/launch.
 - Simplificamos el diseño UX del ZK-aggregator, ahora llamado "encrypted accounts."
 
 ### Contenido y alianzas

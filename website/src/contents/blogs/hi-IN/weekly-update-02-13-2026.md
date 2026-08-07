@@ -57,7 +57,7 @@ Quantus quantum-secure money के लिए standard set करता है�
 
 - Mobile app v1.1.5 दोनों app stores पर ship किया।
 - Rank display bugfixes के साथ new quests screens implement किए।
-- [quantus.com/launch](https://quantus.com/launch) पर launch page publish किया।
+- quantus.com/launch पर launch page publish किया।
 - ZK-aggregator के लिए simplified UX design, अब "encrypted accounts" कहलाता है।
 
 ### Content & Partnerships
