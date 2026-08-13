@@ -944,7 +944,10 @@
       "cryptography": "Criptografía",
       "charles-edwards": "Charles Edwards",
       "encrypted-accounts": "Cuentas Cifradas",
-      "infra": "Infra"
+      "infra": "Infra",
+      "immunefi": "Immunefi",
+      "bug-bounty": "Recompensa por bugs",
+      "senoti": "Senoti"
     }
   },
   "cookie": {

@@ -1,0 +1,83 @@
+---
+title: "Quantus Weekly: Public Bug Bounty"
+description: "Public Immunefi bug bounty runs August 12–24. Plus ML-DSA-65 alongside ML-DSA-87, security hardening, Senoti HA, and Keystone production designs."
+pubDate: "2026-08-10"
+heroImage: "/blog/covers/weekly-update-08-10-2026.webp"
+heroAlt: "Quantus Weekly: Public Bug Bounty"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "quantum",
+    "post-quantum",
+    "immunefi",
+    "bug-bounty",
+    "security",
+    "ml-dsa",
+    "dilithium",
+    "zk-proofs",
+    "senoti",
+    "keystone",
+    "mobile",
+    "poseidon",
+  ]
+---
+
+import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
+
+Starting Wednesday, we are running a public bug bounty on [@immunefi](https://x.com/@immunefi). It opens August 12 and runs through August 24.
+
+We spent the last few weeks hardening in preparation for the public audit. We've run many more V12 security reviews on the chain, tightened memory handling, and published a security policy with private disclosure on the chain, Poseidon, and ZK circuit repos.
+
+Since we began, Quantus testnet has been using ML-DSA-87 (the largest NIST post-quantum signature scheme).
+
+ML-DSA-65 looks like it may be the key size limit most hardware wallets will support, and the likely industry standard for post-quantum blockchains.
+
+So now the chain runs both ML-DSA-87 and ML-DSA-65, and our user-facing applications will probably default to 65.
+
+Here's what else we built last week:
+
+### Github Activity (15+ merged pull requests):
+
+![Github Stats](/blog/assets/github-stats-weekly-update-08-10-2026.webp)
+
+### Core Tech & ZK
+
+- Announced an Immunefi audit competition on the chain, live August 12 through August 24.
+
+<TwitterEmbed url="https://x.com/immunefi/status/2086803012920443159" />
+
+- Security hardening covering the recovery pallet, the scheduler, frame-system, and the wormhole settlement and metering paths.
+- Shipped a runtime upgrade adding ML-DSA-65 as a second transaction signature scheme alongside ML-DSA-87, with a CLI flag to choose either.
+- Tightened memory handling across the cryptography stack. The Dilithium library now zeroizes secrets on the heap, on the stack, and at the public API boundary. Poseidon wipes its sponge state after hashing.
+- Published a security policy with private vulnerability disclosure across the chain, Poseidon, and ZK circuit repos.
+- Raised the default public batch size from 4 to 53 private batches, so each aggregated proof carries far more transactions.
+- Removed the unused assets pallet from the runtime and cleaned up dependencies.
+
+### Network & Infra
+
+- Made Senoti, our notification service, highly available, and migrated the old service onto it.
+- Parallelized the Senoti core wallet event consumer so it stops throttling under load.
+- Stress tested Senoti and Subsquid.
+- Audited publicly exposed endpoints.
+- Renamed "planck" to neutral "token units" across the indexer schema and docs.
+- Added an in/out column to transactions in the explorer and fixed a landing page style bug.
+
+### Web & Mobile App Updates
+
+- Shipped production designs for the Keystone hardware wallet signup and signing flows, replacing the developer screens.
+- Merged 14 pull requests from the mobile security review.
+- Centralized mnemonic generation in the SDK so one secure random number generator serves the whole app.
+- Sped up animated QR decoding roughly seven times in our UR library and made the fragment size configurable, so phone-to-phone transfers use fewer, denser frames.
+- Shipped three phases of SEO fixes to the website, refreshed the wallet page screenshots and the podcast section, and added a blog link to the navigation.
+- Updated [migration.fail](https://migration.fail/) with a working address checker, responsive polish, and a clearer spec table.
+
+### Content & Partnerships
+
+- Published the full Alex Pruden podcast episode:
+
+<TwitterEmbed url="https://x.com/QuantusNetwork/status/2085335080491458874" />
+
+Happy bug hunting.
+
+Stay frosty, quants.

@@ -944,7 +944,10 @@
       "cryptography": "密码学",
       "charles-edwards": "Charles Edwards",
       "encrypted-accounts": "加密账户",
-      "infra": "基建"
+      "infra": "基建",
+      "immunefi": "Immunefi",
+      "bug-bounty": "漏洞赏金",
+      "senoti": "Senoti"
     }
   },
   "cookie": {

@@ -1,0 +1,83 @@
+---
+title: "Quantus Weekly: पब्लिक बग बाउंटी"
+description: "Immunefi पब्लिक बग बाउंटी 12–24 अगस्त तक चलेगा। साथ में ML-DSA-65 और ML-DSA-87, सिक्योरिटी हार्डनिंग, Senoti HA और Keystone प्रोडक्शन डिज़ाइन।"
+pubDate: "2026-08-10"
+heroImage: "/blog/covers/weekly-update-08-10-2026.webp"
+heroAlt: "Quantus Weekly: पब्लिक बग बाउंटी"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "quantum",
+    "post-quantum",
+    "immunefi",
+    "bug-bounty",
+    "security",
+    "ml-dsa",
+    "dilithium",
+    "zk-proofs",
+    "senoti",
+    "keystone",
+    "mobile",
+    "poseidon",
+  ]
+---
+
+import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
+
+बुधवार से हम [@immunefi](https://x.com/@immunefi) पर पब्लिक बग बाउंटी चला रहे हैं। यह 12 अगस्त को खुलता है और 24 अगस्त तक चलता है।
+
+पब्लिक ऑडिट की तैयारी में पिछले कुछ हफ़्ते हमने हार्डनिंग की। Chain पर और कई V12 security review चलाए, मेमोरी हैंडलिंग सख्त की, और chain, Poseidon व ZK circuit repos पर प्राइवेट डिस्क्लोजर वाली security policy पब्लिश की।
+
+शुरुआत से Quantus टेस्टनेट ML-DSA-87 इस्तेमाल कर रहा है (NIST का सबसे बड़ा post-quantum सिग्नेचर स्कीम)।
+
+ML-DSA-65 ज़्यादातर हार्डवेयर वॉलेट के की-साइज़ लिमिट जैसा लगता है, और post-quantum ब्लॉकचेन का संभावित इंडस्ट्री स्टैंडर्ड भी।
+
+इसलिए अब chain ML-DSA-87 और ML-DSA-65 दोनों चलाती है, और हमारे यूज़र-फेसिंग ऐप शायद 65 को डिफ़ॉल्ट रखेंगे।
+
+पिछले हफ़्ते हमने और क्या बनाया:
+
+### Github एक्टिविटी (15+ मर्ज्ड पुल रिक्वेस्ट):
+
+![Github Stats](/blog/assets/github-stats-weekly-update-08-10-2026.webp)
+
+### कोर टेक और ZK
+
+- Chain पर Immunefi ऑडिट कंपटीशन का ऐलान किया, 12 से 24 अगस्त तक लाइव।
+
+<TwitterEmbed url="https://x.com/immunefi/status/2086803012920443159" />
+
+- Security hardening जिसमें recovery pallet, scheduler, frame-system, और wormhole settlement व metering पाथ शामिल हैं।
+- Runtime upgrade शिप किया जो ML-DSA-87 के साथ ML-DSA-65 को दूसरी ट्रांज़ैक्शन सिग्नेचर स्कीम जोड़ता है, CLI फ़्लैग से कोई भी चुन सकते हैं।
+- पूरे क्रिप्टोग्राफ़ी स्टैक में मेमोरी हैंडलिंग सख्त की। Dilithium लाइब्रेरी अब heap, stack और पब्लिक API बाउंड्री पर सीक्रेट को ज़ीरो करती है। Poseidon हैशिंग के बाद sponge स्टेट मिटा देता है।
+- Chain, Poseidon और ZK circuit repos पर प्राइवेट वलनरेबिलिटी डिस्क्लोजर वाली security policy पब्लिश की।
+- डिफ़ॉल्ट public batch साइज़ 4 से बढ़ाकर 53 private batches किया, ताकि हर aggregated प्रूफ़ कहीं ज़्यादा ट्रांज़ैक्शन ले जाए।
+- Runtime से बिना इस्तेमाल का assets pallet हटाया और डिपेंडेंसी साफ़ की।
+
+### नेटवर्क और इंफ्रा
+
+- हमारी notification सर्विस Senoti को highly available बनाया, और पुरानी सर्विस को उस पर माइग्रेट किया।
+- Senoti के core wallet event consumer को पैरेलल किया ताकि लोड पर थ्रॉटल न हो।
+- Senoti और Subsquid का stress टेस्ट किया।
+- पब्लिकली एक्सपोज़्ड एंडपॉइंट का ऑडिट किया।
+- Indexer स्कीमा और डॉक्स में "planck" का नाम बदलकर न्यूट्रल "token units" किया।
+- Explorer में ट्रांज़ैक्शन पर in/out कॉलम जोड़ा और लैंडिंग पेज का स्टाइल बग ठीक किया।
+
+### वेब और मोबाइल ऐप अपडेट
+
+- Keystone हार्डवेयर वॉलेट साइनअप और साइनिंग फ़्लो के प्रोडक्शन डिज़ाइन शिप किए, डेवलपर स्क्रीन की जगह।
+- मोबाइल security review से 14 पुल रिक्वेस्ट मर्ज किए।
+- SDK में mnemonic जनरेशन सेंट्रलाइज़ किया ताकि एक सुरक्षित रैंडम नंबर जनरेटर पूरे ऐप को सर्वे करे।
+- UR लाइब्रेरी में एनिमेटेड QR डिकोडिंग करीब सात गुना तेज़ की और फ़्रैगमेंट साइज़ कॉन्फ़िगरेबल बनाया, ताकि फ़ोन-टू-फ़ोन ट्रांसफ़र कम और घने फ़्रेम इस्तेमाल करें।
+- वेबसाइट पर SEO फ़िक्स के तीन फ़ेज़ शिप किए, वॉलेट पेज स्क्रीनशॉट और पॉडकास्ट सेक्शन रिफ़्रेश किए, और नेविगेशन में ब्लॉग लिंक जोड़ा।
+- [migration.fail](https://migration.fail/) को काम करने वाले अड्रेस चेकर, रिस्पॉन्सिव पॉलिश और साफ़ spec टेबल के साथ अपडेट किया।
+
+### कंटेंट और पार्टनरशिप
+
+- पूरा Alex Pruden पॉडकास्ट एपिसोड पब्लिश किया:
+
+<TwitterEmbed url="https://x.com/QuantusNetwork/status/2085335080491458874" />
+
+हैप्पी बग हंटिंग।
+
+Stay frosty, quants.

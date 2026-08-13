@@ -944,7 +944,10 @@
       "cryptography": "Cryptography",
       "charles-edwards": "Charles Edwards",
       "encrypted-accounts": "Encrypted Accounts",
-      "infra": "Infra"
+      "infra": "Infra",
+      "immunefi": "Immunefi",
+      "bug-bounty": "Bug Bounty",
+      "senoti": "Senoti"
     }
   },
   "cookie": {

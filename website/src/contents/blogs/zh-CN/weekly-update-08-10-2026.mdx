@@ -1,0 +1,83 @@
+---
+title: "Quantus 每周动态：公开漏洞赏金启动"
+description: "Immunefi 公开漏洞赏金将于 8 月 12 日至 24 日举行。另支持 ML-DSA-65 与 ML-DSA-87，并完成安全加固、Senoti 高可用与 Keystone 正式设计。"
+pubDate: "2026-08-10"
+heroImage: "/blog/covers/weekly-update-08-10-2026.webp"
+heroAlt: "Quantus 每周动态：公开漏洞赏金启动"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "quantum",
+    "post-quantum",
+    "immunefi",
+    "bug-bounty",
+    "security",
+    "ml-dsa",
+    "dilithium",
+    "zk-proofs",
+    "senoti",
+    "keystone",
+    "mobile",
+    "poseidon",
+  ]
+---
+
+import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
+
+从周三起，我们将在 [@immunefi](https://x.com/@immunefi) 开展公开漏洞赏金。活动于 8 月 12 日开启，持续至 8 月 24 日。
+
+过去几周我们一直在加固系统，为公开审计做准备。我们对链做了更多轮 V12 安全审查，收紧了内存处理，并在链、Poseidon 与 ZK 电路仓库发布了支持私下披露的安全政策。
+
+自启动以来，Quantus 测试网一直使用 ML-DSA-87（NIST 后量子签名方案中规模最大的一种）。
+
+ML-DSA-65 很可能是大多数硬件钱包能支持的密钥大小上限，也是后量子区块链可能采用的行业标准。
+
+因此现在链同时运行 ML-DSA-87 和 ML-DSA-65，面向用户的应用多半会默认使用 65。
+
+以下是我们上周还交付的内容：
+
+### GitHub 活动（已合并 15+ 个拉取请求）：
+
+![Github Stats](/blog/assets/github-stats-weekly-update-08-10-2026.webp)
+
+### 核心技术与 ZK
+
+- 宣布针对本链的 Immunefi 审计竞赛，8 月 12 日至 24 日上线。
+
+<TwitterEmbed url="https://x.com/immunefi/status/2086803012920443159" />
+
+- 安全加固覆盖 recovery pallet、scheduler、frame-system，以及虫洞结算与计量路径。
+- 发布运行时升级，将 ML-DSA-65 作为第二种交易签名方案与 ML-DSA-87 并存，并提供 CLI 标志以选择其一。
+- 收紧整个密码学栈的内存处理。Dilithium 库现在会在堆、栈和公开 API 边界上将密钥清零。Poseidon 在哈希后擦除海绵状态。
+- 在链、Poseidon 与 ZK 电路仓库发布带私下漏洞披露的安全政策。
+- 将默认公开批次大小从 4 提高到 53 个私有批次，使每个聚合证明承载更多交易。
+- 从运行时移除未使用的 assets pallet，并清理依赖。
+
+### 网络与基础设施
+
+- 使我们的通知服务 Senoti 实现高可用，并将旧服务迁移到其上。
+- 将 Senoti 核心钱包事件消费者并行化，使其在负载下不再限流。
+- 对 Senoti 和 Subsquid 进行了压力测试。
+- 审计了对外公开的端点。
+- 在索引器模式与文档中将 “planck” 重命名为中性的 “token units”。
+- 在浏览器交易中增加 in/out 列，并修复了落地页的样式问题。
+
+### 网页与移动应用更新
+
+- 上线 Keystone 硬件钱包注册与签名流程的正式设计，替换开发者界面。
+- 合并了移动端安全审查中的 14 个拉取请求。
+- 在 SDK 中集中助记词生成，使整个应用共用一个安全随机数生成器。
+- 将 UR 库中的动画二维码解码速度提升约七倍，并支持配置分片大小，使手机到手机传输使用更少、更密的帧。
+- 分三阶段上线网站 SEO 修复，更新钱包页截图与播客栏目，并在导航中加入博客链接。
+- 更新 [migration.fail](https://migration.fail/)，加入可用的地址检查器、响应式打磨，以及更清晰的规格表。
+
+### 内容与合作伙伴
+
+- 发布 Alex Pruden 播客完整集：
+
+<TwitterEmbed url="https://x.com/QuantusNetwork/status/2085335080491458874" />
+
+祝狩猎顺利。
+
+Stay frosty, quants.

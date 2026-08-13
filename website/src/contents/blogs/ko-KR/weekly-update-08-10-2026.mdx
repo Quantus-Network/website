@@ -1,0 +1,83 @@
+---
+title: "Quantus Weekly: 공개 버그 바운티"
+description: "Immunefi 공개 버그 바운티가 8월 12일부터 24일까지 진행됩니다. ML-DSA-65와 ML-DSA-87 병행, 보안 강화, Senoti HA, Keystone 프로덕션 디자인도 포함됩니다."
+pubDate: "2026-08-10"
+heroImage: "/blog/covers/weekly-update-08-10-2026.webp"
+heroAlt: "Quantus Weekly: 공개 버그 바운티"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "quantum",
+    "post-quantum",
+    "immunefi",
+    "bug-bounty",
+    "security",
+    "ml-dsa",
+    "dilithium",
+    "zk-proofs",
+    "senoti",
+    "keystone",
+    "mobile",
+    "poseidon",
+  ]
+---
+
+import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
+
+수요일부터 [@immunefi](https://x.com/@immunefi)에서 공개 버그 바운티를 진행합니다. 8월 12일에 시작해 8월 24일까지 이어집니다.
+
+공개 감사를 준비하며 지난 몇 주를 하드닝에 썼습니다. 체인에 대해 V12 보안 리뷰를 더 많이 진행했고, 메모리 처리를 더 엄격히 했으며, 체인·Poseidon·ZK 회로 저장소에 비공개 제보가 가능한 보안 정책을 공개했습니다.
+
+시작 이후 Quantus 테스트넷은 ML-DSA-87(NIST 포스트양자 서명 방식 중 가장 큰 것)을 사용해 왔습니다.
+
+ML-DSA-65는 대부분의 하드웨어 지갑이 지원할 키 크기 상한이자, 포스트양자 블록체인의 사실상 업계 표준이 될 가능성이 큽니다.
+
+그래서 체인은 이제 ML-DSA-87과 ML-DSA-65를 모두 돌리고, 사용자용 앱은 아마 65를 기본값으로 쓸 것입니다.
+
+지난주 그 밖에 구축한 내용은 다음과 같습니다:
+
+### Github 활동 (머지된 PR 15건 이상):
+
+![Github Stats](/blog/assets/github-stats-weekly-update-08-10-2026.webp)
+
+### 코어 기술 & ZK
+
+- 체인에 대한 Immunefi 감사 컴피티션을 발표했습니다. 8월 12일부터 24일까지 진행됩니다.
+
+<TwitterEmbed url="https://x.com/immunefi/status/2086803012920443159" />
+
+- recovery 팔렛, 스케줄러, frame-system, 웜홀 정산 및 미터링 경로를 대상으로 보안을 강화했습니다.
+- ML-DSA-87과 함께 두 번째 트랜잭션 서명 방식으로 ML-DSA-65를 추가하는 런타임 업그레이드를 출시했고, CLI 플래그로 둘 중 하나를 고를 수 있습니다.
+- 암호 스택 전반의 메모리 처리를 더 엄격히 했습니다. Dilithium 라이브러리는 이제 힙, 스택, 공개 API 경계에서 시크릿을 제로화합니다. Poseidon은 해싱 후 스펀지 상태를 지웁니다.
+- 체인, Poseidon, ZK 회로 저장소에 비공개 취약점 제보가 가능한 보안 정책을 공개했습니다.
+- 기본 퍼블릭 배치 크기를 4에서 53개의 프라이빗 배치로 올려, 집계된 각 증명이 훨씬 더 많은 트랜잭션을 담도록 했습니다.
+- 런타임에서 사용하지 않는 assets 팔렛을 제거하고 의존성을 정리했습니다.
+
+### 네트워크 & 인프라
+
+- 알림 서비스 Senoti를 고가용성으로 구성하고 기존 서비스를 그곳으로 이전했습니다.
+- Senoti 코어 월렛 이벤트 컨슈머를 병렬화해 부하에서 더 이상 스로틀되지 않게 했습니다.
+- Senoti와 Subsquid를 스트레스 테스트했습니다.
+- 공개된 엔드포인트를 감사했습니다.
+- 인덱서 스키마와 문서에서 "planck"를 중립적인 "token units"로 바꿨습니다.
+- 익스플로러 트랜잭션에 in/out 열을 추가하고 랜딩 페이지 스타일 버그를 수정했습니다.
+
+### 웹·모바일 앱 업데이트
+
+- Keystone 하드웨어 지갑 가입 및 서명 플로우의 프로덕션 디자인을 출시하고 개발자 화면을 교체했습니다.
+- 모바일 보안 리뷰에서 나온 풀 리퀘스트 14건을 머지했습니다.
+- SDK에서 니모닉 생성을 중앙화해 앱 전체가 하나의 안전한 난수 생성기를 쓰도록 했습니다.
+- UR 라이브러리의 애니메이션 QR 디코딩을 약 7배 빠르게 만들고 프래그먼트 크기를 설정 가능하게 해, 폰 간 전송이 더 적고 밀도 높은 프레임을 쓰도록 했습니다.
+- 웹사이트 SEO 수정을 3단계로 출시하고, 지갑 페이지 스크린샷과 팟캐스트 섹션을 갱신했으며, 내비게이션에 블로그 링크를 추가했습니다.
+- [migration.fail](https://migration.fail/)에 동작하는 주소 검사기, 반응형 다듬기, 더 명확한 스펙 표를 반영했습니다.
+
+### 콘텐츠 & 파트너십
+
+- Alex Pruden 팟캐스트 전체 에피소드를 공개했습니다:
+
+<TwitterEmbed url="https://x.com/QuantusNetwork/status/2085335080491458874" />
+
+버그 헌팅을 즐기세요.
+
+Stay frosty, quants.

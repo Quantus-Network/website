@@ -1,0 +1,83 @@
+---
+title: "Quantus Weekly: Öffentliches Bug-Bounty"
+description: "Öffentliches Immunefi-Bug-Bounty vom 12. bis 24. August. Plus ML-DSA-65 neben ML-DSA-87, Härtung, Senoti-HA und Keystone-Produktdesigns."
+pubDate: "2026-08-10"
+heroImage: "/blog/covers/weekly-update-08-10-2026.webp"
+heroAlt: "Quantus Weekly: Öffentliches Bug-Bounty"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "quantum",
+    "post-quantum",
+    "immunefi",
+    "bug-bounty",
+    "security",
+    "ml-dsa",
+    "dilithium",
+    "zk-proofs",
+    "senoti",
+    "keystone",
+    "mobile",
+    "poseidon",
+  ]
+---
+
+import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
+
+Ab Mittwoch läuft ein öffentliches Bug-Bounty auf [@immunefi](https://x.com/@immunefi). Es startet am 12. August und geht bis zum 24. August.
+
+Die letzten Wochen haben wir gehärtet, um uns auf das öffentliche Audit vorzubereiten. Wir haben viele weitere V12-Sicherheitsreviews auf der Chain durchgeführt, die Speicherbehandlung verschärft und eine Security Policy mit privater Meldung für die Repos von Chain, Poseidon und ZK-Circuits veröffentlicht.
+
+Seit dem Start nutzt das Quantus-Testnet ML-DSA-87 (das größte NIST-Post-Quantum-Signaturverfahren).
+
+ML-DSA-65 sieht nach dem Key-Size-Limit aus, das die meisten Hardware-Wallets unterstützen werden — und nach dem wahrscheinlichen Industriestandard für Post-Quantum-Blockchains.
+
+Die Chain läuft jetzt mit ML-DSA-87 und ML-DSA-65, und unsere nutzerseitigen Apps werden voraussichtlich auf 65 defaulten.
+
+Hier ist, was wir letzte Woche sonst noch gebaut haben:
+
+### GitHub-Aktivität (15+ gemergte Pull Requests):
+
+![Github Stats](/blog/assets/github-stats-weekly-update-08-10-2026.webp)
+
+### Core-Tech & ZK
+
+- Ein Immunefi-Audit-Competition auf der Chain angekündigt, live vom 12. bis 24. August.
+
+<TwitterEmbed url="https://x.com/immunefi/status/2086803012920443159" />
+
+- Härtung für Recovery-Pallet, Scheduler, frame-system sowie Wormhole-Settlement- und Metering-Pfade.
+- Runtime-Upgrade ausgeliefert, das ML-DSA-65 als zweites Transaktionssignaturverfahren neben ML-DSA-87 hinzufügt, mit einem CLI-Flag zur Auswahl.
+- Speicherbehandlung im gesamten Kryptografie-Stack verschärft. Die Dilithium-Bibliothek überschreibt Secrets jetzt auf Heap, Stack und an der öffentlichen API-Grenze mit Nullen. Poseidon wischt nach dem Hashen den Sponge-State.
+- Security Policy mit privater Schwachstellenmeldung für Chain-, Poseidon- und ZK-Circuit-Repos veröffentlicht.
+- Default-Public-Batch-Größe von 4 auf 53 Private Batches angehoben, sodass jeder aggregierte Proof deutlich mehr Transaktionen trägt.
+- Ungenutztes Assets-Pallet aus der Runtime entfernt und Dependencies aufgeräumt.
+
+### Netzwerk & Infrastruktur
+
+- Senoti, unseren Notification-Service, hochverfügbar gemacht und den alten Service darauf migriert.
+- Den Senoti-Core-Wallet-Event-Consumer parallelisiert, damit er unter Last nicht mehr drosselt.
+- Senoti und Subsquid stresstestet.
+- Öffentlich erreichbare Endpunkte auditiert.
+- „planck“ in Schema und Docs des Indexers in neutrale „Token Units“ umbenannt.
+- Eine In/Out-Spalte bei Transaktionen im Explorer hinzugefügt und einen Style-Bug auf der Landing Page behoben.
+
+### Web- & Mobile-App-Updates
+
+- Produktionsdesigns für Keystone-Hardware-Wallet-Signup und Signing-Flows ausgeliefert und die Developer-Screens ersetzt.
+- 14 Pull Requests aus dem Mobile-Sicherheitsreview gemerged.
+- Mnemonic-Generierung im SDK zentralisiert, sodass ein sicherer Zufallsgenerator die ganze App bedient.
+- Animierte QR-Dekodierung in unserer UR-Library rund siebenmal beschleunigt und die Fragmentgröße konfigurierbar gemacht — Phone-to-Phone-Transfers nutzen so weniger, dichtere Frames.
+- Drei Phasen SEO-Fixes für die Website ausgeliefert, Wallet-Page-Screenshots und den Podcast-Bereich aktualisiert und einen Blog-Link in die Navigation aufgenommen.
+- [migration.fail](https://migration.fail/) mit funktionierendem Address-Checker, responsive Politur und einer klareren Spec-Tabelle aktualisiert.
+
+### Content & Partnerschaften
+
+- Die vollständige Alex-Pruden-Podcast-Folge veröffentlicht:
+
+<TwitterEmbed url="https://x.com/QuantusNetwork/status/2085335080491458874" />
+
+Viel Erfolg bei der Bug-Jagd.
+
+Bleibt kühl, Quants.

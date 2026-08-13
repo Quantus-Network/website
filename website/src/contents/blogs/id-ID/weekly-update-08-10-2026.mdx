@@ -1,0 +1,83 @@
+---
+title: "Quantus Weekly: Bug Bounty Publik"
+description: "Bug bounty publik Immunefi berjalan 12–24 Agustus. Plus ML-DSA-65 bersama ML-DSA-87, penguatan keamanan, Senoti HA, dan desain produksi Keystone."
+pubDate: "2026-08-10"
+heroImage: "/blog/covers/weekly-update-08-10-2026.webp"
+heroAlt: "Quantus Weekly: Bug Bounty Publik"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "quantum",
+    "post-quantum",
+    "immunefi",
+    "bug-bounty",
+    "security",
+    "ml-dsa",
+    "dilithium",
+    "zk-proofs",
+    "senoti",
+    "keystone",
+    "mobile",
+    "poseidon",
+  ]
+---
+
+import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
+
+Mulai Rabu, kami menjalankan bug bounty publik di [@immunefi](https://x.com/@immunefi). Dibuka 12 Agustus dan berlangsung sampai 24 Agustus.
+
+Beberapa minggu terakhir kami mengeraskan sistem sebagai persiapan audit publik. Kami menjalankan lebih banyak V12 security review pada chain, memperketat penanganan memori, dan menerbitkan kebijakan keamanan dengan pengungkapan privat di repo chain, Poseidon, dan sirkuit ZK.
+
+Sejak awal, Quantus testnet memakai ML-DSA-87 (skema tanda tangan post-quantum NIST yang terbesar).
+
+ML-DSA-65 tampak seperti batas ukuran kunci yang akan didukung sebagian besar hardware wallet, dan standar industri yang mungkin untuk blockchain post-quantum.
+
+Jadi sekarang chain menjalankan ML-DSA-87 dan ML-DSA-65, dan aplikasi yang menghadap pengguna kemungkinan akan default ke 65.
+
+Berikut yang kami bangun minggu lalu:
+
+### Github Activity (15+ merged pull requests):
+
+![Github Stats](/blog/assets/github-stats-weekly-update-08-10-2026.webp)
+
+### Core Tech & ZK
+
+- Mengumumkan kompetisi audit Immunefi pada chain, live 12 hingga 24 Agustus.
+
+<TwitterEmbed url="https://x.com/immunefi/status/2086803012920443159" />
+
+- Penguatan keamanan yang mencakup recovery pallet, scheduler, frame-system, serta jalur settlement dan metering wormhole.
+- Merilis runtime upgrade yang menambahkan ML-DSA-65 sebagai skema tanda tangan transaksi kedua di samping ML-DSA-87, dengan flag CLI untuk memilih salah satunya.
+- Memperketat penanganan memori di seluruh tumpukan kriptografi. Pustaka Dilithium kini menolkan rahasia di heap, di stack, dan di batas API publik. Poseidon menghapus keadaan sponge setelah hashing.
+- Menerbitkan kebijakan keamanan dengan pengungkapan kerentanan privat di repo chain, Poseidon, dan sirkuit ZK.
+- Menaikkan ukuran public batch default dari 4 menjadi 53 private batch, sehingga setiap proof teragregasi membawa jauh lebih banyak transaksi.
+- Menghapus assets pallet yang tidak terpakai dari runtime dan merapikan dependensi.
+
+### Network & Infra
+
+- Menjadikan Senoti, layanan notifikasi kami, highly available, dan memigrasikan layanan lama ke sana.
+- Memparalelkan Senoti core wallet event consumer agar tidak lagi throttling di bawah beban.
+- Melakukan stress test Senoti dan Subsquid.
+- Mengaudit endpoint yang terekspos secara publik.
+- Mengganti nama "planck" menjadi "token units" yang netral di skema indexer dan dokumentasi.
+- Menambahkan kolom in/out pada transaksi di explorer dan memperbaiki bug gaya di landing page.
+
+### Web & Mobile App Updates
+
+- Merilis desain produksi untuk alur signup dan signing hardware wallet Keystone, menggantikan layar pengembang.
+- Menggabungkan 14 pull request dari mobile security review.
+- Memusatkan generasi mnemonic di SDK sehingga satu generator bilangan acak yang aman melayani seluruh aplikasi.
+- Mempercepat decoding QR animasi sekitar tujuh kali di pustaka UR kami dan membuat ukuran fragmen dapat dikonfigurasi, sehingga transfer ponsel-ke-ponsel memakai lebih sedikit frame yang lebih padat.
+- Merilis tiga fase perbaikan SEO untuk situs, menyegarkan screenshot halaman wallet dan bagian podcast, serta menambahkan tautan blog ke navigasi.
+- Memperbarui [migration.fail](https://migration.fail/) dengan pemeriksa alamat yang berfungsi, polesan responsif, dan tabel spesifikasi yang lebih jelas.
+
+### Content & Partnerships
+
+- Menerbitkan episode podcast Alex Pruden secara lengkap:
+
+<TwitterEmbed url="https://x.com/QuantusNetwork/status/2085335080491458874" />
+
+Selamat berburu bug.
+
+Stay frosty, quants.

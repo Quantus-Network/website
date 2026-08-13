@@ -944,7 +944,10 @@
       "cryptography": "暗号技術",
       "charles-edwards": "Charles Edwards",
       "encrypted-accounts": "暗号化アカウント",
-      "infra": "インフラ"
+      "infra": "インフラ",
+      "immunefi": "Immunefi",
+      "bug-bounty": "バグバウンティ",
+      "senoti": "Senoti"
     }
   },
   "cookie": {
