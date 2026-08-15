@@ -30,7 +30,13 @@ const metadata = createMetadata({
   imageAlt: person.name,
 });
 
-const jsonLd = getProfilePageJsonLd(slug, metadata.canonical as string);
+const jobTitle = t(`team.people.${slug}.jobTitle`);
+const bio = t(`team.people.${slug}.bio`);
+
+const jsonLd = getProfilePageJsonLd(slug, metadata.canonical as string, {
+  jobTitle,
+  description: bio,
+});
 const aboutTeamHref = `${getLocalizedPath(locale, "/about")}#team`;
 ---
 
@@ -65,7 +71,7 @@ const aboutTeamHref = `${getLocalizedPath(locale, "/about")}#team`;
           <p
             class="text-flare font-mono text-[11px] tracking-[0.14em] uppercase"
           >
-            {person.jobTitle}
+            {jobTitle}
           </p>
           <a
             href={person.social.url}
@@ -91,7 +97,7 @@ const aboutTeamHref = `${getLocalizedPath(locale, "/about")}#team`;
       </header>
 
       <div class="person-bio">
-        {person.bio.split(/\n\n+/).map((paragraph) => <p>{paragraph}</p>)}
+        {bio.split(/\n\n+/).map((paragraph: string) => <p>{paragraph}</p>)}
       </div>
     </div>
   </article>

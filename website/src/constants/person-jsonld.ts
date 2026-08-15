@@ -18,7 +18,15 @@ function personImageUrl(slug: PersonId): string {
   return new URL(PERSON_IMAGES[slug].src, env.SITE_BASE_URL).toString();
 }
 
-export function getPersonJsonLd(slug: PersonId): Person {
+type PersonJsonLdCopy = {
+  jobTitle?: string;
+  description?: string;
+};
+
+export function getPersonJsonLd(
+  slug: PersonId,
+  copy?: PersonJsonLdCopy,
+): Person {
   const person = PEOPLE[slug];
   const imageUrl = personImageUrl(slug);
 
@@ -32,8 +40,8 @@ export function getPersonJsonLd(slug: PersonId): Person {
       url: imageUrl,
       contentUrl: imageUrl,
     },
-    jobTitle: person.jobTitle,
-    description: person.bio,
+    jobTitle: copy?.jobTitle ?? person.jobTitle,
+    description: copy?.description ?? person.bio,
     sameAs: [...person.sameAs],
     worksFor: {
       "@id": env.SITE_BASE_URL,
@@ -58,8 +66,9 @@ export function getAllPersonJsonLd(): Person[] {
 export function getProfilePageJsonLd(
   slug: PersonId,
   canonicalUrl: string,
+  copy?: PersonJsonLdCopy,
 ): Graph {
-  const person = getPersonJsonLd(slug);
+  const person = getPersonJsonLd(slug, copy);
   const profilePage: ProfilePage = {
     "@type": "ProfilePage",
     "@id": `${canonicalUrl}#profile`,

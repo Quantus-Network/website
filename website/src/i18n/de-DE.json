@@ -510,25 +510,31 @@
     }
   },
   "team": {
-    "back_to_about": "Back to About",
-    "follow_on_x": "Follow on X",
+    "back_to_about": "Zurück zu Über uns",
+    "follow_on_x": "Auf X folgen",
     "people": {
       "christopher-smith": {
+        "jobTitle": "Gründer und CEO, Quantus",
+        "bio": "Christopher Smith ist Chefredakteur von Quantum Canary sowie Gründer und CEO von Quantus. Als Technologieunternehmer in den Bereichen künstliche Intelligenz, Blockchain und Quantencomputing entwickelt er seit mehr als einem Jahrzehnt Werkzeuge für dezentrale Systeme. Zu seinen früheren Unternehmen zählen BitMesh, Lunyr und FactoryDAO; außerdem wirkte er an früher Bitcoin-Software und Privacy-Tooling mit. Chris ist Autor des Quantus-Whitepapers und Moderator des QDay-Podcasts, in dem er mit Forschern und Buildern über Quantencomputing, Kryptografie und die Zukunft digitalen Geldes spricht.",
         "meta": {
-          "title": "Christopher Smith | Founder and CEO, Quantus",
-          "description": "Christopher Smith is founder and CEO of Quantus and Editor-in-Chief of Quantum Canary, working across AI, blockchain, and post-quantum cryptography."
+          "title": "Christopher Smith | Gründer und CEO, Quantus",
+          "description": "Christopher Smith ist Gründer und CEO von Quantus und Chefredakteur von Quantum Canary. Er arbeitet an KI, Blockchain und Post-Quanten-Kryptografie."
         }
       },
       "joe-mattia": {
+        "jobTitle": "Mitgründer und COO, Quantus",
+        "bio": "Joseph Mattia ist Mitgründer und COO von Quantus. Er leitet den operativen Bereich und hilft, Post-Quanten-Forschung in Produktumsetzung und Community-Programme zu übersetzen. Er hat Quantus auf QDay-Veranstaltungen vertreten und frühe Folgen des QDay-Podcasts mitmoderiert – und bringt dabei die Perspektive eines Operators zu Blockchain-Sicherheit, Adoption und Koordination ein. Joe konzentriert sich auf die praktischen Entscheidungen, die Builder, Institutionen und Vermögensinhaber treffen müssen, bevor das Quantenrisiko zum Notfall wird.",
         "meta": {
-          "title": "Joseph Mattia | Co-founder and COO, Quantus",
-          "description": "Joseph Mattia is co-founder and COO of Quantus, leading operations that turn post-quantum research into products, community programs, and QDay events."
+          "title": "Joseph Mattia | Mitgründer und COO, Quantus",
+          "description": "Joseph Mattia ist Mitgründer und COO von Quantus. Er führt den Betrieb und macht aus Post-Quanten-Forschung Produkte, Community-Programme und QDay-Events."
         }
       },
       "jonathan-angle": {
+        "jobTitle": "Kommunikationsdirektor, Quantus",
+        "bio": "Jonathan „Jangle“ Angle ist Kommunikationsdirektor bei Quantus, der Post-Quanten-Blockchain. Mit Hintergrund in IT-Sicherheit, Beratung und DeFi hat er Strategie, Produkt und Betrieb von Quantus maßgeblich mitgestaltet. Er schreibt über Blockchain-Sicherheit, Post-Quanten-Kryptografie und DeFi als @defijangle.",
         "meta": {
-          "title": "Jonathan Angle | Communications Director, Quantus",
-          "description": "Jonathan Angle leads communications at Quantus. With a background in IT security, consulting, and DeFi, he writes on post-quantum cryptography as @defijangle."
+          "title": "Jonathan Angle | Kommunikationsdirektor, Quantus",
+          "description": "Jonathan Angle leitet Kommunikation bei Quantus. Mit Erfahrung in IT-Sicherheit, Beratung und DeFi schreibt er als @defijangle über Post-Quanten-Kryptografie."
         }
       }
     }

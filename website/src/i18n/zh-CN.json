@@ -510,25 +510,31 @@
     }
   },
   "team": {
-    "back_to_about": "Back to About",
-    "follow_on_x": "Follow on X",
+    "back_to_about": "返回关于我们",
+    "follow_on_x": "在 X 上关注",
     "people": {
       "christopher-smith": {
+        "jobTitle": "Quantus 创始人兼首席执行官",
+        "bio": "Christopher Smith 是 Quantum Canary 的主编，也是 Quantus 的创始人兼首席执行官。作为一名横跨人工智能、区块链和量子计算的科技创业者，他十多年来一直在为去中心化系统构建工具。他此前创办过 BitMesh、Lunyr 和 FactoryDAO，并参与过早期 Bitcoin 软件与隐私工具的开发。Chris 是 Quantus 白皮书的作者，也是 QDay 播客的主持人，与研究者和建设者探讨量子计算、密码学以及数字货币的未来。",
         "meta": {
-          "title": "Christopher Smith | Founder and CEO, Quantus",
-          "description": "Christopher Smith is founder and CEO of Quantus and Editor-in-Chief of Quantum Canary, working across AI, blockchain, and post-quantum cryptography."
+          "title": "Christopher Smith | Quantus 创始人兼首席执行官",
+          "description": "Christopher Smith 是 Quantus 创始人兼首席执行官，也是 Quantum Canary 主编，深耕人工智能、区块链与后量子密码学。"
         }
       },
       "joe-mattia": {
+        "jobTitle": "Quantus 联合创始人兼首席运营官",
+        "bio": "Joseph Mattia 是 Quantus 的联合创始人兼首席运营官，负责运营，并将后量子研究转化为产品落地与社区项目。他曾代表 Quantus 出席 QDay 活动，并共同主持过 QDay 播客的早期节目，从运营者的视角讨论区块链安全、采用与协作。Joe 关注建设者、机构和资产持有人在量子风险演变成紧急事态之前必须做出的实际选择。",
         "meta": {
-          "title": "Joseph Mattia | Co-founder and COO, Quantus",
-          "description": "Joseph Mattia is co-founder and COO of Quantus, leading operations that turn post-quantum research into products, community programs, and QDay events."
+          "title": "Joseph Mattia | Quantus 联合创始人兼首席运营官",
+          "description": "Joseph Mattia 是 Quantus 联合创始人兼首席运营官，负责将后量子研究转化为产品、社区项目与 QDay 活动，推动落地执行。"
         }
       },
       "jonathan-angle": {
+        "jobTitle": "Quantus 传播总监",
+        "bio": "Jonathan “Jangle” Angle 是后量子区块链 Quantus 的传播总监。他拥有 IT 安全、咨询和 DeFi 背景，深度参与 Quantus 的战略、产品与运营。他以 @defijangle 的身份撰写区块链安全、后量子密码学和 DeFi 相关内容。",
         "meta": {
-          "title": "Jonathan Angle | Communications Director, Quantus",
-          "description": "Jonathan Angle leads communications at Quantus. With a background in IT security, consulting, and DeFi, he writes on post-quantum cryptography as @defijangle."
+          "title": "Jonathan Angle | Quantus 传播总监",
+          "description": "Jonathan Angle 负责 Quantus 传播工作。他拥有 IT 安全、咨询与 DeFi 背景，以 @defijangle 撰写后量子密码学相关内容。"
         }
       }
     }
