@@ -14,7 +14,7 @@ const blog = defineCollection({
     tags: z.array(z.string()).default([]),
     author: z
       .enum(["christopher-smith", "joe-mattia", "jonathan-angle"])
-      .default("christopher-smith"),
+      .optional(),
   }),
 });
 

@@ -10,7 +10,7 @@ import {
 } from "@/utils/i18n";
 import { createMetadata } from "@/utils/create-metadata";
 import { JsonLdGraph } from "@/utils/build-json-ld";
-import { PEOPLE, personId, type PersonId } from "@/constants/people";
+import { PEOPLE, isPersonId, personId } from "@/constants/people";
 import { getPersonJsonLd } from "@/constants/person-jsonld";
 import { organizationJsonLd } from "@/constants/default-jsonld";
 import env from "@/config";
@@ -27,7 +27,7 @@ const {
   heroImage,
   heroAlt,
   tags = [],
-  author: authorId = "christopher-smith",
+  author: authorId,
   relatedPosts = [],
 } = Astro.props;
 
@@ -43,8 +43,7 @@ const metadata = createMetadata({
 });
 
 const blogIndexHref = getLocalizedPath(currentLocale, "/blog");
-const author = PEOPLE[authorId as PersonId];
-const authorHref = getLocalizedPath(currentLocale, `/team/${author.id}`);
+const author = authorId && isPersonId(authorId) ? PEOPLE[authorId] : undefined;
 
 const article: Article = {
   "@type": "Article",
@@ -55,13 +54,17 @@ const article: Article = {
   image: metadata.openGraph?.basic?.image,
   datePublished: pubDate.toISOString(),
   dateModified: updatedDate?.toISOString() || pubDate.toISOString(),
-  author: { "@id": personId(author.id) },
+  author: author
+    ? { "@id": personId(author.id) }
+    : { "@id": env.SITE_BASE_URL },
   publisher: { "@id": env.SITE_BASE_URL },
 };
 
 const jsonLd = JsonLdGraph({
   "@context": "https://schema.org",
-  "@graph": [article, getPersonJsonLd(author.id), organizationJsonLd],
+  "@graph": author
+    ? [article, getPersonJsonLd(author.id), organizationJsonLd]
+    : [article, organizationJsonLd],
 });
 ---
 
@@ -114,12 +117,18 @@ const jsonLd = JsonLdGraph({
             }
           </time>
           <span class="text-content-35">&nbsp;·&nbsp;</span>
-          <a
-            href={authorHref}
-            class="hover:text-flare text-inherit no-underline transition-colors"
-          >
-            {author.name}
-          </a>
+          {
+            author ? (
+              <a
+                href={getLocalizedPath(currentLocale, `/team/${author.id}`)}
+                class="hover:text-flare text-inherit no-underline transition-colors"
+              >
+                {author.name}
+              </a>
+            ) : (
+              <span>{t("blog.post.author")}</span>
+            )
+          }
         </p>
         {
           updatedDate && (
