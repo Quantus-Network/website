@@ -6,8 +6,7 @@ import {
   createTranslator,
   PREFIXED_LOCALES,
 } from "@/utils/i18n";
-import { JsonLdGraph } from "@/utils/build-json-ld";
-import { getWhitepaperJsonLd } from "@/constants/default-jsonld";
+import { getWhitepaperJsonLdGraph } from "@/constants/person-jsonld";
 import { createMetadata } from "@/utils/create-metadata";
 import WhitepaperHeader from "@/components/features/whitepaper/WhitepaperHeader.astro";
 import TableOfContents from "@/components/features/whitepaper/TableOfContents.astro";
@@ -46,10 +45,11 @@ const metadata = createMetadata({
   pathname: Astro.url.pathname,
 });
 
-const jsonLd = JsonLdGraph({
-  "@context": "https://schema.org",
-  "@graph": [getWhitepaperJsonLd(locale, entry.data.version)],
-});
+const jsonLd = getWhitepaperJsonLdGraph(
+  locale,
+  entry.data.version,
+  entry.data.authors,
+);
 
 const styleVersion = entry.data.version === "0.3.1" ? "v1" : "v2";
 ---

@@ -67,7 +67,11 @@ export default defineConfig({
       lastmod: new Date(),
       i18n: { defaultLocale: DEFAULT_LOCALE, locales: LOCALES_MAP },
       filter: (page) => {
+        const path = new URL(page).pathname.replace(/\/$/, "") || "/";
+        const isTeamIndex =
+          path === "/team" || /\/[a-z]{2}-[A-Z]{2}\/team$/.test(path);
         return (
+          !isTeamIndex &&
           !page.includes("/tags/") &&
           !page.includes("/account/") &&
           !page.includes("/oauth/") &&

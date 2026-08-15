@@ -509,6 +509,30 @@
       "cta": "메시지 보내기 →"
     }
   },
+  "team": {
+    "back_to_about": "Back to About",
+    "follow_on_x": "Follow on X",
+    "people": {
+      "christopher-smith": {
+        "meta": {
+          "title": "Christopher Smith | Founder and CEO, Quantus",
+          "description": "Christopher Smith is founder and CEO of Quantus and Editor-in-Chief of Quantum Canary, working across AI, blockchain, and post-quantum cryptography."
+        }
+      },
+      "joe-mattia": {
+        "meta": {
+          "title": "Joseph Mattia | Co-founder and COO, Quantus",
+          "description": "Joseph Mattia is co-founder and COO of Quantus, leading operations that turn post-quantum research into products, community programs, and QDay events."
+        }
+      },
+      "jonathan-angle": {
+        "meta": {
+          "title": "Jonathan Angle | Communications Director, Quantus",
+          "description": "Jonathan Angle leads communications at Quantus. With a background in IT security, consulting, and DeFi, he writes on post-quantum cryptography as @defijangle."
+        }
+      }
+    }
+  },
   "community": {
     "meta": {
       "title": "커뮤니티 | Quantus 양자 보안 미래에 참여",

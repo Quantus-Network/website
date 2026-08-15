@@ -1,8 +1,9 @@
 ---
 import type { Locale } from "@/utils/i18n";
-import { formatDate } from "@/utils/i18n";
+import { formatDate, getLocalizedPath } from "@/utils/i18n";
 import VersionSelector from "./VersionSelector.astro";
 import DownloadButton from "./DownloadButton.astro";
+import { getPersonByName } from "@/constants/people";
 
 export interface Props {
   title: string;
@@ -55,7 +56,30 @@ const displayDate = updatedDate ?? publishedDate;
       >
         <p>
           <span class="font-bold">{t("whitepaper.authors")}:</span>
-          {authors.join(", ")}
+          {
+            authors.map((name, index) => {
+              const person = getPersonByName(name);
+              const href = person
+                ? getLocalizedPath(locale, `/team/${person.id}`)
+                : undefined;
+
+              return (
+                <>
+                  {index > 0 ? ", " : " "}
+                  {href ? (
+                    <a
+                      href={href}
+                      class="hover:text-white hover:underline print:text-inherit print:no-underline"
+                    >
+                      {name}
+                    </a>
+                  ) : (
+                    name
+                  )}
+                </>
+              );
+            })
+          }
         </p>
         <span class="text-white/20 print:text-[#ccc]">|</span>
         <p>

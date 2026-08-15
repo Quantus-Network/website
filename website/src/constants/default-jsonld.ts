@@ -2,11 +2,13 @@ import env from "@/config";
 import type {
   MobileApplication,
   Organization,
+  Person,
   TechArticle,
   WebSite,
 } from "schema-dts";
 import defaultMetadata from "./default-metadata";
 import { APP_LINKS } from "./app-links";
+import { getPersonByName, personId } from "./people";
 
 export const websiteJsonLd: WebSite = {
   "@type": "WebSite",
@@ -74,6 +76,11 @@ export const organizationJsonLd: Organization = {
     "https://www.youtube.com/@QuantusNetwork",
     "https://github.com/Quantus-Network",
   ],
+  founder: [
+    { "@id": personId("christopher-smith") },
+    { "@id": personId("joe-mattia") },
+  ],
+  employee: { "@id": personId("jonathan-angle") },
 };
 
 export const iosAppJsonLd: MobileApplication = {
@@ -107,17 +114,10 @@ export const whitepaperJsonLd: TechArticle = {
   description:
     "The official whitepaper for Quantus, detailing the versioned history, protocol, and architecture of the network.",
   author: {
-    "@type": "Organization",
-    name: "Quantus",
-    url: "https://github.com/Quantus-Network",
+    "@id": personId("christopher-smith"),
   },
   publisher: {
-    "@type": "Organization",
-    name: "Quantus",
-    logo: {
-      "@type": "ImageObject",
-      url: "https://github.com/Quantus-Network.png",
-    },
+    "@id": env.SITE_BASE_URL,
   },
   inLanguage: "en-US",
   about: {
@@ -127,9 +127,28 @@ export const whitepaperJsonLd: TechArticle = {
   },
 };
 
+function resolveWhitepaperAuthors(
+  authorNames: string[],
+): Person | Organization | (Person | Organization)[] {
+  const authors = authorNames.map((name) => {
+    const person = getPersonByName(name);
+    if (person) {
+      return { "@id": personId(person.id) } as Person;
+    }
+    return {
+      "@type": "Organization",
+      name,
+      url: env.SITE_BASE_URL,
+    } satisfies Organization;
+  });
+
+  return authors.length === 1 ? authors[0]! : authors;
+}
+
 export const getWhitepaperJsonLd = (
   locale: string,
   version?: string,
+  authorNames: string[] = ["Christopher Smith"],
 ): TechArticle => {
   const basePath =
     locale === "en-US"
@@ -145,6 +164,7 @@ export const getWhitepaperJsonLd = (
     ...whitepaperJsonLd,
     "@id": url,
     inLanguage: locale,
+    author: resolveWhitepaperAuthors(authorNames),
     ...(version ? { version } : {}),
     encoding: {
       "@type": "MediaObject",

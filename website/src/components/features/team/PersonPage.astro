@@ -1,0 +1,158 @@
+---
+import { Image } from "astro:assets";
+import Layout from "@/components/layout/Layout.astro";
+import { PEOPLE, type PersonId } from "@/constants/people";
+import { PERSON_IMAGES } from "@/constants/person-images";
+import { getProfilePageJsonLd } from "@/constants/person-jsonld";
+import { createMetadata } from "@/utils/create-metadata";
+import {
+  createTranslator,
+  getLocaleFromUrl,
+  getLocalizedPath,
+} from "@/utils/i18n";
+
+interface Props {
+  slug: PersonId;
+}
+
+const { slug } = Astro.props;
+const person = PEOPLE[slug];
+const image = PERSON_IMAGES[slug];
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
+
+const metadata = createMetadata({
+  title: t(`team.people.${slug}.meta.title`),
+  description: t(`team.people.${slug}.meta.description`),
+  pathname: Astro.url.pathname,
+  imageUrl: image.src,
+  imageAlt: person.name,
+});
+
+const jsonLd = getProfilePageJsonLd(slug, metadata.canonical as string);
+const aboutTeamHref = `${getLocalizedPath(locale, "/about")}#team`;
+---
+
+<Layout {...metadata} jsonLd={jsonLd}>
+  <article class="person-page bg-void">
+    <div
+      class="px-content-edges max-md:px-content-edges-mobile mx-auto max-w-[860px] pt-[140px] pb-24 max-md:pt-[120px] max-md:pb-20"
+    >
+      <a
+        href={aboutTeamHref}
+        class="person-page-back text-content-40 hover:text-flare mb-10 inline-flex items-center gap-2 font-mono text-[11px] tracking-[0.16em] uppercase no-underline transition-colors"
+      >
+        {t("team.back_to_about")}
+      </a>
+
+      <header class="mb-10 flex items-start gap-8 max-md:flex-col max-md:gap-6">
+        <div class="person-photo-wrap">
+          <Image
+            src={image}
+            alt={person.name}
+            width={240}
+            height={240}
+            class="person-photo"
+          />
+        </div>
+        <div class="min-w-0 pt-1">
+          <h1
+            class="font-primary mb-3 text-[clamp(28px,3.5vw,48px)] leading-[1.18] font-medium text-white"
+          >
+            {person.name}
+          </h1>
+          <p
+            class="text-flare font-mono text-[11px] tracking-[0.14em] uppercase"
+          >
+            {person.jobTitle}
+          </p>
+          <a
+            href={person.social.url}
+            target="_blank"
+            rel="noopener"
+            class="person-x-link"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              width="12"
+              height="12"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+              ></path>
+            </svg>
+            {t("team.follow_on_x")}
+            <span>{person.social.username}</span>
+          </a>
+        </div>
+      </header>
+
+      <div class="person-bio">
+        {person.bio.split(/\n\n+/).map((paragraph) => <p>{paragraph}</p>)}
+      </div>
+    </div>
+  </article>
+</Layout>
+
+<style>
+  .person-page-back::before {
+    content: "←";
+    margin-right: 4px;
+  }
+
+  .person-photo-wrap {
+    width: 200px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border: 1px solid rgba(232, 230, 224, 0.08);
+    background: #111;
+  }
+
+  .person-photo {
+    display: block;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .person-x-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+    text-decoration: none;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: rgba(232, 230, 224, 0.35);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: color 0.2s ease;
+  }
+
+  .person-x-link:hover {
+    color: var(--color-flare);
+  }
+
+  .person-bio p {
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--color-content-70);
+    margin-bottom: 24px;
+  }
+
+  .person-bio p:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 768px) {
+    .person-photo-wrap,
+    .person-photo {
+      width: 160px;
+      height: 160px;
+    }
+  }
+</style>
