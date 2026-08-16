@@ -1,0 +1,15 @@
+---
+import PersonPage from "@/components/features/team/PersonPage.astro";
+import { PERSON_IDS, isPersonId } from "@/constants/people";
+
+export function getStaticPaths() {
+  return PERSON_IDS.map((slug) => ({ params: { slug } }));
+}
+
+const { slug } = Astro.params;
+if (!slug || !isPersonId(slug)) {
+  return Astro.redirect("/404");
+}
+---
+
+<PersonPage slug={slug} />

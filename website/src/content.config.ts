@@ -12,6 +12,9 @@ const blog = defineCollection({
     heroAlt: z.string().optional(),
     featured: z.boolean().optional(),
     tags: z.array(z.string()).default([]),
+    author: z
+      .enum(["christopher-smith", "joe-mattia", "jonathan-angle"])
+      .optional(),
   }),
 });
 

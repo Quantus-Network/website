@@ -509,6 +509,36 @@
       "cta": "ENVÍENOS UN MENSAJE →"
     }
   },
+  "team": {
+    "back_to_about": "Volver a Sobre nosotros",
+    "follow_on_x": "Seguir en X",
+    "people": {
+      "christopher-smith": {
+        "jobTitle": "Fundador y CEO, Quantus",
+        "bio": "Christopher Smith es editor jefe de Quantum Canary y fundador y CEO de Quantus. Emprendedor tecnológico en inteligencia artificial, blockchain y computación cuántica, lleva más de una década construyendo herramientas para sistemas descentralizados. Sus proyectos anteriores incluyen BitMesh, Lunyr y FactoryDAO, y contribuyó a software temprano de Bitcoin y a herramientas de privacidad. Chris es autor del whitepaper de Quantus y presentador del podcast QDay, donde conversa con investigadores y builders sobre computación cuántica, criptografía y el futuro del dinero digital.",
+        "meta": {
+          "title": "Christopher Smith | Fundador y CEO, Quantus",
+          "description": "Christopher Smith es fundador y CEO de Quantus y editor jefe de Quantum Canary. Trabaja en IA, blockchain y criptografía post-cuántica."
+        }
+      },
+      "joe-mattia": {
+        "jobTitle": "Cofundador y COO, Quantus",
+        "bio": "Joseph Mattia es cofundador y COO de Quantus, donde dirige las operaciones y ayuda a convertir la investigación post-cuántica en ejecución de producto y programas comunitarios. Ha representado a Quantus en eventos QDay y copresentó los primeros episodios del podcast QDay, aportando la perspectiva de un operador sobre seguridad blockchain, adopción y coordinación. Joe se centra en las decisiones prácticas que builders, instituciones y tenedores de activos deben tomar antes de que el riesgo cuántico se convierta en una emergencia.",
+        "meta": {
+          "title": "Joseph Mattia | Cofundador y COO, Quantus",
+          "description": "Joseph Mattia es cofundador y COO de Quantus. Lidera operaciones que convierten la investigación post-cuántica en productos, programas y eventos QDay."
+        }
+      },
+      "jonathan-angle": {
+        "jobTitle": "Director de comunicaciones, Quantus",
+        "bio": "Jonathan “Jangle” Angle es director de comunicaciones de Quantus, la blockchain post-cuántica. Con experiencia en seguridad informática, consultoría y DeFi, ha sido clave en la estrategia, el producto y las operaciones de Quantus. Escribe sobre seguridad blockchain, criptografía post-cuántica y DeFi como @defijangle.",
+        "meta": {
+          "title": "Jonathan Angle | Director de comunicaciones, Quantus",
+          "description": "Jonathan Angle dirige la comunicación en Quantus. Con experiencia en seguridad TI, consultoría y DeFi, escribe de criptografía post-cuántica como @defijangle."
+        }
+      }
+    }
+  },
   "community": {
     "meta": {
       "title": "Comunidad | Únase al futuro Quantus",

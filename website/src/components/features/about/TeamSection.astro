@@ -6,8 +6,13 @@ import JosephMattia from "@/assets/team/joe-mattia.webp";
 import NikolausHager from "@/assets/team/nikolaus-hager.webp";
 import JonathanAngle from "@/assets/team/jonathan-angle.webp";
 import JarrodJayFrankel from "@/assets/team/jarrod-jay-frankel.webp";
-import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+import {
+  createTranslator,
+  getLocaleFromUrl,
+  getLocalizedPath,
+} from "@/utils/i18n";
 import { TEAMS } from "@/constants/teams";
+import { isPersonId } from "@/constants/people";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
@@ -32,40 +37,54 @@ const TEAM_IMAGES = {
     </h2>
     <div class="team-grid">
       {
-        TEAMS.map((team) => (
-          <div class="team-card about-animate" data-delay="0">
-            <div class="team-img-wrap">
-              <a
-                href={team.social.url}
-                target="_blank"
-                rel="noopener"
-                style="display:block;line-height:0;"
-              >
-                <Image src={TEAM_IMAGES[team.id]} alt={team.name} />
-              </a>
-            </div>
-            <div class="team-card-body">
-              <span class="team-name">{team.name}</span>
-              <span class="team-role">{team.role}</span>
-              <a
-                href={team.social.url}
-                target="_blank"
-                rel="noopener"
-                class="team-x-link"
-              >
-                <svg
-                  viewBox="0 0 24 24"
-                  width="12"
-                  height="12"
-                  fill="currentColor"
+        TEAMS.map((team) => {
+          const profileHref = isPersonId(team.id)
+            ? getLocalizedPath(locale, `/team/${team.id}`)
+            : undefined;
+          const photoHref = profileHref ?? team.social.url;
+          const photoIsExternal = !profileHref;
+
+          return (
+            <div class="team-card about-animate" data-delay="0">
+              <div class="team-img-wrap">
+                <a
+                  href={photoHref}
+                  target={photoIsExternal ? "_blank" : undefined}
+                  rel={photoIsExternal ? "noopener" : undefined}
+                  style="display:block;line-height:0;"
                 >
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                </svg>
-                @{team.social.username}
-              </a>
+                  <Image src={TEAM_IMAGES[team.id]} alt={team.name} />
+                </a>
+              </div>
+              <div class="team-card-body">
+                {profileHref ? (
+                  <a href={profileHref} class="team-name-link">
+                    <span class="team-name">{team.name}</span>
+                  </a>
+                ) : (
+                  <span class="team-name">{team.name}</span>
+                )}
+                <span class="team-role">{team.role}</span>
+                <a
+                  href={team.social.url}
+                  target="_blank"
+                  rel="noopener"
+                  class="team-x-link"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="12"
+                    height="12"
+                    fill="currentColor"
+                  >
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                  </svg>
+                  {team.social.username}
+                </a>
+              </div>
             </div>
-          </div>
-        ))
+          );
+        })
       }
     </div>
   </div>
@@ -146,6 +165,14 @@ const TEAM_IMAGES = {
     font-weight: 500;
     color: #ffffff;
     display: block;
+  }
+
+  .team-name-link {
+    text-decoration: none;
+  }
+
+  .team-name-link:hover .team-name {
+    color: #ff6b35;
   }
 
   .team-role {

@@ -509,6 +509,36 @@
       "cta": "KIRIM PESAN KEPADA KAMI →"
     }
   },
+  "team": {
+    "back_to_about": "Kembali ke Tentang",
+    "follow_on_x": "Ikuti di X",
+    "people": {
+      "christopher-smith": {
+        "jobTitle": "Pendiri dan CEO, Quantus",
+        "bio": "Christopher Smith adalah pemimpin redaksi Quantum Canary serta pendiri dan CEO Quantus. Sebagai wirausahawan teknologi di bidang kecerdasan buatan, blockchain, dan komputasi kuantum, ia lebih dari satu dekade membangun perangkat untuk sistem terdesentralisasi. Usaha sebelumnya mencakup BitMesh, Lunyr, dan FactoryDAO, dan ia berkontribusi pada perangkat lunak Bitcoin awal serta perkakas privasi. Chris adalah penulis whitepaper Quantus dan pembawa acara podcast QDay, di mana ia berbicara dengan peneliti dan builder tentang komputasi kuantum, kriptografi, dan masa depan uang digital.",
+        "meta": {
+          "title": "Christopher Smith | Pendiri dan CEO, Quantus",
+          "description": "Christopher Smith adalah pendiri dan CEO Quantus serta pemimpin redaksi Quantum Canary. Ia berkarya di AI, blockchain, dan kriptografi pasca-kuantum."
+        }
+      },
+      "joe-mattia": {
+        "jobTitle": "Pendiri bersama dan COO, Quantus",
+        "bio": "Joseph Mattia adalah pendiri bersama dan COO Quantus, tempat ia memimpin operasi dan membantu mengubah riset pasca-kuantum menjadi eksekusi produk serta program komunitas. Ia telah mewakili Quantus di acara QDay dan menjadi co-host episode awal podcast QDay, membawa perspektif operator pada keamanan blockchain, adopsi, dan koordinasi. Joe berfokus pada pilihan praktis yang harus diambil builder, institusi, dan pemegang aset sebelum risiko kuantum menjadi keadaan darurat.",
+        "meta": {
+          "title": "Joseph Mattia | Pendiri bersama dan COO, Quantus",
+          "description": "Joseph Mattia adalah pendiri bersama dan COO Quantus. Ia memimpin operasi yang mengubah riset pasca-kuantum menjadi produk, program komunitas, dan acara QDay."
+        }
+      },
+      "jonathan-angle": {
+        "jobTitle": "Direktur Komunikasi, Quantus",
+        "bio": "Jonathan “Jangle” Angle adalah Direktur Komunikasi di Quantus, blockchain pasca-kuantum. Dengan latar belakang keamanan TI, konsultasi, dan DeFi, ia berperan penting dalam strategi, produk, dan operasi Quantus. Ia menulis tentang keamanan blockchain, kriptografi pasca-kuantum, dan DeFi sebagai @defijangle.",
+        "meta": {
+          "title": "Jonathan Angle | Direktur Komunikasi, Quantus",
+          "description": "Jonathan Angle memimpin komunikasi Quantus. Berlatar keamanan TI, konsultasi, dan DeFi, ia menulis kriptografi pasca-kuantum sebagai @defijangle."
+        }
+      }
+    }
+  },
   "community": {
     "meta": {
       "title": "Komunitas | Bergabung dengan Quantus",

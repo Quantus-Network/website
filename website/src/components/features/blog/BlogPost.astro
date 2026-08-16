@@ -2,14 +2,18 @@
 import Layout from "@/components/layout/Layout.astro";
 import Card from "@/components/features/blog/Card.astro";
 import type { CollectionEntry } from "astro:content";
-import type { Article, WithContext } from "schema-dts";
+import type { Article } from "schema-dts";
 import {
   getLocaleFromUrl,
   getLocalizedPath,
   createTranslator,
 } from "@/utils/i18n";
-import env from "@/config";
 import { createMetadata } from "@/utils/create-metadata";
+import { JsonLdGraph } from "@/utils/build-json-ld";
+import { PEOPLE, isPersonId, personId } from "@/constants/people";
+import { getPersonJsonLd } from "@/constants/person-jsonld";
+import { organizationJsonLd } from "@/constants/default-jsonld";
+import env from "@/config";
 
 type Props = CollectionEntry<"blog">["data"] & {
   relatedPosts?: CollectionEntry<"blog">[];
@@ -23,6 +27,7 @@ const {
   heroImage,
   heroAlt,
   tags = [],
+  author: authorId,
   relatedPosts = [],
 } = Astro.props;
 
@@ -38,25 +43,32 @@ const metadata = createMetadata({
 });
 
 const blogIndexHref = getLocalizedPath(currentLocale, "/blog");
+const author = authorId && isPersonId(authorId) ? PEOPLE[authorId] : undefined;
 
-const articleSchema: WithContext<Article> = {
-  "@context": "https://schema.org",
+const article: Article = {
   "@type": "Article",
+  "@id": metadata.canonical as string,
   headline: title,
   description: description,
   url: metadata.canonical as string,
   image: metadata.openGraph?.basic?.image,
   datePublished: pubDate.toISOString(),
   dateModified: updatedDate?.toISOString() || pubDate.toISOString(),
-  author: {
-    "@type": "Organization",
-    name: env.SITE_NAME,
-    url: env.SITE_BASE_URL,
-  },
+  author: author
+    ? { "@id": personId(author.id) }
+    : { "@id": env.SITE_BASE_URL },
+  publisher: { "@id": env.SITE_BASE_URL },
 };
+
+const jsonLd = JsonLdGraph({
+  "@context": "https://schema.org",
+  "@graph": author
+    ? [article, getPersonJsonLd(author.id), organizationJsonLd]
+    : [article, organizationJsonLd],
+});
 ---
 
-<Layout {...metadata} jsonLd={articleSchema}>
+<Layout {...metadata} jsonLd={jsonLd}>
   <article class="blog-post">
     <section class="bg-void">
       <div
@@ -105,7 +117,18 @@ const articleSchema: WithContext<Article> = {
             }
           </time>
           <span class="text-content-35">&nbsp;·&nbsp;</span>
-          <span>{t("blog.post.author")}</span>
+          {
+            author ? (
+              <a
+                href={getLocalizedPath(currentLocale, `/team/${author.id}`)}
+                class="hover:text-flare text-inherit no-underline transition-colors"
+              >
+                {author.name}
+              </a>
+            ) : (
+              <span>{t("blog.post.author")}</span>
+            )
+          }
         </p>
         {
           updatedDate && (

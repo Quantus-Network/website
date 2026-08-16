@@ -13,6 +13,7 @@ import {
   organizationJsonLd,
   websiteJsonLd,
 } from "@/constants/default-jsonld";
+import { getAllPersonJsonLd } from "@/constants/person-jsonld";
 import HeroBanner from "@/components/features/about/HeroBanner.astro";
 import MissionSection from "@/components/features/about/MissionSection.astro";
 import TeamSection from "@/components/features/about/TeamSection.astro";
@@ -34,7 +35,13 @@ const metadata = createMetadata({
 
 const jsonLd = JsonLdGraph({
   "@context": "https://schema.org",
-  "@graph": [websiteJsonLd, organizationJsonLd, iosAppJsonLd, androidAppJsonLd],
+  "@graph": [
+    websiteJsonLd,
+    organizationJsonLd,
+    ...getAllPersonJsonLd(),
+    iosAppJsonLd,
+    androidAppJsonLd,
+  ],
 });
 ---
 

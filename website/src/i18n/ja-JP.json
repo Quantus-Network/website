@@ -509,6 +509,36 @@
       "cta": "メッセージを送る →"
     }
   },
+  "team": {
+    "back_to_about": "概要に戻る",
+    "follow_on_x": "Xでフォロー",
+    "people": {
+      "christopher-smith": {
+        "jobTitle": "Quantus創業者兼CEO",
+        "bio": "Christopher SmithはQuantum Canaryの編集長であり、Quantusの創業者兼CEOです。人工知能、ブロックチェーン、量子コンピューティングに取り組むテクノロジー起業家として、10年以上にわたり分散型システム向けのツールを構築してきました。以前の事業にはBitMesh、Lunyr、FactoryDAOがあり、初期のBitcoinソフトウェアやプライバシーツールにも貢献しています。ChrisはQuantusホワイトペーパーの著者であり、QDayポッドキャストのホストとして、研究者やビルダーとともに量子コンピューティング、暗号、デジタルマネーの未来について語っています。",
+        "meta": {
+          "title": "Christopher Smith | Quantus創業者兼CEO",
+          "description": "Christopher SmithはQuantusの創業者兼CEOであり、Quantum Canaryの編集長。AI、ブロックチェーン、耐量子計算機暗号の分野で活動しています。"
+        }
+      },
+      "joe-mattia": {
+        "jobTitle": "Quantus共同創業者兼COO",
+        "bio": "Joseph MattiaはQuantusの共同創業者兼COOとして、オペレーションを率い、耐量子研究をプロダクト実行とコミュニティプログラムに結びつける役割を担っています。QDayイベントでQuantusを代表し、QDayポッドキャストの初期エピソードを共同ホストするなど、ブロックチェーンのセキュリティ、普及、調整についてオペレーターの視点を提供しています。Joeが注力するのは、量子リスクが緊急事態になる前に、ビルダー、機関、資産保有者が下すべき実務上の判断です。",
+        "meta": {
+          "title": "Joseph Mattia | Quantus共同創業者兼COO",
+          "description": "Joseph MattiaはQuantusの共同創業者兼COO。耐量子研究をプロダクト、コミュニティプログラム、QDayイベントへとつなげる運営を率いています。"
+        }
+      },
+      "jonathan-angle": {
+        "jobTitle": "Quantusコミュニケーションディレクター",
+        "bio": "Jonathan “Jangle” Angleは、ポスト量子ブロックチェーンQuantusのコミュニケーションディレクターです。ITセキュリティ、コンサルティング、DeFiのバックグラウンドを持ち、Quantusの戦略、プロダクト、オペレーションに深く関わってきました。ブロックチェーンセキュリティ、耐量子計算機暗号、DeFiについて@defijangleとして発信しています。",
+        "meta": {
+          "title": "Jonathan Angle | Quantusコミュニケーション責任者",
+          "description": "Jonathan AngleはQuantusのコミュニケーションを統括。ITセキュリティ、コンサルティング、DeFiの経験を活かし、@defijangleとして耐量子暗号について発信しています。"
+        }
+      }
+    }
+  },
   "community": {
     "meta": {
       "title": "コミュニティ | Quantusの量子セキュアな未来へ",

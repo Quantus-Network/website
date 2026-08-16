@@ -509,6 +509,36 @@
       "cta": "메시지 보내기 →"
     }
   },
+  "team": {
+    "back_to_about": "소개로 돌아가기",
+    "follow_on_x": "X에서 팔로우",
+    "people": {
+      "christopher-smith": {
+        "jobTitle": "Quantus 창업자 겸 CEO",
+        "bio": "Christopher Smith는 Quantum Canary의 편집장이자 Quantus의 창업자 겸 CEO입니다. 인공지능, 블록체인, 양자 컴퓨팅을 아우르는 기술 기업가로서 10년 이상 탈중앙 시스템을 위한 도구를 만들어 왔습니다. 이전 벤처로는 BitMesh, Lunyr, FactoryDAO가 있으며, 초기 Bitcoin 소프트웨어와 프라이버시 툴링에도 기여했습니다. Chris는 Quantus 백서의 저자이자 QDay 팟캐스트 진행자로, 연구자 및 빌더들과 양자 컴퓨팅, 암호, 디지털 화폐의 미래를 이야기합니다.",
+        "meta": {
+          "title": "Christopher Smith | Quantus 창업자 겸 CEO",
+          "description": "Christopher Smith는 Quantus 창업자 겸 CEO이자 Quantum Canary 편집장으로, AI·블록체인·양자 내성 암호 분야에서 활동합니다."
+        }
+      },
+      "joe-mattia": {
+        "jobTitle": "Quantus 공동창업자 겸 COO",
+        "bio": "Joseph Mattia는 Quantus의 공동창업자 겸 COO로, 운영을 이끌며 양자 내성 연구를 제품 실행과 커뮤니티 프로그램으로 연결합니다. QDay 행사에서 Quantus를 대표하고 QDay 팟캐스트 초기 에피소드를 공동 진행하며, 블록체인 보안·도입·조율에 운영자의 관점을 더해 왔습니다. Joe는 양자 위험이 비상 사태가 되기 전에 빌더, 기관, 자산 보유자가 내려야 할 실질적 선택에 집중합니다.",
+        "meta": {
+          "title": "Joseph Mattia | Quantus 공동창업자 겸 COO",
+          "description": "Joseph Mattia는 Quantus 공동창업자 겸 COO로, 양자 내성 연구를 제품·커뮤니티 프로그램·QDay 이벤트로 전환하는 운영을 이끕니다."
+        }
+      },
+      "jonathan-angle": {
+        "jobTitle": "Quantus 커뮤니케이션 디렉터",
+        "bio": "Jonathan “Jangle” Angle은 포스트 양자 블록체인 Quantus의 커뮤니케이션 디렉터입니다. IT 보안, 컨설팅, DeFi 배경을 바탕으로 Quantus의 전략, 제품, 운영에 깊이 관여해 왔습니다. 블록체인 보안, 양자 내성 암호, DeFi에 대해 @defijangle로 글을 씁니다.",
+        "meta": {
+          "title": "Jonathan Angle | Quantus 커뮤니케이션 디렉터",
+          "description": "Jonathan Angle은 Quantus의 커뮤니케이션을 이끕니다. IT 보안, 컨설팅, DeFi 배경을 바탕으로 @defijangle로 양자 내성 암호에 대해 글을 씁니다."
+        }
+      }
+    }
+  },
   "community": {
     "meta": {
       "title": "커뮤니티 | Quantus 양자 보안 미래에 참여",
