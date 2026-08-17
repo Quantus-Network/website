@@ -132,8 +132,9 @@
     },
     "hero_banner": {
       "eyebrow": "Quantum-Secure Encrypted Money",
-      "title_line1": "The blockchain quantum",
+      "title_line1": "Money quantum",
       "title_line2": "computers can't break.",
+      "sub": "Quantus is the post-quantum Layer 1. Its money is QUAN: mined into existence, reachable from 35+ chains on day one.",
       "cta_whitepaper": "Read Whitepaper",
       "cta_download_wallet": "Download Wallet",
       "freq": {
@@ -293,7 +294,7 @@
     },
     "newsletter": {
       "headline": "The window is open.",
-      "sub": "Get quantum security updates, protocol news, and early access straight to your inbox.",
+      "sub": "Get mining guides, mainnet news, and QUAN updates first.",
       "first_name_placeholder": "First name",
       "first_name_aria": "First name",
       "last_name_placeholder": "Last name",

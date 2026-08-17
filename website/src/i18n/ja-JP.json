@@ -133,7 +133,8 @@
     "hero_banner": {
       "eyebrow": "量子セキュアな暗号化通貨",
       "title_line1": "量子コンピュータでも",
-      "title_line2": "解読できないブロックチェーン。",
+      "title_line2": "解読できないお金。",
+      "sub": "Quantusはポスト量子のレイヤー1です。その通貨はQUAN：マイニングによって生み出され、初日から35以上のチェーンから利用できます。",
       "cta_whitepaper": "ホワイトペーパーを読む",
       "cta_download_wallet": "ウォレットをダウンロード",
       "freq": {
@@ -293,7 +294,7 @@
     },
     "newsletter": {
       "headline": "チャンスは今です。",
-      "sub": "量子セキュリティのアップデート、プロトコルニュース、早期アクセス情報をメールボックスに直接お届けします。",
+      "sub": "マイニングガイド、メインネットの最新情報、QUANのアップデートを誰よりも早くお届けします。",
       "first_name_placeholder": "名",
       "first_name_aria": "名",
       "last_name_placeholder": "姓",

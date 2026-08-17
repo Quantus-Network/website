@@ -133,7 +133,8 @@
     "hero_banner": {
       "eyebrow": "量子安全加密货币",
       "title_line1": "量子计算机无法",
-      "title_line2": "破解的区块链。",
+      "title_line2": "破解的货币。",
+      "sub": "Quantus 是后量子时代的 Layer 1。它的货币是 QUAN：通过挖矿产生，第一天即可从 35+ 条链接入。",
       "cta_whitepaper": "阅读白皮书",
       "cta_download_wallet": "下载钱包",
       "freq": {
@@ -293,7 +294,7 @@
     },
     "newsletter": {
       "headline": "窗口已开启。",
-      "sub": "直接在您的收件箱中获取量子安全更新、协议新闻和早期访问权限。",
+      "sub": "第一时间获取挖矿指南、主网新闻和 QUAN 更新。",
       "first_name_placeholder": "名",
       "first_name_aria": "名",
       "last_name_placeholder": "姓",

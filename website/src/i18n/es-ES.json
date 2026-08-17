@@ -132,8 +132,9 @@
     },
     "hero_banner": {
       "eyebrow": "Dinero Encriptado Seguro Cuánticamente",
-      "title_line1": "La blockchain que las",
+      "title_line1": "Dinero que las",
       "title_line2": "computadoras cuánticas no pueden romper.",
+      "sub": "Quantus es la Layer 1 post-cuántica. Su dinero es QUAN: creado mediante minería, accesible desde más de 35 cadenas desde el primer día.",
       "cta_whitepaper": "Leer Whitepaper",
       "cta_download_wallet": "Descargar Billetera",
       "freq": {
@@ -293,7 +294,7 @@
     },
     "newsletter": {
       "headline": "La ventana está abierta.",
-      "sub": "Reciba actualizaciones de seguridad cuántica, noticias del protocolo y acceso anticipado directamente en su bandeja de entrada.",
+      "sub": "Reciba guías de minería, noticias de la mainnet y actualizaciones de QUAN antes que nadie.",
       "first_name_placeholder": "Nombre",
       "first_name_aria": "Nombre",
       "last_name_placeholder": "Apellido",

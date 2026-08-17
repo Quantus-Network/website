@@ -132,8 +132,9 @@
     },
     "hero_banner": {
       "eyebrow": "Uang Terenkripsi Aman Secara Kuantum",
-      "title_line1": "Blockchain yang tidak bisa",
+      "title_line1": "Uang yang tidak bisa",
       "title_line2": "dipecahkan oleh komputer kuantum.",
+      "sub": "Quantus adalah Layer 1 pasca-kuantum. Uangnya adalah QUAN: diciptakan melalui penambangan, dapat dijangkau dari 35+ chain sejak hari pertama.",
       "cta_whitepaper": "Baca Whitepaper",
       "cta_download_wallet": "Unduh Dompet",
       "freq": {
@@ -293,7 +294,7 @@
     },
     "newsletter": {
       "headline": "Jendela telah terbuka.",
-      "sub": "Dapatkan pembaruan keamanan kuantum, berita protokol, dan akses awal langsung ke kotak masuk Anda.",
+      "sub": "Dapatkan panduan penambangan, berita mainnet, dan pembaruan QUAN lebih dulu.",
       "first_name_placeholder": "Nama depan",
       "first_name_aria": "Nama depan",
       "last_name_placeholder": "Nama belakang",
