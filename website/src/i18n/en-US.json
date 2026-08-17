@@ -144,7 +144,7 @@
         "block_height": "BLOCK HEIGHT",
         "qtps": "QTPS",
         "uptime": "UPTIME",
-        "nodes": "NODES",
+        "nodes": "MINERS",
         "mainnet": "MAINNET: ??"
       }
     },
