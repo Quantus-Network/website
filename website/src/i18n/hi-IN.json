@@ -145,7 +145,7 @@
         "block_height": "ब्लॉक ऊंचाई",
         "qtps": "QTPS",
         "uptime": "अपटाइम",
-        "nodes": "नोड्स",
+        "nodes": "माइनर्स",
         "mainnet": "MAINNET: ??"
       }
     },
@@ -263,7 +263,7 @@
         "network": {
           "label": "नेटवर्क",
           "description": "नेटवर्क गतिविधि देखें।",
-          "nodes": "247 सक्रिय नोड्स",
+          "miners": "247 सक्रिय माइनर्स",
           "explorer_cta": "एक्सप्लोरर देखें"
         }
       }

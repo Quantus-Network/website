@@ -145,7 +145,7 @@
         "block_height": "区块高度",
         "qtps": "QTPS",
         "uptime": "运行时间",
-        "nodes": "节点",
+        "nodes": "矿工",
         "mainnet": "主网: ??"
       }
     },
@@ -263,7 +263,7 @@
         "network": {
           "label": "网络",
           "description": "查看网络活动。",
-          "nodes": "247 个活跃节点",
+          "miners": "247 个活跃矿工",
           "explorer_cta": "查看浏览器"
         }
       }

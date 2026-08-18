@@ -145,7 +145,7 @@
         "block_height": "TINGGI BLOK",
         "qtps": "QTPS",
         "uptime": "UPTIME",
-        "nodes": "NODE",
+        "nodes": "PENAMBANG",
         "mainnet": "MAINNET: ??"
       }
     },
@@ -263,7 +263,7 @@
         "network": {
           "label": "Jaringan",
           "description": "Lihat aktivitas jaringan.",
-          "nodes": "247 Node Aktif",
+          "miners": "247 Penambang Aktif",
           "explorer_cta": "Lihat Explorer"
         }
       }

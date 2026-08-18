@@ -145,7 +145,7 @@
         "block_height": "BLOCK HEIGHT",
         "qtps": "QTPS",
         "uptime": "UPTIME",
-        "nodes": "NODES",
+        "nodes": "MINERS",
         "mainnet": "MAINNET: ??"
       }
     },
@@ -263,7 +263,7 @@
         "network": {
           "label": "Network",
           "description": "View network activity.",
-          "nodes": "247 Active Nodes",
+          "miners": "247 Active Miners",
           "explorer_cta": "View Explorer"
         }
       }

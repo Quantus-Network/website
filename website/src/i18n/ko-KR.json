@@ -145,7 +145,7 @@
         "block_height": "블록 높이",
         "qtps": "QTPS",
         "uptime": "업타임",
-        "nodes": "노드",
+        "nodes": "채굴자",
         "mainnet": "MAINNET: ??"
       }
     },
@@ -263,7 +263,7 @@
         "network": {
           "label": "네트워크",
           "description": "네트워크 활동 보기.",
-          "nodes": "247개의 활성 노드",
+          "miners": "247명의 활성 채굴자",
           "explorer_cta": "익스플로러 보기"
         }
       }

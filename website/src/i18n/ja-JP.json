@@ -145,7 +145,7 @@
         "block_height": "ブロック高",
         "qtps": "QTPS",
         "uptime": "稼働時間",
-        "nodes": "ノード",
+        "nodes": "マイナー",
         "mainnet": "メインネット: ??"
       }
     },
@@ -263,7 +263,7 @@
         "network": {
           "label": "ネットワーク",
           "description": "ネットワーク活動を表示。",
-          "nodes": "247のアクティブなノード",
+          "miners": "247のアクティブなマイナー",
           "explorer_cta": "エクスプローラーを表示"
         }
       }

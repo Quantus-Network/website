@@ -145,7 +145,7 @@
         "block_height": "ALTURA DE BLOQUE",
         "qtps": "QTPS",
         "uptime": "TIEMPO DE ACTIVIDAD",
-        "nodes": "NODOS",
+        "nodes": "MINEROS",
         "mainnet": "MAINNET: ??"
       }
     },
@@ -263,7 +263,7 @@
         "network": {
           "label": "Red",
           "description": "Ver actividad de la red.",
-          "nodes": "247 Nodos Activos",
+          "miners": "247 Mineros Activos",
           "explorer_cta": "Ver Explorador"
         }
       }

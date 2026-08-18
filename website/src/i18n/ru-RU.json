@@ -145,7 +145,7 @@
         "block_height": "ВЫСОТА БЛОКА",
         "qtps": "QTPS",
         "uptime": "АПТАЙМ",
-        "nodes": "УЗЛЫ",
+        "nodes": "МАЙНЕРЫ",
         "mainnet": "MAINNET: ??"
       }
     },
@@ -263,7 +263,7 @@
         "network": {
           "label": "Сеть",
           "description": "Просмотр активности сети.",
-          "nodes": "247 активных узлов",
+          "miners": "247 активных майнеров",
           "explorer_cta": "Открыть Explorer"
         }
       }
