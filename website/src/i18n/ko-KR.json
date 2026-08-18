@@ -182,6 +182,8 @@
         "vulnerable": "취약함",
         "secure": "안전함"
       },
+      "closer": "위의 모든 자산을 지탱하는 암호 기술에는 유효 기간이 있습니다. Quantus는 포스트 양자 시대를 위해 만들어졌습니다.",
+      "cta": "암호 기술 보기",
       "source": "출처: NIST Post-Quantum Cryptography Standardization · 2024"
     },
     "solution": {
@@ -261,7 +263,7 @@
         "network": {
           "label": "네트워크",
           "description": "네트워크 활동 보기.",
-          "validators": "247명의 활성 검증인",
+          "miners": "247명의 활성 채굴자",
           "explorer_cta": "익스플로러 보기"
         }
       }

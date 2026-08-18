@@ -182,6 +182,8 @@
         "vulnerable": "Vulnerable",
         "secure": "Seguro"
       },
+      "closer": "La criptografía que sustenta cada activo de arriba tiene fecha de caducidad. Quantus se construyó para un futuro post-cuántico.",
+      "cta": "Ver la criptografía",
       "source": "Fuente: NIST Post-Quantum Cryptography Standardization · 2024"
     },
     "solution": {
@@ -261,7 +263,7 @@
         "network": {
           "label": "Red",
           "description": "Ver actividad de la red.",
-          "validators": "247 Validadores Activos",
+          "miners": "247 Mineros Activos",
           "explorer_cta": "Ver Explorador"
         }
       }

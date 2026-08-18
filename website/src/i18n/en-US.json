@@ -182,6 +182,8 @@
         "vulnerable": "Vulnerable",
         "secure": "Secure"
       },
+      "closer": "The cryptography under every asset above has an expiry date. Quantus was built for a post-quantum future.",
+      "cta": "See the cryptography",
       "source": "Source: NIST Post-Quantum Cryptography Standardization · 2024"
     },
     "solution": {
@@ -261,7 +263,7 @@
         "network": {
           "label": "Network",
           "description": "View network activity.",
-          "validators": "247 Active Validators",
+          "miners": "247 Active Miners",
           "explorer_cta": "View Explorer"
         }
       }

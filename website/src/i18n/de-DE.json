@@ -182,6 +182,8 @@
         "vulnerable": "Anfällig",
         "secure": "Sicher"
       },
+      "closer": "Die Kryptografie hinter allen Assets oben hat ein Ablaufdatum. Quantus wurde für eine Post-Quanten-Zukunft entwickelt.",
+      "cta": "Die Kryptografie ansehen",
       "source": "Quelle: NIST Post-Quantum Cryptography Standardization · 2024"
     },
     "solution": {
@@ -261,7 +263,7 @@
         "network": {
           "label": "Netzwerk",
           "description": "Netzwerkaktivität anzeigen.",
-          "validators": "247 aktive Validatoren",
+          "miners": "247 aktive Miner",
           "explorer_cta": "Explorer anzeigen"
         }
       }

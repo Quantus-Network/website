@@ -182,6 +182,8 @@
         "vulnerable": "Rentan",
         "secure": "Aman"
       },
+      "closer": "Kriptografi di balik setiap aset di atas punya tanggal kedaluwarsa. Quantus dibangun untuk masa depan pasca-kuantum.",
+      "cta": "Lihat kriptografinya",
       "source": "Sumber: NIST Post-Quantum Cryptography Standardization · 2024"
     },
     "solution": {
@@ -261,7 +263,7 @@
         "network": {
           "label": "Jaringan",
           "description": "Lihat aktivitas jaringan.",
-          "validators": "247 Validator Aktif",
+          "miners": "247 Penambang Aktif",
           "explorer_cta": "Lihat Explorer"
         }
       }

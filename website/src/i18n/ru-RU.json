@@ -182,6 +182,8 @@
         "vulnerable": "Уязвим",
         "secure": "Безопасен"
       },
+      "closer": "У криптографии, на которой держится каждый актив выше, есть срок годности. Quantus создан для пост-квантового будущего.",
+      "cta": "Посмотреть криптографию",
       "source": "Источник: NIST Post-Quantum Cryptography Standardization · 2024"
     },
     "solution": {
@@ -261,7 +263,7 @@
         "network": {
           "label": "Сеть",
           "description": "Просмотр активности сети.",
-          "validators": "247 активных валидаторов",
+          "miners": "247 активных майнеров",
           "explorer_cta": "Открыть Explorer"
         }
       }

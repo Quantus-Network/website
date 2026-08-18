@@ -182,6 +182,8 @@
         "vulnerable": "脆弱",
         "secure": "安全"
       },
+      "closer": "上に並ぶすべての資産を支える暗号技術には期限があります。Quantusはポスト量子時代のために構築されました。",
+      "cta": "暗号技術を見る",
       "source": "出典：NIST Post-Quantum Cryptography Standardization · 2024"
     },
     "solution": {
@@ -261,7 +263,7 @@
         "network": {
           "label": "ネットワーク",
           "description": "ネットワーク活動を表示。",
-          "validators": "247のアクティブなバリデーター",
+          "miners": "247のアクティブなマイナー",
           "explorer_cta": "エクスプローラーを表示"
         }
       }

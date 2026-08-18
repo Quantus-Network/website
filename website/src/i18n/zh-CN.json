@@ -182,6 +182,8 @@
         "vulnerable": "脆弱",
         "secure": "安全"
       },
+      "closer": "上面每一种资产所依赖的密码学都有到期日。Quantus 为后量子时代而生。",
+      "cta": "查看密码学",
       "source": "来源：NIST 后量子密码学标准化 · 2024"
     },
     "solution": {
@@ -261,7 +263,7 @@
         "network": {
           "label": "网络",
           "description": "查看网络活动。",
-          "validators": "247 个活跃验证者",
+          "miners": "247 个活跃矿工",
           "explorer_cta": "查看浏览器"
         }
       }
