@@ -145,7 +145,7 @@
         "block_height": "TINGGI BLOK",
         "qtps": "QTPS",
         "uptime": "UPTIME",
-        "nodes": "PENAMBANG",
+        "nodes": "NODE",
         "mainnet": "MAINNET: ??"
       }
     },
@@ -220,7 +220,7 @@
             },
             "throughput": {
               "label": "Throughput",
-              "value": "50 QTPS"
+              "value": "170 QTPS"
             }
           }
         },
@@ -263,14 +263,14 @@
         "network": {
           "label": "Jaringan",
           "description": "Lihat aktivitas jaringan.",
-          "miners": "247 Penambang Aktif",
+          "nodes": "247 Node Aktif",
           "explorer_cta": "Lihat Explorer"
         }
       }
     },
     "community": {
       "eyebrow": "Komunitas",
-      "headline": "Terlibatlah. Tetap terhubung.",
+      "headline": "Terlibatlah.",
       "cards": {
         "telegram": {
           "label": "Telegram",
@@ -296,7 +296,7 @@
     },
     "newsletter": {
       "headline": "Jendela telah terbuka.",
-      "sub": "Dapatkan panduan penambangan, berita mainnet, dan pembaruan QUAN lebih dulu.",
+      "sub": "Dapatkan pembaruan QUAN lebih dulu.",
       "first_name_placeholder": "Nama depan",
       "first_name_aria": "Nama depan",
       "last_name_placeholder": "Nama belakang",
@@ -445,7 +445,7 @@
         },
         "encrypt": {
           "title": "Pribadi Secara Default",
-          "body": "Privasi adalah hak. Desain bukti zero-knowledge yang sama yang menskalakan Quantus hingga 50 QTPS juga melindungi privasi Anda. Transaksi, saldo, dan riwayat Anda adalah milik Anda."
+          "body": "Privasi adalah hak. Desain bukti zero-knowledge yang sama yang menskalakan Quantus hingga 170 QTPS juga melindungi privasi Anda. Transaksi, saldo, dan riwayat Anda adalah milik Anda."
         }
       }
     },

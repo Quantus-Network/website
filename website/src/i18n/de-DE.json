@@ -145,7 +145,7 @@
         "block_height": "BLOCKHÖHE",
         "qtps": "QTPS",
         "uptime": "UPTIME",
-        "nodes": "MINER",
+        "nodes": "NODES",
         "mainnet": "MAINNET: ??"
       }
     },
@@ -220,7 +220,7 @@
             },
             "throughput": {
               "label": "Durchsatz",
-              "value": "50 QTPS"
+              "value": "170 QTPS"
             }
           }
         },
@@ -263,14 +263,14 @@
         "network": {
           "label": "Netzwerk",
           "description": "Netzwerkaktivität anzeigen.",
-          "miners": "247 aktive Miner",
+          "nodes": "247 aktive Nodes",
           "explorer_cta": "Explorer anzeigen"
         }
       }
     },
     "community": {
       "eyebrow": "Community",
-      "headline": "Machen Sie mit. Bleiben Sie in Kontakt.",
+      "headline": "Machen Sie mit.",
       "cards": {
         "telegram": {
           "label": "Telegram",
@@ -296,7 +296,7 @@
     },
     "newsletter": {
       "headline": "Das Fenster ist offen.",
-      "sub": "Erhalten Sie Mining-Anleitungen, Mainnet-News und QUAN-Updates als Erster.",
+      "sub": "Erhalten Sie QUAN-Updates als Erster.",
       "first_name_placeholder": "Vorname",
       "first_name_aria": "Vorname",
       "last_name_placeholder": "Nachname",
@@ -445,7 +445,7 @@
         },
         "encrypt": {
           "title": "Standardmäßig privat",
-          "body": "Privatsphäre ist ein Recht. Dasselbe Zero-Knowledge-Proof-Design, das Quantus auf 50 QTPS skaliert, schützt auch Ihre Privatsphäre. Ihre Transaktionen, Ihr Kontostand und Ihre Historie gehören Ihnen."
+          "body": "Privatsphäre ist ein Recht. Dasselbe Zero-Knowledge-Proof-Design, das Quantus auf 170 QTPS skaliert, schützt auch Ihre Privatsphäre. Ihre Transaktionen, Ihr Kontostand und Ihre Historie gehören Ihnen."
         }
       }
     },

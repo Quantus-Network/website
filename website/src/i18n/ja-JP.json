@@ -145,7 +145,7 @@
         "block_height": "ブロック高",
         "qtps": "QTPS",
         "uptime": "稼働時間",
-        "nodes": "マイナー",
+        "nodes": "ノード",
         "mainnet": "メインネット: ??"
       }
     },
@@ -220,7 +220,7 @@
             },
             "throughput": {
               "label": "スループット",
-              "value": "50 QTPS"
+              "value": "170 QTPS"
             }
           }
         },
@@ -263,14 +263,14 @@
         "network": {
           "label": "ネットワーク",
           "description": "ネットワーク活動を表示。",
-          "miners": "247のアクティブなマイナー",
+          "nodes": "247のアクティブなノード",
           "explorer_cta": "エクスプローラーを表示"
         }
       }
     },
     "community": {
       "eyebrow": "コミュニティ",
-      "headline": "参加する。つながる。",
+      "headline": "参加する。",
       "cards": {
         "telegram": {
           "label": "Telegram",
@@ -296,7 +296,7 @@
     },
     "newsletter": {
       "headline": "チャンスは今です。",
-      "sub": "マイニングガイド、メインネットの最新情報、QUANのアップデートを誰よりも早くお届けします。",
+      "sub": "QUANのアップデートを誰よりも早くお届けします。",
       "first_name_placeholder": "名",
       "first_name_aria": "名",
       "last_name_placeholder": "姓",

@@ -145,7 +145,7 @@
         "block_height": "ВЫСОТА БЛОКА",
         "qtps": "QTPS",
         "uptime": "АПТАЙМ",
-        "nodes": "МАЙНЕРЫ",
+        "nodes": "УЗЛЫ",
         "mainnet": "MAINNET: ??"
       }
     },
@@ -220,7 +220,7 @@
             },
             "throughput": {
               "label": "Пропускная способность",
-              "value": "50 QTPS"
+              "value": "170 QTPS"
             }
           }
         },
@@ -263,14 +263,14 @@
         "network": {
           "label": "Сеть",
           "description": "Просмотр активности сети.",
-          "miners": "247 активных майнеров",
+          "nodes": "247 активных узлов",
           "explorer_cta": "Открыть Explorer"
         }
       }
     },
     "community": {
       "eyebrow": "Сообщество",
-      "headline": "Участвуйте. Будьте на связи.",
+      "headline": "Участвуйте.",
       "cards": {
         "telegram": {
           "label": "Telegram",
@@ -296,7 +296,7 @@
     },
     "newsletter": {
       "headline": "Окно открыто.",
-      "sub": "Получайте руководства по майнингу, новости мейннета и обновления QUAN первыми.",
+      "sub": "Получайте обновления QUAN первыми.",
       "first_name_placeholder": "Имя",
       "first_name_aria": "Имя",
       "last_name_placeholder": "Фамилия",

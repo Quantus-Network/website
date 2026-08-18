@@ -145,7 +145,7 @@
         "block_height": "BLOCK HEIGHT",
         "qtps": "QTPS",
         "uptime": "UPTIME",
-        "nodes": "MINERS",
+        "nodes": "NODES",
         "mainnet": "MAINNET: ??"
       }
     },
@@ -220,7 +220,7 @@
             },
             "throughput": {
               "label": "Throughput",
-              "value": "50 QTPS"
+              "value": "170 QTPS"
             }
           }
         },
@@ -263,14 +263,14 @@
         "network": {
           "label": "Network",
           "description": "View network activity.",
-          "miners": "247 Active Miners",
+          "nodes": "247 Active Nodes",
           "explorer_cta": "View Explorer"
         }
       }
     },
     "community": {
       "eyebrow": "Community",
-      "headline": "Get involved. Stay connected.",
+      "headline": "Get involved.",
       "cards": {
         "telegram": {
           "label": "Telegram",
@@ -296,7 +296,7 @@
     },
     "newsletter": {
       "headline": "The window is open.",
-      "sub": "Get mining guides, mainnet news, and QUAN updates first.",
+      "sub": "Get QUAN updates first.",
       "first_name_placeholder": "First name",
       "first_name_aria": "First name",
       "last_name_placeholder": "Last name",
@@ -445,7 +445,7 @@
         },
         "encrypt": {
           "title": "Private By Default",
-          "body": "Privacy is a right. The same zero-knowledge proof design that scales Quantus to 50 QTPS also protects your privacy. Your transactions, balance, and history are yours."
+          "body": "Privacy is a right. The same zero-knowledge proof design that scales Quantus to 170 QTPS also protects your privacy. Your transactions, balance, and history are yours."
         }
       }
     },

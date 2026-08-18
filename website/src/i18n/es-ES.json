@@ -145,7 +145,7 @@
         "block_height": "ALTURA DE BLOQUE",
         "qtps": "QTPS",
         "uptime": "TIEMPO DE ACTIVIDAD",
-        "nodes": "MINEROS",
+        "nodes": "NODOS",
         "mainnet": "MAINNET: ??"
       }
     },
@@ -220,7 +220,7 @@
             },
             "throughput": {
               "label": "Rendimiento",
-              "value": "50 QTPS"
+              "value": "170 QTPS"
             }
           }
         },
@@ -263,14 +263,14 @@
         "network": {
           "label": "Red",
           "description": "Ver actividad de la red.",
-          "miners": "247 Mineros Activos",
+          "nodes": "247 Nodos Activos",
           "explorer_cta": "Ver Explorador"
         }
       }
     },
     "community": {
       "eyebrow": "Comunidad",
-      "headline": "Participe. Manténgase conectado.",
+      "headline": "Participe.",
       "cards": {
         "telegram": {
           "label": "Telegram",
@@ -296,7 +296,7 @@
     },
     "newsletter": {
       "headline": "La ventana está abierta.",
-      "sub": "Reciba guías de minería, noticias de la mainnet y actualizaciones de QUAN antes que nadie.",
+      "sub": "Reciba las actualizaciones de QUAN antes que nadie.",
       "first_name_placeholder": "Nombre",
       "first_name_aria": "Nombre",
       "last_name_placeholder": "Apellido",
@@ -445,7 +445,7 @@
         },
         "encrypt": {
           "title": "Privado por defecto",
-          "body": "La privacidad es un derecho. El mismo diseño de pruebas de conocimiento cero que escala Quantus a 50 QTPS también protege su privacidad. Sus transacciones, saldo e historial son suyos."
+          "body": "La privacidad es un derecho. El mismo diseño de pruebas de conocimiento cero que escala Quantus a 170 QTPS también protege su privacidad. Sus transacciones, saldo e historial son suyos."
         }
       }
     },

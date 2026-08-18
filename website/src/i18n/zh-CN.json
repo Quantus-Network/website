@@ -145,7 +145,7 @@
         "block_height": "区块高度",
         "qtps": "QTPS",
         "uptime": "运行时间",
-        "nodes": "矿工",
+        "nodes": "节点",
         "mainnet": "主网: ??"
       }
     },
@@ -220,7 +220,7 @@
             },
             "throughput": {
               "label": "吞吐量",
-              "value": "50 QTPS"
+              "value": "170 QTPS"
             }
           }
         },
@@ -263,14 +263,14 @@
         "network": {
           "label": "网络",
           "description": "查看网络活动。",
-          "miners": "247 个活跃矿工",
+          "nodes": "247 个活跃节点",
           "explorer_cta": "查看浏览器"
         }
       }
     },
     "community": {
       "eyebrow": "社区",
-      "headline": "参与其中。保持联系。",
+      "headline": "参与其中。",
       "cards": {
         "telegram": {
           "label": "Telegram",
@@ -296,7 +296,7 @@
     },
     "newsletter": {
       "headline": "窗口已开启。",
-      "sub": "第一时间获取挖矿指南、主网新闻和 QUAN 更新。",
+      "sub": "第一时间获取 QUAN 更新。",
       "first_name_placeholder": "名",
       "first_name_aria": "名",
       "last_name_placeholder": "姓",
@@ -445,7 +445,7 @@
         },
         "encrypt": {
           "title": "默认私密",
-          "body": "隐私是一项权利。使 Quantus 扩展到 50 QTPS 的零知识证明设计同时也保护了您的隐私。您的交易、余额和历史记录都属于您自己。"
+          "body": "隐私是一项权利。使 Quantus 扩展到 170 QTPS 的零知识证明设计同时也保护了您的隐私。您的交易、余额和历史记录都属于您自己。"
         }
       }
     },

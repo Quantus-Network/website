@@ -145,7 +145,7 @@
         "block_height": "블록 높이",
         "qtps": "QTPS",
         "uptime": "업타임",
-        "nodes": "채굴자",
+        "nodes": "노드",
         "mainnet": "MAINNET: ??"
       }
     },
@@ -220,7 +220,7 @@
             },
             "throughput": {
               "label": "처리량",
-              "value": "50 QTPS"
+              "value": "170 QTPS"
             }
           }
         },
@@ -263,14 +263,14 @@
         "network": {
           "label": "네트워크",
           "description": "네트워크 활동 보기.",
-          "miners": "247명의 활성 채굴자",
+          "nodes": "247개의 활성 노드",
           "explorer_cta": "익스플로러 보기"
         }
       }
     },
     "community": {
       "eyebrow": "커뮤니티",
-      "headline": "참여하세요. 연결을 유지하세요.",
+      "headline": "참여하세요.",
       "cards": {
         "telegram": {
           "label": "Telegram",
@@ -296,7 +296,7 @@
     },
     "newsletter": {
       "headline": "기회는 지금입니다.",
-      "sub": "채굴 가이드, 메인넷 소식, QUAN 업데이트를 가장 먼저 받아보세요.",
+      "sub": "QUAN 업데이트를 가장 먼저 받아보세요.",
       "first_name_placeholder": "이름",
       "first_name_aria": "이름",
       "last_name_placeholder": "성",
