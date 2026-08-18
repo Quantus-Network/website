@@ -348,7 +348,7 @@
         },
         "scale": {
           "title": "Construido para escalar",
-          "body": "Las firmas post-cuánticas son más grandes que las clásicas. Resolvimos eso con un sistema de pruebas de conocimiento cero que comprime miles de transacciones en una sola prueba verificable, sin sacrificar la seguridad."
+          "body": "Las firmas post-cuánticas son más grandes que las clásicas. Quantus lo resuelve con un sistema de pruebas de conocimiento cero que comprime miles de transacciones en una sola prueba verificable, sin sacrificar la seguridad."
         }
       }
     },
@@ -407,7 +407,7 @@
       "title": "La imagen técnica completa.",
       "sub": "Arquitectura del protocolo, supuestos criptográficos y el modelo de seguridad completo, en el whitepaper de Quantus.",
       "primary_cta": "Leer Whitepaper",
-      "secondary_cta": "Explorar la red"
+      "secondary_cta": "Empezar a minar"
     }
   },
   "wallet": {
@@ -418,7 +418,7 @@
     "hero_banner": {
       "eyebrow": "LA BILLETERA QUANTUS",
       "title": "Dinero superior. En su bolsillo.",
-      "sub": "Envíe, reciba y almacene dinero sólido seguro cuánticamente. Disponible en iOS y Android.",
+      "sub": "Envíe, reciba y almacene QUAN: dinero sólido seguro cuánticamente. Disponible en iOS y Android.",
       "cta_app_store": "Descargar en App Store",
       "cta_google_play": "Descargar en Google Play"
     },
@@ -495,7 +495,8 @@
       "heading": "Libertad económica permanente",
       "body1": "Cada decisión que tomamos, desde el diseño del protocolo hasta la interfaz de usuario, se basa en un profundo conocimiento técnico y un respeto por la simplicidad.",
       "body2": "Nos centramos en lo fundamental: seguridad probada matemáticamente, alto rendimiento y una experiencia de producto que se siente sin esfuerzo.",
-      "body3": "Construimos con precisión. Nos movemos rápido sin tomar atajos. Y diseñamos para el mundo que viene, no para el que ya ha pasado."
+      "body3": "Construimos con precisión. Nos movemos rápido sin tomar atajos. Y diseñamos para el mundo que viene, no para el que ya ha pasado.",
+      "body4": "El producto es dinero que perdura. Se llama QUAN."
     },
     "advisors": {
       "eyebrow": "ASESORES"
@@ -550,7 +551,7 @@
     "hero": {
       "eyebrow": "COMUNIDAD",
       "heading": "Las personas que construyen el futuro seguro cuánticamente.",
-      "sub": "Únase a la comunidad de Quantus. Investigadores y adoptantes tempranos que entendieron la amenaza cuántica antes de que el gran público se diera cuenta."
+      "sub": "Únase a la comunidad de Quantus. Investigadores, mineros y primeros poseedores que entendieron la amenaza cuántica antes de que el gran público se diera cuenta."
     },
     "events": {
       "eyebrow": "EVENTOS",
@@ -572,7 +573,7 @@
     "telegram": {
       "eyebrow": "ÚNASE A LA CONVERSACIÓN",
       "heading": "Encuentre su rincón en la comunidad.",
-      "body": "Conéctese con investigadores y adoptantes tempranos en la comunidad de Telegram de Quantus.",
+      "body": "Conéctese con investigadores, mineros y primeros poseedores en la comunidad de Telegram de Quantus.",
       "cta": "UNIRSE A TELEGRAM →"
     },
     "socials": {

@@ -348,7 +348,7 @@
         },
         "scale": {
           "title": "Dibangun untuk Skala",
-          "body": "Tanda tangan pasca-kuantum lebih besar daripada yang klasik. Kami menyelesaikannya dengan sistem bukti zero-knowledge yang mengompres ribuan transaksi menjadi satu bukti tunggal yang dapat diverifikasi - tanpa mengorbankan keamanan."
+          "body": "Tanda tangan pasca-kuantum lebih besar daripada yang klasik. Quantus menyelesaikannya dengan sistem bukti zero-knowledge yang mengompres ribuan transaksi menjadi satu bukti tunggal yang dapat diverifikasi - tanpa mengorbankan keamanan."
         }
       }
     },
@@ -407,7 +407,7 @@
       "title": "Gambaran teknis lengkap.",
       "sub": "Arsitektur protokol, asumsi kriptografi, dan model keamanan lengkap - dalam whitepaper Quantus.",
       "primary_cta": "Baca Whitepaper",
-      "secondary_cta": "Jelajahi Jaringan"
+      "secondary_cta": "Mulai Menambang"
     }
   },
   "wallet": {
@@ -418,7 +418,7 @@
     "hero_banner": {
       "eyebrow": "DOMPET QUANTUS",
       "title": "Uang yang lebih unggul. Di saku Anda.",
-      "sub": "Kirim, terima, dan simpan uang sehat yang aman secara kuantum. Tersedia di iOS dan Android.",
+      "sub": "Kirim, terima, dan simpan QUAN: uang sehat yang aman secara kuantum. Tersedia di iOS dan Android.",
       "cta_app_store": "Unduh di App Store",
       "cta_google_play": "Unduh di Google Play"
     },
@@ -495,7 +495,8 @@
       "heading": "Kebebasan Ekonomi Permanen",
       "body1": "Setiap keputusan yang kami buat, mulai dari desain protokol hingga antarmuka pengguna, didasarkan pada pengetahuan teknis yang mendalam dan rasa hormat terhadap kesederhanaan.",
       "body2": "Kami fokus pada hal-hal mendasar: keamanan yang terbukti secara matematis, performa tinggi, dan pengalaman produk yang terasa mudah.",
-      "body3": "Kami membangun dengan presisi. Kami bergerak cepat tanpa mengambil jalan pintas. Dan kami merancang untuk dunia yang akan datang, bukan yang sudah berlalu."
+      "body3": "Kami membangun dengan presisi. Kami bergerak cepat tanpa mengambil jalan pintas. Dan kami merancang untuk dunia yang akan datang, bukan yang sudah berlalu.",
+      "body4": "Produknya adalah uang yang bertahan lama. Namanya QUAN."
     },
     "advisors": {
       "eyebrow": "PENASIHAT"
@@ -550,7 +551,7 @@
     "hero": {
       "eyebrow": "KOMUNITAS",
       "heading": "Orang-orang yang membangun masa depan yang aman secara kuantum.",
-      "sub": "Bergabunglah dengan komunitas Quantus. Peneliti dan pengadopsi awal yang memahami ancaman kuantum sebelum arus utama menyadarinya."
+      "sub": "Bergabunglah dengan komunitas Quantus. Peneliti, penambang, dan pemegang awal yang memahami ancaman kuantum sebelum arus utama menyadarinya."
     },
     "events": {
       "eyebrow": "ACARA",
@@ -572,7 +573,7 @@
     "telegram": {
       "eyebrow": "GABUNG PERCAKAPAN",
       "heading": "Temukan sudut komunitas Anda.",
-      "body": "Terhubung dengan peneliti dan pengadopsi awal di komunitas Telegram Quantus.",
+      "body": "Terhubung dengan peneliti, penambang, dan pemegang awal di komunitas Telegram Quantus.",
       "cta": "GABUNG TELEGRAM →"
     },
     "socials": {

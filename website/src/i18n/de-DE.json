@@ -348,7 +348,7 @@
         },
         "scale": {
           "title": "Auf Skalierung ausgelegt",
-          "body": "Post-Quanten-Signaturen sind größer als klassische. Wir haben das mit einem Zero-Knowledge-Proof-System gelöst, das Tausende von Transaktionen in einen einzigen verifizierbaren Proof komprimiert – ohne die Sicherheit zu opfern."
+          "body": "Post-Quanten-Signaturen sind größer als klassische. Quantus löst das mit einem Zero-Knowledge-Proof-System, das Tausende von Transaktionen in einen einzigen verifizierbaren Proof komprimiert – ohne die Sicherheit zu opfern."
         }
       }
     },
@@ -407,7 +407,7 @@
       "title": "Das vollständige technische Bild.",
       "sub": "Protokollarchitektur, kryptografische Annahmen und das komplette Sicherheitsmodell – im Quantus-Whitepaper.",
       "primary_cta": "Whitepaper lesen",
-      "secondary_cta": "Netzwerk erkunden"
+      "secondary_cta": "Mining starten"
     }
   },
   "wallet": {
@@ -418,7 +418,7 @@
     "hero_banner": {
       "eyebrow": "DIE QUANTUS-WALLET",
       "title": "Überlegenes Geld. In Ihrer Tasche.",
-      "sub": "Senden, empfangen und speichern Sie quantensicheres, wertbeständiges Geld. Verfügbar für iOS und Android.",
+      "sub": "Senden, empfangen und speichern Sie QUAN: quantensicheres, wertbeständiges Geld. Verfügbar für iOS und Android.",
       "cta_app_store": "Im App Store herunterladen",
       "cta_google_play": "Bei Google Play herunterladen"
     },
@@ -495,7 +495,8 @@
       "heading": "Dauerhafte wirtschaftliche Freiheit",
       "body1": "Jede Entscheidung, die wir treffen – vom Protokolldesign bis zum User Interface –, basiert auf tiefem technischem Wissen und Respekt vor Einfachheit.",
       "body2": "Wir konzentrieren uns auf das Wesentliche: mathematisch bewiesene Sicherheit, hohe Leistung und ein Produkterlebnis, das sich mühelos anfühlt.",
-      "body3": "Wir bauen mit Präzision. Wir bewegen uns schnell, ohne Abkürzungen zu nehmen. Und wir entwickeln für die Welt von morgen, nicht für die von gestern."
+      "body3": "Wir bauen mit Präzision. Wir bewegen uns schnell, ohne Abkürzungen zu nehmen. Und wir entwickeln für die Welt von morgen, nicht für die von gestern.",
+      "body4": "Das Produkt ist Geld, das Bestand hat. Es heißt QUAN."
     },
     "advisors": {
       "eyebrow": "BERATER"
@@ -550,7 +551,7 @@
     "hero": {
       "eyebrow": "COMMUNITY",
       "heading": "Die Menschen, die die quantensichere Zukunft bauen.",
-      "sub": "Werden Sie Teil der Quantus-Community. Forscher und Early Adopter, die die Quantenbedrohung verstanden haben, bevor der Mainstream aufmerksam wurde."
+      "sub": "Werden Sie Teil der Quantus-Community. Forscher, Miner und frühe Inhaber, die die Quantenbedrohung verstanden haben, bevor der Mainstream aufmerksam wurde."
     },
     "events": {
       "eyebrow": "EVENTS",
@@ -572,7 +573,7 @@
     "telegram": {
       "eyebrow": "DISKUSSION BEITRETEN",
       "heading": "Finden Sie Ihren Platz in der Community.",
-      "body": "Vernetzen Sie sich mit Forschern und Early Adoptern in der Quantus-Telegram-Community.",
+      "body": "Vernetzen Sie sich mit Forschern, Minern und frühen Inhabern in der Quantus-Telegram-Community.",
       "cta": "TELEGRAM BEITRETEN →"
     },
     "socials": {
