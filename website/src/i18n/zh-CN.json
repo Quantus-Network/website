@@ -217,7 +217,7 @@
             },
             "throughput": {
               "label": "吞吐量",
-              "value": "50 QTPS"
+              "value": "{qtps} QTPS"
             }
           }
         },
@@ -442,7 +442,7 @@
         },
         "encrypt": {
           "title": "默认私密",
-          "body": "隐私是一项权利。使 Quantus 扩展到 50 QTPS 的零知识证明设计同时也保护了您的隐私。您的交易、余额和历史记录都属于您自己。"
+          "body": "隐私是一项权利。使 Quantus 扩展到 {qtps} QTPS 的零知识证明设计同时也保护了您的隐私。您的交易、余额和历史记录都属于您自己。"
         }
       }
     },
@@ -452,7 +452,6 @@
       "body": "Q-day 不会通过电视转播。Quantus 钱包意味着您无需为此担心。您已经站在了变革的正确一边。",
       "stats": {
         "qtps": {
-          "value": "50",
           "label": "QUANTUS 的 QTPS"
         },
         "security": {

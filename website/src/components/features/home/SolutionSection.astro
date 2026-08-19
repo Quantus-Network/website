@@ -1,4 +1,5 @@
 ---
+import { QTPS } from "@/constants/qtps";
 import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
@@ -85,7 +86,9 @@ const t = await createTranslator(locale);
               <span class="pillar-spec-label">
                 {t("home.solution.pillars.zk.specs.throughput.label")}
               </span><span class="pillar-spec-value">
-                {t("home.solution.pillars.zk.specs.throughput.value")}
+                {t("home.solution.pillars.zk.specs.throughput.value", {
+                  qtps: QTPS,
+                })}
               </span>
               >
             </div>

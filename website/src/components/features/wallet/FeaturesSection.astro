@@ -5,6 +5,7 @@ import checkphrases from "@/assets/wallet/checkphrases.png";
 import encryptYourFunds from "@/assets/wallet/encrypt-your-funds.png";
 import reversibleTransactions from "@/assets/wallet/reversible-transactions.png";
 import highSecurityAccounts from "@/assets/wallet/high-security-accounts.png";
+import { QTPS } from "@/constants/qtps";
 import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
@@ -78,7 +79,7 @@ const t = await createTranslator(locale);
           {t("wallet.features.cards.encrypt.title")}
         </h3>
         <p class="feature-body">
-          {t("wallet.features.cards.encrypt.body")}
+          {t("wallet.features.cards.encrypt.body", { qtps: QTPS })}
         </p>
       </div>
       <div class="feature-card-right">
