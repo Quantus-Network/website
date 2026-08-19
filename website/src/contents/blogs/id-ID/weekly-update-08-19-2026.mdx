@@ -1,0 +1,70 @@
+---
+title: "Quantus Weekly: 170 QTPS dan Miner v4"
+description: "Kompetisi audit Immunefi berlangsung hingga 24 Agustus. Miner v4.0.0 4,1x lebih cepat di GPU, transaksi transparan kini mencapai 170 QTPS sebelum agregasi ZK."
+pubDate: "2026-08-19"
+heroImage: "/blog/covers/weekly-update-08-19-2026.webp"
+heroAlt: "Quantus Weekly: 170 QTPS dan Miner v4"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "quantum",
+    "post-quantum",
+    "immunefi",
+    "gpu-mining",
+    "miner",
+    "mining",
+    "dilithium",
+    "zk-proofs",
+    "scalability",
+    "runtime-upgrade",
+    "keystone",
+    "mobile",
+    "governance",
+    "infra",
+    "security",
+  ]
+---
+
+import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
+
+Kompetisi audit [@immunefi](https://x.com/@immunefi) kami berlanjut hingga 24 Agustus.
+
+Kami juga merilis miner v4.0.0, yang membuat GPU mining 4,1x lebih cepat, jadi uji ulang perangkat mining Anda dengan rilis miner terbaru sebelum mainnet.
+
+Di sisi protokol kami meningkatkan QTPS (quantum TPS) transaksi transparan lebih dari 3x, dari 50 QTPS menjadi 170 QTPS. Angka QTPS ini sebelum agregasi ZK apa pun, yang selanjutnya meningkatkan throughput sekitar satu orde magnitudo.
+
+Berikut yang kami bangun minggu lalu:
+
+### Github Activity (59 merged pull requests):
+
+![Github Stats](/blog/assets/github-stats-weekly-update-08-19-2026.webp)
+
+### Core Tech & ZK
+
+- Kompetisi audit Immunefi live hingga 24 Agustus.
+- Melipatgandakan throughput transaksi transparan dari 50 menjadi 170 QTPS, sebelum agregasi ZK. Chain kini men-cache kunci publik Dilithium akun setelah transaksi pertamanya, memotong sekitar 2 KB dari setiap transaksi berikutnya, dan Merkle root zk-tree dihitung sekali per blok, bukan sekali per transfer. Akan dirilis di runtime upgrade berikutnya.
+- Menambal crash node yang dipicu connection flooding.
+
+### Network & Infra
+
+- Merilis miner v4.0.0: GPU mining ~4,1x lebih cepat.
+- Mengautentikasi saluran antara node dan miner eksternal dengan token auth melalui QUIC dan TLS certificate pinning.
+- Node yang sedang sync tidak lagi menyerahkan job usang ke miner, sehingga hashrate tidak terbakar pada pekerjaan yang tidak bisa memenangkan blok.
+- Menambahkan backup offsite otomatis untuk server dan basis data.
+
+### Web & Mobile App Updates
+
+- Memperbaiki build firmware rilis Keystone dan memverifikasinya di perangkat.
+- Merilis mobile wallet 1.5.11 dengan perbaikan miner claim proof dan layar beranda yang lebih bersih.
+- Merilis CLI v2.1: status referenda tata kelola dengan fase, timing, dan perkiraan enactment, plus checkphrases untuk wallet yang dilindungi.
+
+### Content & Partnerships
+
+- Fortune mewawancarai Chris tentang "great quantum migration" yang akan datang dan $2 triliun aset digital yang berisiko:
+
+<TwitterEmbed url="https://x.com/YuviLightman/status/2089273360136253742" />
+
+- Memperbarui panduan mining di [docs.quantus.com](https://docs.quantus.com).
+
+Stay frosty, quants.

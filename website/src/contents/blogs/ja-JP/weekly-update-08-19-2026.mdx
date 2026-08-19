@@ -1,0 +1,70 @@
+---
+title: "Quantus Weekly: 170 QTPSとMiner v4"
+description: "Immunefiの監査コンペは8月24日まで継続。Miner v4.0.0はGPUで約4.1倍高速、透明トランザクションはZK集約前で170 QTPSに到達した。"
+pubDate: "2026-08-19"
+heroImage: "/blog/covers/weekly-update-08-19-2026.webp"
+heroAlt: "Quantus Weekly: 170 QTPSとMiner v4"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "quantum",
+    "post-quantum",
+    "immunefi",
+    "gpu-mining",
+    "miner",
+    "mining",
+    "dilithium",
+    "zk-proofs",
+    "scalability",
+    "runtime-upgrade",
+    "keystone",
+    "mobile",
+    "governance",
+    "infra",
+    "security",
+  ]
+---
+
+import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
+
+[@immunefi](https://x.com/@immunefi) の監査コンペティションは8月24日まで続く。
+
+Miner v4.0.0もリリースした。GPUマイニングは4.1倍高速になったので、メインネット前に最新のマイナーでハードウェアを再テストしてほしい。
+
+プロトコル側では、透明トランザクションのQTPS（量子TPS）を50 QTPSから170 QTPSへ、3倍以上改善した。このQTPSはZK集約前の数値で、集約によってスループットはさらにおよそ一桁向上する。
+
+先週構築したその他の内容は以下の通り。
+
+### Githubアクティビティ（マージ済みプルリクエスト59件）:
+
+![Github Stats](/blog/assets/github-stats-weekly-update-08-19-2026.webp)
+
+### コア技術 & ZK
+
+- Immunefi監査コンペティションは8月24日まで実施中。
+- ZK集約前の透明トランザクションのスループットを50から170 QTPSへ3倍にした。チェーンはアカウントの初回トランザクション後にDilithium公開鍵をキャッシュし、以降の毎回から約2 KBを削る。zk-treeのMerkleルートは転送ごとではなくブロックごとに1回計算する。次のランタイムアップグレードで出荷する。
+- コネクションフラッディングで発生していたノードクラッシュを修正した。
+
+### ネットワーク & インフラ
+
+- Miner v4.0.0をリリース: GPUマイニングは約4.1倍高速。
+- ノードと外部マイナー間のチャネルを、QUIC上の認証トークンとTLS証明書ピンニングで認証した。
+- 同期中のノードはマイナーに古いジョブを渡さなくなり、ブロックを取れない作業にハッシュレートが消費されなくなる。
+- サーバーとデータベースのオフサイト自動バックアップを追加した。
+
+### Web & モバイルアプリの更新
+
+- Keystoneのリリースファームウェアビルドを修正し、実機で検証した。
+- モバイルウォレット1.5.11をリリース。マイナークレーム証明の修正と、よりすっきりしたホーム画面。
+- CLI v2.1をリリース: ガバナンスレファレンダのステータス（フェーズ、タイミング、成立見込み）に加え、保護ウォレット向けのチェックフレーズ。
+
+### コンテンツ & パートナーシップ
+
+- FortuneがChrisに、来る「great quantum migration」とリスクにさらされる2兆ドルのデジタル資産についてインタビューした:
+
+<TwitterEmbed url="https://x.com/YuviLightman/status/2089273360136253742" />
+
+- [docs.quantus.com](https://docs.quantus.com) のマイニングガイドを更新した。
+
+Stay frosty, quants.
