@@ -217,7 +217,7 @@
             },
             "throughput": {
               "label": "Throughput",
-              "value": "50 QTPS"
+              "value": "{qtps} QTPS"
             }
           }
         },
@@ -442,7 +442,7 @@
         },
         "encrypt": {
           "title": "Private By Default",
-          "body": "Privacy is a right. The same zero-knowledge proof design that scales Quantus to 50 QTPS also protects your privacy. Your transactions, balance, and history are yours."
+          "body": "Privacy is a right. The same zero-knowledge proof design that scales Quantus to {qtps} QTPS also protects your privacy. Your transactions, balance, and history are yours."
         }
       }
     },
@@ -452,7 +452,6 @@
       "body": "Q-day will not be televised. The Quantus wallet means you do not have to think about it. You are already on the right side of the shift.",
       "stats": {
         "qtps": {
-          "value": "50",
           "label": "QTPS ON QUANTUS"
         },
         "security": {

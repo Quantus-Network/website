@@ -217,7 +217,7 @@
             },
             "throughput": {
               "label": "Rendimiento",
-              "value": "50 QTPS"
+              "value": "{qtps} QTPS"
             }
           }
         },
@@ -442,7 +442,7 @@
         },
         "encrypt": {
           "title": "Privado por defecto",
-          "body": "La privacidad es un derecho. El mismo diseño de pruebas de conocimiento cero que escala Quantus a 50 QTPS también protege su privacidad. Sus transacciones, saldo e historial son suyos."
+          "body": "La privacidad es un derecho. El mismo diseño de pruebas de conocimiento cero que escala Quantus a {qtps} QTPS también protege su privacidad. Sus transacciones, saldo e historial son suyos."
         }
       }
     },
@@ -452,7 +452,6 @@
       "body": "El Q-day no será televisado. La billetera Quantus significa que no tiene que pensar en ello. Ya está en el lado correcto del cambio.",
       "stats": {
         "qtps": {
-          "value": "50",
           "label": "QTPS EN QUANTUS"
         },
         "security": {

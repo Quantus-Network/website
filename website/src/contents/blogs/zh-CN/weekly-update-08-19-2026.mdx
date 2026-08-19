@@ -1,0 +1,70 @@
+---
+title: "Quantus 每周动态：170 QTPS 与 Miner v4"
+description: "Immunefi 审计竞赛持续至 8 月 24 日。Miner v4.0.0 使 GPU 挖矿提速约 4.1 倍，透明交易在 ZK 聚合前达到 170 QTPS。"
+pubDate: "2026-08-19"
+heroImage: "/blog/covers/weekly-update-08-19-2026.webp"
+heroAlt: "Quantus 每周动态：170 QTPS 与 Miner v4"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "quantum",
+    "post-quantum",
+    "immunefi",
+    "gpu-mining",
+    "miner",
+    "mining",
+    "dilithium",
+    "zk-proofs",
+    "scalability",
+    "runtime-upgrade",
+    "keystone",
+    "mobile",
+    "governance",
+    "infra",
+    "security",
+  ]
+---
+
+import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
+
+我们在 [@immunefi](https://x.com/@immunefi) 的审计竞赛持续至 8 月 24 日。
+
+我们还发布了 miner v4.0.0，GPU 挖矿提速 4.1 倍，请在主网上线前用最新矿工重新测试你的挖矿硬件。
+
+在协议侧，我们将透明交易的 QTPS（量子 TPS）提升了逾 3 倍，从 50 QTPS 到 170 QTPS。该 QTPS 是 ZK 聚合之前的数字；聚合还会将吞吐再提升大约一个数量级。
+
+以下是我们上周还交付的内容：
+
+### GitHub 活动（已合并 59 个拉取请求）：
+
+![Github Stats](/blog/assets/github-stats-weekly-update-08-19-2026.webp)
+
+### 核心技术与 ZK
+
+- Immunefi 审计竞赛持续至 8 月 24 日。
+- 将透明交易吞吐从 50 提升至 170 QTPS（ZK 聚合前）。链会在账户首笔交易后缓存 Dilithium 公钥，使后续每笔交易减少约 2 KB；zk-tree 的 Merkle 根改为每个区块计算一次，而非每笔转账一次。将随下一次运行时升级上线。
+- 修复了连接洪水触发的节点崩溃。
+
+### 网络与基础设施
+
+- 发布 miner v4.0.0：GPU 挖矿约快 4.1 倍。
+- 用 QUIC 上的认证令牌与 TLS 证书固定，对节点与外部矿工之间的通道进行认证。
+- 正在同步的节点不再向矿工下发过期任务，算力不再浪费在无法出块的工作上。
+- 为服务器和数据库增加了自动化异地备份。
+
+### 网页与移动应用更新
+
+- 修复 Keystone 发布固件构建，并在设备上完成验证。
+- 发布移动钱包 1.5.11，包含矿工领取证明修复和更简洁的主屏幕。
+- 发布 CLI v2.1：治理公投状态（阶段、时间与生效预估），并为受保护钱包提供校验短语。
+
+### 内容与合作伙伴
+
+- 《财富》采访了 Chris，谈即将到来的 “great quantum migration” 以及面临风险的 2 万亿美元数字资产：
+
+<TwitterEmbed url="https://x.com/YuviLightman/status/2089273360136253742" />
+
+- 更新了 [docs.quantus.com](https://docs.quantus.com) 上的挖矿指南。
+
+Stay frosty, quants.

@@ -1,0 +1,70 @@
+---
+title: "Quantus Weekly: 170 QTPS и Miner v4"
+description: "Аудит-соревнование Immunefi идёт до 24 августа. Miner v4.0.0 на GPU быстрее в 4,1 раза, прозрачные транзакции достигают 170 QTPS до ZK-агрегации."
+pubDate: "2026-08-19"
+heroImage: "/blog/covers/weekly-update-08-19-2026.webp"
+heroAlt: "Quantus Weekly: 170 QTPS и Miner v4"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "quantum",
+    "post-quantum",
+    "immunefi",
+    "gpu-mining",
+    "miner",
+    "mining",
+    "dilithium",
+    "zk-proofs",
+    "scalability",
+    "runtime-upgrade",
+    "keystone",
+    "mobile",
+    "governance",
+    "infra",
+    "security",
+  ]
+---
+
+import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
+
+Наше аудит-соревнование на [@immunefi](https://x.com/@immunefi) продолжается до 24 августа.
+
+Мы также выпустили miner v4.0.0: GPU-майнинг стал быстрее в 4,1 раза, поэтому перепроверьте своё майнинг-железо на новом релизе до mainnet.
+
+На стороне протокола мы подняли QTPS (quantum TPS) прозрачных транзакций больше чем в 3 раза — с 50 QTPS до 170 QTPS. Эта цифра QTPS — до любой ZK-агрегации, которая дополнительно увеличивает пропускную способность примерно на порядок.
+
+Вот что ещё мы сделали на прошлой неделе:
+
+### Github Activity (59 merged pull requests):
+
+![Github Stats](/blog/assets/github-stats-weekly-update-08-19-2026.webp)
+
+### Core Tech & ZK
+
+- Аудит-соревнование Immunefi идёт до 24 августа.
+- Утроили пропускную способность прозрачных транзакций с 50 до 170 QTPS, до ZK-агрегации. Цепь теперь кэширует Dilithium public key аккаунта после первой транзакции, срезая примерно 2 KB с каждой следующей, а Merkle-корень zk-tree считается один раз на блок, а не один раз на перевод. Появится в следующем runtime upgrade.
+- Починили краш ноды из-за connection flooding.
+
+### Network & Infra
+
+- Выпустили miner v4.0.0: GPU-майнинг ~в 4,1 раза быстрее.
+- Аутентифицировали канал между нодой и внешним майнером auth-токенами по QUIC и TLS certificate pinning.
+- Синхронизирующиеся ноды больше не отдают майнерам устаревшие джобы, так что хешрейт не сгорает на работе, которая не может выиграть блок.
+- Добавили автоматические offsite-бэкапы серверов и баз данных.
+
+### Web & Mobile App Updates
+
+- Починили сборки release-прошивки Keystone и проверили их на устройстве.
+- Выпустили mobile wallet 1.5.11 с фиксом miner claim proof и более чистым домашним экраном.
+- Выпустили CLI v2.1: статус governance-референдумов с фазами, таймингами и оценками enactment, плюс checkphrases для защищённых кошельков.
+
+### Content & Partnerships
+
+- Fortune взял интервью у Chris о грядущей «great quantum migration» и $2 трлн цифровых активов под риском:
+
+<TwitterEmbed url="https://x.com/YuviLightman/status/2089273360136253742" />
+
+- Обновили гайд по майнингу на [docs.quantus.com](https://docs.quantus.com).
+
+Stay frosty, quants.
