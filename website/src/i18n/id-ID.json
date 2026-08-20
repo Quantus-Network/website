@@ -220,7 +220,7 @@
             },
             "throughput": {
               "label": "Throughput",
-              "value": "170 QTPS"
+              "value": "{qtps} QTPS"
             }
           }
         },
@@ -445,7 +445,7 @@
         },
         "encrypt": {
           "title": "Pribadi Secara Default",
-          "body": "Privasi adalah hak. Desain bukti zero-knowledge yang sama yang menskalakan Quantus hingga 170 QTPS juga melindungi privasi Anda. Transaksi, saldo, dan riwayat Anda adalah milik Anda."
+          "body": "Privasi adalah hak. Desain bukti zero-knowledge yang sama yang menskalakan Quantus hingga {qtps} QTPS juga melindungi privasi Anda. Transaksi, saldo, dan riwayat Anda adalah milik Anda."
         }
       }
     },
@@ -455,7 +455,6 @@
       "body": "Q-day tidak akan disiarkan di televisi. Dompet Quantus berarti Anda tidak perlu memikirkannya. Anda sudah berada di sisi perubahan yang benar.",
       "stats": {
         "qtps": {
-          "value": "50",
           "label": "QTPS DI QUANTUS"
         },
         "security": {

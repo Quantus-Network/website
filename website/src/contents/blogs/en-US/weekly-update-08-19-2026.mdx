@@ -1,0 +1,70 @@
+---
+title: "Quantus Weekly: 170 QTPS and Miner v4"
+description: "Immunefi audit competition runs through August 24. Miner v4.0.0 is 4.1x faster on GPU, and transparent transactions now hit 170 QTPS before ZK aggregation."
+pubDate: "2026-08-19"
+heroImage: "/blog/covers/weekly-update-08-19-2026.webp"
+heroAlt: "Quantus Weekly: 170 QTPS and Miner v4"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "quantum",
+    "post-quantum",
+    "immunefi",
+    "gpu-mining",
+    "miner",
+    "mining",
+    "dilithium",
+    "zk-proofs",
+    "scalability",
+    "runtime-upgrade",
+    "keystone",
+    "mobile",
+    "governance",
+    "infra",
+    "security",
+  ]
+---
+
+import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
+
+Our [@immunefi](https://x.com/@immunefi) audit competition continues through August 24.
+
+We've also released miner v4.0.0, making GPU mining 4.1x faster, so retest your mining hardware with the newest miner release before mainnet.
+
+On the protocol side we've improved the QTPS (quantum TPS) of our transparent transactions by over 3x, from 50 QTPS to 170 QTPS. This QTPS number is before any ZK aggregation, which further improves throughput by approximately an order of magnitude.
+
+Here's what else we built last week:
+
+### Github Activity (59 merged pull requests):
+
+![Github Stats](/blog/assets/github-stats-weekly-update-08-19-2026.webp)
+
+### Core Tech & ZK
+
+- The Immunefi audit competition is live through August 24.
+- Tripled throughput on transparent transactions from 50 to 170 QTPS, before ZK aggregation. The chain now caches an account's Dilithium public key after its first transaction, cutting roughly 2 KB from every later one, and the zk-tree Merkle root now computes once per block instead of once per transfer. Ships in the next runtime upgrade.
+- Patched a node crash triggered by connection flooding.
+
+### Network & Infra
+
+- Released miner v4.0.0: GPU mining is ~4.1x faster.
+- Authenticated the channel between the node and the external miner with auth tokens over QUIC and TLS certificate pinning.
+- Syncing nodes no longer hand miners stale jobs, so hashrate stops burning on work that cannot win a block.
+- Added automated offsite backups for servers and databases.
+
+### Web & Mobile App Updates
+
+- Fixed the Keystone release firmware builds and verified them on the device.
+- Released mobile wallet 1.5.11 with a miner claim proof fix and a cleaner home screen.
+- Released CLI v2.1: governance referenda status with phases, timings, and enactment estimates, plus checkphrases for protected wallets.
+
+### Content & Partnerships
+
+- Fortune interviewed Chris on the coming "great quantum migration" and the $2 trillion in digital assets at risk:
+
+<TwitterEmbed url="https://x.com/YuviLightman/status/2089273360136253742" />
+
+- Updated the mining guide at [docs.quantus.com](https://docs.quantus.com).
+
+Stay frosty, quants.
