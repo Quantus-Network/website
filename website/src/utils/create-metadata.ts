@@ -67,7 +67,7 @@ export const createMetadata = (
       image: image.url,
       imageAlt: image.alt,
       site: "@QuantusNetwork",
-      creator: "@QuantusNetwork",
+      creator: seo.twitter?.creator ?? "@QuantusNetwork",
       card: "summary_large_image",
     },
     canonical,

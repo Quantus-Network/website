@@ -13,6 +13,7 @@ import { JsonLdGraph } from "@/utils/build-json-ld";
 import { PEOPLE, isPersonId, personId } from "@/constants/people";
 import { getPersonJsonLd } from "@/constants/person-jsonld";
 import { organizationJsonLd } from "@/constants/default-jsonld";
+import { resolveTwitterCreator } from "@/utils/resolve-blog-author";
 import env from "@/config";
 
 type Props = CollectionEntry<"blog">["data"] & {
@@ -34,16 +35,19 @@ const {
 const currentLocale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(currentLocale);
 
+const blogIndexHref = getLocalizedPath(currentLocale, "/blog");
+const author = authorId && isPersonId(authorId) ? PEOPLE[authorId] : undefined;
+
 const metadata = createMetadata({
   title,
   description,
   pathname: Astro.url.pathname,
   imageUrl: heroImage,
   imageAlt: heroAlt,
+  twitter: {
+    creator: resolveTwitterCreator(author?.social.username, tags),
+  },
 });
-
-const blogIndexHref = getLocalizedPath(currentLocale, "/blog");
-const author = authorId && isPersonId(authorId) ? PEOPLE[authorId] : undefined;
 
 const article: Article = {
   "@type": "Article",

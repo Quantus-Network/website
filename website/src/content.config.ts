@@ -1,21 +1,28 @@
-import { defineCollection, z } from "astro:content";
+import { defineCollection } from "astro:content";
+import { z } from 'astro/zod'
 import { glob } from "astro/loaders";
+import { resolveBlogAuthor } from "./utils/resolve-blog-author";
 
 const blog = defineCollection({
   loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/contents/blogs" }),
-  schema: z.object({
-    title: z.string(),
-    description: z.string(),
-    pubDate: z.coerce.date(),
-    updatedDate: z.coerce.date().optional(),
-    heroImage: z.string().optional(),
-    heroAlt: z.string().optional(),
-    featured: z.boolean().optional(),
-    tags: z.array(z.string()).default([]),
-    author: z
-      .enum(["christopher-smith", "joe-mattia", "jonathan-angle"])
-      .optional(),
-  }),
+  schema: z
+    .object({
+      title: z.string(),
+      description: z.string(),
+      pubDate: z.coerce.date(),
+      updatedDate: z.coerce.date().optional(),
+      heroImage: z.string().optional(),
+      heroAlt: z.string().optional(),
+      featured: z.boolean().optional(),
+      tags: z.array(z.string()).default([]),
+      author: z
+        .enum(["christopher-smith", "joe-mattia", "jonathan-angle"])
+        .optional(),
+    })
+    .transform((data) => ({
+      ...data,
+      author: resolveBlogAuthor(data.author, data.tags),
+    })),
 });
 
 const tocHeadingItem = z.object({
