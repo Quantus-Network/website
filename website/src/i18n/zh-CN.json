@@ -133,7 +133,8 @@
     "hero_banner": {
       "eyebrow": "量子安全加密货币",
       "title_line1": "量子计算机无法",
-      "title_line2": "破解的区块链。",
+      "title_line2": "破解的货币。",
+      "sub": "Quantus 是后量子时代的 Layer 1。它的货币是 QUAN：通过挖矿产生，第一天即可从 35+ 条链接入。",
       "cta_whitepaper": "阅读白皮书",
       "cta_download_wallet": "下载钱包",
       "freq": {
@@ -144,7 +145,7 @@
         "block_height": "区块高度",
         "qtps": "QTPS",
         "uptime": "运行时间",
-        "nodes": "节点",
+        "nodes": "矿工",
         "mainnet": "主网: ??"
       }
     },
@@ -181,6 +182,8 @@
         "vulnerable": "脆弱",
         "secure": "安全"
       },
+      "closer": "上面每一种资产所依赖的密码学都有到期日。Quantus 为后量子时代而生。",
+      "cta": "查看密码学",
       "source": "来源：NIST 后量子密码学标准化 · 2024"
     },
     "solution": {
@@ -260,14 +263,14 @@
         "network": {
           "label": "网络",
           "description": "查看网络活动。",
-          "validators": "247 个活跃验证者",
+          "miners": "247 个活跃矿工",
           "explorer_cta": "查看浏览器"
         }
       }
     },
     "community": {
       "eyebrow": "社区",
-      "headline": "参与其中。保持联系。",
+      "headline": "参与其中。",
       "cards": {
         "telegram": {
           "label": "Telegram",
@@ -293,7 +296,7 @@
     },
     "newsletter": {
       "headline": "窗口已开启。",
-      "sub": "直接在您的收件箱中获取量子安全更新、协议新闻和早期访问权限。",
+      "sub": "第一时间获取 QUAN 更新。",
       "first_name_placeholder": "名",
       "first_name_aria": "名",
       "last_name_placeholder": "姓",
@@ -345,7 +348,7 @@
         },
         "scale": {
           "title": "为扩展而生",
-          "body": "后量子签名的体积比传统签名大。我们通过零知识证明系统解决了这个问题，该系统可以将数千笔交易压缩成一个可验证的证明，且不牺牲安全性。"
+          "body": "后量子签名的体积比传统签名大。Quantus 通过零知识证明系统解决了这个问题，该系统可以将数千笔交易压缩成一个可验证的证明，且不牺牲安全性。"
         }
       }
     },
@@ -404,7 +407,7 @@
       "title": "完整的技术图景。",
       "sub": "协议架构、加密假设和完整的安全模型——尽在 Quantus 白皮书中。",
       "primary_cta": "阅读白皮书",
-      "secondary_cta": "探索网络"
+      "secondary_cta": "开始挖矿"
     }
   },
   "wallet": {
@@ -415,7 +418,7 @@
     "hero_banner": {
       "eyebrow": "QUANTUS 钱包",
       "title": "优质货币。就在您的口袋里。",
-      "sub": "发送、接收和存储量子安全的稳健货币。支持 iOS 和 Android。",
+      "sub": "发送、接收和存储 QUAN：量子安全的稳健货币。支持 iOS 和 Android。",
       "cta_app_store": "在 App Store 下载",
       "cta_google_play": "在 Google Play 下载"
     },
@@ -491,7 +494,8 @@
       "heading": "永久的经济自由",
       "body1": "从协议设计到用户界面，我们的每一个决定都基于深厚的技术知识和对简洁的尊重。",
       "body2": "我们专注于基础：经过数学证明的安全性、高性能以及轻松的产品体验。",
-      "body3": "我们精密构建。我们快速行动且不走捷径。我们为即将到来的世界而设计，而不是为了已经过去的世界。"
+      "body3": "我们精密构建。我们快速行动且不走捷径。我们为即将到来的世界而设计，而不是为了已经过去的世界。",
+      "body4": "产品是经得起时间考验的货币。它的名字是 QUAN。"
     },
     "advisors": {
       "eyebrow": "顾问"
@@ -546,7 +550,7 @@
     "hero": {
       "eyebrow": "社区",
       "heading": "构建量子安全未来的人们。",
-      "sub": "加入 Quantus 社区。他们是在主流社会意识到量子威胁之前就已理解它的研究人员和早期采用者。"
+      "sub": "加入 Quantus 社区。他们是在主流社会意识到量子威胁之前就已理解它的研究人员、矿工和早期持有者。"
     },
     "events": {
       "eyebrow": "活动",
@@ -568,7 +572,7 @@
     "telegram": {
       "eyebrow": "加入对话",
       "heading": "找到您的社区角落。",
-      "body": "在 Quantus Telegram 社区中与研究人员和早期采用者建立联系。",
+      "body": "在 Quantus Telegram 社区中与研究人员、矿工和早期持有者建立联系。",
       "cta": "加入 TELEGRAM →"
     },
     "socials": {

@@ -133,7 +133,8 @@
     "hero_banner": {
       "eyebrow": "양자 보안 암호화 화폐",
       "title_line1": "양자 컴퓨터가",
-      "title_line2": "해독할 수 없는 블록체인.",
+      "title_line2": "해독할 수 없는 화폐.",
+      "sub": "Quantus는 포스트 양자 레이어 1입니다. 그 화폐는 QUAN: 채굴로 발행되며, 첫날부터 35개 이상의 체인에서 접근할 수 있습니다.",
       "cta_whitepaper": "백서 읽기",
       "cta_download_wallet": "지갑 다운로드",
       "freq": {
@@ -144,7 +145,7 @@
         "block_height": "블록 높이",
         "qtps": "QTPS",
         "uptime": "업타임",
-        "nodes": "노드",
+        "nodes": "채굴자",
         "mainnet": "MAINNET: ??"
       }
     },
@@ -181,6 +182,8 @@
         "vulnerable": "취약함",
         "secure": "안전함"
       },
+      "closer": "위의 모든 자산을 지탱하는 암호 기술에는 유효 기간이 있습니다. Quantus는 포스트 양자 시대를 위해 만들어졌습니다.",
+      "cta": "암호 기술 보기",
       "source": "출처: NIST Post-Quantum Cryptography Standardization · 2024"
     },
     "solution": {
@@ -260,14 +263,14 @@
         "network": {
           "label": "네트워크",
           "description": "네트워크 활동 보기.",
-          "validators": "247명의 활성 검증인",
+          "miners": "247명의 활성 채굴자",
           "explorer_cta": "익스플로러 보기"
         }
       }
     },
     "community": {
       "eyebrow": "커뮤니티",
-      "headline": "참여하세요. 연결을 유지하세요.",
+      "headline": "참여하세요.",
       "cards": {
         "telegram": {
           "label": "Telegram",
@@ -293,7 +296,7 @@
     },
     "newsletter": {
       "headline": "기회는 지금입니다.",
-      "sub": "양자 보안 업데이트, 프로토콜 뉴스, 조기 액세스 정보를 받은 편지함으로 직접 받아보세요.",
+      "sub": "QUAN 업데이트를 가장 먼저 받아보세요.",
       "first_name_placeholder": "이름",
       "first_name_aria": "이름",
       "last_name_placeholder": "성",
@@ -345,7 +348,7 @@
         },
         "scale": {
           "title": "확장성을 위한 설계",
-          "body": "양자 내성 서명은 기존 서명보다 크기가 큽니다. 우리는 보안을 희생하지 않고 수천 개의 거래를 하나의 검증 가능한 증명으로 압축하는 영지식 증명 시스템으로 이 문제를 해결했습니다."
+          "body": "양자 내성 서명은 기존 서명보다 크기가 큽니다. Quantus는 보안을 희생하지 않고 수천 개의 거래를 하나의 검증 가능한 증명으로 압축하는 영지식 증명 시스템으로 이 문제를 해결합니다."
         }
       }
     },
@@ -404,7 +407,7 @@
       "title": "기술적 전모.",
       "sub": "프로토콜 아키텍처, 암호학적 가정, 완전한 보안 모델은 Quantus 백서에서 확인하세요.",
       "primary_cta": "백서 읽기",
-      "secondary_cta": "네트워크 탐색"
+      "secondary_cta": "채굴 시작"
     }
   },
   "wallet": {
@@ -415,7 +418,7 @@
     "hero_banner": {
       "eyebrow": "QUANTUS 지갑",
       "title": "우수한 화폐. 당신의 주머니 속에.",
-      "sub": "양자 보안 사운드 머니를 송금, 수신 및 보관하세요. iOS 및 Android에서 사용 가능합니다.",
+      "sub": "QUAN을 송금, 수신 및 보관하세요. 양자 보안 사운드 머니입니다. iOS 및 Android에서 사용 가능합니다.",
       "cta_app_store": "App Store에서 다운로드",
       "cta_google_play": "Google Play에서 다운로드"
     },
@@ -491,7 +494,8 @@
       "heading": "영구적인 경제적 자유",
       "body1": "프로토콜 설계부터 사용자 인터페이스까지, 우리가 내리는 모든 결정은 깊은 기술적 지식과 단순함에 대한 존중을 바탕으로 합니다.",
       "body2": "우리는 수학적으로 입증된 보안, 높은 성능, 그리고 노력이 필요 없는 제품 경험이라는 기본에 집중합니다.",
-      "body3": "우리는 정밀하게 구축합니다. 품질을 타협하지 않고 신속하게 움직입니다. 그리고 이미 지나간 세상이 아니라 다가올 세상을 위해 설계합니다."
+      "body3": "우리는 정밀하게 구축합니다. 품질을 타협하지 않고 신속하게 움직입니다. 그리고 이미 지나간 세상이 아니라 다가올 세상을 위해 설계합니다.",
+      "body4": "그 결과물은 오래가는 화폐입니다. 이름은 QUAN입니다."
     },
     "advisors": {
       "eyebrow": "어드바이저"
@@ -546,7 +550,7 @@
     "hero": {
       "eyebrow": "커뮤니티",
       "heading": "양자 보안 미래를 만드는 사람들.",
-      "sub": "Quantus 커뮤니티에 참여하세요. 주류가 따라잡기 전에 양자 위협을 이해한 연구자들과 얼리 어답터들입니다."
+      "sub": "Quantus 커뮤니티에 참여하세요. 주류가 따라잡기 전에 양자 위협을 이해한 연구자, 채굴자, 그리고 초기 보유자들입니다."
     },
     "events": {
       "eyebrow": "이벤트",
@@ -568,7 +572,7 @@
     "telegram": {
       "eyebrow": "대화 참여",
       "heading": "커뮤니티의 일원이 되세요.",
-      "body": "Quantus Telegram 커뮤니티에서 연구원 및 얼리 어답터들과 소통하세요.",
+      "body": "Quantus Telegram 커뮤니티에서 연구원, 채굴자, 초기 보유자들과 소통하세요.",
       "cta": "TELEGRAM 참여 →"
     },
     "socials": {

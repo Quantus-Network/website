@@ -132,8 +132,9 @@
     },
     "hero_banner": {
       "eyebrow": "Quantum-Secure Encrypted Money",
-      "title_line1": "The blockchain quantum",
+      "title_line1": "Money quantum",
       "title_line2": "computers can't break.",
+      "sub": "Quantus is the post-quantum Layer 1. Its money is QUAN: mined into existence, reachable from 35+ chains on day one.",
       "cta_whitepaper": "Read Whitepaper",
       "cta_download_wallet": "Download Wallet",
       "freq": {
@@ -144,7 +145,7 @@
         "block_height": "BLOCK HEIGHT",
         "qtps": "QTPS",
         "uptime": "UPTIME",
-        "nodes": "NODES",
+        "nodes": "MINERS",
         "mainnet": "MAINNET: ??"
       }
     },
@@ -181,6 +182,8 @@
         "vulnerable": "Vulnerable",
         "secure": "Secure"
       },
+      "closer": "The cryptography under every asset above has an expiry date. Quantus was built for a post-quantum future.",
+      "cta": "See the cryptography",
       "source": "Source: NIST Post-Quantum Cryptography Standardization · 2024"
     },
     "solution": {
@@ -260,14 +263,14 @@
         "network": {
           "label": "Network",
           "description": "View network activity.",
-          "validators": "247 Active Validators",
+          "miners": "247 Active Miners",
           "explorer_cta": "View Explorer"
         }
       }
     },
     "community": {
       "eyebrow": "Community",
-      "headline": "Get involved. Stay connected.",
+      "headline": "Get involved.",
       "cards": {
         "telegram": {
           "label": "Telegram",
@@ -293,7 +296,7 @@
     },
     "newsletter": {
       "headline": "The window is open.",
-      "sub": "Get quantum security updates, protocol news, and early access straight to your inbox.",
+      "sub": "Get QUAN updates first.",
       "first_name_placeholder": "First name",
       "first_name_aria": "First name",
       "last_name_placeholder": "Last name",
@@ -345,7 +348,7 @@
         },
         "scale": {
           "title": "Built to Scale",
-          "body": "Post-quantum signatures are larger than classical ones. We solved that with a zero-knowledge proof system that compresses thousands of transactions into a single verifiable proof - without sacrificing security."
+          "body": "Post-quantum signatures are larger than classical ones. Quantus solves that with a zero-knowledge proof system that compresses thousands of transactions into a single verifiable proof - without sacrificing security."
         }
       }
     },
@@ -404,7 +407,7 @@
       "title": "The full technical picture.",
       "sub": "Protocol architecture, cryptographic assumptions, and the complete security model - in the Quantus whitepaper.",
       "primary_cta": "Read Whitepaper",
-      "secondary_cta": "Explore Network"
+      "secondary_cta": "Start Mining"
     }
   },
   "wallet": {
@@ -415,7 +418,7 @@
     "hero_banner": {
       "eyebrow": "THE QUANTUS WALLET",
       "title": "Superior money. In your pocket.",
-      "sub": "Send, receive, and store quantum-secure sound money. Available on iOS and Android.",
+      "sub": "Send, receive, and store QUAN: quantum-secure sound money. Available on iOS and Android.",
       "cta_app_store": "Download on App Store",
       "cta_google_play": "Download on Google Play"
     },
@@ -491,7 +494,8 @@
       "heading": "Permanent Economic Freedom",
       "body1": "Every decision we make, from protocol design to user interface, is grounded in deep technical knowledge and a respect for simplicity.",
       "body2": "We focus on the fundamentals: mathematically proven security, high performance, and a product experience that feels effortless.",
-      "body3": "We build with precision. We move fast without cutting corners. And we design for the world that is coming, not the one that has already passed."
+      "body3": "We build with precision. We move fast without cutting corners. And we design for the world that is coming, not the one that has already passed.",
+      "body4": "The product is money that lasts. It's called QUAN."
     },
     "advisors": {
       "eyebrow": "ADVISORS"
@@ -546,7 +550,7 @@
     "hero": {
       "eyebrow": "COMMUNITY",
       "heading": "The people building the quantum-secure future.",
-      "sub": "Join the Quantus community. Researchers and early adopters who understood the quantum threat before the mainstream caught up."
+      "sub": "Join the Quantus community. Researchers, miners, and early holders who understood the quantum threat before the mainstream caught up."
     },
     "events": {
       "eyebrow": "EVENTS",
@@ -568,7 +572,7 @@
     "telegram": {
       "eyebrow": "JOIN THE CONVERSATION",
       "heading": "Find your corner of the community.",
-      "body": "Connect with researchers and early adopters in the Quantus Telegram community.",
+      "body": "Connect with researchers, miners, and early holders in the Quantus Telegram community.",
       "cta": "JOIN TELEGRAM →"
     },
     "socials": {
