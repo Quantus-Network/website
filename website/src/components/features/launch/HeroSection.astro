@@ -1,0 +1,49 @@
+---
+import LogoLong from "@/assets/brand/logo-long.svg";
+import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
+---
+
+<div class="launch-hero">
+  <LogoLong class="launch-logo" />
+  <span class="launch-eyebrow">{t("launch.hero.eyebrow")}</span>
+</div>
+
+<style>
+  .launch-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--launch-space-tight);
+  }
+
+  .launch-logo {
+    display: block;
+    height: 28px;
+    width: auto;
+  }
+
+  .launch-eyebrow {
+    font-family: "Geist Mono", monospace;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(232, 230, 224, 0.45);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 768px) {
+    .launch-logo {
+      height: 22px;
+    }
+
+    .launch-eyebrow {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+    }
+  }
+</style>

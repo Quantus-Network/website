@@ -1,0 +1,309 @@
+---
+import Button from "@/components/ui/Button.astro";
+import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+import { WAITLIST_SOURCE, type WaitlistSource } from "@/constants/waitlist";
+
+interface Props {
+  /** Which waitlist these signups belong to. */
+  source?: WaitlistSource;
+}
+
+const { source = WAITLIST_SOURCE.LAUNCH } = Astro.props;
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
+---
+
+<div class="launch-signup" data-source={source}>
+  <div id="launch-form-wrap" class="launch-form-wrap">
+    <h1 class="launch-headline">{t("launch.signup.headline")}</h1>
+
+    <div class="launch-form-row">
+      <div class="launch-input-wrap">
+        <input
+          type="email"
+          id="launch-email"
+          class="launch-input"
+          placeholder={t("launch.signup.email_placeholder")}
+          aria-label={t("launch.signup.email_aria")}
+          autocomplete="email"
+          required
+        />
+        {/* Decorative resting cursor; the real caret takes over on focus. */}
+        <span class="launch-cursor" aria-hidden="true"></span>
+      </div>
+      <Button id="launch-submit" class="launch-btn">
+        {t("launch.signup.submit_label")}
+      </Button>
+    </div>
+
+    <span class="launch-error-msg" id="launch-error">
+      {t("launch.signup.error_message")}
+    </span>
+  </div>
+
+  <div class="launch-success" id="launch-success">
+    <span class="launch-success-headline">
+      {t("launch.signup.success.headline")}
+    </span>
+    <span class="launch-success-sub">
+      {t("launch.signup.success.sub")}
+    </span>
+  </div>
+</div>
+
+<style>
+  .launch-signup {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .launch-form-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* The page's focal point: display scale, directly above the field. */
+  .launch-headline {
+    font-family: "Geist", sans-serif;
+    font-size: 44px;
+    font-weight: 500;
+    color: var(--color-white);
+    letter-spacing: -0.02em;
+    line-height: 1.08;
+    text-align: center;
+    text-wrap: balance;
+    margin: 0 0 var(--launch-space-group) 0;
+  }
+
+  .launch-form-row {
+    display: flex;
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .launch-input-wrap {
+    position: relative;
+    display: flex;
+    flex: 1;
+    min-width: 0;
+  }
+
+  /* Resting cursor: a thin vertical caret, centred on the input's text line.
+     Reuses the shared `bl` keyframe from global.css at the same rate as
+     the terminal loader's block cursor. */
+  .launch-cursor {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 15px;
+    background: rgba(255, 255, 255, 0.85);
+    animation: bl 0.9s step-end infinite;
+    pointer-events: none;
+  }
+
+  /* Hand off to the real caret on focus, and drop it once anything is typed. */
+  .launch-input:focus ~ .launch-cursor,
+  .launch-input:not(:placeholder-shown) ~ .launch-cursor {
+    display: none;
+  }
+
+  .launch-input {
+    flex: 1;
+    min-width: 0;
+    background: transparent;
+    /* Matches the mining button's border-white so the two bordered
+       elements on the page agree. */
+    border: 1px solid var(--color-white);
+    border-right: none;
+    /* Left pad = cursor left (18) + cursor width (2) + 6px, so the caret
+       sits right against the placeholder like a terminal prompt. */
+    padding: 13px 18px 13px 26px;
+    font-family: "Geist", sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+    outline: none;
+    border-radius: 0;
+    transition: border-color 0.2s;
+  }
+
+  .launch-input::placeholder {
+    color: rgba(232, 230, 224, 0.3);
+  }
+
+  .launch-input:focus {
+    /* Rest is already white, so focus shifts to flare — the same
+       interaction colour the mining button uses on hover. */
+    border-color: var(--color-flare);
+  }
+
+  .launch-input.error {
+    border-color: rgba(255, 59, 59, 0.6);
+  }
+
+  .launch-btn {
+    padding: 13px 26px;
+    white-space: nowrap;
+  }
+
+  .launch-error-msg {
+    font-family: "Geist Mono", monospace;
+    font-size: 12px;
+    color: rgba(255, 59, 59, 0.8);
+    letter-spacing: 0.08em;
+    margin-top: var(--launch-space-tight);
+    display: none;
+    text-align: center;
+  }
+
+  .launch-error-msg.visible {
+    display: block;
+  }
+
+  .launch-success {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--launch-space-tight);
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity 0.7s ease,
+      transform 0.7s ease;
+  }
+
+  .launch-success.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .launch-success-headline {
+    font-family: "Geist", sans-serif;
+    font-size: 26px;
+    font-weight: 500;
+    color: #ffffff;
+    letter-spacing: -0.01em;
+    text-align: center;
+  }
+
+  .launch-success-sub {
+    font-family: "Geist", sans-serif;
+    font-size: 15px;
+    color: rgba(232, 230, 224, 0.45);
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .launch-headline {
+      font-size: 32px;
+    }
+
+    .launch-form-row {
+      flex-direction: column;
+      gap: var(--launch-space-tight);
+      max-width: 100%;
+    }
+
+    .launch-input {
+      border-right: 1px solid var(--color-white);
+      padding: 12px 16px 12px 24px;
+    }
+
+    .launch-cursor {
+      left: 16px;
+    }
+
+    .launch-btn {
+      width: 100%;
+      padding: 12px 20px;
+    }
+
+    .launch-success-headline {
+      font-size: 22px;
+    }
+  }
+</style>
+
+<script>
+  import apiClient from "@/api/client";
+  import { trackEvent } from "@/scripts/shared/analytics";
+
+  const root = document.querySelector<HTMLElement>(".launch-signup");
+  const submitBtn = document.getElementById(
+    "launch-submit",
+  ) as HTMLButtonElement | null;
+  const emailInput = document.getElementById(
+    "launch-email",
+  ) as HTMLInputElement | null;
+  const errorMsg = document.getElementById("launch-error");
+  const formWrap = document.getElementById("launch-form-wrap");
+  const successWrap = document.getElementById("launch-success");
+
+  if (root && submitBtn && emailInput && errorMsg && formWrap && successWrap) {
+    const source = root.dataset.source;
+
+    const isValidEmail = (val: string) =>
+      /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
+
+    const setLoading = (loading: boolean) => {
+      submitBtn.disabled = loading;
+      if (loading) {
+        submitBtn.dataset.originalText = submitBtn.innerText;
+        submitBtn.innerText = "...";
+      } else {
+        submitBtn.innerText = submitBtn.dataset.originalText ?? "";
+      }
+    };
+
+    submitBtn.addEventListener("click", async () => {
+      emailInput.classList.remove("error");
+      errorMsg.classList.remove("visible");
+
+      const email = emailInput.value.trim();
+
+      if (!email || !isValidEmail(email)) {
+        emailInput.classList.add("error");
+        errorMsg.classList.add("visible");
+        return;
+      }
+
+      setLoading(true);
+
+      try {
+        // The squeeze page collects email only; the API still expects the
+        // name fields, so they go up empty.
+        const resp = await apiClient.subscribe(email, "", "", source);
+        const data = await resp.json();
+
+        if (resp.status !== 201) {
+          if (data.error) window.toast.error(data.error);
+          setLoading(false);
+          return;
+        }
+
+        trackEvent("generate_lead", {
+          lead_type: "launch",
+          form_id: "launch_squeeze",
+        });
+
+        formWrap.style.transition = "opacity 0.4s ease";
+        formWrap.style.opacity = "0";
+        setTimeout(() => {
+          formWrap.style.display = "none";
+          successWrap.style.display = "flex";
+          requestAnimationFrame(() => successWrap.classList.add("visible"));
+        }, 400);
+      } catch (error) {
+        window.toast.error((error as Error).message);
+        setLoading(false);
+      }
+    });
+  }
+</script>

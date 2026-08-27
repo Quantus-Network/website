@@ -39,9 +39,11 @@ import env from "@/config";
 
 interface Props extends SEOProps {
   jsonLd?: WithContext<Thing> | Graph;
+  /** Render the navbar and footer. Off for standalone pages like /launch. */
+  showChrome?: boolean;
 }
 
-const { jsonLd, ...metadata } = Astro.props;
+const { jsonLd, showChrome = true, ...metadata } = Astro.props;
 
 const currentLocale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(currentLocale);
@@ -115,11 +117,11 @@ const breadcrumbs = generateBreadcrumbs({
       )
     }
 
-    <Navbar locale={currentLocale} />
+    {showChrome && <Navbar locale={currentLocale} />}
     <main class="grow">
       <slot />
     </main>
-    <Footer />
+    {showChrome && <Footer />}
 
     <CookieConsent />
     <Toast />

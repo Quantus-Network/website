@@ -828,6 +828,36 @@
       "copy": "¡Código de referido copiado!"
     }
   },
+  "launch": {
+    "meta": {
+      "title": "Lanzamiento de Quantus",
+      "description": "Dinero encriptado seguro cuánticamente. Suministro máximo de 21 millones, Proof of Work. Reciba los detalles del lanzamiento."
+    },
+    "hero": {
+      "eyebrow": "Dinero Encriptado Seguro Cuánticamente"
+    },
+    "signup": {
+      "headline": "Reciba los detalles del lanzamiento.",
+      "email_placeholder": "your@email.com",
+      "email_aria": "Dirección de correo electrónico",
+      "submit_label": "AVÍSAME",
+      "error_message": "Por favor, introduzca una dirección de correo electrónico válida.",
+      "success": {
+        "headline": "Está en la lista.",
+        "sub": "Los detalles del lanzamiento llegarán a su bandeja de entrada."
+      }
+    },
+    "facts": {
+      "supply": {
+        "label": "SUMINISTRO MÁXIMO",
+        "value": "21,000,000"
+      },
+      "consensus": {
+        "label": "PROOF OF WORK"
+      }
+    },
+    "mining_cta": "LEER LA GUÍA DE MINERÍA"
+  },
   "blog": {
     "title": "Las últimas noticias de Quantus.",
     "hero": {

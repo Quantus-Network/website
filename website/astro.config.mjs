@@ -70,8 +70,12 @@ export default defineConfig({
         const path = new URL(page).pathname.replace(/\/$/, "") || "/";
         const isTeamIndex =
           path === "/team" || /\/[a-z]{2}-[A-Z]{2}\/team$/.test(path);
+        // Squeeze page: indexable and shareable, but kept out of the sitemap.
+        const isLaunch =
+          path === "/launch" || /\/[a-z]{2}-[A-Z]{2}\/launch$/.test(path);
         return (
           !isTeamIndex &&
+          !isLaunch &&
           !page.includes("/tags/") &&
           !page.includes("/account/") &&
           !page.includes("/oauth/") &&

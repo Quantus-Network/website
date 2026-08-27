@@ -1,0 +1,85 @@
+---
+import Layout from "@/components/layout/Layout.astro";
+import {
+  createTranslator,
+  getLocaleFromUrl,
+  PREFIXED_LOCALES,
+} from "@/utils/i18n";
+import { createMetadata } from "@/utils/create-metadata";
+import { JsonLdGraph } from "@/utils/build-json-ld";
+import {
+  organizationJsonLd,
+  websiteJsonLd,
+} from "@/constants/default-jsonld";
+import HeroSection from "@/components/features/launch/HeroSection.astro";
+import SignupForm from "@/components/features/launch/SignupForm.astro";
+import FactsSection from "@/components/features/launch/FactsSection.astro";
+import AsciiFrame from "@/components/features/launch/AsciiFrame.astro";
+
+export async function getStaticPaths() {
+  return PREFIXED_LOCALES.map((lang) => ({ params: { lang } }));
+}
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
+
+const metadata = createMetadata({
+  title: t("launch.meta.title"),
+  description: t("launch.meta.description"),
+  pathname: Astro.url.pathname,
+});
+
+const jsonLd = JsonLdGraph({
+  "@context": "https://schema.org",
+  "@graph": [websiteJsonLd, organizationJsonLd],
+});
+---
+
+<Layout {...metadata} jsonLd={jsonLd} showChrome={false}>
+  <section id="launch">
+    <AsciiFrame />
+    <div class="launch-inner">
+      <HeroSection />
+      <SignupForm />
+      <FactsSection />
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Two-step spacing scale on an 8px base, inherited by every child block
+     so the whole page shares one rhythm. --tight binds a group together;
+     --group separates one group from the next. */
+  #launch {
+    --launch-space-tight: 8px;
+    --launch-space-group: 40px;
+
+    background: #0e0e0e;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 24px;
+  }
+
+  .launch-inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--launch-space-group);
+    width: 100%;
+    max-width: 620px;
+  }
+
+  @media (max-width: 768px) {
+    #launch {
+      --launch-space-group: 32px;
+
+      padding: 40px 24px;
+    }
+  }
+</style>
