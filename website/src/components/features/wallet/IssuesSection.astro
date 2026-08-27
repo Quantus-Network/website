@@ -1,4 +1,5 @@
 ---
+import { QTPS } from "@/constants/qtps";
 import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
@@ -23,7 +24,7 @@ const t = await createTranslator(locale);
     <div class="wallet-stat-bar">
       <div class="wallet-stat-col wallet-animate" data-delay="0">
         <span class="wallet-stat-num">
-          {t("wallet.issues.stats.qtps.value")}
+          {QTPS}
         </span>
         <span class="wallet-stat-label">
           {t("wallet.issues.stats.qtps.label")}

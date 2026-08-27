@@ -1,0 +1,70 @@
+---
+title: "Quantus Weekly: 170 QTPS와 Miner v4"
+description: "Immunefi 감사 경쟁은 8월 24일까지 이어집니다. Miner v4.0.0은 GPU에서 약 4.1배 빨라졌고, 투명 트랜잭션은 ZK 집계 전 170 QTPS에 도달했습니다."
+pubDate: "2026-08-19"
+heroImage: "/blog/covers/weekly-update-08-19-2026.webp"
+heroAlt: "Quantus Weekly: 170 QTPS와 Miner v4"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "quantum",
+    "post-quantum",
+    "immunefi",
+    "gpu-mining",
+    "miner",
+    "mining",
+    "dilithium",
+    "zk-proofs",
+    "scalability",
+    "runtime-upgrade",
+    "keystone",
+    "mobile",
+    "governance",
+    "infra",
+    "security",
+  ]
+---
+
+import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
+
+[@immunefi](https://x.com/@immunefi) 감사 경쟁은 8월 24일까지 이어집니다.
+
+Miner v4.0.0도 출시했습니다. GPU 마이닝이 4.1배 빨라졌으니, 메인넷 전에 최신 마이너로 하드웨어를 다시 테스트하세요.
+
+프로토콜 쪽에서는 투명 트랜잭션의 QTPS(양자 TPS)를 50 QTPS에서 170 QTPS로 3배 이상 올렸습니다. 이 QTPS는 ZK 집계 이전 수치이며, 집계는 처리량을 대략 한 자릿수 더 끌어올립니다.
+
+지난주 그 밖에 구축한 내용은 다음과 같습니다:
+
+### Github 활동 (머지된 PR 59건):
+
+![Github Stats](/blog/assets/github-stats-weekly-update-08-19-2026.webp)
+
+### 코어 기술 & ZK
+
+- Immunefi 감사 경쟁이 8월 24일까지 진행 중입니다.
+- ZK 집계 전 투명 트랜잭션 처리량을 50에서 170 QTPS로 세 배로 올렸습니다. 체인은 계정의 첫 트랜잭션 이후 Dilithium 공개 키를 캐시해 이후 트랜잭션마다 약 2 KB를 줄이고, zk-tree Merkle 루트는 전송마다가 아니라 블록마다 한 번 계산합니다. 다음 런타임 업그레이드에 실립니다.
+- 커넥션 플러딩으로 발생하던 노드 크래시를 패치했습니다.
+
+### 네트워크 & 인프라
+
+- Miner v4.0.0 출시: GPU 마이닝이 약 4.1배 빨라졌습니다.
+- 노드와 외부 마이너 사이 채널을 QUIC 위 인증 토큰과 TLS 인증서 피닝으로 인증했습니다.
+- 동기화 중인 노드는 더 이상 마이너에게 낡은 잡을 넘기지 않아, 블록을 못 따는 작업에 해시레이트가 낭비되지 않습니다.
+- 서버와 데이터베이스의 오프사이트 자동 백업을 추가했습니다.
+
+### 웹·모바일 앱 업데이트
+
+- Keystone 릴리스 펌웨어 빌드를 고치고 기기에서 검증했습니다.
+- 모바일 지갑 1.5.11을 출시했습니다. 마이너 클레임 증명 수정과 더 깔끔한 홈 화면이 포함됩니다.
+- CLI v2.1을 출시했습니다. 거버넌스 레퍼렌다 상태(단계, 타이밍, 시행 예상)와 보호 지갑용 체크프레이즈가 들어갑니다.
+
+### 콘텐츠 & 파트너십
+
+- Fortune이 Chris에게 다가올 "great quantum migration"과 위험에 처한 2조 달러 디지털 자산에 대해 인터뷰했습니다:
+
+<TwitterEmbed url="https://x.com/YuviLightman/status/2089273360136253742" />
+
+- [docs.quantus.com](https://docs.quantus.com)의 마이닝 가이드를 업데이트했습니다.
+
+Stay frosty, quants.

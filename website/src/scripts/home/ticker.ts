@@ -1,4 +1,5 @@
 import apiClient from "@/api/client";
+import { QTPS } from "@/constants/qtps";
 
 export const buildTicker = () => {
   const track = document.getElementById("ttrack");
@@ -14,7 +15,7 @@ export const buildTicker = () => {
 
   const items = [
     { lbl: labels.blockHeight, val: "—", live: true, id: "block-height" },
-    { lbl: labels.qtps, val: "170", live: false },
+    { lbl: labels.qtps, val: String(QTPS), live: false },
     { lbl: labels.uptime, val: "99.97%", live: false },
     { lbl: labels.nodes, val: "—", live: true, id: "nodes" },
     { lbl: "", val: labels.mainnet, live: false, mainnet: true },

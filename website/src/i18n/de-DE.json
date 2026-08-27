@@ -220,7 +220,7 @@
             },
             "throughput": {
               "label": "Durchsatz",
-              "value": "170 QTPS"
+              "value": "{qtps} QTPS"
             }
           }
         },
@@ -445,7 +445,7 @@
         },
         "encrypt": {
           "title": "Standardmäßig privat",
-          "body": "Privatsphäre ist ein Recht. Dasselbe Zero-Knowledge-Proof-Design, das Quantus auf 170 QTPS skaliert, schützt auch Ihre Privatsphäre. Ihre Transaktionen, Ihr Kontostand und Ihre Historie gehören Ihnen."
+          "body": "Privatsphäre ist ein Recht. Dasselbe Zero-Knowledge-Proof-Design, das Quantus auf {qtps} QTPS skaliert, schützt auch Ihre Privatsphäre. Ihre Transaktionen, Ihr Kontostand und Ihre Historie gehören Ihnen."
         }
       }
     },
@@ -455,7 +455,6 @@
       "body": "Der Q-Day wird nicht im Fernsehen übertragen. Mit der Quantus-Wallet müssen Sie nicht darüber nachdenken. Sie stehen bereits auf der richtigen Seite des Wandels.",
       "stats": {
         "qtps": {
-          "value": "50",
           "label": "QTPS AUF QUANTUS"
         },
         "security": {

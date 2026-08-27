@@ -1,0 +1,70 @@
+---
+title: "Quantus Weekly: 170 QTPS और Miner v4"
+description: "Immunefi ऑडिट कंपटीशन 24 अगस्त तक चलता है। Miner v4.0.0 GPU पर 4.1x तेज़ है, और ट्रांसपेरेंट ट्रांज़ैक्शन ZK एग्रीगेशन से पहले अब 170 QTPS तक पहुँचते हैं।"
+pubDate: "2026-08-19"
+heroImage: "/blog/covers/weekly-update-08-19-2026.webp"
+heroAlt: "Quantus Weekly: 170 QTPS और Miner v4"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "quantum",
+    "post-quantum",
+    "immunefi",
+    "gpu-mining",
+    "miner",
+    "mining",
+    "dilithium",
+    "zk-proofs",
+    "scalability",
+    "runtime-upgrade",
+    "keystone",
+    "mobile",
+    "governance",
+    "infra",
+    "security",
+  ]
+---
+
+import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
+
+हमारा [@immunefi](https://x.com/@immunefi) ऑडिट कंपटीशन 24 अगस्त तक जारी है।
+
+हमने miner v4.0.0 भी रिलीज़ किया है, जिससे GPU माइनिंग 4.1x तेज़ हो गई है — मेननेट से पहले अपने माइनिंग हार्डवेयर को नए miner रिलीज़ से दोबारा टेस्ट करें।
+
+प्रोटोकॉल साइड पर हमने ट्रांसपेरेंट ट्रांज़ैक्शन का QTPS (quantum TPS) 3x से ज़्यादा सुधारा है, 50 QTPS से 170 QTPS। यह QTPS आंकड़ा किसी भी ZK एग्रीगेशन से पहले है, जो थ्रूपुट को लगभग एक ऑर्डर ऑफ़ मैग्निट्यूड और बढ़ाता है।
+
+पिछले हफ़्ते हमने और क्या बनाया:
+
+### Github एक्टिविटी (59 मर्ज्ड पुल रिक्वेस्ट):
+
+![Github Stats](/blog/assets/github-stats-weekly-update-08-19-2026.webp)
+
+### कोर टेक और ZK
+
+- Immunefi ऑडिट कंपटीशन 24 अगस्त तक लाइव है।
+- ट्रांसपेरेंट ट्रांज़ैक्शन का थ्रूपुट ZK एग्रीगेशन से पहले 50 से 170 QTPS तिगुना किया। Chain अब अकाउंट की पहली ट्रांज़ैक्शन के बाद Dilithium पब्लिक की कैश करती है, जिससे हर अगली ट्रांज़ैक्शन से करीब 2 KB कटता है, और zk-tree का Merkle root अब हर ट्रांसफ़र की जगह एक बार प्रति ब्लॉक कंप्यूट होता है। अगले runtime upgrade में शिप होगा।
+- Connection flooding से ट्रिगर होने वाला नोड क्रैश पैच किया।
+
+### नेटवर्क और इंफ्रा
+
+- Miner v4.0.0 रिलीज़: GPU माइनिंग ~4.1x तेज़।
+- नोड और एक्सटर्नल माइनर के बीच चैनल को QUIC पर auth टोकन और TLS सर्टिफ़िकेट पिनिंग से ऑथेंटिकेट किया।
+- सिंक हो रहे नोड अब माइनर को स्टेल जॉब नहीं देते, इसलिए हैशरेट ऐसे काम पर नहीं जलता जिससे ब्लॉक नहीं जीता जा सकता।
+- सर्वर और डेटाबेस के लिए ऑटोमेटेड ऑफसाइट बैकअप जोड़े।
+
+### वेब और मोबाइल ऐप अपडेट
+
+- Keystone रिलीज़ फ़र्मवेयर बिल्ड ठीक किए और डिवाइस पर वेरिफ़ाई किए।
+- मोबाइल वॉलेट 1.5.11 रिलीज़: माइनर क्लेम प्रूफ़ फ़िक्स और साफ़ होम स्क्रीन।
+- CLI v2.1 रिलीज़: गवर्नेंस रेफ़रेंडा स्टेटस फ़ेज़, टाइमिंग और enactment अनुमान के साथ, साथ में प्रोटेक्टेड वॉलेट के लिए checkphrases।
+
+### कंटेंट और पार्टनरशिप
+
+- Fortune ने Chris से आने वाले "great quantum migration" और जोखिम में $2 ट्रिलियन डिजिटल एसेट पर इंटरव्यू किया:
+
+<TwitterEmbed url="https://x.com/YuviLightman/status/2089273360136253742" />
+
+- [docs.quantus.com](https://docs.quantus.com) पर माइनिंग गाइड अपडेट की।
+
+Stay frosty, quants.

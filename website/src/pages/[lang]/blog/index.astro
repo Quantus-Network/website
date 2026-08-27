@@ -21,8 +21,6 @@ const posts = await getCollection("blog", ({ id }) => {
   return id.toLowerCase().startsWith(`${locale.toLowerCase()}/`);
 });
 
-console.log(posts);
-
 const sortedPosts = posts.sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
