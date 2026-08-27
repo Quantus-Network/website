@@ -832,6 +832,36 @@
       "copy": "추천 코드가 복사되었습니다!"
     }
   },
+  "launch": {
+    "meta": {
+      "title": "Quantus 출시",
+      "description": "양자 보안 암호화 화폐. 총 발행 한도 2,100만, Proof of Work. 출시 소식을 받아보세요."
+    },
+    "hero": {
+      "eyebrow": "양자 보안 암호화 화폐"
+    },
+    "signup": {
+      "headline": "출시 소식을 받아보세요.",
+      "email_placeholder": "your@email.com",
+      "email_aria": "이메일 주소",
+      "submit_label": "알림 받기",
+      "error_message": "유효한 이메일 주소를 입력하세요.",
+      "success": {
+        "headline": "등록되었습니다.",
+        "sub": "출시 소식을 이메일로 보내드립니다."
+      }
+    },
+    "facts": {
+      "supply": {
+        "label": "총 발행 한도",
+        "value": "21,000,000"
+      },
+      "consensus": {
+        "label": "PROOF OF WORK"
+      }
+    },
+    "mining_cta": "채굴 가이드 읽기"
+  },
   "blog": {
     "title": "Quantus의 최신 소식.",
     "hero": {

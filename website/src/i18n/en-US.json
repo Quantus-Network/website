@@ -832,6 +832,36 @@
       "copy": "Referral code copied!"
     }
   },
+  "launch": {
+    "meta": {
+      "title": "Quantus Launch",
+      "description": "Quantum secure encrypted money. 21 million supply cap, Proof of Work. Get launch details."
+    },
+    "hero": {
+      "eyebrow": "Quantum Secure Encrypted Money"
+    },
+    "signup": {
+      "headline": "Get launch details.",
+      "email_placeholder": "your@email.com",
+      "email_aria": "Email address",
+      "submit_label": "NOTIFY ME",
+      "error_message": "Please enter a valid email address.",
+      "success": {
+        "headline": "You're on the list.",
+        "sub": "Launch details will land in your inbox."
+      }
+    },
+    "facts": {
+      "supply": {
+        "label": "SUPPLY CAP",
+        "value": "21,000,000"
+      },
+      "consensus": {
+        "label": "PROOF OF WORK"
+      }
+    },
+    "mining_cta": "READ THE MINING GUIDE"
+  },
   "blog": {
     "title": "The latest news from the Quantus.",
     "hero": {

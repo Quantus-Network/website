@@ -1,0 +1,95 @@
+---
+/**
+ * ASCII backdrop for /launch.
+ *
+ * This is Home's hero field, not a copy of it: the element carries
+ * id="ascii-hero" and the script drives it through the very same
+ * `calcHeroDims` / `heroLoop` exports in scripts/home/hero.ts, which render
+ * via renderASCIIRect over chladniRect with the shared RAMP.
+ *
+ * hero.ts resolves #ascii-hero at module scope and gates its loop behind
+ * `heroActive`, which on Home is flipped by the terminal loader. There is no
+ * loader here, so we flip it ourselves. `updateMousePosition` is deliberately
+ * not wired — it is the one export that writes to Home's #fval readout and
+ * would throw on this page.
+ *
+ * Framing is done with a radial mask rather than by slicing the field, so the
+ * pattern stays whole and simply fades out behind the content.
+ */
+---
+
+<div id="ascii-hero" class="launch-ascii" aria-hidden="true"></div>
+
+<style>
+  /* Same type treatment as Home's #ascii-hero. */
+  .launch-ascii {
+    position: absolute;
+    inset: 0;
+    font-family: "Geist Mono", monospace;
+    font-size: 11px;
+    line-height: 1.22;
+    letter-spacing: 0.05em;
+    white-space: pre;
+    color: rgba(255, 107, 53, 0.38);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
+
+    /* Transparent where the content sits, opaque toward the edges. */
+    -webkit-mask-image: radial-gradient(
+      ellipse 62% 56% at 50% 50%,
+      transparent 0%,
+      transparent 42%,
+      rgba(0, 0, 0, 0.5) 68%,
+      #000 92%
+    );
+    mask-image: radial-gradient(
+      ellipse 62% 56% at 50% 50%,
+      transparent 0%,
+      transparent 42%,
+      rgba(0, 0, 0, 0.5) 68%,
+      #000 92%
+    );
+  }
+
+  @media (max-width: 768px) {
+    .launch-ascii {
+      font-size: 6px;
+      line-height: 1.15;
+
+      -webkit-mask-image: radial-gradient(
+        ellipse 78% 46% at 50% 50%,
+        transparent 0%,
+        transparent 46%,
+        rgba(0, 0, 0, 0.5) 70%,
+        #000 94%
+      );
+      mask-image: radial-gradient(
+        ellipse 78% 46% at 50% 50%,
+        transparent 0%,
+        transparent 46%,
+        rgba(0, 0, 0, 0.5) 70%,
+        #000 94%
+      );
+    }
+  }
+</style>
+
+<script>
+  import {
+    calcHeroDims,
+    heroLoop,
+    updateHeroActive,
+  } from "@/scripts/home/hero";
+
+  calcHeroDims();
+  // Home flips this from its terminal loader; /launch has none.
+  updateHeroActive(true);
+  heroLoop();
+
+  window.addEventListener("resize", calcHeroDims);
+</script>

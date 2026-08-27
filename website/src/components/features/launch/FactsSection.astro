@@ -1,0 +1,93 @@
+---
+import Button from "@/components/ui/Button.astro";
+import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
+---
+
+<div class="launch-facts">
+  <div class="launch-stat">
+    <span class="launch-stat-label">{t("launch.facts.supply.label")}</span>
+    <span class="launch-stat-value">{t("launch.facts.supply.value")}</span>
+  </div>
+
+  <div class="launch-consensus">
+    <span class="launch-stat-label">{t("launch.facts.consensus.label")}</span>
+
+    <Button
+      href="https://docs.quantus.com/guides/mining/"
+      variant="secondary"
+      size="medium"
+      target="_blank"
+      rel="noopener"
+      class="launch-mining-btn border-white hover:border-flare hover:text-flare"
+      data-track="mining_docs_click"
+      data-track-cta-location="launch"
+    >
+      {t("launch.mining_cta")}
+    </Button>
+  </div>
+</div>
+
+<style>
+  .launch-facts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--launch-space-group);
+  }
+
+  /* Both blocks share one label/value treatment so they read as a pair. */
+  .launch-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--launch-space-tight);
+  }
+
+  .launch-stat-label {
+    font-family: "Geist Mono", monospace;
+    font-size: 11px;
+    font-weight: 400;
+    color: rgba(232, 230, 224, 0.4);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  .launch-stat-value {
+    font-family: "Geist Mono", monospace;
+    font-size: 36px;
+    font-weight: 400;
+    color: var(--color-flare);
+    letter-spacing: -0.01em;
+    text-align: center;
+    line-height: 1.1;
+  }
+
+  /* Match the NOTIFY ME button's padding so the two CTAs carry equal weight. */
+  .launch-mining-btn {
+    padding: 13px 26px;
+  }
+
+  /* Tighter than the stack gap so the eyebrow binds to its button. */
+  .launch-consensus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--launch-space-tight);
+  }
+
+  @media (max-width: 768px) {
+    .launch-stat-label {
+      font-size: 10px;
+      letter-spacing: 0.12em;
+    }
+
+    .launch-stat-value {
+      font-size: 28px;
+    }
+  }
+</style>

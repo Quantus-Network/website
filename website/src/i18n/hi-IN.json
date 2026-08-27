@@ -832,6 +832,36 @@
       "copy": "रेफरल कोड कॉपी किया गया!"
     }
   },
+  "launch": {
+    "meta": {
+      "title": "Quantus लॉन्च",
+      "description": "क्वांटम-सुरक्षित एन्क्रिप्टेड मनी। 21 मिलियन सप्लाई कैप, Proof of Work। लॉन्च की जानकारी पाएं।"
+    },
+    "hero": {
+      "eyebrow": "क्वांटम-सुरक्षित एन्क्रिप्टेड मनी"
+    },
+    "signup": {
+      "headline": "लॉन्च की जानकारी पाएं।",
+      "email_placeholder": "your@email.com",
+      "email_aria": "ईमेल पता",
+      "submit_label": "मुझे सूचित करें",
+      "error_message": "कृपया एक मान्य ईमेल पता दर्ज करें।",
+      "success": {
+        "headline": "आप सूची में हैं।",
+        "sub": "लॉन्च की जानकारी आपके इनबॉक्स में पहुंचेगी।"
+      }
+    },
+    "facts": {
+      "supply": {
+        "label": "सप्लाई कैप",
+        "value": "21,000,000"
+      },
+      "consensus": {
+        "label": "PROOF OF WORK"
+      }
+    },
+    "mining_cta": "माइनिंग गाइड पढ़ें"
+  },
   "blog": {
     "title": "Quantus की नवीनतम खबरें।",
     "hero": {

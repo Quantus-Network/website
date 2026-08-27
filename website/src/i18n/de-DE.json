@@ -832,6 +832,36 @@
       "copy": "Empfehlungscode kopiert!"
     }
   },
+  "launch": {
+    "meta": {
+      "title": "Quantus Launch",
+      "description": "Quantensicheres verschlüsseltes Geld. 21 Millionen Angebotsgrenze, Proof of Work. Erhalten Sie die Launch-Details."
+    },
+    "hero": {
+      "eyebrow": "Quantensicheres verschlüsseltes Geld"
+    },
+    "signup": {
+      "headline": "Launch-Details erhalten.",
+      "email_placeholder": "your@email.com",
+      "email_aria": "E-Mail-Adresse",
+      "submit_label": "BENACHRICHTIGEN",
+      "error_message": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+      "success": {
+        "headline": "Sie stehen auf der Liste.",
+        "sub": "Die Launch-Details kommen in Ihr Postfach."
+      }
+    },
+    "facts": {
+      "supply": {
+        "label": "ANGEBOTSGRENZE",
+        "value": "21,000,000"
+      },
+      "consensus": {
+        "label": "PROOF OF WORK"
+      }
+    },
+    "mining_cta": "MINING-GUIDE LESEN"
+  },
   "blog": {
     "title": "Die neuesten Nachrichten von Quantus.",
     "hero": {

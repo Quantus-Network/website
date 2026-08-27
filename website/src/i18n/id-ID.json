@@ -832,6 +832,36 @@
       "copy": "Kode referal disalin!"
     }
   },
+  "launch": {
+    "meta": {
+      "title": "Peluncuran Quantus",
+      "description": "Uang terenkripsi aman secara kuantum. Batas pasokan 21 juta, Proof of Work. Dapatkan detail peluncuran."
+    },
+    "hero": {
+      "eyebrow": "Uang Terenkripsi Aman Secara Kuantum"
+    },
+    "signup": {
+      "headline": "Dapatkan detail peluncuran.",
+      "email_placeholder": "your@email.com",
+      "email_aria": "Alamat email",
+      "submit_label": "BERI TAHU SAYA",
+      "error_message": "Harap masukkan alamat email yang valid.",
+      "success": {
+        "headline": "Anda sudah terdaftar.",
+        "sub": "Detail peluncuran akan dikirim ke kotak masuk Anda."
+      }
+    },
+    "facts": {
+      "supply": {
+        "label": "BATAS PASOKAN",
+        "value": "21,000,000"
+      },
+      "consensus": {
+        "label": "PROOF OF WORK"
+      }
+    },
+    "mining_cta": "BACA PANDUAN MINING"
+  },
   "blog": {
     "title": "Berita terbaru dari Quantus.",
     "hero": {

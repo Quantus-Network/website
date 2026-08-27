@@ -35,6 +35,10 @@ interface ContactData {
 
 interface SubscribeData {
   email: string;
+  firstName: string;
+  lastName: string;
+  /** Which list this signup belongs to. Omitted by the site newsletter. */
+  source?: string;
 }
 
 export interface Entrant {
@@ -106,11 +110,15 @@ const createApiClient = () => {
 
     /**
      * Subscribe to waitlist
+     *
+     * `source` identifies which list the signup belongs to. Omitting it
+     * produces the original payload, so existing callers are unaffected.
      */
     subscribe: (
       email: string,
       firstName: string,
       lastName: string,
+      source?: string,
     ): ApiResponse => {
       return fetch(`${env.API_URL}/waitlist`, {
         headers: {
@@ -121,6 +129,7 @@ const createApiClient = () => {
           email,
           firstName,
           lastName,
+          ...(source ? { source } : {}),
         } as SubscribeData),
       });
     },

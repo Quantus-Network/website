@@ -832,6 +832,36 @@
       "copy": "紹介コードをコピーしました！"
     }
   },
+  "launch": {
+    "meta": {
+      "title": "Quantus ローンチ",
+      "description": "量子セキュアな暗号化通貨。供給上限2,100万、Proof of Work。ローンチ情報を受け取る。"
+    },
+    "hero": {
+      "eyebrow": "量子セキュアな暗号化通貨"
+    },
+    "signup": {
+      "headline": "ローンチ情報を受け取る。",
+      "email_placeholder": "your@email.com",
+      "email_aria": "メールアドレス",
+      "submit_label": "通知を受け取る",
+      "error_message": "有効なメールアドレスを入力してください。",
+      "success": {
+        "headline": "登録が完了しました。",
+        "sub": "ローンチ情報をメールでお届けします。"
+      }
+    },
+    "facts": {
+      "supply": {
+        "label": "供給上限",
+        "value": "21,000,000"
+      },
+      "consensus": {
+        "label": "PROOF OF WORK"
+      }
+    },
+    "mining_cta": "マイニングガイドを読む"
+  },
   "blog": {
     "title": "Quantusからの最新ニュース。",
     "hero": {

@@ -39,7 +39,7 @@
 @utility font-cta-mono {
   font-family: var(--font-mono);
   font-size: 12px;
-  font-weight: medium;
+  font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }

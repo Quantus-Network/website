@@ -832,6 +832,36 @@
       "copy": "推荐码已复制！"
     }
   },
+  "launch": {
+    "meta": {
+      "title": "Quantus 上线",
+      "description": "量子安全加密货币。供应上限 2,100 万，工作量证明（Proof of Work）。获取上线详情。"
+    },
+    "hero": {
+      "eyebrow": "量子安全加密货币"
+    },
+    "signup": {
+      "headline": "获取上线详情。",
+      "email_placeholder": "your@email.com",
+      "email_aria": "电子邮件地址",
+      "submit_label": "通知我",
+      "error_message": "请输入有效的电子邮件地址。",
+      "success": {
+        "headline": "您已加入名单。",
+        "sub": "上线详情将发送至您的邮箱。"
+      }
+    },
+    "facts": {
+      "supply": {
+        "label": "供应上限",
+        "value": "21,000,000"
+      },
+      "consensus": {
+        "label": "工作量证明"
+      }
+    },
+    "mining_cta": "阅读挖矿指南"
+  },
   "blog": {
     "title": "来自 Quantus 的最新消息。",
     "hero": {
