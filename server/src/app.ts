@@ -14,6 +14,7 @@ import {
   UnknownWaitlistSourceError,
   buildLoopsContactPayload,
 } from "./utils/loopsContact.js";
+import { toSafeLogError } from "./utils/safeLogError.js";
 import { Inquiry } from "./interfaces/Inquiry.js";
 import Mail from "nodemailer/lib/mailer/index.js";
 import axios from "axios";
@@ -78,7 +79,10 @@ app.post("/api/waitlist", async (req, res) => {
       return;
     }
 
-    logger.error("Failed adding waitlist contact", err);
+    logger.error({
+      message: "Failed adding waitlist contact",
+      error: toSafeLogError(err),
+    });
     res.status(500).json({ error: "Unknown internal server error" });
   }
 });
