@@ -40,5 +40,9 @@ export default {
   newsletter: {
     baseUrl: process.env.NEWSLETTER_BASE_URL,
     apiToken: process.env.NEWSLETTER_API_TOKEN,
+    mailingListIds: {
+      newsletter: process.env.NEWSLETTER_MAILING_LIST_ID,
+      launch: process.env.LAUNCH_MAILING_LIST_ID,
+    },
   },
 };
