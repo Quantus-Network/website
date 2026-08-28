@@ -49,6 +49,7 @@ const t = await createTranslator(locale);
 
 <script>
   import apiClient from "@/api/client";
+  import { WAITLIST_SOURCE } from "@/constants/waitlist";
   import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
 
   const locale = getLocaleFromUrl(location.pathname);
@@ -91,6 +92,7 @@ const t = await createTranslator(locale);
         emailValue,
         firstNameValue,
         lastNameValue,
+        WAITLIST_SOURCE.NEWSLETTER,
       );
       const data = await resp.json();
 

@@ -111,8 +111,8 @@ const createApiClient = () => {
     /**
      * Subscribe to waitlist
      *
-     * `source` identifies which list the signup belongs to. Omitting it
-     * produces the original payload, so existing callers are unaffected.
+     * `source` identifies which Loops mailing list the signup belongs to.
+     * Omitting it is treated as newsletter by the API.
      */
     subscribe: (
       email: string,

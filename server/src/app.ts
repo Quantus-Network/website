@@ -9,6 +9,11 @@ import db from "./config/db.js";
 import emailTransporter from "./config/emailTransporter.js";
 import { waitlist } from "./models/waitlist.js";
 import { generateUniqueID } from "./utils/generateId.js";
+import {
+  MissingMailingListIdError,
+  UnknownWaitlistSourceError,
+  buildLoopsContactPayload,
+} from "./utils/loopsContact.js";
 import { Inquiry } from "./interfaces/Inquiry.js";
 import Mail from "nodemailer/lib/mailer/index.js";
 import axios from "axios";
@@ -30,18 +35,21 @@ app.get("/", async (_, res) => {
   res.send("API is running...");
 });
 app.post("/api/waitlist", async (req, res) => {
-  const { email, firstName, lastName } = req.body;
-  if (!email) res.status(400).json({ error: "Email is required!" });
-  if (!firstName) res.status(400).json({ error: "First name is required!" });
+  const { email, firstName, lastName, source } = req.body;
+  if (!email) {
+    res.status(400).json({ error: "Email is required!" });
+    return;
+  }
 
   try {
-    await dbClient
-      .insert(waitlist)
-      .values({ id: generateUniqueID(), email, lastName, firstName });
+    const loopsContact = buildLoopsContactPayload(
+      { email, firstName, lastName, source },
+      env.newsletter.mailingListIds,
+    );
 
-    await axios.post(
-      `${env.newsletter.baseUrl}/subscribers`,
-      { email, lastname: lastName, firstname: firstName },
+    await axios.put(
+      `${env.newsletter.baseUrl}/contacts/update`,
+      loopsContact,
       {
         headers: {
           Authorization: `Bearer ${env.newsletter.apiToken}`,
@@ -49,16 +57,28 @@ app.post("/api/waitlist", async (req, res) => {
       },
     );
 
+    try {
+      await dbClient
+        .insert(waitlist)
+        .values({ id: generateUniqueID(), email, lastName, firstName });
+    } catch (err) {
+      if (!(err instanceof DatabaseError && err.code === "23505")) {
+        throw err;
+      }
+    }
+
     res.status(201).json({ message: "Success adding to newsletter.", email });
   } catch (err) {
-    if (err instanceof DatabaseError && err.code === "23505") {
-      const column = err.detail?.split(")=")[0]?.slice(5);
-
-      res.status(409).json({ error: `${column} is already used.` });
-
+    if (err instanceof UnknownWaitlistSourceError) {
+      res.status(400).json({ error: err.message });
+      return;
+    }
+    if (err instanceof MissingMailingListIdError) {
+      res.status(500).json({ error: err.message });
       return;
     }
 
+    logger.error("Failed adding waitlist contact", err);
     res.status(500).json({ error: "Unknown internal server error" });
   }
 });

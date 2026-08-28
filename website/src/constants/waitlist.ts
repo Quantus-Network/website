@@ -1,14 +1,11 @@
 /**
- * Identifies which list a POST /waitlist submission belongs to.
+ * Identifies which Loops mailing list a POST /waitlist submission belongs to.
  *
- * The site newsletter omits this and keeps the original payload shape; the
- * launch squeeze page sends LAUNCH. Switching the launch page to a different
- * list is a one-line change here.
- *
- * NOTE: the API does not read this field yet. Until it does, launch signups
- * land in the same list as the newsletter — the field is inert, not wrong.
+ * Newsletter forms send NEWSLETTER; the launch squeeze page sends LAUNCH.
+ * Switching a form to a different list is a one-line change at the call site.
  */
 export const WAITLIST_SOURCE = {
+  NEWSLETTER: "newsletter",
   LAUNCH: "launch",
 } as const;
 
