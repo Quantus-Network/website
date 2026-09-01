@@ -5,6 +5,7 @@ import Layout from "@/components/layout/Layout.astro";
 import {
   createTranslator,
   getLocaleFromUrl,
+  getLocalizedPath,
   PREFIXED_LOCALES,
 } from "@/utils/i18n";
 import { createMetadata } from "@/utils/create-metadata";
@@ -229,7 +230,10 @@ const additionalInfoRegulatoryItems = t(
     </p>
     <p class="policy-body">
       {t("privacy.contact_info.note")}{" "}
-      <a href="/about#contact" style="color:#FF6B35;text-decoration:none;">
+      <a
+        href={`${getLocalizedPath(locale, "/community")}#contact`}
+        style="color:#FF6B35;text-decoration:none;"
+      >
         {t("privacy.contact_info.link")}
       </a>
     </p>

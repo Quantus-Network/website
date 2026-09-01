@@ -502,18 +502,9 @@
     },
     "investors": {
       "eyebrow": "DIDUKUNG OLEH"
-    },
-    "contact": {
-      "eyebrow": "HUBUNGI KAMI",
-      "heading": "Ingin bekerja dengan kami atau mempelajari lebih lanjut?",
-      "body": "Untuk kemitraan, pers, dan pertanyaan investasi:",
-      "email": "hello@quantus.com",
-      "subject": "Pertanyaan dari Situs Web Quantus",
-      "cta": "KIRIM PESAN KEPADA KAMI →"
     }
   },
   "team": {
-    "back_to_about": "Kembali ke Tentang",
     "follow_on_x": "Ikuti di X",
     "people": {
       "christopher-smith": {
@@ -589,6 +580,14 @@
       "heading": "Dari tim Quantus.",
       "sub": "Pendalaman teknis, pembaruan protokol, dan perspektif tentang lanskap ancaman kuantum.",
       "view_all": "BACA SEMUA POSTINGAN →"
+    },
+    "contact": {
+      "eyebrow": "HUBUNGI KAMI",
+      "heading": "Ingin bekerja dengan kami atau mempelajari lebih lanjut?",
+      "body": "Untuk kemitraan, pers, dan pertanyaan investasi:",
+      "email": "hello@quantus.com",
+      "subject": "Pertanyaan dari Situs Web Quantus",
+      "cta": "KIRIM PESAN KEPADA KAMI →"
     }
   },
   "privacy": {
@@ -1012,13 +1011,6 @@
       "bug-bounty": "Hadiah Bug",
       "senoti": "Senoti"
     }
-  },
-  "cookie": {
-    "title": "Persetujuan Cookie",
-    "notice": "Situs web ini menggunakan cookie untuk lebih memahami minat pembacanya dan melayani mereka. Cari tahu lebih lanjut di",
-    "link": "kebijakan privasi dan ketentuan layanan",
-    "accept": "Terima",
-    "decline": "Tolak"
   },
   "whitepaper": {
     "meta": {

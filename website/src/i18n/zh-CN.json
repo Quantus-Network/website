@@ -502,18 +502,9 @@
     },
     "investors": {
       "eyebrow": "支持机构"
-    },
-    "contact": {
-      "eyebrow": "联系我们",
-      "heading": "想与我们合作或了解更多？",
-      "body": "关于合作伙伴、媒体和投资咨询：",
-      "email": "hello@quantus.com",
-      "subject": "来自 Quantus 网站的咨询",
-      "cta": "给我们发送消息 →"
     }
   },
   "team": {
-    "back_to_about": "返回关于我们",
     "follow_on_x": "在 X 上关注",
     "people": {
       "christopher-smith": {
@@ -589,6 +580,14 @@
       "heading": "来自 Quantus 团队。",
       "sub": "技术深度分析、协议更新以及对量子威胁格局的见解。",
       "view_all": "阅读所有文章 →"
+    },
+    "contact": {
+      "eyebrow": "联系我们",
+      "heading": "想与我们合作或了解更多？",
+      "body": "关于合作伙伴、媒体和投资咨询：",
+      "email": "hello@quantus.com",
+      "subject": "来自 Quantus 网站的咨询",
+      "cta": "给我们发送消息 →"
     }
   },
   "privacy": {
@@ -1012,13 +1011,6 @@
       "bug-bounty": "漏洞赏金",
       "senoti": "Senoti"
     }
-  },
-  "cookie": {
-    "title": "Cookie 同意",
-    "notice": "本网站使用 Cookie 以更好地了解读者的兴趣并提供相应服务。了解更多信息请参阅",
-    "link": "隐私政策和服务条款",
-    "accept": "接受",
-    "decline": "拒绝"
   },
   "whitepaper": {
     "meta": {

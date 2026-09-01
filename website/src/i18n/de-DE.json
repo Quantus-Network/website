@@ -502,18 +502,9 @@
     },
     "investors": {
       "eyebrow": "UNTERSTÜTZT DURCH"
-    },
-    "contact": {
-      "eyebrow": "KONTAKT",
-      "heading": "Wollen Sie mit uns arbeiten oder mehr erfahren?",
-      "body": "Für Partnerschaften, Presse- und Investitionsanfragen:",
-      "email": "hello@quantus.com",
-      "subject": "Anfrage über Quantus-Website",
-      "cta": "SCHREIBEN SIE UNS EINE NACHRICHT →"
     }
   },
   "team": {
-    "back_to_about": "Zurück zu Über uns",
     "follow_on_x": "Auf X folgen",
     "people": {
       "christopher-smith": {
@@ -589,6 +580,14 @@
       "heading": "Vom Quantus-Team.",
       "sub": "Technische Deep-Dives, Protokoll-Updates und Perspektiven auf die Quantenbedrohungslandschaft.",
       "view_all": "ALLE BEITRÄGE LESEN →"
+    },
+    "contact": {
+      "eyebrow": "KONTAKT",
+      "heading": "Wollen Sie mit uns arbeiten oder mehr erfahren?",
+      "body": "Für Partnerschaften, Presse- und Investitionsanfragen:",
+      "email": "hello@quantus.com",
+      "subject": "Anfrage über Quantus-Website",
+      "cta": "SCHREIBEN SIE UNS EINE NACHRICHT →"
     }
   },
   "privacy": {
@@ -1012,13 +1011,6 @@
       "bug-bounty": "Bug-Bounty",
       "senoti": "Senoti"
     }
-  },
-  "cookie": {
-    "title": "Cookie-Einwilligung",
-    "notice": "Diese Website verwendet Cookies, um die Interessen ihrer Leser besser zu verstehen und darauf einzugehen. Erfahren Sie mehr in der",
-    "link": "Datenschutzrichtlinie und den Nutzungsbedingungen",
-    "accept": "Akzeptieren",
-    "decline": "Ablehnen"
   },
   "whitepaper": {
     "meta": {

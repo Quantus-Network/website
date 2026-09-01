@@ -502,18 +502,9 @@
     },
     "investors": {
       "eyebrow": "支援企業"
-    },
-    "contact": {
-      "eyebrow": "お問い合わせ",
-      "heading": "私たちと一緒に働きたい、あるいは詳細を知りたいですか？",
-      "body": "パートナーシップ、プレス、投資に関するお問い合わせはこちら：",
-      "email": "hello@quantus.com",
-      "subject": "Quantusウェブサイトからのお問い合わせ",
-      "cta": "メッセージを送る →"
     }
   },
   "team": {
-    "back_to_about": "概要に戻る",
     "follow_on_x": "Xでフォロー",
     "people": {
       "christopher-smith": {
@@ -589,6 +580,14 @@
       "heading": "Quantusチームより。",
       "sub": "技術的な深掘り、プロトコルのアップデート、そして量子の脅威の展望についての視点。",
       "view_all": "すべての記事を読む →"
+    },
+    "contact": {
+      "eyebrow": "お問い合わせ",
+      "heading": "私たちと一緒に働きたい、あるいは詳細を知りたいですか？",
+      "body": "パートナーシップ、プレス、投資に関するお問い合わせはこちら：",
+      "email": "hello@quantus.com",
+      "subject": "Quantusウェブサイトからのお問い合わせ",
+      "cta": "メッセージを送る →"
     }
   },
   "privacy": {
@@ -1012,13 +1011,6 @@
       "bug-bounty": "バグバウンティ",
       "senoti": "Senoti"
     }
-  },
-  "cookie": {
-    "title": "クッキーへの同意",
-    "notice": "当ウェブサイトでは、読者の皆様の関心をより深く理解し、それに応えるためにクッキーを使用しています。詳細は以下をご覧ください：",
-    "link": "プライバシーポリシーおよび利用規約",
-    "accept": "同意する",
-    "decline": "拒否する"
   },
   "whitepaper": {
     "meta": {

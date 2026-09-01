@@ -1,0 +1,40 @@
+<div id="analytics-container"></div>
+
+<script>
+  import env from "@/config";
+  import { initAnalyticsDelegation } from "@/scripts/shared/analytics";
+
+  initAnalyticsDelegation();
+
+  const isPrint =
+    new URLSearchParams(window.location.search).get("print") === "true";
+
+  if (!isPrint) {
+    loadAnalytics(env.GA_ID);
+  }
+
+  function loadAnalytics(gaId: string) {
+    const container = document.getElementById("analytics-container");
+    if (!container) {
+      console.error("Analytics container not found");
+      return;
+    }
+
+    if (!gaId || gaId === "GA-XXXXXXX") return;
+
+    const gaScript = document.createElement("script");
+    gaScript.async = true;
+    gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${gaId}`;
+
+    const gaConfigScript = document.createElement("script");
+    gaConfigScript.innerHTML = `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '${gaId}');
+      `;
+
+    container.appendChild(gaScript);
+    container.appendChild(gaConfigScript);
+  }
+</script>
