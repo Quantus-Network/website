@@ -1012,13 +1012,6 @@
       "senoti": "Senoti"
     }
   },
-  "cookie": {
-    "title": "Cookie-Einwilligung",
-    "notice": "Diese Website verwendet Cookies, um die Interessen ihrer Leser besser zu verstehen und darauf einzugehen. Erfahren Sie mehr in der",
-    "link": "Datenschutzrichtlinie und den Nutzungsbedingungen",
-    "accept": "Akzeptieren",
-    "decline": "Ablehnen"
-  },
   "whitepaper": {
     "meta": {
       "title": "Quantus-Whitepaper | Quantensicherheit",

@@ -5,8 +5,6 @@ declare global {
   }
 }
 
-const CONSENT_KEY = "cookie-consent";
-
 export type AnalyticsParams = Record<string, string | number | boolean>;
 
 type PageType =
@@ -22,21 +20,9 @@ type PageType =
 
 let delegationInitialized = false;
 
-function hasAnalyticsConsent(): boolean {
-  try {
-    const stored = localStorage.getItem(CONSENT_KEY);
-    return stored ? JSON.parse(stored) === true : false;
-  } catch {
-    return false;
-  }
-}
-
 function stripLocalePrefix(pathname: string): string {
   const segments = pathname.split("/").filter(Boolean);
-  if (
-    segments.length > 0 &&
-    /^[a-z]{2}-[A-Z]{2}$/.test(segments[0])
-  ) {
+  if (segments.length > 0 && /^[a-z]{2}-[A-Z]{2}$/.test(segments[0])) {
     return "/" + segments.slice(1).join("/");
   }
   return pathname === "" ? "/" : pathname;
@@ -50,7 +36,10 @@ export function getPageType(pathname = window.location.pathname): PageType {
   if (path.startsWith("/about")) return "about";
   if (path.startsWith("/community")) return "community";
   if (path.startsWith("/whitepaper")) return "whitepaper";
-  if (path.startsWith("/quantum-risk-checker") || path.startsWith("/risk-checker"))
+  if (
+    path.startsWith("/quantum-risk-checker") ||
+    path.startsWith("/risk-checker")
+  )
     return "risk_checker";
   if (path.startsWith("/blog") || path.startsWith("/blogs")) return "blog";
   if (path.startsWith("/technology")) return "technology";
@@ -61,7 +50,10 @@ export function storeFromHref(href: string): "ios" | "android" | undefined {
   try {
     const url = new URL(href, window.location.origin);
     if (url.hostname.includes("apple.com")) return "ios";
-    if (url.hostname.includes("play.google.com") || url.hostname.includes("google.com"))
+    if (
+      url.hostname.includes("play.google.com") ||
+      url.hostname.includes("google.com")
+    )
       return "android";
   } catch {
     // ignore invalid URLs
@@ -70,14 +62,11 @@ export function storeFromHref(href: string): "ios" | "android" | undefined {
 }
 
 /**
- * Fire a GA4 event when the visitor has accepted analytics cookies and gtag is loaded.
+ * Fire a GA4 event when gtag is loaded.
  * Automatically attaches language_code and page_type.
  */
-export function trackEvent(
-  name: string,
-  params: AnalyticsParams = {},
-): void {
-  if (!hasAnalyticsConsent() || typeof window.gtag !== "function") {
+export function trackEvent(name: string, params: AnalyticsParams = {}): void {
+  if (typeof window.gtag !== "function") {
     return;
   }
 

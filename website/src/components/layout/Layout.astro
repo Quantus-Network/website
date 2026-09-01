@@ -33,7 +33,7 @@ import {
 } from "@/utils/i18n";
 import { generateBreadcrumbs } from "@/utils/build-json-ld";
 import { SITE_NAVIGATIONS } from "@/constants/site-navigations";
-import CookieConsent from "@/components/ui/CookieConsent.astro";
+import Analytics from "@/components/ui/Analytics.astro";
 import Toast from "@/components/ui/Toast.astro";
 import env from "@/config";
 
@@ -123,7 +123,7 @@ const breadcrumbs = generateBreadcrumbs({
     </main>
     {showChrome && <Footer />}
 
-    <CookieConsent />
+    <Analytics />
     <Toast />
   </body>
 </html>

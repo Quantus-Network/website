@@ -1012,13 +1012,6 @@
       "senoti": "Senoti"
     }
   },
-  "cookie": {
-    "title": "Cookie 同意",
-    "notice": "本网站使用 Cookie 以更好地了解读者的兴趣并提供相应服务。了解更多信息请参阅",
-    "link": "隐私政策和服务条款",
-    "accept": "接受",
-    "decline": "拒绝"
-  },
   "whitepaper": {
     "meta": {
       "title": "Quantus 白皮书 | 量子安全的技术基础",

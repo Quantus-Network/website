@@ -1012,13 +1012,6 @@
       "senoti": "Senoti"
     }
   },
-  "cookie": {
-    "title": "Persetujuan Cookie",
-    "notice": "Situs web ini menggunakan cookie untuk lebih memahami minat pembacanya dan melayani mereka. Cari tahu lebih lanjut di",
-    "link": "kebijakan privasi dan ketentuan layanan",
-    "accept": "Terima",
-    "decline": "Tolak"
-  },
   "whitepaper": {
     "meta": {
       "title": "Whitepaper Quantus | Keamanan Kuantum",
