@@ -502,14 +502,6 @@
     },
     "investors": {
       "eyebrow": "DIDUKUNG OLEH"
-    },
-    "contact": {
-      "eyebrow": "HUBUNGI KAMI",
-      "heading": "Ingin bekerja dengan kami atau mempelajari lebih lanjut?",
-      "body": "Untuk kemitraan, pers, dan pertanyaan investasi:",
-      "email": "hello@quantus.com",
-      "subject": "Pertanyaan dari Situs Web Quantus",
-      "cta": "KIRIM PESAN KEPADA KAMI →"
     }
   },
   "team": {
@@ -589,6 +581,14 @@
       "heading": "Dari tim Quantus.",
       "sub": "Pendalaman teknis, pembaruan protokol, dan perspektif tentang lanskap ancaman kuantum.",
       "view_all": "BACA SEMUA POSTINGAN →"
+    },
+    "contact": {
+      "eyebrow": "HUBUNGI KAMI",
+      "heading": "Ingin bekerja dengan kami atau mempelajari lebih lanjut?",
+      "body": "Untuk kemitraan, pers, dan pertanyaan investasi:",
+      "email": "hello@quantus.com",
+      "subject": "Pertanyaan dari Situs Web Quantus",
+      "cta": "KIRIM PESAN KEPADA KAMI →"
     }
   },
   "privacy": {

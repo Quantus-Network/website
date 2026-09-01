@@ -3,37 +3,40 @@ import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
+
+const email = t("community.contact.email");
+const subject = encodeURIComponent(t("community.contact.subject"));
 ---
 
 <section id="contact">
-  <div class="about-divider"></div>
-  <div class="about-section-inner">
-    <span class="about-eyebrow about-animate" data-delay="0">
-      {t("about.contact.eyebrow")}
+  <div class="comm-divider"></div>
+  <div class="comm-section-inner">
+    <span class="comm-eyebrow comm-animate" data-delay="0">
+      {t("community.contact.eyebrow")}
     </span>
-    <h2 class="contact-h2 about-animate" data-delay="0.15">
-      {t("about.contact.heading")}
+    <h2 class="contact-h2 comm-animate" data-delay="0.15">
+      {t("community.contact.heading")}
     </h2>
-    <p class="contact-body about-animate" data-delay="0.3">
-      {t("about.contact.body")}
+    <p class="contact-body comm-animate" data-delay="0.3">
+      {t("community.contact.body")}
     </p>
     <a
-      href="mailto:hello@quantus.com"
-      class="contact-email about-animate"
+      href={`mailto:${email}`}
+      class="contact-email comm-animate"
       data-delay="0.45"
       data-track="contact_email_click"
-      data-track-cta-location="about_contact"
+      data-track-cta-location="community_contact"
     >
-      {t("about.contact.email")}
+      {email}
     </a>
     <a
-      href="mailto:hello@quantus.com?subject=Enquiry%20from%20Quantus%20Website"
-      class="contact-cta about-animate"
+      href={`mailto:${email}?subject=${subject}`}
+      class="contact-cta comm-animate"
       data-delay="0.6"
       data-track="contact_email_click"
-      data-track-cta-location="about_contact"
+      data-track-cta-location="community_contact"
     >
-      {t("about.contact.cta")}
+      {t("community.contact.cta")}
     </a>
   </div>
 </section>
@@ -41,15 +44,14 @@ const t = await createTranslator(locale);
 <style>
   #contact {
     background: #0e0e0e;
-    padding: 0 52px;
   }
 
-  #contact .about-section-inner {
-    padding-bottom: 120px;
+  #contact .comm-section-inner {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding-bottom: 120px;
   }
 
   .contact-h2 {
@@ -59,13 +61,14 @@ const t = await createTranslator(locale);
     color: #ffffff;
     max-width: 560px;
     margin-top: 16px;
+    margin-bottom: 0;
     line-height: 1.1;
   }
 
   .contact-body {
     font-family: "Geist", sans-serif;
     font-size: 16px;
-    color: rgba(232, 230, 224, 0.6);
+    color: rgba(232, 230, 224, 0.65);
     margin-top: 20px;
   }
 
@@ -98,10 +101,7 @@ const t = await createTranslator(locale);
   }
 
   @media (max-width: 768px) {
-    #contact {
-      padding: 0 24px;
-    }
-    #contact .about-section-inner {
+    #contact .comm-section-inner {
       padding-bottom: 80px;
     }
     .contact-h2 {

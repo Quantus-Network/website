@@ -502,14 +502,6 @@
     },
     "investors": {
       "eyebrow": "BACKED BY"
-    },
-    "contact": {
-      "eyebrow": "GET IN TOUCH",
-      "heading": "Want to work with us or learn more?",
-      "body": "For partnerships, press, and investment enquiries:",
-      "email": "hello@quantus.com",
-      "subject": "Enquiry from Quantus Website",
-      "cta": "SEND US A MESSAGE →"
     }
   },
   "team": {
@@ -589,6 +581,14 @@
       "heading": "From the Quantus team.",
       "sub": "Technical deep-dives, protocol updates, and perspectives on the quantum threat landscape.",
       "view_all": "READ ALL POSTS →"
+    },
+    "contact": {
+      "eyebrow": "GET IN TOUCH",
+      "heading": "Want to work with us or learn more?",
+      "body": "For partnerships, press, and investment enquiries:",
+      "email": "hello@quantus.com",
+      "subject": "Enquiry from Quantus Website",
+      "cta": "SEND US A MESSAGE →"
     }
   },
   "privacy": {

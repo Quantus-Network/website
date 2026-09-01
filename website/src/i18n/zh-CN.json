@@ -502,14 +502,6 @@
     },
     "investors": {
       "eyebrow": "支持机构"
-    },
-    "contact": {
-      "eyebrow": "联系我们",
-      "heading": "想与我们合作或了解更多？",
-      "body": "关于合作伙伴、媒体和投资咨询：",
-      "email": "hello@quantus.com",
-      "subject": "来自 Quantus 网站的咨询",
-      "cta": "给我们发送消息 →"
     }
   },
   "team": {
@@ -589,6 +581,14 @@
       "heading": "来自 Quantus 团队。",
       "sub": "技术深度分析、协议更新以及对量子威胁格局的见解。",
       "view_all": "阅读所有文章 →"
+    },
+    "contact": {
+      "eyebrow": "联系我们",
+      "heading": "想与我们合作或了解更多？",
+      "body": "关于合作伙伴、媒体和投资咨询：",
+      "email": "hello@quantus.com",
+      "subject": "来自 Quantus 网站的咨询",
+      "cta": "给我们发送消息 →"
     }
   },
   "privacy": {

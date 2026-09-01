@@ -502,14 +502,6 @@
     },
     "investors": {
       "eyebrow": "RESPALDADO POR"
-    },
-    "contact": {
-      "eyebrow": "PÓNGASE EN CONTACTO",
-      "heading": "¿Quiere trabajar con nosotros o saber más?",
-      "body": "Para asociaciones, prensa y consultas de inversión:",
-      "email": "hello@quantus.com",
-      "subject": "Consulta desde el sitio web de Quantus",
-      "cta": "ENVÍENOS UN MENSAJE →"
     }
   },
   "team": {
@@ -589,6 +581,14 @@
       "heading": "Del equipo de Quantus.",
       "sub": "Inmersiones técnicas profundas, actualizaciones del protocolo y perspectivas sobre el panorama de las amenazas cuánticas.",
       "view_all": "LEER TODAS LAS PUBLICACIONES →"
+    },
+    "contact": {
+      "eyebrow": "PÓNGASE EN CONTACTO",
+      "heading": "¿Quiere trabajar con nosotros o saber más?",
+      "body": "Para asociaciones, prensa y consultas de inversión:",
+      "email": "hello@quantus.com",
+      "subject": "Consulta desde el sitio web de Quantus",
+      "cta": "ENVÍENOS UN MENSAJE →"
     }
   },
   "privacy": {

@@ -2,7 +2,11 @@
 import "@/styles/terms-and-privacy.css";
 
 import Layout from "@/components/layout/Layout.astro";
-import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+import {
+  createTranslator,
+  getLocaleFromUrl,
+  getLocalizedPath,
+} from "@/utils/i18n";
 import { createMetadata } from "@/utils/create-metadata";
 import { JsonLdGraph } from "@/utils/build-json-ld";
 import {
@@ -221,7 +225,10 @@ const additionalInfoRegulatoryItems = t(
     </p>
     <p class="policy-body">
       {t("privacy.contact_info.note")}{" "}
-      <a href="/about#contact" style="color:#FF6B35;text-decoration:none;">
+      <a
+        href={`${getLocalizedPath(locale, "/community")}#contact`}
+        style="color:#FF6B35;text-decoration:none;"
+      >
         {t("privacy.contact_info.link")}
       </a>
     </p>

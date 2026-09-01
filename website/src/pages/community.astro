@@ -15,6 +15,7 @@ import PodcastSection from "@/components/features/community/PodcastSection.astro
 import BlogSection from "@/components/features/community/BlogSection.astro";
 import TelegramSection from "@/components/features/community/TelegramSection.astro";
 import SocialsSection from "@/components/features/community/SocialsSection.astro";
+import ContactSection from "@/components/features/community/ContactSection.astro";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
@@ -38,4 +39,5 @@ const jsonLd = JsonLdGraph({
   <BlogSection />
   <TelegramSection />
   <SocialsSection />
+  <ContactSection />
 </Layout>

@@ -502,14 +502,6 @@
     },
     "investors": {
       "eyebrow": "UNTERSTÜTZT DURCH"
-    },
-    "contact": {
-      "eyebrow": "KONTAKT",
-      "heading": "Wollen Sie mit uns arbeiten oder mehr erfahren?",
-      "body": "Für Partnerschaften, Presse- und Investitionsanfragen:",
-      "email": "hello@quantus.com",
-      "subject": "Anfrage über Quantus-Website",
-      "cta": "SCHREIBEN SIE UNS EINE NACHRICHT →"
     }
   },
   "team": {
@@ -589,6 +581,14 @@
       "heading": "Vom Quantus-Team.",
       "sub": "Technische Deep-Dives, Protokoll-Updates und Perspektiven auf die Quantenbedrohungslandschaft.",
       "view_all": "ALLE BEITRÄGE LESEN →"
+    },
+    "contact": {
+      "eyebrow": "KONTAKT",
+      "heading": "Wollen Sie mit uns arbeiten oder mehr erfahren?",
+      "body": "Für Partnerschaften, Presse- und Investitionsanfragen:",
+      "email": "hello@quantus.com",
+      "subject": "Anfrage über Quantus-Website",
+      "cta": "SCHREIBEN SIE UNS EINE NACHRICHT →"
     }
   },
   "privacy": {

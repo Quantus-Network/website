@@ -91,10 +91,9 @@ export const FOOTER_NAVIGATIONS: Navigation[] = [
   {
     label: "footer.sections.company",
     children: [
-      { label: "footer.links.about", href: "/about" },
       { label: "footer.links.blog", href: "/blog" },
       { label: "footer.links.podcast", href: "/community" },
-      { label: "footer.links.contact", href: "/about#contact" },
+      { label: "footer.links.contact", href: "/community#contact" },
       { label: "footer.links.privacy", href: "/privacy-policy" },
       { label: "footer.links.terms", href: "/terms" },
       {
