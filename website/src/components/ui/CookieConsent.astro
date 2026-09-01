@@ -96,15 +96,15 @@ const t = await createTranslator(locale);
     }
 
     checkExistingConsent() {
-      const consent = this.getConsent();
-      const isPrint =
-        new URLSearchParams(window.location.search).get("print") === "true";
+      // const consent = this.getConsent();
+      // const isPrint =
+      //   new URLSearchParams(window.location.search).get("print") === "true";
 
-      if (consent === null && !isPrint) {
-        this.showBanner();
-      } else if (consent === true) {
-        this.loadAnalytics();
-      }
+      // if (consent === null && !isPrint) {
+      //   this.showBanner();
+      // } else if (consent === true) {
+      this.loadAnalytics();
+      // }
     }
 
     showBanner() {
