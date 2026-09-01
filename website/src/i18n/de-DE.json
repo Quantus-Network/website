@@ -670,9 +670,7 @@
     },
     "your_rights": {
       "title": "Ihre Rechte",
-      "general": "Sie können: Die Kommunikation jederzeit abbestellen.",
-      "california": "Für Einwohner Kaliforniens: Sie haben zusätzliche Rechte unter dem CCPA, einschließlich des Rechts zu erfahren, welche personenbezogenen Daten wir sammeln, und des Rechts auf Löschung.",
-      "eu_uk": "Für Einwohner der EU und des Vereinigten Königreichs: Sie haben Rechte unter der DSGVO, einschließlich der Datenübertragbarkeit und des Rechts auf Widerspruch gegen die Verarbeitung."
+      "general": "Sie können: Die Kommunikation jederzeit abbestellen."
     },
     "international_transfers": {
       "title": "Internationale Übertragungen",

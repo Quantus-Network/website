@@ -670,9 +670,7 @@
     },
     "your_rights": {
       "title": "Your Rights",
-      "general": "You can: Unsubscribe from communications anytime.",
-      "california": "For California residents: You have additional rights under CCPA, including the right to know what personal information we collect and the right to deletion.",
-      "eu_uk": "For EU and UK residents: You have rights under GDPR, including data portability and the right to object to processing."
+      "general": "You can: Unsubscribe from communications anytime."
     },
     "international_transfers": {
       "title": "International Transfers",

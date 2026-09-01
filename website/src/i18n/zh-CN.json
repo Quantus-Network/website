@@ -670,9 +670,7 @@
     },
     "your_rights": {
       "title": "您的权利",
-      "general": "您可以：随时退订通讯。",
-      "california": "对于加州居民：根据 CCPA，您享有额外权利，包括了解我们收集哪些个人信息的权利和删除权。",
-      "eu_uk": "对于欧盟和英国居民：根据 GDPR，您享有数据可移植权和反对处理权等权利。"
+      "general": "您可以：随时退订通讯。"
     },
     "international_transfers": {
       "title": "国际转移",
