@@ -5,11 +5,7 @@ import { PEOPLE, type PersonId } from "@/constants/people";
 import { PERSON_IMAGES } from "@/constants/person-images";
 import { getProfilePageJsonLd } from "@/constants/person-jsonld";
 import { createMetadata } from "@/utils/create-metadata";
-import {
-  createTranslator,
-  getLocaleFromUrl,
-  getLocalizedPath,
-} from "@/utils/i18n";
+import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
 
 interface Props {
   slug: PersonId;
@@ -37,7 +33,6 @@ const jsonLd = getProfilePageJsonLd(slug, metadata.canonical as string, {
   jobTitle,
   description: bio,
 });
-const aboutTeamHref = `${getLocalizedPath(locale, "/about")}#team`;
 ---
 
 <Layout {...metadata} jsonLd={jsonLd}>
@@ -45,13 +40,6 @@ const aboutTeamHref = `${getLocalizedPath(locale, "/about")}#team`;
     <div
       class="px-content-edges max-md:px-content-edges-mobile mx-auto max-w-[860px] pt-[140px] pb-24 max-md:pt-[120px] max-md:pb-20"
     >
-      <a
-        href={aboutTeamHref}
-        class="person-page-back text-content-40 hover:text-flare mb-10 inline-flex items-center gap-2 font-mono text-[11px] tracking-[0.16em] uppercase no-underline transition-colors"
-      >
-        {t("team.back_to_about")}
-      </a>
-
       <header class="mb-10 flex items-start gap-8 max-md:flex-col max-md:gap-6">
         <div class="person-photo-wrap">
           <Image
@@ -104,11 +92,6 @@ const aboutTeamHref = `${getLocalizedPath(locale, "/about")}#team`;
 </Layout>
 
 <style>
-  .person-page-back::before {
-    content: "←";
-    margin-right: 4px;
-  }
-
   .person-photo-wrap {
     width: 200px;
     flex-shrink: 0;
