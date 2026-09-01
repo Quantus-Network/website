@@ -3,10 +3,7 @@ import Layout from "@/components/layout/Layout.astro";
 import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
 import { createMetadata } from "@/utils/create-metadata";
 import { JsonLdGraph } from "@/utils/build-json-ld";
-import {
-  organizationJsonLd,
-  websiteJsonLd,
-} from "@/constants/default-jsonld";
+import { organizationJsonLd, websiteJsonLd } from "@/constants/default-jsonld";
 import HeroSection from "@/components/features/launch/HeroSection.astro";
 import SignupForm from "@/components/features/launch/SignupForm.astro";
 import FactsSection from "@/components/features/launch/FactsSection.astro";
@@ -39,6 +36,11 @@ const jsonLd = JsonLdGraph({
 </Layout>
 
 <style>
+  html,
+  body {
+    overscroll-behavior: none;
+  }
+
   /* Two-step spacing scale on an 8px base, inherited by every child block
      so the whole page shares one rhythm. --tight binds a group together;
      --group separates one group from the next. */
