@@ -670,9 +670,7 @@
     },
     "your_rights": {
       "title": "Sus derechos",
-      "general": "Usted puede: Cancelar la suscripción a las comunicaciones en cualquier momento.",
-      "california": "Para los residentes de California: Tiene derechos adicionales bajo la CCPA, incluyendo el derecho a saber qué información personal recopilamos y el derecho a la eliminación.",
-      "eu_uk": "Para los residentes de la UE y el Reino Unido: Tiene derechos bajo el GDPR, incluyendo la portabilidad de los datos y el derecho a oponerse al procesamiento."
+      "general": "Usted puede: Cancelar la suscripción a las comunicaciones en cualquier momento."
     },
     "international_transfers": {
       "title": "Transferencias internacionales",

@@ -670,9 +670,7 @@
     },
     "your_rights": {
       "title": "Hak-Hak Anda",
-      "general": "Anda dapat: Berhenti berlangganan dari komunikasi kapan saja.",
-      "california": "Untuk penduduk California: Anda memiliki hak tambahan berdasarkan CCPA, termasuk hak untuk mengetahui informasi pribadi apa yang kami kumpulkan dan hak untuk penghapusan.",
-      "eu_uk": "Untuk penduduk UE dan Inggris: Anda memiliki hak berdasarkan GDPR, termasuk portabilitas data dan hak untuk menolak pemrosesan."
+      "general": "Anda dapat: Berhenti berlangganan dari komunikasi kapan saja."
     },
     "international_transfers": {
       "title": "Transfer Internasional",
