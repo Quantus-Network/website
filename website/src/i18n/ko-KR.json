@@ -6,7 +6,7 @@
     "community": "커뮤니티",
     "docs": "문서",
     "quantum_risk_checker": "Q-Day 체커",
-    "quan": "Quan",
+    "qtc": "QTC",
     "download_wallet": "지갑 다운로드",
     "open_menu": "메뉴 열기"
   },
@@ -134,7 +134,7 @@
       "eyebrow": "양자 보안 암호화 화폐",
       "title_line1": "양자 컴퓨터가",
       "title_line2": "해독할 수 없는 화폐.",
-      "sub": "Quantus는 포스트 양자 레이어 1입니다. 그 화폐는 QUAN: 채굴로 발행되며, 첫날부터 35개 이상의 체인에서 접근할 수 있습니다.",
+      "sub": "Quantus는 포스트 양자 레이어 1입니다. 그 화폐는 QTC: 채굴로 발행되며, 첫날부터 35개 이상의 체인에서 접근할 수 있습니다.",
       "cta_whitepaper": "백서 읽기",
       "cta_download_wallet": "지갑 다운로드",
       "freq": {
@@ -146,7 +146,7 @@
         "qtps": "QTPS",
         "uptime": "업타임",
         "nodes": "채굴자",
-        "mainnet": "MAINNET: ??"
+        "mainnet": "MAINNET: 9/9/26"
       }
     },
     "problem": {
@@ -296,7 +296,7 @@
     },
     "newsletter": {
       "headline": "기회는 지금입니다.",
-      "sub": "QUAN 업데이트를 가장 먼저 받아보세요.",
+      "sub": "QTC 업데이트를 가장 먼저 받아보세요.",
       "first_name_placeholder": "이름",
       "first_name_aria": "이름",
       "last_name_placeholder": "성",
@@ -418,7 +418,7 @@
     "hero_banner": {
       "eyebrow": "QUANTUS 지갑",
       "title": "우수한 화폐. 당신의 주머니 속에.",
-      "sub": "QUAN을 송금, 수신 및 보관하세요. 양자 보안 사운드 머니입니다. iOS 및 Android에서 사용 가능합니다.",
+      "sub": "QTC를 송금, 수신 및 보관하세요. 양자 보안 사운드 머니입니다. iOS 및 Android에서 사용 가능합니다.",
       "cta_app_store": "App Store에서 다운로드",
       "cta_google_play": "Google Play에서 다운로드"
     },
@@ -495,7 +495,7 @@
       "body1": "프로토콜 설계부터 사용자 인터페이스까지, 우리가 내리는 모든 결정은 깊은 기술적 지식과 단순함에 대한 존중을 바탕으로 합니다.",
       "body2": "우리는 수학적으로 입증된 보안, 높은 성능, 그리고 노력이 필요 없는 제품 경험이라는 기본에 집중합니다.",
       "body3": "우리는 정밀하게 구축합니다. 품질을 타협하지 않고 신속하게 움직입니다. 그리고 이미 지나간 세상이 아니라 다가올 세상을 위해 설계합니다.",
-      "body4": "그 결과물은 오래가는 화폐입니다. 이름은 QUAN입니다."
+      "body4": "그 결과물은 오래가는 화폐입니다. 이름은 QTC입니다."
     },
     "advisors": {
       "eyebrow": "어드바이저"

@@ -68,7 +68,7 @@ Inilah yang lainnya kami kirimkan minggu ini:
 - Menambahkan dukungan bahasa wallet mobile, perbaikan pull-to-refresh dan infinite scroll.
 - Memperbaiki mode POS mobile dan penanganan intent pay/send, termasuk pemrosesan cold-start dan validasi pemisah desimal.
 - Men-deploy situs Q-Day baru dengan integrasi email untuk pertanyaan sponsor di q (dot) day.
-- Men-deploy toko Quantus untuk menjual merch dengan token testnet QUAN di acara dan NS.
+- Men-deploy toko Quantus untuk menjual merch dengan token testnet QTC di acara dan NS.
 - Perbaikan leaderboard mining explorer Quantus.
 
 ### Content & Partnerships

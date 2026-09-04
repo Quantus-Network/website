@@ -68,7 +68,7 @@ Here's what else we shipped this week:
 - Added mobile wallet language support, pull-to-refresh and infinite scroll fixes.
 - Fixed mobile POS mode and pay/send intent handling, including cold-start processing and decimal separator validation.
 - Deployed the new Q-Day site with email integration for sponsor inquiries at q (dot) day.
-- Deployed the Quantus shop for selling merch for QUAN testnet tokens at events and NS.
+- Deployed the Quantus shop for selling merch for QTC testnet tokens at events and NS.
 - Quantus explorer mining leaderboard fixes.
 
 ### Content & Partnerships

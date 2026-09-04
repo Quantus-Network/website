@@ -82,5 +82,5 @@ Secure, private, और scalable money एक multi-trillion dollar opportunity 
 ### कंटेंट और पार्टनरशिप:
 
 - Spotify, Apple, और YouTube पर podcast branding अपडेट किया।
-- Network School पर [$QUAN](https://x.com/search?q=%24QUAN&src=cashtag_click) के लिए Quantus Glasses की पहली pair बेची।
+- Network School पर [$QTC](https://x.com/search?q=%24QTC&src=cashtag_click) के लिए Quantus Glasses की पहली pair बेची।
 - Quantus का NS fair में booth था, app users और Q-day registrants onboard किए।

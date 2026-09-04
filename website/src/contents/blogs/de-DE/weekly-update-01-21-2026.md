@@ -31,7 +31,7 @@ Wir wissen nicht genau, wann die Deadline ist oder welche Chains rechtzeitig upg
 
 Wird die Ursprungs-Chain eines Wrapped Assets kompromittiert, sind auch die Inhaber des Wrapped Assets betroffen. Deshalb haben wir entschieden, dass Quantus keine Wrapped Assets unterstützen kann.
 
-Wir bauen Infrastruktur für permissionless Bridging von überall in das widerstandsfähigste quantensichere Geld, das je geschaffen wurde. Sobald Sie auf unserer Chain natives QUAN halten, sind Sie durch ML-DSA-87 (NISTs höchstes Sicherheitsniveau) geschützt – mit rasendem Durchsatz dank ZK-Aggregation.
+Wir bauen Infrastruktur für permissionless Bridging von überall in das widerstandsfähigste quantensichere Geld, das je geschaffen wurde. Sobald Sie auf unserer Chain natives QTC halten, sind Sie durch ML-DSA-87 (NISTs höchstes Sicherheitsniveau) geschützt – mit rasendem Durchsatz dank ZK-Aggregation.
 
 Ich will hier nichts vorwegnehmen, aber Sie können jederzeit unser GitHub öffnen und nachsehen 👀
 

@@ -6,7 +6,7 @@
     "community": "Comunidad",
     "docs": "Docs",
     "quantum_risk_checker": "Verificador Q-Day",
-    "quan": "Quan",
+    "qtc": "QTC",
     "download_wallet": "Descargar Billetera",
     "open_menu": "Abrir menú"
   },
@@ -134,7 +134,7 @@
       "eyebrow": "Dinero Encriptado Seguro Cuánticamente",
       "title_line1": "Dinero que las",
       "title_line2": "computadoras cuánticas no pueden romper.",
-      "sub": "Quantus es la Layer 1 post-cuántica. Su dinero es QUAN: creado mediante minería, accesible desde más de 35 cadenas desde el primer día.",
+      "sub": "Quantus es la Layer 1 post-cuántica. Su dinero es QTC: creado mediante minería, accesible desde más de 35 cadenas desde el primer día.",
       "cta_whitepaper": "Leer Whitepaper",
       "cta_download_wallet": "Descargar Billetera",
       "freq": {
@@ -146,7 +146,7 @@
         "qtps": "QTPS",
         "uptime": "TIEMPO DE ACTIVIDAD",
         "nodes": "MINEROS",
-        "mainnet": "MAINNET: ??"
+        "mainnet": "MAINNET: 9/9/26"
       }
     },
     "problem": {
@@ -296,7 +296,7 @@
     },
     "newsletter": {
       "headline": "La ventana está abierta.",
-      "sub": "Reciba las actualizaciones de QUAN antes que nadie.",
+      "sub": "Reciba las actualizaciones de QTC antes que nadie.",
       "first_name_placeholder": "Nombre",
       "first_name_aria": "Nombre",
       "last_name_placeholder": "Apellido",
@@ -418,7 +418,7 @@
     "hero_banner": {
       "eyebrow": "LA BILLETERA QUANTUS",
       "title": "Dinero superior. En su bolsillo.",
-      "sub": "Envíe, reciba y almacene QUAN: dinero sólido seguro cuánticamente. Disponible en iOS y Android.",
+      "sub": "Envíe, reciba y almacene QTC: dinero sólido seguro cuánticamente. Disponible en iOS y Android.",
       "cta_app_store": "Descargar en App Store",
       "cta_google_play": "Descargar en Google Play"
     },
@@ -495,7 +495,7 @@
       "body1": "Cada decisión que tomamos, desde el diseño del protocolo hasta la interfaz de usuario, se basa en un profundo conocimiento técnico y un respeto por la simplicidad.",
       "body2": "Nos centramos en lo fundamental: seguridad probada matemáticamente, alto rendimiento y una experiencia de producto que se siente sin esfuerzo.",
       "body3": "Construimos con precisión. Nos movemos rápido sin tomar atajos. Y diseñamos para el mundo que viene, no para el que ya ha pasado.",
-      "body4": "El producto es dinero que perdura. Se llama QUAN."
+      "body4": "El producto es dinero que perdura. Se llama QTC."
     },
     "advisors": {
       "eyebrow": "ASESORES"

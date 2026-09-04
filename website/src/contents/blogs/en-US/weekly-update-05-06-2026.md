@@ -82,5 +82,5 @@ We also released wallet v1.4.0 with a full reskin simplifying and beautifying th
 ### Content & Partnerships:
 
 - Updated podcast branding across Spotify, Apple, and YouTube.
-- Sold the first pair of Quantus Glasses for [$QUAN](https://x.com/search?q=%24QUAN&src=cashtag_click) at Network School.
+- Sold the first pair of Quantus Glasses for [$QTC](https://x.com/search?q=%24QTC&src=cashtag_click) at Network School.
 - Quantus had a booth at the NS fair, onboarding app users and Q-day registrants.

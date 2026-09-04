@@ -68,7 +68,7 @@ tags:
 - 모바일 지갑 언어 지원, 당겨서 새로고침 및 무한 스크롤 수정.
 - 모바일 POS 모드 및 pay/send 인텐트 처리 수정, 콜드 스타트 처리 및 소수점 구분자 검증 포함.
 - q (dot) day에 스폰서 문의용 이메일 연동이 포함된 새 Q-Day 사이트를 배포했습니다.
-- 행사 및 NS에서 QUAN 테스트넷 토큰으로 굿즈를 판매하는 Quantus 샵을 배포했습니다.
+- 행사 및 NS에서 QTC 테스트넷 토큰으로 굿즈를 판매하는 Quantus 샵을 배포했습니다.
 - Quantus explorer 채굴 리더보드 수정.
 
 ### Content & Partnerships

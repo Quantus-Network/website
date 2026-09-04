@@ -82,5 +82,5 @@ También lanzamos la wallet v1.4.0 con un rediseño completo que simplifica y em
 ### Contenido y alianzas:
 
 - Actualización del branding del podcast en Spotify, Apple y YouTube.
-- Venta del primer par de Quantus Glasses por [$QUAN](https://x.com/search?q=%24QUAN&src=cashtag_click) en Network School.
+- Venta del primer par de Quantus Glasses por [$QTC](https://x.com/search?q=%24QTC&src=cashtag_click) en Network School.
 - Quantus tuvo un stand en la feria de NS, incorporando usuarios de la app y registrados de Q-Day.

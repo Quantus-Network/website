@@ -30,7 +30,7 @@ Kami tidak bisa tahu persis kapan batas waktunya, atau chain mana yang akan upgr
 
 Jika chain asal aset wrapped dikompromikan, pemegang aset wrapped ikut terdampak. Jadi kami putuskan @QuantusNetwork tidak bisa mendukung aset wrapped apa pun.
 
-Kami membangun infrastruktur untuk bridging permissionless dari mana pun ke uang quantum-secure paling tangguh yang pernah dibuat. Setelah Anda di chain kami memegang QUAN native, Anda dilindungi ML-DSA-87 (tingkat keamanan tertinggi NIST) dengan throughput luar biasa via ZK aggregation.
+Kami membangun infrastruktur untuk bridging permissionless dari mana pun ke uang quantum-secure paling tangguh yang pernah dibuat. Setelah Anda di chain kami memegang QTC native, Anda dilindungi ML-DSA-87 (tingkat keamanan tertinggi NIST) dengan throughput luar biasa via ZK aggregation.
 
 Tidak ingin mengumumkan apa pun di sini, tapi Anda selalu bisa buka GitHub kami dan cek 👀
 

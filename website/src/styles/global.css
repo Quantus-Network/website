@@ -14,7 +14,6 @@
 
   body {
     cursor: crosshair;
-    user-select: none;
   }
 
   body::after {
