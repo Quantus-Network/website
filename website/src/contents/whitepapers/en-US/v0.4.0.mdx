@@ -294,11 +294,11 @@ H(H(salt | secret | transfer_count))
 
 #### Aggregator Flow
 
-Aggregation uses Plonky2's recursion in two layers, where each parent proof is a verification of its child proofs with their public inputs combined. In the first layer, the user's wallet batches up to seven of its own leaf proofs into one private batch, shuffling the slots and padding with dummy proofs so an observer cannot tell how many are real. In the second layer, any party (a miner or a professional aggregator) batches up to 53 private batches into one public batch and earns part of the fee. At each layer:
+Aggregation uses Plonky2's recursion in two layers, where each parent proof verifies its child proofs and passes their public inputs upward.
 
-- Nullifiers pass unchanged
-- Each batch deduplicates exit addresses and sums their amounts
-- All real proofs in a batch must reference the same recent block hash
+In the first layer, the user's wallet batches up to seven of its own leaf proofs into one private batch. The circuit shuffles the slots, pads empty ones with dummy proofs so an observer cannot tell how many are real, requires every real leaf to reference the same recent block hash, deduplicates exit addresses within the batch, and sums their amounts. Nullifiers pass through unchanged.
+
+In the second layer, any party (a miner or a professional aggregator) batches up to 53 private batches into one public batch and earns part of the fee. This layer forwards each private batch's exits and nullifiers exactly as they are, with no further summing or deduplication. Each private batch stays a separate settlement segment, so if one contains an already-spent nullifier, the chain rejects only that segment and settles the rest.
 
 #### Chain / Verifier Flow
 
