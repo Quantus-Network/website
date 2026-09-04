@@ -11,6 +11,13 @@ export interface Props {
 }
 
 const { versions, currentVersion, locale, latestVersion, t } = Astro.props;
+
+// Only the latest version is listed in the dropdown. Older versions stay reachable
+// by URL (e.g. /whitepaper/v0.3.3). To list them again, map over `versions` below
+// instead of `shownVersions`.
+const shownVersions = versions.filter(
+  ({ version }) => version === latestVersion,
+);
 ---
 
 <div class="relative inline-block" data-version-selector>
@@ -48,7 +55,7 @@ const { versions, currentVersion, locale, latestVersion, t } = Astro.props;
     data-version-list
   >
     {
-      versions.map(({ version, date }) => {
+      shownVersions.map(({ version, date }) => {
         const isLatest = version === latestVersion;
         const isCurrent = version === currentVersion;
         const href = isLatest
