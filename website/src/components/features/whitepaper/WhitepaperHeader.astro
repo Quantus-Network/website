@@ -110,7 +110,12 @@ const displayDate = updatedDate ?? publishedDate;
           />
         )
       }
-      <DownloadButton href={pdfHref} label={t("whitepaper.download_pdf")} />
+      {
+        /* PDF download hidden until the v0.4.0 PDF is produced. Re-enable by restoring the line below. */
+      }
+      {
+        /* <DownloadButton href={pdfHref} label={t("whitepaper.download_pdf")} /> */
+      }
     </div>
   </div>
 </header>
