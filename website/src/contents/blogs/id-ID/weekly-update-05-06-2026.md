@@ -82,5 +82,5 @@ Kami juga merilis wallet v1.4.0 dengan reskin penuh yang menyederhanakan dan mem
 ### Content & Partnerships:
 
 - Memperbarui branding podcast di Spotify, Apple, dan YouTube.
-- Menjual pasangan pertama Quantus Glasses untuk [$QTC](https://x.com/search?q=%24QUAN&src=cashtag_click) di Network School.
+- Menjual pasangan pertama Quantus Glasses untuk [$QTC](https://x.com/search?q=%24QTC&src=cashtag_click) di Network School.
 - Quantus punya booth di pameran NS, mengonboarding pengguna aplikasi dan pendaftar Q-day.

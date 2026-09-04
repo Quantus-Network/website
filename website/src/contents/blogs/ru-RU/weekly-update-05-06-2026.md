@@ -81,5 +81,5 @@ tags:
 ### Content & Partnerships:
 
 - Обновили брендинг подкаста на Spotify, Apple и YouTube.
-- Продали первую пару Quantus Glasses за [$QTC](https://x.com/search?q=%24QUAN&src=cashtag_click) в Network School.
+- Продали первую пару Quantus Glasses за [$QTC](https://x.com/search?q=%24QTC&src=cashtag_click) в Network School.
 - У Quantus был стенд на ярмарке NS: онбордили пользователей приложения и регистраций на Q-day.
