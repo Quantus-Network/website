@@ -1,9 +1,24 @@
 export const startGlitchLoop = () => {
   const GLITCH_CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%&?";
-  const el = document.getElementById("ticker-mainnet")!;
-  const real = "MAINNET: 9/9/26";
-  const staticPart = "MAINNET: ";
-  const glitchPart = "9/9/26";
+  const els = document.querySelectorAll<HTMLElement>("#ticker-mainnet");
+  if (els.length === 0) {
+    throw new Error("No #ticker-mainnet elements found");
+  }
+
+  const reals = Array.from(els, (el) => el.textContent ?? "");
+  const real = reals[0];
+  if (reals.some((text) => text !== real)) {
+    throw new Error("Mainnet ticker copies do not agree");
+  }
+
+  const separator = ": ";
+  const sepIndex = real.lastIndexOf(separator);
+  if (sepIndex === -1) {
+    throw new Error(`Mainnet ticker text must contain "${separator}"`);
+  }
+
+  const staticPart = real.slice(0, sepIndex + separator.length);
+  const glitchPart = real.slice(sepIndex + separator.length);
   let frame = 0;
   const totalFrames = 12;
 
@@ -21,11 +36,16 @@ export const startGlitchLoop = () => {
             : rand;
         })
         .join("");
-      el.innerHTML = staticPart + scrambled;
+      const html = staticPart + scrambled;
+      els.forEach((el) => {
+        el.innerHTML = html;
+      });
       frame++;
       if (frame > totalFrames) {
         clearInterval(scrambleInterval);
-        el.textContent = real;
+        els.forEach((el) => {
+          el.textContent = real;
+        });
         frame = 0;
         setTimeout(nextCycle, 500);
       }

@@ -10,7 +10,7 @@ export const buildTicker = () => {
     qtps: track.dataset.i18nQtps || "QTPS",
     uptime: track.dataset.i18nUptime || "UPTIME",
     nodes: track.dataset.i18nNodes || "NODES",
-    mainnet: track.dataset.i18nMainnet || "MAINNET: ??",
+    mainnet: track.dataset.i18nMainnet || "MAINNET: 9/9/26",
   };
 
   const items = [
@@ -18,18 +18,14 @@ export const buildTicker = () => {
     { lbl: labels.qtps, val: String(QTPS), live: false },
     { lbl: labels.uptime, val: "99.97%", live: false },
     { lbl: labels.nodes, val: "—", live: true, id: "nodes" },
-    { lbl: "", val: labels.mainnet, live: false, mainnet: true },
+    { lbl: "", val: labels.mainnet, live: false, id: "mainnet" },
   ];
 
-  [0, 1].forEach((copyIdx) => {
-    items.forEach(({ lbl, val, live, mainnet, id }) => {
+  [0, 1].forEach(() => {
+    items.forEach(({ lbl, val, live, id }) => {
       const el = document.createElement("div");
       el.className = "t-item";
-      const idAttr = !!id
-        ? ` id="ticker-${id}"`
-        : mainnet && copyIdx === 0
-          ? ' id="ticker-mainnet"'
-          : "";
+      const idAttr = id ? ` id="ticker-${id}"` : "";
       el.innerHTML = `${live ? '<div class="tdot"></div>' : ""}
         ${lbl ? '<span class="t-lbl">' + lbl + "</span>" : ""}
         <span class="t-val${live ? " live" : ""}"${idAttr}>${val}</span>`;
