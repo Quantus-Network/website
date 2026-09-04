@@ -1,9 +1,9 @@
 export const startGlitchLoop = () => {
   const GLITCH_CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%&?";
   const el = document.getElementById("ticker-mainnet")!;
-  const real = "MAINNET: 2026";
+  const real = "MAINNET: 9/9/26";
   const staticPart = "MAINNET: ";
-  const glitchPart = "2026";
+  const glitchPart = "9/9/26";
   let frame = 0;
   const totalFrames = 12;
 
