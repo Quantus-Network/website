@@ -31,7 +31,7 @@ We have no way of knowing precisely when the deadline is, or which chains will u
 
 If a wrapped asset's origin chain gets compromised, so do the wrapped asset holders. So we decided @QuantusNetwork couldn't support any wrapped assets.
 
-We're building infrastructure to allow permissionless bridging from anywhere into the most resilient quantum-secure money ever created. Once you're on our chain holding native QUAN, you're protected by ML-DSA-87 (NIST's highest security level) with face melting throughput via ZK aggregation.
+We're building infrastructure to allow permissionless bridging from anywhere into the most resilient quantum-secure money ever created. Once you're on our chain holding native QTC, you're protected by ML-DSA-87 (NIST's highest security level) with face melting throughput via ZK aggregation.
 
 I don't want to announce anything here, but you could always open our GitHub and check 👀
 

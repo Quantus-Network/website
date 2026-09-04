@@ -31,7 +31,7 @@ No tenemos forma de saber con precisión cuándo es la fecha límite, ni qué ca
 
 Si la cadena de origen de un activo envuelto se ve comprometida, también lo están sus titulares. Por eso decidimos que @QuantusNetwork no podía soportar activos envueltos.
 
-Estamos construyendo infraestructura para permitir bridging permissionless desde cualquier lugar hacia el dinero nativo cuántico-seguro más resistente jamás creado. Una vez en nuestra cadena con QUAN nativo, estás protegido por ML-DSA-87 (el nivel de seguridad más alto de NIST) con un throughput brutal gracias a la agregación ZK.
+Estamos construyendo infraestructura para permitir bridging permissionless desde cualquier lugar hacia el dinero nativo cuántico-seguro más resistente jamás creado. Una vez en nuestra cadena con QTC nativo, estás protegido por ML-DSA-87 (el nivel de seguridad más alto de NIST) con un throughput brutal gracias a la agregación ZK.
 
 No quiero anunciar nada aquí, pero siempre puedes abrir nuestro GitHub y comprobarlo 👀
 

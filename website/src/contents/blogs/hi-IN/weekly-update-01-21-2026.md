@@ -30,7 +30,7 @@ Capital allocators Bitcoin को उस probability के अनुपात �
 
 अगर wrapped asset की origin chain compromise हो जाती है, तो wrapped asset holders भी compromise हो जाते हैं। इसलिए हमने decide किया कि @QuantusNetwork किसी भी wrapped assets support नहीं कर सकता।
 
-हम infrastructure बना रहे हैं जो anywhere से permissionless bridging allow करे—अब तक बने सबसे resilient quantum-secure money में। एक बार जब आप हमारी chain पर native QUAN hold करते हैं, तो आप ML-DSA-87 (NIST का highest security level) से protected होते हैं, ZK aggregation के through face-melting throughput के साथ।
+हम infrastructure बना रहे हैं जो anywhere से permissionless bridging allow करे—अब तक बने सबसे resilient quantum-secure money में। एक बार जब आप हमारी chain पर native QTC hold करते हैं, तो आप ML-DSA-87 (NIST का highest security level) से protected होते हैं, ZK aggregation के through face-melting throughput के साथ।
 
 मैं यहाँ कुछ announce नहीं करना चाहता, लेकिन आप हमेशा हमारा GitHub खोलकर check कर सकते हैं 👀
 

@@ -82,5 +82,5 @@ Außerdem haben wir Wallet v1.4.0 mit einem vollständigen Reskin veröffentlich
 ### Content & Partnerschaften:
 
 - Podcast-Branding auf Spotify, Apple und YouTube aktualisiert.
-- Erstes Paar Quantus Glasses für [$QUAN](https://x.com/search?q=%24QUAN&src=cashtag_click) bei Network School verkauft.
+- Erstes Paar Quantus Glasses für [$QTC](https://x.com/search?q=%24QUAN&src=cashtag_click) bei Network School verkauft.
 - Quantus hatte einen Stand auf der NS-Fair, onboardete App-Nutzer und Q-Day-Registrierungen.

@@ -27,7 +27,7 @@ Jeder konnte minen, und frühe Blockbelohnungen lagen bei 50 BTC.
 
 Ein paar Compute-Zyklen hätten die Blutlinie pensionieren können.
 
-Quantus ist Proof of Work. Max Supply 21M QUAN.
+Quantus ist Proof of Work. Max Supply 21M QTC.
 
 Wie bei Bitcoin bekommen Early Miner mehr Belohnungen fürs Bootstrappen des Netzwerks.
 

@@ -6,7 +6,7 @@
     "community": "Komunitas",
     "docs": "Docs",
     "quantum_risk_checker": "Pemeriksa Q-Day",
-    "quan": "Quan",
+    "qtc": "QTC",
     "download_wallet": "Unduh Dompet",
     "open_menu": "Buka menu"
   },
@@ -134,7 +134,7 @@
       "eyebrow": "Uang Terenkripsi Aman Secara Kuantum",
       "title_line1": "Uang yang tidak bisa",
       "title_line2": "dipecahkan oleh komputer kuantum.",
-      "sub": "Quantus adalah Layer 1 pasca-kuantum. Uangnya adalah QUAN: diciptakan melalui penambangan, dapat dijangkau dari 35+ chain sejak hari pertama.",
+      "sub": "Quantus adalah Layer 1 pasca-kuantum. Uangnya adalah QTC: diciptakan melalui penambangan, dapat dijangkau dari 35+ chain sejak hari pertama.",
       "cta_whitepaper": "Baca Whitepaper",
       "cta_download_wallet": "Unduh Dompet",
       "freq": {
@@ -296,7 +296,7 @@
     },
     "newsletter": {
       "headline": "Jendela telah terbuka.",
-      "sub": "Dapatkan pembaruan QUAN lebih dulu.",
+      "sub": "Dapatkan pembaruan QTC lebih dulu.",
       "first_name_placeholder": "Nama depan",
       "first_name_aria": "Nama depan",
       "last_name_placeholder": "Nama belakang",
@@ -418,7 +418,7 @@
     "hero_banner": {
       "eyebrow": "DOMPET QUANTUS",
       "title": "Uang yang lebih unggul. Di saku Anda.",
-      "sub": "Kirim, terima, dan simpan QUAN: uang sehat yang aman secara kuantum. Tersedia di iOS dan Android.",
+      "sub": "Kirim, terima, dan simpan QTC: uang sehat yang aman secara kuantum. Tersedia di iOS dan Android.",
       "cta_app_store": "Unduh di App Store",
       "cta_google_play": "Unduh di Google Play"
     },
@@ -495,7 +495,7 @@
       "body1": "Setiap keputusan yang kami buat, mulai dari desain protokol hingga antarmuka pengguna, didasarkan pada pengetahuan teknis yang mendalam dan rasa hormat terhadap kesederhanaan.",
       "body2": "Kami fokus pada hal-hal mendasar: keamanan yang terbukti secara matematis, performa tinggi, dan pengalaman produk yang terasa mudah.",
       "body3": "Kami membangun dengan presisi. Kami bergerak cepat tanpa mengambil jalan pintas. Dan kami merancang untuk dunia yang akan datang, bukan yang sudah berlalu.",
-      "body4": "Produknya adalah uang yang bertahan lama. Namanya QUAN."
+      "body4": "Produknya adalah uang yang bertahan lama. Namanya QTC."
     },
     "advisors": {
       "eyebrow": "PENASIHAT"

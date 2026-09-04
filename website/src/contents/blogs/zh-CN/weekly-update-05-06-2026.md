@@ -81,5 +81,5 @@ tags:
 ### 内容与合作：
 
 - 更新 Spotify、Apple 与 YouTube 上的播客品牌形象。
-- 在 Network School 用 [$QUAN](https://x.com/search?q=%24QUAN&src=cashtag_click) 售出第一副 Quantus 眼镜。
+- 在 Network School 用 [$QTC](https://x.com/search?q=%24QUAN&src=cashtag_click) 售出第一副 Quantus 眼镜。
 - Quantus 在 NS 市集设展位，引导应用用户与 Q-Day 报名者。

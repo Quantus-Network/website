@@ -6,7 +6,7 @@
     "community": "Community",
     "docs": "Docs",
     "quantum_risk_checker": "Q-Day Checker",
-    "quan": "Quan",
+    "qtc": "QTC",
     "download_wallet": "Wallet herunterladen",
     "open_menu": "Menü öffnen"
   },
@@ -134,7 +134,7 @@
       "eyebrow": "Quantensicheres verschlüsseltes Geld",
       "title_line1": "Geld, das",
       "title_line2": "Quantencomputer nicht brechen können.",
-      "sub": "Quantus ist die Post-Quanten-Layer-1. Sein Geld ist QUAN: durch Mining entstanden, ab Tag eins von über 35 Chains erreichbar.",
+      "sub": "Quantus ist die Post-Quanten-Layer-1. Sein Geld ist QTC: durch Mining entstanden, ab Tag eins von über 35 Chains erreichbar.",
       "cta_whitepaper": "Whitepaper lesen",
       "cta_download_wallet": "Wallet herunterladen",
       "freq": {
@@ -296,7 +296,7 @@
     },
     "newsletter": {
       "headline": "Das Fenster ist offen.",
-      "sub": "Erhalten Sie QUAN-Updates als Erster.",
+      "sub": "Erhalten Sie QTC-Updates als Erster.",
       "first_name_placeholder": "Vorname",
       "first_name_aria": "Vorname",
       "last_name_placeholder": "Nachname",
@@ -418,7 +418,7 @@
     "hero_banner": {
       "eyebrow": "DIE QUANTUS-WALLET",
       "title": "Überlegenes Geld. In Ihrer Tasche.",
-      "sub": "Senden, empfangen und speichern Sie QUAN: quantensicheres, wertbeständiges Geld. Verfügbar für iOS und Android.",
+      "sub": "Senden, empfangen und speichern Sie QTC: quantensicheres, wertbeständiges Geld. Verfügbar für iOS und Android.",
       "cta_app_store": "Im App Store herunterladen",
       "cta_google_play": "Bei Google Play herunterladen"
     },
@@ -495,7 +495,7 @@
       "body1": "Jede Entscheidung, die wir treffen – vom Protokolldesign bis zum User Interface –, basiert auf tiefem technischem Wissen und Respekt vor Einfachheit.",
       "body2": "Wir konzentrieren uns auf das Wesentliche: mathematisch bewiesene Sicherheit, hohe Leistung und ein Produkterlebnis, das sich mühelos anfühlt.",
       "body3": "Wir bauen mit Präzision. Wir bewegen uns schnell, ohne Abkürzungen zu nehmen. Und wir entwickeln für die Welt von morgen, nicht für die von gestern.",
-      "body4": "Das Produkt ist Geld, das Bestand hat. Es heißt QUAN."
+      "body4": "Das Produkt ist Geld, das Bestand hat. Es heißt QTC."
     },
     "advisors": {
       "eyebrow": "BERATER"

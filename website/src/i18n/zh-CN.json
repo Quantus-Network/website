@@ -6,7 +6,7 @@
     "community": "社区",
     "docs": "文档",
     "quantum_risk_checker": "Q-Day 检测器",
-    "quan": "Quan",
+    "qtc": "QTC",
     "download_wallet": "下载钱包",
     "open_menu": "打开菜单"
   },
@@ -296,7 +296,7 @@
     },
     "newsletter": {
       "headline": "窗口已开启。",
-      "sub": "第一时间获取 QUAN 更新。",
+      "sub": "第一时间获取 QTC 更新。",
       "first_name_placeholder": "名",
       "first_name_aria": "名",
       "last_name_placeholder": "姓",
@@ -418,7 +418,7 @@
     "hero_banner": {
       "eyebrow": "QUANTUS 钱包",
       "title": "优质货币。就在您的口袋里。",
-      "sub": "发送、接收和存储 QUAN：量子安全的稳健货币。支持 iOS 和 Android。",
+      "sub": "发送、接收和存储 QTC：量子安全的稳健货币。支持 iOS 和 Android。",
       "cta_app_store": "在 App Store 下载",
       "cta_google_play": "在 Google Play 下载"
     },
@@ -495,7 +495,7 @@
       "body1": "从协议设计到用户界面，我们的每一个决定都基于深厚的技术知识和对简洁的尊重。",
       "body2": "我们专注于基础：经过数学证明的安全性、高性能以及轻松的产品体验。",
       "body3": "我们精密构建。我们快速行动且不走捷径。我们为即将到来的世界而设计，而不是为了已经过去的世界。",
-      "body4": "产品是经得起时间考验的货币。它的名字是 QUAN。"
+      "body4": "产品是经得起时间考验的货币。它的名字是 QTC。"
     },
     "advisors": {
       "eyebrow": "顾问"

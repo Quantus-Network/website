@@ -81,5 +81,5 @@ Wormhole 사양의 감사 항목을 해결하고 공개 Quantus CLI SDK에 헬�
 ### Content & Partnerships:
 
 - Spotify, Apple, YouTube 전반에 걸친 팟캐스트 브랜딩 업데이트.
-- Network School에서 [$QUAN](https://x.com/search?q=%24QUAN&src=cashtag_click)으로 Quantus Glasses 첫 판매.
+- Network School에서 [$QTC](https://x.com/search?q=%24QUAN&src=cashtag_click)으로 Quantus Glasses 첫 판매.
 - NS 박람회에서 Quantus 부스 운영, 앱 사용자 및 Q-day 등록자 온보딩.

@@ -81,5 +81,5 @@ Wormhole仕様の監査項目に対応し、公開Quantus CLI SDKにヘルパー
 ### Content & Partnerships:
 
 - Spotify、Apple、YouTube全体でポッドキャストブランディングを更新しました。
-- Network Schoolで初のQuantus Glassesを[$QUAN](https://x.com/search?q=%24QUAN&src=cashtag_click)で販売しました。
+- Network Schoolで初のQuantus Glassesを[$QTC](https://x.com/search?q=%24QUAN&src=cashtag_click)で販売しました。
 - QuantusはNSフェアにブースを出展し、アプリユーザーとQ-day登録者をオンボーディングしました。

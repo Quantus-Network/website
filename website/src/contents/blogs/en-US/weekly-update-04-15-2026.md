@@ -28,7 +28,7 @@ Anyone could mine, and early block rewards were 50 BTC.
 
 A few compute cycles could have retired the bloodline.
 
-Quantus is proof of work. Max supply of 21M QUAN.
+Quantus is proof of work. Max supply of 21M QTC.
 
 Just like Bitcoin, early miners get more of the rewards for bootstrapping the network.
 

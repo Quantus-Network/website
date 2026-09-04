@@ -68,7 +68,7 @@ Esto es lo demás que enviamos esta semana:
 - Soporte de idiomas en la wallet móvil, correcciones de pull-to-refresh e infinite scroll.
 - Corrección del modo POS móvil y del manejo de intents de pago/envío, incluyendo procesamiento en cold start y validación del separador decimal.
 - Despliegue del nuevo sitio Q-Day con integración de email para consultas de patrocinio en q (dot) day.
-- Despliegue de la tienda Quantus para vender merch por tokens QUAN de testnet en eventos y NS.
+- Despliegue de la tienda Quantus para vender merch por tokens QTC de testnet en eventos y NS.
 - Correcciones del leaderboard de minería en el explorer de Quantus.
 
 ### Contenido y alianzas

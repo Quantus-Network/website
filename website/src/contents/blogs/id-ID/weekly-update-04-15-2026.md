@@ -27,7 +27,7 @@ Siapa saja bisa mining, dan hadiah blok awal 50 BTC.
 
 Beberapa siklus komputasi bisa saja mengubah garis keturunan.
 
-Quantus adalah proof of work. Max supply 21M QUAN.
+Quantus adalah proof of work. Max supply 21M QTC.
 
 Sama seperti Bitcoin, miner awal mendapat lebih banyak hadiah untuk bootstrapping jaringan.
 

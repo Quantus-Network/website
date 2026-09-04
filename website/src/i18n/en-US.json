@@ -6,7 +6,7 @@
     "community": "Community",
     "docs": "Docs",
     "quantum_risk_checker": "Q-Day Checker",
-    "quan": "Quan",
+    "qtc": "QTC",
     "download_wallet": "Download Wallet",
     "open_menu": "Open menu"
   },
@@ -134,7 +134,7 @@
       "eyebrow": "Quantum-Secure Encrypted Money",
       "title_line1": "Money quantum",
       "title_line2": "computers can't break.",
-      "sub": "Quantus is the post-quantum Layer 1. Its money is QUAN: mined into existence, reachable from 35+ chains on day one.",
+      "sub": "Quantus is the post-quantum Layer 1. Its money is QTC: mined into existence, reachable from 35+ chains on day one.",
       "cta_whitepaper": "Read Whitepaper",
       "cta_download_wallet": "Download Wallet",
       "freq": {
@@ -296,7 +296,7 @@
     },
     "newsletter": {
       "headline": "The window is open.",
-      "sub": "Get QUAN updates first.",
+      "sub": "Get QTC updates first.",
       "first_name_placeholder": "First name",
       "first_name_aria": "First name",
       "last_name_placeholder": "Last name",
@@ -418,7 +418,7 @@
     "hero_banner": {
       "eyebrow": "THE QUANTUS WALLET",
       "title": "Superior money. In your pocket.",
-      "sub": "Send, receive, and store QUAN: quantum-secure sound money. Available on iOS and Android.",
+      "sub": "Send, receive, and store QTC: quantum-secure sound money. Available on iOS and Android.",
       "cta_app_store": "Download on App Store",
       "cta_google_play": "Download on Google Play"
     },
@@ -495,7 +495,7 @@
       "body1": "Every decision we make, from protocol design to user interface, is grounded in deep technical knowledge and a respect for simplicity.",
       "body2": "We focus on the fundamentals: mathematically proven security, high performance, and a product experience that feels effortless.",
       "body3": "We build with precision. We move fast without cutting corners. And we design for the world that is coming, not the one that has already passed.",
-      "body4": "The product is money that lasts. It's called QUAN."
+      "body4": "The product is money that lasts. It's called QTC."
     },
     "advisors": {
       "eyebrow": "ADVISORS"

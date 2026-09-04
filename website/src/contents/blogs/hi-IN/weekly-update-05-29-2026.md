@@ -68,7 +68,7 @@ Authors और editors सहित:
 - Mobile wallet language support, pull-to-refresh और infinite scroll fixes जोड़े।
 - Mobile POS mode और pay/send intent handling fix की, cold-start processing और decimal separator validation सहित।
 - q (dot) day पर sponsor inquiries के लिए email integration के साथ नया Q-Day site deploy किया।
-- Events और NS पर QUAN testnet tokens के लिए merch बेचने हेतु Quantus shop deploy किया।
+- Events और NS पर QTC testnet tokens के लिए merch बेचने हेतु Quantus shop deploy किया।
 - Quantus explorer mining leaderboard fixes।
 
 ### कंटेंट और पार्टनरशिप

@@ -27,7 +27,7 @@ Early hashrate matter करता है।
 
 कुछ compute cycles bloodline retire कर सकते थे।
 
-Quantus proof of work है। Max supply 21M QUAN।
+Quantus proof of work है। Max supply 21M QTC।
 
 Bitcoin की तरह, early miners network bootstrap करने के लिए rewards का ज़्यादा हिस्सा पाते हैं।
 

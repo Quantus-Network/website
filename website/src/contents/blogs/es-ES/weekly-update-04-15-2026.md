@@ -28,7 +28,7 @@ Cualquiera podía minar, y las recompensas por bloque iniciales eran de 50 BTC.
 
 Unos pocos ciclos de cómputo podrían haber cambiado el destino para siempre.
 
-Quantus es prueba de trabajo (proof of work). Suministro máximo de 21M QUAN.
+Quantus es prueba de trabajo (proof of work). Suministro máximo de 21M QTC.
 
 Como en Bitcoin, los mineros tempranos reciben más recompensas por poner en marcha la red.
 
