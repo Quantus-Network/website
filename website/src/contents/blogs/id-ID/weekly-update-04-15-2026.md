@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: Hadiah Mining Planck Testnet"
 description: "Planck testnet live untuk miner awal. Migrasi aplikasi ke TestFlight dan store, mining GPU pindah ke chain baru, plus update Core, infra, dan wallet."
 pubDate: "2026-04-15"

@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus 위클리: 격자 암호 감사와 Keystone 지갑"
 description: "rusty-crystals 격자 암호 감사 이슈를 모두 해결하고 Polkadot SDK 네트워킹을 업데이트했습니다. Keystone 오픈소스 하드웨어 지갑에 Quantus 주소를 지원합니다."
 pubDate: "2025-12-01"

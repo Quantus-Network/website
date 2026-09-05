@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: Poseidon2 más rápido, chain más ligera"
 description: "Gates Poseidon2 8,3x más rápidos tras optimización, refactor de chain elimina ~9.000 líneas y notas del equipo desde Binance Blockchain Week."
 

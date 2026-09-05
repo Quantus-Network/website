@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: Plonky3 Poseidon2 и подкаст Либерленда"
 description: "Plonky3 Poseidon2 интегрирован в ZK-схемы, память Rusty Crystals оптимизирована на 80%, добавлена реферальная программа и подкаст с президентом Либерленда."
 pubDate: "2025-10-14"

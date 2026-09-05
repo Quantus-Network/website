@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: High-Security Accounts"
 description: "Customizable time locks और guardians वाले high-security accounts, multisig integration testing, और recover-funds feature—इस सप्ताह हमारी shipping।"
 pubDate: "2026-02-04"

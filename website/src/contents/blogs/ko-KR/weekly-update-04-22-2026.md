@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: Planck 클레임, 2배 증명 속도"
 description: "포스트 양자 프라이빗 트랜잭션용 첫 테스트넷 Planck. 마이너 마이그레이션, CLI 보상 클레임, prover 처리량 2배 향상을 다룬 Quantus 주간 업데이트입니다."
 pubDate: "2026-04-22"

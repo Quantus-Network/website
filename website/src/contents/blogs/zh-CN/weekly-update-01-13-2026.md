@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus 每周动态：Dilithium 阈值签名"
 description: "本周我们上线 Dilithium 阈值签名，让分布式多方协调生成链上单签，服务托管与跨链场景；并推进 ZK 电路优化、移动钱包硬件支持与白皮书更新。"
 pubDate: "2026-01-13"

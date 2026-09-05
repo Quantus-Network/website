@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: 量子リスク調査レポート"
 description: "暗号資産への量子リスク調査レポートが主要メディアで報じられました。今週はZK監査修正、GPUマイナースロットル、ウォレット更新、Q-Dayサイト・ショップ公開。"
 pubDate: "2026-05-29"

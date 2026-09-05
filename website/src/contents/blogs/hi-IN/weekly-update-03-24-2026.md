@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: दूसरा Halving, 4x तेज़ Proofs"
 description: "Prover time में दूसरी कट — दो हफ्तों में ZK proofs 4x तेज़। Poseidon काम, mining fixes, Senoti limits, whitepaper launch और Quantum Canary।"
 pubDate: "2026-03-24"

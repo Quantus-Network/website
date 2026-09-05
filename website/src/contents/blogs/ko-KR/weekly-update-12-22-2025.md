@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus 위클리: GPU 채굴과 Dirac 스트레스 테스트"
 description: "GPU 지원 Quantus Miner v2.0.2를 공식 출시하고 Dirac 네트워크 스트레스 테스트를 완료했습니다. 2,100만 코인 공급 상한 등 체인 아키텍처를 업데이트했습니다."
 pubDate: "2025-12-22"

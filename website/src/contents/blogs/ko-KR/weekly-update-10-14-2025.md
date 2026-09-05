@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus 위클리: Poseidon2와 Liberland 팟캐스트"
 description: "Plonky3 Poseidon2를 ZK 회로에 이식하고 Rusty Crystals 메모리를 최적화했습니다. 가역 트랜잭션 게이미피케이션을 설계하고 Liberland 대통령과 팟캐스트를 진행했습니다."
 pubDate: "2025-10-14"

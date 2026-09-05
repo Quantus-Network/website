@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: PoW Audit Completed and Dirac Testnet Launch"
 description: "Equilibrium finished our PoW and Poseidon audit, ZK proofs for block headers landed, and the Dirac testnet launched this week on Quantus."
 

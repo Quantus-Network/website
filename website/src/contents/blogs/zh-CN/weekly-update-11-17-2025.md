@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus 每周动态：PoW 审计完成与 Dirac 测试网上线"
 description: "Equilibrium 完成我们的 PoW 与 Poseidon 审计，区块头 ZK 证明落地，Dirac 测试网上线，双端应用商店同步更新钱包与矿机应用。"
 pubDate: "2025-11-17"

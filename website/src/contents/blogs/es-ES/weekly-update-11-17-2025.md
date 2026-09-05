@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: auditoría PoW y testnet Dirac"
 description: "Equilibrium completó la auditoría de PoW y Poseidon, llegaron pruebas ZK para headers de bloque y lanzamos la testnet Dirac en Quantus."
 

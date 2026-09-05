@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus 위클리: 빠른 Poseidon2, 경량 체인"
 description: "Poseidon2 게이트를 최적화해 8.3배 빨라지고 체인 리팩토링으로 약 9,000줄을 제거했습니다. Binance Blockchain Week 현장 소식도 전합니다."
 pubDate: "2025-12-09"

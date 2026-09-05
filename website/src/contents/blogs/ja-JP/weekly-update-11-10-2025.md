@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: Diracテストネットと格子暗号監査"
 description: "Diracテストネットをリリースし、PoWアルゴリズムと格子暗号ライブラリを更新。外部監査を開始し、モバイルウォレットとlibp2pにも統合済みです。マイナーはアップグレードを推奨します。"
 pubDate: "2025-11-10"

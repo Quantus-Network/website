@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: ZK-Aggregation und Miner App"
 description: "Erste ZK-Transaktions-Aggregation für Chain und CLI mit echter Transfer-Verifikation, Miner App v0.1.0 veröffentlicht, GPU-Mining läuft."
 

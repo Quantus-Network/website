@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: POS Mode and P2P Electronic Cash"
 description: "Mobile point-of-sale in wallet v1.2.2, PolyFri masking, Poseidon cleanup, ZK DDoS protection, and why peer-to-peer electronic cash still matters for Quantus."
 

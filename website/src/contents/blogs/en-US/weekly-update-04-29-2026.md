@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: Audits and the Compact Aggregator"
 description: "Spring cleaning: Eiger audit items cleared, CLI refactored, miner and indexer fixes, and wormhole tests on the compact aggregator that doubled prover speed."
 

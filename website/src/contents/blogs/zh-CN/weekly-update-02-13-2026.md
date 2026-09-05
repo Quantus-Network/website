@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus 每周动态：绘制量子安全未来蓝图"
 description: "本周 Quantus 登陆 CoinGecko 抗量子赛道，并交付多签最终简化版、ZK 聚合器重构隐私增强，以及移动应用 v1.1.5 双端上架。"
 pubDate: "2026-02-13"

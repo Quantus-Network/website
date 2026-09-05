@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: Planck, CLI y prover el doble de rápido"
 description: "Planck admite transacciones privadas poscuánticas. Más de la mitad de mineros migraron, recompensas por CLI y el rendimiento agregado del prover se duplicó."
 pubDate: "2026-04-22"

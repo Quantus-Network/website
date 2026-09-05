@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus 每周动态：格子密码学审计与 Keystone 集成"
 description: "rusty-crystals 格子密码审计问题全部关闭，Polkadot SDK 网络层对齐更新；开源 Keystone 固件新增 Quantus 地址支持，并入驻 The Quantum Insider。"
 pubDate: "2025-12-01"

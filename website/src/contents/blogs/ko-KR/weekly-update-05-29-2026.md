@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: 양자 현황 보고서"
 description: "양자 위험 연구 보고서가 주요 매체에 보도됐습니다. ZK 감사 수정, GPU 마이너 스로틀링, 지갑 업데이트, Q-Day 사이트·샵 출시."
 pubDate: "2026-05-29"

@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: Dirac Testnet और Lattice Audit"
 description: "Dirac testnet अपडेट PoW और lattice crypto के साथ शिप हुआ, qp-rusty-crystals बाहरी ऑडिट में है। माइनर्स को अपग्रेड करना चाहिए; वॉलेट और libp2p में इंटिग्रेट है।"
 

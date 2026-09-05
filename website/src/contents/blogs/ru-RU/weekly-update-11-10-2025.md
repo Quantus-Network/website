@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: тестнет Dirac и аудит решётки qp-rusty"
 description: "Запущена тестовая сеть Dirac с обновлённым PoW и библиотекой qp-rusty-crystals: подписи с константным временем, внешний аудит и интеграция в мобильный кошелёк."
 pubDate: "2025-11-10"

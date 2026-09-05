@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: より公正なローンチ"
 description: "初期のBitcoinマイナーはノートPCで1日数千BTCを採掘できました。Quantusは初日から誰でもマイニングを始められるようにすることを最優先にしています。"
 pubDate: "2026-05-13"

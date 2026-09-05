@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus 每周动态：虫洞交易与矿工隐私奖励"
 description: "本周将虫洞提现写入矿工应用，区块奖励默认走虫洞地址；修复最长链共识等漏洞，并发布钱包 v1.2.0/v1.2.1、核心库与 Senoti 更新。"
 pubDate: "2026-03-07"

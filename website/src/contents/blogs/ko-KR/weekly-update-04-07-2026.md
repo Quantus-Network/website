@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: Q-Day 추정치와 온스펜드 리스크"
 description: "Google·Oratomic의 ECC 해독 큐빗 추정치 하향, 비트코인 10분 블록의 온스펜드 리스크, 경제적 자유를 중심으로 한 Quantus 리브랜드를 다룬 주간 업데이트입니다."
 pubDate: "2026-04-07"

@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus 위클리: Dilithium 임계값 서명"
 description: "이번 주 Quantus는 분산 조정을 위한 Dilithium 임계값 서명을 출시했습니다. ZK 회로 개선, 모바일 지갑 업데이트, 커뮤니티 콘텐츠 소식도 함께 전합니다."
 pubDate: "2026-01-13"

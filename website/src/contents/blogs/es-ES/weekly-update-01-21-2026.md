@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: Activos nativos y riesgo cuántico"
 description: "Por qué el capital descuenta Bitcoin por riesgo cuántico, nuestra apuesta por activos nativos y avances en threshold Dilithium y agregación ZK esta semana."
 

@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: High-Security-Konten und Betrugsschutz"
 description: "High-Security-Konten mit Time Locks und Guardians, Multisig-Integration im Test und neues Recover-Funds-Feature – unser Weekly Update dieser Woche."
 

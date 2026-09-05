@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: 킬러 앱은 돈"
 description: "이번 주 Mithril용 Dilithium DKG를 재작성하고 임계값 서명 수정을 출시했습니다. Wormhole SDK 헬퍼를 공개하고 TestFlight에서 지갑 v1.4.0을 배포했습니다."
 pubDate: "2026-05-06"

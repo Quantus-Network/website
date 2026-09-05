@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: Planck-Claims, 2× Prover-Geschwindigkeit"
 description: "Planck ist unser erstes Testnet für post-quantum-private Transaktionen. Miner migrieren, CLI-Reward-Claims in der Wallet, Prover-Durchsatz verdoppelt."
 pubDate: "2026-04-22"

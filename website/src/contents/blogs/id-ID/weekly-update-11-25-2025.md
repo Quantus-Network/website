@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Mingguan: Agregasi ZK dan Miner App"
 description: "Agregasi transaksi ZK pertama untuk chain dan CLI dengan verifikasi transfer nyata, Miner App v0.1.0 rilis, dan pekerjaan GPU mining berlanjut."
 

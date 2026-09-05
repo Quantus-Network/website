@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: 대용량 서명, 더 빠른 웜홀"
 description: "ML-DSA 서명은 비트코인보다 70배 큽니다. 이번 주 양자 안전 서명 확장, 웜홀 증명 2배 가속, ZK 애그리게이션 진전을 다룬 Quantus 주간 업데이트입니다."
 pubDate: "2026-03-16"

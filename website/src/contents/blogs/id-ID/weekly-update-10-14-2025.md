@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Mingguan: Poseidon2 dan Podcast Liberland"
 description: "Kami mem-port Plonky3 Poseidon2 ke sirkuit ZK, mengoptimalkan memori Rusty Crystals, merancang gamifikasi reversal, dan berbincang dengan presiden Liberland."
 

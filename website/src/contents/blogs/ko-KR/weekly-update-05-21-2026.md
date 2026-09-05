@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: Q-Day가 코앞에"
 description: "Q-Day는 6월 6일입니다. 이번 주: Dilithium DKG 감사 항목 마무리, 마이너·알림 업데이트, 지갑 수정, Q-Day 서밋 사이트 리뉴얼."
 pubDate: "2026-05-21"

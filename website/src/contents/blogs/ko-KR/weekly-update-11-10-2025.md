@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus 위클리: Dirac 테스트넷과 격자 암호 감사"
 description: "PoW 알고리즘과 격자 암호 라이브러리를 업데이트한 Dirac 테스트넷을 출시했습니다. qp-rusty-crystals가 외부 감사 중이며, 마이너는 업그레이드가 필요합니다."
 pubDate: "2025-11-10"

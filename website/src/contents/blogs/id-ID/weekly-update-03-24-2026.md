@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: Halving Kedua, Bukti 4x Lebih Cepat"
 description: "Pemotongan waktu prover kedua: bukti ZK 4x lebih cepat dalam dua minggu, plus Poseidon, perbaikan mining, Senoti, whitepaper, dan Quantum Canary."
 pubDate: "2026-03-24"

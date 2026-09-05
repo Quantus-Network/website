@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: тестнет Planck и награды PoW"
 description: "Запущен тестнет Planck для стресс-теста Quantus перед mainnet: ранний хешрейт важен, миграция через TestFlight и GPU-майнинг с наградами за блоки."
 pubDate: "2026-04-15"

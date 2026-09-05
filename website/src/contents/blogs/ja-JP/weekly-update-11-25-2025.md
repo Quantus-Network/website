@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: ZK集約とマイナーアプリ"
 description: "チェーンとCLI向けの初のZKトランザクション集約を完了し、モックテストを実際の転送検証に置き換えました。Miner App v0.1.0もリリースし、GPUマイニング開発を継続中です。"
 pubDate: "2025-11-25"

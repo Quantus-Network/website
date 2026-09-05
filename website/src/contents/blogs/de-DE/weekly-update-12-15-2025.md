@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: GPU-Mining-Durchbruch und ZK-Refactor"
 description: "GPU-Miner ~9× schneller als CPU, ZK-Aggregation-Circuit refactoriert, strategische Meetings in den VAE – im Wochenrückblick."
 pubDate: "2025-12-15"

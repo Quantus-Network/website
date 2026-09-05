@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: аудит PoW и запуск тестнета Dirac"
 description: "Equilibrium завершила аудит PoW и Poseidon — все проблемы решены, выпущены обновления в App Store и Google Play, ZK-доказательства для заголовков блоков."
 pubDate: "2025-11-17"

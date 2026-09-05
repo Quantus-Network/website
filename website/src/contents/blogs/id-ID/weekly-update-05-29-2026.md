@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: Laporan State of Quantum"
 description: "Laporan riset risiko quantum kami masuk media besar. Minggu ini: perbaikan audit ZK, throttling GPU miner, pembaruan wallet, peluncuran situs Q-Day dan toko."
 pubDate: "2026-05-29"

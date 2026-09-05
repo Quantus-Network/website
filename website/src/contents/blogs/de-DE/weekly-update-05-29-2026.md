@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: Der State-of-Quantum-Report"
 description: "Unser Quantum-Risk-Report in großen Medien. Diese Woche: ZK-Audit-Fixes, GPU-Miner-Drosselung, Wallet-Updates sowie Q-Day-Site und Shop."
 pubDate: "2026-05-29"

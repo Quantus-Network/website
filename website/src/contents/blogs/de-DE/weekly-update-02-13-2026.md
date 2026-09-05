@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: Die quantensichere Zukunft kartieren"
 description: "Weekly Update: CoinGecko-Listing, Multisig-Optimierungen, ZK-Aggregator-Refactoring und Mobile-App v1.1.5 – das war diese Woche bei Quantus."
 pubDate: "2026-02-13"

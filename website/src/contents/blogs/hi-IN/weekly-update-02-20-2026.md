@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: Open Research Forum"
 description: "research.quantus.com launch, ZK proof aggregation, multisig pallet merge और mobile wallet updates—post-quantum standards पर इस सप्ताह की progress।"
 pubDate: "2026-02-20"

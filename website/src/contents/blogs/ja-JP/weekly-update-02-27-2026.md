@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: ウォレットはシンプルに"
 description: "Wallet v1.2.0のリリース、マルチシグ付きTreasury、Heisenbergテストネット更新、パフォーマンス改善など、今週のQuantus週刊アップデートをお届けします。"
 pubDate: "2026-02-27"

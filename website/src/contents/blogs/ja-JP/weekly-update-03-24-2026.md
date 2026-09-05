@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: 第2半減期と4倍高速証明"
 description: "2週間でZK証明が4倍高速化。Poseidon最適化、マイニング修正、Senoti制限、ホワイトペーパー公開、Quantum Canary記事をまとめた週次アップデートです。"
 pubDate: "2026-03-24"

@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: Tanda Tangan Besar, Wormhole Lebih Cepat"
 description: "Tanda tangan ML-DSA 70x lebih besar dari Bitcoin. Minggu ini kami percepat signing quantum-safe, bukti wormhole 2x lebih cepat, dan agregasi ZK."
 pubDate: "2026-03-16"

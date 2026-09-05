@@ -14,6 +14,7 @@ const blog = defineCollection({
       heroImage: z.string().optional(),
       heroAlt: z.string().optional(),
       featured: z.boolean().optional(),
+      published: z.boolean().default(false),
       tags: z.array(z.string()).default([]),
       author: z
         .enum(["christopher-smith", "joe-mattia", "jonathan-angle"])

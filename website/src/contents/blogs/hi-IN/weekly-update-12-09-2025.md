@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: तेज़ Poseidon2, हल्की Chain"
 description: "Poseidon2 gates ऑप्टिमाइज़ेशन के बाद 8.3x तेज़, chain refactor ने ~9,000 लाइनें हटाईं और टीम ने Binance Blockchain Week से नोट्स साझा किए।"
 

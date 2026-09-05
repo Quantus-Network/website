@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: PoW-Audit abgeschlossen, Dirac live"
 description: "Equilibrium schloss PoW- und Poseidon-Audit ab, ZK-Proofs für Block-Header landeten und das Dirac-Testnet startete diese Woche bei Quantus."
 

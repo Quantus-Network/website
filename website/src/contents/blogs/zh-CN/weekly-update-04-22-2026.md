@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus 每周动态：Planck 领奖与证明器翻倍"
 description: "Planck 是首个支持后量子隐私交易的测试网；矿工完成迁移、CLI 申领奖励至移动钱包、docs 上线，聚合证明器经 2x8 架构吞吐翻倍。"
 pubDate: "2026-04-22"

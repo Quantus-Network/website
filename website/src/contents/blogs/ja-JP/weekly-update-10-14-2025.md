@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: Poseidon2とLiberlandポッドキャスト"
 description: "Plonky3 Poseidon2をZK回路へ移植し、Rusty Crystalsのメモリを最適化。リバーサル取引のゲーミフィケーションを設計し、Liberland大統領とのポッドキャストも公開しました。"
 pubDate: "2025-10-14"

@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus 每周动态：Q-Day 近在眼前"
 description: "Q-Day 定于 6 月 6 日。本周关闭 Dilithium DKG 审计项，更新矿工与通知，修复钱包，并上线焕新的 Q-Day 峰会站点。"
 pubDate: "2026-05-21"

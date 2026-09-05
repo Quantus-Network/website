@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus 每周动态：更公平的挖矿启动"
 description: "早期比特币矿工用笔记本一天可挖数千 BTC，消费级挖矿很快消亡。Quantus 从第一天起优先让挖矿人人可及——测试网几步即可开跑，GUI 矿工已就绪。"
 pubDate: "2026-05-13"

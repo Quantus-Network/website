@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: एक न्यायसंगत Launch"
 description: "शुरुआती Bitcoin miners laptop पर रोज़ हज़ारों BTC mine कर सकते थे। Quantus पर day one से mining accessible बनाना प्राथमिकता है।"
 pubDate: "2026-05-13"

@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: Quantum-Secure Future"
 description: "CoinGecko listing, multisig optimizations, ZK-aggregator refactoring और mobile app v1.1.5 release—इस सप्ताह Quantus की progress।"
 pubDate: "2026-02-13"

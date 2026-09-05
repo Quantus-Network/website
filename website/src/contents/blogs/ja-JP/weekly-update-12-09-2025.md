@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: 高速Poseidon2と軽量チェーン"
 description: "Poseidon2ゲートを最適化し8.3倍高速化。チェーンをリファクタリングして約9,000行削減。Binance Blockchain Weekでの所感も共有しました。"
 pubDate: "2025-12-09"

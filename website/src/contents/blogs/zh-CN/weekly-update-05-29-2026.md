@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus 每周动态：量子现状研究报告"
 description: "我们的加密量子风险研究报告登上多家主流媒体。本周还有：ZK 审计修复、GPU 矿工限流、钱包更新，以及新版 Q-Day 站点与商店正式上线。"
 pubDate: "2026-05-29"

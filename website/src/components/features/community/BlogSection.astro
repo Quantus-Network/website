@@ -1,20 +1,20 @@
 ---
-import { getCollection } from "astro:content";
 import {
   createTranslator,
   getLocaleFromUrl,
   getLocalizedPath,
   DEFAULT_LOCALE,
 } from "@/utils/i18n";
+import { getBlogPosts } from "@/utils/blog-posts";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
 
-let localePosts = await getCollection("blog", ({ id }) => {
+let localePosts = await getBlogPosts(({ id }) => {
   return id.toLowerCase().startsWith(`${locale.toLowerCase()}/`);
 });
 if (localePosts.length === 0) {
-  localePosts = await getCollection("blog", ({ id }) => {
+  localePosts = await getBlogPosts(({ id }) => {
     return id.toLowerCase().startsWith(`${DEFAULT_LOCALE.toLowerCase()}/`);
   });
 }

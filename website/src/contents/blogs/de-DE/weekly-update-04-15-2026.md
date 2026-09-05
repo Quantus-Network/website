@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: Planck-Testnet-Mining-Belohnungen"
 description: "Planck-Testnet ist live für Early Miner. App-Migration in TestFlight und Stores, GPU-Mining auf der neuen Chain — plus Core-, Infra- und Wallet-Updates."
 pubDate: "2026-04-15"

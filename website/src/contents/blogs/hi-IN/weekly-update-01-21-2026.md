@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: Native Assets और Quantum Risk"
 description: "Bitcoin पर quantum risk का असर, native-only assets का फैसला, Dilithium threshold work और ZK aggregation पर इस सप्ताह की प्रगति।"
 pubDate: "2026-01-21"

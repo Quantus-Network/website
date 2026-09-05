@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus 每周动态：钱包应当保持简单"
 description: "钱包 v1.2.0 上线 App Store：打开即见余额，无广告无社交噪音。本周还有多签国库、Heisenberg 测试网与历史加载提速。"
 pubDate: "2026-02-27"

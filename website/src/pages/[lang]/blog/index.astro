@@ -1,7 +1,6 @@
 ---
 import Layout from "@/components/layout/Layout.astro";
 import { BlogList } from "@/components/features/blog/BlogList";
-import { getCollection } from "astro:content";
 import {
   getLocaleFromUrl,
   getLocalizedPath,
@@ -9,6 +8,7 @@ import {
   PREFIXED_LOCALES,
 } from "@/utils/i18n";
 import { createMetadata } from "@/utils/create-metadata";
+import { getBlogPosts } from "@/utils/blog-posts";
 
 export async function getStaticPaths() {
   return PREFIXED_LOCALES.map((lang) => ({ params: { lang } }));
@@ -17,7 +17,7 @@ export async function getStaticPaths() {
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
 
-const posts = await getCollection("blog", ({ id }) => {
+const posts = await getBlogPosts(({ id }) => {
   return id.toLowerCase().startsWith(`${locale.toLowerCase()}/`);
 });
 

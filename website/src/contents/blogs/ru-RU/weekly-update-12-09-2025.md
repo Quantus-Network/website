@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: Poseidon2 ×8,3 и рефакторинг сети"
 description: "Гейты Poseidon2 ускорены в 8,3 раза, архитектура сети упрощена с удалением 9000 строк кода, новости с Binance Blockchain Week и Solana Breakpoint."
 pubDate: "2025-12-09"

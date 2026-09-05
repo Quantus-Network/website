@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: Planck Claims, 2x Prover Speed"
 description: "Planck is our first testnet for post-quantum private transactions. Miners migrate, CLI reward claims hit the wallet, and prover throughput doubles again."
 

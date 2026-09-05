@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Mingguan: Audit Lattice dan Dompet Keystone"
 description: "Temuan audit lattice Rusty Crystals ditutup, jaringan Polkadot SDK diperbarui, dan alamat Quantus hadir di firmware dompet hardware Keystone open-source."
 

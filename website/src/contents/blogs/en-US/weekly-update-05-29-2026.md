@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: The State of Quantum Report"
 description: "Our quantum-risk research report hit major outlets. This week: ZK audit fixes, GPU miner throttling, wallet updates, Q-Day site and shop launches."
 pubDate: "2026-05-29"

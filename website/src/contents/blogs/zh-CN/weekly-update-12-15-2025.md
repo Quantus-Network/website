@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus 每周动态：GPU 挖矿突破与 ZK 重构"
 description: "本周 GPU 矿机性能约达 CPU 的 9 倍，完成 ZK 聚合电路重构并删减数千行代码；团队在阿联酋会见顾问与投资者，明确代币经济学与发行策略。"
 pubDate: "2025-12-15"

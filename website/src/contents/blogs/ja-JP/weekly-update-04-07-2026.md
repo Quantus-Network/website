@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: Q-Day推定とオンスペンドリスク"
 description: "GoogleとOratomicがECC突破の量子ビット推定を大幅引き下げ。Bitcoinの10分ブロックが直面するオンスペンド攻撃と、Quantusの経済的自由リブランドを解説します。"
 pubDate: "2026-04-07"

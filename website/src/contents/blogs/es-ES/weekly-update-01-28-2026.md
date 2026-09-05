@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: RPCs negables y auditoría Neodyme"
 description: "RPCs negables para mayor privacidad, auditoría Neodyme de Rusty Crystals completada y direcciones ZK privadas para todos los tokens. Resumen semanal."
 

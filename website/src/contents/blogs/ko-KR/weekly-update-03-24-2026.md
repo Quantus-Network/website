@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: 두 번째 반감기, 4배 빠른 증명"
 description: "2주 만에 ZK 증명 4배 가속, Poseidon 작업, 채굴 수정, Senoti 제한, 백서 출시, Quantum Canary 소식을 담은 Quantus 주간 업데이트입니다."
 pubDate: "2026-03-24"

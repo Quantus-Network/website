@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: Q-Day steht unmittelbar bevor"
 description: "Q-Day ist am 6. Juni. Diese Woche: Dilithium-DKG-Audit abgeschlossen, Miner- und Notification-Updates, Wallet-Fixes und neue Q-Day-Summit-Website."
 

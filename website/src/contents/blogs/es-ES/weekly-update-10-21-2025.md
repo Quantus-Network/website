@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: Poseidon2 Gate y Gobernanza"
 description: "Poseidon2 llega como gate de Plonky2, gobernanza on-chain y funciones de tesorería, referidos in-app completos y bindings Icicle para mineros GPU."
 

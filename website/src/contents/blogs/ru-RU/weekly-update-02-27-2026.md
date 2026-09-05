@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: Кошелёк должен быть простым"
 description: "Еженедельное обновление: релиз Wallet v1.2.0, Treasury с мультисигом, обновления тестовой сети Heisenberg и улучшения производительности."
 pubDate: "2026-02-27"

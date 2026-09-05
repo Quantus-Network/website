@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: Akun Keamanan Tinggi & Anti-Penipuan"
 description: "Akun keamanan tinggi dengan time lock dan guardian yang bisa dikustom, pengujian integrasi multisig, dan fitur recover funds baru minggu ini."
 pubDate: "2026-02-04"

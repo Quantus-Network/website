@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus 위클리: 네이티브 자산과 양자 위험"
 description: "자본 시장이 비트코인에 양자 위험 프리미엄을 매기는 이유, Quantus의 네이티브 전용 자산 결정, Dilithium 임계값 서명과 ZK 집계 진행 상황을 이번 주에 정리합니다."
 pubDate: "2026-01-21"

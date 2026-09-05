@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: 否認可能RPCとNeodyme監査"
 description: "プライバシーを強化する否認可能RPC、NeodymeによるRusty Crystals監査の完了、全トークン向けプライベートZKアドレスの提供など、今週のQuantusアップデートをお届けします。"
 pubDate: "2026-01-28"

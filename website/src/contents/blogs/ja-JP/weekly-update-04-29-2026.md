@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: 監査とコンパクト集約"
 description: "Eiger監査項目の解消、CLIリファクタ、マイナーとインデクサー修正。証明速度2倍のコンパクト集約でのワームホール統合テストをまとめた週次アップデートです。"
 pubDate: "2026-04-29"

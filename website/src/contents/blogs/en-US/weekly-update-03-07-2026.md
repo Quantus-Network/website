@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: Wormhole Transactions"
 description: "Weekly update covering wormhole transactions, private block rewards for miners, consensus bug fixes, and wallet updates."
 pubDate: "2026-03-07"

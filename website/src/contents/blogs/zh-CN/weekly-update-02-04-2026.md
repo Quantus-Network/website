@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus 每周动态：高安全账户与反欺诈"
 description: "本周聚焦 Quantus 高安全账户：每笔转出可设时间锁，指定守护者可拦截取消却不能代签；启动守护者多签集成测试，并上线被拦截资金回收功能。"
 pubDate: "2026-02-04"

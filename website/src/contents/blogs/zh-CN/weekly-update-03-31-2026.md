@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus 每周动态：POS 模式与点对点电子现金"
 description: "钱包 v1.2.2 上线销售点模式；PolyFri 证明端掩码、Poseidon 清理、链上 ZK 的 DDoS 防护，以及为何点对点电子现金对 Quantus 仍至关重要。"
 pubDate: "2026-03-31"

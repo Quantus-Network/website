@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: High-Security Accounts and Fraud Prevention"
 description: "High-security accounts with customizable time locks and guardians, multisig integration testing, and a new recover-funds feature this week."
 

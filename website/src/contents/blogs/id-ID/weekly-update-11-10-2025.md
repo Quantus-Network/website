@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Mingguan: Testnet Dirac dan Audit Lattice"
 description: "Testnet Dirac rilis dengan algoritma PoW dan kripto lattice baru yang sedang diaudit eksternal. Miner perlu upgrade; dompet dan libp2p sudah terintegrasi."
 
