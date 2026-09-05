@@ -5,6 +5,7 @@ import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
 import react from "@astrojs/react";
 import rehypeExternalLinks from "./src/utils/rehype-external-links.ts";
+import rehypeAdaptiveTables from "./src/utils/rehype-adaptive-tables.ts";
 import playformCompress from "@playform/compress";
 import markdownForAgents from "astro-markdown-for-agents";
 import { markdownForAgentsOptions } from "./markdown-for-agents.config.mjs";
@@ -55,7 +56,7 @@ export default defineConfig({
   },
   site: SITE_BASE_URL,
   markdown: {
-    rehypePlugins: [rehypeExternalLinks],
+    rehypePlugins: [rehypeExternalLinks, rehypeAdaptiveTables],
   },
   image: {
     domains: ["i.ytimg.com"],
