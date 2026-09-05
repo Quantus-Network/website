@@ -14,6 +14,7 @@ import { PEOPLE, isPersonId, personId } from "@/constants/people";
 import { getPersonJsonLd } from "@/constants/person-jsonld";
 import { organizationJsonLd } from "@/constants/default-jsonld";
 import { resolveTwitterCreator } from "@/utils/resolve-blog-author";
+import { blogMetaTitle } from "@/utils/blog-titles";
 import env from "@/config";
 
 type Props = CollectionEntry<"blog">["data"] & {
@@ -23,6 +24,7 @@ type Props = CollectionEntry<"blog">["data"] & {
 
 const {
   title,
+  metaTitle,
   description,
   pubDate,
   updatedDate,
@@ -34,6 +36,8 @@ const {
   isUnpublishedPreview = false,
 } = Astro.props;
 
+const documentTitle = blogMetaTitle({ title, metaTitle });
+
 const currentLocale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(currentLocale);
 
@@ -41,7 +45,7 @@ const blogIndexHref = getLocalizedPath(currentLocale, "/blog");
 const author = authorId && isPersonId(authorId) ? PEOPLE[authorId] : undefined;
 
 const metadata = createMetadata({
-  title,
+  title: documentTitle,
   description,
   pathname: Astro.url.pathname,
   imageUrl: heroImage,

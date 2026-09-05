@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 /**
  * Validates SEO title/description lengths for i18n page meta and blog frontmatter.
+ * Blog posts: use `metaTitle` when set, otherwise `title`.
  *
  * Latin locales: title 30–60, description 120–160
  * CJK locales (ja-JP, ko-KR, zh-CN): title 20–60, description 70–160
@@ -82,6 +83,7 @@ function parseFrontmatter(raw) {
   if (end === -1) return null;
   const fm = raw.slice(3, end);
   const titleMatch = fm.match(/^title:\s*(.*)$/m);
+  const metaTitleMatch = fm.match(/^metaTitle:\s*(.*)$/m);
   const descMatch = fm.match(/^description:\s*(.*)$/m);
   if (!titleMatch || !descMatch) return null;
 
@@ -98,6 +100,7 @@ function parseFrontmatter(raw) {
 
   return {
     title: unquote(titleMatch[1]),
+    metaTitle: metaTitleMatch ? unquote(metaTitleMatch[1]) : undefined,
     description: unquote(descMatch[1]),
   };
 }
@@ -122,7 +125,7 @@ function checkBlogs(errors) {
       continue;
     }
     const rel = path.relative(websiteRoot, file);
-    checkLength("title", locale, rel, meta.title, errors);
+    checkLength("title", locale, rel, meta.metaTitle ?? meta.title, errors);
     checkLength("description", locale, rel, meta.description, errors);
   }
 }
