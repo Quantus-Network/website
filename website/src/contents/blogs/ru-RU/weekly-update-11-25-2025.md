@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: ZK-агрегация и приложение Miner v0.1"
 description: "Первый этап ZK-агрегации транзакций в сети и CLI с реальной проверкой переводов, выпуск Miner App v0.1.0 и GPU-майнинг готов примерно на 80%."
 pubDate: "2025-11-25"

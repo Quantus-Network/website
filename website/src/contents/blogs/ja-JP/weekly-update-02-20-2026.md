@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: オープンリサーチとPQC標準"
 description: "research.quantus.comの公開、ZK証明集約、マルチシグパレットのマージ、モバイルウォレットの更新など、今週のQuantus週刊アップデートをお届けします。"
 pubDate: "2026-02-20"

@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus 每周动态：ZK 交易聚合与矿机应用发布"
 description: "本周完成链端与 CLI 的首步 ZK 交易聚合，以真实转账验证取代模拟测试；Miner App v0.1.0 发布，GPU 挖矿实现约完成八成。"
 pubDate: "2025-11-25"

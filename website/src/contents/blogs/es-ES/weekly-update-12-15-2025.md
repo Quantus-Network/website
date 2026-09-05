@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: avance GPU y refactor ZK"
 description: "Avance de ~9x en minería GPU, refactor del circuito de agregación ZK y reuniones estratégicas en EAU sobre tokenomics y lanzamiento."
 pubDate: "2025-12-15"

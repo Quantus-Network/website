@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: Klaim Planck, Prover 2x Lebih Cepat"
 description: "Planck adalah testnet pertama untuk transaksi privat post-quantum. Migrasi miner, klaim hadiah CLI ke wallet, dan throughput prover berlipat ganda lagi."
 pubDate: "2026-04-22"

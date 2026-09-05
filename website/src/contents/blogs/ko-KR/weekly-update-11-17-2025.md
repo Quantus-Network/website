@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus 위클리: PoW 감사 완료와 Dirac 런칭"
 description: "Equilibrium의 PoW·Poseidon 감사를 완료하고 블록 헤더 ZK 증명을 출시했습니다. Dirac 테스트넷을 런칭하고 업데이트된 앱을 양대 앱 스토어에 배포했습니다."
 pubDate: "2025-11-17"

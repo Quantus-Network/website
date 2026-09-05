@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: Q-Day Estimates, On-Spend Risk"
 description: "Google और Oratomic ने ECC तोड़ने के qubit estimates घटाए, Bitcoin के 10-minute blocks पर on-spend risk, और economic freedom पर Quantus rebrand।"
 pubDate: "2026-04-07"

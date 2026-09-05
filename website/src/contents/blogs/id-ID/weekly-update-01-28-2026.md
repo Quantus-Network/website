@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: RPC Deniable dan Audit Neodyme"
 description: "RPC deniable untuk privasi lebih kuat, audit Neodyme Rusty Crystals selesai, dan alamat ZK privat kini tersedia untuk setiap token."
 pubDate: "2026-01-28"

@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: minería GPU y stress test Dirac"
 description: "Lanzamos Quantus Miner v2.0.2 con soporte GPU, stress test de la red Dirac y actualizaciones de arquitectura con tope de 21M monedas."
 pubDate: "2025-12-22"

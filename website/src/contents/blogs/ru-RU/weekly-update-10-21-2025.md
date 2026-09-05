@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: Гейт Poseidon2 в Plonky2 и ончейн-управление"
 description: "Гейт Poseidon2 в Plonky2, ончейн-управление и казначейство, рефералы в приложении и старт биндингов Icicle для GPU-майнеров."
 pubDate: "2025-10-21"

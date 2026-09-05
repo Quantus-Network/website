@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus 每周动态：胖签名与更快的虫洞"
 description: "ML-DSA 签名比比特币大约 70 倍；本周推进量子安全签名扩展、虫洞证明提速 2 倍，并推进 ZK 聚合、审计与 Planck 测试网节点。"
 pubDate: "2026-03-16"

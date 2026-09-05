@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: Cuentas de alta seguridad y fraude"
 description: "Cuentas de alta seguridad con time locks y guardians personalizables, pruebas de integración multisig y nueva función recover funds. Resumen semanal de Quantus."
 

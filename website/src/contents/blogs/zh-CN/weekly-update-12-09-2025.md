@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus 每周动态：Poseidon2 提速与链架构精简"
 description: "Poseidon2 门电路优化后提速 8.3 倍，链架构重构删减约九千行代码；团队分享币安区块链周与 Solana Breakpoint 见闻，并继续推进量子安全建设。"
 pubDate: "2025-12-09"

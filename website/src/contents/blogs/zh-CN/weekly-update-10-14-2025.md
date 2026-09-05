@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus 每周动态：Poseidon2 与 Liberland 播客"
 description: "我们将 Plonky3 Poseidon2 移植到 ZK 电路，Rusty Crystals 内存优化约 80%，设计可逆交易游戏化，并与 Liberland 总统 Vit Jedlička 录制播客。"
 pubDate: "2025-10-14"

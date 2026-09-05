@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus 每周动态：Dirac 测试网与格子密码学审计"
 description: "Dirac 测试网发布，完成整链 PoW 算法与 qp-rusty-crystals 格子密码库更新；该库已含恒定时间签名并进入外部审计，钱包与 libp2p 已集成。矿工请升级。"
 pubDate: "2025-11-10"

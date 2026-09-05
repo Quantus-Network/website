@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus 위클리: Poseidon2 게이트와 거버넌스"
 description: "Plonky2에 Poseidon2 게이트를 구현하고 온체인 거버넌스·트레저리 기능을 출시했습니다. 인앱 추천을 완료하고 GPU 마이너용 Icicle 바인딩 통합을 시작했습니다."
 pubDate: "2025-10-21"

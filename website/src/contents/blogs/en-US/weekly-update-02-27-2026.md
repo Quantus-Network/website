@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: The Wallet Should Be Simple"
 description: "Weekly update covering the release of Wallet v1.2.0, Treasury with multisig, Heisenberg testnet updates, and performance improvements."
 pubDate: "2026-02-27"

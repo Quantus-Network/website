@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: 웜홀 트랜잭션"
 description: "웜홀 트랜잭션, 마이너용 프라이빗 블록 보상, 컨센서스 버그 수정, 지갑 업데이트를 다룬 주간 업데이트입니다. Quantus의 최신 개발 현황을 전합니다."
 pubDate: "2026-03-07"

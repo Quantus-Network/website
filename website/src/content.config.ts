@@ -8,12 +8,14 @@ const blog = defineCollection({
   schema: z
     .object({
       title: z.string(),
+      metaTitle: z.string().min(1).optional(),
       description: z.string(),
       pubDate: z.coerce.date(),
       updatedDate: z.coerce.date().optional(),
       heroImage: z.string().optional(),
       heroAlt: z.string().optional(),
       featured: z.boolean().optional(),
+      published: z.boolean().default(false),
       tags: z.array(z.string()).default([]),
       author: z
         .enum(["christopher-smith", "joe-mattia", "jonathan-angle"])

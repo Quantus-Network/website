@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus 위클리: 양자 보안 미래 지도 그리기"
 description: "CoinGecko 상장, 멀티시그 최적화, ZK-aggregator 리팩터링, 모바일 앱 v1.1.5 출시 등 이번 주 Quantus 개발·콘텐츠 업데이트를 정리합니다."
 pubDate: "2026-02-13"

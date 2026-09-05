@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: Mapeando el futuro cuántico-seguro"
 description: "Actualización semanal: listado en CoinGecko, optimizaciones multisig, refactorización del agregador ZK y lanzamiento de la app móvil v1.1.5 en ambas tiendas."
 

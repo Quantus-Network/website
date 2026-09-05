@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: Riset Terbuka & Standar Pasca-Kuantum"
 description: "Update mingguan: peluncuran research.quantus.com, agregasi bukti ZK, merge pallet multisig, dan pembaruan wallet mobile."
 pubDate: "2026-02-20"

@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: POSモードとP2P電子キャッシュ"
 description: "ウォレットv1.2.2のモバイルPOS、PolyFriマスキング、Poseidon整理、ZK DDoS防御。P2P電子キャッシュがQuantusにとってなぜ重要かを解説した週次アップデートです。"
 pubDate: "2026-03-31"

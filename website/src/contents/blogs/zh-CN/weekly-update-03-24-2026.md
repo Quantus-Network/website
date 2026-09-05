@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus 每周动态：第二次减半，证明提速 4 倍"
 description: "连续两周将证明器时间减半，两周内 ZK 证明提速 4 倍；另含 Poseidon 更新、挖矿修复、Senoti 限流、白皮书上线与 Quantum Canary。"
 pubDate: "2026-03-24"

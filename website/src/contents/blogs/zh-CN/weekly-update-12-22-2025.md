@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus 每周动态：GPU 挖矿与 Dirac 压力测试"
 description: "正式发布支持 GPU 的 Quantus Miner v2.0.2，并对 Dirac 完成压力测试；链架构更新支持 2100 万枚代币供应上限，并移除旧归属与国库托盘。"
 pubDate: "2025-12-22"

@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: testnet Planck y recompensas tempranas"
 description: "Lanzamos el testnet Planck para estrés previo al mainnet. Mineros tempranos ganan más recompensas, migración en un clic y minería GPU ya disponible."
 

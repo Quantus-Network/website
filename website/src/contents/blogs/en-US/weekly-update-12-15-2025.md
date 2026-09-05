@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: GPU Mining Breakthrough and ZK Refactor"
 description: "Weekly update covering a 9x performance boost in GPU mining, ZK-aggregation circuit refactor, and strategic meetings in the UAE."
 pubDate: "2025-12-15"

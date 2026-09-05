@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: Zweites Halving, 4× schnellere Proofs"
 description: "Zweite Halbierung der Prover-Zeit: 4× schnellere ZK-Proofs in zwei Wochen. Poseidon, Mining-Fixes, Senoti-Limits, Whitepaper und Quantum Canary."
 pubDate: "2026-03-24"

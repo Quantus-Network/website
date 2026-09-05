@@ -1,5 +1,4 @@
 ---
-import { getCollection } from "astro:content";
 import {
   PODCAST_TOTAL_EPISODES,
   PODCAST_YOUTUBE_CHANNEL,
@@ -10,6 +9,7 @@ import {
   DEFAULT_LOCALE,
   createTranslator,
 } from "@/utils/i18n";
+import { getBlogPosts } from "@/utils/blog-posts";
 import {
   formatEpisodeMeta,
   getLatestPodcastEpisodes,
@@ -21,11 +21,11 @@ const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
 
 // Fetch posts for the current locale, fall back to DEFAULT_LOCALE if none exist
-let localePosts = await getCollection("blog", ({ id }) => {
+let localePosts = await getBlogPosts(({ id }) => {
   return id.toLowerCase().startsWith(`${locale.toLowerCase()}/`);
 });
 if (localePosts.length === 0) {
-  localePosts = await getCollection("blog", ({ id }) => {
+  localePosts = await getBlogPosts(({ id }) => {
     return id.toLowerCase().startsWith(`${DEFAULT_LOCALE.toLowerCase()}/`);
   });
 }

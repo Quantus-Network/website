@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: Wallet सरल होना चाहिए"
 description: "Wallet v1.2.0 release, Treasury with multisig, Heisenberg testnet updates और performance improvements—इस सप्ताह की shipping highlights।"
 pubDate: "2026-02-27"

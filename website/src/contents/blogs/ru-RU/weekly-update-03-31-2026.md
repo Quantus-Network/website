@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: POS, PolyFri и P2P-деньги"
 description: "Мобильный режим POS в v1.2.2, маскирование PolyFri на нативном пути прувера, защита ZK-доказательств от DDoS и шаг к настоящим P2P-электронным деньгам."
 pubDate: "2026-03-31"

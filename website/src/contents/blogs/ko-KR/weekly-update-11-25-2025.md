@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus 위클리: ZK 집계와 마이너 앱"
 description: "체인과 CLI에서 ZK 트랜잭션 집계 1단계를 완료하고 실제 전송 검증으로 전환했습니다. Miner App v0.1.0을 출시하고 GPU 마이닝을 진행 중입니다."
 pubDate: "2025-11-25"

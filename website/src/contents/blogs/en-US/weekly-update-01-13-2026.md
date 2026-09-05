@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: Dilithium Threshold Signatures"
 description: "This week we shipped Dilithium threshold signatures for distributed coordination, plus ZK circuit work, mobile wallet updates, and community content."
 

@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: Un lanzamiento más justo"
 description: "Los primeros mineros de Bitcoin podían minar miles de BTC al día con un portátil. En Quantus, priorizamos hacer la minería accesible desde el día uno."
 pubDate: "2026-05-13"

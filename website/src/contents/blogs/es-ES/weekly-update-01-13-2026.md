@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: Firmas threshold Dilithium"
 description: "Esta semana lanzamos firmas threshold Dilithium para coordinación distribuida, además de circuitos ZK, actualizaciones del wallet móvil y contenido comunitario."
 

@@ -1,16 +1,16 @@
 ---
 import Layout from "@/components/layout/Layout.astro";
 import Card from "@/components/features/blog/Card.astro";
-import { getCollection } from "astro:content";
 import {
   getLocaleFromUrl,
   getLocalizedPath,
   createTranslator,
 } from "@/utils/i18n";
 import { createMetadata } from "@/utils/create-metadata";
+import { getBlogPosts } from "@/utils/blog-posts";
 
 export async function getStaticPaths() {
-  const allPosts = await getCollection("blog");
+  const allPosts = await getBlogPosts();
   const uniqueTags = [...new Set(allPosts.flatMap((post) => post.data.tags))];
 
   return uniqueTags.map((tag) => ({
@@ -22,12 +22,11 @@ const { tag } = Astro.params;
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
 
-const posts = await getCollection("blog", ({ id, data }) => {
-  return (
+const posts = await getBlogPosts(
+  ({ id, data }) =>
     id.toLowerCase().startsWith(`${locale.toLowerCase()}/`) &&
-    data.tags.includes(tag)
-  );
-});
+    data.tags.includes(tag),
+);
 
 const sortedPosts = posts.sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),

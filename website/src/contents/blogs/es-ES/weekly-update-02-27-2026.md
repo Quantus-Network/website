@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: El wallet debe ser simple"
 description: "Lanzamiento del Wallet v1.2.0, Treasury con multisig, actualizaciones del testnet Heisenberg y mejoras de rendimiento. Resumen semanal de Quantus."
 

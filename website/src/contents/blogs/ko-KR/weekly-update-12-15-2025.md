@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus 위클리: GPU 채굴 혁신과 ZK 리팩토링"
 description: "GPU 마이너가 CPU 대비 약 9배 빨라지는 채굴 성능 혁신을 달성했습니다. ZK 집계 회로 리팩토링과 UAE에서의 전략 회의 소식을 전합니다."
 pubDate: "2025-12-15"

@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus 每周动态：杀手级应用是货币"
 description: "本周重写 Dilithium DKG 以对齐 Mithril，修复门限签名，开放 Wormhole SDK 辅助接口，并发布钱包 v1.4.0（TestFlight）。"
 pubDate: "2026-05-06"

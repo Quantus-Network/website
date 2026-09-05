@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: Deniable RPCs and Neodyme Security Audit"
 description: "Deniable RPCs for stronger privacy, Neodyme’s Rusty Crystals audit complete, and private ZK addresses now available for every token."
 

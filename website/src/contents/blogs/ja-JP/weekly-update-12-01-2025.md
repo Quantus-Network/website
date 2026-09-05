@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: 格子暗号監査とKeystone"
 description: "Rusty Crystals格子暗号監査の指摘事項をすべて解決し、Polkadot SDKネットワークを更新。QuantusアドレスをKeystoneオープンソースハードウェアウォレットに実装しました。"
 pubDate: "2025-12-01"

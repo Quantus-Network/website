@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus 위클리: 공개 연구와 포스트퀀텀 표준"
 description: "research.quantus.com 런치, ZK 증명 집계, 멀티시그 팔렛 병합, 모바일 지갑·Senoti 알림 시스템 업데이트 등 이번 주 Quantus 소식을 전합니다."
 pubDate: "2026-02-20"

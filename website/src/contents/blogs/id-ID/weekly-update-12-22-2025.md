@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Mingguan: GPU Mining dan Stress Test Dirac"
 description: "Quantus Miner v2.0.2 dengan dukungan GPU rilis, jaringan Dirac distres-test, dan arsitektur chain diperbarui untuk batas pasokan 21 juta koin."
 

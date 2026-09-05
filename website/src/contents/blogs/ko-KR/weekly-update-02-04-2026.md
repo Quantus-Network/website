@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus 위클리: 고보안 계정과 사기 방지"
 description: "맞춤형 타임락과 가디언을 갖춘 고보안 계정, 멀티시그 통합 테스트, 가로챈 거래 자금 회수 기능 등 이번 주 Quantus 보안 업데이트를 정리합니다."
 pubDate: "2026-02-04"

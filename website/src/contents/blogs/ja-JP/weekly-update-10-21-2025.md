@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: Poseidon2ゲートとガバナンス"
 description: "Poseidon2をPlonky2ゲートとして実装し、オンチェーンガバナンスとトレジャリー機能を出荷。アプリ内紹介機能を完了し、GPUマイナー向けIcicleバインディングの統合も開始しました。"
 pubDate: "2025-10-21"

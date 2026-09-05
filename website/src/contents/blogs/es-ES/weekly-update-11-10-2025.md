@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: testnet Dirac y auditoría lattice"
 description: "Lanzamos la testnet Dirac con PoW actualizado y cripto lattice en auditoría externa. Mineros deben actualizar; wallet y libp2p ya lo integran."
 

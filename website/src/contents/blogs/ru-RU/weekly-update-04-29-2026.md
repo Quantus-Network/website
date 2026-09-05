@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: аудиты Eiger и компактный агрегатор"
 description: "Закрыты пункты аудита с Eiger, отрефакторен CLI, исправлены баги майнера и индексера, wormhole проходит через 2×8 компактный агрегатор и воркшоп Planck."
 pubDate: "2026-04-29"

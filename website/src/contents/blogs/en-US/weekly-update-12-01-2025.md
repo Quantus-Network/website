@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: Lattice Audit and Keystone Wallet"
 description: "Rusty Crystals lattice audit findings are closed, Polkadot SDK networking is updated, and Quantus addresses land on Keystone open-source hardware firmware."
 

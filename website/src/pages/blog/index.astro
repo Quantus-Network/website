@@ -1,18 +1,18 @@
 ---
 import Layout from "@/components/layout/Layout.astro";
 import { BlogList } from "@/components/features/blog/BlogList";
-import { getCollection } from "astro:content";
 import {
   getLocaleFromUrl,
   getLocalizedPath,
   createTranslator,
 } from "@/utils/i18n";
 import { createMetadata } from "@/utils/create-metadata";
+import { getBlogPosts } from "@/utils/blog-posts";
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
 
-const posts = await getCollection("blog", ({ id }) => {
+const posts = await getBlogPosts(({ id }) => {
   return id.toLowerCase().startsWith(`${locale.toLowerCase()}/`);
 });
 

@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Quantus Weekly: Planck Testnet Mining Rewards"
 description: "Planck testnet early miners के लिए live। App migration TestFlight और stores पर, GPU mining नई chain पर — Core, infra और wallet updates।"
 pubDate: "2026-04-15"
