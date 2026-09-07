@@ -1,0 +1,168 @@
+---
+published: false
+title: "Apa Itu Q-Day?"
+metaTitle: "Apa Itu Q-Day? Dampaknya bagi Keamanan Kripto"
+description: "Q-Day adalah saat komputer kuantum bisa membobol kriptografi kunci publik yang lazim dipakai. Ancamannya bagi kripto dan mengapa migrasi dimulai lebih awal."
+pubDate: "2026-09-07"
+heroImage: "/blog/covers/what-is-q-day.webp"
+heroAlt: "Apa Itu Q-Day?"
+featured: false
+author: christopher-smith
+tags:
+  [
+    "q-day",
+    "post-quantum",
+    "quantum-computing",
+    "cryptography",
+    "bitcoin",
+    "nist",
+    "migration",
+    "harvest-now-decrypt-later",
+  ]
+---
+
+import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
+
+Q-Day adalah titik ketika komputer kuantum yang cukup mumpuni bisa membobol kriptografi kunci publik yang melindungi sistem nyata, cukup cepat untuk menyebabkan kegagalan keamanan seperti transaksi palsu atau data yang terbongkar.
+
+RSA dan kriptografi kurva eliptik banyak dipakai untuk pertukaran kunci dan tanda tangan digital.
+
+Bagi blockchain, risikonya bergantung pada kapabilitas kuantum, eksposur kunci publik, dan migrasi. Kerangka kerja di bawah ini menjelaskan bagaimana ketiga kondisi itu bergabung menjadi serangan yang nyata.
+
+## Kapan Q-Day Terjadi?
+
+Tidak ada yang bisa memberi tanggal pasti untuk Q-Day. Para peneliti masih harus memecahkan masalah sulit dalam hardware kuantum, koreksi galat, dan komputasi skala besar.
+
+Perkiraan para ahli mencerminkan ketidakpastian itu. [Survei Global Risk Institute 2025](https://globalriskinstitute.org/publication/quantum-threat-timeline-report-2025b/) menemukan bahwa komputer kuantum yang relevan secara kriptografis (CRQC) cukup mungkin muncul dalam sepuluh tahun dan kemungkinan besar dalam lima belas tahun. Rentang probabilitas ini mengarah ke dekade 2030-an tanpa menunjuk tahun tertentu.
+
+Google mengumumkan target 2029 untuk menyelesaikan migrasi kriptografi pasca-kuantum miliknya sendiri. Itu bukan prediksi kapan CRQC akan muncul. Target itu mencerminkan waktu yang dibutuhkan untuk migrasi dan kemungkinan bahwa kemajuan kriptanalisis dapat mengurangi estimasi sumber daya sebelumnya. [Google mengumumkan linimasa migrasi pada Maret 2026](https://blog.google/innovation-and-ai/technology/safety-security/cryptography-migration-timeline/).
+
+Data rahasia berumur panjang perlu dilindungi sebelum Q-Day.
+
+Dalam serangan harvest-now, decrypt-later, penyerang mengumpulkan informasi terenkripsi hari ini dan menyimpannya sampai komputer kuantum di masa depan bisa mendekripsinya. Data yang harus tetap rahasia selama bertahun-tahun sudah berisiko akibat strategi ini.
+
+![Harvest-now, decrypt-later: penyerang mengumpulkan data terenkripsi hari ini dan mendekripsinya begitu komputer kuantum di masa depan bisa membobol enkripsinya](/blog/assets/harvest-now-decrypt-later.webp)
+
+Harvest-now, decrypt-later paling langsung berlaku pada data terenkripsi. Beberapa blockchain publik menghadapi risiko serupa: kunci publik yang terbongkar di onchain tetap tersedia untuk serangan di masa depan, meskipun menurunkan kunci privat tetap memerlukan CRQC.
+
+## Q-Day Membutuhkan Komputer Kuantum yang Relevan secara Kriptografis
+
+Komputer kuantum yang relevan secara kriptografis, atau CRQC, adalah komputer kuantum yang cukup kuat dan andal untuk membobol kriptografi yang dipakai dalam sistem nyata.
+
+Peneliti menilai kapabilitas itu dengan beberapa ukuran. Ini termasuk jumlah qubit logis yang andal, overhead koreksi galat, jumlah operasi kuantum yang diperlukan, dan waktu yang tersedia untuk menuntaskan serangan.
+
+Prosesor kuantum saat ini bisa mengungguli komputer klasik pada eksperimen yang dipilih dengan cermat. Mereka masih kekurangan skala dan toleransi galat yang diperlukan untuk memulihkan kunci privat blockchain memakai algoritma Shor.
+
+Makalah Google tahun 2026 memperkirakan sumber daya yang dibutuhkan CRQC superkonduktor masa depan untuk memecahkan ECDLP-256 pada secp256k1, kurva eliptik yang dipakai Bitcoin dan banyak chain lain. Dengan asumsi hardware yang dinyatakan, makalah itu memperkirakan kurang dari 500.000 qubit fisik dan waktu eksekusi hanya beberapa menit untuk satu serangan. [Riset Google menjelaskan asumsi dan estimasi sumber daya tersebut](https://research.google/blog/safeguarding-cryptocurrency-by-disclosing-quantum-vulnerabilities-responsibly/).
+
+Estimasi ini menggambarkan mesin masa depan. Ini menunjukkan bahwa kemajuan algoritma dan koreksi galat bisa mengubah estimasi sumber daya sebelum hardware mencapai skala yang diperlukan.
+
+## Apa yang Diancam Q-Day?
+
+Kekhawatiran utama Q-Day bagi blockchain adalah algoritma Shor. Komputer kuantum yang cukup mumpuni bisa memakainya untuk memecahkan masalah matematis yang melindungi sistem RSA dan kurva eliptik. [NIST mengidentifikasi RSA, DSA, dan kriptografi kurva eliptik sebagai kelas yang rentan](https://csrc.nist.gov/Projects/Post-Quantum-Cryptography/Post-Quantum-Cryptography-Standardization/Call-for-Proposals).
+
+Kriptografi kunci publik punya dua tugas utama:
+
+1. Membantu dua pihak membangun rahasia bersama lewat jaringan yang tidak tepercaya.
+2. Memungkinkan pemegang kunci privat membuat tanda tangan digital yang membuktikan otorisasi.
+
+Blockchain sangat bergantung pada tanda tangan digital. Bitcoin memakai ECDSA untuk jalur pengeluaran lama dan tanda tangan Schnorr untuk Taproot. Chain lain membuat pilihan mereka sendiri di antara skema tanda tangan kurva eliptik, termasuk ECDSA dan EdDSA. Jika penyerang bisa menurunkan kunci privat dari kunci publik yang terbongkar, mereka bisa membuat tanda tangan yang mungkin diterima jaringan sebagai valid.
+
+| Fungsi kriptografi | Contoh umum | Efek kuantum | Implikasi praktis |
+| --- | --- | --- | --- |
+| Pembentukan kunci dan enkripsi kunci publik | RSA, ECDH | Algoritma Shor mengancam masalah matematis yang mendasarinya | Catatan terenkripsi yang sudah tertangkap sebelumnya bisa menjadi terbaca |
+| Tanda tangan digital | Tanda tangan RSA, ECDSA, EdDSA | Algoritma Shor bisa memungkinkan pemulihan kunci privat | Penyerang mungkin bisa memalsukan transaksi atau otorisasi lain |
+| Enkripsi simetris | AES | Algoritma Grover menurunkan biaya pencarian brute-force | Ukuran kunci dan biaya serangan praktis menentukan sisa margin keamanan |
+| Hashing | SHA-256, SHA-3 | Pencarian kuantum menurunkan sebagian margin keamanan | Fungsi yang bergantung pada hash memerlukan penilaian terpisah |
+
+Tanda tangan digital Bitcoin dan SHA-256 karena itu menghadapi ancaman kuantum yang berbeda.
+
+ECDSA mengotorisasi pengeluaran. Serangan Shor yang berhasil bisa memulihkan kunci privat dari kunci publiknya dan memungkinkan transaksi palsu.
+
+SHA-256 mendukung mining dan fungsi lain yang bergantung pada hash. Ancaman kuantum yang relevan adalah [algoritma Grover](https://www.quantumcanary.org/insights/how-does-grovers-algorithm-work-mathematically-speaking), yang memberikan percepatan generik untuk pencarian. Ini tidak memberi penyerang jalur pemulihan kunci privat langsung yang sama. [Panduan pasca-kuantum NIST](https://csrc.nist.gov/Projects/Post-Quantum-Cryptography/faqs) memperlakukan kedua model serangan ini secara terpisah.
+
+## Bagaimana Kapabilitas Kuantum Berubah Menjadi Serangan Blockchain
+
+![Kapabilitas kuantum, eksposur kunci publik, dan migrasi yang belum tuntas bergabung menjadi risiko kuantum yang nyata](/blog/assets/quantum-risk-factors.webp)
+
+Sebuah blockchain menjadi rentan ketika komputer kuantum yang mumpuni bisa mengeksploitasi kunci publik yang terbongkar sebelum migrasi pasca-kuantum melindungi aset terkait.
+
+### Mesinnya Bisa Menuntaskan Serangan
+
+Penyerang memerlukan kapasitas kuantum andal yang cukup untuk menurunkan kunci privat dalam waktu yang tersedia untuk target.
+
+Waktu yang tersedia bergantung pada target. Kunci publik yang terlihat di onchain selama bertahun-tahun memberi penyerang waktu jauh lebih lama untuk menurunkan kunci privat terkait, dibandingkan kunci yang terbongkar setelah transaksi disiarkan dan sebelum dikonfirmasi.
+
+### Kunci Publiknya Tersedia
+
+Komputer kuantum tidak bisa menurunkan kunci privat tanpa kunci publik yang terkait.
+
+Beberapa output Bitcoin mencatat kunci publik secara langsung. Yang lain awalnya hanya menyimpan hash dari kunci publik dan membongkar kunci lengkap saat pemiliknya membelanjakannya. Menggunakan ulang sebuah alamat bisa membiarkan dana baru dilindungi oleh kunci yang sudah terbongkar.
+
+Analisis Google tahun 2026 memperkirakan bahwa alamat dengan kunci publik yang terbongkar atau dipakai ulang menyimpan sekitar 6,7 juta BTC yang bisa menghadapi serangan at-rest dari CRQC di masa depan.
+
+Sekitar 2,3 juta BTC dalam analisis tersebut tidak aktif setidaknya selama lima tahun, sementara sekitar 1,7 juta BTC terkunci dalam output pay-to-public-key generasi awal. [Makalah Google](https://quantumai.google/static/site-assets/downloads/cryptocurrency-whitepaper.pdf) menjelaskan asumsi dan metode di balik estimasi ini.
+
+Saldo-saldo ini menjadi rentan diserang ketika sebuah CRQC bisa menurunkan kunci privat terkait. Pemilik yang masih menguasai kunci mereka mungkin bisa memigrasikan dana mereka begitu chain sudah menyediakan jalur pengeluaran pasca-kuantum dan wallet serta layanan pendukung sudah mengadopsinya. Kunci yang hilang atau ditinggalkan menciptakan masalah yang lebih sulit karena mungkin tidak ada siapa pun yang bisa mengotorisasi migrasi.
+
+[Masalah migrasi Bitcoin juga merupakan masalah koordinasi](https://www.quantumcanary.org/insights/bitcoins-migration-problem-is-self-organization), karena tidak ada operator pusat yang bisa memastikan setiap pemilik, wallet, exchange, kustodian, dan operator node melakukan upgrade.
+
+### Migrasi Masih Belum Tuntas
+
+Menambahkan skema tanda tangan pasca-kuantum ke sebuah protokol hanyalah satu bagian dari migrasi. Node harus menegakkan aturan baru, wallet harus membuat dan mengelola kunci baru, serta exchange dan kustodian harus mendukung format transaksi baru.
+
+Aset yang ada tetap rentan sampai pengguna bisa memindahkannya lewat jalur pasca-kuantum yang aktif dan didukung. Sebuah proposal, makalah riset, testnet, atau fitur mainnet opsional menunjukkan kemajuan; itu tidak melindungi aset yang dikendalikan oleh kunci yang rentan.
+
+## Mengapa Migrasi Dimulai Bertahun-Tahun Sebelum Q-Day
+
+NIST merampungkan tiga standar pasca-kuantum pertamanya pada Agustus 2024:
+
+- [FIPS 203](https://csrc.nist.gov/pubs/fips/203/final) menetapkan ML-KEM, metode berbasis lattice untuk membangun kunci bersama.
+- [FIPS 204](https://csrc.nist.gov/pubs/fips/204/final) menetapkan ML-DSA, skema tanda tangan digital berbasis lattice.
+- [FIPS 205](https://csrc.nist.gov/pubs/fips/205/final) menetapkan SLH-DSA, skema tanda tangan digital berbasis hash.
+
+Standar berbasis lattice menyediakan opsi utama yang efisien untuk pembentukan kunci dan tanda tangan. Standar berbasis hash memberi para pengembang opsi tanda tangan yang dibangun di atas asumsi matematis berbeda.
+
+Kami membahas Q-Day, migrasi pasca-kuantum, dan tekanan untuk memperbarui kriptografi yang rentan bersama Alex Pruden di QDay Podcast.
+
+<TwitterEmbed url="https://x.com/QuantusNetwork/status/2085335080491458874?s=20" />
+
+Memilih sebuah algoritma memulai sebuah migrasi. Pada software biasa, pustaka kriptografi baru bisa sampai ke pengguna lewat update rutin, tetapi vendor tetap harus mengubah protokol, sertifikat, dukungan hardware, dan layanan yang bergantung padanya.
+
+NIST mencatat bahwa mengintegrasikan algoritma kriptografi standar ke seluruh sistem informasi [secara historis memakan waktu 10 hingga 20 tahun](https://www.nist.gov/cybersecurity-and-privacy/what-post-quantum-cryptography).
+
+## Apa yang Dilakukan Pemerintah dan Badan Standar
+
+Pemerintah kini sudah memperlakukan migrasi pasca-kuantum sebagai program keamanan multi-tahun.
+
+| Organisasi | Persiapan yang sedang berjalan |
+| --- | --- |
+| NIST | [NIST](https://csrc.nist.gov/Projects/Post-Quantum-Cryptography) merampungkan standar PQC pertamanya pada 2024 dan berencana menghapus algoritma yang rentan kuantum dari standarnya pada 2035, dengan sistem berisiko tinggi bermigrasi lebih dulu |
+| Pemerintah federal Amerika Serikat | [Executive Order 14412](https://www.whitehouse.gov/presidential-actions/2026/06/securing-the-nation-against-advanced-cryptographic-attacks/) dan [OMB M-26-15](https://www.whitehouse.gov/wp-content/uploads/2026/06/M-26-15-Execution-of-the-Migration-to-Post-Quantum-Cryptography.pdf) mewajibkan sistem bernilai tinggi dan berdampak tinggi yang tercakup untuk memakai PQC bagi pembentukan kunci paling lambat 31 Desember 2030, dan bagi tanda tangan digital paling lambat 31 Desember 2031 |
+| NSA | [CNSA 2.0](https://www.nsa.gov/Cybersecurity/Post-Quantum-Cybersecurity-Resources/) mengidentifikasi algoritma tahan-kuantum dan menetapkan transisi bertahap untuk National Security Systems |
+| Uni Eropa | [Peta jalan UE 2025](https://digital-strategy.ec.europa.eu/en/library/coordinated-implementation-roadmap-transition-post-quantum-cryptography) menyerukan transisi yang terkoordinasi di seluruh Negara Anggota |
+| ENISA | [Studi integrasi ENISA](https://www.enisa.europa.eu/publications/post-quantum-cryptography-integration-study) membahas integrasi sistem pasca-kuantum ke dalam protokol yang sudah ada |
+
+Program-program ini dimulai bertahun-tahun sebelum CRQC mana pun dikonfirmasi karena setiap algoritma yang rentan harus lebih dulu ditemukan, diganti, diuji, dan dipensiunkan.
+
+## Cara Menilai Kesiapan Kuantum dalam Sebuah Blockchain
+
+[Rencana migrasi](https://www.quantumcanary.org/insights/crypto-state-of-the-union) yang kredibel menghubungkan kriptografi yang saat ini dipakai dengan orang-orang dan sistem yang harus mengadopsi penggantinya.
+
+Lima pemeriksaan membuat penilaian ini praktis.
+
+1. **Identifikasi kriptografi yang dipakai.** Tentukan skema tanda tangan, metode pembentukan kunci, hash, sistem bukti, dan pustaka kriptografi mana yang melindungi chain saat ini.
+2. **Petakan eksposur kunci publik.** Tentukan kapan kunci menjadi terlihat, apakah dipakai ulang, seberapa lama jendela serangan tetap terbuka, dan aset atau izin apa yang mereka kendalikan.
+3. **Verifikasi apa yang benar-benar sudah diterapkan.** Pisahkan riset yang dipublikasikan, proposal, testnet, fitur mainnet opsional, dan perlindungan mainnet yang wajib.
+4. **Telusuri jalur migrasi.** Periksa bagaimana node, wallet, exchange, kustodian, bridge, dan pengguna akan mengadopsi penggantinya. Rencana itu juga harus menjelaskan apa yang terjadi pada kepemilikan yang tidak aktif atau tidak bisa diakses.
+5. **Periksa buktinya.** Cari spesifikasi, kode implementasi, audit independen, uji performa, dan instruksi pengguna yang jelas. Tanda tangan pasca-kuantum harus bekerja di seluruh lingkungan dalam kondisi yang realistis.
+
+Untuk menilai klaim ketahanan kuantum, identifikasi kriptografi yang masih dipakai, verifikasi bahwa jalur pasca-kuantum sudah aktif, dan pastikan akun serta aset yang ada bisa memakainya.
+
+## Periksa Risiko Kuantum Wallet Ethereum Anda
+
+Externally owned account Ethereum punya pola eksposur yang berbeda dari output Bitcoin, karena kunci publik bisa dipulihkan dari tanda tangan transaksi yang dipublikasikan.
+
+Ethereum juga punya [tanda tangan konsensus, komitmen ketersediaan data, dan sistem bukti](https://www.quantumcanary.org/insights/is-eth-quantum-secure) yang memerlukan jalur migrasi pasca-kuantumnya sendiri.
+
+[Quantum Risk Checker](https://www.quantus.com/quantum-risk-checker/) memakai data blockchain publik untuk menilai eksposur kunci publik dan sensitivitas saldo untuk sebuah alamat Ethereum atau nama ENS. Ini tidak pernah meminta kunci privat.

@@ -1,0 +1,168 @@
+---
+published: false
+title: "什么是 Q-Day？"
+metaTitle: "什么是 Q-Day？对加密安全意味着什么"
+description: "Q-Day 是量子计算机足以破解广泛使用的公钥密码学的临界点。了解它对加密货币意味着哪些具体威胁，以及为什么相关迁移工作必须提前多年开始准备。"
+pubDate: "2026-09-07"
+heroImage: "/blog/covers/what-is-q-day.webp"
+heroAlt: "什么是 Q-Day？"
+featured: false
+author: christopher-smith
+tags:
+  [
+    "q-day",
+    "post-quantum",
+    "quantum-computing",
+    "cryptography",
+    "bitcoin",
+    "nist",
+    "migration",
+    "harvest-now-decrypt-later",
+  ]
+---
+
+import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
+
+Q-Day 是指一台足够强大的量子计算机能够快速破解保护真实系统的公钥密码学，快到足以造成伪造交易或数据泄露等安全事故的那个时间点。
+
+RSA 和椭圆曲线密码学被广泛用于密钥交换和数字签名。
+
+对区块链而言，风险取决于量子能力、公钥暴露程度和迁移进度这三者。下面的框架解释了这些条件如何组合成一次实际的攻击。
+
+## Q-Day 何时到来？
+
+没有人能给出 Q-Day 的可信日期。研究人员仍需在量子硬件、纠错和大规模计算方面解决难题。
+
+专家的预测也反映了这种不确定性。[Global Risk Institute 的 2025 年调查](https://globalriskinstitute.org/publication/quantum-threat-timeline-report-2025b/)发现，具备密码学相关能力的量子计算机（CRQC）在十年内相当可能出现，十五年内则更为可能。这些概率区间指向 2030 年代，但并未指明具体年份。
+
+谷歌宣布了在 2029 年完成自身后量子密码迁移的目标。这并非对 CRQC 出现时间的预测。该目标既反映了迁移所需的时间，也反映了密码分析进展可能降低此前资源估算的可能性。[谷歌于 2026 年 3 月公布了迁移时间表](https://blog.google/innovation-and-ai/technology/safety-security/cryptography-migration-timeline/)。
+
+需要长期保密的数据必须在 Q-Day 之前得到保护。
+
+在“先收集、后解密”攻击中，攻击者今天收集加密信息并将其存储，直到未来的量子计算机能够将其解密。需要多年保密的数据，已经因这种策略而处于风险之中。
+
+![先收集、后解密：攻击者今天收集加密数据，一旦未来的量子计算机能够破解加密就将其解密](/blog/assets/harvest-now-decrypt-later.webp)
+
+“先收集、后解密”最直接适用于加密数据。一些公有区块链也面临相关风险：链上已暴露的公钥仍可供未来攻击使用，即便推导私钥仍然需要 CRQC。
+
+## Q-Day 需要具备密码学相关能力的量子计算机
+
+具备密码学相关能力的量子计算机，即 CRQC，是指强大且可靠到足以破解真实系统所用密码学的量子计算机。
+
+研究人员通过多项指标评估这种能力，包括可靠逻辑量子比特数、纠错开销、所需量子操作次数，以及完成攻击可用的时间。
+
+今天的量子处理器已能在精心挑选的实验中超越经典计算机，但仍未达到用 Shor 算法恢复区块链私钥所需的规模和容错能力。
+
+谷歌 2026 年的论文估算了未来超导 CRQC 在 secp256k1（比特币及许多其他链使用的椭圆曲线）上求解 ECDLP-256 所需的资源。在其给定的硬件假设下，论文估计单次攻击所需物理量子比特不足 50 万个，运行时间为数分钟。[谷歌的研究说明了这些假设和资源估算](https://research.google/blog/safeguarding-cryptocurrency-by-disclosing-quantum-vulnerabilities-responsibly/)。
+
+这一估算描述的是一台未来的机器。它表明，在硬件达到所需规模之前，算法和纠错方面的进展就可能改变资源估算。
+
+## Q-Day 会威胁什么？
+
+对区块链而言，Q-Day 的主要担忧是 Shor 算法。一台足够强大的量子计算机可以用它求解保护 RSA 和椭圆曲线系统的数学难题。[NIST 将 RSA、DSA 和椭圆曲线密码学列为易受攻击的类别](https://csrc.nist.gov/Projects/Post-Quantum-Cryptography/Post-Quantum-Cryptography-Standardization/Call-for-Proposals)。
+
+公钥密码学有两大主要作用：
+
+1. 帮助双方在不受信任的网络上建立共享密钥。
+2. 让私钥持有者能够生成证明授权的数字签名。
+
+区块链高度依赖数字签名。比特币在较旧的花费路径中使用 ECDSA，在 Taproot 中使用 Schnorr 签名。其他链在包括 ECDSA 和 EdDSA 在内的椭圆曲线签名方案中各自做出选择。如果攻击者能从暴露的公钥推导出私钥，就能生成网络可能接受为有效的签名。
+
+| 密码学功能 | 常见示例 | 量子影响 | 实际影响 |
+| --- | --- | --- | --- |
+| 密钥建立与公钥加密 | RSA、ECDH | Shor 算法威胁其底层数学难题 | 此前被截获的加密记录可能变得可读 |
+| 数字签名 | RSA 签名、ECDSA、EdDSA | Shor 算法可能使私钥恢复成为可能 | 攻击者可能伪造交易或其他授权 |
+| 对称加密 | AES | Grover 算法降低暴力搜索的成本 | 密钥长度和实际攻击成本决定剩余的安全余量 |
+| 哈希 | SHA-256、SHA-3 | 量子搜索会降低部分安全余量 | 依赖哈希的功能需要单独评估 |
+
+因此，比特币的数字签名与 SHA-256 面临不同的量子威胁。
+
+ECDSA 负责授权花费。一次成功的 Shor 攻击可能从公钥恢复私钥，从而使伪造交易成为可能。
+
+SHA-256 支撑着挖矿和其他依赖哈希的功能。与之相关的量子威胁是 [Grover 算法](https://www.quantumcanary.org/insights/how-does-grovers-algorithm-work-mathematically-speaking)，它为搜索提供了通用加速。这并未给攻击者提供同样直接的私钥恢复途径。[NIST 的后量子指南](https://csrc.nist.gov/Projects/Post-Quantum-Cryptography/faqs)将这两种攻击模型分开处理。
+
+## 量子能力如何演变为区块链攻击
+
+![量子能力、公钥暴露和不完整的迁移共同构成了实际的量子风险](/blog/assets/quantum-risk-factors.webp)
+
+当一台有能力的量子计算机能够在后量子迁移保护相关资产之前，利用已暴露的公钥时，区块链就变得脆弱。
+
+### 机器能够完成攻击
+
+攻击者需要足够可靠的量子能力，在目标可用的时间内推导出私钥。
+
+可用时间取决于目标本身。一个在链上暴露多年的公钥，比一个在交易广播后、确认前才暴露的公钥，能给攻击者多得多的时间来推导对应私钥。
+
+### 公钥是可获得的
+
+没有对应的公钥，量子计算机无法推导出私钥。
+
+一些比特币输出直接记录公钥；另一些最初只存储公钥的哈希，等所有者花费时才暴露完整公钥。重复使用地址可能导致新资金被一个已经暴露过的公钥所"保护"。
+
+谷歌 2026 年的分析估计，公钥已暴露或被重复使用的地址中，约有 670 万枚 BTC 可能面临未来 CRQC 对静态资产的攻击。
+
+该分析中约有 230 万枚 BTC 至少已闲置五年，另有约 170 万枚 BTC 锁定在早期的 pay-to-public-key 输出中。[谷歌的论文](https://quantumai.google/static/site-assets/downloads/cryptocurrency-whitepaper.pdf)说明了这些估算背后的假设和方法。
+
+一旦 CRQC 能够推导出对应私钥，这些余额就会变得可被攻击。仍掌控自己私钥的持有者，可以在链部署后量子花费路径、且配套钱包与服务已采用该路径后迁移资金。丢失或被弃用的私钥则带来更棘手的问题，因为可能没有人能授权迁移。
+
+[比特币的迁移问题同时也是一个协调问题](https://www.quantumcanary.org/insights/bitcoins-migration-problem-is-self-organization)，因为没有任何中央运营方能够确保每一位持有者、每个钱包、交易所、托管方和节点运营者都完成升级。
+
+### 迁移仍不完整
+
+在协议中加入后量子签名方案只是迁移的一部分。节点必须强制执行新规则，钱包必须生成并管理新密钥，交易所和托管方必须支持新的交易格式。
+
+在用户能够通过已激活且受支持的后量子路径转移资产之前，现有资产仍然脆弱。一项提案、一篇研究论文、一个测试网或一个可选的主网功能，都只能说明有所进展；它们并不能保护由脆弱密钥控制的资产。
+
+## 为何迁移要在 Q-Day 之前多年就开始
+
+NIST 于 2024 年 8 月确定了首批三项后量子标准：
+
+- [FIPS 203](https://csrc.nist.gov/pubs/fips/203/final) 规定了 ML-KEM，一种基于格的共享密钥建立方法。
+- [FIPS 204](https://csrc.nist.gov/pubs/fips/204/final) 规定了 ML-DSA，一种基于格的数字签名方案。
+- [FIPS 205](https://csrc.nist.gov/pubs/fips/205/final) 规定了 SLH-DSA，一种基于哈希的数字签名方案。
+
+基于格的标准为密钥建立和签名提供了高效的主要选项。基于哈希的标准则为实现者提供了建立在不同数学假设之上的签名选项。
+
+我们在 QDay Podcast 中与 Alex Pruden 讨论了 Q-Day、后量子迁移，以及升级脆弱密码学的压力。
+
+<TwitterEmbed url="https://x.com/QuantusNetwork/status/2085335080491458874?s=20" />
+
+选定算法只是迁移的开始。在普通软件中，新的密码学库或许能通过一次常规更新触达用户，但供应商仍必须改动协议、证书、硬件支持及依赖它的各项服务。
+
+NIST 指出，将一种标准化密码算法整合进各类信息系统，[历史上通常需要 10 到 20 年](https://www.nist.gov/cybersecurity-and-privacy/what-post-quantum-cryptography)。
+
+## 各国政府与标准机构正在做什么
+
+各国政府已经将后量子迁移当作一项跨越多年的安全计划来对待。
+
+| 机构 | 正在进行的准备工作 |
+| --- | --- |
+| NIST | [NIST](https://csrc.nist.gov/Projects/Post-Quantum-Cryptography) 于 2024 年确定了首批 PQC 标准，并计划到 2035 年将易受量子攻击的算法从标准中移除，高风险系统将更早完成迁移 |
+| 美国联邦政府 | [第 14412 号行政命令](https://www.whitehouse.gov/presidential-actions/2026/06/securing-the-nation-against-advanced-cryptographic-attacks/)与 [OMB M-26-15](https://www.whitehouse.gov/wp-content/uploads/2026/06/M-26-15-Execution-of-the-Migration-to-Post-Quantum-Cryptography.pdf) 要求相关高价值、高影响系统在 2030 年 12 月 31 日前完成密钥建立的 PQC 迁移，并在 2031 年 12 月 31 日前完成数字签名的 PQC 迁移 |
+| NSA | [CNSA 2.0](https://www.nsa.gov/Cybersecurity/Post-Quantum-Cybersecurity-Resources/) 确定了抗量子算法，并为 National Security Systems 设定了分阶段过渡方案 |
+| 欧盟 | [2025 年欧盟路线图](https://digital-strategy.ec.europa.eu/en/library/coordinated-implementation-roadmap-transition-post-quantum-cryptography) 呼吁各成员国之间进行协调一致的过渡 |
+| ENISA | [ENISA 的整合研究](https://www.enisa.europa.eu/publications/post-quantum-cryptography-integration-study) 探讨了将后量子系统整合进现有协议的问题 |
+
+这些计划之所以在任何 CRQC 得到确认之前多年就已启动，是因为每一种脆弱算法都必须先被发现、替换、测试并最终淘汰。
+
+## 如何评估区块链的量子准备程度
+
+一份可信的[迁移计划](https://www.quantumcanary.org/insights/crypto-state-of-the-union)，会把当前使用的密码学与必须采用其替代方案的人员和系统联系起来。
+
+以下五项检查能让这种评估变得可操作。
+
+1. **识别正在使用的密码学。** 确定哪些签名方案、密钥建立方法、哈希、证明系统和密码学库正在保护当今的链。
+2. **梳理公钥暴露情况。** 确定密钥何时变得可见、是否被重复使用、攻击窗口保持开放的时间有多长，以及它们控制着哪些资产或权限。
+3. **核实实际已部署的内容。** 区分已发表的研究、提案、测试网、可选的主网功能，以及强制性的主网保护。
+4. **追踪迁移路径。** 检查节点、钱包、交易所、托管方、跨链桥和用户将如何采用替代方案。计划还应说明闲置或无法访问的持仓将如何处理。
+5. **审查证据。** 寻找规范文档、实现代码、独立审计、性能测试以及清晰的用户说明。后量子签名必须在现实条件下于整个环境中正常运作。
+
+要评估一项抗量子性声明，需要识别仍在使用的密码学，验证后量子路径是否已激活，并确认现有账户和资产能够使用它。
+
+## 检查你的以太坊钱包的量子风险
+
+以太坊的外部拥有账户（EOA）与比特币输出的暴露方式不同，因为公钥可以从已发布的交易签名中恢复。
+
+以太坊还拥有需要各自独立后量子迁移路径的[共识签名、数据可用性承诺和证明系统](https://www.quantumcanary.org/insights/is-eth-quantum-secure)。
+
+[Quantum Risk Checker](https://www.quantus.com/quantum-risk-checker/) 使用公开的区块链数据，评估某个以太坊地址或 ENS 名称的公钥暴露程度和余额敏感性。它绝不会索取私钥。

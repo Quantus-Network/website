@@ -1007,7 +1007,9 @@
       "infra": "Infra",
       "immunefi": "Immunefi",
       "bug-bounty": "Bug Bounty",
-      "senoti": "Senoti"
+      "senoti": "Senoti",
+      "migration": "Migration",
+      "harvest-now-decrypt-later": "Harvest-Now-Decrypt-Later"
     }
   },
   "whitepaper": {
