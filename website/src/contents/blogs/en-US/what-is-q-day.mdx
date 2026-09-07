@@ -1,0 +1,168 @@
+---
+published: false
+title: "What Is Q-Day?"
+metaTitle: "What Is Q-Day? What It Means for Crypto Security"
+description: "Q-Day is the threshold when quantum computers can break widely used public-key cryptography. Learn what it threatens in crypto and why migration starts early."
+pubDate: "2026-09-07"
+heroImage: "/blog/covers/what-is-q-day.webp"
+heroAlt: "What Is Q-Day?"
+featured: false
+author: christopher-smith
+tags:
+  [
+    "q-day",
+    "post-quantum",
+    "quantum-computing",
+    "cryptography",
+    "bitcoin",
+    "nist",
+    "migration",
+    "harvest-now-decrypt-later",
+  ]
+---
+
+import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
+
+Q-Day is the point when a sufficiently capable quantum computer can break the public-key cryptography protecting real systems quickly enough to cause security failures such as forged transactions or exposed data.
+
+RSA and elliptic-curve cryptography are widely used for key exchange and digital signatures.
+
+For blockchains, risk depends on quantum capability, public-key exposure, and migration. The framework below explains how those conditions combine in a practical attack.
+
+## When Is Q-Day?
+
+No one can give Q-Day a credible date. Researchers still need to solve difficult problems in quantum hardware, error correction, and large-scale computation.
+
+Expert forecasts reflect that uncertainty. The [Global Risk Institute's 2025 survey](https://globalriskinstitute.org/publication/quantum-threat-timeline-report-2025b/) found that a cryptographically relevant quantum computer (CRQC) is quite possible within ten years and likely within fifteen years. These probability ranges point towards the 2030s without identifying a particular year.
+
+Google announced a 2029 target for completing its own post-quantum cryptography migration. It did not predict when a CRQC will arrive. The target reflects the time required for migration and the possibility that cryptanalytic advances could reduce earlier resource estimates. [Google announced the migration timeline in March 2026](https://blog.google/innovation-and-ai/technology/safety-security/cryptography-migration-timeline/).
+
+Long-lived confidential data needs protection before Q-Day.
+
+In a harvest-now, decrypt-later attack, an adversary collects encrypted information today and stores it until a future quantum computer can decrypt it. Data that must remain confidential for many years is already at risk from this strategy.
+
+![Harvest-now, decrypt-later: an adversary collects encrypted data today and decrypts it once a future quantum computer can break the encryption](/blog/assets/harvest-now-decrypt-later.webp)
+
+Harvest-now, decrypt-later applies most directly to encrypted data. Some public blockchains face a related risk: public keys exposed onchain remain available for future attack, even though deriving a private key still requires a CRQC.
+
+## Q-Day Requires a Cryptographically Relevant Quantum Computer
+
+A cryptographically relevant quantum computer, or CRQC, is a quantum computer powerful and reliable enough to break cryptography used in real systems.
+
+Researchers assess that capability using several measurements. These include the number of reliable logical qubits, the error-correction overhead, the number of quantum operations required, and the time available to complete the attack.
+
+Today's quantum processors can outperform classical computers on carefully selected experiments. They still lack the scale and fault tolerance required to recover a blockchain private key using Shor's algorithm.
+
+Google's 2026 paper estimates the resources a future superconducting CRQC could need to solve ECDLP-256 on secp256k1, the elliptic curve used by Bitcoin and many other chains. Under its stated hardware assumptions, the paper estimates fewer than 500,000 physical qubits and a runtime of minutes for one attack. [Google's research explains those assumptions and resource estimates](https://research.google/blog/safeguarding-cryptocurrency-by-disclosing-quantum-vulnerabilities-responsibly/).
+
+The estimate describes a future machine. It shows that advances in algorithms and error correction can change resource estimates before hardware reaches the required scale.
+
+## What Would Q-Day Threaten?
+
+The main Q-Day concern for blockchains is Shor's algorithm. A sufficiently capable quantum computer could use it to solve the mathematical problems protecting RSA and elliptic-curve systems. [NIST identifies RSA, DSA, and elliptic-curve cryptography as vulnerable classes](https://csrc.nist.gov/Projects/Post-Quantum-Cryptography/Post-Quantum-Cryptography-Standardization/Call-for-Proposals).
+
+Public-key cryptography has two main jobs:
+
+1. It helps two parties establish a shared secret across an untrusted network.
+2. It allows a private-key holder to produce a digital signature that proves authorization.
+
+Blockchains depend heavily on digital signatures. Bitcoin uses ECDSA for older spending paths and Schnorr signatures for Taproot. Other chains make their own choices among elliptic-curve signature schemes, including ECDSA and EdDSA. If an attacker can derive a private key from an exposed public key, they can produce a signature that the network may accept as valid.
+
+| Cryptographic function | Common examples | Quantum effect | Practical implication |
+| --- | --- | --- | --- |
+| Key establishment and public-key encryption | RSA, ECDH | Shor's algorithm threatens the underlying mathematical problems | Previously captured encrypted records may become readable |
+| Digital signatures | RSA signatures, ECDSA, EdDSA | Shor's algorithm could enable private-key recovery | An attacker may be able to forge transactions or other authorizations |
+| Symmetric encryption | AES | Grover's algorithm reduces the cost of brute-force search | Key size and practical attack costs determine the remaining security margin |
+| Hashing | SHA-256, SHA-3 | Quantum search reduces some security margins | Hash-dependent functions require a separate assessment |
+
+Bitcoin's digital signatures and SHA-256 therefore face different quantum threats.
+
+ECDSA authorizes spending. A successful Shor attack could recover a private key from its public key and enable forged transactions.
+
+SHA-256 supports mining and other hash-dependent functions. Its relevant quantum threat is [Grover's algorithm](https://www.quantumcanary.org/insights/how-does-grovers-algorithm-work-mathematically-speaking), which provides a generic speedup for search. This does not give an attacker the same direct private-key recovery path. [NIST's post-quantum guidance](https://csrc.nist.gov/Projects/Post-Quantum-Cryptography/faqs) treats the two attack models separately.
+
+## How Quantum Capability Becomes a Blockchain Attack
+
+![Quantum capability, public-key exposure, and incomplete migration combine into practical quantum risk](/blog/assets/quantum-risk-factors.webp)
+
+A blockchain becomes vulnerable when a capable quantum computer can exploit an exposed public key before a post-quantum migration protects the relevant assets.
+
+### The Machine Can Complete the Attack
+
+The attacker needs enough reliable quantum capacity to derive a private key within the time available for the target.
+
+The available time depends on the target. A public key visible onchain for years gives an attacker much longer to derive the corresponding private key than a key revealed after a transaction is broadcast and before it is confirmed.
+
+### The Public Key Is Available
+
+A quantum computer cannot derive a private key without the corresponding public key.
+
+Some Bitcoin outputs record the public key directly. Others initially store a hash of the public key and reveal the full key when the holder spends. Reusing an address can leave new funds protected by a key that has already been exposed.
+
+Google's 2026 analysis estimates that addresses with exposed or reused public keys hold approximately 6.7 million BTC that could face an at-rest attack from a future CRQC.
+
+About 2.3 million BTC in the analysis had been inactive for at least five years, while roughly 1.7 million BTC are locked in early pay-to-public-key outputs. [Google's paper](https://quantumai.google/static/site-assets/downloads/cryptocurrency-whitepaper.pdf) explains the assumptions and method behind these estimates.
+
+These balances become attackable when a CRQC can derive the corresponding private keys. Owners who still control their keys may be able to migrate their funds once the chain has deployed a post-quantum spending route and supporting wallets and services have adopted it. Lost or abandoned keys create a harder problem because nobody may be available to authorize the migration.
+
+[Bitcoin's migration problem is also a coordination problem](https://www.quantumcanary.org/insights/bitcoins-migration-problem-is-self-organization), because no central operator can ensure every holder, wallet, exchange, custodian, and node operator upgrades.
+
+### Migration Remains Incomplete
+
+Adding a post-quantum signature scheme to a protocol is one part of migration. Nodes must enforce the new rules, wallets must create and manage new keys, and exchanges and custodians must support the new transaction format.
+
+Existing assets remain vulnerable until users can move them through an activated, supported post-quantum path. A proposal, research paper, testnet, or optional mainnet feature shows progress; it does not protect assets controlled by vulnerable keys.
+
+## Why Migration Begins Years Before Q-Day
+
+NIST finalized its first three post-quantum standards in August 2024:
+
+- [FIPS 203](https://csrc.nist.gov/pubs/fips/203/final) specifies ML-KEM, a lattice-based method for establishing shared keys.
+- [FIPS 204](https://csrc.nist.gov/pubs/fips/204/final) specifies ML-DSA, a lattice-based digital-signature scheme.
+- [FIPS 205](https://csrc.nist.gov/pubs/fips/205/final) specifies SLH-DSA, a hash-based digital-signature scheme.
+
+The lattice-based standards provide efficient primary options for key establishment and signatures. The hash-based standard gives implementers a signature option built on different mathematical assumptions.
+
+We discussed Q-Day, post-quantum migration, and the pressure to upgrade vulnerable cryptography with Alex Pruden on the QDay Podcast.
+
+<TwitterEmbed url="https://x.com/QuantusNetwork/status/2085335080491458874?s=20" />
+
+Selecting an algorithm starts a migration. In ordinary software, a new cryptographic library may reach users through a routine update, but the vendor still has to change protocols, certificates, hardware support, and dependent services.
+
+NIST notes that integrating a standardized cryptographic algorithm across information systems has [historically taken 10 to 20 years](https://www.nist.gov/cybersecurity-and-privacy/what-post-quantum-cryptography).
+
+## What Governments and Standards Bodies Are Doing
+
+Governments are already treating post-quantum migration as a multi-year security program.
+
+| Organization | Preparation underway |
+| --- | --- |
+| NIST | [NIST](https://csrc.nist.gov/Projects/Post-Quantum-Cryptography) finalized its first PQC standards in 2024 and plans to remove quantum-vulnerable algorithms from its standards by 2035, with high-risk systems moving earlier |
+| United States federal government | [Executive Order 14412](https://www.whitehouse.gov/presidential-actions/2026/06/securing-the-nation-against-advanced-cryptographic-attacks/) and [OMB M-26-15](https://www.whitehouse.gov/wp-content/uploads/2026/06/M-26-15-Execution-of-the-Migration-to-Post-Quantum-Cryptography.pdf) require covered high-value and high-impact systems to use PQC for key establishment by December 31, 2030, and for digital signatures by December 31, 2031 |
+| NSA | [CNSA 2.0](https://www.nsa.gov/Cybersecurity/Post-Quantum-Cybersecurity-Resources/) identifies quantum-resistant algorithms and sets a phased transition for National Security Systems |
+| European Union | The [2025 EU roadmap](https://digital-strategy.ec.europa.eu/en/library/coordinated-implementation-roadmap-transition-post-quantum-cryptography) calls for a coordinated transition across Member States |
+| ENISA | [ENISA's integration study](https://www.enisa.europa.eu/publications/post-quantum-cryptography-integration-study) addresses the integration of post-quantum systems into existing protocols |
+
+These programs begin years before any confirmed CRQC because every vulnerable algorithm must first be found, replaced, tested, and retired.
+
+## How to Assess Quantum Readiness in a Blockchain
+
+A credible [migration plan](https://www.quantumcanary.org/insights/crypto-state-of-the-union) connects the cryptography currently in use to the people and systems that must adopt its replacement.
+
+Five checks make that assessment practical.
+
+1. **Identify the cryptography in use.** Determine which signature schemes, key-establishment methods, hashes, proof systems, and cryptographic libraries protect the chain today.
+2. **Map public-key exposure.** Establish when keys become visible, whether they are reused, how long the attack window remains open, and what assets or permissions they control.
+3. **Verify what has been deployed.** Separate published research, proposals, testnets, optional mainnet features, and mandatory mainnet protection.
+4. **Trace the migration path.** Check how nodes, wallets, exchanges, custodians, bridges, and users will adopt the replacement. The plan should also explain what happens to inactive or inaccessible holdings.
+5. **Examine the evidence.** Look for specifications, implementation code, independent audits, performance tests, and clear user instructions. Post-quantum signatures must work across the full environment under realistic conditions.
+
+To assess a quantum-resistance claim, identify the cryptography still in use, verify that a post-quantum path is active, and confirm that existing accounts and assets can use it.
+
+## Check Your Ethereum Wallet's Quantum Risk
+
+Ethereum externally owned accounts have a different exposure pattern from Bitcoin outputs because a public key can be recovered from a published transaction signature.
+
+Ethereum also has [consensus signatures, data-availability commitments, and proof systems](https://www.quantumcanary.org/insights/is-eth-quantum-secure) that need their own post-quantum migration path.
+
+The [Quantum Risk Checker](https://www.quantus.com/quantum-risk-checker/) uses public blockchain data to assess public-key exposure and balance sensitivity for an Ethereum address or ENS name. It never requests private keys.

@@ -1007,7 +1007,9 @@
       "infra": "インフラ",
       "immunefi": "Immunefi",
       "bug-bounty": "バグバウンティ",
-      "senoti": "Senoti"
+      "senoti": "Senoti",
+      "migration": "移行",
+      "harvest-now-decrypt-later": "ハーベスト・ナウ・デクリプト・レイター"
     }
   },
   "whitepaper": {

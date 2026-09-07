@@ -1007,7 +1007,9 @@
       "infra": "基建",
       "immunefi": "Immunefi",
       "bug-bounty": "漏洞赏金",
-      "senoti": "Senoti"
+      "senoti": "Senoti",
+      "migration": "迁移",
+      "harvest-now-decrypt-later": "先收集后解密"
     }
   },
   "whitepaper": {

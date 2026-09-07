@@ -1007,7 +1007,9 @@
       "infra": "인프라",
       "immunefi": "Immunefi",
       "bug-bounty": "버그 바운티",
-      "senoti": "Senoti"
+      "senoti": "Senoti",
+      "migration": "마이그레이션",
+      "harvest-now-decrypt-later": "하베스트-나우-디크립트-레이터"
     }
   },
   "whitepaper": {
