@@ -437,7 +437,7 @@
         },
         "encrypted": {
           "title": "Terenkripsi",
-          "body": "Saldo dan transfer dienkripsi, bukan disiarkan. Apa yang Anda miliki, dan kepada siapa Anda membayar, tetap antara Anda dan mereka."
+          "body": "Kirim secara transparan atau terenkripsi, per transaksi. Pengiriman terenkripsi memutus kaitan onchain antara pengirim dan penerima, dengan bukti yang dibuat di perangkat Anda sendiri. Jumlah tetap terlihat, dan privasinya bersifat probabilistik, bukan absolut."
         },
         "money": {
           "title": "Uang",

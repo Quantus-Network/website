@@ -437,7 +437,7 @@
         },
         "encrypted": {
           "title": "Verschlüsselt",
-          "body": "Guthaben und Überweisungen werden verschlüsselt, statt öffentlich übertragen zu werden. Was Sie halten und wen Sie bezahlen, bleibt zwischen Ihnen und dem Empfänger."
+          "body": "Senden Sie transparent oder verschlüsselt, Transaktion für Transaktion. Ein verschlüsselter Versand durchtrennt die Onchain-Verbindung zwischen Sender und Empfänger, und der Proof entsteht auf Ihrem eigenen Gerät. Beträge bleiben sichtbar, und die Privatsphäre ist probabilistisch, nicht absolut."
         },
         "money": {
           "title": "Geld",

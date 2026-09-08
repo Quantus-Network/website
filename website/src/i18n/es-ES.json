@@ -437,7 +437,7 @@
         },
         "encrypted": {
           "title": "Encriptado",
-          "body": "Los saldos y las transferencias se encriptan en lugar de difundirse. Lo que usted tiene, y a quién le paga, queda entre usted y esa persona."
+          "body": "Envíe de forma transparente o encriptada, transacción por transacción. Un envío encriptado rompe el vínculo onchain entre emisor y receptor, y la prueba se genera en su propio dispositivo. Los importes siguen siendo visibles, y la privacidad es probabilística, no absoluta."
         },
         "money": {
           "title": "Dinero",

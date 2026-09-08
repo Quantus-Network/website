@@ -437,7 +437,7 @@
         },
         "encrypted": {
           "title": "Encrypted",
-          "body": "Balances and transfers are encrypted rather than broadcast. What you hold, and who you pay, stays between you and them."
+          "body": "Send transparently or encrypted, transaction by transaction. An encrypted send breaks the on-chain link between sender and receiver, with the proof generated on your own device. Amounts stay visible, and the privacy is probabilistic rather than absolute."
         },
         "money": {
           "title": "Money",
