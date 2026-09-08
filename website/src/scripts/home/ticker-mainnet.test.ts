@@ -11,11 +11,22 @@ describe("home hero ticker mainnet", () => {
 
     for (const file of localeFiles) {
       const data = JSON.parse(readFileSync(join(i18nDir, file), "utf8")) as {
-        home: { hero_banner: { ticker: { mainnet: string } } };
+        home: {
+          hero_banner: { ticker: { mainnet: { label: string; value: string } } };
+        };
       };
-      const mainnet = data.home.hero_banner.ticker.mainnet;
-      expect(mainnet.includes("9/9/26"), `${file}: ${mainnet}`).toBe(true);
-      expect(/\?{2}/.test(mainnet), `${file}: ${mainnet}`).toBe(false);
+      const { label, value } = data.home.hero_banner.ticker.mainnet;
+
+      // The date is the shared source of truth and is not localised.
+      expect(value, `${file}: ${value}`).toBe("9/9/26");
+
+      // The label is translated, so only assert it is present and legible.
+      expect(label.length > 0, `${file}: empty label`).toBe(true);
+      expect(/\?{2}/.test(label), `${file}: ${label}`).toBe(false);
+      expect(/\?{2}/.test(value), `${file}: ${value}`).toBe(false);
+
+      // The label must not still carry the date it was split away from.
+      expect(label.includes("9/9/26"), `${file}: ${label}`).toBe(false);
     }
   });
 });
