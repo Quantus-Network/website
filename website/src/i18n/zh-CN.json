@@ -146,7 +146,10 @@
         "qtps": "QTPS",
         "uptime": "运行时间",
         "nodes": "矿工",
-        "mainnet": "主网: 9/9/26"
+        "mainnet": {
+          "label": "主网",
+          "value": "9/9/26"
+        }
       }
     },
     "problem": {

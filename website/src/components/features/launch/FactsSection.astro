@@ -58,7 +58,9 @@ const t = await createTranslator(locale);
   }
 
   .launch-stat-value {
-    font-family: "Geist Mono", monospace;
+    font-family: "Geist", sans-serif;
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum" 1;
     font-size: 36px;
     font-weight: 400;
     color: var(--color-flare);

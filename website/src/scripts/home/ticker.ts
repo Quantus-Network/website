@@ -10,31 +10,36 @@ export const buildTicker = () => {
     qtps: track.dataset.i18nQtps || "QTPS",
     uptime: track.dataset.i18nUptime || "UPTIME",
     nodes: track.dataset.i18nNodes || "NODES",
-    mainnet: track.dataset.i18nMainnet || "MAINNET: 9/9/26",
+    mainnetLabel: track.dataset.i18nMainnetLabel || "MAINNET",
+    mainnetValue: track.dataset.i18nMainnetValue || "9/9/26",
   };
 
   const items = [
-    { lbl: labels.blockHeight, val: "—", live: true, id: "block-height" },
+    { lbl: labels.blockHeight, val: "—", live: true, ref: "block-height" },
     { lbl: labels.qtps, val: String(QTPS), live: false },
     { lbl: labels.uptime, val: "99.97%", live: false },
-    { lbl: labels.nodes, val: "—", live: true, id: "nodes" },
-    { lbl: "", val: labels.mainnet, live: false, id: "mainnet" },
+    { lbl: labels.nodes, val: "—", live: true, ref: "nodes" },
+    { lbl: labels.mainnetLabel, val: labels.mainnetValue, live: false },
   ];
 
+  // Every item is rendered twice so the marquee can loop seamlessly, so live
+  // values are addressed by data attribute rather than id.
   [0, 1].forEach(() => {
-    items.forEach(({ lbl, val, live, id }) => {
+    items.forEach(({ lbl, val, live, ref }) => {
       const el = document.createElement("div");
       el.className = "t-item";
-      const idAttr = id ? ` id="ticker-${id}"` : "";
+      const refAttr = ref ? ` data-ticker="${ref}"` : "";
       el.innerHTML = `${live ? '<div class="tdot"></div>' : ""}
         ${lbl ? '<span class="t-lbl">' + lbl + "</span>" : ""}
-        <span class="t-val${live ? " live" : ""}"${idAttr}>${val}</span>`;
+        <span class="t-val${live ? " live" : ""}"${refAttr}>${val}</span>`;
       track.appendChild(el);
     });
   });
 
-  const nodesEls = document.querySelectorAll("#ticker-nodes");
-  const blockHeightEls = document.querySelectorAll("#ticker-block-height");
+  const nodesEls = document.querySelectorAll('[data-ticker="nodes"]');
+  const blockHeightEls = document.querySelectorAll(
+    '[data-ticker="block-height"]',
+  );
 
   apiClient.nodeRpc.connect();
   apiClient.nodeRpc.subscribe((state) => {

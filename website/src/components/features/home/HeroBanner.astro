@@ -53,7 +53,8 @@ const t = await createTranslator(locale);
       data-i18n-qtps={t("home.hero_banner.ticker.qtps")}
       data-i18n-uptime={t("home.hero_banner.ticker.uptime")}
       data-i18n-nodes={t("home.hero_banner.ticker.nodes")}
-      data-i18n-mainnet={t("home.hero_banner.ticker.mainnet")}
+      data-i18n-mainnet-label={t("home.hero_banner.ticker.mainnet.label")}
+      data-i18n-mainnet-value={t("home.hero_banner.ticker.mainnet.value")}
     >
     </div>
   </div>
@@ -334,7 +335,9 @@ const t = await createTranslator(locale);
     color: var(--color-muted);
   }
   .t-val {
-    font-family: "Geist Mono", monospace;
+    font-family: "Geist", sans-serif;
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum" 1;
     font-size: 12px;
     font-weight: 500;
     color: var(--color-content);
@@ -365,7 +368,6 @@ const t = await createTranslator(locale);
 </style>
 
 <script>
-  import { startGlitchLoop } from "@/scripts/home/glitch";
   import {
     calcHeroDims,
     heroLoop,
@@ -376,7 +378,6 @@ const t = await createTranslator(locale);
   calcHeroDims();
   heroLoop();
   buildTicker();
-  startGlitchLoop();
 
   window.addEventListener("resize", calcHeroDims);
   window.addEventListener("mousemove", updateMousePosition);
