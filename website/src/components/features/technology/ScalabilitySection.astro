@@ -47,7 +47,9 @@ const t = await createTranslator(locale);
   }
 
   .tech-stat-num {
-    font-family: "Geist Mono", monospace;
+    font-family: "Geist", sans-serif;
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum" 1;
     font-size: 96px;
     font-weight: 500;
     line-height: 1;

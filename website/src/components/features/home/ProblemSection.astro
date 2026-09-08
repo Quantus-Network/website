@@ -305,7 +305,9 @@ const t = await createTranslator(locale);
     margin-bottom: 10px;
   }
   .prob-data-row1 .cell-num {
-    font-family: "Geist Mono", monospace;
+    font-family: "Geist", sans-serif;
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum" 1;
     font-size: 64px;
     font-weight: 500;
     line-height: 1;

@@ -334,7 +334,9 @@ const t = await createTranslator(locale);
     color: var(--color-muted);
   }
   .t-val {
-    font-family: "Geist Mono", monospace;
+    font-family: "Geist", sans-serif;
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum" 1;
     font-size: 12px;
     font-weight: 500;
     color: var(--color-content);
