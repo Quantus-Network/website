@@ -65,7 +65,7 @@ const filteredHeadings = headings.filter((h) => h.depth >= 2 && h.depth <= 3);
       <p class="mb-4 text-xs font-semibold tracking-widest text-white/40 uppercase">
         {tocLabel}
       </p>
-      <nav class="max-h-[calc(100vh-10rem)] overflow-y-auto">
+      <nav class="max-h-[calc(100vh-10rem)] overflow-y-auto [color-scheme:dark] [scrollbar-color:rgb(255_255_255/0.2)_transparent] [scrollbar-width:thin]">
         <ul class="space-y-0.5 border-l border-white/10">
           {filteredHeadings.map((heading) => (
             <li>
