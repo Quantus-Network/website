@@ -416,7 +416,7 @@
   "wallet": {
     "meta": {
       "title": "Billetera | Activos Seguros Quantus",
-      "description": "Descargue la billetera Quantus para iOS y Android. Experimente dinero encriptado seguro cuánticamente con transacciones reversibles y privacidad por defecto."
+      "description": "Descargue la billetera Quantus para iOS y Android. Dinero encriptado seguro cuánticamente, gratis y disponible en todo el mundo."
     },
     "hero_banner": {
       "eyebrow": "LA BILLETERA QUANTUS",
@@ -430,27 +430,24 @@
       "heading": "Seguridad de refugio seguro.",
       "body": "Su billetera es tan segura como la blockchain que hay debajo. Otras cadenas utilizan criptografía de curva elíptica, del tipo que una computadora cuántica suficientemente potente puede romper. Quantus está construido de manera diferente. La criptografía post-cuántica es la base de la cadena, no una característica añadida por encima. Su billetera hereda esa seguridad."
     },
-    "features": {
-      "eyebrow": "CARACTERÍSTICAS",
-      "heading": "Construido para humanos.",
-      "cards": {
-        "reversible": {
-          "title": "Transacciones reversibles",
-          "body": "Diga adiós a las transacciones de prueba. Establezca una ventana de tiempo en las transferencias salientes. ¿Cambió de opinión? Cancele antes de que se cierre la ventana. Una red de seguridad que no compromete la finalidad."
+    "money": {
+      "eyebrow": "Qué es",
+      "heading": "Dinero encriptado seguro cuánticamente.",
+      "blocks": {
+        "quantum": {
+          "title": "Seguro cuánticamente",
+          "body": "Cada firma usa ML-DSA-87 en el nivel 5 de NIST. La protección reside en la propia chain, así que no hay nada que migrar ni nada que activar."
         },
-        "checkphrases": {
-          "title": "Frases de verificación",
-          "body": "No vuelva a cometer errores de escritura. Cada dirección de Quantus tiene una frase de verificación legible por humanos. Una secuencia corta de palabras memorables generada a partir de su dirección. Verifique la frase antes de enviar. Protéjase contra errores tipográficos, manipulación de copiar y pegar y ataques de envenenamiento de direcciones."
+        "encrypted": {
+          "title": "Encriptado",
+          "body": "Envíe de forma transparente o encriptada, transacción por transacción. Un envío encriptado rompe el vínculo onchain entre emisor y receptor, y la prueba se genera en su propio dispositivo. Los importes siguen siendo visibles, y la privacidad es probabilística, no absoluta."
         },
-        "high_security": {
-          "title": "Cuentas de alta seguridad",
-          "body": "Para instituciones y usuarios avanzados. Cree un interruptor de hombre muerto o asigne un guardián a su cuenta que pueda revertir transacciones maliciosas. Los guardianes pueden cancelar transacciones durante el período de reversión, pero no gastar en su nombre. Opcional y componible."
-        },
-        "encrypt": {
-          "title": "Privado por defecto",
-          "body": "La privacidad es un derecho. El mismo diseño de pruebas de conocimiento cero que escala Quantus a {qtps} QTPS también protege su privacidad. Sus transacciones, saldo e historial son suyos."
+        "money": {
+          "title": "Dinero",
+          "body": "Envíe, reciba e intercambie desde su teléfono. Gratis para descargar, disponible en todo el mundo y suyo."
         }
-      }
+      },
+      "image_alt": "Pantalla de inicio de la billetera Quantus con saldo, recibir, enviar e intercambiar"
     },
     "issues": {
       "eyebrow": "POR QUÉ ES IMPORTANTE",

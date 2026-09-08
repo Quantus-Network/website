@@ -416,7 +416,7 @@
   "wallet": {
     "meta": {
       "title": "Wallet | Quantus Quantum-Secure Assets",
-      "description": "Download the Quantus wallet for iOS and Android. Experience quantum-secure encrypted money with reversible transactions and private-by-default security."
+      "description": "Download the Quantus wallet for iOS and Android. Quantum secure encrypted money, free to download and available worldwide."
     },
     "hero_banner": {
       "eyebrow": "THE QUANTUS WALLET",
@@ -430,27 +430,24 @@
       "heading": "Safe haven security.",
       "body": "Your wallet is only as secure as the blockchain underneath it. Other chains use elliptic curve cryptography, the kind a sufficiently powerful quantum computer can break. Quantus is built differently. Post-quantum cryptography is the foundation of the chain, not a feature added on top. Your wallet inherits that security."
     },
-    "features": {
-      "eyebrow": "FEATURES",
-      "heading": "Built for humans.",
-      "cards": {
-        "reversible": {
-          "title": "Reversible Transactions",
-          "body": "Say goodbye to test transactions. Set a time window on outgoing transfers. Changed your mind? Cancel before the window closes. A safety net that does not compromise finality."
+    "money": {
+      "eyebrow": "What it is",
+      "heading": "Quantum secure encrypted money.",
+      "blocks": {
+        "quantum": {
+          "title": "Quantum secure",
+          "body": "Every signature uses ML-DSA-87 at NIST level 5. The protection sits in the chain itself, so there is nothing to migrate and nothing to switch on."
         },
-        "checkphrases": {
-          "title": "Check-Phrases",
-          "body": "Never fat finger again. Every Quantus address has a human-readable checkphrase. A short sequence of memorable words generated from your address. Verify the phrase before you send. Protect against typos, copy-paste tampering, and address poisoning attacks."
+        "encrypted": {
+          "title": "Encrypted",
+          "body": "Send transparently or encrypted, transaction by transaction. An encrypted send breaks the on-chain link between sender and receiver, with the proof generated on your own device. Amounts stay visible, and the privacy is probabilistic rather than absolute."
         },
-        "high_security": {
-          "title": "High-Security Accounts",
-          "body": "For institutions and advanced users. Create a dead-man switch or assign a guardian to your account who can revert malicious transactions. Guardians can cancel transactions during the reversal period, but not spend on your behalf. Opt-in and composable."
-        },
-        "encrypt": {
-          "title": "Private By Default",
-          "body": "Privacy is a right. The same zero-knowledge proof design that scales Quantus to {qtps} QTPS also protects your privacy. Your transactions, balance, and history are yours."
+        "money": {
+          "title": "Money",
+          "body": "Send, receive and swap from your phone. Free to download, available worldwide, and yours to hold."
         }
-      }
+      },
+      "image_alt": "Quantus wallet home screen showing balance, receive, send and swap"
     },
     "issues": {
       "eyebrow": "WHY IT MATTERS",
