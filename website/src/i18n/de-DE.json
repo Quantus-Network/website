@@ -413,7 +413,7 @@
   "wallet": {
     "meta": {
       "title": "Wallet | Quantus quantensichere Assets",
-      "description": "Laden Sie die Quantus-Wallet für iOS und Android herunter. Erleben Sie quantensicheres Geld mit reversiblen Transaktionen und Privatsphäre standardmäßig."
+      "description": "Laden Sie die Quantus-Wallet für iOS und Android herunter. Quantensicheres verschlüsseltes Geld, kostenlos und weltweit verfügbar."
     },
     "hero_banner": {
       "eyebrow": "DIE QUANTUS-WALLET",
@@ -427,27 +427,24 @@
       "heading": "Sicherheit wie in einem sicheren Hafen.",
       "body": "Ihre Wallet ist nur so sicher wie die darunterliegende Blockchain. Andere Chains nutzen Elliptic Curve Cryptography, die ein ausreichend leistungsstarker Quantencomputer brechen kann. Quantus ist anders gebaut. Post-Quanten-Kryptografie ist das Fundament der Chain, kein nachträglich hinzugefügtes Feature. Ihre Wallet erbt diese Sicherheit."
     },
-    "features": {
-      "eyebrow": "FEATURES",
-      "heading": "Für Menschen gebaut.",
-      "cards": {
-        "reversible": {
-          "title": "Reversible Transaktionen",
-          "body": "Verabschieden Sie sich von Testtransaktionen. Legen Sie ein Zeitfenster für ausgehende Überweisungen fest. Meinung geändert? Abbrechen, bevor das Fenster schließt. Ein Sicherheitsnetz, das die Finalität nicht beeinträchtigt."
+    "money": {
+      "eyebrow": "Was es ist",
+      "heading": "Quantensicheres verschlüsseltes Geld.",
+      "blocks": {
+        "quantum": {
+          "title": "Quantensicher",
+          "body": "Jede Signatur verwendet ML-DSA-87 auf NIST-Level 5. Der Schutz steckt in der Chain selbst, es gibt also nichts zu migrieren und nichts einzuschalten."
         },
-        "checkphrases": {
-          "title": "Check-Phrases",
-          "body": "Nie wieder Tippfehler. Jede Quantus-Adresse hat eine menschenlesbare Check-Phrase. Eine kurze Folge einprägsamer Wörter, die aus Ihrer Adresse generiert werden. Überprüfen Sie die Phrase, bevor Sie senden. Schutz vor Tippfehlern, Copy-Paste-Manipulationen und Address-Poisoning-Angriffen."
+        "encrypted": {
+          "title": "Verschlüsselt",
+          "body": "Guthaben und Überweisungen werden verschlüsselt, statt öffentlich übertragen zu werden. Was Sie halten und wen Sie bezahlen, bleibt zwischen Ihnen und dem Empfänger."
         },
-        "high_security": {
-          "title": "Hochsicherheits-Accounts",
-          "body": "Für Institutionen und fortgeschrittene Nutzer. Erstellen Sie einen Dead-Man-Switch oder weisen Sie Ihrem Account einen Guardian zu, der bösartige Transaktionen rückgängig machen kann. Guardians können Transaktionen während der Reversal-Periode stornieren, aber nicht in Ihrem Namen Geld ausgeben. Opt-in und kombinierbar."
-        },
-        "encrypt": {
-          "title": "Standardmäßig privat",
-          "body": "Privatsphäre ist ein Recht. Dasselbe Zero-Knowledge-Proof-Design, das Quantus auf {qtps} QTPS skaliert, schützt auch Ihre Privatsphäre. Ihre Transaktionen, Ihr Kontostand und Ihre Historie gehören Ihnen."
+        "money": {
+          "title": "Geld",
+          "body": "Senden, empfangen und tauschen Sie direkt vom Smartphone. Kostenlos, weltweit verfügbar und in Ihrem Besitz."
         }
-      }
+      },
+      "image_alt": "Startbildschirm der Quantus-Wallet mit Guthaben, Empfangen, Senden und Tauschen"
     },
     "issues": {
       "eyebrow": "WARUM ES WICHTIG IST",

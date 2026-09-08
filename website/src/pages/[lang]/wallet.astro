@@ -15,7 +15,7 @@ import {
 } from "@/constants/default-jsonld";
 import HeroBanner from "@/components/features/wallet/HeroBanner.astro";
 import AdvantagesSection from "@/components/features/wallet/AdvantagesSection.astro";
-import FeaturesSection from "@/components/features/wallet/FeaturesSection.astro";
+import MoneySection from "@/components/features/wallet/MoneySection.astro";
 import IssuesSection from "@/components/features/wallet/IssuesSection.astro";
 import CtaSection from "@/components/features/wallet/CtaSection.astro";
 
@@ -41,7 +41,7 @@ const jsonLd = JsonLdGraph({
 <Layout {...metadata} jsonLd={jsonLd}>
   <HeroBanner />
   <AdvantagesSection />
-  <FeaturesSection />
+  <MoneySection />
   <IssuesSection />
   <CtaSection />
 </Layout>

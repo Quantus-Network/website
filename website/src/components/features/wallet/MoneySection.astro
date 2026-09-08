@@ -1,0 +1,184 @@
+---
+import { Image } from "astro:assets";
+
+import walletHome from "@/assets/wallet/wallet-home.png";
+import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
+---
+
+<section id="wallet-money">
+  <div class="wallet-divider"></div>
+  <div class="money-header">
+    <span class="wallet-section-eyebrow wallet-animate" data-delay="0">
+      {t("wallet.money.eyebrow")}
+    </span>
+    <h2 class="wallet-section-h2 money-h2 wallet-animate" data-delay="0.15">
+      {t("wallet.money.heading")}
+    </h2>
+  </div>
+  <div class="money-card wallet-animate" data-delay="0.3">
+    <div class="money-text">
+      <div class="money-block">
+        <h3 class="money-block-title">
+          {t("wallet.money.blocks.quantum.title")}
+        </h3>
+        <p class="money-block-body">
+          {t("wallet.money.blocks.quantum.body")}
+        </p>
+      </div>
+      <div class="money-block">
+        <h3 class="money-block-title">
+          {t("wallet.money.blocks.encrypted.title")}
+        </h3>
+        <p class="money-block-body">
+          {t("wallet.money.blocks.encrypted.body")}
+        </p>
+      </div>
+      <div class="money-block">
+        <h3 class="money-block-title">
+          {t("wallet.money.blocks.money.title")}
+        </h3>
+        <p class="money-block-body">
+          {t("wallet.money.blocks.money.body")}
+        </p>
+      </div>
+    </div>
+    <div class="money-visual">
+      <Image
+        src={walletHome}
+        alt={t("wallet.money.image_alt")}
+        width={480}
+        format="webp"
+      />
+    </div>
+  </div>
+</section>
+
+<style>
+  #wallet-money {
+    background: #0e0e0e;
+    position: relative;
+    z-index: 50;
+    padding: 80px 52px 48px;
+  }
+
+  .money-header {
+    margin-top: 64px;
+    margin-bottom: 44px;
+  }
+
+  .wallet-section-eyebrow {
+    font-family: "Geist Mono", monospace;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(232, 230, 224, 0.35);
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .wallet-section-h2 {
+    font-family: "Geist", sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    line-height: 1.05;
+  }
+
+  .money-h2 {
+    font-size: 48px;
+    margin-top: 16px;
+    margin-bottom: 0;
+  }
+
+  .money-card {
+    border: 1px solid rgba(232, 230, 224, 0.08);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* No padding on the cell, so each block rule spans it edge to edge. */
+  .money-text {
+    padding: 0;
+  }
+
+  .money-block {
+    padding: 44px 64px;
+    border-top: 1px solid rgba(232, 230, 224, 0.08);
+  }
+  .money-block:first-child {
+    border-top: none;
+    padding-top: 64px;
+  }
+  .money-block:last-child {
+    padding-bottom: 64px;
+  }
+
+  .money-block-title {
+    font-family: "Geist", sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    color: #ffffff;
+    line-height: 1.1;
+    margin-bottom: 18px;
+  }
+
+  .money-block-body {
+    font-family: "Geist", sans-serif;
+    font-size: 14px;
+    line-height: 1.45;
+    color: rgba(232, 230, 224, 0.65);
+    max-width: 46ch;
+  }
+
+  .money-visual {
+    border-left: 1px solid rgba(232, 230, 224, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 56px 0;
+  }
+
+  .money-visual img {
+    display: block;
+    width: 240px;
+    height: auto;
+  }
+
+  @media (max-width: 768px) {
+    #wallet-money {
+      padding: 80px 24px 48px;
+    }
+    .money-header {
+      margin-top: 40px;
+      margin-bottom: 32px;
+    }
+    .money-h2 {
+      font-size: 32px;
+    }
+    .money-card {
+      grid-template-columns: 1fr;
+    }
+    .money-block {
+      padding: 36px 28px;
+    }
+    .money-block:first-child {
+      padding-top: 28px;
+    }
+    .money-block:last-child {
+      padding-bottom: 28px;
+    }
+    .money-block-title {
+      font-size: 22px;
+    }
+    .money-visual {
+      border-left: none;
+      border-top: 1px solid rgba(232, 230, 224, 0.08);
+      padding: 48px 0;
+    }
+  }
+</style>

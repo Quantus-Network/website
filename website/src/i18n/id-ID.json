@@ -413,7 +413,7 @@
   "wallet": {
     "meta": {
       "title": "Dompet | Aset Aman Kuantum Quantus",
-      "description": "Unduh dompet Quantus untuk iOS dan Android. Rasakan uang terenkripsi aman kuantum dengan transaksi yang dapat dibalik dan privasi sebagai default."
+      "description": "Unduh dompet Quantus untuk iOS dan Android. Uang terenkripsi yang aman kuantum, gratis diunduh dan tersedia di seluruh dunia."
     },
     "hero_banner": {
       "eyebrow": "DOMPET QUANTUS",
@@ -427,27 +427,24 @@
       "heading": "Keamanan tempat perlindungan yang aman.",
       "body": "Dompet Anda hanya seaman blockchain di bawahnya. Rantai lain menggunakan kriptografi kurva eliptik, jenis yang dapat dipecahkan oleh komputer kuantum yang cukup kuat. Quantus dibangun secara berbeda. Kriptografi pasca-kuantum adalah landasan rantai, bukan fitur yang ditambahkan di atasnya. Dompet Anda mewarisi keamanan tersebut."
     },
-    "features": {
-      "eyebrow": "FITUR",
-      "heading": "Dibangun untuk manusia.",
-      "cards": {
-        "reversible": {
-          "title": "Transaksi yang Dapat Dibatalkan",
-          "body": "Ucapkan selamat tinggal pada transaksi uji coba. Tetapkan jendela waktu pada transfer keluar. Berubah pikiran? Batalkan sebelum jendela waktu ditutup. Jaring pengaman yang tidak mengompromikan finalitas."
+    "money": {
+      "eyebrow": "Apa itu",
+      "heading": "Uang terenkripsi yang aman kuantum.",
+      "blocks": {
+        "quantum": {
+          "title": "Aman kuantum",
+          "body": "Setiap tanda tangan menggunakan ML-DSA-87 pada NIST level 5. Perlindungannya ada di dalam chain itu sendiri, jadi tidak ada yang perlu dimigrasikan dan tidak ada yang perlu diaktifkan."
         },
-        "checkphrases": {
-          "title": "Check-Phrase",
-          "body": "Jangan pernah salah ketik lagi. Setiap alamat Quantus memiliki check-phrase yang dapat dibaca manusia. Urutan pendek kata-kata yang mudah diingat yang dihasilkan dari alamat Anda. Verifikasi frasa sebelum Anda mengirim. Lindungi dari salah ketik, perusakan salin-tempel, dan serangan address poisoning."
+        "encrypted": {
+          "title": "Terenkripsi",
+          "body": "Saldo dan transfer dienkripsi, bukan disiarkan. Apa yang Anda miliki, dan kepada siapa Anda membayar, tetap antara Anda dan mereka."
         },
-        "high_security": {
-          "title": "Akun Keamanan Tinggi",
-          "body": "Untuk institusi dan pengguna tingkat lanjut. Buat dead-man switch atau tetapkan wali (guardian) ke akun Anda yang dapat membatalkan transaksi berbahaya. Wali dapat membatalkan transaksi selama periode pembatalan, tetapi tidak dapat membelanjakan atas nama Anda. Opt-in dan dapat disusun."
-        },
-        "encrypt": {
-          "title": "Pribadi Secara Default",
-          "body": "Privasi adalah hak. Desain bukti zero-knowledge yang sama yang menskalakan Quantus hingga {qtps} QTPS juga melindungi privasi Anda. Transaksi, saldo, dan riwayat Anda adalah milik Anda."
+        "money": {
+          "title": "Uang",
+          "body": "Kirim, terima, dan tukar dari ponsel Anda. Gratis diunduh, tersedia di seluruh dunia, dan menjadi milik Anda."
         }
-      }
+      },
+      "image_alt": "Layar beranda dompet Quantus yang menampilkan saldo, terima, kirim, dan tukar"
     },
     "issues": {
       "eyebrow": "MENGAPA INI PENTING",
