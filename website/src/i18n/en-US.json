@@ -249,20 +249,23 @@
     "coin": {
       "eyebrow": "The coin",
       "heading": "Finishing what Bitcoin started.",
-      "lede": "QTC is secure, scalable, and private peer to peer electronic cash. What Satoshi intended.",
       "cols": {
-        "get": {
-          "title": "Get QTC",
-          "body": "Download the Quantus wallet on iOS or Android. Free, available worldwide.",
+        "money": {
+          "title": "Superior money",
+          "body": "QTC is secure, scalable, and private peer to peer electronic cash. QTC enters circulation through Proof-of-Work: open participation, work in, coins out.",
           "cta": "Start mining"
         },
-        "chains": {
-          "title": "35+ chains, day one",
-          "body": "Via NEAR Intents, QTC is reachable from 35+ chains at launch. No bridging. Swap in from the chain you already hold assets on."
+        "get": {
+          "title": "Get QTC (coming soon)",
+          "body": "QTC is accessible in our mobile app via NEAR intents. Bridge crypto from anywhere to QTC."
         },
         "pq": {
-          "title": "Post-quantum ownership",
-          "body": "ML-DSA-87 signs every transaction. NIST FIPS 204. Your money. Your keys. Your cryptography."
+          "title": "Post-quantum security",
+          "body": [
+            "Your keys.",
+            "Your coins.",
+            "Already quantum secure."
+          ]
         }
       }
     },

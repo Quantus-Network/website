@@ -249,20 +249,23 @@
     "coin": {
       "eyebrow": "La moneda",
       "heading": "Terminando lo que Bitcoin empezó.",
-      "lede": "QTC es dinero electrónico entre pares seguro, escalable y privado. Lo que Satoshi pretendía.",
       "cols": {
-        "get": {
-          "title": "Obtener QTC",
-          "body": "Descargue la billetera Quantus para iOS o Android. Gratis y disponible en todo el mundo.",
+        "money": {
+          "title": "Dinero superior",
+          "body": "QTC es dinero electrónico entre pares seguro, escalable y privado. QTC entra en circulación mediante Proof-of-Work: participación abierta, trabajo dentro, monedas fuera.",
           "cta": "Empezar a minar"
         },
-        "chains": {
-          "title": "35+ cadenas, desde el primer día",
-          "body": "A través de NEAR Intents, QTC es accesible desde más de 35 cadenas en el lanzamiento. Sin bridging. Intercambie desde la cadena en la que ya tiene activos."
+        "get": {
+          "title": "Obtener QTC (próximamente)",
+          "body": "QTC es accesible en nuestra aplicación móvil a través de NEAR intents. Haga bridge de cripto desde cualquier parte a QTC."
         },
         "pq": {
-          "title": "Propiedad post-cuántica",
-          "body": "ML-DSA-87 firma cada transacción. NIST FIPS 204. Su dinero. Sus claves. Su criptografía."
+          "title": "Seguridad post-cuántica",
+          "body": [
+            "Sus claves.",
+            "Sus monedas.",
+            "Ya seguras frente a la computación cuántica."
+          ]
         }
       }
     },

@@ -249,20 +249,23 @@
     "coin": {
       "eyebrow": "Koin ini",
       "heading": "Menyelesaikan apa yang dimulai Bitcoin.",
-      "lede": "QTC adalah uang elektronik peer-to-peer yang aman, skalabel, dan privat. Seperti yang dimaksudkan Satoshi.",
       "cols": {
-        "get": {
-          "title": "Dapatkan QTC",
-          "body": "Unduh dompet Quantus di iOS atau Android. Gratis, tersedia di seluruh dunia.",
+        "money": {
+          "title": "Uang yang lebih unggul",
+          "body": "QTC adalah uang elektronik peer-to-peer yang aman, skalabel, dan privat. QTC masuk ke peredaran melalui Proof-of-Work: partisipasi terbuka, kerja masuk, koin keluar.",
           "cta": "Mulai menambang"
         },
-        "chains": {
-          "title": "35+ chain, sejak hari pertama",
-          "body": "Melalui NEAR Intents, QTC dapat dijangkau dari 35+ chain saat peluncuran. Tanpa bridging. Tukar dari chain tempat Anda sudah memegang aset."
+        "get": {
+          "title": "Dapatkan QTC (segera hadir)",
+          "body": "QTC dapat diakses di aplikasi seluler kami melalui NEAR intents. Bridge kripto dari mana saja ke QTC."
         },
         "pq": {
-          "title": "Kepemilikan pasca-kuantum",
-          "body": "ML-DSA-87 menandatangani setiap transaksi. NIST FIPS 204. Uang Anda. Kunci Anda. Kriptografi Anda."
+          "title": "Keamanan pasca-kuantum",
+          "body": [
+            "Kunci Anda.",
+            "Koin Anda.",
+            "Sudah aman secara kuantum."
+          ]
         }
       }
     },

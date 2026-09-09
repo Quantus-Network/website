@@ -249,20 +249,23 @@
     "coin": {
       "eyebrow": "Der Coin",
       "heading": "Vollenden, was Bitcoin begonnen hat.",
-      "lede": "QTC ist sicheres, skalierbares und privates elektronisches Peer-to-Peer-Bargeld. So, wie Satoshi es gemeint hat.",
       "cols": {
-        "get": {
-          "title": "QTC erhalten",
-          "body": "Laden Sie die Quantus-Wallet für iOS oder Android herunter. Kostenlos und weltweit verfügbar.",
+        "money": {
+          "title": "Überlegenes Geld",
+          "body": "QTC ist sicheres, skalierbares und privates elektronisches Peer-to-Peer-Bargeld. QTC gelangt durch Proof-of-Work in Umlauf: offene Teilnahme, Arbeit rein, Coins raus.",
           "cta": "Mining starten"
         },
-        "chains": {
-          "title": "35+ Chains, ab Tag eins",
-          "body": "Über NEAR Intents ist QTC zum Start von über 35 Chains erreichbar. Kein Bridging. Tauschen Sie von der Chain aus ein, auf der Sie bereits Assets halten."
+        "get": {
+          "title": "QTC erhalten (bald verfügbar)",
+          "body": "QTC ist in unserer Mobile-App über NEAR intents zugänglich. Bridgen Sie Krypto von überall zu QTC."
         },
         "pq": {
-          "title": "Post-Quanten-Eigentum",
-          "body": "ML-DSA-87 signiert jede Transaktion. NIST FIPS 204. Ihr Geld. Ihre Schlüssel. Ihre Kryptografie."
+          "title": "Post-Quanten-Sicherheit",
+          "body": [
+            "Ihre Schlüssel.",
+            "Ihre Coins.",
+            "Schon jetzt quantensicher."
+          ]
         }
       }
     },
