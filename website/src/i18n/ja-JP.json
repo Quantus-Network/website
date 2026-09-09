@@ -805,7 +805,7 @@
     "brand": "Quantus",
     "copyright": "© {year} Quantus.",
     "rights": "All rights reserved.",
-    "built_on": "BUILT ON PLANCK TESTNET",
+    "built_on": "",
     "sections": {
       "protocol": "プロトコル",
       "community": "コミュニティ",

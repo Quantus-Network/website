@@ -261,11 +261,7 @@
         },
         "pq": {
           "title": "Keamanan pasca-kuantum",
-          "body": [
-            "Kunci Anda.",
-            "Koin Anda.",
-            "Sudah aman secara kuantum."
-          ]
+          "body": ["Kunci Anda.", "Koin Anda.", "Sudah aman secara kuantum."]
         }
       }
     },
@@ -805,7 +801,7 @@
     "brand": "Quantus",
     "copyright": "© {year} Quantus.",
     "rights": "Seluruh hak cipta dilindungi undang-undang.",
-    "built_on": "DIBANGUN DI ATAS PLANCK TESTNET",
+    "built_on": "",
     "sections": {
       "protocol": "Protokol",
       "community": "Komunitas",

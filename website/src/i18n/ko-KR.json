@@ -261,11 +261,7 @@
         },
         "pq": {
           "title": "포스트 양자 보안",
-          "body": [
-            "당신의 키.",
-            "당신의 코인.",
-            "이미 양자 보안."
-          ]
+          "body": ["당신의 키.", "당신의 코인.", "이미 양자 보안."]
         }
       }
     },
@@ -805,7 +801,7 @@
     "brand": "Quantus",
     "copyright": "© {year} Quantus.",
     "rights": "All rights reserved.",
-    "built_on": "BUILT ON PLANCK TESTNET",
+    "built_on": "",
     "sections": {
       "protocol": "프로토콜",
       "community": "커뮤니티",
