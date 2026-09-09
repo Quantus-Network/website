@@ -1,0 +1,695 @@
+---
+title: "Quantus Whitepaper"
+version: "0.4.1"
+publishedDate: "2026-09-04"
+updatedDate: "2026-09-09"
+authors: ["Christopher Smith", "Jonathan Angle"]
+changelog:
+  - "トークノミクス：ジェネシス時のプレミント27%（投資家・創業者・チーム23%、会社4%）、73%はマイニングによる発行。"
+  - "プライバシー特性：暗号化送金の具体的なプライバシーモデルを明記。"
+pdfCover: true
+# Astro の `render().headings` は JSX の `<h2>` と ChapterHeading を含みません。アンカー slug は Markdown の `###` の id と一致します。
+toc:
+  insertBefore:
+    量子の脅威:
+      - slug: legal-disclaimer
+        text: 免責事項
+      - slug: contents
+        text: 目次
+      - slug: chapter-01
+        text: はじめに
+    量子計算の基礎:
+      - slug: chapter-02
+        text: ブロックチェーンに対する量子の脅威
+    調整問題:
+      - slug: chapter-03
+        text: 移行の危機
+    基礎:
+      - slug: chapter-04
+        text: Quantusのアーキテクチャ
+    hd-lattice:
+      - slug: chapter-05
+        text: アカウントのセキュリティ
+    ブロック報酬:
+      - slug: chapter-06
+        text: トークノミクスとガバナンス
+    実装上の問題:
+      - slug: chapter-07
+        text: ロードマップ
+      - slug: chapter-08
+        text: リスク
+  insertAfter:
+    その他の考慮:
+      - slug: chapter-09
+        text: 参考文献と関連資料
+---
+
+import CalloutV2 from "@/components/features/whitepaper/mdx/CalloutV2.astro";
+import TimelineV2 from "@/components/features/whitepaper/mdx/TimelineV2.astro";
+import ResponsiveTableV2 from "@/components/features/whitepaper/mdx/ResponsiveTableV2.astro";
+import OrderedList from "@/components/features/whitepaper/mdx/OrderedList.astro";
+import ChapterHeading from "@/components/features/whitepaper/mdx/ChapterHeading.astro";
+import Reference from "@/components/features/whitepaper/mdx/Reference.astro";
+import ReferenceMarker from "@/components/features/whitepaper/mdx/ReferenceMarker.astro";
+
+<h2
+  id="legal-disclaimer"
+  className="font-whitepaper-section-title-alt! print:text-whitepaper-section-title-alt!"
+>
+  <span>免責事項</span>
+</h2>
+
+_本ホワイトペーパーは情報提供のみを目的としており、いかなる有価証券、投資、または金融商品の売却の申し出、買付けの申し出の勧誘、または推奨を構成するものではありません。読者は投資判断を行う前に独自のデューデリジェンスを行い、資格を有する専門家に相談してください。Quantusは、ここに含まれる情報の正確性または完全性について表明または保証を行いません。_
+
+<h2
+  id="contents"
+  className="font-whitepaper-section-title-alt! print:text-whitepaper-section-title-alt!"
+>
+  <span>目次</span>
+</h2>
+
+<OrderedList
+  items={[
+    { title: "はじめに", number: "01" },
+    { title: "ブロックチェーンに対する量子の脅威", number: "02" },
+    { title: "移行の危機", number: "03" },
+    { title: "Quantusのアーキテクチャ", number: "04" },
+    { title: "アカウントのセキュリティ", number: "05" },
+    { title: "トークノミクスとガバナンス", number: "06" },
+    { title: "ロードマップ", number: "07" },
+    { title: "リスク", number: "08" },
+    { title: "参考文献と関連資料", number: "09" },
+  ]}
+/>
+
+<br />
+
+<ChapterHeading number="01" title="はじめに" />
+
+### 量子の脅威
+
+従来のブロックチェーンは、暗号学的に意味のある量子コンピュータ（CRQC）による存亡の脅威に直面しています。ブロックチェーンの暗号基盤は離散対数問題（DLP）の困難さに依存しており、量子アルゴリズム、特にショアのアルゴリズムは、古典コンピュータよりもDLPを指数的に速く解くことができます。この脆弱性により、量子的な攻撃者が公開鍵から秘密鍵を導き出し、取引の偽造や機密性の高い金融データの復号が可能になる恐れがあります。
+
+今後数年のうちに、ブロックチェーンで保全されている数兆ドル規模の価値は、次のいずれかへ移行しなければなりません。
+
+- 既存ブロックチェーン上の耐量子ソリューション（現時点で、規模のある完全なソリューションは存在しません）
+- 耐量子ブロックチェーン（Quantus）
+- 暗号資産の外の他の資産クラス（金、法定通貨、不動産）
+
+> 先回りした耐量子ソリューションがなければ、数兆ドル規模の暗号経済は突然の価値毀損のリスクにさらされます。
+
+### 独自の価値提案
+
+ラテン語で「どれほど」を意味する語にちなんで名付けられたQuantusは、量子的に安全でプライベート、かつスケーラブルなマネーです。量子時代のために構築されたピアツーピアの電子マネーです。
+
+なぜ業界にもう1つのL1が必要なのでしょうか。
+
+量子的に安全、プライベート、スケーラブル、マネーという4つの基準をすべて満たすブロックチェーン資産は、現在他に存在しません。
+
+Quantusは汎用スマートコントラクト・プラットフォームではありません。EthereumやSolanaよりも、ビットコイン、Monero、Zcashに近い存在です。
+
+少数の料理に徹して磨きをかけるレストランのように、Quantusは次を提供します。
+
+- すべてのトランザクションに対する耐量子署名（ML-DSA）
+- ピア間接続を保護する耐量子認証と暗号化（ML-DSAおよびML-KEM）
+- プライベートトランザクションとスケーリングのための耐量子ゼロ知識証明
+- すべてのトランザクションでのクリアサイニングとコールドストレージ対応による、シンプルで高セキュリティなセルフカストディ
+- マルチシグアドレス、人間が読めるチェックフレーズ、盗難を抑止するセキュリティ機能を備えたアドバンストアカウント
+- 健全なマネー、セキュリティ、希少性を確保する21,000,000枚の供給上限とプルーフ・オブ・ワークのコンセンサス
+
+量子的に安全でプライベート、かつスケーラブルなマネーに焦点を当てる判断は、CRQCが業界にもたらす脅威と、ビットコインがこれらの課題に対処できないことに由来します。
+
+<ChapterHeading number="02" title="ブロックチェーンに対する量子の脅威" />
+
+### 量子計算の基礎
+
+量子コンピュータは、重ね合わせやもつれなどの原理を利用して、古典マシンでは扱いにくい計算を行います。0または1である古典ビットとは異なり、量子ビット（qubit）は複数の状態に同時に存在でき、特定の問題に対して指数的な並列性を可能にします。この能力は、ブロックチェーンを支える暗号システムに存亡のリスクをもたらします。量子ハード向けに開発されたアルゴリズムが、量子以前の公開鍵暗号の大半のセキュリティ前提を覆すためです。
+
+**ショアのアルゴリズム**は、1994年にピーター・ショアによって発表され、量子コンピュータ上で大きな整数の因数分解と離散対数問題を多項式時間で解く手法を示しました。量子フーリエ変換（QFT）を用いて関数の周期を求め、RSAや楕円曲線暗号（ECC）などの方式の基盤となる落とし戸関数を効率的に反転できます。ブロックチェーン金融では、十分に強力な量子コンピュータ（推定1,200～1,450論理量子ビット<ReferenceMarker id="11" />、以前の推定約2,000<ReferenceMarker id="6" /><ReferenceMarker id="7" /><ReferenceMarker id="8" /><ReferenceMarker id="9" />から引き下げ）を持つ攻撃者が、多項式時間 O(n³) で公開鍵から秘密鍵を導き出せることを意味します。極めて大きな加速であり、脆弱なシステムを一晩で時代遅れにします。<ReferenceMarker id="1" />ハードウェアとアルゴリズムの進歩に伴い、研究者はこの数字を下方修正し続けています。
+
+**グローバーのアルゴリズム**は、1996年にラヴ・グローバーによって提案され、非構造化探索に対して二次の加速を与え、探索時間を O(n) から O(√n) 操作に短縮します。非対称暗号に対するショアほど壊滅的ではありませんが、グローバーはハッシュ関数やAES暗号などの対称プリミティブに影響し、実質的にセキュリティレベルを半分にします（例：256ビット鍵が量子攻撃下では128ビット相当に振る舞う）。この攻撃は、暗号方式を変えるのではなくセキュリティビットを倍にすることで緩和されます。また、グローバーの二次加速は量子ビットとゲート要件が高く、並列化が限られた数十億の逐次操作を要するため、将来のハードでも現実世界での逆転には不向きです。<ReferenceMarker id="2" />
+
+### 縮まるタイムライン
+
+量子以前の暗号を破るためのリソース推定は下がり続けています。2026年3月、Googleは256ビット楕円曲線鍵を破るための推定を物理量子ビット500,000個未満に引き下げました。これは従来の最良推定からの20分の1への削減です。<ReferenceMarker id="11" />2026年6月、Eigen Labsは[ecdsa.fail](https://ecdsa.fail)を公開しました。これは、すべてのビットコインとEthereumの署名の基盤である曲線secp256k1を破る回路を、研究者とAIエージェントが競って縮小する公開リーダーボードです。このオープンな取り組みは8時間でGoogleの結果に並び、3日以内にそれを上回りました。<ReferenceMarker id="20" />
+
+NISTは脆弱な方式からの移行を正式化しており、RSAと256ビット楕円曲線暗号を2030年までに非推奨とし、2035年までに完全に禁止します。<ReferenceMarker id="12" />2026年6月、大統領令14412は連邦政府の期限を2035年から前倒しし、鍵確立については2030年12月31日、デジタル署名については2031年12月31日とし、パイロット移行を2027年末までに完了するよう定めました。<ReferenceMarker id="13" />
+
+暗号学的に意味のある量子コンピュータがいつ登場するかは誰にも分かりませんが、5年以内に登場する可能性があります。それより長く秘密を保つ必要があるものは、すでに耐量子暗号化を必要としています。情報セキュリティ業界はこれに基づいて行動しています。Signalは2023年に耐量子鍵交換を追加し、Appleは2024年にiMessageへ追加し、Cloudflareは現在トラフィックの大半をハイブリッド耐量子TLSで配信しています。<ReferenceMarker id="14" /><ReferenceMarker id="15" /><ReferenceMarker id="16" />
+
+### 4つの脅威カテゴリ
+
+#### 01 - デジタル署名の偽造
+
+ショアのアルゴリズムは、多くのブロックチェーンで使われるECCベースの署名（例：ビットコインのsecp256k1曲線）を直接脅かし、攻撃者が不正なトランザクションを承認できるようにします。これは、ブロックチェーンの最も基本的な機能の致命的な失敗となります。
+
+#### 02 - ゼロ知識システムにおける偽証明の偽造
+
+プライバシー重視の金融におけるzk-SNARKなど、多くのゼロ知識証明は、コミットメントに楕円曲線ペアリングを介した離散対数の困難さに依存しています。ショアにより、有効に見える無効な証明が作れ、攻撃者が新規コインを鋳造したりL2の状態を偽装したりできる可能性があります。
+
+#### 03 - 秘密情報の復号
+
+量子攻撃は、プライバシー・プロトコルにおいて脆弱な公開鍵方式で保護された暗号化データを露呈させる可能性があります。金融プロトコルにおけるP2P通信を復号し、機密性の高い詳細を明らかにし、標的を絞った盗難を可能にする恐れもあります。
+
+#### 04 - ハッシュ関数の反転
+
+グローバーのアルゴリズムは、プルーフ・オブ・ワークやアドレス生成に使われるSHA-256などのハッシュに対する原像攻撃を加速し得ますが、最も心配の少ない脅威です。多くの耐量子方式は、十分な大きさのダイジェストであればハッシュは十分安全とみなされるため、ハッシュベースの構成を取り入れています。
+
+### 耐量子暗号におけるスケーリングの課題
+
+耐量子暗号（PQC）は量子脅威に対する不可欠な保護を提供しますが、これらのアルゴリズム固有の設計により、重大なスケーリング上の障壁を生みます。コンパクトな数学構造に依拠する楕円曲線方式とは異なり、PQCプリミティブは古典および量子の両方の攻撃者に対してセキュリティを維持するために、より大きなパラメータを必要とします。その結果、公開鍵、秘密鍵、署名がしばしば桁違いに大きくなります。次の表は、ML-DSAの代表的なサイズを、256ビットECDSAなどの古典的対応物と比較したものです。<ReferenceMarker id="10" />
+
+<ResponsiveTableV2
+  headers={["アルゴリズム", "公開鍵", "秘密鍵", "署名"]}
+  rows={[
+    ["ML-DSA-87 (Dilithium)", "2,592 bytes", "4,896 bytes", "4,627 bytes"],
+    ["ML-DSA-65 (Dilithium)", "1,952 bytes", "4,032 bytes", "3,309 bytes"],
+    ["ECDSA (256-bit)", "32 bytes", "32 bytes", "65 bytes"],
+  ]}
+/>
+
+ご覧のとおり、ML-DSAの署名はECDSA相当より70倍以上、公開鍵は80倍以上大きくなり得ます。他のPQCファミリーはさらに悪化します。SPHINCS+のようなハッシュベース方式は最大41 KBの署名を生み、FALCONのようなサイズ最適化格子バリアントでも古典サイズを大きく上回ります。
+
+ブロックチェーンの文脈では、これらの肥大化したサイズがシステム全体のスケーリング問題に積み上がります。大きな署名は個々のトランザクションを膨らませ、ブロックが早く埋まり検証に時間がかかることでスループットを下げます。P2P通信にも負荷がかかり、帯域と伝播遅延が増し、プルーフ・オブ・ワークなどのコンセンサスでフォークや孤立ブロックのリスクを高め得ます。ストレージ要件も影響を受け、ノードの運用コストが上がり、特にリソースの限られたユーザーやバリデータの参加障壁となります。
+
+### TPS対QTPS
+
+「TPS」は、ブロックチェーンが1秒あたりに処理できるトランザクション数を測る業界用語です。量子的に安全な秒間トランザクション数（QTPS）は、すべてのトランザクションが利用可能な耐量子アドレス種別とトランザクション署名を使った場合の、ブロックチェーンの理論上のスループットを測ります。
+
+耐量子アドレス種別を持たないチェーンのQTPSはゼロです。
+
+ビットコインがブロックサイズやブロック生成速度を変えずにML-DSA-65を追加した場合、単純なトランザクションは今日の72バイトと33バイトの代わりに、3,309バイトの署名と1,952バイトの公開鍵になります。1ブロックに収まるトランザクションは約6,000件から約690件になり、ビットコインのQTPSは現在の約10 TPSから約1.1に下がります。
+
+<CalloutV2 title="注">
+  こうしたスケーリング課題は、将来すべてのブロックチェーンが対処しなければなりません。例えばビットコインは、最大ブロックサイズを増やさなければ約1QTPS以下になります。
+</CalloutV2>
+
+<ChapterHeading number="03" title="移行の危機" />
+
+### 調整問題
+
+ビットコインの保守的文化はプロトコル変更に抵抗します。いかなるPQCアップグレードにも、移行期限、コインの没収の可能性、ブロックサイズの増加など、論争的な事項についてのコンセンサスが必要です。たとえコミュニティが合意しても、各ユーザーは自分のコインを量子的に安全な新しいアドレスへ移行しなければなりません。移行はすべての暗号資産保有者の行動を要し、その多くはウォレットへのアクセスを失っているか、脅威を認識していません。
+
+これらの問題は、明確なリーダーシップの欠如と技術的硬直化の哲学により、ビットコインにとって特に困難です。
+
+合意は最初の一歩にすぎません。ビットコインが耐量子アドレス種別を出荷して初めて、移行を始められます。
+
+### 移行タイムラインの問題
+
+各チェーンの時計は、耐量子アドレス種別を出荷した時点で動き始め、暗号学的に意味のある量子コンピュータが存在する日に止まります。
+
+アドレス種別が出荷されると、すべての保有者は耐量子鍵ペアを生成し、コインをそこへ移さなければなりません。ビットコインには約1億7,000万の未使用出力があり、それぞれを動かすには個別の署名が必要です。<ReferenceMarker id="17" />移行がすべてのブロックのすべてのバイトを使ったとしても、すべてを移すには少なくとも80日かかります。移行がすべてのバイトを使えることはありません。すでに移行を終えた保有者は取引を続け、その耐量子署名はECDSAの20倍から80倍の大きさなので、耐量子トランザクション1件は今日のトランザクションより多くのブロック領域を使います。多くの保有者はまずテスト送金を行います。
+
+最も楽観的な仮定、つまりすべての保有者が情報を得て速やかに行動した場合でも、移行には数ヶ月かかります。期限のないはるかに小さな変更であったSegWitは、ビットコインのトランザクションの半数に達するまでに2年かかりました。<ReferenceMarker id="18" />現実的には移行は年単位でかかり、移行されていないコインはすべて露出したままです。
+
+### 紛失コインの問題
+
+推定230万～370万ビットコイン、総供給の1割超が、紛失した鍵、死亡した保有者、忘れられたウォレットにより恒久的にアクセス不能です。<ReferenceMarker id="3" />これらのコインは移行できず、暗号学的に意味のある量子コンピュータ（CRQC）を作るための公的な懸賞金として機能します。
+
+> 技術的に唯一の解は、移行されていないコインを凍結する厳格な期限を設けることです。
+
+2026年6月、Binance創業者のChangpeng Zhaoは、耐量子アップグレードの後におよそ1年の猶予期間を設け、その後フォークによって脆弱なアドレスに残るコイン（Satoshiに帰属するとされる110万BTCを含む）を凍結する案を提示しました。この提案は業界を二分しました。<ReferenceMarker id="19" />
+
+<CalloutV2 title="QUANTUSの答え">
+  こうした積み重なった課題により、既存チェーンへの量子セキュリティの後付けは極めて困難です。Quantusは耐量子アドレス種別のみをサポートすることで、これを回避します。
+</CalloutV2>
+
+<ChapterHeading number="04" title="Quantusのアーキテクチャ" />
+
+### 基礎
+
+Quantusは、Polkadotの背後にあるParity Technologiesチームが開発したブロックチェーンSDK、Substrateの上に構築されています。Substrateは高度にモジュール式であり、Quantusを独自にする部分に集中するためにコンポーネントを容易に差し替えられます。
+
+QuantusはSubstrateを次のように強化します。
+
+- 耐量子署名方式のサポート追加
+- P2Pネットワークのセキュリティを耐量子に更新
+- zk-treeの追加。すべての残高クレジットを記録するPoseidon2 Merkleツリーで、各ブロックヘッダにコミットされるため、ウォレットはゼロ知識証明の中で入金を証明できます
+
+### 量子的に安全
+
+#### 耐量子暗号プリミティブ
+
+Quantusは、NISTが標準化したPQCを用いて、トランザクションとネットワーク通信のセキュリティを量子脅威から保護します。トランザクション整合性の中核には**ML-DSA**（モジュール格子ベースのデジタル署名アルゴリズム、旧称CRYSTALS-Dilithium）があり、セキュリティ、効率、実装のしやすさのバランスから格子ベースの署名方式として選ばれています。ML-DSAは、モジュール格子上のLearning With Errors（LWE）やShort Integer Solution（SIS）などの問題の困難さを利用し、ショアのアルゴリズムを含む古典・量子攻撃に対して頑健な耐性を提供します。<ReferenceMarker id="4" />
+
+トランザクション署名には、Quantusは2つのML-DSAパラメータ集合をサポートします。ML-DSA-65（NISTセキュリティレベル3）が主要な方式でありQuantusウォレットの既定値で、セキュリティと署名サイズの優れたバランスを提供します。最高のセキュリティレベル（NISTセキュリティレベル5、AES-256相当）を提供するパラメータ集合であるML-DSA-87も、格子問題における暗号解析の潜在的な突破に対して最大の余裕を求めるユーザー向けにサポートされます。格子暗号は比較的新しく、古典方式ほど実戦で試されておらず、より大きなパラメータは格子暗号解析の潜在的進展によるリスクを緩和します。
+
+#### 検討した代替案
+
+ML-DSAは、FN-DSA（Falcon）などの代替より選ばれました。FN-DSAは実装が複雑（例：ブロックチェーンに不向きな浮動小数点演算が必要）で、仕様に決定論的鍵生成がなく、開発当時は最終化されていませんでした。
+
+SLH-DSAのようなハッシュベース方式は、さらに大きな署名（17 KB超）のため選ばれませんでした。暗号アジリティ（署名方式の切り替え能力）はSubstrateに組み込まれており、将来状況が変わればこれらの代替を比較的容易に追加できます。
+
+ML-DSAは鍵と署名が大きくなるものの、ストレージがまだボトルネックではない初期段階のQuantusのネットワークでは管理可能であり、ゼロ知識証明によるワームホールアドレスなどの最適化がスケーリングに対処します。
+
+実装の技術詳細は [QIP-0006](https://github.com/Quantus-Network/improvement-proposals/blob/main/qip-0006.md) を参照してください。
+
+#### litep2p - 量子的に安全なネットワーク
+
+Quantusは、ピアツーピア（P2P）ノード間通信を、認証にML-DSA、暗号化に**ML-KEM**（モジュール格子ベース鍵カプセル化メカニズム、旧CRYSTALS-Kyber）を組み合わせて保護します。この統合はPQCをlitep2pネットワークスタックまで拡張し、量子耐性のため中核コンポーネントを変更します。ピア識別にML-DSA-87署名を、トランスポートセキュリティには4メッセージのpqXX Noiseパターン上でML-KEM-768を用います。このパターンではすべての鍵交換がKEMカプセル化であり、Diffie-Hellmanへのフォールバックはありません。<ReferenceMarker id="5" />
+
+P2P層は量子セキュリティ分析で見落とされがちです。ピア認証は重要ですが、ピア層で攻撃者が最悪行えるのはノードになりすまして無効なメッセージを送ることであり、これはサービス拒否にすぎません。この攻撃は、ブロックチェーンではノードは通常信頼されず、攻撃が検知されれば鍵を容易に変更できるため、すでに緩和されています。同様に、P2P通信の復号は攻撃者への利益が限定的（例：トランザクション経路の追跡はプロキシやTorで緩和）で、多くのデータは最終的にオンチェーンで公開されます。
+
+それでも、P2P層を量子的に保護することは、盗聴、中間者攻撃、量子による復号から守り、ノードのゴシップ、ブロック伝播、その他のネットワーク相互作用が予見可能な将来にわたって機密性と整合性を保つことを意味します。
+
+実装の技術詳細は [QIP-0004](https://github.com/Quantus-Network/improvement-proposals/blob/main/qip-0004.md) を参照してください。
+
+### プライベート
+
+#### 2つのアドレス種別
+
+Quantusには2つのアドレス種別があります。透明アドレスはML-DSA公開鍵のハッシュで、その残高と入出金のすべてがオンチェーンで可視です。暗号化アドレスはワームホールアドレスです。そこへ送られたコインは証明可能な形でバーンされ、所有者は後に、送金元を一切参照しないゼロ知識証明によって任意の出口アドレスでそれらをミントします。2つは相互運用可能で、チェーンはそれらを区別できません。暗号化アドレスへの入金は通常の送金であり、そのアドレスは通常の可視残高を保持します。
+
+#### ワームホールアドレス
+
+耐量子暗号に内在するスケーリング課題に対処するため、Quantusは**「ワームホールアドレス」**と呼ばれる、革新的な集約耐量子署名方式を導入します。このシステムは、Plonky2証明システム（基本的にSTARK）で生成されたゼロ知識証明（ZKP）を利用し、残高検証をオフチェーンに移し、チェーンは個々の署名を処理せず単一のコンパクトな証明だけを検証できます。チェーン自体がすべての証明レイヤーを検証します。QuantusにL2はありません。
+
+ワームホールアドレスは、1本の証明で多数のトランザクションを検証でき、公開入力（例：ヌリファイア、出口アドレス、金額）が主な制約要因になります。これにより、トランザクションあたりの償却フットプリントは小さな定数に抑えられ、既知のいかなるPQC署名方式よりもはるかに小さくなります。
+
+方式の量子セキュリティは、SNARKで一般的に使われる量子に弱い楕円曲線ペアリングの代わりに、Poseidonハッシュファミリー上に構築されたFRI（Fast Reed-Solomon Interactive Oracle Proofs）コミットメントに由来します。さらに、認証秘密は**Poseidon2**の背後に隠されます。安全なハッシュ関数はグローバーのアルゴリズムで二次的に弱まるだけで破られないため、ハッシュ原像証明はZK文脈においてSPHINCS+のようなハッシュベース方式に似た、軽量の耐量子署名として機能し得ます。
+
+#### プライバシー特性
+
+スケーリングにとどまらず、ワームホール送金はQuantusの暗号化トランザクションとして機能し、この方法で資金を受け取ったアドレスは暗号化アカウントとして機能します。チェーンはワームホールアドレスを通常のアドレスと区別しません。入金は通常の送金であり、受取アドレスはオンチェーンで通常の可視残高を示します。支出の仕組みは異なります。ワームホールからの出口では、ゼロ知識証明に対して出口アドレスで資金がミントされ、その公開入力にはヌリファイア、最近のブロックハッシュ、金額、出口アドレスしか含まれません。オンチェーンには送金元アドレスを参照するものは何もなく、送金元の残高が引き落とされることもありません。観察者から見ると、ワームホールアドレス経由で受け取った資金は、その後使われたかどうかにかかわらず、まったくその場にとどまっているように見えます。暗号化送金は、送信者と受信者の間のオンチェーンの繋がりを断ちます。ウォレットはこれを透明と暗号化の2つのトランザクションモードとして提供し、証明はユーザーのデバイス上でローカルに生成されます。
+
+入金と、示唆的なタイミングで行われた同額の出口を突き合わせる観察者は、両者の繋がりを絞り込めます。ウォレットは最大7件の出口を1本の証明にまとめ、ダミーのスロットでバッチを埋めます。暗号化送金は0.01 QUAN刻みで動くため、多くの送金が同じ金額を共有します。すべてのネイティブ送金は同じ匿名性集合に加わります。マイニング報酬のワームホールアドレスは、構成上識別可能です。
+
+#### クライアント／証明者フロー
+
+ユーザーは、ソルトと秘密を連結したものを二重ハッシュし、支出不能であることが証明可能なアドレスを生成します。
+
+```
+H(H(salt|secret))
+```
+
+この構成は、単一ハッシュの公開鍵を支出不能アドレスと誤認するような偽陽性を防ぎます。Substrate（および一般的にブロックチェーン）では、アドレスは安全なハッシュではなく、秘密鍵から代数演算で導かれた公開鍵の単一ハッシュだからです。したがって構成のセキュリティは、安全なハッシュの原像の原像を見つけることに帰着します。このアドレスへ送られたトークンは事実上バーンされます。受取アドレスに対応する秘密鍵が存在しないため使用できません。これらのコインは供給を膨らませずに再鋳造できます。
+
+zk-treeは、チェーン上のすべての残高クレジットを、受取人、受取人ごとの送金回数、金額を保持するリーフとして記録します。ユーザーのウォレットは、最近のブロックヘッダのzk-treeルートから、自身の入金のリーフまでのMerkle証明を開きます。二重使用を防ぐためヌリファイアを計算します。
+
+```
+H(H(salt | secret | transfer_count))
+```
+
+#### アグリゲーターフロー
+
+集約にはPlonky2の再帰を2層で用い、各親証明が子証明を検証し、子の公開入力を上位へ渡します。
+
+第1層では、ユーザーのウォレットが自身のリーフ証明を最大7件まで1つのプライベートバッチにまとめます。回路はスロットをシャッフルし、観察者が実際の件数を判別できないよう空のスロットをダミー証明で埋め、すべての実リーフが同じ最近のブロックハッシュを参照することを要求し、バッチ内の出口アドレスを重複除去し、その金額を合算します。ヌリファイアはそのまま通過します。
+
+第2層では、任意の当事者（マイナーまたは専門のアグリゲーター）が最大53件のプライベートバッチを1つのパブリックバッチにまとめ、手数料の一部を得ます。この層は各プライベートバッチの出口とヌリファイアをそのまま転送し、さらなる合算や重複除去は行いません。各プライベートバッチは独立した決済セグメントのままなので、あるバッチに使用済みのヌリファイアが含まれていても、チェーンはそのセグメントだけを拒否し、残りを決済します。
+
+#### チェーン／検証者フロー
+
+ネットワークは集約証明を検証し、ブロックハッシュがオンチェーンにあり最近のものであること、ヌリファイアの一意性（二重使用防止）、証明の有効性を確認します。ZK回路は、zk-tree Merkle証明の正しさ、ヌリファイア計算の正確さ、アドレスの支出不能性、出力と手数料の合計が入力を超えないこと、ブロックヘッダとの連鎖を課します。
+
+#### Plonky2を選ぶ理由
+
+- 一部が形式検証済み（Quantusの回路とPlonky2の一部）
+- 耐量子
+- 信頼された初期設定が不要
+- 証明／検証が効率的
+- 証明の集約がスムーズ
+- Rustでのネイティブ実装
+- Substrateのno-std環境と互換
+
+#### セキュリティ上の注意
+
+潜在的リスクには、回路／検証実装の不具合によるインフレーション・バグが含まれます。ユーザーは秘密を開示せず最初のハッシュを公開することで、任意にワームホールアドレスであることを証明できます。検証トランザクションは署名されないため、チェーンはサービス拒否を金融的手段以外で制限します。プール受け入れ時の低コストな検査、ディスパッチ時のみの完全な証明検証、512 KiBの証明サイズ上限です。入金されたコインは証明可能な形でバーンされているため、出口は総発行量を増やさずに残高をミントし、供給上限は影響を受けません。
+
+さらなる技術詳細は [QIP-0005](https://github.com/Quantus-Network/improvement-proposals/blob/main/qip-0005.md) を参照してください。
+
+### スケーラブル
+
+Quantusのすべてのトランザクションは耐量子であるため、そのTPSとQTPSは同じ数字です。スループットはブロック領域によって制約されます。目標ブロック時間は12秒で、各ブロックは3.75 MBのトランザクションを許容します。
+
+<ResponsiveTableV2
+  headers={["モード", "送金あたりのバイト数", "ブロックあたりの送金数", "QTPS"]}
+  rows={[
+    ["透明、ML-DSA-87", "~7.3 KB", "~510", "~43"],
+    ["透明、ML-DSA-65", "~5.4 KB", "~690", "~58"],
+    ["暗号化、現行の2層集約", "371件の送金あたり~266 KB", "~5,200", "~430"],
+    ["暗号化、理論上の上限", "公開入力~112 bytes", "~33,000", "~2,800"],
+  ]}
+/>
+
+### マネー
+
+#### コンセンサスメカニズム
+
+Quantusは、ビットコインのコンセンサスの望ましい性質を保ちつつ、ZK証明システムとの親和性を高めるためSHA-256を**Poseidon2**に置き換えることで、プルーフ・オブ・ワーク（PoW）コンセンサスアルゴリズムを用います。目標ブロック時間は12秒です。
+
+重要：この変更は量子セキュリティのためではありません。SHA-256のような暗号ハッシュ関数は、特にグローバーのアルゴリズムにより弱まりますが破壊されません。一部の耐量子署名方式はこの理由で安全なハッシュを基本ブロックとして使います。
+
+Poseidon2はPoseidonハッシュ関数の改良版です。SHA-256のような従来ハッシュでの計算用にSNARKやSTARKを作ると、Poseidonを使う場合の約100倍のゲートが必要になることが多く、Poseidonはビット演算ではなくフィールド要素上の代数関数のみに依拠します。
+
+Poseidon2とPlonky2には**Goldilocks体**を用います。Goldilocks体の位数は64ビット符号なし整数に収まり、健全性を損なわず効率を高めます。
+
+供給上限は21,000,000 QUANです。セクション06を参照してください。
+
+<ChapterHeading number="05" title="アカウントのセキュリティ" />
+
+暗号資産の鍵管理には多くのリスクがあります。そのほとんどは避けられます。
+
+### HD-Lattice
+
+階層的決定論的（HD）ウォレットはブロックチェーンの業界標準であり、すべての鍵を1つのシードフレーズでバックアップでき、操作ごとの手動バックアップよりセキュリティと利便性が向上します。Dilithiumのような格子方式に適合させると2つの課題があります。
+
+- HMAC-SHA512の出力は、特定の性質を持つ環からサンプリングされた多項式である格子秘密鍵を直接形成できない。
+- 非ハード化鍵導出は楕円曲線上の加算に依拠するが、格子には存在しない（公開鍵はどの代数演算でも閉じない）。
+
+Quantusは前者を、HMAC出力を鍵そのものではなく、秘密鍵を決定論的に構築するエントロピーとして用いることで対処します。後者は緊急度が低く、格子暗号をそれに対処できるよう適合させられるかは未解決の研究課題です。
+
+透明アカウントの鍵とワームホールの秘密は、同じシードから別々のパス（BIP44コインタイプ189189'と189189189'）で導出されるため、1つのシードフレーズで両方のアドレス種別をバックアップできます。
+
+さらなる技術詳細は [QIP-0002](https://github.com/Quantus-Network/improvement-proposals/blob/main/qip-0002.md) を参照してください。
+
+### チェックフレーズ
+
+Quantusは「チェックフレーズ」を導入します。これはブロックチェーンアドレスに対する、暗号学的に安全で人間が読めるチェックサムです。アドレスをハッシュしてBIP-39ニーモニック単語リストから短い覚えやすい語列を生成します。チェックフレーズは誤字、改ざん、アドレスポイズニング攻撃から保護します。40,000回反復の鍵導出関数によりレインボーテーブル攻撃を高コストにします。大きな送金では、ユーザーは引き続きアドレスを1文字ずつ確認すべきです。チェックフレーズはチェックサムであり、アドレスではありません。資金を受け取ることはできません。
+
+さらなる技術詳細は [QIP-0008](https://github.com/Quantus-Network/improvement-proposals/blob/main/qip-0008.md) を参照してください。
+
+### マルチシグアカウント
+
+マルチシグアカウントは新しいアカウントとして始まります。作成者は署名者（最大100人）を列挙し、トランザクションの承認に必要な人数（閾値）を設定し、ノンスを選びます。チェーンはこの3つからアカウントのアドレスを導出します。署名者と閾値はアドレスの一部であるため、決して変わりません。別の構成を望む人は新しいマルチシグを作成し、資金を移します。どの署名者もトランザクションを提案できます。閾値の人数の署名者が承認すると実行されます。提案は最長2週間で失効します。
+
+マルチシグアカウントはチェーンにネイティブです。それらは透明アドレスです。マルチシグは暗号化アドレスにはなれず、暗号化アドレスは署名者にはなれません。マルチシグは暗号化アドレスとの送受金ができ、アドバンストアカウントのガーディアンになれます。
+
+### アドバンストアカウント
+
+アドバンストアカウントは、単一の鍵以上の保護を望むユーザーのためのものです。透明アドレスにのみ存在し、ほとんどのユーザーには必要ありません。どの透明アカウントもアドバンストアカウントになれます。この格上げは恒久的であり、盗人が無効化することはできません。所有者は**ガーディアン**を指名します。これは別のアカウントで、ハードウェアウォレット、マルチシグ、信頼できる第三者など、アドバンストアカウント自体よりも強固に保護されたものが望ましいです。ガーディアンはアカウントから支出できません。できるのは、アカウントの保留中の送金をキャンセルすることと、その資金を回収することだけです。
+
+ガーディアン、必須タイムロック、鍵の回収はアドバンストアカウントにのみ存在し、任意です。所有者はアカウント作成時にこれらのパラメータを一度設定し、その後変更できません。別のパラメータを望む所有者は、新しいアドバンストアカウントを作成してそこへ資金を移します。
+
+これらの機能は取引所、カストディアン、その他の上級ユーザー向けに構築されています。ほとんどの人は目にすることもありません。
+
+ガーディアンは連鎖できます。アドバンストアカウントのガーディアン自体を、独自のガーディアンを持つアドバンストアカウントにできます。これにより、各ガーディアンが保護するアカウントに対して上位の権限を持つ、合成可能な階層が生まれます。正当な送金のファイナリティを損なわず、ユーザーが不正活動に気づき対応する時間を確保する設計です。
+
+さらなる技術詳細は [QIP-0011](https://github.com/Quantus-Network/improvement-proposals/blob/main/qip-0011.md) を参照してください。
+
+#### タイムロック付きトランザクション
+
+どの透明アカウントも送金に遅延を付与でき、その間に送信者はキャンセルできます。これにより、ファイナリティを犠牲にせずミスを修正し、盗難を抑止できます。
+
+アドバンストアカウントは、すべての送金に必須の遅延を設定できます。キャンセルできるのはガーディアンだけで、キャンセルされた資金はガーディアンへ送られます。
+
+さらなる技術詳細は [QIP-0009](https://github.com/Quantus-Network/improvement-proposals/blob/main/qip-0009.md) および [QIP-0010](https://github.com/Quantus-Network/improvement-proposals/blob/main/qip-0010.md) を参照してください。
+
+#### 鍵の回収
+
+多くの暗号資産の富は、所有者とともに墓場へ運ばれました。アドバンストアカウントはその出口を提供します。アドバンストアカウントの作成時に、所有者はいつでもアカウントの全資金を回収できるガーディアンを指名します。相続人のアカウント、家族のマルチシグ、または専門のカストディアンをガーディアンに指名した所有者は、裁判所を必要としないオンチェーンの遺言を持つことになります。
+
+<ChapterHeading number="06" title="トークノミクスとガバナンス" />
+
+Quantusは固定された金融政策を持ちます。21,000,000 QUANの供給上限、指数関数的に減衰する発行曲線、そして供給上限を維持しながらブロック報酬を無期限にゼロより上に保つトランザクション手数料のバーンです。
+
+### ブロック報酬
+
+Quantusは、ビットコインを模した単純なブロック発行を採用しますが、断続的な半減期ではなく滑らかな減衰を用います。単純なヒューリスティックが各ブロックの報酬を決めます。
+
+```
+block_reward = (max_supply - current_supply) / 50,000,000
+```
+
+このヒューリスティックは、block_rewardがcurrent_supplyに加算されるにつれ、次ブロックで計算されるblock_rewardが下がる、滑らかな指数減衰曲線を形成します。手数料によるバーンはcurrent_supplyを減らし、ブロック報酬の予算の一部になります。
+
+### 投資家とチームへの割当
+
+Quantusは、資金提供で大きなリスクを負った投資家の支援により構築されました。ジェネシス時に、総供給の27%（5,670,000 QUAN）が一度だけミントされます。残りの73%（15,330,000 QUAN）はマイニングによってのみ発行されます。開発者税はなく、マイナーはブロック報酬を全額受け取ります。
+
+投資家、創業者、チームは総供給の23%を保有します。これらのトークンはメインネット後の最初の1年間ロックされ、その後36ヶ月にわたって線形にベスティングされます。これは専用のベスティングパレットによりオンチェーンで強制されます。
+
+### 会社への割当
+
+会社は総供給の4%を保有します。1%はジェネシス時に流動性があり、初期流動性の供給に充てられます。残りの3%は将来の会社運営の資金であり、メインネット後の最初の1年間ロックされ、その後36ヶ月にわたって線形にベスティングされます。
+
+### トランザクション手数料
+
+すべてのトランザクション手数料はマイナーに渡るか、バーンされます。
+
+<ResponsiveTableV2
+  headers={["トランザクション種別", "手数料", "行き先"]}
+  rows={[
+    [
+      "透明、ML-DSA-65（既定）",
+      "単純な送金1件あたり約0.0062 QUAN、任意のチップを加算可",
+      "マイナー",
+    ],
+    [
+      "透明、ML-DSA-87",
+      "単純な送金1件あたり約0.0081 QUAN、任意のチップを加算可",
+      "マイナー",
+    ],
+    ["暗号化", "金額の0.04%、最低0.01 QUAN", "半分はマイナー、半分はバーン"],
+    [
+      "アドバンストアカウントのキャンセル（稀、アドバンストアカウントのみ）",
+      "キャンセルされた金額の1%",
+      "バーン",
+    ],
+  ]}
+/>
+
+実際には、25 QUAN以下の暗号化トランザクションは最低額の0.01 QUANを固定で支払い、それより大きいものは0.04%の手数料を支払います。
+
+ネットワークに活動がある限り、この手数料構造はマイナーに永続的にセキュリティの対価を支払います。Quantusはセキュリティ予算を使い果たすことなく、21,000,000 QUANのハードキャップを維持します。
+
+### ネットワークアップグレード
+
+Quantusは、Substrateのランタイムアップグレードにより「フォークレス」アップグレードをサポートし、ブロックチェーンの中核ロジック（「ランタイム」）を、ネットワークを混乱させ得るハードフォークなしに進化させられます。このアップグレード経路はダウンタイムとリスクを最小化し、セキュリティ修正と暗号のアップグレードをハードフォークなしで出荷できます。
+
+コミュニティがシステムへの信頼を深めるにつれ、ランタイム変更の権限は大幅に縮小されます。
+
+### ガバナンス体制
+
+ユーザーが依存する金融システムは、安定し、予測可能で、安全であるべきです。
+
+**Technical Collective**は、技術専門家のキュレートされたグループで、緊急の技術案件を提案・レビュー・ホワイトリストし、コミュニティの監督を維持しつつ専用トラックで迅速化する専門機関として機能します。ネットワークの金融政策を変更する権限はありません。緊急のセキュリティ問題や圧倒的なコミュニティの支持がない限り重要なプロトコルアップグレードを出荷する意図はなく、会社は時間をかけてTechnical Collectiveを廃止する意向です。
+
+誰でも、Quantus改善提案（QIP）を公開レビューのために提出し、[research.quantus.com](https://research.quantus.com)で議論することで、プロトコル変更を提案できます。
+
+<ChapterHeading number="07" title="ロードマップ" />
+
+2026年までの現行ロードマップ（変更の可能性あり）。
+
+<TimelineV2
+  title="Heisenberg Inception"
+  date="2024年12月"
+  subtitle="資金調達完了、Substrate採用。"
+/>
+
+<TimelineV2
+  title="Resonance Alpha"
+  date="2025年7月"
+  subtitle="パブリックテストネット、Dilithium署名。"
+/>
+
+<TimelineV2
+  title="Schrödinger Beta"
+  date="2025年10月"
+  subtitle="機能完成、監査準備完了。"
+/>
+
+<TimelineV2
+  title="Dirac Beta"
+  date="2025年11月"
+  subtitle="PoWをPoseidon2に変更、監査対応。"
+/>
+
+<TimelineV2
+  title="Planck Beta"
+  date="2026年4月"
+  subtitle="アドバンストアカウント、マルチシグ、ハードウェアウォレット、暗号化トランザクション、2層ZK集約。"
+/>
+
+<TimelineV2
+  title="Mainnet"
+  date="2026年9月9日"
+  subtitle="メインネットジェネシス。"
+/>
+
+<br />
+
+<ChapterHeading number="08" title="リスク" />
+
+Quantusの構築には固有のリスクが伴います。
+
+### 実装上の問題
+
+設計の優れたシステムでも、ソフトウェアロジックの欠陥は重大な障害を引き起こし得ます。Quantusは、Neodyme、Eiger、Hashcloakによる独立監査、Immunefiでの公開監査コンペティション、ZK回路とPlonky2の一部の形式検証、そしてAIを活用した継続的な内部レビューによって、このリスクを低減しています。
+
+実装リスクを完全に排除できるプロセスは存在しません。
+
+#### 監査
+
+<ResponsiveTableV2
+  headers={["対象", "監査者", "日付"]}
+  rows={[
+    [
+      "プルーフ・オブ・ワークとPoseidon2",
+      "Eiger (Equilibrium Group)",
+      "2025年10月",
+    ],
+    ["ML-DSA署名とHDウォレット", "Neodyme", "2025年12月"],
+    ["ワームホールZK回路", "Eiger (Equilibrium Group)", "2026年3月"],
+    ["Substrateランタイムとノード", "Eiger (Equilibrium Group)", "2026年5月"],
+    ["ワームホール回路の形式検証", "Quantus、Lean証明支援系にて", "2026年6月"],
+    ["閾値ML-DSA署名", "Hashcloak", "2026年"],
+    ["チェーン全体、公開監査コンペティション", "Immunefi", "2026年8月"],
+  ]}
+/>
+
+レポート：
+
+- [プルーフ・オブ・ワークとPoseidon2：レポート](https://github.com/Quantus-Network/qp-poseidon/blob/main/audits/Proof-of-Work%20and%20Poseidon%20Security%20Review%201.1.pdf)
+- [ML-DSA署名とHDウォレット：レポート](https://github.com/Quantus-Network/qp-rusty-crystals/blob/master/audits/Neodyme-Audit.pdf)
+- [ワームホールZK回路：レポート](https://github.com/Quantus-Network/qp-zk-circuits/blob/main/audits/EigerWormholeAudit.pdf)
+- [Substrateランタイムとノード：レポート](https://github.com/Quantus-Network/chain/blob/main/audits/quantus-substrate-audit-20260513.pdf)
+- [ワームホール回路の形式検証：仕様](https://github.com/Quantus-Network/qp-zk-circuits/tree/main/formal)
+- [チェーン全体、公開監査コンペティション：キャンペーン](https://immunefi.com/bounty/audit-comp-quantus)
+
+### NISTアルゴリズム選定上の問題
+
+標準化後に、選ばれた耐量子標準（例：ML-DSA、ML-KEM）に欠陥やバックドアが現れる可能性があります。最悪の場合、そのような欠陥により攻撃者が公開鍵から秘密鍵を導いて署名を偽造でき、チェーンにとって壊滅的な故障モードとなります。欠陥が公表されれば、Quantusは新しいアルゴリズムへアップグレードできます。
+
+### 量子計算のタイムライン
+
+量子の進展は予想よりずっと遅れ、PQCの必要性を先延ばしにする可能性があります。逆に、政府による秘密開発などが、ブロックチェーンコミュニティが迅速に更新しなければ突然の脅威となる可能性があります。
+
+### その他の考慮
+
+一般的な採用障壁、金融／ブロックチェーンにおける規制の不確実性、暗号エコシステムに内在するボラティリティ。
+
+<ChapterHeading number="09" title="参考文献と関連資料" />
+
+<br />
+
+<Reference id="reference-1" label="[1]">
+  Shor, P. W. (1997). Polynomial-time algorithms for prime factorization and
+  discrete logarithms on a quantum computer. SIAM Journal on Computing, 26(5),
+  1484–1509.
+  [https://doi.org/10.1137/S0097539795293172](https://doi.org/10.1137/S0097539795293172)
+</Reference>
+
+<Reference id="reference-2" label="[2]">
+  Grover, L.K. (1996). A fast quantum mechanical algorithm for database search.
+  Proceedings of the Twenty-Eight Annual ACM Symposium on Theory of Computing,
+  212-219.
+  [https://doi.org/10.1145/237814.237866](https://doi.org/10.1145/237814.237866)
+</Reference>
+
+<Reference id="reference-3" label="[3]">
+  Chainalysis. (2020, June). 60% of Bitcoin Is Held Long Term as Digital Gold.
+  What About the Rest? Chainalysis Market Intel. Archived at
+  [https://web.archive.org/web/20200622014856/https://blog.chainalysis.com/reports/bitcoin-market-data-exchanges-trading](https://web.archive.org/web/20200622014856/https://blog.chainalysis.com/reports/bitcoin-market-data-exchanges-trading)
+</Reference>
+
+<Reference id="reference-4" label="[4]">
+  National Institute of Standards and Technology. (2024). FIPS 204:
+  Module-Lattice-Based Digital Signature Standard (ML-DSA). U.S. Department of
+  Commerce.
+  [https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.204.pdf](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.204.pdf)
+</Reference>
+
+<Reference id="reference-5" label="[5]">
+  National Institute of Standards and Technology. (2024). FIPS 203:
+  Module-Lattice-Based Key-Encapsulation Mechanism Standard (ML-KEM). U.S.
+  Department of Commerce.
+  [https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.203.pdf](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.203.pdf)
+</Reference>
+
+<Reference id="reference-6" label="[6]">
+  Häner, T., Jaques, S., Naehrig, M., Roetteler, M., & Soeken, M. (2020).
+  Improved quantum circuits for elliptic curve discrete logarithms.
+  arXiv:2002.12480.
+  [https://arxiv.org/abs/2002.12480](https://arxiv.org/abs/2002.12480)
+</Reference>
+
+<Reference id="reference-7" label="[7]">
+  Gidney, C., & Ekerå, M. (2021). How to factor 2048 bit RSA integers in 8 hours
+  using 20 million noisy qubits. arXiv:1905.09749.
+  [https://arxiv.org/abs/1905.09749](https://arxiv.org/abs/1905.09749)
+</Reference>
+
+<Reference id="reference-8" label="[8]">
+  Aggarwal, D., et al. (2021). Assessment of Quantum Threat To Bitcoin and
+  Derived Cryptocurrencies. ePrint IACR.
+  [https://eprint.iacr.org/2021/967.pdf](https://eprint.iacr.org/2021/967.pdf)
+</Reference>
+
+<Reference id="reference-9" label="[9]">
+  Roetteler, M., Naehrig, M., Svore, K. M., & Lauter, K. (2017). Quantum
+  resource estimates for computing elliptic curve discrete logarithms.
+  arXiv:1706.06752.
+  [https://arxiv.org/abs/1706.06752](https://arxiv.org/abs/1706.06752)
+</Reference>
+
+<Reference id="reference-10" label="[10]">
+  Open Quantum Safe Project. (n.d.). ML-DSA | Open Quantum Safe. Retrieved
+  January 29, 2026, from
+  [https://openquantumsafe.org/liboqs/algorithms/sig/ml-dsa.html](https://openquantumsafe.org/liboqs/algorithms/sig/ml-dsa.html)
+</Reference>
+
+<Reference id="reference-11" label="[11]">
+  Babbush, R., Zalcman, A., Gidney, C., Broughton, M., Khattar, T., Neven, H.,
+  Bergamaschi, T., Drake, J., & Boneh, D. (2026). Securing Elliptic Curve
+  Cryptocurrencies against Quantum Vulnerabilities: Resource Estimates and
+  Mitigations. Google Quantum AI.
+  [https://quantumai.google/static/site-assets/downloads/cryptocurrency-whitepaper.pdf](https://quantumai.google/static/site-assets/downloads/cryptocurrency-whitepaper.pdf)
+</Reference>
+
+<Reference id="reference-12" label="[12]">
+  National Institute of Standards and Technology. (2024). NIST IR 8547:
+  Transition to Post-Quantum Cryptography Standards.
+  [https://nvlpubs.nist.gov/nistpubs/ir/2024/NIST.IR.8547.ipd.pdf](https://nvlpubs.nist.gov/nistpubs/ir/2024/NIST.IR.8547.ipd.pdf)
+</Reference>
+
+<Reference id="reference-13" label="[13]">
+  Executive Order 14412 of June 22, 2026, Securing the Nation Against Advanced
+  Cryptographic Attacks, 91 Fed. Reg. 38483 (June 25, 2026).
+  [https://www.federalregister.gov/d/2026-12909](https://www.federalregister.gov/d/2026-12909)
+</Reference>
+
+<Reference id="reference-14" label="[14]">
+  Signal. (2023, September 19). The PQXDH Key Agreement Protocol.
+  [https://signal.org/blog/pqxdh/](https://signal.org/blog/pqxdh/)
+</Reference>
+
+<Reference id="reference-15" label="[15]">
+  Apple Security Engineering and Architecture. (2024, February 21). iMessage
+  with PQ3: The new state of the art in quantum-secure messaging at scale.
+  [https://security.apple.com/blog/imessage-pq3/](https://security.apple.com/blog/imessage-pq3/)
+</Reference>
+
+<Reference id="reference-16" label="[16]">
+  Cloudflare. (2025). The state of the post-quantum Internet in 2025.
+  [https://blog.cloudflare.com/pq-2025/](https://blog.cloudflare.com/pq-2025/)
+</Reference>
+
+<Reference id="reference-17" label="[17]">
+  Blockchain.com. (2026). Bitcoin UTXO count. Retrieved September 3, 2026, from
+  [https://www.blockchain.com/explorer/charts/utxo-count](https://www.blockchain.com/explorer/charts/utxo-count)
+</Reference>
+
+<Reference id="reference-18" label="[18]">
+  transactionfee.info. (n.d.). Payments spending SegWit.
+  [https://transactionfee.info/charts/payments-spending-segwit/](https://transactionfee.info/charts/payments-spending-segwit/)
+</Reference>
+
+<Reference id="reference-19" label="[19]">
+  CoinDesk. (2026, July 4). Bitcoin experts split over plan to freeze Satoshi's
+  1.1 million Bitcoin as quantum threat grows.
+  [https://www.coindesk.com/business/2026/07/04/bitcoin-experts-split-over-plan-to-freeze-satoshi-s-1-1-million-bitcoin-as-quantum-threat-grows](https://www.coindesk.com/business/2026/07/04/bitcoin-experts-split-over-plan-to-freeze-satoshi-s-1-1-million-bitcoin-as-quantum-threat-grows)
+</Reference>
+
+<Reference id="reference-20" label="[20]">
+  Eigen Labs. (2026). ECDSA.fail: can you break ECDSA?
+  [https://ecdsa.fail](https://ecdsa.fail)
+</Reference>
+
+### 関連資料
+
+- [Quantus改善提案（QIP）](https://github.com/Quantus-Network/improvement-proposals)
+- [ドキュメント](https://docs.quantus.com)
+- [リサーチフォーラム](https://research.quantus.com)
+- [The State of Quantumレポート](https://report.quantus.com)
+- [ソースコード](https://github.com/Quantus-Network)
