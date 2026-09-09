@@ -90,6 +90,7 @@ const t = await createTranslator(locale);
     justify-content: center;
     overflow: hidden;
     padding: 0;
+    user-select: none;
   }
 
   /* Damps the ASCII field under the copy; z-index sits above #ascii-hero,
@@ -121,6 +122,10 @@ const t = await createTranslator(locale);
     padding-bottom: 60px;
     z-index: 10;
     pointer-events: none;
+  }
+
+  .hc > * {
+    pointer-events: auto;
   }
 
   .eyebrow {
@@ -192,7 +197,6 @@ const t = await createTranslator(locale);
   .ctas {
     display: flex;
     gap: 14px;
-    pointer-events: all;
     justify-content: center;
     opacity: 0;
     transform: translateY(6px);
