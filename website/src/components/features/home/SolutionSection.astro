@@ -378,7 +378,7 @@ const t = await createTranslator(locale);
 <script>
   const twText = document.getElementById("typewriter-text") as HTMLElement;
   const TEXT = twText?.dataset.i18nTypewriter as string;
-  const CHAR_DELAY = 28;
+  const CHAR_DELAY = 14;
 
   const divider = document.getElementById("sol-divider")!;
   const twBlock = document.getElementById("typewriter-block")!;
@@ -402,17 +402,17 @@ const t = await createTranslator(locale);
 
   /* ── Sequence ── */
   function startSequence() {
-    // Eyebrow fades in 0.9s after divider
-    setTimeout(() => twEyebrow.classList.add("visible"), 900);
+    // Eyebrow fades in 0.3s after divider
+    setTimeout(() => twEyebrow.classList.add("visible"), 300);
 
-    // Typing starts 1.5s after section visible
+    // Typing starts 0.4s after section visible
     setTimeout(() => {
       typeOut(TEXT, 0, () => {
         // Typing done — remove cursor, then animate pillars in after 400ms
         twCursor.classList.add("hidden");
         setTimeout(showPillars, 400);
       });
-    }, 1500);
+    }, 400);
   }
 
   /* ── Typewriter: single string, char by char ── */
