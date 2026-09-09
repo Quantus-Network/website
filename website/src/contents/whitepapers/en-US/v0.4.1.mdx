@@ -2,10 +2,11 @@
 title: "Quantus Whitepaper"
 version: "0.4.1"
 publishedDate: "2026-09-04"
-updatedDate: "2026-09-08"
+updatedDate: "2026-09-09"
 authors: ["Christopher Smith", "Jonathan Angle"]
 changelog:
   - "Tokenomics: genesis pre-mint 27% (23% investors, founders, and team; 4% company), 73% mined."
+  - "Privacy Properties: state the concrete privacy model of encrypted sends."
 pdfCover: true
 # Astro `render().headings` skips JSX `<h2>` and ChapterHeading; anchor slugs match markdown `###` ids.
 toc:
@@ -273,9 +274,9 @@ The quantum security of the scheme derives from FRI (Fast Reed-Solomon Interacti
 
 #### Privacy Properties
 
-Beyond scaling, wormhole transfers function as Quantus's encrypted transactions, and an address that receives funds this way functions as an encrypted account. The chain does not distinguish wormhole addresses from ordinary addresses: a deposit is an ordinary transfer, and the receiving address shows a normal, visible balance onchain. Spending works differently. Exiting the wormhole mints funds at the exit address against a zero-knowledge proof whose public inputs contain only nullifiers, a recent block hash, amounts, and exit addresses. Nothing onchain references the source address, and the source balance is never debited. To an observer, funds received through a wormhole address appear to remain exactly where they are, whether or not they have since been spent. The sender–receiver link is broken; amounts and exit addresses remain visible. Wallets expose this as two transaction modes, transparent and encrypted, with proofs generated locally on the user's device.
+Beyond scaling, wormhole transfers function as Quantus's encrypted transactions, and an address that receives funds this way functions as an encrypted account. The chain does not distinguish wormhole addresses from ordinary addresses: a deposit is an ordinary transfer, and the receiving address shows a normal, visible balance onchain. Spending works differently. Exiting the wormhole mints funds at the exit address against a zero-knowledge proof whose public inputs contain only nullifiers, a recent block hash, amounts, and exit addresses. Nothing onchain references the source address, and the source balance is never debited. To an observer, funds received through a wormhole address appear to remain exactly where they are, whether or not they have since been spent. An encrypted send breaks the onchain link between sender and receiver. Wallets expose this as two transaction modes, transparent and encrypted, with proofs generated locally on the user's device.
 
-This privacy is probabilistic rather than absolute. Exact amount-and-timing correlation can narrow the link between a deposit and an exit, mitigated by proof batching, amount quantization (encrypted transfers move in steps of 0.01 QUAN), and the fact that every native transfer joins the same anonymity set. Mining-reward wormhole addresses are identifiable by construction.
+An observer who matches a deposit to an exit of the same amount at a suggestive time can narrow the link between them. Wallets batch up to seven exits into one proof and pad the batch with dummy slots. Encrypted transfers move in steps of 0.01 QUAN, so many transfers share the same amount. Every native transfer joins the same anonymity set. Mining-reward wormhole addresses are identifiable by construction.
 
 #### Client / Prover Flow
 
