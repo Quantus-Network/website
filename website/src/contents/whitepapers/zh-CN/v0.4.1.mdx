@@ -1,0 +1,681 @@
+---
+title: "Quantus Whitepaper"
+version: "0.4.1"
+publishedDate: "2026-09-04"
+updatedDate: "2026-09-09"
+authors: ["Christopher Smith", "Jonathan Angle"]
+changelog:
+  - "代币经济学：创世预铸 27%（投资者、创始人与团队 23%；公司 4%），73% 通过挖矿产出。"
+  - "隐私属性：明确加密发送的具体隐私模型。"
+pdfCover: true
+# Astro `render().headings` 不会包含 JSX `<h2>` 与 ChapterHeading；锚点 slug 与 Markdown `###` 的 id 一致。
+toc:
+  insertBefore:
+    量子威胁:
+      - slug: legal-disclaimer
+        text: 法律声明
+      - slug: contents
+        text: 目录
+      - slug: chapter-01
+        text: 引言
+    量子计算基础:
+      - slug: chapter-02
+        text: 区块链面临的量子威胁
+    协调问题:
+      - slug: chapter-03
+        text: 迁移危机
+    基础:
+      - slug: chapter-04
+        text: Quantus 架构
+    hd-lattice:
+      - slug: chapter-05
+        text: 账户安全
+    区块奖励:
+      - slug: chapter-06
+        text: 代币经济学与治理
+    实现问题:
+      - slug: chapter-07
+        text: 路线图
+      - slug: chapter-08
+        text: 风险
+  insertAfter:
+    其他考量:
+      - slug: chapter-09
+        text: 参考文献与延伸阅读
+---
+
+import CalloutV2 from "@/components/features/whitepaper/mdx/CalloutV2.astro";
+import TimelineV2 from "@/components/features/whitepaper/mdx/TimelineV2.astro";
+import ResponsiveTableV2 from "@/components/features/whitepaper/mdx/ResponsiveTableV2.astro";
+import OrderedList from "@/components/features/whitepaper/mdx/OrderedList.astro";
+import ChapterHeading from "@/components/features/whitepaper/mdx/ChapterHeading.astro";
+import Reference from "@/components/features/whitepaper/mdx/Reference.astro";
+import ReferenceMarker from "@/components/features/whitepaper/mdx/ReferenceMarker.astro";
+
+<h2
+  id="legal-disclaimer"
+  className="font-whitepaper-section-title-alt! print:text-whitepaper-section-title-alt!"
+>
+  <span>法律声明</span>
+</h2>
+
+_本白皮书仅供信息参考，不构成出售要约、购买要约招揽，或对任何证券、投资或金融产品的推荐。读者在做出投资决策前应自行尽职调查，并咨询合格专业人士。Quantus 不对本文所含信息的准确性或完整性作出任何陈述或保证。_
+
+<h2
+  id="contents"
+  className="font-whitepaper-section-title-alt! print:text-whitepaper-section-title-alt!"
+>
+  <span>目录</span>
+</h2>
+
+<OrderedList
+  items={[
+    { title: "引言", number: "01" },
+    { title: "区块链面临的量子威胁", number: "02" },
+    { title: "迁移危机", number: "03" },
+    { title: "Quantus 架构", number: "04" },
+    { title: "账户安全", number: "05" },
+    { title: "代币经济学与治理", number: "06" },
+    { title: "路线图", number: "07" },
+    { title: "风险", number: "08" },
+    { title: "参考文献与延伸阅读", number: "09" },
+  ]}
+/>
+
+<br />
+
+<ChapterHeading number="01" title="引言" />
+
+### 量子威胁
+
+传统区块链面临来自密码学相关量子计算机（CRQC）的生存威胁。区块链的密码学基础依赖于离散对数问题（DLP）的难度，而量子算法，尤其是 Shor 算法，可以以指数级快于经典计算机的速度求解 DLP。这一漏洞可能使量子对手从公钥推导出私钥，从而伪造交易并解密敏感的金融数据。
+
+未来数年，数万亿美元由区块链保护的价值将不得不迁移至：
+
+- 现有区块链上的后量子方案（目前尚无具备实质规模的完整方案）
+- 后量子区块链（Quantus）
+- 退出加密领域，转入其他资产类别（黄金、法币、房地产）
+
+> 若无主动的抗量子方案，数万亿美元的加密经济可能突然贬值。
+
+### 独特价值主张
+
+Quantus 以拉丁语中表示「多少」的词命名，是量子安全、隐私、可扩展的货币：为量子时代打造的点对点电子现金。
+
+行业为何还需要另一条 L1？
+
+目前没有任何其他区块链资产同时满足全部四项标准：量子安全、隐私、可扩展、货币。
+
+Quantus 不是通用智能合约平台。它更像比特币、Monero 或 Zcash，而不像以太坊或 Solana。
+
+如同一家只提供少数几道精心打磨菜品的餐厅，Quantus 提供：
+
+- 所有交易均采用后量子签名（ML-DSA）
+- 后量子认证与加密（ML-DSA 与 ML-KEM）保护对等节点连接
+- 后量子零知识证明，用于隐私交易与扩展
+- 所有交易支持清晰签名（clear signing）并支持冷存储，实现简单、高安全的自托管
+- 多签地址、可读校验短语，以及带有遏制盗窃安全特性的高级账户类型
+- 21,000,000 供应上限与工作量证明共识，确保健全货币、安全与稀缺
+
+聚焦量子安全、隐私、可扩展货币这一决策，源于 CRQC 对行业的威胁，以及比特币无力应对这些挑战。
+
+<ChapterHeading number="02" title="区块链面临的量子威胁" />
+
+### 量子计算基础
+
+量子计算机利用叠加与纠缠等原理，执行对经典机器而言难以处理的计算。与只能为 0 或 1 的经典比特不同，量子比特（qubits）可同时处于多种状态，为特定问题带来指数级并行。这一能力对支撑区块链的密码系统构成生存风险，因为为量子硬件开发的算法动摇了大多数前量子公钥密码学的安全假设。
+
+**Shor 算法**由 Peter Shor 于 1994 年提出，在量子计算机上为分解大整数和求解离散对数问题提供多项式时间方法。它利用量子傅里叶变换（QFT）寻找函数的周期，从而高效逆转支撑 RSA 或椭圆曲线密码（ECC）等方案的陷门函数。对区块链金融而言，这意味着拥有足够强大的量子计算机（估计需 1,200 至 1,450 个逻辑量子比特 <ReferenceMarker id="11" />，低于早先约 2,000 个的估计 <ReferenceMarker id="6" /><ReferenceMarker id="7" /><ReferenceMarker id="8" /><ReferenceMarker id="9" />）的攻击者可在多项式时间 O(n³) 内从公钥推导私钥：极端的加速使脆弱系统一夜之间过时。<ReferenceMarker id="1" /> 随着硬件与算法的进步，研究者不断下调这一数字。
+
+**Grover 算法**由 Lov Grover 于 1996 年提出，为非结构化搜索提供平方加速，将搜索时间从 O(n) 降至 O(√n) 次操作。虽不如 Shor 对非对称密码那样致命，Grover 仍影响哈希函数与 AES 加密等对称原语，实质上使安全级别减半（例如 256 位密钥在量子攻击下表现得像 128 位）。该攻击通过将安全位数加倍而非更换密码方案来缓解。此外，Grover 的平方加速因极高的量子比特与门需求而在实践中难以落地，需要数十亿次顺序操作且并行度有限，即便在未来硬件上，对现实世界的逆向仍不可行。<ReferenceMarker id="2" />
+
+### 不断缩短的时间线
+
+破解前量子密码所需的资源估计持续下降。2026 年 3 月，Google 将破解 256 位椭圆曲线密钥所需的估计降至不足 500,000 个物理量子比特，较此前最佳估计减少 20 倍。<ReferenceMarker id="11" /> 2026 年 6 月，Eigen Labs 上线 [ecdsa.fail](https://ecdsa.fail)，这是一个公开排行榜，研究者与 AI 智能体在此竞相缩小破解 secp256k1 的电路，而 secp256k1 正是每一笔比特币与以太坊签名所用的曲线。这一开放行动在八小时内追平 Google 的结果，三天内便将其超越。<ReferenceMarker id="20" />
+
+NIST 已正式确定弃用脆弱方案的过渡路线：到 2030 年弃用 RSA 与 256 位椭圆曲线密码，到 2035 年完全禁用。<ReferenceMarker id="12" /> 2026 年 6 月，第 14412 号行政命令将联邦截止期限从 2035 年提前：密钥建立为 2030 年 12 月 31 日，数字签名为 2031 年 12 月 31 日，试点迁移须在 2027 年底前完成。<ReferenceMarker id="13" />
+
+没有人知道密码学相关量子计算机何时出现，但它可能在五年内到来。任何需要保密超过五年的信息，如今就已需要后量子加密。信息安全行业已据此行动：Signal 于 2023 年加入后量子密钥交换，Apple 于 2024 年将其加入 iMessage，Cloudflare 如今大部分流量已通过混合后量子 TLS 传输。<ReferenceMarker id="14" /><ReferenceMarker id="15" /><ReferenceMarker id="16" />
+
+### 四类威胁
+
+#### 01 - 伪造数字签名
+
+Shor 算法直接威胁大多数区块链使用的基于 ECC 的签名（例如比特币的 secp256k1 曲线），使对手可授权欺诈交易。这将构成区块链最基本功能的灾难性失效。
+
+#### 02 - 在零知识系统中伪造无效证明
+
+许多零知识证明，例如面向隐私金融的 zk-SNARKs，依赖椭圆曲线配对实现的离散对数难度来承诺。Shor 可能允许创建看似有效实则无效的证明，使攻击者可铸造新币或伪造 Layer 2（L2）状态。
+
+#### 03 - 解密秘密信息
+
+量子攻击可能暴露隐私协议中受脆弱公钥方案保护的加密数据；也可能解密金融协议中的 p2p 通信，泄露敏感细节并促成定向盗窃。
+
+#### 04 - 逆向哈希函数
+
+Grover 算法可加速对 SHA-256 等哈希的原像攻击（用于工作量证明与地址生成），但这是最不令人担忧的威胁。许多后量子密码方案采用基于哈希的构造，因为只要摘要足够大，哈希仍被认为足够安全。
+
+### 后量子密码中的扩展挑战
+
+尽管后量子密码（PQC）为抵御量子威胁提供必要保护，但由于这些算法的固有设计，会引入显著的扩展障碍。与依赖紧凑数学结构的椭圆曲线方案不同，PQC 原语需要更大参数以维持对经典与量子对手的安全性。这导致公钥、私钥与签名明显更大，往往相差多个数量级。下表展示 ML-DSA 相对 256 位 ECDSA 等经典等价物的典型规模：<ReferenceMarker id="10" />
+
+<ResponsiveTableV2
+  headers={["算法", "公钥", "私钥", "签名"]}
+  rows={[
+    ["ML-DSA-87 (Dilithium)", "2,592 bytes", "4,896 bytes", "4,627 bytes"],
+    ["ML-DSA-65 (Dilithium)", "1,952 bytes", "4,032 bytes", "3,309 bytes"],
+    ["ECDSA (256-bit)", "32 bytes", "32 bytes", "65 bytes"],
+  ]}
+/>
+
+可见，ML-DSA 签名可比 ECDSA 等价物大 70 倍以上，公钥大 80 倍以上。其他 PQC 家族更甚：基于哈希的方案如 SPHINCS+ 可产生高达 41 KB 的签名，而像 FALCON 这类尺寸优化格变体仍显著大于经典规模。
+
+在区块链语境下，这些膨胀的规模会累积为系统性扩展问题。更大的签名使单笔交易膨胀，区块更快填满并需要更长验证时间，从而降低吞吐量。同时挤压点对点（P2P）通信，增加带宽需求与传播延迟，在工作量证明等共识机制中可能提高网络分叉或孤块风险。存储需求亦受影响，节点运营成本更高、参与门槛更高，尤其对资源有限的用户或验证者。
+
+### TPS 与 QTPS
+
+「TPS」是衡量区块链每秒可处理多少笔交易的行业术语。量子安全每秒交易数（QTPS）衡量的是：若每笔交易都使用该链现有的后量子地址类型与交易签名，该链的理论吞吐量。
+
+没有后量子地址类型的链，QTPS 为零。
+
+若比特币在不改变区块大小与出块速率的情况下加入 ML-DSA-65，一笔简单交易将包含 3,309 字节的签名与 1,952 字节的公钥，而非如今的 72 与 33 字节。一个区块将容纳约 690 笔此类交易而非约 6,000 笔，比特币的 QTPS 将约为 1.1，低于如今约 10 TPS。
+
+<CalloutV2 title="说明">
+  所有区块链未来都必须应对这些扩展挑战。例如，若不提高最大区块大小，比特币的
+  QTPS 将约为 1 或更低。
+</CalloutV2>
+
+<ChapterHeading number="03" title="迁移危机" />
+
+### 协调问题
+
+比特币的保守文化抵制协议变更。任何 PQC 升级都需在迁移期限、可能的代币没收与区块大小增加等有争议问题上达成共识。即便社区同意，每位用户也必须将自己的币迁移到量子安全的新地址。迁移要求所有加密资产持有者行动，其中许多人已丢失钱包访问权限或仍未意识到威胁。
+
+这些问题对比特币尤为困难，因其缺乏明确领导且奉行技术僵化哲学。
+
+达成共识只是第一步。比特币推出后量子地址类型之后，迁移才能开始。
+
+### 迁移时间表问题
+
+每条链的时钟从其推出后量子地址类型之日开始，到密码学相关量子计算机出现之日结束。
+
+地址类型推出后，每位持有人都必须生成后量子密钥对并将币转入其中。比特币约有 1.7 亿个未花费输出，每一个都需要单独的签名才能转移。<ReferenceMarker id="17" /> 即便迁移占用每个区块的每一个字节，全部转移也至少需要 80 天。迁移不可能占用每一个字节。已完成迁移的持有人仍在继续交易，其后量子签名比 ECDSA 大 20 至 80 倍，因此每笔后量子交易占用的区块空间都多于如今的交易。许多持有人会先发送一笔试探交易。
+
+在最乐观的假设下，即每位持有人都知情并迅速行动，迁移仍需数月。SegWit 是一项小得多且没有截止期限的变更，却用了两年才覆盖比特币一半的交易。<ReferenceMarker id="18" /> 现实地说，迁移将耗时数年，而每一枚未迁移的币都暴露在外。
+
+### 丢失币问题
+
+据估计约有 230 万至 370 万枚比特币，超过总供应量的十分之一，因密钥丢失、持有人去世或遗忘钱包而永久无法访问。<ReferenceMarker id="3" /> 这些币无法迁移，相当于公开悬赏制造密码学相关量子计算机（CRQC）。
+
+> 唯一的技术方案需要一个硬性期限，冻结未迁移的币。
+
+2026 年 6 月，Binance 创始人赵长鹏提议在后量子升级后设置约一年的窗口期，此后通过分叉冻结仍留在脆弱地址中的币，包括归属于中本聪的 110 万 BTC。该提议令行业意见分裂。<ReferenceMarker id="19" />
+
+<CalloutV2 title="QUANTUS 的回应">
+  这些叠加的挑战使向现有链追加量子安全变得极其困难。Quantus
+  通过仅支持后量子地址类型来规避这一问题。
+</CalloutV2>
+
+<ChapterHeading number="04" title="Quantus 架构" />
+
+### 基础
+
+Quantus 构建于 Substrate 之上，这是由 Polkadot 背后的团队 Parity Technologies 开发的区块链 SDK。Substrate 高度模块化，便于替换组件以聚焦 Quantus 的独特之处。
+
+Quantus 对 Substrate 的增强包括：
+
+- 增加后量子签名方案支持
+- 将 p2p 网络安全升级为后量子
+- 增加 zk-tree：一棵记录每一笔余额入账的 Poseidon2 Merkle 树，其根提交于每个区块头，使钱包可在零知识证明中证明存款
+
+### 量子安全
+
+#### 后量子密码原语
+
+Quantus 采用 NIST 标准化的 PQC，确保交易与网络通信在量子威胁下的安全。交易完整性的核心是 **ML-DSA**（基于模格的数字签名算法，曾名 CRYSTALS-Dilithium），一种基于格的签名方案，因其在安全性、效率与实现便利性之间的平衡而被选中。ML-DSA 利用 Learning With Errors（LWE）与 Short Integer Solution（SIS）在模格上的难度等问题，对包括 Shor 算法在内的经典与量子攻击提供强韧抵抗。<ReferenceMarker id="4" />
+
+对交易签名，Quantus 支持两个 ML-DSA 参数集。ML-DSA-65（NIST 第 3 安全级别）是主要方案，也是 Quantus 钱包的默认选项，在安全性与签名尺寸之间取得良好平衡。ML-DSA-87 是安全级别最高的参数集（NIST 第 5 级，相当于 AES-256），同样受支持，面向希望对格问题潜在密码分析突破保留最大余量的用户。格密码相对新颖，实战检验少于经典方案，更大参数可缓解格密码分析潜在进展带来的风险。
+
+#### 备选方案
+
+相对 FN-DSA（Falcon）等替代方案选择 ML-DSA，因 FN-DSA 实现更复杂（例如需要浮点运算，不适合区块链）、规范中无确定性密钥生成，且开发时尚未最终定稿。
+
+未选择基于哈希的 SLH-DSA 等选项，因其签名更大（超过 17 KB）。密码敏捷性（可更换签名方案）已内置于 Substrate，未来若情况需要，添加这些替代相对容易。
+
+尽管 ML-DSA 产生更大密钥与签名，在 Quantus 早期网络中仍可管理，此时存储尚非瓶颈，且 wormhole 地址配合零知识证明等优化将解决扩展问题。
+
+实现技术细节见 [QIP-0006](https://github.com/Quantus-Network/improvement-proposals/blob/main/qip-0006.md)。
+
+#### litep2p - 量子安全的网络
+
+Quantus 通过结合 ML-DSA 认证与 **ML-KEM**（基于模格的密钥封装机制，曾名 CRYSTALS-Kyber）加密，保护点对点（P2P）节点通信。该集成将 PQC 延伸至 litep2p 网络栈，修改核心组件以实现抗量子：ML-DSA-87 签名用于对等身份，ML-KEM-768 用于传输安全，采用四消息 pqXX Noise 模式，其中每次密钥交换都是一次 KEM 封装，没有 Diffie-Hellman 回退。<ReferenceMarker id="5" />
+
+P2P 层在量子安全分析中常被忽视。对等认证重要，但攻击者在 P2P 层最坏情况是冒充节点并发送无效消息，可能导致拒绝服务。该风险已因区块链模型中节点通常不受信任且检测到攻击后可轻易换钥而缓解。同理，解密 P2P 通信对攻击者收益有限（例如追踪交易路径，可用代理或 Tor 缓解），且多数数据最终链上公开。
+
+尽管如此，对 P2P 层做量子安全加固可抵御窃听、中间人与量子解密，确保节点 gossip、区块传播及其他网络交互在可预见未来仍保密且完整。
+
+实现技术细节见 [QIP-0004](https://github.com/Quantus-Network/improvement-proposals/blob/main/qip-0004.md)。
+
+### 隐私
+
+#### 两种地址类型
+
+Quantus 有两种地址类型。透明地址是 ML-DSA 公钥的哈希；其余额以及每一笔转入转出在链上均可见。加密地址是 wormhole 地址：发往该地址的币被可证明地销毁，所有者随后可凭一份不引用任何来源的零知识证明，在任意输出地址将其铸造出来。两种地址可互操作，且链无法区分二者：向加密地址的存款是一笔普通转账，该地址持有的也是普通的可见余额。
+
+#### Wormhole 地址
+
+为应对后量子密码固有的扩展挑战，Quantus 引入一种创新的聚合后量子签名方案 **「Wormhole Addresses」**。该系统利用 Plonky2 证明系统（本质为 STARK）生成的零知识证明（ZKP），将余额验证移出链上，使链仅需验证单一紧凑证明而无需处理单笔签名。链本身验证每一层证明。Quantus 没有 L2。
+
+Wormhole Addresses 可用一条证明验证大量交易，主要限制来自公开输入（如 nullifier、输出地址与金额）。这使摊销到每笔交易的占用降至一个很小的常数，远低于任何已知 PQC 签名方案。
+
+该方案的量子安全来自构建于 Poseidon 哈希家族之上的 FRI（Fast Reed-Solomon Interactive Oracle Proofs）承诺，而非 SNARK 中常见的易受量子威胁的椭圆曲线配对。此外，认证秘密隐藏在 **Poseidon2** 之后。安全哈希仅被 Grover 算法二次削弱，不会被破解；哈希原像证明可在 ZK 场景中充当轻量后量子签名，类似 SPHINCS+ 等基于哈希的方案。
+
+#### 隐私属性
+
+除扩展之外，wormhole 转账还充当 Quantus 的加密交易，以此方式收到资金的地址则充当加密账户。链不会区分 wormhole 地址与普通地址：存款是一笔普通转账，接收地址在链上显示正常、可见的余额。花费的方式则不同。退出 wormhole 时，资金凭一份零知识证明在输出地址铸造，该证明的公开输入仅包含 nullifier、一个近期区块哈希、金额与输出地址。链上没有任何内容引用来源地址，来源余额也从未被扣减。在观察者看来，通过 wormhole 地址收到的资金始终停留在原处，无论其是否已被花费。一次加密发送切断了发送方与接收方之间的链上关联。钱包将其呈现为两种交易模式：透明与加密，证明在用户设备上本地生成。
+
+观察者若在可疑的时间点将一笔存款与一笔相同金额的输出匹配，便可缩小二者之间的关联范围。钱包将最多七笔输出打包进一份证明，并用虚拟槽位填充批次。加密转账以 0.01 QTC 为步长，因此许多转账金额相同。每一笔原生转账都加入同一个匿名集。挖矿奖励的 wormhole 地址因其构造方式而可被识别。
+
+#### 客户端 / 证明者流程
+
+用户生成可证明不可花费的地址，通过对盐与秘密拼接后双重哈希：
+
+```
+H(H(salt|secret))
+```
+
+该构造避免假阳性（例如将单一哈希公钥与不可花费地址混淆），因为在 Substrate（及一般区块链）中，地址是对公钥的单一哈希，公钥由私钥经某代数运算导出，而非安全哈希。构造安全性因此归结为寻找安全哈希的「原像的原像」。发往该地址的代币实质被销毁。无法花费，因接收地址无私钥对应。这些币可重新铸造而不膨胀总供应。
+
+zk-tree 将链上每一笔余额入账记录为一片叶子，包含接收方、按接收方计数的转账次数与金额。用户钱包从近期区块头的 zk-tree 根打开一条 Merkle 证明，直至其存款对应的叶子。计算 nullifier 以防止双花：
+
+```
+H(H(salt | secret | transfer_count))
+```
+
+#### 聚合器流程
+
+聚合使用 Plonky2 的递归，分两层进行，每个父证明验证其子证明并将子证明的公开输入向上传递。
+
+第一层，用户钱包将最多七份自己的叶子证明打包为一个私有批次。电路打乱槽位顺序，用虚拟证明填充空槽以使观察者无法判断真实数量，要求每片真实叶子引用同一个近期区块哈希，对批次内的输出地址去重，并对其金额求和。nullifier 原样传递。
+
+第二层，任意方（矿工或专业聚合者）将最多 53 个私有批次打包为一个公开批次，并赚取部分手续费。该层原样转发每个私有批次的输出与 nullifier，不再求和或去重。每个私有批次仍是独立的结算段，因此若某个批次包含已花费的 nullifier，链只拒绝该段并结算其余部分。
+
+#### 链 / 验证者流程
+
+网络验证聚合证明时检查：区块哈希在链上且为近期、nullifier 唯一（防双花）、证明有效。ZK 电路约束 zk-tree Merkle 证明正确性、nullifier 计算精确、地址不可花费、输出加手续费不超过输入，以及区块头链接。
+
+#### 为何选择 Plonky2
+
+- 部分经形式化验证（Quantus 电路与 Plonky2 的一个子集）
+- 后量子
+- 无 trusted setup
+- 证明 / 验证高效
+- 证明聚合顺畅
+- Rust 原生实现
+- 兼容 Substrate 的 no-std 环境
+
+#### 安全说明
+
+潜在风险包括电路 / 验证实现缺陷导致的通胀错误。用户可选择发布第一重哈希（不泄露秘密）证明某地址为 wormhole。验证交易无签名，故链以非金融手段限制拒绝服务：交易池准入时做低成本检查，仅在执行时做完整证明验证，并将证明大小上限设为 512 KiB。退出时铸造余额不会提高总发行量，因为存入的币已被可证明地销毁，供应上限不受影响。
+
+更多技术细节见 [QIP-0005](https://github.com/Quantus-Network/improvement-proposals/blob/main/qip-0005.md)。
+
+### 可扩展
+
+Quantus 上每一笔交易都是后量子的，因此其 TPS 与 QTPS 是同一个数字。区块空间限定吞吐量：目标出块时间为 12 秒，每个区块允许 3.75 MB 的交易。
+
+<ResponsiveTableV2
+  headers={["模式", "每笔转账字节数", "每区块转账数", "QTPS"]}
+  rows={[
+    ["透明，ML-DSA-87", "~7.3 KB", "~510", "~43"],
+    ["透明，ML-DSA-65", "~5.4 KB", "~690", "~58"],
+    ["加密，当前两层聚合", "每 371 笔转账 ~266 KB", "~5,200", "~430"],
+    ["加密，理论上限", "公开输入 ~112 bytes", "~33,000", "~2,800"],
+  ]}
+/>
+
+### 货币
+
+#### 共识机制
+
+Quantus 使用工作量证明（PoW）共识算法，在保留比特币共识理想性质的同时，通过将 SHA-256 替换为 **Poseidon2** 以更好兼容 ZK 证明系统。目标出块时间为 12 秒。
+
+重要：此变更并非出于量子安全。SHA-256 等密码学哈希被量子算法（尤其 Grover）削弱但未被摧毁。部分后量子签名方案以安全哈希为基本构件亦出于此因。
+
+Poseidon2 是 Poseidon 哈希的改进。为使用 SHA-256 等传统哈希的计算构建 SNARK 或 STARK 通常需要约多 100 倍的门，而 Poseidon 完全基于域元素的代数函数而非位运算。
+
+我们对 Poseidon2 与 Plonky2 使用 **Goldilocks 域**。Goldilocks 域阶可容纳于 64 位无符号整数，提高效率而不损害稳健性。
+
+供应上限为 21,000,000 QTC。见第 06 节。
+
+<ChapterHeading number="05" title="账户安全" />
+
+管理加密货币密钥存在诸多风险，其中大多数可以避免。
+
+### HD-Lattice
+
+分层确定性（HD）钱包是区块链的行业标准，允许用单一助记词备份所有密钥，相较每笔操作手动备份更安全便捷。将其适配 Dilithium 等格方案面临两项挑战：
+
+- HMAC-SHA512 输出无法直接构成格私钥（格私钥是从环上采样、需满足特定性质的多项式）。
+- 非硬化密钥派生依赖椭圆曲线加法，格上不存在（公钥对任意代数运算不封闭）。
+
+Quantus 对第一点将 HMAC 输出用作熵以确定性构建私钥，而非直接作为私钥本身。第二点重要性较低，格密码能否适配仍是开放研究问题。
+
+透明账户密钥与 wormhole 秘密从同一个种子经不同路径派生（BIP44 币种类型 189189' 与 189189189'），因此一个助记词即可备份两种地址类型。
+
+更多技术细节见 [QIP-0002](https://github.com/Quantus-Network/improvement-proposals/blob/main/qip-0002.md)。
+
+### 校验短语
+
+Quantus 引入「校验短语」（check-phrases），一种密码学安全的可读区块链地址校验和。对地址哈希生成来自 BIP-39 助记词表的一小段易记单词序列。校验短语可防范笔误、篡改与地址投毒攻击。40,000 次迭代的密钥派生函数提高彩虹表攻击成本。大额交易用户仍应逐字核对地址。校验短语是校验和，不是地址，无法接收资金。
+
+更多技术细节见 [QIP-0008](https://github.com/Quantus-Network/improvement-proposals/blob/main/qip-0008.md)。
+
+### 多签账户
+
+多签账户以一个新账户开始。创建者列出签名者（最多 100 位），设定必须有多少位批准一笔交易（阈值），并选择一个 nonce，链根据这三项派生出账户地址。签名者与阈值永不更改，因为它们是地址的一部分。想要不同组合的人创建一个新的多签并转移资金。任意签名者均可提议一笔交易。达到阈值数量的签名者批准后即执行。提议最多两周后过期。
+
+多签账户是链原生的。它们是透明地址。多签不能是加密地址，加密地址也不能作为签名者。多签可以向加密地址发送与接收，也可以作为高级账户的监护人。
+
+### 高级账户
+
+高级账户面向希望获得比单一密钥更多保护的用户。它们仅存在于透明地址，且大多数用户永远不需要。任意透明账户都可以成为高级账户。升级是永久性的，因此窃贼无法将其关闭。所有者指定一位 **监护人**：另一个账户，最好比高级账户本身更安全，例如硬件钱包、多签或可信第三方。监护人不能从该账户花费，只能取消该账户的待处理转账并恢复其资金。
+
+监护人、强制时间锁与密钥恢复仅存在于高级账户，且均为可选。所有者在创建账户时一次性设定这些参数，此后无法更改。想要不同参数的所有者创建一个新的高级账户并将资金转移过去。
+
+这些功能为交易所、托管机构及其他高级用户而建。大多数人永远不会接触到它们。
+
+监护人可链式配置：高级账户的监护人本身可以是带有自己监护人的高级账户。这形成可组合层级，每位监护人对所保护账户拥有更高权限。该设计给用户时间发现与应对未授权活动，而不损害合法转账的终局性。
+
+更多技术细节见 [QIP-0011](https://github.com/Quantus-Network/improvement-proposals/blob/main/qip-0011.md)。
+
+#### 时间锁交易
+
+任意透明账户都可以为一笔对外转账附加延迟，在此期间发送方可以取消。这可以纠正错误并遏制盗窃，而不牺牲终局性。
+
+高级账户可对每一笔对外转账设置强制延迟。只有监护人可以取消，被取消的资金归监护人。
+
+更多技术细节见 [QIP-0009](https://github.com/Quantus-Network/improvement-proposals/blob/main/qip-0009.md) 与 [QIP-0010](https://github.com/Quantus-Network/improvement-proposals/blob/main/qip-0010.md)。
+
+#### 密钥恢复
+
+许多加密财富随持有人离世而永久丢失。高级账户提供了一条出路。创建高级账户时，所有者指定一位可随时恢复账户全部资金的监护人。将继承人的账户、家庭多签或专业托管机构指定为监护人的所有者，便拥有一份无需法院的链上遗嘱。
+
+<ChapterHeading number="06" title="代币经济学与治理" />
+
+Quantus 采用固定货币政策：21,000,000 QTC 的供应上限、指数衰减的发行曲线，以及交易手续费销毁机制，使区块奖励在维持供应上限的同时无限期保持在零以上。
+
+### 区块奖励
+
+Quantus 采用模仿比特币的简单区块发行，但以平滑衰减取代跳跃式减半。简单启发式决定每块奖励：
+
+```
+block_reward = (max_supply - current_supply) / 50,000,000
+```
+
+该启发式在 block_reward 计入 current_supply 时形成平滑的指数衰减曲线，从而降低下一区块计算的 block_reward。手续费的任何销毁都会降低 current_supply 并计入区块奖励预算。
+
+### 投资者与团队分配
+
+Quantus 在投资者承担高风险资助下建成。创世时一次性铸造总供应量的 27%（5,670,000 QTC）。其余 73%（15,330,000 QTC）只能通过挖矿产出。没有开发税：矿工保留全部区块奖励。
+
+投资者、创始人与团队持有总供应量的 23%。这些代币在主网上线后的第一年锁定，随后在接下来的 36 个月内线性归属，由专用的归属 pallet 在链上强制执行。
+
+### 公司分配
+
+公司持有总供应量的 4%。其中 1% 在创世时即可流通，用于提供初始流动性。其余 3% 用于资助公司未来运营，在主网上线后的第一年锁定，随后在接下来的 36 个月内线性归属。
+
+### 交易手续费
+
+每一笔交易手续费要么归矿工，要么被销毁。
+
+<ResponsiveTableV2
+  headers={["交易类型", "手续费", "去向"]}
+  rows={[
+    [
+      "透明，ML-DSA-65（默认）",
+      "每笔简单转账约 0.0062 QTC，外加可选小费",
+      "矿工",
+    ],
+    ["透明，ML-DSA-87", "每笔简单转账约 0.0081 QTC，外加可选小费", "矿工"],
+    ["加密", "金额的 0.04%，最低 0.01 QTC", "一半归矿工，一半销毁"],
+    ["高级账户取消（罕见，仅限高级账户）", "被取消金额的 1%", "销毁"],
+  ]}
+/>
+
+实际上，25 QTC 及以下的加密交易支付固定的 0.01 QTC 最低费用；超过该金额的支付 0.04% 手续费。
+
+只要网络上有活动，这一手续费结构就会永久支付矿工以保护网络。Quantus 维持 21,000,000 QTC 的硬上限，且永远不会耗尽安全预算。
+
+### 网络升级
+
+Quantus 通过 Substrate 的 runtime 升级支持「无分叉」升级，使区块链核心逻辑（「runtime」）无需可能扰乱网络的硬分叉即可演进。该升级路径减少停机与风险，安全修复与密码学升级无需硬分叉即可发布。
+
+随社区对系统信心增强，变更 runtime 的权力将显著收窄。
+
+### 治理体系
+
+用户所依赖的货币系统应当稳定、可预测且安全。
+
+**Technical Collective** 是由技术专家组成的精选团体，作为专门机构提出、审查或白名单紧急技术事项，通过专用轨道加速处理并保持社区监督。它无权变更网络的货币政策。除非出现紧急安全问题或获得压倒性社区支持，它不打算发布重大协议升级，且公司计划随时间推移逐步废止 Technical Collective。
+
+任何人都可以提交 Quantus 改进提案（QIP）供公开评审并在 [research.quantus.com](https://research.quantus.com) 讨论，以此提议协议变更。
+
+<ChapterHeading number="07" title="路线图" />
+
+截至 2026 年的当前路线图，可能变更。
+
+<TimelineV2
+  title="Heisenberg Inception"
+  date="2024年12月"
+  subtitle="融资到位，选定 Substrate。"
+/>
+
+<TimelineV2
+  title="Resonance Alpha"
+  date="2025年7月"
+  subtitle="公开测试网，Dilithium 签名。"
+/>
+
+<TimelineV2
+  title="Schrödinger Beta"
+  date="2025年10月"
+  subtitle="功能完整，准备审计。"
+/>
+
+<TimelineV2
+  title="Dirac Beta"
+  date="2025年11月"
+  subtitle="PoW 切换为 Poseidon2，处理审计意见。"
+/>
+
+<TimelineV2
+  title="Planck Beta"
+  date="2026年4月"
+  subtitle="高级账户，多签，硬件钱包，加密交易，两层 ZK 聚合。"
+/>
+
+<TimelineV2 title="Mainnet" date="2026年9月9日" subtitle="主网创世。" />
+
+<br />
+
+<ChapterHeading number="08" title="风险" />
+
+构建 Quantus 存在固有风险。
+
+### 实现问题
+
+软件逻辑缺陷即使在设计最好的系统中也可能导致严重故障。Quantus 通过以下方式降低这一风险：Neodyme、Eiger 与 Hashcloak 的独立审计，Immunefi 公开审计竞赛，对其 ZK 电路及 Plonky2 部分代码的形式化验证，以及持续的 AI 辅助内部评审。
+
+没有任何流程能完全消除实现风险。
+
+#### 审计
+
+<ResponsiveTableV2
+  headers={["范围", "审计方", "日期"]}
+  rows={[
+    ["工作量证明与 Poseidon2", "Eiger (Equilibrium Group)", "2025年10月"],
+    ["ML-DSA 签名与 HD 钱包", "Neodyme", "2025年12月"],
+    ["Wormhole ZK 电路", "Eiger (Equilibrium Group)", "2026年3月"],
+    ["Substrate runtime 与节点", "Eiger (Equilibrium Group)", "2026年5月"],
+    ["Wormhole 电路形式化验证", "Quantus，使用 Lean 证明助手", "2026年6月"],
+    ["门限 ML-DSA 签名", "Hashcloak", "2026年"],
+    ["全链，公开审计竞赛", "Immunefi", "2026年8月"],
+  ]}
+/>
+
+报告：
+
+- [工作量证明与 Poseidon2：报告](https://github.com/Quantus-Network/qp-poseidon/blob/main/audits/Proof-of-Work%20and%20Poseidon%20Security%20Review%201.1.pdf)
+- [ML-DSA 签名与 HD 钱包：报告](https://github.com/Quantus-Network/qp-rusty-crystals/blob/master/audits/Neodyme-Audit.pdf)
+- [Wormhole ZK 电路：报告](https://github.com/Quantus-Network/qp-zk-circuits/blob/main/audits/EigerWormholeAudit.pdf)
+- [Substrate runtime 与节点：报告](https://github.com/Quantus-Network/chain/blob/main/audits/quantus-substrate-audit-20260513.pdf)
+- [Wormhole 电路形式化验证：规范](https://github.com/Quantus-Network/qp-zk-circuits/tree/main/formal)
+- [全链，公开审计竞赛：活动页面](https://immunefi.com/bounty/audit-comp-quantus)
+
+### NIST 算法选择问题
+
+已选后量子标准（如 ML-DSA、ML-KEM）在标准化后可能暴露缺陷或后门。最坏情况下，此类缺陷可使攻击者从公钥推导私钥并伪造签名，构成链的灾难性失效模式。若此类缺陷公开，Quantus 可升级至新算法。
+
+### 量子计算时间表
+
+量子进展可能远晚于预期，推迟 PQC 需求；反之，秘密开发（例如政府）若区块链社区未能快速升级，可能带来突发威胁。
+
+### 其他考量
+
+一般采用障碍、金融 / 区块链监管不确定性以及加密生态固有的波动性。
+
+<ChapterHeading number="09" title="参考文献与延伸阅读" />
+
+<br />
+
+<Reference id="reference-1" label="[1]">
+  Shor, P. W. (1997). Polynomial-time algorithms for prime factorization and
+  discrete logarithms on a quantum computer. SIAM Journal on Computing, 26(5),
+  1484–1509.
+  [https://doi.org/10.1137/S0097539795293172](https://doi.org/10.1137/S0097539795293172)
+</Reference>
+
+<Reference id="reference-2" label="[2]">
+  Grover, L.K. (1996). A fast quantum mechanical algorithm for database search.
+  Proceedings of the Twenty-Eight Annual ACM Symposium on Theory of Computing,
+  212-219.
+  [https://doi.org/10.1145/237814.237866](https://doi.org/10.1145/237814.237866)
+</Reference>
+
+<Reference id="reference-3" label="[3]">
+  Chainalysis. (2020, June). 60% of Bitcoin Is Held Long Term as Digital Gold.
+  What About the Rest? Chainalysis Market Intel. Archived at
+  [https://web.archive.org/web/20200622014856/https://blog.chainalysis.com/reports/bitcoin-market-data-exchanges-trading](https://web.archive.org/web/20200622014856/https://blog.chainalysis.com/reports/bitcoin-market-data-exchanges-trading)
+</Reference>
+
+<Reference id="reference-4" label="[4]">
+  National Institute of Standards and Technology. (2024). FIPS 204:
+  Module-Lattice-Based Digital Signature Standard (ML-DSA). U.S. Department of
+  Commerce.
+  [https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.204.pdf](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.204.pdf)
+</Reference>
+
+<Reference id="reference-5" label="[5]">
+  National Institute of Standards and Technology. (2024). FIPS 203:
+  Module-Lattice-Based Key-Encapsulation Mechanism Standard (ML-KEM). U.S.
+  Department of Commerce.
+  [https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.203.pdf](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.203.pdf)
+</Reference>
+
+<Reference id="reference-6" label="[6]">
+  Häner, T., Jaques, S., Naehrig, M., Roetteler, M., & Soeken, M. (2020).
+  Improved quantum circuits for elliptic curve discrete logarithms.
+  arXiv:2002.12480.
+  [https://arxiv.org/abs/2002.12480](https://arxiv.org/abs/2002.12480)
+</Reference>
+
+<Reference id="reference-7" label="[7]">
+  Gidney, C., & Ekerå, M. (2021). How to factor 2048 bit RSA integers in 8 hours
+  using 20 million noisy qubits. arXiv:1905.09749.
+  [https://arxiv.org/abs/1905.09749](https://arxiv.org/abs/1905.09749)
+</Reference>
+
+<Reference id="reference-8" label="[8]">
+  Aggarwal, D., et al. (2021). Assessment of Quantum Threat To Bitcoin and
+  Derived Cryptocurrencies. ePrint IACR.
+  [https://eprint.iacr.org/2021/967.pdf](https://eprint.iacr.org/2021/967.pdf)
+</Reference>
+
+<Reference id="reference-9" label="[9]">
+  Roetteler, M., Naehrig, M., Svore, K. M., & Lauter, K. (2017). Quantum
+  resource estimates for computing elliptic curve discrete logarithms.
+  arXiv:1706.06752.
+  [https://arxiv.org/abs/1706.06752](https://arxiv.org/abs/1706.06752)
+</Reference>
+
+<Reference id="reference-10" label="[10]">
+  Open Quantum Safe Project. (n.d.). ML-DSA | Open Quantum Safe. Retrieved
+  January 29, 2026, from
+  [https://openquantumsafe.org/liboqs/algorithms/sig/ml-dsa.html](https://openquantumsafe.org/liboqs/algorithms/sig/ml-dsa.html)
+</Reference>
+
+<Reference id="reference-11" label="[11]">
+  Babbush, R., Zalcman, A., Gidney, C., Broughton, M., Khattar, T., Neven, H.,
+  Bergamaschi, T., Drake, J., & Boneh, D. (2026). Securing Elliptic Curve
+  Cryptocurrencies against Quantum Vulnerabilities: Resource Estimates and
+  Mitigations. Google Quantum AI.
+  [https://quantumai.google/static/site-assets/downloads/cryptocurrency-whitepaper.pdf](https://quantumai.google/static/site-assets/downloads/cryptocurrency-whitepaper.pdf)
+</Reference>
+
+<Reference id="reference-12" label="[12]">
+  National Institute of Standards and Technology. (2024). NIST IR 8547:
+  Transition to Post-Quantum Cryptography Standards.
+  [https://nvlpubs.nist.gov/nistpubs/ir/2024/NIST.IR.8547.ipd.pdf](https://nvlpubs.nist.gov/nistpubs/ir/2024/NIST.IR.8547.ipd.pdf)
+</Reference>
+
+<Reference id="reference-13" label="[13]">
+  Executive Order 14412 of June 22, 2026, Securing the Nation Against Advanced
+  Cryptographic Attacks, 91 Fed. Reg. 38483 (June 25, 2026).
+  [https://www.federalregister.gov/d/2026-12909](https://www.federalregister.gov/d/2026-12909)
+</Reference>
+
+<Reference id="reference-14" label="[14]">
+  Signal. (2023, September 19). The PQXDH Key Agreement Protocol.
+  [https://signal.org/blog/pqxdh/](https://signal.org/blog/pqxdh/)
+</Reference>
+
+<Reference id="reference-15" label="[15]">
+  Apple Security Engineering and Architecture. (2024, February 21). iMessage
+  with PQ3: The new state of the art in quantum-secure messaging at scale.
+  [https://security.apple.com/blog/imessage-pq3/](https://security.apple.com/blog/imessage-pq3/)
+</Reference>
+
+<Reference id="reference-16" label="[16]">
+  Cloudflare. (2025). The state of the post-quantum Internet in 2025.
+  [https://blog.cloudflare.com/pq-2025/](https://blog.cloudflare.com/pq-2025/)
+</Reference>
+
+<Reference id="reference-17" label="[17]">
+  Blockchain.com. (2026). Bitcoin UTXO count. Retrieved September 3, 2026, from
+  [https://www.blockchain.com/explorer/charts/utxo-count](https://www.blockchain.com/explorer/charts/utxo-count)
+</Reference>
+
+<Reference id="reference-18" label="[18]">
+  transactionfee.info. (n.d.). Payments spending SegWit.
+  [https://transactionfee.info/charts/payments-spending-segwit/](https://transactionfee.info/charts/payments-spending-segwit/)
+</Reference>
+
+<Reference id="reference-19" label="[19]">
+  CoinDesk. (2026, July 4). Bitcoin experts split over plan to freeze Satoshi's
+  1.1 million Bitcoin as quantum threat grows.
+  [https://www.coindesk.com/business/2026/07/04/bitcoin-experts-split-over-plan-to-freeze-satoshi-s-1-1-million-bitcoin-as-quantum-threat-grows](https://www.coindesk.com/business/2026/07/04/bitcoin-experts-split-over-plan-to-freeze-satoshi-s-1-1-million-bitcoin-as-quantum-threat-grows)
+</Reference>
+
+<Reference id="reference-20" label="[20]">
+  Eigen Labs. (2026). ECDSA.fail: can you break ECDSA?
+  [https://ecdsa.fail](https://ecdsa.fail)
+</Reference>
+
+### 延伸阅读
+
+- [Quantus 改进提案（QIPs）](https://github.com/Quantus-Network/improvement-proposals)
+- [文档](https://docs.quantus.com)
+- [研究论坛](https://research.quantus.com)
+- [量子现状报告（The State of Quantum）](https://report.quantus.com)
+- [源代码](https://github.com/Quantus-Network)

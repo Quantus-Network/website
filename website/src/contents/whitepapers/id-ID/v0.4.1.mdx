@@ -1,0 +1,717 @@
+---
+title: "Quantus Whitepaper"
+version: "0.4.1"
+publishedDate: "2026-09-04"
+updatedDate: "2026-09-09"
+authors: ["Christopher Smith", "Jonathan Angle"]
+changelog:
+  - "Tokenomik: pra-cetak genesis 27% (23% investor, pendiri, dan tim; 4% perusahaan), 73% ditambang."
+  - "Properti privasi: menyatakan model privasi konkret dari pengiriman terenkripsi."
+pdfCover: true
+# Astro `render().headings` tidak menyertakan `<h2>` JSX dan ChapterHeading; slug jangkar sama dengan id `###` Markdown.
+toc:
+  insertBefore:
+    ancaman-kuantum:
+      - slug: legal-disclaimer
+        text: Penafian hukum
+      - slug: contents
+        text: Daftar isi
+      - slug: chapter-01
+        text: Pendahuluan
+    dasar-dasar-komputasi-kuantum:
+      - slug: chapter-02
+        text: Ancaman Kuantum terhadap Blockchain
+    masalah-koordinasi:
+      - slug: chapter-03
+        text: Krisis Migrasi
+    fondasi:
+      - slug: chapter-04
+        text: Arsitektur Quantus
+    hd-lattice:
+      - slug: chapter-05
+        text: Keamanan Akun
+    hadiah-blok:
+      - slug: chapter-06
+        text: Tokenomik dan Tata Kelola
+    masalah-implementasi:
+      - slug: chapter-07
+        text: Peta jalan
+      - slug: chapter-08
+        text: Risiko
+  insertAfter:
+    pertimbangan-lain:
+      - slug: chapter-09
+        text: Referensi & Bacaan lanjutan
+---
+
+import CalloutV2 from "@/components/features/whitepaper/mdx/CalloutV2.astro";
+import TimelineV2 from "@/components/features/whitepaper/mdx/TimelineV2.astro";
+import ResponsiveTableV2 from "@/components/features/whitepaper/mdx/ResponsiveTableV2.astro";
+import OrderedList from "@/components/features/whitepaper/mdx/OrderedList.astro";
+import ChapterHeading from "@/components/features/whitepaper/mdx/ChapterHeading.astro";
+import Reference from "@/components/features/whitepaper/mdx/Reference.astro";
+import ReferenceMarker from "@/components/features/whitepaper/mdx/ReferenceMarker.astro";
+
+<h2
+  id="legal-disclaimer"
+  className="font-whitepaper-section-title-alt! print:text-whitepaper-section-title-alt!"
+>
+  <span>Penafian hukum</span>
+</h2>
+
+_Whitepaper ini disediakan hanya untuk tujuan informasi dan bukan merupakan penawaran untuk menjual, ajakan untuk membeli, atau rekomendasi untuk sekuritas, investasi, atau produk keuangan apa pun. Pembaca harus melakukan uji tuntas sendiri dan berkonsultasi dengan profesional yang berkualifikasi sebelum membuat keputusan investasi apa pun. Quantus tidak memberikan pernyataan atau jaminan mengenai keakuratan atau kelengkapan informasi di sini._
+
+<h2
+  id="contents"
+  className="font-whitepaper-section-title-alt! print:text-whitepaper-section-title-alt!"
+>
+  <span>Daftar isi</span>
+</h2>
+
+<OrderedList
+  items={[
+    { title: "Pendahuluan", number: "01" },
+    { title: "Ancaman Kuantum terhadap Blockchain", number: "02" },
+    { title: "Krisis Migrasi", number: "03" },
+    { title: "Arsitektur Quantus", number: "04" },
+    { title: "Keamanan Akun", number: "05" },
+    { title: "Tokenomik dan Tata Kelola", number: "06" },
+    { title: "Peta jalan", number: "07" },
+    { title: "Risiko", number: "08" },
+    { title: "Referensi & Bacaan lanjutan", number: "09" },
+  ]}
+/>
+
+<br />
+
+<ChapterHeading number="01" title="Pendahuluan" />
+
+### Ancaman kuantum
+
+Blockchain tradisional menghadapi ancaman eksistensial dari komputer kuantum yang relevan secara kriptografis (CRQC). Fondasi kriptografi blockchain bergantung pada kesulitan masalah logaritma diskrit (DLP), dan algoritma kuantum, terutama Shor, dapat menyelesaikan DLP secara eksponensial lebih cepat daripada komputer klasik. Kerentanan ini dapat memungkinkan penyerang kuantum untuk menurunkan kunci privat dari kunci publik, yang akan memungkinkan mereka memalsukan transaksi dan mendekripsi data keuangan yang sensitif.
+
+Dalam beberapa tahun mendatang, nilai triliunan dolar yang diamankan blockchain harus bermigrasi ke:
+
+- Solusi pasca-kuantum pada blockchain yang ada (saat ini belum ada solusi lengkap berukuran material)
+- Blockchain pasca-kuantum (Quantus)
+- Keluar dari kripto ke kelas aset lain (emas, fiat, properti)
+
+> Tanpa solusi tahan kuantum yang proaktif, ekonomi kripto bernilai triliunan dolar berisiko mengalami devaluasi mendadak.
+
+### Proposisi nilai unik
+
+Dinamai dari kata Latin untuk "berapa banyak", Quantus adalah uang yang aman secara kuantum, privat, dan skalabel: uang elektronik peer-to-peer yang dibangun untuk era kuantum.
+
+Mengapa industri membutuhkan L1 lain?
+
+Saat ini tidak ada aset blockchain lain yang memenuhi keempat kriteria: aman secara kuantum, privat, skalabel, uang.
+
+Quantus bukan platform smart contract serba guna. Quantus lebih mirip Bitcoin, Monero, atau Zcash dan tidak seperti Ethereum atau Solana.
+
+Seperti restoran dengan beberapa menu yang sangat disempurnakan, Quantus menyediakan:
+
+- Tanda tangan pasca-kuantum untuk semua transaksi (ML-DSA)
+- Autentikasi dan enkripsi pasca-kuantum (ML-DSA dan ML-KEM) untuk mengamankan koneksi peer
+- Bukti zero-knowledge pasca-kuantum untuk transaksi privat dan penskalaan
+- Clear signing pada semua transaksi dan dukungan cold storage untuk kustodi mandiri yang sederhana dan sangat aman
+- Alamat multisig, frasa pemeriksaan yang mudah dibaca manusia, dan tipe akun lanjutan dengan fitur keamanan yang mencegah pencurian
+- Batas pasokan 21,000,000 dan konsensus Proof-of-Work untuk memastikan uang yang sehat, keamanan, dan kelangkaan
+
+Keputusan untuk fokus pada uang yang aman secara kuantum, privat, dan skalabel berasal dari ancaman yang ditimbulkan CRQC terhadap industri dan ketidakmampuan Bitcoin untuk mengatasi tantangan ini.
+
+<ChapterHeading number="02" title="Ancaman Kuantum terhadap Blockchain" />
+
+### Dasar-dasar komputasi kuantum
+
+Komputer kuantum memanfaatkan prinsip seperti superposisi dan keterikatan untuk melakukan komputasi yang sulit bagi mesin klasik. Berbeda dengan bit klasik, yang bernilai 0 atau 1, bit kuantum (qubit) dapat berada dalam banyak keadaan secara bersamaan, memungkinkan paralelisme eksponensial untuk masalah tertentu. Kemampuan ini menimbulkan risiko eksistensial terhadap sistem kriptografi yang mendasari blockchain, karena algoritma yang dikembangkan untuk perangkat keras kuantum merusak asumsi keamanan dari sebagian besar kriptografi kunci publik pra-kuantum.
+
+**Algoritma Shor**, diperkenalkan pada 1994 oleh Peter Shor, memberikan metode waktu polinomial untuk memfaktorkan bilangan bulat besar dan menyelesaikan masalah logaritma diskrit pada komputer kuantum. Algoritma ini mengeksploitasi Quantum Fourier Transform (QFT) untuk menemukan periode suatu fungsi, memungkinkan pembalikan efisien dari fungsi trapdoor yang mendasari skema seperti RSA atau kriptografi kurva eliptik (ECC). Untuk keuangan blockchain, ini berarti penyerang dengan komputer kuantum yang cukup kuat (diperkirakan 1,200 hingga 1,450 qubit logis <ReferenceMarker id="11" />, turun dari perkiraan sebelumnya sekitar 2,000 <ReferenceMarker id="6" /><ReferenceMarker id="7" /><ReferenceMarker id="8" /><ReferenceMarker id="9" />) dapat menurunkan kunci privat dari kunci publik dalam waktu polinomial O(n³), percepatan ekstrem yang membuat sistem rentan usang dalam semalam. <ReferenceMarker id="1" /> Para peneliti terus merevisi angka ini ke bawah seiring perangkat keras dan algoritma membaik.
+
+**Algoritma Grover**, diusulkan oleh Lov Grover pada 1996, menawarkan percepatan kuadratik untuk masalah pencarian tak terstruktur, mengurangi waktu pencarian dari O(n) menjadi O(√n) operasi. Meskipun tidak sedahsyat Shor untuk kriptografi asimetris, Grover mempengaruhi primitif simetris seperti fungsi hash dan enkripsi AES, secara efektif membagi dua tingkat keamanan (misalnya kunci 256-bit berperilaku seperti 128 bit terhadap serangan kuantum). Serangan ini dimitigasi dengan menggandakan bit keamanan, bukan mengubah skema kriptografi. Selain itu, percepatan kuadratik Grover tidak praktis karena persyaratan qubit dan gerbang yang tinggi, membutuhkan miliaran operasi berurutan dengan paralelisasi terbatas, sehingga tidak layak untuk pembalikan dunia nyata bahkan pada perangkat keras masa depan. <ReferenceMarker id="2" />
+
+### Linimasa yang menyusut
+
+Perkiraan sumber daya untuk memecahkan kriptografi pra-kuantum terus menurun. Pada Maret 2026, Google memangkas perkiraannya menjadi di bawah 500,000 qubit fisik untuk memecahkan kunci kurva eliptik 256-bit, pengurangan 20x dari perkiraan terbaik sebelumnya. <ReferenceMarker id="11" /> Pada Juni 2026, Eigen Labs membuka [ecdsa.fail](https://ecdsa.fail), papan peringkat publik tempat para peneliti dan agen AI berlomba memperkecil sirkuit yang memecahkan secp256k1, kurva di balik setiap tanda tangan Bitcoin dan Ethereum. Upaya terbuka ini menyamai hasil Google dalam delapan jam dan melampauinya dalam tiga hari. <ReferenceMarker id="20" />
+
+NIST telah memformalkan transisi menjauh dari skema yang rentan, menghentikan (deprecate) RSA dan kriptografi kurva eliptik 256-bit pada 2030 dan melarangnya sepenuhnya pada 2035. <ReferenceMarker id="12" /> Pada Juni 2026, Executive Order 14412 memajukan tenggat federal dari 2035 menjadi 31 Desember 2030 untuk pembentukan kunci dan 31 Desember 2031 untuk tanda tangan digital, dengan migrasi percontohan yang harus selesai pada akhir 2027. <ReferenceMarker id="13" />
+
+Tidak ada yang tahu kapan komputer kuantum yang relevan secara kriptografis akan hadir, tetapi bisa saja hadir dalam lima tahun. Apa pun yang harus tetap rahasia lebih lama dari itu sudah membutuhkan enkripsi pasca-kuantum. Industri keamanan informasi telah bertindak atas hal ini: Signal menambahkan pertukaran kunci pasca-kuantum pada 2023, Apple menambahkannya ke iMessage pada 2024, dan Cloudflare kini melayani sebagian besar lalu lintasnya melalui TLS pasca-kuantum hibrida. <ReferenceMarker id="14" /><ReferenceMarker id="15" /><ReferenceMarker id="16" />
+
+### Empat kategori ancaman
+
+#### 01 - Memalsukan tanda tangan digital
+
+Algoritma Shor secara langsung mengancam tanda tangan berbasis ECC yang digunakan di sebagian besar blockchain (misalnya kurva secp256k1 Bitcoin), memungkinkan penyerang mengotorisasi transaksi palsu. Ini akan menjadi kegagalan kritis dari fitur paling dasar sebuah blockchain.
+
+#### 02 - Memalsukan bukti palsu dalam sistem zero-knowledge
+
+Banyak bukti zero-knowledge, seperti dalam zk-SNARKs untuk keuangan berfokus privasi, bergantung pada kesulitan logaritma diskrit melalui pasangan kurva eliptik untuk komitmen. Shor dapat memungkinkan pembuatan bukti tidak valid yang tampak valid, yang dapat memungkinkan penyerang mencetak koin baru atau memalsukan keadaan Layer-2 (L2).
+
+#### 03 - Mendekripsi informasi rahasia
+
+Serangan kuantum dapat mengekspos data terenkripsi yang dilindungi oleh skema kunci publik rentan dalam protokol privasi. Serangan ini juga dapat mendekripsi komunikasi p2p dalam protokol keuangan, mengungkap detail sensitif dan memungkinkan pencurian bertarget.
+
+#### 04 - Membalikkan fungsi hash
+
+Algoritma Grover dapat mempercepat serangan preimage pada hash seperti SHA-256, digunakan untuk proof-of-work dan pembuatan alamat, tetapi ini adalah ancaman yang paling tidak mengkhawatirkan. Banyak skema kriptografi pasca-kuantum menggabungkan konstruksi berbasis hash karena hash dianggap cukup aman dengan digest yang cukup besar.
+
+### Tantangan penskalaan dalam kriptografi pasca-kuantum
+
+Meskipun kriptografi pasca-kuantum (PQC) menawarkan perlindungan penting terhadap ancaman kuantum, PQC memperkenalkan hambatan penskalaan signifikan karena desain inheren algoritma ini. Berbeda dengan skema kurva eliptik, yang mengandalkan struktur matematika ringkas, primitif PQC memerlukan parameter lebih besar untuk mempertahankan keamanan terhadap penyerang klasik dan kuantum. Hal ini menghasilkan kunci publik, kunci privat, dan tanda tangan yang jauh lebih besar, sering kali berkali-kali orde magnitudo. Tabel berikut mengilustrasikan ukuran tipikal ML-DSA dibandingkan rekan klasik seperti ECDSA 256-bit: <ReferenceMarker id="10" />
+
+<ResponsiveTableV2
+  headers={["ALGORITMA", "KUNCI PUBLIK", "KUNCI PRIVAT", "TANDA TANGAN"]}
+  rows={[
+    ["ML-DSA-87 (Dilithium)", "2,592 bytes", "4,896 bytes", "4,627 bytes"],
+    ["ML-DSA-65 (Dilithium)", "1,952 bytes", "4,032 bytes", "3,309 bytes"],
+    ["ECDSA (256-bit)", "32 bytes", "32 bytes", "65 bytes"],
+  ]}
+/>
+
+Seperti ditunjukkan, tanda tangan ML-DSA dapat lebih dari 70 kali lebih besar daripada setara ECDSA, dan kunci publik lebih dari 80 kali lebih besar. Keluarga PQC lain memperparah hal ini: skema berbasis hash seperti SPHINCS+ dapat menghasilkan tanda tangan hingga 41 KB, sementara varian lattice yang dioptimalkan ukuran seperti FALCON masih melebihi ukuran klasik dengan kelipatan signifikan.
+
+Dalam konteks blockchain, ukuran yang membengkak ini berlipat menjadi masalah penskalaan sistemik. Tanda tangan yang lebih besar membengkakkan transaksi individu, mengurangi throughput karena blok terisi lebih cepat dan memerlukan lebih banyak waktu untuk validasi. Ini juga membebani komunikasi peer-to-peer (P2P), meningkatkan kebutuhan bandwidth dan penundaan propagasi, yang dapat meningkatkan risiko fork jaringan atau blok yatim dalam mekanisme konsensus seperti proof-of-work. Persyaratan penyimpanan juga terpengaruh, menyebabkan biaya operasi node lebih tinggi dan hambatan partisipasi, terutama bagi pengguna atau validator dengan sumber daya terbatas.
+
+### TPS vs QTPS
+
+"TPS" adalah istilah industri yang mengukur berapa banyak transaksi yang dapat diproses sebuah blockchain per detik. Transaksi aman kuantum per detik (QTPS) mengukur throughput teoretis sebuah blockchain jika setiap transaksi menggunakan tipe alamat pasca-kuantum dan tanda tangan transaksi yang tersedia.
+
+Chain tanpa tipe alamat pasca-kuantum memiliki QTPS nol.
+
+Jika Bitcoin menambahkan ML-DSA-65 tanpa mengubah ukuran atau laju blok, transaksi sederhana akan berisi tanda tangan 3,309 byte dan kunci publik 1,952 byte, bukan 72 dan 33 byte seperti sekarang. Satu blok akan memuat sekitar 690 transaksi semacam itu, bukan sekitar 6,000, dan QTPS Bitcoin akan menjadi sekitar 1.1, turun dari ~10 TPS.
+
+<CalloutV2 title="CATATAN">
+  Tantangan penskalaan ini harus diatasi oleh semua blockchain di masa depan.
+  Bitcoin, misalnya, akan memiliki sekitar 1 QTPS atau kurang jika ukuran blok
+  maksimum tidak ditingkatkan.
+</CalloutV2>
+
+<ChapterHeading number="03" title="Krisis Migrasi" />
+
+### Masalah koordinasi
+
+Budaya konservatif Bitcoin menolak perubahan protokol. Peningkatan PQC mana pun akan memerlukan konsensus tentang isu kontroversial seperti linimasa migrasi, potensi penyitaan koin, dan peningkatan ukuran blok. Bahkan jika komunitas setuju, setiap pengguna harus memigrasikan koin mereka ke alamat aman kuantum baru. Migrasi memerlukan tindakan dari setiap pemegang kripto, banyak di antaranya kehilangan akses ke dompet atau tidak menyadari ancaman.
+
+Isu-isu ini sangat menantang bagi Bitcoin karena kurangnya kepemimpinan yang jelas dan filosofi osifikasi teknis.
+
+Kesepakatan adalah langkah pertama. Setelah Bitcoin merilis tipe alamat pasca-kuantum, migrasi dapat dimulai.
+
+### Masalah linimasa migrasi
+
+Jam setiap chain mulai berdetak saat chain itu merilis tipe alamat pasca-kuantum dan berhenti pada hari komputer kuantum yang relevan secara kriptografis hadir.
+
+Begitu tipe alamat dirilis, setiap pemegang harus membuat pasangan kunci pasca-kuantum dan memindahkan koin mereka ke sana. Bitcoin memiliki sekitar 170 juta output yang belum dibelanjakan, dan masing-masing memerlukan tanda tangannya sendiri untuk dipindahkan. <ReferenceMarker id="17" /> Jika migrasi menggunakan setiap byte dari setiap blok, memindahkan semuanya akan memakan waktu setidaknya 80 hari. Migrasi tidak akan mendapatkan setiap byte. Pemegang yang sudah bermigrasi tetap bertransaksi, dan tanda tangan pasca-kuantum mereka 20x hingga 80x lebih besar daripada ECDSA, sehingga setiap transaksi pasca-kuantum memakai lebih banyak ruang blok daripada transaksi saat ini. Banyak pemegang akan mengirim transaksi uji terlebih dahulu.
+
+Dengan asumsi paling optimistis, ketika setiap pemegang mendapat informasi dan bertindak segera, migrasi memakan waktu berbulan-bulan. SegWit, perubahan yang jauh lebih kecil tanpa tenggat, membutuhkan dua tahun untuk mencapai separuh transaksi Bitcoin. <ReferenceMarker id="18" /> Secara realistis, migrasi akan memakan waktu bertahun-tahun, dan setiap koin yang belum dimigrasikan tetap terpapar.
+
+### Masalah koin yang hilang
+
+Diperkirakan 2.3 hingga 3.7 juta Bitcoin, lebih dari sepersepuluh total pasokan, tidak dapat diakses secara permanen karena kunci yang hilang, pemegang yang meninggal, atau dompet yang terlupakan. <ReferenceMarker id="3" /> Koin ini tidak dapat dimigrasikan dan berfungsi sebagai hadiah publik untuk membuat komputer kuantum yang relevan secara kriptografis (CRQC).
+
+> Satu-satunya solusi teknis memerlukan tenggat keras yang membekukan koin yang belum dimigrasikan.
+
+Pada Juni 2026, pendiri Binance Changpeng Zhao mengusulkan jendela sekitar satu tahun setelah peningkatan pasca-kuantum, yang setelahnya sebuah fork akan membekukan koin yang tertinggal di alamat rentan, termasuk 1.1 juta BTC yang diatribusikan kepada Satoshi. Usulan ini memecah industri. <ReferenceMarker id="19" />
+
+<CalloutV2 title="JAWABAN QUANTUS">
+  Tantangan yang bertumpuk ini membuat retrofit keamanan kuantum ke chain yang
+  ada sangat sulit. Quantus menghindari ini dengan hanya mendukung tipe alamat
+  pasca-kuantum.
+</CalloutV2>
+
+<ChapterHeading number="04" title="Arsitektur Quantus" />
+
+### Fondasi
+
+Quantus dibangun di atas Substrate, SDK blockchain yang dikembangkan oleh Parity Technologies, tim di balik Polkadot. Substrate sangat modular, memungkinkan penggantian komponen dengan mudah sehingga kami dapat fokus pada apa yang membuat Quantus unik.
+
+Quantus meningkatkan Substrate dengan:
+
+- Menambahkan dukungan untuk skema tanda tangan pasca-kuantum
+- Meningkatkan keamanan jaringan p2p menjadi pasca-kuantum
+- Menambahkan zk-tree, pohon Merkle Poseidon2 dari setiap kredit saldo, yang dikomitkan di setiap header blok sehingga dompet dapat membuktikan deposit di dalam bukti zero-knowledge
+
+### Aman secara kuantum
+
+#### Primitif kriptografi pasca-kuantum
+
+Quantus menggunakan PQC yang distandarisasi NIST untuk memastikan keamanan transaksi dan komunikasi jaringan terhadap ancaman kuantum. Inti integritas transaksi adalah **ML-DSA** (Module-Lattice-based Digital Signature Algorithm, sebelumnya dikenal sebagai CRYSTALS-Dilithium), skema tanda tangan berbasis lattice yang dipilih karena keseimbangan keamanan, efisiensi, dan kemudahan implementasi. ML-DSA memanfaatkan kesulitan masalah seperti Learning With Errors (LWE) dan Short Integer Solution (SIS) pada module lattice, memberikan resistensi kuat terhadap serangan klasik dan kuantum, termasuk dari algoritma Shor. <ReferenceMarker id="4" />
+
+Untuk tanda tangan transaksi, Quantus mendukung dua set parameter ML-DSA. ML-DSA-65 (NIST Security Level 3) adalah skema utama dan bawaan di dompet Quantus, menawarkan keseimbangan kuat antara keamanan dan ukuran tanda tangan. ML-DSA-87, set parameter dengan tingkat keamanan tertinggi (NIST Security Level 5, setara AES-256), juga didukung bagi pengguna yang menginginkan margin maksimum terhadap kemungkinan terobosan kriptanalisis pada masalah lattice. Kriptografi lattice relatif baru dan kurang teruji dibanding skema klasik, dan parameter yang lebih besar memitigasi risiko dari kemajuan potensial dalam kriptanalisis lattice.
+
+#### Alternatif yang dipertimbangkan
+
+ML-DSA dipilih dibanding alternatif seperti FN-DSA (Falcon) karena kompleksitas implementasi FN-DSA yang lebih besar (mis. memerlukan operasi floating-point, yang tidak ramah blockchain), tidak adanya generasi kunci deterministik dalam spesifikasinya, dan statusnya yang belum final pada saat pengembangan.
+
+Opsi berbasis hash seperti SLH-DSA tidak dipilih karena ukuran tanda tangan yang bahkan lebih besar (melebihi 17 KB). Crypto-agility (kemampuan menukar skema tanda tangan berbeda) sudah tertanam dalam Substrate, sehingga relatif mudah menambahkan alternatif ini di tanggal mendatang jika diperlukan.
+
+Meskipun ML-DSA menghasilkan kunci dan tanda tangan lebih besar, ini dapat dikelola di jaringan tahap awal Quantus, di mana penyimpanan belum menjadi bottleneck, dan optimisasi seperti alamat wormhole melalui bukti zero-knowledge akan mengatasi penskalaan.
+
+Untuk detail teknis implementasi lihat [QIP-0006](https://github.com/Quantus-Network/improvement-proposals/blob/main/qip-0006.md).
+
+#### litep2p - Jaringan aman kuantum
+
+Quantus mengamankan komunikasi node peer-to-peer (P2P) menggunakan kombinasi ML-DSA untuk autentikasi dan **ML-KEM** (Module-Lattice-based Key Encapsulation Mechanism, sebelumnya CRYSTALS-Kyber) untuk enkripsi. Integrasi ini memperluas PQC ke stack jaringan litep2p, memodifikasi komponen inti untuk resistensi kuantum: menggunakan tanda tangan ML-DSA-87 untuk identitas peer dan ML-KEM-768 untuk keamanan transport melalui pola Noise pqXX empat pesan yang setiap pertukaran kuncinya berupa enkapsulasi KEM, tanpa fallback Diffie-Hellman. <ReferenceMarker id="5" />
+
+Lapisan P2P sering diabaikan dalam analisis keamanan kuantum. Autentikasi peer penting, tetapi yang terburuk yang dapat dilakukan penyerang di level peer adalah menyamar sebagai node dan mengirim pesan tidak valid, yang dapat mengakibatkan penolakan layanan. Serangan ini sudah dimitigasi oleh fakta bahwa node umumnya tidak dipercaya dalam model blockchain dan node dapat dengan mudah mengganti kunci jika serangan terdeteksi. Demikian pula, mendekripsi komunikasi P2P memberikan manfaat penyerang terbatas (mis. melacak jalur transaksi, dimitigasi oleh proxy atau Tor), dan sebagian besar data menjadi publik onchain.
+
+Namun, mengamankan lapisan P2P secara kuantum melindungi dari penyadapan, serangan man-in-the-middle, dan dekripsi kuantum, memastikan gossip node, propagasi blok, dan interaksi jaringan lainnya tetap rahasia dan bebas gangguan untuk masa mendatang.
+
+Untuk detail teknis implementasi lihat [QIP-0004](https://github.com/Quantus-Network/improvement-proposals/blob/main/qip-0004.md).
+
+### Privat
+
+#### Dua tipe alamat
+
+Quantus memiliki dua tipe alamat. Alamat transparan adalah hash dari kunci publik ML-DSA; saldonya dan setiap transfer masuk dan keluar terlihat onchain. Alamat terenkripsi adalah alamat wormhole: koin yang dikirim ke sana terbukti dibakar, dan pemiliknya kemudian mencetaknya di alamat keluar mana pun dengan bukti zero-knowledge yang tidak merujuk sumber apa pun. Keduanya dapat saling beroperasi, dan chain tidak dapat membedakannya: deposit ke alamat terenkripsi adalah transfer biasa, dan alamat itu menyimpan saldo biasa yang terlihat.
+
+#### Alamat wormhole
+
+Untuk mengatasi tantangan penskalaan yang melekat dalam kriptografi pasca-kuantum, Quantus memperkenalkan skema tanda tangan pasca-kuantum agregatif inovatif bernama **"Wormhole Addresses"**. Sistem ini memanfaatkan bukti zero-knowledge (ZKP) yang dihasilkan melalui sistem pembuatan bukti Plonky2 (pada dasarnya STARKs) untuk memindahkan verifikasi saldo off-chain, memungkinkan chain memverifikasi satu bukti ringkas tanpa memproses tanda tangan individu. Chain itu sendiri memverifikasi setiap lapisan bukti. Quantus tidak memiliki L2.
+
+Wormhole Addresses memungkinkan verifikasi sejumlah besar transaksi dengan satu bukti, dengan input publik (mis. nullifier, alamat keluar, dan jumlah) menjadi faktor pembatas utama. Ini mengurangi jejak per transaksi yang diamortisasi menjadi konstanta kecil, jauh di bawah skema tanda tangan PQC mana pun yang diketahui.
+
+Keamanan kuantum skema ini berasal dari komitmen FRI (Fast Reed-Solomon Interactive Oracle Proofs) yang dibangun di atas keluarga hash Poseidon, bukan pasangan kurva eliptik rentan kuantum yang umum digunakan dalam SNARK. Selain itu rahasia autentikasi disembunyikan di balik **Poseidon2**. Karena fungsi hash aman hanya melemah secara kuadratik oleh algoritma Grover, bukan rusak, bukti preimage hash dapat berfungsi sebagai tanda tangan pasca-kuantum ringan dalam konteks ZK, mirip skema berbasis hash seperti SPHINCS+.
+
+#### Properti privasi
+
+Di luar penskalaan, transfer wormhole berfungsi sebagai transaksi terenkripsi Quantus, dan alamat yang menerima dana dengan cara ini berfungsi sebagai akun terenkripsi. Chain tidak membedakan alamat wormhole dari alamat biasa: deposit adalah transfer biasa, dan alamat penerima menampilkan saldo normal yang terlihat onchain. Pembelanjaan bekerja secara berbeda. Keluar dari wormhole mencetak dana di alamat keluar berdasarkan bukti zero-knowledge yang input publiknya hanya berisi nullifier, hash blok terkini, jumlah, dan alamat keluar. Tidak ada apa pun onchain yang merujuk alamat sumber, dan saldo sumber tidak pernah didebit. Bagi pengamat, dana yang diterima melalui alamat wormhole tampak tetap berada persis di tempatnya, terlepas dari apakah dana itu sudah dibelanjakan. Pengiriman terenkripsi memutus tautan onchain antara pengirim dan penerima. Dompet menampilkannya sebagai dua mode transaksi, transparan dan terenkripsi, dengan bukti yang dihasilkan secara lokal di perangkat pengguna.
+
+Pengamat yang mencocokkan deposit dengan keluaran berjumlah sama pada waktu yang mencurigakan dapat mempersempit tautan di antara keduanya. Dompet menggabungkan hingga tujuh keluaran ke dalam satu bukti dan mengisi batch dengan slot dummy. Transfer terenkripsi bergerak dalam kelipatan 0.01 QTC, sehingga banyak transfer berbagi jumlah yang sama. Setiap transfer native bergabung ke himpunan anonimitas yang sama. Alamat wormhole hadiah penambangan dapat dikenali berdasarkan konstruksinya.
+
+#### Alur klien / prover
+
+Pengguna menghasilkan alamat yang terbukti tidak dapat dibelanjakan dengan melakukan hash ganda pada garam yang digabungkan dengan rahasia:
+
+```
+H(H(salt|secret))
+```
+
+Konstruksi ini mencegah positif palsu (mis. mengira kunci publik hash tunggal sebagai alamat yang tidak dapat dibelanjakan) karena di Substrate (dan umumnya) alamat blockchain adalah hash tunggal dari kunci publik, yang diturunkan dari kunci privat melalui operasi aljabar tertentu, bukan melalui hash aman. Keamanan konstruksi karenanya berkurang menjadi menemukan preimage-dari-preimage dari hash aman. Token yang dikirim ke alamat ini secara efektif dibakar. Tidak dapat dibelanjakan karena tidak ada kunci privat untuk alamat yang menerimanya. Koin ini karena itu dapat dicetak ulang tanpa membengkakkan pasokan.
+
+Zk-tree mencatat setiap kredit saldo di chain sebagai daun yang menyimpan penerima, penghitung transfer per penerima, dan jumlah. Dompet pengguna membuka bukti Merkle dari akar zk-tree pada header blok terkini ke daun untuk depositnya. Nullifier dihitung untuk mencegah double-spend:
+
+```
+H(H(salt | secret | transfer_count))
+```
+
+#### Alur agregator
+
+Agregasi menggunakan rekursi Plonky2 dalam dua lapisan, di mana setiap bukti induk memverifikasi bukti anaknya dan meneruskan input publik mereka ke atas.
+
+Pada lapisan pertama, dompet pengguna menggabungkan hingga tujuh bukti daunnya sendiri ke dalam satu batch privat. Sirkuit mengacak slot, mengisi slot kosong dengan bukti dummy sehingga pengamat tidak dapat mengetahui berapa banyak yang asli, mewajibkan setiap daun asli merujuk hash blok terkini yang sama, mendeduplikasi alamat keluar di dalam batch, dan menjumlahkan jumlahnya. Nullifier lewat tanpa berubah.
+
+Pada lapisan kedua, pihak mana pun (penambang atau agregator profesional) menggabungkan hingga 53 batch privat ke dalam satu batch publik dan memperoleh sebagian biaya. Lapisan ini meneruskan keluaran dan nullifier setiap batch privat persis apa adanya, tanpa penjumlahan atau deduplikasi lebih lanjut. Setiap batch privat tetap menjadi segmen penyelesaian terpisah, sehingga jika salah satunya berisi nullifier yang sudah dibelanjakan, chain hanya menolak segmen itu dan menyelesaikan sisanya.
+
+#### Alur chain / verifikator
+
+Jaringan memverifikasi bukti agregat dengan memeriksa: hash blok ada onchain dan terkini, keunikan nullifier (untuk mencegah double-spend), dan validitas bukti. Sirkuit ZK menegakkan kebenaran bukti Merkle zk-tree, akurasi komputasi nullifier, ketidakmampuan alamat untuk dibelanjakan, bahwa output ditambah biaya tidak melebihi input, dan penautan header blok.
+
+#### Mengapa Plonky2
+
+- Terverifikasi secara formal sebagian (sirkuit Quantus dan sebagian Plonky2)
+- Pasca-kuantum
+- Tanpa trusted setup
+- Pembuatan/verifikasi efisien
+- Agregasi bukti mulus
+- Implementasi asli Rust
+- Kompatibel dengan lingkungan no-std Substrate
+
+#### Catatan keamanan
+
+Risiko potensial termasuk bug inflasi dari implementasi sirkuit/verifikasi yang cacat. Pengguna secara opsional dapat membuktikan sebuah alamat adalah wormhole dengan mempublikasikan hash pertama tanpa mengungkap rahasia. Transaksi verifikasi tidak ditandatangani, sehingga chain membatasi penolakan layanan secara non-keuangan: pemeriksaan murah saat masuk pool, verifikasi bukti penuh hanya saat dispatch, dan batas ukuran bukti 512 KiB. Keluaran mencetak saldo tanpa menaikkan total penerbitan, karena koin yang didepositkan terbukti dibakar, sehingga batas pasokan tidak terpengaruh.
+
+Untuk detail teknis lebih lanjut tentang implementasi lihat [QIP-0005](https://github.com/Quantus-Network/improvement-proposals/blob/main/qip-0005.md).
+
+### Skalabel
+
+Setiap transaksi di Quantus bersifat pasca-kuantum, sehingga TPS dan QTPS-nya adalah angka yang sama. Ruang blok membatasi throughput: target waktu blok adalah 12 detik dan setiap blok mengizinkan 3.75 MB transaksi.
+
+<ResponsiveTableV2
+  headers={["MODE", "BYTE PER TRANSFER", "TRANSFER PER BLOK", "QTPS"]}
+  rows={[
+    ["Transparan, ML-DSA-87", "~7.3 KB", "~510", "~43"],
+    ["Transparan, ML-DSA-65", "~5.4 KB", "~690", "~58"],
+    [
+      "Terenkripsi, agregasi dua lapisan saat ini",
+      "~266 KB per 371 transfer",
+      "~5,200",
+      "~430",
+    ],
+    [
+      "Terenkripsi, batas teoretis",
+      "~112 byte input publik",
+      "~33,000",
+      "~2,800",
+    ],
+  ]}
+/>
+
+### Uang
+
+#### Mekanisme konsensus
+
+Quantus menggunakan algoritma konsensus Proof-of-Work (PoW) yang mempertahankan sifat menguntungkan konsensus Bitcoin sementara meningkatkan kompatibilitas dengan sistem bukti ZK dengan mengganti SHA-256 dengan **Poseidon2**. Target waktu blok adalah 12 detik.
+
+Penting, perubahan ini tidak dilakukan untuk keamanan kuantum. Fungsi hash kriptografis seperti SHA-256 dilemahkan tetapi tidak dimusnahkan oleh algoritma kuantum, terutama Grover. Beberapa skema tanda tangan pasca-kuantum menggunakan hash aman sebagai blok bangunan karena alasan ini.
+
+Poseidon2 adalah penyempurnaan fungsi hash Poseidon. Membuat SNARK atau STARK untuk komputasi yang melibatkan hash tradisional seperti SHA-256 sering memerlukan hampir 100x lebih banyak gerbang dibandingkan menggunakan Poseidon, yang sepenuhnya mengandalkan fungsi aljabar atas elemen medan, bukan operasi bit.
+
+Kami menggunakan **medan Goldilocks** untuk Poseidon2 dan Plonky2. Orde medan Goldilocks muat dalam bilangan bulat tak bertanda 64-bit, yang meningkatkan efisiensi tanpa mengorbankan soundness.
+
+Pasokan dibatasi pada 21,000,000 QTC. Lihat bagian 06.
+
+<ChapterHeading number="05" title="Keamanan Akun" />
+
+Ada banyak risiko dalam mengelola kunci mata uang kripto. Sebagian besar dapat dihindari.
+
+### HD-Lattice
+
+Dompet Hierarchical Deterministic (HD) adalah standar industri untuk blockchain, memungkinkan pengguna mencadangkan satu frasa benih untuk semua kunci, meningkatkan keamanan dan kenyamanan dibanding cadangan manual per tindakan. Mengadaptasi ini ke skema lattice seperti Dilithium melibatkan dua tantangan:
+
+- Keluaran HMAC-SHA512 tidak dapat langsung membentuk kunci privat lattice, yang merupakan polinomial yang disampel dari ring dengan properti tertentu.
+- Derivasi kunci non-hardened mengandalkan penjumlahan kurva eliptik, yang tidak ada pada lattice (kunci publik tidak tertutup di bawah operasi aljabar apa pun).
+
+Quantus mengatasi masalah pertama dengan menggunakan keluaran HMAC sebagai entropi untuk membangun kunci privat secara deterministik, bukan sebagai kunci privat itu sendiri. Masalah kedua kurang kritis dan tetap pertanyaan riset terbuka apakah kriptografi lattice dapat diadaptasi untuk mengatasinya.
+
+Kunci akun transparan dan rahasia wormhole diturunkan dari benih yang sama pada jalur terpisah (coin type BIP44 189189' dan 189189189'), sehingga satu frasa benih mencadangkan kedua tipe alamat.
+
+Untuk detail teknis lebih lanjut lihat [QIP-0002](https://github.com/Quantus-Network/improvement-proposals/blob/main/qip-0002.md).
+
+### Frasa pemeriksaan
+
+Quantus memperkenalkan "frasa pemeriksaan" (check-phrase), checksum yang dapat dibaca manusia dan aman secara kriptografis untuk alamat blockchain. Alamat di-hash untuk menghasilkan urutan pendek kata-kata yang mudah diingat dari daftar mnemonik BIP-39. Frasa pemeriksaan melindungi dari typo, manipulasi, dan serangan address poisoning. Fungsi derivasi kunci 40,000 iterasi membuat serangan rainbow table mahal. Untuk transaksi besar, pengguna tetap harus memverifikasi setiap karakter alamat. Frasa pemeriksaan adalah checksum, bukan alamat. Frasa ini tidak dapat menerima dana.
+
+Untuk detail teknis lebih lanjut lihat [QIP-0008](https://github.com/Quantus-Network/improvement-proposals/blob/main/qip-0008.md).
+
+### Akun multisig
+
+Akun multisig dimulai sebagai akun baru. Pembuat mendaftar para penanda tangan (hingga 100), menetapkan berapa banyak dari mereka yang harus menyetujui sebuah transaksi (ambang batas), dan memilih nonce, lalu chain menurunkan alamat akun dari ketiga hal tersebut. Penanda tangan dan ambang batas tidak pernah berubah, karena keduanya adalah bagian dari alamat. Siapa pun yang menginginkan susunan berbeda membuat multisig baru dan memindahkan dananya. Penanda tangan mana pun dapat mengusulkan transaksi. Begitu ambang batas penanda tangan menyetujui, transaksi dieksekusi. Usulan kedaluwarsa setelah paling lama dua minggu.
+
+Akun multisig bersifat native di chain. Akun ini adalah alamat transparan. Multisig tidak dapat menjadi alamat terenkripsi, dan alamat terenkripsi tidak dapat menjadi penanda tangan. Multisig dapat mengirim ke dan menerima dari alamat terenkripsi, dan dapat menjadi wali untuk akun lanjutan.
+
+### Akun lanjutan
+
+Akun lanjutan ditujukan bagi pengguna yang menginginkan perlindungan lebih dari satu kunci. Akun ini hanya ada untuk alamat transparan, dan sebagian besar pengguna tidak pernah memerlukannya. Akun transparan mana pun dapat menjadi akun lanjutan. Peningkatan ini permanen, sehingga pencuri tidak dapat mematikannya. Pemilik menunjuk **wali**: akun lain, sebaiknya yang lebih aman daripada akun lanjutan itu sendiri, seperti dompet perangkat keras, multisig, atau pihak ketiga tepercaya. Wali tidak dapat membelanjakan dari akun. Wali hanya dapat membatalkan transfer tertunda akun tersebut dan memulihkan dananya.
+
+Wali, kunci waktu wajib, dan pemulihan kunci hanya ada untuk akun lanjutan dan bersifat opsional. Pemilik menetapkan parameter ini sekali, saat membuat akun, dan tidak dapat mengubahnya setelah itu. Pemilik yang menginginkan parameter berbeda membuat akun lanjutan baru dan memindahkan dananya ke sana.
+
+Fitur-fitur ini dibangun untuk bursa, kustodian, dan pengguna tingkat lanjut lainnya. Kebanyakan orang tidak akan pernah melihatnya.
+
+Wali dapat dirantai: wali sebuah akun lanjutan dapat sendiri menjadi akun lanjutan dengan walinya sendiri. Ini menciptakan hierarki yang dapat dikomposisikan di mana setiap wali memiliki izin superior terhadap akun yang dilindungi. Desain ini memberi pengguna waktu untuk mendeteksi dan merespons aktivitas tidak sah tanpa mengorbankan finalitas untuk transfer sah.
+
+Untuk detail teknis lebih lanjut lihat [QIP-0011](https://github.com/Quantus-Network/improvement-proposals/blob/main/qip-0011.md).
+
+#### Transaksi terkunci waktu
+
+Akun transparan mana pun dapat melampirkan penundaan pada transfer keluar, yang selama itu pengirim dapat membatalkannya. Ini memperbaiki kesalahan dan mencegah pencurian tanpa mengorbankan finalitas.
+
+Akun lanjutan dapat menetapkan penundaan wajib pada setiap transfer keluar. Hanya wali yang dapat membatalkan, dan dana yang dibatalkan dikirim ke wali.
+
+Untuk detail teknis lebih lanjut lihat [QIP-0009](https://github.com/Quantus-Network/improvement-proposals/blob/main/qip-0009.md) dan [QIP-0010](https://github.com/Quantus-Network/improvement-proposals/blob/main/qip-0010.md).
+
+#### Pemulihan kunci
+
+Banyak kekayaan kripto ikut ke kubur bersama pemiliknya. Akun lanjutan menawarkan jalan keluar. Saat membuat akun lanjutan, pemilik menunjuk wali yang dapat memulihkan seluruh dana akun kapan saja. Pemilik yang menunjuk akun ahli waris, multisig keluarga, atau kustodian profesional sebagai wali memiliki wasiat onchain yang tidak memerlukan pengadilan.
+
+<ChapterHeading number="06" title="Tokenomik dan Tata Kelola" />
+
+Quantus memiliki kebijakan moneter tetap: batas pasokan 21,000,000 QTC, kurva emisi yang meluruh secara eksponensial, dan pembakaran biaya transaksi yang menjaga hadiah blok tetap di atas nol tanpa batas waktu sambil mempertahankan batas pasokan.
+
+### Hadiah blok
+
+Quantus menggunakan emisi blok lugas yang meniru Bitcoin, tetapi dengan peluruhan halus alih-alih halving yang bertahap. Heuristik sederhana menentukan hadiah setiap blok:
+
+```
+block_reward = (max_supply - current_supply) / 50,000,000
+```
+
+Heuristik ini membentuk kurva peluruhan eksponensial halus karena block_reward berkontribusi pada current_supply yang mengurangi block_reward yang dihitung pada blok berikutnya. Pembakaran apa pun dari biaya mengurangi current_supply dan menjadi bagian dari anggaran hadiah blok.
+
+### Alokasi investor dan tim
+
+Quantus dibangun dengan bantuan investor yang mengambil risiko besar dalam mendanainya. Pada genesis, ada pencetakan satu kali sebesar 27% dari total pasokan (5,670,000 QTC). Sisa 73% (15,330,000 QTC) hanya dapat ditambang ke dalam keberadaan. Tidak ada pajak pengembang: penambang menerima hadiah blok sepenuhnya.
+
+Investor, pendiri, dan tim memiliki 23% dari total pasokan. Token ini tetap terkunci selama tahun pertama setelah mainnet, lalu vesting secara linier selama 36 bulan berikutnya, ditegakkan onchain oleh pallet vesting khusus.
+
+### Alokasi perusahaan
+
+Perusahaan memegang 4% dari total pasokan. 1% likuid pada genesis untuk menyediakan likuiditas awal. Sisa 3% untuk mendanai operasi perusahaan di masa depan, terkunci selama tahun pertama setelah mainnet, lalu vesting secara linier selama 36 bulan berikutnya.
+
+### Biaya transaksi
+
+Setiap biaya transaksi diberikan kepada penambang atau dibakar.
+
+<ResponsiveTableV2
+  headers={["JENIS TRANSAKSI", "BIAYA", "TUJUAN"]}
+  rows={[
+    [
+      "Transparan, ML-DSA-65 (bawaan)",
+      "Sekitar 0.0062 QTC per transfer sederhana, ditambah tip opsional",
+      "Penambang",
+    ],
+    [
+      "Transparan, ML-DSA-87",
+      "Sekitar 0.0081 QTC per transfer sederhana, ditambah tip opsional",
+      "Penambang",
+    ],
+    [
+      "Terenkripsi",
+      "0.04% dari jumlah, minimum 0.01 QTC",
+      "Separuh ke penambang, separuh dibakar",
+    ],
+    [
+      "Pembatalan akun lanjutan (jarang, hanya akun lanjutan)",
+      "1% dari jumlah yang dibatalkan",
+      "Dibakar",
+    ],
+  ]}
+/>
+
+Dalam praktiknya, transaksi terenkripsi sebesar 25 QTC atau kurang membayar minimum tetap 0.01 QTC; yang lebih besar membayar biaya 0.04%.
+
+Selama ada aktivitas di jaringan, struktur biaya ini membayar penambang untuk mengamankannya selamanya. Quantus mempertahankan batas keras 21,000,000 QTC tanpa pernah kehabisan anggaran keamanan.
+
+### Peningkatan jaringan
+
+Quantus mendukung peningkatan "tanpa fork" melalui peningkatan runtime Substrate, memungkinkan logika inti blockchain ("runtime") berkembang tanpa hard fork yang dapat mengganggu jaringan. Jalur peningkatan ini meminimalkan downtime dan risiko, sehingga perbaikan keamanan dan peningkatan kriptografi dirilis tanpa hard fork.
+
+Seiring komunitas memperoleh kepercayaan pada sistem dari waktu ke waktu, kekuatan untuk mengubah runtime akan dikurangi secara signifikan.
+
+### Sistem tata kelola
+
+Sistem moneter yang diandalkan pengguna harus stabil, dapat diprediksi, dan aman.
+
+**Technical Collective** adalah kelompok kurasi ahli teknis yang bertindak sebagai badan khusus untuk mengusulkan, meninjau, atau mendaftar-putihkan urusan teknis mendesak, mempercepatnya melalui trek khusus sambil mempertahankan pengawasan komunitas. Badan ini tidak memiliki mandat untuk mengubah kebijakan moneter jaringan. Badan ini tidak berniat merilis peningkatan protokol signifikan kecuali ada masalah keamanan mendesak atau dukungan komunitas yang sangat besar, dan perusahaan berniat menghapus Technical Collective secara bertahap.
+
+Siapa pun dapat mengusulkan perubahan protokol dengan mengajukan Quantus Improvement Proposal (QIP) untuk tinjauan publik dan mendiskusikannya di [research.quantus.com](https://research.quantus.com).
+
+<ChapterHeading number="07" title="Peta jalan" />
+
+Peta jalan saat ini hingga 2026, dapat berubah.
+
+<TimelineV2
+  title="Heisenberg Inception"
+  date="Desember 2024"
+  subtitle="Pendanaan terjamin, Substrate dipilih."
+/>
+
+<TimelineV2
+  title="Resonance Alpha"
+  date="Juli 2025"
+  subtitle="Testnet publik, tanda tangan Dilithium."
+/>
+
+<TimelineV2
+  title="Schrödinger Beta"
+  date="Oktober 2025"
+  subtitle="Fitur lengkap, siap audit."
+/>
+
+<TimelineV2
+  title="Dirac Beta"
+  date="November 2025"
+  subtitle="PoW diganti Poseidon2, audit ditindaklanjuti."
+/>
+
+<TimelineV2
+  title="Planck Beta"
+  date="April 2026"
+  subtitle="Akun lanjutan, multisig, dompet perangkat keras, transaksi terenkripsi, agregasi ZK dua lapisan."
+/>
+
+<TimelineV2
+  title="Mainnet"
+  date="9 September 2026"
+  subtitle="Genesis mainnet."
+/>
+
+<br />
+
+<ChapterHeading number="08" title="Risiko" />
+
+Membangun Quantus disertai risiko inheren.
+
+### Masalah implementasi
+
+Cacat dalam logika perangkat lunak dapat menyebabkan kegagalan serius bahkan pada sistem yang dirancang paling baik. Quantus mengurangi risiko ini melalui audit independen oleh Neodyme, Eiger, dan Hashcloak, kompetisi audit publik Immunefi, verifikasi formal sirkuit ZK-nya dan sebagian Plonky2, serta tinjauan internal berbantuan AI yang berkelanjutan.
+
+Tidak ada proses yang menghilangkan risiko implementasi sepenuhnya.
+
+#### Audit
+
+<ResponsiveTableV2
+  headers={["SEGMEN", "AUDITOR", "TANGGAL"]}
+  rows={[
+    [
+      "Proof-of-Work dan Poseidon2",
+      "Eiger (Equilibrium Group)",
+      "Oktober 2025",
+    ],
+    ["Tanda tangan ML-DSA dan dompet HD", "Neodyme", "Desember 2025"],
+    ["Sirkuit ZK wormhole", "Eiger (Equilibrium Group)", "Maret 2026"],
+    ["Runtime dan node Substrate", "Eiger (Equilibrium Group)", "Mei 2026"],
+    [
+      "Verifikasi formal sirkuit wormhole",
+      "Quantus, dalam proof assistant Lean",
+      "Juni 2026",
+    ],
+    ["Tanda tangan ML-DSA ambang batas", "Hashcloak", "2026"],
+    ["Seluruh chain, kompetisi audit publik", "Immunefi", "Agustus 2026"],
+  ]}
+/>
+
+Laporan:
+
+- [Proof-of-Work dan Poseidon2: laporan](https://github.com/Quantus-Network/qp-poseidon/blob/main/audits/Proof-of-Work%20and%20Poseidon%20Security%20Review%201.1.pdf)
+- [Tanda tangan ML-DSA dan dompet HD: laporan](https://github.com/Quantus-Network/qp-rusty-crystals/blob/master/audits/Neodyme-Audit.pdf)
+- [Sirkuit ZK wormhole: laporan](https://github.com/Quantus-Network/qp-zk-circuits/blob/main/audits/EigerWormholeAudit.pdf)
+- [Runtime dan node Substrate: laporan](https://github.com/Quantus-Network/chain/blob/main/audits/quantus-substrate-audit-20260513.pdf)
+- [Verifikasi formal sirkuit wormhole: spesifikasi](https://github.com/Quantus-Network/qp-zk-circuits/tree/main/formal)
+- [Seluruh chain, kompetisi audit publik: kampanye](https://immunefi.com/bounty/audit-comp-quantus)
+
+### Masalah pemilihan algoritma NIST
+
+Cacat atau pintu belakang dalam standar pasca-kuantum yang dipilih (mis. ML-DSA, ML-KEM) dapat muncul setelah standardisasi. Dalam kasus terburuk, cacat tersebut memungkinkan penyerang memalsukan tanda tangan dengan menurunkan kunci privat dari kunci publik, mewakili mode kegagalan katastrofik chain. Jika cacat tersebut diumumkan, Quantus dapat ditingkatkan ke algoritma baru.
+
+### Linimasa komputasi kuantum
+
+Terobosan kuantum mungkin datang jauh lebih lambat dari perkiraan, menunda kebutuhan PQC; sebaliknya, pengembangan rahasia (mis. oleh pemerintah) dapat menyebabkan ancaman mendadak jika komunitas blockchain gagal memperbarui dengan cepat.
+
+### Pertimbangan lain
+
+Hambatan adopsi umum, ketidakpastian regulasi dalam keuangan/blockchain, dan volatilitas inheren ekosistem kripto.
+
+<ChapterHeading number="09" title="Referensi & Bacaan lanjutan" />
+
+<br />
+
+<Reference id="reference-1" label="[1]">
+  Shor, P. W. (1997). Polynomial-time algorithms for prime factorization and
+  discrete logarithms on a quantum computer. SIAM Journal on Computing, 26(5),
+  1484–1509.
+  [https://doi.org/10.1137/S0097539795293172](https://doi.org/10.1137/S0097539795293172)
+</Reference>
+
+<Reference id="reference-2" label="[2]">
+  Grover, L.K. (1996). A fast quantum mechanical algorithm for database search.
+  Proceedings of the Twenty-Eight Annual ACM Symposium on Theory of Computing,
+  212-219.
+  [https://doi.org/10.1145/237814.237866](https://doi.org/10.1145/237814.237866)
+</Reference>
+
+<Reference id="reference-3" label="[3]">
+  Chainalysis. (2020, June). 60% of Bitcoin Is Held Long Term as Digital Gold.
+  What About the Rest? Chainalysis Market Intel. Archived at
+  [https://web.archive.org/web/20200622014856/https://blog.chainalysis.com/reports/bitcoin-market-data-exchanges-trading](https://web.archive.org/web/20200622014856/https://blog.chainalysis.com/reports/bitcoin-market-data-exchanges-trading)
+</Reference>
+
+<Reference id="reference-4" label="[4]">
+  National Institute of Standards and Technology. (2024). FIPS 204:
+  Module-Lattice-Based Digital Signature Standard (ML-DSA). U.S. Department of
+  Commerce.
+  [https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.204.pdf](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.204.pdf)
+</Reference>
+
+<Reference id="reference-5" label="[5]">
+  National Institute of Standards and Technology. (2024). FIPS 203:
+  Module-Lattice-Based Key-Encapsulation Mechanism Standard (ML-KEM). U.S.
+  Department of Commerce.
+  [https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.203.pdf](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.203.pdf)
+</Reference>
+
+<Reference id="reference-6" label="[6]">
+  Häner, T., Jaques, S., Naehrig, M., Roetteler, M., & Soeken, M. (2020).
+  Improved quantum circuits for elliptic curve discrete logarithms.
+  arXiv:2002.12480.
+  [https://arxiv.org/abs/2002.12480](https://arxiv.org/abs/2002.12480)
+</Reference>
+
+<Reference id="reference-7" label="[7]">
+  Gidney, C., & Ekerå, M. (2021). How to factor 2048 bit RSA integers in 8 hours
+  using 20 million noisy qubits. arXiv:1905.09749.
+  [https://arxiv.org/abs/1905.09749](https://arxiv.org/abs/1905.09749)
+</Reference>
+
+<Reference id="reference-8" label="[8]">
+  Aggarwal, D., et al. (2021). Assessment of Quantum Threat To Bitcoin and
+  Derived Cryptocurrencies. ePrint IACR.
+  [https://eprint.iacr.org/2021/967.pdf](https://eprint.iacr.org/2021/967.pdf)
+</Reference>
+
+<Reference id="reference-9" label="[9]">
+  Roetteler, M., Naehrig, M., Svore, K. M., & Lauter, K. (2017). Quantum
+  resource estimates for computing elliptic curve discrete logarithms.
+  arXiv:1706.06752.
+  [https://arxiv.org/abs/1706.06752](https://arxiv.org/abs/1706.06752)
+</Reference>
+
+<Reference id="reference-10" label="[10]">
+  Open Quantum Safe Project. (n.d.). ML-DSA | Open Quantum Safe. Retrieved
+  January 29, 2026, from
+  [https://openquantumsafe.org/liboqs/algorithms/sig/ml-dsa.html](https://openquantumsafe.org/liboqs/algorithms/sig/ml-dsa.html)
+</Reference>
+
+<Reference id="reference-11" label="[11]">
+  Babbush, R., Zalcman, A., Gidney, C., Broughton, M., Khattar, T., Neven, H.,
+  Bergamaschi, T., Drake, J., & Boneh, D. (2026). Securing Elliptic Curve
+  Cryptocurrencies against Quantum Vulnerabilities: Resource Estimates and
+  Mitigations. Google Quantum AI.
+  [https://quantumai.google/static/site-assets/downloads/cryptocurrency-whitepaper.pdf](https://quantumai.google/static/site-assets/downloads/cryptocurrency-whitepaper.pdf)
+</Reference>
+
+<Reference id="reference-12" label="[12]">
+  National Institute of Standards and Technology. (2024). NIST IR 8547:
+  Transition to Post-Quantum Cryptography Standards.
+  [https://nvlpubs.nist.gov/nistpubs/ir/2024/NIST.IR.8547.ipd.pdf](https://nvlpubs.nist.gov/nistpubs/ir/2024/NIST.IR.8547.ipd.pdf)
+</Reference>
+
+<Reference id="reference-13" label="[13]">
+  Executive Order 14412 of June 22, 2026, Securing the Nation Against Advanced
+  Cryptographic Attacks, 91 Fed. Reg. 38483 (June 25, 2026).
+  [https://www.federalregister.gov/d/2026-12909](https://www.federalregister.gov/d/2026-12909)
+</Reference>
+
+<Reference id="reference-14" label="[14]">
+  Signal. (2023, September 19). The PQXDH Key Agreement Protocol.
+  [https://signal.org/blog/pqxdh/](https://signal.org/blog/pqxdh/)
+</Reference>
+
+<Reference id="reference-15" label="[15]">
+  Apple Security Engineering and Architecture. (2024, February 21). iMessage
+  with PQ3: The new state of the art in quantum-secure messaging at scale.
+  [https://security.apple.com/blog/imessage-pq3/](https://security.apple.com/blog/imessage-pq3/)
+</Reference>
+
+<Reference id="reference-16" label="[16]">
+  Cloudflare. (2025). The state of the post-quantum Internet in 2025.
+  [https://blog.cloudflare.com/pq-2025/](https://blog.cloudflare.com/pq-2025/)
+</Reference>
+
+<Reference id="reference-17" label="[17]">
+  Blockchain.com. (2026). Bitcoin UTXO count. Retrieved September 3, 2026, from
+  [https://www.blockchain.com/explorer/charts/utxo-count](https://www.blockchain.com/explorer/charts/utxo-count)
+</Reference>
+
+<Reference id="reference-18" label="[18]">
+  transactionfee.info. (n.d.). Payments spending SegWit.
+  [https://transactionfee.info/charts/payments-spending-segwit/](https://transactionfee.info/charts/payments-spending-segwit/)
+</Reference>
+
+<Reference id="reference-19" label="[19]">
+  CoinDesk. (2026, July 4). Bitcoin experts split over plan to freeze Satoshi's
+  1.1 million Bitcoin as quantum threat grows.
+  [https://www.coindesk.com/business/2026/07/04/bitcoin-experts-split-over-plan-to-freeze-satoshi-s-1-1-million-bitcoin-as-quantum-threat-grows](https://www.coindesk.com/business/2026/07/04/bitcoin-experts-split-over-plan-to-freeze-satoshi-s-1-1-million-bitcoin-as-quantum-threat-grows)
+</Reference>
+
+<Reference id="reference-20" label="[20]">
+  Eigen Labs. (2026). ECDSA.fail: can you break ECDSA?
+  [https://ecdsa.fail](https://ecdsa.fail)
+</Reference>
+
+### Bacaan lanjutan
+
+- [Quantus Improvement Proposals (QIP)](https://github.com/Quantus-Network/improvement-proposals)
+- [Dokumentasi](https://docs.quantus.com)
+- [Forum riset](https://research.quantus.com)
+- [Laporan The State of Quantum](https://report.quantus.com)
+- [Kode sumber](https://github.com/Quantus-Network)
