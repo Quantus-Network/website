@@ -118,14 +118,14 @@
     },
     "loader": {
       "lines": {
-        "protocol": "> QUANTUS 协议 v0.7.1-q-day-2",
+        "protocol": "> QUANTUS 协议 v1.0.0-gm",
         "integrity": "> 系统完整性 <span class=\"ok\">[通过]</span>",
         "nist_module": "> NIST FIPS 204 模块已加载 <span class=\"ok\">[正常]</span>",
         "initializing": "> 正在初始化 <span class=\"ac\">ML-DSA / DILITHIUM-5</span>...",
         "signature_scheme": "> 后量子签名方案 <span class=\"ok\">激活</span>",
         "p2p_layer": "> P2P 通信层 → <span class=\"ac\">PQ 加密隧道</span>",
         "zk_engine": "> 递归 ZK 证明引擎 <span class=\"ok\">就绪</span>",
-        "syncing": "> 正在同步 PLANCK 测试网... 节点: <span class=\"ac\">247</span>",
+        "syncing": "> 正在同步 MAINNET... 节点: <span class=\"ac\">247</span>",
         "chladni": "> 克拉尼场可视化器 <span class=\"ac\">正在加载</span>",
         "prompt": "> <span class=\"blink\"></span>"
       }
@@ -134,7 +134,7 @@
       "eyebrow": "量子安全加密货币",
       "title_line1": "量子计算机无法",
       "title_line2": "破解的货币。",
-      "sub": "Quantus 是后量子时代的 Layer 1。它的货币是 QTC：通过挖矿产生，第一天即可从 35+ 条链接入。",
+      "sub": "Quantus 是量子安全加密货币。供应上限 2,100 万。Proof of Work，保护隐私",
       "cta_whitepaper": "阅读白皮书",
       "cta_download_wallet": "下载钱包",
       "freq": {
@@ -261,11 +261,7 @@
         },
         "pq": {
           "title": "后量子安全",
-          "body": [
-            "您的密钥。",
-            "您的币。",
-            "已然量子安全。"
-          ]
+          "body": ["您的密钥。", "您的币。", "已然量子安全。"]
         }
       }
     },
@@ -675,21 +671,14 @@
     "cookies_tracking": {
       "title": "Cookie 和追踪",
       "intro": "我们的网站使用 Cookie 用于：",
-      "items": [
-        "基本的网站功能",
-        "了解网站使用情况的分析",
-        "性能改进"
-      ],
+      "items": ["基本的网站功能", "了解网站使用情况的分析", "性能改进"],
       "note": "您可以通过浏览器设置控制 Cookie，但这可能会影响网站功能。"
     },
     "data_security": {
       "title": "数据安全与保留",
       "intro": "我们实施标准的安全措施来保护您的数据，包括加密和安全存储。然而，没有任何在线服务是完全安全的。",
       "technical": "保留期限：",
-      "retention_items": [
-        "网站分析：26 个月",
-        "时事通讯订阅：直到您退订"
-      ]
+      "retention_items": ["网站分析：26 个月", "时事通讯订阅：直到您退订"]
     },
     "your_rights": {
       "title": "您的权利",
@@ -805,7 +794,7 @@
     "brand": "Quantus",
     "copyright": "© {year} Quantus.",
     "rights": "保留所有权利。",
-    "built_on": "基于 PLANCK 测试网构建",
+    "built_on": "",
     "sections": {
       "protocol": "协议",
       "community": "社区",

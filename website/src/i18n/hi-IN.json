@@ -118,14 +118,14 @@
     },
     "loader": {
       "lines": {
-        "protocol": "> QUANTUS PROTOCOL v0.7.1-q-day-2",
+        "protocol": "> QUANTUS PROTOCOL v1.0.0-gm",
         "integrity": "> SYSTEM INTEGRITY <span class=\"ok\">[PASS]</span>",
         "nist_module": "> NIST FIPS 204 MODULE LOADED <span class=\"ok\">[OK]</span>",
         "initializing": "> INITIALIZING <span class=\"ac\">ML-DSA / DILITHIUM-5</span>...",
         "signature_scheme": "> POST-QUANTUM SIGNATURE SCHEME <span class=\"ok\">ACTIVE</span>",
         "p2p_layer": "> P2P COMM LAYER → <span class=\"ac\">PQ-ENCRYPTED TUNNEL</span>",
         "zk_engine": "> RECURSIVE ZK PROOF ENGINE <span class=\"ok\">READY</span>",
-        "syncing": "> SYNCING PLANCK TESTNET... PEERS: <span class=\"ac\">247</span>",
+        "syncing": "> SYNCING MAINNET... PEERS: <span class=\"ac\">247</span>",
         "chladni": "> CHLADNI FIELD VISUALIZER <span class=\"ac\">LOADING</span>",
         "prompt": "> <span class=\"blink\"></span>"
       }
@@ -134,7 +134,7 @@
       "eyebrow": "क्वांटम-सुरक्षित एन्क्रिप्टेड मनी",
       "title_line1": "पैसा जिसे क्वांटम",
       "title_line2": "कंप्यूटर तोड़ नहीं सकते।",
-      "sub": "Quantus पोस्ट-क्वांटम लेयर 1 है। इसका पैसा QTC है: माइनिंग से रचा गया, पहले ही दिन से 35+ चेन से पहुंच योग्य।",
+      "sub": "Quantus क्वांटम-सुरक्षित एन्क्रिप्टेड मनी है। 21 मिलियन सप्लाई कैप। Proof of Work, और गोपनीयता बनाए रखने वाला",
       "cta_whitepaper": "व्हाइटपेपर पढ़ें",
       "cta_download_wallet": "वॉलेट डाउनलोड करें",
       "freq": {
@@ -261,11 +261,7 @@
         },
         "pq": {
           "title": "पोस्ट-क्वांटम सुरक्षा",
-          "body": [
-            "आपकी कुंजियाँ।",
-            "आपके कॉइन।",
-            "पहले से क्वांटम-सुरक्षित।"
-          ]
+          "body": ["आपकी कुंजियाँ।", "आपके कॉइन।", "पहले से क्वांटम-सुरक्षित।"]
         }
       }
     },
@@ -805,7 +801,7 @@
     "brand": "Quantus",
     "copyright": "© {year} Quantus.",
     "rights": "सर्वाधिकार सुरक्षित।",
-    "built_on": "PLANCK टेस्टनेट पर निर्मित",
+    "built_on": "",
     "sections": {
       "protocol": "प्रोटोकॉल",
       "community": "कम्युनिटी",
