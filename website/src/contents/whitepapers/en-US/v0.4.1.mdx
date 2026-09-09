@@ -276,7 +276,7 @@ The quantum security of the scheme derives from FRI (Fast Reed-Solomon Interacti
 
 Beyond scaling, wormhole transfers function as Quantus's encrypted transactions, and an address that receives funds this way functions as an encrypted account. The chain does not distinguish wormhole addresses from ordinary addresses: a deposit is an ordinary transfer, and the receiving address shows a normal, visible balance onchain. Spending works differently. Exiting the wormhole mints funds at the exit address against a zero-knowledge proof whose public inputs contain only nullifiers, a recent block hash, amounts, and exit addresses. Nothing onchain references the source address, and the source balance is never debited. To an observer, funds received through a wormhole address appear to remain exactly where they are, whether or not they have since been spent. An encrypted send breaks the onchain link between sender and receiver. Wallets expose this as two transaction modes, transparent and encrypted, with proofs generated locally on the user's device.
 
-An observer who matches a deposit to an exit of the same amount at a suggestive time can narrow the link between them. Wallets batch up to seven exits into one proof and pad the batch with dummy slots. Encrypted transfers move in steps of 0.01 QUAN, so many transfers share the same amount. Every native transfer joins the same anonymity set. Mining-reward wormhole addresses are identifiable by construction.
+An observer who matches a deposit to an exit of the same amount at a suggestive time can narrow the link between them. Wallets batch up to seven exits into one proof and pad the batch with dummy slots. Encrypted transfers move in steps of 0.01 QTC, so many transfers share the same amount. Every native transfer joins the same anonymity set. Mining-reward wormhole addresses are identifiable by construction.
 
 #### Client / Prover Flow
 
@@ -358,7 +358,7 @@ Poseidon2 is a refinement of the Poseidon hash function. Creating SNARKs or STAR
 
 We use the **Goldilocks field** for both Poseidon2 and Plonky2. The Goldilocks field's order fits in an unsigned 64-bit integer, which increases efficiency without compromising soundness.
 
-Supply is capped at 21,000,000 QUAN. See section 06.
+Supply is capped at 21,000,000 QTC. See section 06.
 
 <ChapterHeading number="05" title="Account Security" />
 
@@ -415,7 +415,7 @@ Many crypto-fortunes have gone to the grave with their owners. Advanced accounts
 
 <ChapterHeading number="06" title="Tokenomics and Governance" />
 
-Quantus has a fixed monetary policy: a 21,000,000 QUAN supply cap, an exponentially decaying emission curve, and a transaction fee burn that keeps the block reward above zero indefinitely while maintaining the supply cap.
+Quantus has a fixed monetary policy: a 21,000,000 QTC supply cap, an exponentially decaying emission curve, and a transaction fee burn that keeps the block reward above zero indefinitely while maintaining the supply cap.
 
 ### Block Rewards
 
@@ -429,7 +429,7 @@ This heuristic forms a smooth exponentially decaying curve as the block_reward c
 
 ### Investor and Team Allocation
 
-Quantus was built with the help of investors who took great risk in funding it. At genesis, there is a one-time mint of 27% of the total supply (5,670,000 QUAN). The remaining 73% (15,330,000 QUAN) can only be mined into existence. There is no dev tax: miners keep full block rewards.
+Quantus was built with the help of investors who took great risk in funding it. At genesis, there is a one-time mint of 27% of the total supply (5,670,000 QTC). The remaining 73% (15,330,000 QTC) can only be mined into existence. There is no dev tax: miners keep full block rewards.
 
 The investors, founders, and team own 23% of total supply. These tokens stay locked for the first year after mainnet, then vest linearly over the following 36 months, enforced onchain by a dedicated vesting pallet.
 
@@ -446,17 +446,17 @@ Every transaction fee goes to miners or is burned.
   rows={[
     [
       "Transparent, ML-DSA-65 (default)",
-      "About 0.0062 QUAN per simple transfer, plus an optional tip",
+      "About 0.0062 QTC per simple transfer, plus an optional tip",
       "Miners",
     ],
     [
       "Transparent, ML-DSA-87",
-      "About 0.0081 QUAN per simple transfer, plus an optional tip",
+      "About 0.0081 QTC per simple transfer, plus an optional tip",
       "Miners",
     ],
     [
       "Encrypted",
-      "0.04% of the amount, minimum 0.01 QUAN",
+      "0.04% of the amount, minimum 0.01 QTC",
       "Half to miners, half burned",
     ],
     [
@@ -467,9 +467,9 @@ Every transaction fee goes to miners or is burned.
   ]}
 />
 
-In practice, encrypted transactions of 25 QUAN or less pay the flat 0.01 QUAN minimum; anything larger pays the 0.04% fee.
+In practice, encrypted transactions of 25 QTC or less pay the flat 0.01 QTC minimum; anything larger pays the 0.04% fee.
 
-As long as there is activity on the network, this fee structure pays miners to secure it in perpetuity. Quantus keeps a hard cap of 21,000,000 QUAN without ever running out of security budget.
+As long as there is activity on the network, this fee structure pays miners to secure it in perpetuity. Quantus keeps a hard cap of 21,000,000 QTC without ever running out of security budget.
 
 ### Network Upgrades
 

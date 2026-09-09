@@ -281,7 +281,7 @@ Die Quantensicherheit des Schemas kommt von FRI-Commitments (Fast Reed-Solomon I
 
 Über die Skalierung hinaus fungieren Wormhole-Überweisungen als die verschlüsselten Transaktionen von Quantus, und eine Adresse, die auf diesem Weg Mittel erhält, fungiert als verschlüsseltes Konto. Die Kette unterscheidet Wormhole-Adressen nicht von gewöhnlichen Adressen: Eine Einzahlung ist eine gewöhnliche Überweisung, und die empfangende Adresse zeigt onchain ein normales, sichtbares Guthaben. Das Ausgeben funktioniert anders. Der Ausgang aus dem Wormhole prägt Mittel an der Ausgangsadresse gegen einen Zero-Knowledge-Beweis, dessen öffentliche Inputs nur Nullifier, einen aktuellen Block-Hash, Beträge und Ausgangsadressen enthalten. Nichts onchain referenziert die Quelladresse, und das Quellguthaben wird nie belastet. Für einen Beobachter scheinen über eine Wormhole-Adresse empfangene Mittel genau dort zu bleiben, wo sie sind, unabhängig davon, ob sie inzwischen ausgegeben wurden. Eine verschlüsselte Sendung bricht die Onchain-Verbindung zwischen Sender und Empfänger. Wallets stellen das als zwei Transaktionsmodi dar, transparent und verschlüsselt, wobei die Beweise lokal auf dem Gerät des Nutzers erzeugt werden.
 
-Ein Beobachter, der eine Einzahlung einem Ausgang gleichen Betrags zu einem verdächtigen Zeitpunkt zuordnet, kann die Verbindung zwischen beiden eingrenzen. Wallets bündeln bis zu sieben Ausgänge in einem Beweis und füllen das Bündel mit Dummy-Slots auf. Verschlüsselte Überweisungen erfolgen in Schritten von 0,01 QUAN, sodass viele Überweisungen denselben Betrag teilen. Jede native Überweisung tritt derselben Anonymitätsmenge bei. Wormhole-Adressen für Mining-Belohnungen sind konstruktionsbedingt identifizierbar.
+Ein Beobachter, der eine Einzahlung einem Ausgang gleichen Betrags zu einem verdächtigen Zeitpunkt zuordnet, kann die Verbindung zwischen beiden eingrenzen. Wallets bündeln bis zu sieben Ausgänge in einem Beweis und füllen das Bündel mit Dummy-Slots auf. Verschlüsselte Überweisungen erfolgen in Schritten von 0,01 QTC, sodass viele Überweisungen denselben Betrag teilen. Jede native Überweisung tritt derselben Anonymitätsmenge bei. Wormhole-Adressen für Mining-Belohnungen sind konstruktionsbedingt identifizierbar.
 
 #### Client-/Prover-Flow
 
@@ -368,7 +368,7 @@ Poseidon2 ist eine Verfeinerung der Hashfunktion Poseidon. SNARKs oder STARKs f�
 
 Wir verwenden das **Goldilocks-Feld** für Poseidon2 und Plonky2. Die Ordnung des Goldilocks-Feldes passt in eine 64-Bit-Unsigned-Integer, was die Effizienz erhöht, ohne die Solidität zu gefährden.
 
-Das Angebot ist auf 21.000.000 QUAN begrenzt. Siehe Abschnitt 06.
+Das Angebot ist auf 21.000.000 QTC begrenzt. Siehe Abschnitt 06.
 
 <ChapterHeading number="05" title="Kontosicherheit" />
 
@@ -425,7 +425,7 @@ Viele Krypto-Vermögen sind mit ihren Besitzern ins Grab gegangen. Erweiterte Ko
 
 <ChapterHeading number="06" title="Tokenomics und Governance" />
 
-Quantus hat eine feste Geldpolitik: eine Angebotsobergrenze von 21.000.000 QUAN, eine exponentiell abklingende Emissionskurve und eine Verbrennung von Transaktionsgebühren, die die Blockbelohnung dauerhaft über null hält und zugleich die Angebotsobergrenze wahrt.
+Quantus hat eine feste Geldpolitik: eine Angebotsobergrenze von 21.000.000 QTC, eine exponentiell abklingende Emissionskurve und eine Verbrennung von Transaktionsgebühren, die die Blockbelohnung dauerhaft über null hält und zugleich die Angebotsobergrenze wahrt.
 
 ### Blockbelohnungen
 
@@ -439,7 +439,7 @@ Diese Heuristik bildet eine sanft fallende Exponentialkurve, während die block_
 
 ### Zuteilung an Investoren und Team
 
-Quantus wurde mit Hilfe von Investoren aufgebaut, die hohes Risiko bei der Finanzierung trugen. Bei der Genesis gibt es eine einmalige Prägung von 27 % des Gesamtangebots (5.670.000 QUAN). Die restlichen 73 % (15.330.000 QUAN) können nur durch Mining entstehen. Es gibt keine Dev-Tax: Miner behalten die vollen Blockbelohnungen.
+Quantus wurde mit Hilfe von Investoren aufgebaut, die hohes Risiko bei der Finanzierung trugen. Bei der Genesis gibt es eine einmalige Prägung von 27 % des Gesamtangebots (5.670.000 QTC). Die restlichen 73 % (15.330.000 QTC) können nur durch Mining entstehen. Es gibt keine Dev-Tax: Miner behalten die vollen Blockbelohnungen.
 
 Investoren, Gründer und Team halten 23 % des Gesamtangebots. Diese Tokens bleiben im ersten Jahr nach dem Mainnet gesperrt und vesten anschließend linear über die folgenden 36 Monate, onchain durchgesetzt durch ein dediziertes Vesting-Pallet.
 
@@ -456,17 +456,17 @@ Jede Transaktionsgebühr geht an Miner oder wird verbrannt.
   rows={[
     [
       "Transparent, ML-DSA-65 (Standard)",
-      "Etwa 0,0062 QUAN pro einfacher Überweisung, plus optionales Trinkgeld",
+      "Etwa 0,0062 QTC pro einfacher Überweisung, plus optionales Trinkgeld",
       "Miner",
     ],
     [
       "Transparent, ML-DSA-87",
-      "Etwa 0,0081 QUAN pro einfacher Überweisung, plus optionales Trinkgeld",
+      "Etwa 0,0081 QTC pro einfacher Überweisung, plus optionales Trinkgeld",
       "Miner",
     ],
     [
       "Verschlüsselt",
-      "0,04 % des Betrags, mindestens 0,01 QUAN",
+      "0,04 % des Betrags, mindestens 0,01 QTC",
       "Hälfte an Miner, Hälfte verbrannt",
     ],
     [
@@ -477,9 +477,9 @@ Jede Transaktionsgebühr geht an Miner oder wird verbrannt.
   ]}
 />
 
-In der Praxis zahlen verschlüsselte Transaktionen von 25 QUAN oder weniger das feste Minimum von 0,01 QUAN; alles darüber zahlt die Gebühr von 0,04 %.
+In der Praxis zahlen verschlüsselte Transaktionen von 25 QTC oder weniger das feste Minimum von 0,01 QTC; alles darüber zahlt die Gebühr von 0,04 %.
 
-Solange es Aktivität im Netzwerk gibt, bezahlt diese Gebührenstruktur Miner auf Dauer für dessen Absicherung. Quantus behält eine harte Obergrenze von 21.000.000 QUAN, ohne je das Sicherheitsbudget zu erschöpfen.
+Solange es Aktivität im Netzwerk gibt, bezahlt diese Gebührenstruktur Miner auf Dauer für dessen Absicherung. Quantus behält eine harte Obergrenze von 21.000.000 QTC, ohne je das Sicherheitsbudget zu erschöpfen.
 
 ### Netzwerk-Upgrades
 

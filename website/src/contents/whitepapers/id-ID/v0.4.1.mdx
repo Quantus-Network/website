@@ -276,7 +276,7 @@ Keamanan kuantum skema ini berasal dari komitmen FRI (Fast Reed-Solomon Interact
 
 Di luar penskalaan, transfer wormhole berfungsi sebagai transaksi terenkripsi Quantus, dan alamat yang menerima dana dengan cara ini berfungsi sebagai akun terenkripsi. Chain tidak membedakan alamat wormhole dari alamat biasa: deposit adalah transfer biasa, dan alamat penerima menampilkan saldo normal yang terlihat onchain. Pembelanjaan bekerja secara berbeda. Keluar dari wormhole mencetak dana di alamat keluar berdasarkan bukti zero-knowledge yang input publiknya hanya berisi nullifier, hash blok terkini, jumlah, dan alamat keluar. Tidak ada apa pun onchain yang merujuk alamat sumber, dan saldo sumber tidak pernah didebit. Bagi pengamat, dana yang diterima melalui alamat wormhole tampak tetap berada persis di tempatnya, terlepas dari apakah dana itu sudah dibelanjakan. Pengiriman terenkripsi memutus tautan onchain antara pengirim dan penerima. Dompet menampilkannya sebagai dua mode transaksi, transparan dan terenkripsi, dengan bukti yang dihasilkan secara lokal di perangkat pengguna.
 
-Pengamat yang mencocokkan deposit dengan keluaran berjumlah sama pada waktu yang mencurigakan dapat mempersempit tautan di antara keduanya. Dompet menggabungkan hingga tujuh keluaran ke dalam satu bukti dan mengisi batch dengan slot dummy. Transfer terenkripsi bergerak dalam kelipatan 0.01 QUAN, sehingga banyak transfer berbagi jumlah yang sama. Setiap transfer native bergabung ke himpunan anonimitas yang sama. Alamat wormhole hadiah penambangan dapat dikenali berdasarkan konstruksinya.
+Pengamat yang mencocokkan deposit dengan keluaran berjumlah sama pada waktu yang mencurigakan dapat mempersempit tautan di antara keduanya. Dompet menggabungkan hingga tujuh keluaran ke dalam satu bukti dan mengisi batch dengan slot dummy. Transfer terenkripsi bergerak dalam kelipatan 0.01 QTC, sehingga banyak transfer berbagi jumlah yang sama. Setiap transfer native bergabung ke himpunan anonimitas yang sama. Alamat wormhole hadiah penambangan dapat dikenali berdasarkan konstruksinya.
 
 #### Alur klien / prover
 
@@ -358,7 +358,7 @@ Poseidon2 adalah penyempurnaan fungsi hash Poseidon. Membuat SNARK atau STARK un
 
 Kami menggunakan **medan Goldilocks** untuk Poseidon2 dan Plonky2. Orde medan Goldilocks muat dalam bilangan bulat tak bertanda 64-bit, yang meningkatkan efisiensi tanpa mengorbankan soundness.
 
-Pasokan dibatasi pada 21,000,000 QUAN. Lihat bagian 06.
+Pasokan dibatasi pada 21,000,000 QTC. Lihat bagian 06.
 
 <ChapterHeading number="05" title="Keamanan Akun" />
 
@@ -415,7 +415,7 @@ Banyak kekayaan kripto ikut ke kubur bersama pemiliknya. Akun lanjutan menawarka
 
 <ChapterHeading number="06" title="Tokenomik dan Tata Kelola" />
 
-Quantus memiliki kebijakan moneter tetap: batas pasokan 21,000,000 QUAN, kurva emisi yang meluruh secara eksponensial, dan pembakaran biaya transaksi yang menjaga hadiah blok tetap di atas nol tanpa batas waktu sambil mempertahankan batas pasokan.
+Quantus memiliki kebijakan moneter tetap: batas pasokan 21,000,000 QTC, kurva emisi yang meluruh secara eksponensial, dan pembakaran biaya transaksi yang menjaga hadiah blok tetap di atas nol tanpa batas waktu sambil mempertahankan batas pasokan.
 
 ### Hadiah blok
 
@@ -429,7 +429,7 @@ Heuristik ini membentuk kurva peluruhan eksponensial halus karena block_reward b
 
 ### Alokasi investor dan tim
 
-Quantus dibangun dengan bantuan investor yang mengambil risiko besar dalam mendanainya. Pada genesis, ada pencetakan satu kali sebesar 27% dari total pasokan (5,670,000 QUAN). Sisa 73% (15,330,000 QUAN) hanya dapat ditambang ke dalam keberadaan. Tidak ada pajak pengembang: penambang menerima hadiah blok sepenuhnya.
+Quantus dibangun dengan bantuan investor yang mengambil risiko besar dalam mendanainya. Pada genesis, ada pencetakan satu kali sebesar 27% dari total pasokan (5,670,000 QTC). Sisa 73% (15,330,000 QTC) hanya dapat ditambang ke dalam keberadaan. Tidak ada pajak pengembang: penambang menerima hadiah blok sepenuhnya.
 
 Investor, pendiri, dan tim memiliki 23% dari total pasokan. Token ini tetap terkunci selama tahun pertama setelah mainnet, lalu vesting secara linier selama 36 bulan berikutnya, ditegakkan onchain oleh pallet vesting khusus.
 
@@ -446,17 +446,17 @@ Setiap biaya transaksi diberikan kepada penambang atau dibakar.
   rows={[
     [
       "Transparan, ML-DSA-65 (bawaan)",
-      "Sekitar 0.0062 QUAN per transfer sederhana, ditambah tip opsional",
+      "Sekitar 0.0062 QTC per transfer sederhana, ditambah tip opsional",
       "Penambang",
     ],
     [
       "Transparan, ML-DSA-87",
-      "Sekitar 0.0081 QUAN per transfer sederhana, ditambah tip opsional",
+      "Sekitar 0.0081 QTC per transfer sederhana, ditambah tip opsional",
       "Penambang",
     ],
     [
       "Terenkripsi",
-      "0.04% dari jumlah, minimum 0.01 QUAN",
+      "0.04% dari jumlah, minimum 0.01 QTC",
       "Separuh ke penambang, separuh dibakar",
     ],
     [
@@ -467,9 +467,9 @@ Setiap biaya transaksi diberikan kepada penambang atau dibakar.
   ]}
 />
 
-Dalam praktiknya, transaksi terenkripsi sebesar 25 QUAN atau kurang membayar minimum tetap 0.01 QUAN; yang lebih besar membayar biaya 0.04%.
+Dalam praktiknya, transaksi terenkripsi sebesar 25 QTC atau kurang membayar minimum tetap 0.01 QTC; yang lebih besar membayar biaya 0.04%.
 
-Selama ada aktivitas di jaringan, struktur biaya ini membayar penambang untuk mengamankannya selamanya. Quantus mempertahankan batas keras 21,000,000 QUAN tanpa pernah kehabisan anggaran keamanan.
+Selama ada aktivitas di jaringan, struktur biaya ini membayar penambang untuk mengamankannya selamanya. Quantus mempertahankan batas keras 21,000,000 QTC tanpa pernah kehabisan anggaran keamanan.
 
 ### Peningkatan jaringan
 

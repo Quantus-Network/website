@@ -276,7 +276,7 @@ La seguridad cuántica del esquema proviene de compromisos FRI (Fast Reed-Solomo
 
 Más allá del escalado, las transferencias wormhole funcionan como las transacciones cifradas de Quantus, y una dirección que recibe fondos de este modo funciona como una cuenta cifrada. La cadena no distingue las direcciones wormhole de las direcciones ordinarias: un depósito es una transferencia ordinaria, y la dirección receptora muestra un saldo normal y visible en cadena. El gasto funciona de otra forma. Salir del wormhole acuña fondos en la dirección de salida contra una prueba de conocimiento cero cuyos inputs públicos contienen solo nullifiers, un hash de bloque reciente, importes y direcciones de salida. Nada en cadena hace referencia a la dirección de origen, y el saldo de origen nunca se debita. Para un observador, los fondos recibidos a través de una dirección wormhole parecen permanecer exactamente donde están, se hayan gastado después o no. Un envío cifrado rompe el vínculo en cadena entre remitente y receptor. Los monederos lo exponen como dos modos de transacción, transparente y cifrado, con pruebas generadas localmente en el dispositivo del usuario.
 
-Un observador que empareje un depósito con una salida del mismo importe en un momento sugerente puede estrechar el vínculo entre ambos. Los monederos agrupan hasta siete salidas en una prueba y rellenan el lote con ranuras ficticias. Las transferencias cifradas se mueven en pasos de 0,01 QUAN, por lo que muchas transferencias comparten el mismo importe. Cada transferencia nativa se une al mismo conjunto de anonimato. Las direcciones wormhole de recompensas de minería son identificables por construcción.
+Un observador que empareje un depósito con una salida del mismo importe en un momento sugerente puede estrechar el vínculo entre ambos. Los monederos agrupan hasta siete salidas en una prueba y rellenan el lote con ranuras ficticias. Las transferencias cifradas se mueven en pasos de 0,01 QTC, por lo que muchas transferencias comparten el mismo importe. Cada transferencia nativa se une al mismo conjunto de anonimato. Las direcciones wormhole de recompensas de minería son identificables por construcción.
 
 #### Flujo cliente / probador
 
@@ -363,7 +363,7 @@ Poseidon2 es un refinamiento de la función hash Poseidon. Crear SNARKs o STARKs
 
 Usamos el **campo Goldilocks** para Poseidon2 y Plonky2. El orden del campo Goldilocks cabe en un entero sin signo de 64 bits, lo que aumenta la eficiencia sin comprometer la solidez.
 
-El suministro está limitado a 21.000.000 QUAN. Véase la sección 06.
+El suministro está limitado a 21.000.000 QTC. Véase la sección 06.
 
 <ChapterHeading number="05" title="Seguridad de las cuentas" />
 
@@ -420,7 +420,7 @@ Muchas fortunas cripto han ido a la tumba con sus dueños. Las cuentas avanzadas
 
 <ChapterHeading number="06" title="Tokenómica y gobernanza" />
 
-Quantus tiene una política monetaria fija: un tope de suministro de 21.000.000 QUAN, una curva de emisión exponencialmente decreciente y una quema de comisiones de transacción que mantiene la recompensa de bloque por encima de cero indefinidamente sin superar el tope de suministro.
+Quantus tiene una política monetaria fija: un tope de suministro de 21.000.000 QTC, una curva de emisión exponencialmente decreciente y una quema de comisiones de transacción que mantiene la recompensa de bloque por encima de cero indefinidamente sin superar el tope de suministro.
 
 ### Recompensas de bloque
 
@@ -434,7 +434,7 @@ Esta heurística forma una curva exponencial suavemente decreciente a medida que
 
 ### Asignación a inversores y equipo
 
-Quantus se construyó con la ayuda de inversores que asumieron gran riesgo al financiarlo. En el génesis hay una acuñación única del 27% del suministro total (5.670.000 QUAN). El 73% restante (15.330.000 QUAN) solo puede minarse hasta existir. No hay impuesto para desarrolladores: los mineros se quedan con la recompensa de bloque completa.
+Quantus se construyó con la ayuda de inversores que asumieron gran riesgo al financiarlo. En el génesis hay una acuñación única del 27% del suministro total (5.670.000 QTC). El 73% restante (15.330.000 QTC) solo puede minarse hasta existir. No hay impuesto para desarrolladores: los mineros se quedan con la recompensa de bloque completa.
 
 Los inversores, fundadores y equipo poseen el 23% del suministro total. Estos tokens permanecen bloqueados durante el primer año tras mainnet y luego se liberan linealmente a lo largo de los 36 meses siguientes, con aplicación en cadena mediante un pallet de vesting dedicado.
 
@@ -451,17 +451,17 @@ Cada comisión de transacción va a los mineros o se quema.
   rows={[
     [
       "Transparente, ML-DSA-65 (predeterminada)",
-      "Unos 0,0062 QUAN por transferencia simple, más una propina opcional",
+      "Unos 0,0062 QTC por transferencia simple, más una propina opcional",
       "Mineros",
     ],
     [
       "Transparente, ML-DSA-87",
-      "Unos 0,0081 QUAN por transferencia simple, más una propina opcional",
+      "Unos 0,0081 QTC por transferencia simple, más una propina opcional",
       "Mineros",
     ],
     [
       "Cifrada",
-      "0,04% del importe, mínimo 0,01 QUAN",
+      "0,04% del importe, mínimo 0,01 QTC",
       "Mitad a mineros, mitad quemada",
     ],
     [
@@ -472,9 +472,9 @@ Cada comisión de transacción va a los mineros o se quema.
   ]}
 />
 
-En la práctica, las transacciones cifradas de 25 QUAN o menos pagan el mínimo fijo de 0,01 QUAN; cualquier importe mayor paga la comisión del 0,04%.
+En la práctica, las transacciones cifradas de 25 QTC o menos pagan el mínimo fijo de 0,01 QTC; cualquier importe mayor paga la comisión del 0,04%.
 
-Mientras haya actividad en la red, esta estructura de comisiones paga a los mineros por asegurarla a perpetuidad. Quantus mantiene un tope estricto de 21.000.000 QUAN sin agotar nunca su presupuesto de seguridad.
+Mientras haya actividad en la red, esta estructura de comisiones paga a los mineros por asegurarla a perpetuidad. Quantus mantiene un tope estricto de 21.000.000 QTC sin agotar nunca su presupuesto de seguridad.
 
 ### Actualizaciones de red
 
