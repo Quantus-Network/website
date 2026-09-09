@@ -1,0 +1,727 @@
+---
+title: "Quantus Whitepaper"
+version: "0.4.1"
+publishedDate: "2026-09-04"
+updatedDate: "2026-09-09"
+authors: ["Christopher Smith", "Jonathan Angle"]
+changelog:
+  - "Tokenomics: Genesis-Vorprägung 27 % (23 % Investoren, Gründer und Team; 4 % Unternehmen), 73 % geschürft."
+  - "Datenschutzeigenschaften: das konkrete Datenschutzmodell verschlüsselter Sendungen beschrieben."
+pdfCover: true
+# Astro `render().headings` überspringt JSX-`<h2>` und ChapterHeading; Anker-Slugs entsprechen den Markdown-`###`-IDs.
+toc:
+  insertBefore:
+    die-quantenbedrohung:
+      - slug: legal-disclaimer
+        text: Rechtlicher Hinweis
+      - slug: contents
+        text: Inhalt
+      - slug: chapter-01
+        text: Einführung
+    grundlagen-des-quantencomputings:
+      - slug: chapter-02
+        text: Die Quantenbedrohung für die Blockchain
+    das-koordinationsproblem:
+      - slug: chapter-03
+        text: Die Migrationskrise
+    grundlagen:
+      - slug: chapter-04
+        text: Architektur von Quantus
+    hd-lattice:
+      - slug: chapter-05
+        text: Kontosicherheit
+    blockbelohnungen:
+      - slug: chapter-06
+        text: Tokenomics und Governance
+    implementierungsprobleme:
+      - slug: chapter-07
+        text: Roadmap
+      - slug: chapter-08
+        text: Risiken
+  insertAfter:
+    sonstige-überlegungen:
+      - slug: chapter-09
+        text: Referenzen und weiterführende Literatur
+---
+
+import CalloutV2 from "@/components/features/whitepaper/mdx/CalloutV2.astro";
+import TimelineV2 from "@/components/features/whitepaper/mdx/TimelineV2.astro";
+import ResponsiveTableV2 from "@/components/features/whitepaper/mdx/ResponsiveTableV2.astro";
+import OrderedList from "@/components/features/whitepaper/mdx/OrderedList.astro";
+import ChapterHeading from "@/components/features/whitepaper/mdx/ChapterHeading.astro";
+import Reference from "@/components/features/whitepaper/mdx/Reference.astro";
+import ReferenceMarker from "@/components/features/whitepaper/mdx/ReferenceMarker.astro";
+
+<h2
+  id="legal-disclaimer"
+  className="font-whitepaper-section-title-alt! print:text-whitepaper-section-title-alt!"
+>
+  <span>Rechtlicher Hinweis</span>
+</h2>
+
+_Dieses Whitepaper dient ausschließlich Informationszwecken und stellt weder ein Angebot zum Verkauf noch eine Aufforderung zum Kauf noch eine Empfehlung für Wertpapiere, Anlagen oder Finanzprodukte dar. Leserinnen und Leser sollten eigene Sorgfalt walten lassen und qualifizierte Fachleute konsultieren, bevor sie Anlageentscheidungen treffen. Quantus übernimmt keine Zusicherungen oder Gewährleistungen hinsichtlich der Richtigkeit oder Vollständigkeit der hier enthaltenen Informationen._
+
+<h2
+  id="contents"
+  className="font-whitepaper-section-title-alt! print:text-whitepaper-section-title-alt!"
+>
+  <span>Inhalt</span>
+</h2>
+
+<OrderedList
+  items={[
+    { title: "Einführung", number: "01" },
+    { title: "Die Quantenbedrohung für die Blockchain", number: "02" },
+    { title: "Die Migrationskrise", number: "03" },
+    { title: "Architektur von Quantus", number: "04" },
+    { title: "Kontosicherheit", number: "05" },
+    { title: "Tokenomics und Governance", number: "06" },
+    { title: "Roadmap", number: "07" },
+    { title: "Risiken", number: "08" },
+    { title: "Referenzen und weiterführende Literatur", number: "09" },
+  ]}
+/>
+
+<br />
+
+<ChapterHeading number="01" title="Einführung" />
+
+### Die Quantenbedrohung
+
+Klassische Blockchains stehen vor einer existenziellen Bedrohung durch kryptographisch relevante Quantencomputer (CRQC). Die kryptographischen Grundlagen von Blockchains beruhen auf der Schwierigkeit des diskreten Logarithmusproblems (DLP), und Quantenalgorithmen, insbesondere der von Shor, können das DLP exponentiell schneller lösen als klassische Computer. Diese Schwachstelle könnte es quantenbezogenen Angreifern ermöglichen, private aus öffentlichen Schlüsseln abzuleiten, womit sie Transaktionen fälschen und sensible Finanzdaten entschlüsseln könnten.
+
+In den kommenden Jahren müssen Werte in Billionenhöhe, die durch Blockchains gesichert sind, migrieren:
+
+- auf Post-Quanten-Lösungen in bestehenden Blockchains (derzeit gibt es keine vollständigen Lösungen nennenswerter Größe)
+- auf Post-Quanten-Blockchains (Quantus)
+- aus Krypto heraus in andere Anlageklassen (Gold, Fiat, Immobilien)
+
+> Ohne proaktive quantenresistente Lösungen riskiert die Billionen-Dollar-Kryptoökonomie eine plötzliche Abwertung.
+
+### Einzigartiges Wertversprechen
+
+Nach dem lateinischen Wort für „wie viel“ benannt, ist Quantus quantensicheres, privates, skalierbares Geld: elektronisches Peer-to-Peer-Bargeld für das Quantenzeitalter.
+
+Warum braucht die Branche eine weitere L1?
+
+Derzeit erfüllt kein anderes Blockchain-Asset alle vier Kriterien: quantensicher, privat, skalierbar, Geld.
+
+Quantus ist keine allgemeine Smart-Contract-Plattform. Es ähnelt eher Bitcoin, Monero oder Zcash als Ethereum oder Solana.
+
+Wie ein Restaurant mit wenigen hoch verfeinerten Gerichten bietet Quantus:
+
+- Post-Quanten-Signaturen für alle Transaktionen (ML-DSA)
+- Post-Quanten-Authentifizierung und -Verschlüsselung (ML-DSA und ML-KEM) zur Absicherung von Peer-Verbindungen
+- Post-Quanten-Zero-Knowledge-Beweise für private Transaktionen und Skalierung
+- Clear Signing für alle Transaktionen und Cold-Storage-Unterstützung für einfache, hochsichere Selbstverwahrung
+- Multisig-Adressen, lesbare Prüfsätze und einen erweiterten Kontotyp mit Sicherheitsfunktionen, die Diebstahl erschweren
+- Eine Angebotsobergrenze von 21.000.000 und Proof-of-Work-Konsens für solides Geld, Sicherheit und Knappheit
+
+Die Konzentration auf quantensicheres, privates, skalierbares Geld ergibt sich aus der Bedrohung durch CRQC für die Branche und aus der Unfähigkeit von Bitcoin, diese Herausforderungen zu adressieren.
+
+<ChapterHeading number="02" title="Die Quantenbedrohung für die Blockchain" />
+
+### Grundlagen des Quantencomputings
+
+Quantencomputer nutzen Prinzipien wie Superposition und Verschränkung, um Berechnungen durchzuführen, die für klassische Maschinen unhandelbar sind. Anders als klassische Bits, die 0 oder 1 sind, können Qubits gleichzeitig in mehreren Zuständen existieren, was für bestimmte Probleme exponentiellen Parallelismus ermöglicht. Diese Fähigkeit birgt existenzielle Risiken für die kryptographischen Systeme, auf denen Blockchains beruhen, da für Quantenhardware entwickelte Algorithmen die Sicherheitsannahmen der meisten Prä-Quanten-Public-Key-Kryptographie untergraben.
+
+**Shors Algorithmus**, 1994 von Peter Shor vorgestellt, liefert ein Polynomzeitverfahren zur Faktorisierung großer Ganzzahlen und zur Lösung des diskreten Logarithmusproblems auf einem Quantencomputer. Er nutzt Quanten-Fourier-Transformationen (QFT), um die Periode einer Funktion zu finden, und kann damit effizient die Einwegfunktionen invertieren, auf denen Verfahren wie RSA oder Elliptische-Kurven-Kryptographie (ECC) beruhen. Für Blockchain-Finanzen bedeutet das: Ein Angreifer mit einem ausreichend leistungsfähigen Quantencomputer (geschätzt 1.200 bis 1.450 logische Qubits <ReferenceMarker id="11" />, gegenüber früheren Schätzungen von etwa 2.000 <ReferenceMarker id="6" /><ReferenceMarker id="7" /><ReferenceMarker id="8" /><ReferenceMarker id="9" />) könnte private aus öffentlichen Schlüsseln in polynomieller Zeit O(n³) ableiten, eine extreme Beschleunigung, die verwundbare Systeme über Nacht obsolet macht. <ReferenceMarker id="1" /> Forscher korrigieren diese Zahl weiter nach unten, während Hardware und Algorithmen besser werden.
+
+**Grovers Algorithmus**, 1996 von Lov Grover vorgeschlagen, liefert eine quadratische Beschleunigung für unstrukturierte Suchprobleme und reduziert die Suchzeit von O(n) auf O(√n) Operationen. Obwohl er für asymmetrische Kryptographie nicht so verheerend ist wie Shor, betrifft Grover symmetrische Primitive wie Hashfunktionen und AES-Verschlüsselung, wodurch das Sicherheitsniveau effektiv halbiert wird (z. B. verhält sich ein 256-Bit-Schlüssel gegenüber Quantenangriffen wie 128 Bit). Dieser Angriff wird durch einfache Verdopplung der Sicherheitsbits statt durch einen Wechsel des kryptographischen Schemas gemildert. Zudem ist Grovers quadratische Beschleunigung wegen hoher Qubit- und Gatteranforderungen unpraktikabel: Sie erfordert Milliarden sequenzieller Operationen bei begrenzter Parallelisierung, was reale Umkehrungen selbst mit zukünftiger Hardware undurchführbar macht. <ReferenceMarker id="2" />
+
+### Der schrumpfende Zeitplan
+
+Die Ressourcenschätzungen für das Brechen von Prä-Quanten-Kryptographie sinken weiter. Im März 2026 senkte Google seine Schätzung auf unter 500.000 physische Qubits für das Brechen eines 256-Bit-Elliptische-Kurven-Schlüssels, eine Reduktion um das 20-Fache gegenüber der bisher besten Schätzung. <ReferenceMarker id="11" /> Im Juni 2026 eröffnete Eigen Labs [ecdsa.fail](https://ecdsa.fail), eine öffentliche Bestenliste, auf der Forscher und KI-Agenten darum wetteifern, den Schaltkreis zu verkleinern, der secp256k1 bricht, die Kurve hinter jeder Bitcoin- und Ethereum-Signatur. Die offene Initiative erreichte Googles Ergebnis in acht Stunden und übertraf es innerhalb von drei Tagen. <ReferenceMarker id="20" />
+
+NIST hat den Übergang weg von verwundbaren Schemata formalisiert: RSA und 256-Bit-Elliptische-Kurven-Kryptographie werden bis 2030 als veraltet eingestuft und bis 2035 vollständig untersagt. <ReferenceMarker id="12" /> Im Juni 2026 verlegte die Executive Order 14412 die US-Bundesfrist von 2035 auf den 31. Dezember 2030 für den Schlüsselaustausch und den 31. Dezember 2031 für digitale Signaturen, mit einer Pilotmigration, die bis Ende 2027 abgeschlossen sein soll. <ReferenceMarker id="13" />
+
+Niemand weiß, wann ein kryptographisch relevanter Quantencomputer kommt, aber er könnte innerhalb von fünf Jahren kommen. Alles, was länger als das geheim bleiben muss, braucht bereits heute Post-Quanten-Verschlüsselung. Die Informationssicherheitsbranche hat entsprechend gehandelt: Signal führte 2023 einen Post-Quanten-Schlüsselaustausch ein, Apple ergänzte iMessage 2024 damit, und Cloudflare liefert heute den Großteil seines Datenverkehrs über hybrides Post-Quanten-TLS aus. <ReferenceMarker id="14" /><ReferenceMarker id="15" /><ReferenceMarker id="16" />
+
+### Vier Bedrohungskategorien
+
+#### 01 - Digitale Signaturen fälschen
+
+Shors Algorithmus bedroht direkt die auf ECC basierenden Signaturen, die in den meisten Blockchains verwendet werden (z. B. die Kurve secp256k1 bei Bitcoin), und erlaubt es Angreifern, betrügerische Transaktionen zu autorisieren. Das wäre ein kritisches Versagen der grundlegendsten Eigenschaft einer Blockchain.
+
+#### 02 - Falsche Beweise in Zero-Knowledge-Systemen fälschen
+
+Viele Zero-Knowledge-Beweise, etwa zk-SNARKs für datenschutzorientierte Finanzen, beruhen auf der Schwierigkeit des diskreten Logarithmus über Elliptische-Kurven-Paarungen für Commitments. Shor könnte es ermöglichen, ungültige Beweise zu erzeugen, die gültig erscheinen, womit ein Angreifer neue Coins prägen oder den Zustand von Layer-2-Lösungen (L2) fälschen könnte.
+
+#### 03 - Geheime Information entschlüsseln
+
+Quantenangriffe könnten durch verwundbare Public-Key-Schemata geschützte Daten in Datenschutzprotokollen offenlegen. Sie könnten auch P2P-Kommunikation in Finanzprotokollen entschlüsseln, sensible Details preisgeben und gezielten Diebstahl ermöglichen.
+
+#### 04 - Hashfunktionen invertieren
+
+Grovers Algorithmus könnte Preimage-Angriffe auf Hashes wie SHA-256 beschleunigen, die in Proof-of-Work und Adressgenerierung verwendet werden, das ist jedoch die am wenigsten besorgniserregende Bedrohung. Viele Post-Quanten-Kryptographie-Schemata nutzen hashbasierte Konstruktionen, da Hashes mit ausreichend großem Digest als hinreichend sicher gelten.
+
+### Skalierungsherausforderungen in der Post-Quanten-Kryptographie
+
+Obwohl Post-Quanten-Kryptographie (PQC) wesentlichen Schutz vor Quantenbedrohungen bietet, führt sie aufgrund des inhärenten Designs dieser Algorithmen zu erheblichen Skalierungshindernissen. Anders als Elliptische-Kurven-Verfahren, die auf kompakten mathematischen Strukturen beruhen, benötigen PQC-Primitive größere Parameter, um die Sicherheit gegen klassische und quantenbezogene Angreifer zu halten. Dadurch entstehen deutlich größere öffentliche und private Schlüssel sowie Signaturen, oft um viele Größenordnungen. Die folgende Tabelle zeigt typische ML-DSA-Größen im Vergleich zu klassischen Äquivalenten wie 256-Bit-ECDSA: <ReferenceMarker id="10" />
+
+<ResponsiveTableV2
+  headers={[
+    "ALGORITHMUS",
+    "ÖFFENTLICHER SCHLÜSSEL",
+    "PRIVATER SCHLÜSSEL",
+    "SIGNATUR",
+  ]}
+  rows={[
+    ["ML-DSA-87 (Dilithium)", "2,592 bytes", "4,896 bytes", "4,627 bytes"],
+    ["ML-DSA-65 (Dilithium)", "1,952 bytes", "4,032 bytes", "3,309 bytes"],
+    ["ECDSA (256-bit)", "32 bytes", "32 bytes", "65 bytes"],
+  ]}
+/>
+
+Wie zu sehen ist, können ML-DSA-Signaturen mehr als 70-mal größer sein als vergleichbare ECDSA-Signaturen, öffentliche Schlüssel mehr als 80-mal. Andere PQC-Familien verschärfen das: hashbasierte Schemata wie SPHINCS+ können Signaturen bis zu 41 KB erzeugen, während selbst größenoptimierte Gittervarianten wie FALCON die klassischen Größen weiterhin um ein Vielfaches übertreffen.
+
+In Blockchain-Kontexten summieren sich diese aufgeblähten Größen zu systemischen Skalierungsproblemen. Größere Signaturen blähen einzelne Transaktionen auf und senken den Durchsatz, weil Blöcke schneller voll werden und die Validierung länger dauert. Sie belasten auch die Peer-to-Peer-Kommunikation (P2P), erhöhen Bandbreitenbedarf und Propagationsverzögerungen und können das Risiko von Forks oder Waisenblöcken in Konsensmechanismen wie Proof-of-Work erhöhen. Auch die Speicheranforderungen steigen, mit höheren Betriebskosten für Knoten und Hürden für die Teilnahme, insbesondere für Nutzer oder Validatoren mit begrenzten Ressourcen.
+
+### TPS vs. QTPS
+
+„TPS“ ist ein Branchenbegriff, der misst, wie viele Transaktionen eine Blockchain pro Sekunde verarbeiten kann. Quantensichere Transaktionen pro Sekunde (QTPS) messen den theoretischen Durchsatz einer Blockchain, wenn jede Transaktion ihren verfügbaren Post-Quanten-Adresstyp und dessen Transaktionssignaturen nutzen würde.
+
+Eine Kette ohne Post-Quanten-Adresstyp hat QTPS von null.
+
+Würde Bitcoin ML-DSA-65 ohne Änderung von Blockgröße oder Blockrate einführen, bestünde eine einfache Transaktion aus einer 3.309-Byte-Signatur und einem 1.952-Byte-Public-Key statt heute 72 und 33 Bytes. Ein Block würde etwa 690 solcher Transaktionen statt etwa 6.000 fassen, und die QTPS von Bitcoin lägen bei etwa 1,1, gegenüber ~10 TPS.
+
+<CalloutV2 title="HINWEIS">
+  Diese Skalierungsherausforderungen müssen künftig alle Blockchains angehen.
+  Bitcoin hätte zum Beispiel etwa 1 QTPS oder weniger, wenn die maximale
+  Blockgröße nicht erhöht würde.
+</CalloutV2>
+
+<ChapterHeading number="03" title="Die Migrationskrise" />
+
+### Das Koordinationsproblem
+
+Die konservative Kultur von Bitcoin lehnt Protokolländerungen ab. Jedes PQC-Upgrade würde Konsens zu kontroversen Fragen wie Migrationsfristen, möglicher Coin-Beschlagnahme und Erhöhungen der Blockgröße erfordern. Selbst wenn die Community zustimmte, müsste jeder einzelne Nutzer seine Coins auf neue quantensichere Adressen migrieren. Die Migration erfordert Handeln aller Krypto-Inhaberinnen und -Inhaber, von denen viele den Zugang zu ihren Wallets verloren haben oder sich der Bedrohung nicht bewusst sind.
+
+Diese Probleme sind für Bitcoin besonders schwer wegen fehlender klarer Führung und einer Philosophie technischer Versteinerung.
+
+Einigkeit ist der erste Schritt. Sobald Bitcoin einen Post-Quanten-Adresstyp ausliefert, kann die Migration beginnen.
+
+### Das Problem des Migrationszeitplans
+
+Die Uhr jeder Kette startet, wenn sie einen Post-Quanten-Adresstyp ausliefert, und endet an dem Tag, an dem ein kryptographisch relevanter Quantencomputer existiert.
+
+Sobald der Adresstyp ausgeliefert ist, muss jeder Inhaber ein Post-Quanten-Schlüsselpaar erzeugen und seine Coins dorthin verschieben. Bitcoin hat etwa 170 Millionen unverbrauchte Outputs, und jeder einzelne braucht eine eigene Signatur, um bewegt zu werden. <ReferenceMarker id="17" /> Selbst wenn die Migration jedes Byte jedes Blocks nutzen würde, dauerte das Verschieben aller Outputs mindestens 80 Tage. Die Migration wird nicht jedes Byte bekommen. Inhaber, die bereits migriert haben, transagieren weiter, und ihre Post-Quanten-Signaturen sind 20- bis 80-mal größer als ECDSA, sodass jede Post-Quanten-Transaktion mehr Blockplatz belegt als eine heutige Transaktion. Viele Inhaber werden zuerst eine Testtransaktion senden.
+
+Unter den optimistischsten Annahmen, mit jedem Inhaber informiert und zügig handelnd, dauert die Migration Monate. SegWit, eine weit kleinere Änderung ohne Frist, brauchte zwei Jahre, um die Hälfte der Bitcoin-Transaktionen zu erreichen. <ReferenceMarker id="18" /> Realistisch wird die Migration Jahre dauern, und jeder nicht migrierte Coin ist exponiert.
+
+### Das Problem verlorener Coins
+
+Schätzungen zufolge sind 2,3 bis 3,7 Millionen Bitcoin, mehr als ein Zehntel des Gesamtangebots, dauerhaft unzugänglich wegen verlorener Schlüssel, verstorbener Inhaber oder vergessener Wallets. <ReferenceMarker id="3" /> Diese Coins können nicht migriert werden und wirken wie eine öffentliche Belohnung für den Bau eines kryptographisch relevanten Quantencomputers (CRQC).
+
+> Die einzige technische Lösung erfordert eine strikte Frist, die nicht migrierte Coins einfriert.
+
+Im Juni 2026 schlug Binance-Gründer Changpeng Zhao ein Fenster von etwa einem Jahr nach einem Post-Quanten-Upgrade vor, nach dessen Ablauf ein Fork die in verwundbaren Adressen verbliebenen Coins einfrieren würde, einschließlich der 1,1 Millionen BTC, die Satoshi zugeschrieben werden. Der Vorschlag spaltete die Branche. <ReferenceMarker id="19" />
+
+<CalloutV2 title="DIE ANTWORT VON QUANTUS">
+  Diese sich stapelnden Herausforderungen machen es außerordentlich schwer,
+  Quantensicherheit nachträglich in bestehende Ketten einzubauen. Quantus
+  vermeidet das, indem es ausschließlich Post-Quanten-Adresstypen unterstützt.
+</CalloutV2>
+
+<ChapterHeading number="04" title="Architektur von Quantus" />
+
+### Grundlagen
+
+Quantus basiert auf Substrate, einem Blockchain-SDK, entwickelt von Parity Technologies, dem Team hinter Polkadot. Substrate ist hochgradig modular, sodass Komponenten leicht ausgetauscht werden können, um den Fokus auf das zu legen, was Quantus einzigartig macht.
+
+Quantus erweitert Substrate:
+
+- durch Unterstützung für Post-Quanten-Signaturschemata
+- durch Aktualisierung der P2P-Netzwerksicherheit auf Post-Quanten
+- durch den zk-Tree, einen Poseidon2-Merkle-Baum aller Guthabengutschriften, der in jedem Block-Header festgeschrieben wird, damit Wallets Einzahlungen innerhalb von Zero-Knowledge-Beweisen nachweisen können
+
+### Quantensicher
+
+#### Post-Quanten-kryptographische Primitive
+
+Quantus setzt vom NIST standardisierte PQC ein, um Transaktions- und Netzwerkkommunikationssicherheit gegen Quantenbedrohungen zu gewährleisten. Im Kern der Transaktionsintegrität steht **ML-DSA** (Module-Lattice-Based Digital Signature Algorithm, zuvor CRYSTALS-Dilithium), ein gitterbasiertes Signaturschema, das für sein Gleichgewicht aus Sicherheit, Effizienz und Implementierbarkeit gewählt wurde. ML-DSA nutzt die Schwierigkeit von Problemen wie Learning With Errors (LWE) und Short Integer Solution (SIS) über Modulgittern und bietet robusten Widerstand gegen klassische und quantenbezogene Angriffe, einschließlich Shors Algorithmus. <ReferenceMarker id="4" />
+
+Für Transaktionssignaturen unterstützt Quantus zwei ML-DSA-Parametersätze. ML-DSA-65 (NIST-Sicherheitsstufe 3) ist das primäre Schema und der Standard in Quantus-Wallets und bietet ein starkes Gleichgewicht aus Sicherheit und Signaturgröße. ML-DSA-87, der Parametersatz mit der höchsten Sicherheitsstufe (NIST-Sicherheitsstufe 5, äquivalent zu AES-256), wird ebenfalls unterstützt, für Nutzer, die den maximalen Sicherheitsabstand gegenüber möglichen kryptoanalytischen Durchbrüchen bei Gitterproblemen wünschen. Gitter-Kryptographie ist relativ neu und weniger kampferprobt als klassische Schemata, und die größeren Parameter mildern Risiken potenzieller Fortschritte in der Gitter-Kryptoanalyse.
+
+#### In Betracht gezogene Alternativen
+
+ML-DSA wurde gegenüber Alternativen wie FN-DSA (Falcon) gewählt wegen der höheren Implementationskomplexität von FN-DSA (z. B. erfordert es Gleitkommaoperationen, wenig geeignet für Blockchains), fehlender deterministischer Schlüsselerzeugung in der Spezifikation und des zum Entwicklungszeitpunkt nicht finalisierten Status.
+
+Hashbasierte Optionen wie SLH-DSA wurden wegen noch größerer Signaturen (über 17 KB) nicht gewählt. Krypto-Agilität (die Fähigkeit, Signaturschemata auszutauschen) ist in Substrate integriert, sodass diese Alternativen künftig relativ einfach ergänzt werden können, wenn die Umstände es erfordern.
+
+Obwohl ML-DSA größere Schlüssel und Signaturen erzeugt, sind sie im frühen Quantus-Netz handhabbar, wo Speicher noch kein Engpass ist, und Optimierungen wie Wormhole-Adressen mittels Zero-Knowledge-Beweisen werden das Skalieren adressieren.
+
+Technische Implementierungsdetails siehe [QIP-0006](https://github.com/Quantus-Network/improvement-proposals/blob/main/qip-0006.md).
+
+#### litep2p - Quantensicheres Netzwerk
+
+Quantus sichert die Peer-to-Peer-Kommunikation (P2P) zwischen Knoten durch Kombination von ML-DSA zur Authentifizierung und **ML-KEM** (Module-Lattice-Based Key-Encapsulation Mechanism, zuvor CRYSTALS-Kyber) zur Verschlüsselung. Diese Integration erweitert PQC auf den litep2p-Netzwerkstack und modifiziert Kernkomponenten für Quantenresistenz: ML-DSA-87-Signaturen für Peer-Identität und ML-KEM-768 für Transportsicherheit über das Noise-Muster pqXX mit vier Nachrichten, in dem jeder Schlüsselaustausch eine KEM-Kapselung ist, ohne Diffie-Hellman-Rückfall. <ReferenceMarker id="5" />
+
+Die P2P-Schicht wird in Quanten-Sicherheitsanalysen oft vernachlässigt. Peer-Authentifizierung ist wichtig, aber das Schlimmste, was ein Angreifer auf P2P-Ebene tun kann, ist einen Knoten zu imitieren und ungültige Nachrichten zu senden, was Denial-of-Service verursachen könnte. Dieser Angriff wird bereits gemildert, weil Knoten im Blockchain-Modell in der Regel nicht vertrauenswürdig sind und bei Erkennung leicht den Schlüssel wechseln können. Ebenso bietet das Entschlüsseln von P2P-Kommunikation dem Angreifer begrenzte Vorteile (z. B. Transaktionspfade verfolgen, mit Proxies oder Tor milderbar), und die meisten Daten werden ohnehin öffentlich onchain sichtbar.
+
+Dennoch schützt die quantensichere Absicherung der P2P-Schicht vor Abhören, Man-in-the-Middle-Angriffen und Quanten-Entschlüsselung und stellt sicher, dass Node-Gossip, Blockpropagation und andere Netzwerkinteraktionen in absehbarer Zeit vertraulich und manipulationssicher bleiben.
+
+Technische Implementierungsdetails siehe [QIP-0004](https://github.com/Quantus-Network/improvement-proposals/blob/main/qip-0004.md).
+
+### Privat
+
+#### Zwei Adresstypen
+
+Quantus hat zwei Adresstypen. Eine transparente Adresse ist der Hash eines ML-DSA-Public-Keys; ihr Guthaben und jede ein- und ausgehende Überweisung sind onchain sichtbar. Eine verschlüsselte Adresse ist eine Wormhole-Adresse: An sie gesendete Coins werden nachweislich verbrannt, und der Eigentümer prägt sie später an einer beliebigen Ausgangsadresse neu, mit einem Zero-Knowledge-Beweis, der keine Quelle referenziert. Beide sind interoperabel, und die Kette kann sie nicht unterscheiden: Eine Einzahlung auf eine verschlüsselte Adresse ist eine gewöhnliche Überweisung, und die Adresse hält ein gewöhnliches sichtbares Guthaben.
+
+#### Wormhole-Adressen
+
+Um die der Post-Quanten-Kryptographie innewohnenden Skalierungsherausforderungen anzugehen, führt Quantus ein innovatives aggregiertes Post-Quanten-Signaturschema namens **„Wormhole Addresses“** ein. Dieses System nutzt Zero-Knowledge-Beweise (ZKP), erzeugt mit dem Beweissystem Plonky2 (im Wesentlichen STARKs), um die Saldo-Verifikation off-chain zu verlagern, sodass die Kette einen einzigen kompakten Beweis verifizieren kann, ohne einzelne Signaturen zu verarbeiten. Die Kette selbst verifiziert jede Beweisebene. Quantus hat keine L2.
+
+Wormhole-Adressen ermöglichen die Verifikation einer großen Zahl von Transaktionen mit einem Beweis; die öffentlichen Inputs (z. B. Nullifier, Ausgangsadressen und Beträge) werden zum Hauptengpass. Dadurch sinkt der amortisierte Platzbedarf pro Transaktion auf eine kleine Konstante, weit unter jedem bekannten PQC-Signaturschema.
+
+Die Quantensicherheit des Schemas kommt von FRI-Commitments (Fast Reed-Solomon Interactive Oracle Proofs) auf Basis der Poseidon-Hashfamilie statt der in SNARKs üblichen, quantenverwundbaren Elliptische-Kurven-Paarungen. Außerdem bleiben die Authentifizierungsgeheimnisse hinter **Poseidon2** verborgen. Da sichere Hashfunktionen durch Grovers Algorithmus nur quadratisch geschwächt, nicht gebrochen werden, können Hash-Preimage-Beweise als leichte Post-Quanten-Signaturen in ZK-Kontexten dienen, ähnlich hashbasierten Schemata wie SPHINCS+.
+
+#### Datenschutzeigenschaften
+
+Über die Skalierung hinaus fungieren Wormhole-Überweisungen als die verschlüsselten Transaktionen von Quantus, und eine Adresse, die auf diesem Weg Mittel erhält, fungiert als verschlüsseltes Konto. Die Kette unterscheidet Wormhole-Adressen nicht von gewöhnlichen Adressen: Eine Einzahlung ist eine gewöhnliche Überweisung, und die empfangende Adresse zeigt onchain ein normales, sichtbares Guthaben. Das Ausgeben funktioniert anders. Der Ausgang aus dem Wormhole prägt Mittel an der Ausgangsadresse gegen einen Zero-Knowledge-Beweis, dessen öffentliche Inputs nur Nullifier, einen aktuellen Block-Hash, Beträge und Ausgangsadressen enthalten. Nichts onchain referenziert die Quelladresse, und das Quellguthaben wird nie belastet. Für einen Beobachter scheinen über eine Wormhole-Adresse empfangene Mittel genau dort zu bleiben, wo sie sind, unabhängig davon, ob sie inzwischen ausgegeben wurden. Eine verschlüsselte Sendung bricht die Onchain-Verbindung zwischen Sender und Empfänger. Wallets stellen das als zwei Transaktionsmodi dar, transparent und verschlüsselt, wobei die Beweise lokal auf dem Gerät des Nutzers erzeugt werden.
+
+Ein Beobachter, der eine Einzahlung einem Ausgang gleichen Betrags zu einem verdächtigen Zeitpunkt zuordnet, kann die Verbindung zwischen beiden eingrenzen. Wallets bündeln bis zu sieben Ausgänge in einem Beweis und füllen das Bündel mit Dummy-Slots auf. Verschlüsselte Überweisungen erfolgen in Schritten von 0,01 QUAN, sodass viele Überweisungen denselben Betrag teilen. Jede native Überweisung tritt derselben Anonymitätsmenge bei. Wormhole-Adressen für Mining-Belohnungen sind konstruktionsbedingt identifizierbar.
+
+#### Client-/Prover-Flow
+
+Nutzer erzeugen eine nachweislich nicht ausgebbare Adresse durch doppeltes Hashen eines Salzes zusammen mit einem Geheimnis:
+
+```
+H(H(salt|secret))
+```
+
+Diese Konstruktion vermeidet Fehlalarme (z. B. Verwechslung eines einfach gehashten Public-Keys mit einer nicht ausgebbaren Adresse), weil in Substrate (und allgemein) Blockchain-Adressen der einfache Hash eines öffentlichen Schlüssels sind, der aus dem privaten Schlüssel durch eine algebraische Operation abgeleitet wird, nicht durch einen sicheren Hash. Die Sicherheit der Konstruktion reduziert sich damit auf das Finden der Preimage-zur-Preimage eines sicheren Hashs. An diese Adresse gesendete Tokens werden faktisch verbrannt. Sie können nicht ausgegeben werden, weil es keinen privaten Schlüssel für die empfangende Adresse gibt. Diese Coins können daher neu geprägt werden, ohne das Angebot zu inflieren.
+
+Der zk-Tree zeichnet jede Guthabengutschrift auf der Kette als Blatt auf, das den Empfänger, einen Transferzähler pro Empfänger und den Betrag enthält. Das Wallet des Nutzers öffnet einen Merkle-Beweis von der zk-Tree-Wurzel eines aktuellen Block-Headers bis zum Blatt seiner Einzahlung. Ein Nullifier wird berechnet, um Doppelausgaben zu verhindern:
+
+```
+H(H(salt | secret | transfer_count))
+```
+
+#### Aggregator-Flow
+
+Die Aggregation nutzt die Rekursion von Plonky2 in zwei Ebenen, wobei jeder Elternbeweis seine Kindbeweise verifiziert und deren öffentliche Inputs nach oben weiterreicht.
+
+In der ersten Ebene bündelt das Wallet des Nutzers bis zu sieben seiner eigenen Blattbeweise in ein privates Bündel. Der Schaltkreis mischt die Slots, füllt leere mit Dummy-Beweisen auf, damit ein Beobachter nicht erkennen kann, wie viele echt sind, verlangt, dass jedes echte Blatt denselben aktuellen Block-Hash referenziert, dedupliziert Ausgangsadressen innerhalb des Bündels und summiert deren Beträge. Nullifier passieren unverändert.
+
+In der zweiten Ebene bündelt eine beliebige Partei (ein Miner oder ein professioneller Aggregator) bis zu 53 private Bündel in ein öffentliches Bündel und verdient einen Teil der Gebühr. Diese Ebene leitet die Ausgänge und Nullifier jedes privaten Bündels exakt unverändert weiter, ohne weitere Summierung oder Deduplizierung. Jedes private Bündel bleibt ein eigenes Abwicklungssegment: Enthält eines einen bereits ausgegebenen Nullifier, verwirft die Kette nur dieses Segment und wickelt den Rest ab.
+
+#### Chain-/Verifier-Flow
+
+Das Netzwerk verifiziert den aggregierten Beweis durch Prüfung: Block-Hash ist onchain und aktuell, Eindeutigkeit der Nullifier (gegen Doppelausgaben) und Gültigkeit des Beweises. Der ZK-Schaltkreis erzwingt die Korrektheit des zk-Tree-Merkle-Beweises, die Genauigkeit der Nullifier-Berechnung, die Nicht-Ausgebbarkeit der Adresse, dass Ausgaben plus Gebühr den Eingang nicht übersteigen, und die Verkettung der Block-Header.
+
+#### Warum Plonky2
+
+- Teilweise formal verifiziert (Quantus-Schaltkreise und ein Teil von Plonky2)
+- Post-quantenfest
+- Ohne trusted setup
+- Effizientes Beweisen/Verifizieren
+- Flüssige Beweisaggregation
+- Native Rust-Implementierung
+- Kompatibel mit Substrates no-std-Umgebung
+
+#### Sicherheitshinweise
+
+Potenzielle Risiken umfassen Inflationsfehler durch fehlerhafte Schaltkreis-/Verifikationsimplementierungen. Nutzer können optional nachweisen, dass eine Adresse eine Wormhole-Adresse ist, indem sie den ersten Hash ohne Offenlegung des Geheimnisses veröffentlichen. Verifikationstransaktionen sind nicht signiert, daher begrenzt die Kette Denial-of-Service ohne finanzielle Mittel: günstige Prüfungen bei der Aufnahme in den Pool, vollständige Beweisverifikation erst beim Dispatch und eine Obergrenze von 512 KiB für die Beweisgröße. Ausgänge prägen Guthaben, ohne die Gesamtemission zu erhöhen, da die eingezahlten Coins nachweislich verbrannt wurden; die Angebotsobergrenze bleibt somit unberührt.
+
+Weitere technische Details siehe [QIP-0005](https://github.com/Quantus-Network/improvement-proposals/blob/main/qip-0005.md).
+
+### Skalierbar
+
+Jede Transaktion auf Quantus ist post-quantenfest, daher sind TPS und QTPS dieselbe Zahl. Der Blockplatz begrenzt den Durchsatz: Die Ziel-Blockzeit beträgt 12 Sekunden, und jeder Block erlaubt 3,75 MB an Transaktionen.
+
+<ResponsiveTableV2
+  headers={[
+    "MODUS",
+    "BYTES PRO ÜBERWEISUNG",
+    "ÜBERWEISUNGEN PRO BLOCK",
+    "QTPS",
+  ]}
+  rows={[
+    ["Transparent, ML-DSA-87", "~7,3 KB", "~510", "~43"],
+    ["Transparent, ML-DSA-65", "~5,4 KB", "~690", "~58"],
+    [
+      "Verschlüsselt, aktuelle zweistufige Aggregation",
+      "~266 KB pro 371 Überweisungen",
+      "~5.200",
+      "~430",
+    ],
+    [
+      "Verschlüsselt, theoretische Obergrenze",
+      "~112 Bytes öffentliche Inputs",
+      "~33.000",
+      "~2.800",
+    ],
+  ]}
+/>
+
+### Geld
+
+#### Konsensmechanismus
+
+Quantus verwendet einen Proof-of-Work (PoW)-Konsensalgorithmus, der die wünschenswerten Eigenschaften des Bitcoin-Konsenses bewahrt und die Kompatibilität mit ZK-Beweissystemen verbessert, indem SHA-256 durch **Poseidon2** ersetzt wird. Die Ziel-Blockzeit beträgt 12 Sekunden.
+
+Wichtig: Diese Änderung erfolgt nicht wegen Quantensicherheit. Kryptographische Hashfunktionen wie SHA-256 werden durch Quantenalgorithmen, insbesondere Grover, geschwächt, aber nicht zerstört. Einige Post-Quanten-Signaturschemata nutzen aus diesem Grund sichere Hashes als Grundbaustein.
+
+Poseidon2 ist eine Verfeinerung der Hashfunktion Poseidon. SNARKs oder STARKs für Berechnungen mit traditionellen Hashfunktionen wie SHA-256 zu erstellen erfordert oft fast 100-mal mehr Gatter als mit Poseidon, das vollständig auf algebraischen Funktionen über Feldelementen statt auf Bitoperationen beruht.
+
+Wir verwenden das **Goldilocks-Feld** für Poseidon2 und Plonky2. Die Ordnung des Goldilocks-Feldes passt in eine 64-Bit-Unsigned-Integer, was die Effizienz erhöht, ohne die Solidität zu gefährden.
+
+Das Angebot ist auf 21.000.000 QUAN begrenzt. Siehe Abschnitt 06.
+
+<ChapterHeading number="05" title="Kontosicherheit" />
+
+Beim Umgang mit Kryptowährungsschlüsseln gibt es viele Risiken. Die meisten lassen sich vermeiden.
+
+### HD-Lattice
+
+Hierarchisch-deterministische (HD) Wallets sind der Branchenstandard für Blockchains und erlauben, eine einzige Seed-Phrase für alle Schlüssel zu sichern, mit besserer Sicherheit und Komfort gegenüber manuellen Kopien pro Aktion. Die Übertragung auf Gitterschemata wie Dilithium wirft zwei Herausforderungen auf:
+
+- HMAC-SHA512-Ausgaben können nicht direkt private Gitterschlüssel bilden, die Polynome aus einem Ring mit bestimmten Eigenschaften sind.
+- Nicht gehärtete Schlüsselableitung beruht auf Elliptische-Kurven-Addition, die in Gittern fehlt (öffentliche Schlüssel sind unter keiner algebraischen Operation abgeschlossen).
+
+Quantus löst den ersten Punkt, indem die HMAC-Ausgabe als Entropie dient, um den privaten Schlüssel deterministisch zu konstruieren, nicht als den Schlüssel selbst. Der zweite Punkt ist weniger kritisch, und es bleibt eine offene Forschungsfrage, ob sich Gitter-Kryptographie so anpassen lässt, dass er gelöst wird.
+
+Transparente Kontoschlüssel und Wormhole-Geheimnisse werden aus demselben Seed auf getrennten Pfaden abgeleitet (BIP44-Coin-Typen 189189' und 189189189'), sodass eine Seed-Phrase beide Adresstypen sichert.
+
+Weitere technische Details siehe [QIP-0002](https://github.com/Quantus-Network/improvement-proposals/blob/main/qip-0002.md).
+
+### Prüfsätze
+
+Quantus führt „Check-Phrases“ ein, eine kryptographisch sichere, lesbare Prüfsumme für Blockchain-Adressen. Die Adresse wird gehasht, um eine kurze Folge merkbarer Wörter aus der BIP-39-Mnemonik-Liste zu erzeugen. Prüfsätze schützen vor Tippfehlern, Manipulation und Address-Poisoning-Angriffen. Eine Schlüsselableitungsfunktion mit 40.000 Iterationen macht Rainbow-Table-Angriffe teuer. Bei großen Transaktionen sollten Nutzer weiterhin jedes Zeichen der Adresse prüfen. Ein Prüfsatz ist eine Prüfsumme, keine Adresse. Er kann keine Mittel empfangen.
+
+Weitere technische Details siehe [QIP-0008](https://github.com/Quantus-Network/improvement-proposals/blob/main/qip-0008.md).
+
+### Multisig-Konten
+
+Ein Multisig-Konto beginnt als neues Konto. Der Ersteller listet die Unterzeichner auf (bis zu 100), legt fest, wie viele von ihnen eine Transaktion genehmigen müssen (den Schwellenwert), und wählt eine Nonce; die Kette leitet die Adresse des Kontos aus diesen drei Angaben ab. Unterzeichner und Schwellenwert ändern sich nie, weil sie Teil der Adresse sind. Wer eine andere Zusammensetzung will, erstellt ein neues Multisig und verschiebt die Mittel. Jeder Unterzeichner kann eine Transaktion vorschlagen. Sobald der Schwellenwert an Unterzeichnern genehmigt hat, wird sie ausgeführt. Vorschläge verfallen nach spätestens zwei Wochen.
+
+Multisig-Konten sind nativ in der Kette. Sie sind transparente Adressen. Ein Multisig kann keine verschlüsselte Adresse sein, und eine verschlüsselte Adresse kann kein Unterzeichner sein. Ein Multisig kann an verschlüsselte Adressen senden und von ihnen empfangen, und es kann Guardian eines erweiterten Kontos sein.
+
+### Erweiterte Konten
+
+Erweiterte Konten sind für Nutzer, die mehr Schutz wollen als einen einzelnen Schlüssel. Sie existieren nur für transparente Adressen, und die meisten Nutzer brauchen nie eines. Jedes transparente Konto kann zu einem erweiterten Konto werden. Das Upgrade ist dauerhaft, sodass ein Dieb es nicht abschalten kann. Der Eigentümer benennt einen **Guardian**: ein anderes Konto, vorzugsweise besser gesichert als das erweiterte Konto selbst, etwa eine Hardware-Wallet, ein Multisig oder eine vertrauenswürdige dritte Partei. Der Guardian kann nicht vom Konto ausgeben. Er kann nur die ausstehenden Überweisungen des Kontos stornieren und dessen Mittel wiederherstellen.
+
+Der Guardian, die verpflichtende Zeitsperre und die Schlüsselwiederherstellung existieren nur für erweiterte Konten und sind optional. Der Eigentümer legt diese Parameter einmalig bei der Erstellung des Kontos fest und kann sie danach nicht mehr ändern. Ein Eigentümer, der andere Parameter will, erstellt ein neues erweitertes Konto und verschiebt die Mittel dorthin.
+
+Diese Funktionen sind für Börsen, Verwahrer und andere fortgeschrittene Nutzer gebaut. Die meisten Menschen werden sie nie zu Gesicht bekommen.
+
+Guardians können verkettet werden: Der Guardian eines erweiterten Kontos kann selbst ein erweitertes Konto mit eigenem Guardian sein. So entstehen komponierbare Hierarchien, in denen jeder Guardian höhere Befugnisse über das geschützte Konto hat. Das Design gibt Nutzern Zeit, unbefugte Aktivität zu erkennen und zu reagieren, ohne die Finalität legitimer Überweisungen zu gefährden.
+
+Weitere technische Details siehe [QIP-0011](https://github.com/Quantus-Network/improvement-proposals/blob/main/qip-0011.md).
+
+#### Zeitgesperrte Transaktionen
+
+Jedes transparente Konto kann einer ausgehenden Überweisung eine Verzögerung anhängen, während der der Absender sie stornieren kann. Das korrigiert Fehler und erschwert Diebstahl, ohne die Finalität zu opfern.
+
+Ein erweitertes Konto kann eine verpflichtende Verzögerung für jede ausgehende Überweisung festlegen. Nur der Guardian kann stornieren, und stornierte Mittel gehen an den Guardian.
+
+Weitere technische Details siehe [QIP-0009](https://github.com/Quantus-Network/improvement-proposals/blob/main/qip-0009.md) und [QIP-0010](https://github.com/Quantus-Network/improvement-proposals/blob/main/qip-0010.md).
+
+#### Schlüsselwiederherstellung
+
+Viele Krypto-Vermögen sind mit ihren Besitzern ins Grab gegangen. Erweiterte Konten bieten einen Ausweg. Bei der Erstellung eines erweiterten Kontos benennt der Eigentümer einen Guardian, der jederzeit alle Mittel des Kontos wiederherstellen kann. Ein Eigentümer, der das Konto eines Erben, ein Familien-Multisig oder einen professionellen Verwahrer als Guardian benennt, hat ein Onchain-Testament, das kein Gericht braucht.
+
+<ChapterHeading number="06" title="Tokenomics und Governance" />
+
+Quantus hat eine feste Geldpolitik: eine Angebotsobergrenze von 21.000.000 QUAN, eine exponentiell abklingende Emissionskurve und eine Verbrennung von Transaktionsgebühren, die die Blockbelohnung dauerhaft über null hält und zugleich die Angebotsobergrenze wahrt.
+
+### Blockbelohnungen
+
+Quantus nutzt eine einfache Blockemission nach Bitcoin-Vorbild, jedoch mit einem sanften Abklingen statt abrupter Halbierungen. Eine einfache Heuristik bestimmt die Belohnung jedes Blocks:
+
+```
+block_reward = (max_supply - current_supply) / 50,000,000
+```
+
+Diese Heuristik bildet eine sanft fallende Exponentialkurve, während die block_reward zum current_supply beiträgt und damit die im nächsten Block berechnete block_reward senkt. Verbrennungen aus Gebühren reduzieren das current_supply und werden Teil des Budgets für Blockbelohnungen.
+
+### Zuteilung an Investoren und Team
+
+Quantus wurde mit Hilfe von Investoren aufgebaut, die hohes Risiko bei der Finanzierung trugen. Bei der Genesis gibt es eine einmalige Prägung von 27 % des Gesamtangebots (5.670.000 QUAN). Die restlichen 73 % (15.330.000 QUAN) können nur durch Mining entstehen. Es gibt keine Dev-Tax: Miner behalten die vollen Blockbelohnungen.
+
+Investoren, Gründer und Team halten 23 % des Gesamtangebots. Diese Tokens bleiben im ersten Jahr nach dem Mainnet gesperrt und vesten anschließend linear über die folgenden 36 Monate, onchain durchgesetzt durch ein dediziertes Vesting-Pallet.
+
+### Zuteilung an das Unternehmen
+
+Das Unternehmen hält 4 % des Gesamtangebots. 1 % ist bei der Genesis liquide, um die anfängliche Liquidität bereitzustellen. Die restlichen 3 % dienen der Finanzierung künftiger Unternehmensaktivitäten, im ersten Jahr nach dem Mainnet gesperrt und anschließend linear über die folgenden 36 Monate vestend.
+
+### Transaktionsgebühren
+
+Jede Transaktionsgebühr geht an Miner oder wird verbrannt.
+
+<ResponsiveTableV2
+  headers={["TRANSAKTIONSTYP", "GEBÜHR", "ZIEL"]}
+  rows={[
+    [
+      "Transparent, ML-DSA-65 (Standard)",
+      "Etwa 0,0062 QUAN pro einfacher Überweisung, plus optionales Trinkgeld",
+      "Miner",
+    ],
+    [
+      "Transparent, ML-DSA-87",
+      "Etwa 0,0081 QUAN pro einfacher Überweisung, plus optionales Trinkgeld",
+      "Miner",
+    ],
+    [
+      "Verschlüsselt",
+      "0,04 % des Betrags, mindestens 0,01 QUAN",
+      "Hälfte an Miner, Hälfte verbrannt",
+    ],
+    [
+      "Stornierung bei erweitertem Konto (selten, nur erweiterte Konten)",
+      "1 % des stornierten Betrags",
+      "Verbrannt",
+    ],
+  ]}
+/>
+
+In der Praxis zahlen verschlüsselte Transaktionen von 25 QUAN oder weniger das feste Minimum von 0,01 QUAN; alles darüber zahlt die Gebühr von 0,04 %.
+
+Solange es Aktivität im Netzwerk gibt, bezahlt diese Gebührenstruktur Miner auf Dauer für dessen Absicherung. Quantus behält eine harte Obergrenze von 21.000.000 QUAN, ohne je das Sicherheitsbudget zu erschöpfen.
+
+### Netzwerk-Upgrades
+
+Quantus unterstützt „fork-freie“ Upgrades über Substrate-Runtime-Upgrades, sodass die Kernlogik der Blockchain (die „Runtime“) ohne Hard Forks evolvieren kann, die das Netzwerk stören könnten. Dieser Upgrade-Pfad minimiert Ausfallzeiten und Risiken, sodass Sicherheitskorrekturen und kryptographische Upgrades ohne Hard Fork ausgeliefert werden.
+
+Wenn die Community mit der Zeit Vertrauen ins System gewinnt, wird die Macht, die Runtime zu ändern, deutlich reduziert.
+
+### Governance-System
+
+Ein Geldsystem, auf das sich Nutzer verlassen, sollte stabil, vorhersehbar und sicher sein.
+
+Das **Technical Collective** ist eine kuratierte Gruppe technischer Expertinnen und Experten, die als Spezialorgan dringende technische Angelegenheiten vorschlägt, prüft oder whitelistet und sie über eine dedizierte Spur beschleunigt, bei gemeinschaftlicher Aufsicht. Es hat kein Mandat, die Geldpolitik des Netzwerks zu ändern. Es beabsichtigt nicht, wesentliche Protokoll-Upgrades auszuliefern, sofern kein dringendes Sicherheitsproblem oder überwältigende Unterstützung der Community vorliegt, und das Unternehmen beabsichtigt, das Technical Collective mit der Zeit abzuschaffen.
+
+Jeder kann eine Protokolländerung vorschlagen, indem er einen Quantus Improvement Proposal (QIP) zur öffentlichen Prüfung einreicht und ihn auf [research.quantus.com](https://research.quantus.com) diskutiert.
+
+<ChapterHeading number="07" title="Roadmap" />
+
+Die aktuelle Roadmap bis 2026, vorbehaltlich Änderungen.
+
+<TimelineV2
+  title="Heisenberg Inception"
+  date="Dezember 2024"
+  subtitle="Finanzierung gesichert, Substrate gewählt."
+/>
+
+<TimelineV2
+  title="Resonance Alpha"
+  date="Juli 2025"
+  subtitle="Öffentliches Testnet, Dilithium-Signaturen."
+/>
+
+<TimelineV2
+  title="Schrödinger Beta"
+  date="Oktober 2025"
+  subtitle="Vollständige Features, bereit für Audit."
+/>
+
+<TimelineV2
+  title="Dirac Beta"
+  date="November 2025"
+  subtitle="PoW auf Poseidon2 umgestellt, Audits adressiert."
+/>
+
+<TimelineV2
+  title="Planck Beta"
+  date="April 2026"
+  subtitle="Erweiterte Konten, Multisigs, Hardware-Wallet, verschlüsselte Transaktionen, zweistufige ZK-Aggregation."
+/>
+
+<TimelineV2
+  title="Mainnet"
+  date="9. September 2026"
+  subtitle="Mainnet-Genesis."
+/>
+
+<br />
+
+<ChapterHeading number="08" title="Risiken" />
+
+Den Aufbau von Quantus begleiten inhärente Risiken.
+
+### Implementierungsprobleme
+
+Fehler in der Softwarelogik können selbst in den bestdesignten Systemen schwere Ausfälle verursachen. Quantus verringert dieses Risiko durch unabhängige Audits von Neodyme, Eiger und Hashcloak, einen öffentlichen Audit-Wettbewerb bei Immunefi, formale Verifikation seiner ZK-Schaltkreise und eines Teils von Plonky2 sowie kontinuierliche KI-gestützte interne Prüfung.
+
+Kein Prozess beseitigt das Implementierungsrisiko vollständig.
+
+#### Audits
+
+<ResponsiveTableV2
+  headers={["SEGMENT", "AUDITOR", "DATUM"]}
+  rows={[
+    [
+      "Proof-of-Work und Poseidon2",
+      "Eiger (Equilibrium Group)",
+      "Oktober 2025",
+    ],
+    ["ML-DSA-Signaturen und HD-Wallet", "Neodyme", "Dezember 2025"],
+    ["Wormhole-ZK-Schaltkreise", "Eiger (Equilibrium Group)", "März 2026"],
+    ["Substrate-Runtime und Node", "Eiger (Equilibrium Group)", "Mai 2026"],
+    [
+      "Formale Verifikation des Wormhole-Schaltkreises",
+      "Quantus, im Beweisassistenten Lean",
+      "Juni 2026",
+    ],
+    ["Threshold-ML-DSA-Signaturen", "Hashcloak", "2026"],
+    ["Gesamte Kette, öffentlicher Audit-Wettbewerb", "Immunefi", "August 2026"],
+  ]}
+/>
+
+Berichte:
+
+- [Proof-of-Work und Poseidon2: Bericht](https://github.com/Quantus-Network/qp-poseidon/blob/main/audits/Proof-of-Work%20and%20Poseidon%20Security%20Review%201.1.pdf)
+- [ML-DSA-Signaturen und HD-Wallet: Bericht](https://github.com/Quantus-Network/qp-rusty-crystals/blob/master/audits/Neodyme-Audit.pdf)
+- [Wormhole-ZK-Schaltkreise: Bericht](https://github.com/Quantus-Network/qp-zk-circuits/blob/main/audits/EigerWormholeAudit.pdf)
+- [Substrate-Runtime und Node: Bericht](https://github.com/Quantus-Network/chain/blob/main/audits/quantus-substrate-audit-20260513.pdf)
+- [Formale Verifikation des Wormhole-Schaltkreises: Spezifikation](https://github.com/Quantus-Network/qp-zk-circuits/tree/main/formal)
+- [Gesamte Kette, öffentlicher Audit-Wettbewerb: Kampagne](https://immunefi.com/bounty/audit-comp-quantus)
+
+### Probleme bei der NIST-Algorithmenauswahl
+
+Fehler oder Hintertüren in den ausgewählten Post-Quanten-Standards (z. B. ML-DSA, ML-KEM) könnten nach der Standardisierung auftauchen. Im schlimmsten Fall würden solche Fehler es einem Angreifer erlauben, Signaturen zu fälschen, indem er den privaten aus dem öffentlichen Schlüssel ableitet, ein katastrophaler Fehlermodus der Kette. Wenn solche Fehler öffentlich werden, könnte Quantus auf einen neuen Algorithmus upgraden.
+
+### Zeitrahmen des Quantencomputings
+
+Quantenfortschritte könnten viel später kommen als erwartet und die PQC-Notwendigkeit verzögern; umgekehrt könnte geheime Entwicklung (z. B. durch Regierungen) plötzliche Bedrohungen erzeugen, wenn die Blockchain-Community nicht schnell genug upgraded.
+
+### Sonstige Überlegungen
+
+Allgemeine Adoptionsbarrieren, regulatorische Unsicherheit in Finanzen/Blockchain und die inhärente Volatilität von Krypto-Ökosystemen.
+
+<ChapterHeading number="09" title="Referenzen und weiterführende Literatur" />
+
+<br />
+
+<Reference id="reference-1" label="[1]">
+  Shor, P. W. (1997). Polynomial-time algorithms for prime factorization and
+  discrete logarithms on a quantum computer. SIAM Journal on Computing, 26(5),
+  1484–1509.
+  [https://doi.org/10.1137/S0097539795293172](https://doi.org/10.1137/S0097539795293172)
+</Reference>
+
+<Reference id="reference-2" label="[2]">
+  Grover, L.K. (1996). A fast quantum mechanical algorithm for database search.
+  Proceedings of the Twenty-Eight Annual ACM Symposium on Theory of Computing,
+  212-219.
+  [https://doi.org/10.1145/237814.237866](https://doi.org/10.1145/237814.237866)
+</Reference>
+
+<Reference id="reference-3" label="[3]">
+  Chainalysis. (2020, June). 60% of Bitcoin Is Held Long Term as Digital Gold.
+  What About the Rest? Chainalysis Market Intel. Archived at
+  [https://web.archive.org/web/20200622014856/https://blog.chainalysis.com/reports/bitcoin-market-data-exchanges-trading](https://web.archive.org/web/20200622014856/https://blog.chainalysis.com/reports/bitcoin-market-data-exchanges-trading)
+</Reference>
+
+<Reference id="reference-4" label="[4]">
+  National Institute of Standards and Technology. (2024). FIPS 204:
+  Module-Lattice-Based Digital Signature Standard (ML-DSA). U.S. Department of
+  Commerce.
+  [https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.204.pdf](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.204.pdf)
+</Reference>
+
+<Reference id="reference-5" label="[5]">
+  National Institute of Standards and Technology. (2024). FIPS 203:
+  Module-Lattice-Based Key-Encapsulation Mechanism Standard (ML-KEM). U.S.
+  Department of Commerce.
+  [https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.203.pdf](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.203.pdf)
+</Reference>
+
+<Reference id="reference-6" label="[6]">
+  Häner, T., Jaques, S., Naehrig, M., Roetteler, M., & Soeken, M. (2020).
+  Improved quantum circuits for elliptic curve discrete logarithms.
+  arXiv:2002.12480.
+  [https://arxiv.org/abs/2002.12480](https://arxiv.org/abs/2002.12480)
+</Reference>
+
+<Reference id="reference-7" label="[7]">
+  Gidney, C., & Ekerå, M. (2021). How to factor 2048 bit RSA integers in 8 hours
+  using 20 million noisy qubits. arXiv:1905.09749.
+  [https://arxiv.org/abs/1905.09749](https://arxiv.org/abs/1905.09749)
+</Reference>
+
+<Reference id="reference-8" label="[8]">
+  Aggarwal, D., et al. (2021). Assessment of Quantum Threat To Bitcoin and
+  Derived Cryptocurrencies. ePrint IACR.
+  [https://eprint.iacr.org/2021/967.pdf](https://eprint.iacr.org/2021/967.pdf)
+</Reference>
+
+<Reference id="reference-9" label="[9]">
+  Roetteler, M., Naehrig, M., Svore, K. M., & Lauter, K. (2017). Quantum
+  resource estimates for computing elliptic curve discrete logarithms.
+  arXiv:1706.06752.
+  [https://arxiv.org/abs/1706.06752](https://arxiv.org/abs/1706.06752)
+</Reference>
+
+<Reference id="reference-10" label="[10]">
+  Open Quantum Safe Project. (n.d.). ML-DSA | Open Quantum Safe. Retrieved
+  January 29, 2026, from
+  [https://openquantumsafe.org/liboqs/algorithms/sig/ml-dsa.html](https://openquantumsafe.org/liboqs/algorithms/sig/ml-dsa.html)
+</Reference>
+
+<Reference id="reference-11" label="[11]">
+  Babbush, R., Zalcman, A., Gidney, C., Broughton, M., Khattar, T., Neven, H.,
+  Bergamaschi, T., Drake, J., & Boneh, D. (2026). Securing Elliptic Curve
+  Cryptocurrencies against Quantum Vulnerabilities: Resource Estimates and
+  Mitigations. Google Quantum AI.
+  [https://quantumai.google/static/site-assets/downloads/cryptocurrency-whitepaper.pdf](https://quantumai.google/static/site-assets/downloads/cryptocurrency-whitepaper.pdf)
+</Reference>
+
+<Reference id="reference-12" label="[12]">
+  National Institute of Standards and Technology. (2024). NIST IR 8547:
+  Transition to Post-Quantum Cryptography Standards.
+  [https://nvlpubs.nist.gov/nistpubs/ir/2024/NIST.IR.8547.ipd.pdf](https://nvlpubs.nist.gov/nistpubs/ir/2024/NIST.IR.8547.ipd.pdf)
+</Reference>
+
+<Reference id="reference-13" label="[13]">
+  Executive Order 14412 of June 22, 2026, Securing the Nation Against Advanced
+  Cryptographic Attacks, 91 Fed. Reg. 38483 (June 25, 2026).
+  [https://www.federalregister.gov/d/2026-12909](https://www.federalregister.gov/d/2026-12909)
+</Reference>
+
+<Reference id="reference-14" label="[14]">
+  Signal. (2023, September 19). The PQXDH Key Agreement Protocol.
+  [https://signal.org/blog/pqxdh/](https://signal.org/blog/pqxdh/)
+</Reference>
+
+<Reference id="reference-15" label="[15]">
+  Apple Security Engineering and Architecture. (2024, February 21). iMessage
+  with PQ3: The new state of the art in quantum-secure messaging at scale.
+  [https://security.apple.com/blog/imessage-pq3/](https://security.apple.com/blog/imessage-pq3/)
+</Reference>
+
+<Reference id="reference-16" label="[16]">
+  Cloudflare. (2025). The state of the post-quantum Internet in 2025.
+  [https://blog.cloudflare.com/pq-2025/](https://blog.cloudflare.com/pq-2025/)
+</Reference>
+
+<Reference id="reference-17" label="[17]">
+  Blockchain.com. (2026). Bitcoin UTXO count. Retrieved September 3, 2026, from
+  [https://www.blockchain.com/explorer/charts/utxo-count](https://www.blockchain.com/explorer/charts/utxo-count)
+</Reference>
+
+<Reference id="reference-18" label="[18]">
+  transactionfee.info. (n.d.). Payments spending SegWit.
+  [https://transactionfee.info/charts/payments-spending-segwit/](https://transactionfee.info/charts/payments-spending-segwit/)
+</Reference>
+
+<Reference id="reference-19" label="[19]">
+  CoinDesk. (2026, July 4). Bitcoin experts split over plan to freeze Satoshi's
+  1.1 million Bitcoin as quantum threat grows.
+  [https://www.coindesk.com/business/2026/07/04/bitcoin-experts-split-over-plan-to-freeze-satoshi-s-1-1-million-bitcoin-as-quantum-threat-grows](https://www.coindesk.com/business/2026/07/04/bitcoin-experts-split-over-plan-to-freeze-satoshi-s-1-1-million-bitcoin-as-quantum-threat-grows)
+</Reference>
+
+<Reference id="reference-20" label="[20]">
+  Eigen Labs. (2026). ECDSA.fail: can you break ECDSA?
+  [https://ecdsa.fail](https://ecdsa.fail)
+</Reference>
+
+### Weiterführende Literatur
+
+- [Quantus Improvement Proposals (QIPs)](https://github.com/Quantus-Network/improvement-proposals)
+- [Dokumentation](https://docs.quantus.com)
+- [Forschungsforum](https://research.quantus.com)
+- [Der Bericht „The State of Quantum“](https://report.quantus.com)
+- [Quellcode](https://github.com/Quantus-Network)
