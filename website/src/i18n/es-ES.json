@@ -118,14 +118,14 @@
     },
     "loader": {
       "lines": {
-        "protocol": "> PROTOCOLO QUANTUS v0.7.1-q-day-2",
+        "protocol": "> PROTOCOLO QUANTUS v1.0.0-gm",
         "integrity": "> INTEGRIDAD DEL SISTEMA <span class=\"ok\">[PASADO]</span>",
         "nist_module": "> MÓDULO NIST FIPS 204 CARGADO <span class=\"ok\">[OK]</span>",
         "initializing": "> INICIALIZANDO <span class=\"ac\">ML-DSA / DILITHIUM-5</span>...",
         "signature_scheme": "> ESQUEMA DE FIRMA POST-CUÁNTICA <span class=\"ok\">ACTIVO</span>",
         "p2p_layer": "> CAPA DE COMUNICACIÓN P2P → <span class=\"ac\">TÚNEL ENCRIPTADO PQ</span>",
         "zk_engine": "> MOTOR DE PRUEBAS ZK RECURSIVAS <span class=\"ok\">LISTO</span>",
-        "syncing": "> SINCRONIZANDO PLANCK TESTNET... PARES: <span class=\"ac\">247</span>",
+        "syncing": "> SINCRONIZANDO MAINNET... PARES: <span class=\"ac\">247</span>",
         "chladni": "> VISUALIZADOR DE CAMPO CHLADNI <span class=\"ac\">CARGANDO</span>",
         "prompt": "> <span class=\"blink\"></span>"
       }

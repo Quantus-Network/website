@@ -118,14 +118,14 @@
     },
     "loader": {
       "lines": {
-        "protocol": "> QUANTUS 协议 v0.7.1-q-day-2",
+        "protocol": "> QUANTUS 协议 v1.0.0-gm",
         "integrity": "> 系统完整性 <span class=\"ok\">[通过]</span>",
         "nist_module": "> NIST FIPS 204 模块已加载 <span class=\"ok\">[正常]</span>",
         "initializing": "> 正在初始化 <span class=\"ac\">ML-DSA / DILITHIUM-5</span>...",
         "signature_scheme": "> 后量子签名方案 <span class=\"ok\">激活</span>",
         "p2p_layer": "> P2P 通信层 → <span class=\"ac\">PQ 加密隧道</span>",
         "zk_engine": "> 递归 ZK 证明引擎 <span class=\"ok\">就绪</span>",
-        "syncing": "> 正在同步 PLANCK 测试网... 节点: <span class=\"ac\">247</span>",
+        "syncing": "> 正在同步 MAINNET... 节点: <span class=\"ac\">247</span>",
         "chladni": "> 克拉尼场可视化器 <span class=\"ac\">正在加载</span>",
         "prompt": "> <span class=\"blink\"></span>"
       }

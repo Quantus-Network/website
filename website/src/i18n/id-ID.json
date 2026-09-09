@@ -118,14 +118,14 @@
     },
     "loader": {
       "lines": {
-        "protocol": "> PROTOKOL QUANTUS v0.7.1-q-day-2",
+        "protocol": "> PROTOKOL QUANTUS v1.0.0-gm",
         "integrity": "> INTEGRITAS SISTEM <span class=\"ok\">[LULUS]</span>",
         "nist_module": "> MODUL NIST FIPS 204 DIMUAT <span class=\"ok\">[OK]</span>",
         "initializing": "> MENGINISIALISASI <span class=\"ac\">ML-DSA / DILITHIUM-5</span>...",
         "signature_scheme": "> SKEMA TANDA TANGAN PASCA-KUANTUM <span class=\"ok\">AKTIF</span>",
         "p2p_layer": "> LAPISAN KOMUNIKASI P2P → <span class=\"ac\">TEROWONGAN TERENKRIPSI PQ</span>",
         "zk_engine": "> MESIN BUKTI ZK REKURSIF <span class=\"ok\">SIAP</span>",
-        "syncing": "> MENYINKRONKAN PLANCK TESTNET... PEER: <span class=\"ac\">247</span>",
+        "syncing": "> MENYINKRONKAN MAINNET... PEER: <span class=\"ac\">247</span>",
         "chladni": "> VISUALISASI MEDAN CHLADNI <span class=\"ac\">MEMUAT</span>",
         "prompt": "> <span class=\"blink\"></span>"
       }
