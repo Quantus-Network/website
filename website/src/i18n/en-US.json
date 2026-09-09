@@ -246,6 +246,29 @@
         }
       }
     },
+    "coin": {
+      "eyebrow": "The coin",
+      "heading": "Finishing what Bitcoin started.",
+      "cols": {
+        "money": {
+          "title": "Superior money",
+          "body": "QTC is secure, scalable, and private peer to peer electronic cash. QTC enters circulation through Proof-of-Work: open participation, work in, coins out.",
+          "cta": "Start mining"
+        },
+        "get": {
+          "title": "Get QTC (coming soon)",
+          "body": "QTC is accessible in our mobile app via NEAR intents. Bridge crypto from anywhere to QTC."
+        },
+        "pq": {
+          "title": "Post-quantum security",
+          "body": [
+            "Your keys.",
+            "Your coins.",
+            "Already quantum secure."
+          ]
+        }
+      }
+    },
     "ecosystem": {
       "eyebrow": "The Ecosystem",
       "headline": "Tools. Entry Points to Quantus.",

@@ -246,6 +246,29 @@
         }
       }
     },
+    "coin": {
+      "eyebrow": "这枚币",
+      "heading": "完成 Bitcoin 未竟之事。",
+      "cols": {
+        "money": {
+          "title": "更优的货币",
+          "body": "QTC 是安全、可扩展且私密的点对点电子现金。QTC 通过工作量证明进入流通：开放参与，投入算力，产出币。",
+          "cta": "开始挖矿"
+        },
+        "get": {
+          "title": "获取 QTC（即将推出）",
+          "body": "QTC 可在我们的移动应用中通过 NEAR intents 使用。从任何地方将加密资产跨链桥接为 QTC。"
+        },
+        "pq": {
+          "title": "后量子安全",
+          "body": [
+            "您的密钥。",
+            "您的币。",
+            "已然量子安全。"
+          ]
+        }
+      }
+    },
     "ecosystem": {
       "eyebrow": "生态系统",
       "headline": "工具。进入 Quantus 的入口。",

@@ -246,6 +246,29 @@
         }
       }
     },
+    "coin": {
+      "eyebrow": "이 코인",
+      "heading": "Bitcoin이 시작한 일을 완성합니다.",
+      "cols": {
+        "money": {
+          "title": "더 나은 화폐",
+          "body": "QTC는 안전하고 확장 가능하며 프라이빗한 P2P 전자화폐입니다. QTC는 작업증명(Proof-of-Work)을 통해 유통됩니다. 누구나 참여할 수 있고, 일한 만큼 코인이 나옵니다.",
+          "cta": "채굴 시작하기"
+        },
+        "get": {
+          "title": "QTC 받기 (출시 예정)",
+          "body": "QTC는 모바일 앱에서 NEAR intents를 통해 이용할 수 있습니다. 어디에서든 암호화폐를 QTC로 브리지하세요."
+        },
+        "pq": {
+          "title": "포스트 양자 보안",
+          "body": [
+            "당신의 키.",
+            "당신의 코인.",
+            "이미 양자 보안."
+          ]
+        }
+      }
+    },
     "ecosystem": {
       "eyebrow": "생태계",
       "headline": "도구. Quantus로의 진입점.",

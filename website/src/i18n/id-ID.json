@@ -246,6 +246,29 @@
         }
       }
     },
+    "coin": {
+      "eyebrow": "Koin ini",
+      "heading": "Menyelesaikan apa yang dimulai Bitcoin.",
+      "cols": {
+        "money": {
+          "title": "Uang yang lebih unggul",
+          "body": "QTC adalah uang elektronik peer-to-peer yang aman, skalabel, dan privat. QTC masuk ke peredaran melalui Proof-of-Work: partisipasi terbuka, kerja masuk, koin keluar.",
+          "cta": "Mulai menambang"
+        },
+        "get": {
+          "title": "Dapatkan QTC (segera hadir)",
+          "body": "QTC dapat diakses di aplikasi seluler kami melalui NEAR intents. Bridge kripto dari mana saja ke QTC."
+        },
+        "pq": {
+          "title": "Keamanan pasca-kuantum",
+          "body": [
+            "Kunci Anda.",
+            "Koin Anda.",
+            "Sudah aman secara kuantum."
+          ]
+        }
+      }
+    },
     "ecosystem": {
       "eyebrow": "Ekosistem",
       "headline": "Alat. Titik Masuk ke Quantus.",

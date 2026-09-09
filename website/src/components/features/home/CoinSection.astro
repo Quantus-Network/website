@@ -1,0 +1,206 @@
+---
+import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
+
+const MINING_DOCS_URL = "https://docs.quantus.com/guides/mining/";
+---
+
+<section id="coin">
+  <div class="coin-divider"></div>
+
+  <div class="coin-inner">
+    <span class="coin-eyebrow">
+      {t("home.coin.eyebrow")}
+    </span>
+    <h2 class="coin-headline">
+      {t("home.coin.heading")}
+    </h2>
+
+    <div class="coin-cols">
+      <div class="coin-col">
+        <h3 class="coin-col-title">
+          {t("home.coin.cols.money.title")}
+        </h3>
+        <p class="coin-col-body">
+          {t("home.coin.cols.money.body")}
+        </p>
+        <a
+          href={MINING_DOCS_URL}
+          class="coin-col-link"
+          target="_blank"
+          rel="noopener"
+          data-track="mining_docs_click"
+          data-track-cta-location="home_coin"
+        >
+          {t("home.coin.cols.money.cta")}
+        </a>
+      </div>
+      <div class="coin-col">
+        <h3 class="coin-col-title">
+          {t("home.coin.cols.get.title")}
+        </h3>
+        <p class="coin-col-body">
+          {t("home.coin.cols.get.body")}
+        </p>
+      </div>
+      <div class="coin-col">
+        <h3 class="coin-col-title">
+          {t("home.coin.cols.pq.title")}
+        </h3>
+        <p class="coin-col-body">
+          {
+            (t("home.coin.cols.pq.body") as string[]).map((line) => (
+              <span class="coin-col-line">{line}</span>
+            ))
+          }
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  #coin {
+    background: #0e0e0e;
+    position: relative;
+    z-index: 50;
+  }
+
+  .coin-divider {
+    width: 0;
+    height: 1px;
+    background: #ff6b35;
+    transition: width 0.8s ease-out;
+    margin: 0;
+    padding: 0;
+    display: block;
+  }
+  .coin-divider.expanded {
+    width: 100%;
+  }
+
+  .coin-inner {
+    padding: 96px 52px 120px;
+  }
+
+  .coin-eyebrow {
+    font-family: "Geist Mono", monospace;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(232, 230, 224, 0.35);
+    display: block;
+    margin-bottom: 22px;
+  }
+
+  .coin-headline {
+    font-family: "Geist", sans-serif;
+    font-size: 52px;
+    font-weight: 500;
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    max-width: 20ch;
+    margin-bottom: 56px;
+  }
+
+  .coin-cols {
+    border: 1px solid rgba(232, 230, 224, 0.08);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .coin-col {
+    padding: 56px 48px;
+    border-left: 1px solid rgba(232, 230, 224, 0.08);
+    display: flex;
+    flex-direction: column;
+  }
+  .coin-col:first-child {
+    border-left: none;
+  }
+
+  .coin-col-title {
+    font-family: "Geist", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: -0.015em;
+    line-height: 1.1;
+    color: #ffffff;
+    margin-bottom: 18px;
+  }
+
+  .coin-col-body {
+    font-family: "Geist", sans-serif;
+    font-size: 14px;
+    line-height: 1.45;
+    color: rgba(232, 230, 224, 0.65);
+  }
+
+  /* pq column renders as discrete lines, one translated string each */
+  .coin-col-line {
+    display: block;
+  }
+
+  .coin-col-link {
+    font-family: "Geist Mono", monospace;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #ff6b35;
+    text-decoration: none;
+    align-self: flex-start;
+    margin-top: 28px;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+    transition: border-color 0.15s ease;
+  }
+  .coin-col-link:hover,
+  .coin-col-link:focus-visible {
+    border-bottom-color: #ff6b35;
+  }
+  .coin-col-link:focus-visible {
+    outline: 1px solid #ff6b35;
+    outline-offset: 6px;
+  }
+
+  @media (max-width: 768px) {
+    .coin-inner {
+      padding: 64px 24px 80px;
+    }
+    .coin-headline {
+      font-size: clamp(26px, 7vw, 38px);
+      margin-bottom: 40px;
+    }
+    .coin-cols {
+      grid-template-columns: 1fr;
+    }
+    .coin-col {
+      border-left: none;
+      border-top: 1px solid rgba(232, 230, 224, 0.08);
+      padding: 36px 28px;
+    }
+    .coin-col:first-child {
+      border-top: none;
+    }
+  }
+</style>
+
+<script>
+  const coinSection = document.getElementById("coin")!;
+  const coinDivider = coinSection.querySelector(".coin-divider")!;
+
+  const coinObs = new IntersectionObserver(
+    (entries) => {
+      if (entries[0].isIntersecting) {
+        coinDivider.classList.add("expanded");
+        coinObs.disconnect();
+      }
+    },
+    { threshold: 0.1 },
+  );
+  coinObs.observe(coinSection);
+</script>

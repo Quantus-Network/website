@@ -246,6 +246,29 @@
         }
       }
     },
+    "coin": {
+      "eyebrow": "La moneda",
+      "heading": "Terminando lo que Bitcoin empezó.",
+      "cols": {
+        "money": {
+          "title": "Dinero superior",
+          "body": "QTC es dinero electrónico entre pares seguro, escalable y privado. QTC entra en circulación mediante Proof-of-Work: participación abierta, trabajo dentro, monedas fuera.",
+          "cta": "Empezar a minar"
+        },
+        "get": {
+          "title": "Obtener QTC (próximamente)",
+          "body": "QTC es accesible en nuestra aplicación móvil a través de NEAR intents. Haga bridge de cripto desde cualquier parte a QTC."
+        },
+        "pq": {
+          "title": "Seguridad post-cuántica",
+          "body": [
+            "Sus claves.",
+            "Sus monedas.",
+            "Ya seguras frente a la computación cuántica."
+          ]
+        }
+      }
+    },
     "ecosystem": {
       "eyebrow": "El Ecosistema",
       "headline": "Herramientas. Puntos de entrada a Quantus.",

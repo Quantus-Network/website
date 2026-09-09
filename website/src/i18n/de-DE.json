@@ -246,6 +246,29 @@
         }
       }
     },
+    "coin": {
+      "eyebrow": "Der Coin",
+      "heading": "Vollenden, was Bitcoin begonnen hat.",
+      "cols": {
+        "money": {
+          "title": "Überlegenes Geld",
+          "body": "QTC ist sicheres, skalierbares und privates elektronisches Peer-to-Peer-Bargeld. QTC gelangt durch Proof-of-Work in Umlauf: offene Teilnahme, Arbeit rein, Coins raus.",
+          "cta": "Mining starten"
+        },
+        "get": {
+          "title": "QTC erhalten (bald verfügbar)",
+          "body": "QTC ist in unserer Mobile-App über NEAR intents zugänglich. Bridgen Sie Krypto von überall zu QTC."
+        },
+        "pq": {
+          "title": "Post-Quanten-Sicherheit",
+          "body": [
+            "Ihre Schlüssel.",
+            "Ihre Coins.",
+            "Schon jetzt quantensicher."
+          ]
+        }
+      }
+    },
     "ecosystem": {
       "eyebrow": "Das Ökosystem",
       "headline": "Tools. Einstiegspunkte zu Quantus.",
