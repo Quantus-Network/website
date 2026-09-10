@@ -1,0 +1,71 @@
+---
+published: true
+title: "Quantus Weekly: En vivo el miércoles"
+description: "Quantus entra en vivo el 9 de septiembre. Al lanzar solo se mina. El trabajo de Immunefi está fusionado y Quantum & Privacy Day es el 8 de octubre en Singapur."
+pubDate: "2026-09-08"
+heroImage: "/blog/covers/weekly-update-09-08-2026.webp"
+heroAlt: "Quantus Weekly: En vivo el miércoles"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "quantum",
+    "post-quantum",
+    "immunefi",
+    "security",
+    "ml-dsa",
+    "mining",
+    "miner",
+    "mainnet",
+    "keystone",
+    "infra",
+    "q-day",
+  ]
+---
+
+import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
+
+Quantus entra en vivo el miércoles 9 de septiembre.
+
+Al lanzamiento, la única forma de obtener Quantus es minarlo. Algunas semanas después será líquido y negociable. Más sobre eso pronto.
+
+Hemos fusionado todo el trabajo de seguridad de [@Immunefi](https://x.com/@Immunefi) en nuestros repositorios públicos.
+
+La semana pasada anunciamos Quantum & Privacy Day, el 8 de octubre en Singapur (Token2049), coorganizado con [@NEARProtocol](https://x.com/@NEARProtocol).
+
+Esto es lo demás que construimos la semana pasada:
+
+### Núcleo Técnico y ZK
+
+- Todos los fixes de la competición de auditoría de [@Immunefi](https://x.com/@Immunefi) ya están en producción.
+- La chain admite ML-DSA-65 junto a ML-DSA-87.
+- Cada firma queda ligada a su contexto de firma según FIPS 204, en la chain, la wallet, la CLI y el firmware de la hardware wallet.
+- Refactorizamos la decodificación de transacciones y reconstruimos el parser de transacciones multisig para fallar en cerrado ante cualquier cosa que no pueda decodificar.
+- Endurecimos el stack de red contra ataques de denegación de servicio.
+
+### Red e Infraestructura
+
+- Desplegamos un mainnet de staging y ensayamos el lanzamiento completo: nodos en América, Asia, Europa y Australia con la configuración de mainnet.
+- Construimos los release candidates de mainnet con un pipeline automatizado nuevo que produce binarios firmados.
+- Automatizamos la flota de bootnodes con infrastructure as code: muchos bootnodes multi-región más nodos RPC dedicados.
+- Añadimos un periodo de espera antes de que cualquier paquete de terceros recién publicado pueda entrar en nuestros builds, en todos los repositorios.
+- Bajamos el uso de memoria del indexador de la chain de más del 90% a cerca del 26% y programamos restauraciones de backup para validar nuestras copias.
+
+### Actualizaciones de Web y App Móvil
+
+- Lanzamos [quantus.com/launch](https://quantus.com/launch) para que los usuarios se inscriban a actualizaciones por email sobre el lanzamiento.
+- Publicamos un refresco del sitio web.
+- El soporte de hardware wallet Keystone ahora maneja varias cuentas.
+- Publicamos CLI v2.1.3 con correcciones.
+- Publicamos miner v4.0.2 con kernels optimizados por separado para Apple Metal y Nvidia.
+
+### Contenido y Alianzas
+
+- Anunciamos Quantum & Privacy Day, nuestro evento en Singapur con NEAR durante la semana de Token2049:
+
+<TwitterEmbed url="https://x.com/NEARProtocol/status/2095961480596242672" />
+
+- [@YuviLightman](https://x.com/@YuviLightman) habló en [@Bitcoinconfasia](https://x.com/@Bitcoinconfasia) en Hong Kong: "How Bitcoin Survives Quantum."
+- [@CoinMarketCap](https://x.com/@CoinMarketCap) Academy publicó "What Is Q-Day?", escrito por Christopher Smith: [coinmarketcap.com/academy/glossary/q-day](https://coinmarketcap.com/academy/glossary/q-day)
+
+Stay frosty, quants.

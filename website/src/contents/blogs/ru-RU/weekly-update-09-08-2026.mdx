@@ -1,0 +1,71 @@
+---
+published: true
+title: "Quantus Weekly: Запуск в среду"
+description: "Quantus запускается 9 сентября. На старте только майнинг. Работа Immunefi влита в репозитории, Quantum & Privacy Day — 8 октября в Сингапуре."
+pubDate: "2026-09-08"
+heroImage: "/blog/covers/weekly-update-09-08-2026.webp"
+heroAlt: "Quantus Weekly: Запуск в среду"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "quantum",
+    "post-quantum",
+    "immunefi",
+    "security",
+    "ml-dsa",
+    "mining",
+    "miner",
+    "mainnet",
+    "keystone",
+    "infra",
+    "q-day",
+  ]
+---
+
+import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
+
+Quantus запускается в среду, 9 сентября.
+
+На старте единственный способ получить Quantus — майнить его. Через несколько недель он станет ликвидным и торгуемым. Подробности скоро.
+
+Мы влили всю работу по безопасности от [@Immunefi](https://x.com/@Immunefi) в наши публичные репозитории.
+
+На прошлой неделе мы анонсировали Quantum & Privacy Day, 8 октября в Сингапуре (Token2049), совместно с [@NEARProtocol](https://x.com/@NEARProtocol).
+
+Вот что ещё мы сделали на прошлой неделе:
+
+### Core Tech & ZK
+
+- Все исправления аудит-соревнования [@Immunefi](https://x.com/@Immunefi) выпущены.
+- Чеин поддерживает ML-DSA-65 наряду с ML-DSA-87.
+- Каждая подпись привязана к своему контексту подписи по стандарту FIPS 204 — на чеине, в кошельке, CLI и прошивке аппаратного кошелька.
+- Рефакторинг декодирования транзакций и пересборка парсера мультиподписных транзакций: всё, что он не может декодировать, закрывается отказом.
+- Укрепили сетевой стек против атак отказа в обслуживании.
+
+### Network & Infra
+
+- Развернули staging-mainnet и прогнали на нём полный запуск: ноды в Америке, Азии, Европе и Австралии на конфигурации mainnet.
+- Собрали релиз-кандидаты mainnet через новый автоматизированный пайплайн, который выпускает подписанные бинарники.
+- Автоматизировали флот бутнод через infrastructure as code: много мультирегиональных бутнод плюс выделенные RPC-ноды.
+- Добавили период ожидания, прежде чем любой только что опубликованный сторонний пакет сможет попасть в наши сборки — во всех репозиториях.
+- Срезали потребление памяти индексатора чеина с более чем 90% примерно до 26% и настроили плановые восстановления бэкапов, чтобы проверять наши копии.
+
+### Web & Mobile App Updates
+
+- Запустили [quantus.com/launch](https://quantus.com/launch), чтобы пользователи могли подписаться на email-обновления о запуске.
+- Выпустили обновление сайта.
+- Поддержка аппаратного кошелька Keystone теперь работает с несколькими аккаунтами.
+- Выпустили CLI v2.1.3 с исправлениями.
+- Выпустили miner v4.0.2 с отдельными оптимизированными ядрами для Apple Metal и Nvidia.
+
+### Content & Partnerships
+
+- Анонсировали Quantum & Privacy Day, наше сингапурское событие с NEAR на неделе Token2049:
+
+<TwitterEmbed url="https://x.com/NEARProtocol/status/2095961480596242672" />
+
+- [@YuviLightman](https://x.com/@YuviLightman) выступил на [@Bitcoinconfasia](https://x.com/@Bitcoinconfasia) в Гонконге: "How Bitcoin Survives Quantum."
+- [@CoinMarketCap](https://x.com/@CoinMarketCap) Academy опубликовала "What Is Q-Day?", автор Christopher Smith: [coinmarketcap.com/academy/glossary/q-day](https://coinmarketcap.com/academy/glossary/q-day)
+
+Stay frosty, quants.

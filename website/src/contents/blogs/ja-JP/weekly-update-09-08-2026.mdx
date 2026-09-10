@@ -1,0 +1,71 @@
+---
+published: true
+title: "Quantus Weekly: 水曜にローンチ"
+description: "Quantusは9月9日水曜日にローンチする。開始時はマイニングのみ。Immunefiのセキュリティ対応はマージ済みで、Quantum & Privacy Dayは10月8日にシンガポールで開催。"
+pubDate: "2026-09-08"
+heroImage: "/blog/covers/weekly-update-09-08-2026.webp"
+heroAlt: "Quantus Weekly: 水曜にローンチ"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "quantum",
+    "post-quantum",
+    "immunefi",
+    "security",
+    "ml-dsa",
+    "mining",
+    "miner",
+    "mainnet",
+    "keystone",
+    "infra",
+    "q-day",
+  ]
+---
+
+import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
+
+Quantusは9月9日水曜日にローンチする。
+
+ローンチ時点でQuantusを入手する唯一の方法はマイニングだ。数週間後に流動化し、取引可能になる。詳細は近日。
+
+[@Immunefi](https://x.com/@Immunefi) からのセキュリティ対応をすべて公開リポジトリにマージした。
+
+先週、シンガポール（Token2049）の10月8日に [@NEARProtocol](https://x.com/@NEARProtocol) と共催する Quantum & Privacy Day を発表した。
+
+先週構築したその他の内容は以下の通り。
+
+### コア技術 & ZK
+
+- [@Immunefi](https://x.com/@Immunefi) 監査コンペティションの修正をすべて出荷した。
+- チェーンは ML-DSA-87 に加え ML-DSA-65 をサポートする。
+- FIPS 204 に従い、すべての署名を署名コンテキストに束縛した。対象はチェーン、ウォレット、CLI、ハードウェアウォレットのファームウェア。
+- トランザクションデコードをリファクタし、マルチシグトランザクションパーサーを再構築して、デコードできないものはフェイルクローズする。
+- ネットワーキングスタックをサービス拒否攻撃に対して強化した。
+
+### ネットワーク & インフラ
+
+- ステージングメインネットをデプロイし、そこでローンチ全体を予行した。南北アメリカ、アジア、欧州、オーストラリアのノードがメインネット構成で稼働。
+- 署名済みバイナリを出す新しい自動パイプラインでメインネットのリリース候補を構築した。
+- ブートノード群を infrastructure as code で自動化した。多リージョンのブートノードに加え、専用RPCノード。
+- 新規公開のサードパーティパッケージがビルドに入る前に待機期間を設けた。全リポジトリ対象。
+- チェーンインデクサのメモリ使用を90%超から約26%へ下げ、バックアップ検証のため定期リストアを設定した。
+
+### Web & モバイルアプリの更新
+
+- ローンチのメール更新を受け取る登録用に [quantus.com/launch](https://quantus.com/launch) を公開した。
+- ウェブサイトの刷新を出荷した。
+- Keystoneハードウェアウォレット対応が複数アカウントを扱えるようになった。
+- 修正入りの CLI v2.1.3 をリリースした。
+- Apple Metal と Nvidia 向けに最適化した別々のカーネルを持つ miner v4.0.2 をリリースした。
+
+### コンテンツ & パートナーシップ
+
+- Token2049週にNEARと共催するシンガポールイベント、Quantum & Privacy Day を発表した:
+
+<TwitterEmbed url="https://x.com/NEARProtocol/status/2095961480596242672" />
+
+- [@YuviLightman](https://x.com/@YuviLightman) が香港の [@Bitcoinconfasia](https://x.com/@Bitcoinconfasia) で講演した: "How Bitcoin Survives Quantum."
+- [@CoinMarketCap](https://x.com/@CoinMarketCap) Academy が Christopher Smith 著の "What Is Q-Day?" を公開した: [coinmarketcap.com/academy/glossary/q-day](https://coinmarketcap.com/academy/glossary/q-day)
+
+Stay frosty, quants.

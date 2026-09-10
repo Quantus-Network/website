@@ -1,0 +1,71 @@
+---
+published: true
+title: "Quantus Weekly: बुधवार को लाइव"
+description: "Quantus 9 सितंबर को लाइव होता है। लॉन्च पर सिर्फ़ माइनिंग। Immunefi सुरक्षा काम मर्ज है, Quantum & Privacy Day 8 अक्टूबर को सिंगापुर में है।"
+pubDate: "2026-09-08"
+heroImage: "/blog/covers/weekly-update-09-08-2026.webp"
+heroAlt: "Quantus Weekly: बुधवार को लाइव"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "quantum",
+    "post-quantum",
+    "immunefi",
+    "security",
+    "ml-dsa",
+    "mining",
+    "miner",
+    "mainnet",
+    "keystone",
+    "infra",
+    "q-day",
+  ]
+---
+
+import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
+
+Quantus बुधवार, 9 सितंबर को लाइव होता है।
+
+लॉन्च पर Quantus पाने का एकमात्र तरीका इसे माइन करना है। कुछ हफ़्तों बाद यह लिक्विड और ट्रेडेबल होगा। उस पर जल्द और जानकारी।
+
+हमने [@Immunefi](https://x.com/@Immunefi) का सारा सुरक्षा काम अपने पब्लिक रिपॉज़िटरी में मर्ज कर दिया है।
+
+पिछले हफ़्ते हमने Quantum & Privacy Day की घोषणा की, 8 अक्टूबर को सिंगापुर में (Token2049), [@NEARProtocol](https://x.com/@NEARProtocol) के साथ सह-आयोजित।
+
+पिछले हफ़्ते हमने और क्या बनाया:
+
+### कोर टेक और ZK
+
+- [@Immunefi](https://x.com/@Immunefi) ऑडिट कंपटीशन के सभी फ़िक्स शिप हो चुके हैं।
+- चेन ML-DSA-87 के साथ-साथ ML-DSA-65 भी सपोर्ट करती है।
+- FIPS 204 मानक के अनुसार हर सिग्नेचर को उसके साइनिंग कॉन्टेक्स्ट से बाँधा गया — चेन, वॉलेट, CLI और हार्डवेयर वॉलेट फ़र्मवेयर पर।
+- ट्रांज़ैक्शन डिकोडिंग को रिफ़ैक्टर किया और मल्टिसिग ट्रांज़ैक्शन पार्सर को फिर से बनाया, ताकि जो कुछ वह डिकोड न कर सके उस पर फ़ेल-क्लोज्ड रहे।
+- नेटवर्किंग स्टैक को डिनायल-ऑफ़-सर्विस हमलों के ख़िलाफ़ मज़बूत किया।
+
+### नेटवर्क और इंफ्रा
+
+- स्टेजिंग मेननेट डिप्लॉय किया और उस पर पूरा लॉन्च रिहर्सल किया: अमेरिका, एशिया, यूरोप और ऑस्ट्रेलिया में मेननेट कॉन्फ़िगरेशन पर चलते नोड्स।
+- नए ऑटोमेटेड पाइपलाइन से मेननेट रिलीज़ कैंडिडेट बनाए जो साइन किए बाइनरी पैदा करता है।
+- इंफ्रास्ट्रक्चर ऐज़ कोड से बूट노드 फ़्लीट को ऑटोमेट किया: कई मल्टी-रीजन बूटनोड्स प्लस डेडिकेटेड RPC नोड्स।
+- हर रिपॉज़िटरी में, किसी भी नए प्रकाशित थर्ड-पार्टी पैकेज के हमारे बिल्ड में आने से पहले एक वेटिंग पीरियड जोड़ा।
+- चेन इंडेक्सर की मेमोरी यूज़ 90% से ज़्यादा से लगभग 26% तक घटाई और बैकअप वैलिडेट करने के लिए शेड्यूल्ड बैकअप रिस्टोर सेट किए।
+
+### वेब और मोबाइल ऐप अपडेट
+
+- [quantus.com/launch](https://quantus.com/launch) लॉन्च किया ताकि यूज़र हमारे लॉन्च पर ईमेल अपडेट पाने के लिए साइन अप कर सकें।
+- वेबसाइट रीफ़्रेश शिप किया।
+- Keystone हार्डवेयर वॉलेट सपोर्ट अब कई अकाउंट हैंडल करता है।
+- फ़िक्स के साथ CLI v2.1.3 रिलीज़ किया।
+- Apple Metal और Nvidia के लिए अलग ऑप्टिमाइज़्ड कर्नेल के साथ miner v4.0.2 रिलीज़ किया।
+
+### कंटेंट और पार्टनरशिप
+
+- Quantum & Privacy Day की घोषणा की, Token2049 सप्ताह में NEAR के साथ हमारा सिंगापुर इवेंट:
+
+<TwitterEmbed url="https://x.com/NEARProtocol/status/2095961480596242672" />
+
+- [@YuviLightman](https://x.com/@YuviLightman) ने हांगकांग में [@Bitcoinconfasia](https://x.com/@Bitcoinconfasia) पर बात की: "How Bitcoin Survives Quantum."
+- [@CoinMarketCap](https://x.com/@CoinMarketCap) Academy ने "What Is Q-Day?" प्रकाशित किया, लेखक Christopher Smith: [coinmarketcap.com/academy/glossary/q-day](https://coinmarketcap.com/academy/glossary/q-day)
+
+Stay frosty, quants.
