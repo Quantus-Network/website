@@ -1,0 +1,71 @@
+---
+published: true
+title: "Quantus Weekly: Go-live hari Rabu"
+description: "Quantus tayang Rabu, 9 September. Saat rilis hanya bisa ditambang. Kerja keamanan Immunefi sudah digabung, Quantum & Privacy Day 8 Oktober di Singapura."
+pubDate: "2026-09-08"
+heroImage: "/blog/covers/weekly-update-09-08-2026.webp"
+heroAlt: "Quantus Weekly: Go-live hari Rabu"
+featured: false
+tags:
+  [
+    "weekly-update",
+    "quantum",
+    "post-quantum",
+    "immunefi",
+    "security",
+    "ml-dsa",
+    "mining",
+    "miner",
+    "mainnet",
+    "keystone",
+    "infra",
+    "q-day",
+  ]
+---
+
+import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
+
+Quantus tayang Rabu, 9 September.
+
+Saat peluncuran, satu-satunya cara mendapatkan Quantus adalah menambangnya. Beberapa minggu kemudian, koin ini akan likuid dan dapat diperdagangkan. Lebih lanjut segera.
+
+Kami telah menggabungkan semua pekerjaan keamanan dari [@Immunefi](https://x.com/@Immunefi) ke repositori publik kami.
+
+Minggu lalu kami mengumumkan Quantum & Privacy Day, 8 Oktober di Singapura (Token2049), diselenggarakan bersama [@NEARProtocol](https://x.com/@NEARProtocol).
+
+Berikut yang kami bangun minggu lalu:
+
+### Core Tech & ZK
+
+- Semua perbaikan kompetisi audit [@Immunefi](https://x.com/@Immunefi) sudah dikirim.
+- Chain mendukung ML-DSA-65 bersama ML-DSA-87.
+- Setiap tanda tangan diikat ke konteks penandatanganan sesuai standar FIPS 204, di chain, wallet, CLI, dan firmware hardware wallet.
+- Refaktor decoding transaksi dan membangun ulang parser transaksi multisig agar gagal tertutup pada apa pun yang tidak dapat didekode.
+- Menguatkan tumpukan jaringan terhadap serangan denial-of-service.
+
+### Network & Infra
+
+- Menerapkan staging mainnet dan menggelar latihan peluncuran penuh: node di Amerika, Asia, Eropa, dan Australia dengan konfigurasi mainnet.
+- Membangun release candidate mainnet melalui pipeline otomatis baru yang menghasilkan biner bertanda tangan.
+- Mengotomatiskan armada bootnode dengan infrastructure as code: banyak bootnode multi-wilayah plus node RPC khusus.
+- Menambahkan masa tunggu sebelum paket pihak ketiga yang baru diterbitkan dapat masuk ke build kami, di setiap repositori.
+- Memotong penggunaan memori pengindeks chain dari lebih dari 90% menjadi sekitar 26% dan menjadwalkan pemulihan cadangan untuk memvalidasi cadangan kami.
+
+### Web & Mobile App Updates
+
+- Meluncurkan [quantus.com/launch](https://quantus.com/launch) agar pengguna dapat mendaftar untuk pembaruan email tentang peluncuran kami.
+- Mengirim penyegaran situs web.
+- Dukungan hardware wallet Keystone kini menangani beberapa akun.
+- Merilis CLI v2.1.3 dengan perbaikan.
+- Merilis miner v4.0.2 dengan kernel terpisah yang dioptimalkan untuk Apple Metal dan Nvidia.
+
+### Content & Partnerships
+
+- Mengumumkan Quantum & Privacy Day, acara kami di Singapura bersama NEAR selama pekan Token2049:
+
+<TwitterEmbed url="https://x.com/NEARProtocol/status/2095961480596242672" />
+
+- [@YuviLightman](https://x.com/@YuviLightman) berbicara di [@Bitcoinconfasia](https://x.com/@Bitcoinconfasia) di Hong Kong: "How Bitcoin Survives Quantum."
+- [@CoinMarketCap](https://x.com/@CoinMarketCap) Academy menerbitkan "What Is Q-Day?", ditulis oleh Christopher Smith: [coinmarketcap.com/academy/glossary/q-day](https://coinmarketcap.com/academy/glossary/q-day)
+
+Stay frosty, quants.
