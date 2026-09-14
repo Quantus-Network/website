@@ -40,8 +40,29 @@ const tokensMatch = (provided: string | undefined, expected: string | undefined)
 // and the database. Prevents unbounded payloads from being persisted or sent.
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const MAX_TEXT_LENGTH = 5000;
+
 const clampText = (value: unknown, max = 200): string =>
   typeof value === "string" ? value.slice(0, max) : "";
+
+// Preserve undefined when optional fields are omitted or empty, allowing downstream
+// handlers (such as buildLoopsContactPayload) to safely fall back to defaults.
+const clampOptionalText = (value: unknown, max = 100): string | undefined =>
+  typeof value === "string" && value.trim().length > 0 ? value.slice(0, max) : undefined;
+
+// Extracts the raw email address from either a bare address ("user@example.com")
+// or an RFC 2822 display-name format ("Display Name <user@example.com>").
+const extractEmail = (input: string): string => {
+  const match = input.match(/<([^>]+)>/);
+  return match ? match[1].trim() : input.trim();
+};
+
+// Validates whether an email header contains a valid email address while
+// supporting both bare addresses and display names accepted by Nodemailer.
+const isValidEmailHeader = (input: unknown): boolean => {
+  if (typeof input !== "string" || !input.trim()) return false;
+  const rawEmail = extractEmail(input);
+  return EMAIL_RE.test(rawEmail) && rawEmail.length <= 320;
+};
 
 // Middleware
 app.set("trust proxy", true);
@@ -53,6 +74,7 @@ app.use(corsHandler);
 app.get("/", async (_, res) => {
   res.send("API is running...");
 });
+
 app.post("/api/waitlist", async (req, res) => {
   const { email, firstName, lastName, source } = req.body;
   if (!email || typeof email !== "string" || !EMAIL_RE.test(email) || email.length > 320) {
@@ -63,12 +85,14 @@ app.post("/api/waitlist", async (req, res) => {
   try {
     const safeFirstName = clampText(firstName);
     const safeLastName = clampText(lastName);
+    const safeSource = clampOptionalText(source, 100);
+
     const loopsContact = buildLoopsContactPayload(
       {
         email,
         firstName: safeFirstName,
         lastName: safeLastName,
-        source: clampText(source, 100),
+        source: safeSource,
       },
       env.newsletter.mailingListIds,
     );
@@ -111,6 +135,7 @@ app.post("/api/waitlist", async (req, res) => {
     res.status(500).json({ error: "Unknown internal server error" });
   }
 });
+
 app.post("/api/inquiries", async (req, res) => {
   const { email, message, name } = req.body as Inquiry;
 
@@ -148,6 +173,7 @@ app.post("/api/inquiries", async (req, res) => {
     res.status(400).json({ error: "Failed sending." });
   }
 });
+
 app.post("/api/send-email", async (req, res) => {
   const { from, to, subject, html } = req.body as EmailPayload;
 
@@ -157,11 +183,12 @@ app.post("/api/send-email", async (req, res) => {
     return;
   }
 
-  if (!from || typeof from !== "string" || !EMAIL_RE.test(from)) {
+  // Allow both bare email addresses and RFC 2822 display-name formats supported by Nodemailer.
+  if (!isValidEmailHeader(from)) {
     res.status(400).json({ error: "A valid From address is required!" });
     return;
   }
-  if (!to || typeof to !== "string" || !EMAIL_RE.test(to)) {
+  if (!isValidEmailHeader(to)) {
     res.status(400).json({ error: "A valid To address is required!" });
     return;
   }
@@ -195,6 +222,7 @@ app.post("/api/send-email", async (req, res) => {
     res.status(400).json({ error: "Failed sending." });
   }
 });
+
 app.post("/api/sponsorships", async (req, res) => {
   const {
     name,
