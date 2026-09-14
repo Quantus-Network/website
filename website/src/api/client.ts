@@ -8,6 +8,20 @@ import env from "@/config";
 import NodeRpcService from "./node-rpc-service";
 import type { EthereumAddressData } from "@/interfaces/EthereumSecurity";
 
+function readUptimePercent(data: unknown): number {
+  if (
+    !data ||
+    typeof data !== "object" ||
+    !("percent" in data) ||
+    typeof data.percent !== "number" ||
+    !Number.isFinite(data.percent)
+  ) {
+    throw new Error("Mainnet uptime response is invalid");
+  }
+
+  return data.percent;
+}
+
 // Types for API responses
 interface ChainStatsData {
   allTransactions: {
@@ -132,6 +146,19 @@ const createApiClient = () => {
           ...(source ? { source } : {}),
         } as SubscribeData),
       });
+    },
+
+    /**
+     * Mainnet bootnode uptime from the public Grafana overview dashboard,
+     * proxied same-origin so the browser never calls Grafana (CORS/CSP).
+     */
+    getMainnetUptime: async (): Promise<number> => {
+      const response = await fetch("/api/mainnet-uptime");
+      if (!response.ok) {
+        throw new Error(`Mainnet uptime request failed: ${response.status}`);
+      }
+
+      return readUptimePercent(await response.json());
     },
 
     /**

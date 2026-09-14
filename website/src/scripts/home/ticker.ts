@@ -1,4 +1,5 @@
 import apiClient from "@/api/client";
+import { formatUptimePercent } from "@/api/grafana-public-uptime";
 import { QTPS } from "@/constants/qtps";
 
 export const buildTicker = () => {
@@ -17,7 +18,7 @@ export const buildTicker = () => {
   const items = [
     { lbl: labels.blockHeight, val: "—", live: true, ref: "block-height" },
     { lbl: labels.qtps, val: String(QTPS), live: false },
-    { lbl: labels.uptime, val: "99.97%", live: false },
+    { lbl: labels.uptime, val: "—", live: true, ref: "uptime" },
     { lbl: labels.nodes, val: "—", live: true, ref: "nodes" },
     { lbl: labels.mainnetLabel, val: labels.mainnetValue, live: false },
   ];
@@ -39,6 +40,19 @@ export const buildTicker = () => {
   const nodesEls = document.querySelectorAll('[data-ticker="nodes"]');
   const blockHeightEls = document.querySelectorAll(
     '[data-ticker="block-height"]',
+  );
+  const uptimeEls = document.querySelectorAll('[data-ticker="uptime"]');
+
+  void apiClient.getMainnetUptime().then(
+    (percent) => {
+      const formatted = formatUptimePercent(percent);
+      uptimeEls.forEach((el) => {
+        el.textContent = formatted;
+      });
+    },
+    (error) => {
+      console.error("Failed to load mainnet uptime:", error);
+    },
   );
 
   apiClient.nodeRpc.connect();
