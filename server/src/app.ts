@@ -1,5 +1,6 @@
 import express from "express";
 import helmet from "helmet";
+import { createHash, timingSafeEqual } from "node:crypto";
 
 import env from "./config/index.js";
 
@@ -25,6 +26,23 @@ const dbClient = await db();
 const emailClient = emailTransporter();
 const app = express();
 
+// Compare secrets in constant time by hashing both sides first, so the
+// comparison does not leak the token through timing and length differences.
+// An unset expected token (config missing `EMAIL_TOKEN`) always fails closed.
+const tokensMatch = (provided: string | undefined, expected: string | undefined): boolean => {
+  if (!provided || !expected) return false;
+  const a = createHash("sha256").update(provided).digest();
+  const b = createHash("sha256").update(expected).digest();
+  return timingSafeEqual(a, b);
+};
+
+// Basic shape/size validation for free-text fields forwarded to the mailer
+// and the database. Prevents unbounded payloads from being persisted or sent.
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const MAX_TEXT_LENGTH = 5000;
+const clampText = (value: unknown, max = 200): string =>
+  typeof value === "string" ? value.slice(0, max) : "";
+
 // Middleware
 app.set("trust proxy", true);
 app.use(helmet({ crossOriginResourcePolicy: { policy: "cross-origin" } }));
@@ -37,14 +55,21 @@ app.get("/", async (_, res) => {
 });
 app.post("/api/waitlist", async (req, res) => {
   const { email, firstName, lastName, source } = req.body;
-  if (!email) {
-    res.status(400).json({ error: "Email is required!" });
+  if (!email || typeof email !== "string" || !EMAIL_RE.test(email) || email.length > 320) {
+    res.status(400).json({ error: "A valid email is required!" });
     return;
   }
 
   try {
+    const safeFirstName = clampText(firstName);
+    const safeLastName = clampText(lastName);
     const loopsContact = buildLoopsContactPayload(
-      { email, firstName, lastName, source },
+      {
+        email,
+        firstName: safeFirstName,
+        lastName: safeLastName,
+        source: clampText(source, 100),
+      },
       env.newsletter.mailingListIds,
     );
 
@@ -61,7 +86,7 @@ app.post("/api/waitlist", async (req, res) => {
     try {
       await dbClient
         .insert(waitlist)
-        .values({ id: generateUniqueID(), email, lastName, firstName });
+        .values({ id: generateUniqueID(), email, lastName: safeLastName, firstName: safeFirstName });
     } catch (err) {
       if (!(err instanceof DatabaseError && err.code === "23505")) {
         throw err;
@@ -89,16 +114,16 @@ app.post("/api/waitlist", async (req, res) => {
 app.post("/api/inquiries", async (req, res) => {
   const { email, message, name } = req.body as Inquiry;
 
-  if (!name) {
+  if (!name || typeof name !== "string") {
     res.status(400).json({ error: "Name is required!" });
     return;
   }
-  if (!email) {
-    res.status(400).json({ error: "Email is required!" });
+  if (!email || typeof email !== "string" || !EMAIL_RE.test(email) || email.length > 320) {
+    res.status(400).json({ error: "A valid email is required!" });
     return;
   }
-  if (!message) {
-    res.status(400).json({ error: "Message is required!" });
+  if (!message || typeof message !== "string" || message.length > MAX_TEXT_LENGTH) {
+    res.status(400).json({ error: "Message is required (max 5000 characters)!" });
     return;
   }
 
@@ -106,14 +131,20 @@ app.post("/api/inquiries", async (req, res) => {
     from: `Hello Quantus <${env.email.sender}>`,
     to: env.email.receiver,
     subject: "Quantus New Contact",
-    text: `${name} is contacting, \n\nemail: ${email}\nmessage:${message}`,
+    text: `${name.slice(0, 200)} is contacting, \n\nemail: ${email}\nmessage:${message.slice(0, MAX_TEXT_LENGTH)}`,
   };
 
   try {
-    emailClient.sendMail(contactUsMailOptions);
+    // Await the send so failures surface as an HTTP error instead of an
+    // unhandled promise rejection after a false "Success" response.
+    await emailClient.sendMail(contactUsMailOptions);
 
     res.status(200).json({ message: "Success sending!", email });
   } catch (error) {
+    logger.error({
+      message: "Failed sending contact email",
+      error: toSafeLogError(error),
+    });
     res.status(400).json({ error: "Failed sending." });
   }
 });
@@ -121,25 +152,25 @@ app.post("/api/send-email", async (req, res) => {
   const { from, to, subject, html } = req.body as EmailPayload;
 
   const token = req.headers.authorization?.split(" ")[1];
-  if (token !== env.email.token) {
+  if (!tokensMatch(token, env.email.token)) {
     res.status(401).json({ error: "Unauthorized!" });
     return;
   }
 
-  if (!from) {
-    res.status(400).json({ error: "From is required!" });
+  if (!from || typeof from !== "string" || !EMAIL_RE.test(from)) {
+    res.status(400).json({ error: "A valid From address is required!" });
     return;
   }
-  if (!to) {
-    res.status(400).json({ error: "To is required!" });
+  if (!to || typeof to !== "string" || !EMAIL_RE.test(to)) {
+    res.status(400).json({ error: "A valid To address is required!" });
     return;
   }
-  if (!subject) {
-    res.status(400).json({ error: "Subject is required!" });
+  if (!subject || typeof subject !== "string" || subject.length > 500) {
+    res.status(400).json({ error: "Subject is required (max 500 characters)!" });
     return;
   }
-  if (!html) {
-    res.status(400).json({ error: "HTML is required!" });
+  if (!html || typeof html !== "string" || html.length > 200_000) {
+    res.status(400).json({ error: "HTML is required (max 200000 characters)!" });
     return;
   }
 
@@ -151,10 +182,16 @@ app.post("/api/send-email", async (req, res) => {
   };
 
   try {
-    emailClient.sendMail(sendMailOptions);
+    // Await the send so failures surface as an HTTP error instead of an
+    // unhandled promise rejection after a false "Success" response.
+    await emailClient.sendMail(sendMailOptions);
 
     res.status(200).json({ message: "Success sending!" });
   } catch (error) {
+    logger.error({
+      message: "Failed sending send-email request",
+      error: toSafeLogError(error),
+    });
     res.status(400).json({ error: "Failed sending." });
   }
 });
@@ -169,30 +206,30 @@ app.post("/api/sponsorships", async (req, res) => {
     additionalInfo,
   } = req.body as SponsorshipPayload;
 
-  if (!name) {
+  if (!name || typeof name !== "string") {
     res.status(400).json({ error: "Name is required!" });
     return;
   }
-  if (!email) {
-    res.status(400).json({ error: "Email is required!" });
+  if (!email || typeof email !== "string" || !EMAIL_RE.test(email) || email.length > 320) {
+    res.status(400).json({ error: "A valid email is required!" });
     return;
   }
-  if (!designation) {
+  if (!designation || typeof designation !== "string") {
     res.status(400).json({ error: "Designation is required!" });
     return;
   }
-  if (!organization) {
+  if (!organization || typeof organization !== "string") {
     res.status(400).json({ error: "Organization is required!" });
     return;
   }
-  if (!investmentTier) {
+  if (!investmentTier || typeof investmentTier !== "string") {
     res.status(400).json({ error: "Investment tier is required!" });
     return;
   }
 
-  let text = `${name} is inquiring for a sponsorship, \n\nemail: ${email}\ndesignation: ${designation}\norganization: ${organization}\ninvestment tier: ${investmentTier}`;
-  if (phone) text += `\nphone: ${phone}`;
-  if (additionalInfo) text += `\nadditional info: ${additionalInfo}`;
+  let text = `${name.slice(0, 200)} is inquiring for a sponsorship, \n\nemail: ${email}\ndesignation: ${designation.slice(0, 200)}\norganization: ${organization.slice(0, 200)}\ninvestment tier: ${investmentTier.slice(0, 100)}`;
+  if (phone && typeof phone === "string") text += `\nphone: ${phone.slice(0, 100)}`;
+  if (additionalInfo && typeof additionalInfo === "string") text += `\nadditional info: ${additionalInfo.slice(0, MAX_TEXT_LENGTH)}`;
 
   const sponsorshipMailOptions: Mail.Options = {
     from: `Sponsorship Request - Q.Day <${env.email.sender}>`,
@@ -202,10 +239,16 @@ app.post("/api/sponsorships", async (req, res) => {
   };
 
   try {
-    emailClient.sendMail(sponsorshipMailOptions);
+    // Await the send so failures surface as an HTTP error instead of an
+    // unhandled promise rejection after a false "Success" response.
+    await emailClient.sendMail(sponsorshipMailOptions);
 
     res.status(200).json({ message: "Success sending!" });
   } catch (error) {
+    logger.error({
+      message: "Failed sending sponsorship email",
+      error: toSafeLogError(error),
+    });
     res.status(400).json({ error: "Failed sending." });
   }
 });
