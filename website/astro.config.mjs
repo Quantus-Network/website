@@ -9,6 +9,7 @@ import rehypeAdaptiveTables from "./src/utils/rehype-adaptive-tables.ts";
 import playformCompress from "@playform/compress";
 import markdownForAgents from "astro-markdown-for-agents";
 import { markdownForAgentsOptions } from "./markdown-for-agents.config.mjs";
+import { mainnetUptimeDevApiPlugin } from "./src/api/mainnet-uptime-dev-plugin.ts";
 
 const SITE_BASE_URL = process.env.SITE_BASE_URL || "https://www.quantus.com";
 const DEFAULT_LOCALE = "en-US";
@@ -46,7 +47,7 @@ export default defineConfig({
   },
   vite: {
     // @ts-ignore
-    plugins: [tailwindcss()],
+    plugins: [tailwindcss(), mainnetUptimeDevApiPlugin()],
     build: {
       cssMinify: true,
     },

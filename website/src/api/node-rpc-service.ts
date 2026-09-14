@@ -36,15 +36,15 @@ const TELEMETRY_ACTIONS = {
   TelemetryInfo: 23,
 } as const;
 
-const PLANCK_GENESIS_HASH =
-  "0x4901bf5c57fd3f9e726af399c763de6670dbdb115a91c0237e173f16eef65e72";
+export const QUANTUS_MAINNET_GENESIS_HASH =
+  "0xfb5487c0be6ae4ade2d41d16e50465129861636c2b8d61fa94d7a19631626fba";
 
 const MESSAGE_TIMEOUT_MS = 60_000;
 
 /**
  * Node Counter Service
  * Manages WebSocket connection to the Quantus telemetry feed and tracks
- * Planck mainnet node count and block height.
+ * Quantus mainnet node count and block height.
  */
 class NodeRpcService {
   private ws: WebSocket | null = null;
@@ -57,11 +57,11 @@ class NodeRpcService {
   private pingId = 0;
   private pingSentAt: number | null = null;
   private subscribed = false;
-  private planckChainSeen = false;
+  private targetChainSeen = false;
 
   private options: Required<NodeRpcOptions> = {
     wsUrl: "wss://feed-telemetry.quantus.cat/feed",
-    chainGenesisHash: PLANCK_GENESIS_HASH,
+    chainGenesisHash: QUANTUS_MAINNET_GENESIS_HASH,
     maxReconnectAttempts: 5,
     reconnectDelay: 1000,
     heartbeatInterval: 30000,
@@ -136,7 +136,7 @@ class NodeRpcService {
       this.ws = null;
     }
     this.subscribed = false;
-    this.planckChainSeen = false;
+    this.targetChainSeen = false;
     this.updateState("disconnected", "Disconnected");
     this.isConnecting = false;
   }
@@ -155,7 +155,7 @@ class NodeRpcService {
       this.isConnecting = false;
       this.reconnectAttempts = 0;
       this.subscribed = false;
-      this.planckChainSeen = false;
+      this.targetChainSeen = false;
       this.updateState("connected", "Connected to network");
       this.resetMessageTimeout();
       this.sendPing();
@@ -221,7 +221,7 @@ class NodeRpcService {
             number,
           ];
           if (genesisHash === this.options.chainGenesisHash) {
-            this.planckChainSeen = true;
+            this.targetChainSeen = true;
             this.state.count = nodeCount;
             stateChanged = true;
             this.maybeSubscribeToChain();
@@ -232,7 +232,7 @@ class NodeRpcService {
         case TELEMETRY_ACTIONS.RemovedChain: {
           const genesisHash = payload as string;
           if (genesisHash === this.options.chainGenesisHash) {
-            this.planckChainSeen = false;
+            this.targetChainSeen = false;
             this.state.count = null;
             stateChanged = true;
           }
@@ -289,7 +289,7 @@ class NodeRpcService {
       this.subscribed ||
       !this.ws ||
       this.ws.readyState !== WebSocket.OPEN ||
-      !this.planckChainSeen
+      !this.targetChainSeen
     ) {
       return;
     }
