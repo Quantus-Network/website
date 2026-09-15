@@ -1,0 +1,166 @@
+---
+published: false
+title: "Was ist ein CRQC?"
+metaTitle: "Was ist ein CRQC? Kryptografisch relevanter Quantencomputer"
+description: "Erfahren Sie, was einen Quantencomputer kryptografisch relevant macht, wie er sich von heutigen Maschinen unterscheidet und was das für Krypto bedeuten könnte."
+pubDate: "2026-09-15"
+heroImage: "/blog/covers/what-is-a-crqc.webp"
+heroAlt: "Was ist ein CRQC?"
+featured: false
+author: christopher-smith
+tags:
+  [
+    "crqc",
+    "quantum-computing",
+    "post-quantum",
+    "cryptography",
+    "bitcoin",
+    "ecdsa",
+    "nist",
+    "ai",
+  ]
+---
+
+import YouTubeEmbed from "@/components/features/blog/YouTubeEmbed.astro";
+
+Ein **kryptografisch relevanter Quantencomputer**, kurz **CRQC**, ist ein Quantencomputer, der leistungsfähig und zuverlässig genug ist, um weit verbreitete Formen der Public-Key-Kryptografie zu brechen. Das sind Sicherheitsverfahren, die Kommunikation vertraulich halten und prüfen, dass Transaktionen autorisiert wurden.
+
+Quantencomputer existieren bereits, aber keine öffentlich vorgeführte Maschine kann diese Angriffe bei den Schlüsselgrößen ausführen, die große Blockchains verwenden. Auf Blockchains, die verwundbare Methoden zur Prüfung der Transaktionsautorisierung nutzen, könnte ein CRQC einem Angreifer erlauben, Transaktionen zu erzeugen, die das Netzwerk ohne Erlaubnis des Inhabers akzeptiert.
+
+## Wie unterscheidet sich ein CRQC von heutigen Quantencomputern?
+
+Heutige Quantencomputer können Experimente durchführen und spezialisierte Berechnungen ausführen. Lange Berechnungen sind schwierig, weil sich Fehler ansammeln können, bevor die Maschine fertig ist.
+
+Quantencomputer speichern und verarbeiten Informationen mit **Quantenbits**, meist kurz **Qubits** genannt. Ein physisches Qubit ist eine einzelne Hardware-Einheit, etwa ein supraleitender Schaltkreis oder ein gefangenes Ion. Störungen aus der Umgebung oder unpräzise Steuerung können während einer Berechnung Fehler verursachen.
+
+Der Physiker John Preskill führte den Begriff [NISQ, für „noisy intermediate-scale quantum“](https://arxiv.org/abs/1801.00862), ein, um Maschinen mit begrenzter Qubit-Zahl zu beschreiben, deren Berechnungen durch Fehler eingeschränkt sind. „Noisy“ (verrauscht) bezieht sich auf diese Fehler; „intermediate-scale“ (mittlere Größenordnung) auf die Anzahl der Qubits.
+
+Forscher nutzen **Quantenfehlerkorrektur**, um die Information eines Qubits über mehrere physische Qubits zu kodieren und Fehler zu erkennen und zu korrigieren. Diese kodierte Einheit heißt **logisches Qubit**. Es kann zuverlässiger sein als ein einzelnes physisches Qubit, kann aber trotzdem versagen.
+
+Ein CRQC müsste einen vollständigen kryptografischen Angriff ausführen und dabei Fehler niedrig genug halten, damit die Berechnung gelingt. Das erfordert zuverlässige Berechnung in einem Umfang und über eine Dauer, die weit über die bisher gezeigten begrenzten Experimente hinausgeht.
+
+### Wie viele Qubits würde ein Quantenangriff benötigen?
+
+Der Unterschied zwischen physischen und logischen Qubits erklärt, warum es keine einzige Antwort gibt. Hardware-Ankündigungen nennen oft physische Qubits, während Angriffsschätzungen logische Qubits angeben können. Um diese Zahlen zu vergleichen, muss man wissen, wie viel Fehlerkorrektur die vorgeschlagene Maschine benötigen würde.
+
+Auch der Angriff selbst beeinflusst die Anforderung. Ein Quantencomputer führt eine Abfolge von Operationen aus, die als Quantenschaltkreis bezeichnet wird, und Forscher können für denselben Angriff unterschiedliche Schaltkreise entwerfen. Ein Design könnte weniger Qubits, aber mehr Operationen benötigen, was die Arbeit erhöht, die die Maschine korrekt ausführen muss.
+
+Forscher schätzen dann die benötigte physische Hardware anhand von Annahmen über Geschwindigkeit und Fehlerraten der Maschine.
+
+Eine [von Google geleitete Studie aus dem Jahr 2026](https://arxiv.org/abs/2603.28846v2) schätzte, was ein Quantencomputer benötigen würde, um einen privaten Schlüssel — das Geheimnis zur Autorisierung von Transaktionen — aus dem zugehörigen öffentlichen Schlüssel zu berechnen. Die Studie untersuchte Bitcoins secp256k1-System mit elliptischen Kurven.
+
+Ein vorgeschlagener Schaltkreis benötigte weniger als 1.200 logische Qubits und weniger als 90 Millionen Toffoli-Gatter, eine bestimmte Art von Quantenoperation.
+
+Unter den Annahmen des Papers für supraleitende Hardware, einschließlich einer physischen Fehlerrate von 0,1 Prozent, schätzten die Autoren, dass die Ausführung des Schaltkreises weniger als 500.000 physische Qubits benötigen würde.
+
+Eine funktionierende Maschine müsste diese Qubits trotzdem bereitstellen und die Operationen zuverlässig ausführen. Die Forscher haben den Angriff nicht an einem existierenden Quantencomputer vorgeführt.
+
+> Weiterlesen: [Warum ist es so schwer, einen Quantencomputer zu bauen?](https://www.quantumcanary.org/insights/why-is-it-so-hard-to-build-a-quantum-computer)
+
+## Wie könnte ein Quantencomputer eine Transaktion fälschen?
+
+Wenn Sie eine Transaktion genehmigen, verwendet Ihre Wallet einen privaten Schlüssel, um eine **digitale Signatur** zu erzeugen. Andere Computer verwenden den zugehörigen öffentlichen Schlüssel, um die Signatur zu prüfen. So kann das Netzwerk die Transaktion verifizieren, ohne Ihren privaten Schlüssel kennen zu müssen.
+
+Die beiden Schlüssel sind mathematisch verbunden, aber die Berechnung des privaten Schlüssels aus dem öffentlichen sollte unpraktikabel sein. Signaturverfahren wie ECDSA, eines der von Bitcoin verwendeten Verfahren, beruhen auf der Schwierigkeit dieser Berechnung.
+
+Shors Algorithmus gibt einem hinreichend leistungsfähigen Quantencomputer einen effizienten Weg, das mathematische Problem hinter diesen Signaturen mit elliptischen Kurven zu lösen. Mit Zugriff auf den passenden öffentlichen Schlüssel könnte der Angreifer den privaten Schlüssel berechnen und damit Transaktionen signieren.
+
+Für Gelder, die allein durch diesen Schlüssel kontrolliert werden, könnte der Angreifer eine Transaktion signieren, die sie an eine von ihm kontrollierte Adresse sendet. Die Signatur würde die Prüfung bestehen, obwohl der Inhaber die Übertragung nie genehmigt hat.
+
+### Könnte ein Quantencomputer auch private Daten lesen?
+
+Eine Transaktion zu fälschen und private Nachrichten zu lesen sind unterschiedliche Angriffe. Eine digitale Signatur hilft, eine Transaktion zu verifizieren. Verschlüsselung hält Informationen vertraulich, indem sie ohne den richtigen Schlüssel unlesbar gemacht werden.
+
+Viele verschlüsselte Verbindungen nutzen Public-Key-Kryptografie, um die geheimen Schlüssel zu etablieren, die ihre Nachrichten schützen. Ein hinreichend leistungsfähiger Quantencomputer könnte verwundbare Methoden in diesem Prozess angreifen und einem Angreifer so möglicherweise erlauben, aufgezeichnete Kommunikation zu lesen.
+
+Blockchains nutzen auch Hashfunktionen wie SHA-256. Eine Hashfunktion wandelt Daten in einen Wert fester Länge um. Schon eine kleine Änderung der Daten erzeugt meist einen anderen Hashwert, was Computern hilft, Veränderungen zu erkennen. Hashing verbirgt die ursprüngliche Information nicht in einer Form, die später jemand entschlüsselt.
+
+Grovers Algorithmus kann die Suche nach geheimen Verschlüsselungsschlüsseln oder nach Eingaben, die einen bestimmten Hash erzeugen, beschleunigen. Ob das einen Angriff praktikabel macht, hängt vom kryptografischen Verfahren und den verfügbaren Ressourcen ab. Die Fähigkeit, verwundbare Signaturen zu fälschen, würde AES, ein weit verbreitetes Verschlüsselungsverfahren, oder die SHA-256-Hashfunktion nicht automatisch unbrauchbar machen.
+
+> Weiterlesen: [Wie funktioniert Grovers Algorithmus (mathematisch erklärt)](https://www.quantumcanary.org/insights/how-does-grovers-algorithm-work-mathematically-speaking)
+
+## Wann könnte ein CRQC Krypto gefährden?
+
+Es gibt kein bestätigtes Datum für einen Quantencomputer, der die von großen Blockchains verwendete Kryptografie angreifen kann. [NIST beschreibt Schätzungen, die von Jahren bis Jahrzehnten reichen](https://www.nist.gov/cybersecurity-and-privacy/what-post-quantum-cryptography) und technische Probleme widerspiegeln, die Forscher noch lösen müssen. Öffentliche Ankündigungen zeigen, was offen demonstriert wurde, aber die erste fähige Maschine könnte bei ihrer Fertigstellung nicht angekündigt werden.
+
+Der Zeitpunkt hängt sowohl von der Maschine ab, die Forscher bauen können, als auch von der Berechnung, die ein Angreifer von ihr benötigt. Forscher arbeiten an beidem, unter anderem durch KI-gestützte Experimente.
+
+### Wie KI den Fortschritt hin zu einem CRQC beeinflussen könnte
+
+KI hilft Forschern bereits, den Aufwand für einen künftigen Quantenangriff zu verringern. Bei [ECDSA.fail](https://ecdsa.fail/) von EigenLabs nutzen Teilnehmer KI-Coding-Agenten, um Verbesserungen an einem Quantenschaltkreis für Angriffe auf elliptische Kurven zu entwickeln und zu testen. Die Challenge nutzt Ergebnisse aus Googles Forschung als Referenzpunkte, um Fortschritt zu vergleichen.
+
+![ECDSA.fail-Leaderboard, das KI-gestützte Verbesserungen am Quantenschaltkreis zum Brechen von Bitcoins Signaturen mit elliptischen Kurven verfolgt — aktuell 62 % vor Googles klassifiziertem Schaltkreis](/blog/assets/ecdsa-fail-leaderboard.webp)
+
+Das Ziel ist, dieselbe Berechnung mit weniger Qubits oder Operationen durchzuführen. Das [Forschungspapier des Projekts beschreibt, wie Menschen und KI-Agenten Verbesserungen beitragen](https://arxiv.org/abs/2609.09582), die geprüft werden, bevor sie im Leaderboard erscheinen. Diese Ergebnisse betreffen eine einzelne Operation innerhalb eines größeren Angriffs; die Durchführung des vollständigen Angriffs würde weiterhin einen fähigen Quantencomputer erfordern.
+
+Forscher nutzen KI auch, um Quantenprozessoren zuverlässig arbeiten zu lassen. Im Juli 2026 [berichtete Google, dass maschinelles Lernen genutzt wurde, um Steuerungen von Quantenprozessoren anzupassen](https://research.google/blog/towards-a-quantum-computer-that-learns-from-its-errors/), während Fehlerkorrektur-Experimente liefen. Die Anpassungen halfen dem System, stabil zu bleiben, während sich die Betriebsbedingungen änderten.
+
+Wir haben mit Colton Dillion, CEO und Mitgründer von Postquant Labs, dem Unternehmen hinter Quip Network, untersucht, wie KI und Quantencomputing Bitcoin beeinflussen könnten:
+
+<YouTubeEmbed url="https://youtu.be/qXvgN8GY_NY?si=_yPpXHm8A1ZSSwdU" title="KI, Quantencomputing und Bitcoin mit Colton Dillion" />
+
+### Manche Angriffe lassen mehr Zeit als andere
+
+Im Fall von Bitcoin hängt die für einen Angriff verfügbare Zeit teilweise davon ab, wann der öffentliche Schlüssel sichtbar wird.
+
+Ein **At-Rest-Angriff** zielt auf Gelder, deren öffentlicher Schlüssel bereits offengelegt ist. Ein Angreifer kann mit der Berechnung des privaten Schlüssels beginnen, ohne auf eine Zahlung des Inhabers zu warten. Der Angriff bleibt nützlich, solange dieser Schlüssel noch Gelder kontrolliert.
+
+Manche frühen Bitcoin-Mining-Belohnungen nutzen ein Format, das den öffentlichen Schlüssel direkt onchain speichert. Dazu zählen Coins, die üblicherweise Satoshi Nakamoto zugeschrieben werden, auch wenn dieser Besitz unbewiesen ist. Ihr Alter oder ihre Inaktivität würden einen Quantenangriff auf die offengelegten Schlüssel nicht verhindern.
+
+Ein **On-Spend-Angriff** zielt auf einen Schlüssel, der während einer Zahlung offengelegt wird. Der Angreifer muss den privaten Schlüssel wiederherstellen und schnell genug eine konkurrierende Transaktion einreichen, damit diese stattdessen akzeptiert wird. Bei Bitcoin kann das bedeuten, den Angriff zu versuchen, während die ursprüngliche Zahlung auf Bestätigung wartet.
+
+Eine Maschine könnte deshalb bereits offengelegte Schlüssel bedrohen, bevor sie schnell genug ist, um ein kurzes Ausgabefenster auszunutzen.
+
+### Verschlüsselte Informationen lassen sich schon heute sammeln
+
+Angreifer können auch verschlüsselte Informationen speichern, die über Jahre wertvoll bleiben könnten, darunter private Nachrichten, medizinische Unterlagen, Regierungskommunikation und vertrauliche Geschäftsdokumente.
+
+Bei einem Harvest-now-decrypt-later-Angriff speichert jemand diese verschlüsselten Informationen, bis ein künftiger Quantencomputer die verwundbare Kryptografie brechen kann, die deren Verschlüsselungsschlüssel schützt. [NIST erklärt, warum langlebige Geheimnisse geschützt werden müssen, bevor ein solcher Computer existiert](https://www.nist.gov/cybersecurity-and-privacy/what-post-quantum-cryptography).
+
+Das gefährdet die Vertraulichkeit gespeicherter Informationen. Ein Angriff auf einen offengelegten Bitcoin-Signaturschlüssel gefährdet die Gelder, zu deren Ausgabe dieser Schlüssel jemanden autorisiert.
+
+## Warum die Vorbereitung beginnt, bevor ein CRQC existiert
+
+Die Ungleichung des Kryptografen Michele Mosca vergleicht drei Zeiträume:
+
+- **X**, wie viele Jahre Informationen vertraulich bleiben müssen
+- **Y**, wie viele Jahre die Migration dauert
+- **Z**, die geschätzte Anzahl an Jahren, bis ein Quantencomputer die diese Informationen schützende Kryptografie brechen kann
+
+Das Planungsziel ist **X + Y \< Z**.
+
+![Moscas Ungleichung: Wenn die Jahre, in denen Daten vertraulich bleiben müssen (X), plus die Jahre, die die Migration dauert (Y), die Jahre bis zum Eintreffen eines fähigen Quantencomputers (Z) übersteigen, werden geheime Schlüssel offengelegt, bevor Schutz besteht](/blog/assets/moscas-inequality.webp)
+
+Übersteigt die Summe Z, könnten gesammelte Informationen lesbar werden, während sie noch geschützt werden müssen. Z bleibt ungewiss.
+
+Für Blockchain-Signaturschlüssel muss die Migration bestehende Gelder schützen, bevor ein Quantencomputer die zum Ausgeben nötigen privaten Schlüssel wiederherstellen kann. Ein bereits offengelegter öffentlicher Schlüssel erlaubt einem Angreifer, diese Berechnung zu versuchen, ohne auf eine Transaktion des Inhabers zu warten.
+
+Vorbereitung bedeutet, verwundbare Signaturen durch **Post-Quanten-Kryptografie** zu ersetzen: Algorithmen, die entwickelt wurden, um bekannten Angriffen sowohl von klassischen als auch von Quantencomputern zu widerstehen. Diese Algorithmen laufen auf herkömmlicher Hardware, sodass Entwickler sie implementieren können, bevor ein CRQC existiert.
+
+[NIST hat 2024 seine ersten drei Post-Quanten-Standards finalisiert](https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards) und liefert Verfahren zur Etablierung gemeinsamer Geheimnisse und zur Erstellung digitaler Signaturen. Entwickler müssen diese Verfahren noch in die von Menschen genutzten Systeme integrieren und testen.
+
+Bei einer Blockchain kann das Änderungen im gesamten Netzwerk erfordern. Nodes müssen die aktualisierten Regeln durchsetzen, Wallets müssen die neuen Signaturen unterstützen, und Börsen sowie Verwahrer müssen ihre Dienste aktualisieren. Je nach Migrationsdesign müssen Nutzer möglicherweise auch bestehende Gelder zu neuen Schlüsseln oder Adressen verschieben.
+
+Gelder, die durch verlorene private Schlüssel kontrolliert werden, schaffen ein schwierigeres Problem, weil ihre Inhaber keine gewöhnliche Übertragung autorisieren können. Ein neues Signaturverfahren hinzuzufügen, schützt diese Gelder nicht automatisch.
+
+Bei Bitcoin belegt Inaktivität allein nicht, dass ein privater Schlüssel verloren wurde.
+
+Der Migrationsplan einer Blockchain sollte erklären, wie bestehende Gelder geschützt werden, einschließlich der Gelder, deren Inhaber keine Übertragung vornehmen können. Bei der Bewertung von Quantensicherheits-Behauptungen sollte man auf bereits umgesetzte Änderungen, die von Nutzern erforderlichen Schritte und die Gelder achten, die weiterhin exponiert bleiben könnten.
+
+## Häufig gestellte Fragen
+
+### Schützt eine Hardware-Wallet vor einem Quantenangriff?
+
+Eine Hardware-Wallet hilft, private Schlüssel von anderen Geräten isoliert zu halten. Ein Quantenangriff auf ein verwundbares Signaturverfahren könnte den privaten Schlüssel jedoch aus offengelegten öffentlichen Informationen ableiten, ohne auf die Wallet zuzugreifen. Das Gerät allein kann diese Berechnung nicht verhindern.
+
+### Sind „kryptografisch relevante“ und „kryptoanalytisch relevante“ Quantencomputer unterschiedlich?
+
+Beide Begriffe tauchen in Diskussionen über Quantenangriffe auf Kryptografie auf. [NIST verwendet „cryptanalytically relevant quantum computer“](https://csrc.nist.gov/glossary/term/cryptanalytically_relevant_quantum_computer) für eine Maschine, die mit Quantenalgorithmen Kryptografie brechen kann, die gegen klassische Computer sicher bleibt.
+
+### Was ist der Unterschied zwischen einem CRQC und Q-Day?
+
+Ein CRQC ist ein Quantencomputer mit der Fähigkeit, einen kryptografischen Angriff auszuführen. Q-Day bezeichnet den Zeitpunkt, an dem diese Fähigkeit noch genutzte Kryptografie brechen kann. Unterschiedliche kryptografische Systeme benötigen unterschiedliche Angriffsressourcen und Laufzeiten und könnten deshalb zu unterschiedlichen Zeitpunkten verwundbar werden.
+
+### Braucht Post-Quanten-Kryptografie einen Quantencomputer?
+
+Nein. Post-Quanten-Kryptografie läuft auf herkömmlichen Computern, einschließlich der von Wallets und Blockchain-Nodes genutzten Hardware. Sie ist so entwickelt, dass sie bekannten Quantenangriffen widersteht, sodass Systeme sie übernehmen können, bevor ein CRQC existiert.

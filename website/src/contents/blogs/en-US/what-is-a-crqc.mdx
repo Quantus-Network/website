@@ -1,0 +1,166 @@
+---
+published: false
+title: "What Is a CRQC?"
+metaTitle: "What Is a CRQC? Cryptographically Relevant Quantum Computer"
+description: "Learn what makes a quantum computer cryptographically relevant, how it differs from today's machines, and what its capabilities could mean for crypto."
+pubDate: "2026-09-15"
+heroImage: "/blog/covers/what-is-a-crqc.webp"
+heroAlt: "What Is a CRQC?"
+featured: false
+author: christopher-smith
+tags:
+  [
+    "crqc",
+    "quantum-computing",
+    "post-quantum",
+    "cryptography",
+    "bitcoin",
+    "ecdsa",
+    "nist",
+    "ai",
+  ]
+---
+
+import YouTubeEmbed from "@/components/features/blog/YouTubeEmbed.astro";
+
+A **cryptographically relevant quantum computer**, or **CRQC**, is a quantum computer powerful and reliable enough to break widely used forms of public-key cryptography. These are security methods that help keep communications private and check that transactions were authorized.
+
+Quantum computers already exist, but no publicly demonstrated machine can perform these attacks at the key sizes used by major blockchains. On blockchains using vulnerable methods to verify transaction authorization, a CRQC could let an attacker create transactions the network accepts without the owner's permission.
+
+## How Is a CRQC Different From Today's Quantum Computers?
+
+Today's quantum computers can run experiments and perform specialized calculations. Long calculations are difficult because errors can accumulate before the machine finishes.
+
+Quantum computers store and process information using **quantum bits**, usually shortened to **qubits**. A physical qubit is an individual hardware unit, such as a superconducting circuit or a trapped ion. Disturbances from its surroundings or imperfect control can introduce errors during a calculation.
+
+Physicist John Preskill introduced the term [NISQ, meaning noisy intermediate-scale quantum](https://arxiv.org/abs/1801.00862), to describe machines with limited numbers of qubits whose calculations are constrained by errors. "Noisy" refers to those errors; "intermediate-scale" refers to the number of qubits.
+
+Researchers use **quantum error correction** to encode one qubit's information across multiple physical qubits and detect and correct errors. That encoded unit is called a **logical qubit**. It can be more reliable than an individual physical qubit, although it can still fail.
+
+A CRQC would need to perform a complete cryptographic attack while keeping errors low enough for the calculation to succeed. That requires reliable computation at a scale and duration beyond the limited experiments demonstrated so far.
+
+### How Many Qubits Would a Quantum Attack Need?
+
+The distinction between physical and logical qubits explains why there is no single answer. Hardware announcements often report physical qubits, while attack estimates may specify logical qubits. Comparing those numbers requires knowing how much error correction the proposed machine would need.
+
+The attack itself also affects the requirement. A quantum computer performs a sequence of operations called a quantum circuit, and researchers can design different circuits for the same attack. One design might use fewer qubits but require more operations, increasing the work the machine must complete accurately.
+
+Researchers then estimate the physical hardware needed using assumptions about the machine's speed and error rates.
+
+A [Google-led study published in 2026](https://arxiv.org/abs/2603.28846v2) estimated what a quantum computer would need to calculate a private key, the secret used to authorize transactions, from its matching public key. The study examined Bitcoin's secp256k1 elliptic-curve system.
+
+One proposed circuit needed fewer than 1,200 logical qubits and fewer than 90 million Toffoli gates, a particular type of quantum operation.
+
+Under the paper's assumptions for superconducting hardware, including a physical error rate of 0.1 percent, the authors estimated that running the circuit would need fewer than 500,000 physical qubits.
+
+A working machine would still need to provide those qubits and execute the operations reliably. The researchers did not demonstrate the attack on an existing quantum computer.
+
+> Further Reading: [Why Is It So Hard to Build a Quantum Computer?](https://www.quantumcanary.org/insights/why-is-it-so-hard-to-build-a-quantum-computer)
+
+## How Could a Quantum Computer Forge a Transaction?
+
+When you approve a transaction, your wallet uses a private key to create a **digital signature**. Other computers use its matching public key to check the signature. This lets the network verify the transaction without needing to know your private key.
+
+The two keys are mathematically connected, but calculating the private key from the public key should be impractical. Signature schemes such as ECDSA, one of the schemes used by Bitcoin, rely on the difficulty of that calculation.
+
+Shor's algorithm gives a sufficiently capable quantum computer an efficient way to solve the mathematical problem behind these elliptic-curve signatures. With access to the relevant public key, the attacker could calculate the private key and use it to sign transactions.
+
+For funds controlled by that key alone, the attacker could sign a transaction sending them to an address they control. The signature would pass verification even though the owner never approved the transfer.
+
+### Could a Quantum Computer Read Private Data Too?
+
+Forging a transaction and reading someone's private messages involve different attacks. A digital signature helps verify a transaction. Encryption keeps information confidential by making it unreadable without the right key.
+
+Many encrypted connections use public-key cryptography to establish the secret keys that protect their messages. A sufficiently capable quantum computer could attack vulnerable methods used in that process, potentially allowing an attacker to read recorded communications.
+
+Blockchains also use hash functions, such as SHA-256. A hash function turns data into a fixed-length value. Even a small change to the data will usually produce a different hash value, helping computers detect alterations. Hashing does not hide the original information in a form that someone later decrypts.
+
+Grover's algorithm can speed up searches for secret encryption keys or inputs that produce a particular hash. Whether that makes an attack practical depends on the cryptographic method and the resources available. The ability to forge vulnerable signatures would not automatically make AES, a widely used encryption method, or the SHA-256 hash function unusable.
+
+> Further Reading: [How Does Grover's Algorithm Work (Mathematically Speaking)](https://www.quantumcanary.org/insights/how-does-grovers-algorithm-work-mathematically-speaking)
+
+## When Could a CRQC Put Crypto at Risk?
+
+There is no confirmed date for a quantum computer that can attack the cryptography major blockchains use. [NIST describes estimates ranging from years to decades](https://www.nist.gov/cybersecurity-and-privacy/what-post-quantum-cryptography), which reflect engineering problems researchers still need to solve. Public announcements show what has been demonstrated openly, but the first capable machine might not be announced when it is built.
+
+The timing depends on both the machine researchers can build and the calculation an attacker needs it to perform. Researchers are working on both, including through AI-assisted experiments.
+
+### How AI Could Affect Progress Toward a CRQC
+
+AI is already helping researchers reduce the work a future quantum attack would require. At [ECDSA.fail](https://ecdsa.fail/) by EigenLabs, participants use AI coding agents to develop and test improvements to a quantum circuit used in elliptic-curve attacks. The challenge uses results from Google's research as reference points for comparing progress.
+
+![ECDSA.fail leaderboard tracking AI-assisted improvements to the quantum circuit needed to break Bitcoin's elliptic-curve signatures, currently 62% ahead of Google's classified circuit](/blog/assets/ecdsa-fail-leaderboard.webp)
+
+The aim is to perform the same calculation using fewer qubits or operations. The project's [research paper describes how people and AI agents contribute improvements](https://arxiv.org/abs/2609.09582), which are checked before appearing on the leaderboard. These results concern one operation within a larger attack; performing the complete attack would still require a capable quantum computer.
+
+Researchers are also using AI to keep quantum processors operating reliably. In July 2026, [Google reported using machine learning to adjust quantum-processor controls](https://research.google/blog/towards-a-quantum-computer-that-learns-from-its-errors/) during error-correction experiments. The adjustments helped the system remain stable as its operating conditions changed.
+
+We explored how AI and quantum computing could affect Bitcoin with Colton Dillion, CEO and co-founder of Postquant Labs, the company behind Quip Network:
+
+<YouTubeEmbed url="https://youtu.be/qXvgN8GY_NY?si=_yPpXHm8A1ZSSwdU" title="AI, quantum computing, and Bitcoin with Colton Dillion" />
+
+### Some Attacks Allow More Time Than Others
+
+In the case of Bitcoin, the time available for an attack depends partly on when the public key becomes visible.
+
+An **at-rest attack** targets funds whose public key is already exposed. An attacker can begin calculating the private key without waiting for the owner to make a payment. The attack remains useful while that key still controls funds.
+
+Some early Bitcoin mining rewards use a format that records the public key directly onchain. These include coins commonly attributed to Satoshi Nakamoto, although that ownership is unproven. Their age or inactivity would not prevent a quantum attack against the exposed keys.
+
+An **on-spend attack** targets a key revealed during a payment. The attacker must recover the private key and submit a competing transaction quickly enough to get it accepted instead. In Bitcoin, this can mean attempting the attack while the original payment awaits confirmation.
+
+A machine might therefore threaten already-exposed keys before it becomes fast enough to exploit a short spending window.
+
+### Encrypted Information Can Be Collected Today
+
+Attackers can also store encrypted information that may remain valuable for years, including private messages, medical records, government communications and confidential business documents.
+
+In a **harvest-now, decrypt-later attack**, someone stores that encrypted information until a future quantum computer can break the vulnerable cryptography protecting its encryption keys. [NIST explains why long-lived secrets need protection before such a computer exists](https://www.nist.gov/cybersecurity-and-privacy/what-post-quantum-cryptography).
+
+This threatens the confidentiality of stored information. An attack against an exposed Bitcoin signing key threatens the funds that key authorizes someone to spend.
+
+## Why Preparation Starts Before a CRQC Exists
+
+Cryptographer Michele Mosca's inequality compares three periods:
+
+- **X**, how many years information must remain confidential
+- **Y**, how many years migration takes
+- **Z**, the estimated number of years until a quantum computer can break the cryptography protecting that information
+
+The planning target is **X + Y \< Z**.
+
+![Mosca's inequality: when the years data must stay confidential (X) plus the years migration takes (Y) exceed the years until a capable quantum computer arrives (Z), secret keys are revealed before protection is in place](/blog/assets/moscas-inequality.webp)
+
+If the sum exceeds Z, collected information could become readable while it still needs protection. Z remains uncertain.
+
+For blockchain signing keys, migration must protect existing funds before a quantum computer can recover the private keys needed to spend them. An already-exposed public key lets an attacker attempt that calculation without waiting for its owner to make a transaction.
+
+Preparation means replacing vulnerable signatures with **post-quantum cryptography**: algorithms designed to resist known attacks from both classical and quantum computers. These algorithms run on conventional hardware, so developers can implement them before a CRQC exists.
+
+[NIST finalized its first three post-quantum standards in 2024](https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards), providing methods for establishing shared secrets and creating digital signatures. Developers still need to integrate and test those methods in the systems people use.
+
+On a blockchain, that can require changes across the network. Nodes must enforce the updated rules, wallets must support the new signatures, and exchanges and custodians must update their services. Depending on the migration design, users may also need to move existing funds to new keys or addresses.
+
+Funds controlled by lost private keys create a harder problem because their owners cannot authorize an ordinary transfer. Adding a new signature method does not automatically protect those funds.
+
+In Bitcoin, inactivity alone does not establish that a private key has been lost.
+
+A blockchain's migration plan should explain how existing funds will be protected, including funds whose owners cannot make a transfer. When assessing quantum-readiness claims, look for the changes already deployed, the actions users must take, and the funds that could remain exposed.
+
+## Frequently Asked Questions
+
+### Does a Hardware Wallet Protect Against a Quantum Attack?
+
+A hardware wallet helps keep private keys isolated from other devices. However, a quantum attack against a vulnerable signature scheme could derive the private key from exposed public information without accessing the wallet. The device alone cannot prevent that calculation.
+
+### Are "Cryptographically Relevant" and "Cryptanalytically Relevant" Quantum Computers Different?
+
+Both terms appear in discussions of quantum attacks on cryptography. [NIST uses "cryptanalytically relevant quantum computer"](https://csrc.nist.gov/glossary/term/cryptanalytically_relevant_quantum_computer) for a machine capable of using quantum algorithms to break cryptography that remains secure against classical computers.
+
+### What Is the Difference Between a CRQC and Q-Day?
+
+A CRQC is a quantum computer with the capability to perform a cryptographic attack. Q-Day refers to the point when that capability can break cryptography still in use. Different cryptographic systems require different attack resources and running times, so they could become vulnerable at different times.
+
+### Does Post-Quantum Cryptography Need a Quantum Computer?
+
+No. Post-quantum cryptography runs on conventional computers, including the hardware used by wallets and blockchain nodes. It is designed to resist known quantum attacks, so systems can adopt it before a CRQC exists.

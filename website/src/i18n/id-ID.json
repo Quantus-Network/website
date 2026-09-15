@@ -1009,7 +1009,8 @@
       "bug-bounty": "Hadiah Bug",
       "senoti": "Senoti",
       "migration": "Migrasi",
-      "harvest-now-decrypt-later": "Harvest-Now-Decrypt-Later"
+      "harvest-now-decrypt-later": "Harvest-Now-Decrypt-Later",
+      "crqc": "CRQC"
     }
   },
   "whitepaper": {

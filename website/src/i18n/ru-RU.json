@@ -1009,7 +1009,8 @@
       "bug-bounty": "Баг-баунти",
       "senoti": "Senoti",
       "migration": "Миграция",
-      "harvest-now-decrypt-later": "Собрать-Сейчас-Расшифровать-Потом"
+      "harvest-now-decrypt-later": "Собрать-Сейчас-Расшифровать-Потом",
+      "crqc": "CRQC"
     }
   },
   "whitepaper": {
