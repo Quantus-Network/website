@@ -5,8 +5,8 @@ import { useDebounceValue } from "usehooks-ts";
 import { INPUT_DEBOUNCE_INTERVAL } from "@/constants/debounce-interval";
 import {
   ALL_BLOG_CATEGORY,
+  blogCategoryFilterFromSearch,
   filterPostsByCategory,
-  parseBlogCategoryFilter,
   type BlogCategory,
   type BlogCategoryFilter,
 } from "@/utils/blog-categories";
@@ -117,8 +117,8 @@ export const BlogList: React.FC<Props> = ({
 
   useEffect(() => {
     const applyCategoryFromUrl = () => {
-      const raw = new URLSearchParams(window.location.search).get("category");
-      setSelectedCategory(parseBlogCategoryFilter(raw));
+      const category = blogCategoryFilterFromSearch(window.location.search);
+      setSelectedCategory(category);
     };
 
     applyCategoryFromUrl();

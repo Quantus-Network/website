@@ -2,6 +2,7 @@ import { describe, expect, test } from "bun:test";
 import {
   ALL_BLOG_CATEGORY,
   BLOG_CATEGORIES,
+  blogCategoryFilterFromSearch,
   blogCategoryListHref,
   filterPostsByCategory,
   parseBlogCategoryFilter,
@@ -66,6 +67,36 @@ describe("parseBlogCategoryFilter", () => {
   test("rejects unknown category ids instead of coercing them", () => {
     expect(() => parseBlogCategoryFilter("podcast")).toThrow(
       'Unknown blog category "podcast"',
+    );
+    expect(() => parseBlogCategoryFilter("")).toThrow(
+      'Unknown blog category ""',
+    );
+  });
+});
+
+describe("blogCategoryFilterFromSearch (blog list deep-link query)", () => {
+  test("missing category keeps every post visible", () => {
+    expect(blogCategoryFilterFromSearch("")).toBe(ALL_BLOG_CATEGORY);
+    expect(blogCategoryFilterFromSearch("?q=wallet")).toBe(ALL_BLOG_CATEGORY);
+  });
+
+  test("a known category id is applied", () => {
+    expect(blogCategoryFilterFromSearch("?category=education")).toBe(
+      "education",
+    );
+    expect(blogCategoryFilterFromSearch("?category=weekly-update")).toBe(
+      "weekly-update",
+    );
+    expect(blogCategoryFilterFromSearch("?category=all")).toBe(
+      ALL_BLOG_CATEGORY,
+    );
+  });
+
+  test("empty or unknown category does not throw and selects all", () => {
+    expect(blogCategoryFilterFromSearch("?category=")).toBe(ALL_BLOG_CATEGORY);
+    expect(blogCategoryFilterFromSearch("?category")).toBe(ALL_BLOG_CATEGORY);
+    expect(blogCategoryFilterFromSearch("?category=podcast")).toBe(
+      ALL_BLOG_CATEGORY,
     );
   });
 });

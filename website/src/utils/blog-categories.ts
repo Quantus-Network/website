@@ -19,6 +19,17 @@ export function parseBlogCategoryFilter(
   throw new Error(`Unknown blog category "${value}"`);
 }
 
+/** Untrusted `location.search` from `/blog?category=…`. Invalid values select all. */
+export function blogCategoryFilterFromSearch(
+  search: string,
+): BlogCategoryFilter {
+  const raw = new URLSearchParams(search).get("category");
+  if (raw === null || raw === ALL_BLOG_CATEGORY || isBlogCategory(raw)) {
+    return parseBlogCategoryFilter(raw);
+  }
+  return ALL_BLOG_CATEGORY;
+}
+
 export function filterPostsByCategory<
   T extends { data: { category: BlogCategory } },
 >(posts: readonly T[], category: BlogCategoryFilter): T[] {
