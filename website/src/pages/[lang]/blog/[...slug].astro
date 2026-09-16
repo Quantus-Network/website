@@ -34,13 +34,14 @@ type Props = CollectionEntry<"blog">;
 const post = Astro.props;
 
 const postLocale = post.id.split("/")[0];
-const allPosts = await getBlogPosts(({ id }) => {
-  return id.toLowerCase().startsWith(`${postLocale.toLowerCase()}/`);
+const allPosts = await getBlogPosts();
+const localePosts = allPosts.filter((entry) => {
+  return entry.id.toLowerCase().startsWith(`${postLocale.toLowerCase()}/`);
 });
 const isUnpublishedPreview =
   import.meta.env.DEV && !isBlogSlugPublished(allPosts, post.id);
 
-const relatedPosts = relatedBlogPosts(allPosts, post, 5);
+const relatedPosts = relatedBlogPosts(localePosts, post, 5);
 
 const { Content } = await render(post);
 ---

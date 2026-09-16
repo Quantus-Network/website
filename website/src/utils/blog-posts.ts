@@ -28,6 +28,7 @@ function publishedSlugsFromEnglish(
   return slugs;
 }
 
+/** `posts` must include en-US entries. Locale-only lists always look unpublished. */
 export function isBlogSlugPublished(
   posts: readonly BlogPostLike[],
   id: string,
