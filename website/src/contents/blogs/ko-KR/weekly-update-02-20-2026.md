@@ -9,13 +9,9 @@ heroAlt: "Quantus 위클리: 공개 연구와 포스트퀀텀 표준"
 featured: false
 tags:
   [
-    "weekly-update",
-    "research",
     "post-quantum-cryptography",
-    "multisig",
-    "zk-proofs",
-    "mobile-wallet",
-    "notification-system",
+    "zero-knowledge-proofs",
+    "wallet",
   ]
 ---
 

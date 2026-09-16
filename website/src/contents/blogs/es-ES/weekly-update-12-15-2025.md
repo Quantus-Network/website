@@ -9,12 +9,10 @@ heroAlt: "Quantus Weekly: avance GPU y refactor ZK"
 featured: false
 tags:
   [
-    "weekly-update",
-    "gpu-mining",
+    "mining",
     "zero-knowledge-proofs",
     "tokenomics",
-    "hardware-wallet",
-    "solana-breakpoint",
+    "wallet",
   ]
 ---
 

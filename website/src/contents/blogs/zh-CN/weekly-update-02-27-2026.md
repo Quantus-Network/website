@@ -9,13 +9,8 @@ heroAlt: "Quantus 每周动态：钱包应当保持简单"
 featured: false
 tags:
   [
-    "weekly-update",
-    "mobile-wallet",
-    "treasury",
-    "multisig",
-    "heisenberg-testnet",
-    "zk-proofs",
-    "performance",
+    "wallet",
+    "zero-knowledge-proofs",
   ]
 ---
 

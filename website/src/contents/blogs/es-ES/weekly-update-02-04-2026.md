@@ -10,13 +10,7 @@ heroAlt: "Quantus Weekly: Cuentas de alta seguridad y fraude"
 featured: false
 tags:
   [
-    "weekly-update",
-    "security",
-    "guardian",
-    "time-lock",
-    "fraud-prevention",
-    "multisig",
-    "plonky2",
+    "protocol-security",
   ]
 ---
 

@@ -9,13 +9,9 @@ heroAlt: "Quantus Weekly: ZK в 4× быстрее за две недели"
 featured: false
 tags:
   [
-    "weekly-update",
-    "zk-proofs",
-    "poseidon",
+    "zero-knowledge-proofs",
     "privacy",
     "wormhole",
-    "performance",
-    "scalability",
   ]
 ---
 

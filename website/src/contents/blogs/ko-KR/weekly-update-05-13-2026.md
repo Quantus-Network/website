@@ -9,18 +9,11 @@ heroAlt: "Quantus Weekly: 더 공정한 런치"
 featured: false
 tags:
   [
-    "weekly-update",
     "bitcoin",
     "mining",
-    "fair-launch",
-    "testnet",
-    "planck",
-    "gui-miner",
-    "zk-proofs",
-    "security",
-    "infrastructure",
-    "mobile",
-    "network-school",
+    "zero-knowledge-proofs",
+    "protocol-security",
+    "wallet",
   ]
 ---
 

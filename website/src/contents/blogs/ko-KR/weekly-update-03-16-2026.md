@@ -9,12 +9,10 @@ heroAlt: "Quantus Weekly: 대용량 서명, 더 빠른 웜홀"
 featured: false
 tags:
   [
-    "weekly-update",
-    "quantum-safe",
+    "post-quantum-cryptography",
     "ml-dsa",
-    "zk-proofs",
+    "zero-knowledge-proofs",
     "wormhole",
-    "scalability",
     "privacy",
   ]
 ---

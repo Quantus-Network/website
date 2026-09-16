@@ -10,13 +10,8 @@ heroAlt: "Quantus Weekly: Mapeando el futuro cuántico-seguro"
 featured: false
 tags:
   [
-    "weekly-update",
-    "coingecko",
-    "multisig",
-    "plonky2",
-    "plonky3",
-    "quantum-resistant",
-    "zk-proofs",
+    "post-quantum-cryptography",
+    "zero-knowledge-proofs",
   ]
 ---
 

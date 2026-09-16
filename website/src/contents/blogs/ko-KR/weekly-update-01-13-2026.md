@@ -9,13 +9,9 @@ heroAlt: "Quantus 위클리: Dilithium 임계값 서명"
 featured: false
 tags:
   [
-    "weekly-update",
-    "threshold-signatures",
     "post-quantum-cryptography",
-    "dilithium",
+    "ml-dsa",
     "zero-knowledge-proofs",
-    "quantum-safe",
-    "blockchain",
   ]
 ---
 

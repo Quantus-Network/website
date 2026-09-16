@@ -53,7 +53,7 @@ const metadata = createMetadata({
   imageUrl: heroImage,
   imageAlt: heroAlt,
   twitter: {
-    creator: resolveTwitterCreator(author?.social.username, tags),
+    creator: resolveTwitterCreator(author?.social.username, category),
   },
 });
 

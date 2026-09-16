@@ -9,14 +9,8 @@ heroAlt: "Quantus 위클리: 네이티브 자산과 양자 위험"
 featured: false
 tags:
   [
-    "weekly-update",
     "bitcoin",
-    "quantum-safe",
-    "zk-aggregator",
-    "mpc",
-    "multisig",
-    "indexer",
-    "biohacking",
+    "post-quantum-cryptography",
   ]
 ---
 

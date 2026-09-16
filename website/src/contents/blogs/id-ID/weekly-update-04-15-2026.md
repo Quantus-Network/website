@@ -9,15 +9,11 @@ heroAlt: "Quantus Weekly: Hadiah Mining Planck Testnet"
 featured: false
 tags:
   [
-    "weekly-update",
     "bitcoin",
     "pow",
     "mining",
-    "testnet",
-    "mobile",
-    "zk-proofs",
-    "infrastructure",
-    "subsquid",
+    "wallet",
+    "zero-knowledge-proofs",
   ]
 ---
 

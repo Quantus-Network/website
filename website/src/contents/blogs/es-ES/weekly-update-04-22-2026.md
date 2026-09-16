@@ -9,17 +9,12 @@ heroAlt: "Quantus Weekly: Planck, CLI y prover el doble de rápido"
 featured: false
 tags:
   [
-    "weekly-update",
     "bitcoin",
     "pow",
     "mining",
-    "testnet",
-    "planck",
-    "post-quantum",
-    "mobile",
-    "zk-proofs",
-    "infrastructure",
-    "subsquid",
+    "post-quantum-cryptography",
+    "wallet",
+    "zero-knowledge-proofs",
   ]
 ---
 

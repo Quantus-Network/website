@@ -9,13 +9,8 @@ heroAlt: "Quantus 每周动态：绘制量子安全未来蓝图"
 featured: false
 tags:
   [
-    "weekly-update",
-    "coingecko",
-    "multisig",
-    "plonky2",
-    "plonky3",
-    "quantum-resistant",
-    "zk-proofs",
+    "post-quantum-cryptography",
+    "zero-knowledge-proofs",
   ]
 ---
 

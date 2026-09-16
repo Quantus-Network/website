@@ -9,13 +9,8 @@ heroAlt: "Quantus Weekly: Кошелёк должен быть простым"
 featured: false
 tags:
   [
-    "weekly-update",
-    "mobile-wallet",
-    "treasury",
-    "multisig",
-    "heisenberg-testnet",
-    "zk-proofs",
-    "performance",
+    "wallet",
+    "zero-knowledge-proofs",
   ]
 ---
 

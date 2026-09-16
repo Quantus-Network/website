@@ -9,13 +9,7 @@ heroAlt: "Quantus Weekly: Akun Keamanan Tinggi dan Anti-Penipuan"
 featured: false
 tags:
   [
-    "weekly-update",
-    "security",
-    "guardian",
-    "time-lock",
-    "fraud-prevention",
-    "multisig",
-    "plonky2",
+    "protocol-security",
   ]
 ---
 

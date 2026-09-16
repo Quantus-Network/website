@@ -9,12 +9,8 @@ heroAlt: "Quantus 每周动态：ZK 交易聚合与矿机应用发布"
 featured: false
 tags:
   [
-    "weekly-update",
     "zero-knowledge-proofs",
-    "gpu-mining",
-    "miner-app",
-    "ama",
-    "substrate",
+    "mining",
   ]
 ---
 

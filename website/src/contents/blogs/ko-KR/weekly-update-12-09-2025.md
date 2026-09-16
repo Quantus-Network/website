@@ -9,12 +9,7 @@ heroAlt: "Quantus 위클리: 빠른 Poseidon2, 경량 체인"
 featured: false
 tags:
   [
-    "weekly-update",
-    "poseidon2",
-    "chain-architecture",
     "wormhole",
-    "binance-blockchain-week",
-    "solana-breakpoint",
   ]
 ---
 

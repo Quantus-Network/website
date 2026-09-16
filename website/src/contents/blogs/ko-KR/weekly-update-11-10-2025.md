@@ -9,13 +9,7 @@ heroAlt: "Quantus 위클리: Dirac 테스트넷과 격자 암호 감사"
 featured: false
 tags:
   [
-    "weekly-update",
-    "dirac-testnet",
-    "lattice-cryptography",
     "pow",
-    "libp2p",
-    "ghostdag",
-    "blue-green-deployment",
   ]
 ---
 

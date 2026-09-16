@@ -9,12 +9,10 @@ heroAlt: "Quantus 每周动态：虫洞交易与矿工隐私奖励"
 featured: false
 tags:
   [
-    "weekly-update",
     "wormhole",
-    "zk-proofs",
+    "zero-knowledge-proofs",
     "privacy",
-    "miner-app",
-    "consensus",
+    "mining",
     "wallet",
   ]
 ---

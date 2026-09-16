@@ -9,13 +9,9 @@ heroAlt: "Quantus Weekly: GPU-Mining und Dirac-Stresstest"
 featured: false
 tags:
   [
-    "weekly-update",
-    "gpu-mining",
-    "dirac-network",
-    "blockchain-architecture",
+    "mining",
     "tokenomics",
-    "hardware-wallet",
-    "social-engagement",
+    "wallet",
   ]
 ---
 

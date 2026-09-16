@@ -9,12 +9,8 @@ heroAlt: "Quantus 每周动态：格子密码学审计与 Keystone 集成"
 featured: false
 tags:
   [
-    "weekly-update",
-    "lattice-cryptography",
-    "keystone",
-    "polkadot-sdk",
-    "hardware-wallet",
-    "audit",
+    "wallet",
+    "protocol-security",
   ]
 ---
 

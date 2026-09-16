@@ -9,12 +9,8 @@ heroAlt: "Quantus Weekly: 格子暗号監査とKeystone"
 featured: false
 tags:
   [
-    "weekly-update",
-    "lattice-cryptography",
-    "keystone",
-    "polkadot-sdk",
-    "hardware-wallet",
-    "audit",
+    "wallet",
+    "protocol-security",
   ]
 ---
 

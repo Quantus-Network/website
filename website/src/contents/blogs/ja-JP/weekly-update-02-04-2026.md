@@ -9,13 +9,7 @@ heroAlt: "Quantus Weekly: 高セキュリティ口座と不正防止"
 featured: false
 tags:
   [
-    "weekly-update",
-    "security",
-    "guardian",
-    "time-lock",
-    "fraud-prevention",
-    "multisig",
-    "plonky2",
+    "protocol-security",
   ]
 ---
 

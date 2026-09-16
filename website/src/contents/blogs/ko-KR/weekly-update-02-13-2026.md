@@ -9,13 +9,8 @@ heroAlt: "Quantus 위클리: 양자 보안 미래 지도 그리기"
 featured: false
 tags:
   [
-    "weekly-update",
-    "coingecko",
-    "multisig",
-    "plonky2",
-    "plonky3",
-    "quantum-resistant",
-    "zk-proofs",
+    "post-quantum-cryptography",
+    "zero-knowledge-proofs",
   ]
 ---
 

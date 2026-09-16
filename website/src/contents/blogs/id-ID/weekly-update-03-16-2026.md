@@ -9,12 +9,10 @@ heroAlt: "Quantus Weekly: Tanda Tangan Besar, Wormhole Lebih Cepat"
 featured: false
 tags:
   [
-    "weekly-update",
-    "quantum-safe",
+    "post-quantum-cryptography",
     "ml-dsa",
-    "zk-proofs",
+    "zero-knowledge-proofs",
     "wormhole",
-    "scalability",
     "privacy",
   ]
 ---

@@ -9,15 +9,9 @@ heroAlt: "Quantus 每周动态：Poseidon2 门电路与链上治理"
 featured: false
 tags:
   [
-    "weekly-update",
-    "plonky2",
-    "poseidon2",
     "governance",
-    "treasury",
-    "conviction-voting",
-    "referral",
-    "gpu-mining",
-    "audit",
+    "mining",
+    "protocol-security",
   ]
 ---
 

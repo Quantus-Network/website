@@ -10,15 +10,11 @@ heroAlt: "Quantus Weekly: día Q, on-spend y libertad económica"
 featured: false
 tags:
   [
-    "weekly-update",
-    "quantum",
+    "quantum-computing",
     "bitcoin",
-    "post-quantum",
-    "ecc",
-    "zk-proofs",
-    "rebrand",
-    "infrastructure",
-    "mobile",
+    "post-quantum-cryptography",
+    "zero-knowledge-proofs",
+    "wallet",
   ]
 ---
 

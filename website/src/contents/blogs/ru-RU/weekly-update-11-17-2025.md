@@ -9,15 +9,11 @@ heroAlt: "Quantus Weekly: аудит PoW и запуск тестнета Dirac"
 featured: false
 tags:
   [
-    "weekly-update",
-    "audit",
+    "protocol-security",
     "pow",
-    "poseidon",
-    "dirac-testnet",
     "zero-knowledge-proofs",
-    "mobile-wallet",
-    "miner-app",
-    "podcast",
+    "wallet",
+    "mining",
   ]
 ---
 

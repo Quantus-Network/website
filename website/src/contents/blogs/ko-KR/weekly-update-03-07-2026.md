@@ -9,12 +9,10 @@ heroAlt: "Quantus Weekly: 웜홀 트랜잭션"
 featured: false
 tags:
   [
-    "weekly-update",
     "wormhole",
-    "zk-proofs",
+    "zero-knowledge-proofs",
     "privacy",
-    "miner-app",
-    "consensus",
+    "mining",
     "wallet",
   ]
 ---

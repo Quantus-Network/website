@@ -9,15 +9,11 @@ heroAlt: "Quantus 위클리: PoW 감사 완료와 Dirac 런칭"
 featured: false
 tags:
   [
-    "weekly-update",
-    "audit",
+    "protocol-security",
     "pow",
-    "poseidon",
-    "dirac-testnet",
     "zero-knowledge-proofs",
-    "mobile-wallet",
-    "miner-app",
-    "podcast",
+    "wallet",
+    "mining",
   ]
 ---
 

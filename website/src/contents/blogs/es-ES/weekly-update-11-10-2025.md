@@ -10,13 +10,7 @@ heroAlt: "Quantus Weekly: testnet Dirac y auditoría lattice"
 featured: false
 tags:
   [
-    "weekly-update",
-    "dirac-testnet",
-    "lattice-cryptography",
     "pow",
-    "libp2p",
-    "ghostdag",
-    "blue-green-deployment",
   ]
 ---
 

@@ -9,19 +9,13 @@ heroAlt: "Quantus Weekly: Q-Dayが目前"
 featured: false
 tags:
   [
-    "weekly-update",
     "q-day",
     "mainnet",
     "mining",
-    "testnet",
-    "planck",
-    "post-quantum",
-    "dilithium",
-    "threshold-signatures",
-    "zk-proofs",
-    "mobile",
-    "infrastructure",
-    "gui-miner",
+    "post-quantum-cryptography",
+    "ml-dsa",
+    "zero-knowledge-proofs",
+    "wallet",
   ]
 ---
 

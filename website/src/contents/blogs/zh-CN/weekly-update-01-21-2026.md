@@ -9,14 +9,8 @@ heroAlt: "Quantus 每周动态：原生资产与量子风险"
 featured: false
 tags:
   [
-    "weekly-update",
     "bitcoin",
-    "quantum-safe",
-    "zk-aggregator",
-    "mpc",
-    "multisig",
-    "indexer",
-    "biohacking",
+    "post-quantum-cryptography",
   ]
 ---
 

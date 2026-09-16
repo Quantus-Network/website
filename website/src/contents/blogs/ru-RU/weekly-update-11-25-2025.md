@@ -9,12 +9,8 @@ heroAlt: "Quantus Weekly: ZK-агрегация и приложение Miner v0
 featured: false
 tags:
   [
-    "weekly-update",
     "zero-knowledge-proofs",
-    "gpu-mining",
-    "miner-app",
-    "ama",
-    "substrate",
+    "mining",
   ]
 ---
 

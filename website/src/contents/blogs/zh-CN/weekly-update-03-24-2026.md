@@ -9,13 +9,9 @@ heroAlt: "Quantus 每周动态：第二次减半，证明提速 4 倍"
 featured: false
 tags:
   [
-    "weekly-update",
-    "zk-proofs",
-    "poseidon",
+    "zero-knowledge-proofs",
     "privacy",
     "wormhole",
-    "performance",
-    "scalability",
   ]
 ---
 

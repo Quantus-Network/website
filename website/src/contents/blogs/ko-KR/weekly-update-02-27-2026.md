@@ -9,13 +9,8 @@ heroAlt: "Quantus 위클리: 지갑은 단순해야 합니다"
 featured: false
 tags:
   [
-    "weekly-update",
-    "mobile-wallet",
-    "treasury",
-    "multisig",
-    "heisenberg-testnet",
-    "zk-proofs",
-    "performance",
+    "wallet",
+    "zero-knowledge-proofs",
   ]
 ---
 

@@ -9,13 +9,8 @@ heroAlt: "Quantus Weekly: 量子耐性の未来を描く"
 featured: false
 tags:
   [
-    "weekly-update",
-    "coingecko",
-    "multisig",
-    "plonky2",
-    "plonky3",
-    "quantum-resistant",
-    "zk-proofs",
+    "post-quantum-cryptography",
+    "zero-knowledge-proofs",
   ]
 ---
 

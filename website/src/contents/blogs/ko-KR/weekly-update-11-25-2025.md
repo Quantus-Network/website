@@ -9,12 +9,8 @@ heroAlt: "Quantus 위클리: ZK 집계와 마이너 앱"
 featured: false
 tags:
   [
-    "weekly-update",
     "zero-knowledge-proofs",
-    "gpu-mining",
-    "miner-app",
-    "ama",
-    "substrate",
+    "mining",
   ]
 ---
 

@@ -9,17 +9,12 @@ heroAlt: "Quantus Weekly: Planck 클레임, 2배 증명 속도"
 featured: false
 tags:
   [
-    "weekly-update",
     "bitcoin",
     "pow",
     "mining",
-    "testnet",
-    "planck",
-    "post-quantum",
-    "mobile",
-    "zk-proofs",
-    "infrastructure",
-    "subsquid",
+    "post-quantum-cryptography",
+    "wallet",
+    "zero-knowledge-proofs",
   ]
 ---
 

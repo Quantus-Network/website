@@ -10,12 +10,8 @@ heroAlt: "Quantus Weekly: auditoría lattice y Keystone"
 featured: false
 tags:
   [
-    "weekly-update",
-    "lattice-cryptography",
-    "keystone",
-    "polkadot-sdk",
-    "hardware-wallet",
-    "audit",
+    "wallet",
+    "protocol-security",
   ]
 ---
 

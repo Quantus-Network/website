@@ -9,20 +9,13 @@ heroAlt: "Quantus 每周动态：量子现状研究报告"
 featured: false
 tags:
   [
-    "weekly-update",
-    "quantum",
-    "research",
+    "quantum-computing",
     "bitcoin",
-    "post-quantum",
-    "zk-proofs",
+    "post-quantum-cryptography",
+    "zero-knowledge-proofs",
     "mining",
-    "testnet",
-    "planck",
-    "mobile",
-    "infrastructure",
-    "subsquid",
+    "wallet",
     "q-day",
-    "network-school",
   ]
 ---
 

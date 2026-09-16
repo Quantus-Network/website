@@ -9,18 +9,11 @@ heroAlt: "Quantus 每周动态：更公平的挖矿启动"
 featured: false
 tags:
   [
-    "weekly-update",
     "bitcoin",
     "mining",
-    "fair-launch",
-    "testnet",
-    "planck",
-    "gui-miner",
-    "zk-proofs",
-    "security",
-    "infrastructure",
-    "mobile",
-    "network-school",
+    "zero-knowledge-proofs",
+    "protocol-security",
+    "wallet",
   ]
 ---
 

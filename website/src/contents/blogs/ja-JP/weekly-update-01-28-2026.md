@@ -9,14 +9,9 @@ heroAlt: "Quantus Weekly: 否認可能RPCとNeodyme監査"
 featured: false
 tags:
   [
-    "weekly-update",
-    "rpc",
     "privacy",
-    "audit",
-    "security",
-    "dilithium",
-    "zk-aggregator",
-    "multisig",
+    "protocol-security",
+    "ml-dsa",
   ]
 ---
 

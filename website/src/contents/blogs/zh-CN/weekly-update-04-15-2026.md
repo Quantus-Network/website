@@ -9,15 +9,11 @@ heroAlt: "Quantus 每周动态：Planck 测试网挖矿奖励"
 featured: false
 tags:
   [
-    "weekly-update",
     "bitcoin",
     "pow",
     "mining",
-    "testnet",
-    "mobile",
-    "zk-proofs",
-    "infrastructure",
-    "subsquid",
+    "wallet",
+    "zero-knowledge-proofs",
   ]
 ---
 

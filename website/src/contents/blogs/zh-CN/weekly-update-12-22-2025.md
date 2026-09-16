@@ -9,13 +9,9 @@ heroAlt: "Quantus 每周动态：GPU 挖矿与 Dirac 压力测试"
 featured: false
 tags:
   [
-    "weekly-update",
-    "gpu-mining",
-    "dirac-network",
-    "blockchain-architecture",
+    "mining",
     "tokenomics",
-    "hardware-wallet",
-    "social-engagement",
+    "wallet",
   ]
 ---
 

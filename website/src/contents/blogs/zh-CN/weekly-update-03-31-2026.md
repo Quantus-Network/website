@@ -9,14 +9,9 @@ heroAlt: "Quantus 每周动态：POS 模式与点对点电子现金"
 featured: false
 tags:
   [
-    "weekly-update",
-    "point-of-sale",
-    "mobile",
-    "zk-proofs",
-    "polyfri",
-    "poseidon",
+    "wallet",
+    "zero-knowledge-proofs",
     "privacy",
-    "infrastructure",
   ]
 ---
 

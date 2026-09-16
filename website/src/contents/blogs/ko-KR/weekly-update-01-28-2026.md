@@ -9,14 +9,9 @@ heroAlt: "Quantus 위클리: 디나이어블 RPC와 Neodyme 감사"
 featured: false
 tags:
   [
-    "weekly-update",
-    "rpc",
     "privacy",
-    "audit",
-    "security",
-    "dilithium",
-    "zk-aggregator",
-    "multisig",
+    "protocol-security",
+    "ml-dsa",
   ]
 ---
 

@@ -9,14 +9,9 @@ heroAlt: "Quantus Weekly: Mode POS dan Uang Elektronik P2P"
 featured: false
 tags:
   [
-    "weekly-update",
-    "point-of-sale",
-    "mobile",
-    "zk-proofs",
-    "polyfri",
-    "poseidon",
+    "wallet",
+    "zero-knowledge-proofs",
     "privacy",
-    "infrastructure",
   ]
 ---
 

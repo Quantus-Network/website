@@ -9,13 +9,9 @@ heroAlt: "Quantus Weekly: オープンリサーチとPQC標準"
 featured: false
 tags:
   [
-    "weekly-update",
-    "research",
     "post-quantum-cryptography",
-    "multisig",
-    "zk-proofs",
-    "mobile-wallet",
-    "notification-system",
+    "zero-knowledge-proofs",
+    "wallet",
   ]
 ---
 

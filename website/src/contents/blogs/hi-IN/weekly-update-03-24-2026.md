@@ -9,13 +9,9 @@ heroAlt: "Quantus Weekly: दूसरा Halving, 4x तेज़ Proofs"
 featured: false
 tags:
   [
-    "weekly-update",
-    "zk-proofs",
-    "poseidon",
+    "zero-knowledge-proofs",
     "privacy",
     "wormhole",
-    "performance",
-    "scalability",
   ]
 ---
 

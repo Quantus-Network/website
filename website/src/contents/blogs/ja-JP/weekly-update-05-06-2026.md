@@ -9,21 +9,14 @@ heroAlt: "Quantus Weekly: キラーアプリは「お金」"
 featured: false
 tags:
   [
-    "weekly-update",
     "bitcoin",
     "pow",
     "mining",
-    "testnet",
-    "planck",
-    "post-quantum",
-    "mobile",
-    "zk-proofs",
-    "infrastructure",
-    "subsquid",
-    "dilithium",
+    "post-quantum-cryptography",
+    "wallet",
+    "zero-knowledge-proofs",
+    "ml-dsa",
     "wormhole",
-    "mithril",
-    "network-school",
   ]
 ---
 

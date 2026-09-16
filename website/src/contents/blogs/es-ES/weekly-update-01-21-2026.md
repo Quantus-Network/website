@@ -10,14 +10,8 @@ heroAlt: "Quantus Weekly: Activos nativos y riesgo cuántico"
 featured: false
 tags:
   [
-    "weekly-update",
     "bitcoin",
-    "quantum-safe",
-    "zk-aggregator",
-    "mpc",
-    "multisig",
-    "indexer",
-    "biohacking",
+    "post-quantum-cryptography",
   ]
 ---
 

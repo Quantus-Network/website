@@ -9,13 +9,7 @@ heroAlt: "Quantus Weekly: тестнет Dirac и аудит решётки qp-r
 featured: false
 tags:
   [
-    "weekly-update",
-    "dirac-testnet",
-    "lattice-cryptography",
     "pow",
-    "libp2p",
-    "ghostdag",
-    "blue-green-deployment",
   ]
 ---
 

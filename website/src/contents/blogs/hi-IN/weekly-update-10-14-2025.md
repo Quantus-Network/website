@@ -10,15 +10,7 @@ heroAlt: "Quantus Weekly: Poseidon2 और Liberland पॉडकास्ट"
 featured: false
 tags:
   [
-    "weekly-update",
-    "plonky3",
-    "poseidon2",
-    "gamification",
-    "referral",
-    "liberland",
-    "podcast",
-    "quantum-safe",
-    "schrodinger-testnet",
+    "post-quantum-cryptography",
   ]
 ---
 

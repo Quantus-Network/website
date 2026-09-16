@@ -10,14 +10,9 @@ heroAlt: "Quantus Weekly: POS móvil, PolyFri y dinero P2P"
 featured: false
 tags:
   [
-    "weekly-update",
-    "point-of-sale",
-    "mobile",
-    "zk-proofs",
-    "polyfri",
-    "poseidon",
+    "wallet",
+    "zero-knowledge-proofs",
     "privacy",
-    "infrastructure",
   ]
 ---
 

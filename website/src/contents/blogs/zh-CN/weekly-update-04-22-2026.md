@@ -9,17 +9,12 @@ heroAlt: "Quantus 每周动态：Planck 领奖与证明器翻倍"
 featured: false
 tags:
   [
-    "weekly-update",
     "bitcoin",
     "pow",
     "mining",
-    "testnet",
-    "planck",
-    "post-quantum",
-    "mobile",
-    "zk-proofs",
-    "infrastructure",
-    "subsquid",
+    "post-quantum-cryptography",
+    "wallet",
+    "zero-knowledge-proofs",
   ]
 ---
 

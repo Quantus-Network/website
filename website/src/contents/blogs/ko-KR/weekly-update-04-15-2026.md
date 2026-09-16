@@ -9,15 +9,11 @@ heroAlt: "Quantus Weekly: Planck 테스트넷 채굴 보상"
 featured: false
 tags:
   [
-    "weekly-update",
     "bitcoin",
     "pow",
     "mining",
-    "testnet",
-    "mobile",
-    "zk-proofs",
-    "infrastructure",
-    "subsquid",
+    "wallet",
+    "zero-knowledge-proofs",
   ]
 ---
 

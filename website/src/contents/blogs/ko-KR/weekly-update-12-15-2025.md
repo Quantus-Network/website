@@ -9,12 +9,10 @@ heroAlt: "Quantus 위클리: GPU 채굴 혁신과 ZK 리팩토링"
 featured: false
 tags:
   [
-    "weekly-update",
-    "gpu-mining",
+    "mining",
     "zero-knowledge-proofs",
     "tokenomics",
-    "hardware-wallet",
-    "solana-breakpoint",
+    "wallet",
   ]
 ---
 

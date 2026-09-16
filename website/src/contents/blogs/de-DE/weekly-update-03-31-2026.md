@@ -9,14 +9,9 @@ heroAlt: "Quantus Weekly: POS-Modus und P2P-E-Cash"
 featured: false
 tags:
   [
-    "weekly-update",
-    "point-of-sale",
-    "mobile",
-    "zk-proofs",
-    "polyfri",
-    "poseidon",
+    "wallet",
+    "zero-knowledge-proofs",
     "privacy",
-    "infrastructure",
   ]
 ---
 

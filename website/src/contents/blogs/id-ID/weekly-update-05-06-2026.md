@@ -10,21 +10,14 @@ heroAlt: "Quantus Weekly: Aplikasi Killer Adalah Uang"
 featured: false
 tags:
   [
-    "weekly-update",
     "bitcoin",
     "pow",
     "mining",
-    "testnet",
-    "planck",
-    "post-quantum",
-    "mobile",
-    "zk-proofs",
-    "infrastructure",
-    "subsquid",
-    "dilithium",
+    "post-quantum-cryptography",
+    "wallet",
+    "zero-knowledge-proofs",
+    "ml-dsa",
     "wormhole",
-    "mithril",
-    "network-school",
   ]
 ---
 

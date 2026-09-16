@@ -10,12 +10,7 @@ heroAlt: "Quantus Mingguan: Poseidon2 Lebih Cepat, Chain Lebih Ringan"
 featured: false
 tags:
   [
-    "weekly-update",
-    "poseidon2",
-    "chain-architecture",
     "wormhole",
-    "binance-blockchain-week",
-    "solana-breakpoint",
   ]
 ---
 

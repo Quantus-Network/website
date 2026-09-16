@@ -9,12 +9,10 @@ heroAlt: "Quantus Weekly: Прорыв в майнинге на GPU и рефа�
 featured: false
 tags:
   [
-    "weekly-update",
-    "gpu-mining",
+    "mining",
     "zero-knowledge-proofs",
     "tokenomics",
-    "hardware-wallet",
-    "solana-breakpoint",
+    "wallet",
   ]
 ---
 

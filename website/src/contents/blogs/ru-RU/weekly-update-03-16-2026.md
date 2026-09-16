@@ -9,12 +9,10 @@ heroAlt: "Quantus Weekly: ML-DSA, ZK-масштаб и wormhole ×2"
 featured: false
 tags:
   [
-    "weekly-update",
-    "quantum-safe",
+    "post-quantum-cryptography",
     "ml-dsa",
-    "zk-proofs",
+    "zero-knowledge-proofs",
     "wormhole",
-    "scalability",
     "privacy",
   ]
 ---

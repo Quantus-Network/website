@@ -10,12 +10,10 @@ heroAlt: "Quantus Mingguan: Terobosan GPU Mining dan Refactor ZK"
 featured: false
 tags:
   [
-    "weekly-update",
-    "gpu-mining",
+    "mining",
     "zero-knowledge-proofs",
     "tokenomics",
-    "hardware-wallet",
-    "solana-breakpoint",
+    "wallet",
   ]
 ---
 

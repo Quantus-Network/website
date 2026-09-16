@@ -19,11 +19,11 @@ type Post = {
 
 const weeklyA: Post = {
   id: "en-US/weekly-update-a",
-  data: { category: "weekly-update", tags: ["weekly-update", "mining"] },
+  data: { category: "weekly-update", tags: ["mining"] },
 };
 const weeklyB: Post = {
   id: "en-US/weekly-update-b",
-  data: { category: "weekly-update", tags: ["weekly-update", "wallet"] },
+  data: { category: "weekly-update", tags: ["wallet"] },
 };
 const educationA: Post = {
   id: "en-US/what-is-q-day",

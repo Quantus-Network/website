@@ -9,12 +9,8 @@ heroAlt: "Quantus 위클리: 격자 암호 감사와 Keystone 지갑"
 featured: false
 tags:
   [
-    "weekly-update",
-    "lattice-cryptography",
-    "keystone",
-    "polkadot-sdk",
-    "hardware-wallet",
-    "audit",
+    "wallet",
+    "protocol-security",
   ]
 ---
 

@@ -9,12 +9,7 @@ heroAlt: "Quantus Weekly: Poseidon2 ×8,3 и рефакторинг сети"
 featured: false
 tags:
   [
-    "weekly-update",
-    "poseidon2",
-    "chain-architecture",
     "wormhole",
-    "binance-blockchain-week",
-    "solana-breakpoint",
   ]
 ---
 

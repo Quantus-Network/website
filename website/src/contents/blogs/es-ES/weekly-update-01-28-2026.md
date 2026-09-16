@@ -10,14 +10,9 @@ heroAlt: "Quantus Weekly: RPCs negables y auditoría Neodyme"
 featured: false
 tags:
   [
-    "weekly-update",
-    "rpc",
     "privacy",
-    "audit",
-    "security",
-    "dilithium",
-    "zk-aggregator",
-    "multisig",
+    "protocol-security",
+    "ml-dsa",
   ]
 ---
 

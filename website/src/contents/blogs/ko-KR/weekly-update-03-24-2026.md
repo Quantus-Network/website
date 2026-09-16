@@ -9,13 +9,9 @@ heroAlt: "Quantus Weekly: 두 번째 반감기, 4배 빠른 증명"
 featured: false
 tags:
   [
-    "weekly-update",
-    "zk-proofs",
-    "poseidon",
+    "zero-knowledge-proofs",
     "privacy",
     "wormhole",
-    "performance",
-    "scalability",
   ]
 ---
 

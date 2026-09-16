@@ -9,12 +9,8 @@ heroAlt: "Quantus Weekly: аудит решётки и интеграция Keys
 featured: false
 tags:
   [
-    "weekly-update",
-    "lattice-cryptography",
-    "keystone",
-    "polkadot-sdk",
-    "hardware-wallet",
-    "audit",
+    "wallet",
+    "protocol-security",
   ]
 ---
 

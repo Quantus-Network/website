@@ -9,12 +9,7 @@ heroAlt: "Quantus 每周动态：Poseidon2 提速与链架构精简"
 featured: false
 tags:
   [
-    "weekly-update",
-    "poseidon2",
-    "chain-architecture",
     "wormhole",
-    "binance-blockchain-week",
-    "solana-breakpoint",
   ]
 ---
 

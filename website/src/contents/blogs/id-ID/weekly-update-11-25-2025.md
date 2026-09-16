@@ -10,12 +10,8 @@ heroAlt: "Quantus Mingguan: Agregasi ZK dan Miner App"
 featured: false
 tags:
   [
-    "weekly-update",
     "zero-knowledge-proofs",
-    "gpu-mining",
-    "miner-app",
-    "ama",
-    "substrate",
+    "mining",
   ]
 ---
 

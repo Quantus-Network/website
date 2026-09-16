@@ -9,13 +9,9 @@ heroAlt: "Quantus Weekly: Tanda Tangan Threshold Dilithium"
 featured: false
 tags:
   [
-    "weekly-update",
-    "threshold-signatures",
     "post-quantum-cryptography",
-    "dilithium",
+    "ml-dsa",
     "zero-knowledge-proofs",
-    "quantum-safe",
-    "blockchain",
   ]
 ---
 

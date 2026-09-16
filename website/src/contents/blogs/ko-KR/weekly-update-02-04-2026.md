@@ -9,13 +9,7 @@ heroAlt: "Quantus 위클리: 고보안 계정과 사기 방지"
 featured: false
 tags:
   [
-    "weekly-update",
-    "security",
-    "guardian",
-    "time-lock",
-    "fraud-prevention",
-    "multisig",
-    "plonky2",
+    "protocol-security",
   ]
 ---
 

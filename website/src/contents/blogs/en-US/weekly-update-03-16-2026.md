@@ -10,12 +10,10 @@ heroAlt: "Quantus Weekly: Fat Signatures, Faster Wormholes"
 featured: false
 tags:
   [
-    "weekly-update",
-    "quantum-safe",
+    "post-quantum-cryptography",
     "ml-dsa",
-    "zk-proofs",
+    "zero-knowledge-proofs",
     "wormhole",
-    "scalability",
     "privacy",
   ]
 ---

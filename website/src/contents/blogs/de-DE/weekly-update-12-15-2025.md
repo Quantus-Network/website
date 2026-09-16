@@ -9,12 +9,10 @@ heroAlt: "Quantus Weekly: GPU-Mining-Durchbruch und ZK-Refactor"
 featured: false
 tags:
   [
-    "weekly-update",
-    "gpu-mining",
+    "mining",
     "zero-knowledge-proofs",
     "tokenomics",
-    "hardware-wallet",
-    "solana-breakpoint",
+    "wallet",
   ]
 ---
 

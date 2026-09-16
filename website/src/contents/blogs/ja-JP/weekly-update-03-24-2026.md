@@ -9,13 +9,9 @@ heroAlt: "Quantus Weekly: 第2半減期と4倍高速証明"
 featured: false
 tags:
   [
-    "weekly-update",
-    "zk-proofs",
-    "poseidon",
+    "zero-knowledge-proofs",
     "privacy",
     "wormhole",
-    "performance",
-    "scalability",
   ]
 ---
 

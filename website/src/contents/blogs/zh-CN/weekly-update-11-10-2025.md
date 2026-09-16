@@ -9,13 +9,7 @@ heroAlt: "Quantus 每周动态：Dirac 测试网与格子密码学审计"
 featured: false
 tags:
   [
-    "weekly-update",
-    "dirac-testnet",
-    "lattice-cryptography",
     "pow",
-    "libp2p",
-    "ghostdag",
-    "blue-green-deployment",
   ]
 ---
 

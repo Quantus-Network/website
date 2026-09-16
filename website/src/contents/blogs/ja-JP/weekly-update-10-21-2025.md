@@ -9,15 +9,9 @@ heroAlt: "Quantus Weekly: Poseidon2ゲートとガバナンス"
 featured: false
 tags:
   [
-    "weekly-update",
-    "plonky2",
-    "poseidon2",
     "governance",
-    "treasury",
-    "conviction-voting",
-    "referral",
-    "gpu-mining",
-    "audit",
+    "mining",
+    "protocol-security",
   ]
 ---
 

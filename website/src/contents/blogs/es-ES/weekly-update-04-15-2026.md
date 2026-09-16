@@ -10,15 +10,11 @@ heroAlt: "Quantus Weekly: testnet Planck y recompensas tempranas"
 featured: false
 tags:
   [
-    "weekly-update",
     "bitcoin",
     "pow",
     "mining",
-    "testnet",
-    "mobile",
-    "zk-proofs",
-    "infrastructure",
-    "subsquid",
+    "wallet",
+    "zero-knowledge-proofs",
   ]
 ---
 

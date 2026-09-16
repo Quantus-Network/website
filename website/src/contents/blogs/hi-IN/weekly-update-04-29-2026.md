@@ -9,17 +9,12 @@ heroAlt: "Quantus Weekly: Audits और Compact Aggregator"
 featured: false
 tags:
   [
-    "weekly-update",
     "bitcoin",
     "pow",
     "mining",
-    "testnet",
-    "planck",
-    "post-quantum",
-    "mobile",
-    "zk-proofs",
-    "infrastructure",
-    "subsquid",
+    "post-quantum-cryptography",
+    "wallet",
+    "zero-knowledge-proofs",
   ]
 ---
 

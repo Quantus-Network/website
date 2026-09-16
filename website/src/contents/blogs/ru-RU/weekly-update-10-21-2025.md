@@ -9,15 +9,9 @@ heroAlt: "Quantus Weekly: Гейт Poseidon2 в Plonky2 и ончейн-упра
 featured: false
 tags:
   [
-    "weekly-update",
-    "plonky2",
-    "poseidon2",
     "governance",
-    "treasury",
-    "conviction-voting",
-    "referral",
-    "gpu-mining",
-    "audit",
+    "mining",
+    "protocol-security",
   ]
 ---
 

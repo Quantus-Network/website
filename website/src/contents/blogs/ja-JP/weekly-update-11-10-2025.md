@@ -9,13 +9,7 @@ heroAlt: "Quantus Weekly: Diracテストネットと格子暗号監査"
 featured: false
 tags:
   [
-    "weekly-update",
-    "dirac-testnet",
-    "lattice-cryptography",
     "pow",
-    "libp2p",
-    "ghostdag",
-    "blue-green-deployment",
   ]
 ---
 

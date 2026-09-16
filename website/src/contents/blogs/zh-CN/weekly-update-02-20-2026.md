@@ -9,13 +9,9 @@ heroAlt: "Quantus 每周动态：开放研究与后量子标准"
 featured: false
 tags:
   [
-    "weekly-update",
-    "research",
     "post-quantum-cryptography",
-    "multisig",
-    "zk-proofs",
-    "mobile-wallet",
-    "notification-system",
+    "zero-knowledge-proofs",
+    "wallet",
   ]
 ---
 

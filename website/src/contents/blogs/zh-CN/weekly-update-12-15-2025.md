@@ -9,12 +9,10 @@ heroAlt: "Quantus 每周动态：GPU 挖矿突破与 ZK 重构"
 featured: false
 tags:
   [
-    "weekly-update",
-    "gpu-mining",
+    "mining",
     "zero-knowledge-proofs",
     "tokenomics",
-    "hardware-wallet",
-    "solana-breakpoint",
+    "wallet",
   ]
 ---
 

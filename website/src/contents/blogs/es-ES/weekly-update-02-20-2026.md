@@ -10,13 +10,9 @@ heroAlt: "Quantus Weekly: Investigación abierta y PQC"
 featured: false
 tags:
   [
-    "weekly-update",
-    "research",
     "post-quantum-cryptography",
-    "multisig",
-    "zk-proofs",
-    "mobile-wallet",
-    "notification-system",
+    "zero-knowledge-proofs",
+    "wallet",
   ]
 ---
 

@@ -9,12 +9,10 @@ heroAlt: "Quantus 每周动态：胖签名与更快的虫洞"
 featured: false
 tags:
   [
-    "weekly-update",
-    "quantum-safe",
+    "post-quantum-cryptography",
     "ml-dsa",
-    "zk-proofs",
+    "zero-knowledge-proofs",
     "wormhole",
-    "scalability",
     "privacy",
   ]
 ---

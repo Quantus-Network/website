@@ -10,13 +10,9 @@ heroAlt: "Quantus Weekly: Dilithium-Schwellenwertsignaturen"
 featured: false
 tags:
   [
-    "weekly-update",
-    "threshold-signatures",
     "post-quantum-cryptography",
-    "dilithium",
+    "ml-dsa",
     "zero-knowledge-proofs",
-    "quantum-safe",
-    "blockchain",
   ]
 ---
 
