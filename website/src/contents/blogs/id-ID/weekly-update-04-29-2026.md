@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Audit dan Compact Aggregator"
 description: "Spring cleaning: item audit Eiger selesai, CLI direfaktor, perbaikan miner dan indexer, plus tes wormhole pada compact aggregator yang 2x prover."
 pubDate: "2026-04-29"

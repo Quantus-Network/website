@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: State of Quantum रिपोर्ट"
 description: "Quantum-risk research report बड़े outlets पर छाई। इस सप्ताह: ZK audit fixes, GPU miner throttling, wallet updates, Q-Day site और shop launch।"
 pubDate: "2026-05-29"

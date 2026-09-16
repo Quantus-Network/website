@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Deniable RPCs und Neodyme-Audit"
 description: "Deniable RPCs für stärkere Privatsphäre, abgeschlossenes Neodyme-Rusty-Crystals-Audit und private ZK-Adressen für jeden Token ab Genesis verfügbar."
 

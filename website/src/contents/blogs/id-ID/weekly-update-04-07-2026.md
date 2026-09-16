@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Estimasi Q-Day dan Risiko On-Spend"
 description: "Google dan Oratomic memangkas estimasi qubit untuk memecahkan ECC, risiko on-spend Bitcoin, dan rebrand Quantus pada kebebasan ekonomi permanen."
 pubDate: "2026-04-07"

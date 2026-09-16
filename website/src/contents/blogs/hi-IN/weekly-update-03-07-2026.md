@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Wormhole ट्रांज़ैक्शन"
 description: "Wormhole ट्रांज़ैक्शन, माइनर्स के निजी ब्लॉक रिवॉर्ड, consensus बग फिक्स और wallet अपडेट — इस सप्ताह Quantus में क्या-क्या शिप हुआ, पूरी जानकारी यहाँ।"
 pubDate: "2026-03-07"

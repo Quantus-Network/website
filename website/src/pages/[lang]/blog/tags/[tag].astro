@@ -103,6 +103,7 @@ const metadata = createMetadata({
               `/blog/${post.id.split("/").slice(1).join("/")}`,
             )}
             tags={post.data.tags}
+            category={post.data.category}
             heroImage={post.data.heroImage}
             heroAlt={post.data.heroAlt}
             featured={post.data.featured}

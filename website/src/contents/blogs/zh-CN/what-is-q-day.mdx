@@ -1,5 +1,6 @@
 ---
 published: false
+category: education
 title: "什么是 Q-Day？"
 metaTitle: "什么是 Q-Day？对加密安全意味着什么"
 description: "Q-Day 是量子计算机足以破解广泛使用的公钥密码学的临界点。了解它对加密货币意味着哪些具体威胁，以及为什么相关迁移工作必须提前多年开始准备。"
@@ -68,12 +69,12 @@ RSA 和椭圆曲线密码学被广泛用于密钥交换和数字签名。
 
 区块链高度依赖数字签名。比特币在较旧的花费路径中使用 ECDSA，在 Taproot 中使用 Schnorr 签名。其他链在包括 ECDSA 和 EdDSA 在内的椭圆曲线签名方案中各自做出选择。如果攻击者能从暴露的公钥推导出私钥，就能生成网络可能接受为有效的签名。
 
-| 密码学功能 | 常见示例 | 量子影响 | 实际影响 |
-| --- | --- | --- | --- |
-| 密钥建立与公钥加密 | RSA、ECDH | Shor 算法威胁其底层数学难题 | 此前被截获的加密记录可能变得可读 |
-| 数字签名 | RSA 签名、ECDSA、EdDSA | Shor 算法可能使私钥恢复成为可能 | 攻击者可能伪造交易或其他授权 |
-| 对称加密 | AES | Grover 算法降低暴力搜索的成本 | 密钥长度和实际攻击成本决定剩余的安全余量 |
-| 哈希 | SHA-256、SHA-3 | 量子搜索会降低部分安全余量 | 依赖哈希的功能需要单独评估 |
+| 密码学功能         | 常见示例               | 量子影响                        | 实际影响                                 |
+| ------------------ | ---------------------- | ------------------------------- | ---------------------------------------- |
+| 密钥建立与公钥加密 | RSA、ECDH              | Shor 算法威胁其底层数学难题     | 此前被截获的加密记录可能变得可读         |
+| 数字签名           | RSA 签名、ECDSA、EdDSA | Shor 算法可能使私钥恢复成为可能 | 攻击者可能伪造交易或其他授权             |
+| 对称加密           | AES                    | Grover 算法降低暴力搜索的成本   | 密钥长度和实际攻击成本决定剩余的安全余量 |
+| 哈希               | SHA-256、SHA-3         | 量子搜索会降低部分安全余量      | 依赖哈希的功能需要单独评估               |
 
 因此，比特币的数字签名与 SHA-256 面临不同的量子威胁。
 
@@ -135,13 +136,13 @@ NIST 指出，将一种标准化密码算法整合进各类信息系统，[历�
 
 各国政府已经将后量子迁移当作一项跨越多年的安全计划来对待。
 
-| 机构 | 正在进行的准备工作 |
-| --- | --- |
-| NIST | [NIST](https://csrc.nist.gov/Projects/Post-Quantum-Cryptography) 于 2024 年确定了首批 PQC 标准，并计划到 2035 年将易受量子攻击的算法从标准中移除，高风险系统将更早完成迁移 |
+| 机构         | 正在进行的准备工作                                                                                                                                                                                                                                                                                                                                                                                                 |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| NIST         | [NIST](https://csrc.nist.gov/Projects/Post-Quantum-Cryptography) 于 2024 年确定了首批 PQC 标准，并计划到 2035 年将易受量子攻击的算法从标准中移除，高风险系统将更早完成迁移                                                                                                                                                                                                                                         |
 | 美国联邦政府 | [第 14412 号行政命令](https://www.whitehouse.gov/presidential-actions/2026/06/securing-the-nation-against-advanced-cryptographic-attacks/)与 [OMB M-26-15](https://www.whitehouse.gov/wp-content/uploads/2026/06/M-26-15-Execution-of-the-Migration-to-Post-Quantum-Cryptography.pdf) 要求相关高价值、高影响系统在 2030 年 12 月 31 日前完成密钥建立的 PQC 迁移，并在 2031 年 12 月 31 日前完成数字签名的 PQC 迁移 |
-| NSA | [CNSA 2.0](https://www.nsa.gov/Cybersecurity/Post-Quantum-Cybersecurity-Resources/) 确定了抗量子算法，并为 National Security Systems 设定了分阶段过渡方案 |
-| 欧盟 | [2025 年欧盟路线图](https://digital-strategy.ec.europa.eu/en/library/coordinated-implementation-roadmap-transition-post-quantum-cryptography) 呼吁各成员国之间进行协调一致的过渡 |
-| ENISA | [ENISA 的整合研究](https://www.enisa.europa.eu/publications/post-quantum-cryptography-integration-study) 探讨了将后量子系统整合进现有协议的问题 |
+| NSA          | [CNSA 2.0](https://www.nsa.gov/Cybersecurity/Post-Quantum-Cybersecurity-Resources/) 确定了抗量子算法，并为 National Security Systems 设定了分阶段过渡方案                                                                                                                                                                                                                                                          |
+| 欧盟         | [2025 年欧盟路线图](https://digital-strategy.ec.europa.eu/en/library/coordinated-implementation-roadmap-transition-post-quantum-cryptography) 呼吁各成员国之间进行协调一致的过渡                                                                                                                                                                                                                                   |
+| ENISA        | [ENISA 的整合研究](https://www.enisa.europa.eu/publications/post-quantum-cryptography-integration-study) 探讨了将后量子系统整合进现有协议的问题                                                                                                                                                                                                                                                                    |
 
 这些计划之所以在任何 CRQC 得到确认之前多年就已启动，是因为每一种脆弱算法都必须先被发现、替换、测试并最终淘汰。
 

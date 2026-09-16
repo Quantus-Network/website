@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: POS-Modus und P2P-E-Cash"
 description: "Mobiles POS in Wallet v1.2.2, PolyFri-Masking, Poseidon-Cleanup, ZK-DDoS-Schutz — und warum P2P-Electronic-Cash für Quantus zählt."
 pubDate: "2026-03-31"

@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: auditorías Eiger y agregador compacto"
 description: "Semana de limpieza: ítems de auditoría con Eiger, CLI refactorizada y bugs corregidos en miner e indexador. Pruebas wormhole en el agregador compacto 2x8."
 

@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: аудит решётки и интеграция Keystone"
 description: "Устранены все замечания аудита qp-rusty-crystals, сеть обновлена под Polkadot SDK, адреса Quantus добавлены в прошивку аппаратного кошелька Keystone."
 pubDate: "2025-12-01"

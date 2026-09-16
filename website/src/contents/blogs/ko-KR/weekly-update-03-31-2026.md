@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: POS 모드와 P2P 전자현금"
 description: "지갑 v1.2.2 모바일 POS, PolyFri 마스킹, Poseidon 정리, ZK DDoS 방어, Quantus가 P2P 전자현금을 왜 중요하게 여기는지를 다룬 주간 업데이트입니다."
 pubDate: "2026-03-31"

@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: 量子耐性の未来を描く"
 description: "CoinGecko上場、マルチシグ最適化、ZK-aggregatorリファクタリング、モバイルアプリv1.1.5リリースなど、今週のQuantus週刊アップデートをお届けします。"
 pubDate: "2026-02-13"

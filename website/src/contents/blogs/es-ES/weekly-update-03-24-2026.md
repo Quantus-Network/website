@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: halving ZK y pruebas 4x más rápidas"
 description: "Segundo halving en la pipeline ZK: pruebas wormhole cuatro veces más rápidas en dos semanas. Optimizaciones Poseidon, minería corregida y whitepaper publicado."
 

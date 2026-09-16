@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Открытые исследования и стандарт PQC"
 description: "Еженедельное обновление: запуск research.quantus.com, агрегация ZK-доказательств, слияние паллеты мультисига и обновления мобильного кошелька."
 pubDate: "2026-02-20"

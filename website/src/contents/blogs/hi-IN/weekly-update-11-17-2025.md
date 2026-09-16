@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: PoW Audit और Dirac Launch"
 description: "Equilibrium ने PoW और Poseidon ऑडिट पूरा किया, block header के ZK proofs आए और Dirac testnet इस सप्ताह Quantus पर लॉन्च हुआ।"
 

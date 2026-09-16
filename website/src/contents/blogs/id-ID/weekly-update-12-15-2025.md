@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Mingguan: Terobosan GPU Mining dan Refactor ZK"
 description: "Peningkatan performa GPU mining 9x, refactor sirkuit ZK-agregasi, dan pertemuan strategis di UAE tentang tokenomics serta peluncuran token."
 

@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Second Halving, 4x Faster Proofs"
 description: "A second prover-time cut delivers 4x faster ZK proofs in two weeks, with Poseidon work, mining fixes, Senoti limits, whitepaper launch, and Quantum Canary."
 

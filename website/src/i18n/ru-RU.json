@@ -891,6 +891,12 @@
     "search_placeholder": "Поиск записей...",
     "no_posts_found": "Записей не найдено.",
     "featured_label": "Рекомендуемое",
+    "categories_label": "Категории",
+    "categories": {
+      "all": "Все",
+      "weekly-update": "Еженедельное обновление",
+      "education": "Образование"
+    },
     "related_posts": "Похожие записи",
     "post": {
       "back_to_blog": "Назад в блог",

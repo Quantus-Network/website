@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: auditoría lattice y Keystone"
 description: "Cerramos hallazgos de la auditoría de Rusty Crystals, actualizamos networking Polkadot SDK y direcciones Quantus en firmware Keystone open source."
 

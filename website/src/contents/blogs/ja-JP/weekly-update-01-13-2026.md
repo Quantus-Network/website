@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Dilithiumしきい値署名"
 description: "今週は分散調整向けのDilithiumしきい値署名をリリースしました。ZK回路の改善、モバイルウォレットのアップデート、コミュニティ向けコンテンツもお届けしています。"
 pubDate: "2026-01-13"

@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: GPUマイニングとZKリファクタ"
 description: "GPUマイニングで9倍の性能向上を達成し、ZK集約回路をリファクタリングして数千行のコードを削除。UAEでの戦略的ミーティングの内容も共有しました。"
 pubDate: "2025-12-15"

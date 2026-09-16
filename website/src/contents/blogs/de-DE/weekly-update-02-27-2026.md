@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Die Wallet soll einfach sein"
 description: "Weekly Update: Wallet v1.2.0, Treasury mit Multisig, Heisenberg-Testnet-Updates und Performance-Verbesserungen – das war diese Woche bei Quantus."
 pubDate: "2026-02-27"

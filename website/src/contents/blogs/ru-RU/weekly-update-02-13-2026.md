@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Карта квантово-защищённого будущего"
 description: "Еженедельное обновление: листинг на CoinGecko, оптимизации мультисига, рефакторинг ZK-агрегатора и релиз мобильного приложения v1.1.5."
 pubDate: "2026-02-13"

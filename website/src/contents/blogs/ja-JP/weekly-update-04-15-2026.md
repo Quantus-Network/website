@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Planckテストネット報酬"
 description: "Planckテストネットが早期マイナー向けに公開。TestFlightとストア向けアプリ移行、GPUマイニング、コア・インフラ・ウォレット更新をまとめた週次アップデートです。"
 pubDate: "2026-04-15"

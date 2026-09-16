@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Schnelleres Poseidon2, schlankere Chain"
 description: "Poseidon2-Gates nach Optimierung 8,3× schneller, Chain-Refactor streicht ~9.000 Zeilen – Notizen von der Binance Blockchain Week."
 

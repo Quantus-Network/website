@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Q-Day, on-spend и ребрендинг"
 description: "Google и Oratomic снижают оценки кубитов для взлома ECC, атаки on-spend угрожают Bitcoin, а Quantus фиксирует миссию: постоянная экономическая свобода."
 pubDate: "2026-04-07"

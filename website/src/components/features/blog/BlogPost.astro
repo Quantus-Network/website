@@ -15,6 +15,7 @@ import { getPersonJsonLd } from "@/constants/person-jsonld";
 import { organizationJsonLd } from "@/constants/default-jsonld";
 import { resolveTwitterCreator } from "@/utils/resolve-blog-author";
 import { blogMetaTitle } from "@/utils/blog-titles";
+import { blogCategoryListHref } from "@/utils/blog-categories";
 import env from "@/config";
 
 type Props = CollectionEntry<"blog">["data"] & {
@@ -30,6 +31,7 @@ const {
   updatedDate,
   heroImage,
   heroAlt,
+  category,
   tags = [],
   author: authorId,
   relatedPosts = [],
@@ -86,27 +88,17 @@ const jsonLd = JsonLdGraph({
       >
         <a
           href={blogIndexHref}
-          class="blog-post-back text-content-40 hover:text-flare mb-8 inline-flex items-center gap-2 font-mono text-[11px] tracking-[0.16em] uppercase no-underline transition-colors"
+          class="blog-post-back text-content-40 hover:text-flare mb-8 flex w-fit items-center gap-2 font-mono text-[11px] tracking-[0.16em] uppercase no-underline transition-colors"
         >
           {t("blog.post.back_to_blog")}
         </a>
 
-        {
-          tags.length > 0 && (
-            <div class="mb-5 flex flex-wrap gap-2">
-              {tags.map((tag: string) => (
-                <span class="blog-post-tag-pill">
-                  <a
-                    href={getLocalizedPath(currentLocale, `/blog/tags/${tag}`)}
-                    class="hover:text-flare text-inherit no-underline transition-colors"
-                  >
-                    {t(`blog.tags.${tag}`) || tag}
-                  </a>
-                </span>
-              ))}
-            </div>
-          )
-        }
+        <a
+          href={blogCategoryListHref(blogIndexHref, category)}
+          class="text-flare mb-4 block w-fit font-mono text-xs tracking-[0.22em] uppercase no-underline"
+        >
+          {t(`blog.categories.${category}`)}
+        </a>
 
         {
           isUnpublishedPreview && (
@@ -160,6 +152,23 @@ const jsonLd = JsonLdGraph({
             </p>
           )
         }
+
+        {
+          tags.length > 0 && (
+            <div class="mt-5 flex flex-wrap gap-2">
+              {tags.map((tag: string) => (
+                <span class="blog-post-tag-pill">
+                  <a
+                    href={getLocalizedPath(currentLocale, `/blog/tags/${tag}`)}
+                    class="hover:text-flare text-inherit no-underline transition-colors"
+                  >
+                    {t(`blog.tags.${tag}`) || tag}
+                  </a>
+                </span>
+              ))}
+            </div>
+          )
+        }
       </div>
     </section>
 
@@ -207,6 +216,7 @@ const jsonLd = JsonLdGraph({
                     `/blog/${relatedPost.id.split("/").slice(1).join("/")}`,
                   )}
                   tags={relatedPost.data.tags}
+                  category={relatedPost.data.category}
                   heroImage={relatedPost.data.heroImage}
                   heroAlt={relatedPost.data.heroAlt}
                   featured={relatedPost.data.featured}

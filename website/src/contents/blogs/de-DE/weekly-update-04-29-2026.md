@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Audits und der Compact Aggregator"
 description: "Frühjahrsputz: Eiger-Audit erledigt, CLI refaktoriert, Miner- und Indexer-Fixes, Wormhole-Tests am Compact Aggregator mit doppelter Prover-Geschwindigkeit."
 pubDate: "2026-04-29"

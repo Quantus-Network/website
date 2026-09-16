@@ -884,6 +884,12 @@
     "search_placeholder": "搜索文章...",
     "no_posts_found": "未找到文章。",
     "featured_label": "精选",
+    "categories_label": "分类",
+    "categories": {
+      "all": "全部",
+      "weekly-update": "每周更新",
+      "education": "教育"
+    },
     "related_posts": "相关文章",
     "post": {
       "back_to_blog": "返回博客",

@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Transacciones Wormhole"
 description: "Transacciones wormhole, recompensas de bloque privadas para mineros, correcciones de consenso y actualizaciones de la billetera esta semana."
 

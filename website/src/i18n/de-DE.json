@@ -895,6 +895,12 @@
     "search_placeholder": "Beiträge suchen...",
     "no_posts_found": "Keine Beiträge gefunden.",
     "featured_label": "Hervorgehoben",
+    "categories_label": "Kategorien",
+    "categories": {
+      "all": "Alle",
+      "weekly-update": "Wöchentliches Update",
+      "education": "Bildung"
+    },
     "related_posts": "Ähnliche Beiträge",
     "post": {
       "back_to_blog": "Zurück zum Blog",

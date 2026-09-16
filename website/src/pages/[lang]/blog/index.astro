@@ -33,6 +33,7 @@ const serializablePosts = sortedPosts.map((post) => ({
     title: post.data.title,
     description: post.data.description,
     pubDate: post.data.pubDate.toISOString(),
+    category: post.data.category,
     tags: post.data.tags,
     heroImage: post.data.heroImage,
     heroAlt: post.data.heroAlt,
@@ -42,6 +43,7 @@ const serializablePosts = sortedPosts.map((post) => ({
 
 const translations = await import(`../../../i18n/${locale}.json`);
 const tagsMap = translations.default.blog?.tags || {};
+const categoriesMap = translations.default.blog?.categories || {};
 
 const metadata = createMetadata({
   title: t("blog.meta.title"),
@@ -90,6 +92,8 @@ const metadata = createMetadata({
       featuredLabel={t("blog.featured_label")}
       readLabel={t("blog.card.read")}
       tagsMap={tagsMap}
+      categoriesMap={categoriesMap}
+      categoriesLabel={t("blog.categories_label")}
     />
   </section>
 </Layout>

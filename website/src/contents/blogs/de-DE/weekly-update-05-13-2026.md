@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Ein fairerer Start"
 description: "Frühe Bitcoin-Miner schürften tausende BTC täglich per Laptop. Bei Quantus machen wir Mining vom ersten Tag an für alle zugänglich."
 pubDate: "2026-05-13"

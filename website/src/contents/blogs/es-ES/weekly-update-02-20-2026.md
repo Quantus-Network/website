@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Investigación abierta y PQC"
 description: "Lanzamiento de research.quantus.com, agregación de pruebas ZK, merge del pallet multisig y actualizaciones del wallet móvil. Resumen semanal de Quantus."
 

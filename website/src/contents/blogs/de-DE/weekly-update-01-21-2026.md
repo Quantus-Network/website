@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Native Assets und Quantenrisiko"
 description: "Warum Kapital Bitcoin wegen Quantenrisiko abschlägt, unsere Native-Assets-Entscheidung und Fortschritte bei Dilithium-Schwellenwert und ZK-Aggregation."
 

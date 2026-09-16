@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: отчёт State of Quantum"
 description: "Наш отчёт о квантовом риске для крипты попал в крупные СМИ. На этой неделе: фиксы ZK-аудита, троттлинг GPU-майнера, обновления кошелька, сайт Q-Day и шоп."
 pubDate: "2026-05-29"

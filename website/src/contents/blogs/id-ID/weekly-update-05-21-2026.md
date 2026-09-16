@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Q-Day Sudah di Depan Mata"
 description: "Q-Day 6 Juni. Minggu ini: temuan audit Dilithium DKG ditutup, pembaruan miner dan notifikasi, perbaikan wallet, dan situs summit Q-Day yang diperbarui."
 

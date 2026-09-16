@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: La killer app es el dinero"
 description: "Esta semana reescribimos DKG Dilithium para Mithril, corregimos firmas threshold, abrimos helpers Wormhole en el SDK y lanzamos wallet v1.4.0 en TestFlight."
 

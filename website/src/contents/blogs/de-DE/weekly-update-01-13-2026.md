@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Dilithium-Schwellenwertsignaturen"
 description: "Dilithium-Schwellenwertsignaturen für verteilte Koordination, leichtere ZK-Circuits, Wormhole-Proof-Aggregation und Mobile-Wallet-Updates – unser Weekly Update."
 

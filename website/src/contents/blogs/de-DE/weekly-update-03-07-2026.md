@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Wormhole-Transaktionen"
 description: "Wormhole-Transaktionen, private Blockbelohnungen für Miner, Consensus-Fixes und Wallet-Updates — unser Wochenrückblick bei Quantus."
 pubDate: "2026-03-07"

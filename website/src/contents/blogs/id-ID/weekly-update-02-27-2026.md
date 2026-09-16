@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Wallet Harus Sederhana"
 description: "Minggu ini: rilis Wallet v1.2.0, Treasury dengan multisig, pembaruan testnet Heisenberg, dan peningkatan performa yang signifikan."
 pubDate: "2026-02-27"

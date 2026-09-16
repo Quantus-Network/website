@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Mapping the Quantum-Secure Future"
 description: "Weekly update covering our CoinGecko listing, multisig optimizations, ZK-aggregator refactoring, and mobile app v1.1.5 release."
 pubDate: "2026-02-13"

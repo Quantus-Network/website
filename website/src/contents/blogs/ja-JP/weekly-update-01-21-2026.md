@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: ネイティブ資産と量子リスク"
 description: "資本がビットコインを量子リスクで割り引く理由、ネイティブ資産のみを採用した設計判断、Dilithiumしきい値署名とZK集約の今週の進捗をまとめました。"
 pubDate: "2026-01-21"

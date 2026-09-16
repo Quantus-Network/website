@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus 每周动态：可否认 RPC 与 Neodyme 审计"
 description: "本周我们推出可否认 RPC，让钱包查询交易时 RPC 无从得知目标；并完成 Rusty Crystals 的 Neodyme 审计，创世代币启用私有 ZK 地址。"
 pubDate: "2026-01-28"

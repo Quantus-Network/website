@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Poseidon2 und Liberland-Podcast"
 description: "Plonky3 Poseidon2 in ZK-Circuits portiert, Rusty-Crystals-Speicher optimiert, Reversal-Gamification entworfen – Podcast mit Liberlands Präsidenten."
 

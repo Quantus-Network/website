@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Dilithium Threshold हस्ताक्षर"
 description: "इस सप्ताह हमने distributed coordination के लिए Dilithium threshold signatures शिप किए, साथ में ZK circuits, mobile wallet updates और community content।"
 pubDate: "2026-01-13"

@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Poseidon2 and Liberland Podcast"
 description: "We ported Plonky3 Poseidon2 into ZK circuits, optimized Rusty Crystals memory, designed reversal gamification, and spoke with Liberland's president."
 

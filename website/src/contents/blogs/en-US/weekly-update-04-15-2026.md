@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Planck Testnet Mining Rewards"
 description: "Planck testnet is live for early miners. App migration hits TestFlight and stores, GPU mining moves to the new chain, with Core, infra, and wallet updates."
 

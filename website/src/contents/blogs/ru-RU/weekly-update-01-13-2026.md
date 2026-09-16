@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Пороговые подписи Dilithium"
 description: "На этой неделе мы выпустили пороговые подписи Dilithium для распределённой координации, плюс обновления ZK-схем, мобильного кошелька и контента."
 

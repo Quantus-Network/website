@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Native Assets and Quantum Risk"
 description: "Why capital is discounting Bitcoin for quantum risk, our native-only assets decision, Dilithium threshold work, and progress on ZK aggregation this week."
 

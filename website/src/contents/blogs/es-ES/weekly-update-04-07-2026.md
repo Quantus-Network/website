@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: día Q, on-spend y libertad económica"
 description: "Google y Oratomic reducen las estimaciones de cúbits para romper ECC. Ataques on-spend frente a bloques de 10 minutos y la fecha límite PQC de Google en 2029."
 

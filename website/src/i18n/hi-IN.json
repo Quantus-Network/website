@@ -891,6 +891,12 @@
     "search_placeholder": "पोस्ट खोजें...",
     "no_posts_found": "कोई पोस्ट नहीं मिली।",
     "featured_label": "विशेष",
+    "categories_label": "श्रेणियाँ",
+    "categories": {
+      "all": "सभी",
+      "weekly-update": "साप्ताहिक अपडेट",
+      "education": "शिक्षा"
+    },
     "related_posts": "संबंधित पोस्ट",
     "post": {
       "back_to_blog": "ब्लॉग पर वापस जाएं",

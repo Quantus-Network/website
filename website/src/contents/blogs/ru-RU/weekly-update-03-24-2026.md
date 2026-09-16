@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: ZK в 4× быстрее за две недели"
 description: "Второе уполовинивание ZK-конвейера: доказательства wormhole в 4 раза быстрее за 14 дней, обновлён Poseidon, исправлен майнинг и опубликован whitepaper Quantus."
 pubDate: "2026-03-24"

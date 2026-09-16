@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Memetakan Masa Depan Quantum-Secure"
 description: "Minggu ini Quantus terlisting di CoinGecko, plus optimasi multisig, refactoring ZK-aggregator, dan rilis mobile app v1.1.5 ke app store."
 pubDate: "2026-02-13"

@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: 高セキュリティ口座と不正防止"
 description: "カスタマイズ可能なタイムロックとガーディアンを備えた高セキュリティ口座、マルチシグ統合のテスト、資金回収機能の追加など、今週のQuantusアップデートをお届けします。"
 pubDate: "2026-02-04"

@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Aset Native dan Risiko Kuantum"
 description: "Mengapa modal mendiskon Bitcoin karena risiko kuantum, keputusan aset native-only kami, pekerjaan threshold Dilithium, dan progres ZK aggregation minggu ini."
 pubDate: "2026-01-21"

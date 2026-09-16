@@ -895,6 +895,12 @@
     "search_placeholder": "Buscar publicaciones...",
     "no_posts_found": "No se encontraron publicaciones.",
     "featured_label": "Destacado",
+    "categories_label": "Categorías",
+    "categories": {
+      "all": "Todas",
+      "weekly-update": "Actualización Semanal",
+      "education": "Educación"
+    },
     "related_posts": "Publicaciones relacionadas",
     "post": {
       "back_to_blog": "Volver al Blog",

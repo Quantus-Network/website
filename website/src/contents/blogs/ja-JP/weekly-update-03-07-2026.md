@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: ワームホールトランザクション"
 description: "ワームホールトランザクション、マイナー向けプライベートブロック報酬、コンセンサスバグ修正、ウォレット更新をまとめた週次アップデート。Quantusの最新開発状況をお届けします。"
 pubDate: "2026-03-07"

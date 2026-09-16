@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Wormhole-транзакции"
 description: "Wormhole-транзакции, приватные награды майнерам по умолчанию, фиксы консенсуса, релизы библиотек и кошелёк v1.2.0–1.2.1 в сторах."
 pubDate: "2026-03-07"

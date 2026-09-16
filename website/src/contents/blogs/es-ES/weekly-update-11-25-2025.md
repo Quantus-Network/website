@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: agregación ZK y Miner App"
 description: "Primera agregación ZK de transacciones para chain y CLI con verificación real de transferencias, Miner App v0.1.0 y avances en minería GPU."
 

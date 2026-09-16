@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: более честный запуск"
 description: "Ранние майнеры Bitcoin добывали тысячи BTC в день на ноутбуке. В Quantus с первого дня делаем майнинг доступным для всех."
 pubDate: "2026-05-13"

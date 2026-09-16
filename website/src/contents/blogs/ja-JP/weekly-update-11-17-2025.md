@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: PoW監査完了とDiracローンチ"
 description: "EquilibriumによるPoWとPoseidonの監査を完了し、ブロックヘッダー向けZK証明を出荷。Diracテストネットを今週Quantus上でローンチしました。"
 pubDate: "2025-11-17"

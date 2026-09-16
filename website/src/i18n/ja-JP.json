@@ -895,6 +895,12 @@
     "search_placeholder": "記事を検索...",
     "no_posts_found": "記事が見つかりませんでした。",
     "featured_label": "注目",
+    "categories_label": "カテゴリー",
+    "categories": {
+      "all": "すべて",
+      "weekly-update": "週刊アップデート",
+      "education": "教育"
+    },
     "related_posts": "関連記事",
     "post": {
       "back_to_blog": "ブログに戻る",

@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Dirac Testnet and Lattice Audit"
 description: "Dirac testnet ships with an updated PoW algorithm and lattice crypto under external audit. Miners should upgrade; wallet and libp2p already integrate it."
 

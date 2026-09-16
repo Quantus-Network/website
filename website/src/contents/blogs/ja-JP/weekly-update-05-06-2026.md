@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: キラーアプリは「お金」"
 description: "今週はMithril向けにDilithium DKGを書き直し、閾値署名の修正を出荷。Wormhole SDKヘルパーを公開し、TestFlightでウォレットv1.4.0をリリースしました。"
 pubDate: "2026-05-06"

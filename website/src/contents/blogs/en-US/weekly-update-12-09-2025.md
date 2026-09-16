@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Faster Poseidon2, Leaner Chain"
 description: "Poseidon2 gates run 8.3x faster after optimization, a chain refactor drops about 9,000 lines, and the team shares notes from Binance Blockchain Week."
 

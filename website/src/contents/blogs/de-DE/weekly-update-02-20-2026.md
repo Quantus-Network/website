@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Open Research und Post-Quantum-Standard"
 description: "Launch von research.quantus.com, ZK-Proof-Aggregation, Multisig-Pallet-Merge und Mobile-Wallet-Updates – das Weekly Update von Quantus diese Woche."
 pubDate: "2026-02-20"

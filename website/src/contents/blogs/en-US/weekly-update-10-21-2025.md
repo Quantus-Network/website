@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Poseidon2 Gate and Governance"
 description: "Poseidon2 lands as a Plonky2 gate, on-chain governance and treasury functions ship, in-app referrals complete, and GPU miner Icicle bindings begin."
 

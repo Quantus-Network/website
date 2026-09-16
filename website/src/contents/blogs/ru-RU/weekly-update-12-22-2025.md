@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Майнинг на GPU и стресс-тестирование Dirac"
 description: "Еженедельное обновление, посвященное выпуску Quantus Miner v2.0.2 с поддержкой GPU, стресс-тестированию сети Dirac и обновлению архитектуры сети."
 pubDate: "2025-12-22"

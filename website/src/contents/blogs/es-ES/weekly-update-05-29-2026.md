@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Informe State of Quantum"
 description: "Nuestro informe sobre riesgo cuántico llegó a grandes medios. Esta semana: auditorías ZK, throttling del minero GPU, actualizaciones wallet, web Q-Day y tienda."
 pubDate: "2026-05-29"

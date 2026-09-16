@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Fat Signatures, Faster Wormholes"
 description: "ML-DSA signatures are 70x larger than Bitcoin’s—this week we scaled quantum-safe signing, sped up wormhole proofs 2x, and pushed ZK aggregation forward."
 

@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: असली Killer App पैसा है"
 description: "इस सप्ताह Dilithium DKG Mithril के लिए rewrite, threshold signature fixes, Wormhole SDK helpers expose, और wallet v1.4.0 TestFlight पर रिलीज़।"
 

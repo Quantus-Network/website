@@ -891,6 +891,12 @@
     "search_placeholder": "Search posts...",
     "no_posts_found": "No posts found.",
     "featured_label": "Featured",
+    "categories_label": "Categories",
+    "categories": {
+      "all": "All",
+      "weekly-update": "Weekly Update",
+      "education": "Education"
+    },
     "related_posts": "Related Posts",
     "post": {
       "back_to_blog": "Back to Blog",

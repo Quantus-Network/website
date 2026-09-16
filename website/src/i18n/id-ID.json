@@ -891,6 +891,12 @@
     "search_placeholder": "Cari postingan...",
     "no_posts_found": "Postingan tidak ditemukan.",
     "featured_label": "Unggulan",
+    "categories_label": "Kategori",
+    "categories": {
+      "all": "Semua",
+      "weekly-update": "Pembaruan Mingguan",
+      "education": "Edukasi"
+    },
     "related_posts": "Postingan Terkait",
     "post": {
       "back_to_blog": "Kembali ke Blog",

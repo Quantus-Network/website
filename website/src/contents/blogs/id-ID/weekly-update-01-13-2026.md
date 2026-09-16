@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Tanda Tangan Threshold Dilithium"
 description: "Minggu ini kami rilis tanda tangan threshold Dilithium untuk koordinasi terdistribusi, plus sirkuit ZK, pembaruan wallet mobile, dan konten komunitas."
 pubDate: "2026-01-13"

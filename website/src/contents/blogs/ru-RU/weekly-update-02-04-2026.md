@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: High-Security и защита от мошенничества"
 description: "High-security аккаунты с настраиваемыми таймлоками и опекунами, тестирование мультисига и новая функция возврата средств на этой неделе."
 
