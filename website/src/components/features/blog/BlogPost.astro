@@ -82,7 +82,7 @@ const jsonLd = JsonLdGraph({
   <article class="blog-post">
     <section class="bg-void">
       <div
-        class="px-content-edges max-md:px-content-edges-mobile max-w-[860px] pt-[140px] pb-16 max-md:pt-[120px] max-md:pb-12"
+        class="px-content-edges max-md:px-content-edges-mobile mx-auto max-w-[860px] pt-[140px] pb-16 max-md:pt-[120px] max-md:pb-12"
       >
         <a
           href={blogIndexHref}
@@ -165,7 +165,7 @@ const jsonLd = JsonLdGraph({
 
     {
       heroImage && (
-        <>
+        <div class="px-content-edges max-md:px-content-edges-mobile mx-auto max-w-[860px]">
           <div class="max-h-[480px] w-full overflow-hidden">
             <img
               width={1020}
@@ -179,12 +179,12 @@ const jsonLd = JsonLdGraph({
             />
           </div>
           <div class="bg-flare h-px w-full" aria-hidden="true" />
-        </>
+        </div>
       )
     }
 
     <div
-      class="px-content-edges max-md:px-content-edges-mobile max-w-[860px] pt-16 pb-16 max-md:pt-12 max-md:pb-20"
+      class="px-content-edges max-md:px-content-edges-mobile mx-auto max-w-[860px] pt-16 pb-16 max-md:pt-12 max-md:pb-20"
     >
       <div class="blog-post-prose prose prose-invert max-w-none">
         <slot />
