@@ -866,7 +866,6 @@
       "email_aria": "Dirección de correo electrónico",
       "submit_label": "Avísame",
       "error_message": "Por favor, introduzca una dirección de correo electrónico válida.",
-      "micro": "Un correo cuando los swaps estén activos. Nada más.",
       "success": {
         "headline": "Está en la lista.",
         "sub": "Se enterará antes que nadie."

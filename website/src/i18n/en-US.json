@@ -862,7 +862,6 @@
       "email_aria": "Email address",
       "submit_label": "Notify me",
       "error_message": "Please enter a valid email address.",
-      "micro": "One email when swaps go live. Nothing else.",
       "success": {
         "headline": "You're on the list.",
         "sub": "You'll hear before anyone else does."

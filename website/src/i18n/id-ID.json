@@ -862,7 +862,6 @@
       "email_aria": "Alamat email",
       "submit_label": "Beri tahu saya",
       "error_message": "Harap masukkan alamat email yang valid.",
-      "micro": "Satu email saat swap aktif. Tidak lebih.",
       "success": {
         "headline": "Anda sudah terdaftar.",
         "sub": "Anda akan tahu sebelum orang lain."
