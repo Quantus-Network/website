@@ -8,12 +8,7 @@ pubDate: "2026-01-13"
 heroImage: "/blog/covers/weekly-update-01-13-2026.webp"
 heroAlt: "Quantus Weekly: Пороговые подписи Dilithium"
 featured: false
-tags:
-  [
-    "post-quantum-cryptography",
-    "ml-dsa",
-    "zero-knowledge-proofs",
-  ]
+tags: ["post-quantum-cryptography", "ml-dsa", "zero-knowledge-proofs"]
 ---
 
 Власть и полномочия разделены между несколькими сторонами. Распределённая координация.

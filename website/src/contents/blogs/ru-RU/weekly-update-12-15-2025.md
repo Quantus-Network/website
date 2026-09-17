@@ -7,13 +7,7 @@ pubDate: "2025-12-15"
 heroImage: "/blog/covers/weekly-update-12-15-2025.webp"
 heroAlt: "Quantus Weekly: Прорыв в майнинге на GPU и рефакторинг ZK"
 featured: false
-tags:
-  [
-    "mining",
-    "zero-knowledge-proofs",
-    "tokenomics",
-    "wallet",
-  ]
+tags: ["mining", "zero-knowledge-proofs", "tokenomics", "wallet"]
 ---
 
 На этой неделе команда добилась прорыва в производительности майнинга. Наш новый майнер для GPU теперь работает примерно в 9 раз быстрее, чем версия для CPU.

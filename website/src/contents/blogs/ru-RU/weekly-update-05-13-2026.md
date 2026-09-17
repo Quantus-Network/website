@@ -8,13 +8,7 @@ heroImage: "/blog/covers/weekly-update-05-13-2026.webp"
 heroAlt: "Quantus Weekly: более честный запуск"
 featured: false
 tags:
-  [
-    "bitcoin",
-    "mining",
-    "zero-knowledge-proofs",
-    "protocol-security",
-    "wallet",
-  ]
+  ["bitcoin", "mining", "zero-knowledge-proofs", "protocol-security", "wallet"]
 ---
 
 Ранние майнеры Bitcoin могли добывать тысячи BTC в день на ноутбуке.

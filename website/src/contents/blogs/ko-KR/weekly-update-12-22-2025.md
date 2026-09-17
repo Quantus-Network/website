@@ -7,12 +7,7 @@ pubDate: "2025-12-22"
 heroImage: "/blog/covers/weekly-update-12-22-2025.webp"
 heroAlt: "Quantus 위클리: GPU 채굴과 Dirac 스트레스 테스트"
 featured: false
-tags:
-  [
-    "mining",
-    "tokenomics",
-    "wallet",
-  ]
+tags: ["mining", "tokenomics", "wallet"]
 ---
 
 이번 주 GPU 지원 Quantus Miner v2.0.2를 공식 출시하고 Dirac 네트워크 스트레스 테스트를 성공적으로 마쳤습니다.

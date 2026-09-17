@@ -7,13 +7,7 @@ pubDate: "2025-12-15"
 heroImage: "/blog/covers/weekly-update-12-15-2025.webp"
 heroAlt: "Quantus 每周动态：GPU 挖矿突破与 ZK 重构"
 featured: false
-tags:
-  [
-    "mining",
-    "zero-knowledge-proofs",
-    "tokenomics",
-    "wallet",
-  ]
+tags: ["mining", "zero-knowledge-proofs", "tokenomics", "wallet"]
 ---
 
 本周，我们在挖矿性能方面取得了突破。我们新的 GPU 矿机现在的运行速度比 CPU 版本快约 9 倍。

@@ -7,14 +7,7 @@ pubDate: "2025-11-17"
 heroImage: "/blog/covers/weekly-update-11-17-2025.webp"
 heroAlt: "Quantus Weekly: PoW監査完了とDiracローンチ"
 featured: false
-tags:
-  [
-    "protocol-security",
-    "pow",
-    "zero-knowledge-proofs",
-    "wallet",
-    "mining",
-  ]
+tags: ["protocol-security", "pow", "zero-knowledge-proofs", "wallet", "mining"]
 ---
 
 今週、チームはEquilibriumによるPoWアルゴリズムとPoseidonハッシュ関数の監査を完了し、更新アプリを両アプリストアへ出荷しました。

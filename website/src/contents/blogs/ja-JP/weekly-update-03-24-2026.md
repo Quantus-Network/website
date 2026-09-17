@@ -7,12 +7,7 @@ pubDate: "2026-03-24"
 heroImage: "/blog/covers/weekly-update-03-24-2026.webp"
 heroAlt: "Quantus Weekly: 第2半減期と4倍高速証明"
 featured: false
-tags:
-  [
-    "zero-knowledge-proofs",
-    "privacy",
-    "wormhole",
-  ]
+tags: ["zero-knowledge-proofs", "privacy", "wormhole"]
 ---
 
 2 は特別な数字です。

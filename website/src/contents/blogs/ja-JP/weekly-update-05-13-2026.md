@@ -8,13 +8,7 @@ heroImage: "/blog/covers/weekly-update-05-13-2026.webp"
 heroAlt: "Quantus Weekly: より公正なローンチ"
 featured: false
 tags:
-  [
-    "bitcoin",
-    "mining",
-    "zero-knowledge-proofs",
-    "protocol-security",
-    "wallet",
-  ]
+  ["bitcoin", "mining", "zero-knowledge-proofs", "protocol-security", "wallet"]
 ---
 
 初期のBitcoinマイナーは、ノートPCで1日数千BTCを採掘できました。

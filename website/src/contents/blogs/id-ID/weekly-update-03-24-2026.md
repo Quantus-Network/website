@@ -7,12 +7,7 @@ pubDate: "2026-03-24"
 heroImage: "/blog/covers/weekly-update-03-24-2026.webp"
 heroAlt: "Quantus Weekly: Halving Kedua, Bukti 4x Lebih Cepat"
 featured: false
-tags:
-  [
-    "zero-knowledge-proofs",
-    "privacy",
-    "wormhole",
-  ]
+tags: ["zero-knowledge-proofs", "privacy", "wormhole"]
 ---
 
 2 adalah angka spesial.

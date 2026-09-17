@@ -8,14 +8,7 @@ pubDate: "2025-11-17"
 heroImage: "/blog/covers/weekly-update-11-17-2025.webp"
 heroAlt: "Quantus Weekly: auditoría PoW y testnet Dirac"
 featured: false
-tags:
-  [
-    "protocol-security",
-    "pow",
-    "zero-knowledge-proofs",
-    "wallet",
-    "mining",
-  ]
+tags: ["protocol-security", "pow", "zero-knowledge-proofs", "wallet", "mining"]
 ---
 
 Esta semana el equipo completó la auditoría de Equilibrium de nuestro algoritmo proof of work y la función hash Poseidon, y publicó apps actualizadas en ambas tiendas.

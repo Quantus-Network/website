@@ -8,11 +8,7 @@ pubDate: "2025-12-01"
 heroImage: "/blog/covers/weekly-update-12-01-2025.webp"
 heroAlt: "Quantus Weekly: Lattice Audit and Keystone Wallet"
 featured: false
-tags:
-  [
-    "wallet",
-    "protocol-security",
-  ]
+tags: ["wallet", "protocol-security"]
 ---
 
 Last week, the team addressed all issues raised in the audit of our lattice crypto library (rusty-crystals) and shipped networking updates to align with the latest Polkadot SDK. We also implemented Quantus address support on the open-source Keystone hardware wallet firmware and got our profile listed on the market intelligence platform “The Quantum Insider”.

@@ -7,10 +7,7 @@ pubDate: "2025-10-14"
 heroImage: "/blog/covers/weekly-update-10-14-2025.webp"
 heroAlt: "Quantus 每周动态：Poseidon2 与 Liberland 播客"
 featured: false
-tags:
-  [
-    "post-quantum-cryptography",
-  ]
+tags: ["post-quantum-cryptography"]
 ---
 
 ## 产品与开发新闻

@@ -7,12 +7,7 @@ pubDate: "2025-12-22"
 heroImage: "/blog/covers/weekly-update-12-22-2025.webp"
 heroAlt: "Quantus 每周动态：GPU 挖矿与 Dirac 压力测试"
 featured: false
-tags:
-  [
-    "mining",
-    "tokenomics",
-    "wallet",
-  ]
+tags: ["mining", "tokenomics", "wallet"]
 ---
 
 本周，我们正式发布了支持 GPU 的 Quantus Miner v2.0.2，并成功对 Dirac 进行了压力测试。

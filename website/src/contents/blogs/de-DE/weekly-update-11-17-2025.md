@@ -8,14 +8,7 @@ pubDate: "2025-11-17"
 heroImage: "/blog/covers/weekly-update-11-17-2025.webp"
 heroAlt: "Quantus Weekly: PoW-Audit abgeschlossen, Dirac live"
 featured: false
-tags:
-  [
-    "protocol-security",
-    "pow",
-    "zero-knowledge-proofs",
-    "wallet",
-    "mining",
-  ]
+tags: ["protocol-security", "pow", "zero-knowledge-proofs", "wallet", "mining"]
 ---
 
 Diese Woche hat das Team das Audit von Equilibrium für unseren Proof-of-Work-Algorithmus und die Poseidon-Hash-Funktion abgeschlossen und aktualisierte Apps in beide App Stores ausgeliefert.

@@ -7,11 +7,7 @@ pubDate: "2026-02-13"
 heroImage: "/blog/covers/weekly-update-02-13-2026.webp"
 heroAlt: "Quantus 每周动态：绘制量子安全未来蓝图"
 featured: false
-tags:
-  [
-    "post-quantum-cryptography",
-    "zero-knowledge-proofs",
-  ]
+tags: ["post-quantum-cryptography", "zero-knowledge-proofs"]
 ---
 
 Fra Mauro 在威尼斯附近一座修道院里，花了数年绘制当时已知世界的地图。

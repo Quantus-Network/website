@@ -8,12 +8,7 @@ pubDate: "2026-03-31"
 heroImage: "/blog/covers/weekly-update-03-31-2026.webp"
 heroAlt: "Quantus Weekly: POS Mode and P2P Electronic Cash"
 featured: false
-tags:
-  [
-    "wallet",
-    "zero-knowledge-proofs",
-    "privacy",
-  ]
+tags: ["wallet", "zero-knowledge-proofs", "privacy"]
 ---
 
 > A Peer-to-Peer Electronic Cash System.

@@ -8,13 +8,7 @@ pubDate: "2025-12-15"
 heroImage: "/blog/covers/weekly-update-12-15-2025.webp"
 heroAlt: "Quantus Mingguan: Terobosan GPU Mining dan Refactor ZK"
 featured: false
-tags:
-  [
-    "mining",
-    "zero-knowledge-proofs",
-    "tokenomics",
-    "wallet",
-  ]
+tags: ["mining", "zero-knowledge-proofs", "tokenomics", "wallet"]
 ---
 
 Minggu ini tim mencapai terobosan dalam performa mining. GPU miner baru kami sekarang berjalan ~9x lebih cepat daripada versi CPU.

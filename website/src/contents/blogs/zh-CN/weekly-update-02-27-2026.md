@@ -7,11 +7,7 @@ pubDate: "2026-02-27"
 heroImage: "/blog/covers/weekly-update-02-27-2026.webp"
 heroAlt: "Quantus 每周动态：钱包应当保持简单"
 featured: false
-tags:
-  [
-    "wallet",
-    "zero-knowledge-proofs",
-  ]
+tags: ["wallet", "zero-knowledge-proofs"]
 ---
 
 每一个主流加密钱包都在加我不想要的垃圾功能。

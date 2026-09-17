@@ -7,10 +7,7 @@ pubDate: "2025-12-09"
 heroImage: "/blog/covers/weekly-update-12-09-2025.webp"
 heroAlt: "Quantus Weekly: 高速Poseidon2と軽量チェーン"
 featured: false
-tags:
-  [
-    "wormhole",
-  ]
+tags: ["wormhole"]
 ---
 
 [@EliBenSassonとScott Aaronsonのインタビュー](https://x.com/Starknet/status/1995865652377395421)をご覧になった方も多いでしょう。

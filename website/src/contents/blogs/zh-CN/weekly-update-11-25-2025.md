@@ -7,11 +7,7 @@ pubDate: "2025-11-25"
 heroImage: "/blog/covers/weekly-update-11-25-2025.webp"
 heroAlt: "Quantus 每周动态：ZK 交易聚合与矿机应用发布"
 featured: false
-tags:
-  [
-    "zero-knowledge-proofs",
-    "mining",
-  ]
+tags: ["zero-knowledge-proofs", "mining"]
 ---
 
 本周，我们完成了链端和 CLI 的 ZK 交易聚合第一步，用真实的转账验证取代了模拟测试。我们还发布了矿机应用 (Miner App) v0.1.0 二进制文件，现已可用。

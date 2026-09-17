@@ -7,14 +7,7 @@ pubDate: "2025-11-17"
 heroImage: "/blog/covers/weekly-update-11-17-2025.webp"
 heroAlt: "Quantus Weekly: аудит PoW и запуск тестнета Dirac"
 featured: false
-tags:
-  [
-    "protocol-security",
-    "pow",
-    "zero-knowledge-proofs",
-    "wallet",
-    "mining",
-  ]
+tags: ["protocol-security", "pow", "zero-knowledge-proofs", "wallet", "mining"]
 ---
 
 На этой неделе команда завершила аудит нашего алгоритма Proof of Work и хэш-функции Poseidon, проведенный компанией Equilibrium, и выпустила обновленные приложения в оба магазина приложений.

@@ -7,11 +7,7 @@ pubDate: "2026-02-27"
 heroImage: "/blog/covers/weekly-update-02-27-2026.webp"
 heroAlt: "Quantus 위클리: 지갑은 단순해야 합니다"
 featured: false
-tags:
-  [
-    "wallet",
-    "zero-knowledge-proofs",
-  ]
+tags: ["wallet", "zero-knowledge-proofs"]
 ---
 
 주요 암호화폐 지갑마다 원치 않는 기능이 계속 붙고 있습니다.

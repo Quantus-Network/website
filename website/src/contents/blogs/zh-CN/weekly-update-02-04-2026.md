@@ -7,10 +7,7 @@ pubDate: "2026-02-04"
 heroImage: "/blog/covers/weekly-update-02-04-2026.webp"
 heroAlt: "Quantus 每周动态：高安全账户与反欺诈"
 featured: false
-tags:
-  [
-    "protocol-security",
-  ]
+tags: ["protocol-security"]
 ---
 
 Chainalysis 估计 2025 年有 170 亿美元加密资产被盗。口号是「做自己的银行」。另一半其实是「做自己的安全团队」。说清楚：「口袋里的瑞士银行账户，但只给网络安全专家用」依然很酷。但行业对无辜普通人不够负责——他们甚至不懂非对称密码学，就把净资产搬上链，然后被重创。

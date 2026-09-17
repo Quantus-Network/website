@@ -7,10 +7,7 @@ pubDate: "2026-02-04"
 heroImage: "/blog/covers/weekly-update-02-04-2026.webp"
 heroAlt: "Quantus Weekly: Akun Keamanan Tinggi dan Anti-Penipuan"
 featured: false
-tags:
-  [
-    "protocol-security",
-  ]
+tags: ["protocol-security"]
 ---
 
 Chainalysis memperkirakan $17 miliar kripto dicuri pada 2025. Pitch-nya: "jadi bank sendiri." Separuh lainnya: "jadi tim keamanan sendiri." Jujur saja, "rekening Swiss di saku Anda, tapi cuma untuk ahli cybersecurity" tetap sangat keren. Tapi industri mengecewakan normies yang tak bersalah yang kehilangan seluruh kekayaan on-chain tanpa tahu apa itu kriptografi asimetris.

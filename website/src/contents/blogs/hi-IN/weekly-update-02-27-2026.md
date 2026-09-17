@@ -7,11 +7,7 @@ pubDate: "2026-02-27"
 heroImage: "/blog/covers/weekly-update-02-27-2026.webp"
 heroAlt: "Quantus Weekly: Wallet सरल होना चाहिए"
 featured: false
-tags:
-  [
-    "wallet",
-    "zero-knowledge-proofs",
-  ]
+tags: ["wallet", "zero-knowledge-proofs"]
 ---
 
 हर major crypto wallet garbage features add कर रहा है जो मुझे नहीं चाहिए।

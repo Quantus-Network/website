@@ -7,13 +7,7 @@ pubDate: "2025-12-15"
 heroImage: "/blog/covers/weekly-update-12-15-2025.webp"
 heroAlt: "Quantus Weekly: GPUマイニングとZKリファクタ"
 featured: false
-tags:
-  [
-    "mining",
-    "zero-knowledge-proofs",
-    "tokenomics",
-    "wallet",
-  ]
+tags: ["mining", "zero-knowledge-proofs", "tokenomics", "wallet"]
 ---
 
 今週、チームはマイニング性能におけるブレークスルーを達成しました。新GPUマイナーはCPU版より約9倍高速に動作しています。

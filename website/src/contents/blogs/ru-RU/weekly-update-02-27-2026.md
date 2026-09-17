@@ -7,11 +7,7 @@ pubDate: "2026-02-27"
 heroImage: "/blog/covers/weekly-update-02-27-2026.webp"
 heroAlt: "Quantus Weekly: Кошелёк должен быть простым"
 featured: false
-tags:
-  [
-    "wallet",
-    "zero-knowledge-proofs",
-  ]
+tags: ["wallet", "zero-knowledge-proofs"]
 ---
 
 Каждый крупный криптокошелёк добавляет мусорные фичи, которые мне не нужны.

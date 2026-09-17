@@ -7,12 +7,7 @@ pubDate: "2025-10-21"
 heroImage: "/blog/covers/weekly-update-10-21-2025.webp"
 heroAlt: "Quantus 每周动态：Poseidon2 门电路与链上治理"
 featured: false
-tags:
-  [
-    "governance",
-    "mining",
-    "protocol-security",
-  ]
+tags: ["governance", "mining", "protocol-security"]
 ---
 
 ## 产品与开发新闻

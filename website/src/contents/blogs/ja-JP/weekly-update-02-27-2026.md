@@ -7,11 +7,7 @@ pubDate: "2026-02-27"
 heroImage: "/blog/covers/weekly-update-02-27-2026.webp"
 heroAlt: "Quantus Weekly: ウォレットはシンプルに"
 featured: false
-tags:
-  [
-    "wallet",
-    "zero-knowledge-proofs",
-  ]
+tags: ["wallet", "zero-knowledge-proofs"]
 ---
 
 主要な暗号資産ウォレットは、不要な機能を次々と追加しています。

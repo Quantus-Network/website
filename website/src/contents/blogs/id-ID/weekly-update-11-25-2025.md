@@ -8,11 +8,7 @@ pubDate: "2025-11-25"
 heroImage: "/blog/covers/weekly-update-11-25-2025.webp"
 heroAlt: "Quantus Mingguan: Agregasi ZK dan Miner App"
 featured: false
-tags:
-  [
-    "zero-knowledge-proofs",
-    "mining",
-  ]
+tags: ["zero-knowledge-proofs", "mining"]
 ---
 
 Minggu ini tim menyelesaikan langkah pertama agregasi transaksi ZK untuk chain dan CLI, mengganti mock test dengan verifikasi transfer aktual. Kami juga merilis binary Miner App v0.1.0, yang sekarang tersedia.

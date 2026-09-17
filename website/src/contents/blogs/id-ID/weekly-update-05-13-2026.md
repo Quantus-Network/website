@@ -8,13 +8,7 @@ heroImage: "/blog/covers/weekly-update-05-13-2026.webp"
 heroAlt: "Quantus Weekly: Peluncuran yang Lebih Adil"
 featured: false
 tags:
-  [
-    "bitcoin",
-    "mining",
-    "zero-knowledge-proofs",
-    "protocol-security",
-    "wallet",
-  ]
+  ["bitcoin", "mining", "zero-knowledge-proofs", "protocol-security", "wallet"]
 ---
 
 Miner Bitcoin awal bisa menambang ribuan BTC sehari di laptop.

@@ -7,10 +7,7 @@ pubDate: "2025-12-09"
 heroImage: "/blog/covers/weekly-update-12-09-2025.webp"
 heroAlt: "Quantus 위클리: 빠른 Poseidon2, 경량 체인"
 featured: false
-tags:
-  [
-    "wormhole",
-  ]
+tags: ["wormhole"]
 ---
 
 [@EliBenSasson과 Scott Aaronson의 인터뷰](https://x.com/Starknet/status/1995865652377395421)를 보셨을 것입니다.

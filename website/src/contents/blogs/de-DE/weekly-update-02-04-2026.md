@@ -8,10 +8,7 @@ pubDate: "2026-02-04"
 heroImage: "/blog/covers/weekly-update-02-04-2026.webp"
 heroAlt: "Quantus Weekly: High-Security-Konten und Betrugsschutz"
 featured: false
-tags:
-  [
-    "protocol-security",
-  ]
+tags: ["protocol-security"]
 ---
 
 Chainalysis schätzte, dass 2025 Krypto im Wert von 17 Mrd. USD gestohlen wurde. Das Versprechen lautete: „Sei deine eigene Bank.“ Die andere Hälfte heißt: „Sei dein eigenes Sicherheitsteam.“ Klar, „ein Schweizer Bankkonto in der Tasche – aber nur für Cybersecurity-Experten“ ist immer noch verdammt cool. Aber die Branche hat unschuldigen Laien einen Bärendienst erwiesen, die ihr Vermögen on-chain verschoben, ohne zu wissen, was asymmetrische Kryptografie ist.

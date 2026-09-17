@@ -8,13 +8,7 @@ heroImage: "/blog/covers/weekly-update-05-13-2026.webp"
 heroAlt: "Quantus Weekly: Ein fairerer Start"
 featured: false
 tags:
-  [
-    "bitcoin",
-    "mining",
-    "zero-knowledge-proofs",
-    "protocol-security",
-    "wallet",
-  ]
+  ["bitcoin", "mining", "zero-knowledge-proofs", "protocol-security", "wallet"]
 ---
 
 Frühe Bitcoin-Miner konnten tausende BTC pro Tag auf einem Laptop schürfen.

@@ -7,12 +7,7 @@ pubDate: "2026-02-20"
 heroImage: "/blog/covers/weekly-update-02-20-2026.webp"
 heroAlt: "Quantus Weekly: Открытые исследования и стандарт PQC"
 featured: false
-tags:
-  [
-    "post-quantum-cryptography",
-    "zero-knowledge-proofs",
-    "wallet",
-  ]
+tags: ["post-quantum-cryptography", "zero-knowledge-proofs", "wallet"]
 ---
 
 Постквантовая криптография слишком нова, чтобы пилить её в блокчейне за закрытыми дверями.

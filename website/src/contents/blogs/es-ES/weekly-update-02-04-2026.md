@@ -8,10 +8,7 @@ pubDate: "2026-02-04"
 heroImage: "/blog/covers/weekly-update-02-04-2026.webp"
 heroAlt: "Quantus Weekly: Cuentas de alta seguridad y fraude"
 featured: false
-tags:
-  [
-    "protocol-security",
-  ]
+tags: ["protocol-security"]
 ---
 
 Chainalysis estimó que se robaron 17.000 millones de dólares en cripto en 2025. El pitch era "sé tu propio banco". La otra mitad es "sé tu propio equipo de seguridad". Para ser claros, "una cuenta suiza en el bolsillo, pero solo para expertos en ciberseguridad" sigue siendo increíblemente molón. Pero la industria hizo un flaco favor a los normies inocentes que se quedaron rekt al mover su patrimonio on-chain sin saber siquiera qué es la criptografía asimétrica.

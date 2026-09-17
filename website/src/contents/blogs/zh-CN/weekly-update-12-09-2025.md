@@ -7,10 +7,7 @@ pubDate: "2025-12-09"
 heroImage: "/blog/covers/weekly-update-12-09-2025.webp"
 heroAlt: "Quantus 每周动态：Poseidon2 提速与链架构精简"
 featured: false
-tags:
-  [
-    "wormhole",
-  ]
+tags: ["wormhole"]
 ---
 
 你可能已经看过了 [@EliBenSasson 和 Scott Aaronson 的这段采访](https://x.com/Starknet/status/1995865652377395421)

@@ -8,11 +8,7 @@ pubDate: "2026-02-13"
 heroImage: "/blog/covers/weekly-update-02-13-2026.webp"
 heroAlt: "Quantus Weekly: Mapeando el futuro cuántico-seguro"
 featured: false
-tags:
-  [
-    "post-quantum-cryptography",
-    "zero-knowledge-proofs",
-  ]
+tags: ["post-quantum-cryptography", "zero-knowledge-proofs"]
 ---
 
 Fra Mauro pasó años dentro de un monasterio cerca de Venecia dibujando un mapa de todo el mundo conocido.

@@ -8,12 +8,7 @@ pubDate: "2026-03-31"
 heroImage: "/blog/covers/weekly-update-03-31-2026.webp"
 heroAlt: "Quantus Weekly: POS móvil, PolyFri y dinero P2P"
 featured: false
-tags:
-  [
-    "wallet",
-    "zero-knowledge-proofs",
-    "privacy",
-  ]
+tags: ["wallet", "zero-knowledge-proofs", "privacy"]
 ---
 
 > Un sistema de dinero electrónico entre pares.

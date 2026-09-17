@@ -8,11 +8,7 @@ pubDate: "2026-01-21"
 heroImage: "/blog/covers/weekly-update-01-21-2026.webp"
 heroAlt: "Quantus Weekly: Нативные активы и квантовый риск"
 featured: false
-tags:
-  [
-    "bitcoin",
-    "post-quantum-cryptography",
-  ]
+tags: ["bitcoin", "post-quantum-cryptography"]
 ---
 
 Если вам интересно, почему золото растёт, а биткоин буксует — читайте дальше. Никакой загадки здесь нет.

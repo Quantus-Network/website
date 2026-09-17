@@ -8,12 +8,7 @@ pubDate: "2026-01-28"
 heroImage: "/blog/covers/weekly-update-01-28-2026.webp"
 heroAlt: "Quantus Weekly: Deniable RPCs und Neodyme-Audit"
 featured: false
-tags:
-  [
-    "privacy",
-    "protocol-security",
-    "ml-dsa",
-  ]
+tags: ["privacy", "protocol-security", "ml-dsa"]
 ---
 
 Ihre Wallet verpetzt Sie.

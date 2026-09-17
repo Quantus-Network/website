@@ -8,11 +8,7 @@ pubDate: "2026-01-21"
 heroImage: "/blog/covers/weekly-update-01-21-2026.webp"
 heroAlt: "Quantus Weekly: Native Assets und Quantenrisiko"
 featured: false
-tags:
-  [
-    "bitcoin",
-    "post-quantum-cryptography",
-  ]
+tags: ["bitcoin", "post-quantum-cryptography"]
 ---
 
 Wenn Sie sich fragen, warum Gold durch die Decke geht und Bitcoin kämpft – lesen Sie das hier. Es ist nicht mysteriös.

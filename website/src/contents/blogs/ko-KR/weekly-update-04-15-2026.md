@@ -7,14 +7,7 @@ pubDate: "2026-04-15"
 heroImage: "/blog/covers/weekly-update-04-15-2026.webp"
 heroAlt: "Quantus Weekly: Planck 테스트넷 채굴 보상"
 featured: false
-tags:
-  [
-    "bitcoin",
-    "pow",
-    "mining",
-    "wallet",
-    "zero-knowledge-proofs",
-  ]
+tags: ["bitcoin", "pow", "mining", "wallet", "zero-knowledge-proofs"]
 ---
 
 초기 해시레이트가 중요합니다.

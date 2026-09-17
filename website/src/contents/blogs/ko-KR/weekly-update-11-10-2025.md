@@ -7,10 +7,7 @@ pubDate: "2025-11-10"
 heroImage: "/blog/covers/weekly-update-11-10-2025.webp"
 heroAlt: "Quantus 위클리: Dirac 테스트넷과 격자 암호 감사"
 featured: false
-tags:
-  [
-    "pow",
-  ]
+tags: ["pow"]
 ---
 
 이번 주 팀은 Dirac 테스트넷을 출시하여 PoW 알고리즘과 격자 암호 라이브러리 qp-rusty-crystals의 체인 전반 업데이트를 마무리했습니다. 이 핵심 라이브러리는 현재 외부 감사 중이며 상수 시간(constant-time) 서명을 포함합니다. 업데이트는 모바일 지갑과 libp2p에 통합되었습니다.

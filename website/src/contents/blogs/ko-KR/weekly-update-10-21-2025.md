@@ -7,12 +7,7 @@ pubDate: "2025-10-21"
 heroImage: "/blog/covers/weekly-update-10-21-2025.webp"
 heroAlt: "Quantus 위클리: Poseidon2 게이트와 거버넌스"
 featured: false
-tags:
-  [
-    "governance",
-    "mining",
-    "protocol-security",
-  ]
+tags: ["governance", "mining", "protocol-security"]
 ---
 
 ## 제품 및 개발 뉴스

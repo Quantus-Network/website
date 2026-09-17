@@ -8,13 +8,7 @@ heroImage: "/blog/covers/weekly-update-05-13-2026.webp"
 heroAlt: "Quantus Weekly: एक न्यायसंगत Launch"
 featured: false
 tags:
-  [
-    "bitcoin",
-    "mining",
-    "zero-knowledge-proofs",
-    "protocol-security",
-    "wallet",
-  ]
+  ["bitcoin", "mining", "zero-knowledge-proofs", "protocol-security", "wallet"]
 ---
 
 शुरुआती Bitcoin miners laptop पर रोज़ हज़ारों BTC mine कर सकते थे।

@@ -8,12 +8,7 @@ pubDate: "2025-10-21"
 heroImage: "/blog/covers/weekly-update-10-21-2025.webp"
 heroAlt: "Quantus Mingguan: Gate Poseidon2 dan Governance"
 featured: false
-tags:
-  [
-    "governance",
-    "mining",
-    "protocol-security",
-  ]
+tags: ["governance", "mining", "protocol-security"]
 ---
 
 ## Berita Produk & Pengembangan

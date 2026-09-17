@@ -7,14 +7,7 @@ pubDate: "2026-03-07"
 heroImage: "/blog/covers/weekly-update-03-07-2026.webp"
 heroAlt: "Quantus Weekly: Wormhole ट्रांज़ैक्शन"
 featured: false
-tags:
-  [
-    "wormhole",
-    "zero-knowledge-proofs",
-    "privacy",
-    "mining",
-    "wallet",
-  ]
+tags: ["wormhole", "zero-knowledge-proofs", "privacy", "mining", "wallet"]
 ---
 
 आप coins को एक unspendable address पर burn करते हैं।

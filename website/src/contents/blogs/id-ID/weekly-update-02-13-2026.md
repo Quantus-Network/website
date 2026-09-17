@@ -7,11 +7,7 @@ pubDate: "2026-02-13"
 heroImage: "/blog/covers/weekly-update-02-13-2026.webp"
 heroAlt: "Quantus Weekly: Memetakan Masa Depan Quantum-Secure"
 featured: false
-tags:
-  [
-    "post-quantum-cryptography",
-    "zero-knowledge-proofs",
-  ]
+tags: ["post-quantum-cryptography", "zero-knowledge-proofs"]
 ---
 
 Fra Mauro menghabiskan bertahun-tahun di biara dekat Venesia menggambar peta seluruh dunia yang dikenal.

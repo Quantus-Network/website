@@ -7,12 +7,7 @@ pubDate: "2026-01-13"
 heroImage: "/blog/covers/weekly-update-01-13-2026.webp"
 heroAlt: "Quantus 위클리: Dilithium 임계값 서명"
 featured: false
-tags:
-  [
-    "post-quantum-cryptography",
-    "ml-dsa",
-    "zero-knowledge-proofs",
-  ]
+tags: ["post-quantum-cryptography", "ml-dsa", "zero-knowledge-proofs"]
 ---
 
 권력과 권한은 여러 당사자에게 나뉩니다. 분산 조정.

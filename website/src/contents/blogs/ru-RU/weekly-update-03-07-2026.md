@@ -7,14 +7,7 @@ pubDate: "2026-03-07"
 heroImage: "/blog/covers/weekly-update-03-07-2026.webp"
 heroAlt: "Quantus Weekly: Wormhole-транзакции"
 featured: false
-tags:
-  [
-    "wormhole",
-    "zero-knowledge-proofs",
-    "privacy",
-    "mining",
-    "wallet",
-  ]
+tags: ["wormhole", "zero-knowledge-proofs", "privacy", "mining", "wallet"]
 ---
 
 Вы сжигаете монеты на нетратимый адрес.

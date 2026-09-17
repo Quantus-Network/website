@@ -7,11 +7,7 @@ pubDate: "2026-02-13"
 heroImage: "/blog/covers/weekly-update-02-13-2026.webp"
 heroAlt: "Quantus 위클리: 양자 보안 미래 지도 그리기"
 featured: false
-tags:
-  [
-    "post-quantum-cryptography",
-    "zero-knowledge-proofs",
-  ]
+tags: ["post-quantum-cryptography", "zero-knowledge-proofs"]
 ---
 
 Fra Mauro는 베네치아 근처 수도원에서 알려진 세계 전체 지도를 그리는 데 수년을 보냈습니다.

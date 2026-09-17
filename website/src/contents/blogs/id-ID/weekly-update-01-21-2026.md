@@ -7,11 +7,7 @@ pubDate: "2026-01-21"
 heroImage: "/blog/covers/weekly-update-01-21-2026.webp"
 heroAlt: "Quantus Weekly: Aset Native dan Risiko Kuantum"
 featured: false
-tags:
-  [
-    "bitcoin",
-    "post-quantum-cryptography",
-  ]
+tags: ["bitcoin", "post-quantum-cryptography"]
 ---
 
 Kalau Anda penasaran kenapa emas melesat dan Bitcoin tertekan, baca ini. Tidak ada misteri di baliknya.

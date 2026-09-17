@@ -7,13 +7,7 @@ pubDate: "2025-12-15"
 heroImage: "/blog/covers/weekly-update-12-15-2025.webp"
 heroAlt: "Quantus Weekly: avance GPU y refactor ZK"
 featured: false
-tags:
-  [
-    "mining",
-    "zero-knowledge-proofs",
-    "tokenomics",
-    "wallet",
-  ]
+tags: ["mining", "zero-knowledge-proofs", "tokenomics", "wallet"]
 ---
 
 Esta semana el equipo logró un avance en el rendimiento de minería. Nuestro nuevo minero GPU ahora corre ~9x más rápido que la versión CPU.

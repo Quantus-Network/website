@@ -7,14 +7,7 @@ pubDate: "2026-03-07"
 heroImage: "/blog/covers/weekly-update-03-07-2026.webp"
 heroAlt: "Quantus Weekly: 웜홀 트랜잭션"
 featured: false
-tags:
-  [
-    "wormhole",
-    "zero-knowledge-proofs",
-    "privacy",
-    "mining",
-    "wallet",
-  ]
+tags: ["wormhole", "zero-knowledge-proofs", "privacy", "mining", "wallet"]
 ---
 
 코인을 사용 불가능한 주소로 소각합니다.

@@ -7,11 +7,7 @@ pubDate: "2026-01-21"
 heroImage: "/blog/covers/weekly-update-01-21-2026.webp"
 heroAlt: "Quantus Weekly: Native Assets और Quantum Risk"
 featured: false
-tags:
-  [
-    "bitcoin",
-    "post-quantum-cryptography",
-  ]
+tags: ["bitcoin", "post-quantum-cryptography"]
 ---
 
 अगर आप सोच रहे हैं कि Gold क्यों rip कर रहा है और Bitcoin struggle कर रहा है, तो इसे पढ़ें। इसमें कुछ भी mysterious नहीं है।

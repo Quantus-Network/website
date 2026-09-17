@@ -7,12 +7,7 @@ pubDate: "2026-01-13"
 heroImage: "/blog/covers/weekly-update-01-13-2026.webp"
 heroAlt: "Quantus Weekly: Dilithium Threshold हस्ताक्षर"
 featured: false
-tags:
-  [
-    "post-quantum-cryptography",
-    "ml-dsa",
-    "zero-knowledge-proofs",
-  ]
+tags: ["post-quantum-cryptography", "ml-dsa", "zero-knowledge-proofs"]
 ---
 
 शक्ति और अधिकार कई पक्षों के बीच विभाजित। वितरित समन्वय।

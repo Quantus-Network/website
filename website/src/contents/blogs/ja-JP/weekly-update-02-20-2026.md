@@ -7,12 +7,7 @@ pubDate: "2026-02-20"
 heroImage: "/blog/covers/weekly-update-02-20-2026.webp"
 heroAlt: "Quantus Weekly: オープンリサーチとPQC標準"
 featured: false
-tags:
-  [
-    "post-quantum-cryptography",
-    "zero-knowledge-proofs",
-    "wallet",
-  ]
+tags: ["post-quantum-cryptography", "zero-knowledge-proofs", "wallet"]
 ---
 
 ポスト量子暗号は新しすぎて、閉ざされたドアの裏でブロックチェーンに載せるべきではありません。

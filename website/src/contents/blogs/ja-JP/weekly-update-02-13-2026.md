@@ -7,11 +7,7 @@ pubDate: "2026-02-13"
 heroImage: "/blog/covers/weekly-update-02-13-2026.webp"
 heroAlt: "Quantus Weekly: 量子耐性の未来を描く"
 featured: false
-tags:
-  [
-    "post-quantum-cryptography",
-    "zero-knowledge-proofs",
-  ]
+tags: ["post-quantum-cryptography", "zero-knowledge-proofs"]
 ---
 
 フラ・マウロはヴェネツィア近郊の修道院で何年もかけ、当時知られていた全世界の地図を描きました。

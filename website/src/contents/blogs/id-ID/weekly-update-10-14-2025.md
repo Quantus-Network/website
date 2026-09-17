@@ -8,10 +8,7 @@ pubDate: "2025-10-14"
 heroImage: "/blog/covers/weekly-update-10-14-2025.webp"
 heroAlt: "Quantus Mingguan: Poseidon2 dan Podcast Liberland"
 featured: false
-tags:
-  [
-    "post-quantum-cryptography",
-  ]
+tags: ["post-quantum-cryptography"]
 ---
 
 ## Berita Produk & Pengembangan

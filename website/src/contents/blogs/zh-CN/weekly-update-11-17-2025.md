@@ -7,14 +7,7 @@ pubDate: "2025-11-17"
 heroImage: "/blog/covers/weekly-update-11-17-2025.webp"
 heroAlt: "Quantus 每周动态：PoW 审计完成与 Dirac 测试网上线"
 featured: false
-tags:
-  [
-    "protocol-security",
-    "pow",
-    "zero-knowledge-proofs",
-    "wallet",
-    "mining",
-  ]
+tags: ["protocol-security", "pow", "zero-knowledge-proofs", "wallet", "mining"]
 ---
 
 本周，我们完成了 Equilibrium 对我们工作量证明 (PoW) 算法和 Poseidon 哈希函数的审计，并向各大应用商店发布了更新后的应用。

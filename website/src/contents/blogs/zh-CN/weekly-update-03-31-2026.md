@@ -7,12 +7,7 @@ pubDate: "2026-03-31"
 heroImage: "/blog/covers/weekly-update-03-31-2026.webp"
 heroAlt: "Quantus 每周动态：POS 模式与点对点电子现金"
 featured: false
-tags:
-  [
-    "wallet",
-    "zero-knowledge-proofs",
-    "privacy",
-  ]
+tags: ["wallet", "zero-knowledge-proofs", "privacy"]
 ---
 
 > 点对点电子现金系统。

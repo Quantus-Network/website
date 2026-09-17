@@ -7,10 +7,7 @@ pubDate: "2025-10-14"
 heroImage: "/blog/covers/weekly-update-10-14-2025.webp"
 heroAlt: "Quantus Weekly: Poseidon2とLiberlandポッドキャスト"
 featured: false
-tags:
-  [
-    "post-quantum-cryptography",
-  ]
+tags: ["post-quantum-cryptography"]
 ---
 
 ## Product & Development News

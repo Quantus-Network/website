@@ -7,12 +7,7 @@ pubDate: "2026-02-20"
 heroImage: "/blog/covers/weekly-update-02-20-2026.webp"
 heroAlt: "Quantus 위클리: 공개 연구와 포스트퀀텀 표준"
 featured: false
-tags:
-  [
-    "post-quantum-cryptography",
-    "zero-knowledge-proofs",
-    "wallet",
-  ]
+tags: ["post-quantum-cryptography", "zero-knowledge-proofs", "wallet"]
 ---
 
 포스트퀀텀 암호학은 너무 새로워서, 닫힌 문 뒤에서만 블록체인에 실어 출시할 수 있는 분야가 아닙니다.

@@ -8,14 +8,7 @@ pubDate: "2026-03-07"
 heroImage: "/blog/covers/weekly-update-03-07-2026.webp"
 heroAlt: "Quantus Weekly: Transacciones Wormhole"
 featured: false
-tags:
-  [
-    "wormhole",
-    "zero-knowledge-proofs",
-    "privacy",
-    "mining",
-    "wallet",
-  ]
+tags: ["wormhole", "zero-knowledge-proofs", "privacy", "mining", "wallet"]
 ---
 
 Quemas monedas en una dirección que no se puede gastar.

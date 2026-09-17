@@ -7,13 +7,7 @@ pubDate: "2025-12-15"
 heroImage: "/blog/covers/weekly-update-12-15-2025.webp"
 heroAlt: "Quantus 위클리: GPU 채굴 혁신과 ZK 리팩토링"
 featured: false
-tags:
-  [
-    "mining",
-    "zero-knowledge-proofs",
-    "tokenomics",
-    "wallet",
-  ]
+tags: ["mining", "zero-knowledge-proofs", "tokenomics", "wallet"]
 ---
 
 이번 주 팀은 채굴 성능에서 획기적 진전을 이뤘습니다. 새 GPU 마이너는 CPU 버전보다 약 9배 빠르게 실행됩니다.

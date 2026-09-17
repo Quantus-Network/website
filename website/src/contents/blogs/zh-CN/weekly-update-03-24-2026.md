@@ -7,12 +7,7 @@ pubDate: "2026-03-24"
 heroImage: "/blog/covers/weekly-update-03-24-2026.webp"
 heroAlt: "Quantus 每周动态：第二次减半，证明提速 4 倍"
 featured: false
-tags:
-  [
-    "zero-knowledge-proofs",
-    "privacy",
-    "wormhole",
-  ]
+tags: ["zero-knowledge-proofs", "privacy", "wormhole"]
 ---
 
 2 是一个特别的数。

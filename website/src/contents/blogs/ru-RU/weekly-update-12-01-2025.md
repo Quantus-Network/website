@@ -7,11 +7,7 @@ pubDate: "2025-12-01"
 heroImage: "/blog/covers/weekly-update-12-01-2025.webp"
 heroAlt: "Quantus Weekly: аудит решётки и интеграция Keystone"
 featured: false
-tags:
-  [
-    "wallet",
-    "protocol-security",
-  ]
+tags: ["wallet", "protocol-security"]
 ---
 
 На прошлой неделе команда устранила все замечания, выявленные в ходе аудита нашей библиотеки решетчатой криптографии (rusty-crystals), и выпустила обновления сети для соответствия последней версии Polkadot SDK. Мы также внедрили поддержку адресов Quantus в прошивку аппаратного кошелька Keystone с открытым исходным кодом и разместили наш профиль на платформе анализа рынка «The Quantum Insider».

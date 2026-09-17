@@ -7,11 +7,7 @@ pubDate: "2026-01-21"
 heroImage: "/blog/covers/weekly-update-01-21-2026.webp"
 heroAlt: "Quantus 每周动态：原生资产与量子风险"
 featured: false
-tags:
-  [
-    "bitcoin",
-    "post-quantum-cryptography",
-  ]
+tags: ["bitcoin", "post-quantum-cryptography"]
 ---
 
 如果你想知道为什么黄金在狂飙、比特币却承压，读这篇就够了。没什么神秘的。

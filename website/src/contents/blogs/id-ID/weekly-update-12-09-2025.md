@@ -8,10 +8,7 @@ pubDate: "2025-12-09"
 heroImage: "/blog/covers/weekly-update-12-09-2025.webp"
 heroAlt: "Quantus Mingguan: Poseidon2 Lebih Cepat, Chain Lebih Ringan"
 featured: false
-tags:
-  [
-    "wormhole",
-  ]
+tags: ["wormhole"]
 ---
 
 Anda mungkin sudah melihat [wawancara ini dengan @EliBenSasson dan Scott Aaronson](https://x.com/Starknet/status/1995865652377395421)

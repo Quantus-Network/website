@@ -7,13 +7,7 @@ pubDate: "2025-12-15"
 heroImage: "/blog/covers/weekly-update-12-15-2025.webp"
 heroAlt: "Quantus Weekly: GPU-Mining-Durchbruch und ZK-Refactor"
 featured: false
-tags:
-  [
-    "mining",
-    "zero-knowledge-proofs",
-    "tokenomics",
-    "wallet",
-  ]
+tags: ["mining", "zero-knowledge-proofs", "tokenomics", "wallet"]
 ---
 
 Diese Woche hat das Team einen Durchbruch bei der Mining-Performance erzielt. Unser neuer GPU-Miner läuft jetzt etwa 9× schneller als die CPU-Version.

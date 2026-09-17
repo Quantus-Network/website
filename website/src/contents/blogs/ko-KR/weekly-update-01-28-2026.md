@@ -7,12 +7,7 @@ pubDate: "2026-01-28"
 heroImage: "/blog/covers/weekly-update-01-28-2026.webp"
 heroAlt: "Quantus 위클리: 디나이어블 RPC와 Neodyme 감사"
 featured: false
-tags:
-  [
-    "privacy",
-    "protocol-security",
-    "ml-dsa",
-  ]
+tags: ["privacy", "protocol-security", "ml-dsa"]
 ---
 
 지갑이 당신을 신고하고 있습니다.

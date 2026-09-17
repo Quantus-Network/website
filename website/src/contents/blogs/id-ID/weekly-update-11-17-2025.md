@@ -8,14 +8,7 @@ pubDate: "2025-11-17"
 heroImage: "/blog/covers/weekly-update-11-17-2025.webp"
 heroAlt: "Quantus Mingguan: Audit PoW Selesai dan Dirac Launch"
 featured: false
-tags:
-  [
-    "protocol-security",
-    "pow",
-    "zero-knowledge-proofs",
-    "wallet",
-    "mining",
-  ]
+tags: ["protocol-security", "pow", "zero-knowledge-proofs", "wallet", "mining"]
 ---
 
 Minggu ini tim menyelesaikan audit dari Equilibrium untuk algoritma proof of work dan fungsi hash Poseidon kami, serta merilis aplikasi yang diperbarui ke kedua app store.

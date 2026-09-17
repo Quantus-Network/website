@@ -8,10 +8,7 @@ pubDate: "2025-11-10"
 heroImage: "/blog/covers/weekly-update-11-10-2025.webp"
 heroAlt: "Quantus Weekly: Dirac Testnet और Lattice Audit"
 featured: false
-tags:
-  [
-    "pow",
-  ]
+tags: ["pow"]
 ---
 
 इस सप्ताह टीम ने Dirac testnet रिलीज़ किया, proof of work algorithm और lattice cryptography library qp-rusty-crystals में chain-wide अपडेट को finalize किया। यह core library अब external audit में है और constant-time signatures शामिल हैं। अपडेट अब mobile wallet और libp2p में integrate है।

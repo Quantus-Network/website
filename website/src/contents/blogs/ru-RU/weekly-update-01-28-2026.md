@@ -8,12 +8,7 @@ pubDate: "2026-01-28"
 heroImage: "/blog/covers/weekly-update-01-28-2026.webp"
 heroAlt: "Quantus Weekly: Отрицаемые RPC и аудит Neodyme"
 featured: false
-tags:
-  [
-    "privacy",
-    "protocol-security",
-    "ml-dsa",
-  ]
+tags: ["privacy", "protocol-security", "ml-dsa"]
 ---
 
 Ваш кошелёк на вас стучит.

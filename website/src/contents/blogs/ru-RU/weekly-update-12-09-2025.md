@@ -7,10 +7,7 @@ pubDate: "2025-12-09"
 heroImage: "/blog/covers/weekly-update-12-09-2025.webp"
 heroAlt: "Quantus Weekly: Poseidon2 ×8,3 и рефакторинг сети"
 featured: false
-tags:
-  [
-    "wormhole",
-  ]
+tags: ["wormhole"]
 ---
 
 Вы, вероятно, видели [это интервью с @EliBenSasson и Скоттом Ааронсоном](https://x.com/Starknet/status/1995865652377395421)

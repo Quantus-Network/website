@@ -7,11 +7,7 @@ pubDate: "2026-01-21"
 heroImage: "/blog/covers/weekly-update-01-21-2026.webp"
 heroAlt: "Quantus Weekly: ネイティブ資産と量子リスク"
 featured: false
-tags:
-  [
-    "bitcoin",
-    "post-quantum-cryptography",
-  ]
+tags: ["bitcoin", "post-quantum-cryptography"]
 ---
 
 金が急騰しビットコインが苦戦している理由が気になるなら、これを読んでください。神秘性などありません。

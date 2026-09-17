@@ -7,12 +7,7 @@ pubDate: "2025-12-22"
 heroImage: "/blog/covers/weekly-update-12-22-2025.webp"
 heroAlt: "Quantus Weekly: GPU Mining और Dirac Stress Testing"
 featured: false
-tags:
-  [
-    "mining",
-    "tokenomics",
-    "wallet",
-  ]
+tags: ["mining", "tokenomics", "wallet"]
 ---
 
 इस सप्ताह, हमने GPU support के साथ Quantus Miner v2.0.2 officially रिलीज़ किया और Dirac network का stress test सफलतापूर्वक किया।

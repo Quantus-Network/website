@@ -8,10 +8,7 @@ pubDate: "2025-12-09"
 heroImage: "/blog/covers/weekly-update-12-09-2025.webp"
 heroAlt: "Quantus Weekly: तेज़ Poseidon2, हल्की Chain"
 featured: false
-tags:
-  [
-    "wormhole",
-  ]
+tags: ["wormhole"]
 ---
 
 शायद आपने [@EliBenSasson और Scott Aaronson के साथ यह interview](https://x.com/Starknet/status/1995865652377395421) देखा

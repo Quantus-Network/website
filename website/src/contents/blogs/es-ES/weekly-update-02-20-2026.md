@@ -8,12 +8,7 @@ pubDate: "2026-02-20"
 heroImage: "/blog/covers/weekly-update-02-20-2026.webp"
 heroAlt: "Quantus Weekly: Investigación abierta y PQC"
 featured: false
-tags:
-  [
-    "post-quantum-cryptography",
-    "zero-knowledge-proofs",
-    "wallet",
-  ]
+tags: ["post-quantum-cryptography", "zero-knowledge-proofs", "wallet"]
 ---
 
 La criptografía poscuántica es demasiado nueva para lanzarla en una blockchain a puerta cerrada.

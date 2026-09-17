@@ -8,12 +8,7 @@ pubDate: "2025-10-21"
 heroImage: "/blog/covers/weekly-update-10-21-2025.webp"
 heroAlt: "Quantus Weekly: Poseidon2 Gate और Governance"
 featured: false
-tags:
-  [
-    "governance",
-    "mining",
-    "protocol-security",
-  ]
+tags: ["governance", "mining", "protocol-security"]
 ---
 
 ## उत्पाद और विकास समाचार

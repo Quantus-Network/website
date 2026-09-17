@@ -7,14 +7,7 @@ pubDate: "2026-04-15"
 heroImage: "/blog/covers/weekly-update-04-15-2026.webp"
 heroAlt: "Quantus 每周动态：Planck 测试网挖矿奖励"
 featured: false
-tags:
-  [
-    "bitcoin",
-    "pow",
-    "mining",
-    "wallet",
-    "zero-knowledge-proofs",
-  ]
+tags: ["bitcoin", "pow", "mining", "wallet", "zero-knowledge-proofs"]
 ---
 
 早期算力很重要。

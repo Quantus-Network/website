@@ -7,12 +7,7 @@ pubDate: "2026-03-24"
 heroImage: "/blog/covers/weekly-update-03-24-2026.webp"
 heroAlt: "Quantus Weekly: 두 번째 반감기, 4배 빠른 증명"
 featured: false
-tags:
-  [
-    "zero-knowledge-proofs",
-    "privacy",
-    "wormhole",
-  ]
+tags: ["zero-knowledge-proofs", "privacy", "wormhole"]
 ---
 
 2는 특별한 숫자입니다.

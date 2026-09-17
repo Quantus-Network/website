@@ -7,12 +7,7 @@ pubDate: "2026-01-13"
 heroImage: "/blog/covers/weekly-update-01-13-2026.webp"
 heroAlt: "Quantus 每周动态：Dilithium 阈值签名"
 featured: false
-tags:
-  [
-    "post-quantum-cryptography",
-    "ml-dsa",
-    "zero-knowledge-proofs",
-  ]
+tags: ["post-quantum-cryptography", "ml-dsa", "zero-knowledge-proofs"]
 ---
 
 权力与权威在多方之间分配。分布式协调。

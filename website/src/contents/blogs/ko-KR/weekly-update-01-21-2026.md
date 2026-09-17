@@ -7,11 +7,7 @@ pubDate: "2026-01-21"
 heroImage: "/blog/covers/weekly-update-01-21-2026.webp"
 heroAlt: "Quantus 위클리: 네이티브 자산과 양자 위험"
 featured: false
-tags:
-  [
-    "bitcoin",
-    "post-quantum-cryptography",
-  ]
+tags: ["bitcoin", "post-quantum-cryptography"]
 ---
 
 금값은 치솟는데 비트코인은 왜 버거운지 궁금하다면 이 글을 읽어보세요. 별다른 비밀은 없습니다.

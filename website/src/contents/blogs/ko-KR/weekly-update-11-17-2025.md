@@ -7,14 +7,7 @@ pubDate: "2025-11-17"
 heroImage: "/blog/covers/weekly-update-11-17-2025.webp"
 heroAlt: "Quantus 위클리: PoW 감사 완료와 Dirac 런칭"
 featured: false
-tags:
-  [
-    "protocol-security",
-    "pow",
-    "zero-knowledge-proofs",
-    "wallet",
-    "mining",
-  ]
+tags: ["protocol-security", "pow", "zero-knowledge-proofs", "wallet", "mining"]
 ---
 
 이번 주 팀은 Equilibrium의 PoW 알고리즘 및 Poseidon 해시 함수 감사를 완료했으며, 업데이트된 앱을 양대 앱 스토어에 출시했습니다.

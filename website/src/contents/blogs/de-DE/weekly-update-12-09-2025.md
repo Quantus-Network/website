@@ -8,10 +8,7 @@ pubDate: "2025-12-09"
 heroImage: "/blog/covers/weekly-update-12-09-2025.webp"
 heroAlt: "Quantus Weekly: Schnelleres Poseidon2, schlankere Chain"
 featured: false
-tags:
-  [
-    "wormhole",
-  ]
+tags: ["wormhole"]
 ---
 
 Ihr habt wahrscheinlich [dieses Interview mit @EliBenSasson und Scott Aaronson](https://x.com/Starknet/status/1995865652377395421) gesehen.
