@@ -1,0 +1,172 @@
+---
+/**
+ * Everything /launch renders. Shared by pages/launch.astro and
+ * pages/[lang]/launch.astro, which differ only in getStaticPaths.
+ *
+ * Section wrappers live here rather than in each section so the dividers
+ * between them can be styled in one place.
+ */
+import Layout from "@/components/layout/Layout.astro";
+import LogoLong from "@/assets/brand/logo-long.svg";
+import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+import { createMetadata } from "@/utils/create-metadata";
+import { JsonLdGraph } from "@/utils/build-json-ld";
+import { organizationJsonLd, websiteJsonLd } from "@/constants/default-jsonld";
+import LaunchField from "./LaunchField.astro";
+import HeroSection from "./HeroSection.astro";
+import CardsSection from "./CardsSection.astro";
+import MiningSection from "./MiningSection.astro";
+import WaysSection from "./WaysSection.astro";
+import SignupForm from "./SignupForm.astro";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
+
+const metadata = createMetadata({
+  title: t("launch.meta.title"),
+  description: t("launch.meta.description"),
+  pathname: Astro.url.pathname,
+});
+
+const jsonLd = JsonLdGraph({
+  "@context": "https://schema.org",
+  "@graph": [websiteJsonLd, organizationJsonLd],
+});
+---
+
+<Layout {...metadata} jsonLd={jsonLd} showChrome={false}>
+  <section id="launch">
+    <LaunchField />
+
+    <div class="launch-frame">
+      <div class="launch-cell">
+        <div class="launch-logo">
+          <LogoLong class="launch-logo-mark" />
+        </div>
+      </div>
+
+      <div class="launch-cell launch-cell-hero">
+        <HeroSection />
+      </div>
+
+      <div class="launch-cell">
+        <CardsSection />
+      </div>
+
+      <div class="launch-cell">
+        <p class="launch-bridge">{t("launch.bridge")}</p>
+      </div>
+
+      <div class="launch-cell">
+        <MiningSection />
+      </div>
+
+      <div class="launch-cell">
+        <WaysSection />
+      </div>
+
+      <div class="launch-cell">
+        <section class="launch-final">
+          <h2 class="launch-final-title">{t("launch.final.title")}</h2>
+          <SignupForm id="launch-final" />
+        </section>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  html,
+  body {
+    overscroll-behavior: none;
+  }
+
+  #launch {
+    /* Interaction colours from the design that have no site token. Kept
+       local to this page rather than added to colors.css. */
+    --launch-flare-hover: #e85c24;
+    --launch-flare-pressed: #ce4a18;
+    --launch-flare-bright: #ff834f;
+    --launch-cta-gradient: linear-gradient(180deg, #242220 0%, #181716 100%);
+    --launch-cta-gradient-hover: linear-gradient(
+      180deg,
+      #2c2926 0%,
+      #1c1b19 100%
+    );
+
+    position: relative;
+    font-family: var(--font-primary);
+    font-weight: 300;
+    color: var(--color-content);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* The field sits outside this frame; copy sits inside it. */
+  .launch-frame {
+    position: relative;
+    z-index: 2;
+    width: min(1160px, calc(100% - 152px));
+    margin: 0 auto;
+    border-left: 1px solid var(--color-content-10);
+    border-right: 1px solid var(--color-content-10);
+    background: var(--color-void);
+  }
+
+  .launch-cell {
+    position: relative;
+  }
+
+  /* Dividers stop at the frame edges. */
+  .launch-cell + .launch-cell::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--color-content-10);
+  }
+
+  /* Lets the field show faintly behind the hero. */
+  .launch-cell-hero {
+    background: color-mix(in srgb, var(--color-void) 60%, transparent);
+  }
+
+  .launch-logo {
+    padding: 48px 0 44px;
+    text-align: center;
+  }
+
+  .launch-logo-mark {
+    display: inline-block;
+    width: clamp(112px, 12vw, 146px);
+    height: auto;
+  }
+
+  .launch-bridge {
+    margin: 0;
+    padding: 92px 24px;
+    font-size: clamp(24px, 2.6vw, 34px);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    text-align: center;
+  }
+
+  .launch-final {
+    padding: 120px 24px 132px;
+    text-align: center;
+  }
+
+  .launch-final-title {
+    margin: 0 0 44px;
+    font-size: clamp(30px, 3.6vw, 48px);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+  }
+
+  @media (max-width: 768px) {
+    .launch-frame {
+      width: calc(100% - 28px);
+    }
+  }
+</style>

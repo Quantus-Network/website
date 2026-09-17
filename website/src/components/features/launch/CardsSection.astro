@@ -1,0 +1,65 @@
+---
+import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
+
+const CARDS = ["quantum_secure", "encrypted", "sound_money"] as const;
+---
+
+<div class="launch-cards">
+  {
+    CARDS.map((card) => (
+      <div class="launch-card">
+        <h3 class="launch-card-title">{t(`launch.cards.${card}.title`)}</h3>
+        <p class="launch-card-body">{t(`launch.cards.${card}.body`)}</p>
+      </div>
+    ))
+  }
+</div>
+
+<style>
+  .launch-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .launch-card {
+    padding: 56px 40px;
+    border-left: 1px solid var(--color-content-10);
+  }
+
+  .launch-card:first-child {
+    border-left: none;
+  }
+
+  .launch-card-title {
+    margin: 0 0 16px;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: -0.015em;
+  }
+
+  .launch-card-body {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.45;
+    color: var(--color-content-70);
+  }
+
+  @media (max-width: 768px) {
+    .launch-cards {
+      grid-template-columns: 1fr;
+    }
+
+    .launch-card {
+      padding: 36px 28px;
+      border-left: none;
+      border-top: 1px solid var(--color-content-10);
+    }
+
+    .launch-card:first-child {
+      border-top: none;
+    }
+  }
+</style>
