@@ -858,29 +858,54 @@
       "description": "量子セキュアな暗号化通貨。供給上限2,100万、Proof of Work。ローンチ情報を受け取る。"
     },
     "hero": {
-      "eyebrow": "量子セキュアな暗号化通貨"
+      "eyebrow": "量子セキュアな暗号化通貨",
+      "sub": "メインネットは稼働中。次はスワップです。いち早く通知を受け取りましょう。"
     },
     "signup": {
-      "headline": "ローンチ情報を受け取る。",
-      "email_placeholder": "your@email.com",
+      "email_placeholder": "メールアドレスを入力",
       "email_aria": "メールアドレス",
       "submit_label": "通知を受け取る",
       "error_message": "有効なメールアドレスを入力してください。",
+      "micro": "スワップ開始時にメールを1通だけお送りします。それ以外は送りません。",
       "success": {
         "headline": "登録が完了しました。",
-        "sub": "ローンチ情報をメールでお届けします。"
+        "sub": "誰よりも早くお知らせします。"
       }
     },
-    "facts": {
-      "supply": {
-        "label": "供給上限",
-        "value": "21,000,000"
+    "cards": {
+      "quantum_secure": {
+        "title": "量子セキュア",
+        "body": "量子コンピュータにも破られないお金。ジェネシスからポスト量子。"
       },
-      "consensus": {
-        "label": "PROOF OF WORK"
+      "encrypted": {
+        "title": "暗号化",
+        "body": "資金は公開にも非公開にもできます。"
+      },
+      "sound_money": {
+        "title": "健全なお金",
+        "body": "供給上限2,100万 $QTC。プルーフ・オブ・ワーク。ビットコインが始めたことを完成させる。"
       }
     },
-    "mining_cta": "マイニングガイドを読む"
+    "bridge": "ピアツーピアの暗号化キャッシュ。",
+    "mining": {
+      "title": "マイニングを始める",
+      "body": "計算資源を $QTC に変えましょう。",
+      "cta": "LLMにマイニングガイドを読ませる"
+    },
+    "wallet": {
+      "title": "$QTC でスワップ、保有、支払い。",
+      "body": "ポスト量子時代のためのウォレット。iOS と Android に対応。",
+      "ios": "iOS",
+      "android": "Android"
+    },
+    "community": {
+      "title": "会話に参加しましょう。",
+      "body": "Quantus を開発・マイニングしている人たちは、まずここで話しています。",
+      "telegram": "Telegram"
+    },
+    "final": {
+      "title": "スワップ開始をいち早く知る。"
+    }
   },
   "blog": {
     "title": "Quantusからの最新ニュース。",

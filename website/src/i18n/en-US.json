@@ -854,29 +854,54 @@
       "description": "Quantum secure encrypted money. 21 million supply cap, Proof of Work. Get launch details."
     },
     "hero": {
-      "eyebrow": "Quantum Secure Encrypted Money"
+      "eyebrow": "Quantum Secure Encrypted Money",
+      "sub": "Mainnet is live. Swaps are next. Get notified first."
     },
     "signup": {
-      "headline": "Get launch details.",
-      "email_placeholder": "your@email.com",
+      "email_placeholder": "Enter your email",
       "email_aria": "Email address",
-      "submit_label": "NOTIFY ME",
+      "submit_label": "Notify me",
       "error_message": "Please enter a valid email address.",
+      "micro": "One email when swaps go live. Nothing else.",
       "success": {
         "headline": "You're on the list.",
-        "sub": "Launch details will land in your inbox."
+        "sub": "You'll hear before anyone else does."
       }
     },
-    "facts": {
-      "supply": {
-        "label": "SUPPLY CAP",
-        "value": "21,000,000"
+    "cards": {
+      "quantum_secure": {
+        "title": "Quantum secure",
+        "body": "Money quantum computers can't break. Post-quantum from genesis."
       },
-      "consensus": {
-        "label": "PROOF OF WORK"
+      "encrypted": {
+        "title": "Encrypted",
+        "body": "Keep your funds transparent or hidden."
+      },
+      "sound_money": {
+        "title": "Sound money",
+        "body": "21,000,000 $QTC supply cap. Proof-of-work. Finishing what Bitcoin started."
       }
     },
-    "mining_cta": "READ THE MINING GUIDE"
+    "bridge": "Peer-to-peer encrypted cash.",
+    "mining": {
+      "title": "Start mining",
+      "body": "Turn your compute into $QTC.",
+      "cta": "Point your LLM at the mining guide"
+    },
+    "wallet": {
+      "title": "Swap, stack, and pay with $QTC.",
+      "body": "A wallet built for the post-quantum future. iOS and Android.",
+      "ios": "iOS",
+      "android": "Android"
+    },
+    "community": {
+      "title": "Join the conversation.",
+      "body": "The people building and mining Quantus talk here first.",
+      "telegram": "Telegram"
+    },
+    "final": {
+      "title": "Be first when swaps go live."
+    }
   },
   "blog": {
     "title": "The latest news from the Quantus.",

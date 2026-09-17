@@ -1,0 +1,112 @@
+---
+import { createTranslator, getLocaleFromUrl } from "@/utils/i18n";
+import { APP_LINKS } from "@/constants/app-links";
+import { SITE_SOCIALS } from "@/constants/site-socials";
+
+const locale = getLocaleFromUrl(Astro.url.pathname);
+const t = await createTranslator(locale);
+---
+
+<div class="launch-ways">
+  <div class="launch-way">
+    <h3 class="launch-way-title">{t("launch.wallet.title")}</h3>
+    <p class="launch-way-body">{t("launch.wallet.body")}</p>
+    <a
+      class="launch-way-link"
+      href={APP_LINKS.ios}
+      target="_blank"
+      rel="noopener"
+      data-track="wallet_store_click"
+      data-track-store="ios"
+      data-track-cta-location="launch"
+    >
+      {t("launch.wallet.ios")}
+    </a>
+    <a
+      class="launch-way-link"
+      href={APP_LINKS.android}
+      target="_blank"
+      rel="noopener"
+      data-track="wallet_store_click"
+      data-track-store="android"
+      data-track-cta-location="launch"
+    >
+      {t("launch.wallet.android")}
+    </a>
+  </div>
+
+  <div class="launch-way">
+    <h3 class="launch-way-title">{t("launch.community.title")}</h3>
+    <p class="launch-way-body">{t("launch.community.body")}</p>
+    <a
+      class="launch-way-link"
+      href={SITE_SOCIALS.telegram}
+      target="_blank"
+      rel="noopener"
+      data-track="community_click"
+      data-track-channel="telegram"
+      data-track-cta-location="launch"
+    >
+      {t("launch.community.telegram")}
+    </a>
+  </div>
+</div>
+
+<style>
+  .launch-ways {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .launch-way {
+    padding: 52px 40px;
+    border-left: 1px solid var(--color-content-10);
+  }
+
+  .launch-way:first-child {
+    border-left: none;
+  }
+
+  .launch-way-title {
+    margin: 0 0 12px;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+
+  .launch-way-body {
+    margin: 0 0 20px;
+    font-size: 14px;
+    line-height: 1.45;
+    color: var(--color-content-70);
+  }
+
+  .launch-way-link {
+    margin-right: 22px;
+    padding-bottom: 2px;
+    border-bottom: 1px solid var(--color-flare-30);
+    font-size: 14px;
+    color: var(--color-flare);
+    text-decoration: none;
+  }
+
+  .launch-way-link:hover {
+    border-bottom-color: var(--color-flare);
+  }
+
+  @media (max-width: 768px) {
+    .launch-ways {
+      grid-template-columns: 1fr;
+    }
+
+    .launch-way {
+      padding: 40px 28px;
+      border-left: none;
+      border-top: 1px solid var(--color-content-10);
+    }
+
+    .launch-way:first-child {
+      border-top: none;
+    }
+  }
+</style>

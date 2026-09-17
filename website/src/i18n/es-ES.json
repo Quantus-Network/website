@@ -858,29 +858,54 @@
       "description": "Dinero encriptado seguro cuánticamente. Suministro máximo de 21 millones, Proof of Work. Reciba los detalles del lanzamiento."
     },
     "hero": {
-      "eyebrow": "Dinero Encriptado Seguro Cuánticamente"
+      "eyebrow": "Dinero Encriptado Seguro Cuánticamente",
+      "sub": "La mainnet ya está activa. Los swaps son lo siguiente. Reciba el aviso antes que nadie."
     },
     "signup": {
-      "headline": "Reciba los detalles del lanzamiento.",
-      "email_placeholder": "your@email.com",
+      "email_placeholder": "Introduzca su correo electrónico",
       "email_aria": "Dirección de correo electrónico",
-      "submit_label": "AVÍSAME",
+      "submit_label": "Avísame",
       "error_message": "Por favor, introduzca una dirección de correo electrónico válida.",
+      "micro": "Un correo cuando los swaps estén activos. Nada más.",
       "success": {
         "headline": "Está en la lista.",
-        "sub": "Los detalles del lanzamiento llegarán a su bandeja de entrada."
+        "sub": "Se enterará antes que nadie."
       }
     },
-    "facts": {
-      "supply": {
-        "label": "SUMINISTRO MÁXIMO",
-        "value": "21,000,000"
+    "cards": {
+      "quantum_secure": {
+        "title": "Seguro cuánticamente",
+        "body": "Dinero que los ordenadores cuánticos no pueden romper. Poscuántico desde el génesis."
       },
-      "consensus": {
-        "label": "PROOF OF WORK"
+      "encrypted": {
+        "title": "Encriptado",
+        "body": "Mantenga sus fondos transparentes u ocultos."
+      },
+      "sound_money": {
+        "title": "Dinero sólido",
+        "body": "Suministro máximo de 21.000.000 $QTC. Proof-of-work. Terminando lo que Bitcoin empezó."
       }
     },
-    "mining_cta": "LEER LA GUÍA DE MINERÍA"
+    "bridge": "Efectivo encriptado entre pares.",
+    "mining": {
+      "title": "Empiece a minar",
+      "body": "Convierta su capacidad de cómputo en $QTC.",
+      "cta": "Pase la guía de minería a su LLM"
+    },
+    "wallet": {
+      "title": "Intercambie, acumule y pague con $QTC.",
+      "body": "Una billetera creada para el futuro poscuántico. iOS y Android.",
+      "ios": "iOS",
+      "android": "Android"
+    },
+    "community": {
+      "title": "Únase a la conversación.",
+      "body": "Quienes construyen y minan Quantus hablan aquí primero.",
+      "telegram": "Telegram"
+    },
+    "final": {
+      "title": "Sea el primero en saber cuándo llegan los swaps."
+    }
   },
   "blog": {
     "title": "Las últimas noticias de Quantus.",

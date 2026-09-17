@@ -854,29 +854,54 @@
       "description": "Uang terenkripsi aman secara kuantum. Batas pasokan 21 juta, Proof of Work. Dapatkan detail peluncuran."
     },
     "hero": {
-      "eyebrow": "Uang Terenkripsi Aman Secara Kuantum"
+      "eyebrow": "Uang Terenkripsi Aman Secara Kuantum",
+      "sub": "Mainnet sudah aktif. Berikutnya swap. Dapatkan notifikasi lebih dulu."
     },
     "signup": {
-      "headline": "Dapatkan detail peluncuran.",
-      "email_placeholder": "your@email.com",
+      "email_placeholder": "Masukkan email Anda",
       "email_aria": "Alamat email",
-      "submit_label": "BERI TAHU SAYA",
+      "submit_label": "Beri tahu saya",
       "error_message": "Harap masukkan alamat email yang valid.",
+      "micro": "Satu email saat swap aktif. Tidak lebih.",
       "success": {
         "headline": "Anda sudah terdaftar.",
-        "sub": "Detail peluncuran akan dikirim ke kotak masuk Anda."
+        "sub": "Anda akan tahu sebelum orang lain."
       }
     },
-    "facts": {
-      "supply": {
-        "label": "BATAS PASOKAN",
-        "value": "21,000,000"
+    "cards": {
+      "quantum_secure": {
+        "title": "Aman secara kuantum",
+        "body": "Uang yang tidak dapat dibobol komputer kuantum. Pascakuantum sejak genesis."
       },
-      "consensus": {
-        "label": "PROOF OF WORK"
+      "encrypted": {
+        "title": "Terenkripsi",
+        "body": "Simpan dana Anda secara transparan atau tersembunyi."
+      },
+      "sound_money": {
+        "title": "Uang yang sehat",
+        "body": "Batas pasokan 21.000.000 $QTC. Proof-of-work. Menuntaskan apa yang dimulai Bitcoin."
       }
     },
-    "mining_cta": "BACA PANDUAN MINING"
+    "bridge": "Uang tunai terenkripsi peer-to-peer.",
+    "mining": {
+      "title": "Mulai menambang",
+      "body": "Ubah daya komputasi Anda menjadi $QTC.",
+      "cta": "Arahkan LLM Anda ke panduan mining"
+    },
+    "wallet": {
+      "title": "Swap, simpan, dan bayar dengan $QTC.",
+      "body": "Dompet yang dibuat untuk masa depan pascakuantum. iOS dan Android.",
+      "ios": "iOS",
+      "android": "Android"
+    },
+    "community": {
+      "title": "Bergabung dalam percakapan.",
+      "body": "Orang-orang yang membangun dan menambang Quantus berdiskusi di sini lebih dulu.",
+      "telegram": "Telegram"
+    },
+    "final": {
+      "title": "Jadilah yang pertama tahu saat swap aktif."
+    }
   },
   "blog": {
     "title": "Berita terbaru dari Quantus.",

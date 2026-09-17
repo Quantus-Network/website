@@ -858,29 +858,54 @@
       "description": "Quantensicheres verschlüsseltes Geld. 21 Millionen Angebotsgrenze, Proof of Work. Erhalten Sie die Launch-Details."
     },
     "hero": {
-      "eyebrow": "Quantensicheres verschlüsseltes Geld"
+      "eyebrow": "Quantensicheres verschlüsseltes Geld",
+      "sub": "Das Mainnet ist live. Als Nächstes kommen Swaps. Erfahren Sie es zuerst."
     },
     "signup": {
-      "headline": "Launch-Details erhalten.",
-      "email_placeholder": "your@email.com",
+      "email_placeholder": "E-Mail-Adresse eingeben",
       "email_aria": "E-Mail-Adresse",
-      "submit_label": "BENACHRICHTIGEN",
+      "submit_label": "Benachrichtigen",
       "error_message": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+      "micro": "Eine E-Mail, wenn Swaps live gehen. Sonst nichts.",
       "success": {
         "headline": "Sie stehen auf der Liste.",
-        "sub": "Die Launch-Details kommen in Ihr Postfach."
+        "sub": "Sie erfahren es vor allen anderen."
       }
     },
-    "facts": {
-      "supply": {
-        "label": "ANGEBOTSGRENZE",
-        "value": "21,000,000"
+    "cards": {
+      "quantum_secure": {
+        "title": "Quantensicher",
+        "body": "Geld, das Quantencomputer nicht knacken können. Post-Quanten-sicher ab dem Genesis-Block."
       },
-      "consensus": {
-        "label": "PROOF OF WORK"
+      "encrypted": {
+        "title": "Verschlüsselt",
+        "body": "Halten Sie Ihre Guthaben transparent oder verborgen."
+      },
+      "sound_money": {
+        "title": "Solides Geld",
+        "body": "21.000.000 $QTC Angebotsgrenze. Proof-of-Work. Vollendet, was Bitcoin begonnen hat."
       }
     },
-    "mining_cta": "MINING-GUIDE LESEN"
+    "bridge": "Verschlüsseltes Peer-to-Peer-Bargeld.",
+    "mining": {
+      "title": "Mining starten",
+      "body": "Machen Sie Ihre Rechenleistung zu $QTC.",
+      "cta": "Geben Sie Ihrem LLM den Mining-Guide"
+    },
+    "wallet": {
+      "title": "Swappen, sparen und bezahlen mit $QTC.",
+      "body": "Eine Wallet für die Post-Quanten-Zukunft. iOS und Android.",
+      "ios": "iOS",
+      "android": "Android"
+    },
+    "community": {
+      "title": "Diskutieren Sie mit.",
+      "body": "Die Menschen, die Quantus bauen und minen, tauschen sich zuerst hier aus.",
+      "telegram": "Telegram"
+    },
+    "final": {
+      "title": "Erfahren Sie es zuerst, wenn Swaps live gehen."
+    }
   },
   "blog": {
     "title": "Die neuesten Nachrichten von Quantus.",
