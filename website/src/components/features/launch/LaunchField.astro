@@ -1,0 +1,49 @@
+---
+/**
+ * Fixed Chladni field behind the /launch frame. Driven by
+ * scripts/launch/field.ts, which is independent of Home's hero field.
+ */
+---
+
+<div class="launch-field" aria-hidden="true">
+  <pre id="launch-field" class="launch-field-glyphs"></pre>
+</div>
+
+<style>
+  .launch-field {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .launch-field-glyphs {
+    margin: 0;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    line-height: 1.05;
+    letter-spacing: 0.06em;
+    white-space: pre;
+    color: var(--color-flare);
+    opacity: 0.3;
+    will-change: transform;
+  }
+
+  @media (max-width: 768px) {
+    .launch-field-glyphs {
+      opacity: 0.13;
+    }
+  }
+</style>
+
+<script>
+  import { initLaunchField } from "@/scripts/launch/field";
+
+  const glyphs = document.getElementById("launch-field");
+  if (glyphs) initLaunchField(glyphs);
+</script>
