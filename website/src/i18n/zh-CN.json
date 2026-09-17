@@ -847,29 +847,54 @@
       "description": "量子安全加密货币。供应上限 2,100 万，工作量证明（Proof of Work）。获取上线详情。"
     },
     "hero": {
-      "eyebrow": "量子安全加密货币"
+      "eyebrow": "量子安全加密货币",
+      "sub": "主网已上线。接下来是兑换功能。抢先获取通知。"
     },
     "signup": {
-      "headline": "获取上线详情。",
-      "email_placeholder": "your@email.com",
+      "email_placeholder": "输入您的电子邮件",
       "email_aria": "电子邮件地址",
       "submit_label": "通知我",
       "error_message": "请输入有效的电子邮件地址。",
+      "micro": "兑换上线时只发一封邮件，别无其他。",
       "success": {
         "headline": "您已加入名单。",
-        "sub": "上线详情将发送至您的邮箱。"
+        "sub": "您将比任何人都更早知道。"
       }
     },
-    "facts": {
-      "supply": {
-        "label": "供应上限",
-        "value": "21,000,000"
+    "cards": {
+      "quantum_secure": {
+        "title": "量子安全",
+        "body": "量子计算机无法破解的货币。从创世起即抗量子。"
       },
-      "consensus": {
-        "label": "工作量证明"
+      "encrypted": {
+        "title": "加密",
+        "body": "资金可公开，也可隐藏。"
+      },
+      "sound_money": {
+        "title": "稳健货币",
+        "body": "供应上限 2,100 万 $QTC。工作量证明。完成比特币未竟之事。"
       }
     },
-    "mining_cta": "阅读挖矿指南"
+    "bridge": "点对点加密现金。",
+    "mining": {
+      "title": "开始挖矿",
+      "body": "将您的算力转化为 $QTC。",
+      "cta": "让您的 LLM 读取挖矿指南"
+    },
+    "wallet": {
+      "title": "使用 $QTC 兑换、持有和支付。",
+      "body": "为后量子时代打造的钱包。支持 iOS 和 Android。",
+      "ios": "iOS",
+      "android": "Android"
+    },
+    "community": {
+      "title": "加入对话。",
+      "body": "构建和挖掘 Quantus 的人们最先在这里交流。",
+      "telegram": "Telegram"
+    },
+    "final": {
+      "title": "兑换上线时，第一时间知道。"
+    }
   },
   "blog": {
     "title": "来自 Quantus 的最新消息。",
