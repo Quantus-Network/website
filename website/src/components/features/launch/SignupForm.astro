@@ -7,11 +7,9 @@ interface Props {
   id: string;
   /** Which waitlist these signups belong to. */
   source?: WaitlistSource;
-  /** Optional line under the field, hidden once signed up. */
-  note?: string;
 }
 
-const { id, source = WAITLIST_SOURCE.LAUNCH, note } = Astro.props;
+const { id, source = WAITLIST_SOURCE.LAUNCH } = Astro.props;
 
 const locale = getLocaleFromUrl(Astro.url.pathname);
 const t = await createTranslator(locale);
@@ -40,8 +38,6 @@ const t = await createTranslator(locale);
     <span class="launch-error-msg" id={`${id}-error`} data-signup-error>
       {t("launch.signup.error_message")}
     </span>
-
-    {note && <p class="launch-note">{note}</p>}
   </form>
 
   {/* Receipt: the field becomes a confirmed row carrying the address. */}
@@ -170,14 +166,6 @@ const t = await createTranslator(locale);
     display: block;
   }
 
-  .launch-note {
-    margin: 20px 0 0;
-    font-size: 13px;
-    line-height: 1.5;
-    color: var(--color-content-55);
-    text-align: center;
-  }
-
   .launch-receipt {
     opacity: 0;
     transform: translateY(12px);
@@ -266,11 +254,6 @@ const t = await createTranslator(locale);
     .launch-submit {
       padding: 15px 18px;
       font-size: 13.5px;
-    }
-
-    .launch-note {
-      margin-top: 16px;
-      font-size: 12px;
     }
 
     .launch-receipt-row {

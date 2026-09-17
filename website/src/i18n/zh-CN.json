@@ -855,7 +855,6 @@
       "email_aria": "电子邮件地址",
       "submit_label": "通知我",
       "error_message": "请输入有效的电子邮件地址。",
-      "micro": "兑换上线时只发一封邮件，别无其他。",
       "success": {
         "headline": "您已加入名单。",
         "sub": "您将比任何人都更早知道。"
