@@ -1,21 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Кошелёк должен быть простым"
 description: "Еженедельное обновление: релиз Wallet v1.2.0, Treasury с мультисигом, обновления тестовой сети Heisenberg и улучшения производительности."
 pubDate: "2026-02-27"
 heroImage: "/blog/covers/weekly-update-02-27-2026.webp"
 heroAlt: "Quantus Weekly: Кошелёк должен быть простым"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "mobile-wallet",
-    "treasury",
-    "multisig",
-    "heisenberg-testnet",
-    "zk-proofs",
-    "performance",
-  ]
+tags: ["wallet", "zero-knowledge-proofs"]
 ---
 
 Каждый крупный криптокошелёк добавляет мусорные фичи, которые мне не нужны.

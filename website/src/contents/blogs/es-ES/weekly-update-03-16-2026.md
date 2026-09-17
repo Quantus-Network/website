@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: ML-DSA y Wormhole el doble de rápido"
 description: "Firmas ML-DSA 70 veces más grandes que Bitcoin, escaladas con agregación ZK. Pruebas wormhole el doble de rápidas, revisiones de seguridad y nodos testnet."
 
@@ -9,12 +10,10 @@ heroAlt: "Quantus Weekly: ML-DSA y Wormhole el doble de rápido"
 featured: false
 tags:
   [
-    "weekly-update",
-    "quantum-safe",
+    "post-quantum-cryptography",
     "ml-dsa",
-    "zk-proofs",
+    "zero-knowledge-proofs",
     "wormhole",
-    "scalability",
     "privacy",
   ]
 ---

@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: High-Security и защита от мошенничества"
 description: "High-security аккаунты с настраиваемыми таймлоками и опекунами, тестирование мультисига и новая функция возврата средств на этой неделе."
 
@@ -7,16 +8,7 @@ pubDate: "2026-02-04"
 heroImage: "/blog/covers/weekly-update-02-04-2026.webp"
 heroAlt: "Quantus Weekly: High-Security и защита от мошенничества"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "security",
-    "guardian",
-    "time-lock",
-    "fraud-prevention",
-    "multisig",
-    "plonky2",
-  ]
+tags: ["protocol-security"]
 ---
 
 По оценке Chainalysis, в 2025 году украли $17 млрд в крипте. Питч звучал как «будь своим банком». Вторая половина — «будь своей службой безопасности». Да, «швейцарский банковский счёт в кармане, но только для кибербезопасников» — всё ещё безумно круто. Но индустрия подставила обычных людей, которых рекнуло после того, как они перевели состояние onchain, даже не зная, что такое асимметричная криптография.

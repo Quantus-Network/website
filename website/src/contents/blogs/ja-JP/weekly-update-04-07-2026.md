@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Q-Day推定とオンスペンドリスク"
 description: "GoogleとOratomicがECC突破の量子ビット推定を大幅引き下げ。Bitcoinの10分ブロックが直面するオンスペンド攻撃と、Quantusの経済的自由リブランドを解説します。"
 pubDate: "2026-04-07"
@@ -8,15 +9,11 @@ heroAlt: "Quantus Weekly: Q-Day推定とオンスペンドリスク"
 featured: false
 tags:
   [
-    "weekly-update",
-    "quantum",
+    "quantum-computing",
     "bitcoin",
-    "post-quantum",
-    "ecc",
-    "zk-proofs",
-    "rebrand",
-    "infrastructure",
-    "mobile",
+    "post-quantum-cryptography",
+    "zero-knowledge-proofs",
+    "wallet",
   ]
 ---
 

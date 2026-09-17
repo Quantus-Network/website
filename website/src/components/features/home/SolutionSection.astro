@@ -86,9 +86,11 @@ const t = await createTranslator(locale);
               <span class="pillar-spec-label">
                 {t("home.solution.pillars.zk.specs.throughput.label")}
               </span><span class="pillar-spec-value">
-                {t("home.solution.pillars.zk.specs.throughput.value", {
-                  qtps: QTPS,
-                })}
+                {
+                  t("home.solution.pillars.zk.specs.throughput.value", {
+                    qtps: QTPS,
+                  })
+                }
               </span>
               >
             </div>

@@ -35,3 +35,19 @@ When appending, use the next `MEM-###` ID and this structure:
 - **Do instead:** Use **Quantus** only. When shortening meta titles, rewrite to stay within SEO length targets (MEM-001) without reintroducing “Network”.
 - **Context:** Especially `website/src/i18n/*.json` meta and UI strings; avoid the phrase in new copy
 - **Source:** user
+
+### MEM-003 — 2026-09-16
+
+- **Category:** content, blog
+- **Mistake:** Using `weekly-update` as a blog tag after it already exists as a category, so article pages still showed “Weekly Update” as a tag.
+- **Do instead:** Keep `weekly-update` as a **category only**. Never put a category id in frontmatter `tags`. Weekly-update author/Twitter defaults must key off `category`, not tags.
+- **Context:** Blog frontmatter, `BlogPost.astro` tag pills, `content.config.ts`, `resolve-blog-author.ts`
+- **Source:** user
+
+### MEM-004 — 2026-09-16
+
+- **Category:** content, blog
+- **Mistake:** Letting blog tags proliferate (PQC/quantum-safe/Dilithium/GPU mining/mobile wallet/security/audit, plus one-off names) instead of a small canonical set.
+- **Do instead:** Use only these tag ids: `q-day`, `quantum-computing`, `post-quantum-cryptography`, `cryptography`, `bitcoin`, `mining`, `pow`, `privacy`, `zero-knowledge-proofs`, `wallet`, `mainnet`, `ml-dsa`, `wormhole`, `protocol-security`, `governance`, `tokenomics`. Map aliases: Post-Quantum / PQC / Quantum-Safe / Quantum-Resistant → `post-quantum-cryptography`; ZK-Proofs → `zero-knowledge-proofs`; GPU Mining / miner / miner-app / gui-miner → `mining`; Mobile Wallet / hardware-wallet / mobile → `wallet`; Dilithium → `ml-dsa`; Security / Audit / Immunefi / bug-bounty → `protocol-security`; quantum → `quantum-computing`. Drop any other tag. Add `blog.tags.<id>` in every i18n file when adding an id to `BLOG_TAGS`. Schema must reject unknown tags rather than coercing them.
+- **Context:** `website/src/constants/blog-tags.ts`, blog frontmatter `tags`, `blog.tags` i18n, tag pages
+- **Source:** user

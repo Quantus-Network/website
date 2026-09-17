@@ -1,21 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: тестнет Dirac и аудит решётки qp-rusty"
 description: "Запущена тестовая сеть Dirac с обновлённым PoW и библиотекой qp-rusty-crystals: подписи с константным временем, внешний аудит и интеграция в мобильный кошелёк."
 pubDate: "2025-11-10"
 heroImage: "/blog/covers/weekly-update-11-10-2025.webp"
 heroAlt: "Quantus Weekly: тестнет Dirac и аудит решётки qp-rusty"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "dirac-testnet",
-    "lattice-cryptography",
-    "pow",
-    "libp2p",
-    "ghostdag",
-    "blue-green-deployment",
-  ]
+tags: ["pow"]
 ---
 
 На этой неделе команда запустила тестовую сеть Dirac, завершив обновление алгоритма Proof of Work и библиотеки решетчатой криптографии qp-rusty-crystals во всей сети. Эта основная библиотека сейчас проходит внешний аудит и включает подписи с константным временем выполнения. Обновление интегрировано в мобильный кошелек и libp2p.

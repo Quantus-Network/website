@@ -1,22 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus 위클리: 네이티브 자산과 양자 위험"
 description: "자본 시장이 비트코인에 양자 위험 프리미엄을 매기는 이유, Quantus의 네이티브 전용 자산 결정, Dilithium 임계값 서명과 ZK 집계 진행 상황을 이번 주에 정리합니다."
 pubDate: "2026-01-21"
 heroImage: "/blog/covers/weekly-update-01-21-2026.webp"
 heroAlt: "Quantus 위클리: 네이티브 자산과 양자 위험"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "bitcoin",
-    "quantum-safe",
-    "zk-aggregator",
-    "mpc",
-    "multisig",
-    "indexer",
-    "biohacking",
-  ]
+tags: ["bitcoin", "post-quantum-cryptography"]
 ---
 
 금값은 치솟는데 비트코인은 왜 버거운지 궁금하다면 이 글을 읽어보세요. 별다른 비밀은 없습니다.

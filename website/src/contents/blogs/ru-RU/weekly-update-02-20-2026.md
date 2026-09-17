@@ -1,21 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Открытые исследования и стандарт PQC"
 description: "Еженедельное обновление: запуск research.quantus.com, агрегация ZK-доказательств, слияние паллеты мультисига и обновления мобильного кошелька."
 pubDate: "2026-02-20"
 heroImage: "/blog/covers/weekly-update-02-20-2026.webp"
 heroAlt: "Quantus Weekly: Открытые исследования и стандарт PQC"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "research",
-    "post-quantum-cryptography",
-    "multisig",
-    "zk-proofs",
-    "mobile-wallet",
-    "notification-system",
-  ]
+tags: ["post-quantum-cryptography", "zero-knowledge-proofs", "wallet"]
 ---
 
 Постквантовая криптография слишком нова, чтобы пилить её в блокчейне за закрытыми дверями.

@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Planck Claims, 2x Prover Speed"
 description: "Planck post-quantum private transactions का पहला testnet। Miners migrate, CLI reward claims wallet में, prover throughput फिर दोगुना — साप्ताहिक अपडेट।"
 pubDate: "2026-04-22"
@@ -8,17 +9,12 @@ heroAlt: "Quantus Weekly: Planck Claims, 2x Prover Speed"
 featured: false
 tags:
   [
-    "weekly-update",
     "bitcoin",
     "pow",
     "mining",
-    "testnet",
-    "planck",
-    "post-quantum",
-    "mobile",
-    "zk-proofs",
-    "infrastructure",
-    "subsquid",
+    "post-quantum-cryptography",
+    "wallet",
+    "zero-knowledge-proofs",
   ]
 ---
 

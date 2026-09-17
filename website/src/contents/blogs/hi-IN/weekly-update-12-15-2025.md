@@ -1,20 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: GPU Mining और ZK Refactor"
 description: "GPU mining में ~9x प्रदर्शन बढ़ोतरी, ZK-aggregation circuit refactor और UAE में रणनीतिक मीटिंग्स — इस सप्ताह की Quantus अपडेट।"
 pubDate: "2025-12-15"
 heroImage: "/blog/covers/weekly-update-12-15-2025.webp"
 heroAlt: "Quantus Weekly: GPU Mining Breakthrough और ZK Refactor"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "gpu-mining",
-    "zero-knowledge-proofs",
-    "tokenomics",
-    "hardware-wallet",
-    "solana-breakpoint",
-  ]
+tags: ["mining", "zero-knowledge-proofs", "tokenomics", "wallet"]
 ---
 
 इस सप्ताह टीम ने mining performance में breakthrough हासिल किया। हमारा नया GPU miner अब CPU version से ~9x तेज़ चल रहा है।

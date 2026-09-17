@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Dilithium-Schwellenwertsignaturen"
 description: "Dilithium-Schwellenwertsignaturen für verteilte Koordination, leichtere ZK-Circuits, Wormhole-Proof-Aggregation und Mobile-Wallet-Updates – unser Weekly Update."
 
@@ -7,16 +8,7 @@ pubDate: "2026-01-13"
 heroImage: "/blog/covers/weekly-update-01-13-2026.webp"
 heroAlt: "Quantus Weekly: Dilithium-Schwellenwertsignaturen"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "threshold-signatures",
-    "post-quantum-cryptography",
-    "dilithium",
-    "zero-knowledge-proofs",
-    "quantum-safe",
-    "blockchain",
-  ]
+tags: ["post-quantum-cryptography", "ml-dsa", "zero-knowledge-proofs"]
 ---
 
 Macht und Autorität auf mehrere Parteien verteilt. Verteilte Koordination.

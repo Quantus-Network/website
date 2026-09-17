@@ -1,23 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Hadiah Mining Planck Testnet"
 description: "Planck testnet live untuk miner awal. Migrasi aplikasi ke TestFlight dan store, mining GPU pindah ke chain baru, plus update Core, infra, dan wallet."
 pubDate: "2026-04-15"
 heroImage: "/blog/covers/weekly-update-04-15-2026.webp"
 heroAlt: "Quantus Weekly: Hadiah Mining Planck Testnet"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "bitcoin",
-    "pow",
-    "mining",
-    "testnet",
-    "mobile",
-    "zk-proofs",
-    "infrastructure",
-    "subsquid",
-  ]
+tags: ["bitcoin", "pow", "mining", "wallet", "zero-knowledge-proofs"]
 ---
 
 Hashrate awal penting.

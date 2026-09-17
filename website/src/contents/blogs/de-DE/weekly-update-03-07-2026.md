@@ -1,21 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Wormhole-Transaktionen"
 description: "Wormhole-Transaktionen, private Blockbelohnungen für Miner, Consensus-Fixes und Wallet-Updates — unser Wochenrückblick bei Quantus."
 pubDate: "2026-03-07"
 heroImage: "/blog/covers/weekly-update-03-07-2026.webp"
 heroAlt: "Quantus Weekly: Wormhole-Transaktionen"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "wormhole",
-    "zk-proofs",
-    "privacy",
-    "miner-app",
-    "consensus",
-    "wallet",
-  ]
+tags: ["wormhole", "zero-knowledge-proofs", "privacy", "mining", "wallet"]
 ---
 
 Du verbrennst Coins an eine nicht ausgebende Adresse.

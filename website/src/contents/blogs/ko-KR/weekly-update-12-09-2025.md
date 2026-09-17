@@ -1,20 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus 위클리: 빠른 Poseidon2, 경량 체인"
 description: "Poseidon2 게이트를 최적화해 8.3배 빨라지고 체인 리팩토링으로 약 9,000줄을 제거했습니다. Binance Blockchain Week 현장 소식도 전합니다."
 pubDate: "2025-12-09"
 heroImage: "/blog/covers/weekly-update-12-09-2025.webp"
 heroAlt: "Quantus 위클리: 빠른 Poseidon2, 경량 체인"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "poseidon2",
-    "chain-architecture",
-    "wormhole",
-    "binance-blockchain-week",
-    "solana-breakpoint",
-  ]
+tags: ["wormhole"]
 ---
 
 [@EliBenSasson과 Scott Aaronson의 인터뷰](https://x.com/Starknet/status/1995865652377395421)를 보셨을 것입니다.

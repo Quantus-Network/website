@@ -3,9 +3,21 @@ import Fuse from "fuse.js";
 import { Search as SearchIcon } from "lucide-react";
 import { useDebounceValue } from "usehooks-ts";
 import { INPUT_DEBOUNCE_INTERVAL } from "@/constants/debounce-interval";
+import {
+  ALL_BLOG_CATEGORY,
+  blogCategoryFilterFromSearch,
+  filterPostsByCategory,
+  type BlogCategory,
+  type BlogCategoryFilter,
+} from "@/utils/blog-categories";
+import { BLOG_CATEGORIES } from "@/constants/blog-categories";
 
 const INITIAL_VISIBLE_COUNT = 6;
 const LOAD_MORE_COUNT = 6;
+const CATEGORY_FILTERS: BlogCategoryFilter[] = [
+  ALL_BLOG_CATEGORY,
+  ...BLOG_CATEGORIES,
+];
 
 interface Post {
   id: string;
@@ -14,6 +26,7 @@ interface Post {
     title: string;
     description: string;
     pubDate: string;
+    category: BlogCategory;
     tags: string[];
     heroImage?: string;
     heroAlt?: string;
@@ -31,6 +44,8 @@ interface Props {
   featuredLabel: string;
   readLabel: string;
   tagsMap: Record<string, string>;
+  categoriesMap: Record<string, string>;
+  categoriesLabel: string;
 }
 
 function useCardEntrance(deps: unknown[]) {
@@ -90,27 +105,59 @@ export const BlogList: React.FC<Props> = ({
   featuredLabel,
   readLabel,
   tagsMap,
+  categoriesMap,
+  categoriesLabel,
 }) => {
   const [query, setQuery] = useState("");
   const [debouncedQuery] = useDebounceValue(query, INPUT_DEBOUNCE_INTERVAL);
+  const [selectedCategory, setSelectedCategory] =
+    useState<BlogCategoryFilter>(ALL_BLOG_CATEGORY);
   const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE_COUNT);
   const observerTarget = useRef<HTMLDivElement>(null);
 
+  useEffect(() => {
+    const applyCategoryFromUrl = () => {
+      const category = blogCategoryFilterFromSearch(window.location.search);
+      setSelectedCategory(category);
+    };
+
+    applyCategoryFromUrl();
+    window.addEventListener("popstate", applyCategoryFromUrl);
+    return () => window.removeEventListener("popstate", applyCategoryFromUrl);
+  }, []);
+
+  const selectCategory = (category: BlogCategoryFilter) => {
+    setSelectedCategory(category);
+    const url = new URL(window.location.href);
+    if (category === ALL_BLOG_CATEGORY) {
+      url.searchParams.delete("category");
+    } else {
+      url.searchParams.set("category", category);
+    }
+    window.history.replaceState(null, "", url);
+  };
+
+  const categoryFilteredPosts = useMemo(
+    () => filterPostsByCategory(posts, selectedCategory),
+    [posts, selectedCategory],
+  );
+
   const fuse = useMemo(() => {
-    return new Fuse(posts, {
-      keys: ["data.title", "data.description", "data.tags"],
+    return new Fuse(categoryFilteredPosts, {
+      keys: ["data.title", "data.description", "data.tags", "data.category"],
     });
-  }, [posts]);
+  }, [categoryFilteredPosts]);
 
   const results = useMemo(() => {
-    if (!debouncedQuery) return posts;
+    if (!debouncedQuery) return categoryFilteredPosts;
     return fuse.search(debouncedQuery).map((result) => result.item);
-  }, [fuse, debouncedQuery, posts]);
+  }, [fuse, debouncedQuery, categoryFilteredPosts]);
 
   const featuredPost = useMemo(() => {
     if (debouncedQuery) return null;
+    if (selectedCategory !== ALL_BLOG_CATEGORY) return null;
     return posts.find((post) => post.data.featured) ?? posts[0] ?? null;
-  }, [posts, debouncedQuery]);
+  }, [posts, debouncedQuery, selectedCategory]);
 
   const displayedPosts = useMemo(() => {
     let filteredResults = results;
@@ -122,7 +169,7 @@ export const BlogList: React.FC<Props> = ({
 
   useEffect(() => {
     setVisibleCount(INITIAL_VISIBLE_COUNT);
-  }, [debouncedQuery]);
+  }, [debouncedQuery, selectedCategory]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -155,16 +202,41 @@ export const BlogList: React.FC<Props> = ({
 
   return (
     <div className="flex flex-col gap-10">
-      {/* Search */}
-      <div className="relative max-w-md">
-        <SearchIcon className="text-content-35 absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2" />
-        <input
-          type="text"
-          placeholder={searchPlaceholder}
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          className="border-border text-content placeholder:text-content-35 focus:border-content-25 h-11 w-full border bg-transparent pr-4 pl-10 font-mono text-sm focus:outline-none"
-        />
+      <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+        <div
+          role="group"
+          aria-label={categoriesLabel}
+          className="flex flex-wrap gap-2"
+        >
+          {CATEGORY_FILTERS.map((category) => {
+            const isActive = selectedCategory === category;
+            return (
+              <button
+                key={category}
+                type="button"
+                aria-pressed={isActive}
+                onClick={() => selectCategory(category)}
+                className={
+                  isActive
+                    ? "border-flare text-flare h-11 border px-3.5 font-mono text-[11px] tracking-[0.14em] uppercase"
+                    : "border-border text-content-40 hover:border-content-25 hover:text-content-70 h-11 border bg-transparent px-3.5 font-mono text-[11px] tracking-[0.14em] uppercase transition-colors"
+                }
+              >
+                {categoriesMap[category] || category}
+              </button>
+            );
+          })}
+        </div>
+        <div className="relative w-full max-w-md md:w-80">
+          <SearchIcon className="text-content-35 absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2" />
+          <input
+            type="text"
+            placeholder={searchPlaceholder}
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            className="border-border text-content placeholder:text-content-35 focus:border-content-25 h-11 w-full border bg-transparent pr-4 pl-10 font-mono text-sm focus:outline-none"
+          />
+        </div>
       </div>
 
       {/* Featured post */}
@@ -200,6 +272,10 @@ export const BlogList: React.FC<Props> = ({
                 >
                   {formatDate(featuredPost.data.pubDate)}
                 </time>
+                <span className="text-content-40 font-mono text-[10px] tracking-[0.14em] uppercase">
+                  {categoriesMap[featuredPost.data.category] ||
+                    featuredPost.data.category}
+                </span>
                 <span className="text-flare font-mono text-[10px] tracking-[0.14em] uppercase">
                   {featuredLabel}
                 </span>
@@ -259,12 +335,17 @@ export const BlogList: React.FC<Props> = ({
                 </div>
               )}
               <div className="flex flex-1 flex-col px-5 pt-6 pb-7">
-                <time
-                  dateTime={post.data.pubDate}
-                  className="text-content-35 mb-2.5 block font-mono text-[11px] tracking-[0.14em] uppercase"
-                >
-                  {formatDate(post.data.pubDate)}
-                </time>
+                <div className="mb-2.5 flex items-center gap-3">
+                  <time
+                    dateTime={post.data.pubDate}
+                    className="text-content-35 font-mono text-[11px] tracking-[0.14em] uppercase"
+                  >
+                    {formatDate(post.data.pubDate)}
+                  </time>
+                  <span className="text-flare font-mono text-[10px] tracking-[0.14em] uppercase">
+                    {categoriesMap[post.data.category] || post.data.category}
+                  </span>
+                </div>
                 <span className="text-content-90 block text-[17px] leading-[1.35] font-medium">
                   {post.data.title}
                 </span>

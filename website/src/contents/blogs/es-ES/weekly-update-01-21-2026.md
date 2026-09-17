@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Activos nativos y riesgo cuántico"
 description: "Por qué el capital descuenta Bitcoin por riesgo cuántico, nuestra apuesta por activos nativos y avances en threshold Dilithium y agregación ZK esta semana."
 
@@ -7,17 +8,7 @@ pubDate: "2026-01-21"
 heroImage: "/blog/covers/weekly-update-01-21-2026.webp"
 heroAlt: "Quantus Weekly: Activos nativos y riesgo cuántico"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "bitcoin",
-    "quantum-safe",
-    "zk-aggregator",
-    "mpc",
-    "multisig",
-    "indexer",
-    "biohacking",
-  ]
+tags: ["bitcoin", "post-quantum-cryptography"]
 ---
 
 Si te preguntas por qué el oro se dispara y Bitcoin se resiente, lee esto. No hay nada misterioso.

@@ -1,22 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus 每周动态：原生资产与量子风险"
 description: "资本正按量子风险折价比特币。为保证量子安全，我们决定不支持包装资产、仅持原生 QTC；本周推进 Dilithium 阈值签名、ZK 聚合与自定义多签进展。"
 pubDate: "2026-01-21"
 heroImage: "/blog/covers/weekly-update-01-21-2026.webp"
 heroAlt: "Quantus 每周动态：原生资产与量子风险"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "bitcoin",
-    "quantum-safe",
-    "zk-aggregator",
-    "mpc",
-    "multisig",
-    "indexer",
-    "biohacking",
-  ]
+tags: ["bitcoin", "post-quantum-cryptography"]
 ---
 
 如果你想知道为什么黄金在狂飙、比特币却承压，读这篇就够了。没什么神秘的。

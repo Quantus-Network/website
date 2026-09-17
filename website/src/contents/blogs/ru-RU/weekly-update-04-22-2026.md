@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Planck, CLI-награды, prover ×2"
 description: "Planck — первый тестнет с постквантовыми приватными транзакциями: миграция майнеров, награды через CLI на прозрачный адрес и prover в 2 раза быстрее."
 pubDate: "2026-04-22"
@@ -8,17 +9,12 @@ heroAlt: "Quantus Weekly: Planck, CLI-награды, prover ×2"
 featured: false
 tags:
   [
-    "weekly-update",
     "bitcoin",
     "pow",
     "mining",
-    "testnet",
-    "planck",
-    "post-quantum",
-    "mobile",
-    "zk-proofs",
-    "infrastructure",
-    "subsquid",
+    "post-quantum-cryptography",
+    "wallet",
+    "zero-knowledge-proofs",
   ]
 ---
 

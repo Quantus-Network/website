@@ -1,23 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus 每周动态：Planck 测试网挖矿奖励"
 description: "Planck 测试网已对早期矿工开放；TestFlight 与应用商店迁移推进，GPU 挖矿上新链，本周另有核心、Subsquid 与钱包更新。"
 pubDate: "2026-04-15"
 heroImage: "/blog/covers/weekly-update-04-15-2026.webp"
 heroAlt: "Quantus 每周动态：Planck 测试网挖矿奖励"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "bitcoin",
-    "pow",
-    "mining",
-    "testnet",
-    "mobile",
-    "zk-proofs",
-    "infrastructure",
-    "subsquid",
-  ]
+tags: ["bitcoin", "pow", "mining", "wallet", "zero-knowledge-proofs"]
 ---
 
 早期算力很重要。

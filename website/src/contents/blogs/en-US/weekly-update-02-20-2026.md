@@ -1,21 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Open Research and the Post-Quantum Standard"
 description: "Weekly update covering the launch of research.quantus.com, ZK proof aggregation, multisig pallet merge, and mobile wallet updates."
 pubDate: "2026-02-20"
 heroImage: "/blog/covers/weekly-update-02-20-2026.webp"
 heroAlt: "Quantus Weekly: Open Research and the Post-Quantum Standard"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "research",
-    "post-quantum-cryptography",
-    "multisig",
-    "zk-proofs",
-    "mobile-wallet",
-    "notification-system",
-  ]
+tags: ["post-quantum-cryptography", "zero-knowledge-proofs", "wallet"]
 ---
 
 Post-quantum cryptography is too new to ship in a blockchain behind closed doors.

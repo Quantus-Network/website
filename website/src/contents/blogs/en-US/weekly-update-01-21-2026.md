@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Native Assets and Quantum Risk"
 description: "Why capital is discounting Bitcoin for quantum risk, our native-only assets decision, Dilithium threshold work, and progress on ZK aggregation this week."
 
@@ -7,17 +8,7 @@ pubDate: "2026-01-21"
 heroImage: "/blog/covers/weekly-update-01-21-2026.webp"
 heroAlt: "Quantus Weekly: Native Assets and Quantum Risk"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "bitcoin",
-    "quantum-safe",
-    "zk-aggregator",
-    "mpc",
-    "multisig",
-    "indexer",
-    "biohacking",
-  ]
+tags: ["bitcoin", "post-quantum-cryptography"]
 ---
 
 If you're wondering why Gold is ripping and Bitcoin is struggling read this. There's nothing mysterious about it.

@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Q-Day está a la vuelta de la esquina"
 description: "Q-Day es el 6 de junio. Esta semana: auditoría Dilithium DKG cerrada, updates de miner y notificaciones, fixes en wallet y nueva web del summit Q-Day."
 
@@ -9,19 +10,13 @@ heroAlt: "Quantus Weekly: Q-Day está a la vuelta de la esquina"
 featured: false
 tags:
   [
-    "weekly-update",
     "q-day",
     "mainnet",
     "mining",
-    "testnet",
-    "planck",
-    "post-quantum",
-    "dilithium",
-    "threshold-signatures",
-    "zk-proofs",
-    "mobile",
-    "infrastructure",
-    "gui-miner",
+    "post-quantum-cryptography",
+    "ml-dsa",
+    "zero-knowledge-proofs",
+    "wallet",
   ]
 ---
 

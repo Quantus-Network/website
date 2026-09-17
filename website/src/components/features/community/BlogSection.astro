@@ -23,17 +23,10 @@ const recentPosts = localePosts
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
   .slice(0, 3);
 
-const translations = await import(`../../../i18n/${locale}.json`);
-const tagsMap: Record<string, string> = translations.default.blog?.tags ?? {};
-
 function formatDate(date: Date): string {
   return date
     .toLocaleDateString("en-US", { month: "short", day: "2-digit" })
     .toUpperCase();
-}
-
-function getTagLabel(tag: string): string {
-  return (tagsMap[tag] ?? tag.replace(/-/g, " ")).toUpperCase();
 }
 
 function getBlogUrl(postId: string): string {
@@ -68,7 +61,7 @@ function getBlogUrl(postId: string): string {
                 {formatDate(post.data.pubDate)}
               </span>
               <span class="comm-blog-tag">
-                {getTagLabel(post.data.tags[0] ?? "")}
+                {t(`blog.categories.${post.data.category}`)}
               </span>
             </div>
             <span class="comm-blog-title">{post.data.title}</span>

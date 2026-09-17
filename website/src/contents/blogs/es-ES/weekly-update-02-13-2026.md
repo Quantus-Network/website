@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Mapeando el futuro cuántico-seguro"
 description: "Actualización semanal: listado en CoinGecko, optimizaciones multisig, refactorización del agregador ZK y lanzamiento de la app móvil v1.1.5 en ambas tiendas."
 
@@ -7,16 +8,7 @@ pubDate: "2026-02-13"
 heroImage: "/blog/covers/weekly-update-02-13-2026.webp"
 heroAlt: "Quantus Weekly: Mapeando el futuro cuántico-seguro"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "coingecko",
-    "multisig",
-    "plonky2",
-    "plonky3",
-    "quantum-resistant",
-    "zk-proofs",
-  ]
+tags: ["post-quantum-cryptography", "zero-knowledge-proofs"]
 ---
 
 Fra Mauro pasó años dentro de un monasterio cerca de Venecia dibujando un mapa de todo el mundo conocido.

@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Aplikasi Killer Adalah Uang"
 description: "Minggu ini: DKG Dilithium untuk Mithril, perbaikan tanda tangan threshold, helper SDK Wormhole, dan rilis wallet v1.4.0 di TestFlight."
 
@@ -9,21 +10,14 @@ heroAlt: "Quantus Weekly: Aplikasi Killer Adalah Uang"
 featured: false
 tags:
   [
-    "weekly-update",
     "bitcoin",
     "pow",
     "mining",
-    "testnet",
-    "planck",
-    "post-quantum",
-    "mobile",
-    "zk-proofs",
-    "infrastructure",
-    "subsquid",
-    "dilithium",
+    "post-quantum-cryptography",
+    "wallet",
+    "zero-knowledge-proofs",
+    "ml-dsa",
     "wormhole",
-    "mithril",
-    "network-school",
   ]
 ---
 

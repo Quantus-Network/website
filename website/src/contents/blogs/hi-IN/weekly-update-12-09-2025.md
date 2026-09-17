@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: तेज़ Poseidon2, हल्की Chain"
 description: "Poseidon2 gates ऑप्टिमाइज़ेशन के बाद 8.3x तेज़, chain refactor ने ~9,000 लाइनें हटाईं और टीम ने Binance Blockchain Week से नोट्स साझा किए।"
 
@@ -7,15 +8,7 @@ pubDate: "2025-12-09"
 heroImage: "/blog/covers/weekly-update-12-09-2025.webp"
 heroAlt: "Quantus Weekly: तेज़ Poseidon2, हल्की Chain"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "poseidon2",
-    "chain-architecture",
-    "wormhole",
-    "binance-blockchain-week",
-    "solana-breakpoint",
-  ]
+tags: ["wormhole"]
 ---
 
 शायद आपने [@EliBenSasson और Scott Aaronson के साथ यह interview](https://x.com/Starknet/status/1995865652377395421) देखा

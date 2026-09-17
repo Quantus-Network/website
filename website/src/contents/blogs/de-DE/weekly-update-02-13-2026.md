@@ -1,21 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Die quantensichere Zukunft kartieren"
 description: "Weekly Update: CoinGecko-Listing, Multisig-Optimierungen, ZK-Aggregator-Refactoring und Mobile-App v1.1.5 – das war diese Woche bei Quantus."
 pubDate: "2026-02-13"
 heroImage: "/blog/covers/weekly-update-02-13-2026.webp"
 heroAlt: "Quantus Weekly: Die quantensichere Zukunft kartieren"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "coingecko",
-    "multisig",
-    "plonky2",
-    "plonky3",
-    "quantum-resistant",
-    "zk-proofs",
-  ]
+tags: ["post-quantum-cryptography", "zero-knowledge-proofs"]
 ---
 
 Fra Mauro verbrachte Jahre in einem Kloster nahe Venedig damit, eine Karte der gesamten bekannten Welt zu zeichnen.

@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: 더 공정한 런치"
 description: "초기 Bitcoin 채굴자는 노트북으로 하루에 수천 BTC를 채굴할 수 있었습니다. Quantus는 첫날부터 채굴 접근성을 최우선으로 합니다."
 pubDate: "2026-05-13"
@@ -7,20 +8,7 @@ heroImage: "/blog/covers/weekly-update-05-13-2026.webp"
 heroAlt: "Quantus Weekly: 더 공정한 런치"
 featured: false
 tags:
-  [
-    "weekly-update",
-    "bitcoin",
-    "mining",
-    "fair-launch",
-    "testnet",
-    "planck",
-    "gui-miner",
-    "zk-proofs",
-    "security",
-    "infrastructure",
-    "mobile",
-    "network-school",
-  ]
+  ["bitcoin", "mining", "zero-knowledge-proofs", "protocol-security", "wallet"]
 ---
 
 초기 Bitcoin 채굴자는 노트북으로 하루에 수천 BTC를 채굴할 수 있었습니다.

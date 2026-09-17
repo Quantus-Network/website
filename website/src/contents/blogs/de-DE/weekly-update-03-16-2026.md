@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Fette Signaturen, schnellere Wormholes"
 description: "ML-DSA-Signaturen sind 70× größer als bei Bitcoin. Diese Woche: quantensichere Signierung skaliert, Wormhole-Proofs 2× schneller, ZK-Aggregation voran."
 pubDate: "2026-03-16"
@@ -8,12 +9,10 @@ heroAlt: "Quantus Weekly: Fette Signaturen, schnellere Wormholes"
 featured: false
 tags:
   [
-    "weekly-update",
-    "quantum-safe",
+    "post-quantum-cryptography",
     "ml-dsa",
-    "zk-proofs",
+    "zero-knowledge-proofs",
     "wormhole",
-    "scalability",
     "privacy",
   ]
 ---

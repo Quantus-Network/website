@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Planck報酬請求と2倍高速化"
 description: "耐量子プライベートトランザクション向け初のPlanckテストネット。マイナー移行、CLI報酬請求、証明スループットが再び2倍に。Quantusの週次アップデートです。"
 pubDate: "2026-04-22"
@@ -8,17 +9,12 @@ heroAlt: "Quantus Weekly: Planck報酬請求と2倍高速化"
 featured: false
 tags:
   [
-    "weekly-update",
     "bitcoin",
     "pow",
     "mining",
-    "testnet",
-    "planck",
-    "post-quantum",
-    "mobile",
-    "zk-proofs",
-    "infrastructure",
-    "subsquid",
+    "post-quantum-cryptography",
+    "wallet",
+    "zero-knowledge-proofs",
   ]
 ---
 

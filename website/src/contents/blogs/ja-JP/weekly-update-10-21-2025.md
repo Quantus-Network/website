@@ -1,23 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Poseidon2ゲートとガバナンス"
 description: "Poseidon2をPlonky2ゲートとして実装し、オンチェーンガバナンスとトレジャリー機能を出荷。アプリ内紹介機能を完了し、GPUマイナー向けIcicleバインディングの統合も開始しました。"
 pubDate: "2025-10-21"
 heroImage: "/blog/covers/weekly-update-10-21-2025.webp"
 heroAlt: "Quantus Weekly: Poseidon2ゲートとガバナンス"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "plonky2",
-    "poseidon2",
-    "governance",
-    "treasury",
-    "conviction-voting",
-    "referral",
-    "gpu-mining",
-    "audit",
-  ]
+tags: ["governance", "mining", "protocol-security"]
 ---
 
 ## Product & Development News

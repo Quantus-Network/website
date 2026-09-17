@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Q-Day Estimates and On-Spend Risk"
 description: "Google and Oratomic cut qubit estimates for breaking ECC, why Bitcoin's 10-minute blocks face on-spend risk, and Quantus's rebrand on economic freedom."
 
@@ -9,15 +10,11 @@ heroAlt: "Quantus Weekly: Q-Day Estimates and On-Spend Risk"
 featured: false
 tags:
   [
-    "weekly-update",
-    "quantum",
+    "quantum-computing",
     "bitcoin",
-    "post-quantum",
-    "ecc",
-    "zk-proofs",
-    "rebrand",
-    "infrastructure",
-    "mobile",
+    "post-quantum-cryptography",
+    "zero-knowledge-proofs",
+    "wallet",
   ]
 ---
 

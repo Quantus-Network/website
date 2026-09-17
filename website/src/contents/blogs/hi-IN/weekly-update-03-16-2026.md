@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Fat Signatures, तेज़ Wormholes"
 description: "ML-DSA signatures Bitcoin से 70x बड़े — इस सप्ताह quantum-safe signing scale की, wormhole proofs 2x तेज़ हुए, और ZK aggregation में आगे बढ़े।"
 pubDate: "2026-03-16"
@@ -8,12 +9,10 @@ heroAlt: "Quantus Weekly: Fat Signatures, तेज़ Wormholes"
 featured: false
 tags:
   [
-    "weekly-update",
-    "quantum-safe",
+    "post-quantum-cryptography",
     "ml-dsa",
-    "zk-proofs",
+    "zero-knowledge-proofs",
     "wormhole",
-    "scalability",
     "privacy",
   ]
 ---

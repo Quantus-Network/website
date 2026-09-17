@@ -1,23 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Plonky3 Poseidon2 и подкаст Либерленда"
 description: "Plonky3 Poseidon2 интегрирован в ZK-схемы, память Rusty Crystals оптимизирована на 80%, добавлена реферальная программа и подкаст с президентом Либерленда."
 pubDate: "2025-10-14"
 heroImage: "/blog/covers/weekly-update-10-14-2025.webp"
 heroAlt: "Quantus Weekly: Plonky3 Poseidon2 и подкаст Либерленда"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "plonky3",
-    "poseidon2",
-    "gamification",
-    "referral",
-    "liberland",
-    "podcast",
-    "quantum-safe",
-    "schrodinger-testnet",
-  ]
+tags: ["post-quantum-cryptography"]
 ---
 
 ## Новости продукта и разработки

@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: ML-DSA, ZK-масштаб и wormhole ×2"
 description: "Подписи ML-DSA в 70 раз больше Bitcoin: Quantus масштабирует их через ZK-агрегацию до 3500 TPS, ускоряет wormhole вдвое и проходит аудиты безопасности."
 pubDate: "2026-03-16"
@@ -8,12 +9,10 @@ heroAlt: "Quantus Weekly: ML-DSA, ZK-масштаб и wormhole ×2"
 featured: false
 tags:
   [
-    "weekly-update",
-    "quantum-safe",
+    "post-quantum-cryptography",
     "ml-dsa",
-    "zk-proofs",
+    "zero-knowledge-proofs",
     "wormhole",
-    "scalability",
     "privacy",
   ]
 ---

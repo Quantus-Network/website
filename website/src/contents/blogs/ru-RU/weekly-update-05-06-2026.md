@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: киллер-приложение — деньги"
 description: "На этой неделе переписали Dilithium DKG под Mithril, исправили пороговые подписи, открыли хелперы Wormhole SDK и выпустили кошелёк v1.4.0 в TestFlight."
 pubDate: "2026-05-06"
@@ -8,21 +9,14 @@ heroAlt: "Quantus Weekly: киллер-приложение — деньги"
 featured: false
 tags:
   [
-    "weekly-update",
     "bitcoin",
     "pow",
     "mining",
-    "testnet",
-    "planck",
-    "post-quantum",
-    "mobile",
-    "zk-proofs",
-    "infrastructure",
-    "subsquid",
-    "dilithium",
+    "post-quantum-cryptography",
+    "wallet",
+    "zero-knowledge-proofs",
+    "ml-dsa",
     "wormhole",
-    "mithril",
-    "network-school",
   ]
 ---
 

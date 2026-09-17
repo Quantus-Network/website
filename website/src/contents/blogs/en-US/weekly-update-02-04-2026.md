@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: High-Security Accounts and Fraud Prevention"
 description: "High-security accounts with customizable time locks and guardians, multisig integration testing, and a new recover-funds feature this week."
 
@@ -7,16 +8,7 @@ pubDate: "2026-02-04"
 heroImage: "/blog/covers/weekly-update-02-04-2026.webp"
 heroAlt: "Quantus Weekly: High-Security Accounts and Fraud Prevention"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "security",
-    "guardian",
-    "time-lock",
-    "fraud-prevention",
-    "multisig",
-    "plonky2",
-  ]
+tags: ["protocol-security"]
 ---
 
 Chainalysis estimated $17B in crypto was stolen in 2025. The pitch was "be your own bank." The other half is "be your own security team." To be clear, "a Swiss bank account in your pocket, but only for cybersecurity experts" is still insanely badass. But the industry did a disservice to innocent normies who got rekt by moving their net worth onchain without even knowing what asymmetric cryptography is.

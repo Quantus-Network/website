@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Mingguan: Poseidon2 dan Podcast Liberland"
 description: "Kami mem-port Plonky3 Poseidon2 ke sirkuit ZK, mengoptimalkan memori Rusty Crystals, merancang gamifikasi reversal, dan berbincang dengan presiden Liberland."
 
@@ -7,18 +8,7 @@ pubDate: "2025-10-14"
 heroImage: "/blog/covers/weekly-update-10-14-2025.webp"
 heroAlt: "Quantus Mingguan: Poseidon2 dan Podcast Liberland"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "plonky3",
-    "poseidon2",
-    "gamification",
-    "referral",
-    "liberland",
-    "podcast",
-    "quantum-safe",
-    "schrodinger-testnet",
-  ]
+tags: ["post-quantum-cryptography"]
 ---
 
 ## Berita Produk & Pengembangan

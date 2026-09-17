@@ -1,20 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus 每周动态：GPU 挖矿突破与 ZK 重构"
 description: "本周 GPU 矿机性能约达 CPU 的 9 倍，完成 ZK 聚合电路重构并删减数千行代码；团队在阿联酋会见顾问与投资者，明确代币经济学与发行策略。"
 pubDate: "2025-12-15"
 heroImage: "/blog/covers/weekly-update-12-15-2025.webp"
 heroAlt: "Quantus 每周动态：GPU 挖矿突破与 ZK 重构"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "gpu-mining",
-    "zero-knowledge-proofs",
-    "tokenomics",
-    "hardware-wallet",
-    "solana-breakpoint",
-  ]
+tags: ["mining", "zero-knowledge-proofs", "tokenomics", "wallet"]
 ---
 
 本周，我们在挖矿性能方面取得了突破。我们新的 GPU 矿机现在的运行速度比 CPU 版本快约 9 倍。

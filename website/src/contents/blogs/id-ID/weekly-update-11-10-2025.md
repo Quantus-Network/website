@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Mingguan: Testnet Dirac dan Audit Lattice"
 description: "Testnet Dirac rilis dengan algoritma PoW dan kripto lattice baru yang sedang diaudit eksternal. Miner perlu upgrade; dompet dan libp2p sudah terintegrasi."
 
@@ -7,16 +8,7 @@ pubDate: "2025-11-10"
 heroImage: "/blog/covers/weekly-update-11-10-2025.webp"
 heroAlt: "Quantus Mingguan: Testnet Dirac dan Audit Lattice"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "dirac-testnet",
-    "lattice-cryptography",
-    "pow",
-    "libp2p",
-    "ghostdag",
-    "blue-green-deployment",
-  ]
+tags: ["pow"]
 ---
 
 Minggu ini tim merilis testnet Dirac, menyelesaikan pembaruan chain-wide untuk algoritma proof of work dan library kriptografi lattice, qp-rusty-crystals. Library inti ini sekarang sedang diaudit eksternal dan mencakup tanda tangan constant-time. Pembaruan ini sudah terintegrasi ke dompet mobile dan libp2p.

@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Transacciones Wormhole"
 description: "Transacciones wormhole, recompensas de bloque privadas para mineros, correcciones de consenso y actualizaciones de la billetera esta semana."
 
@@ -7,16 +8,7 @@ pubDate: "2026-03-07"
 heroImage: "/blog/covers/weekly-update-03-07-2026.webp"
 heroAlt: "Quantus Weekly: Transacciones Wormhole"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "wormhole",
-    "zk-proofs",
-    "privacy",
-    "miner-app",
-    "consensus",
-    "wallet",
-  ]
+tags: ["wormhole", "zero-knowledge-proofs", "privacy", "mining", "wallet"]
 ---
 
 Quemas monedas en una dirección que no se puede gastar.

@@ -1,22 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Mode POS dan Uang Elektronik P2P"
 description: "Point-of-sale mobile di wallet v1.2.2, masking PolyFri, cleanup Poseidon, perlindungan DDoS ZK, dan mengapa uang elektronik peer-to-peer masih penting."
 pubDate: "2026-03-31"
 heroImage: "/blog/covers/weekly-update-03-31-2026.webp"
 heroAlt: "Quantus Weekly: Mode POS dan Uang Elektronik P2P"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "point-of-sale",
-    "mobile",
-    "zk-proofs",
-    "polyfri",
-    "poseidon",
-    "privacy",
-    "infrastructure",
-  ]
+tags: ["wallet", "zero-knowledge-proofs", "privacy"]
 ---
 
 > A Peer-to-Peer Electronic Cash System.

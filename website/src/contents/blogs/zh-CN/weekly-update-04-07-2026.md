@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus 每周动态：Q 日估算与链上花费风险"
 description: "Google 与 Oratomic 下调攻破 ECC 所需量子比特；比特币 10 分钟出块面临链上花费风险；Quantus 以「永久经济自由」完成品牌重塑。"
 pubDate: "2026-04-07"
@@ -8,15 +9,11 @@ heroAlt: "Quantus 每周动态：Q 日估算与链上花费风险"
 featured: false
 tags:
   [
-    "weekly-update",
-    "quantum",
+    "quantum-computing",
     "bitcoin",
-    "post-quantum",
-    "ecc",
-    "zk-proofs",
-    "rebrand",
-    "infrastructure",
-    "mobile",
+    "post-quantum-cryptography",
+    "zero-knowledge-proofs",
+    "wallet",
   ]
 ---
 

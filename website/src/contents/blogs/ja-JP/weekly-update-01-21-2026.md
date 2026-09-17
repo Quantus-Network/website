@@ -1,22 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: ネイティブ資産と量子リスク"
 description: "資本がビットコインを量子リスクで割り引く理由、ネイティブ資産のみを採用した設計判断、Dilithiumしきい値署名とZK集約の今週の進捗をまとめました。"
 pubDate: "2026-01-21"
 heroImage: "/blog/covers/weekly-update-01-21-2026.webp"
 heroAlt: "Quantus Weekly: ネイティブ資産と量子リスク"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "bitcoin",
-    "quantum-safe",
-    "zk-aggregator",
-    "mpc",
-    "multisig",
-    "indexer",
-    "biohacking",
-  ]
+tags: ["bitcoin", "post-quantum-cryptography"]
 ---
 
 金が急騰しビットコインが苦戦している理由が気になるなら、これを読んでください。神秘性などありません。

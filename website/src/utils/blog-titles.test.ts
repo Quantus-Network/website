@@ -11,7 +11,8 @@ describe("blogMetaTitle", () => {
   test("uses metaTitle when it is set", () => {
     expect(
       blogMetaTitle({
-        title: "Quantus Weekly: 170 QTPS and Miner v4 — a longer on-page heading",
+        title:
+          "Quantus Weekly: 170 QTPS and Miner v4 — a longer on-page heading",
         metaTitle: "Quantus Weekly: 170 QTPS and Miner v4",
       }),
     ).toBe("Quantus Weekly: 170 QTPS and Miner v4");

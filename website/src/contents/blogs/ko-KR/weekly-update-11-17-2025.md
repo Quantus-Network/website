@@ -1,23 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus 위클리: PoW 감사 완료와 Dirac 런칭"
 description: "Equilibrium의 PoW·Poseidon 감사를 완료하고 블록 헤더 ZK 증명을 출시했습니다. Dirac 테스트넷을 런칭하고 업데이트된 앱을 양대 앱 스토어에 배포했습니다."
 pubDate: "2025-11-17"
 heroImage: "/blog/covers/weekly-update-11-17-2025.webp"
 heroAlt: "Quantus 위클리: PoW 감사 완료와 Dirac 런칭"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "audit",
-    "pow",
-    "poseidon",
-    "dirac-testnet",
-    "zero-knowledge-proofs",
-    "mobile-wallet",
-    "miner-app",
-    "podcast",
-  ]
+tags: ["protocol-security", "pow", "zero-knowledge-proofs", "wallet", "mining"]
 ---
 
 이번 주 팀은 Equilibrium의 PoW 알고리즘 및 Poseidon 해시 함수 감사를 완료했으며, 업데이트된 앱을 양대 앱 스토어에 출시했습니다.

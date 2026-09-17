@@ -1,23 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Planckテストネット報酬"
 description: "Planckテストネットが早期マイナー向けに公開。TestFlightとストア向けアプリ移行、GPUマイニング、コア・インフラ・ウォレット更新をまとめた週次アップデートです。"
 pubDate: "2026-04-15"
 heroImage: "/blog/covers/weekly-update-04-15-2026.webp"
 heroAlt: "Quantus Weekly: Planckテストネット報酬"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "bitcoin",
-    "pow",
-    "mining",
-    "testnet",
-    "mobile",
-    "zk-proofs",
-    "infrastructure",
-    "subsquid",
-  ]
+tags: ["bitcoin", "pow", "mining", "wallet", "zero-knowledge-proofs"]
 ---
 
 早期のハッシュレートは重要です。

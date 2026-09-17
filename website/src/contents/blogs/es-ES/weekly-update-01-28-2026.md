@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: RPCs negables y auditoría Neodyme"
 description: "RPCs negables para mayor privacidad, auditoría Neodyme de Rusty Crystals completada y direcciones ZK privadas para todos los tokens. Resumen semanal."
 
@@ -7,17 +8,7 @@ pubDate: "2026-01-28"
 heroImage: "/blog/covers/weekly-update-01-28-2026.webp"
 heroAlt: "Quantus Weekly: RPCs negables y auditoría Neodyme"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "rpc",
-    "privacy",
-    "audit",
-    "security",
-    "dilithium",
-    "zk-aggregator",
-    "multisig",
-  ]
+tags: ["privacy", "protocol-security", "ml-dsa"]
 ---
 
 Tu wallet te está delatando.

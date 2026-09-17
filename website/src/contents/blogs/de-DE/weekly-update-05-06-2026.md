@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Die Killer-App ist Geld"
 description: "Diese Woche: Dilithium-DKG für Mithril, Threshold-Signaturen, Wormhole-SDK und Wallet v1.4.0 auf TestFlight ausgeliefert."
 
@@ -9,21 +10,14 @@ heroAlt: "Quantus Weekly: Die Killer-App ist Geld"
 featured: false
 tags:
   [
-    "weekly-update",
     "bitcoin",
     "pow",
     "mining",
-    "testnet",
-    "planck",
-    "post-quantum",
-    "mobile",
-    "zk-proofs",
-    "infrastructure",
-    "subsquid",
-    "dilithium",
+    "post-quantum-cryptography",
+    "wallet",
+    "zero-knowledge-proofs",
+    "ml-dsa",
     "wormhole",
-    "mithril",
-    "network-school",
   ]
 ---
 

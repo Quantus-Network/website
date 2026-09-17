@@ -1,21 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: オープンリサーチとPQC標準"
 description: "research.quantus.comの公開、ZK証明集約、マルチシグパレットのマージ、モバイルウォレットの更新など、今週のQuantus週刊アップデートをお届けします。"
 pubDate: "2026-02-20"
 heroImage: "/blog/covers/weekly-update-02-20-2026.webp"
 heroAlt: "Quantus Weekly: オープンリサーチとPQC標準"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "research",
-    "post-quantum-cryptography",
-    "multisig",
-    "zk-proofs",
-    "mobile-wallet",
-    "notification-system",
-  ]
+tags: ["post-quantum-cryptography", "zero-knowledge-proofs", "wallet"]
 ---
 
 ポスト量子暗号は新しすぎて、閉ざされたドアの裏でブロックチェーンに載せるべきではありません。

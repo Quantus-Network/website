@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Q-Day уже совсем близко"
 description: "Q-Day — 6 июня. На этой неделе: закрыты пункты аудита Dilithium DKG, обновления майнера и уведомлений, фиксы кошелька и обновлённый сайт саммита Q-Day."
 pubDate: "2026-05-21"
@@ -8,19 +9,13 @@ heroAlt: "Quantus Weekly: Q-Day уже совсем близко"
 featured: false
 tags:
   [
-    "weekly-update",
     "q-day",
     "mainnet",
     "mining",
-    "testnet",
-    "planck",
-    "post-quantum",
-    "dilithium",
-    "threshold-signatures",
-    "zk-proofs",
-    "mobile",
-    "infrastructure",
-    "gui-miner",
+    "post-quantum-cryptography",
+    "ml-dsa",
+    "zero-knowledge-proofs",
+    "wallet",
   ]
 ---
 

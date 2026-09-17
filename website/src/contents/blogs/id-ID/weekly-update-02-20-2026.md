@@ -1,21 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Riset Terbuka & Standar Pasca-Kuantum"
 description: "Update mingguan: peluncuran research.quantus.com, agregasi bukti ZK, merge pallet multisig, dan pembaruan wallet mobile."
 pubDate: "2026-02-20"
 heroImage: "/blog/covers/weekly-update-02-20-2026.webp"
 heroAlt: "Quantus Weekly: Riset Terbuka dan Standar Pasca-Kuantum"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "research",
-    "post-quantum-cryptography",
-    "multisig",
-    "zk-proofs",
-    "mobile-wallet",
-    "notification-system",
-  ]
+tags: ["post-quantum-cryptography", "zero-knowledge-proofs", "wallet"]
 ---
 
 Kriptografi pasca-kuantum terlalu baru untuk dikembangkan di blockchain di balik pintu tertutup.

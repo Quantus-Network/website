@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Native Assets und Quantenrisiko"
 description: "Warum Kapital Bitcoin wegen Quantenrisiko abschlägt, unsere Native-Assets-Entscheidung und Fortschritte bei Dilithium-Schwellenwert und ZK-Aggregation."
 
@@ -7,17 +8,7 @@ pubDate: "2026-01-21"
 heroImage: "/blog/covers/weekly-update-01-21-2026.webp"
 heroAlt: "Quantus Weekly: Native Assets und Quantenrisiko"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "bitcoin",
-    "quantum-safe",
-    "zk-aggregator",
-    "mpc",
-    "multisig",
-    "indexer",
-    "biohacking",
-  ]
+tags: ["bitcoin", "post-quantum-cryptography"]
 ---
 
 Wenn Sie sich fragen, warum Gold durch die Decke geht und Bitcoin kämpft – lesen Sie das hier. Es ist nicht mysteriös.

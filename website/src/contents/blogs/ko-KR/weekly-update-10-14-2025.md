@@ -1,23 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus 위클리: Poseidon2와 Liberland 팟캐스트"
 description: "Plonky3 Poseidon2를 ZK 회로에 이식하고 Rusty Crystals 메모리를 최적화했습니다. 가역 트랜잭션 게이미피케이션을 설계하고 Liberland 대통령과 팟캐스트를 진행했습니다."
 pubDate: "2025-10-14"
 heroImage: "/blog/covers/weekly-update-10-14-2025.webp"
 heroAlt: "Quantus 위클리: Poseidon2와 Liberland 팟캐스트"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "plonky3",
-    "poseidon2",
-    "gamification",
-    "referral",
-    "liberland",
-    "podcast",
-    "quantum-safe",
-    "schrodinger-testnet",
-  ]
+tags: ["post-quantum-cryptography"]
 ---
 
 ## 제품 및 개발 뉴스

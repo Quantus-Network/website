@@ -1,21 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Memetakan Masa Depan Quantum-Secure"
 description: "Minggu ini Quantus terlisting di CoinGecko, plus optimasi multisig, refactoring ZK-aggregator, dan rilis mobile app v1.1.5 ke app store."
 pubDate: "2026-02-13"
 heroImage: "/blog/covers/weekly-update-02-13-2026.webp"
 heroAlt: "Quantus Weekly: Memetakan Masa Depan Quantum-Secure"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "coingecko",
-    "multisig",
-    "plonky2",
-    "plonky3",
-    "quantum-resistant",
-    "zk-proofs",
-  ]
+tags: ["post-quantum-cryptography", "zero-knowledge-proofs"]
 ---
 
 Fra Mauro menghabiskan bertahun-tahun di biara dekat Venesia menggambar peta seluruh dunia yang dikenal.

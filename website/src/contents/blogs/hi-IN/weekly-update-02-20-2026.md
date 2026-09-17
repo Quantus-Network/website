@@ -1,21 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Open Research Forum"
 description: "research.quantus.com launch, ZK proof aggregation, multisig pallet merge और mobile wallet updates—post-quantum standards पर इस सप्ताह की progress।"
 pubDate: "2026-02-20"
 heroImage: "/blog/covers/weekly-update-02-20-2026.webp"
 heroAlt: "Quantus Weekly: Open Research Forum"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "research",
-    "post-quantum-cryptography",
-    "multisig",
-    "zk-proofs",
-    "mobile-wallet",
-    "notification-system",
-  ]
+tags: ["post-quantum-cryptography", "zero-knowledge-proofs", "wallet"]
 ---
 
 Post-quantum cryptography blockchain में closed doors के पीछे ship करने के लिए बहुत new है।

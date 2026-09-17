@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: A Fairer Launch"
 description: "Early Bitcoin miners could mine thousands of BTC a day on a laptop. At Quantus, we're prioritizing making mining accessible from day one."
 pubDate: "2026-05-13"
@@ -7,20 +8,7 @@ heroImage: "/blog/covers/weekly-update-05-13-2026.webp"
 heroAlt: "Quantus Weekly: A Fairer Launch"
 featured: false
 tags:
-  [
-    "weekly-update",
-    "bitcoin",
-    "mining",
-    "fair-launch",
-    "testnet",
-    "planck",
-    "gui-miner",
-    "zk-proofs",
-    "security",
-    "infrastructure",
-    "mobile",
-    "network-school",
-  ]
+  ["bitcoin", "mining", "zero-knowledge-proofs", "protocol-security", "wallet"]
 ---
 
 Early Bitcoin miners could mine thousands of BTC a day on a laptop.

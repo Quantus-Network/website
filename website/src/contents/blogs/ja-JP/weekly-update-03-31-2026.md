@@ -1,22 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: POSモードとP2P電子キャッシュ"
 description: "ウォレットv1.2.2のモバイルPOS、PolyFriマスキング、Poseidon整理、ZK DDoS防御。P2P電子キャッシュがQuantusにとってなぜ重要かを解説した週次アップデートです。"
 pubDate: "2026-03-31"
 heroImage: "/blog/covers/weekly-update-03-31-2026.webp"
 heroAlt: "Quantus Weekly: POSモードとP2P電子キャッシュ"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "point-of-sale",
-    "mobile",
-    "zk-proofs",
-    "polyfri",
-    "poseidon",
-    "privacy",
-    "infrastructure",
-  ]
+tags: ["wallet", "zero-knowledge-proofs", "privacy"]
 ---
 
 > A Peer-to-Peer Electronic Cash System.

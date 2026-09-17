@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: PoW Audit Completed and Dirac Testnet Launch"
 description: "Equilibrium finished our PoW and Poseidon audit, ZK proofs for block headers landed, and the Dirac testnet launched this week on Quantus."
 
@@ -7,18 +8,7 @@ pubDate: "2025-11-17"
 heroImage: "/blog/covers/weekly-update-11-17-2025.webp"
 heroAlt: "Quantus Weekly: PoW Audit Completed and Dirac Testnet Launch"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "audit",
-    "pow",
-    "poseidon",
-    "dirac-testnet",
-    "zero-knowledge-proofs",
-    "mobile-wallet",
-    "miner-app",
-    "podcast",
-  ]
+tags: ["protocol-security", "pow", "zero-knowledge-proofs", "wallet", "mining"]
 ---
 
 This week the team completed the audit from Equilibrium of our proof of work algorithm and Poseidon hash function and shipped updated apps to both app stores.

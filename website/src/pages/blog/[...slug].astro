@@ -3,6 +3,7 @@ import { type CollectionEntry, render } from "astro:content";
 import BlogPost from "@/components/features/blog/BlogPost.astro";
 import { DEFAULT_LOCALE } from "@/utils/i18n";
 import { getBlogPosts, isBlogSlugPublished } from "@/utils/blog-posts";
+import { relatedBlogPosts } from "@/utils/blog-categories";
 
 export async function getStaticPaths() {
   const posts = await getBlogPosts(({ id }) => {
@@ -29,16 +30,7 @@ const allPosts = await getBlogPosts(({ id }) => {
 const isUnpublishedPreview =
   import.meta.env.DEV && !isBlogSlugPublished(allPosts, post.id);
 
-const relatedPosts = allPosts
-  .filter((p) => p.id !== post.id)
-  .map((p) => ({
-    post: p,
-    score: p.data.tags.filter((tag) => post.data.tags.includes(tag)).length,
-  }))
-  .filter((p) => p.score > 0)
-  .sort((a, b) => b.score - a.score)
-  .slice(0, 5)
-  .map((p) => p.post);
+const relatedPosts = relatedBlogPosts(allPosts, post, 5);
 
 const { Content } = await render(post);
 ---

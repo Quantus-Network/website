@@ -1,21 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: The Wallet Should Be Simple"
 description: "Weekly update covering the release of Wallet v1.2.0, Treasury with multisig, Heisenberg testnet updates, and performance improvements."
 pubDate: "2026-02-27"
 heroImage: "/blog/covers/weekly-update-02-27-2026.webp"
 heroAlt: "Quantus Weekly: The Wallet Should Be Simple"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "mobile-wallet",
-    "treasury",
-    "multisig",
-    "heisenberg-testnet",
-    "zk-proofs",
-    "performance",
-  ]
+tags: ["wallet", "zero-knowledge-proofs"]
 ---
 
 Every major crypto wallet is adding garbage features I do not want.

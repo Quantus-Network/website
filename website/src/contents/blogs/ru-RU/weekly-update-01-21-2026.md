@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Нативные активы и квантовый риск"
 description: "Почему капитал дисконтирует биткоин из-за квантового риска, наше решение только в пользу нативных активов и прогресс по ZK-агрегации."
 
@@ -7,17 +8,7 @@ pubDate: "2026-01-21"
 heroImage: "/blog/covers/weekly-update-01-21-2026.webp"
 heroAlt: "Quantus Weekly: Нативные активы и квантовый риск"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "bitcoin",
-    "quantum-safe",
-    "zk-aggregator",
-    "mpc",
-    "multisig",
-    "indexer",
-    "biohacking",
-  ]
+tags: ["bitcoin", "post-quantum-cryptography"]
 ---
 
 Если вам интересно, почему золото растёт, а биткоин буксует — читайте дальше. Никакой загадки здесь нет.
