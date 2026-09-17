@@ -1032,7 +1032,8 @@
       "bug-bounty": "バグバウンティ",
       "senoti": "Senoti",
       "migration": "移行",
-      "harvest-now-decrypt-later": "ハーベスト・ナウ・デクリプト・レイター"
+      "harvest-now-decrypt-later": "ハーベスト・ナウ・デクリプト・レイター",
+      "crqc": "CRQC"
     }
   },
   "whitepaper": {

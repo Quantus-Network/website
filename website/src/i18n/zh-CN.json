@@ -1021,7 +1021,8 @@
       "bug-bounty": "漏洞赏金",
       "senoti": "Senoti",
       "migration": "迁移",
-      "harvest-now-decrypt-later": "先收集后解密"
+      "harvest-now-decrypt-later": "先收集后解密",
+      "crqc": "CRQC"
     }
   },
   "whitepaper": {

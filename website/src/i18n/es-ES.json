@@ -1032,7 +1032,8 @@
       "bug-bounty": "Recompensa por bugs",
       "senoti": "Senoti",
       "migration": "Migración",
-      "harvest-now-decrypt-later": "Recolectar-Ahora-Descifrar-Después"
+      "harvest-now-decrypt-later": "Recolectar-Ahora-Descifrar-Después",
+      "crqc": "CRQC"
     }
   },
   "whitepaper": {
