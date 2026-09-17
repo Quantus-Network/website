@@ -47,19 +47,26 @@ const CARDS = ["quantum_secure", "encrypted", "sound_money"] as const;
     color: var(--color-content-70);
   }
 
-  @media (max-width: 768px) {
+  /* Stacks earlier than the site's 768px breakpoint: three columns at
+     ~800px leave each card a ~135px measure and wrap the titles. */
+  @media (max-width: 900px) {
     .launch-cards {
       grid-template-columns: 1fr;
     }
 
     .launch-card {
-      padding: 36px 28px;
       border-left: none;
       border-top: 1px solid var(--color-content-10);
     }
 
     .launch-card:first-child {
       border-top: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .launch-card {
+      padding: 36px 28px;
     }
   }
 </style>
