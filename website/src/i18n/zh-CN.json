@@ -924,7 +924,11 @@
       "wormhole": "虫洞",
       "protocol-security": "协议安全",
       "governance": "治理",
-      "tokenomics": "代币经济学"
+      "tokenomics": "代币经济学",
+      "crqc": "CRQC",
+      "ecdsa": "ECDSA",
+      "nist": "NIST",
+      "ai": "AI"
     }
   },
   "whitepaper": {

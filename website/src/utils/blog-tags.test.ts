@@ -26,6 +26,12 @@ function blogFiles(dir: string): string[] {
 }
 
 describe("canonical blog tags", () => {
+  test("includes tags introduced by the CRQC education article", () => {
+    expect(BLOG_TAGS).toEqual(
+      expect.arrayContaining(["crqc", "ecdsa", "nist", "ai"]),
+    );
+  });
+
   test("weekly-update is a category, never a tag", () => {
     expect(BLOG_CATEGORIES).toContain("weekly-update");
     expect(BLOG_TAGS).not.toContain("weekly-update");

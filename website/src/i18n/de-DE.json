@@ -935,7 +935,11 @@
       "wormhole": "Wormhole",
       "protocol-security": "Protokollsicherheit",
       "governance": "Governance",
-      "tokenomics": "Tokenomics"
+      "tokenomics": "Tokenomics",
+      "crqc": "CRQC",
+      "ecdsa": "ECDSA",
+      "nist": "NIST",
+      "ai": "KI"
     }
   },
   "whitepaper": {

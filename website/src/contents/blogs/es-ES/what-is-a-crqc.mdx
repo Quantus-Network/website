@@ -1,0 +1,170 @@
+---
+published: false
+category: education
+title: "¿Qué es un CRQC?"
+metaTitle: "¿Qué es un CRQC? Computadora cuántica relevante"
+description: "Descubre qué hace que una computadora cuántica sea criptográficamente relevante, cómo difiere de las máquinas actuales y qué podría significar para cripto."
+pubDate: "2026-09-15"
+heroImage: "/blog/covers/what-is-a-crqc.webp"
+heroAlt: "¿Qué es un CRQC?"
+featured: false
+author: christopher-smith
+tags:
+  [
+    "crqc",
+    "quantum-computing",
+    "post-quantum-cryptography",
+    "cryptography",
+    "bitcoin",
+    "ecdsa",
+    "nist",
+    "ai",
+  ]
+---
+
+import YouTubeEmbed from "@/components/features/blog/YouTubeEmbed.astro";
+
+Una **computadora cuántica criptográficamente relevante**, o **CRQC**, es una computadora cuántica lo bastante potente y fiable para romper formas ampliamente usadas de criptografía de clave pública. Estos son métodos de seguridad que ayudan a mantener las comunicaciones privadas y a comprobar que las transacciones fueron autorizadas.
+
+Las computadoras cuánticas ya existen, pero ninguna máquina demostrada públicamente puede realizar estos ataques con los tamaños de clave que usan las principales blockchains. En blockchains que usan métodos vulnerables para verificar la autorización de transacciones, un CRQC podría permitir a un atacante crear transacciones que la red acepte sin el permiso del propietario.
+
+## ¿En qué se diferencia un CRQC de las computadoras cuánticas actuales?
+
+Las computadoras cuánticas actuales pueden ejecutar experimentos y realizar cálculos especializados. Los cálculos largos son difíciles porque los errores pueden acumularse antes de que la máquina termine.
+
+Las computadoras cuánticas almacenan y procesan información usando **bits cuánticos**, normalmente abreviados como **qubits**. Un qubit físico es una unidad de hardware individual, como un circuito superconductor o un ion atrapado. Las perturbaciones del entorno o un control imperfecto pueden introducir errores durante un cálculo.
+
+El físico John Preskill introdujo el término [NISQ, que significa quantum ruidoso de escala intermedia](https://arxiv.org/abs/1801.00862), para describir máquinas con un número limitado de qubits cuyos cálculos están limitados por errores. "Ruidoso" se refiere a esos errores; "escala intermedia" se refiere al número de qubits.
+
+Los investigadores usan **corrección de errores cuánticos** para codificar la información de un qubit en múltiples qubits físicos y detectar y corregir errores. Esa unidad codificada se llama **qubit lógico**. Puede ser más fiable que un qubit físico individual, aunque aún puede fallar.
+
+Un CRQC necesitaría realizar un ataque criptográfico completo manteniendo los errores lo bastante bajos para que el cálculo tenga éxito. Eso exige computación fiable a una escala y duración que van más allá de los experimentos limitados demostrados hasta ahora.
+
+### ¿Cuántos qubits necesitaría un ataque cuántico?
+
+La distinción entre qubits físicos y lógicos explica por qué no hay una única respuesta. Los anuncios de hardware suelen reportar qubits físicos, mientras que las estimaciones de ataque pueden especificar qubits lógicos. Comparar esas cifras requiere saber cuánta corrección de errores necesitaría la máquina propuesta.
+
+El propio ataque también afecta al requisito. Una computadora cuántica ejecuta una secuencia de operaciones llamada circuito cuántico, y los investigadores pueden diseñar distintos circuitos para el mismo ataque. Un diseño podría usar menos qubits pero requerir más operaciones, aumentando el trabajo que la máquina debe completar con precisión.
+
+Los investigadores luego estiman el hardware físico necesario usando suposiciones sobre la velocidad y las tasas de error de la máquina.
+
+Un [estudio liderado por Google publicado en 2026](https://arxiv.org/abs/2603.28846v2) estimó lo que necesitaría una computadora cuántica para calcular una clave privada —el secreto usado para autorizar transacciones— a partir de su clave pública correspondiente. El estudio examinó el sistema de curva elíptica secp256k1 de Bitcoin.
+
+Un circuito propuesto necesitaba menos de 1.200 qubits lógicos y menos de 90 millones de puertas Toffoli, un tipo particular de operación cuántica.
+
+Bajo los supuestos del paper para hardware superconductor, incluida una tasa de error físico del 0,1 por ciento, los autores estimaron que ejecutar el circuito necesitaría menos de 500.000 qubits físicos.
+
+Una máquina funcional aún necesitaría proporcionar esos qubits y ejecutar las operaciones de forma fiable. Los investigadores no demostraron el ataque en una computadora cuántica existente.
+
+> Para leer más: [¿Por qué es tan difícil construir una computadora cuántica?](https://www.quantumcanary.org/insights/why-is-it-so-hard-to-build-a-quantum-computer)
+
+## ¿Cómo podría una computadora cuántica falsificar una transacción?
+
+Cuando aprueba una transacción, su wallet usa una clave privada para crear una **firma digital**. Otras computadoras usan su clave pública correspondiente para comprobar la firma. Esto permite a la red verificar la transacción sin necesidad de conocer su clave privada.
+
+Las dos claves están conectadas matemáticamente, pero calcular la clave privada a partir de la pública debería ser impracticable. Esquemas de firma como ECDSA, uno de los usados por Bitcoin, dependen de la dificultad de ese cálculo.
+
+El algoritmo de Shor le da a una computadora cuántica suficientemente capaz una forma eficiente de resolver el problema matemático detrás de estas firmas de curva elíptica. Con acceso a la clave pública relevante, el atacante podría calcular la clave privada y usarla para firmar transacciones.
+
+Para fondos controlados únicamente por esa clave, el atacante podría firmar una transacción que los envíe a una dirección que controle. La firma pasaría la verificación aunque el propietario nunca aprobara la transferencia.
+
+### ¿Podría una computadora cuántica leer también datos privados?
+
+Falsificar una transacción y leer los mensajes privados de alguien implican ataques distintos. Una firma digital ayuda a verificar una transacción. El cifrado mantiene la información confidencial haciéndola ilegible sin la clave correcta.
+
+Muchas conexiones cifradas usan criptografía de clave pública para establecer las claves secretas que protegen sus mensajes. Una computadora cuántica suficientemente capaz podría atacar métodos vulnerables usados en ese proceso, permitiendo potencialmente a un atacante leer comunicaciones grabadas.
+
+Las blockchains también usan funciones hash, como SHA-256. Una función hash convierte datos en un valor de longitud fija. Incluso un pequeño cambio en los datos suele producir un valor hash distinto, lo que ayuda a las computadoras a detectar alteraciones. El hashing no oculta la información original en una forma que alguien pueda descifrar después.
+
+El algoritmo de Grover puede acelerar la búsqueda de claves de cifrado secretas o de entradas que produzcan un hash concreto. Que eso haga práctico un ataque depende del método criptográfico y de los recursos disponibles. La capacidad de falsificar firmas vulnerables no haría automáticamente inutilizable AES, un método de cifrado muy usado, ni la función hash SHA-256.
+
+> Para leer más: [Cómo funciona el algoritmo de Grover (matemáticamente hablando)](https://www.quantumcanary.org/insights/how-does-grovers-algorithm-work-mathematically-speaking)
+
+## ¿Cuándo podría un CRQC poner en riesgo a cripto?
+
+No hay una fecha confirmada para una computadora cuántica que pueda atacar la criptografía que usan las principales blockchains. [El NIST describe estimaciones que van de años a décadas](https://www.nist.gov/cybersecurity-and-privacy/what-post-quantum-cryptography), lo que refleja problemas de ingeniería que los investigadores aún deben resolver. Los anuncios públicos muestran lo que se ha demostrado abiertamente, pero la primera máquina capaz podría no anunciarse cuando se construya.
+
+El momento depende tanto de la máquina que los investigadores puedan construir como del cálculo que un atacante necesite que realice. Los investigadores están trabajando en ambos frentes, incluso mediante experimentos asistidos por IA.
+
+### Cómo podría la IA afectar el progreso hacia un CRQC
+
+La IA ya está ayudando a los investigadores a reducir el trabajo que requeriría un futuro ataque cuántico. En [ECDSA.fail](https://ecdsa.fail/), de EigenLabs, los participantes usan agentes de codificación con IA para desarrollar y probar mejoras a un circuito cuántico usado en ataques de curva elíptica. El desafío usa los resultados de la investigación de Google como puntos de referencia para comparar el progreso.
+
+![Tabla de clasificación de ECDSA.fail que rastrea las mejoras asistidas por IA al circuito cuántico necesario para romper las firmas de curva elíptica de Bitcoin, actualmente un 62% por delante del circuito clasificado de Google](/blog/assets/ecdsa-fail-leaderboard.webp)
+
+El objetivo es realizar el mismo cálculo usando menos qubits u operaciones. El [paper de investigación del proyecto describe cómo personas y agentes de IA aportan mejoras](https://arxiv.org/abs/2609.09582), que se verifican antes de aparecer en la tabla de clasificación. Estos resultados se refieren a una sola operación dentro de un ataque mayor; realizar el ataque completo seguiría requiriendo una computadora cuántica capaz.
+
+Los investigadores también están usando IA para que los procesadores cuánticos funcionen de forma fiable. En julio de 2026, [Google informó haber usado aprendizaje automático para ajustar los controles de un procesador cuántico](https://research.google/blog/towards-a-quantum-computer-that-learns-from-its-errors/) durante experimentos de corrección de errores. Los ajustes ayudaron al sistema a mantenerse estable a medida que cambiaban sus condiciones de operación.
+
+Exploramos cómo la IA y la computación cuántica podrían afectar a Bitcoin con Colton Dillion, CEO y cofundador de Postquant Labs, la empresa detrás de Quip Network:
+
+<YouTubeEmbed
+  url="https://youtu.be/qXvgN8GY_NY?si=_yPpXHm8A1ZSSwdU"
+  title="IA, computación cuántica y Bitcoin con Colton Dillion"
+/>
+
+### Algunos ataques permiten más tiempo que otros
+
+En el caso de Bitcoin, el tiempo disponible para un ataque depende en parte de cuándo se vuelve visible la clave pública.
+
+Un **ataque en reposo** apunta a fondos cuya clave pública ya está expuesta. Un atacante puede empezar a calcular la clave privada sin esperar a que el propietario haga un pago. El ataque sigue siendo útil mientras esa clave todavía controle fondos.
+
+Algunas recompensas de minería tempranas de Bitcoin usan un formato que registra la clave pública directamente onchain. Estas incluyen monedas comúnmente atribuidas a Satoshi Nakamoto, aunque esa propiedad no está probada. Su antigüedad o inactividad no impedirían un ataque cuántico contra las claves expuestas.
+
+Un **ataque en el momento del gasto** apunta a una clave revelada durante un pago. El atacante debe recuperar la clave privada y enviar una transacción competidora con suficiente rapidez para que sea aceptada en su lugar. En Bitcoin, esto puede significar intentar el ataque mientras el pago original espera confirmación.
+
+Una máquina podría por tanto amenazar claves ya expuestas antes de ser lo bastante rápida para explotar una ventana de gasto corta.
+
+### La información cifrada se puede recolectar hoy
+
+Los atacantes también pueden almacenar información cifrada que podría seguir siendo valiosa durante años, incluyendo mensajes privados, historiales médicos, comunicaciones gubernamentales y documentos empresariales confidenciales.
+
+En un ataque de recolectar-ahora-descifrar-después, alguien almacena esa información cifrada hasta que una futura computadora cuántica pueda romper la criptografía vulnerable que protege sus claves de cifrado. [El NIST explica por qué los secretos de larga duración necesitan protección antes de que exista tal computadora](https://www.nist.gov/cybersecurity-and-privacy/what-post-quantum-cryptography).
+
+Esto amenaza la confidencialidad de la información almacenada. Un ataque contra una clave de firma de Bitcoin expuesta amenaza los fondos que esa clave autoriza a alguien a gastar.
+
+## Por qué la preparación empieza antes de que exista un CRQC
+
+La desigualdad del criptógrafo Michele Mosca compara tres periodos:
+
+- **X**, cuántos años debe permanecer confidencial la información
+- **Y**, cuántos años tarda la migración
+- **Z**, el número estimado de años hasta que una computadora cuántica pueda romper la criptografía que protege esa información
+
+El objetivo de planificación es **X + Y \< Z**.
+
+![Desigualdad de Mosca: cuando los años que los datos deben permanecer confidenciales (X) más los años que tarda la migración (Y) superan los años hasta que llega una computadora cuántica capaz (Z), las claves secretas quedan expuestas antes de que exista protección](/blog/assets/moscas-inequality.webp)
+
+Si la suma supera a Z, la información recolectada podría volverse legible mientras aún necesita protección. Z sigue siendo incierta.
+
+Para las claves de firma de blockchain, la migración debe proteger los fondos existentes antes de que una computadora cuántica pueda recuperar las claves privadas necesarias para gastarlos. Una clave pública ya expuesta permite a un atacante intentar ese cálculo sin esperar a que su propietario haga una transacción.
+
+Prepararse significa reemplazar firmas vulnerables por **criptografía post-cuántica**: algoritmos diseñados para resistir ataques conocidos tanto de computadoras clásicas como cuánticas. Estos algoritmos funcionan en hardware convencional, por lo que los desarrolladores pueden implementarlos antes de que exista un CRQC.
+
+[El NIST finalizó sus primeros tres estándares post-cuánticos en 2024](https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards), proporcionando métodos para establecer secretos compartidos y crear firmas digitales. Los desarrolladores todavía necesitan integrar y probar esos métodos en los sistemas que usa la gente.
+
+En una blockchain, eso puede requerir cambios en toda la red. Los nodos deben hacer cumplir las reglas actualizadas, las wallets deben soportar las nuevas firmas, y los exchanges y custodios deben actualizar sus servicios. Según el diseño de la migración, los usuarios también pueden necesitar mover fondos existentes a nuevas claves o direcciones.
+
+Los fondos controlados por claves privadas perdidas crean un problema más difícil porque sus propietarios no pueden autorizar una transferencia ordinaria. Añadir un nuevo método de firma no protege automáticamente esos fondos.
+
+En Bitcoin, la inactividad por sí sola no demuestra que una clave privada se haya perdido.
+
+El plan de migración de una blockchain debería explicar cómo se protegerán los fondos existentes, incluidos los fondos cuyos propietarios no pueden hacer una transferencia. Al evaluar afirmaciones de preparación cuántica, busca los cambios ya desplegados, las acciones que deben tomar los usuarios y los fondos que podrían permanecer expuestos.
+
+## Preguntas frecuentes
+
+### ¿Una wallet de hardware protege contra un ataque cuántico?
+
+Una wallet de hardware ayuda a mantener las claves privadas aisladas de otros dispositivos. Sin embargo, un ataque cuántico contra un esquema de firma vulnerable podría derivar la clave privada a partir de información pública expuesta sin acceder a la wallet. El dispositivo por sí solo no puede impedir ese cálculo.
+
+### ¿Son diferentes las computadoras cuánticas "criptográficamente relevantes" y "criptanalíticamente relevantes"?
+
+Ambos términos aparecen en discusiones sobre ataques cuánticos a la criptografía. [El NIST usa "computadora cuántica criptanalíticamente relevante"](https://csrc.nist.gov/glossary/term/cryptanalytically_relevant_quantum_computer) para una máquina capaz de usar algoritmos cuánticos para romper criptografía que sigue siendo segura frente a computadoras clásicas.
+
+### ¿Cuál es la diferencia entre un CRQC y el Q-Day?
+
+Un CRQC es una computadora cuántica con la capacidad de realizar un ataque criptográfico. El Q-Day se refiere al momento en que esa capacidad puede romper la criptografía todavía en uso. Distintos sistemas criptográficos requieren distintos recursos de ataque y tiempos de ejecución, por lo que podrían volverse vulnerables en momentos diferentes.
+
+### ¿La criptografía post-cuántica necesita una computadora cuántica?
+
+No. La criptografía post-cuántica funciona en computadoras convencionales, incluido el hardware usado por wallets y nodos de blockchain. Está diseñada para resistir ataques cuánticos conocidos, de modo que los sistemas puedan adoptarla antes de que exista un CRQC.

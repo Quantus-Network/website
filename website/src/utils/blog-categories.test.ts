@@ -1,13 +1,17 @@
+import { readdirSync, readFileSync } from "node:fs";
+import { join } from "node:path";
 import { describe, expect, test } from "bun:test";
+import { BLOG_CATEGORIES } from "@/constants/blog-categories";
 import {
   ALL_BLOG_CATEGORY,
-  BLOG_CATEGORIES,
   blogCategoryFilterFromSearch,
   blogCategoryListHref,
   filterPostsByCategory,
   parseBlogCategoryFilter,
   relatedBlogPosts,
 } from "./blog-categories";
+
+const blogsRoot = join(import.meta.dir, "../contents/blogs");
 
 type Post = {
   id: string;
@@ -134,5 +138,29 @@ describe("relatedBlogPosts", () => {
       true,
     );
     expect(related).toEqual([]);
+  });
+});
+
+describe("blog frontmatter categories", () => {
+  test("every post uses a canonical category id", () => {
+    const allowed = new Set<string>(BLOG_CATEGORIES);
+    const files = readdirSync(blogsRoot, { recursive: true, encoding: "utf8" })
+      .filter((name) => name.endsWith(".md") || name.endsWith(".mdx"))
+      .map((name) => join(blogsRoot, name));
+
+    expect(files.length).toBeGreaterThan(0);
+
+    for (const file of files) {
+      const source = readFileSync(file, "utf8");
+      const match = source.match(/^---\n([\s\S]*?)\n---/);
+      expect(match, `${file} is missing frontmatter`).toBeTruthy();
+      const categoryMatch = match![1].match(/^category:\s*(.+)$/m);
+      expect(categoryMatch, `${file} is missing category`).toBeTruthy();
+      const category = categoryMatch![1].trim();
+      expect(
+        allowed.has(category),
+        `${file} has unknown category "${category}"`,
+      ).toBe(true);
+    }
   });
 });
