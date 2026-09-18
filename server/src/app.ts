@@ -36,10 +36,15 @@ const tokensMatch = (provided: string | undefined, expected: string | undefined)
   return timingSafeEqual(a, b);
 };
 
-// Basic shape/size validation for free-text fields forwarded to the mailer
-// and the database. Prevents unbounded payloads from being persisted or sent.
-const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+// Strict RFC 5322 addr-spec baseline for bare email addresses.
+const EMAIL_RE = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/;
+
+// Matches single address with display name: "Display Name <mailbox@domain.com>" or '"Quoted Name" <mailbox@domain.com>'.
+// Anchored strictly to prohibit trailing recipient suffixes (e.g. ", second@example.com").
+const FORMATTED_EMAIL_RE = /^(?:(?:"([^"\r\n]{1,254})")|([^<>"@,;:\r\n]{1,254}))?\s*<([^\s<>]+)>$/;
+
 const MAX_TEXT_LENGTH = 5000;
+const MAX_EMAIL_HEADER_LENGTH = 320;
 
 const clampText = (value: unknown, max = 200): string =>
   typeof value === "string" ? value.slice(0, max) : "";
@@ -47,21 +52,38 @@ const clampText = (value: unknown, max = 200): string =>
 // Preserve undefined when optional fields are omitted or empty, allowing downstream
 // handlers (such as buildLoopsContactPayload) to safely fall back to defaults.
 const clampOptionalText = (value: unknown, max = 100): string | undefined =>
-  typeof value === "string" && value.trim().length > 0 ? value.slice(0, max) : undefined;
+  typeof value === "string" && value.trim().length > 0 ? value.trim().slice(0, max) : undefined;
 
-// Extracts the raw email address from either a bare address ("user@example.com")
-// or an RFC 2822 display-name format ("Display Name <user@example.com>").
-const extractEmail = (input: string): string => {
-  const match = input.match(/<([^>]+)>/);
-  return match ? match[1].trim() : input.trim();
-};
-
-// Validates whether an email header contains a valid email address while
-// supporting both bare addresses and display names accepted by Nodemailer.
+// Validates that an address header contains exactly one valid RFC 5322 recipient or sender.
+// Rejects multi-recipient suffixes, unescaped separators, and oversized display names under noUncheckedIndexedAccess.
 const isValidEmailHeader = (input: unknown): boolean => {
-  if (typeof input !== "string" || !input.trim()) return false;
-  const rawEmail = extractEmail(input);
-  return EMAIL_RE.test(rawEmail) && rawEmail.length <= 320;
+  if (typeof input !== "string") return false;
+  const trimmed = input.trim();
+  if (trimmed.length === 0 || trimmed.length > MAX_EMAIL_HEADER_LENGTH) return false;
+
+  // Validate bare email address
+  if (EMAIL_RE.test(trimmed)) {
+    return true;
+  }
+
+  // Validate single display-name format: "Name <mailbox@domain.com>"
+  const match = FORMATTED_EMAIL_RE.exec(trimmed);
+  if (!match) return false;
+
+  const quotedName: string | undefined = match[1];
+  const unquotedName: string | undefined = match[2];
+  const rawEmail: string | undefined = match[3];
+
+  if (!rawEmail || !EMAIL_RE.test(rawEmail) || rawEmail.length > MAX_EMAIL_HEADER_LENGTH) {
+    return false;
+  }
+
+  const displayName = (quotedName ?? unquotedName ?? "").trim();
+  if (displayName.length === 0 && (quotedName !== undefined || unquotedName !== undefined)) {
+    return false;
+  }
+
+  return true;
 };
 
 // Middleware
@@ -77,7 +99,7 @@ app.get("/", async (_, res) => {
 
 app.post("/api/waitlist", async (req, res) => {
   const { email, firstName, lastName, source } = req.body;
-  if (!email || typeof email !== "string" || !EMAIL_RE.test(email) || email.length > 320) {
+  if (!email || typeof email !== "string" || !EMAIL_RE.test(email) || email.length > MAX_EMAIL_HEADER_LENGTH) {
     res.status(400).json({ error: "A valid email is required!" });
     return;
   }
@@ -143,7 +165,7 @@ app.post("/api/inquiries", async (req, res) => {
     res.status(400).json({ error: "Name is required!" });
     return;
   }
-  if (!email || typeof email !== "string" || !EMAIL_RE.test(email) || email.length > 320) {
+  if (!email || typeof email !== "string" || !EMAIL_RE.test(email) || email.length > MAX_EMAIL_HEADER_LENGTH) {
     res.status(400).json({ error: "A valid email is required!" });
     return;
   }
@@ -238,7 +260,7 @@ app.post("/api/sponsorships", async (req, res) => {
     res.status(400).json({ error: "Name is required!" });
     return;
   }
-  if (!email || typeof email !== "string" || !EMAIL_RE.test(email) || email.length > 320) {
+  if (!email || typeof email !== "string" || !EMAIL_RE.test(email) || email.length > MAX_EMAIL_HEADER_LENGTH) {
     res.status(400).json({ error: "A valid email is required!" });
     return;
   }
