@@ -5,6 +5,7 @@ import { createHash, timingSafeEqual } from "node:crypto";
 import env from "./config/index.js";
 
 import { corsHandler } from "./middlewares/cors.js";
+import { createApiRateLimiter } from "./middlewares/rateLimiter.js";
 import logger from "./lib/logger.js";
 import db from "./config/db.js";
 import emailTransporter from "./config/emailTransporter.js";
@@ -16,7 +17,6 @@ import {
   buildLoopsContactPayload,
 } from "./utils/loopsContact.js";
 import { toSafeLogError } from "./utils/safeLogError.js";
-import { Inquiry } from "./interfaces/Inquiry.js";
 import Mail from "nodemailer/lib/mailer/index.js";
 import axios from "axios";
 import { DatabaseError } from "pg";
@@ -47,7 +47,7 @@ const clampText = (value: unknown, max = 200): string =>
 const clampOptionalText = (value: unknown, max = 100): string | undefined =>
   typeof value === "string" && value.trim().length > 0 ? value.trim().slice(0, max) : undefined;
 
-// Validates that a bare mailbox string conforms to basic email patterns:
+// Validates that a bare mailbox conforms to email address structure:
 // contains exactly one '@' with non-empty local and domain parts, bounded length,
 // no whitespace or control characters, supporting international SMTPUTF8 mailboxes.
 const isValidMailbox = (mailbox: string): boolean => {
@@ -68,33 +68,35 @@ const isValidMailbox = (mailbox: string): boolean => {
 };
 
 // Validates that an address header contains exactly one valid recipient or sender.
-// Supports both bare mailboxes and standard Nodemailer "Display Name <mailbox@domain>" formats,
-// while strictly rejecting comma-separated recipient suffixes and oversized values.
+// Supports bare mailboxes, unquoted display names without commas, and quoted display names
+// that may legally contain commas (e.g. "Doe, Jane" <jane@example.com>).
+// Strictly rejects multiple recipient lists, trailing chained addresses, and unclosed quotes.
 const isValidEmailHeader = (input: unknown): input is string => {
   if (typeof input !== "string") return false;
   const trimmed = input.trim();
   if (trimmed.length === 0 || trimmed.length > MAX_EMAIL_HEADER_LENGTH) return false;
 
-  // Reject multiple address chaining via commas
-  if (trimmed.includes(",")) return false;
-
-  // Single display-name format: "Display Name <mailbox@domain>"
-  const angleMatch = /^([^<]*)<([^<>]+)>$/.exec(trimmed);
+  // Single display-name pattern: optional quoted name (allows commas) OR unquoted name (no commas/semicolons),
+  // followed strictly by angle-bracketed mailbox. Anchored to reject multi-address lists.
+  const angleMatch = /^(?:(?:"([^"\r\n\0]*)")|([^<>,;:\r\n\0]*))\s*<([^<>]+)>$/.exec(trimmed);
   if (angleMatch) {
-    const rawMailbox = angleMatch[2]?.trim();
+    const rawMailbox = angleMatch[3]?.trim();
     if (!rawMailbox) return false;
     return isValidMailbox(rawMailbox);
   }
 
-  // Bare email format
+  // Bare email address: must not contain quotes or commas
+  if (trimmed.includes(",") || trimmed.includes('"')) return false;
+
   return isValidMailbox(trimmed);
 };
 
 // Middleware
-app.set("trust proxy", true);
+app.set("trust proxy", 1);
 app.use(helmet({ crossOriginResourcePolicy: { policy: "cross-origin" } }));
 app.use(express.json());
 app.use(corsHandler);
+app.use("/api", createApiRateLimiter());
 
 // Routes
 app.get("/", async (_, res) => {
@@ -159,44 +161,6 @@ app.post("/api/waitlist", async (req, res) => {
       error: toSafeLogError(err),
     });
     res.status(500).json({ error: "Unknown internal server error" });
-  }
-});
-
-app.post("/api/inquiries", async (req, res) => {
-  const { email, message, name } = req.body as Inquiry;
-
-  if (!name || typeof name !== "string") {
-    res.status(400).json({ error: "Name is required!" });
-    return;
-  }
-  if (!email || typeof email !== "string" || !isValidMailbox(email.trim())) {
-    res.status(400).json({ error: "A valid email is required!" });
-    return;
-  }
-  if (!message || typeof message !== "string" || message.length > MAX_TEXT_LENGTH) {
-    res.status(400).json({ error: "Message is required (max 5000 characters)!" });
-    return;
-  }
-
-  const contactUsMailOptions: Mail.Options = {
-    from: `Hello Quantus <${env.email.sender}>`,
-    to: env.email.receiver,
-    subject: "Quantus New Contact",
-    text: `${name.slice(0, 200)} is contacting, \n\nemail: ${email.trim()}\nmessage:${message.slice(0, MAX_TEXT_LENGTH)}`,
-  };
-
-  try {
-    // Await the send so failures surface as an HTTP error instead of an
-    // unhandled promise rejection after a false "Success" response.
-    await emailClient.sendMail(contactUsMailOptions);
-
-    res.status(200).json({ message: "Success sending!", email });
-  } catch (error) {
-    logger.error({
-      message: "Failed sending contact email",
-      error: toSafeLogError(error),
-    });
-    res.status(400).json({ error: "Failed sending." });
   }
 });
 
