@@ -45,4 +45,8 @@ export default {
       launch: process.env.LAUNCH_MAILING_LIST_ID,
     },
   },
+  rateLimit: {
+    windowMs: 10 * 60 * 1000,
+    limit: 10,
+  },
 };
