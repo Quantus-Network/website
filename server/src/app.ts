@@ -86,37 +86,6 @@ app.post("/api/waitlist", async (req, res) => {
     res.status(500).json({ error: "Unknown internal server error" });
   }
 });
-app.post("/api/inquiries", async (req, res) => {
-  const { email, message, name } = req.body as Inquiry;
-
-  if (!name) {
-    res.status(400).json({ error: "Name is required!" });
-    return;
-  }
-  if (!email) {
-    res.status(400).json({ error: "Email is required!" });
-    return;
-  }
-  if (!message) {
-    res.status(400).json({ error: "Message is required!" });
-    return;
-  }
-
-  const contactUsMailOptions: Mail.Options = {
-    from: `Hello Quantus <${env.email.sender}>`,
-    to: env.email.receiver,
-    subject: "Quantus New Contact",
-    text: `${name} is contacting, \n\nemail: ${email}\nmessage:${message}`,
-  };
-
-  try {
-    emailClient.sendMail(contactUsMailOptions);
-
-    res.status(200).json({ message: "Success sending!", email });
-  } catch (error) {
-    res.status(400).json({ error: "Failed sending." });
-  }
-});
 app.post("/api/send-email", async (req, res) => {
   const { from, to, subject, html } = req.body as EmailPayload;
 
