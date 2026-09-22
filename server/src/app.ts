@@ -4,6 +4,7 @@ import helmet from "helmet";
 import env from "./config/index.js";
 
 import { corsHandler } from "./middlewares/cors.js";
+import { createApiRateLimiter } from "./middlewares/rateLimit.js";
 import logger from "./lib/logger.js";
 import db from "./config/db.js";
 import emailTransporter from "./config/emailTransporter.js";
@@ -15,7 +16,6 @@ import {
   buildLoopsContactPayload,
 } from "./utils/loopsContact.js";
 import { toSafeLogError } from "./utils/safeLogError.js";
-import { Inquiry } from "./interfaces/Inquiry.js";
 import Mail from "nodemailer/lib/mailer/index.js";
 import axios from "axios";
 import { DatabaseError } from "pg";
@@ -25,11 +25,15 @@ const dbClient = await db();
 const emailClient = emailTransporter();
 const app = express();
 
+const apiRateLimiter = createApiRateLimiter(env.rateLimit);
+
 // Middleware
-app.set("trust proxy", true);
+// Trust one proxy hop so the limiter keys off the client IP Cloudflare reports.
+app.set("trust proxy", 1);
 app.use(helmet({ crossOriginResourcePolicy: { policy: "cross-origin" } }));
 app.use(express.json());
 app.use(corsHandler);
+app.use("/api", apiRateLimiter);
 
 // Routes
 app.get("/", async (_, res) => {
@@ -84,37 +88,6 @@ app.post("/api/waitlist", async (req, res) => {
       error: toSafeLogError(err),
     });
     res.status(500).json({ error: "Unknown internal server error" });
-  }
-});
-app.post("/api/inquiries", async (req, res) => {
-  const { email, message, name } = req.body as Inquiry;
-
-  if (!name) {
-    res.status(400).json({ error: "Name is required!" });
-    return;
-  }
-  if (!email) {
-    res.status(400).json({ error: "Email is required!" });
-    return;
-  }
-  if (!message) {
-    res.status(400).json({ error: "Message is required!" });
-    return;
-  }
-
-  const contactUsMailOptions: Mail.Options = {
-    from: `Hello Quantus <${env.email.sender}>`,
-    to: env.email.receiver,
-    subject: "Quantus New Contact",
-    text: `${name} is contacting, \n\nemail: ${email}\nmessage:${message}`,
-  };
-
-  try {
-    emailClient.sendMail(contactUsMailOptions);
-
-    res.status(200).json({ message: "Success sending!", email });
-  } catch (error) {
-    res.status(400).json({ error: "Failed sending." });
   }
 });
 app.post("/api/send-email", async (req, res) => {
