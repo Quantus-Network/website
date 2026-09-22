@@ -36,13 +36,6 @@ const tokensMatch = (provided: string | undefined, expected: string | undefined)
   return timingSafeEqual(a, b);
 };
 
-// Strict RFC 5322 addr-spec baseline for bare email addresses.
-const EMAIL_RE = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/;
-
-// Matches single address with display name: "Display Name <mailbox@domain.com>" or '"Quoted Name" <mailbox@domain.com>'.
-// Anchored strictly to prohibit trailing recipient suffixes (e.g. ", second@example.com").
-const FORMATTED_EMAIL_RE = /^(?:(?:"([^"\r\n]{1,254})")|([^<>"@,;:\r\n]{1,254}))?\s*<([^\s<>]+)>$/;
-
 const MAX_TEXT_LENGTH = 5000;
 const MAX_EMAIL_HEADER_LENGTH = 320;
 
@@ -54,36 +47,47 @@ const clampText = (value: unknown, max = 200): string =>
 const clampOptionalText = (value: unknown, max = 100): string | undefined =>
   typeof value === "string" && value.trim().length > 0 ? value.trim().slice(0, max) : undefined;
 
-// Validates that an address header contains exactly one valid RFC 5322 recipient or sender.
-// Rejects multi-recipient suffixes, unescaped separators, and oversized display names under noUncheckedIndexedAccess.
-const isValidEmailHeader = (input: unknown): boolean => {
-  if (typeof input !== "string") return false;
-  const trimmed = input.trim();
-  if (trimmed.length === 0 || trimmed.length > MAX_EMAIL_HEADER_LENGTH) return false;
+// Validates that a bare mailbox string conforms to basic email patterns:
+// contains exactly one '@' with non-empty local and domain parts, bounded length,
+// no whitespace or control characters, supporting international SMTPUTF8 mailboxes.
+const isValidMailbox = (mailbox: string): boolean => {
+  if (!mailbox || mailbox.length > MAX_EMAIL_HEADER_LENGTH) return false;
+  if (/[\s\r\n\0]/.test(mailbox)) return false;
 
-  // Validate bare email address
-  if (EMAIL_RE.test(trimmed)) {
-    return true;
-  }
-
-  // Validate single display-name format: "Name <mailbox@domain.com>"
-  const match = FORMATTED_EMAIL_RE.exec(trimmed);
-  if (!match) return false;
-
-  const quotedName: string | undefined = match[1];
-  const unquotedName: string | undefined = match[2];
-  const rawEmail: string | undefined = match[3];
-
-  if (!rawEmail || !EMAIL_RE.test(rawEmail) || rawEmail.length > MAX_EMAIL_HEADER_LENGTH) {
+  const atIndex = mailbox.indexOf("@");
+  if (atIndex <= 0 || atIndex !== mailbox.lastIndexOf("@") || atIndex === mailbox.length - 1) {
     return false;
   }
 
-  const displayName = (quotedName ?? unquotedName ?? "").trim();
-  if (displayName.length === 0 && (quotedName !== undefined || unquotedName !== undefined)) {
+  const domain = mailbox.slice(atIndex + 1);
+  if (!domain.includes(".") || domain.startsWith(".") || domain.endsWith(".")) {
     return false;
   }
 
   return true;
+};
+
+// Validates that an address header contains exactly one valid recipient or sender.
+// Supports both bare mailboxes and standard Nodemailer "Display Name <mailbox@domain>" formats,
+// while strictly rejecting comma-separated recipient suffixes and oversized values.
+const isValidEmailHeader = (input: unknown): input is string => {
+  if (typeof input !== "string") return false;
+  const trimmed = input.trim();
+  if (trimmed.length === 0 || trimmed.length > MAX_EMAIL_HEADER_LENGTH) return false;
+
+  // Reject multiple address chaining via commas
+  if (trimmed.includes(",")) return false;
+
+  // Single display-name format: "Display Name <mailbox@domain>"
+  const angleMatch = /^([^<]*)<([^<>]+)>$/.exec(trimmed);
+  if (angleMatch) {
+    const rawMailbox = angleMatch[2]?.trim();
+    if (!rawMailbox) return false;
+    return isValidMailbox(rawMailbox);
+  }
+
+  // Bare email format
+  return isValidMailbox(trimmed);
 };
 
 // Middleware
@@ -99,7 +103,7 @@ app.get("/", async (_, res) => {
 
 app.post("/api/waitlist", async (req, res) => {
   const { email, firstName, lastName, source } = req.body;
-  if (!email || typeof email !== "string" || !EMAIL_RE.test(email) || email.length > MAX_EMAIL_HEADER_LENGTH) {
+  if (!email || typeof email !== "string" || !isValidMailbox(email.trim())) {
     res.status(400).json({ error: "A valid email is required!" });
     return;
   }
@@ -111,7 +115,7 @@ app.post("/api/waitlist", async (req, res) => {
 
     const loopsContact = buildLoopsContactPayload(
       {
-        email,
+        email: email.trim(),
         firstName: safeFirstName,
         lastName: safeLastName,
         source: safeSource,
@@ -132,7 +136,7 @@ app.post("/api/waitlist", async (req, res) => {
     try {
       await dbClient
         .insert(waitlist)
-        .values({ id: generateUniqueID(), email, lastName: safeLastName, firstName: safeFirstName });
+        .values({ id: generateUniqueID(), email: email.trim(), lastName: safeLastName, firstName: safeFirstName });
     } catch (err) {
       if (!(err instanceof DatabaseError && err.code === "23505")) {
         throw err;
@@ -165,7 +169,7 @@ app.post("/api/inquiries", async (req, res) => {
     res.status(400).json({ error: "Name is required!" });
     return;
   }
-  if (!email || typeof email !== "string" || !EMAIL_RE.test(email) || email.length > MAX_EMAIL_HEADER_LENGTH) {
+  if (!email || typeof email !== "string" || !isValidMailbox(email.trim())) {
     res.status(400).json({ error: "A valid email is required!" });
     return;
   }
@@ -178,7 +182,7 @@ app.post("/api/inquiries", async (req, res) => {
     from: `Hello Quantus <${env.email.sender}>`,
     to: env.email.receiver,
     subject: "Quantus New Contact",
-    text: `${name.slice(0, 200)} is contacting, \n\nemail: ${email}\nmessage:${message.slice(0, MAX_TEXT_LENGTH)}`,
+    text: `${name.slice(0, 200)} is contacting, \n\nemail: ${email.trim()}\nmessage:${message.slice(0, MAX_TEXT_LENGTH)}`,
   };
 
   try {
@@ -260,7 +264,7 @@ app.post("/api/sponsorships", async (req, res) => {
     res.status(400).json({ error: "Name is required!" });
     return;
   }
-  if (!email || typeof email !== "string" || !EMAIL_RE.test(email) || email.length > MAX_EMAIL_HEADER_LENGTH) {
+  if (!email || typeof email !== "string" || !isValidMailbox(email.trim())) {
     res.status(400).json({ error: "A valid email is required!" });
     return;
   }
@@ -277,7 +281,7 @@ app.post("/api/sponsorships", async (req, res) => {
     return;
   }
 
-  let text = `${name.slice(0, 200)} is inquiring for a sponsorship, \n\nemail: ${email}\ndesignation: ${designation.slice(0, 200)}\norganization: ${organization.slice(0, 200)}\ninvestment tier: ${investmentTier.slice(0, 100)}`;
+  let text = `${name.slice(0, 200)} is inquiring for a sponsorship, \n\nemail: ${email.trim()}\ndesignation: ${designation.slice(0, 200)}\norganization: ${organization.slice(0, 200)}\ninvestment tier: ${investmentTier.slice(0, 100)}`;
   if (phone && typeof phone === "string") text += `\nphone: ${phone.slice(0, 100)}`;
   if (additionalInfo && typeof additionalInfo === "string") text += `\nadditional info: ${additionalInfo.slice(0, MAX_TEXT_LENGTH)}`;
 
