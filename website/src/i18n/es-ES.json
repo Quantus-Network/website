@@ -858,29 +858,53 @@
       "description": "Dinero encriptado seguro cuánticamente. Suministro máximo de 21 millones, Proof of Work. Reciba los detalles del lanzamiento."
     },
     "hero": {
-      "eyebrow": "Dinero Encriptado Seguro Cuánticamente"
+      "eyebrow": "Dinero Encriptado Seguro Cuánticamente",
+      "sub": "La mainnet ya está activa. Los swaps son lo siguiente. Reciba el aviso antes que nadie."
     },
     "signup": {
-      "headline": "Reciba los detalles del lanzamiento.",
-      "email_placeholder": "your@email.com",
+      "email_placeholder": "Introduzca su correo electrónico",
       "email_aria": "Dirección de correo electrónico",
-      "submit_label": "AVÍSAME",
+      "submit_label": "Avísame",
       "error_message": "Por favor, introduzca una dirección de correo electrónico válida.",
       "success": {
         "headline": "Está en la lista.",
-        "sub": "Los detalles del lanzamiento llegarán a su bandeja de entrada."
+        "sub": "Se enterará antes que nadie."
       }
     },
-    "facts": {
-      "supply": {
-        "label": "SUMINISTRO MÁXIMO",
-        "value": "21,000,000"
+    "cards": {
+      "quantum_secure": {
+        "title": "Seguro cuánticamente",
+        "body": "Dinero que los ordenadores cuánticos no pueden romper. Poscuántico desde el génesis."
       },
-      "consensus": {
-        "label": "PROOF OF WORK"
+      "encrypted": {
+        "title": "Encriptado",
+        "body": "Mantenga sus fondos transparentes u ocultos."
+      },
+      "sound_money": {
+        "title": "Dinero sólido",
+        "body": "Suministro máximo de 21.000.000 $QTC. Proof-of-work. Terminando lo que Bitcoin empezó."
       }
     },
-    "mining_cta": "LEER LA GUÍA DE MINERÍA"
+    "bridge": "Efectivo encriptado entre pares.",
+    "mining": {
+      "title": "Empiece a minar",
+      "body": "Convierta su capacidad de cómputo en $QTC.",
+      "cta": "Pase la guía de minería a su LLM"
+    },
+    "wallet": {
+      "title": "Intercambie, acumule y pague con $QTC.",
+      "body": "Una billetera creada para el futuro poscuántico. iOS y Android.",
+      "ios": "iOS",
+      "android": "Android"
+    },
+    "community": {
+      "title": "Únase a la conversación.",
+      "body": "Quienes construyen y minan Quantus hablan aquí primero.",
+      "telegram": "Telegram"
+    },
+    "final": {
+      "title": "Sea el primero en saber cuándo llegan los swaps."
+    }
   },
   "blog": {
     "title": "Las últimas noticias de Quantus.",
@@ -895,6 +919,12 @@
     "search_placeholder": "Buscar publicaciones...",
     "no_posts_found": "No se encontraron publicaciones.",
     "featured_label": "Destacado",
+    "categories_label": "Categorías",
+    "categories": {
+      "all": "Todas",
+      "weekly-update": "Actualización Semanal",
+      "education": "Educación"
+    },
     "related_posts": "Publicaciones relacionadas",
     "post": {
       "back_to_blog": "Volver al Blog",
@@ -914,125 +944,26 @@
       "back_link": "← Volver a todas las publicaciones"
     },
     "tags": {
-      "weekly-update": "Actualización Semanal",
-      "threshold-signatures": "Firmas de Umbral",
-      "post-quantum-cryptography": "Criptografía Post-Cuántica",
-      "dilithium": "Dilithium",
-      "zero-knowledge-proofs": "Pruebas de Conocimiento Cero",
-      "quantum-safe": "Seguro Cuánticamente",
-      "blockchain": "Blockchain",
-      "podcast": "Podcast",
-      "crypto": "Cripto",
-      "defi": "DeFi",
-      "bitcoin": "Bitcoin",
-      "business": "Negocios",
-      "network-state": "Estado de Red",
-      "innovation": "Innovación",
-      "quantum-computing": "Computación Cuántica",
-      "gpu-mining": "Minería GPU",
-      "dirac-network": "Red Dirac",
-      "blockchain-architecture": "Arquitectura Blockchain",
-      "tokenomics": "Tokenomics",
-      "hardware-wallet": "Billetera de Hardware",
-      "social-engagement": "Compromiso Social",
-      "solana-breakpoint": "Solana Breakpoint",
-      "culture": "Cultura",
-      "ai": "IA",
-      "justice": "Justicia",
-      "freedom": "Libertad",
-      "poseidon2": "Poseidon2",
-      "chain-architecture": "Arquitectura de Cadena",
-      "wormhole": "Wormhole",
-      "binance-blockchain-week": "Binance Blockchain Week",
-      "lattice-cryptography": "Criptografía de Red",
-      "polkadot-sdk": "SDK de Polkadot",
-      "audit": "Auditoría",
-      "miner-app": "App de Minería",
-      "gui-miner": "Minero GUI",
-      "mobile": "Móvil",
-      "ml-dsa": "ML-DSA",
-      "ama": "AMA",
-      "substrate": "Substrate",
-      "poseidon": "Poseidon",
-      "point-of-sale": "Punto de venta",
-      "dirac-testnet": "Testnet Dirac",
-      "mobile-wallet": "Billetera Móvil",
-      "wallet": "Billetera",
-      "pow": "Proof of Work",
-      "libp2p": "libp2p",
-      "ghostdag": "GHOSTDAG",
-      "blue-green-deployment": "Despliegue Azul-Verde",
-      "plonky2": "Plonky2",
-      "rebrand": "Rebranding",
-      "referral": "Referido",
-      "governance": "Gobernanza",
-      "treasury": "Tesorería",
-      "conviction-voting": "Votación por Convicción",
-      "gamification": "Gamificación",
-      "plonky3": "Plonky3",
-      "polyfri": "PolyFri",
-      "liberland": "Liberland",
-      "schrodinger-testnet": "Testnet Schrödinger",
-      "pqc": "PQC",
-      "mpc": "MPC",
-      "multisig": "Multisig",
-      "indexer": "Indexador",
-      "zk-aggregator": "Agregador ZK",
-      "biohacking": "Biohacking",
-      "rpc": "RPC",
-      "scalability": "Escalabilidad",
-      "privacy": "Privacidad",
-      "security": "Seguridad",
-      "guardian": "Guardián",
-      "time-lock": "Bloqueo de Tiempo",
-      "fraud-prevention": "Prevención de Fraude",
-      "coingecko": "CoinGecko",
-      "ecc": "ECC",
-      "post-quantum": "Postcuántico",
-      "quantum": "Cuántico",
-      "quantum-resistant": "Resistente Cuánticamente",
-      "zk-proofs": "Pruebas ZK",
-      "research": "Investigación",
-      "notification-system": "Sistema de Notificación",
-      "keystone": "Keystone",
-      "heisenberg-testnet": "Testnet Heisenberg",
-      "performance": "Rendimiento",
-      "planck": "Planck",
-      "prover": "Prover",
-      "infrastructure": "Infraestructura",
-      "consensus": "Consenso",
-      "mining": "Minería",
-      "fair-launch": "Lanzamiento justo",
-      "testnet": "Testnet",
-      "subsquid": "Subsquid",
-      "mithril": "Mithril",
-      "mainnet": "Mainnet",
       "q-day": "Q-Day",
-      "network-school": "Network School",
-      "ecdsa": "ECDSA",
-      "runtime-upgrade": "Actualización de Runtime",
-      "litep2p": "litep2p",
-      "nist": "NIST",
-      "ml-kem": "ML-KEM",
-      "blackrock": "BlackRock",
-      "formal-verification": "Verificación Formal",
-      "javascript-sdk": "SDK de JavaScript",
-      "runtime": "Runtime",
-      "cold-storage": "Almacenamiento en Frío",
-      "miner": "Minero",
-      "open-source": "Código Abierto",
-      "block-explorer": "Explorador de Bloques",
-      "reuters": "Reuters",
-      "bip-360": "BIP-360",
+      "quantum-computing": "Computación Cuántica",
+      "post-quantum-cryptography": "Criptografía Post-Cuántica",
       "cryptography": "Criptografía",
-      "charles-edwards": "Charles Edwards",
-      "encrypted-accounts": "Cuentas Cifradas",
-      "infra": "Infra",
-      "immunefi": "Immunefi",
-      "bug-bounty": "Recompensa por bugs",
-      "senoti": "Senoti",
-      "migration": "Migración",
-      "harvest-now-decrypt-later": "Recolectar-Ahora-Descifrar-Después"
+      "bitcoin": "Bitcoin",
+      "mining": "Minería",
+      "pow": "Proof of Work",
+      "privacy": "Privacidad",
+      "zero-knowledge-proofs": "Pruebas de Conocimiento Cero",
+      "wallet": "Billetera",
+      "mainnet": "Mainnet",
+      "ml-dsa": "ML-DSA",
+      "wormhole": "Wormhole",
+      "protocol-security": "Seguridad del protocolo",
+      "governance": "Gobernanza",
+      "tokenomics": "Tokenomics",
+      "crqc": "CRQC",
+      "ecdsa": "ECDSA",
+      "nist": "NIST",
+      "ai": "IA"
     }
   },
   "whitepaper": {

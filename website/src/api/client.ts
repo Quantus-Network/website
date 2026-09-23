@@ -41,12 +41,6 @@ interface GraphQLResponse<T = any> {
   }>;
 }
 
-interface ContactData {
-  name: string;
-  email: string;
-  message: string;
-}
-
 interface SubscribeData {
   email: string;
   firstName: string;
@@ -103,23 +97,6 @@ const createApiClient = () => {
         `${env.TASK_MASTER_URL}/risk-checker/${addressOrEnsName}`,
       );
       return (await data.json())?.data as EthereumAddressData | null;
-    },
-
-    /**
-     * Submit a contact form inquiry
-     */
-    contact: (name: string, email: string, message: string): ApiResponse => {
-      return fetch(`${env.API_URL}/inquiries`, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-        method: "POST",
-        body: JSON.stringify({
-          name,
-          email,
-          message,
-        } as ContactData),
-      });
     },
 
     /**
@@ -222,7 +199,6 @@ export default apiClient;
 export type {
   ChainStatsData,
   GraphQLResponse,
-  ContactData,
   SubscribeData,
   NodeData,
   NodeRpcState,

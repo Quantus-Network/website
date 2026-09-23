@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { filterPublishedBlogPosts } from "./blog-posts";
+import { filterPublishedBlogPosts, isBlogSlugPublished } from "./blog-posts";
 
 type Post = { id: string; data: { published?: boolean } };
 
@@ -80,5 +80,16 @@ describe("filterPublishedBlogPosts", () => {
     expect(filterPublishedBlogPosts([liveEnglish], false)).toEqual([
       liveEnglish,
     ]);
+  });
+});
+
+describe("isBlogSlugPublished", () => {
+  test("translation of a published English slug is published", () => {
+    expect(
+      isBlogSlugPublished(
+        [liveEnglish, translationUnpublished],
+        translationUnpublished.id,
+      ),
+    ).toBe(true);
   });
 });

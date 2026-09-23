@@ -1,20 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: ZK-агрегация и приложение Miner v0.1"
 description: "Первый этап ZK-агрегации транзакций в сети и CLI с реальной проверкой переводов, выпуск Miner App v0.1.0 и GPU-майнинг готов примерно на 80%."
 pubDate: "2025-11-25"
 heroImage: "/blog/covers/weekly-update-11-25-2025.webp"
 heroAlt: "Quantus Weekly: ZK-агрегация и приложение Miner v0.1"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "zero-knowledge-proofs",
-    "gpu-mining",
-    "miner-app",
-    "ama",
-    "substrate",
-  ]
+tags: ["zero-knowledge-proofs", "mining"]
 ---
 
 На этой неделе команда завершила первый этап ZK-агрегации транзакций как для сети, так и для CLI, заменив мок-тесты реальной проверкой переводов. Мы также выпустили бинарный файл Miner App v0.1.0, который уже доступен.

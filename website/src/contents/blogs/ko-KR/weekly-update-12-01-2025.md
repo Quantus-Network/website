@@ -1,20 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus 위클리: 격자 암호 감사와 Keystone 지갑"
 description: "rusty-crystals 격자 암호 감사 이슈를 모두 해결하고 Polkadot SDK 네트워킹을 업데이트했습니다. Keystone 오픈소스 하드웨어 지갑에 Quantus 주소를 지원합니다."
 pubDate: "2025-12-01"
 heroImage: "/blog/covers/weekly-update-12-01-2025.webp"
 heroAlt: "Quantus 위클리: 격자 암호 감사와 Keystone 지갑"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "lattice-cryptography",
-    "keystone",
-    "polkadot-sdk",
-    "hardware-wallet",
-    "audit",
-  ]
+tags: ["wallet", "protocol-security"]
 ---
 
 지난주 팀은 격자 암호 라이브러리(rusty-crystals) 감사에서 제기된 모든 이슈를 해결하고 최신 Polkadot SDK에 맞춘 네트워킹 업데이트를 출시했습니다. 또한 오픈소스 Keystone 하드웨어 지갑 펌웨어에 Quantus 주소 지원을 구현했으며, 시장 정보 플랫폼 "The Quantum Insider"에 프로필을 등재했습니다.

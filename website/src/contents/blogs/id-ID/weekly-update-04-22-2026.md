@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Klaim Planck, Prover 2x Lebih Cepat"
 description: "Planck adalah testnet pertama untuk transaksi privat post-quantum. Migrasi miner, klaim hadiah CLI ke wallet, dan throughput prover berlipat ganda lagi."
 pubDate: "2026-04-22"
@@ -8,17 +9,12 @@ heroAlt: "Quantus Weekly: Klaim Planck, Prover 2x Lebih Cepat"
 featured: false
 tags:
   [
-    "weekly-update",
     "bitcoin",
     "pow",
     "mining",
-    "testnet",
-    "planck",
-    "post-quantum",
-    "mobile",
-    "zk-proofs",
-    "infrastructure",
-    "subsquid",
+    "post-quantum-cryptography",
+    "wallet",
+    "zero-knowledge-proofs",
   ]
 ---
 

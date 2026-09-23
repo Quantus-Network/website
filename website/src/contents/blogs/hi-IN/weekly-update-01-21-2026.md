@@ -1,22 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Native Assets और Quantum Risk"
 description: "Bitcoin पर quantum risk का असर, native-only assets का फैसला, Dilithium threshold work और ZK aggregation पर इस सप्ताह की प्रगति।"
 pubDate: "2026-01-21"
 heroImage: "/blog/covers/weekly-update-01-21-2026.webp"
 heroAlt: "Quantus Weekly: Native Assets और Quantum Risk"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "bitcoin",
-    "quantum-safe",
-    "zk-aggregator",
-    "mpc",
-    "multisig",
-    "indexer",
-    "biohacking",
-  ]
+tags: ["bitcoin", "post-quantum-cryptography"]
 ---
 
 अगर आप सोच रहे हैं कि Gold क्यों rip कर रहा है और Bitcoin struggle कर रहा है, तो इसे पढ़ें। इसमें कुछ भी mysterious नहीं है।

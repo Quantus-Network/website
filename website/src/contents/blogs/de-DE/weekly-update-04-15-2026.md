@@ -1,23 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Planck-Testnet-Mining-Belohnungen"
 description: "Planck-Testnet ist live für Early Miner. App-Migration in TestFlight und Stores, GPU-Mining auf der neuen Chain — plus Core-, Infra- und Wallet-Updates."
 pubDate: "2026-04-15"
 heroImage: "/blog/covers/weekly-update-04-15-2026.webp"
 heroAlt: "Quantus Weekly: Planck-Testnet-Mining-Belohnungen"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "bitcoin",
-    "pow",
-    "mining",
-    "testnet",
-    "mobile",
-    "zk-proofs",
-    "infrastructure",
-    "subsquid",
-  ]
+tags: ["bitcoin", "pow", "mining", "wallet", "zero-knowledge-proofs"]
 ---
 
 Frühe Hashrate zählt.

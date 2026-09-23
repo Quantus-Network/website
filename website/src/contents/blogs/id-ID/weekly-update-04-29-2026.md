@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Audit dan Compact Aggregator"
 description: "Spring cleaning: item audit Eiger selesai, CLI direfaktor, perbaikan miner dan indexer, plus tes wormhole pada compact aggregator yang 2x prover."
 pubDate: "2026-04-29"
@@ -8,17 +9,12 @@ heroAlt: "Quantus Weekly: Audit dan Compact Aggregator"
 featured: false
 tags:
   [
-    "weekly-update",
     "bitcoin",
     "pow",
     "mining",
-    "testnet",
-    "planck",
-    "post-quantum",
-    "mobile",
-    "zk-proofs",
-    "infrastructure",
-    "subsquid",
+    "post-quantum-cryptography",
+    "wallet",
+    "zero-knowledge-proofs",
   ]
 ---
 

@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Ein fairerer Start"
 description: "Frühe Bitcoin-Miner schürften tausende BTC täglich per Laptop. Bei Quantus machen wir Mining vom ersten Tag an für alle zugänglich."
 pubDate: "2026-05-13"
@@ -7,20 +8,7 @@ heroImage: "/blog/covers/weekly-update-05-13-2026.webp"
 heroAlt: "Quantus Weekly: Ein fairerer Start"
 featured: false
 tags:
-  [
-    "weekly-update",
-    "bitcoin",
-    "mining",
-    "fair-launch",
-    "testnet",
-    "planck",
-    "gui-miner",
-    "zk-proofs",
-    "security",
-    "infrastructure",
-    "mobile",
-    "network-school",
-  ]
+  ["bitcoin", "mining", "zero-knowledge-proofs", "protocol-security", "wallet"]
 ---
 
 Frühe Bitcoin-Miner konnten tausende BTC pro Tag auf einem Laptop schürfen.

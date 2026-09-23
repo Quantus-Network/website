@@ -1,23 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: тестнет Planck и награды PoW"
 description: "Запущен тестнет Planck для стресс-теста Quantus перед mainnet: ранний хешрейт важен, миграция через TestFlight и GPU-майнинг с наградами за блоки."
 pubDate: "2026-04-15"
 heroImage: "/blog/covers/weekly-update-04-15-2026.webp"
 heroAlt: "Quantus Weekly: тестнет Planck и награды PoW"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "bitcoin",
-    "pow",
-    "mining",
-    "testnet",
-    "mobile",
-    "zk-proofs",
-    "infrastructure",
-    "subsquid",
-  ]
+tags: ["bitcoin", "pow", "mining", "wallet", "zero-knowledge-proofs"]
 ---
 
 Ранний хешрейт имеет значение.

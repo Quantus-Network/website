@@ -1,21 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Halving Kedua, Bukti 4x Lebih Cepat"
 description: "Pemotongan waktu prover kedua: bukti ZK 4x lebih cepat dalam dua minggu, plus Poseidon, perbaikan mining, Senoti, whitepaper, dan Quantum Canary."
 pubDate: "2026-03-24"
 heroImage: "/blog/covers/weekly-update-03-24-2026.webp"
 heroAlt: "Quantus Weekly: Halving Kedua, Bukti 4x Lebih Cepat"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "zk-proofs",
-    "poseidon",
-    "privacy",
-    "wormhole",
-    "performance",
-    "scalability",
-  ]
+tags: ["zero-knowledge-proofs", "privacy", "wormhole"]
 ---
 
 2 adalah angka spesial.

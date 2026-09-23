@@ -1,0 +1,170 @@
+---
+published: false
+category: education
+title: "Apa Itu CRQC?"
+metaTitle: "Apa Itu CRQC? Komputer Kuantum Relevan Secara Kriptografis"
+description: "Pelajari apa yang membuat komputer kuantum relevan secara kriptografis, bedanya dengan mesin saat ini, dan apa arti kemampuannya bagi dunia kripto."
+pubDate: "2026-09-15"
+heroImage: "/blog/covers/what-is-a-crqc.webp"
+heroAlt: "Apa Itu CRQC?"
+featured: false
+author: christopher-smith
+tags:
+  [
+    "crqc",
+    "quantum-computing",
+    "post-quantum-cryptography",
+    "cryptography",
+    "bitcoin",
+    "ecdsa",
+    "nist",
+    "ai",
+  ]
+---
+
+import YouTubeEmbed from "@/components/features/blog/YouTubeEmbed.astro";
+
+**Komputer kuantum yang relevan secara kriptografis**, atau **CRQC**, adalah komputer kuantum yang cukup kuat dan andal untuk membobol bentuk kriptografi kunci publik yang banyak dipakai. Ini adalah metode keamanan yang membantu menjaga kerahasiaan komunikasi dan memastikan transaksi telah diotorisasi.
+
+Komputer kuantum sudah ada, tetapi belum ada mesin yang didemonstrasikan secara publik yang bisa melakukan serangan ini pada ukuran kunci yang dipakai blockchain besar. Pada blockchain yang memakai metode rentan untuk memverifikasi otorisasi transaksi, CRQC bisa memungkinkan penyerang membuat transaksi yang diterima jaringan tanpa izin pemiliknya.
+
+## Apa Bedanya CRQC dengan Komputer Kuantum Saat Ini?
+
+Komputer kuantum saat ini bisa menjalankan eksperimen dan melakukan kalkulasi khusus. Kalkulasi panjang itu sulit karena galat bisa menumpuk sebelum mesin selesai.
+
+Komputer kuantum menyimpan dan mengolah informasi memakai **bit kuantum**, biasa disingkat **qubit**. Qubit fisik adalah satu unit hardware, seperti sirkuit superkonduktor atau ion yang terjebak. Gangguan dari lingkungan sekitarnya atau kontrol yang tidak sempurna bisa memunculkan galat selama kalkulasi.
+
+Fisikawan John Preskill memperkenalkan istilah [NISQ, yang berarti noisy intermediate-scale quantum](https://arxiv.org/abs/1801.00862), untuk menggambarkan mesin dengan jumlah qubit terbatas yang kalkulasinya dibatasi oleh galat. "Noisy" mengacu pada galat itu; "intermediate-scale" mengacu pada jumlah qubit.
+
+Peneliti memakai **koreksi galat kuantum** untuk mengenkode informasi satu qubit ke beberapa qubit fisik dan mendeteksi serta memperbaiki galat. Unit terenkode itu disebut **qubit logis**. Qubit logis bisa lebih andal daripada qubit fisik tunggal, meski masih bisa gagal.
+
+CRQC perlu melakukan serangan kriptografi lengkap sambil menjaga galat cukup rendah agar kalkulasi berhasil. Itu memerlukan komputasi andal pada skala dan durasi yang jauh melampaui eksperimen terbatas yang sudah didemonstrasikan sejauh ini.
+
+### Berapa Banyak Qubit yang Dibutuhkan Serangan Kuantum?
+
+Perbedaan antara qubit fisik dan logis menjelaskan mengapa tidak ada satu jawaban tunggal. Pengumuman hardware sering melaporkan qubit fisik, sementara estimasi serangan bisa menyebutkan qubit logis. Membandingkan angka-angka itu memerlukan pengetahuan tentang seberapa banyak koreksi galat yang dibutuhkan mesin yang diusulkan.
+
+Serangan itu sendiri juga memengaruhi kebutuhannya. Komputer kuantum menjalankan urutan operasi yang disebut sirkuit kuantum, dan peneliti bisa merancang sirkuit berbeda untuk serangan yang sama. Satu desain mungkin memakai lebih sedikit qubit tetapi memerlukan lebih banyak operasi, menambah pekerjaan yang harus diselesaikan mesin secara akurat.
+
+Peneliti kemudian memperkirakan hardware fisik yang diperlukan memakai asumsi tentang kecepatan dan tingkat galat mesin.
+
+Sebuah [studi yang dipimpin Google dan dipublikasikan pada 2026](https://arxiv.org/abs/2603.28846v2) memperkirakan apa yang dibutuhkan komputer kuantum untuk menghitung kunci privat — rahasia yang dipakai untuk mengotorisasi transaksi — dari kunci publik pasangannya. Studi ini meneliti sistem kurva eliptik secp256k1 milik Bitcoin.
+
+Satu sirkuit yang diusulkan memerlukan kurang dari 1.200 qubit logis dan kurang dari 90 juta gerbang Toffoli, jenis operasi kuantum tertentu.
+
+Dengan asumsi makalah tersebut untuk hardware superkonduktor, termasuk tingkat galat fisik 0,1 persen, para penulis memperkirakan menjalankan sirkuit itu memerlukan kurang dari 500.000 qubit fisik.
+
+Mesin yang benar-benar berfungsi tetap perlu menyediakan qubit tersebut dan menjalankan operasinya secara andal. Para peneliti tidak mendemonstrasikan serangan ini pada komputer kuantum yang sudah ada.
+
+> Baca Lebih Lanjut: [Mengapa Sangat Sulit Membangun Komputer Kuantum?](https://www.quantumcanary.org/insights/why-is-it-so-hard-to-build-a-quantum-computer)
+
+## Bagaimana Komputer Kuantum Bisa Memalsukan Transaksi?
+
+Saat Anda menyetujui sebuah transaksi, wallet Anda memakai kunci privat untuk membuat **tanda tangan digital**. Komputer lain memakai kunci publik pasangannya untuk memeriksa tanda tangan itu. Ini memungkinkan jaringan memverifikasi transaksi tanpa perlu mengetahui kunci privat Anda.
+
+Kedua kunci itu terhubung secara matematis, tetapi menghitung kunci privat dari kunci publik seharusnya tidak praktis. Skema tanda tangan seperti ECDSA, salah satu skema yang dipakai Bitcoin, bergantung pada kesulitan kalkulasi tersebut.
+
+Algoritma Shor memberi komputer kuantum yang cukup mumpuni cara efisien untuk memecahkan masalah matematis di balik tanda tangan kurva eliptik ini. Dengan akses ke kunci publik yang relevan, penyerang bisa menghitung kunci privat dan memakainya untuk menandatangani transaksi.
+
+Untuk dana yang hanya dikendalikan oleh kunci itu, penyerang bisa menandatangani transaksi yang mengirim dana tersebut ke alamat yang mereka kendalikan. Tanda tangan itu akan lolos verifikasi meski pemiliknya tidak pernah menyetujui transfer tersebut.
+
+### Bisakah Komputer Kuantum Membaca Data Privat Juga?
+
+Memalsukan transaksi dan membaca pesan privat seseorang adalah dua serangan yang berbeda. Tanda tangan digital membantu memverifikasi transaksi. Enkripsi menjaga kerahasiaan informasi dengan membuatnya tidak terbaca tanpa kunci yang tepat.
+
+Banyak koneksi terenkripsi memakai kriptografi kunci publik untuk membangun kunci rahasia yang melindungi pesan mereka. Komputer kuantum yang cukup mumpuni bisa menyerang metode rentan yang dipakai dalam proses itu, yang berpotensi memungkinkan penyerang membaca komunikasi yang terekam.
+
+Blockchain juga memakai fungsi hash, seperti SHA-256. Fungsi hash mengubah data menjadi nilai dengan panjang tetap. Bahkan perubahan kecil pada data biasanya menghasilkan nilai hash yang berbeda, membantu komputer mendeteksi perubahan. Hashing tidak menyembunyikan informasi asli dalam bentuk yang bisa didekripsi seseorang nanti.
+
+Algoritma Grover bisa mempercepat pencarian kunci enkripsi rahasia atau input yang menghasilkan hash tertentu. Apakah itu membuat serangan jadi praktis bergantung pada metode kriptografi dan sumber daya yang tersedia. Kemampuan memalsukan tanda tangan yang rentan tidak akan otomatis membuat AES, metode enkripsi yang banyak dipakai, atau fungsi hash SHA-256 jadi tidak berguna.
+
+> Baca Lebih Lanjut: [Bagaimana Algoritma Grover Bekerja (Secara Matematis)](https://www.quantumcanary.org/insights/how-does-grovers-algorithm-work-mathematically-speaking)
+
+## Kapan CRQC Bisa Membahayakan Kripto?
+
+Tidak ada tanggal pasti untuk komputer kuantum yang bisa menyerang kriptografi yang dipakai blockchain besar. [NIST menyebutkan estimasi mulai dari tahunan hingga puluhan tahun](https://www.nist.gov/cybersecurity-and-privacy/what-post-quantum-cryptography), yang mencerminkan masalah teknik yang masih harus dipecahkan peneliti. Pengumuman publik menunjukkan apa yang sudah didemonstrasikan secara terbuka, tetapi mesin mumpuni pertama mungkin tidak diumumkan saat dibangun.
+
+Waktunya bergantung pada mesin yang bisa dibangun peneliti dan kalkulasi yang dibutuhkan penyerang darinya. Peneliti sedang mengerjakan keduanya, termasuk melalui eksperimen berbantuan AI.
+
+### Bagaimana AI Bisa Memengaruhi Kemajuan Menuju CRQC
+
+AI sudah membantu peneliti mengurangi pekerjaan yang diperlukan serangan kuantum di masa depan. Di [ECDSA.fail](https://ecdsa.fail/) oleh EigenLabs, peserta memakai agen AI coding untuk mengembangkan dan menguji perbaikan pada sirkuit kuantum yang dipakai dalam serangan kurva eliptik. Tantangan ini memakai hasil dari riset Google sebagai titik acuan untuk membandingkan kemajuan.
+
+![Leaderboard ECDSA.fail yang melacak perbaikan berbantuan AI pada sirkuit kuantum yang diperlukan untuk membobol tanda tangan kurva eliptik Bitcoin, saat ini 62% lebih unggul dari sirkuit rahasia milik Google](/blog/assets/ecdsa-fail-leaderboard.webp)
+
+Tujuannya adalah melakukan kalkulasi yang sama dengan lebih sedikit qubit atau operasi. [Makalah riset proyek ini menjelaskan bagaimana manusia dan agen AI berkontribusi memberikan perbaikan](https://arxiv.org/abs/2609.09582), yang diperiksa sebelum muncul di leaderboard. Hasil-hasil ini menyangkut satu operasi dalam serangan yang lebih besar; melakukan serangan lengkap tetap memerlukan komputer kuantum yang mumpuni.
+
+Peneliti juga memakai AI untuk menjaga prosesor kuantum tetap bekerja secara andal. Pada Juli 2026, [Google melaporkan penggunaan machine learning untuk menyesuaikan kontrol prosesor kuantum](https://research.google/blog/towards-a-quantum-computer-that-learns-from-its-errors/) selama eksperimen koreksi galat. Penyesuaian itu membantu sistem tetap stabil saat kondisi operasinya berubah.
+
+Kami membahas bagaimana AI dan komputasi kuantum bisa memengaruhi Bitcoin bersama Colton Dillion, CEO dan co-founder Postquant Labs, perusahaan di balik Quip Network:
+
+<YouTubeEmbed
+  url="https://youtu.be/qXvgN8GY_NY?si=_yPpXHm8A1ZSSwdU"
+  title="AI, komputasi kuantum, dan Bitcoin bersama Colton Dillion"
+/>
+
+### Beberapa Serangan Memberi Lebih Banyak Waktu daripada yang Lain
+
+Dalam kasus Bitcoin, waktu yang tersedia untuk sebuah serangan sebagian bergantung pada kapan kunci publik menjadi terlihat.
+
+**Serangan at-rest** menyasar dana yang kunci publiknya sudah terbongkar. Penyerang bisa mulai menghitung kunci privat tanpa menunggu pemiliknya melakukan pembayaran. Serangan ini tetap berguna selama kunci itu masih mengendalikan dana.
+
+Beberapa reward mining Bitcoin awal memakai format yang mencatat kunci publik langsung di onchain. Ini termasuk koin yang biasa diatribusikan pada Satoshi Nakamoto, meski kepemilikan itu belum terbukti. Usia atau ketidakaktifan koin itu tidak akan mencegah serangan kuantum terhadap kunci yang terbongkar.
+
+**Serangan on-spend** menyasar kunci yang terbongkar saat pembayaran. Penyerang harus memulihkan kunci privat dan mengirim transaksi pesaing cukup cepat agar diterima sebagai gantinya. Pada Bitcoin, ini bisa berarti mencoba serangan sementara pembayaran asli menunggu konfirmasi.
+
+Karena itu, sebuah mesin mungkin mengancam kunci yang sudah terbongkar sebelum ia cukup cepat untuk mengeksploitasi jendela pengeluaran yang singkat.
+
+### Informasi Terenkripsi Bisa Dikumpulkan Hari Ini
+
+Penyerang juga bisa menyimpan informasi terenkripsi yang mungkin tetap berharga selama bertahun-tahun, termasuk pesan pribadi, catatan medis, komunikasi pemerintah, dan dokumen bisnis rahasia.
+
+Dalam serangan harvest-now, decrypt-later, seseorang menyimpan informasi terenkripsi itu sampai komputer kuantum di masa depan bisa membobol kriptografi rentan yang melindungi kunci enkripsinya. [NIST menjelaskan mengapa rahasia yang berumur panjang perlu dilindungi sebelum komputer semacam itu ada](https://www.nist.gov/cybersecurity-and-privacy/what-post-quantum-cryptography).
+
+Ini mengancam kerahasiaan informasi yang disimpan. Serangan terhadap kunci penandatanganan Bitcoin yang terbongkar mengancam dana yang diotorisasi kunci itu untuk dibelanjakan seseorang.
+
+## Mengapa Persiapan Dimulai Sebelum CRQC Ada
+
+Ketidaksetaraan milik kriptografer Michele Mosca membandingkan tiga periode:
+
+- **X**, berapa tahun informasi harus tetap rahasia
+- **Y**, berapa tahun migrasi berlangsung
+- **Z**, estimasi jumlah tahun sampai komputer kuantum bisa membobol kriptografi yang melindungi informasi itu
+
+Target perencanaannya adalah **X + Y \< Z**.
+
+![Ketidaksetaraan Mosca: ketika tahun data harus tetap rahasia (X) ditambah tahun migrasi berlangsung (Y) melebihi tahun sampai komputer kuantum yang mumpuni muncul (Z), kunci rahasia terbongkar sebelum perlindungan siap](/blog/assets/moscas-inequality.webp)
+
+Jika jumlahnya melebihi Z, informasi yang terkumpul bisa menjadi terbaca saat masih memerlukan perlindungan. Z masih belum pasti.
+
+Untuk kunci penandatanganan blockchain, migrasi harus melindungi dana yang ada sebelum komputer kuantum bisa memulihkan kunci privat yang diperlukan untuk membelanjakannya. Kunci publik yang sudah terbongkar memungkinkan penyerang mencoba kalkulasi itu tanpa menunggu pemiliknya melakukan transaksi.
+
+Persiapan berarti menggantikan tanda tangan yang rentan dengan **kriptografi pasca-kuantum**: algoritma yang dirancang untuk menahan serangan yang dikenal dari komputer klasik maupun kuantum. Algoritma ini berjalan pada hardware konvensional, sehingga developer bisa mengimplementasikannya sebelum CRQC ada.
+
+[NIST merampungkan tiga standar pasca-kuantum pertamanya pada 2024](https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards), menyediakan metode untuk membangun rahasia bersama dan membuat tanda tangan digital. Developer masih perlu mengintegrasikan dan menguji metode-metode itu di sistem yang dipakai orang-orang.
+
+Pada blockchain, itu bisa memerlukan perubahan di seluruh jaringan. Node harus menegakkan aturan yang diperbarui, wallet harus mendukung tanda tangan baru, dan exchange serta kustodian harus memperbarui layanan mereka. Bergantung pada desain migrasinya, pengguna mungkin juga perlu memindahkan dana yang ada ke kunci atau alamat baru.
+
+Dana yang dikendalikan oleh kunci privat yang hilang menciptakan masalah yang lebih sulit karena pemiliknya tidak bisa mengotorisasi transfer biasa. Menambahkan metode tanda tangan baru tidak otomatis melindungi dana tersebut.
+
+Pada Bitcoin, ketidakaktifan saja tidak membuktikan bahwa sebuah kunci privat telah hilang.
+
+Rencana migrasi sebuah blockchain harus menjelaskan bagaimana dana yang ada akan dilindungi, termasuk dana yang pemiliknya tidak bisa melakukan transfer. Saat menilai klaim kesiapan kuantum, perhatikan perubahan yang sudah diterapkan, tindakan yang harus diambil pengguna, dan dana yang bisa tetap terbongkar.
+
+## Pertanyaan yang Sering Diajukan
+
+### Apakah Hardware Wallet Melindungi dari Serangan Kuantum?
+
+Hardware wallet membantu menjaga kunci privat terisolasi dari perangkat lain. Namun, serangan kuantum terhadap skema tanda tangan yang rentan bisa menurunkan kunci privat dari informasi publik yang terbongkar tanpa mengakses wallet itu. Perangkat itu sendiri tidak bisa mencegah kalkulasi tersebut.
+
+### Apakah Komputer Kuantum "Relevan Secara Kriptografis" dan "Relevan Secara Kriptanalitis" Berbeda?
+
+Kedua istilah muncul dalam diskusi tentang serangan kuantum terhadap kriptografi. [NIST memakai "cryptanalytically relevant quantum computer"](https://csrc.nist.gov/glossary/term/cryptanalytically_relevant_quantum_computer) untuk mesin yang mampu memakai algoritma kuantum untuk membobol kriptografi yang tetap aman terhadap komputer klasik.
+
+### Apa Beda CRQC dan Q-Day?
+
+CRQC adalah komputer kuantum dengan kemampuan untuk melakukan serangan kriptografi. Q-Day mengacu pada titik ketika kemampuan itu bisa membobol kriptografi yang masih dipakai. Sistem kriptografi yang berbeda memerlukan sumber daya serangan dan waktu eksekusi yang berbeda, sehingga bisa menjadi rentan pada waktu yang berbeda-beda.
+
+### Apakah Kriptografi Pasca-Kuantum Memerlukan Komputer Kuantum?
+
+Tidak. Kriptografi pasca-kuantum berjalan pada komputer konvensional, termasuk hardware yang dipakai wallet dan node blockchain. Kriptografi ini dirancang untuk menahan serangan kuantum yang dikenal, sehingga sistem bisa mengadopsinya sebelum CRQC ada.

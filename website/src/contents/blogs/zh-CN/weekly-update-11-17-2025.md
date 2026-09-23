@@ -1,23 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus 每周动态：PoW 审计完成与 Dirac 测试网上线"
 description: "Equilibrium 完成我们的 PoW 与 Poseidon 审计，区块头 ZK 证明落地，Dirac 测试网上线，双端应用商店同步更新钱包与矿机应用。"
 pubDate: "2025-11-17"
 heroImage: "/blog/covers/weekly-update-11-17-2025.webp"
 heroAlt: "Quantus 每周动态：PoW 审计完成与 Dirac 测试网上线"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "audit",
-    "pow",
-    "poseidon",
-    "dirac-testnet",
-    "zero-knowledge-proofs",
-    "mobile-wallet",
-    "miner-app",
-    "podcast",
-  ]
+tags: ["protocol-security", "pow", "zero-knowledge-proofs", "wallet", "mining"]
 ---
 
 本周，我们完成了 Equilibrium 对我们工作量证明 (PoW) 算法和 Poseidon 哈希函数的审计，并向各大应用商店发布了更新后的应用。

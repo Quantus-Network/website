@@ -1,21 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: ワームホールトランザクション"
 description: "ワームホールトランザクション、マイナー向けプライベートブロック報酬、コンセンサスバグ修正、ウォレット更新をまとめた週次アップデート。Quantusの最新開発状況をお届けします。"
 pubDate: "2026-03-07"
 heroImage: "/blog/covers/weekly-update-03-07-2026.webp"
 heroAlt: "Quantus Weekly: ワームホールトランザクション"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "wormhole",
-    "zk-proofs",
-    "privacy",
-    "miner-app",
-    "consensus",
-    "wallet",
-  ]
+tags: ["wormhole", "zero-knowledge-proofs", "privacy", "mining", "wallet"]
 ---
 
 コインを使用不可能なアドレスへバーンする。

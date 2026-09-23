@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: auditoría lattice y Keystone"
 description: "Cerramos hallazgos de la auditoría de Rusty Crystals, actualizamos networking Polkadot SDK y direcciones Quantus en firmware Keystone open source."
 
@@ -7,15 +8,7 @@ pubDate: "2025-12-01"
 heroImage: "/blog/covers/weekly-update-12-01-2025.webp"
 heroAlt: "Quantus Weekly: auditoría lattice y Keystone"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "lattice-cryptography",
-    "keystone",
-    "polkadot-sdk",
-    "hardware-wallet",
-    "audit",
-  ]
+tags: ["wallet", "protocol-security"]
 ---
 
 La semana pasada, el equipo abordó todos los problemas planteados en la auditoría de nuestra biblioteca de cripto lattice (rusty-crystals) y publicó actualizaciones de networking para alinearse con el último Polkadot SDK. También implementamos soporte de direcciones Quantus en el firmware open source del hardware wallet Keystone y conseguimos que nuestro perfil apareciera en la plataforma de inteligencia de mercado «The Quantum Insider».

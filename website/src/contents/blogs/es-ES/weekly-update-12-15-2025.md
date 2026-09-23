@@ -1,20 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: avance GPU y refactor ZK"
 description: "Avance de ~9x en minería GPU, refactor del circuito de agregación ZK y reuniones estratégicas en EAU sobre tokenomics y lanzamiento."
 pubDate: "2025-12-15"
 heroImage: "/blog/covers/weekly-update-12-15-2025.webp"
 heroAlt: "Quantus Weekly: avance GPU y refactor ZK"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "gpu-mining",
-    "zero-knowledge-proofs",
-    "tokenomics",
-    "hardware-wallet",
-    "solana-breakpoint",
-  ]
+tags: ["mining", "zero-knowledge-proofs", "tokenomics", "wallet"]
 ---
 
 Esta semana el equipo logró un avance en el rendimiento de minería. Nuestro nuevo minero GPU ahora corre ~9x más rápido que la versión CPU.

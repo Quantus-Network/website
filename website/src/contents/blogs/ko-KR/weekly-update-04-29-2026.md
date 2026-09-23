@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: 감사 및 컴팩트 애그리게이터"
 description: "Eiger 감사 항목 정리, CLI 리팩터, 마이너·인덱서 수정, prover 속도 2배를 낸 컴팩트 애그리게이터 웜홀 테스트를 다룬 Quantus 주간 업데이트입니다."
 pubDate: "2026-04-29"
@@ -8,17 +9,12 @@ heroAlt: "Quantus Weekly: 감사 및 컴팩트 애그리게이터"
 featured: false
 tags:
   [
-    "weekly-update",
     "bitcoin",
     "pow",
     "mining",
-    "testnet",
-    "planck",
-    "post-quantum",
-    "mobile",
-    "zk-proofs",
-    "infrastructure",
-    "subsquid",
+    "post-quantum-cryptography",
+    "wallet",
+    "zero-knowledge-proofs",
   ]
 ---
 

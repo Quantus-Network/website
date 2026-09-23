@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Faster Poseidon2, Leaner Chain"
 description: "Poseidon2 gates run 8.3x faster after optimization, a chain refactor drops about 9,000 lines, and the team shares notes from Binance Blockchain Week."
 
@@ -7,15 +8,7 @@ pubDate: "2025-12-09"
 heroImage: "/blog/covers/weekly-update-12-09-2025.webp"
 heroAlt: "Quantus Weekly: Faster Poseidon2, Leaner Chain"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "poseidon2",
-    "chain-architecture",
-    "wormhole",
-    "binance-blockchain-week",
-    "solana-breakpoint",
-  ]
+tags: ["wormhole"]
 ---
 
 You probaly saw [this interview with @EliBenSasson and Scott Aaronson](https://x.com/Starknet/status/1995865652377395421)

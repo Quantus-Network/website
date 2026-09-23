@@ -1,21 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Quantum-Secure Future"
 description: "CoinGecko listing, multisig optimizations, ZK-aggregator refactoring और mobile app v1.1.5 release—इस सप्ताह Quantus की progress।"
 pubDate: "2026-02-13"
 heroImage: "/blog/covers/weekly-update-02-13-2026.webp"
 heroAlt: "Quantus Weekly: Quantum-Secure Future"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "coingecko",
-    "multisig",
-    "plonky2",
-    "plonky3",
-    "quantum-resistant",
-    "zk-proofs",
-  ]
+tags: ["post-quantum-cryptography", "zero-knowledge-proofs"]
 ---
 
 Fra Mauro ने Venice के पास monastery के अंदर entire known world का map बनाने में years बिताए।

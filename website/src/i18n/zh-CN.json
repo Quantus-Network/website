@@ -847,29 +847,53 @@
       "description": "量子安全加密货币。供应上限 2,100 万，工作量证明（Proof of Work）。获取上线详情。"
     },
     "hero": {
-      "eyebrow": "量子安全加密货币"
+      "eyebrow": "量子安全加密货币",
+      "sub": "主网已上线。接下来是兑换功能。抢先获取通知。"
     },
     "signup": {
-      "headline": "获取上线详情。",
-      "email_placeholder": "your@email.com",
+      "email_placeholder": "输入您的电子邮件",
       "email_aria": "电子邮件地址",
       "submit_label": "通知我",
       "error_message": "请输入有效的电子邮件地址。",
       "success": {
         "headline": "您已加入名单。",
-        "sub": "上线详情将发送至您的邮箱。"
+        "sub": "您将比任何人都更早知道。"
       }
     },
-    "facts": {
-      "supply": {
-        "label": "供应上限",
-        "value": "21,000,000"
+    "cards": {
+      "quantum_secure": {
+        "title": "量子安全",
+        "body": "量子计算机无法破解的货币。从创世起即抗量子。"
       },
-      "consensus": {
-        "label": "工作量证明"
+      "encrypted": {
+        "title": "加密",
+        "body": "资金可公开，也可隐藏。"
+      },
+      "sound_money": {
+        "title": "稳健货币",
+        "body": "供应上限 2,100 万 $QTC。工作量证明。完成比特币未竟之事。"
       }
     },
-    "mining_cta": "阅读挖矿指南"
+    "bridge": "点对点加密现金。",
+    "mining": {
+      "title": "开始挖矿",
+      "body": "将您的算力转化为 $QTC。",
+      "cta": "让您的 LLM 读取挖矿指南"
+    },
+    "wallet": {
+      "title": "使用 $QTC 兑换、持有和支付。",
+      "body": "为后量子时代打造的钱包。支持 iOS 和 Android。",
+      "ios": "iOS",
+      "android": "Android"
+    },
+    "community": {
+      "title": "加入对话。",
+      "body": "构建和挖掘 Quantus 的人们最先在这里交流。",
+      "telegram": "Telegram"
+    },
+    "final": {
+      "title": "兑换上线时，第一时间知道。"
+    }
   },
   "blog": {
     "title": "来自 Quantus 的最新消息。",
@@ -884,6 +908,12 @@
     "search_placeholder": "搜索文章...",
     "no_posts_found": "未找到文章。",
     "featured_label": "精选",
+    "categories_label": "分类",
+    "categories": {
+      "all": "全部",
+      "weekly-update": "每周更新",
+      "education": "教育"
+    },
     "related_posts": "相关文章",
     "post": {
       "back_to_blog": "返回博客",
@@ -903,125 +933,26 @@
       "back_link": "← 返回所有文章"
     },
     "tags": {
-      "weekly-update": "每周更新",
-      "threshold-signatures": "阈值签名",
-      "post-quantum-cryptography": "后量子密码学",
-      "dilithium": "Dilithium",
-      "zero-knowledge-proofs": "零知识证明",
-      "quantum-safe": "量子安全",
-      "blockchain": "区块链",
-      "podcast": "播客",
-      "crypto": "加密货币",
-      "defi": "DeFi",
-      "bitcoin": "比特币",
-      "business": "商业",
-      "network-state": "网络国家",
-      "innovation": "创新",
-      "quantum-computing": "量子计算",
-      "gpu-mining": "GPU 挖矿",
-      "dirac-network": "Dirac 网络",
-      "blockchain-architecture": "区块链架构",
-      "tokenomics": "代币经济学",
-      "hardware-wallet": "硬件钱包",
-      "social-engagement": "社会参与",
-      "solana-breakpoint": "Solana Breakpoint",
-      "culture": "文化",
-      "ai": "人工智能",
-      "justice": "正义",
-      "freedom": "自由",
-      "poseidon2": "Poseidon2",
-      "chain-architecture": "链架构",
-      "wormhole": "虫洞",
-      "binance-blockchain-week": "币安区块链周",
-      "lattice-cryptography": "格密码学",
-      "polkadot-sdk": "Polkadot SDK",
-      "audit": "审计",
-      "miner-app": "矿工 App",
-      "gui-miner": "GUI 矿工",
-      "mobile": "移动端",
-      "ml-dsa": "ML-DSA",
-      "ama": "AMA",
-      "substrate": "Substrate",
-      "poseidon": "Poseidon",
-      "point-of-sale": "销售点",
-      "dirac-testnet": "Dirac 测试网",
-      "mobile-wallet": "移动钱包",
-      "wallet": "钱包",
-      "pow": "工作量证明",
-      "libp2p": "libp2p",
-      "ghostdag": "GHOSTDAG",
-      "blue-green-deployment": "蓝绿部署",
-      "plonky2": "Plonky2",
-      "rebrand": "品牌焕新",
-      "referral": "推荐",
-      "governance": "治理",
-      "treasury": "财库",
-      "conviction-voting": "信念投票",
-      "gamification": "游戏化",
-      "plonky3": "Plonky3",
-      "polyfri": "PolyFri",
-      "liberland": "利伯兰",
-      "schrodinger-testnet": "薛定谔测试网",
-      "pqc": "PQC",
-      "mpc": "MPC",
-      "multisig": "多重签名",
-      "indexer": "索引器",
-      "zk-aggregator": "ZK 聚合器",
-      "biohacking": "生物黑客",
-      "rpc": "RPC",
-      "scalability": "可扩展性",
-      "privacy": "隐私",
-      "security": "安全",
-      "guardian": "监护人",
-      "time-lock": "时间锁",
-      "fraud-prevention": "反欺诈",
-      "coingecko": "CoinGecko",
-      "ecc": "ECC",
-      "post-quantum": "后量子",
-      "quantum": "量子",
-      "quantum-resistant": "抗量子",
-      "zk-proofs": "ZK 证明",
-      "research": "研究",
-      "notification-system": "通知系统",
-      "keystone": "Keystone",
-      "heisenberg-testnet": "海森堡测试网",
-      "performance": "性能",
-      "planck": "普朗克",
-      "prover": "证明者",
-      "infrastructure": "基础设施",
-      "consensus": "共识",
-      "mining": "挖矿",
-      "fair-launch": "公平启动",
-      "testnet": "测试网",
-      "subsquid": "Subsquid",
-      "mithril": "Mithril",
-      "mainnet": "主网",
       "q-day": "Q-Day",
-      "network-school": "Network School",
-      "ecdsa": "ECDSA",
-      "runtime-upgrade": "运行时升级",
-      "litep2p": "litep2p",
-      "nist": "NIST",
-      "ml-kem": "ML-KEM",
-      "blackrock": "BlackRock",
-      "formal-verification": "形式化验证",
-      "javascript-sdk": "JavaScript SDK",
-      "runtime": "运行时",
-      "cold-storage": "冷存储",
-      "miner": "矿工",
-      "open-source": "开源",
-      "block-explorer": "区块浏览器",
-      "reuters": "路透社",
-      "bip-360": "BIP-360",
+      "quantum-computing": "量子计算",
+      "post-quantum-cryptography": "后量子密码学",
       "cryptography": "密码学",
-      "charles-edwards": "Charles Edwards",
-      "encrypted-accounts": "加密账户",
-      "infra": "基建",
-      "immunefi": "Immunefi",
-      "bug-bounty": "漏洞赏金",
-      "senoti": "Senoti",
-      "migration": "迁移",
-      "harvest-now-decrypt-later": "先收集后解密"
+      "bitcoin": "比特币",
+      "mining": "挖矿",
+      "pow": "工作量证明",
+      "privacy": "隐私",
+      "zero-knowledge-proofs": "零知识证明",
+      "wallet": "钱包",
+      "mainnet": "主网",
+      "ml-dsa": "ML-DSA",
+      "wormhole": "虫洞",
+      "protocol-security": "协议安全",
+      "governance": "治理",
+      "tokenomics": "代币经济学",
+      "crqc": "CRQC",
+      "ecdsa": "ECDSA",
+      "nist": "NIST",
+      "ai": "AI"
     }
   },
   "whitepaper": {

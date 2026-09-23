@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus 每周动态：更公平的挖矿启动"
 description: "早期比特币矿工用笔记本一天可挖数千 BTC，消费级挖矿很快消亡。Quantus 从第一天起优先让挖矿人人可及——测试网几步即可开跑，GUI 矿工已就绪。"
 pubDate: "2026-05-13"
@@ -7,20 +8,7 @@ heroImage: "/blog/covers/weekly-update-05-13-2026.webp"
 heroAlt: "Quantus 每周动态：更公平的挖矿启动"
 featured: false
 tags:
-  [
-    "weekly-update",
-    "bitcoin",
-    "mining",
-    "fair-launch",
-    "testnet",
-    "planck",
-    "gui-miner",
-    "zk-proofs",
-    "security",
-    "infrastructure",
-    "mobile",
-    "network-school",
-  ]
+  ["bitcoin", "mining", "zero-knowledge-proofs", "protocol-security", "wallet"]
 ---
 
 早期比特币矿工用笔记本一天就能挖出数千枚 BTC。

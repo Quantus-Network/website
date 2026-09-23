@@ -1,21 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus 위클리: 양자 보안 미래 지도 그리기"
 description: "CoinGecko 상장, 멀티시그 최적화, ZK-aggregator 리팩터링, 모바일 앱 v1.1.5 출시 등 이번 주 Quantus 개발·콘텐츠 업데이트를 정리합니다."
 pubDate: "2026-02-13"
 heroImage: "/blog/covers/weekly-update-02-13-2026.webp"
 heroAlt: "Quantus 위클리: 양자 보안 미래 지도 그리기"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "coingecko",
-    "multisig",
-    "plonky2",
-    "plonky3",
-    "quantum-resistant",
-    "zk-proofs",
-  ]
+tags: ["post-quantum-cryptography", "zero-knowledge-proofs"]
 ---
 
 Fra Mauro는 베네치아 근처 수도원에서 알려진 세계 전체 지도를 그리는 데 수년을 보냈습니다.

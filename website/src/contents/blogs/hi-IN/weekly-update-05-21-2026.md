@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Q-Day बिल्कुल पास है"
 description: "Q-Day 6 जून है। इस सप्ताह: Dilithium DKG audit items close, miner और notification updates, wallet fixes, और refreshed Q-Day summit site।"
 
@@ -9,19 +10,13 @@ heroAlt: "Quantus Weekly: Q-Day बिल्कुल पास है"
 featured: false
 tags:
   [
-    "weekly-update",
     "q-day",
     "mainnet",
     "mining",
-    "testnet",
-    "planck",
-    "post-quantum",
-    "dilithium",
-    "threshold-signatures",
-    "zk-proofs",
-    "mobile",
-    "infrastructure",
-    "gui-miner",
+    "post-quantum-cryptography",
+    "ml-dsa",
+    "zero-knowledge-proofs",
+    "wallet",
   ]
 ---
 

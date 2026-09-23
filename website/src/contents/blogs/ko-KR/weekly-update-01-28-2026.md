@@ -1,22 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus 위클리: 디나이어블 RPC와 Neodyme 감사"
 description: "프라이버시를 강화하는 디나이어블 RPC, Rusty Crystals Dilithium 라이브러리 Neodyme 보안 감사 완료, 모든 토큰용 프라이빗 ZK 주소 도입 소식을 이번 주에 전합니다."
 pubDate: "2026-01-28"
 heroImage: "/blog/covers/weekly-update-01-28-2026.webp"
 heroAlt: "Quantus 위클리: 디나이어블 RPC와 Neodyme 감사"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "rpc",
-    "privacy",
-    "audit",
-    "security",
-    "dilithium",
-    "zk-aggregator",
-    "multisig",
-  ]
+tags: ["privacy", "protocol-security", "ml-dsa"]
 ---
 
 지갑이 당신을 신고하고 있습니다.

@@ -1,0 +1,96 @@
+---
+published: true
+category: weekly-update
+title: "Quantus Weekly: メインネット稼働"
+description: "Quantusのメインネットは9月9日にローンチし、以降5万3000超のブロックを途切れなく生成した。初週のマイニング・ウォレット・ZKの数字と、QTCがいつ取引可能になるか。"
+pubDate: "2026-09-16"
+heroImage: "/blog/covers/weekly-update-09-16-2026.webp"
+heroAlt: "Quantus Weekly: メインネット稼働"
+featured: false
+tags:
+  [
+    "quantum-computing",
+    "post-quantum-cryptography",
+    "mainnet",
+    "mining",
+    "wallet",
+    "zero-knowledge-proofs",
+    "ml-dsa",
+    "privacy",
+    "q-day",
+  ]
+---
+
+import TwitterEmbed from "@/components/features/blog/TwitterEmbed.astro";
+
+Quantusのメインネットが稼働した。
+
+ジェネシスは9月9日水曜日で、以降チェーンは途切れなく5万3000超のブロックを生成している。
+
+メインネットを起動した時点で、7,000台以上のGPUが直ちにマイニングを始めた。
+
+最初の1週間:
+
+- ローンチ当日のモバイルウォレット日次アクティブユーザーは2,371人
+- 平均ハッシュレート11.2 TH/s、9月10日のピークは24.4 TH/s。これだけのGPUを借りると平均で1日5万〜8万ドル（ピーク時は1日12.5万〜17万ドル）
+- QTC 1枚のマイニングコスト: 平均20〜35ドル（ピーク時55〜80ドル）
+- 難易度は最初の40時間で3,100倍に上昇。ブロックタイムはジェネシスから12時間以内に12秒目標へ到達
+- アカウント3,546、発行QTCは16,463
+- オンチェーンで検証したZK証明は4,011件。19,248件のプライベート払い出しを決済し、額面は16,508 QTC
+- 透明トランスファーは11,645件
+
+今日QTCを入手する唯一の方法はマイニングだ。
+
+マイニングが競争的なのは理解している。QTCがどこでいつ取引可能になるかは、明日発表する。
+
+### コア技術 & ZK
+
+- qp-zk-circuits v4.4.0をリリース: 公開バッチ証明が4倍速くなった。
+- qp-plonky2 v1.5.6をリリース: 軽微なセキュリティ更新。
+- JavaScript SDK v0.3.1をリリース: ML-DSA-87に加えてML-DSA-65署名を追加。
+
+### ネットワーク & インフラ
+
+- miner v4.2.0をリリース
+- メインネットのインデクサ、エクスプローラ、監視、プッシュ通知、ドキュメントをすべてメインネットへ移行。
+
+### Web & モバイルアプリの更新
+
+- モバイルウォレットをメインネットに切り替えた。
+- ホワイトペーパー v0.4.1を公開: [quantus.com/whitepaper](https://quantus.com/whitepaper)
+
+### コンテンツ & パートナーシップ
+
+- メインネットローンチの投稿:
+
+<TwitterEmbed url="https://x.com/QuantusNetwork/status/2097684989814919380" />
+
+- Quantum & Privacy Day。Token2049のサイドイベントとして、10月8日にシンガポールでNEARと開催:
+
+<TwitterEmbed url="https://x.com/QuantusNetwork/status/2099639731902456265" />
+
+- Illia Polosukhin（NEAR）が Quantum & Privacy Day で登壇:
+
+<TwitterEmbed url="https://x.com/QuantusNetwork/status/2097376933939933609" />
+
+- Alex Shevchenko が Quantum & Privacy Day で登壇:
+
+<TwitterEmbed url="https://x.com/QuantusNetwork/status/2099909695351779704" />
+
+- Alex Pruden が Quantum & Privacy Day で登壇:
+
+<TwitterEmbed url="https://x.com/QuantusNetwork/status/2098448815892074711" />
+
+- Chris Smith が Quantum & Privacy Day で登壇:
+
+<TwitterEmbed url="https://x.com/QuantusNetwork/status/2097735050334703699" />
+
+- Joe Mattia が Quantum & Privacy Day で登壇:
+
+<TwitterEmbed url="https://x.com/QuantusNetwork/status/2099454627716423714" />
+
+- Bitcoin News による Quantus ローンチ報道:
+
+<TwitterEmbed url="https://x.com/QuantusNetwork/status/2098321308912115796" />
+
+Stay frosty, quants.

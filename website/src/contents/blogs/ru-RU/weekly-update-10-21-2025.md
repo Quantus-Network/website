@@ -1,23 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Гейт Poseidon2 в Plonky2 и ончейн-управление"
 description: "Гейт Poseidon2 в Plonky2, ончейн-управление и казначейство, рефералы в приложении и старт биндингов Icicle для GPU-майнеров."
 pubDate: "2025-10-21"
 heroImage: "/blog/covers/weekly-update-10-21-2025.webp"
 heroAlt: "Quantus Weekly: Гейт Poseidon2 в Plonky2 и ончейн-управление"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "plonky2",
-    "poseidon2",
-    "governance",
-    "treasury",
-    "conviction-voting",
-    "referral",
-    "gpu-mining",
-    "audit",
-  ]
+tags: ["governance", "mining", "protocol-security"]
 ---
 
 ## Новости продукта и разработки

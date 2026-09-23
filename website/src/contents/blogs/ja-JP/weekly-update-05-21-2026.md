@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Q-Dayが目前"
 description: "Q-Dayは6月6日。今週はDilithium DKG監査項目の完了、マイナー・通知の更新、ウォレット修正、Q-Dayサミットサイトの刷新をリリースしました。"
 pubDate: "2026-05-21"
@@ -8,19 +9,13 @@ heroAlt: "Quantus Weekly: Q-Dayが目前"
 featured: false
 tags:
   [
-    "weekly-update",
     "q-day",
     "mainnet",
     "mining",
-    "testnet",
-    "planck",
-    "post-quantum",
-    "dilithium",
-    "threshold-signatures",
-    "zk-proofs",
-    "mobile",
-    "infrastructure",
-    "gui-miner",
+    "post-quantum-cryptography",
+    "ml-dsa",
+    "zero-knowledge-proofs",
+    "wallet",
   ]
 ---
 

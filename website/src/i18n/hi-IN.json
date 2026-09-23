@@ -854,29 +854,53 @@
       "description": "क्वांटम-सुरक्षित एन्क्रिप्टेड मनी। 21 मिलियन सप्लाई कैप, Proof of Work। लॉन्च की जानकारी पाएं।"
     },
     "hero": {
-      "eyebrow": "क्वांटम-सुरक्षित एन्क्रिप्टेड मनी"
+      "eyebrow": "क्वांटम-सुरक्षित एन्क्रिप्टेड मनी",
+      "sub": "मेननेट लाइव है। अगला कदम स्वैप है। सबसे पहले सूचना पाएं।"
     },
     "signup": {
-      "headline": "लॉन्च की जानकारी पाएं।",
-      "email_placeholder": "your@email.com",
+      "email_placeholder": "अपना ईमेल दर्ज करें",
       "email_aria": "ईमेल पता",
       "submit_label": "मुझे सूचित करें",
       "error_message": "कृपया एक मान्य ईमेल पता दर्ज करें।",
       "success": {
         "headline": "आप सूची में हैं।",
-        "sub": "लॉन्च की जानकारी आपके इनबॉक्स में पहुंचेगी।"
+        "sub": "आपको सबसे पहले पता चलेगा।"
       }
     },
-    "facts": {
-      "supply": {
-        "label": "सप्लाई कैप",
-        "value": "21,000,000"
+    "cards": {
+      "quantum_secure": {
+        "title": "क्वांटम-सुरक्षित",
+        "body": "ऐसा पैसा जिसे क्वांटम कंप्यूटर नहीं तोड़ सकते। जेनेसिस से ही पोस्ट-क्वांटम।"
       },
-      "consensus": {
-        "label": "PROOF OF WORK"
+      "encrypted": {
+        "title": "एन्क्रिप्टेड",
+        "body": "अपने फंड को पारदर्शी रखें या छिपाकर।"
+      },
+      "sound_money": {
+        "title": "साउंड मनी",
+        "body": "21 मिलियन $QTC सप्लाई कैप। Proof-of-work। Bitcoin ने जो शुरू किया, उसे पूरा करना।"
       }
     },
-    "mining_cta": "माइनिंग गाइड पढ़ें"
+    "bridge": "पीयर-टू-पीयर एन्क्रिप्टेड कैश।",
+    "mining": {
+      "title": "माइनिंग शुरू करें",
+      "body": "अपनी कंप्यूटिंग पावर को $QTC में बदलें।",
+      "cta": "अपने LLM को माइनिंग गाइड दें"
+    },
+    "wallet": {
+      "title": "$QTC से स्वैप करें, जमा करें और भुगतान करें।",
+      "body": "पोस्ट-क्वांटम भविष्य के लिए बना वॉलेट। iOS और Android।",
+      "ios": "iOS",
+      "android": "Android"
+    },
+    "community": {
+      "title": "बातचीत में शामिल हों।",
+      "body": "Quantus बनाने और माइन करने वाले लोग सबसे पहले यहीं बात करते हैं।",
+      "telegram": "Telegram"
+    },
+    "final": {
+      "title": "स्वैप लाइव होते ही सबसे पहले जानें।"
+    }
   },
   "blog": {
     "title": "Quantus की नवीनतम खबरें।",
@@ -891,6 +915,12 @@
     "search_placeholder": "पोस्ट खोजें...",
     "no_posts_found": "कोई पोस्ट नहीं मिली।",
     "featured_label": "विशेष",
+    "categories_label": "श्रेणियाँ",
+    "categories": {
+      "all": "सभी",
+      "weekly-update": "साप्ताहिक अपडेट",
+      "education": "शिक्षा"
+    },
     "related_posts": "संबंधित पोस्ट",
     "post": {
       "back_to_blog": "ब्लॉग पर वापस जाएं",
@@ -910,125 +940,26 @@
       "back_link": "← सभी पोस्ट पर वापस जाएं"
     },
     "tags": {
-      "weekly-update": "साप्ताहिक अपडेट",
-      "threshold-signatures": "थ्रेशोल्ड हस्ताक्षर",
-      "post-quantum-cryptography": "पोस्ट-क्वांटम क्रिप्टोग्राफी",
-      "dilithium": "Dilithium",
-      "zero-knowledge-proofs": "जीरो-नॉलेज प्रूफ",
-      "quantum-safe": "क्वांटम-सुरक्षित",
-      "blockchain": "ब्लॉकचेन",
-      "podcast": "पॉडकास्ट",
-      "crypto": "क्रिप्टो",
-      "defi": "DeFi",
-      "bitcoin": "Bitcoin",
-      "business": "बिज़नेस",
-      "network-state": "नेटवर्क स्टेट",
-      "innovation": "नवाचार",
-      "quantum-computing": "क्वांटम कंप्यूटिंग",
-      "gpu-mining": "GPU माइनिंग",
-      "dirac-network": "Dirac नेटवर्क",
-      "blockchain-architecture": "ब्लॉकचेन आर्किटेक्चर",
-      "tokenomics": "टोकनॉमिक्स",
-      "hardware-wallet": "हार्डवेयर वॉलेट",
-      "social-engagement": "सोशल एंगेजमेंट",
-      "solana-breakpoint": "Solana Breakpoint",
-      "culture": "संस्कृति",
-      "ai": "AI",
-      "justice": "न्याय",
-      "freedom": "स्वतंत्रता",
-      "poseidon2": "Poseidon2",
-      "chain-architecture": "चेन आर्किटेक्चर",
-      "wormhole": "वर्महोल",
-      "binance-blockchain-week": "Binance ब्लॉकचेन वीक",
-      "lattice-cryptography": "लैटिस क्रिप्टोग्राफी",
-      "polkadot-sdk": "Polkadot SDK",
-      "audit": "ऑडिट",
-      "miner-app": "माइनर ऐप",
-      "gui-miner": "GUI माइनर",
-      "mobile": "मोबाइल",
-      "ml-dsa": "ML-DSA",
-      "ama": "AMA",
-      "substrate": "Substrate",
-      "poseidon": "Poseidon",
-      "point-of-sale": "बिक्री बिंदु",
-      "dirac-testnet": "Dirac टेस्टनेट",
-      "mobile-wallet": "मोबाइल वॉलेट",
-      "wallet": "वॉलेट",
-      "pow": "प्रूफ ऑफ वर्क",
-      "libp2p": "libp2p",
-      "ghostdag": "GHOSTDAG",
-      "blue-green-deployment": "ब्लू-ग्रीन डिप्लॉयमेंट",
-      "plonky2": "Plonky2",
-      "rebrand": "रीब्रांडिंग",
-      "referral": "रेफरल",
-      "governance": "गवर्नेंस",
-      "treasury": "ट्रेजरी",
-      "conviction-voting": "कनविक्शन वोटिंग",
-      "gamification": "गेमिफिकेशन",
-      "plonky3": "Plonky3",
-      "polyfri": "PolyFri",
-      "liberland": "Liberland",
-      "schrodinger-testnet": "Schrödinger टेस्टनेट",
-      "pqc": "PQC",
-      "mpc": "MPC",
-      "multisig": "मल्टीसिग",
-      "indexer": "इंडेक्सर",
-      "zk-aggregator": "ZK-एग्रीगेटर",
-      "biohacking": "बायोहैकिंग",
-      "rpc": "RPC",
-      "scalability": "स्केलेबिलिटी",
-      "privacy": "गोपनीयता",
-      "security": "सुरक्षा",
-      "guardian": "अभिभावक",
-      "time-lock": "टाइम-लॉक",
-      "fraud-prevention": "धोखाधड़ी की रोकथाम",
-      "coingecko": "CoinGecko",
-      "ecc": "ECC",
-      "post-quantum": "पोस्ट-क्वांटम",
-      "quantum": "क्वांटम",
-      "quantum-resistant": "क्वांटम-प्रतिरोधी",
-      "zk-proofs": "ZK-प्रूफ",
-      "research": "रिसर्च",
-      "notification-system": "अधिसूचना प्रणाली",
-      "keystone": "Keystone",
-      "heisenberg-testnet": "Heisenberg टेस्टनेट",
-      "performance": "प्रदर्शन",
-      "planck": "प्लांक",
-      "prover": "प्रूवर",
-      "infrastructure": "बुनियादी ढांचा",
-      "consensus": "कंसेंसस",
-      "mining": "माइनिंग",
-      "fair-launch": "फेयर लॉन्च",
-      "testnet": "टेस्टनेट",
-      "subsquid": "Subsquid",
-      "mithril": "Mithril",
-      "mainnet": "मेननेट",
       "q-day": "Q-Day",
-      "network-school": "Network School",
-      "ecdsa": "ECDSA",
-      "runtime-upgrade": "रनटाइम अपग्रेड",
-      "litep2p": "litep2p",
-      "nist": "NIST",
-      "ml-kem": "ML-KEM",
-      "blackrock": "BlackRock",
-      "formal-verification": "औपचारिक सत्यापन",
-      "javascript-sdk": "JavaScript SDK",
-      "runtime": "रनटाइम",
-      "cold-storage": "कोल्ड स्टोरेज",
-      "miner": "माइनर",
-      "open-source": "ओपन सोर्स",
-      "block-explorer": "ब्लॉक एक्सप्लोरर",
-      "reuters": "रॉयटर्स",
-      "bip-360": "BIP-360",
+      "quantum-computing": "क्वांटम कंप्यूटिंग",
+      "post-quantum-cryptography": "पोस्ट-क्वांटम क्रिप्टोग्राफी",
       "cryptography": "क्रिप्टोग्राफी",
-      "charles-edwards": "Charles Edwards",
-      "encrypted-accounts": "एन्क्रिप्टेड खाते",
-      "infra": "इन्फ्रा",
-      "immunefi": "Immunefi",
-      "bug-bounty": "बग बाउंटी",
-      "senoti": "Senoti",
-      "migration": "माइग्रेशन",
-      "harvest-now-decrypt-later": "हार्वेस्ट-नाउ-डिक्रिप्ट-लेटर"
+      "bitcoin": "Bitcoin",
+      "mining": "माइनिंग",
+      "pow": "प्रूफ ऑफ वर्क",
+      "privacy": "गोपनीयता",
+      "zero-knowledge-proofs": "जीरो-नॉलेज प्रूफ",
+      "wallet": "वॉलेट",
+      "mainnet": "मेननेट",
+      "ml-dsa": "ML-DSA",
+      "wormhole": "वर्महोल",
+      "protocol-security": "प्रोटोकॉल सुरक्षा",
+      "governance": "गवर्नेंस",
+      "tokenomics": "टोकनॉमिक्स",
+      "crqc": "CRQC",
+      "ecdsa": "ECDSA",
+      "nist": "NIST",
+      "ai": "AI"
     }
   },
   "whitepaper": {

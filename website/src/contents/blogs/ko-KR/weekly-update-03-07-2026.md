@@ -1,21 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: 웜홀 트랜잭션"
 description: "웜홀 트랜잭션, 마이너용 프라이빗 블록 보상, 컨센서스 버그 수정, 지갑 업데이트를 다룬 주간 업데이트입니다. Quantus의 최신 개발 현황을 전합니다."
 pubDate: "2026-03-07"
 heroImage: "/blog/covers/weekly-update-03-07-2026.webp"
 heroAlt: "Quantus Weekly: 웜홀 트랜잭션"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "wormhole",
-    "zk-proofs",
-    "privacy",
-    "miner-app",
-    "consensus",
-    "wallet",
-  ]
+tags: ["wormhole", "zero-knowledge-proofs", "privacy", "mining", "wallet"]
 ---
 
 코인을 사용 불가능한 주소로 소각합니다.

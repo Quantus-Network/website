@@ -1,23 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Planck 테스트넷 채굴 보상"
 description: "Planck 테스트넷이 초기 마이너를 위해 공개되었습니다. 앱 마이그레이션, GPU 채굴, 코어·인프라·지갑 업데이트를 다룬 Quantus 주간 업데이트입니다."
 pubDate: "2026-04-15"
 heroImage: "/blog/covers/weekly-update-04-15-2026.webp"
 heroAlt: "Quantus Weekly: Planck 테스트넷 채굴 보상"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "bitcoin",
-    "pow",
-    "mining",
-    "testnet",
-    "mobile",
-    "zk-proofs",
-    "infrastructure",
-    "subsquid",
-  ]
+tags: ["bitcoin", "pow", "mining", "wallet", "zero-knowledge-proofs"]
 ---
 
 초기 해시레이트가 중요합니다.

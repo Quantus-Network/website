@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Mingguan: Audit Lattice dan Dompet Keystone"
 description: "Temuan audit lattice Rusty Crystals ditutup, jaringan Polkadot SDK diperbarui, dan alamat Quantus hadir di firmware dompet hardware Keystone open-source."
 
@@ -7,15 +8,7 @@ pubDate: "2025-12-01"
 heroImage: "/blog/covers/weekly-update-12-01-2025.webp"
 heroAlt: "Quantus Mingguan: Audit Lattice dan Dompet Keystone"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "lattice-cryptography",
-    "keystone",
-    "polkadot-sdk",
-    "hardware-wallet",
-    "audit",
-  ]
+tags: ["wallet", "protocol-security"]
 ---
 
 Minggu lalu, tim menangani semua isu yang muncul dalam audit library kripto lattice kami (rusty-crystals) dan merilis pembaruan networking agar selaras dengan Polkadot SDK terbaru. Kami juga mengimplementasikan dukungan alamat Quantus di firmware dompet hardware Keystone open-source dan mendapatkan profil kami terdaftar di platform market intelligence "The Quantum Insider".

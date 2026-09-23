@@ -1,21 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: 高セキュリティ口座と不正防止"
 description: "カスタマイズ可能なタイムロックとガーディアンを備えた高セキュリティ口座、マルチシグ統合のテスト、資金回収機能の追加など、今週のQuantusアップデートをお届けします。"
 pubDate: "2026-02-04"
 heroImage: "/blog/covers/weekly-update-02-04-2026.webp"
 heroAlt: "Quantus Weekly: 高セキュリティ口座と不正防止"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "security",
-    "guardian",
-    "time-lock",
-    "fraud-prevention",
-    "multisig",
-    "plonky2",
-  ]
+tags: ["protocol-security"]
 ---
 
 Chainalysisは2025年に170億ドル相当の暗号資産が盗まれたと推計しています。売り文句は「自分自身の銀行になれ」でした。もう半分は「自分自身のセキュリティチームになれ」です。言っておきますが、「サイバーセキュリティの専門家だけの、ポケットの中のスイス銀行口座」は依然として非常にカッコいい。しかし業界は、非対称暗号が何かすら知らずに全資産をオンチェーンに移した一般ユーザーに不利益をもたらしました。

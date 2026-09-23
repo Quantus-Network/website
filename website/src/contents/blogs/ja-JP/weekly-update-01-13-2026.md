@@ -1,21 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Dilithiumしきい値署名"
 description: "今週は分散調整向けのDilithiumしきい値署名をリリースしました。ZK回路の改善、モバイルウォレットのアップデート、コミュニティ向けコンテンツもお届けしています。"
 pubDate: "2026-01-13"
 heroImage: "/blog/covers/weekly-update-01-13-2026.webp"
 heroAlt: "Quantus Weekly: Dilithiumしきい値署名"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "threshold-signatures",
-    "post-quantum-cryptography",
-    "dilithium",
-    "zero-knowledge-proofs",
-    "quantum-safe",
-    "blockchain",
-  ]
+tags: ["post-quantum-cryptography", "ml-dsa", "zero-knowledge-proofs"]
 ---
 
 権限と権力は複数の当事者に分散されます。分散型の調整。

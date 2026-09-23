@@ -1,22 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Deniable RPCs और Security Audit"
 description: "Deniable RPCs से मजबूत privacy, Rusty Crystals का Neodyme security audit पूरा, और सभी tokens के लिए private ZK addresses—इस सप्ताह।"
 pubDate: "2026-01-28"
 heroImage: "/blog/covers/weekly-update-01-28-2026.webp"
 heroAlt: "Quantus Weekly: Deniable RPCs और Security Audit"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "rpc",
-    "privacy",
-    "audit",
-    "security",
-    "dilithium",
-    "zk-aggregator",
-    "multisig",
-  ]
+tags: ["privacy", "protocol-security", "ml-dsa"]
 ---
 
 आपका wallet आपकी जासूसी कर रहा है।

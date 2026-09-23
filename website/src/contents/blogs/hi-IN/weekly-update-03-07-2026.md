@@ -1,21 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Wormhole ट्रांज़ैक्शन"
 description: "Wormhole ट्रांज़ैक्शन, माइनर्स के निजी ब्लॉक रिवॉर्ड, consensus बग फिक्स और wallet अपडेट — इस सप्ताह Quantus में क्या-क्या शिप हुआ, पूरी जानकारी यहाँ।"
 pubDate: "2026-03-07"
 heroImage: "/blog/covers/weekly-update-03-07-2026.webp"
 heroAlt: "Quantus Weekly: Wormhole ट्रांज़ैक्शन"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "wormhole",
-    "zk-proofs",
-    "privacy",
-    "miner-app",
-    "consensus",
-    "wallet",
-  ]
+tags: ["wormhole", "zero-knowledge-proofs", "privacy", "mining", "wallet"]
 ---
 
 आप coins को एक unspendable address पर burn करते हैं।

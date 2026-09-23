@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Mingguan: Poseidon2 Lebih Cepat, Chain Lebih Ringan"
 description: "Gate Poseidon2 8,3x lebih cepat setelah optimasi, refactor chain menghapus ~9.000 baris kode, dan catatan tim dari Binance Blockchain Week."
 
@@ -7,15 +8,7 @@ pubDate: "2025-12-09"
 heroImage: "/blog/covers/weekly-update-12-09-2025.webp"
 heroAlt: "Quantus Mingguan: Poseidon2 Lebih Cepat, Chain Lebih Ringan"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "poseidon2",
-    "chain-architecture",
-    "wormhole",
-    "binance-blockchain-week",
-    "solana-breakpoint",
-  ]
+tags: ["wormhole"]
 ---
 
 Anda mungkin sudah melihat [wawancara ini dengan @EliBenSasson dan Scott Aaronson](https://x.com/Starknet/status/1995865652377395421)

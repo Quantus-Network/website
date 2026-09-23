@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Dilithium Threshold Signatures"
 description: "This week we shipped Dilithium threshold signatures for distributed coordination, plus ZK circuit work, mobile wallet updates, and community content."
 
@@ -7,16 +8,7 @@ pubDate: "2026-01-13"
 heroImage: "/blog/covers/weekly-update-01-13-2026.webp"
 heroAlt: "Quantus Weekly: Dilithium Threshold Signatures"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "threshold-signatures",
-    "post-quantum-cryptography",
-    "dilithium",
-    "zero-knowledge-proofs",
-    "quantum-safe",
-    "blockchain",
-  ]
+tags: ["post-quantum-cryptography", "ml-dsa", "zero-knowledge-proofs"]
 ---
 
 Power and authority split between multiple parties. Distributed coordination.

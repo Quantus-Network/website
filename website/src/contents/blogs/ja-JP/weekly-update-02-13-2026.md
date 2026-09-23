@@ -1,21 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: 量子耐性の未来を描く"
 description: "CoinGecko上場、マルチシグ最適化、ZK-aggregatorリファクタリング、モバイルアプリv1.1.5リリースなど、今週のQuantus週刊アップデートをお届けします。"
 pubDate: "2026-02-13"
 heroImage: "/blog/covers/weekly-update-02-13-2026.webp"
 heroAlt: "Quantus Weekly: 量子耐性の未来を描く"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "coingecko",
-    "multisig",
-    "plonky2",
-    "plonky3",
-    "quantum-resistant",
-    "zk-proofs",
-  ]
+tags: ["post-quantum-cryptography", "zero-knowledge-proofs"]
 ---
 
 フラ・マウロはヴェネツィア近郊の修道院で何年もかけ、当時知られていた全世界の地図を描きました。

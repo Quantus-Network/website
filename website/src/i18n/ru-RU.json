@@ -854,29 +854,53 @@
       "description": "Квантово-безопасные зашифрованные деньги. Максимальная эмиссия 21 млн, Proof of Work. Получите детали запуска."
     },
     "hero": {
-      "eyebrow": "Квантово-безопасные зашифрованные деньги"
+      "eyebrow": "Квантово-безопасные зашифрованные деньги",
+      "sub": "Mainnet запущен. Следующий шаг — свопы. Узнайте первыми."
     },
     "signup": {
-      "headline": "Получите детали запуска.",
-      "email_placeholder": "your@email.com",
+      "email_placeholder": "Введите ваш email",
       "email_aria": "Адрес электронной почты",
-      "submit_label": "СООБЩИТЬ МНЕ",
+      "submit_label": "Сообщить мне",
       "error_message": "Пожалуйста, введите корректный адрес электронной почты.",
       "success": {
         "headline": "Вы в списке.",
-        "sub": "Детали запуска придут на вашу почту."
+        "sub": "Вы узнаете раньше всех."
       }
     },
-    "facts": {
-      "supply": {
-        "label": "МАКСИМАЛЬНАЯ ЭМИССИЯ",
-        "value": "21,000,000"
+    "cards": {
+      "quantum_secure": {
+        "title": "Квантовая безопасность",
+        "body": "Деньги, которые не взломает квантовый компьютер. Постквантовая защита с генезиса."
       },
-      "consensus": {
-        "label": "PROOF OF WORK"
+      "encrypted": {
+        "title": "Шифрование",
+        "body": "Держите средства открытыми или скрытыми."
+      },
+      "sound_money": {
+        "title": "Твёрдые деньги",
+        "body": "Максимальная эмиссия 21 000 000 $QTC. Proof-of-work. Завершаем то, что начал Bitcoin."
       }
     },
-    "mining_cta": "ЧИТАТЬ РУКОВОДСТВО ПО МАЙНИНГУ"
+    "bridge": "Одноранговые зашифрованные наличные.",
+    "mining": {
+      "title": "Начните майнить",
+      "body": "Превратите вычислительную мощность в $QTC.",
+      "cta": "Передайте руководство по майнингу своей LLM"
+    },
+    "wallet": {
+      "title": "Обменивайте, копите и платите в $QTC.",
+      "body": "Кошелёк для постквантового будущего. iOS и Android.",
+      "ios": "iOS",
+      "android": "Android"
+    },
+    "community": {
+      "title": "Присоединяйтесь к общению.",
+      "body": "Те, кто создаёт и майнит Quantus, первыми обсуждают всё здесь.",
+      "telegram": "Telegram"
+    },
+    "final": {
+      "title": "Узнайте первыми, когда запустятся свопы."
+    }
   },
   "blog": {
     "title": "Последние новости от Quantus.",
@@ -891,6 +915,12 @@
     "search_placeholder": "Поиск записей...",
     "no_posts_found": "Записей не найдено.",
     "featured_label": "Рекомендуемое",
+    "categories_label": "Категории",
+    "categories": {
+      "all": "Все",
+      "weekly-update": "Еженедельное обновление",
+      "education": "Образование"
+    },
     "related_posts": "Похожие записи",
     "post": {
       "back_to_blog": "Назад в блог",
@@ -910,125 +940,26 @@
       "back_link": "← Назад ко всем записям"
     },
     "tags": {
-      "weekly-update": "Еженедельное обновление",
-      "threshold-signatures": "Пороговые подписи",
-      "post-quantum-cryptography": "Постквантовая криптография",
-      "dilithium": "Dilithium",
-      "zero-knowledge-proofs": "ZK-доказательства",
-      "quantum-safe": "Квантово-безопасный",
-      "blockchain": "Блокчейн",
-      "podcast": "Подкаст",
-      "crypto": "Крипто",
-      "defi": "DeFi",
-      "bitcoin": "Bitcoin",
-      "business": "Бизнес",
-      "network-state": "Сетевое государство",
-      "innovation": "Инновации",
-      "quantum-computing": "Квантовые вычисления",
-      "gpu-mining": "GPU-майнинг",
-      "dirac-network": "Сеть Dirac",
-      "blockchain-architecture": "Архитектура блокчейна",
-      "tokenomics": "Токеномика",
-      "hardware-wallet": "Аппаратный кошелек",
-      "social-engagement": "Социальная активность",
-      "solana-breakpoint": "Solana Breakpoint",
-      "culture": "Культура",
-      "ai": "ИИ",
-      "justice": "Справедливость",
-      "freedom": "Свобода",
-      "poseidon2": "Poseidon2",
-      "chain-architecture": "Архитектура сети",
-      "wormhole": "Wormhole",
-      "binance-blockchain-week": "Binance Blockchain Week",
-      "lattice-cryptography": "Решетчатая криптография",
-      "polkadot-sdk": "Polkadot SDK",
-      "audit": "Аудит",
-      "miner-app": "Приложение для майнинга",
-      "gui-miner": "GUI-майнер",
-      "mobile": "Мобильный",
-      "ml-dsa": "ML-DSA",
-      "ama": "AMA",
-      "substrate": "Substrate",
-      "poseidon": "Poseidon",
-      "point-of-sale": "Точка продаж",
-      "dirac-testnet": "Dirac Testnet",
-      "mobile-wallet": "Мобильный кошелек",
-      "wallet": "Кошелек",
-      "pow": "Proof of Work",
-      "libp2p": "libp2p",
-      "ghostdag": "GHOSTDAG",
-      "blue-green-deployment": "Blue-Green развертывание",
-      "plonky2": "Plonky2",
-      "rebrand": "Ребрендинг",
-      "referral": "Реферал",
-      "governance": "Управление",
-      "treasury": "Казначейство",
-      "conviction-voting": "Голосование по убеждению",
-      "gamification": "Геймификация",
-      "plonky3": "Plonky3",
-      "polyfri": "PolyFri",
-      "liberland": "Либерленд",
-      "schrodinger-testnet": "Schrödinger Testnet",
-      "pqc": "PQC",
-      "mpc": "MPC",
-      "multisig": "Мультисиг",
-      "indexer": "Индексатор",
-      "zk-aggregator": "ZK-агрегатор",
-      "biohacking": "Биохакинг",
-      "rpc": "RPC",
-      "scalability": "Масштабируемость",
-      "privacy": "Приватность",
-      "security": "Безопасность",
-      "guardian": "Опекун",
-      "time-lock": "Тайм-лок",
-      "fraud-prevention": "Предотвращение мошенничества",
-      "coingecko": "CoinGecko",
-      "ecc": "ECC",
-      "post-quantum": "Постквант",
-      "quantum": "Квант",
-      "quantum-resistant": "Квантово-устойчивый",
-      "zk-proofs": "ZK-доказательства",
-      "research": "Исследования",
-      "notification-system": "Система уведомлений",
-      "keystone": "Keystone",
-      "heisenberg-testnet": "Heisenberg Testnet",
-      "performance": "Производительность",
-      "planck": "Планк",
-      "prover": "Проверщик",
-      "infrastructure": "Инфраструктура",
-      "consensus": "Консенсус",
-      "mining": "Майнинг",
-      "fair-launch": "Справедливый запуск",
-      "testnet": "Тестнет",
-      "subsquid": "Subsquid",
-      "mithril": "Mithril",
-      "mainnet": "Мейннет",
       "q-day": "Q-Day",
-      "network-school": "Network School",
-      "ecdsa": "ECDSA",
-      "runtime-upgrade": "Обновление runtime",
-      "litep2p": "litep2p",
-      "nist": "NIST",
-      "ml-kem": "ML-KEM",
-      "blackrock": "BlackRock",
-      "formal-verification": "Формальная верификация",
-      "javascript-sdk": "JavaScript SDK",
-      "runtime": "Runtime",
-      "cold-storage": "Cold Storage",
-      "miner": "Miner",
-      "open-source": "Open Source",
-      "block-explorer": "Обозреватель блоков",
-      "reuters": "Reuters",
-      "bip-360": "BIP-360",
+      "quantum-computing": "Квантовые вычисления",
+      "post-quantum-cryptography": "Постквантовая криптография",
       "cryptography": "Криптография",
-      "charles-edwards": "Charles Edwards",
-      "encrypted-accounts": "Зашифрованные аккаунты",
-      "infra": "Инфра",
-      "immunefi": "Immunefi",
-      "bug-bounty": "Баг-баунти",
-      "senoti": "Senoti",
-      "migration": "Миграция",
-      "harvest-now-decrypt-later": "Собрать-Сейчас-Расшифровать-Потом"
+      "bitcoin": "Bitcoin",
+      "mining": "Майнинг",
+      "pow": "Proof of Work",
+      "privacy": "Приватность",
+      "zero-knowledge-proofs": "ZK-доказательства",
+      "wallet": "Кошелек",
+      "mainnet": "Мейннет",
+      "ml-dsa": "ML-DSA",
+      "wormhole": "Wormhole",
+      "protocol-security": "Безопасность протокола",
+      "governance": "Управление",
+      "tokenomics": "Токеномика",
+      "crqc": "CRQC",
+      "ecdsa": "ECDSA",
+      "nist": "NIST",
+      "ai": "ИИ"
     }
   },
   "whitepaper": {

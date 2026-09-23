@@ -64,7 +64,9 @@ function checkLength(kind, locale, key, value, errors) {
 }
 
 function checkI18n(errors) {
-  for (const file of fs.readdirSync(i18nDir).filter((f) => f.endsWith(".json"))) {
+  for (const file of fs
+    .readdirSync(i18nDir)
+    .filter((f) => f.endsWith(".json"))) {
     const locale = path.basename(file, ".json");
     const data = JSON.parse(fs.readFileSync(path.join(i18nDir, file), "utf8"));
     for (const [key, value] of walkJson(data)) {
@@ -121,7 +123,9 @@ function checkBlogs(errors) {
     const raw = fs.readFileSync(file, "utf8");
     const meta = parseFrontmatter(raw);
     if (!meta) {
-      errors.push(`[parse] ${path.relative(websiteRoot, file)}: missing title/description`);
+      errors.push(
+        `[parse] ${path.relative(websiteRoot, file)}: missing title/description`,
+      );
       continue;
     }
     const rel = path.relative(websiteRoot, file);
@@ -135,9 +139,16 @@ function checkDefaultMetadata(errors) {
   const raw = fs.readFileSync(file, "utf8");
   const title = raw.match(/default:\s*"([^"]+)"/)?.[1];
   const desc = raw.match(/const description =\s*\n?\s*"([^"]+)"/)?.[1];
-  if (title) checkLength("title", "en-US", "default-metadata.title", title, errors);
+  if (title)
+    checkLength("title", "en-US", "default-metadata.title", title, errors);
   if (desc)
-    checkLength("description", "en-US", "default-metadata.description", desc, errors);
+    checkLength(
+      "description",
+      "en-US",
+      "default-metadata.description",
+      desc,
+      errors,
+    );
 }
 
 const errors = [];

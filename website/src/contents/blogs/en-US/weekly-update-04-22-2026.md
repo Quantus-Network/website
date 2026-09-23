@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Planck Claims, 2x Prover Speed"
 description: "Planck is our first testnet for post-quantum private transactions. Miners migrate, CLI reward claims hit the wallet, and prover throughput doubles again."
 
@@ -9,17 +10,12 @@ heroAlt: "Quantus Weekly: Planck Claims, 2x Prover Speed"
 featured: false
 tags:
   [
-    "weekly-update",
     "bitcoin",
     "pow",
     "mining",
-    "testnet",
-    "planck",
-    "post-quantum",
-    "mobile",
-    "zk-proofs",
-    "infrastructure",
-    "subsquid",
+    "post-quantum-cryptography",
+    "wallet",
+    "zero-knowledge-proofs",
   ]
 ---
 

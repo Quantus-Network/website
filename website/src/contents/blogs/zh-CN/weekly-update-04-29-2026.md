@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus 每周动态：审计与紧凑聚合器"
 description: "春季清理：推进 Eiger 审计整改、重构 CLI、修复矿工与索引器；在将证明器提速一倍的紧凑聚合器上跑通虫洞测试，并发布钱包与矿工新版本。"
 pubDate: "2026-04-29"
@@ -8,17 +9,12 @@ heroAlt: "Quantus 每周动态：审计与紧凑聚合器"
 featured: false
 tags:
   [
-    "weekly-update",
     "bitcoin",
     "pow",
     "mining",
-    "testnet",
-    "planck",
-    "post-quantum",
-    "mobile",
-    "zk-proofs",
-    "infrastructure",
-    "subsquid",
+    "post-quantum-cryptography",
+    "wallet",
+    "zero-knowledge-proofs",
   ]
 ---
 

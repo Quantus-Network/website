@@ -1,21 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus 위클리: 지갑은 단순해야 합니다"
 description: "지갑 v1.2.0 출시, 멀티시그 Treasury, Heisenberg 테스트넷 업데이트, 거래 내역 로딩 5초 미만 등 이번 주 Quantus 지갑·체인 성능 개선을 정리합니다."
 pubDate: "2026-02-27"
 heroImage: "/blog/covers/weekly-update-02-27-2026.webp"
 heroAlt: "Quantus 위클리: 지갑은 단순해야 합니다"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "mobile-wallet",
-    "treasury",
-    "multisig",
-    "heisenberg-testnet",
-    "zk-proofs",
-    "performance",
-  ]
+tags: ["wallet", "zero-knowledge-proofs"]
 ---
 
 주요 암호화폐 지갑마다 원치 않는 기능이 계속 붙고 있습니다.

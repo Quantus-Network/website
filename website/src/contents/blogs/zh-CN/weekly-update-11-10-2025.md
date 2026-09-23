@@ -1,21 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus 每周动态：Dirac 测试网与格子密码学审计"
 description: "Dirac 测试网发布，完成整链 PoW 算法与 qp-rusty-crystals 格子密码库更新；该库已含恒定时间签名并进入外部审计，钱包与 libp2p 已集成。矿工请升级。"
 pubDate: "2025-11-10"
 heroImage: "/blog/covers/weekly-update-11-10-2025.webp"
 heroAlt: "Quantus 每周动态：Dirac 测试网与格子密码学审计"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "dirac-testnet",
-    "lattice-cryptography",
-    "pow",
-    "libp2p",
-    "ghostdag",
-    "blue-green-deployment",
-  ]
+tags: ["pow"]
 ---
 
 本周，我们发布了 Dirac 测试网，完成了全链范围内对工作量证明 (PoW) 算法和格子密码学库 qp-rusty-crystals 的更新。该核心库目前正在接受外部审计，并包含恒定时间 (constant-time) 签名。此次更新现已集成到移动钱包和 libp2p 中。

@@ -1,20 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Прорыв в майнинге на GPU и рефакторинг ZK"
 description: "Еженедельное обновление, посвященное 9-кратному увеличению производительности майнинга на GPU, рефакторингу схемы ZK-агрегации и стратегическим встречам в ОАЭ."
 pubDate: "2025-12-15"
 heroImage: "/blog/covers/weekly-update-12-15-2025.webp"
 heroAlt: "Quantus Weekly: Прорыв в майнинге на GPU и рефакторинг ZK"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "gpu-mining",
-    "zero-knowledge-proofs",
-    "tokenomics",
-    "hardware-wallet",
-    "solana-breakpoint",
-  ]
+tags: ["mining", "zero-knowledge-proofs", "tokenomics", "wallet"]
 ---
 
 На этой неделе команда добилась прорыва в производительности майнинга. Наш новый майнер для GPU теперь работает примерно в 9 раз быстрее, чем версия для CPU.

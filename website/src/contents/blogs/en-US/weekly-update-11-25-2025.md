@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: ZK Aggregation and Miner App"
 description: "First ZK transaction aggregation lands for chain and CLI with real transfer verification, Miner App v0.1.0 ships, and GPU mining work continues."
 
@@ -7,15 +8,7 @@ pubDate: "2025-11-25"
 heroImage: "/blog/covers/weekly-update-11-25-2025.webp"
 heroAlt: "Quantus Weekly: ZK Aggregation and Miner App"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "zero-knowledge-proofs",
-    "gpu-mining",
-    "miner-app",
-    "ama",
-    "substrate",
-  ]
+tags: ["zero-knowledge-proofs", "mining"]
 ---
 
 This week the team completed the first step of ZK transaction aggregation for both the chain and CLI, replacing mock tests with actual transfer verification. We also released the Miner App v0.1.0 binary, now available.

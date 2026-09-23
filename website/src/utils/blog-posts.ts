@@ -16,7 +16,9 @@ function isDefaultLocaleBlogId(id: string): boolean {
   return id.toLowerCase().startsWith(`${BLOG_PUBLISH_LOCALE.toLowerCase()}/`);
 }
 
-function publishedSlugsFromEnglish(posts: readonly BlogPostLike[]): Set<string> {
+function publishedSlugsFromEnglish(
+  posts: readonly BlogPostLike[],
+): Set<string> {
   const slugs = new Set<string>();
   for (const post of posts) {
     if (isDefaultLocaleBlogId(post.id) && post.data.published === true) {
@@ -26,6 +28,7 @@ function publishedSlugsFromEnglish(posts: readonly BlogPostLike[]): Set<string> 
   return slugs;
 }
 
+/** `posts` must include en-US entries. Locale-only lists always look unpublished. */
 export function isBlogSlugPublished(
   posts: readonly BlogPostLike[],
   id: string,

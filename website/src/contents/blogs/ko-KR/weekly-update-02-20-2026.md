@@ -1,21 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus 위클리: 공개 연구와 포스트퀀텀 표준"
 description: "research.quantus.com 런치, ZK 증명 집계, 멀티시그 팔렛 병합, 모바일 지갑·Senoti 알림 시스템 업데이트 등 이번 주 Quantus 소식을 전합니다."
 pubDate: "2026-02-20"
 heroImage: "/blog/covers/weekly-update-02-20-2026.webp"
 heroAlt: "Quantus 위클리: 공개 연구와 포스트퀀텀 표준"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "research",
-    "post-quantum-cryptography",
-    "multisig",
-    "zk-proofs",
-    "mobile-wallet",
-    "notification-system",
-  ]
+tags: ["post-quantum-cryptography", "zero-knowledge-proofs", "wallet"]
 ---
 
 포스트퀀텀 암호학은 너무 새로워서, 닫힌 문 뒤에서만 블록체인에 실어 출시할 수 있는 분야가 아닙니다.

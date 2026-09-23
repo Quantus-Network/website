@@ -1,7 +1,9 @@
 import { defineCollection } from "astro:content";
-import { z } from 'astro/zod'
+import { z } from "astro/zod";
 import { glob } from "astro/loaders";
 import { resolveBlogAuthor } from "./utils/resolve-blog-author";
+import { BLOG_CATEGORIES } from "./constants/blog-categories";
+import { BLOG_TAGS } from "./constants/blog-tags";
 
 const blog = defineCollection({
   loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/contents/blogs" }),
@@ -16,14 +18,15 @@ const blog = defineCollection({
       heroAlt: z.string().optional(),
       featured: z.boolean().optional(),
       published: z.boolean().default(false),
-      tags: z.array(z.string()).default([]),
+      category: z.enum(BLOG_CATEGORIES),
+      tags: z.array(z.enum(BLOG_TAGS)).default([]),
       author: z
         .enum(["christopher-smith", "joe-mattia", "jonathan-angle"])
         .optional(),
     })
     .transform((data) => ({
       ...data,
-      author: resolveBlogAuthor(data.author, data.tags),
+      author: resolveBlogAuthor(data.author, data.category),
     })),
 });
 

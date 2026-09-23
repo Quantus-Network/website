@@ -1,21 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Wormhole-транзакции"
 description: "Wormhole-транзакции, приватные награды майнерам по умолчанию, фиксы консенсуса, релизы библиотек и кошелёк v1.2.0–1.2.1 в сторах."
 pubDate: "2026-03-07"
 heroImage: "/blog/covers/weekly-update-03-07-2026.webp"
 heroAlt: "Quantus Weekly: Wormhole-транзакции"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "wormhole",
-    "zk-proofs",
-    "privacy",
-    "miner-app",
-    "consensus",
-    "wallet",
-  ]
+tags: ["wormhole", "zero-knowledge-proofs", "privacy", "mining", "wallet"]
 ---
 
 Вы сжигаете монеты на нетратимый адрес.

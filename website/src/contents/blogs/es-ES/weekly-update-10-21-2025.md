@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Poseidon2 Gate y Gobernanza"
 description: "Poseidon2 llega como gate de Plonky2, gobernanza on-chain y funciones de tesorería, referidos in-app completos y bindings Icicle para mineros GPU."
 
@@ -7,18 +8,7 @@ pubDate: "2025-10-21"
 heroImage: "/blog/covers/weekly-update-10-21-2025.webp"
 heroAlt: "Quantus Weekly: Poseidon2 Gate y Gobernanza"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "plonky2",
-    "poseidon2",
-    "governance",
-    "treasury",
-    "conviction-voting",
-    "referral",
-    "gpu-mining",
-    "audit",
-  ]
+tags: ["governance", "mining", "protocol-security"]
 ---
 
 ## Noticias de Producto y Desarrollo

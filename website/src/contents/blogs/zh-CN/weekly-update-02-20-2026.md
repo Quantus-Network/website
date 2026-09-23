@@ -1,21 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus 每周动态：开放研究与后量子标准"
 description: "research.quantus.com 上线，邀请密码学家公开审视协议决策；本周还推进多机 ZK 证明聚合、多签 pallet 合并与钱包 TestFlight。"
 pubDate: "2026-02-20"
 heroImage: "/blog/covers/weekly-update-02-20-2026.webp"
 heroAlt: "Quantus 每周动态：开放研究与后量子标准"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "research",
-    "post-quantum-cryptography",
-    "multisig",
-    "zk-proofs",
-    "mobile-wallet",
-    "notification-system",
-  ]
+tags: ["post-quantum-cryptography", "zero-knowledge-proofs", "wallet"]
 ---
 
 后量子密码学太新了，不适合关起门来就塞进区块链。

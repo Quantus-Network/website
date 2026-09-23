@@ -1,20 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus 위클리: ZK 집계와 마이너 앱"
 description: "체인과 CLI에서 ZK 트랜잭션 집계 1단계를 완료하고 실제 전송 검증으로 전환했습니다. Miner App v0.1.0을 출시하고 GPU 마이닝을 진행 중입니다."
 pubDate: "2025-11-25"
 heroImage: "/blog/covers/weekly-update-11-25-2025.webp"
 heroAlt: "Quantus 위클리: ZK 집계와 마이너 앱"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "zero-knowledge-proofs",
-    "gpu-mining",
-    "miner-app",
-    "ama",
-    "substrate",
-  ]
+tags: ["zero-knowledge-proofs", "mining"]
 ---
 
 이번 주 팀은 체인과 CLI 모두에서 ZK 트랜잭션 집계 1단계를 완료하여 모의 테스트를 실제 전송 검증으로 대체했습니다. Miner App v0.1.0 바이너리도 출시했습니다.

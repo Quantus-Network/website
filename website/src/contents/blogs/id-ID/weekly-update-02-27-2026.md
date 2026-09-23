@@ -1,21 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Wallet Harus Sederhana"
 description: "Minggu ini: rilis Wallet v1.2.0, Treasury dengan multisig, pembaruan testnet Heisenberg, dan peningkatan performa yang signifikan."
 pubDate: "2026-02-27"
 heroImage: "/blog/covers/weekly-update-02-27-2026.webp"
 heroAlt: "Quantus Weekly: Wallet Harus Sederhana"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "mobile-wallet",
-    "treasury",
-    "multisig",
-    "heisenberg-testnet",
-    "zk-proofs",
-    "performance",
-  ]
+tags: ["wallet", "zero-knowledge-proofs"]
 ---
 
 Setiap wallet kripto besar menambahkan fitur sampah yang tidak saya inginkan.

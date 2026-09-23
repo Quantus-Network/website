@@ -1,21 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Transaksi Wormhole"
 description: "Update mingguan: transaksi wormhole, hadiah blok privat untuk miner, perbaikan bug konsensus, serta pembaruan wallet dan infrastruktur jaringan."
 pubDate: "2026-03-07"
 heroImage: "/blog/covers/weekly-update-03-07-2026.webp"
 heroAlt: "Quantus Weekly: Transaksi Wormhole"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "wormhole",
-    "zk-proofs",
-    "privacy",
-    "miner-app",
-    "consensus",
-    "wallet",
-  ]
+tags: ["wormhole", "zero-knowledge-proofs", "privacy", "mining", "wallet"]
 ---
 
 Anda membakar koin ke alamat yang tidak bisa dibelanjakan.

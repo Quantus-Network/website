@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: 巨大署名と高速ワームホール"
 description: "ML-DSA署名はBitcoinの70倍。量子耐性署名のスケール、ワームホール証明の2倍高速化、ZK集約の前進をまとめた週次アップデート。Quantusの最新開発をお届けします。"
 pubDate: "2026-03-16"
@@ -8,12 +9,10 @@ heroAlt: "Quantus Weekly: 巨大署名と高速ワームホール"
 featured: false
 tags:
   [
-    "weekly-update",
-    "quantum-safe",
+    "post-quantum-cryptography",
     "ml-dsa",
-    "zk-proofs",
+    "zero-knowledge-proofs",
     "wormhole",
-    "scalability",
     "privacy",
   ]
 ---

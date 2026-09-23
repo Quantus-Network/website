@@ -1,20 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: 格子暗号監査とKeystone"
 description: "Rusty Crystals格子暗号監査の指摘事項をすべて解決し、Polkadot SDKネットワークを更新。QuantusアドレスをKeystoneオープンソースハードウェアウォレットに実装しました。"
 pubDate: "2025-12-01"
 heroImage: "/blog/covers/weekly-update-12-01-2025.webp"
 heroAlt: "Quantus Weekly: 格子暗号監査とKeystone"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "lattice-cryptography",
-    "keystone",
-    "polkadot-sdk",
-    "hardware-wallet",
-    "audit",
-  ]
+tags: ["wallet", "protocol-security"]
 ---
 
 先週、チームは格子暗号ライブラリ（rusty-crystals）の監査で指摘された全問題に対応し、最新Polkadot SDKに合わせたネットワーク更新を出荷しました。オープンソースKeystoneハードウェアウォレットファームウェアへのQuantusアドレス対応も実装し、市場インテリジェンスプラットフォーム「The Quantum Insider」への掲載も完了しました。

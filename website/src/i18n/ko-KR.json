@@ -854,29 +854,53 @@
       "description": "양자 보안 암호화 화폐. 총 발행 한도 2,100만, Proof of Work. 출시 소식을 받아보세요."
     },
     "hero": {
-      "eyebrow": "양자 보안 암호화 화폐"
+      "eyebrow": "양자 보안 암호화 화폐",
+      "sub": "메인넷이 출시되었습니다. 다음은 스왑입니다. 가장 먼저 알림을 받아보세요."
     },
     "signup": {
-      "headline": "출시 소식을 받아보세요.",
-      "email_placeholder": "your@email.com",
+      "email_placeholder": "이메일을 입력하세요",
       "email_aria": "이메일 주소",
       "submit_label": "알림 받기",
       "error_message": "유효한 이메일 주소를 입력하세요.",
       "success": {
         "headline": "등록되었습니다.",
-        "sub": "출시 소식을 이메일로 보내드립니다."
+        "sub": "누구보다 먼저 소식을 전해드립니다."
       }
     },
-    "facts": {
-      "supply": {
-        "label": "총 발행 한도",
-        "value": "21,000,000"
+    "cards": {
+      "quantum_secure": {
+        "title": "양자 보안",
+        "body": "양자 컴퓨터도 깰 수 없는 화폐. 제네시스부터 포스트 양자."
       },
-      "consensus": {
-        "label": "PROOF OF WORK"
+      "encrypted": {
+        "title": "암호화",
+        "body": "자금을 공개하거나 숨길 수 있습니다."
+      },
+      "sound_money": {
+        "title": "건전한 화폐",
+        "body": "2,100만 $QTC 발행 한도. 작업 증명. 비트코인이 시작한 일을 완성합니다."
       }
     },
-    "mining_cta": "채굴 가이드 읽기"
+    "bridge": "P2P 암호화 현금.",
+    "mining": {
+      "title": "채굴 시작하기",
+      "body": "컴퓨팅 파워를 $QTC로 바꾸세요.",
+      "cta": "LLM에게 채굴 가이드를 맡기세요"
+    },
+    "wallet": {
+      "title": "$QTC로 스왑하고, 모으고, 결제하세요.",
+      "body": "포스트 양자 시대를 위한 지갑. iOS 및 Android.",
+      "ios": "iOS",
+      "android": "Android"
+    },
+    "community": {
+      "title": "대화에 참여하세요.",
+      "body": "Quantus를 만들고 채굴하는 사람들이 가장 먼저 이야기하는 곳입니다.",
+      "telegram": "Telegram"
+    },
+    "final": {
+      "title": "스왑 출시 소식을 가장 먼저 받아보세요."
+    }
   },
   "blog": {
     "title": "Quantus의 최신 소식.",
@@ -891,6 +915,12 @@
     "search_placeholder": "게시물 검색...",
     "no_posts_found": "게시물을 찾을 수 없습니다.",
     "featured_label": "추천",
+    "categories_label": "카테고리",
+    "categories": {
+      "all": "전체",
+      "weekly-update": "주간 업데이트",
+      "education": "교육"
+    },
     "related_posts": "관련 게시물",
     "post": {
       "back_to_blog": "블로그로 돌아가기",
@@ -910,125 +940,26 @@
       "back_link": "← 모든 게시물로 돌아가기"
     },
     "tags": {
-      "weekly-update": "주간 업데이트",
-      "threshold-signatures": "임계값 서명",
-      "post-quantum-cryptography": "양자 내성 암호",
-      "dilithium": "Dilithium",
-      "zero-knowledge-proofs": "영지식 증명",
-      "quantum-safe": "양자 보안",
-      "blockchain": "블록체인",
-      "podcast": "팟캐스트",
-      "crypto": "크립토",
-      "defi": "DeFi",
-      "bitcoin": "Bitcoin",
-      "business": "비즈니스",
-      "network-state": "네트워크 국가",
-      "innovation": "혁신",
-      "quantum-computing": "양자 컴퓨팅",
-      "gpu-mining": "GPU 마이닝",
-      "dirac-network": "Dirac 네트워크",
-      "blockchain-architecture": "블록체인 아키텍처",
-      "tokenomics": "토크노믹스",
-      "hardware-wallet": "하드웨어 지갑",
-      "social-engagement": "사회적 참여",
-      "solana-breakpoint": "Solana Breakpoint",
-      "culture": "문화",
-      "ai": "AI",
-      "justice": "정의",
-      "freedom": "자유",
-      "poseidon2": "Poseidon2",
-      "chain-architecture": "체인 아키텍처",
-      "wormhole": "웜홀",
-      "binance-blockchain-week": "Binance Blockchain Week",
-      "lattice-cryptography": "격자 암호",
-      "polkadot-sdk": "Polkadot SDK",
-      "audit": "감사",
-      "miner-app": "마이너 앱",
-      "gui-miner": "GUI 마이너",
-      "mobile": "모바일",
-      "ml-dsa": "ML-DSA",
-      "ama": "AMA",
-      "substrate": "Substrate",
-      "poseidon": "Poseidon",
-      "point-of-sale": "POS",
-      "dirac-testnet": "Dirac 테스트넷",
-      "mobile-wallet": "모바일 지갑",
-      "wallet": "지갑",
-      "pow": "Proof of Work",
-      "libp2p": "libp2p",
-      "ghostdag": "GHOSTDAG",
-      "blue-green-deployment": "블루-그린 배포",
-      "plonky2": "Plonky2",
-      "rebrand": "리브랜딩",
-      "referral": "추천",
-      "governance": "거버넌스",
-      "treasury": "재무",
-      "conviction-voting": "확신 투표",
-      "gamification": "게이미피케이션",
-      "plonky3": "Plonky3",
-      "polyfri": "PolyFri",
-      "liberland": "Liberland",
-      "schrodinger-testnet": "Schrödinger 테스트넷",
-      "pqc": "PQC",
-      "mpc": "MPC",
-      "multisig": "멀티시그",
-      "indexer": "인덱서",
-      "zk-aggregator": "ZK 어그리게이터",
-      "biohacking": "바이오해킹",
-      "rpc": "RPC",
-      "scalability": "확장성",
-      "privacy": "프라이버시",
-      "security": "보안",
-      "guardian": "가디언",
-      "time-lock": "타임락",
-      "fraud-prevention": "사기 방지",
-      "coingecko": "CoinGecko",
-      "ecc": "ECC",
-      "post-quantum": "포스트 양자",
-      "quantum": "양자",
-      "quantum-resistant": "양자 내성",
-      "zk-proofs": "ZK 증명",
-      "research": "리서치",
-      "notification-system": "알림 시스템",
-      "keystone": "Keystone",
-      "heisenberg-testnet": "Heisenberg 테스트넷",
-      "performance": "성능",
-      "planck": "플랑크",
-      "prover": "증명자",
-      "infrastructure": "인프라",
-      "consensus": "합의",
-      "mining": "마이닝",
-      "fair-launch": "페어 런칭",
-      "testnet": "테스트넷",
-      "subsquid": "Subsquid",
-      "mithril": "Mithril",
-      "mainnet": "메인넷",
       "q-day": "Q-Day",
-      "network-school": "Network School",
-      "ecdsa": "ECDSA",
-      "runtime-upgrade": "런타임 업그레이드",
-      "litep2p": "litep2p",
-      "nist": "NIST",
-      "ml-kem": "ML-KEM",
-      "blackrock": "BlackRock",
-      "formal-verification": "형식 검증",
-      "javascript-sdk": "JavaScript SDK",
-      "runtime": "런타임",
-      "cold-storage": "콜드 스토리지",
-      "miner": "마이너",
-      "open-source": "오픈 소스",
-      "block-explorer": "블록 탐색기",
-      "reuters": "로이터",
-      "bip-360": "BIP-360",
+      "quantum-computing": "양자 컴퓨팅",
+      "post-quantum-cryptography": "양자 내성 암호",
       "cryptography": "암호학",
-      "charles-edwards": "Charles Edwards",
-      "encrypted-accounts": "암호화 계정",
-      "infra": "인프라",
-      "immunefi": "Immunefi",
-      "bug-bounty": "버그 바운티",
-      "senoti": "Senoti",
-      "migration": "마이그레이션",
-      "harvest-now-decrypt-later": "하베스트-나우-디크립트-레이터"
+      "bitcoin": "Bitcoin",
+      "mining": "마이닝",
+      "pow": "Proof of Work",
+      "privacy": "프라이버시",
+      "zero-knowledge-proofs": "영지식 증명",
+      "wallet": "지갑",
+      "mainnet": "메인넷",
+      "ml-dsa": "ML-DSA",
+      "wormhole": "웜홀",
+      "protocol-security": "프로토콜 보안",
+      "governance": "거버넌스",
+      "tokenomics": "토크노믹스",
+      "crqc": "CRQC",
+      "ecdsa": "ECDSA",
+      "nist": "NIST",
+      "ai": "AI"
     }
   },
   "whitepaper": {

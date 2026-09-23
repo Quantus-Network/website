@@ -5,7 +5,7 @@ import { createHash, timingSafeEqual } from "node:crypto";
 import env from "./config/index.js";
 
 import { corsHandler } from "./middlewares/cors.js";
-import { createApiRateLimiter } from "./middlewares/rateLimiter.js";
+import { createApiRateLimiter } from "./middlewares/rateLimit.js";
 import logger from "./lib/logger.js";
 import db from "./config/db.js";
 import emailTransporter from "./config/emailTransporter.js";
@@ -92,6 +92,10 @@ const isValidEmailHeader = (input: unknown): input is string => {
 };
 
 // Middleware
+const apiRateLimiter = createApiRateLimiter(env.rateLimit);
+
+// Middleware
+// Trust one proxy hop so the limiter keys off the client IP Cloudflare reports.
 app.set("trust proxy", 1);
 app.use(helmet({ crossOriginResourcePolicy: { policy: "cross-origin" } }));
 app.use(express.json());

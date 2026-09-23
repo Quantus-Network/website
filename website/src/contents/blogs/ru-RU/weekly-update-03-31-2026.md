@@ -1,22 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: POS, PolyFri и P2P-деньги"
 description: "Мобильный режим POS в v1.2.2, маскирование PolyFri на нативном пути прувера, защита ZK-доказательств от DDoS и шаг к настоящим P2P-электронным деньгам."
 pubDate: "2026-03-31"
 heroImage: "/blog/covers/weekly-update-03-31-2026.webp"
 heroAlt: "Quantus Weekly: POS, PolyFri и P2P-деньги"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "point-of-sale",
-    "mobile",
-    "zk-proofs",
-    "polyfri",
-    "poseidon",
-    "privacy",
-    "infrastructure",
-  ]
+tags: ["wallet", "zero-knowledge-proofs", "privacy"]
 ---
 
 > A Peer-to-Peer Electronic Cash System.

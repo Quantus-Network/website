@@ -1,21 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: GPUマイニングとDirac負荷試験"
 description: "GPU対応Quantus Miner v2.0.2をリリースし、Diracネットワークのストレステストに成功。2100万枚供給上限とチェーンアーキテクチャの更新も完了しました。"
 pubDate: "2025-12-22"
 heroImage: "/blog/covers/weekly-update-12-22-2025.webp"
 heroAlt: "Quantus Weekly: GPUマイニングとDirac負荷試験"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "gpu-mining",
-    "dirac-network",
-    "blockchain-architecture",
-    "tokenomics",
-    "hardware-wallet",
-    "social-engagement",
-  ]
+tags: ["mining", "tokenomics", "wallet"]
 ---
 
 今週、GPU対応のQuantus Miner v2.0.2を正式リリースし、Diracネットワークのストレステストに成功しました。

@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Peluncuran yang Lebih Adil"
 description: "Miner Bitcoin awal bisa menambang ribuan BTC sehari di laptop. Di Quantus, kami memprioritaskan aksesibilitas mining sejak hari pertama."
 pubDate: "2026-05-13"
@@ -7,20 +8,7 @@ heroImage: "/blog/covers/weekly-update-05-13-2026.webp"
 heroAlt: "Quantus Weekly: Peluncuran yang Lebih Adil"
 featured: false
 tags:
-  [
-    "weekly-update",
-    "bitcoin",
-    "mining",
-    "fair-launch",
-    "testnet",
-    "planck",
-    "gui-miner",
-    "zk-proofs",
-    "security",
-    "infrastructure",
-    "mobile",
-    "network-school",
-  ]
+  ["bitcoin", "mining", "zero-knowledge-proofs", "protocol-security", "wallet"]
 ---
 
 Miner Bitcoin awal bisa menambang ribuan BTC sehari di laptop.

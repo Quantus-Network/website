@@ -1,20 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: GPUマイニングとZKリファクタ"
 description: "GPUマイニングで9倍の性能向上を達成し、ZK集約回路をリファクタリングして数千行のコードを削除。UAEでの戦略的ミーティングの内容も共有しました。"
 pubDate: "2025-12-15"
 heroImage: "/blog/covers/weekly-update-12-15-2025.webp"
 heroAlt: "Quantus Weekly: GPUマイニングとZKリファクタ"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "gpu-mining",
-    "zero-knowledge-proofs",
-    "tokenomics",
-    "hardware-wallet",
-    "solana-breakpoint",
-  ]
+tags: ["mining", "zero-knowledge-proofs", "tokenomics", "wallet"]
 ---
 
 今週、チームはマイニング性能におけるブレークスルーを達成しました。新GPUマイナーはCPU版より約9倍高速に動作しています。

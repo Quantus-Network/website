@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Q-Day-Schätzungen und On-Spend-Risiko"
 description: "Google und Oratomic senken Qubit-Schätzungen für ECC. On-Spend-Risiko bei 10-Minuten-Blöcken und Quantus-Rebrand für dauerhafte wirtschaftliche Freiheit."
 pubDate: "2026-04-07"
@@ -8,15 +9,11 @@ heroAlt: "Quantus Weekly: Q-Day-Schätzungen und On-Spend-Risiko"
 featured: false
 tags:
   [
-    "weekly-update",
-    "quantum",
+    "quantum-computing",
     "bitcoin",
-    "post-quantum",
-    "ecc",
-    "zk-proofs",
-    "rebrand",
-    "infrastructure",
-    "mobile",
+    "post-quantum-cryptography",
+    "zero-knowledge-proofs",
+    "wallet",
   ]
 ---
 

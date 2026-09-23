@@ -1,21 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: ウォレットはシンプルに"
 description: "Wallet v1.2.0のリリース、マルチシグ付きTreasury、Heisenbergテストネット更新、パフォーマンス改善など、今週のQuantus週刊アップデートをお届けします。"
 pubDate: "2026-02-27"
 heroImage: "/blog/covers/weekly-update-02-27-2026.webp"
 heroAlt: "Quantus Weekly: ウォレットはシンプルに"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "mobile-wallet",
-    "treasury",
-    "multisig",
-    "heisenberg-testnet",
-    "zk-proofs",
-    "performance",
-  ]
+tags: ["wallet", "zero-knowledge-proofs"]
 ---
 
 主要な暗号資産ウォレットは、不要な機能を次々と追加しています。

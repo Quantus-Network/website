@@ -1,21 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus 위클리: 고보안 계정과 사기 방지"
 description: "맞춤형 타임락과 가디언을 갖춘 고보안 계정, 멀티시그 통합 테스트, 가로챈 거래 자금 회수 기능 등 이번 주 Quantus 보안 업데이트를 정리합니다."
 pubDate: "2026-02-04"
 heroImage: "/blog/covers/weekly-update-02-04-2026.webp"
 heroAlt: "Quantus 위클리: 고보안 계정과 사기 방지"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "security",
-    "guardian",
-    "time-lock",
-    "fraud-prevention",
-    "multisig",
-    "plonky2",
-  ]
+tags: ["protocol-security"]
 ---
 
 Chainalysis는 2025년 암호화폐 도난 규모를 170억 달러로 추정했습니다. "스스로 은행이 되라"는 말의 반대편에는 "스스로 보안팀이 되라"는 말이 있습니다. "주머니 속 스위스 은행 계좌, 단 사이버 보안 전문가 전용"은 여전히 멋진 이야기지만, 비대칭 암호가 뭔지도 모른 채 순자산을 온체인으로 옮겼다가 당한 일반 사용자에게 업계는 큰 실수를 했습니다.

@@ -1,22 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: RPC Deniable dan Audit Neodyme"
 description: "RPC deniable untuk privasi lebih kuat, audit Neodyme Rusty Crystals selesai, dan alamat ZK privat kini tersedia untuk setiap token."
 pubDate: "2026-01-28"
 heroImage: "/blog/covers/weekly-update-01-28-2026.webp"
 heroAlt: "Quantus Weekly: RPC Deniable dan Audit Neodyme"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "rpc",
-    "privacy",
-    "audit",
-    "security",
-    "dilithium",
-    "zk-aggregator",
-    "multisig",
-  ]
+tags: ["privacy", "protocol-security", "ml-dsa"]
 ---
 
 Wallet Anda sedang mengkhianati Anda.

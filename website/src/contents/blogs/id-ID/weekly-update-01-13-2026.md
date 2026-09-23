@@ -1,21 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Tanda Tangan Threshold Dilithium"
 description: "Minggu ini kami rilis tanda tangan threshold Dilithium untuk koordinasi terdistribusi, plus sirkuit ZK, pembaruan wallet mobile, dan konten komunitas."
 pubDate: "2026-01-13"
 heroImage: "/blog/covers/weekly-update-01-13-2026.webp"
 heroAlt: "Quantus Weekly: Tanda Tangan Threshold Dilithium"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "threshold-signatures",
-    "post-quantum-cryptography",
-    "dilithium",
-    "zero-knowledge-proofs",
-    "quantum-safe",
-    "blockchain",
-  ]
+tags: ["post-quantum-cryptography", "ml-dsa", "zero-knowledge-proofs"]
 ---
 
 Kekuatan dan otoritas dibagi di antara banyak pihak. Koordinasi terdistribusi.

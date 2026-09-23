@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: halving ZK y pruebas 4x más rápidas"
 description: "Segundo halving en la pipeline ZK: pruebas wormhole cuatro veces más rápidas en dos semanas. Optimizaciones Poseidon, minería corregida y whitepaper publicado."
 
@@ -7,16 +8,7 @@ pubDate: "2026-03-24"
 heroImage: "/blog/covers/weekly-update-03-24-2026.webp"
 heroAlt: "Quantus Weekly: halving ZK y pruebas 4x más rápidas"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "zk-proofs",
-    "poseidon",
-    "privacy",
-    "wormhole",
-    "performance",
-    "scalability",
-  ]
+tags: ["zero-knowledge-proofs", "privacy", "wormhole"]
 ---
 
 2 es un número especial.

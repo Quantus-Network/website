@@ -1,21 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Wallet सरल होना चाहिए"
 description: "Wallet v1.2.0 release, Treasury with multisig, Heisenberg testnet updates और performance improvements—इस सप्ताह की shipping highlights।"
 pubDate: "2026-02-27"
 heroImage: "/blog/covers/weekly-update-02-27-2026.webp"
 heroAlt: "Quantus Weekly: Wallet सरल होना चाहिए"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "mobile-wallet",
-    "treasury",
-    "multisig",
-    "heisenberg-testnet",
-    "zk-proofs",
-    "performance",
-  ]
+tags: ["wallet", "zero-knowledge-proofs"]
 ---
 
 हर major crypto wallet garbage features add कर रहा है जो मुझे नहीं चाहिए।

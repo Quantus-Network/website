@@ -1,21 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Zweites Halving, 4× schnellere Proofs"
 description: "Zweite Halbierung der Prover-Zeit: 4× schnellere ZK-Proofs in zwei Wochen. Poseidon, Mining-Fixes, Senoti-Limits, Whitepaper und Quantum Canary."
 pubDate: "2026-03-24"
 heroImage: "/blog/covers/weekly-update-03-24-2026.webp"
 heroAlt: "Quantus Weekly: Zweites Halving, 4× schnellere Proofs"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "zk-proofs",
-    "poseidon",
-    "privacy",
-    "wormhole",
-    "performance",
-    "scalability",
-  ]
+tags: ["zero-knowledge-proofs", "privacy", "wormhole"]
 ---
 
 2 ist eine besondere Zahl.

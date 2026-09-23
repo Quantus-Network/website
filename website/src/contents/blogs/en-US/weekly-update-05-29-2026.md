@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: The State of Quantum Report"
 description: "Our quantum-risk research report hit major outlets. This week: ZK audit fixes, GPU miner throttling, wallet updates, Q-Day site and shop launches."
 pubDate: "2026-05-29"
@@ -8,20 +9,13 @@ heroAlt: "Quantus Weekly: The State of Quantum Report"
 featured: false
 tags:
   [
-    "weekly-update",
-    "quantum",
-    "research",
+    "quantum-computing",
     "bitcoin",
-    "post-quantum",
-    "zk-proofs",
+    "post-quantum-cryptography",
+    "zero-knowledge-proofs",
     "mining",
-    "testnet",
-    "planck",
-    "mobile",
-    "infrastructure",
-    "subsquid",
+    "wallet",
     "q-day",
-    "network-school",
   ]
 ---
 

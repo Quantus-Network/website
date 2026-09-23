@@ -1,21 +1,13 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Diracテストネットと格子暗号監査"
 description: "Diracテストネットをリリースし、PoWアルゴリズムと格子暗号ライブラリを更新。外部監査を開始し、モバイルウォレットとlibp2pにも統合済みです。マイナーはアップグレードを推奨します。"
 pubDate: "2025-11-10"
 heroImage: "/blog/covers/weekly-update-11-10-2025.webp"
 heroAlt: "Quantus Weekly: Diracテストネットと格子暗号監査"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "dirac-testnet",
-    "lattice-cryptography",
-    "pow",
-    "libp2p",
-    "ghostdag",
-    "blue-green-deployment",
-  ]
+tags: ["pow"]
 ---
 
 今週、チームはDiracテストネットをリリースし、PoWアルゴリズムと格子暗号ライブラリqp-rusty-crystalsのチェーン全体更新を完了しました。このコアライブラリは現在外部監査中で、定数時間署名を含みます。更新はモバイルウォレットとlibp2pに統合済みです。

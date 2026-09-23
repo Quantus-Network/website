@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: Q-Day steht unmittelbar bevor"
 description: "Q-Day ist am 6. Juni. Diese Woche: Dilithium-DKG-Audit abgeschlossen, Miner- und Notification-Updates, Wallet-Fixes und neue Q-Day-Summit-Website."
 
@@ -9,19 +10,13 @@ heroAlt: "Quantus Weekly: Q-Day steht unmittelbar bevor"
 featured: false
 tags:
   [
-    "weekly-update",
     "q-day",
     "mainnet",
     "mining",
-    "testnet",
-    "planck",
-    "post-quantum",
-    "dilithium",
-    "threshold-signatures",
-    "zk-proofs",
-    "mobile",
-    "infrastructure",
-    "gui-miner",
+    "post-quantum-cryptography",
+    "ml-dsa",
+    "zero-knowledge-proofs",
+    "wallet",
   ]
 ---
 

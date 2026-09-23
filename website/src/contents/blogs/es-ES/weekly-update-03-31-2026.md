@@ -1,5 +1,6 @@
 ---
 published: true
+category: weekly-update
 title: "Quantus Weekly: POS móvil, PolyFri y dinero P2P"
 description: "Modo POS en wallet v1.2.2, enmascaramiento PolyFri en el probador y limpieza del hasher Poseidon. Protección DDoS para pruebas ZK y alfa del rediseño móvil."
 
@@ -7,17 +8,7 @@ pubDate: "2026-03-31"
 heroImage: "/blog/covers/weekly-update-03-31-2026.webp"
 heroAlt: "Quantus Weekly: POS móvil, PolyFri y dinero P2P"
 featured: false
-tags:
-  [
-    "weekly-update",
-    "point-of-sale",
-    "mobile",
-    "zk-proofs",
-    "polyfri",
-    "poseidon",
-    "privacy",
-    "infrastructure",
-  ]
+tags: ["wallet", "zero-knowledge-proofs", "privacy"]
 ---
 
 > Un sistema de dinero electrónico entre pares.
