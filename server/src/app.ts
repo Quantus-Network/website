@@ -18,6 +18,9 @@ import {
 } from "./utils/loopsContact.js";
 import { toSafeLogError } from "./utils/safeLogError.js";
 import Mail from "nodemailer/lib/mailer/index.js";
+// Standards-aware address parser from Nodemailer to preserve full delivery compatibility
+// @ts-expect-error - addressparser is part of nodemailer runtime exports
+import addressparser from "nodemailer/lib/addressparser/index.js";
 import axios from "axios";
 import { DatabaseError } from "pg";
 import { EmailPayload, SponsorshipPayload } from "./interfaces/EmailPayload.js";
@@ -47,60 +50,76 @@ const clampText = (value: unknown, max = 200): string =>
 const clampOptionalText = (value: unknown, max = 100): string | undefined =>
   typeof value === "string" && value.trim().length > 0 ? value.trim().slice(0, max) : undefined;
 
-// Validates that a bare mailbox conforms to email address structure:
-// contains exactly one '@' with non-empty local and domain parts, bounded length,
-// no whitespace or control characters, supporting international SMTPUTF8 mailboxes.
-const isValidMailbox = (mailbox: string): boolean => {
-  if (!mailbox || mailbox.length > MAX_EMAIL_HEADER_LENGTH) return false;
-  if (/[\s\r\n\0]/.test(mailbox)) return false;
+interface ParsedAddress {
+  name: string;
+  address: string;
+}
 
-  const atIndex = mailbox.indexOf("@");
-  if (atIndex <= 0 || atIndex !== mailbox.lastIndexOf("@") || atIndex === mailbox.length - 1) {
-    return false;
+// Validates that an address header contains exactly one valid recipient/sender,
+// conforms to total length bounds, has no leading/trailing dots or double dots in the domain/local parts,
+// and correctly parses via Nodemailer's address parser.
+const parseSingleEmailAddress = (input: unknown): ParsedAddress | null => {
+  if (typeof input !== "string") return null;
+  const trimmed = input.trim();
+  if (trimmed.length === 0 || trimmed.length > MAX_EMAIL_HEADER_LENGTH) return null;
+  if (/[\r\n\0]/.test(trimmed)) return null;
+
+  try {
+    const parsed: ParsedAddress[] = addressparser(trimmed);
+    if (!Array.isArray(parsed) || parsed.length !== 1) {
+      return null;
+    }
+
+    const item = parsed[0];
+    if (!item || !item.address) return null;
+
+    const atIndex = item.address.indexOf("@");
+    if (atIndex <= 0 || atIndex !== item.address.lastIndexOf("@") || atIndex === item.address.length - 1) {
+      return null;
+    }
+
+    const localPart = item.address.slice(0, atIndex);
+    const domain = item.address.slice(atIndex + 1);
+
+    // Reject consecutive dots or leading/trailing dots in domain
+    if (!domain.includes(".") || domain.startsWith(".") || domain.endsWith(".") || domain.includes("..")) {
+      return null;
+    }
+
+    // For unquoted local parts, disallow leading/trailing dots or consecutive dots
+    if (!localPart.startsWith('"') && !localPart.endsWith('"')) {
+      if (localPart.startsWith(".") || localPart.endsWith(".") || localPart.includes("..")) {
+        return null;
+      }
+    }
+
+    return item;
+  } catch {
+    return null;
   }
-
-  const domain = mailbox.slice(atIndex + 1);
-  if (!domain.includes(".") || domain.startsWith(".") || domain.endsWith(".")) {
-    return false;
-  }
-
-  return true;
 };
 
-// Validates that an address header contains exactly one valid recipient or sender.
-// Supports bare mailboxes, unquoted display names without commas, and quoted display names
-// that may legally contain commas (e.g. "Doe, Jane" <jane@example.com>).
-// Strictly rejects multiple recipient lists, trailing chained addresses, and unclosed quotes.
-const isValidEmailHeader = (input: unknown): input is string => {
+const isValidMailbox = (input: unknown): boolean => {
   if (typeof input !== "string") return false;
-  const trimmed = input.trim();
-  if (trimmed.length === 0 || trimmed.length > MAX_EMAIL_HEADER_LENGTH) return false;
+  const res = parseSingleEmailAddress(input);
+  if (!res) return false;
+  // For bare mailboxes (waitlist/sponsorships), ensure no display-name wrapping exists
+  return res.address === input.trim();
+};
 
-  // Single display-name pattern: optional quoted name (allows commas) OR unquoted name (no commas/semicolons),
-  // followed strictly by angle-bracketed mailbox. Anchored to reject multi-address lists.
-  const angleMatch = /^(?:(?:"([^"\r\n\0]*)")|([^<>,;:\r\n\0]*))\s*<([^<>]+)>$/.exec(trimmed);
-  if (angleMatch) {
-    const rawMailbox = angleMatch[3]?.trim();
-    if (!rawMailbox) return false;
-    return isValidMailbox(rawMailbox);
-  }
-
-  // Bare email address: must not contain quotes or commas
-  if (trimmed.includes(",") || trimmed.includes('"')) return false;
-
-  return isValidMailbox(trimmed);
+const isValidEmailHeader = (input: unknown): input is string => {
+  return parseSingleEmailAddress(input) !== null;
 };
 
 // Middleware
 const apiRateLimiter = createApiRateLimiter(env.rateLimit);
 
-// Middleware
 // Trust one proxy hop so the limiter keys off the client IP Cloudflare reports.
 app.set("trust proxy", 1);
 app.use(helmet({ crossOriginResourcePolicy: { policy: "cross-origin" } }));
 app.use(express.json());
 app.use(corsHandler);
-app.use("/api", createApiRateLimiter());
+app.use("/api", apiRateLimiter);
 
 // Routes
 app.get("/", async (_, res) => {
