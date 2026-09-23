@@ -4,26 +4,12 @@ dotenv.config();
 
 export default {
   port: process.env.PORT,
-  corsWhitelist: [
-    "http://localhost:5500",
-    "http://localhost:4321",
-    "http://127.0.0.1:5500",
-    "https://www.resonancenetwork.io",
-    "https://resonancenetwork.io",
-    "http://www.resonancenetwork.io",
-    "http://resonancenetwork.io",
-    "http://quantus.com",
-    "https://quantus.com",
-    "http://www.quantus.com",
-    "https://www.quantus.com",
-    "https://q.day",
-    "http://q.day",
-  ],
+  corsWhitelist: process.env.CORS_WHITELIST?.split(",") || [],
   apiBaseUrl: process.env.API_BASE_URL,
   webBaseUrl: process.env.WEB_BASE_URL,
   databaseURI: process.env.DATABASE_URI,
   databaseURL: process.env.DATABASE_BASE_URL,
-  appName: "Resonance_Network",
+  appName: "Quantus_Network",
   nodeEnv: process.env.NODE_ENV,
   email: {
     token: process.env.EMAIL_TOKEN,
@@ -46,7 +32,7 @@ export default {
     },
   },
   rateLimit: {
-    windowMs: 10 * 60 * 1000,
-    limit: 10,
+    windowMs: Number(process.env.RATE_LIMIT_WINDOW_MS),
+    limit: Number(process.env.RATE_LIMIT_LIMIT),
   },
 };
