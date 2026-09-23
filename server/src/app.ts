@@ -19,7 +19,6 @@ import {
 import { toSafeLogError } from "./utils/safeLogError.js";
 import Mail from "nodemailer/lib/mailer/index.js";
 // Standards-aware address parser from Nodemailer to preserve full delivery compatibility
-// @ts-expect-error - addressparser is part of nodemailer runtime exports
 import addressparser from "nodemailer/lib/addressparser/index.js";
 import axios from "axios";
 import { DatabaseError } from "pg";
@@ -57,7 +56,7 @@ interface ParsedAddress {
 
 // Validates that an address header contains exactly one valid recipient/sender,
 // conforms to total length bounds, has no leading/trailing dots or double dots in the domain/local parts,
-// and correctly parses via Nodemailer's address parser.
+// safely narrows AddressOrGroup, rejects group addresses, and correctly parses via Nodemailer's address parser.
 const parseSingleEmailAddress = (input: unknown): ParsedAddress | null => {
   if (typeof input !== "string") return null;
   const trimmed = input.trim();
@@ -65,21 +64,24 @@ const parseSingleEmailAddress = (input: unknown): ParsedAddress | null => {
   if (/[\r\n\0]/.test(trimmed)) return null;
 
   try {
-    const parsed: ParsedAddress[] = addressparser(trimmed);
+    const parsed = addressparser(trimmed);
     if (!Array.isArray(parsed) || parsed.length !== 1) {
       return null;
     }
 
     const item = parsed[0];
-    if (!item || !item.address) return null;
-
-    const atIndex = item.address.indexOf("@");
-    if (atIndex <= 0 || atIndex !== item.address.lastIndexOf("@") || atIndex === item.address.length - 1) {
+    if (!item || !("address" in item) || typeof item.address !== "string") {
       return null;
     }
 
-    const localPart = item.address.slice(0, atIndex);
-    const domain = item.address.slice(atIndex + 1);
+    const address = item.address;
+    const atIndex = address.indexOf("@");
+    if (atIndex <= 0 || atIndex !== address.lastIndexOf("@") || atIndex === address.length - 1) {
+      return null;
+    }
+
+    const localPart = address.slice(0, atIndex);
+    const domain = address.slice(atIndex + 1);
 
     // Reject consecutive dots or leading/trailing dots in domain
     if (!domain.includes(".") || domain.startsWith(".") || domain.endsWith(".") || domain.includes("..")) {
@@ -93,7 +95,7 @@ const parseSingleEmailAddress = (input: unknown): ParsedAddress | null => {
       }
     }
 
-    return item;
+    return { name: item.name, address: item.address };
   } catch {
     return null;
   }
